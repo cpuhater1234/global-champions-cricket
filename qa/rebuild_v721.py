@@ -3,6 +3,7 @@ from pathlib import Path
 import base64
 import gzip
 import hashlib
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -28,7 +29,8 @@ def payload_text(stem):
         raise SystemExit(f"Missing patch payload: {stem}")
     return "".join(p.read_text() for p in parts).strip()
 
-def apply_payload(stem, target):
+def apply_payload(stem, source, target):
+    shutil.copy2(source, target)
     raw = gzip.decompress(base64.b64decode(payload_text(stem)))
     with tempfile.NamedTemporaryFile(suffix=".patch", delete=False) as fh:
         fh.write(raw)
@@ -50,8 +52,7 @@ if not V720.exists():
 if sha(V720) != EXPECTED_720:
     raise SystemExit(f"v7.2.0 SHA mismatch: {sha(V720)}")
 
-# The patch itself copies v7.2.0 to the v7.2.1 target before applying edits.
-apply_payload("v720_to_v721_season_hub.patch.gz.b64", V721)
+apply_payload("v720_to_v721_season_hub.patch.gz.b64", V720, V721)
 
 if not V721.exists():
     raise SystemExit(f"v7.2.1 was not produced: {V721.relative_to(ROOT)}")
