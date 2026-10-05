@@ -1,0 +1,23 @@
+# Local QA artefacts
+*.log
+*.tmp
+*.bak
+__pycache__/
+*.pyc
+
+# Browser/visual QA output
+qa/output/
+qa/screenshots/
+qa/results/*.json
+
+# Instrumented and experimental builds stay off main unless deliberately promoted
+*_QA_INSTRUMENTED.html
+*_QA_FULL.html
+*_candidate.html
+*_diag.html
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
