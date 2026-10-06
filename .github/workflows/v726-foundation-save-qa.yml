@@ -19,6 +19,9 @@ jobs:
       - name: Run foundation save-continuity guardrail
         run: python qa/check_v726_save.py
 
+      - name: Check browser harness syntax
+        run: node --check qa/browser_v726_foundation_save.mjs
+
       - name: Locate Chrome
         run: |
           CHROME="$(which google-chrome || which google-chrome-stable || which chromium || which chromium-browser || true)"
