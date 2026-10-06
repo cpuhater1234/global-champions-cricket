@@ -1,0 +1,24 @@
+name: GCC structural rebuild verification
+
+on:
+  push:
+    branches:
+      - work/v7.2-structural-rebuild
+  workflow_dispatch:
+
+jobs:
+  rebuild-v722:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rebuild and verify v7.2.2
+        run: |
+          python qa/rebuild_v722.py
+          python qa/check_v722_xi.py
+          sha256sum game/global_champions_cricket_v7_2_2_xi_structure.html
+      - name: Upload reconstructed v7.2.2
+        uses: actions/upload-artifact@v4
+        with:
+          name: gcc-v722-reconstructed
+          path: game/global_champions_cricket_v7_2_2_xi_structure.html
+          if-no-files-found: error
