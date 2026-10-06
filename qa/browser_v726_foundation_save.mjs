@@ -387,7 +387,8 @@ try{
       savedOrder:[...(save?.state?.battingOrder||[])]
     };
   })()`);
-  assert(xi.count===11&&Number.isFinite(xi.coverNum)&&xi.coverNum>=20,'Recommended XI size/bowling-cover integrity failed',JSON.stringify(xi));\n  assert(xi.squadKeepers===0 ? xi.keeperNeeded===true : (xi.selectedKeepers>=1&&xi.keeperNeeded===false),'Recommended XI keeper fallback integrity failed',JSON.stringify(xi));
+  assert(xi.count===11&&Number.isFinite(xi.coverNum)&&xi.coverNum>=20,'Recommended XI size/bowling-cover integrity failed',JSON.stringify(xi));
+  assert(xi.squadKeepers===0 ? xi.keeperNeeded===true : (xi.selectedKeepers>=1&&xi.keeperNeeded===false),'Recommended XI keeper fallback integrity failed',JSON.stringify(xi));
   assert(xi.savedScreen==='team'&&JSON.stringify(xi.savedXi)===JSON.stringify(xi.ids)&&JSON.stringify(xi.savedOrder)===JSON.stringify(xi.order),'XI selection was not checkpointed',JSON.stringify(xi));
 
   // Hard reload boundary 6: XI selected.
