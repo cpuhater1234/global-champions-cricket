@@ -278,7 +278,9 @@ try{
   const drawResume=await continueDynasty();
   assert(drawResume.screen==='draft'&&JSON.stringify(drawResume.draftOrder)===JSON.stringify(draw.order),'Draft Order resume did not preserve order/enter Draft',JSON.stringify(drawResume));
   const userFirstPick=draw.order.indexOf(club.user);
-  assert(drawResume.pickIndex===userFirstPick,'Draft resume did not stop at the user first pick',JSON.stringify({userFirstPick,drawResume}));
+  assert(drawResume.pickIndex===0,'Draft resume should preserve the untouched Draft at pick 0',JSON.stringify({userFirstPick,drawResume}));
+  const advancedToUser=await cdp.eval(`(()=>{GCC.skipToMyPick();return{pickIndex:GCC.state.pickIndex,user:GCC.state.userClub.abbr}})()`);
+  assert(advancedToUser.pickIndex===userFirstPick,'Skip to My Pick did not reach the user first turn after resume',JSON.stringify({userFirstPick,advancedToUser}));
 
   // Make one real user pick and persist the resulting partial Draft.
   const onePick=await cdp.eval(`(()=>{
