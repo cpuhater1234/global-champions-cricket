@@ -1,9 +1,6 @@
 name: GCC v7.2.5 Preseason Journey QA
 
 on:
-  push:
-    branches:
-      - work/v7.2-structural-rebuild
   workflow_dispatch:
 
 jobs:
