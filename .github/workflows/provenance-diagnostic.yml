@@ -1,0 +1,56 @@
+name: GCC provenance diagnostic
+
+on:
+  push:
+    branches:
+      - work/v7.2-structural-rebuild
+
+jobs:
+  provenance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Diagnose transfer drift and rebuild chain
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import base64, gzip, hashlib, shutil, subprocess, tempfile
+
+          root=Path('.')
+          game=root/'game'
+          patches=root/'qa'/'patches'
+          src=game/'global_champions_cricket_v7_1_2_premium_polish_candidate.html'
+
+          def sha(p):
+              return hashlib.sha256(p.read_bytes()).hexdigest()
+          def norm(p):
+              b=p.read_bytes().replace(b'\r',b'').replace(b'\n',b'')
+              return hashlib.sha256(b).hexdigest()
+          def payload(stem):
+              parts=sorted(patches.glob(stem+'.part*'))
+              return ''.join(x.read_text() for x in parts).strip()
+          def apply(stem, source, target):
+              shutil.copy2(source,target)
+              raw=gzip.decompress(base64.b64decode(payload(stem)))
+              with tempfile.NamedTemporaryFile(suffix='.patch',delete=False) as f:
+                  f.write(raw); pp=Path(f.name)
+              try:
+                  subprocess.run(['patch','-p0','--forward','--batch','-i',str(pp)],cwd=root,check=True)
+              finally:
+                  pp.unlink(missing_ok=True)
+
+          print('v712 raw',sha(src))
+          print('v712 normalized',norm(src))
+          v720=game/'_diag_v720.html'
+          v721=game/'_diag_v721.html'
+          v722=game/'_diag_v722.html'
+          apply('v712_to_v720_launcher.patch.gz.b64',src,v720)
+          print('v720 raw',sha(v720))
+          print('v720 normalized',norm(v720))
+          apply('v720_to_v721_season_hub.patch.gz.b64',v720,v721)
+          print('v721 raw',sha(v721))
+          print('v721 normalized',norm(v721))
+          apply('v721_to_v722_xi.patch.gz.b64',v721,v722)
+          print('v722 raw',sha(v722))
+          print('v722 normalized',norm(v722))
+          PY
