@@ -29,13 +29,13 @@ def payload_text(stem):
     return ''.join(p.read_text() for p in parts).strip()
 
 def apply_payload(stem, source, target):
-    shutil.copy2(source, target)
     raw = gzip.decompress(base64.b64decode(payload_text(stem)))
     with tempfile.NamedTemporaryFile(suffix='.patch', delete=False) as fh:
         fh.write(raw)
         patch_path = Path(fh.name)
     try:
-        target.unlink(missing_ok=True)\n        subprocess.run(['patch', '--batch', '-o', target.name, source.name, '-i', str(patch_path)], cwd=GAME, check=True)
+        target.unlink(missing_ok=True)
+        subprocess.run(['patch', '--batch', '-o', target.name, source.name, '-i', str(patch_path)], cwd=GAME, check=True)
     finally:
         patch_path.unlink(missing_ok=True)
 
