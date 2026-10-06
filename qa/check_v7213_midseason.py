@@ -5,7 +5,7 @@ ROOT=Path(__file__).resolve().parents[1]
 SOURCE=ROOT/'game'/'global_champions_cricket_v7_2_12_offseason_transition_isolation.html'
 TARGET=ROOT/'game'/'global_champions_cricket_v7_2_13_midseason_trade_window.html'
 EXPECTED_SOURCE='10e0ea729a0bc5d3bacfbec759b3d91f38eae26caec266913338ac38c7410283'
-EXPECTED_TARGET='2b102f1e5a54743d2a3b1dcb9eb2fa2c69c79021235453535512cbb3350a5509'
+EXPECTED_TARGET='21788e247134133ea2aaa998d864b82384526f27dac2ef8cc72c4ed33c00ea99'
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def scripts(t):return re.findall(r'<script(?:\s[^>]*)?>(.*?)</script>',t,re.S|re.I)
 if not TARGET.exists():subprocess.run([sys.executable,str(ROOT/'qa'/'rebuild_v7213.py')],cwd=ROOT,check=True)
@@ -21,7 +21,7 @@ else:
         fail.append('Presentation block changed beyond UI-version marker')
     expected=sa[8]
     old1="function proposeTrade(midseason=false){const club=$('tradeClub')?.value,target=pById($('tradeTarget')?.value),offer=pById($('tradeOffer')?.value);if(!club||!target||!offer)return;"
-    new1="function proposeTrade(midseason=false){const club=$('tradeClub')?.value,target=pById($('tradeTarget')?.value),offer=pById($('tradeOffer')?.value);if(!club||!target||!offer)return;if(midseason&&state.dynasty.midseasonDone[state.year]){const read=$('tradeRead');if(read){read.className='trade-read bad';read.textContent='This season\\'s mid-season window is already closed.'}return}"
+    new1="function proposeTrade(midseason=false){const club=$('tradeClub')?.value,target=pById($('tradeTarget')?.value),offer=pById($('tradeOffer')?.value);if(!club||!target||!offer)return;if(midseason&&state.dynasty.midseasonDone[state.year]){const read=$('tradeRead');if(read){read.className='trade-read bad';read.textContent=\"This season's mid-season window is already closed.\"}return}"
     old2="const accepted=offered>=asked*threshold;$('tradeRead').className=`trade-read ${accepted?'good':'bad'}`;$('tradeRead').textContent=accepted?`${club} accept. ${offer.name} leaves; ${target.name} is yours.`:`${club} reject it. They value ${target.name} more highly than the package you offered.`;if(!accepted)return;const offerCoverId=midseason?state.dynasty.replacementFor[offer.id]:null;"
     new2="const accepted=offered>=asked*threshold;$('tradeRead').className=`trade-read ${accepted?'good':'bad'}`;$('tradeRead').textContent=accepted?`${club} accept. ${offer.name} leaves; ${target.name} is yours.`:`${club} reject it. They value ${target.name} more highly than the package you offered.`;if(!accepted)return;if(midseason)state.dynasty.midseasonDone[state.year]=true;const offerCoverId=midseason?state.dynasty.replacementFor[offer.id]:null;"
     old3="function openMidseasonMarket(){state.dynasty.midseasonDone[state.year]=true;log('TRADE WINDOW',`${state.year} mid-season window opens`,'After Round 7, contenders and struggling clubs get one short chance to reshape the list.');openTradeCentre(true);autoSave()}"
