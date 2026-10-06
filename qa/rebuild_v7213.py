@@ -6,7 +6,7 @@ GAME=ROOT/'game'; PATCHES=ROOT/'qa'/'patches'
 V7212=GAME/'global_champions_cricket_v7_2_12_offseason_transition_isolation.html'
 V7213=GAME/'global_champions_cricket_v7_2_13_midseason_trade_window.html'
 EXPECTED_7212='10e0ea729a0bc5d3bacfbec759b3d91f38eae26caec266913338ac38c7410283'
-EXPECTED_7213='2b102f1e5a54743d2a3b1dcb9eb2fa2c69c79021235453535512cbb3350a5509'
+EXPECTED_7213='21788e247134133ea2aaa998d864b82384526f27dac2ef8cc72c4ed33c00ea99'
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 def payload(stem):
     parts=sorted(PATCHES.glob(stem+'.part*'))
