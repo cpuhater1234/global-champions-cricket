@@ -113,6 +113,8 @@ try{
   assert(swapAudit.reset.length===11&&new Set(swapAudit.reset).size===11&&swapAudit.resetTouched===false,'Reset order did not restore a valid natural order',JSON.stringify(swapAudit));
   // Restore the balanced recommendation before the season handoff.
   await cdp.eval(`GCC.selectRecommendedXI(); true`);
+  // Let legitimate swap/recommendation feedback clear before judging the steady-state mobile layout.
+  await sleep(1250);
 
   // Completed XI must remain usable on mobile, with the quick start promoted and no page-level overflow.
   await viewport(390,844);
