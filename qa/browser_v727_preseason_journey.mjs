@@ -155,7 +155,7 @@ try{
   await shot('07-season-after-round-1.png');
 
   const scorecard=await cdp.eval(`(()=>{GCC.openScorecard(1);return{open:document.getElementById('modal')?.classList.contains('open'),innings:document.querySelectorAll('#modal .scorecard-innings').length,text:document.getElementById('modal')?.innerText||''};})()`);
-  assert(scorecard.open&&scorecard.innings===2&&/Batting/.test(scorecard.text)&&/Bowling/.test(scorecard.text),'Round 1 scorecard failed',JSON.stringify(scorecard));
+  assert(scorecard.open&&scorecard.innings===2&&/BATTING/i.test(scorecard.text)&&/BOWLING/i.test(scorecard.text),'Round 1 scorecard failed',JSON.stringify(scorecard));
   await cdp.eval(`GCC.closeModal(); true`);
 
   const round5=await cdp.eval(`(()=>{while(GCC.state.round<5)GCC.playNextRound();GCC.setSeasonView('overview');const views={};for(const v of ['fixtures','ladder','analysis','players']){GCC.setSeasonView(v);views[v]={active:document.querySelector('[data-season-panel="'+v+'"]')?.classList.contains('active'),text:(document.querySelector('[data-season-panel="'+v+'"]')?.innerText||'').trim().length};}GCC.setSeasonView('overview');return{round:GCC.state.round,results:GCC.state.results.length,heading:document.querySelector('#season .section-head h2')?.textContent.trim(),intro:document.querySelector('#season .section-head p')?.textContent.trim(),runRows:document.querySelectorAll('#seasonRun .season-run-row').length,ladderRows:document.querySelectorAll('#ladderSnapshot .ladder-snapshot-row').length,views,story:(document.getElementById('matchStory')?.innerText||'').trim(),overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth};})()`);
