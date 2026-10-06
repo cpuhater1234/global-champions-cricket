@@ -370,18 +370,24 @@ try{
     const save=JSON.parse(localStorage.getItem('gcc_dynasty_v7_2'));
     const essentials=document.getElementById('xiEssentials')?.innerText||'';
     const cover=[...document.querySelectorAll('#xiEssentials b')].map(x=>x.textContent.trim()).find(x=>/ ov$/.test(x))||'';
+    const squad=GCC.state.teams[GCC.state.userClub.abbr].map(id=>GCC.state.pool.find(p=>p.id===id)).filter(Boolean);
+    const squadKeepers=squad.filter(p=>(p.keeping||0)>=65||p.role==='WK-BAT').length;
+    const selected=GCC.state.xi.map(id=>GCC.state.pool.find(p=>p.id===id)).filter(Boolean);
+    const selectedKeepers=selected.filter(p=>(p.keeping||0)>=65||p.role==='WK-BAT').length;
     return{
       ids:[...GCC.state.xi],
       order:[...GCC.state.battingOrder],
       count:GCC.state.xi.length,
       keeperNeeded:/Needed/.test(essentials),
+      squadKeepers,
+      selectedKeepers,
       coverNum:parseFloat(cover),
       savedScreen:save?.currentScreen,
       savedXi:[...(save?.state?.xi||[])],
       savedOrder:[...(save?.state?.battingOrder||[])]
     };
   })()`);
-  assert(xi.count===11&&!xi.keeperNeeded&&Number.isFinite(xi.coverNum)&&xi.coverNum>=20,'Recommended XI integrity failed',JSON.stringify(xi));
+  assert(xi.count===11&&Number.isFinite(xi.coverNum)&&xi.coverNum>=20,'Recommended XI size/bowling-cover integrity failed',JSON.stringify(xi));\n  assert(xi.squadKeepers===0 ? xi.keeperNeeded===true : (xi.selectedKeepers>=1&&xi.keeperNeeded===false),'Recommended XI keeper fallback integrity failed',JSON.stringify(xi));
   assert(xi.savedScreen==='team'&&JSON.stringify(xi.savedXi)===JSON.stringify(xi.ids)&&JSON.stringify(xi.savedOrder)===JSON.stringify(xi.order),'XI selection was not checkpointed',JSON.stringify(xi));
 
   // Hard reload boundary 6: XI selected.
