@@ -311,8 +311,8 @@ try{
   const final15=await cdp.eval(`(()=>({phase:GCC.state.dynasty.offseason.phase,n:GCC.state.teams[GCC.state.userClub.abbr].length,unique:new Set(GCC.state.teams[GCC.state.userClub.abbr]).size,cta:(document.querySelector('#dynastyMain .button.primary')?.textContent||'').trim()}))()`);
   assert(final15.phase==='cuts'&&final15.n===15&&final15.unique===15&&/ENTER 2009 TEAM ROOM/.test(final15.cta),'Final 15 could not be lodged cleanly',JSON.stringify(final15));
 
-  const ready=await cdp.eval(`(()=>{Dynasty.finishOffseason();return{phase:GCC.state.dynasty.offseason?.phase,cutsComplete:GCC.state.dynasty.offseason?.cutsComplete,heading:(document.querySelector('#dynastyMain h3')?.textContent||'').trim(),cta:(document.querySelector('#dynastyMain .button.primary')?.textContent||'').trim(),opening:Object.fromEntries(Object.entries(GCC.state.dynasty.seasonOpeningRosters?.[2009]||{}).map(([k,v])=>[k,v.length])),overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth};})()`);
-  assert(ready.phase==='ready'&&ready.cutsComplete&&ready.heading==='The 15 are lodged.'&&/NAME THE 2009 XI/.test(ready.cta)&&Object.keys(ready.opening).length===8&&Object.values(ready.opening).every(n=>n===15)&&ready.overflow<=1,'Pre-season ready state failed',JSON.stringify(ready));
+  const preSeasonReady=await cdp.eval(`(()=>{Dynasty.finishOffseason();return{phase:GCC.state.dynasty.offseason?.phase,cutsComplete:GCC.state.dynasty.offseason?.cutsComplete,heading:(document.querySelector('#dynastyMain h3')?.textContent||'').trim(),cta:(document.querySelector('#dynastyMain .button.primary')?.textContent||'').trim(),opening:Object.fromEntries(Object.entries(GCC.state.dynasty.seasonOpeningRosters?.[2009]||{}).map(([k,v])=>[k,v.length])),overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth};})()`);
+  assert(preSeasonReady.phase==='ready'&&preSeasonReady.cutsComplete&&preSeasonReady.heading==='The 15 are lodged.'&&/NAME THE 2009 XI/.test(preSeasonReady.cta)&&Object.keys(preSeasonReady.opening).length===8&&Object.values(preSeasonReady.opening).every(n=>n===15)&&preSeasonReady.overflow<=1,'Pre-season ready state failed',JSON.stringify(preSeasonReady));
   await shot('21-2009-preseason-ready.png');
 
   // Hard reload is the acceptance gate for the Final 15 -> Pre-season transition.
@@ -328,7 +328,7 @@ try{
   await shot('22-2009-round-1.png');
   await noErrors('2009 offseason continuation');
 
-  const report={candidate:'e6a93cf831a548c2dfd44c5c8d6af9c35166accf007c428bdde286e4b860fe70',launcher,foundation,recruit,draw,draftStart,drafted,modal,teamChoice,saved,resumed,xi,season,mobileLauncher,mobileResume,seasonEntryVisual,round1,round1Visual,scorecard,round5,round5Visual,mobileRound5,round10,round14,finalsEntry,semiStage,semiCard,gfReady,finalsDone,finalsSteady,review,mobileReview,reviewFooter,market,tradeCentre,marketResume,cpuMarket,lottery,pickAssets,lotteryResume,draftOpen,partialDraft,draftResume,draftDone,final15,ready,readyResume,team2009,season2009};
+  const report={candidate:'e6a93cf831a548c2dfd44c5c8d6af9c35166accf007c428bdde286e4b860fe70',launcher,foundation,recruit,draw,draftStart,drafted,modal,teamChoice,saved,resumed,xi,season,mobileLauncher,mobileResume,seasonEntryVisual,round1,round1Visual,scorecard,round5,round5Visual,mobileRound5,round10,round14,finalsEntry,semiStage,semiCard,gfReady,finalsDone,finalsSteady,review,mobileReview,reviewFooter,market,tradeCentre,marketResume,cpuMarket,lottery,pickAssets,lotteryResume,draftOpen,partialDraft,draftResume,draftDone,final15,preSeasonReady,readyResume,team2009,season2009};
   fs.writeFileSync(path.join(OUT,'browser-report.json'),JSON.stringify(report,null,2));
   console.log('v7.2.10 dynasty loop audit OK');
   console.log(JSON.stringify(report,null,2));
