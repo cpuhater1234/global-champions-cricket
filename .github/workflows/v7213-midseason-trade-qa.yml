@@ -1,0 +1,44 @@
+name: GCC v7.2.13 Midseason Trade QA
+
+on:
+  push:
+    branches:
+      - work/v7.2-structural-rebuild
+  workflow_dispatch:
+
+jobs:
+  midseason-trade-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild exact v7.2.13 candidate
+        run: python qa/rebuild_v7213.py
+
+      - name: Run mid-season trade-window guardrail
+        run: python qa/check_v7213_midseason.py
+
+      - name: Check dynasty-season regression syntax
+        run: node --check qa/browser_v7213_dynasty_season_audit.mjs
+
+      - name: Locate Chrome
+        run: |
+          CHROME="$(which google-chrome || which google-chrome-stable || which chromium || which chromium-browser || true)"
+          test -n "$CHROME"
+          echo "CHROME_BIN=$CHROME" >> "$GITHUB_ENV"
+          "$CHROME" --version
+          node --version
+
+      - name: Run injury cover and mid-season trade regression
+        run: node --experimental-websocket qa/browser_v7213_dynasty_season_audit.mjs
+
+      - name: Upload QA evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gcc-v7213-midseason-trade-qa
+          path: |
+            qa/output/v7213-dynasty-season-audit/
+            game/global_champions_cricket_v7_2_13_midseason_trade_window.html
+          if-no-files-found: warn
