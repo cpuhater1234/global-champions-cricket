@@ -1,0 +1,44 @@
+name: GCC v7.2.12 Dynasty Season Systems Audit
+
+on:
+  push:
+    branches:
+      - work/v7.2-structural-rebuild
+  workflow_dispatch:
+
+jobs:
+  dynasty-season-systems:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild exact v7.2.12 candidate
+        run: python qa/rebuild_v7212.py
+
+      - name: Run v7.2.12 transition guardrail
+        run: python qa/check_v7212_transition.py
+
+      - name: Check dynasty-season systems harness syntax
+        run: node --check qa/browser_v7212_dynasty_season_audit.mjs
+
+      - name: Locate Chrome
+        run: |
+          CHROME="$(which google-chrome || which google-chrome-stable || which chromium || which chromium-browser || true)"
+          test -n "$CHROME"
+          echo "CHROME_BIN=$CHROME" >> "$GITHUB_ENV"
+          "$CHROME" --version
+          node --version
+
+      - name: Run injury cover and Round 7 trade-window audit
+        run: node --experimental-websocket qa/browser_v7212_dynasty_season_audit.mjs
+
+      - name: Upload audit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gcc-v7212-dynasty-season-systems
+          path: |
+            qa/output/v7212-dynasty-season-audit/
+            game/global_champions_cricket_v7_2_12_offseason_transition_isolation.html
+          if-no-files-found: warn
