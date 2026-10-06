@@ -187,9 +187,9 @@ try {
   const bat=await cdp.eval(`(()=>{GCC.setFilter('BAT');return {cards:document.querySelectorAll('#players .player-card').length,active:[...document.querySelectorAll('#filters button.primary')].map(x=>x.textContent.trim())}})()`);
   assert(bat.cards>0 && bat.cards<=24 && bat.active.includes('BAT'),'BAT filter failed',JSON.stringify(bat));
   await cdp.eval(`GCC.setFilter('ALL')`);
-  const search=await cdp.eval(`(()=>{const first=GCC.state.pool.filter(p=>p.available&&!p.draftedBy).sort((a,b)=>b.overall-a.overall)[0];const q=first.name.split(/\\s+/)[0];const el=document.getElementById('search');el.value=q;el.dispatchEvent(new Event('input',{bubbles:true}));return {q,cards:document.querySelectorAll('#players .player-card').length};})()`);
+  const search=await cdp.eval(`(()=>{const first=GCC.state.pool.filter(p=>p.available&&!p.draftedBy).sort((a,b)=>b.overall-a.overall)[0];const q=first.name.split(/\\s+/)[0];const el=document.getElementById('playerSearch');el.value=q;el.dispatchEvent(new Event('input',{bubbles:true}));return {q,cards:document.querySelectorAll('#players .player-card').length};})()`);
   assert(search.cards>=1 && search.cards<=24,'Player search did not bound matching results',JSON.stringify(search));
-  await cdp.eval(`(()=>{const el=document.getElementById('search');el.value='';el.dispatchEvent(new Event('input',{bubbles:true}));})()`);
+  await cdp.eval(`(()=>{const el=document.getElementById('playerSearch');el.value='';el.dispatchEvent(new Event('input',{bubbles:true}));})()`);
 
   // Full board is deliberate secondary view.
   const board=await cdp.eval(`(()=>{GCC.toggleDraftBoard();return {boardHidden:document.getElementById('draftBoardPanel').hidden,workspaceHidden:document.getElementById('draftWorkspace').hidden,cols:document.querySelectorAll('#draftBoard .draft-col').length,picks:document.querySelectorAll('#draftBoard .draft-pick').length,toggle:document.getElementById('draftBoardToggle').textContent.trim()};})()`);
