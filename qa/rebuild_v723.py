@@ -35,7 +35,7 @@ def apply_payload(stem, source, target):
         fh.write(raw)
         patch_path = Path(fh.name)
     try:
-        subprocess.run(['patch', '-p0', '--forward', '--batch', '-i', str(patch_path)], cwd=GAME, check=True)
+        target.unlink(missing_ok=True)\n        subprocess.run(['patch', '--batch', '-o', target.name, source.name, '-i', str(patch_path)], cwd=GAME, check=True)
     finally:
         patch_path.unlink(missing_ok=True)
 
