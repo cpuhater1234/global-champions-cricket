@@ -1,0 +1,24 @@
+name: GCC v7.2.4 Signing QA
+
+on:
+  push:
+    branches:
+      - work/v7.2-structural-rebuild
+  workflow_dispatch:
+
+jobs:
+  signing-reconstruct:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild v7.2.4 Signing Week candidate
+        run: python qa/rebuild_v724.py
+
+      - name: Upload reconstructed candidate
+        uses: actions/upload-artifact@v4
+        with:
+          name: gcc-v724-signing-candidate
+          path: game/global_champions_cricket_v7_2_4_signing_week_structure.html
+          if-no-files-found: error
