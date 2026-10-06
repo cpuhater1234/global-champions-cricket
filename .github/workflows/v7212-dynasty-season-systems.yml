@@ -1,9 +1,6 @@
 name: GCC v7.2.12 Dynasty Season Systems Audit
 
 on:
-  push:
-    branches:
-      - work/v7.2-structural-rebuild
   workflow_dispatch:
 
 jobs:
