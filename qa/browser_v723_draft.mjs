@@ -234,7 +234,9 @@ try {
   assert(team.screen==='team' && team.squad===15 && team.xi===0,'Enter Team Room transition failed',JSON.stringify(team));
   await assertNoErrors('team-room transition');
 
-  // Mobile regression on a fresh foundation draft.
+  // Mobile regression on a genuinely fresh foundation draft.
+  // Desktop completion autosaves the dynasty, so clear the QA origin before reload.
+  await cdp.eval(`localStorage.clear(); sessionStorage.clear(); true`);
   await viewport(390,844);
   await cdp.call('Page.reload',{ignoreCache:true});
   for(let i=0;i<240;i++){
