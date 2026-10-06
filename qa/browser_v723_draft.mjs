@@ -22,6 +22,8 @@ const server = http.createServer((req,res)=>{
   if (req.url === '/' || req.url === '/game.html') {
     res.writeHead(200, {'Content-Type':'text/html; charset=utf-8','Cache-Control':'no-store'});
     res.end(html);
+  } else if (req.url === '/favicon.ico') {
+    res.writeHead(204); res.end();
   } else {
     res.writeHead(404); res.end('not found');
   }
