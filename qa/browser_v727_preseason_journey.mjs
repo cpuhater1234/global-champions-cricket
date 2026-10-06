@@ -86,6 +86,13 @@ try{
   assert(teamChoice.overflow<=1,'Team Room choice state overflow',String(teamChoice.overflow));
   await shot('02-team-room-choice.png');
 
+  // Team Room audit: manual entry should reveal the selection workspace without inventing ratings.
+  const manualEntry=await cdp.eval(`(()=>{GCC.showManualXI();return{layoutHidden:document.querySelector('#team .team-layout')?.hidden,xi:GCC.state.xi.length,available:document.querySelectorAll('#xiList .xi-row').length,battingSlots:document.querySelectorAll('#xiBattingOrder .batting-slot').length,emptySlots:document.querySelectorAll('#xiBattingOrder .empty-slot').length,startDisabled:document.getElementById('startSeasonButton')?.disabled,overall:(document.getElementById('teamOverall')?.innerText||'').trim(),detailHidden:document.getElementById('teamDetailRead')?.hidden,overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}})()`);
+  assert(!manualEntry.layoutHidden&&manualEntry.xi===0&&manualEntry.available===15&&manualEntry.battingSlots===11&&manualEntry.emptySlots===11,'Manual XI entry state failed',JSON.stringify(manualEntry));
+  assert(manualEntry.startDisabled&&manualEntry.overall===''&&manualEntry.detailHidden&&manualEntry.overflow<=1,'Manual XI entry leaks ratings/start/overflow',JSON.stringify(manualEntry));
+  const clearedChoice=await cdp.eval(`(()=>{GCC.clearXI();return{layoutHidden:document.querySelector('#team .team-layout')?.hidden,manualHidden:document.getElementById('manualXIButton')?.hidden,recommendHidden:document.getElementById('recommendXIButton')?.hidden,xi:GCC.state.xi.length}})()`);
+  assert(clearedChoice.layoutHidden===true&&!clearedChoice.manualHidden&&!clearedChoice.recommendHidden&&clearedChoice.xi===0,'Clear XI did not return to focused choice state',JSON.stringify(clearedChoice));
+
   const saved=await cdp.eval(`(()=>{Dynasty.openLauncher();return{launcherHidden:document.getElementById('careerLauncher')?.hidden,continueHidden:document.getElementById('launcherContinue')?.hidden,club:document.getElementById('launcherClub')?.textContent.trim(),detail:document.getElementById('launcherDetail')?.textContent.trim()}})()`);
   assert(saved.launcherHidden===false&&saved.continueHidden===false&&saved.club,'Saved dynasty is not available from launcher after Draft',JSON.stringify(saved));
   const resumed=await cdp.eval(`(()=>{Dynasty.continueFromLauncher();return{screen:document.querySelector('.screen.active')?.id,user:GCC.state.userClub?.abbr,xi:GCC.state.xi.length,squad:GCC.state.teams[GCC.state.userClub.abbr]?.length}})()`);
@@ -97,6 +104,23 @@ try{
   assert(xi.overall.length>0&&xi.detailHidden===false,'Selected-XI ratings/detail missing',JSON.stringify(xi));
   assert(xi.overflow<=1,'Completed XI desktop overflow',String(xi.overflow));
   await shot('03-team-room-xi-ready.png');
+
+  // Direct bench swap must preserve an eleven-player XI and a valid batting order.
+  const swapAudit=await cdp.eval(`(()=>{const beforeXI=[...GCC.state.xi];const beforeOrder=[...GCC.state.battingOrder];const bench=(GCC.state.teams[GCC.state.userClub.abbr]||[]).find(id=>!GCC.state.xi.includes(id));const outgoing=GCC.state.xi[0];if(!bench||!outgoing)throw new Error('swap precondition missing');GCC.beginSwap(bench);const armed={pending:GCC.state.pendingSwapIn,status:document.getElementById('swapStatus')?.innerText||''};GCC.replaceXI(outgoing);const afterXI=[...GCC.state.xi],afterOrder=[...GCC.state.battingOrder];const moveId=afterOrder[1];const firstBefore=afterOrder[0];GCC.moveBattingPlayer(moveId,-1);const moved=[...GCC.state.battingOrder];const touched=GCC.state.orderTouched;GCC.autoOrderXI();const reset=[...GCC.state.battingOrder];const resetTouched=GCC.state.orderTouched;return{bench,outgoing,armed,beforeXI,beforeOrder,afterXI,afterOrder,moved,touched,reset,resetTouched,pending:GCC.state.pendingSwapIn,unique:new Set(GCC.state.xi).size,count:GCC.state.xi.length,firstBefore};})()`);
+  assert(swapAudit.armed.pending===swapAudit.bench&&/SWAP IN/i.test(swapAudit.armed.status),'Bench swap did not enter explicit swap mode',JSON.stringify(swapAudit));
+  assert(swapAudit.count===11&&swapAudit.unique===11&&swapAudit.afterXI.includes(swapAudit.bench)&&!swapAudit.afterXI.includes(swapAudit.outgoing)&&swapAudit.afterOrder.length===11&&swapAudit.pending==null,'Direct bench swap corrupted XI/order',JSON.stringify(swapAudit));
+  assert(swapAudit.moved[0]===swapAudit.afterOrder[1]&&swapAudit.touched===true,'Batting-order move did not apply cleanly',JSON.stringify(swapAudit));
+  assert(swapAudit.reset.length===11&&new Set(swapAudit.reset).size===11&&swapAudit.resetTouched===false,'Reset order did not restore a valid natural order',JSON.stringify(swapAudit));
+  // Restore the balanced recommendation before the season handoff.
+  await cdp.eval(`GCC.selectRecommendedXI(); true`);
+
+  // Completed XI must remain usable on mobile, with the quick start promoted and no page-level overflow.
+  await viewport(390,844);
+  const mobileTeam=await cdp.eval(`(()=>({screen:document.querySelector('.screen.active')?.id,xi:GCC.state.xi.length,quickHidden:document.getElementById('quickStartSeasonButton')?.hidden,quickDisplay:getComputedStyle(document.getElementById('quickStartSeasonButton')).display,startDisabled:document.getElementById('startSeasonButton')?.disabled,sheetCols:getComputedStyle(document.querySelector('#team .team-sheet-grid')).gridTemplateColumns,overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}))()`);
+  assert(mobileTeam.screen==='team'&&mobileTeam.xi===11&&!mobileTeam.quickHidden&&mobileTeam.quickDisplay!=='none'&&!mobileTeam.startDisabled,'Completed XI mobile controls failed',JSON.stringify(mobileTeam));
+  assert(mobileTeam.overflow<=1,'Completed XI mobile overflow',JSON.stringify(mobileTeam));
+  await shot('03b-team-room-mobile-xi-ready.png');
+  await viewport(1440,900);
 
   const season=await cdp.eval(`(()=>{GCC.startSeason();const appearances={};for(const round of GCC.state.fullSchedule)for(const f of round){appearances[f.home.abbr]=(appearances[f.home.abbr]||0)+1;appearances[f.away.abbr]=(appearances[f.away.abbr]||0)+1}return{screen:document.querySelector('.screen.active')?.id,round:GCC.state.round,fullRounds:GCC.state.fullSchedule.length,userFixtures:GCC.state.schedule.length,appearances,results:GCC.state.results.length,overview:document.getElementById('seasonOverview')?.classList.contains('active'),stage:document.getElementById('seasonStageTitle')?.textContent.trim(),play:document.getElementById('playRound')?.textContent.trim(),seasonNav:[...document.querySelectorAll('[data-season-view]')].filter(x=>x.classList.contains('active')).map(x=>x.dataset.seasonView),overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}})()`);
   assert(season.screen==='season'&&season.round===0&&season.fullRounds===14&&season.userFixtures===14&&season.results===0,'Season start state failed',JSON.stringify(season));
