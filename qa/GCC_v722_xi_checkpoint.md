@@ -13,7 +13,7 @@ This pass rebuilds XI selection around the actual cricket decision: name the ele
 - Input: `game/global_champions_cricket_v7_2_1_season_hub_structure.html`
 - Output: `game/global_champions_cricket_v7_2_2_xi_structure.html`
 - v7.2.1 SHA-256: `e1b1566abbf6c1f11a366f6b9f54e67ef9747a9871ebcf87309fdd7ca4049db3`
-- v7.2.2 SHA-256: `6e1ec524263c1f30366b64be210ae6c6726830ff37dcfaaed4b79e8236d127e6`
+- v7.2.2 SHA-256: `6b9ee248228a677e48ef644aa30aa4d8d7ed520404f9e0b32941d6961b13623f`
 
 Rebuild with:
 
@@ -49,6 +49,14 @@ No batting/bowling headline ratings are displayed before a side exists.
 ### Recommended XI
 
 `GCC.selectRecommendedXI()` uses the existing balanced-XI logic, applies the batting order, clears stale pins/swap state, and excludes players whose dynasty injury status is `OUT`.
+
+The recommendation hierarchy is now explicitly cricket-valid:
+
+1. recognised keeper + at least 20 overs of bowling capacity;
+2. recognised keeper if the squad cannot also cover 20 overs;
+3. pure best-rated XI only when the available squad genuinely contains no recognised keeper.
+
+A recommended XI therefore never voluntarily omits an available recognised keeper just to improve the headline rating.
 
 If fewer than eleven selectable players exist, the recommendation fails safely rather than silently selecting an unavailable player.
 
@@ -89,15 +97,13 @@ The default completed-XI read now prioritises:
 - Batting
 - Bowling
 
-Bowling cover uses the existing validated `oversCapacity` measure. An earlier test exposed `trustedOversCapacity` as unsuitable for player-facing use because it produced a misleading 0.0-over read; that implementation was rejected before checkpointing.
+Bowling cover uses the existing validated `oversCapacity` measure.
 
 ### Progressive detail
 
 Phase metrics, fielding/chemistry and ground-fit material now sit under the collapsed `Detailed XI read` control rather than occupying the default selection screen.
 
 ## Browser acceptance results
-
-### Core interactions
 
 Passed with zero page errors and zero console errors:
 
@@ -111,44 +117,18 @@ Passed with zero page errors and zero console errors:
 - manual eleven-player build
 - Start Season transition
 - mobile layout at 390 x 844
+- unavailable injured player cannot be re-added from a re-rendered manual list
 
-### Recommended XI state
+### Keeper recommendation stress test
 
-Tested full-XI example:
+A 24-run synthetic squad test exercised all eight league slots on each run: 192 recommendation cases total.
 
-- XI: 11
-- Bench: 4
-- Batting: 91 / Elite
-- Bowling: 82 / Strong
-- Keeper: Phil Salt
-- Bowling cover: 20.0 overs
-- XI shape: Elite
-- Detailed XI read: closed by default
+- cases where the available 15-player squad contained a recognised keeper: 168
+- cases where the recommended XI omitted that available keeper: 0
+- duplicate/short XI failures: 0
+- runtime failures: 0
 
-These numbers are test-state observations, not hard-coded acceptance values.
-
-### Incomplete XI state
-
-After removing one player:
-
-- XI: 10
-- available players: 5
-- no headline Batting/Bowling ratings
-- bowling-cover check updates to the actual ten-player group
-
-### Manual imbalance test
-
-A deliberately batting-heavy XI exposed:
-
-- Batting: 93 / Elite
-- Bowling: 68 / Thin
-- Bowling cover: 12.0 overs
-
-This is desired behaviour: the screen now reflects the selected side rather than a projected best XI.
-
-### Injury hardening
-
-A player marked `OUT` was excluded by Recommended XI while the function still returned an eleven-player side. Runtime errors: zero.
+Synthetic squads with no recognised keeper are allowed to surface the shortage rather than inventing one.
 
 ### Density comparison at 1440 x 900
 
@@ -157,11 +137,9 @@ A player marked `OUT` was excluded by Recommended XI while the function still re
 | Empty XI | 1015 px | 244 px |
 | Completed XI | 1015 px | 860 px |
 
-The old empty state also displayed projected ratings and 15 squad rows plus an 11-slot batting-order area. The v7.2.2 empty state is only the naming choice.
-
 ### Full-season regression
 
-From the v7.2.2 build:
+From the final v7.2.2 build:
 
 - Recommended XI selected
 - Season started
@@ -169,7 +147,6 @@ From the v7.2.2 build:
 - final round = 14
 - schedule length = 14
 - postseason CTA remained available
-- qualification state opened correctly when applicable
 - page runtime errors = 0
 - console errors = 0
 
@@ -178,7 +155,8 @@ From the v7.2.2 build:
 At 390 x 844:
 
 - no page-level horizontal overflow
-- First XI is ordered before the bench/profile sections
+- First XI is ordered before bench/profile sections
+- `START SEASON` is immediately available after accepting the recommendation
 - full selection interaction remains usable
 
 ## Guardrails
@@ -192,6 +170,7 @@ At 390 x 844:
 - collapsed detailed read
 - Bowling cover
 - injury exclusion in Recommended XI
+- keeper-preserving recommendation fallback
 - removal of the old `LIKELY XI` presentation
 
 ## Not claimed by this checkpoint
