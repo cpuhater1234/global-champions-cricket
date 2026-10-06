@@ -16,6 +16,9 @@ jobs:
       - name: Rebuild v7.2.4 Signing Week candidate
         run: python qa/rebuild_v724.py
 
+      - name: Record candidate SHA
+        run: sha256sum game/global_champions_cricket_v7_2_4_signing_week_structure.html
+
       - name: Upload reconstructed candidate
         uses: actions/upload-artifact@v4
         with:
