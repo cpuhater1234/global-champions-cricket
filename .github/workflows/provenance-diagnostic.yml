@@ -1,4 +1,4 @@
-name: GCC provenance diagnostic
+name: GCC v7.2.2 exact reconstruction
 
 on:
   push:
@@ -6,46 +6,38 @@ on:
       - work/v7.2-structural-rebuild
 
 jobs:
-  provenance:
+  reconstruct:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Verify exact structural outputs
+      - name: Reconstruct exact v7.2.2
         run: |
           python - <<'PY'
           from pathlib import Path
           import base64, gzip, hashlib, shutil, subprocess, tempfile
-          root=Path('.')
-          game=root/'game'
-          patches=root/'qa'/'patches'
-          src=game/'global_champions_cricket_v7_1_2_premium_polish_candidate.html'
+          root=Path('.'); game=root/'game'; patches=root/'qa'/'patches'
           v720=game/'global_champions_cricket_v7_2_0_launcher_architecture.html'
           v721=game/'global_champions_cricket_v7_2_1_season_hub_structure.html'
           v722=game/'global_champions_cricket_v7_2_2_xi_structure.html'
           def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
-          def norm(p):
-              b=p.read_bytes().replace(b'\r',b'').replace(b'\n',b'')
-              return hashlib.sha256(b).hexdigest()
-          def payload(stem):
-              return ''.join(x.read_text() for x in sorted(patches.glob(stem+'.part*'))).strip()
+          def payload(stem): return ''.join(x.read_text() for x in sorted(patches.glob(stem+'.part*'))).strip()
           def apply(stem, source, target):
-              target.unlink(missing_ok=True)
-              shutil.copy2(source,target)
+              target.unlink(missing_ok=True); shutil.copy2(source,target)
               raw=gzip.decompress(base64.b64decode(payload(stem)))
               with tempfile.NamedTemporaryFile(suffix='.patch',delete=False) as f:
                   f.write(raw); pp=Path(f.name)
-              try:
-                  subprocess.run(['patch','-p0','--forward','--batch','-i',str(pp)],cwd=root,check=True)
-              finally:
-                  pp.unlink(missing_ok=True)
-          print('v712 raw',sha(src))
-          print('v712 normalized',norm(src))
-          print('committed v720 raw',sha(v720))
-          print('committed v720 normalized',norm(v720))
+              try: subprocess.run(['patch','-p0','--forward','--batch','-i',str(pp)],cwd=root,check=True)
+              finally: pp.unlink(missing_ok=True)
+          assert sha(v720)=='365245b618ffa09a799c32006faa09acc896598c5aecfa60501fe7cdd080d4ef'
           apply('v720_to_v721_season_hub.patch.gz.b64',v720,v721)
-          print('v721 from committed v720 raw',sha(v721))
-          print('v721 normalized',norm(v721))
+          assert sha(v721)=='e1b1566abbf6c1f11a366f6b9f54e67ef9747a9871ebcf87309fdd7ca4049db3'
           apply('v721_to_v722_xi.patch.gz.b64',v721,v722)
-          print('v722 from committed v720 chain raw',sha(v722))
-          print('v722 normalized',norm(v722))
+          assert sha(v722)=='6b9ee248228a677e48ef644aa30aa4d8d7ed520404f9e0b32941d6961b13623f'
+          print('EXACT_V722',sha(v722))
           PY
+      - name: Upload exact v7.2.2
+        uses: actions/upload-artifact@v4
+        with:
+          name: gcc-v722-exact
+          path: game/global_champions_cricket_v7_2_2_xi_structure.html
+          if-no-files-found: error
