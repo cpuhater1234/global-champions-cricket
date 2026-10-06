@@ -120,8 +120,8 @@ try{
   await shot('06-mobile-season-resumed.png');
   await noErrors('mobile continue journey');
 
-  const report={candidate:'ed7767c447fb1e0ed48b14bf93f69ec6e5af6f4307611c869b6182996b9291f2',launcher,foundation,recruit,draw,draftStart,drafted,modal,teamChoice,saved,resumed,xi,season,mobileLauncher,mobileResume};
+  const report={candidate:'58d64d554df9ed9090c3d47499258786e97355845c27cb071efa5512ec0c200c',launcher,foundation,recruit,draw,draftStart,drafted,modal,teamChoice,saved,resumed,xi,season,mobileLauncher,mobileResume};
   fs.writeFileSync(path.join(OUT,'browser-report.json'),JSON.stringify(report,null,2));
-  console.log('v7.2.5 preseason journey audit OK');
+  console.log('v7.2.6 preseason journey audit OK');
   console.log(JSON.stringify(report,null,2));
 }finally{cdp.close();proc.kill('SIGTERM');server.close()}
