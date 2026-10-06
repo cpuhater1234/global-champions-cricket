@@ -1,0 +1,44 @@
+name: GCC v7.2.8 Postseason Audit
+
+on:
+  push:
+    branches:
+      - work/v7.2-structural-rebuild
+  workflow_dispatch:
+
+jobs:
+  postseason-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild exact v7.2.8 candidate
+        run: python qa/rebuild_v728.py
+
+      - name: Run v7.2.8 Season hierarchy guardrail
+        run: python qa/check_v728_season.py
+
+      - name: Check postseason audit syntax
+        run: node --check qa/browser_v728_postseason_audit.mjs
+
+      - name: Locate Chrome
+        run: |
+          CHROME="$(which google-chrome || which google-chrome-stable || which chromium || which chromium-browser || true)"
+          test -n "$CHROME"
+          echo "CHROME_BIN=$CHROME" >> "$GITHUB_ENV"
+          "$CHROME" --version
+          node --version
+
+      - name: Run postseason and review audit
+        run: node --experimental-websocket qa/browser_v728_postseason_audit.mjs
+
+      - name: Upload audit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gcc-v728-postseason-audit
+          path: |
+            qa/output/v728-season-journey/
+            game/global_champions_cricket_v7_2_8_season_result_hierarchy.html
+          if-no-files-found: warn
