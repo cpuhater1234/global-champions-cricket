@@ -7,21 +7,35 @@ on:
   workflow_dispatch:
 
 jobs:
-  signing-reconstruct:
+  signing-qa:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
 
-      - name: Rebuild v7.2.4 Signing Week candidate
+      - name: Rebuild exact v7.2.4 candidate
         run: python qa/rebuild_v724.py
 
-      - name: Record candidate SHA
-        run: sha256sum game/global_champions_cricket_v7_2_4_signing_week_structure.html
+      - name: Run static structural guardrail
+        run: python qa/check_v724_signing.py
 
-      - name: Upload reconstructed candidate
+      - name: Locate Chrome
+        run: |
+          CHROME="$(which google-chrome || which google-chrome-stable || which chromium || which chromium-browser || true)"
+          test -n "$CHROME"
+          echo "CHROME_BIN=$CHROME" >> "$GITHUB_ENV"
+          "$CHROME" --version
+          node --version
+
+      - name: Run desktop and mobile Signing Week regression
+        run: node --experimental-websocket qa/browser_v724_signing.mjs
+
+      - name: Upload QA evidence
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: gcc-v724-signing-candidate
-          path: game/global_champions_cricket_v7_2_4_signing_week_structure.html
-          if-no-files-found: error
+          name: gcc-v724-signing-qa
+          path: |
+            qa/output/v724/
+            game/global_champions_cricket_v7_2_4_signing_week_structure.html
+          if-no-files-found: warn
