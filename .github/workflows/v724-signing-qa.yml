@@ -30,6 +30,9 @@ jobs:
       - name: Run desktop and mobile Signing Week regression
         run: node --experimental-websocket qa/browser_v724_signing.mjs
 
+      - name: Run Draft Order Draw acceptance audit
+        run: node --experimental-websocket qa/browser_v724_draft_draw_audit.mjs
+
       - name: Upload QA evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -37,5 +40,6 @@ jobs:
           name: gcc-v724-signing-qa
           path: |
             qa/output/v724/
+            qa/output/draft-draw-audit/
             game/global_champions_cricket_v7_2_4_signing_week_structure.html
           if-no-files-found: warn
