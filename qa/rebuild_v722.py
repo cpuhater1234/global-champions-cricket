@@ -15,7 +15,7 @@ V721 = GAME / "global_champions_cricket_v7_2_1_season_hub_structure.html"
 V722 = GAME / "global_champions_cricket_v7_2_2_xi_structure.html"
 
 EXPECTED_721 = "e1b1566abbf6c1f11a366f6b9f54e67ef9747a9871ebcf87309fdd7ca4049db3"
-EXPECTED_722 = "6e1ec524263c1f30366b64be210ae6c6726830ff37dcfaaed4b79e8236d127e6"
+EXPECTED_722 = "6b9ee248228a677e48ef644aa30aa4d8d7ed520404f9e0b32941d6961b13623f"
 
 def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
