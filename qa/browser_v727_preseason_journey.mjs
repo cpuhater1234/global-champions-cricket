@@ -147,7 +147,41 @@ try{
   await shot('06-mobile-season-resumed.png');
   await noErrors('mobile continue journey');
 
-  const report={candidate:'05b88d1158efa063a90c9d7dbadfbac5278de08f16129ffe7a419a74f8b7e58a',launcher,foundation,recruit,draw,draftStart,drafted,modal,teamChoice,saved,resumed,xi,season,mobileLauncher,mobileResume};
+  // Season gameplay audit: move through actual rounds and verify the screen remains a cricket decision surface.
+  await viewport(1440,900);
+  const round1=await cdp.eval(`(()=>{GCC.playNextRound();const story=document.getElementById('matchStory')?.innerText||'';const next=document.getElementById('seasonStageTitle')?.textContent.trim();return{round:GCC.state.round,results:GCC.state.results.length,story,next,heading:document.querySelector('#season .section-head h2')?.textContent.trim(),runRows:document.querySelectorAll('#seasonRun .season-run-row').length,ladderRows:document.querySelectorAll('#ladderSnapshot .ladder-snapshot-row').length,tickerHidden:document.getElementById('seasonTicker')?.hidden,overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth};})()`);
+  assert(round1.round===1&&round1.results===1&&/ROUND 1/.test(round1.story)&&/OPEN SCORECARD/.test(round1.story),'Round 1 result story failed',JSON.stringify(round1));
+  assert(round1.next&&round1.heading==='Early rounds'&&round1.runRows===4&&round1.ladderRows>=4&&round1.tickerHidden&&round1.overflow<=1,'Round 1 season hierarchy failed',JSON.stringify(round1));
+  await shot('07-season-after-round-1.png');
+
+  const scorecard=await cdp.eval(`(()=>{GCC.openScorecard(1);return{open:document.getElementById('modal')?.classList.contains('open'),innings:document.querySelectorAll('#modal .scorecard-innings').length,text:document.getElementById('modal')?.innerText||''};})()`);
+  assert(scorecard.open&&scorecard.innings===2&&/Batting/.test(scorecard.text)&&/Bowling/.test(scorecard.text),'Round 1 scorecard failed',JSON.stringify(scorecard));
+  await cdp.eval(`GCC.closeModal(); true`);
+
+  const round5=await cdp.eval(`(()=>{while(GCC.state.round<5)GCC.playNextRound();GCC.setSeasonView('overview');const views={};for(const v of ['fixtures','ladder','analysis','players']){GCC.setSeasonView(v);views[v]={active:document.querySelector('[data-season-panel="'+v+'"]')?.classList.contains('active'),text:(document.querySelector('[data-season-panel="'+v+'"]')?.innerText||'').trim().length};}GCC.setSeasonView('overview');return{round:GCC.state.round,results:GCC.state.results.length,heading:document.querySelector('#season .section-head h2')?.textContent.trim(),intro:document.querySelector('#season .section-head p')?.textContent.trim(),runRows:document.querySelectorAll('#seasonRun .season-run-row').length,ladderRows:document.querySelectorAll('#ladderSnapshot .ladder-snapshot-row').length,views,story:(document.getElementById('matchStory')?.innerText||'').trim(),overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth};})()`);
+  assert(round5.round===5&&round5.results===5&&round5.heading==='The season is taking shape'&&round5.runRows===5,'Round 5 overview structure failed',JSON.stringify(round5));
+  assert(Object.values(round5.views).every(v=>v.active&&v.text>0),'One or more Season secondary views failed after results accumulated',JSON.stringify(round5.views));
+  assert(round5.story.length>0&&round5.ladderRows>=4&&round5.overflow<=1,'Round 5 cricket context failed',JSON.stringify(round5));
+  await shot('08-season-round-5.png');
+
+  await viewport(390,844);
+  const mobileRound5=await cdp.eval(`(()=>({round:GCC.state.round,overview:document.getElementById('seasonOverview')?.classList.contains('active'),story:!!document.querySelector('#matchStory .story-card'),navButtons:document.querySelectorAll('.season-view-button').length,overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}))()`);
+  assert(mobileRound5.round===5&&mobileRound5.overview&&mobileRound5.story&&mobileRound5.navButtons===5&&mobileRound5.overflow<=1,'Round 5 mobile Season Hub failed',JSON.stringify(mobileRound5));
+  await shot('09-mobile-season-round-5.png');
+  await viewport(1440,900);
+
+  const round10=await cdp.eval(`(()=>{while(GCC.state.round<10)GCC.playNextRound();GCC.setSeasonView('overview');return{round:GCC.state.round,results:GCC.state.results.length,heading:document.querySelector('#season .section-head h2')?.textContent.trim(),intro:document.querySelector('#season .section-head p')?.textContent.trim(),stage:document.getElementById('seasonStageTitle')?.textContent.trim(),story:(document.getElementById('matchStory')?.innerText||'').trim(),runRows:document.querySelectorAll('#seasonRun .season-run-row').length,overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth};})()`);
+  assert(round10.round===10&&round10.results===10&&round10.heading==='The run home'&&/4 matches left/.test(round10.intro||''),'Round 10 run-home state failed',JSON.stringify(round10));
+  assert(round10.stage&&round10.story.length>0&&round10.runRows>=4&&round10.overflow<=1,'Round 10 context failed',JSON.stringify(round10));
+  await shot('10-season-round-10.png');
+
+  const round14=await cdp.eval(`(()=>{while(GCC.state.round<14)GCC.playNextRound();const qualified=(GCC.state.regularSeasonPosition||99)<=4;const modalOpen=document.getElementById('modal')?.classList.contains('open');if(modalOpen)GCC.closeModal();GCC.setSeasonView('overview');return{round:GCC.state.round,results:GCC.state.results.length,position:GCC.state.regularSeasonPosition,qualified,heading:document.querySelector('#season .section-head h2')?.textContent.trim(),intro:document.querySelector('#season .section-head p')?.textContent.trim(),stage:document.getElementById('seasonStageTitle')?.textContent.trim(),actionsHidden:document.getElementById('seasonActions')?.hidden,cta:(document.getElementById('postSeasonCta')?.innerText||'').trim(),story:(document.getElementById('matchStory')?.innerText||'').trim(),overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth};})()`);
+  assert(round14.round===14&&round14.results===14&&round14.heading==='Regular season complete'&&round14.actionsHidden,'Round 14 completion state failed',JSON.stringify(round14));
+  assert(round14.position>=1&&round14.position<=8&&/REGULAR SEASON COMPLETE/.test(round14.cta)&&round14.story.length>0&&round14.overflow<=1,'Round 14 handoff/context failed',JSON.stringify(round14));
+  await shot('11-season-round-14.png');
+  await noErrors('full regular-season journey');
+
+  const report={candidate:'05b88d1158efa063a90c9d7dbadfbac5278de08f16129ffe7a419a74f8b7e58a',launcher,foundation,recruit,draw,draftStart,drafted,modal,teamChoice,saved,resumed,xi,season,mobileLauncher,mobileResume,round1,scorecard,round5,mobileRound5,round10,round14};
   fs.writeFileSync(path.join(OUT,'browser-report.json'),JSON.stringify(report,null,2));
   console.log('v7.2.7 preseason journey audit OK');
   console.log(JSON.stringify(report,null,2));
