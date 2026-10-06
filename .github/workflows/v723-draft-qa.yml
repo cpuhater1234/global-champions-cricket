@@ -1,0 +1,41 @@
+name: GCC v7.2.3 Draft QA
+
+on:
+  push:
+    branches:
+      - work/v7.2-structural-rebuild
+  workflow_dispatch:
+
+jobs:
+  draft-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild exact v7.2.3 candidate
+        run: python qa/rebuild_v723.py
+
+      - name: Run static structural guardrail
+        run: python qa/check_v723_draft.py
+
+      - name: Locate Chrome
+        run: |
+          CHROME="$(which google-chrome || which google-chrome-stable || which chromium || which chromium-browser || true)"
+          test -n "$CHROME"
+          echo "CHROME_BIN=$CHROME" >> "$GITHUB_ENV"
+          "$CHROME" --version
+          node --version
+
+      - name: Run desktop and mobile draft regression
+        run: node --experimental-websocket qa/browser_v723_draft.mjs
+
+      - name: Upload QA evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gcc-v723-draft-qa
+          path: |
+            qa/output/v723/
+            game/global_champions_cricket_v7_2_3_draft_structure.html
+          if-no-files-found: warn
