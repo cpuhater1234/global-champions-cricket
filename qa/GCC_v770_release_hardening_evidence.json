@@ -1,0 +1,118 @@
+{
+  "phase": "v7.7 Release Hardening",
+  "status": "accepted-no-game-code-change",
+  "tested_binary": {
+    "file": "global_champions_cricket_v7_6_0_matchday_immersion.html",
+    "sha256": "3a8b8bb9b9d67558ea19bda4b595b0ab083209f3ccb0607d209aaad04155b55f"
+  },
+  "careers": [
+    {
+      "seed": 101,
+      "seasons": 19,
+      "years": "2008-2026",
+      "titles": 4,
+      "best_finish": 1,
+      "worst_finish": 8,
+      "final": {
+        "history": 19,
+        "total_contracts": 120,
+        "unique_contracts": 120,
+        "rosters_legal": true,
+        "retired_rostered": 0,
+        "stale_replacements": 0,
+        "archive_rows": 19,
+        "honours_rows": 8,
+        "record_rows": 8
+      },
+      "errors": {
+        "page": 0,
+        "runtime": 0,
+        "console": 0
+      }
+    },
+    {
+      "seed": 202,
+      "seasons": 19,
+      "years": "2008-2026",
+      "titles": 2,
+      "best_finish": 1,
+      "worst_finish": 8,
+      "final": {
+        "history": 19,
+        "total_contracts": 120,
+        "unique_contracts": 120,
+        "rosters_legal": true,
+        "retired_rostered": 0,
+        "stale_replacements": 0,
+        "archive_rows": 19,
+        "honours_rows": 8,
+        "record_rows": 8
+      },
+      "errors": {
+        "page": 0,
+        "runtime": 0,
+        "console": 0
+      }
+    },
+    {
+      "seed": 303,
+      "seasons": 19,
+      "years": "2008-2026",
+      "titles": 4,
+      "best_finish": 1,
+      "worst_finish": 8,
+      "final": {
+        "history": 19,
+        "total_contracts": 120,
+        "unique_contracts": 120,
+        "rosters_legal": true,
+        "retired_rostered": 0,
+        "stale_replacements": 0,
+        "archive_rows": 19,
+        "honours_rows": 8,
+        "record_rows": 8
+      },
+      "errors": {
+        "page": 0,
+        "runtime": 0,
+        "console": 0
+      }
+    }
+  ],
+  "totals": {
+    "careers": 3,
+    "seasons": 57,
+    "archived_seasons": 57
+  },
+  "hardening_route": {
+    "matchday_preview_read_only_sampled_rounds": [
+      1,
+      7,
+      14
+    ],
+    "save_continue_boundary": "fresh JavaScript realm with persisted GCC save between career chunks",
+    "annual_draft_and_final_15": "real product paths every offseason",
+    "injuries_and_replacements": "real product path; XI repaired when required",
+    "finals": "real user/CPU Finals paths",
+    "archive": "audited at completed 2026 career"
+  },
+  "static": {
+    "script_blocks_syntax_clean": 9,
+    "static_dom_ids": 174,
+    "unique_static_dom_ids": 174,
+    "duplicate_static_dom_ids": 0,
+    "todo": 0,
+    "fixme": 0,
+    "debug": 0,
+    "lorem": 0,
+    "temp_copy": 0,
+    "dev_only": 0
+  },
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "game_minor_requiring_patch": 0,
+    "qa_harness_defects_fixed": 2
+  },
+  "environment_note": "Hosted GitHub Actions remained unavailable before checkout (runner_id 0, zero executed steps). Hardening was executed locally against the exact SHA-verified binary. Local Chromium navigation to 127.0.0.1 is administrator-blocked, so the local hardening driver used a fresh-realm document injection plus a persisted storage shim for save/Continue boundaries."
+}
