@@ -7,7 +7,7 @@ GAME=ROOT/'game'
 V732=GAME/'global_champions_cricket_v7_3_2_cricket_language.html'
 V733=GAME/'global_champions_cricket_v7_3_3_visual_identity.html'
 EXPECTED_732='693558f48012bc878672e7dedd4524eaed7616597319d5539dba0c9d9b7994da'
-EXPECTED_733='67d509ff1386df6b95fcb5582d659e48f1baccea6c46e34a7ae9a27a51a703e2'
+EXPECTED_733='88c1c2b21ae7593d77b94babfda74e8df247e1f1e13be7f5de89a80abe62f650'
 
 def sha(p):
     return hashlib.sha256(p.read_bytes()).hexdigest()
@@ -142,6 +142,12 @@ replacement='<span class="brand-mark" aria-hidden="true"><svg class="gcc-brand-s
 t,n=re.subn(pattern,replacement,t,count=1)
 if n!=1:
     raise SystemExit(f'brand raster replacement count: {n}')
+
+launcher_old='<div class="launcher-mark" aria-hidden="true"><svg viewBox="0 0 64 64"><use href="#gcc-crest"></use></svg></div>'
+launcher_new='<div class="launcher-mark" aria-hidden="true"><svg viewBox="0 0 72 64"><use href="#gcc-crest"></use></svg></div>'
+if t.count(launcher_old)!=1:
+    raise SystemExit('launcher mark viewport anchor mismatch')
+t=t.replace(launcher_old,launcher_new,1)
 
 old_version="document.body.dataset.uiVersion = 'v7.3.2-cricket-language';"
 new_version="document.body.dataset.uiVersion = 'v7.3.3-visual-identity';"
