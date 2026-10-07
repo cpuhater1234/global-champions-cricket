@@ -198,18 +198,28 @@ The resulting completed career produced:
 
 Desktop and mobile Archive / detail evidence was visually reviewed. The Archive retained the accepted v7.3.3 cream / green editorial identity and did not become a tabbed analytics dashboard.
 
-The full-horizon-tested pre-polish candidate was:
+The exact accepted candidate was then replayed through the complete horizon in bounded save/resume chunks:
 
-`b77e38ff00af6701cf555aeb407ee4c473e78fe359d64c1c86bf39ed20d40f89`
+`bc3bbb7465ff660fe0028dab19b74f32afcffa494351b03cd2b197830dfae16a`
 
-Reversing exactly the two final copy changes on the accepted candidate reproduces that SHA byte-for-byte.
+The final chunk reached 2026 and passed the end-state Archive gate with:
 
-The final `bc3bbb74...` delta from the full-horizon-tested build is therefore limited to:
+- 19 / 19 archived seasons;
+- 19 rendered season rows;
+- 8 / 8 clubs in league honours;
+- 8 record-book records;
+- populated top-five club legends;
+- working 2008 and 2026 Season Books;
+- 120 rostered players / 120 unique rostered IDs;
+- exactly 15 players on every club;
+- zero retired players left on active rosters;
+- zero runtime errors;
+- zero console errors;
+- zero page-level horizontal overflow at 390px.
 
-1. Archive intro wording: removes a claim about surfacing moves;
-2. timeline heading: becomes career-aware before nineteen seasons.
+Opening and rendering the completed Archive was also verified not to mutate `history`, `manager`, `clubCareer` or `playerCareer`.
 
-No cricket logic, derived-history logic, record calculation, Legacy logic or layout rule changed after the full-horizon run.
+This removes the previous pre-polish/full-horizon distinction: the accepted SHA itself has now completed the real 2008-2026 audit.
 
 ## Hosted Actions
 
@@ -222,8 +232,9 @@ It now defines:
 1. deterministic rebuild from v7.4.1;
 2. static guard;
 3. Archive browser audit;
-4. one real seed-101 2008-2026 longevity run;
-5. evidence artifact upload.
+4. the real seed-101 2008-2026 dynasty in bounded 2008-2014 / 2015-2020 / 2021-2026 save-resume chunks;
+5. final Legacy / Archive / Season Book integrity checks;
+6. evidence artifact upload.
 
 GitHub-hosted runs are still failing before checkout with zero workflow steps and no allocated runner, matching the infrastructure issue already recorded during v7.4.1. Local acceptance therefore remains the operative evidence until hosted execution is available again.
 
