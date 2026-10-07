@@ -4,7 +4,7 @@
 
 Accepted first v7.3 game-experience build on top of the frozen v7.2.16 baseline.
 
-This checkpoint marks the switch from incremental screen polish to product-level game building.
+This checkpoint marks the switch from incremental screen polish to product-level game building. Engineering-green candidates were repeatedly rejected when manual product review still found weak decision ownership, stale copy or visible presentation defects.
 
 ## Source of truth
 
@@ -12,10 +12,9 @@ This checkpoint marks the switch from incremental screen polish to product-level
 - Branch: `work/v7.3-game-experience`
 - Frozen parent: v7.2.16 Launcher Fast Path
 - v7.2.16 SHA-256: `dbf8dc746207c970c11ab650cf13cbca0adae87b641dc63c159f02db0090af2b`
-- v7.3.0 SHA-256: `a9ecb8e4596fc7d751e6abcd840d74529e6b49b0c5ed78b8770badd3db4e191c`
-- Final accepted engineering/product run: `37563393315`
-- Final tested code head: `6fd9e7f0193d0cfb124a01f37b50856af1352258`
-- Accepted build parent: `eaa3d6e268c95ac82fc1523dc1f6c38d35df74a7`
+- v7.3.0 SHA-256: `88e1c5cde4200de3d3a352f85b7bd701476e2c73f3465df4172b7e9e96dcb743`
+- Final accepted engineering/product run: `37563693946`
+- Final tested code head: `e8d174f4e6fe42f84af561fcda847ff279f73c02`
 
 Rebuild and verify:
 
@@ -27,7 +26,7 @@ node --experimental-websocket qa/browser_v730_core_game_experience.mjs
 
 ## Product objective
 
-v7.3.0 fixes the ownership of the XI decision and the season interruption philosophy.
+v7.3.0 fixes ownership of the XI decision and the season interruption philosophy.
 
 The user chooses the eleven.
 
@@ -80,6 +79,12 @@ Once the XI reaches eleven:
 - one of the XI is then chosen to leave
 - XI size and batting-order integrity remain 11/11
 - routine swaps do not trigger a large presentation moment over the Team Room
+
+### Responsive hierarchy
+
+The decorative `SELECTION SHEET` ornament was removed after final manual mobile review found it colliding with the stacked `FIRST XI` heading.
+
+The ornament had no gameplay job, so it was cut rather than repositioned.
 
 ## Injury interruption
 
@@ -159,15 +164,16 @@ Verified:
 - outgoing player leaves XI
 - pending swap state clears
 - routine XI changes do not trigger the large GCC moment overlay
-- no large XI-change moment is shown
 
 ### Mobile
 
 At 390 x 844:
 
-- all 15 squad rows remain accessible
-- XI remains 11/11
+- completed XI hierarchy is clean
+- no `SELECTION SHEET` / `FIRST XI` label collision
 - Season action remains usable
+- batting order remains legible
+- all 15 squad players remain accessible
 - page-level horizontal overflow: 0
 - routine swap feedback does not obstruct the Team Room hierarchy
 
@@ -213,7 +219,7 @@ v7.3.0 was not accepted merely because CI went green.
 
 ### Rejection 1: recommendation-era copy
 
-An engineering-green candidate still injected recommendation-era Team Room language even though the recommendation action had been removed.
+An engineering-green candidate still carried recommendation-era Team Room language even though the recommendation action had been removed.
 
 That state was rejected and the copy layer was corrected.
 
@@ -231,15 +237,27 @@ That state was rejected.
 
 The final build makes the decision explicit and blocks progression until the human repairs the XI.
 
+### Rejection 4: mobile selection-sheet collision
+
+A passing candidate still showed the decorative `SELECTION SHEET` label overlapping the stacked mobile `FIRST XI` heading.
+
+That state was rejected during manual screenshot review. The redundant ornament was removed entirely and the full browser journey re-passed.
+
 This is the practical v7.3 standard: engineering-green is necessary but not sufficient.
 
 ## Visual review decision
 
-Final desktop injury evidence and repaired-XI evidence were manually reviewed after the passing browser run.
+Final evidence from run `37563693946` was manually reviewed after the passing browser journey.
 
-The core decision hierarchy is accepted.
+Accepted states:
 
-One minor pre-existing mobile label collision around the small `SELECTION SHEET` ornament is deliberately deferred to the later consistency/visual pass. It does not reopen the v7.3.0 gameplay workstream.
+- desktop empty XI
+- desktop complete XI
+- mobile complete XI
+- Round 2 injury interruption
+- repaired Round 2 XI
+
+The Team Room now has a coherent decision hierarchy on desktop and mobile, with no accepted known visual collision in this workstream.
 
 ## Scope protection
 
@@ -266,6 +284,14 @@ v7.3.0 does not intentionally redesign or recalibrate:
 
 v7.3.0 Core Game Experience is accepted at SHA-256:
 
-`a9ecb8e4596fc7d751e6abcd840d74529e6b49b0c5ed78b8770badd3db4e191c`
+`88e1c5cde4200de3d3a352f85b7bd701476e2c73f3465df4172b7e9e96dcb743`
+
+Passing acceptance run:
+
+`37563693946`
+
+Tested branch head:
+
+`e8d174f4e6fe42f84af561fcda847ff279f73c02`
 
 The next coherent workstream is **v7.3.1 Dynasty Continuity**, focused on bringing the annual Draft onto the established 2008 Draft interaction family rather than maintaining a cheaper second Draft interface.
