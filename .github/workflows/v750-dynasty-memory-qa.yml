@@ -8,7 +8,7 @@ on:
       - '.github/workflows/v750-dynasty-memory-qa.yml'
       - 'qa/rebuild_v750.py'
       - 'qa/check_v750.py'
-      - 'qa/browser_v750_dynasty_memory.mjs'
+      - 'qa/patches/v750_*.gz.b64'
       - 'qa/GCC_v750_dynasty_memory_plan.md'
   workflow_dispatch:
 
@@ -19,15 +19,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Rebuild accepted v7.4.1 baseline
-        run: python qa/rebuild_v741.py
+      - name: Rebuild v7.5 from accepted v7.4.1
+        run: python qa/rebuild_v750.py
 
-      - name: Verify accepted v7.4.1 baseline
-        run: python qa/check_v741.py
+      - name: Verify v7.5 scope and syntax
+        run: python qa/check_v750.py
 
-      - name: Upload baseline for v7.5 implementation
+      - name: Upload v7.5 candidate
         uses: actions/upload-artifact@v4
         with:
-          name: gcc-v741-baseline-for-v750
-          path: game/global_champions_cricket_v7_4_1_form_symmetry.html
+          name: gcc-v750-dynasty-memory-candidate
+          path: game/global_champions_cricket_v7_5_0_dynasty_memory.html
           if-no-files-found: error
