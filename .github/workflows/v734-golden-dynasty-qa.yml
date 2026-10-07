@@ -13,11 +13,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Rebuild frozen v7.3.3 product
-        run: python qa/rebuild_v733.py
+      - name: Rebuild v7.3.4 Golden product
+        run: python qa/rebuild_v734.py
 
-      - name: Verify frozen v7.3.3 product
-        run: python qa/check_v733.py
+      - name: Verify v7.3.4 Golden product
+        run: python qa/check_v734.py
 
       - name: Check Golden Dynasty harness syntax
         run: node --check qa/browser_v734_golden_dynasty.mjs
@@ -40,5 +40,5 @@ jobs:
           name: gcc-v734-golden-dynasty-qa
           path: |
             qa/output/v734-golden-dynasty/
-            game/global_champions_cricket_v7_3_3_visual_identity.html
+            game/global_champions_cricket_v7_3_4_golden_dynasty.html
           if-no-files-found: warn
