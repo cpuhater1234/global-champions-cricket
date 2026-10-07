@@ -8,6 +8,7 @@ on:
       - '.github/workflows/v750-dynasty-memory-qa.yml'
       - 'qa/rebuild_v750.py'
       - 'qa/check_v750.py'
+      - 'qa/browser_v750_dynasty_memory.mjs'
       - 'qa/patches/v750_*.gz.b64'
       - 'qa/GCC_v750_dynasty_memory_plan.md'
   workflow_dispatch:
@@ -25,9 +26,23 @@ jobs:
       - name: Verify v7.5 scope and syntax
         run: python qa/check_v750.py
 
+      - name: Locate Chrome
+        run: |
+          CHROME="$(which google-chrome || which google-chrome-stable || which chromium || which chromium-browser || true)"
+          test -n "$CHROME"
+          echo "CHROME_BIN=$CHROME" >> "$GITHUB_ENV"
+          "$CHROME" --version
+          node --version
+
+      - name: Run Archive browser smoke test
+        env:
+          GCC_GAME_FILE: global_champions_cricket_v7_5_0_dynasty_memory.html
+        run: node --experimental-websocket qa/browser_v750_dynasty_memory.mjs
+
       - name: Upload v7.5 candidate
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: gcc-v750-dynasty-memory-candidate
           path: game/global_champions_cricket_v7_5_0_dynasty_memory.html
-          if-no-files-found: error
+          if-no-files-found: warn
