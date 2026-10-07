@@ -253,7 +253,7 @@ try{
     return cdp.eval(`(()=>{const card=document.querySelector('#annualDraftPlayers .player-card');if(!card)return null;const m=(card.getAttribute('onclick')||'').match(/userAnnualDraft\\\\((\\\\d+)\\\\)/);if(!m)return null;const id=Number(m[1]),before=GCC.state.dynasty.offseason.pickCursor;Dynasty.userAnnualDraft(id);return{id,before,after:GCC.state.dynasty.offseason.pickCursor,phase:GCC.state.dynasty.offseason.phase,picks:GCC.state.dynasty.offseason.picks.length}})()`);
   }
   let first2010=await makeAnnualPick();
-  if(!first2010){await cdp.eval(`Dynasty.runCpuDraftUntilUser();true`);first2010=await makeAnnualPick()}
+  if(!first2010){await cdp.eval(`Dynasty.runCpuDraftUntilUser();Dynasty.renderOffseason();true`);first2010=await makeAnnualPick()}
   assert(first2010&&first2010.after>first2010.before,'2010 first Draft pick failed',JSON.stringify(first2010));
 
   const draft2010Snap=await cdp.eval(`(()=>({cursor:GCC.state.dynasty.offseason.pickCursor,picks:JSON.stringify(GCC.state.dynasty.offseason.picks),roster:JSON.stringify([...GCC.state.teams[GCC.state.userClub.abbr]].sort((a,b)=>a-b))}))()`);
@@ -264,7 +264,7 @@ try{
   let draftGuard2010=0;
   while((await cdp.eval(`GCC.state.dynasty.offseason?.phase`))==='draft'&&draftGuard2010++<40){
     const p=await makeAnnualPick();
-    if(!p)await cdp.eval(`Dynasty.runCpuDraftUntilUser();true`);
+    if(!p)await cdp.eval(`Dynasty.runCpuDraftUntilUser();Dynasty.renderOffseason();true`);
   }
   const draft2010Done=await cdp.eval(`(()=>{const o=GCC.state.dynasty.offseason,all=Object.values(GCC.state.teams).flat();return{phase:o.phase,complete:o.draftComplete,picks:o.picks.length,userRoster:GCC.state.teams[GCC.state.userClub.abbr].length,total:all.length,unique:new Set(all).size}})()`);
   assert(draft2010Done.phase==='cuts'&&draft2010Done.complete&&draft2010Done.total===draft2010Done.unique&&draft2010Done.userRoster>=15,'2010 Draft completion failed',JSON.stringify(draft2010Done));
