@@ -7,7 +7,7 @@ GAME=ROOT/'game'
 A=GAME/'global_champions_cricket_v7_4_1_form_symmetry.html'
 B=GAME/'global_champions_cricket_v7_5_0_dynasty_memory.html'
 EA='34f3095daeceb732629e443499aa905a553d79aa3045c9d41d2d5e80b2b29643'
-EB='bc3bbb7465ff660fe0028dab19b74f32afcffa494351b03cd2b197830dfae16a'
+EB='abe0c99338990b5a33f23a62e759b853e9118c2e3a97331c91e37ae23fc571c6'
 
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 
