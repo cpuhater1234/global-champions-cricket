@@ -5,8 +5,8 @@ ROOT=Path(__file__).resolve().parents[1]
 GAME=ROOT/'game'; PATCHES=ROOT/'qa'/'patches'
 V730=GAME/'global_champions_cricket_v7_3_0_core_game_experience.html'
 V731=GAME/'global_champions_cricket_v7_3_1_dynasty_continuity.html'
-EXPECTED_730='a9ecb8e4596fc7d751e6abcd840d74529e6b49b0c5ed78b8770badd3db4e191c'
-EXPECTED_731='ef7c04895020da2922af5e12ad830c602f453233b72ec942f92aa03e677ab19f'
+EXPECTED_730='88e1c5cde4200de3d3a352f85b7bd701476e2c73f3465df4172b7e9e96dcb743'
+EXPECTED_731='59385c4244f9ebdd5fb1250ba7f9330828c5c6c084f582b41aecc1bf8c1fb116'
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 def payload(stem):
     parts=sorted(PATCHES.glob(stem+'.part*'))
