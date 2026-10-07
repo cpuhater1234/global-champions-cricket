@@ -70,6 +70,8 @@ A real dynasty was carried through the complete 2008-2026 horizon using seed 101
 
 The final accepted build loaded the real accumulated dynasty history, completed the closing seasons through 2026, rendered the career-end Legacy screen and audited the complete 19-season Archive.
 
+The horizon run was split only at season boundaries to stay within the headless-browser execution ceiling. Each continuation used GCC's own autosave and Continue path. No dynasty history, season record or player statistic was manually reconstructed or injected between chunks.
+
 Verified:
 
 - 19 archived seasons, 2008 through 2026;
@@ -116,6 +118,12 @@ At the end of the accepted career:
 Structured evidence is recorded in:
 
 `qa/GCC_v750_acceptance_evidence.json`
+
+## CI infrastructure note
+
+The repository's hosted GitHub Actions jobs are still failing before checkout with zero executed steps because no runner is being allocated. This is the same infrastructure condition seen during the v7.4.1 work.
+
+The accepted evidence above comes from the exact deterministic rebuild and local Chromium QA against the pinned candidate SHA. The remote workflow remains configured to rebuild and check the candidate when runner allocation is available.
 
 ## Freeze rule
 
