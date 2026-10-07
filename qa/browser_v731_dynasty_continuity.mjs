@@ -55,7 +55,11 @@ try{
   assert(foundation.screen==='draft'&&foundation.user&&foundation.cards===24&&foundation.boardHidden,'Foundation Draft setup/regression failed',JSON.stringify(foundation));
   const drafted=await cdp.eval(`(()=>{const s=GCC.state;let guard=0;while(s.pickIndex<120&&guard<40){GCC.skipToMyPick();if(s.pickIndex>=120)break;const round=Math.floor(s.pickIndex/8),pos=s.pickIndex%8,t=s.draftOrder[round%2===0?pos:7-pos];if(!t||t.abbr!==s.userClub.abbr)throw new Error('skipToMyPick failed');const p=s.pool.filter(x=>x.available&&!x.draftedBy).sort((a,b)=>b.overall-a.overall)[0];GCC.userDraft(p.id);guard++;}return{finished:s.draftFinished,user:s.teams[s.userClub.abbr].length,pickIndex:s.pickIndex};})()`);
   assert(drafted.finished&&drafted.user===15&&drafted.pickIndex===120,'Foundation Draft failed',JSON.stringify(drafted));
-  await cdp.eval(`GCC.closeModal();Dynasty.beginOffseason();Dynasty.runCpuMarket();Dynasty.drawDraftOrder();true`);
+  await sleep(600);
+  const foundationComplete=await cdp.eval(`(()=>({open:document.getElementById('modal')?.classList.contains('open'),text:(document.getElementById('modal')?.innerText||'').trim()}))()`);
+  assert(foundationComplete.open&&/DRAFT COMPLETE/.test(foundationComplete.text),'Foundation Draft completion modal did not settle before offseason handoff',JSON.stringify(foundationComplete));
+  await cdp.eval(`GCC.closeModal();true`);await sleep(300);
+  await cdp.eval(`Dynasty.beginOffseason();Dynasty.runCpuMarket();Dynasty.drawDraftOrder();true`);
   const lottery=await cdp.eval(`(()=>{const o=GCC.state.dynasty.offseason;return{year:GCC.state.year,phase:o.phase,order:o.lottery.length,unique:new Set(o.lottery).size,userPick:o.lottery.indexOf(GCC.state.userClub.abbr)+1}})()`);
   assert(lottery.year===2009&&lottery.phase==='lottery'&&lottery.order===8&&lottery.unique===8&&lottery.userPick>=1,'2009 Draft Draw failed',JSON.stringify(lottery));
 
