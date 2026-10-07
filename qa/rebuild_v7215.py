@@ -12,7 +12,8 @@ EXPECTED_BASE_7215='9c3199f12db3e2273f6fe667d79a141a6a7fb506ab73b1c881a2650b56c5
 EXPECTED_CONTEXT_7215='e27df5c1bb6e7f26419fc08893b6b6a8a686aa098d206eb1edc1a7724b05049f'
 EXPECTED_COPY_7215='90821b2cd6756fc2649e3a579b210935d5a3439d4e721f543b274f192b6a552e'
 EXPECTED_WEATHER_7215='770fb8f811038b60db6f9282a496f71eba06a990ea33cb43380ae184279586d7'
-EXPECTED_7215='b8eea1a14caee62fb4a09755729d9e077eb0994724e7d6a643fcfe1c5c8d3915'
+EXPECTED_HEADER_7215='b8eea1a14caee62fb4a09755729d9e077eb0994724e7d6a643fcfe1c5c8d3915'
+EXPECTED_7215='22dbb185e1c274a60449223b0e3e362470e36be39b9d90e95fc76caec73df78a'
 
 def sha(p):
     return hashlib.sha256(p.read_bytes()).hexdigest()
@@ -68,6 +69,9 @@ apply_inplace('v7215_stable_weather_seed.patch.gz.b64',V7215)
 if sha(V7215)!=EXPECTED_WEATHER_7215:
     raise SystemExit(f'v7.2.15 weather SHA mismatch: {sha(V7215)}')
 apply_inplace('v7215_midseason_team_header.patch.gz.b64',V7215)
+if sha(V7215)!=EXPECTED_HEADER_7215:
+    raise SystemExit(f'v7.2.15 header SHA mismatch: {sha(V7215)}')
+apply_inplace('v7215_round_context_overwrite.patch.gz.b64',V7215)
 if sha(V7215)!=EXPECTED_7215:
     raise SystemExit(f'v7.2.15 SHA mismatch: {sha(V7215)}')
 
@@ -76,4 +80,5 @@ print(f'v7.2.15 BASE OK  {EXPECTED_BASE_7215}')
 print(f'v7.2.15 CONTEXT OK  {EXPECTED_CONTEXT_7215}')
 print(f'v7.2.15 COPY OK  {EXPECTED_COPY_7215}')
 print(f'v7.2.15 WEATHER OK  {EXPECTED_WEATHER_7215}')
+print(f'v7.2.15 HEADER OK  {EXPECTED_HEADER_7215}')
 print(f'v7.2.15 OK  {EXPECTED_7215}')
