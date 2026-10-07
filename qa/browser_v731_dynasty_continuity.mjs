@@ -41,7 +41,7 @@ try{
   const foundation=await cdp.eval("(()=>{Dynasty.requestNewDynasty();GCC.skipLeagueReveal();GCC.finishLeagueReveal();GCC.selectClub(0);GCC.confirmClub();GCC.skipRecruitment();GCC.setupDraft();GCC.skipDraftReveal();GCC.beginDraft();let guard=0;while(GCC.state.pickIndex<120&&guard++<40){GCC.skipToMyPick();if(GCC.state.pickIndex>=120)break;const p=GCC.state.pool.filter(x=>x.available&&!x.draftedBy).sort((a,b)=>b.overall-a.overall)[0];GCC.userDraft(p.id)}return{finished:GCC.state.draftFinished,n:GCC.state.teams[GCC.state.userClub.abbr].length,user:GCC.state.userClub.abbr}})()");
   assert(foundation.finished&&foundation.n===15,'foundation Draft failed',JSON.stringify(foundation));
   await sleep(650);
-  await cdp.eval('GCC.closeModal();Dynasty.beginOffseason();Dynasty.runCpuMarket();Dynasty.drawDraftOrder();true');
+  // The foundation Draft completion ceremony is delayed. Let it render and dismiss it before the accelerated jump to 2009.\n  await sleep(600);\n  await cdp.eval('GCC.closeModal();Dynasty.beginOffseason();Dynasty.runCpuMarket();Dynasty.drawDraftOrder();true');
   const draw=await cdp.eval("(()=>{const o=GCC.state.dynasty.offseason;return{year:GCC.state.year,phase:o.phase,n:o.lottery.length,u:new Set(o.lottery).size,user:o.lottery.indexOf(GCC.state.userClub.abbr)}})()");
   assert(draw.year===2009&&draw.phase==='lottery'&&draw.n===8&&draw.u===8&&draw.user>=0,'2009 Draft draw failed',JSON.stringify(draw));
 
