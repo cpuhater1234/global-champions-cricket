@@ -332,7 +332,7 @@ try{
   }
 
   async function balanceSnapshot(stage){
-    return cdp.eval(`(()=>{const s=GCC.state,d=s.dynasty||{},allIds=Object.values(s.teams).flat(),used=new Set(allIds);
+    return cdp.eval(`(()=>{const stage=${JSON.stringify(stage)},s=GCC.state,d=s.dynasty||{},allIds=Object.values(s.teams).flat(),used=new Set(allIds);
       const active=s.pool.filter(p=>!p.dynastyRetired&&p.available!==false&&(!p.dynastyCareer||((p.dynastyCareer.debutYear||0)<=s.year&&(p.dynastyCareer.exitYear??9999)>=s.year)));
       const keeper=p=>(p.keeping||0)>=65||p.role==='WK-BAT';
       const bowler=p=>(p.maxOvers||0)>=4||(p.bowl||0)>=65;
