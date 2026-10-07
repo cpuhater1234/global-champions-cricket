@@ -8,7 +8,7 @@ PATCHES=ROOT/'qa'/'patches'
 V7214=GAME/'global_champions_cricket_v7_2_14_year_shell_continuity.html'
 V7215=GAME/'global_champions_cricket_v7_2_15_match_day_conditions.html'
 EXPECTED_7214='70810a1d6771c283f9f143d7707a0df90fd5594dfe321677f6f7fe51e6f48e8d'
-EXPECTED_7215='ea140a1a347b78f11be44f62d142f36df66cc1474dc6dfcdc28a1bed15b2a42a'
+EXPECTED_7215='9c3199f12db3e2273f6fe667d79a141a6a7fb506ab73b1c881a2650b56c55bec'
 
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 def payload(stem):
