@@ -7,7 +7,7 @@ GAME=ROOT/'game'
 V733=GAME/'global_champions_cricket_v7_3_3_visual_identity.html'
 V734=GAME/'global_champions_cricket_v7_3_4_golden_dynasty.html'
 EXPECTED_733='88c1c2b21ae7593d77b94babfda74e8df247e1f1e13be7f5de89a80abe62f650'
-EXPECTED_734='3b29b1f3b90ddb4e4728487ef280df0bcee9345c571c3979904b8a8b98b9f19e'
+EXPECTED_734='ac7e0479d3c5fe4b5ae6d3648f71267d74e540af3b127f08e6decfe03d6bb9bc'
 
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 
@@ -18,6 +18,8 @@ if sha(V733)!=EXPECTED_733:
 
 t=V733.read_text('utf-8')
 repls=[
+("function updateYearCopy(){const y=state.year;const stamp=$('seasonStamp');",
+"function updateYearCopy(){const launcher=$('careerLauncher'),meta=launcher&&!launcher.hidden?readSaveMeta():null,y=Number(meta?.year||state.year||2008);const stamp=$('seasonStamp');"),
 ("document.body.dataset.uiVersion = 'v7.3.3-visual-identity';","document.body.dataset.uiVersion = 'v7.3.4-golden-dynasty';"),
 ("function renderLauncher({legacyDetected=false}={}){const e=launcherEls();if(!e.launcher)return;const meta=readSaveMeta(),hasNew=!!safeStorageGet(META_KEY),hasLegacy=legacyDetected;e.launcher.hidden=false;if(e.hero)e.hero.hidden=true;const has=hasNew||hasLegacy;if(e.cont)e.cont.hidden=!has;if(e.career)e.career.hidden=!has;if(has){const clubName=meta?.club?.name||'Dynasty save found';if(e.club)e.club.textContent=clubName;if(e.detail)e.detail.textContent=launcherDetail(meta);if(e.cont)e.cont.textContent=meta?.club?.name?`CONTINUE ${meta.club.name.toUpperCase()}`:'CONTINUE DYNASTY';if(e.title)e.title.textContent='Back to the club.';if(e.summary)e.summary.textContent='Continue your saved dynasty, or start a different 2008 world.';}else{if(e.title)e.title.textContent='Your cricket world.';if(e.summary)e.summary.textContent='Take charge of one club from the foundation season through 2026.';if(e.status)e.status.textContent='';}}",
 "function renderLauncher({legacyDetected=false}={}){const e=launcherEls();if(!e.launcher)return;const meta=readSaveMeta(),hasNew=!!safeStorageGet(META_KEY),hasLegacy=legacyDetected,stamp=$('seasonStamp'),nav=$('nav');e.launcher.hidden=false;if(e.hero)e.hero.hidden=true;const has=hasNew||hasLegacy;if(e.cont)e.cont.hidden=!has;if(e.career)e.career.hidden=!has;if(has){if(stamp)stamp.textContent=String(meta?.year||2008);if(nav)nav.hidden=true;const clubName=meta?.club?.name||'Dynasty save found';if(e.club)e.club.textContent=clubName;if(e.detail)e.detail.textContent=launcherDetail(meta);if(e.cont)e.cont.textContent=meta?.club?.name?`CONTINUE ${meta.club.name.toUpperCase()}`:'CONTINUE DYNASTY';if(e.title)e.title.textContent='Back to the club.';if(e.summary)e.summary.textContent='Continue your saved dynasty, or start a different 2008 world.';}else{if(stamp)stamp.textContent='2008';if(nav)nav.hidden=false;if(e.title)e.title.textContent='Your cricket world.';if(e.summary)e.summary.textContent='Take charge of one club from the foundation season through 2026.';if(e.status)e.status.textContent='';}}"),
