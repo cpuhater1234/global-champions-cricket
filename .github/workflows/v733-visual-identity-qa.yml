@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  cricket-language:
+  visual-identity:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -33,7 +33,7 @@ jobs:
           node --version
 
       - name: Run visual identity journey
-        run: node --experimental-websocket qa/browser_v732_cricket_language.mjs
+        run: node --experimental-websocket qa/browser_v733_visual_identity.mjs
 
       - name: Upload QA evidence
         if: always()
