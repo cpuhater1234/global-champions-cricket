@@ -4,22 +4,24 @@
 
 Accepted final v7.3 product gate.
 
-v7.3.4 does not introduce a new game build. It proves the frozen v7.3.3 product across a continuous 2008-2010 dynasty and records the final product classifications.
+v7.3.4 proves the v7.3 product across a continuous 2008-2010 dynasty and contains one isolated launcher-continuity fix discovered by that test.
 
 ## Source of truth
 
 - Repository: `cpuhater1234/global-champions-cricket`
 - Branch: `work/v7.3.4-golden-dynasty`
-- Frozen game: v7.3.3 Visual Identity
-- Frozen game SHA-256: `88c1c2b21ae7593d77b94babfda74e8df247e1f1e13be7f5de89a80abe62f650`
+- Final game: v7.3.4 Golden Dynasty
+- Parent v7.3.3 SHA-256: `88c1c2b21ae7593d77b94babfda74e8df247e1f1e13be7f5de89a80abe62f650`
+- Final v7.3.4 SHA-256: `ac7e0479d3c5fe4b5ae6d3648f71267d74e540af3b127f08e6decfe03d6bb9bc`
 - Frozen v7.3.3 checkpoint: `9a34d05f27b8d56b0fe123375e1af7a22bc12217`
-- Accepted Golden Dynasty QA head: `f0f877102920f4aff842b3abc190d756c8073336`
-- Accepted Golden Dynasty run: `37571273144`
+- Pre-fix Golden Dynasty QA head: `f0f877102920f4aff842b3abc190d756c8073336`
+- Pre-fix Golden Dynasty run: `37571273144`
+- Final checkpoint run: pending current CI
 - Evidence artifact: `gcc-v734-golden-dynasty-qa`
 
 ## Golden Dynasty result
 
-The unchanged v7.3.3 game completed the full automated 2008-2010 Golden Dynasty route successfully.
+The Golden Dynasty completed the full automated 2008-2010 route. During that test, one launcher continuity defect was isolated: a saved 2010 dynasty could display the unloaded default year (2008) in the masthead before Continue. v7.3.4 fixes that wrapper-only issue and leaves simulation, ratings, product copy and core interaction logic unchanged.
 
 The final run passed:
 
@@ -35,6 +37,26 @@ Runtime quality:
 - page errors: 0
 - runtime exceptions: 0
 - console errors: 0
+
+## Launcher continuity fix
+
+Golden Dynasty identified a genuine repeated-session defect:
+
+- after saving in 2010 and reloading to the launcher, the masthead could show `2008`;
+- the saved club and Continue action were correct;
+- the problem was the generic year decorator reading unloaded in-memory state after the launcher had already read saved metadata.
+
+The final v7.3.4 fix is isolated to the dynasty/launcher wrapper:
+
+- launcher year reads saved metadata while the launcher is open;
+- saved launcher hides in-game navigation until Continue;
+- fresh launcher remains 2008;
+- New Dynasty / 2008 story restore 2008 correctly;
+- Continue restores live dynasty navigation and live year state.
+
+No simulation, ratings, Draft, XI, injury, trade or match-engine code changed.
+
+Classification: **KEEP after isolated fix**
 
 ## 2008
 
@@ -304,7 +326,7 @@ None from the Golden Dynasty.
 
 ## v7.3 conclusion
 
-v7.3 achieved its purpose.
+v7.3 achieved its purpose. The final binary is v7.3.4 with the isolated launcher continuity fix above.
 
 The game now behaves as one coherent dynasty product across foundation year, second season and repeated third-season workflows.
 
