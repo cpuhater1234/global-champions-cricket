@@ -1,9 +1,6 @@
 name: GCC v7.4.1 Form Symmetry QA
 
 on:
-  push:
-    branches:
-      - work/v7.4.1-form-symmetry
   workflow_dispatch:
 
 jobs:
@@ -14,7 +11,7 @@ jobs:
       matrix:
         seed: [101, 202, 303]
     runs-on: ubuntu-24.04
-    timeout-minutes: 18
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -35,10 +32,10 @@ jobs:
           "$CHROME" --version
           node --version
 
-      - name: Run fixed-seed form balance audit
+      - name: Run fixed-seed full-horizon form audit
         env:
           GCC_AUDIT_SEED: ${{ matrix.seed }}
-          GCC_AUDIT_END_YEAR: 2014
+          GCC_AUDIT_END_YEAR: 2026
           GCC_GAME_FILE: global_champions_cricket_v7_4_1_form_symmetry.html
         run: node --experimental-websocket qa/browser_v740_longevity.mjs
 
