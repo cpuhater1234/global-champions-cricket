@@ -12,9 +12,9 @@ v7.3.3 is a visual-system and identity pass only. Gameplay, copy, DOM structure 
 - Branch: `work/v7.3.3-visual-identity`
 - Frozen parent checkpoint: `7452d927cf1c522f585829477cefed1330f3edb1`
 - Parent v7.3.2 SHA-256: `693558f48012bc878672e7dedd4524eaed7616597319d5539dba0c9d9b7994da`
-- v7.3.3 generated SHA-256: `67d509ff1386df6b95fcb5582d659e48f1baccea6c46e34a7ae9a27a51a703e2`
-- Final accepted product/engineering run: `37569688199`
-- Tested code head: `0f4c120b94cd64f3e809c9d35cc68a93d77c3ca0`
+- v7.3.3 generated SHA-256: `88c1c2b21ae7593d77b94babfda74e8df247e1f1e13be7f5de89a80abe62f650`
+- Final accepted product/engineering run: `37570026362`
+- Tested code head: `b6e3d16b4c07d3dce46d527df4d3a74abbcbcb20`
 
 Rebuild and verify:
 
@@ -106,13 +106,13 @@ Manual review accepted:
 - mark is clearly cricket-specific;
 - title hierarchy dominates rather than decoration;
 - large cream field feels intentional rather than unfinished;
-- one primary New Dynasty action;
+- one primary New Dynasty action, rendered in deep green when no save exists;
 - secondary links remain quiet;
 - no line crosses or competes with the hero/year.
 
 ### Continue launcher
 
-Saved dynasty launcher correctly uses the club-specific action, e.g.:
+Saved dynasty launcher correctly hands primary emphasis to the club-specific continue action, e.g.:
 
 `CONTINUE BRISBANE HEAT`
 
