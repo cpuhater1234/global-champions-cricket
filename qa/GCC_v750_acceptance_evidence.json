@@ -1,0 +1,48 @@
+{
+  "release": "v7.5.0 Dynasty Memory & Legacy",
+  "status": "accepted",
+  "parent_sha256": "34f3095daeceb732629e443499aa905a553d79aa3045c9d41d2d5e80b2b29643",
+  "accepted_sha256": "abe0c99338990b5a33f23a62e759b853e9118c2e3a97331c91e37ae23fc571c6",
+  "audit_seed": 101,
+  "completed_through": 2026,
+  "history": {
+    "seasons": 19,
+    "first_year": 2008,
+    "last_year": 2026
+  },
+  "archive": {
+    "season_rows": 19,
+    "honours_rows": 8,
+    "record_book_rows": 8,
+    "club_legends_rows": 5,
+    "records_reconcile": true,
+    "honours_reconcile": true,
+    "legends_reconcile": true,
+    "timeline_reconciles": true,
+    "read_only_state_check": true
+  },
+  "mobile": {
+    "horizontal_overflow": false,
+    "detail_modal_client_height": 758,
+    "detail_modal_scroll_height": 980,
+    "detail_modal_overflow_y": "auto",
+    "viewport_height": 844
+  },
+  "integrity": {
+    "contracted_players": 120,
+    "unique_contracted_players": 120,
+    "clubs": 8,
+    "roster_size_each": 15,
+    "retired_players_rostered": 0,
+    "runtime_errors": 0,
+    "console_errors": 0
+  },
+  "guardrail": {
+    "save_resume_unchanged": true,
+    "simulation_unchanged": true,
+    "balance_unchanged": true,
+    "save_schema_unchanged": true,
+    "duplicate_dom_ids": 0,
+    "script_blocks_syntax_clean": 9
+  }
+}
