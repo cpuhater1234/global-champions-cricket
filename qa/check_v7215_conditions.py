@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 SOURCE=ROOT/'game'/'global_champions_cricket_v7_2_14_year_shell_continuity.html'
 TARGET=ROOT/'game'/'global_champions_cricket_v7_2_15_match_day_conditions.html'
 EXPECTED_SOURCE='70810a1d6771c283f9f143d7707a0df90fd5594dfe321677f6f7fe51e6f48e8d'
-EXPECTED_TARGET='9c3199f12db3e2273f6fe667d79a141a6a7fb506ab73b1c881a2650b56c55bec'
+EXPECTED_TARGET='e27df5c1bb6e7f26419fc08893b6b6a8a686aa098d206eb1edc1a7724b05049f'
 
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 def scripts(t): return re.findall(r'<script(?:\s[^>]*)?>(.*?)</script>',t,re.S|re.I)
@@ -51,7 +51,7 @@ required=[
 "const weatherCondition=style==='SPIN'?(phase==='middle'?(weather.middleSpin||0):0):(phase==='newBall'?(weather.newBallPace||0):0);",
 "const firstInnings = innings(firstClub, secondClub, matchGround,{weather:matchGround.weather});",
 "weather:pair.weather",
-"const nextFx=nextUserFixture();",
+"const nextFx=nextUserFixture();",\n"const fixtureRead=nextFx&&nextOpp?`${nextHome?'Home':'Away'} · ${nextOpp.name} · ${nextGround.ground} · ${nextGround.trait} · ${nextGround.weather.label}. ${nextGround.weather.read}`:'';",
 "selectionKicker.textContent=`ROUND ${nextRound} SELECTION`;",
 "quickStart.textContent=state.fullSchedule?.length?'RETURN TO SEASON':'START SEASON'",
 "if (state.fullSchedule?.length) { renderSeason(); go('season'); return; }",
