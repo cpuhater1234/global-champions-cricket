@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 SOURCE=ROOT/'game'/'global_champions_cricket_v7_2_14_year_shell_continuity.html'
 TARGET=ROOT/'game'/'global_champions_cricket_v7_2_15_match_day_conditions.html'
 EXPECTED_SOURCE='70810a1d6771c283f9f143d7707a0df90fd5594dfe321677f6f7fe51e6f48e8d'
-EXPECTED_TARGET='90821b2cd6756fc2649e3a579b210935d5a3439d4e721f543b274f192b6a552e'
+EXPECTED_TARGET='770fb8f811038b60db6f9282a496f71eba06a990ea33cb43380ae184279586d7'
 
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 def scripts(t): return re.findall(r'<script(?:\s[^>]*)?>(.*?)</script>',t,re.S|re.I)
@@ -34,8 +34,10 @@ else:
     new_nv="function nextVenueFor(c){const fixtures=state.fullSchedule?.[state.round]||[];const fx=fixtures.find(f=>f.home?.abbr===c.abbr||f.away?.abbr===c.abbr);return fx?(G.matchGroundForFixture?G.matchGroundForFixture(fx):fx.home):c}"
     old_ss="if(!state.userClub)return base.toast('Choose your club first');if(state.xi.length!==11)"
     new_ss="if(!state.userClub)return base.toast('Choose your club first');if(state.fullSchedule?.length){specialGo('season');return}if(state.xi.length!==11)"
-    expected8=sa[8].replace(old_nv,new_nv,1).replace(old_ss,new_ss,1)
-    if expected8!=sb[8]: fail.append('Dynasty block changed beyond CPU next-venue weather parity + active-season Team Room guard')
+    old_mig="function migrateLoadedSave(save){if(!save.state.dynasty)save.state.dynasty=freshDynasty();save.state.dynasty.version=SAVE_VERSION;return save}"
+    new_mig="function migrateLoadedSave(save){if(!save.state.dynasty)save.state.dynasty=freshDynasty();if(!Number.isFinite(save.state.weatherSeed))save.state.weatherSeed=(Number(save.state.seed)>>>0)||1;save.state.dynasty.version=SAVE_VERSION;return save}"
+    expected8=sa[8].replace(old_nv,new_nv,1).replace(old_ss,new_ss,1).replace(old_mig,new_mig,1)
+    if expected8!=sb[8]: fail.append('Dynasty block changed beyond CPU next-venue weather parity + active-season Team Room guard + weather-seed migration')
 
 required=[
 "const WEATHER_TYPES = Object.freeze({",
@@ -43,7 +45,11 @@ required=[
 "COOL_DAMP:Object.freeze({code:'COOL_DAMP',label:'Cool & damp',newBallPace:.85,middleSpin:0,boundary:-.55",
 "HOT_DRY:Object.freeze({code:'HOT_DRY',label:'Hot & dry',newBallPace:0,middleSpin:.80,boundary:.35",
 "if(home.ground==='Docklands Stadium') return [['SETTLED',1]];",
-"const roll=detailRng(`${state.seed}|weather|${year}|${round}|${home.abbr}`)();",
+"weatherSeed: 1,",
+"state.weatherSeed = state.seed;",
+"const stableSeed=Number.isFinite(state.weatherSeed)?state.weatherSeed:((Number(state.seed)>>>0)||1);",
+"const roll=detailRng(`${stableSeed}|weather|${year}|${round}|${home.abbr}`)();",
+"if(!Number.isFinite(save.state.weatherSeed))save.state.weatherSeed=(Number(save.state.seed)>>>0)||1;",
 "baseConditions:base,",
 "pace:(base.pace||0)+weather.newBallPace",
 "spin:(base.spin||0)+weather.middleSpin",
@@ -77,7 +83,8 @@ for marker in required:
     if marker not in b: fail.append('Missing match-day marker: '+marker)
 
 for forbidden in [
-    'humidityBonus','humidity bonus','DLS','Duckworth','abandoned due to rain','rain-shortened','weatherReroll'
+    'humidityBonus','humidity bonus','DLS','Duckworth','abandoned due to rain','rain-shortened','weatherReroll',
+    'detailRng(`${state.seed}|weather|'
 ]:
     script_text='\n'.join(sb).lower() if sb else ''
     if forbidden.lower() in script_text: fail.append('Unapproved weather mechanic present: '+forbidden)
@@ -106,4 +113,6 @@ print('Changed script blocks: 5, 7, 8 only')
 print('Player/club database unchanged: yes')
 print('CPU next-venue context uses the same effective match ground: yes')
 print('Active season cannot be reset from Team Room: yes')
+print('Weather identity is independent of live match RNG: yes')
+print('Legacy saves receive a persistent weather seed on migration: yes')
 print('No DLS / abandonment / humidity shortcut introduced: yes')
