@@ -11,6 +11,7 @@ on:
       - 'qa/browser_v750_dynasty_memory.mjs'
       - 'qa/patches/v750_*.gz.b64'
       - 'qa/GCC_v750_dynasty_memory_plan.md'
+      - 'qa/GCC_v750_dynasty_memory_checkpoint.md'
   workflow_dispatch:
 
 jobs:
@@ -39,10 +40,19 @@ jobs:
           GCC_GAME_FILE: global_champions_cricket_v7_5_0_dynasty_memory.html
         run: node --experimental-websocket qa/browser_v750_dynasty_memory.mjs
 
-      - name: Upload v7.5 candidate
+      - name: Run one real 2008-2026 dynasty
+        env:
+          GCC_AUDIT_SEED: 101
+          GCC_AUDIT_END_YEAR: 2026
+          GCC_GAME_FILE: global_champions_cricket_v7_5_0_dynasty_memory.html
+        run: node --experimental-websocket qa/browser_v740_longevity.mjs
+
+      - name: Upload v7.5 evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: gcc-v750-dynasty-memory-candidate
-          path: game/global_champions_cricket_v7_5_0_dynasty_memory.html
+          name: gcc-v750-dynasty-memory-evidence
+          path: |
+            game/global_champions_cricket_v7_5_0_dynasty_memory.html
+            qa/output/v740-longevity/
           if-no-files-found: warn
