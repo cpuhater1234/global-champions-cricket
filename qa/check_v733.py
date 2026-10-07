@@ -7,7 +7,7 @@ GAME=ROOT/'game'
 A=GAME/'global_champions_cricket_v7_3_2_cricket_language.html'
 B=GAME/'global_champions_cricket_v7_3_3_visual_identity.html'
 EA='693558f48012bc878672e7dedd4524eaed7616597319d5539dba0c9d9b7994da'
-EB='67d509ff1386df6b95fcb5582d659e48f1baccea6c46e34a7ae9a27a51a703e2'
+EB='88c1c2b21ae7593d77b94babfda74e8df247e1f1e13be7f5de89a80abe62f650'
 
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 if not B.exists():
@@ -51,12 +51,14 @@ required=[
     '/* v7.3.3 VISUAL IDENTITY',
     '.topbar::after{display:none}',
     '.launcher-kicker{display:none}',
+    '.launcher-actions:has(#launcherContinue[hidden]) #launcherNew{background:var(--deep);border-color:var(--deep);color:#fff}',
     '.section-head::after{background:var(--identity-rule);opacity:1}',
     '.button.primary{background:var(--deep);border-color:var(--deep);box-shadow:none!important}',
     '#team .team-selection-panel::before{display:none}',
     '<symbol id="gcc-crest" viewBox="0 0 72 64">',
     '<circle cx="56" cy="39" r="9"',
     '<svg class="gcc-brand-symbol" viewBox="0 0 72 64"><use href="#gcc-crest"></use></svg>',
+    '<div class="launcher-mark" aria-hidden="true"><svg viewBox="0 0 72 64"><use href="#gcc-crest"></use></svg></div>',
 ]
 for needle in required:
     if needle not in b: raise SystemExit(f'missing v7.3.3 visual identity marker: {needle}')
