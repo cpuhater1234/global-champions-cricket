@@ -7,6 +7,7 @@ import {spawn} from 'node:child_process';
 const ROOT=process.cwd();
 const GAME=path.join(ROOT,'game','global_champions_cricket_v7_4_0_league_history.html');
 const OUT=path.join(ROOT,'qa','output','v740-longevity');
+const AUDIT_SEED=Number(process.env.GCC_AUDIT_SEED||0);
 fs.mkdirSync(OUT,{recursive:true});
 function fail(m,d=''){throw new Error(d?`${m}: ${d}`:m)}
 function assert(c,m,d=''){if(!c)fail(m,d)}
@@ -57,7 +58,7 @@ try{
   assert(freshMobile.markW===52&&freshMobile.markH===47&&freshMobile.brandW===34&&freshMobile.topH===68&&freshMobile.overflow<=1,'Fresh mobile launcher visual gate failed',JSON.stringify(freshMobile));
   await shot('00b-launcher-fresh-mobile.png');await viewport(1440,900);await sleep(200);
 
-  const clubs=await cdp.eval(`(()=>{Dynasty.requestNewDynasty();GCC.skipLeagueReveal();GCC.finishLeagueReveal();return{screen:document.querySelector('.screen.active')?.id,heading:document.querySelector('#clubs h2')?.textContent.trim(),copy:document.querySelector('#clubs .section-head p')?.textContent.trim(),stage:document.querySelector('#clubs .stage-note')?.innerText||'',overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}})()`);
+  const clubs=await cdp.eval(`(()=>{Dynasty.requestNewDynasty();if(${AUDIT_SEED}>0){GCC.state.seed=${AUDIT_SEED};GCC.state.weatherSeed=${AUDIT_SEED}}GCC.skipLeagueReveal();GCC.finishLeagueReveal();return{screen:document.querySelector('.screen.active')?.id,heading:document.querySelector('#clubs h2')?.textContent.trim(),copy:document.querySelector('#clubs .section-head p')?.textContent.trim(),stage:document.querySelector('#clubs .stage-note')?.innerText||'',overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}})()`);
   assert(clubs.screen==='clubs'&&clubs.heading==='Which club is yours?'&&/ground/.test(clubs.copy)&&/Pick your club/.test(clubs.stage)&&clubs.overflow<=1,'Club-choice language gate failed',JSON.stringify(clubs));
   await shot('01-club-choice.png');
 
@@ -425,7 +426,7 @@ try{
   const longIntegrity=await cdp.eval(`(()=>{const s=GCC.state,d=s.dynasty||{},all=Object.values(s.teams).flat(),badRatings=s.pool.filter(p=>['overall','bat','bowl','power','control','pace','fielding','keeping'].some(k=>Number.isFinite(Number(p[k]))&&(Number(p[k])<1||Number(p[k])>99))).map(p=>p.name);const retiredRostered=s.pool.filter(p=>p.dynastyRetired&&all.includes(p.id)).map(p=>p.name);return{year:s.year,round:s.round,total:all.length,unique:new Set(all).size,rosters:Object.fromEntries(s.league.map(c=>[c.abbr,(s.teams[c.abbr]||[]).length])),badRatings,retiredRostered,replacements:Object.keys(d.replacementOf||{}).length,history:(d.history||[]).length}})()`);
   assert(longIntegrity.year===2014&&longIntegrity.total===longIntegrity.unique&&Object.values(longIntegrity.rosters).every(n=>n===15)&&longIntegrity.badRatings.length===0&&longIntegrity.retiredRostered.length===0,'Longevity final integrity failed',JSON.stringify(longIntegrity));
 
-  const longevityReport={testedSha:'6317af10bbda0aa8ee1f61c825d12097c216ec58beef54df2f2524e75f1136eb',strategy:'role-aware current/dynasty value',longevity,longIntegrity,pageErrors:await cdp.eval('window.__qaErrors||[]'),runtimeErrors,consoleErrors};
+  const longevityReport={testedSha:'6317af10bbda0aa8ee1f61c825d12097c216ec58beef54df2f2524e75f1136eb',auditSeed:AUDIT_SEED||null,strategy:'role-aware current/dynasty value',longevity,longIntegrity,pageErrors:await cdp.eval('window.__qaErrors||[]'),runtimeErrors,consoleErrors};
   fs.writeFileSync(path.join(OUT,'longevity-report.json'),JSON.stringify(longevityReport,null,2));
   console.log(JSON.stringify({years:longevity.filter(x=>x.year).map(x=>({year:x.year,position:x.season.position,champion:x.season.review.champion,avgInnings:x.season.avgInnings,injuries:x.season.injuries,trades:x.season.trades})),integrity:longIntegrity},null,2));
 
