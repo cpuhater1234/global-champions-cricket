@@ -1,0 +1,53 @@
+name: GCC v7.4.1 Form Symmetry QA
+
+on:
+  push:
+    branches:
+      - work/v7.4.1-form-symmetry
+  workflow_dispatch:
+
+jobs:
+  form-seed:
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        seed: [101, 202, 303]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild v7.4.1 candidate
+        run: python qa/rebuild_v741.py
+
+      - name: Verify v7.4.1 candidate
+        run: python qa/check_v741.py
+
+      - name: Check longevity harness syntax
+        run: node --check qa/browser_v740_longevity.mjs
+
+      - name: Locate Chrome
+        run: |
+          CHROME="$(which google-chrome || which google-chrome-stable || which chromium || which chromium-browser || true)"
+          test -n "$CHROME"
+          echo "CHROME_BIN=$CHROME" >> "$GITHUB_ENV"
+          "$CHROME" --version
+          node --version
+
+      - name: Run fixed-seed form balance audit
+        env:
+          GCC_AUDIT_SEED: ${{ matrix.seed }}
+          GCC_AUDIT_END_YEAR: 2014
+          GCC_GAME_FILE: global_champions_cricket_v7_4_1_form_symmetry.html
+        run: node --experimental-websocket qa/browser_v740_longevity.mjs
+
+      - name: Upload form-balance evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gcc-v741-form-seed-${{ matrix.seed }}
+          path: |
+            qa/output/v740-longevity/
+            game/global_champions_cricket_v7_4_1_form_symmetry.html
+          if-no-files-found: warn
