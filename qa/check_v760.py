@@ -7,6 +7,7 @@ GAME=ROOT/'game'
 A=GAME/'global_champions_cricket_v7_5_0_dynasty_memory.html'
 B=GAME/'global_champions_cricket_v7_6_0_matchday_immersion.html'
 EA='abe0c99338990b5a33f23a62e759b853e9118c2e3a97331c91e37ae23fc571c6'
+EB='3a8b8bb9b9d67558ea19bda4b595b0ab083209f3ccb0607d209aaad04155b55f'
 
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 
@@ -31,6 +32,7 @@ def extract(src,name):
 
 if not B.exists(): subprocess.run([sys.executable,str(ROOT/'qa'/'rebuild_v760.py')],cwd=ROOT,check=True)
 if sha(A)!=EA: raise SystemExit(f'v7.5 parent SHA mismatch: {sha(A)}')
+if sha(B)!=EB: raise SystemExit(f'accepted v7.6 SHA mismatch: {sha(B)}')
 a=A.read_text('utf-8'); b=B.read_text('utf-8')
 
 for marker in [
@@ -72,7 +74,7 @@ if 'onclick="GCC.openMatchdayPreview()"' not in b: raise SystemExit('manual roun
 if 'onclick="GCC.simulateSeason()"' not in b: raise SystemExit('Run Season fast path changed')
 print('v7.6 Matchday guardrail OK')
 print('Parent SHA-256',EA)
-print('Candidate SHA-256',sha(B))
+print('Accepted v7.6 SHA-256',EB)
 print('Simulation / save / dynasty mechanics unchanged: yes')
 print('Matchday preview statically read-only: yes')
 print('9 script blocks syntax-clean; duplicate DOM IDs: 0')
