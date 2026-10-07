@@ -52,6 +52,7 @@ new_finish=new_finish.replace(legacy_anchor,legacy_world+legacy_anchor,1)
 t=t[:start]+new_finish+t[end:]
 
 t=replace_once(t,'Every season, title, player career and move becomes part of the world you are building.','Every season, title and player record becomes part of the world you are building.','Archive intro copy')
+t=replace_once(t,'Nineteen seasons are now history. Your legacy starts with championships, then the finals runs and winning seasons that followed.','Nineteen seasons are now history. Titles, Finals runs and the seasons between them now sit in the GCC record book.','Legacy intro copy')
 t=replace_once(t,'    openSeasonReview,\n    renderTeam,','    openSeasonReview,\n    reviewSeasonValue,\n    renderTeam,','GCC review value export')
 t=replace_once(t,'openArchive,backFromArchive,finishCareer','openArchive,openArchiveSeason,backFromArchive,finishCareer','Dynasty export')
 t=replace_once(t,"document.body.dataset.uiVersion = 'v7.4.1-form-symmetry';","document.body.dataset.uiVersion = 'v7.5.0-dynasty-memory';",'UI version')
