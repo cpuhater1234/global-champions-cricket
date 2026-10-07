@@ -1,0 +1,58 @@
+name: GCC v7.6 Matchday QA
+
+on:
+  push:
+    branches:
+      - work/v7.6-matchday-immersion
+    paths:
+      - '.github/workflows/v760-matchday-qa.yml'
+      - 'qa/rebuild_v760.py'
+      - 'qa/check_v760.py'
+      - 'qa/browser_v760_matchday_qa.mjs'
+      - 'qa/browser_v760_matchday_depth_qa.mjs'
+      - 'qa/browser_v760_matchday_edges.mjs'
+      - 'qa/browser_v760_final_regression.mjs'
+      - 'qa/patches/v750_to_v760_matchday.patch.gz.b64'
+      - 'qa/GCC_v760_matchday_immersion_plan.md'
+  workflow_dispatch:
+
+jobs:
+  matchday:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild v7.6 from accepted v7.5
+        run: python qa/rebuild_v760.py
+
+      - name: Verify v7.6 protected scope
+        run: python qa/check_v760.py
+
+      - name: Locate Chrome
+        run: |
+          CHROME="$(which google-chrome || which google-chrome-stable || which chromium || which chromium-browser || true)"
+          test -n "$CHROME"
+          echo "CHROME_BIN=$CHROME" >> "$GITHUB_ENV"
+          "$CHROME" --version
+          node --version
+
+      - name: Prove Matchday determinism
+        run: node --experimental-websocket qa/browser_v760_matchday_qa.mjs
+
+      - name: Test Matchday through the season
+        run: node --experimental-websocket qa/browser_v760_matchday_depth_qa.mjs
+
+      - name: Test dynasty Matchday edges
+        run: node --experimental-websocket qa/browser_v760_matchday_edges.mjs
+
+      - name: Lock result, scorecard and fast path
+        run: node --experimental-websocket qa/browser_v760_final_regression.mjs
+
+      - name: Upload v7.6 candidate
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gcc-v760-matchday-candidate
+          path: game/global_champions_cricket_v7_6_0_matchday_immersion.html
+          if-no-files-found: warn
