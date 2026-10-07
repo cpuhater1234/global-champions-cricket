@@ -16,8 +16,8 @@ v7.3.4 proves the v7.3 product across a continuous 2008-2010 dynasty and contain
 - Frozen v7.3.3 checkpoint: `9a34d05f27b8d56b0fe123375e1af7a22bc12217`
 - Pre-fix Golden Dynasty QA head: `f0f877102920f4aff842b3abc190d756c8073336`
 - Pre-fix Golden Dynasty run: `37571273144`
-- Final checkpoint run: `37573629866`
-- Final tested QA head: `65b78806a2668308d94598ae5976e88f94f28de3`
+- Final checkpoint run: `37573875287`
+- Final tested QA head: `9adc949accfc62632df05cea048e9fb5bc7ba2c0`
 - Evidence artifact: `gcc-v734-golden-dynasty-qa`
 
 ## Golden Dynasty result
@@ -26,8 +26,8 @@ The Golden Dynasty completed the full automated 2008-2010 route. During that tes
 
 The final run passed:
 
-- frozen v7.3.3 deterministic rebuild;
-- frozen v7.3.3 static/product guardrail;
+- deterministic v7.3.4 rebuild from the frozen v7.3.3 parent;
+- v7.3.4 static/product guardrail, including launcher-continuity scope protection;
 - Golden Dynasty harness syntax;
 - Chrome launch;
 - full 2008-2010 Golden Dynasty;
