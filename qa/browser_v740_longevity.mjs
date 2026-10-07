@@ -5,7 +5,7 @@ import path from 'node:path';
 import {spawn} from 'node:child_process';
 
 const ROOT=process.cwd();
-const GAME=path.join(ROOT,'game','global_champions_cricket_v7_4_0_league_history.html');
+const GAME=path.join(ROOT,'game',process.env.GCC_GAME_FILE||'global_champions_cricket_v7_4_0_league_history.html');
 const OUT=path.join(ROOT,'qa','output','v740-longevity');
 const AUDIT_SEED=Number(process.env.GCC_AUDIT_SEED||0);
 const AUDIT_END_YEAR=Number(process.env.GCC_AUDIT_END_YEAR||2014);
