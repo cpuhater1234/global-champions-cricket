@@ -97,6 +97,7 @@ protected=[
     'resolveCpuFinalsOffscreen',
     'formNegRoll',
     'updateFormForMatch',
+    'reviewSeasonValue',
 ]
 for fn in protected:
     if extract(a,fn)!=extract(b,fn):
@@ -104,8 +105,10 @@ for fn in protected:
 
 if 'playerStats' not in extract(b,'archiveSeasonPlayers') or 'archiveSeasonPlayers' not in extract(b,'archiveCareerAggregate'):
     raise SystemExit('career records are not derived from archived playerStats')
-if 'reviewSeasonValue' not in extract(b,'archiveSeasonLeaders'):
-    raise SystemExit('season standout does not reuse reviewSeasonValue')
+if 'G.reviewSeasonValue' not in extract(b,'archiveSeasonLeaders'):
+    raise SystemExit('season standout does not reuse accepted reviewSeasonValue')
+if 'reviewSeasonValue,' not in b:
+    raise SystemExit('accepted reviewSeasonValue is not exposed read-only to Dynasty Archive')
 
 helper_blob='\n'.join(extract(b,n) for n in [
     'archiveCareerAggregate',
