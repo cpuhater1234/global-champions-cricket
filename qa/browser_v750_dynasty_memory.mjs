@@ -70,10 +70,11 @@ async function main(){
     honours:document.querySelectorAll('#archive .archive-honour-row').length,
     records:document.querySelectorAll('#archive .archive-record').length,
     legends:document.querySelectorAll('#archive .archive-legend-row').length,
+    timelineHeading:document.querySelector('#archive .archive-section:last-child h3')?.textContent.trim()||'',
     overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth
   })`);
   const d=JSON.parse(desktop);
-  if(d.sections!==4||d.rows!==3||d.records!==8||d.legends!==3||d.overflow)throw new Error('desktop archive assertion '+desktop);
+  if(d.sections!==4||d.rows!==3||d.honours!==8||d.records!==8||d.legends!==3||d.timelineHeading!=='The seasons so far'||d.overflow)throw new Error('desktop archive assertion '+desktop);
   await ev('Dynasty.openArchiveSeason(2009)');await sleep(50);
   const detail=await ev(`JSON.stringify({
     open:document.getElementById('modal').classList.contains('open'),
@@ -84,6 +85,13 @@ async function main(){
   const x=JSON.parse(detail);
   if(!x.open||!x.summary.includes('Finished 3rd')||x.leaders!==3||x.tables!==2)throw new Error('season detail assertion '+detail);
   await ev("GCC.closeModal()");
+  const beforeHistory=await ev(`JSON.stringify({history:GCC.state.dynasty.history,manager:GCC.state.dynasty.manager,clubCareer:GCC.state.dynasty.clubCareer,playerCareer:GCC.state.dynasty.playerCareer})`);
+  await ev(`(()=>{GCC.state.dynasty.history.push({year:2007,champion:null,userPosition:8,wins:3,losses:11,played:14,finals:false,grandFinal:false,title:false,roster:[]});Dynasty.openArchive();return true})()`);await sleep(30);
+  const oldRecord=await ev(`JSON.stringify({rows:document.querySelectorAll('#archive .archive-season').length,last:document.querySelector('#archive .archive-season:last-child')?.innerText||''})`);
+  const o=JSON.parse(oldRecord);if(o.rows!==4||!o.last.includes('2007'))throw new Error('older archive record graceful-load assertion '+oldRecord);
+  await ev(`GCC.state.dynasty.history.pop();Dynasty.openArchive();true`);
+  const afterHistory=await ev(`JSON.stringify({history:GCC.state.dynasty.history,manager:GCC.state.dynasty.manager,clubCareer:GCC.state.dynasty.clubCareer,playerCareer:GCC.state.dynasty.playerCareer})`);
+  if(beforeHistory!==afterHistory)throw new Error('Archive mutated historical cricket state');
   await call('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});
   await sleep(100);
   const mobile=await ev(`JSON.stringify({sw:document.documentElement.scrollWidth,cw:document.documentElement.clientWidth,cols:getComputedStyle(document.querySelector('#archive .archive-record-grid')).gridTemplateColumns})`);
