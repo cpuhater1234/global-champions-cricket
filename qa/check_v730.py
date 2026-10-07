@@ -5,7 +5,7 @@ ROOT=Path(__file__).resolve().parents[1]
 SOURCE=ROOT/'game'/'global_champions_cricket_v7_2_16_launcher_fast_path.html'
 TARGET=ROOT/'game'/'global_champions_cricket_v7_3_0_core_game_experience.html'
 EXPECTED_SOURCE='dbf8dc746207c970c11ab650cf13cbca0adae87b641dc63c159f02db0090af2b'
-EXPECTED_TARGET='a9ecb8e4596fc7d751e6abcd840d74529e6b49b0c5ed78b8770badd3db4e191c'
+EXPECTED_TARGET='88e1c5cde4200de3d3a352f85b7bd701476e2c73f3465df4172b7e9e96dcb743'
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def scripts(t):return re.findall(r'<script(?:\s[^>]*)?>(.*?)</script>',t,re.S|re.I)
 if not TARGET.exists():subprocess.run([sys.executable,str(ROOT/'qa'/'rebuild_v730.py')],cwd=ROOT,check=True)
@@ -42,7 +42,8 @@ for forbidden in [
   "autoRepairXI();const before=state.round",
   "const available=roster.filter(p=>!state.xi.includes(p.id))",
   "Start from the recommended side",
-  "Start with the recommendation"
+  "Start with the recommendation",
+  'content:"SELECTION SHEET"'
 ]:
     if forbidden in b:fail.append('Rejected v7.2 selection behaviour remains: '+forbidden)
 # Product guardrail: implementation can retain the internal recommendation helper for CPU/legacy testing,

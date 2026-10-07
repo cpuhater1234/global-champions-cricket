@@ -6,7 +6,7 @@ GAME=ROOT/'game'; PATCHES=ROOT/'qa'/'patches'
 V7216=GAME/'global_champions_cricket_v7_2_16_launcher_fast_path.html'
 V730=GAME/'global_champions_cricket_v7_3_0_core_game_experience.html'
 EXPECTED_7216='dbf8dc746207c970c11ab650cf13cbca0adae87b641dc63c159f02db0090af2b'
-EXPECTED_730='a9ecb8e4596fc7d751e6abcd840d74529e6b49b0c5ed78b8770badd3db4e191c'
+EXPECTED_730='88e1c5cde4200de3d3a352f85b7bd701476e2c73f3465df4172b7e9e96dcb743'
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 def payload(stem):
     parts=sorted(PATCHES.glob(stem+'.part*'))
@@ -35,6 +35,7 @@ apply('v7216_to_v730_core.patch.gz.b64',V7216,V730)
 apply_in_place('v730_copy_fix.patch.gz.b64',V730)
 apply_in_place('v730_product_acceptance.patch.gz.b64',V730)
 apply_in_place('v730_injury_clarity.patch.gz.b64',V730)
+apply_in_place('v730_remove_selection_sheet.patch.gz.b64',V730)
 if sha(V730)!=EXPECTED_730: raise SystemExit(f'v7.3.0 SHA mismatch: {sha(V730)}')
 print(f'v7.2.16 OK  {EXPECTED_7216}')
 print(f'v7.3.0 OK  {EXPECTED_730}')
