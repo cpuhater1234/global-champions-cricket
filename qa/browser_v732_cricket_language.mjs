@@ -86,7 +86,7 @@ try{
 
   await cdp.eval(`(()=>{while(GCC.state.round<14)GCC.playNextRound();const row=GCC.state.table[GCC.state.userClub.abbr];row.pts=999;row.nrr=9;GCC.state.regularSeasonPosition=1;GCC.renderSeason();GCC.proceedPostSeason();return true})()`);
   const finals=await cdp.eval(`(()=>({screen:document.querySelector('.screen.active')?.id,title:document.getElementById('finalsTitle')?.textContent.trim(),intro:document.getElementById('finalsIntro')?.textContent.trim(),stage:document.getElementById('finalsStageCopy')?.textContent.trim(),overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}))()`);
-  assert(finals.screen==='finals'&&finals.title==='Four clubs remain.'&&/no second chance/.test(finals.intro)&&finals.stage.length>10&&finals.overflow<=1,'Finals regression gate failed',JSON.stringify(finals));
+  assert(finals.screen==='finals'&&finals.title==='Four clubs remain.'&&/One loss ends the season/.test(finals.intro)&&/path begins/.test(finals.stage)&&finals.overflow<=1,'Finals regression gate failed',JSON.stringify(finals));
   await shot('09-finals.png');
   await cdp.eval(`GCC.simulateFinals();GCC.advanceFinals();GCC.simulateFinals();GCC.openSeasonReview();true`);
   const review=await cdp.eval(`(()=>({screen:document.querySelector('.screen.active')?.id,strength:(document.querySelector('#reviewStrengths')?.parentElement?.innerText||'').trim(),weak:(document.querySelector('#reviewWeaknesses')?.parentElement?.innerText||'').trim(),book:(document.getElementById('reviewTable')?.parentElement?.innerText||'').trim(),overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}))()`);
