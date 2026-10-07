@@ -69,7 +69,7 @@ try{
   assert(drafted.finished&&drafted.n===15,'Foundation Draft completion failed',JSON.stringify(drafted));await sleep(650);await cdp.eval(`GCC.closeModal();GCC.enterTeamRoom();true`);
 
   const team=await cdp.eval(`(()=>{const intro=document.querySelector('#team .section-head p')?.textContent.trim(),lead=document.getElementById('selectionCopy')?.textContent.trim(),squad=document.getElementById('squadColumnNote')?.textContent.trim(),order=document.querySelector('#team .team-order-note')?.textContent.trim(),swap=document.getElementById('swapStatus')?.textContent.trim();return{intro,lead,squad,order,swap,rows:document.querySelectorAll('#xiList .xi-row').length,overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}})()`);
-  assert(/natural batting order/.test(team.intro)&&/innings differently/.test(team.intro)&&/Build a balanced XI/.test(team.lead)&&/Selected players stay visible/.test(team.squad)&&/natural order/.test(team.order)&&/Bench changes become available/.test(team.swap)&&team.rows===15&&team.overflow<=1,'Team Room language gate failed',JSON.stringify(team));
+  assert(/natural batting order/.test(team.intro)&&/innings differently/.test(team.intro)&&/Build a balanced XI/.test(team.lead)&&/Selected players stay visible/.test(team.squad)&&/natural order/.test(team.order)&&/spots still open/.test(team.swap)&&team.rows===15&&team.overflow<=1,'Team Room language gate failed',JSON.stringify(team));
   await shot('05-team-room-empty.png');
 
   const xi=await cdp.eval(`(()=>{for(const id of GCC.state.teams[GCC.state.userClub.abbr]){if(GCC.state.xi.length>=11)break;GCC.toggleXI(id)}return{xi:GCC.state.xi.length,order:GCC.state.battingOrder.length,start:document.getElementById('startSeasonButton')?.disabled}})()`);
