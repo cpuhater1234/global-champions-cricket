@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 SOURCE=ROOT/'game'/'global_champions_cricket_v7_2_14_year_shell_continuity.html'
 TARGET=ROOT/'game'/'global_champions_cricket_v7_2_15_match_day_conditions.html'
 EXPECTED_SOURCE='70810a1d6771c283f9f143d7707a0df90fd5594dfe321677f6f7fe51e6f48e8d'
-EXPECTED_TARGET='b8eea1a14caee62fb4a09755729d9e077eb0994724e7d6a643fcfe1c5c8d3915'
+EXPECTED_TARGET='22dbb185e1c274a60449223b0e3e362470e36be39b9d90e95fc76caec73df78a'
 
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 def scripts(t): return re.findall(r'<script(?:\s[^>]*)?>(.*?)</script>',t,re.S|re.I)
@@ -36,8 +36,10 @@ else:
     new_ss="if(!state.userClub)return base.toast('Choose your club first');if(state.fullSchedule?.length){specialGo('season');return}if(state.xi.length!==11)"
     old_mig="function migrateLoadedSave(save){if(!save.state.dynasty)save.state.dynasty=freshDynasty();save.state.dynasty.version=SAVE_VERSION;return save}"
     new_mig="function migrateLoadedSave(save){if(!save.state.dynasty)save.state.dynasty=freshDynasty();if(!Number.isFinite(save.state.weatherSeed))save.state.weatherSeed=(Number(save.state.seed)>>>0)||1;save.state.dynasty.version=SAVE_VERSION;return save}"
-    expected8=sa[8].replace(old_nv,new_nv,1).replace(old_ss,new_ss,1).replace(old_mig,new_mig,1)
-    if expected8!=sb[8]: fail.append('Dynasty block changed beyond CPU next-venue weather parity + active-season Team Room guard + weather-seed migration')
+    old_yearcopy="const th=document.querySelector('#team .section-head h2');if(th)th.textContent=y===2008?'Name your first XI':`Name your ${y} XI`;const tp=document.querySelector('#team .section-head p');if(tp)tp.textContent=y===2008?'Pick the eleven for Round 1, then set the batting order. Start from the recommended side or build it yourself.':`Pick the eleven for ${y}. Start with the recommendation or adjust for form, fitness and conditions.`;"
+    new_yearcopy="const th=document.querySelector('#team .section-head h2');const activeSeason=!!state.fullSchedule?.length;const nextRound=Math.min(14,(state.round||0)+1);if(th)th.textContent=activeSeason?`Set your Round ${nextRound} XI`:(y===2008?'Name your first XI':`Name your ${y} XI`);const tp=document.querySelector('#team .section-head p');if(tp)tp.textContent=activeSeason?`Review the eleven for Round ${nextRound}. Adjust for form, fitness and conditions, then return to the Season Hub.`:(y===2008?'Pick the eleven for Round 1, then set the batting order. Start from the recommended side or build it yourself.':`Pick the eleven for ${y}. Start with the recommendation or adjust for form, fitness and conditions.`);"
+    expected8=sa[8].replace(old_nv,new_nv,1).replace(old_ss,new_ss,1).replace(old_mig,new_mig,1).replace(old_yearcopy,new_yearcopy,1)
+    if expected8!=sb[8]: fail.append('Dynasty block changed beyond CPU next-venue weather parity + active-season Team Room guard + weather-seed migration + active-round year-copy continuity')
 
 required=[
 "const WEATHER_TYPES = Object.freeze({",
@@ -52,6 +54,7 @@ required=[
 "if(!Number.isFinite(save.state.weatherSeed))save.state.weatherSeed=(Number(save.state.seed)>>>0)||1;",
 "if(teamHeading) teamHeading.textContent=`Set your Round ${nextRound} XI`;",
 "if(teamIntro) teamIntro.textContent=`Review the eleven for Round ${nextRound}. Adjust for form, fitness and conditions, then return to the Season Hub.`;",
+"const th=document.querySelector('#team .section-head h2');const activeSeason=!!state.fullSchedule?.length;const nextRound=Math.min(14,(state.round||0)+1);",
 "baseConditions:base,",
 "pace:(base.pace||0)+weather.newBallPace",
 "spin:(base.spin||0)+weather.middleSpin",
@@ -117,5 +120,5 @@ print('CPU next-venue context uses the same effective match ground: yes')
 print('Active season cannot be reset from Team Room: yes')
 print('Weather identity is independent of live match RNG: yes')
 print('Legacy saves receive a persistent weather seed on migration: yes')
-print('Mid-season Team Room heading follows the actual next round: yes')
+print('Mid-season Team Room heading survives year-copy refresh: yes')
 print('No DLS / abandonment / humidity shortcut introduced: yes')
