@@ -9,52 +9,41 @@ on:
 jobs:
   conditions-qa:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
 
       - name: Rebuild exact v7.2.15 candidate
         run: python qa/rebuild_v7215.py
 
-      - name: Inspect candidate structure
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          import hashlib,re
-          src=Path('game/global_champions_cricket_v7_2_14_year_shell_continuity.html')
-          dst=Path('game/global_champions_cricket_v7_2_15_match_day_conditions.html')
-          print('SOURCE',hashlib.sha256(src.read_bytes()).hexdigest())
-          print('TARGET',hashlib.sha256(dst.read_bytes()).hexdigest())
-          a=src.read_text('utf-8'); b=dst.read_text('utf-8')
-          sa=re.findall(r'<script(?:\s[^>]*)?>(.*?)</script>',a,re.S|re.I)
-          sb=re.findall(r'<script(?:\s[^>]*)?>(.*?)</script>',b,re.S|re.I)
-          print('SCRIPT_BLOCKS',len(sa),len(sb))
-          print('CHANGED_SCRIPT_BLOCKS',[i for i,(x,y) in enumerate(zip(sa,sb)) if x!=y])
-          for line in b.splitlines():
-              low=line.lower()
-              if any(k in low for k in ['weather','match-day','match day','conditions','next fixture','next match','overcast','cool / damp','hot / dry','settled']):
-                  print('MATCH_DAY_LINE',line[:900])
-          PY
+      - name: Run match-day conditions guardrail
+        run: python qa/check_v7215_conditions.py
 
-      - name: Check JavaScript syntax
+      - name: Check browser harness syntax
         run: |
-          python - <<'PY'
-          from pathlib import Path
-          import re,subprocess,tempfile
-          text=Path('game/global_champions_cricket_v7_2_15_match_day_conditions.html').read_text('utf-8')
-          scripts=re.findall(r'<script(?:\s[^>]*)?>(.*?)</script>',text,re.S|re.I)
-          assert len(scripts)==9, len(scripts)
-          with tempfile.TemporaryDirectory() as td:
-              for i,s in enumerate(scripts):
-                  p=Path(td)/f's{i}.js'
-                  p.write_text(s,'utf-8')
-                  subprocess.run(['node','--check',str(p)],check=True)
-          print('JS_SYNTAX_OK',len(scripts))
-          PY
+          node --check qa/browser_v7215_conditions.mjs
+          node --check qa/browser_v7215_stats.mjs
 
-      - name: Upload reconstructed candidate
+      - name: Locate Chrome
+        run: |
+          CHROME="$(which google-chrome || which google-chrome-stable || which chromium || which chromium-browser || true)"
+          test -n "$CHROME"
+          echo "CHROME_BIN=$CHROME" >> "$GITHUB_ENV"
+          "$CHROME" --version
+          node --version
+
+      - name: Run match-day conditions browser regression
+        run: node --experimental-websocket qa/browser_v7215_conditions.mjs
+
+      - name: Run paired v7.2.14 vs v7.2.15 statistical regression
+        run: node --experimental-websocket qa/browser_v7215_stats.mjs
+
+      - name: Upload QA evidence
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: gcc-v7215-match-day-candidate
-          path: game/global_champions_cricket_v7_2_15_match_day_conditions.html
-          if-no-files-found: error
+          name: gcc-v7215-match-day-qa
+          path: |
+            qa/output/v7215-conditions-audit/
+            game/global_champions_cricket_v7_2_15_match_day_conditions.html
+          if-no-files-found: warn
