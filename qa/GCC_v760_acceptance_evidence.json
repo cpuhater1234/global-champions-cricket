@@ -1,0 +1,43 @@
+{
+  "release": "v7.6.0 Matchday & Season Immersion",
+  "status": "accepted",
+  "parent_sha256": "abe0c99338990b5a33f23a62e759b853e9118c2e3a97331c91e37ae23fc571c6",
+  "accepted_sha256": "3a8b8bb9b9d67558ea19bda4b595b0ab083209f3ccb0607d209aaad04155b55f",
+  "audit_seed": 101,
+  "scope": "read-only regular-season Matchday preview",
+  "determinism": {
+    "preview_state_unchanged": true,
+    "direct_vs_preview_result_identical": true,
+    "winner_identical": true,
+    "innings_identical": true,
+    "scorecard_data_identical": true,
+    "post_match_form_identical": true,
+    "final_seed_identical": true
+  },
+  "presentation": {
+    "rounds_inspected": [1, 4, 11, 14],
+    "desktop_horizontal_overflow": false,
+    "mobile_horizontal_overflow": false,
+    "mobile_vertical_scroll": true,
+    "round14_specific_close_copy": true
+  },
+  "dynasty_integration": {
+    "real_2009_offseason_path_tested": true,
+    "injured_xi_blocks_preview": true,
+    "injured_xi_routes_to_team_room": true,
+    "player_specific_injury_message": true,
+    "repaired_xi_opens_preview": true
+  },
+  "regression": {
+    "v75_result_card_text_identical": true,
+    "v75_scorecard_text_identical": true,
+    "run_season_completes_14_rounds": true,
+    "run_season_bypasses_preview": true,
+    "finals_screen_untouched": true,
+    "simulation_functions_byte_identical": true,
+    "save_resume_functions_byte_identical": true,
+    "save_schema_unchanged": true,
+    "duplicate_dom_ids": 0,
+    "script_blocks_syntax_clean": 9
+  }
+}
