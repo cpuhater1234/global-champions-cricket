@@ -102,7 +102,7 @@ for fn in protected:
     if extract(a,fn)!=extract(b,fn):
         raise SystemExit(f'protected function changed: {fn}')
 
-if 'playerStats' not in extract(b,'archiveCareerAggregate'):
+if 'playerStats' not in extract(b,'archiveSeasonPlayers') or 'archiveSeasonPlayers' not in extract(b,'archiveCareerAggregate'):
     raise SystemExit('career records are not derived from archived playerStats')
 if 'reviewSeasonValue' not in extract(b,'archiveSeasonLeaders'):
     raise SystemExit('season standout does not reuse reviewSeasonValue')
