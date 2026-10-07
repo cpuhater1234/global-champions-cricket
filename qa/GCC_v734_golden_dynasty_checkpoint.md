@@ -16,7 +16,8 @@ v7.3.4 proves the v7.3 product across a continuous 2008-2010 dynasty and contain
 - Frozen v7.3.3 checkpoint: `9a34d05f27b8d56b0fe123375e1af7a22bc12217`
 - Pre-fix Golden Dynasty QA head: `f0f877102920f4aff842b3abc190d756c8073336`
 - Pre-fix Golden Dynasty run: `37571273144`
-- Final checkpoint run: pending current CI
+- Final checkpoint run: `37573629866`
+- Final tested QA head: `65b78806a2668308d94598ae5976e88f94f28de3`
 - Evidence artifact: `gcc-v734-golden-dynasty-qa`
 
 ## Golden Dynasty result
