@@ -8,6 +8,7 @@ const ROOT=process.cwd();
 const GAME=path.join(ROOT,'game','global_champions_cricket_v7_4_0_league_history.html');
 const OUT=path.join(ROOT,'qa','output','v740-longevity');
 const AUDIT_SEED=Number(process.env.GCC_AUDIT_SEED||0);
+const AUDIT_END_YEAR=Number(process.env.GCC_AUDIT_END_YEAR||2014);
 fs.mkdirSync(OUT,{recursive:true});
 function fail(m,d=''){throw new Error(d?`${m}: ${d}`:m)}
 function assert(c,m,d=''){if(!c)fail(m,d)}
@@ -410,23 +411,23 @@ try{
 
   // Finish 2010 from the Golden Dynasty's Round 3 state, then continue through 2014.
   longevity.push({stage:'2010-round3',snapshot:await balanceSnapshot('2010-round3')});
-  for(const targetYear of [2010,2011,2012,2013,2014]){
+  for(const targetYear of Array.from({length:AUDIT_END_YEAR-2009},(_,i)=>2010+i)){
     assert((await cdp.eval('GCC.state.year'))===targetYear,'Longevity year mismatch before season '+targetYear);
     const before=await balanceSnapshot('pre-season-'+targetYear);
     const seasonAudit=await seasonAuditAndReview();
     const after=await balanceSnapshot('post-season-'+targetYear);
     const row={year:targetYear,before,season:seasonAudit,after};
     longevity.push(row);
-    if(targetYear<2014){
+    if(targetYear<AUDIT_END_YEAR){
       row.offseason=await advanceOffseasonWithValueStrategy();
       row.next=await balanceSnapshot('ready-'+(targetYear+1));
     }
   }
 
   const longIntegrity=await cdp.eval(`(()=>{const s=GCC.state,d=s.dynasty||{},all=Object.values(s.teams).flat(),badRatings=s.pool.filter(p=>['overall','bat','bowl','power','control','pace','fielding','keeping'].some(k=>Number.isFinite(Number(p[k]))&&(Number(p[k])<1||Number(p[k])>99))).map(p=>p.name);const retiredRostered=s.pool.filter(p=>p.dynastyRetired&&all.includes(p.id)).map(p=>p.name);return{year:s.year,round:s.round,total:all.length,unique:new Set(all).size,rosters:Object.fromEntries(s.league.map(c=>[c.abbr,(s.teams[c.abbr]||[]).length])),badRatings,retiredRostered,replacements:Object.keys(d.replacementOf||{}).length,history:(d.history||[]).length}})()`);
-  assert(longIntegrity.year===2014&&longIntegrity.total===longIntegrity.unique&&Object.values(longIntegrity.rosters).every(n=>n===15)&&longIntegrity.badRatings.length===0&&longIntegrity.retiredRostered.length===0,'Longevity final integrity failed',JSON.stringify(longIntegrity));
+  assert(longIntegrity.year===AUDIT_END_YEAR&&longIntegrity.total===longIntegrity.unique&&Object.values(longIntegrity.rosters).every(n=>n===15)&&longIntegrity.badRatings.length===0&&longIntegrity.retiredRostered.length===0,'Longevity final integrity failed',JSON.stringify({AUDIT_END_YEAR,longIntegrity}));
 
-  const longevityReport={testedSha:'6317af10bbda0aa8ee1f61c825d12097c216ec58beef54df2f2524e75f1136eb',auditSeed:AUDIT_SEED||null,strategy:'role-aware current/dynasty value',longevity,longIntegrity,pageErrors:await cdp.eval('window.__qaErrors||[]'),runtimeErrors,consoleErrors};
+  const longevityReport={testedSha:'6317af10bbda0aa8ee1f61c825d12097c216ec58beef54df2f2524e75f1136eb',auditSeed:AUDIT_SEED||null,auditEndYear:AUDIT_END_YEAR,strategy:'role-aware current/dynasty value',longevity,longIntegrity,pageErrors:await cdp.eval('window.__qaErrors||[]'),runtimeErrors,consoleErrors};
   fs.writeFileSync(path.join(OUT,'longevity-report.json'),JSON.stringify(longevityReport,null,2));
   console.log(JSON.stringify({years:longevity.filter(x=>x.year).map(x=>({year:x.year,position:x.season.position,champion:x.season.review.champion,avgInnings:x.season.avgInnings,injuries:x.season.injuries,trades:x.season.trades})),integrity:longIntegrity},null,2));
 
