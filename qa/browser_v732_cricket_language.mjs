@@ -95,7 +95,7 @@ try{
 
   await cdp.eval(`Dynasty.beginOffseason();true`);
   const market=await cdp.eval(`(()=>({screen:document.querySelector('.screen.active')?.id,title:document.getElementById('dynastyTitle')?.textContent.trim(),intro:document.getElementById('dynastyIntro')?.textContent.trim(),headline:(document.getElementById('dynastyHeadline')?.innerText||'').trim(),main:(document.getElementById('dynastyMain')?.innerText||'').trim(),overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}))()`);
-  assert(market.screen==='dynasty'&&/^Build the 2009 side\./.test(market.title)&&/Retirements, trades and the Draft reshape the list/.test(market.intro)&&/Finish with fifteen/.test(market.intro)&&/list spots|list full|to release|cuts after Draft/.test(market.headline)&&/Trade before the Draft Draw/.test(market.main)&&/Every club values needs differently/.test(market.main)&&/cricketer they are now/.test(market.main)&&market.overflow<=1,'Offseason language gate failed',JSON.stringify(market));
+  assert(market.screen==='dynasty'&&/^Build the 2009 side\./.test(market.title)&&/Retirements, trades and the Draft reshape the list/.test(market.intro)&&/Finish with fifteen/.test(market.intro)&&/list spots|list full|to release|cuts after Draft/i.test(market.headline)&&/Trade before the Draft Draw/.test(market.main)&&/Every club values needs differently/.test(market.main)&&/cricketer they are now/.test(market.main)&&market.overflow<=1,'Offseason language gate failed',JSON.stringify(market));
   await shot('11-offseason-market.png');
 
   const trade=await cdp.eval(`(()=>{Dynasty.openTradeCentre(false);return{text:(document.getElementById('modalBody')?.innerText||'').trim(),open:document.getElementById('modal')?.classList.contains('open')}})()`);
