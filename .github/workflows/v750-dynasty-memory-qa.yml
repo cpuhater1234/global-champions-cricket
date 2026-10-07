@@ -9,6 +9,7 @@ on:
       - 'qa/rebuild_v750.py'
       - 'qa/check_v750.py'
       - 'qa/browser_v750_dynasty_memory.mjs'
+      - 'qa/browser_v750_horizon_chunk.mjs'
       - 'qa/patches/v750_*.gz.b64'
       - 'qa/GCC_v750_dynasty_memory_plan.md'
       - 'qa/GCC_v750_dynasty_memory_checkpoint.md'
@@ -40,12 +41,31 @@ jobs:
           GCC_GAME_FILE: global_champions_cricket_v7_5_0_dynasty_memory.html
         run: node --experimental-websocket qa/browser_v750_dynasty_memory.mjs
 
-      - name: Run one real 2008-2026 dynasty
+      - name: Run 2008-2014 dynasty chunk
         env:
           GCC_AUDIT_SEED: 101
-          GCC_AUDIT_END_YEAR: 2026
-          GCC_GAME_FILE: global_champions_cricket_v7_5_0_dynasty_memory.html
-        run: node --experimental-websocket qa/browser_v740_longevity.mjs
+          GCC_START_YEAR: 2008
+          GCC_END_YEAR: 2014
+          GCC_SAVE_OUT: qa/output/v750-full-horizon/save-after-2014.json
+        run: node --experimental-websocket qa/browser_v750_horizon_chunk.mjs
+
+      - name: Run 2015-2020 dynasty chunk
+        env:
+          GCC_AUDIT_SEED: 101
+          GCC_START_YEAR: 2015
+          GCC_END_YEAR: 2020
+          GCC_SAVE_IN: qa/output/v750-full-horizon/save-after-2014.json
+          GCC_SAVE_OUT: qa/output/v750-full-horizon/save-after-2020.json
+        run: node --experimental-websocket qa/browser_v750_horizon_chunk.mjs
+
+      - name: Run 2021-2026 dynasty chunk and Archive gate
+        env:
+          GCC_AUDIT_SEED: 101
+          GCC_START_YEAR: 2021
+          GCC_END_YEAR: 2026
+          GCC_SAVE_IN: qa/output/v750-full-horizon/save-after-2020.json
+          GCC_SAVE_OUT: qa/output/v750-full-horizon/final-report.json
+        run: node --experimental-websocket qa/browser_v750_horizon_chunk.mjs
 
       - name: Upload v7.5 evidence
         if: always()
@@ -54,5 +74,5 @@ jobs:
           name: gcc-v750-dynasty-memory-evidence
           path: |
             game/global_champions_cricket_v7_5_0_dynasty_memory.html
-            qa/output/v740-longevity/
+            qa/output/v750-full-horizon/
           if-no-files-found: warn
