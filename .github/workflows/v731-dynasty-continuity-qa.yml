@@ -1,0 +1,44 @@
+name: GCC v7.3.1 Dynasty Continuity QA
+
+on:
+  push:
+    branches:
+      - work/v7.3-game-experience
+  workflow_dispatch:
+
+jobs:
+  dynasty-continuity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild exact v7.3.1 candidate
+        run: python qa/rebuild_v731.py
+
+      - name: Run v7.3.1 static/product guardrail
+        run: python qa/check_v731.py
+
+      - name: Check browser harness syntax
+        run: node --check qa/browser_v731_dynasty_continuity.mjs
+
+      - name: Locate Chrome
+        run: |
+          CHROME="$(which google-chrome || which google-chrome-stable || which chromium || which chromium-browser || true)"
+          test -n "$CHROME"
+          echo "CHROME_BIN=$CHROME" >> "$GITHUB_ENV"
+          "$CHROME" --version
+          node --version
+
+      - name: Run 2009 annual Draft continuity journey
+        run: node --experimental-websocket qa/browser_v731_dynasty_continuity.mjs
+
+      - name: Upload QA evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gcc-v731-dynasty-continuity-qa
+          path: |
+            qa/output/v731-dynasty-continuity/
+            game/global_champions_cricket_v7_3_1_dynasty_continuity.html
+          if-no-files-found: warn
