@@ -1,31 +1,54 @@
 #!/usr/bin/env python3
 from pathlib import Path
-import base64,gzip,hashlib,subprocess,sys,tempfile
+import hashlib,subprocess,sys
 ROOT=Path(__file__).resolve().parents[1]
-GAME=ROOT/'game'; PATCHES=ROOT/'qa'/'patches'
+GAME=ROOT/'game'
 V731=GAME/'global_champions_cricket_v7_3_1_dynasty_continuity.html'
 V732=GAME/'global_champions_cricket_v7_3_2_cricket_language.html'
 EXPECTED_731='ef7c04895020da2922af5e12ad830c602f453233b72ec942f92aa03e677ab19f'
 EXPECTED_732='693558f48012bc878672e7dedd4524eaed7616597319d5539dba0c9d9b7994da'
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
-def payload(stem):
-    parts=sorted(PATCHES.glob(stem+'.part*'))
-    if parts:return ''.join(x.read_text() for x in parts).strip()
-    p=PATCHES/stem
-    if p.exists():return p.read_text().strip()
-    raise SystemExit(f'Missing patch payload: {stem}')
-def apply(stem,src,dst):
-    raw=gzip.decompress(base64.b64decode(payload(stem)))
-    with tempfile.NamedTemporaryFile(suffix='.patch',delete=False) as fh:
-        fh.write(raw); pp=Path(fh.name)
-    try:
-        dst.unlink(missing_ok=True)
-        subprocess.run(['patch','--batch','-o',dst.name,src.name,'-i',str(pp)],cwd=GAME,check=True)
-    finally: pp.unlink(missing_ok=True)
 if not V731.exists():
     subprocess.run([sys.executable,str(ROOT/'qa'/'rebuild_v731.py')],cwd=ROOT,check=True)
 if sha(V731)!=EXPECTED_731: raise SystemExit(f'v7.3.1 SHA mismatch: {sha(V731)}')
-apply('v731_to_v732_cricket_language.patch.gz.b64',V731,V732)
+src=V731; dst=V732
+t=src.read_text('utf-8')
+repls=[
+("document.body.dataset.uiVersion = 'v7.3.1-dynasty-continuity';","document.body.dataset.uiVersion = 'v7.3.2-cricket-language';"),
+("<h2>Five days decide the board.</h2>\n            <p>No club has a squad yet. Watch the league find out who will enter the foundation draft, then draw the order once the pool is locked.</p>","<h2>Five days decide who enters the Draft.</h2>\n            <p>No club has a squad yet. Every decision shapes the foundation Draft pool. When Day 5 closes, the Draft Order is drawn.</p>"),
+("<span class=\"kicker\">WHAT THIS CHANGES</span>\n            <strong id=\"recruitContextLead\">The draft board does not exist yet.</strong>\n            <p id=\"recruitContext\">Every player who signs becomes draftable. Every player who declines disappears before Pick 1.</p>","<span class=\"kicker\">WHAT IT MEANS FOR THE DRAFT</span>\n            <strong id=\"recruitContextLead\">The Draft pool is still open.</strong>\n            <p id=\"recruitContext\">A yes puts the player into the Draft. A no takes that player out before Pick 1.</p>"),
+("<div><span class=\"kicker\"><svg class=\"kicker-icon\" viewBox=\"0 0 32 32\" aria-hidden=\"true\"><use href=\"#icon-stumps\"></use></svg>TEAM ROOM</span><h2>Name your first XI</h2><p>Pick the eleven you want for Round 1. The room will order them naturally; the cricket decisions stay with you.</p></div>","<div><span class=\"kicker\"><svg class=\"kicker-icon\" viewBox=\"0 0 32 32\" aria-hidden=\"true\"><use href=\"#icon-stumps\"></use></svg>TEAM ROOM</span><h2>Name your first XI</h2><p>Pick the eleven for Round 1. They start in a natural batting order; move them if you see the innings differently.</p></div>"),
+("<div><span class=\"kicker\">ROUND 1 SELECTION</span><strong id=\"selectionLead\">Pick your eleven.</strong><small id=\"selectionCopy\">All 15 stay in view. Pick the side, then adjust the batting order only if you want to.</small></div>","<div><span class=\"kicker\">ROUND 1 SELECTION</span><strong id=\"selectionLead\">0/11 selected.</strong><small id=\"selectionCopy\">The full 15 stays in view while you build the side.</small></div>"),
+("Select the XI. Once it is full, choose SWAP beside a bench player for a direct change.","Bench changes become available once the XI is full."),
+("Open the window to find out who will enter the foundation draft.","Open the window to see who enters the foundation Draft."),
+("contextLead.textContent = 'The board is locked.';\n        context.textContent = `${signedCount} players can now be drafted. ${declinedCount} are gone before Pick 1. Draw the order to find out where you sit.`;","contextLead.textContent = 'The Draft pool is locked.';\n        context.textContent = `${signedCount} players are in the Draft. ${declinedCount} are out. Draw the order to learn your first pick.`;"),
+("contextLead.textContent = `${signedCount} names are already draftable.`;\n        context.textContent = pendingCount ? `${pendingCount} decisions are still unresolved. The pool can still change before the fifth day closes.` : 'Every call is resolved. The league is closing the window.';","contextLead.textContent = `${signedCount} players are in the Draft pool.`;\n        context.textContent = pendingCount ? `${pendingCount} calls remain. The pool can still change before Day 5 closes.` : 'Every call is resolved. The league is closing the window.';"),
+("contextLead.textContent = 'The draft board does not exist yet.';\n        context.textContent = `All ${pendingCount} eligible players are unresolved. Every yes adds a draftable name; every no removes one before the order is drawn.`;","contextLead.textContent = 'The Draft pool is still open.';\n        context.textContent = `All ${pendingCount} eligible players are undecided. Every yes puts a player into the Draft; every no takes that player out before the order is drawn.`;"),
+("if(tp)tp.textContent=activeSeason?`Review the eleven for Round ${nextRound}. Adjust for form, fitness and conditions, then return to the Season Hub.`:(y===2008?'Pick the eleven for Round 1, then set the batting order. Your picks are ordered naturally unless you change them.':`Pick the eleven for ${y}. Use form, fitness and conditions to shape the side.`);","if(tp)tp.textContent=activeSeason?`Name the eleven for Round ${nextRound}. Weigh form, fitness, opposition and conditions, then return to the Season Hub.`:(y===2008?'Pick the eleven for Round 1. They start in a natural batting order; move them if you see the innings differently.':`Name the eleven that opens ${y}. Weigh form, fitness and conditions.`);"),
+("if(teamIntro) teamIntro.textContent=`Pick the eleven for Round ${nextRound}. Use form, fitness and conditions as your guide, then return to the Season Hub.`;","if(teamIntro) teamIntro.textContent=`Name the eleven for Round ${nextRound}. Weigh form, fitness, opposition and conditions, then return to the Season Hub.`;"),
+("if(columnNote) columnNote.textContent=complete?'The full 15 stays visible. Use SWAP on the bench for a direct change.':'Pick from the full squad. Selected players stay visible here and enter the batting order.';","if(columnNote) columnNote.textContent=complete?'All 15 stay visible. Choose SWAP on a bench player for a direct change.':'Selected players stay visible so you can compare the full 15.';"),
+("if(lead) lead.textContent=selectionBlocked?(unavailableSelected.length===1?`${unavailableSelected[0].name} is out. Make one change for Round ${nextRound}.`:`${unavailableSelected.length} players are out. Change the XI for Round ${nextRound}.`):complete?`Your XI is set for Round ${nextRound}.`:state.xi.length?`${state.xi.length} selected · ${remaining} to go.`:'Pick your eleven.';","if(lead) lead.textContent=selectionBlocked?(unavailableSelected.length===1?`${unavailableSelected[0].name} is out. Make one change for Round ${nextRound}.`:`${unavailableSelected.length} players are out. Change the XI for Round ${nextRound}.`):complete?`XI set for Round ${nextRound}.`:state.xi.length?`${state.xi.length}/11 selected · ${remaining} to go.`:'0/11 selected.';"),
+("const actionCopy=selectionBlocked?'An unavailable player cannot take the field. Pick from the bench before returning to the Season Hub.':complete?(state.fullSchedule?.length?'Make any final changes, then return to the Season Hub.':'Make any final changes, then start the season.'):state.xi.length?'Keep building the side. The room will keep a natural batting order as you pick.':'All 15 stay in view. Pick the side; warnings will tell you if the XI lacks a keeper or enough bowling.';","const actionCopy=selectionBlocked?'Pick a fit replacement from the bench before returning to the Season Hub.':complete?(state.fullSchedule?.length?'Change anything you need, then return to the Season Hub.':'Change anything you need, then start the season.'):state.xi.length?'Keep building the XI. New picks slot into a natural batting order.':'Build a balanced XI. Warnings will flag a missing keeper or insufficient bowling.';"),
+("XI complete. Choose SWAP beside a bench player for a direct replacement.","XI complete. Choose SWAP beside a bench player, then choose who comes out."),
+("$('profileNote').textContent='No projected XI ratings are shown yet. Pick the eleven first; the room will flag any obvious keeper or bowling problem.';","$('profileNote').textContent='Pick all eleven before judging the side as a whole.';"),
+("$('dynastyIntro').textContent='Retirements leave holes. Trades move players. The draft order is random. Get the squad back to fifteen before Round 1.';","$('dynastyIntro').textContent='Retirements, trades and the Draft reshape the list. Finish with fifteen, then name the XI for Round 1.';"),
+("function renderDynastyHeadline(){const o=state.dynasty.offseason;const arrivals=o.arrivals.map(pById).filter(Boolean);const top=arrivals.sort((a,b)=>b.overall-a.overall)[0];const open=Math.max(0,15-rosterIds(state.userClub.abbr).length);$('dynastyHeadline').innerHTML=`<div class=\"dynasty-banner\"><div><span class=\"kicker\">${state.year} OFF-SEASON</span><h3>${top?`${top.name} leads the new names.`:'The league turns over.'}</h3><p>${o.retirements.length} player${o.retirements.length===1?'':'s'} left contracted lists at the turn of the year. ${o.arrivals.length} new T20 player${o.arrivals.length===1?'':'s'} became eligible. Your list currently has ${rosterIds(state.userClub.abbr).length} players.</p></div><div class=\"dynasty-banner-stat\"><b>${open||'FULL'}</b><span>${open?'spots to fill':'before the draft'}</span></div></div>`}","function renderDynastyHeadline(){const o=state.dynasty.offseason;const arrivals=o.arrivals.map(pById).filter(Boolean);const top=arrivals.sort((a,b)=>b.overall-a.overall)[0];const n=rosterIds(state.userClub.abbr).length;let statValue,statLabel;if(o.phase==='cuts'&&n>15){statValue=String(n-15);statLabel='to release'}else if(o.phase==='ready'){statValue='15/15';statLabel='list lodged'}else if(n<15){statValue=String(15-n);statLabel='list spots'}else if(n===15){statValue='15/15';statLabel=o.phase==='draft'?'Draft still live':'list full'}else{statValue=`${n}/15`;statLabel='cuts after Draft'}$('dynastyHeadline').innerHTML=`<div class=\"dynasty-banner\"><div><span class=\"kicker\">${state.year} OFF-SEASON</span><h3>${top?`${top.name} leads the new names.`:'The league turns over.'}</h3><p>${o.retirements.length} player${o.retirements.length===1?'':'s'} left contracted lists at the turn of the year. ${o.arrivals.length} new T20 player${o.arrivals.length===1?'':'s'} became eligible.</p></div><div class=\"dynasty-banner-stat\"><b>${statValue}</b><span>${statLabel}</span></div></div>`}"),
+("<span class=\"kicker\">TRADE PERIOD</span><h3>Shape the squad before the draw</h3><p>Clubs trade to solve cricket problems. A side short of a keeper, a new-ball bowler or a finisher will see the same player very differently.</p>","<span class=\"kicker\">TRADE PERIOD</span><h3>Trade before the Draft Draw</h3><p>Every club values needs differently. A keeper, new-ball bowler or finisher can be worth more to one list than another.</p>"),
+("${o.cpuMarketRun?'LEAGUE MOVES COMPLETE':'RUN LEAGUE MOVES'}","${o.cpuMarketRun?'LEAGUE TRADES DONE':'LET OTHER CLUBS TRADE'}"),
+("<span class=\"kicker\">${midseason?'MID-SEASON':'OFF-SEASON'} TRADE CENTRE</span><h2>Make a cricket trade.</h2><p>There is no single price for a player. Clubs care about form, age, role, ground fit and whether the incoming player actually solves a problem in their XI.</p>","<span class=\"kicker\">${midseason?'MID-SEASON':'OFF-SEASON'} TRADE CENTRE</span><h2>Make a cricket trade.</h2><p>Build the deal around what each list needs. Form, age, role and ground fit all change a player's value.</p>"),
+("<div id=\"tradeRead\" class=\"trade-read\">Choose the player you want, then put a cricket case to the other club.</div>","<div id=\"tradeRead\" class=\"trade-read\">Choose the player you want, then decide what you are prepared to send.</div>"),
+("<span class=\"kicker\">LIST CHECK</span><b>${ps.length}/15 contracted</b>","<span class=\"kicker\">LIST BALANCE</span><b>${ps.length}/15 on the list</b>"),
+("${mine?'Strengthen the fifteen. Search the pool, check the list, then make the cricket call.':'The board is moving. Advance to your next selection.'}","${mine?'Add what the list needs most. Search the pool, compare roles and make the pick.':'The board is moving. Advance to your next selection.'}"),
+("<span class=\"kicker\">FINAL 15</span><h3>${need?`Release ${need} player${need===1?'':'s'}.`:'Your 15 are set.'}</h3><p>The draft can take the squad beyond fifteen. Trim it back before the season starts.</p>","<span class=\"kicker\">FINAL 15</span><h3>${need?`Release ${need} player${need===1?'':'s'}.`:'Your 15 are set.'}</h3><p>${need?`The Draft has taken you over fifteen. Release ${need} before you can name the XI.`:'The list is back to fifteen. Name the XI when you are ready.'}</p>"),
+("<div class=\"dynasty-season-stat\"><span>Fitness watch</span><b class=\"${managing.length?'warning':''}\">${managing.length?managing.map(p=>p.name).join(', '):'No managed loads'}</b></div>","<div class=\"dynasty-season-stat\"><span>Fitness</span><b class=\"${managing.length?'warning':''}\">${managing.length?managing.map(p=>p.name).join(', '):'No restrictions'}</b></div>"),
+]
+for old,new in repls:
+    count=t.count(old)
+    expected=2 if old=='Open the window to find out who will enter the foundation draft.' else 1
+    if count!=expected:
+        raise SystemExit(f'replacement count {count}, expected {expected} for {old[:100]!r}')
+    t=t.replace(old,new)
+dst.write_text(t,'utf-8')
 if sha(V732)!=EXPECTED_732: raise SystemExit(f'v7.3.2 SHA mismatch: {sha(V732)}')
 print(f'v7.3.1 OK  {EXPECTED_731}')
 print(f'v7.3.2 OK  {EXPECTED_732}')
