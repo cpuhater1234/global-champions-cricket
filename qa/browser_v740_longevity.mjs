@@ -5,7 +5,7 @@ import path from 'node:path';
 import {spawn} from 'node:child_process';
 
 const ROOT=process.cwd();
-const GAME=path.join(ROOT,'game','global_champions_cricket_v7_3_4_golden_dynasty.html');
+const GAME=path.join(ROOT,'game','global_champions_cricket_v7_4_0_league_history.html');
 const OUT=path.join(ROOT,'qa','output','v740-longevity');
 fs.mkdirSync(OUT,{recursive:true});
 function fail(m,d=''){throw new Error(d?`${m}: ${d}`:m)}
@@ -357,8 +357,8 @@ try{
     const audit=await cdp.eval(`(()=>{const s=GCC.state,d=s.dynasty||{},rows=Object.values(s.table||{}).sort((a,b)=>b.pts-a.pts||b.nrr-a.nrr),r=s.results||[];
       const innings=r.flatMap(x=>[x.homeInnings,x.awayInnings]).filter(Boolean);
       const cards=r.map(x=>x.scorecard).filter(Boolean);
-      const batRows=cards.flatMap(sc=>[...(sc.home?.batting||[]),...(sc.away?.batting||[])]);
-      const bowlRows=cards.flatMap(sc=>[...(sc.home?.bowling||[]),...(sc.away?.bowling||[])]);
+      const batRows=cards.flatMap(sc=>(sc.innings||[]).flatMap(i=>i.batting||[]));
+      const bowlRows=cards.flatMap(sc=>(sc.innings||[]).flatMap(i=>i.bowling||[]));
       const avg=xs=>xs.length?xs.reduce((a,b)=>a+b,0)/xs.length:0;
       const yearTx=(d.transactions||[]).filter(x=>x.year===s.year);
       return{year:s.year,position:s.regularSeasonPosition,ladder:rows.map((x,i)=>({pos:i+1,abbr:x.club.abbr,w:x.w,l:x.l,pts:x.pts,nrr:+x.nrr.toFixed(3)})),userMatches:r.length,avgInnings:+avg(innings.map(x=>x.total||0)).toFixed(2),avgWickets:+avg(innings.map(x=>x.wickets||0)).toFixed(2),highest:Math.max(...innings.map(x=>x.total||0),0),lowest:Math.min(...innings.map(x=>x.total||0).filter(Boolean),999),sixes:batRows.reduce((a,x)=>a+(x.sixes||0),0),fours:batRows.reduce((a,x)=>a+(x.fours||0),0),fifties:batRows.filter(x=>(x.runs||0)>=50&&(x.runs||0)<100).length,hundreds:batRows.filter(x=>(x.runs||0)>=100).length,bowlEcon:+avg(bowlRows.filter(x=>(x.balls||0)>=6).map(x=>x.runs/Math.max(1,x.balls/6))).toFixed(2),injuries:yearTx.filter(x=>x.type==='INJURY').length,replacements:yearTx.filter(x=>x.type==='REPLACEMENT').length,trades:yearTx.filter(x=>x.type==='TRADE').length,formDist:Object.fromEntries([-3,-2,-1,0,1,2,3].map(v=>[v,s.pool.filter(p=>(p.form||0)===v&&!p.dynastyRetired).length]))}
@@ -377,7 +377,8 @@ try{
       if(stage==='gf-ready')await cdp.eval('GCC.simulateFinals();true');
       await sleep(650);await cdp.eval('GCC.closeModal();GCC.openSeasonReview();true');
     }else await cdp.eval('GCC.proceedPostSeason();true');
-    audit.review=await cdp.eval(`(()=>({screen:document.querySelector('.screen.active')?.id,title:document.getElementById('reviewTitle')?.textContent.trim(),champion:GCC.state.champion?.abbr||GCC.state.finals?.gf?.winner?.abbr||null}))()`);
+    audit.review=await cdp.eval(`(()=>({screen:document.querySelector('.screen.active')?.id,title:document.getElementById('reviewTitle')?.textContent.trim(),champion:GCC.state.champion?.abbr||GCC.state.finals?.gf?.winner?.abbr||null,finalsStage:GCC.state.finals?.stage||null}))()`);
+    assert(audit.review.screen==='review'&&audit.review.champion&&audit.review.finalsStage==='done','Longevity season history missing resolved champion',JSON.stringify(audit));
     return audit;
   }
 
@@ -392,7 +393,7 @@ try{
       const picked=await cdp.eval(`(()=>{const cards=[...document.querySelectorAll('#annualDraftPlayers .player-card')];if(!cards.length){Dynasty.runCpuDraftUntilUser();Dynasty.renderOffseason();return false}const choices=cards.map(card=>{const nums=((card.getAttribute('onclick')||'').match(/\\d+/g)||[]).map(Number),id=nums[0],p=GCC.state.pool.find(x=>x.id===id);return{id,p,value:p?Dynasty.tradeValue(p,GCC.state.userClub.abbr):-999}}).filter(x=>x.id&&x.p).sort((a,b)=>b.value-a.value);if(!choices.length)return false;Dynasty.userAnnualDraft(choices[0].id);return true})()`);
       if(!picked)await cdp.eval('Dynasty.runCpuDraftUntilUser();Dynasty.renderOffseason();true');
     }
-    const draft=await cdp.eval(`(()=>{const o=GCC.state.dynasty.offseason;return{phase:o.phase,picks:o.picks.length,userPicks:o.picks.filter(x=>x.owner===GCC.state.userClub.abbr).map(x=>x.player),roster:GCC.state.teams[GCC.state.userClub.abbr].length}})()`);
+    const draft=await cdp.eval(`(()=>{const o=GCC.state.dynasty.offseason;return{phase:o.phase,picks:o.picks.length,userPicks:o.picks.filter(x=>x.owner===GCC.state.userClub.abbr).map(x=>x.playerId),roster:GCC.state.teams[GCC.state.userClub.abbr].length}})()`);
     assert(draft.phase==='cuts','Longevity annual Draft did not reach cuts',JSON.stringify(draft));
     let cg=0;
     while((await cdp.eval('GCC.state.teams[GCC.state.userClub.abbr].length'))>15&&cg++<15){
@@ -424,12 +425,11 @@ try{
   const longIntegrity=await cdp.eval(`(()=>{const s=GCC.state,d=s.dynasty||{},all=Object.values(s.teams).flat(),badRatings=s.pool.filter(p=>['overall','bat','bowl','power','control','pace','fielding','keeping'].some(k=>Number.isFinite(Number(p[k]))&&(Number(p[k])<1||Number(p[k])>99))).map(p=>p.name);const retiredRostered=s.pool.filter(p=>p.dynastyRetired&&all.includes(p.id)).map(p=>p.name);return{year:s.year,round:s.round,total:all.length,unique:new Set(all).size,rosters:Object.fromEntries(s.league.map(c=>[c.abbr,(s.teams[c.abbr]||[]).length])),badRatings,retiredRostered,replacements:Object.keys(d.replacementOf||{}).length,history:(d.history||[]).length}})()`);
   assert(longIntegrity.year===2014&&longIntegrity.total===longIntegrity.unique&&Object.values(longIntegrity.rosters).every(n=>n===15)&&longIntegrity.badRatings.length===0&&longIntegrity.retiredRostered.length===0,'Longevity final integrity failed',JSON.stringify(longIntegrity));
 
-  const longevityReport={testedSha:'ac7e0479d3c5fe4b5ae6d3648f71267d74e540af3b127f08e6decfe03d6bb9bc',strategy:'role-aware current/dynasty value',longevity,longIntegrity,pageErrors:await cdp.eval('window.__qaErrors||[]'),runtimeErrors,consoleErrors};
+  const longevityReport={testedSha:'6317af10bbda0aa8ee1f61c825d12097c216ec58beef54df2f2524e75f1136eb',strategy:'role-aware current/dynasty value',longevity,longIntegrity,pageErrors:await cdp.eval('window.__qaErrors||[]'),runtimeErrors,consoleErrors};
   fs.writeFileSync(path.join(OUT,'longevity-report.json'),JSON.stringify(longevityReport,null,2));
   console.log(JSON.stringify({years:longevity.filter(x=>x.year).map(x=>({year:x.year,position:x.season.position,champion:x.season.review.champion,avgInnings:x.season.avgInnings,injuries:x.season.injuries,trades:x.season.trades})),integrity:longIntegrity},null,2));
 
   await noErrors('v7.4 longevity audit');
-  fs.writeFileSync(path.join(OUT,'longevity-golden-base.json'),JSON.stringify(report,null,2));
   console.log(JSON.stringify(report,null,2));
 
 } finally {
