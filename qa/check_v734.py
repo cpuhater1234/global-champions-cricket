@@ -7,7 +7,7 @@ GAME=ROOT/'game'
 A=GAME/'global_champions_cricket_v7_3_3_visual_identity.html'
 B=GAME/'global_champions_cricket_v7_3_4_golden_dynasty.html'
 EA='88c1c2b21ae7593d77b94babfda74e8df247e1f1e13be7f5de89a80abe62f650'
-EB='3b29b1f3b90ddb4e4728487ef280df0bcee9345c571c3979904b8a8b98b9f19e'
+EB='ac7e0479d3c5fe4b5ae6d3648f71267d74e540af3b127f08e6decfe03d6bb9bc'
 
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 if not B.exists():
@@ -31,6 +31,7 @@ required=[
     "if(stamp)stamp.textContent=String(meta?.year||2008);if(nav)nav.hidden=true;",
     "if(stamp)stamp.textContent='2008';if(nav)nav.hidden=false;",
     "restoreObject(state,save.state);if(nav)nav.hidden=false;",
+    "const launcher=$('careerLauncher'),meta=launcher&&!launcher.hidden?readSaveMeta():null,y=Number(meta?.year||state.year||2008);",
 ]
 for n in required:
     if n not in b: raise SystemExit(f'missing launcher continuity marker: {n}')
