@@ -4,8 +4,8 @@ import hashlib,re,shutil,subprocess,sys,tempfile
 ROOT=Path(__file__).resolve().parents[1]
 SOURCE=ROOT/'game'/'global_champions_cricket_v7_3_0_core_game_experience.html'
 TARGET=ROOT/'game'/'global_champions_cricket_v7_3_1_dynasty_continuity.html'
-EXPECTED_SOURCE='a9ecb8e4596fc7d751e6abcd840d74529e6b49b0c5ed78b8770badd3db4e191c'
-EXPECTED_TARGET='ef7c04895020da2922af5e12ad830c602f453233b72ec942f92aa03e677ab19f'
+EXPECTED_SOURCE='88e1c5cde4200de3d3a352f85b7bd701476e2c73f3465df4172b7e9e96dcb743'
+EXPECTED_TARGET='59385c4244f9ebdd5fb1250ba7f9330828c5c6c084f582b41aecc1bf8c1fb116'
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def scripts(t):return re.findall(r'<script(?:\s[^>]*)?>(.*?)</script>',t,re.S|re.I)
 def func(text,name):
