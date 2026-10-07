@@ -250,7 +250,7 @@ try{
   await cdp.eval(`Dynasty.runCpuMarket();Dynasty.drawDraftOrder();Dynasty.startAnnualDraft();true`);
 
   async function makeAnnualPick(){
-    return cdp.eval(`(()=>{const card=document.querySelector('#annualDraftPlayers .player-card');if(!card){const o=GCC.state.dynasty.offseason;window.__goldenNoCard={year:GCC.state.year,phase:o?.phase,cursor:o?.pickCursor,picks:o?.picks?.length||0,lottery:[...(o?.lottery||[])],user:GCC.state.userClub?.abbr,main:(document.getElementById('dynastyMain')?.innerText||'').slice(0,1600),cards:document.querySelectorAll('#annualDraftPlayers .player-card').length};return null}const m=(card.getAttribute('onclick')||'').match(/userAnnualDraft\\\\((\\\\d+)\\\\)/);if(!m)return null;const id=Number(m[1]),before=GCC.state.dynasty.offseason.pickCursor;Dynasty.userAnnualDraft(id);return{id,before,after:GCC.state.dynasty.offseason.pickCursor,phase:GCC.state.dynasty.offseason.phase,picks:GCC.state.dynasty.offseason.picks.length}})()`);
+    return cdp.eval(`(()=>{const card=document.querySelector('#annualDraftPlayers .player-card');if(!card){const o=GCC.state.dynasty.offseason;window.__goldenNoCard={year:GCC.state.year,phase:o?.phase,cursor:o?.pickCursor,picks:o?.picks?.length||0,lottery:[...(o?.lottery||[])],user:GCC.state.userClub?.abbr,main:(document.getElementById('dynastyMain')?.innerText||'').slice(0,1600),cards:document.querySelectorAll('#annualDraftPlayers .player-card').length};return null}const nums=((card.getAttribute('onclick')||'').match(/\\d+/g)||[]).map(Number);if(!nums.length){window.__goldenNoCard={onclick:card.getAttribute('onclick'),reason:'unparsed-card'};return null}const id=nums[0],before=GCC.state.dynasty.offseason.pickCursor;Dynasty.userAnnualDraft(id);return{id,before,after:GCC.state.dynasty.offseason.pickCursor,phase:GCC.state.dynasty.offseason.phase,picks:GCC.state.dynasty.offseason.picks.length}})()`);
   }
   let first2010=await makeAnnualPick();
   if(!first2010){await cdp.eval(`Dynasty.runCpuDraftUntilUser();Dynasty.renderOffseason();true`);first2010=await makeAnnualPick()}
@@ -272,7 +272,7 @@ try{
 
   let cutGuard2010=0;
   while((await cdp.eval(`GCC.state.teams[GCC.state.userClub.abbr].length`))>15&&cutGuard2010++<12){
-    const id=await cdp.eval(`(()=>{const rows=[...document.querySelectorAll('.cut-row')].filter(x=>x.querySelector('button'));if(!rows.length)return null;rows.sort((a,b)=>Number(a.querySelector('strong')?.textContent||999)-Number(b.querySelector('strong')?.textContent||999));const m=(rows[0].querySelector('button')?.getAttribute('onclick')||'').match(/cutPlayer\\\\((\\\\d+)\\\\)/);return m?Number(m[1]):null})()`);
+    const id=await cdp.eval(`(()=>{const rows=[...document.querySelectorAll('.cut-row')].filter(x=>x.querySelector('button'));if(!rows.length)return null;rows.sort((a,b)=>Number(a.querySelector('strong')?.textContent||999)-Number(b.querySelector('strong')?.textContent||999));const nums=((rows[0].querySelector('button')?.getAttribute('onclick')||'').match(/\\d+/g)||[]).map(Number);return nums.length?nums[0]:null})()`);
     assert(id,'2010 Final 15 has no releasable player');
     await cdp.eval(`Dynasty.cutPlayer(`+id+`);true`);
   }
