@@ -1,0 +1,50 @@
+name: GCC v7.4 Multi-Seed Longevity QA
+
+on:
+  push:
+    branches:
+      - work/v7.4-dynasty-balance
+  workflow_dispatch:
+
+jobs:
+  longevity-seed:
+    strategy:
+      fail-fast: false
+      matrix:
+        seed: [101, 202, 303]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild v7.4.0 League History product
+        run: python qa/rebuild_v740.py
+
+      - name: Verify v7.4.0 League History product
+        run: python qa/check_v740.py
+
+      - name: Check longevity harness syntax
+        run: node --check qa/browser_v740_longevity.mjs
+
+      - name: Locate Chrome
+        run: |
+          CHROME="$(which google-chrome || which google-chrome-stable || which chromium || which chromium-browser || true)"
+          test -n "$CHROME"
+          echo "CHROME_BIN=$CHROME" >> "$GITHUB_ENV"
+          "$CHROME" --version
+          node --version
+
+      - name: Run fixed-seed 2008-2014 longevity audit
+        env:
+          GCC_AUDIT_SEED: ${{ matrix.seed }}
+        run: node --experimental-websocket qa/browser_v740_longevity.mjs
+
+      - name: Upload seed evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gcc-v740-longevity-seed-${{ matrix.seed }}
+          path: |
+            qa/output/v740-longevity/
+            game/global_champions_cricket_v7_4_0_league_history.html
+          if-no-files-found: warn
