@@ -1,0 +1,33 @@
+name: GCC v7.5 Dynasty Memory QA
+
+on:
+  push:
+    branches:
+      - work/v7.5-dynasty-depth
+    paths:
+      - '.github/workflows/v750-dynasty-memory-qa.yml'
+      - 'qa/rebuild_v750.py'
+      - 'qa/check_v750.py'
+      - 'qa/browser_v750_dynasty_memory.mjs'
+      - 'qa/GCC_v750_dynasty_memory_plan.md'
+  workflow_dispatch:
+
+jobs:
+  dynasty-memory:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild accepted v7.4.1 baseline
+        run: python qa/rebuild_v741.py
+
+      - name: Verify accepted v7.4.1 baseline
+        run: python qa/check_v741.py
+
+      - name: Upload baseline for v7.5 implementation
+        uses: actions/upload-artifact@v4
+        with:
+          name: gcc-v741-baseline-for-v750
+          path: game/global_champions_cricket_v7_4_1_form_symmetry.html
+          if-no-files-found: error
