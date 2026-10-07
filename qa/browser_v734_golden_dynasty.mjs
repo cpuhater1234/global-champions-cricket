@@ -140,165 +140,165 @@ try{
 
 
   // 2009: manual XI ownership and save/resume.
-  const xi2009=await cdp.eval(\`(()=>{const ids=[...GCC.state.teams[GCC.state.userClub.abbr]].sort((a,b)=>(GCC.state.pool.find(p=>p.id===b)?.overall||0)-(GCC.state.pool.find(p=>p.id===a)?.overall||0));for(const id of ids){if(GCC.state.xi.length>=11)break;GCC.toggleXI(id)}return{xi:[...GCC.state.xi],order:[...GCC.state.battingOrder],rows:document.querySelectorAll('#xiList .xi-row').length,recommend:[...document.querySelectorAll('#team button')].some(x=>/RECOMMENDED XI/i.test(x.textContent||'')),startDisabled:document.getElementById('startSeasonButton')?.disabled,overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}})()\`);
+  const xi2009=await cdp.eval(`(()=>{const ids=[...GCC.state.teams[GCC.state.userClub.abbr]].sort((a,b)=>(GCC.state.pool.find(p=>p.id===b)?.overall||0)-(GCC.state.pool.find(p=>p.id===a)?.overall||0));for(const id of ids){if(GCC.state.xi.length>=11)break;GCC.toggleXI(id)}return{xi:[...GCC.state.xi],order:[...GCC.state.battingOrder],rows:document.querySelectorAll('#xiList .xi-row').length,recommend:[...document.querySelectorAll('#team button')].some(x=>/RECOMMENDED XI/i.test(x.textContent||'')),startDisabled:document.getElementById('startSeasonButton')?.disabled,overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}})()`);
   assert(xi2009.xi.length===11&&xi2009.order.length===11&&new Set(xi2009.xi).size===11&&xi2009.rows===15&&!xi2009.recommend&&!xi2009.startDisabled&&xi2009.overflow<=1,'2009 manual XI failed',JSON.stringify(xi2009));
   await shot('18-2009-xi.png');
 
-  const season2009=await cdp.eval(\`(()=>{GCC.startSeason();return{screen:document.querySelector('.screen.active')?.id,year:GCC.state.year,round:GCC.state.round,xi:[...GCC.state.xi],order:[...GCC.state.battingOrder],rounds:GCC.state.fullSchedule.length,nav:[...document.querySelectorAll('#nav button')].map(x=>x.textContent.trim()),views:[...document.querySelectorAll('.season-view-button')].map(x=>x.textContent.trim()),overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}})()\`);
+  const season2009=await cdp.eval(`(()=>{GCC.startSeason();return{screen:document.querySelector('.screen.active')?.id,year:GCC.state.year,round:GCC.state.round,xi:[...GCC.state.xi],order:[...GCC.state.battingOrder],rounds:GCC.state.fullSchedule.length,nav:[...document.querySelectorAll('#nav button')].map(x=>x.textContent.trim()),views:[...document.querySelectorAll('.season-view-button')].map(x=>x.textContent.trim()),overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}})()`);
   assert(season2009.screen==='season'&&season2009.year===2009&&season2009.round===0&&season2009.xi.length===11&&season2009.order.length===11&&season2009.rounds===14&&season2009.overflow<=1,'2009 season handoff failed',JSON.stringify(season2009));
-  const round1_2009=await cdp.eval(\`(()=>{GCC.playNextRound();return{round:GCC.state.round,results:GCC.state.results.length,screen:document.querySelector('.screen.active')?.id}})()\`);
+  const round1_2009=await cdp.eval(`(()=>{GCC.playNextRound();return{round:GCC.state.round,results:GCC.state.results.length,screen:document.querySelector('.screen.active')?.id}})()`);
   assert(round1_2009.round===1&&round1_2009.results===1&&round1_2009.screen==='season','2009 Round 1 failed',JSON.stringify(round1_2009));
 
-  const seasonSnapshot=await cdp.eval(\`(()=>({year:GCC.state.year,round:GCC.state.round,xi:[...GCC.state.xi],order:[...GCC.state.battingOrder],roster:[...GCC.state.teams[GCC.state.userClub.abbr]].sort((a,b)=>a-b)}))()\`);
+  const seasonSnapshot=await cdp.eval(`(()=>({year:GCC.state.year,round:GCC.state.round,xi:[...GCC.state.xi],order:[...GCC.state.battingOrder],roster:[...GCC.state.teams[GCC.state.userClub.abbr]].sort((a,b)=>a-b)}))()`);
   await cdp.call('Page.reload',{ignoreCache:true});await ready();await sleep(250);
-  const launcher2009=await cdp.eval(\`(()=>({continueHidden:document.getElementById('launcherContinue')?.hidden,label:document.getElementById('launcherContinue')?.textContent.trim(),overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}))()\`);
+  const launcher2009=await cdp.eval(`(()=>({continueHidden:document.getElementById('launcherContinue')?.hidden,label:document.getElementById('launcherContinue')?.textContent.trim(),overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}))()`);
   assert(!launcher2009.continueHidden&&/^CONTINUE /.test(launcher2009.label)&&launcher2009.overflow<=1,'2009 season reload launcher failed',JSON.stringify(launcher2009));
-  const seasonResume=await cdp.eval(\`(()=>{Dynasty.continueFromLauncher();return{screen:document.querySelector('.screen.active')?.id,year:GCC.state.year,round:GCC.state.round,xi:[...GCC.state.xi],order:[...GCC.state.battingOrder],roster:[...GCC.state.teams[GCC.state.userClub.abbr]].sort((a,b)=>a-b)}})()\`);
+  const seasonResume=await cdp.eval(`(()=>{Dynasty.continueFromLauncher();return{screen:document.querySelector('.screen.active')?.id,year:GCC.state.year,round:GCC.state.round,xi:[...GCC.state.xi],order:[...GCC.state.battingOrder],roster:[...GCC.state.teams[GCC.state.userClub.abbr]].sort((a,b)=>a-b)}})()`);
   assert(seasonResume.screen==='season'&&seasonResume.year===2009&&seasonResume.round===seasonSnapshot.round&&JSON.stringify(seasonResume.xi)===JSON.stringify(seasonSnapshot.xi)&&JSON.stringify(seasonResume.order)===JSON.stringify(seasonSnapshot.order)&&JSON.stringify(seasonResume.roster)===JSON.stringify(seasonSnapshot.roster),'2009 season reload did not preserve XI state',JSON.stringify({seasonSnapshot,seasonResume}));
 
   // Case A: bench cover exists. Fast sim must stop before silently changing the XI.
-  const benchInjury=await cdp.eval(\`(()=>{const injured=GCC.state.xi.find(id=>{const p=GCC.state.pool.find(x=>x.id===id);return p&&p.role!=='WK-BAT'})||GCC.state.xi[0];const bench=GCC.state.teams[GCC.state.userClub.abbr].find(id=>!GCC.state.xi.includes(id));window.__goldenBench={injured,bench,before:[...GCC.state.xi]};GCC.state.dynasty.injuries={[injured]:{status:'OUT',roundsLeft:2,type:'calf tightness'}};GCC.simulateSeason();return{injured,bench,before:window.__goldenBench.before,after:[...GCC.state.xi],screen:document.querySelector('.screen.active')?.id,round:GCC.state.round,lead:document.getElementById('selectionLead')?.textContent.trim(),quick:document.getElementById('quickStartSeasonButton')?.textContent.trim(),start:document.getElementById('startSeasonButton')?.textContent.trim()}})()\`);
+  const benchInjury=await cdp.eval(`(()=>{const injured=GCC.state.xi.find(id=>{const p=GCC.state.pool.find(x=>x.id===id);return p&&p.role!=='WK-BAT'})||GCC.state.xi[0];const bench=GCC.state.teams[GCC.state.userClub.abbr].find(id=>!GCC.state.xi.includes(id));window.__goldenBench={injured,bench,before:[...GCC.state.xi]};GCC.state.dynasty.injuries={[injured]:{status:'OUT',roundsLeft:2,type:'calf tightness'}};GCC.simulateSeason();return{injured,bench,before:window.__goldenBench.before,after:[...GCC.state.xi],screen:document.querySelector('.screen.active')?.id,round:GCC.state.round,lead:document.getElementById('selectionLead')?.textContent.trim(),quick:document.getElementById('quickStartSeasonButton')?.textContent.trim(),start:document.getElementById('startSeasonButton')?.textContent.trim()}})()`);
   assert(benchInjury.injured&&benchInjury.bench&&benchInjury.screen==='team'&&benchInjury.round===1&&JSON.stringify(benchInjury.before)===JSON.stringify(benchInjury.after)&&/out/i.test(benchInjury.lead)&&benchInjury.quick==='CHANGE REQUIRED'&&benchInjury.start==='CHANGE REQUIRED','Bench-cover injury did not interrupt cleanly',JSON.stringify(benchInjury));
   await shot('19-2009-injury-interruption.png');
 
-  const benchRepair=await cdp.eval(\`(()=>{const x=window.__goldenBench;GCC.beginSwap(x.bench);GCC.replaceXI(x.injured);GCC.startSeason();return{screen:document.querySelector('.screen.active')?.id,xi:[...GCC.state.xi],order:[...GCC.state.battingOrder],hasBench:GCC.state.xi.includes(x.bench),hasInjured:GCC.state.xi.includes(x.injured)}})()\`);
+  const benchRepair=await cdp.eval(`(()=>{const x=window.__goldenBench;GCC.beginSwap(x.bench);GCC.replaceXI(x.injured);GCC.startSeason();return{screen:document.querySelector('.screen.active')?.id,xi:[...GCC.state.xi],order:[...GCC.state.battingOrder],hasBench:GCC.state.xi.includes(x.bench),hasInjured:GCC.state.xi.includes(x.injured)}})()`);
   assert(benchRepair.screen==='season'&&benchRepair.xi.length===11&&benchRepair.order.length===11&&benchRepair.hasBench&&!benchRepair.hasInjured,'User-owned bench repair failed',JSON.stringify(benchRepair));
   await shot('20-2009-injury-repaired.png');
-  await cdp.eval(\`(()=>{const x=window.__goldenBench;if(GCC.state.dynasty.injuries[x.injured])GCC.state.dynasty.injuries[x.injured].roundsLeft=1;GCC.playNextRound();return true})()\`);
+  await cdp.eval(`(()=>{const x=window.__goldenBench;if(GCC.state.dynasty.injuries[x.injured])GCC.state.dynasty.injuries[x.injured].roundsLeft=1;GCC.playNextRound();return true})()`);
 
   // Case B: remove all fit recognised keepers so temporary cover is a legitimate squad need.
-  const coverNeed=await cdp.eval(\`(()=>{const keep=p=>(p?.keeping||0)>=65||p?.role==='WK-BAT';const roster=GCC.state.teams[GCC.state.userClub.abbr].map(id=>GCC.state.pool.find(p=>p.id===id)).filter(Boolean);let main=GCC.state.xi.map(id=>GCC.state.pool.find(p=>p.id===id)).find(keep);if(!main){main=roster.find(keep);if(main&&!GCC.state.xi.includes(main.id)){const outgoing=GCC.state.xi[0];GCC.beginSwap(main.id);GCC.replaceXI(outgoing)}}if(!main)return{ok:false};const injuries={};for(const p of roster.filter(keep))injuries[p.id]={status:'OUT',roundsLeft:p.id===main.id?4:3,type:'finger injury'};GCC.state.dynasty.injuries=injuries;window.__goldenCover={main:main.id};return{ok:true,main:main.id,keepers:roster.filter(keep).map(p=>p.id),fitKeepers:roster.filter(keep).filter(p=>!injuries[p.id]).length,round:GCC.state.round}})()\`);
+  const coverNeed=await cdp.eval(`(()=>{const keep=p=>(p?.keeping||0)>=65||p?.role==='WK-BAT';const roster=GCC.state.teams[GCC.state.userClub.abbr].map(id=>GCC.state.pool.find(p=>p.id===id)).filter(Boolean);let main=GCC.state.xi.map(id=>GCC.state.pool.find(p=>p.id===id)).find(keep);if(!main){main=roster.find(keep);if(main&&!GCC.state.xi.includes(main.id)){const outgoing=GCC.state.xi[0];GCC.beginSwap(main.id);GCC.replaceXI(outgoing)}}if(!main)return{ok:false};const injuries={};for(const p of roster.filter(keep))injuries[p.id]={status:'OUT',roundsLeft:p.id===main.id?4:3,type:'finger injury'};GCC.state.dynasty.injuries=injuries;window.__goldenCover={main:main.id};return{ok:true,main:main.id,keepers:roster.filter(keep).map(p=>p.id),fitKeepers:roster.filter(keep).filter(p=>!injuries[p.id]).length,round:GCC.state.round}})()`);
   assert(coverNeed.ok&&coverNeed.keepers.length>=1&&coverNeed.fitKeepers===0,'Could not establish legitimate keeper-cover case',JSON.stringify(coverNeed));
 
-  const coverMarket=await cdp.eval(\`(()=>{const x=window.__goldenCover;Dynasty.openReplacementMarket(x.main);const btn=document.querySelector('.market-player button');const m=(btn?.getAttribute('onclick')||'').match(/signReplacement\\\\((\\\\d+),(\\\\d+)\\\\)/);if(m)x.replacement=Number(m[2]);return{open:document.getElementById('modal')?.classList.contains('open'),cards:document.querySelectorAll('.market-player').length,injured:m?Number(m[1]):null,replacement:m?Number(m[2]):null,text:(document.getElementById('modalBody')?.innerText||'').trim()}})()\`);
+  const coverMarket=await cdp.eval(`(()=>{const x=window.__goldenCover;Dynasty.openReplacementMarket(x.main);const btn=document.querySelector('.market-player button');const m=(btn?.getAttribute('onclick')||'').match(/signReplacement\\\\((\\\\d+),(\\\\d+)\\\\)/);if(m)x.replacement=Number(m[2]);return{open:document.getElementById('modal')?.classList.contains('open'),cards:document.querySelectorAll('.market-player').length,injured:m?Number(m[1]):null,replacement:m?Number(m[2]):null,text:(document.getElementById('modalBody')?.innerText||'').trim()}})()`);
   assert(coverMarket.open&&coverMarket.cards>0&&coverMarket.injured===coverNeed.main&&coverMarket.replacement&&/cover|temporary|returns to the player pool/i.test(coverMarket.text),'Legitimate replacement market failed',JSON.stringify(coverMarket));
   await shot('21-2009-replacement-market.png');
 
-  const coverSigned=await cdp.eval(\`(()=>{const x=window.__goldenCover;Dynasty.signReplacement(x.main,x.replacement);const d=GCC.state.dynasty,rep=GCC.state.pool.find(p=>p.id===x.replacement);return{mapped:d.replacementFor[x.main],reverse:d.replacementOf[x.replacement],roster:GCC.state.teams[GCC.state.userClub.abbr].length,replacementFlag:!!rep?.dynastyReplacement}})()\`);
+  const coverSigned=await cdp.eval(`(()=>{const x=window.__goldenCover;Dynasty.signReplacement(x.main,x.replacement);const d=GCC.state.dynasty,rep=GCC.state.pool.find(p=>p.id===x.replacement);return{mapped:d.replacementFor[x.main],reverse:d.replacementOf[x.replacement],roster:GCC.state.teams[GCC.state.userClub.abbr].length,replacementFlag:!!rep?.dynastyReplacement}})()`);
   assert(coverSigned.mapped===coverMarket.replacement&&coverSigned.reverse===coverNeed.main&&coverSigned.roster===16&&coverSigned.replacementFlag,'Temporary cover signing failed',JSON.stringify(coverSigned));
 
-  const coverXI=await cdp.eval(\`(()=>{const x=window.__goldenCover;GCC.beginSwap(x.replacement);GCC.replaceXI(x.main);GCC.state.dynasty.injuries[x.main].roundsLeft=1;GCC.startSeason();return{screen:document.querySelector('.screen.active')?.id,xi:GCC.state.xi.length,hasReplacement:GCC.state.xi.includes(x.replacement),hasInjured:GCC.state.xi.includes(x.main)}})()\`);
+  const coverXI=await cdp.eval(`(()=>{const x=window.__goldenCover;GCC.beginSwap(x.replacement);GCC.replaceXI(x.main);GCC.state.dynasty.injuries[x.main].roundsLeft=1;GCC.startSeason();return{screen:document.querySelector('.screen.active')?.id,xi:GCC.state.xi.length,hasReplacement:GCC.state.xi.includes(x.replacement),hasInjured:GCC.state.xi.includes(x.main)}})()`);
   assert(coverXI.screen==='season'&&coverXI.xi===11&&coverXI.hasReplacement&&!coverXI.hasInjured,'Temporary cover could not enter XI',JSON.stringify(coverXI));
 
-  const coverReturn=await cdp.eval(\`(()=>{const x=window.__goldenCover;GCC.playNextRound();const d=GCC.state.dynasty,rep=GCC.state.pool.find(p=>p.id===x.replacement);return{round:GCC.state.round,injury:d.injuries[x.main]||null,mapped:d.replacementFor[x.main]||null,reverse:d.replacementOf[x.replacement]||null,roster:GCC.state.teams[GCC.state.userClub.abbr].length,repInRoster:GCC.state.teams[GCC.state.userClub.abbr].includes(x.replacement),mainInXI:GCC.state.xi.includes(x.main),repInXI:GCC.state.xi.includes(x.replacement),replacementFlag:!!rep?.dynastyReplacement,xi:GCC.state.xi.length,order:GCC.state.battingOrder.length}})()\`);
+  const coverReturn=await cdp.eval(`(()=>{const x=window.__goldenCover;GCC.playNextRound();const d=GCC.state.dynasty,rep=GCC.state.pool.find(p=>p.id===x.replacement);return{round:GCC.state.round,injury:d.injuries[x.main]||null,mapped:d.replacementFor[x.main]||null,reverse:d.replacementOf[x.replacement]||null,roster:GCC.state.teams[GCC.state.userClub.abbr].length,repInRoster:GCC.state.teams[GCC.state.userClub.abbr].includes(x.replacement),mainInXI:GCC.state.xi.includes(x.main),repInXI:GCC.state.xi.includes(x.replacement),replacementFlag:!!rep?.dynastyReplacement,xi:GCC.state.xi.length,order:GCC.state.battingOrder.length}})()`);
   assert(coverReturn.injury==null&&coverReturn.mapped==null&&coverReturn.reverse==null&&coverReturn.roster===15&&!coverReturn.repInRoster&&coverReturn.mainInXI&&!coverReturn.repInXI&&!coverReturn.replacementFlag&&coverReturn.xi===11&&coverReturn.order===11,'Temporary cover return lifecycle failed',JSON.stringify(coverReturn));
   await shot('22-2009-cover-returned.png');
 
   // Advance deterministically to Round 7 and exercise a deliberate trade decision.
   let midGuard=0;
-  while((await cdp.eval(\`GCC.state.round\`))<7&&midGuard++<10){
-    await cdp.eval(\`GCC.state.dynasty.injuries={};GCC.state.dynasty.replacementFor={};GCC.state.dynasty.replacementOf={};GCC.playNextRound();true\`);
+  while((await cdp.eval(`GCC.state.round`))<7&&midGuard++<10){
+    await cdp.eval(`GCC.state.dynasty.injuries={};GCC.state.dynasty.replacementFor={};GCC.state.dynasty.replacementOf={};GCC.playNextRound();true`);
   }
-  const round7=await cdp.eval(\`(()=>({round:GCC.state.round,done:!!GCC.state.dynasty.midseasonDone[2009],buttons:[...document.querySelectorAll('#dynastySeasonStrip button')].map(x=>x.textContent.trim()),strip:(document.getElementById('dynastySeasonStrip')?.innerText||'').trim(),overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}))()\`);
+  const round7=await cdp.eval(`(()=>({round:GCC.state.round,done:!!GCC.state.dynasty.midseasonDone[2009],buttons:[...document.querySelectorAll('#dynastySeasonStrip button')].map(x=>x.textContent.trim()),strip:(document.getElementById('dynastySeasonStrip')?.innerText||'').trim(),overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}))()`);
   assert(round7.round===7&&!round7.done&&round7.buttons.includes('OPEN TRADE WINDOW')&&/Trade window open/.test(round7.strip)&&round7.overflow<=1,'Round 7 trade window failed',JSON.stringify(round7));
   await shot('23-2009-round7.png');
 
-  const midOpen=await cdp.eval(\`(()=>{Dynasty.openMidseasonMarket();return{modal:document.getElementById('modal')?.classList.contains('open'),clubs:document.querySelectorAll('#tradeClub option').length,targets:document.querySelectorAll('#tradeTarget option').length,offers:document.querySelectorAll('#tradeOffer option').length,pick:!!document.getElementById('tradePick')}})()\`);
+  const midOpen=await cdp.eval(`(()=>{Dynasty.openMidseasonMarket();return{modal:document.getElementById('modal')?.classList.contains('open'),clubs:document.querySelectorAll('#tradeClub option').length,targets:document.querySelectorAll('#tradeTarget option').length,offers:document.querySelectorAll('#tradeOffer option').length,pick:!!document.getElementById('tradePick')}})()`);
   assert(midOpen.modal&&midOpen.clubs===7&&midOpen.targets>0&&midOpen.offers>0&&!midOpen.pick,'Mid-season Trade Centre failed',JSON.stringify(midOpen));
-  await cdp.eval(\`GCC.closeModal();GCC.renderSeason();true\`);
-  const midCancel=await cdp.eval(\`(()=>({done:!!GCC.state.dynasty.midseasonDone[2009],buttons:[...document.querySelectorAll('#dynastySeasonStrip button')].map(x=>x.textContent.trim())}))()\`);
+  await cdp.eval(`GCC.closeModal();GCC.renderSeason();true`);
+  const midCancel=await cdp.eval(`(()=>({done:!!GCC.state.dynasty.midseasonDone[2009],buttons:[...document.querySelectorAll('#dynastySeasonStrip button')].map(x=>x.textContent.trim())}))()`);
   assert(!midCancel.done&&midCancel.buttons.includes('OPEN TRADE WINDOW'),'Inspecting trade window consumed it',JSON.stringify(midCancel));
 
-  await cdp.eval(\`Dynasty.openMidseasonMarket();true\`);
-  const acceptedTrade=await cdp.eval(\`(()=>{const clubEl=document.getElementById('tradeClub'),offerEl=document.getElementById('tradeOffer');const offerIds=[...offerEl.options].map(o=>Number(o.value)).sort((a,b)=>Number(GCC.state.xi.includes(a))-Number(GCC.state.xi.includes(b)));const before=GCC.state.dynasty.transactions.filter(x=>x.year===2009&&x.type==='TRADE').length;for(const offerId of offerIds){offerEl.value=String(offerId);for(let ci=0;ci<clubEl.options.length;ci++){clubEl.selectedIndex=ci;Dynasty.refreshTradeTarget();const targetEl=document.getElementById('tradeTarget');for(let ti=targetEl.options.length-1;ti>=0;ti--){targetEl.selectedIndex=ti;const offer=Number(offerEl.value),target=Number(targetEl.value),club=clubEl.value,offerWasXI=GCC.state.xi.includes(offer);Dynasty.proposeTrade(true);if(document.getElementById('tradeRead')?.classList.contains('good')){window.__goldenTrade={offer,target,club,offerWasXI,before};return{accepted:true,offer,target,club,offerWasXI,before}}}}return{accepted:false,before}})()\`);
+  await cdp.eval(`Dynasty.openMidseasonMarket();true`);
+  const acceptedTrade=await cdp.eval(`(()=>{const clubEl=document.getElementById('tradeClub'),offerEl=document.getElementById('tradeOffer');const offerIds=[...offerEl.options].map(o=>Number(o.value)).sort((a,b)=>Number(GCC.state.xi.includes(a))-Number(GCC.state.xi.includes(b)));const before=GCC.state.dynasty.transactions.filter(x=>x.year===2009&&x.type==='TRADE').length;for(const offerId of offerIds){offerEl.value=String(offerId);for(let ci=0;ci<clubEl.options.length;ci++){clubEl.selectedIndex=ci;Dynasty.refreshTradeTarget();const targetEl=document.getElementById('tradeTarget');for(let ti=targetEl.options.length-1;ti>=0;ti--){targetEl.selectedIndex=ti;const offer=Number(offerEl.value),target=Number(targetEl.value),club=clubEl.value,offerWasXI=GCC.state.xi.includes(offer);Dynasty.proposeTrade(true);if(document.getElementById('tradeRead')?.classList.contains('good')){window.__goldenTrade={offer,target,club,offerWasXI,before};return{accepted:true,offer,target,club,offerWasXI,before}}}}return{accepted:false,before}})()`);
   assert(acceptedTrade.accepted,'No valid mid-season trade could be completed',JSON.stringify(acceptedTrade));
   await sleep(800);
 
-  let tradeState=await cdp.eval(\`(()=>{const all=Object.values(GCC.state.teams).flat();return{done:!!GCC.state.dynasty.midseasonDone[2009],modal:document.getElementById('modal')?.classList.contains('open'),trades:GCC.state.dynasty.transactions.filter(x=>x.year===2009&&x.type==='TRADE').length,total:all.length,unique:new Set(all).size,roster:GCC.state.teams[GCC.state.userClub.abbr].length,xi:GCC.state.xi.length,screen:document.querySelector('.screen.active')?.id}})()\`);
+  let tradeState=await cdp.eval(`(()=>{const all=Object.values(GCC.state.teams).flat();return{done:!!GCC.state.dynasty.midseasonDone[2009],modal:document.getElementById('modal')?.classList.contains('open'),trades:GCC.state.dynasty.transactions.filter(x=>x.year===2009&&x.type==='TRADE').length,total:all.length,unique:new Set(all).size,roster:GCC.state.teams[GCC.state.userClub.abbr].length,xi:GCC.state.xi.length,screen:document.querySelector('.screen.active')?.id}})()`);
   assert(tradeState.done&&!tradeState.modal&&tradeState.trades===acceptedTrade.before+1&&tradeState.total===tradeState.unique&&tradeState.roster===15,'Accepted trade corrupted ownership/state',JSON.stringify({acceptedTrade,tradeState}));
   if(tradeState.xi<11){
-    const repair=await cdp.eval(\`(()=>{const id=GCC.state.teams[GCC.state.userClub.abbr].find(x=>!GCC.state.xi.includes(x));if(id)GCC.toggleXI(id);return{xi:GCC.state.xi.length,order:GCC.state.battingOrder.length}})()\`);
+    const repair=await cdp.eval(`(()=>{const id=GCC.state.teams[GCC.state.userClub.abbr].find(x=>!GCC.state.xi.includes(x));if(id)GCC.toggleXI(id);return{xi:GCC.state.xi.length,order:GCC.state.battingOrder.length}})()`);
     assert(repair.xi===11&&repair.order===11,'Post-trade XI repair failed',JSON.stringify(repair));
-    await cdp.eval(\`GCC.startSeason();true\`);
+    await cdp.eval(`GCC.startSeason();true`);
   }
   await shot('24-2009-trade-complete.png');
 
-  const tradeSnap=await cdp.eval(\`(()=>({round:GCC.state.round,roster:[...GCC.state.teams[GCC.state.userClub.abbr]].sort((a,b)=>a-b),xi:[...GCC.state.xi],order:[...GCC.state.battingOrder],trades:GCC.state.dynasty.transactions.filter(x=>x.year===2009&&x.type==='TRADE').length,done:!!GCC.state.dynasty.midseasonDone[2009]}))()\`);
+  const tradeSnap=await cdp.eval(`(()=>({round:GCC.state.round,roster:[...GCC.state.teams[GCC.state.userClub.abbr]].sort((a,b)=>a-b),xi:[...GCC.state.xi],order:[...GCC.state.battingOrder],trades:GCC.state.dynasty.transactions.filter(x=>x.year===2009&&x.type==='TRADE').length,done:!!GCC.state.dynasty.midseasonDone[2009]}))()`);
   await cdp.call('Page.reload',{ignoreCache:true});await ready();
-  const tradeResume=await cdp.eval(\`(()=>{Dynasty.continueFromLauncher();return{screen:document.querySelector('.screen.active')?.id,round:GCC.state.round,roster:[...GCC.state.teams[GCC.state.userClub.abbr]].sort((a,b)=>a-b),xi:[...GCC.state.xi],order:[...GCC.state.battingOrder],trades:GCC.state.dynasty.transactions.filter(x=>x.year===2009&&x.type==='TRADE').length,done:!!GCC.state.dynasty.midseasonDone[2009]}})()\`);
+  const tradeResume=await cdp.eval(`(()=>{Dynasty.continueFromLauncher();return{screen:document.querySelector('.screen.active')?.id,round:GCC.state.round,roster:[...GCC.state.teams[GCC.state.userClub.abbr]].sort((a,b)=>a-b),xi:[...GCC.state.xi],order:[...GCC.state.battingOrder],trades:GCC.state.dynasty.transactions.filter(x=>x.year===2009&&x.type==='TRADE').length,done:!!GCC.state.dynasty.midseasonDone[2009]}})()`);
   assert(tradeResume.round===tradeSnap.round&&JSON.stringify(tradeResume.roster)===JSON.stringify(tradeSnap.roster)&&JSON.stringify(tradeResume.xi)===JSON.stringify(tradeSnap.xi)&&JSON.stringify(tradeResume.order)===JSON.stringify(tradeSnap.order)&&tradeResume.trades===tradeSnap.trades&&tradeResume.done,'Mid-season trade save/resume failed',JSON.stringify({tradeSnap,tradeResume}));
 
   // Finish 2009.
   let finishGuard=0;
-  while((await cdp.eval(\`GCC.state.round\`))<14&&finishGuard++<12){
-    await cdp.eval(\`GCC.state.dynasty.injuries={};GCC.state.dynasty.replacementFor={};GCC.state.dynasty.replacementOf={};GCC.playNextRound();true\`);
+  while((await cdp.eval(`GCC.state.round`))<14&&finishGuard++<12){
+    await cdp.eval(`GCC.state.dynasty.injuries={};GCC.state.dynasty.replacementFor={};GCC.state.dynasty.replacementOf={};GCC.playNextRound();true`);
   }
-  const regular2009=await cdp.eval(\`(()=>({year:GCC.state.year,round:GCC.state.round,position:GCC.state.regularSeasonPosition,qualified:(GCC.state.regularSeasonPosition||99)<=4,results:GCC.state.results.length}))()\`);
+  const regular2009=await cdp.eval(`(()=>({year:GCC.state.year,round:GCC.state.round,position:GCC.state.regularSeasonPosition,qualified:(GCC.state.regularSeasonPosition||99)<=4,results:GCC.state.results.length}))()`);
   assert(regular2009.year===2009&&regular2009.round===14&&regular2009.results===14,'2009 regular season failed',JSON.stringify(regular2009));
 
   if(regular2009.qualified){
-    await cdp.eval(\`GCC.proceedPostSeason();true\`);
-    if(await cdp.eval(\`document.getElementById('modal')?.classList.contains('open')\`))await cdp.eval(\`GCC.enterFinalsFromModal();true\`);
-    let stage=await cdp.eval(\`GCC.state.finals?.stage\`);
-    if(stage==='ready')await cdp.eval(\`GCC.simulateFinals();true\`);
-    stage=await cdp.eval(\`GCC.state.finals?.stage\`);
-    if(stage==='semis')await cdp.eval(\`GCC.advanceFinals();true\`);
-    stage=await cdp.eval(\`GCC.state.finals?.stage\`);
-    if(stage==='gf-ready')await cdp.eval(\`GCC.simulateFinals();true\`);
-    await sleep(700);await cdp.eval(\`GCC.closeModal();GCC.openSeasonReview();true\`);
+    await cdp.eval(`GCC.proceedPostSeason();true`);
+    if(await cdp.eval(`document.getElementById('modal')?.classList.contains('open')`))await cdp.eval(`GCC.enterFinalsFromModal();true`);
+    let stage=await cdp.eval(`GCC.state.finals?.stage`);
+    if(stage==='ready')await cdp.eval(`GCC.simulateFinals();true`);
+    stage=await cdp.eval(`GCC.state.finals?.stage`);
+    if(stage==='semis')await cdp.eval(`GCC.advanceFinals();true`);
+    stage=await cdp.eval(`GCC.state.finals?.stage`);
+    if(stage==='gf-ready')await cdp.eval(`GCC.simulateFinals();true`);
+    await sleep(700);await cdp.eval(`GCC.closeModal();GCC.openSeasonReview();true`);
   }else{
-    await cdp.eval(\`GCC.proceedPostSeason();true\`);
+    await cdp.eval(`GCC.proceedPostSeason();true`);
   }
-  const review2009=await cdp.eval(\`(()=>({screen:document.querySelector('.screen.active')?.id,year:GCC.state.year,title:document.getElementById('reviewTitle')?.textContent.trim(),footer:[...document.querySelectorAll('#review .review-footer button')].map(x=>x.textContent.trim()),overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}))()\`);
+  const review2009=await cdp.eval(`(()=>({screen:document.querySelector('.screen.active')?.id,year:GCC.state.year,title:document.getElementById('reviewTitle')?.textContent.trim(),footer:[...document.querySelectorAll('#review .review-footer button')].map(x=>x.textContent.trim()),overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}))()`);
   assert(review2009.screen==='review'&&review2009.year===2009&&review2009.title&&review2009.footer.some(x=>/CONTINUE DYNASTY/.test(x))&&review2009.overflow<=1,'2009 Review failed',JSON.stringify(review2009));
   await shot('25-2009-review.png');
 
   // 2010: repeat annual Draft, Final 15, XI and early season.
-  const market2010=await cdp.eval(\`(()=>{Dynasty.beginOffseason();const all=Object.values(GCC.state.teams).flat();return{screen:document.querySelector('.screen.active')?.id,year:GCC.state.year,phase:GCC.state.dynasty.offseason?.phase,total:all.length,unique:new Set(all).size,timeline:document.querySelectorAll('#dynastyTimeline .dynasty-step').length,overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}})()\`);
+  const market2010=await cdp.eval(`(()=>{Dynasty.beginOffseason();const all=Object.values(GCC.state.teams).flat();return{screen:document.querySelector('.screen.active')?.id,year:GCC.state.year,phase:GCC.state.dynasty.offseason?.phase,total:all.length,unique:new Set(all).size,timeline:document.querySelectorAll('#dynastyTimeline .dynasty-step').length,overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}})()`);
   assert(market2010.screen==='dynasty'&&market2010.year===2010&&market2010.phase==='market'&&market2010.total===market2010.unique&&market2010.timeline===5&&market2010.overflow<=1,'2010 offseason failed',JSON.stringify(market2010));
   await shot('26-2010-market.png');
-  await cdp.eval(\`Dynasty.runCpuMarket();Dynasty.drawDraftOrder();Dynasty.startAnnualDraft();true\`);
+  await cdp.eval(`Dynasty.runCpuMarket();Dynasty.drawDraftOrder();Dynasty.startAnnualDraft();true`);
 
   async function makeAnnualPick(){
-    return cdp.eval(\`(()=>{const card=document.querySelector('#annualDraftPlayers .player-card');if(!card)return null;const m=(card.getAttribute('onclick')||'').match(/userAnnualDraft\\\\((\\\\d+)\\\\)/);if(!m)return null;const id=Number(m[1]),before=GCC.state.dynasty.offseason.pickCursor;Dynasty.userAnnualDraft(id);return{id,before,after:GCC.state.dynasty.offseason.pickCursor,phase:GCC.state.dynasty.offseason.phase,picks:GCC.state.dynasty.offseason.picks.length}})()\`);
+    return cdp.eval(`(()=>{const card=document.querySelector('#annualDraftPlayers .player-card');if(!card)return null;const m=(card.getAttribute('onclick')||'').match(/userAnnualDraft\\\\((\\\\d+)\\\\)/);if(!m)return null;const id=Number(m[1]),before=GCC.state.dynasty.offseason.pickCursor;Dynasty.userAnnualDraft(id);return{id,before,after:GCC.state.dynasty.offseason.pickCursor,phase:GCC.state.dynasty.offseason.phase,picks:GCC.state.dynasty.offseason.picks.length}})()`);
   }
   let first2010=await makeAnnualPick();
-  if(!first2010){await cdp.eval(\`Dynasty.runCpuDraftUntilUser();true\`);first2010=await makeAnnualPick()}
+  if(!first2010){await cdp.eval(`Dynasty.runCpuDraftUntilUser();true`);first2010=await makeAnnualPick()}
   assert(first2010&&first2010.after>first2010.before,'2010 first Draft pick failed',JSON.stringify(first2010));
 
-  const draft2010Snap=await cdp.eval(\`(()=>({cursor:GCC.state.dynasty.offseason.pickCursor,picks:JSON.stringify(GCC.state.dynasty.offseason.picks),roster:JSON.stringify([...GCC.state.teams[GCC.state.userClub.abbr]].sort((a,b)=>a-b))}))()\`);
+  const draft2010Snap=await cdp.eval(`(()=>({cursor:GCC.state.dynasty.offseason.pickCursor,picks:JSON.stringify(GCC.state.dynasty.offseason.picks),roster:JSON.stringify([...GCC.state.teams[GCC.state.userClub.abbr]].sort((a,b)=>a-b))}))()`);
   await cdp.call('Page.reload',{ignoreCache:true});await ready();
-  const draft2010Resume=await cdp.eval(\`(()=>{Dynasty.continueFromLauncher();const o=GCC.state.dynasty.offseason;return{screen:document.querySelector('.screen.active')?.id,year:GCC.state.year,phase:o?.phase,cursor:o?.pickCursor,picks:JSON.stringify(o?.picks||[]),roster:JSON.stringify([...GCC.state.teams[GCC.state.userClub.abbr]].sort((a,b)=>a-b)),cards:document.querySelectorAll('#annualDraftPlayers .player-card').length}})()\`);
+  const draft2010Resume=await cdp.eval(`(()=>{Dynasty.continueFromLauncher();const o=GCC.state.dynasty.offseason;return{screen:document.querySelector('.screen.active')?.id,year:GCC.state.year,phase:o?.phase,cursor:o?.pickCursor,picks:JSON.stringify(o?.picks||[]),roster:JSON.stringify([...GCC.state.teams[GCC.state.userClub.abbr]].sort((a,b)=>a-b)),cards:document.querySelectorAll('#annualDraftPlayers .player-card').length}})()`);
   assert(draft2010Resume.screen==='dynasty'&&draft2010Resume.year===2010&&draft2010Resume.phase==='draft'&&draft2010Resume.cursor===draft2010Snap.cursor&&draft2010Resume.picks===draft2010Snap.picks&&draft2010Resume.roster===draft2010Snap.roster&&draft2010Resume.cards===24,'2010 Draft reload failed',JSON.stringify({draft2010Snap,draft2010Resume}));
 
   let draftGuard2010=0;
-  while((await cdp.eval(\`GCC.state.dynasty.offseason?.phase\`))==='draft'&&draftGuard2010++<40){
+  while((await cdp.eval(`GCC.state.dynasty.offseason?.phase`))==='draft'&&draftGuard2010++<40){
     const p=await makeAnnualPick();
-    if(!p)await cdp.eval(\`Dynasty.runCpuDraftUntilUser();true\`);
+    if(!p)await cdp.eval(`Dynasty.runCpuDraftUntilUser();true`);
   }
-  const draft2010Done=await cdp.eval(\`(()=>{const o=GCC.state.dynasty.offseason,all=Object.values(GCC.state.teams).flat();return{phase:o.phase,complete:o.draftComplete,picks:o.picks.length,userRoster:GCC.state.teams[GCC.state.userClub.abbr].length,total:all.length,unique:new Set(all).size}})()\`);
+  const draft2010Done=await cdp.eval(`(()=>{const o=GCC.state.dynasty.offseason,all=Object.values(GCC.state.teams).flat();return{phase:o.phase,complete:o.draftComplete,picks:o.picks.length,userRoster:GCC.state.teams[GCC.state.userClub.abbr].length,total:all.length,unique:new Set(all).size}})()`);
   assert(draft2010Done.phase==='cuts'&&draft2010Done.complete&&draft2010Done.total===draft2010Done.unique&&draft2010Done.userRoster>=15,'2010 Draft completion failed',JSON.stringify(draft2010Done));
   await shot('27-2010-final15.png');
 
   let cutGuard2010=0;
-  while((await cdp.eval(\`GCC.state.teams[GCC.state.userClub.abbr].length\`))>15&&cutGuard2010++<12){
-    const id=await cdp.eval(\`(()=>{const rows=[...document.querySelectorAll('.cut-row')].filter(x=>x.querySelector('button'));if(!rows.length)return null;rows.sort((a,b)=>Number(a.querySelector('strong')?.textContent||999)-Number(b.querySelector('strong')?.textContent||999));const m=(rows[0].querySelector('button')?.getAttribute('onclick')||'').match(/cutPlayer\\\\((\\\\d+)\\\\)/);return m?Number(m[1]):null})()\`);
+  while((await cdp.eval(`GCC.state.teams[GCC.state.userClub.abbr].length`))>15&&cutGuard2010++<12){
+    const id=await cdp.eval(`(()=>{const rows=[...document.querySelectorAll('.cut-row')].filter(x=>x.querySelector('button'));if(!rows.length)return null;rows.sort((a,b)=>Number(a.querySelector('strong')?.textContent||999)-Number(b.querySelector('strong')?.textContent||999));const m=(rows[0].querySelector('button')?.getAttribute('onclick')||'').match(/cutPlayer\\\\((\\\\d+)\\\\)/);return m?Number(m[1]):null})()`);
     assert(id,'2010 Final 15 has no releasable player');
-    await cdp.eval(\`Dynasty.cutPlayer(\`+id+\`);true\`);
+    await cdp.eval(`Dynasty.cutPlayer(`+id+`);true`);
   }
-  const pre2010=await cdp.eval(\`(()=>{Dynasty.finishOffseason();return{year:GCC.state.year,phase:GCC.state.dynasty.offseason?.phase,n:GCC.state.teams[GCC.state.userClub.abbr].length,main:(document.getElementById('dynastyMain')?.innerText||'').trim()}})()\`);
+  const pre2010=await cdp.eval(`(()=>{Dynasty.finishOffseason();return{year:GCC.state.year,phase:GCC.state.dynasty.offseason?.phase,n:GCC.state.teams[GCC.state.userClub.abbr].length,main:(document.getElementById('dynastyMain')?.innerText||'').trim()}})()`);
   assert(pre2010.year===2010&&pre2010.phase==='ready'&&pre2010.n===15&&/The 15 are lodged/.test(pre2010.main),'2010 Pre-season failed',JSON.stringify(pre2010));
 
-  await cdp.eval(\`Dynasty.enterTeamRoom();true\`);
-  const team2010=await cdp.eval(\`(()=>{const ids=[...GCC.state.teams[GCC.state.userClub.abbr]].sort((a,b)=>(GCC.state.pool.find(p=>p.id===b)?.overall||0)-(GCC.state.pool.find(p=>p.id===a)?.overall||0));for(const id of ids){if(GCC.state.xi.length>=11)break;GCC.toggleXI(id)}return{screen:document.querySelector('.screen.active')?.id,year:GCC.state.year,title:document.querySelector('#team .section-head h2')?.textContent.trim(),xi:[...GCC.state.xi],order:[...GCC.state.battingOrder],rows:document.querySelectorAll('#xiList .xi-row').length,overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}})()\`);
+  await cdp.eval(`Dynasty.enterTeamRoom();true`);
+  const team2010=await cdp.eval(`(()=>{const ids=[...GCC.state.teams[GCC.state.userClub.abbr]].sort((a,b)=>(GCC.state.pool.find(p=>p.id===b)?.overall||0)-(GCC.state.pool.find(p=>p.id===a)?.overall||0));for(const id of ids){if(GCC.state.xi.length>=11)break;GCC.toggleXI(id)}return{screen:document.querySelector('.screen.active')?.id,year:GCC.state.year,title:document.querySelector('#team .section-head h2')?.textContent.trim(),xi:[...GCC.state.xi],order:[...GCC.state.battingOrder],rows:document.querySelectorAll('#xiList .xi-row').length,overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}})()`);
   assert(team2010.screen==='team'&&team2010.year===2010&&/2010 XI/.test(team2010.title)&&team2010.xi.length===11&&team2010.order.length===11&&team2010.rows===15&&team2010.overflow<=1,'2010 Team Room repetition failed',JSON.stringify(team2010));
   await shot('28-2010-xi.png');
 
-  const season2010=await cdp.eval(\`(()=>{GCC.startSeason();for(let i=0;i<3;i++){GCC.state.dynasty.injuries={};GCC.playNextRound()}return{screen:document.querySelector('.screen.active')?.id,year:GCC.state.year,round:GCC.state.round,results:GCC.state.results.length,xi:[...GCC.state.xi],order:[...GCC.state.battingOrder],nav:[...document.querySelectorAll('#nav button')].map(x=>x.textContent.trim()),views:[...document.querySelectorAll('.season-view-button')].map(x=>x.textContent.trim()),overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}})()\`);
+  const season2010=await cdp.eval(`(()=>{GCC.startSeason();for(let i=0;i<3;i++){GCC.state.dynasty.injuries={};GCC.playNextRound()}return{screen:document.querySelector('.screen.active')?.id,year:GCC.state.year,round:GCC.state.round,results:GCC.state.results.length,xi:[...GCC.state.xi],order:[...GCC.state.battingOrder],nav:[...document.querySelectorAll('#nav button')].map(x=>x.textContent.trim()),views:[...document.querySelectorAll('.season-view-button')].map(x=>x.textContent.trim()),overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}})()`);
   assert(season2010.screen==='season'&&season2010.year===2010&&season2010.round===3&&season2010.results===3&&season2010.xi.length===11&&season2010.order.length===11&&season2010.overflow<=1,'2010 repeated season failed',JSON.stringify(season2010));
   assert(JSON.stringify(season2010.nav)===JSON.stringify(season2009.nav)&&JSON.stringify(season2010.views)===JSON.stringify(season2009.views),'Season shell changed between 2009 and 2010',JSON.stringify({season2009,season2010}));
   await shot('29-2010-round3.png');
 
-  const season2010Snap=await cdp.eval(\`(()=>({round:GCC.state.round,xi:[...GCC.state.xi],order:[...GCC.state.battingOrder],roster:[...GCC.state.teams[GCC.state.userClub.abbr]].sort((a,b)=>a-b)}))()\`);
+  const season2010Snap=await cdp.eval(`(()=>({round:GCC.state.round,xi:[...GCC.state.xi],order:[...GCC.state.battingOrder],roster:[...GCC.state.teams[GCC.state.userClub.abbr]].sort((a,b)=>a-b)}))()`);
   await cdp.call('Page.reload',{ignoreCache:true});await ready();await sleep(250);
-  const finalLauncher=await cdp.eval(\`(()=>({label:document.getElementById('launcherContinue')?.textContent.trim(),hidden:document.getElementById('launcherContinue')?.hidden,overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}))()\`);
+  const finalLauncher=await cdp.eval(`(()=>({label:document.getElementById('launcherContinue')?.textContent.trim(),hidden:document.getElementById('launcherContinue')?.hidden,overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}))()`);
   assert(!finalLauncher.hidden&&/^CONTINUE /.test(finalLauncher.label)&&finalLauncher.overflow<=1,'2010 continue launcher failed',JSON.stringify(finalLauncher));
   await shot('30-2010-continue-launcher.png');
 
-  const season2010Resume=await cdp.eval(\`(()=>{Dynasty.continueFromLauncher();return{screen:document.querySelector('.screen.active')?.id,year:GCC.state.year,round:GCC.state.round,xi:[...GCC.state.xi],order:[...GCC.state.battingOrder],roster:[...GCC.state.teams[GCC.state.userClub.abbr]].sort((a,b)=>a-b)}})()\`);
+  const season2010Resume=await cdp.eval(`(()=>{Dynasty.continueFromLauncher();return{screen:document.querySelector('.screen.active')?.id,year:GCC.state.year,round:GCC.state.round,xi:[...GCC.state.xi],order:[...GCC.state.battingOrder],roster:[...GCC.state.teams[GCC.state.userClub.abbr]].sort((a,b)=>a-b)}})()`);
   assert(season2010Resume.screen==='season'&&season2010Resume.year===2010&&season2010Resume.round===season2010Snap.round&&JSON.stringify(season2010Resume.xi)===JSON.stringify(season2010Snap.xi)&&JSON.stringify(season2010Resume.order)===JSON.stringify(season2010Snap.order)&&JSON.stringify(season2010Resume.roster)===JSON.stringify(season2010Snap.roster),'2010 season reload failed',JSON.stringify({season2010Snap,season2010Resume}));
 
-  const integrity=await cdp.eval(\`(()=>{const all=Object.values(GCC.state.teams).flat(),user=GCC.state.teams[GCC.state.userClub.abbr],xi=GCC.state.xi,order=GCC.state.battingOrder;return{total:all.length,unique:new Set(all).size,userRoster:user.length,userUnique:new Set(user).size,xi:xi.length,xiUnique:new Set(xi).size,order:order.length,orderUnique:new Set(order).size,orderMatches:order.every(id=>xi.includes(id))&&xi.every(id=>order.includes(id)),year:GCC.state.year,round:GCC.state.round}})()\`);
+  const integrity=await cdp.eval(`(()=>{const all=Object.values(GCC.state.teams).flat(),user=GCC.state.teams[GCC.state.userClub.abbr],xi=GCC.state.xi,order=GCC.state.battingOrder;return{total:all.length,unique:new Set(all).size,userRoster:user.length,userUnique:new Set(user).size,xi:xi.length,xiUnique:new Set(xi).size,order:order.length,orderUnique:new Set(order).size,orderMatches:order.every(id=>xi.includes(id))&&xi.every(id=>order.includes(id)),year:GCC.state.year,round:GCC.state.round}})()`);
   assert(integrity.total===integrity.unique&&integrity.userRoster===15&&integrity.userUnique===15&&integrity.xi===11&&integrity.xiUnique===11&&integrity.order===11&&integrity.orderUnique===11&&integrity.orderMatches&&integrity.year===2010&&integrity.round===3,'Golden Dynasty final integrity failed',JSON.stringify(integrity));
 
   const classifications={
@@ -307,7 +307,7 @@ try{
     REBUILD:[],
     CUT:[]
   };
-  const report={parentSha:'88c1c2b21ae7593d77b94babfda74e8df247e1f1e13be7f5de89a80abe62f650',clubs,signing,draw,draft,team,season,innings,finals,review,market,trade,lottery,annual,cuts,readyState,team2009,xi2009,season2009,seasonSnapshot,seasonResume,benchInjury,benchRepair,coverNeed,coverMarket,coverSigned,coverXI,coverReturn,round7,midOpen,midCancel,acceptedTrade,tradeState,tradeSnap,tradeResume,regular2009,review2009,market2010,first2010,draft2010Snap,draft2010Resume,draft2010Done,pre2010,team2010,season2010,season2010Snap,finalLauncher,season2010Resume,integrity,classifications,pageErrors:await cdp.eval(\`window.__qaErrors||[]\`),runtimeErrors,consoleErrors};
+  const report={parentSha:'88c1c2b21ae7593d77b94babfda74e8df247e1f1e13be7f5de89a80abe62f650',clubs,signing,draw,draft,team,season,innings,finals,review,market,trade,lottery,annual,cuts,readyState,team2009,xi2009,season2009,seasonSnapshot,seasonResume,benchInjury,benchRepair,coverNeed,coverMarket,coverSigned,coverXI,coverReturn,round7,midOpen,midCancel,acceptedTrade,tradeState,tradeSnap,tradeResume,regular2009,review2009,market2010,first2010,draft2010Snap,draft2010Resume,draft2010Done,pre2010,team2010,season2010,season2010Snap,finalLauncher,season2010Resume,integrity,classifications,pageErrors:await cdp.eval(`window.__qaErrors||[]`),runtimeErrors,consoleErrors};
   await noErrors('v7.3.4 golden dynasty');
   fs.writeFileSync(path.join(OUT,'golden-report.json'),JSON.stringify(report,null,2));
   console.log(JSON.stringify(report,null,2));
