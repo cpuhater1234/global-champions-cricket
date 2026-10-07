@@ -430,7 +430,6 @@ try{
   console.log(JSON.stringify({years:longevity.filter(x=>x.year).map(x=>({year:x.year,position:x.season.position,champion:x.season.review.champion,avgInnings:x.season.avgInnings,injuries:x.season.injuries,trades:x.season.trades})),integrity:longIntegrity},null,2));
 
   await noErrors('v7.4 longevity audit');
-  console.log(JSON.stringify(report,null,2));
 
 } finally {
   cdp.close();try{proc.kill('SIGTERM')}catch{};await new Promise(r=>server.close(r));try{fs.rmSync(profile,{recursive:true,force:true})}catch{}
