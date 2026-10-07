@@ -66,6 +66,8 @@ body::before{display:none}
 .launcher-career{margin:27px auto 0;padding:0;border:0;max-width:430px}
 .launcher-career strong{font-size:25px}
 .launcher-actions{margin-top:25px;gap:9px}
+.launcher-actions:has(#launcherContinue[hidden]) #launcherNew{background:var(--deep);border-color:var(--deep);color:#fff}
+.launcher-actions:has(#launcherContinue[hidden]) #launcherNew:hover{background:var(--deep-2);border-color:var(--deep-2)}
 .launcher-links{margin-top:15px;gap:18px}
 .launcher-status{margin-top:10px}
 
