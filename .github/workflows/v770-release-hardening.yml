@@ -1,0 +1,55 @@
+name: GCC v7.7 Release Hardening
+
+on:
+  push:
+    branches:
+      - work/v7.7-release-hardening
+    paths:
+      - '.github/workflows/v770-release-hardening.yml'
+      - 'qa/check_v770_baseline.py'
+      - 'qa/browser_v770_release_hardening.mjs'
+      - 'qa/GCC_v770_*.md'
+      - 'qa/GCC_v770_*.json'
+  workflow_dispatch:
+
+jobs:
+  baseline:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify frozen v7.6 baseline
+        run: python qa/check_v770_baseline.py
+
+  full-career:
+    needs: baseline
+    strategy:
+      fail-fast: false
+      matrix:
+        seed: [101, 202, 303]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rebuild frozen v7.6
+        run: python qa/rebuild_v760.py
+      - name: Locate Chrome
+        run: |
+          CHROME="$(which google-chrome || which google-chrome-stable || which chromium || which chromium-browser || true)"
+          test -n "$CHROME"
+          echo "CHROME_BIN=$CHROME" >> "$GITHUB_ENV"
+          "$CHROME" --version
+          node --version
+      - name: Run 2008-2026 hardening career
+        env:
+          GCC_GAME_FILE: global_champions_cricket_v7_6_0_matchday_immersion.html
+          GCC_AUDIT_SEED: ${{ matrix.seed }}
+          GCC_AUDIT_END_YEAR: 2026
+        run: node --experimental-websocket qa/browser_v770_release_hardening.mjs
+      - name: Upload hardening evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gcc-v770-hardening-${{ matrix.seed }}
+          path: qa/output/v770-release-hardening/${{ matrix.seed }}
+          if-no-files-found: warn
