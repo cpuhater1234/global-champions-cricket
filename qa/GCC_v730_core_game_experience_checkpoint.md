@@ -12,9 +12,10 @@ This checkpoint marks the switch from incremental screen polish to product-level
 - Branch: `work/v7.3-game-experience`
 - Frozen parent: v7.2.16 Launcher Fast Path
 - v7.2.16 SHA-256: `dbf8dc746207c970c11ab650cf13cbca0adae87b641dc63c159f02db0090af2b`
-- v7.3.0 SHA-256: `3dedc12f16d810ad034f44014e19ef10b64e3c39faab3d5f918c6066836dcd80`
-- Accepted product/engineering run before checkpoint documentation: `37561989737`
-- Tested code head: `d627ef14b09dd9b738e802f3d895f8e5a3ede971`
+- v7.3.0 SHA-256: `a9ecb8e4596fc7d751e6abcd840d74529e6b49b0c5ed78b8770badd3db4e191c`
+- Final accepted engineering/product run: `37563393315`
+- Final tested code head: `6fd9e7f0193d0cfb124a01f37b50856af1352258`
+- Accepted build parent: `eaa3d6e268c95ac82fc1523dc1f6c38d35df74a7`
 
 Rebuild and verify:
 
@@ -31,6 +32,7 @@ v7.3.0 fixes the ownership of the XI decision and the season interruption philos
 The user chooses the eleven.
 
 The game may:
+
 - maintain a natural batting order for the players the user picked
 - show cricket-balance reads
 - warn about keeper or bowling problems
@@ -46,7 +48,7 @@ The game no longer silently repairs the human XI during later-season auto-run wh
 
 The Team Room now presents the complete 15-man squad throughout selection.
 
-Browser acceptance verified:
+Final browser acceptance verified:
 
 - empty XI: 15 squad rows, 15 PICK actions
 - partial XI: all 15 still visible
@@ -77,10 +79,11 @@ Once the XI reaches eleven:
 - a bench player can be armed for a direct swap
 - one of the XI is then chosen to leave
 - XI size and batting-order integrity remain 11/11
+- routine swaps do not trigger a large presentation moment over the Team Room
 
 ## Injury interruption
 
-Later-season `RUN SEASON` no longer calls the human `autoRepairXI()` path between rounds.
+Later-season `RUN SEASON` no longer calls the human auto-repair path between rounds.
 
 Before another round begins, the run checks the human XI.
 
@@ -89,14 +92,25 @@ If the XI is invalid because a selected player is unavailable:
 - auto-run stops
 - Team Room opens
 - the injured player remains in the XI
+- the unavailable player is named in the decision copy
 - the user must make the selection decision
 - no replacement is silently chosen
+- both progression controls read `CHANGE REQUIRED`
+- both progression controls remain disabled until the user repairs the XI
+
+Once the user swaps in an available player:
+
+- XI remains 11 unique players
+- the unavailable player leaves the XI
+- the screen returns to the normal ready state
+- both progression controls read `RETURN TO SEASON`
+- both progression controls are enabled
 
 CPU XI repair and CPU season progression remain separate and unchanged.
 
-## Browser acceptance
+## Final browser acceptance
 
-The v7.3-specific Chrome journey completed:
+The v7.3-specific Chrome journey completed against the final SHA.
 
 ### Empty XI
 
@@ -144,6 +158,7 @@ Verified:
 - incoming player enters XI
 - outgoing player leaves XI
 - pending swap state clears
+- no large XI-change moment is shown
 
 ### Mobile
 
@@ -153,23 +168,37 @@ At 390 x 844:
 - XI remains 11/11
 - Season action remains usable
 - page-level horizontal overflow: 0
+- routine swap feedback does not obstruct the Team Room hierarchy
 
 ### Injury interruption
 
-A controlled later-season test injected an OUT injury after one valid auto-run round.
+A controlled 2009 test injected exactly one OUT injury after one valid auto-run round.
 
-Verified:
+Verified before the user acts:
 
 - first valid round completed
 - auto-run stopped before Round 2
 - Team Room became active
 - round remained 1
 - injured player remained selected
-- entire XI remained byte-for-byte the same selection
+- entire XI remained the same selection
 - no silent human XI repair occurred
 - all 15 squad rows remained visible
-- injured player visibly unavailable
+- exactly one controlled injured player was unavailable
+- heading: `Set your Round 2 XI`
+- decision lead names the unavailable player
+- both progression controls: `CHANGE REQUIRED`
+- both progression controls disabled
 - page-level overflow: 0
+
+Verified after the user repairs the XI:
+
+- XI: 11
+- unique XI IDs: 11
+- injured player no longer selected
+- lead returns to `Your XI is set for Round 2.`
+- both progression controls: `RETURN TO SEASON`
+- both progression controls enabled
 
 Runtime quality:
 
@@ -177,21 +206,39 @@ Runtime quality:
 - runtime exceptions: 0
 - console errors: 0
 
-## Game-gate rejection caught during review
+## Game-gate rejections caught during review
 
-The first engineering-green candidate was not accepted immediately.
+v7.3.0 was not accepted merely because CI went green.
 
-Manual screenshot review found old recommendation-era Team Room copy still being injected by the year-shell copy layer even though the recommendation button had been removed.
+### Rejection 1: recommendation-era copy
+
+An engineering-green candidate still injected recommendation-era Team Room language even though the recommendation action had been removed.
+
+That state was rejected and the copy layer was corrected.
+
+### Rejection 2: routine swap presentation
+
+Screenshot review showed a large transient XI-change moment competing with the Team Room hierarchy, especially on mobile.
+
+That state was rejected. Routine XI changes now stay inside the Team Room interaction.
+
+### Rejection 3: ambiguous injury state
+
+A later engineering-green candidate correctly stopped at Round 2, but still said the XI was set and allowed `RETURN TO SEASON` while the injured player remained selected.
 
 That state was rejected.
 
-The copy layer was corrected so the screen now states, in the foundation season:
+The final build makes the decision explicit and blocks progression until the human repairs the XI.
 
-`Pick the eleven you want for Round 1. The room will order them naturally; the cricket decisions stay with you.`
+This is the practical v7.3 standard: engineering-green is necessary but not sufficient.
 
-The static guardrail and browser test now reject recommendation-era Team Room copy.
+## Visual review decision
 
-This is the first concrete use of the v7.3 rule that engineering-green does not automatically mean product-accepted.
+Final desktop injury evidence and repaired-XI evidence were manually reviewed after the passing browser run.
+
+The core decision hierarchy is accepted.
+
+One minor pre-existing mobile label collision around the small `SELECTION SHEET` ornament is deliberately deferred to the later consistency/visual pass. It does not reopen the v7.3.0 gameplay workstream.
 
 ## Scope protection
 
@@ -218,6 +265,6 @@ v7.3.0 does not intentionally redesign or recalibrate:
 
 v7.3.0 Core Game Experience is accepted at SHA-256:
 
-`3dedc12f16d810ad034f44014e19ef10b64e3c39faab3d5f918c6066836dcd80`
+`a9ecb8e4596fc7d751e6abcd840d74529e6b49b0c5ed78b8770badd3db4e191c`
 
 The next coherent workstream is **v7.3.1 Dynasty Continuity**, focused on bringing the annual Draft onto the established 2008 Draft interaction family rather than maintaining a cheaper second Draft interface.
