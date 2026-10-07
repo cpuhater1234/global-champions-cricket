@@ -5,7 +5,7 @@ ROOT=Path(__file__).resolve().parents[1]
 SOURCE=ROOT/'game'/'global_champions_cricket_v7_2_16_launcher_fast_path.html'
 TARGET=ROOT/'game'/'global_champions_cricket_v7_3_0_core_game_experience.html'
 EXPECTED_SOURCE='dbf8dc746207c970c11ab650cf13cbca0adae87b641dc63c159f02db0090af2b'
-EXPECTED_TARGET='3dedc12f16d810ad034f44014e19ef10b64e3c39faab3d5f918c6066836dcd80'
+EXPECTED_TARGET='da0d3d7c8b3fc874816c2c55c5bc83cdb9ba6574f4c6abd4f1f1b507f0a959e8'
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def scripts(t):return re.findall(r'<script(?:\s[^>]*)?>(.*?)</script>',t,re.S|re.I)
 if not TARGET.exists():subprocess.run([sys.executable,str(ROOT/'qa'/'rebuild_v730.py')],cwd=ROOT,check=True)
@@ -19,6 +19,9 @@ else:
         if sa[i]!=sb[i]:fail.append(f'Protected core script block {i} changed')
 for marker in [
   "document.body.dataset.uiVersion = 'v7.3.0-core-game-experience';",
+  "Your picks are ordered naturally unless you change them.",
+  "base.renderTeam();decorateSoon();return base.toast(issue)",
+  "base.renderTeam();decorateSoon();base.toast(selectionIssue)",
   "actionLabel='PICK'",
   "$('xiList').innerHTML = roster.map",
   "const selectionIssue=userXIProblem();if(selectionIssue){autoTimer=null;specialGo('team')",
@@ -27,6 +30,10 @@ for marker in [
 ]:
     if marker not in b:fail.append('Missing v7.3.0 marker: '+marker)
 for forbidden in [
+  'Start from the recommended side or build it yourself.',
+  'Start with the recommendation',
+  "showMoment({eyebrow:'XI CHANGE'",
+  'function autoRepairXI(){',
   '>USE RECOMMENDED XI<',
   '>BUILD MANUALLY<',
   "autoRepairXI();const before=state.round",
