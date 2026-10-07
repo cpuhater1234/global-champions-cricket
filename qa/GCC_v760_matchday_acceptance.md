@@ -176,6 +176,10 @@ Structured evidence is recorded in:
 
 `qa/GCC_v760_acceptance_evidence.json`
 
+## CI infrastructure note
+
+The hosted GitHub Actions runner remains unavailable in this repository and jobs are still failing before checkout when a runner is requested. Acceptance is therefore based on the exact deterministic local rebuild plus Chromium QA against the pinned SHA above, consistent with the v7.5 acceptance process.
+
 ## Freeze rule
 
 Do not modify the accepted v7.6 build during later phases.
