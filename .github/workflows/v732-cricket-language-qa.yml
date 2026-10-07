@@ -13,11 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Verify v7.3.2 patch payload
-        run: |
-          wc -c qa/patches/v731_to_v732_cricket_language.patch.gz.b64.part*
-          sha256sum qa/patches/v731_to_v732_cricket_language.patch.gz.b64.part*
-          cat qa/patches/v731_to_v732_cricket_language.patch.gz.b64.part* | sha256sum
 
       - name: Rebuild exact v7.3.2 candidate
         run: python qa/rebuild_v732.py
@@ -25,8 +20,6 @@ jobs:
       - name: Run v7.3.2 static and product guardrail
         run: python qa/check_v732.py
 
-      - name: Restore browser harness
-        run: cat qa/browser_v732_cricket_language.mjs.b64.part* | base64 -d > qa/browser_v732_cricket_language.mjs
 
       - name: Check browser harness syntax
         run: node --check qa/browser_v732_cricket_language.mjs
