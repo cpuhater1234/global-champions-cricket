@@ -7,6 +7,7 @@ GAME=ROOT/'game'
 A=GAME/'global_champions_cricket_v7_4_1_form_symmetry.html'
 B=GAME/'global_champions_cricket_v7_5_0_dynasty_memory.html'
 EA='34f3095daeceb732629e443499aa905a553d79aa3045c9d41d2d5e80b2b29643'
+EB='bc3bbb7465ff660fe0028dab19b74f32afcffa494351b03cd2b197830dfae16a'
 
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 
@@ -14,6 +15,8 @@ if not B.exists():
     subprocess.run([sys.executable,str(ROOT/'qa'/'rebuild_v750.py')],cwd=ROOT,check=True)
 if sha(A)!=EA:
     raise SystemExit(f'parent SHA mismatch: {sha(A)}')
+if sha(B)!=EB:
+    raise SystemExit(f'accepted v7.5 SHA mismatch: {sha(B)}')
 
 a=A.read_text('utf-8')
 b=B.read_text('utf-8')
@@ -98,6 +101,10 @@ protected=[
     'formNegRoll',
     'updateFormForMatch',
     'reviewSeasonValue',
+    'autoSave',
+    'migrateLoadedSave',
+    'resumeSave',
+    'continueFromLauncher',
 ]
 for fn in protected:
     if extract(a,fn)!=extract(b,fn):
@@ -128,7 +135,7 @@ if 'club:' in season_helper or 'clubByAbbr' in season_helper:
 
 print('v7.5 Dynasty Memory guardrail OK')
 print('Parent SHA-256',EA)
-print('Candidate SHA-256',sha(B))
-print('Save schema / simulation / balance functions unchanged: yes')
+print('Accepted v7.5 SHA-256',EB)
+print('Save / resume / simulation / balance functions unchanged: yes')
 print('Archive helpers derived from existing history only: yes')
 print('9 script blocks syntax-clean; duplicate DOM IDs: 0')
