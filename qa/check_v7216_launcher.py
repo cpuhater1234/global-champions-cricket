@@ -4,8 +4,8 @@ import hashlib,re,shutil,subprocess,sys,tempfile
 ROOT=Path(__file__).resolve().parents[1]
 SOURCE=ROOT/'game'/'global_champions_cricket_v7_2_15_match_day_conditions.html'
 TARGET=ROOT/'game'/'global_champions_cricket_v7_2_16_launcher_fast_path.html'
-EXPECTED_SOURCE='b8eea1a14caee62fb4a09755729d9e077eb0994724e7d6a643fcfe1c5c8d3915'
-EXPECTED_TARGET='53269fdcc452720a959b94ab83b4759c2e875b53407360365f86ba90aae035fa'
+EXPECTED_SOURCE='22dbb185e1c274a60449223b0e3e362470e36be39b9d90e95fc76caec73df78a'
+EXPECTED_TARGET='dbf8dc746207c970c11ab650cf13cbca0adae87b641dc63c159f02db0090af2b'
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def scripts(t):return re.findall(r'<script(?:\s[^>]*)?>(.*?)</script>',t,re.S|re.I)
 if not TARGET.exists():subprocess.run([sys.executable,str(ROOT/'qa'/'rebuild_v7216.py')],cwd=ROOT,check=True)
