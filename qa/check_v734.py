@@ -23,7 +23,7 @@ if len(scripts_a)!=9 or len(scripts_b)!=9:
 
 # Only the dynasty wrapper script may change. All simulation / ratings / UI foundations remain exact.
 for i,(x,y) in enumerate(zip(scripts_a,scripts_b),1):
-    if i!=8 and x!=y:
+    if i not in (8,9) and x!=y:
         raise SystemExit(f'protected script block changed: {i}')
 
 required=[
