@@ -250,11 +250,11 @@ try{
   await cdp.eval(`Dynasty.runCpuMarket();Dynasty.drawDraftOrder();Dynasty.startAnnualDraft();true`);
 
   async function makeAnnualPick(){
-    return cdp.eval(`(()=>{const card=document.querySelector('#annualDraftPlayers .player-card');if(!card)return null;const m=(card.getAttribute('onclick')||'').match(/userAnnualDraft\\\\((\\\\d+)\\\\)/);if(!m)return null;const id=Number(m[1]),before=GCC.state.dynasty.offseason.pickCursor;Dynasty.userAnnualDraft(id);return{id,before,after:GCC.state.dynasty.offseason.pickCursor,phase:GCC.state.dynasty.offseason.phase,picks:GCC.state.dynasty.offseason.picks.length}})()`);
+    return cdp.eval(`(()=>{const card=document.querySelector('#annualDraftPlayers .player-card');if(!card){const o=GCC.state.dynasty.offseason;window.__goldenNoCard={year:GCC.state.year,phase:o?.phase,cursor:o?.pickCursor,picks:o?.picks?.length||0,lottery:[...(o?.lottery||[])],user:GCC.state.userClub?.abbr,main:(document.getElementById('dynastyMain')?.innerText||'').slice(0,1600),cards:document.querySelectorAll('#annualDraftPlayers .player-card').length};return null}const m=(card.getAttribute('onclick')||'').match(/userAnnualDraft\\\\((\\\\d+)\\\\)/);if(!m)return null;const id=Number(m[1]),before=GCC.state.dynasty.offseason.pickCursor;Dynasty.userAnnualDraft(id);return{id,before,after:GCC.state.dynasty.offseason.pickCursor,phase:GCC.state.dynasty.offseason.phase,picks:GCC.state.dynasty.offseason.picks.length}})()`);
   }
   let first2010=await makeAnnualPick();
   if(!first2010){await cdp.eval(`Dynasty.runCpuDraftUntilUser();Dynasty.renderOffseason();true`);first2010=await makeAnnualPick()}
-  assert(first2010&&first2010.after>first2010.before,'2010 first Draft pick failed',JSON.stringify(first2010));
+  const noCard2010=first2010?null:await cdp.eval(`window.__goldenNoCard||null`);assert(first2010&&first2010.after>first2010.before,'2010 first Draft pick failed',JSON.stringify({first2010,noCard2010}));
 
   const draft2010Snap=await cdp.eval(`(()=>({cursor:GCC.state.dynasty.offseason.pickCursor,picks:JSON.stringify(GCC.state.dynasty.offseason.picks),roster:JSON.stringify([...GCC.state.teams[GCC.state.userClub.abbr]].sort((a,b)=>a-b))}))()`);
   await cdp.call('Page.reload',{ignoreCache:true});await ready();
