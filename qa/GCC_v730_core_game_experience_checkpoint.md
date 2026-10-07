@@ -158,6 +158,7 @@ Verified:
 - incoming player enters XI
 - outgoing player leaves XI
 - pending swap state clears
+- routine XI changes do not trigger the large GCC moment overlay
 - no large XI-change moment is shown
 
 ### Mobile
