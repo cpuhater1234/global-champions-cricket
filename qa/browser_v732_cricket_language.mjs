@@ -88,7 +88,7 @@ try{
   const finals=await cdp.eval(`(()=>({screen:document.querySelector('.screen.active')?.id,title:document.getElementById('finalsTitle')?.textContent.trim(),intro:document.getElementById('finalsIntro')?.textContent.trim(),stage:document.getElementById('finalsStageCopy')?.textContent.trim(),overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}))()`);
   assert(finals.screen==='finals'&&finals.title==='Four clubs remain.'&&/One loss ends the season/.test(finals.intro)&&/path begins/.test(finals.stage)&&finals.overflow<=1,'Finals regression gate failed',JSON.stringify(finals));
   await shot('09-finals.png');
-  await cdp.eval(`GCC.simulateFinals();GCC.advanceFinals();GCC.simulateFinals();GCC.openSeasonReview();true`);
+  await cdp.eval(`GCC.simulateFinals();GCC.advanceFinals();GCC.simulateFinals();true`);await sleep(700);await cdp.eval(`GCC.closeModal();GCC.openSeasonReview();window.scrollTo(0,0);true`);await sleep(250);
   const review=await cdp.eval(`(()=>({screen:document.querySelector('.screen.active')?.id,strength:(document.querySelector('#reviewStrengths')?.parentElement?.innerText||'').trim(),weak:(document.querySelector('#reviewWeaknesses')?.parentElement?.innerText||'').trim(),book:(document.getElementById('reviewTable')?.parentElement?.innerText||'').trim(),overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}))()`);
   assert(review.screen==='review'&&/WHAT HELD UP/.test(review.strength)&&/What you can trust/.test(review.strength)&&/NEXT SEASON/.test(review.weak)&&/The first fix/.test(review.weak)&&/SEASON BOOK/.test(review.book)&&review.overflow<=1,'Season Review regression gate failed',JSON.stringify(review));
   await shot('10-season-review.png');
@@ -118,11 +118,11 @@ try{
   }
   const cuts=await cdp.eval(`(()=>({phase:GCC.state.dynasty.offseason?.phase,main:(document.getElementById('dynastyMain')?.innerText||'').trim(),n:GCC.state.teams[GCC.state.userClub.abbr].length}))()`);
   assert(cuts.phase==='cuts'&&/FINAL 15/.test(cuts.main)&&/The Draft has taken you over fifteen/.test(cuts.main)&&/before you can name the XI/.test(cuts.main),'Final 15 language gate failed',JSON.stringify(cuts));
-  await shot('16-final-15.png');
+  await cdp.eval(`window.scrollTo(0,0);true`);await sleep(250);await shot('16-final-15.png');
   await cdp.eval(`(()=>{const ids=[...GCC.state.teams[GCC.state.userClub.abbr]];while(GCC.state.teams[GCC.state.userClub.abbr].length>15)Dynasty.cutPlayer(GCC.state.teams[GCC.state.userClub.abbr][0]);Dynasty.finishOffseason();return true})()`);
   const readyState=await cdp.eval(`(()=>({phase:GCC.state.dynasty.offseason?.phase,main:(document.getElementById('dynastyMain')?.innerText||'').trim()}))()`);
   assert(readyState.phase==='ready'&&/The 15 are lodged/.test(readyState.main)&&/Form carries over lightly; selection starts again/.test(readyState.main),'Pre-season language gate failed',JSON.stringify(readyState));
-  await shot('17-preseason-ready.png');
+  await cdp.eval(`window.scrollTo(0,0);true`);await sleep(250);await shot('17-preseason-ready.png');
 
   await cdp.eval(`Dynasty.enterTeamRoom();true`);
   const team2009=await cdp.eval(`(()=>({title:document.querySelector('#team .section-head h2')?.textContent.trim(),intro:document.querySelector('#team .section-head p')?.textContent.trim()}))()`);
