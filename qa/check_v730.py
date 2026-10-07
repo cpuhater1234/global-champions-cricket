@@ -5,7 +5,7 @@ ROOT=Path(__file__).resolve().parents[1]
 SOURCE=ROOT/'game'/'global_champions_cricket_v7_2_16_launcher_fast_path.html'
 TARGET=ROOT/'game'/'global_champions_cricket_v7_3_0_core_game_experience.html'
 EXPECTED_SOURCE='dbf8dc746207c970c11ab650cf13cbca0adae87b641dc63c159f02db0090af2b'
-EXPECTED_TARGET='da0d3d7c8b3fc874816c2c55c5bc83cdb9ba6574f4c6abd4f1f1b507f0a959e8'
+EXPECTED_TARGET='a9ecb8e4596fc7d751e6abcd840d74529e6b49b0c5ed78b8770badd3db4e191c'
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def scripts(t):return re.findall(r'<script(?:\s[^>]*)?>(.*?)</script>',t,re.S|re.I)
 if not TARGET.exists():subprocess.run([sys.executable,str(ROOT/'qa'/'rebuild_v730.py')],cwd=ROOT,check=True)
@@ -20,6 +20,9 @@ else:
 for marker in [
   "document.body.dataset.uiVersion = 'v7.3.0-core-game-experience';",
   "Your picks are ordered naturally unless you change them.",
+  "const selectionBlocked=unavailableSelected.length>0;",
+  "quickStart.textContent=selectionBlocked?'CHANGE REQUIRED'",
+  "startButton.disabled = !complete||selectionBlocked",
   "base.renderTeam();decorateSoon();return base.toast(issue)",
   "base.renderTeam();decorateSoon();base.toast(selectionIssue)",
   "actionLabel='PICK'",
