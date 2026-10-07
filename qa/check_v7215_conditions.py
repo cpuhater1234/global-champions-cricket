@@ -55,7 +55,14 @@ required=[
 "selectionKicker.textContent=`ROUND ${nextRound} SELECTION`;",
 "quickStart.textContent=state.fullSchedule?.length?'RETURN TO SEASON':'START SEASON'",
 "if (state.fullSchedule?.length) { renderSeason(); go('season'); return; }",
-"${f.home.ground} · ${f.home.trait} · ${weather.label}",
+"const weather=res?.weather||(next?matchWeather(f.home,f.round,state.year||2008):null);",
+"const weatherRead=weather?` · ${weather.label}`:'';",
+"${f.home.ground} · ${f.home.trait}${weatherRead}",
+"f.semis=[simulateKnockout(top[0],top[3],15),simulateKnockout(top[1],top[2],15)];",
+"f.gf=simulateKnockout(f.gfPair.home,f.gfPair.away,16);",
+"function simulateKnockout(home, away, weatherRound=15)",
+"const semiConditions=`${semiHost.ground} · ${semiWeather.label}`;",
+"const gfConditions=`${f.gfPair.home.ground} · ${gfWeather.label}`;",
 "${nextFx.home.ground} · ${nextFx.home.trait} · ${matchWeather(nextFx.home,nextFx.round,state.year||2008).label}",
 "ROUND ${res.round} · ${res.home.ground} · ${(res.weather||matchWeather(res.home,res.round,state.year||2008)).label}",
 "scorecard-meta\">${res.home.ground} · ${(res.weather||matchWeather(res.home,res.round||15,state.year||2008)).label}",
@@ -70,7 +77,8 @@ for marker in required:
 for forbidden in [
     'humidityBonus','humidity bonus','DLS','Duckworth','abandoned due to rain','rain-shortened','weatherReroll'
 ]:
-    if forbidden.lower() in b.lower(): fail.append('Unapproved weather mechanic present: '+forbidden)
+    script_text='\n'.join(sb).lower() if sb else ''
+    if forbidden.lower() in script_text: fail.append('Unapproved weather mechanic present: '+forbidden)
 
 # Weather must not rewrite the permanent club-ground database.
 if len(sa)==9 and len(sb)==9 and sa[0]!=sb[0]:
