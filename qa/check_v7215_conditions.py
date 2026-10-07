@@ -36,10 +36,8 @@ else:
     new_ss="if(!state.userClub)return base.toast('Choose your club first');if(state.fullSchedule?.length){specialGo('season');return}if(state.xi.length!==11)"
     old_mig="function migrateLoadedSave(save){if(!save.state.dynasty)save.state.dynasty=freshDynasty();save.state.dynasty.version=SAVE_VERSION;return save}"
     new_mig="function migrateLoadedSave(save){if(!save.state.dynasty)save.state.dynasty=freshDynasty();if(!Number.isFinite(save.state.weatherSeed))save.state.weatherSeed=(Number(save.state.seed)>>>0)||1;save.state.dynasty.version=SAVE_VERSION;return save}"
-    old_team="const th=document.querySelector('#team .section-head h2');if(th)th.textContent=y===2008?'Name your first XI':`Name your ${y} XI`;const tp=document.querySelector('#team .section-head p');if(tp)tp.textContent=y===2008?'Pick the eleven for Round 1, then set the batting order. Start from the recommended side or build it yourself.':`Pick the eleven for ${y}. Start with the recommendation or adjust for form, fitness and conditions.`;"
-    new_team="const th=document.querySelector('#team .section-head h2');const activeSeason=!!state.fullSchedule?.length;const nextRound=Math.min(14,(state.round||0)+1);if(th)th.textContent=activeSeason?`Set your XI for Round ${nextRound}`:(y===2008?'Name your first XI':`Name your ${y} XI`);const tp=document.querySelector('#team .section-head p');if(tp)tp.textContent=activeSeason?`Review the eleven for Round ${nextRound}. Adjust for form, fitness and match conditions, then return to the Season Hub.`:(y===2008?'Pick the eleven for Round 1, then set the batting order. Start from the recommended side or build it yourself.':`Pick the eleven for ${y}. Start with the recommendation or adjust for form, fitness and conditions.`);"
-    expected8=sa[8].replace(old_nv,new_nv,1).replace(old_ss,new_ss,1).replace(old_mig,new_mig,1).replace(old_team,new_team,1)
-    if expected8!=sb[8]: fail.append('Dynasty block changed beyond CPU next-venue weather parity + active-season Team Room guard + weather-seed migration + Team Room copy continuity')
+    expected8=sa[8].replace(old_nv,new_nv,1).replace(old_ss,new_ss,1).replace(old_mig,new_mig,1)
+    if expected8!=sb[8]: fail.append('Dynasty block changed beyond CPU next-venue weather parity + active-season Team Room guard + weather-seed migration')
 
 required=[
 "const WEATHER_TYPES = Object.freeze({",
@@ -52,9 +50,6 @@ required=[
 "const stableSeed=Number.isFinite(state.weatherSeed)?state.weatherSeed:((Number(state.seed)>>>0)||1);",
 "const roll=detailRng(`${stableSeed}|weather|${year}|${round}|${home.abbr}`)();",
 "if(!Number.isFinite(save.state.weatherSeed))save.state.weatherSeed=(Number(save.state.seed)>>>0)||1;",
-"const activeSeason=!!state.fullSchedule?.length;const nextRound=Math.min(14,(state.round||0)+1);",
-"activeSeason?`Set your XI for Round ${nextRound}`",
-"Review the eleven for Round ${nextRound}. Adjust for form, fitness and match conditions, then return to the Season Hub.",
 "if(teamHeading) teamHeading.textContent=`Set your Round ${nextRound} XI`;",
 "if(teamIntro) teamIntro.textContent=`Review the eleven for Round ${nextRound}. Adjust for form, fitness and conditions, then return to the Season Hub.`;",
 "baseConditions:base,",
@@ -122,6 +117,5 @@ print('CPU next-venue context uses the same effective match ground: yes')
 print('Active season cannot be reset from Team Room: yes')
 print('Weather identity is independent of live match RNG: yes')
 print('Legacy saves receive a persistent weather seed on migration: yes')
-print('Mid-season Team Room copy follows the actual next round: yes')
 print('Mid-season Team Room heading follows the actual next round: yes')
 print('No DLS / abandonment / humidity shortcut introduced: yes')
