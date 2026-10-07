@@ -95,8 +95,10 @@ try{
   assert(resumed.screen==='dynasty'&&resumed.phase==='draft'&&resumed.cursor===snap.cursor&&JSON.stringify(resumed.picks)===JSON.stringify(snap.picks)&&JSON.stringify(resumed.roster)===JSON.stringify(snap.roster)&&resumed.cards===24&&resumed.legacy===0&&resumed.board===0,'Annual Draft save/resume failed',JSON.stringify({snap,resumed}));
 
   await viewport(390,844);
-  const mobile=await cdp.eval(`(()=>({cards:document.querySelectorAll('#annualDraftPlayers .player-card').length,needs:document.querySelectorAll('.annual-draft-need').length,overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth,columns:getComputedStyle(document.querySelector('#annualDraftPlayers')).gridTemplateColumns}))()`);
-  assert(mobile.cards===24&&mobile.needs===4&&mobile.overflow<=1,'Annual Draft mobile layout failed',JSON.stringify(mobile));
+  await sleep(1400);
+  await cdp.eval(`document.querySelector('.annual-draft-room')?.scrollIntoView({block:'start'});true`);await sleep(120);
+  const mobile=await cdp.eval(`(()=>({cards:document.querySelectorAll('#annualDraftPlayers .player-card').length,needs:document.querySelectorAll('.annual-draft-need').length,overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth,columns:getComputedStyle(document.querySelector('#annualDraftPlayers')).gridTemplateColumns,heading:(document.querySelector('.annual-draft-room h3')?.textContent||'').trim(),search:!!document.getElementById('annualDraftSearch')}))()`);
+  assert(mobile.cards===24&&mobile.needs===4&&mobile.search&&/on the clock/i.test(mobile.heading)&&mobile.overflow<=1,'Annual Draft mobile layout failed',JSON.stringify(mobile));
   await shot('04-annual-draft-mobile.png');
   await viewport(1440,900);
 
