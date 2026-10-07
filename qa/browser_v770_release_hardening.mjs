@@ -6,9 +6,9 @@ import {spawn} from 'node:child_process';
 
 const ROOT=process.cwd();
 const GAME=path.join(ROOT,'game',process.env.GCC_GAME_FILE||'global_champions_cricket_v7_6_0_matchday_immersion.html');
-const OUT=path.join(ROOT,'qa','output','v770-release-hardening',String(AUDIT_SEED||'default'));
 const AUDIT_SEED=Number(process.env.GCC_AUDIT_SEED||0);
 const AUDIT_END_YEAR=Number(process.env.GCC_AUDIT_END_YEAR||2026);
+const OUT=path.join(ROOT,'qa','output','v770-release-hardening',String(AUDIT_SEED||'default'));
 fs.mkdirSync(OUT,{recursive:true});
 function fail(m,d=''){throw new Error(d?`${m}: ${d}`:m)}
 function assert(c,m,d=''){if(!c)fail(m,d)}
