@@ -291,7 +291,7 @@ These should be judged in context during the Golden Dynasty pass rather than reo
 
 v7.3.3 Visual Identity is accepted at SHA-256:
 
-`67d509ff1386df6b95fcb5582d659e48f1baccea6c46e34a7ae9a27a51a703e2`
+`88c1c2b21ae7593d77b94babfda74e8df247e1f1e13be7f5de89a80abe62f650`
 
 The next coherent workstream is **v7.3.4 Golden Dynasty**.
 
