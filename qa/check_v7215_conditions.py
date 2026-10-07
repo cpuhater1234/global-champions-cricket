@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 SOURCE=ROOT/'game'/'global_champions_cricket_v7_2_14_year_shell_continuity.html'
 TARGET=ROOT/'game'/'global_champions_cricket_v7_2_15_match_day_conditions.html'
 EXPECTED_SOURCE='70810a1d6771c283f9f143d7707a0df90fd5594dfe321677f6f7fe51e6f48e8d'
-EXPECTED_TARGET='770fb8f811038b60db6f9282a496f71eba06a990ea33cb43380ae184279586d7'
+EXPECTED_TARGET='b8eea1a14caee62fb4a09755729d9e077eb0994724e7d6a643fcfe1c5c8d3915'
 
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 def scripts(t): return re.findall(r'<script(?:\s[^>]*)?>(.*?)</script>',t,re.S|re.I)
@@ -50,6 +50,8 @@ required=[
 "const stableSeed=Number.isFinite(state.weatherSeed)?state.weatherSeed:((Number(state.seed)>>>0)||1);",
 "const roll=detailRng(`${stableSeed}|weather|${year}|${round}|${home.abbr}`)();",
 "if(!Number.isFinite(save.state.weatherSeed))save.state.weatherSeed=(Number(save.state.seed)>>>0)||1;",
+"if(teamHeading) teamHeading.textContent=`Set your Round ${nextRound} XI`;",
+"if(teamIntro) teamIntro.textContent=`Review the eleven for Round ${nextRound}. Adjust for form, fitness and conditions, then return to the Season Hub.`;",
 "baseConditions:base,",
 "pace:(base.pace||0)+weather.newBallPace",
 "spin:(base.spin||0)+weather.middleSpin",
@@ -115,4 +117,5 @@ print('CPU next-venue context uses the same effective match ground: yes')
 print('Active season cannot be reset from Team Room: yes')
 print('Weather identity is independent of live match RNG: yes')
 print('Legacy saves receive a persistent weather seed on migration: yes')
+print('Mid-season Team Room heading follows the actual next round: yes')
 print('No DLS / abandonment / humidity shortcut introduced: yes')
