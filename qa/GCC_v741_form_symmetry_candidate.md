@@ -1,3 +1,5 @@
+> **Superseded:** this file documents the rejected first v7.4.1 threshold-only candidate. The accepted build and final 2008-2026 evidence are in `qa/GCC_v741_form_symmetry_checkpoint.md` and `qa/v741_full_horizon_summary.csv`.
+
 # GCC v7.4.1 Form Symmetry Candidate
 
 ## Status
