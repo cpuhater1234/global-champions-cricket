@@ -1,0 +1,44 @@
+name: GCC v7.3.4 Golden Dynasty QA
+
+on:
+  push:
+    branches:
+      - work/v7.3.4-golden-dynasty
+  workflow_dispatch:
+
+jobs:
+  golden-dynasty:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild frozen v7.3.3 product
+        run: python qa/rebuild_v733.py
+
+      - name: Verify frozen v7.3.3 product
+        run: python qa/check_v733.py
+
+      - name: Check Golden Dynasty harness syntax
+        run: node --check qa/browser_v734_golden_dynasty.mjs
+
+      - name: Locate Chrome
+        run: |
+          CHROME="$(which google-chrome || which google-chrome-stable || which chromium || which chromium-browser || true)"
+          test -n "$CHROME"
+          echo "CHROME_BIN=$CHROME" >> "$GITHUB_ENV"
+          "$CHROME" --version
+          node --version
+
+      - name: Run 2008-2010 Golden Dynasty
+        run: node --experimental-websocket qa/browser_v734_golden_dynasty.mjs
+
+      - name: Upload Golden Dynasty evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gcc-v734-golden-dynasty-qa
+          path: |
+            qa/output/v734-golden-dynasty/
+            game/global_champions_cricket_v7_3_3_visual_identity.html
+          if-no-files-found: warn
