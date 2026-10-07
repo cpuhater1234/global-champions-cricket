@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 SOURCE=ROOT/'game'/'global_champions_cricket_v7_2_14_year_shell_continuity.html'
 TARGET=ROOT/'game'/'global_champions_cricket_v7_2_15_match_day_conditions.html'
 EXPECTED_SOURCE='70810a1d6771c283f9f143d7707a0df90fd5594dfe321677f6f7fe51e6f48e8d'
-EXPECTED_TARGET='e27df5c1bb6e7f26419fc08893b6b6a8a686aa098d206eb1edc1a7724b05049f'
+EXPECTED_TARGET='90821b2cd6756fc2649e3a579b210935d5a3439d4e721f543b274f192b6a552e'
 
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 def scripts(t): return re.findall(r'<script(?:\s[^>]*)?>(.*?)</script>',t,re.S|re.I)
@@ -53,6 +53,7 @@ required=[
 "weather:pair.weather",
 "const nextFx=nextUserFixture();",
 "const fixtureRead=nextFx&&nextOpp?`${nextHome?'Home':'Away'} · ${nextOpp.name} · ${nextGround.ground} · ${nextGround.trait} · ${nextGround.weather.label}. ${nextGround.weather.read}`:'';",
+"copy.textContent=fixtureRead?`${fixtureRead} ${actionCopy}`:actionCopy;",
 "selectionKicker.textContent=`ROUND ${nextRound} SELECTION`;",
 "quickStart.textContent=state.fullSchedule?.length?'RETURN TO SEASON':'START SEASON'",
 "if (state.fullSchedule?.length) { renderSeason(); go('season'); return; }",
