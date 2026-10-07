@@ -90,7 +90,7 @@ try{
   await shot('09-finals.png');
   await cdp.eval(`GCC.simulateFinals();GCC.advanceFinals();GCC.simulateFinals();GCC.openSeasonReview();true`);
   const review=await cdp.eval(`(()=>({screen:document.querySelector('.screen.active')?.id,strength:(document.querySelector('#reviewStrengths')?.parentElement?.innerText||'').trim(),weak:(document.querySelector('#reviewWeaknesses')?.parentElement?.innerText||'').trim(),book:(document.getElementById('reviewTable')?.parentElement?.innerText||'').trim(),overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth}))()`);
-  assert(review.screen==='review'&&/WHAT HELD UP/.test(review.strength)&&/What you can trust/.test(review.strength)&&/NEXT SEASON/.test(review.weak)&&/Where the side can improve/.test(review.weak)&&/SEASON BOOK/.test(review.book)&&review.overflow<=1,'Season Review regression gate failed',JSON.stringify(review));
+  assert(review.screen==='review'&&/WHAT HELD UP/.test(review.strength)&&/What you can trust/.test(review.strength)&&/NEXT SEASON/.test(review.weak)&&/The first fix/.test(review.weak)&&/SEASON BOOK/.test(review.book)&&review.overflow<=1,'Season Review regression gate failed',JSON.stringify(review));
   await shot('10-season-review.png');
 
   await cdp.eval(`Dynasty.beginOffseason();true`);
