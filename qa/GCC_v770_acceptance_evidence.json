@@ -1,0 +1,110 @@
+{
+  "release": "v7.7.0 Release Hardened",
+  "status": "accepted",
+  "parent_v7_6_sha256": "3a8b8bb9b9d67558ea19bda4b595b0ab083209f3ccb0607d209aaad04155b55f",
+  "accepted_v7_7_sha256": "57051db6a677b3721e4d19bb414e9098144116c64f7e78e0a9ab38dac26fcdfc",
+  "hardening_matrix": {
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "total_seasons": 57,
+    "range": "2008-2026",
+    "all_chunks": {
+      "page_errors": 0,
+      "runtime_errors": 0,
+      "console_errors": 0
+    },
+    "end_state": {
+      "history": 19,
+      "contracted_players": 120,
+      "unique_contracted_players": 120,
+      "clubs": 8,
+      "roster_size_each": 15,
+      "retired_players_rostered": 0,
+      "stale_replacement_mappings": 0,
+      "archive_rows": 19,
+      "honours_rows": 8,
+      "record_book_rows": 8
+    },
+    "baseline_2026": {
+      "101": {
+        "position": 5,
+        "wins": 6,
+        "losses": 8,
+        "champion": "LAN"
+      },
+      "202": {
+        "position": 8,
+        "wins": 5,
+        "losses": 9,
+        "champion": "SOM"
+      },
+      "303": {
+        "position": 8,
+        "wins": 5,
+        "losses": 9,
+        "champion": "DC"
+      }
+    }
+  },
+  "candidate_regression": {
+    "method": "Resume each real v7.6 start-of-2026 save in v7.7, play the full 2026 season, finish career, and open Archive.",
+    "outcomes_match_v7_6": true,
+    "seeds": {
+      "101": {
+        "position": 5,
+        "wins": 6,
+        "losses": 8,
+        "champion": "LAN",
+        "page_errors": 0,
+        "runtime_errors": 0,
+        "console_errors": 0
+      },
+      "202": {
+        "position": 8,
+        "wins": 5,
+        "losses": 9,
+        "champion": "SOM",
+        "page_errors": 0,
+        "runtime_errors": 0,
+        "console_errors": 0
+      },
+      "303": {
+        "position": 8,
+        "wins": 5,
+        "losses": 9,
+        "champion": "DC",
+        "page_errors": 0,
+        "runtime_errors": 0,
+        "console_errors": 0
+      }
+    },
+    "final_integrity": {
+      "history": 19,
+      "contracted_players": 120,
+      "unique_contracted_players": 120,
+      "clubs": 8,
+      "roster_size_each": 15,
+      "retired_players_rostered": 0,
+      "stale_replacement_mappings": 0,
+      "archive_rows": 19,
+      "honours_rows": 8,
+      "record_book_rows": 8
+    }
+  },
+  "archive_candidate_qa": {
+    "desktop_horizontal_overflow": 0,
+    "mobile_horizontal_overflow": 0,
+    "season_rows": 19,
+    "raw_ranking_formula_removed": true,
+    "redundant_timeline_tail_removed": true
+  },
+  "guardrail": {
+    "protected_cricket_save_matchday_functions_byte_identical": true,
+    "script_blocks_syntax_clean": 9,
+    "duplicate_static_dom_ids": 0
+  },
+  "ci_note": "Hosted GitHub Actions remained unavailable at acceptance: jobs failed before checkout with runner_id 0 and zero executed steps. Acceptance evidence was produced locally from exact deterministic repository builds."
+}
