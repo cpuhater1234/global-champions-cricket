@@ -12,6 +12,10 @@ The release candidate therefore remains the frozen v7.6 game:
 
 `global_champions_cricket_v7_6_0_matchday_immersion.html`
 
+Release-candidate branch:
+
+`release/v7.6-rc1` at commit `f0826aba1e9a88885f3631112007601fc9514d60`
+
 SHA-256:
 
 `3a8b8bb9b9d67558ea19bda4b595b0ab083209f3ccb0607d209aaad04155b55f`
