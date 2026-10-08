@@ -119,6 +119,15 @@ v7.7 then found no reproduced defect that supports reopening:
 
 The correct release-hardening decision is therefore **no change**.
 
+
+## Rejected cosmetic candidate
+
+A late Archive-only experiment produced SHA `57051db6a677b3721e4d19bb414e9098144116c64f7e78e0a9ab38dac26fcdfc` by removing a redundant season tail, simplifying its grid and replacing the exposed Club Legends weighting formula with cricket-language copy.
+
+That experiment did not fix a reproduced BLOCKER, MAJOR or justified MINOR. It is therefore **not an accepted v7.7 game build** and must not be used as a new baseline.
+
+The corresponding experimental rebuild/check/evidence files were removed from this branch. The only accepted release-candidate binary remains the frozen v7.6 SHA below.
+
 ## Freeze rule
 
 Do not create a cosmetic v7.7 binary merely to advance the version number.
