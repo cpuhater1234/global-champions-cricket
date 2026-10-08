@@ -8,7 +8,7 @@ V760=GAME/'global_champions_cricket_v7_6_0_matchday_immersion.html'
 V781=GAME/'global_champions_cricket_v7_8_1_player_experience.html'
 EXPECTED_760='3a8b8bb9b9d67558ea19bda4b595b0ab083209f3ccb0607d209aaad04155b55f'
 EXPECTED_781='6be011326dc44b67f113a9a9c2e242285c3fe7e2dfe490bde507701027342596'
-PAYLOAD=PATCHES/'v760_to_v781_player_experience.patch.gz.b64'
+PARTS=[PATCHES/f'v781_payload_part_{i:02d}.b64' for i in range(5)]
 
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 
@@ -16,9 +16,11 @@ if not V760.exists():
     subprocess.run([sys.executable,str(ROOT/'qa'/'rebuild_v760.py')],cwd=ROOT,check=True)
 if sha(V760)!=EXPECTED_760:
     raise SystemExit(f'v7.6 parent SHA mismatch: {sha(V760)}')
-if not PAYLOAD.exists():
-    raise SystemExit(f'Missing v7.8.1 patch payload: {PAYLOAD.name}')
-raw=gzip.decompress(base64.b64decode(PAYLOAD.read_text().strip()))
+missing=[p.name for p in PARTS if not p.exists()]
+if missing:
+    raise SystemExit('Missing v7.8.1 patch payload part(s): '+', '.join(missing))
+payload=''.join(p.read_text().strip() for p in PARTS)
+raw=gzip.decompress(base64.b64decode(payload))
 with tempfile.NamedTemporaryFile(suffix='.patch',delete=False) as fh:
     fh.write(raw); pp=Path(fh.name)
 try:
