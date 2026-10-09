@@ -1,0 +1,32 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import {loadGame} from './offline_game_host.mjs';
+const file=process.argv[2]||'game/gcc_recovery_architecture_checkpoint.html';
+import {assertRosters,selectXI,foundation} from './offline_game_scenarios.mjs';
+
+const report={kind:'offline functional regression',source:file,sha256:crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex'),limits:['DOM render stub, not a browser','No CSS/layout/click/animation verification','Controlled timers; direct exported API calls','One deterministic complete career plus targeted manipulated-state stress cases'],checks:0,failures:[],years:[],reloads:[],matchCount:0};
+function check(name,fn){report.checks++;try{fn();}catch(e){report.failures.push({name,error:e.message});}}
+function matchCheck(r){report.matchCount++;for(const inn of [r.homeInnings,r.awayInnings]){check('innings bounds',()=>{assert.ok(inn.balls>0&&inn.balls<=120);assert.ok(inn.wickets>=0&&inn.wickets<=10);assert.ok(inn.total>=0)});check('bowling plan legal',()=>{const counts={};for(let i=0;i<inn.bowlingPlan.length;i++){const id=inn.bowlingPlan[i];counts[id]=(counts[id]||0)+1;assert.ok(counts[id]<=4);if(i)assert.notEqual(id,inn.bowlingPlan[i-1]);}})}for(const inn of r.scorecard.innings){check('scorecard sums',()=>{assert.equal(inn.batting.reduce((n,p)=>n+p.runs,0)+inn.extras,inn.total);assert.equal(inn.batting.reduce((n,p)=>n+p.balls,0),inn.balls);assert.equal(inn.bowling.reduce((n,p)=>n+p.balls,0),inn.balls);assert.equal(inn.bowling.reduce((n,p)=>n+p.wickets,0)+inn.batting.filter(p=>p.dismissal.startsWith('run out')).length,inn.wickets);assert.equal(inn.bowling.reduce((n,p)=>n+p.runs,0)+inn.extrasBreakdown.byes+inn.extrasBreakdown.legByes,inn.total);assert.ok(inn.bowling.every(p=>p.balls<=24));assert.equal(inn.extrasBreakdown.wides+inn.extrasBreakdown.noBalls+inn.extrasBreakdown.byes+inn.extrasBreakdown.legByes,inn.extras);});}}
+function reload(h,label){const storage=new Map(h.storage),saved=JSON.parse(storage.get('gcc_dynasty_v7_2')),fresh=loadGame(file,101,storage);fresh.context.Dynasty.resumeSave();const after=JSON.parse(storage.get('gcc_dynasty_v7_2'));report.reloads.push({label,expectedScreen:saved.currentScreen,actualScreen:after.currentScreen});check('reload state '+label,()=>{assert.equal(fresh.G.state.year,saved.state.year);assert.equal(fresh.G.state.round,saved.state.round);assert.equal(JSON.stringify(fresh.G.state.teams),JSON.stringify(saved.state.teams));assert.equal(JSON.stringify(fresh.G.state.results),JSON.stringify(saved.state.results));assert.equal(JSON.stringify(fresh.G.state.champion),JSON.stringify(saved.state.champion));assert.equal(fresh.errors.length,0);});check('reload screen '+label,()=>assert.equal(after.currentScreen,saved.currentScreen));return fresh;}
+const h=foundation(loadGame(file)),G=h.G,D=h.context.Dynasty,s=G.state;
+reload(h,'foundation team');
+for(let year=2008;year<=2026;year++){
+ assert.equal(s.year,year);selectXI(G);G.startSeason();
+ check('schedule '+year,()=>{assert.equal(s.fullSchedule.length,14);assert.equal(s.fullSchedule.flat().length,56);for(const c of s.league){const fs=s.fullSchedule.flat();assert.equal(fs.filter(f=>f.home.abbr===c.abbr).length,7);assert.equal(fs.filter(f=>f.away.abbr===c.abbr).length,7);for(const b of s.league.filter(b=>b.abbr!==c.abbr))assert.equal(fs.filter(f=>f.home.abbr===c.abbr&&f.away.abbr===b.abbr).length,1);}});
+ for(let round=0;round<14;round++){selectXI(G);G.go('season');G.playNextRound();assert.equal(s.round,round+1,`round stalled ${year}/${round}: ${h.get('toast').textContent}`);matchCheck(s.results.at(-1));if(year===2008&&round===6)reload(h,'midseason');}
+ check('league table '+year,()=>{assert.equal(s.results.length,14);const rows=Object.values(s.table);for(const r of rows){assert.equal(r.p,14);assert.equal(r.w+r.l,14);assert.equal(r.pts,r.w*2);assert.ok(Number.isFinite(r.nrr));}assert.equal(rows.reduce((n,r)=>n+r.w,0),56);});
+ if(year===2008){G.proceedPostSeason();if(s.finals){G.enterFinalsFromModal();reload(h,'finals');}}
+ G.resolveCpuFinalsOffscreen();assert.ok(s.champion);G.openSeasonReview();if(year===2008)reload(h,'season review');
+ report.years.push({year,club:s.userClub.abbr,wins:s.table[s.userClub.abbr].w,champion:s.champion.abbr});console.log(`Completed ${year}`);
+ if(year===2026){D.beginOffseason();reload(h,'career end');check('career cannot advance past 2026',()=>{D.beginOffseason();G.startSeason();assert.equal(s.year,2026)});break;}
+ const before=s.pool.filter(p=>!p.dynastyRetired&&(p.dynastyCareer?.exitYear??9999)<year+1).map(p=>p.id);D.beginOffseason();
+ check('retired players removed '+year,()=>{for(const id of before){assert.ok(!Object.values(s.teams).flat().includes(id));assert.ok(s.pool.find(p=>p.id===id).dynastyRetired);}});
+ const o=s.dynasty.offseason;D.runCpuMarket();D.drawDraftOrder();D.startAnnualDraft();
+ const expected=[];for(let r=1;r<=Math.max(...Object.values(o.draftNeeds));r++)for(const abbr of r%2?o.lottery:[...o.lottery].reverse())if(o.draftNeeds[abbr]>=r)expected.push({round:r,owner:o.pickOwners[`R${r}:${abbr}`]||abbr});
+ let guard=0;while(o.phase==='draft'&&guard++<50){const used=new Set(Object.values(s.teams).flat());const p=s.pool.filter(p=>p.available!==false&&!p.dynastyRetired&&!p.dynastyReplacement&&!p.draftedBy&&!used.has(p.id)).sort((a,b)=>b.overall-a.overall)[0];assert.ok(p,'free agent available');const cursor=o.pickCursor;D.userAnnualDraft(p.id);assert.ok(o.pickCursor>cursor,'annual draft progresses');}
+ check('annual draft slot ownership '+s.year,()=>{assert.equal(o.picks.length,expected.length);for(let i=0;i<expected.length;i++){assert.equal(o.picks[i].round,expected[i].round);assert.equal(o.picks[i].owner,expected[i].owner);assert.ok(o.picks[i].playerId!=null);}});
+ check('annual draft all lists 15 '+s.year,()=>assertRosters(s));D.finishOffseason();assert.equal(o.phase,'ready');D.enterTeamRoom();if(year===2008)reload(h,'next year team');
+}
+check('no game console errors',()=>assert.equal(h.errors.length,0,JSON.stringify(h.errors)));
+report.gameErrors=h.errors;fs.writeFileSync('qa/offline_game_results.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({checks:report.checks,failures:report.failures.length,years:report.years.length,matches:report.matchCount,reloads:report.reloads},null,2));if(report.failures.length)process.exitCode=1;

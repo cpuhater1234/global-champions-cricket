@@ -1,0 +1,4 @@
+import assert from 'node:assert/strict';
+export function assertRosters(s){const ids=Object.values(s.teams).flat();assert.equal(ids.length,120);assert.equal(new Set(ids).size,120);for(const c of s.league)assert.equal(s.teams[c.abbr].length,15);}
+export function selectXI(G){G.selectRecommendedXI();assert.equal(G.state.xi.length,11);if(G.state.battingOrder.length!==11)G.autoOrderXI();}
+export function foundation(host,club=0){const G=host.G,s=G.state;G.newWorld();G.skipLeagueReveal();G.finishLeagueReveal();G.selectClub(club);G.confirmClub();G.skipRecruitment();G.setupDraft();G.skipDraftReveal();G.beginDraft();for(let guard=0;s.pickIndex<120&&guard<40;guard++){G.skipToMyPick();if(s.pickIndex>=120)break;const p=s.pool.filter(p=>p.available&&!p.draftedBy).sort((a,b)=>b.overall-a.overall)[0];assert.ok(p);G.userDraft(p.id);}assert.equal(s.pickIndex,120);assertRosters(s);G.closeModal();G.enterTeamRoom();selectXI(G);return host;}

@@ -1,0 +1,124 @@
+{
+  "kind": "targeted manipulated-state functional stress",
+  "checks": [
+    "0 retirements removed",
+    "0 retirements cap voluntary releases",
+    "0 retirements draft restores unique lists",
+    "0 retirements user receives vacancy picks",
+    "1 retirements removed",
+    "1 retirements cap voluntary releases",
+    "1 retirements draft restores unique lists",
+    "1 retirements user receives vacancy picks",
+    "2 retirements removed",
+    "2 retirements cap voluntary releases",
+    "2 retirements draft restores unique lists",
+    "2 retirements user receives vacancy picks",
+    "3 retirements removed",
+    "3 retirements cap voluntary releases",
+    "3 retirements draft restores unique lists",
+    "3 retirements user receives vacancy picks",
+    "4 retirements removed",
+    "4 retirements cap voluntary releases",
+    "4 retirements draft restores unique lists",
+    "4 retirements user receives vacancy picks",
+    "5 retirements removed",
+    "5 retirements cap voluntary releases",
+    "5 retirements draft restores unique lists",
+    "5 retirements user receives vacancy picks",
+    "7 retirements removed",
+    "7 retirements cap voluntary releases",
+    "7 retirements draft restores unique lists",
+    "7 retirements user receives vacancy picks",
+    "duplicate XI blocks match",
+    "unavailable XI blocks match",
+    "injury cover registers both directions",
+    "duplicate replacement signing cannot enlarge list",
+    "injury scenario has no console errors",
+    "invalid offer cannot mutate rosters",
+    "accepted player and pick trade found",
+    "trade swaps ownership exactly once",
+    "traded draft pick cannot be spent twice",
+    "post-trade draft leaves 15 unique players per club",
+    "no game console errors in trading",
+    "valid vacancy pick trade is accepted",
+    "real first-round pick is exercised by acquiring club",
+    "valid pick scenario has no console errors"
+  ],
+  "failures": [
+    {
+      "name": "traded first-round asset corresponds to a real vacancy",
+      "error": "The accepted trade spent an R1 pick for a club with no draft vacancy"
+    },
+    {
+      "name": "valid pick trade ends with 15 unique players per club",
+      "error": "Expected values to be strictly equal:\n\n119 !== 120\n"
+    }
+  ],
+  "retirementScenarios": [
+    {
+      "forced": 0,
+      "controlled": 4,
+      "cap": 4
+    },
+    {
+      "forced": 1,
+      "controlled": 3,
+      "cap": 3
+    },
+    {
+      "forced": 2,
+      "controlled": 2,
+      "cap": 2
+    },
+    {
+      "forced": 3,
+      "controlled": 1,
+      "cap": 1
+    },
+    {
+      "forced": 4,
+      "controlled": 0,
+      "cap": 0
+    },
+    {
+      "forced": 5,
+      "controlled": 0,
+      "cap": 0
+    },
+    {
+      "forced": 7,
+      "controlled": 0,
+      "cap": 0
+    }
+  ],
+  "tradeScenario": {
+    "userClub": "SIX",
+    "acquiringClub": "DC",
+    "draftNeeds": {
+      "SIX": 0,
+      "DC": 0,
+      "RR": 0,
+      "KKR": 0,
+      "SOM": 0,
+      "HAM": 0,
+      "HEA": 0,
+      "STA": 0
+    },
+    "tradedPickSlot": null
+  },
+  "validPickTrade": {
+    "userClub": "SIX",
+    "acquiringClub": "DC",
+    "rosterSizes": {
+      "SIX": 14,
+      "DC": 15,
+      "RR": 15,
+      "KKR": 15,
+      "SOM": 15,
+      "HAM": 15,
+      "HEA": 15,
+      "STA": 15
+    },
+    "phaseAfterFinish": "cuts"
+  }
+}

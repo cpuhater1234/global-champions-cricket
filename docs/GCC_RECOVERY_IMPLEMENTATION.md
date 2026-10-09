@@ -101,7 +101,12 @@ The local runtime has no Chromium binary. The official Playwright browser
 download failed to supply a valid archive under the current network restrictions.
 The cloud browser blocks access to the local HTTP game and rejects local-file
 navigation under its security policy. No workaround was attempted after the
-explicit policy rejection. Browser visual/gameplay QA is therefore unperformed.
+explicit policy rejection. Browser visual and interaction QA is therefore unperformed.
+
+Functional execution is now available without a browser. See
+`qa/OFFLINE_TESTING.md` for the Node VM harness, reproducible career and stress
+commands, results and explicit DOM/timer limitations. This runs the unchanged
+game scripts; it does not satisfy the screenshot acceptance gate.
 
 Continue the presentation implementation in an environment with an authorised
 browser capable of rendering the local build. This checkpoint makes that work
