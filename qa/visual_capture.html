@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GCC visual capture</title>
+<style>body{font:18px system-ui;background:#101b26;color:#f2f5f7;margin:0;padding:32px;max-width:900px}h1{font-size:32px}p{line-height:1.5}button{font:inherit;padding:14px 20px;border:0;border-radius:8px;margin:0 8px 12px 0;cursor:pointer;background:#b9ed88;color:#10200d}button:disabled{opacity:.4;cursor:default}#status{padding:16px;background:#213244;border-radius:8px}video{width:100%;max-height:300px;background:#000;margin-top:20px}small{color:#bed0df}</style>
+<h1>Capture the current game</h1>
+<p>Open the latest game in its own browser window. Click <b>Start capture</b> and select that game window in the browser’s sharing chooser. Move through Home, Season, Squad/XI, Matchday, Scorecard and the offseason screens you want reviewed. Hold each screen for about five seconds.</p>
+<p>This collects one image every four seconds, up to 90 images. Everything stays on your computer until you choose to send the downloaded ZIP.</p>
+<button id="start">Start capture</button><button id="stop" disabled>Stop capture</button><button id="download" disabled>Download images ZIP</button>
+<p id="status" role="status">Checking screen capture support…</p>
+<video id="preview" muted autoplay playsinline></video>
+<p><small>The game is not loaded or changed by this tool. Select only the window you want included. The ZIP contains the captured pixels and capture times; it does not verify the game version.</small></p>
+<script>
+'use strict';
+const frames=[]; let stream=null,timer=null,busy=false,started=null;
+const start=document.getElementById('start'),stop=document.getElementById('stop'),download=document.getElementById('download'),status=document.getElementById('status'),video=document.getElementById('preview');
+const supported=!!(window.isSecureContext && navigator.mediaDevices?.getDisplayMedia);
+start.disabled=!supported;
+status.textContent=supported?'Ready. Start capture opens the browser’s window chooser.':'Screen capture is unavailable in this browser. Use Windows Snipping Tool: press Win + Shift + S on the game and paste the screenshot into this chat.';
+function finish(){if(timer!==null)clearInterval(timer);timer=null;if(stream)stream.getTracks().forEach(t=>t.stop());stream=null;start.disabled=!supported;stop.disabled=true;download.disabled=frames.length===0;status.textContent=`Stopped. ${frames.length} images ready to download.`;}
+async function capture(){
+ if(busy||!stream||!video.videoWidth||!video.videoHeight)return;
+ if(frames.length>=90){finish();return;}
+ busy=true;
+ try{const c=document.createElement('canvas');c.width=video.videoWidth;c.height=video.videoHeight;c.getContext('2d').drawImage(video,0,0);const blob=await new Promise(resolve=>c.toBlob(resolve,'image/png'));if(!blob)throw Error('Image encoding failed');frames.push({blob,width:c.width,height:c.height,at:new Date().toISOString()});download.disabled=false;status.textContent=`Capturing: ${frames.length} / 90 images. Hold each game screen for five seconds.`;if(frames.length>=90)finish();}
+ catch(e){finish();status.textContent=`Capture stopped: ${e.message}. Existing images can still be downloaded.`;}
+ finally{busy=false;}
+}
+start.onclick=async()=>{
+ start.disabled=true;
+ try{stream=await navigator.mediaDevices.getDisplayMedia({video:true,audio:false});started=started||new Date().toISOString();video.srcObject=stream;stream.getVideoTracks()[0].addEventListener('ended',finish,{once:true});await video.play();stop.disabled=false;status.textContent='Sharing started. Move to the game window.';timer=setInterval(capture,4000);await capture();}
+ catch(e){finish();status.textContent=`Sharing did not start (${e.name||'error'}). You can use Windows Snipping Tool instead: Win + Shift + S, select the game, then paste into this chat.`;}
+};
+stop.onclick=finish;
+function crc32(bytes){let c=0xffffffff;for(const b of bytes){c^=b;for(let j=0;j<8;j++)c=(c>>>1)^((c&1)?0xedb88320:0);}return (c^0xffffffff)>>>0;}
+function header(size){return new DataView(new ArrayBuffer(size));}
+async function makeZip(items){
+ const enc=new TextEncoder(),parts=[],central=[];let offset=0,centralSize=0;
+ for(const item of items){const name=enc.encode(item.name),data=new Uint8Array(await item.blob.arrayBuffer()),crc=crc32(data),h=header(30);h.setUint32(0,0x04034b50,true);h.setUint16(4,20,true);h.setUint16(6,0x800,true);h.setUint32(14,crc,true);h.setUint32(18,data.length,true);h.setUint32(22,data.length,true);h.setUint16(26,name.length,true);parts.push(h.buffer,name,data);
+ const d=header(46);d.setUint32(0,0x02014b50,true);d.setUint16(4,20,true);d.setUint16(6,20,true);d.setUint16(8,0x800,true);d.setUint32(16,crc,true);d.setUint32(20,data.length,true);d.setUint32(24,data.length,true);d.setUint16(28,name.length,true);d.setUint32(42,offset,true);central.push(d.buffer,name);offset+=30+name.length+data.length;centralSize+=46+name.length;}
+ const end=header(22);end.setUint32(0,0x06054b50,true);end.setUint16(8,items.length,true);end.setUint16(10,items.length,true);end.setUint32(12,centralSize,true);end.setUint32(16,offset,true);return new Blob([...parts,...central,end.buffer],{type:'application/zip'});
+}
+download.onclick=async()=>{
+ finish();download.disabled=true;
+ try{const snapshot=frames.slice();const items=snapshot.map((f,i)=>({name:`screen-${String(i+1).padStart(3,'0')}.png`,blob:f.blob}));items.push({name:'capture.json',blob:new Blob([JSON.stringify({started,userAgent:navigator.userAgent,versionVerified:false,frames:snapshot.map(({width,height,at},i)=>({file:items[i].name,width,height,at}))},null,2)],{type:'application/json'})});const zip=await makeZip(items),url=URL.createObjectURL(zip),a=document.createElement('a');a.href=url;a.download='gcc-visual-capture.zip';a.click();setTimeout(()=>URL.revokeObjectURL(url),60000);status.textContent=`Downloaded ${snapshot.length} images. Attach gcc-visual-capture.zip to the chat for review.`;}
+ catch(e){status.textContent=`Download failed: ${e.message}. Your images remain in this tab.`;}
+ finally{download.disabled=frames.length===0;}
+};
+</script></html>
