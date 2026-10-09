@@ -1,0 +1,128 @@
+{
+  "baseline": "global_champions_cricket_v7_8_7_brutal_qa.html",
+  "baseline_sha256": "8dfda284f00ca7f693f96b734ae9a95edb9ad0b133165dcaef9024eae74478c2",
+  "script_count": 10,
+  "style_count": 2,
+  "blocks": [
+    {
+      "kind": "style",
+      "attributes": "",
+      "path": "styles/legacy-foundation.css"
+    },
+    {
+      "kind": "style",
+      "attributes": " id=\"v780-player-feedback\"",
+      "path": "styles/legacy-feedback.css"
+    },
+    {
+      "kind": "script",
+      "attributes": "",
+      "path": "scripts/players-2008.js"
+    },
+    {
+      "kind": "script",
+      "attributes": "",
+      "path": "scripts/league-data.js"
+    },
+    {
+      "kind": "script",
+      "attributes": "",
+      "path": "scripts/ratings-model.js"
+    },
+    {
+      "kind": "script",
+      "attributes": "",
+      "path": "scripts/player-projections.js"
+    },
+    {
+      "kind": "script",
+      "attributes": "",
+      "path": "scripts/cpu-draft.js"
+    },
+    {
+      "kind": "script",
+      "attributes": "",
+      "path": "scripts/foundation-game.js"
+    },
+    {
+      "kind": "script",
+      "attributes": "",
+      "path": "scripts/home-motion.js"
+    },
+    {
+      "kind": "script",
+      "attributes": "",
+      "path": "scripts/event-presentation.js"
+    },
+    {
+      "kind": "script",
+      "attributes": " id=\"gcc-dynasty-engine\"",
+      "path": "scripts/dynasty-game.js"
+    },
+    {
+      "kind": "script",
+      "attributes": "",
+      "path": "scripts/home-identity.js"
+    }
+  ],
+  "embedded_assets": [
+    "assets/embedded-000.txt",
+    "assets/embedded-001.txt",
+    "assets/embedded-002.txt"
+  ],
+  "presentation_functions": {
+    "foundation-game": {
+      "season": [
+        "seasonFixtureRow",
+        "renderSeasonFixtures",
+        "fullLadderHtml",
+        "renderSeasonLadder",
+        "renderSeasonOverview",
+        "setSeasonView",
+        "renderSeason",
+        "renderSeasonInsights",
+        "renderMatchStory"
+      ],
+      "matchday": [
+        "openMatchdayPreview"
+      ],
+      "finals": [
+        "finalsMatchMarkup",
+        "renderFinals"
+      ],
+      "review": [
+        "renderSeasonReview"
+      ],
+      "draft": [
+        "renderDraftWorkspace",
+        "renderDraftStatus",
+        "renderDraftTransit",
+        "renderDraft",
+        "renderDraftFlow",
+        "renderPlayers"
+      ],
+      "team": [
+        "renderTeam"
+      ]
+    },
+    "dynasty-game": {
+      "offseason": [
+        "renderOffseason",
+        "renderMarket",
+        "renderLottery",
+        "renderCuts",
+        "renderReady"
+      ],
+      "annual-draft": [
+        "annualPlayerCard",
+        "annualDraftNeedsHtml",
+        "renderAnnualDraftPoolOnly",
+        "renderAnnualDraft"
+      ],
+      "trade": [
+        "openTradeCentre",
+        "refreshTradeRead"
+      ]
+    }
+  }
+}

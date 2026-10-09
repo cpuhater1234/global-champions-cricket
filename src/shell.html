@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Global Champions Cricket · Dynasty 2008–2026</title>
+  <style>@@GCC_INCLUDE:styles/legacy-foundation.css@@</style>
+
+<style id="v780-player-feedback">@@GCC_INCLUDE:styles/legacy-feedback.css@@</style>
+</head>
+<body data-model-version="2008-evidence-provenance-hardened-v4" data-ui-version="v6.70.2-story-overlap-fix">
+
+  <svg class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-stumps" viewBox="0 0 64 64">
+      <rect x="14" y="16" width="8" height="40" rx="1.8" fill="none" stroke="currentColor" stroke-width="3"/>
+      <rect x="28" y="16" width="8" height="40" rx="1.8" fill="none" stroke="currentColor" stroke-width="3"/>
+      <rect x="42" y="16" width="8" height="40" rx="1.8" fill="none" stroke="currentColor" stroke-width="3"/>
+      <rect x="19" y="11" width="12" height="4" rx="1.4" fill="none" stroke="currentColor" stroke-width="3"/>
+      <rect x="33" y="11" width="12" height="4" rx="1.4" fill="none" stroke="currentColor" stroke-width="3"/>
+    </symbol>
+    <symbol id="icon-bat" viewBox="0 0 64 64">
+      <g transform="rotate(32 32 32)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="29" y="6.5" width="6" height="16" rx="2" stroke-width="2.4"/>
+        <path d="M24 22.5h16l2 4.5v24.5c0 3.2-2.4 5.5-5.5 5.5h-7c-3.1 0-5.5-2.3-5.5-5.5V27z" stroke-width="2.6"/>
+        <path d="M24 22.5l3.2-3.4h9.6l3.2 3.4" stroke-width="2.6"/>
+      </g>
+    </symbol>
+    <symbol id="gcc-crest" viewBox="0 0 72 64">
+      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17 16v34M29 16v34M41 16v34" stroke-width="3.2"/>
+        <path d="M14 13h18M28 13h18" stroke-width="3.2"/>
+        <circle cx="56" cy="39" r="9" stroke-width="3.2"/>
+        <path d="M51 32.5c3.2 2.7 5.5 6.7 6.8 12.7" stroke-width="1.7"/>
+      </g>
+    </symbol>
+  </svg>
+  <div class="shell">
+    <header class="topbar">
+      <button class="brand" onclick="GCC.go('world')" aria-label="Global Champions Cricket home">
+        <span class="brand-mark" aria-hidden="true"><svg class="gcc-brand-symbol" viewBox="0 0 72 64"><use href="#gcc-crest"></use></svg></span>
+        <span><b>GLOBAL CHAMPIONS CRICKET</b><small id="seasonStamp">2008</small></span>
+      </button>
+      <nav id="nav" class="nav"></nav>
+    </header>
+
+    <main>
+      <section id="world" class="screen active">
+        <div id="careerLauncher" class="career-launcher" aria-live="polite">
+          <div class="launcher-shell">
+            <div class="launcher-mark" aria-hidden="true"><svg viewBox="0 0 72 64"><use href="#gcc-crest"></use></svg></div>
+            <span class="launcher-kicker" id="launcherKicker">GLOBAL CHAMPIONS CRICKET</span>
+            <h1 id="launcherTitle">Your cricket world.</h1>
+            <p class="launcher-summary" id="launcherSummary">Start a new dynasty, or continue the career already saved on this device.</p>
+            <div id="launcherCareer" class="launcher-career" hidden><strong id="launcherClub">Dynasty save found</strong><span id="launcherDetail">Ready to continue</span></div>
+            <div class="launcher-actions">
+              <button id="launcherContinue" class="button primary" onclick="Dynasty.continueFromLauncher()" hidden>CONTINUE DYNASTY</button>
+              <button id="launcherNew" class="button" onclick="Dynasty.requestNewDynasty()">NEW DYNASTY</button>
+            </div>
+            <div class="launcher-links"><button class="launcher-link" onclick="Dynasty.importSave()">Import save</button><button id="launcherStory" class="launcher-link" onclick="Dynasty.showFoundationIntro()">2008 story</button></div>
+            <div id="launcherStatus" class="launcher-status"></div>
+          </div>
+        </div>
+        <div class="hero home-hero" id="homeHero" hidden>
+          <div class="hero-copy home-copy">
+            <span class="kicker"><span class="kicker-icon ball-icon" aria-hidden="true"></span>FOUNDATION YEAR · 2008</span>
+            <h1>The breakaway begins.</h1>
+            <p>It is July 2008. Saudi money has landed in cricket, and eight established clubs have agreed to break away for a new global T20 competition: Global Champions Cricket.</p>
+            <p>The clubs keep their names and home grounds. Their playing lists do not come with them. Every dressing room starts empty, and every player must decide whether to enter the new league.</p>
+            <p>You arrive before the first player has signed. Five days of calls decide who enters the pool. Then comes the draft: 120 picks, eight new squads, 14 matches and the first GCC title.</p>
+            <div class="actions">
+              <button id="homeNewDynasty" class="button primary" onclick="Dynasty.requestNewDynasty()">ENTER THE WORLD</button><button id="homeContinueDynasty" class="button" onclick="Dynasty.continueFromLauncher()" hidden>CONTINUE DYNASTY</button>
+              <button class="button" onclick="GCC.openWorldDossier()">READ THE STORY</button>
+              <button class="button" onclick="GCC.openHow()">HOW TO PLAY</button>
+            </div>
+            <div class="world-actions-note"><button onclick="GCC.openWorldDossier()">Open the 2008 GCC dossier</button> for the full story and the rules before you begin.</div>
+            <div class="home-copy-rule"><svg viewBox="0 0 48 32" aria-hidden="true"><use href="#icon-stumps"></use></svg><span>2008 starts here</span></div>
+          </div>
+          <aside class="world-card home-world-card story-card-panel" id="foundationCard">
+            <div class="foundation-scene" id="foundationScene">
+              <img class="foundation-brand-logo" src="@@GCC_INCLUDE:assets/embedded-002.txt@@" alt="Global Champions Cricket logo">
+            </div>
+            <div class="foundation-copy">
+              <div class="foundation-statline"><span>8 clubs</span><span>5-day signing window</span><span>120 draft picks</span><span>14 matches</span></div>
+              <div class="foundation-note">
+                <svg viewBox="0 0 48 32" aria-hidden="true"><use href="#icon-stumps"></use></svg>
+                <div><b>You inherit a club, not a team.</b><p>Fifteen contracts. Eleven places. Twenty overs. A batting order, a keeper, an attack and a home ground. Big names help; balance wins matches.</p></div>
+              </div>
+            </div>
+          </aside>
+          <div class="home-timeline"><span>July 2008</span><svg viewBox="0 0 32 32" aria-hidden="true"><use href="#icon-stumps"></use></svg><span>The eight foundation licences have been awarded</span></div>
+        </div>
+      </section>
+
+      <section id="leagueDraw" class="screen">
+        <div class="cinematic">
+          <div class="cinematic-head">
+            <span class="kicker"><svg class="kicker-icon" viewBox="0 0 32 32" aria-hidden="true"><use href="#icon-stumps"></use></svg>FOUNDATION CLUB DRAW</span>
+            <h2>Eight clubs. One new league.</h2>
+            <p>The money is on the table. Now the clubs make their call. Three from India, three from Australia and two from England will make up the first GCC season.</p>
+          </div>
+          <div class="reveal-prompt" id="leagueRevealPrompt">Who takes the deal?<small>Eight clubs are about to leave the old order behind. When the last name lands, one of them becomes yours.</small></div>
+          <div class="reveal-status"><strong id="leagueRevealCount">0 of 8 revealed</strong><span id="leagueRevealStatus">The draw is about to begin</span></div>
+          <div id="leagueRevealGrid" class="reveal-grid"></div>
+          <div class="actions right"><button id="leagueRevealPace" class="button" onclick="GCC.cycleRevealPace('league')">PACE 1×</button><button id="leagueRevealSkip" class="button" onclick="GCC.skipLeagueReveal()">REVEAL ALL</button><button id="leagueRevealContinue" class="button primary" onclick="GCC.finishLeagueReveal()" disabled>CHOOSE YOUR CLUB</button></div>
+        </div>
+      </section>
+
+      <section id="clubs" class="screen">
+        <header class="section-head">
+          <div>
+            <span class="kicker"><svg class="kicker-icon" viewBox="0 0 32 32" aria-hidden="true"><use href="#icon-stumps"></use></svg>CHOOSE YOUR FRANCHISE</span>
+            <h2>Which club is yours?</h2>
+            <p>Pick one of the eight. You keep the club and the ground; the squad starts empty.</p>
+          </div>
+          <button id="chooseClub" class="button primary" onclick="GCC.confirmClub()" disabled>TAKE CONTROL</button>
+        </header>
+        <div class="stage-note"><svg class="stage-note-icon" viewBox="0 0 48 32" aria-hidden="true"><use href="#icon-stumps"></use></svg><b>Pick your club.</b><span>Seven league matches come home. Choose the ground you want on your side.</span></div>
+        <div id="clubGrid" class="club-grid"></div>
+      </section>
+
+      <section id="recruit" class="screen">
+        <header class="section-head recruit-head">
+          <div>
+            <span class="kicker"><svg class="kicker-icon" viewBox="0 0 32 32" aria-hidden="true"><use href="#icon-stumps"></use></svg>GCC SIGNING WEEK</span>
+            <h2>Five days decide who enters the Draft.</h2>
+            <p>No club has a squad yet. Every decision shapes the foundation Draft pool. When Day 5 closes, the Draft Order is drawn.</p>
+          </div>
+          <div class="signing-actions">
+            <button id="runRecruit" class="button primary" onclick="GCC.runRecruitment()">OPEN SIGNING WINDOW</button>
+            <button id="speedRecruit" class="button" onclick="GCC.cycleRecruitSpeed()">SPEED 1×</button>
+            <button id="skipRecruit" class="button" onclick="GCC.skipRecruitment()">SKIP TO FINAL POOL</button>
+          </div>
+        </header>
+        <div class="signing-status" aria-live="polite">
+          <div id="recruitSummary" class="signing-scoreline">DAY 0/5 · 0 IN · 0 OUT · 0 WAITING</div>
+          <div id="recruitProgress" class="day-track"></div>
+        </div>
+        <div id="recruitLiveView" class="signing-live-view">
+          <main class="signing-stage">
+            <div id="recruitTicker" class="recruit-ticker"><span class="live-dot"></span><b>Day 1 ready</b><span>The first calls are waiting.</span></div>
+            <div id="recruitRoll" class="recruit-roll"><span class="roll-label">NEXT CALL</span><h3>The first name is waiting</h3><p>Open the window to see who enters the foundation Draft.</p></div>
+            <div class="signing-recent-head"><span class="kicker">LATEST FROM THE WINDOW</span><span>Most recent decisions only</span></div>
+            <div id="recruitRecent" class="signing-recent"><div class="empty">No decisions yet.</div></div>
+          </main>
+          <aside class="signing-side">
+            <span class="kicker">WHAT IT MEANS FOR THE DRAFT</span>
+            <strong id="recruitContextLead">The Draft pool is still open.</strong>
+            <p id="recruitContext">A yes puts the player into the Draft. A no takes that player out before Pick 1.</p>
+            <button id="recruitWireToggle" class="button" onclick="GCC.toggleRecruitWire()">VIEW FULL SIGNING WIRE</button>
+            <button id="draftSetup" class="button primary signing-next" onclick="GCC.setupDraft()" disabled>DRAW DRAFT ORDER</button>
+          </aside>
+        </div>
+        <div id="recruitWirePanel" class="signing-wire-panel" hidden>
+          <div class="signing-wire-head"><div><span class="kicker">LEAGUE SIGNING WIRE</span><h3>Every call in one place.</h3></div><button class="button" onclick="GCC.toggleRecruitWire()">BACK TO LIVE WINDOW</button></div>
+          <div id="recruitFeed" class="feed recruit-feed"><div class="empty">No calls yet.</div></div>
+        </div>
+      </section>
+
+      <section id="draftDraw" class="screen">
+        <div class="cinematic">
+          <div class="cinematic-head">
+            <span class="kicker"><span class="kicker-icon ball-icon" aria-hidden="true"></span>DRAFT ORDER DRAW</span>
+            <h2>Where will you pick?</h2>
+            <p>Eight envelopes. Eight first-round slots. When your club comes out, you will know how long you have to wait before making the first pick of your era.</p>
+          </div>
+          <div class="reveal-prompt" id="draftRevealPrompt">Where do you land?<small>Round 1 runs from 1 to 8. Round 2 comes straight back. Then the board starts moving.</small></div>
+          <div class="reveal-status"><strong id="draftRevealCount">0 of 8 positions drawn</strong><span id="draftRevealStatus">The first envelope is ready</span></div>
+          <div id="draftRevealGrid" class="reveal-grid"></div>
+          <div class="actions right"><button id="draftRevealPace" class="button" onclick="GCC.cycleRevealPace('draft')">PACE 1×</button><button id="draftRevealSkip" class="button" onclick="GCC.skipDraftReveal()">REVEAL ALL</button><button id="draftRevealContinue" class="button primary" onclick="GCC.beginDraft()" disabled>ENTER DRAFT ROOM</button></div>
+        </div>
+      </section>
+
+      <section id="draft" class="screen">
+        <header class="section-head compact">
+          <div><span class="kicker"><span class="kicker-icon ball-icon" aria-hidden="true"></span>FOUNDATION DRAFT</span><h2 id="onClock">Draft room</h2><p id="draftHint">15 rounds · snake order</p></div>
+          <div class="pick-count" id="pickNo">0 / 120</div>
+        </header>
+        <div class="stage-note"><svg class="stage-note-icon" viewBox="0 0 48 32" aria-hidden="true"><use href="#icon-stumps"></use></svg><b>The board will get away from you.</b><span>Know which cricket jobs you cannot leave empty, then be ready to change course when another club takes your player.</span></div>
+        <div id="draftFlow" class="draft-flow" aria-live="polite">
+          <div class="draft-flow-copy"><span class="ball-icon" aria-hidden="true"></span><div><b id="draftFlowLead">The room is settling.</b><span id="draftFlowDetail">The first pick is about to be made.</span></div></div>
+          <div class="draft-flow-actions"><button id="draftBoardToggle" class="button" onclick="GCC.toggleDraftBoard()">VIEW DRAFT BOARD</button><button id="draftPace" class="button" onclick="GCC.cycleDraftPace()">PACE 1×</button><button id="skipToPick" class="button" onclick="GCC.skipToMyPick()">SKIP TO MY PICK</button></div>
+        </div>
+        <div id="draftWorkspace" class="draft-layout">
+          <div class="panel">
+            <div class="toolbar">
+              <input id="playerSearch" class="input" placeholder="Search player" oninput="GCC.renderPlayers()">
+              <div id="filters" class="filters"></div>
+            </div>
+            <div id="players" class="player-grid"></div>
+            <div id="draftPoolControls" class="draft-pool-controls" aria-live="polite"></div>
+          </div>
+          <aside class="panel side-panel">
+            <span class="kicker">YOUR SQUAD</span>
+            <div class="draft-squad-head"><h3 id="draftTeamName">—</h3><span id="draftSquadCount" class="draft-squad-count">0 / 15</span></div>
+            <div id="draftNeeds" class="need-list"></div>
+            <div id="draftSquadRead" class="draft-read"></div>
+            <div id="draftProfile" class="mini-profile"></div>
+            <div class="draft-list-label">DRAFTED SO FAR</div>
+            <div id="squadMini" class="squad-list"></div>
+          </aside>
+        </div>
+        <div id="draftBoardPanel" class="panel board-panel draft-secondary-view" hidden><div class="draft-board-head"><span class="kicker">FULL DRAFT BOARD</span><p>All 120 slots, when you need the room-wide view. Return to the player pool to make your pick.</p></div><div id="draftBoard" class="draft-board"></div></div>
+      </section>
+
+      <section id="team" class="screen">
+        <header class="section-head">
+          <div><span class="kicker"><svg class="kicker-icon" viewBox="0 0 32 32" aria-hidden="true"><use href="#icon-stumps"></use></svg>TEAM ROOM</span><h2>Name your first XI</h2><p>Pick the eleven for Round 1. They start in a natural batting order; move them if you see the innings differently.</p></div>
+        </header>
+        <div class="team-command-bar">
+          <div><span class="kicker">ROUND 1 SELECTION</span><strong id="selectionLead">0/11 selected.</strong><small id="selectionCopy">The full 15 stays in view while you build the side.</small></div>
+          <div class="team-command-actions"><button id="quickStartSeasonButton" type="button" class="button primary team-quick-start" onclick="GCC.startSeason()" hidden>START SEASON</button><button id="clearXIButton" type="button" class="button" onclick="GCC.clearXI()" hidden>CLEAR XI</button></div>
+        </div>
+        <div class="team-layout">
+          <div class="panel team-selection-panel">
+            <div class="team-sheet-grid">
+              <section class="team-squad-column">
+                <div class="team-column-head"><div><span class="kicker" id="squadColumnKicker">SQUAD</span><h3 id="squadColumnTitle">15 players</h3></div><span class="team-column-note" id="squadColumnNote">Your full squad stays here while you choose the XI.</span></div>
+                <div id="xiList" class="xi-list"></div>
+              </section>
+              <section class="team-xi-column">
+                <div class="team-order-head"><div><span class="kicker">FIRST XI</span><h3>Batting order</h3></div><div class="team-order-tools"><span class="team-order-note">Move players only when you want to change the natural order.</span><button type="button" class="team-auto-order" onclick="GCC.autoOrderXI()">RESET ORDER</button></div></div>
+                <div id="swapStatus" class="swap-status"><span>Bench changes become available once the XI is full.</span></div>
+                <div id="xiBattingOrder" class="xi-batting-order"></div>
+              </section>
+            </div>
+          </div>
+          <aside class="panel profile-panel">
+            <div class="profile-head"><div><span class="kicker" id="profileScope">NO XI SELECTED</span><h3 id="profileTeamName">—</h3></div><span id="xiCount" class="xi-count">0/11</span></div>
+            <div id="teamOverall" class="selection-team-rating"></div>
+            <div id="xiEssentials" class="xi-essentials"></div>
+            <div class="profile-note" id="profileNote">Choose the eleven before judging the side.</div>
+            <details id="teamDetailRead" class="team-detail-read">
+              <summary>Detailed XI read</summary>
+              <div id="teamProfile" class="rating-grid"></div>
+              <div id="groundCard" class="ground-card"></div>
+            </details>
+            <button id="startSeasonButton" class="button primary full" onclick="GCC.startSeason()">SELECT 11 TO START</button>
+          </aside>
+        </div>
+      </section>
+
+      <section id="season" class="screen">
+        <header class="section-head season-head">
+          <div><span class="kicker"><span class="kicker-icon ball-icon" aria-hidden="true"></span>2008 SEASON</span><h2>The first season begins</h2><p>Fourteen matches. Seven at home, seven away.</p></div>
+          <div id="seasonActions" class="season-actions"><button id="playRound" class="button primary" onclick="GCC.openMatchdayPreview()">MATCHDAY · ROUND 1</button><button id="simulateSeason" class="button" onclick="GCC.simulateSeason()">RUN SEASON</button><button id="seasonPace" class="button" onclick="GCC.cycleSeasonPace()" hidden>PACE 1×</button></div>
+        </header>
+        <div id="seasonTicker" class="season-ticker" hidden><span class="live-dot"></span><b>Season running</b><span>The next result is loading.</span></div>
+        <div id="matchStory"></div>
+        <div class="stage-note season-stage-note"><svg class="stage-note-icon" viewBox="0 0 48 32" aria-hidden="true"><use href="#icon-stumps"></use></svg><b id="seasonStageTitle">Round 1 is waiting.</b><span id="seasonStageCopy">Your first opponent is next.</span></div>
+        <div id="seasonKpis" class="stat-strip"></div>
+        <div id="postSeasonCta" class="post-season-cta"></div>
+
+        <nav class="season-view-nav" aria-label="Season views">
+          <button class="season-view-button active" data-season-view="overview" aria-selected="true" onclick="GCC.setSeasonView('overview')">Overview</button>
+          <button class="season-view-button" data-season-view="fixtures" aria-selected="false" onclick="GCC.setSeasonView('fixtures')">Fixtures</button>
+          <button class="season-view-button" data-season-view="ladder" aria-selected="false" onclick="GCC.setSeasonView('ladder')">Ladder</button>
+          <button class="season-view-button" data-season-view="analysis" aria-selected="false" onclick="GCC.setSeasonView('analysis')">Analysis</button>
+          <button class="season-view-button" data-season-view="players" aria-selected="false" onclick="GCC.setSeasonView('players')">Players</button>
+        </nav>
+
+        <div id="seasonOverview" class="season-view active" data-season-panel="overview">
+          <div class="season-overview-grid">
+            <section class="season-overview-block"><div class="season-overview-head"><span class="kicker">THE RUN</span><h3>Recent and next</h3></div><div id="seasonRun" class="season-run-list"></div></section>
+            <section class="season-overview-block"><div class="season-overview-head"><span class="kicker">FINALS LINE</span><h3>Ladder snapshot</h3><span>Top four qualify</span></div><div id="ladderSnapshot" class="ladder-snapshot"></div><button class="season-inline-link" onclick="GCC.setSeasonView('ladder')">View full ladder</button></section>
+          </div>
+        </div>
+
+        <div id="seasonFixturesView" class="season-view" data-season-panel="fixtures" hidden>
+          <div class="panel season-panel fixtures-panel"><div class="season-panel-head"><span class="kicker">FULL SCHEDULE</span><h3>Your 14 matches</h3></div><div id="fixtures"></div></div>
+        </div>
+
+        <div id="seasonLadderView" class="season-view" data-season-panel="ladder" hidden>
+          <div class="panel season-panel ladder-panel"><div class="season-panel-head"><span class="kicker">GCC TABLE</span><h3>Full ladder</h3></div><div id="ladder"></div></div>
+        </div>
+
+        <div id="seasonAnalysisView" class="season-view" data-season-panel="analysis" hidden>
+          <div class="season-insight-grid">
+            <div id="seasonWhy" class="insight-card"></div>
+            <div id="seasonShape" class="insight-card"></div>
+          </div>
+        </div>
+
+        <div id="seasonPlayersView" class="season-view" data-season-panel="players" hidden>
+          <div id="seasonPlayers" class="insight-card"></div>
+        </div>
+      </section>
+
+      <section id="finals" class="screen">
+        <div class="finals-shell">
+          <div class="finals-hero">
+            <span class="kicker"><span class="kicker-icon ball-icon" aria-hidden="true"></span>2008 FINALS</span>
+            <h2 id="finalsTitle">Four clubs remain.</h2>
+            <p id="finalsIntro">The table is gone now. Two semi-finals, one Grand Final, no second chance.</p>
+            <span id="finalsSeed" class="finals-seed"></span>
+            <div id="finalsTension" class="finals-tension"></div>
+          </div>
+          <div class="stage-note"><svg class="stage-note-icon" viewBox="0 0 48 32" aria-hidden="true"><use href="#icon-stumps"></use></svg><b id="finalsStageTitle">The bracket is set.</b><span id="finalsStageCopy">Two semi-finals. One grand final. The first GCC champion is three matches away.</span></div>
+          <div id="finalsSemis" class="finals-stage"></div>
+          <div id="finalsGrandFinal" class="finals-championship"></div>
+          <div id="finalsStory" class="finals-story"></div>
+          <div id="finalsControls" class="finals-controls"><button class="button primary" onclick="GCC.simulateFinals()">PLAY FINALS</button></div>
+        </div>
+      </section>
+
+      <section id="review" class="screen">
+        <div class="review-shell">
+          <div class="review-hero">
+            <span class="kicker"><svg class="kicker-icon" viewBox="0 0 32 32" aria-hidden="true"><use href="#icon-stumps"></use></svg>2008 SEASON REVIEW</span>
+            <div id="reviewOutcome" class="review-outcome"></div>
+            <h2 id="reviewTitle">The season in full.</h2>
+            <p id="reviewIntro"></p>
+          </div>
+          <div id="reviewKpis" class="stat-strip"></div>
+          <div id="reviewPlayers" class="review-players"></div>
+          <div class="review-card review-moments-card"><span class="kicker">MATCHES TO REMEMBER</span><h3>The scorecards that shaped the season</h3><div id="reviewMoments" class="review-list review-moments"></div></div>
+          <div class="review-grid">
+            <div class="review-card"><span class="kicker">WHAT HELD UP</span><h3>What you can trust</h3><div id="reviewStrengths" class="review-list"></div></div>
+            <div class="review-card"><span class="kicker">NEXT SEASON</span><h3>Where the side can improve</h3><div id="reviewWeaknesses" class="review-list"></div></div>
+          </div>
+          <div class="review-card" style="margin-top:12px"><span class="kicker">SEASON BOOK</span><h3>Batting and bowling</h3><div id="reviewTable" class="review-table"></div></div>
+          <div class="review-footer"><button class="button primary" onclick="GCC.go('world')">RETURN TO GCC WORLD</button></div>
+        </div>
+      </section>
+
+
+      <section id="dynasty" class="screen dynasty-screen">
+        <header class="section-head dynasty-head">
+          <div><span class="kicker" id="dynastyKicker">DYNASTY · OFF-SEASON</span><h2 id="dynastyTitle">The league moves on.</h2><p id="dynastyIntro">Retirements, arrivals, trades and the annual draft reshape the competition before Round 1.</p></div>
+          <div class="dynasty-head-actions"><button class="button" onclick="Dynasty.openArchive()">LEAGUE ARCHIVE</button><button class="button" onclick="Dynasty.exportSave()">EXPORT SAVE</button></div>
+        </header>
+        <div id="dynastyTimeline" class="dynasty-timeline"></div>
+        <div id="dynastyHeadline" class="dynasty-headline"></div>
+        <div class="dynasty-layout">
+          <main id="dynastyMain" class="dynasty-main"></main>
+          <aside class="dynasty-rail">
+            <section class="panel dynasty-roster-panel"><div class="dynasty-panel-head"><span class="kicker">YOUR LIST</span><b id="dynastyRosterCount">—</b></div><div id="dynastyRoster" class="dynasty-roster"></div></section>
+            <section class="panel dynasty-wire-panel"><div class="dynasty-panel-head"><span class="kicker">LEAGUE WIRE</span><span id="dynastyWireYear"></span></div><div id="dynastyWire" class="dynasty-wire"></div></section>
+          </aside>
+        </div>
+      </section>
+
+      <section id="archive" class="screen dynasty-screen">
+        <header class="section-head dynasty-head"><div><span class="kicker">GCC ARCHIVE</span><h2>The league remembers.</h2><p>Every season, title and player record becomes part of the world you are building.</p></div><div class="dynasty-head-actions"><button class="button" onclick="Dynasty.backFromArchive()">BACK</button></div></header>
+        <div id="archiveHero" class="archive-hero"></div>
+        <div id="archiveContent" class="archive-content"></div>
+      </section>
+
+      <section id="legacy" class="screen dynasty-screen legacy-screen">
+        <div id="legacyContent" class="legacy-shell"></div>
+      </section>
+    </main>
+  </div>
+
+  <div id="modal" class="modal" onclick="GCC.backdropClose(event)"><div id="modalBody" class="modal-card"></div></div>
+  <div id="toast" class="toast"></div>
+
+  <script>@@GCC_INCLUDE:scripts/players-2008.js@@</script>
+  <script>@@GCC_INCLUDE:scripts/league-data.js@@</script>
+  <script>@@GCC_INCLUDE:scripts/ratings-model.js@@</script>
+  <script>@@GCC_INCLUDE:scripts/player-projections.js@@</script>
+  <script>@@GCC_INCLUDE:scripts/cpu-draft.js@@</script>
+  <script>@@GCC_INCLUDE:scripts/foundation-game.js@@</script>
+
+<script>@@GCC_INCLUDE:scripts/home-motion.js@@</script>
+
+
+<script>@@GCC_INCLUDE:scripts/event-presentation.js@@</script>
+
+
+<script id="gcc-dynasty-engine">@@GCC_INCLUDE:scripts/dynasty-game.js@@</script>
+
+
+<script>@@GCC_INCLUDE:scripts/home-identity.js@@</script>
+</body>
+</html>

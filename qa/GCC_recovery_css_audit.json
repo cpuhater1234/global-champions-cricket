@@ -1,0 +1,1022 @@
+{
+  "baseline_sha256": "8dfda284f00ca7f693f96b734ae9a95edb9ad0b133165dcaef9024eae74478c2",
+  "style_files": 2,
+  "important_declarations": 931,
+  "media_blocks": 79,
+  "distinct_media_conditions": 11,
+  "selector_occurrences": 3458,
+  "distinct_selectors": 2098,
+  "selectors_defined_multiple_times": 778,
+  "tokens_defined_multiple_times": {
+    "--gcc-canvas": 2,
+    "--gcc-deep": 2,
+    "--gcc-deep-2": 2,
+    "--gcc-gold-wash": 2,
+    "--gcc-loss": 2,
+    "--gcc-loss-wash": 2,
+    "--gcc-paper": 2,
+    "--gcc-paper-2": 2,
+    "--gcc-sage": 2,
+    "--gcc-sage-2": 2,
+    "--gcc-shadow": 2,
+    "--gcc-win": 2,
+    "--gcc-win-wash": 2,
+    "--league-bg": 3,
+    "--league-border": 3,
+    "--league-shadow": 3,
+    "--league-text": 3,
+    "--premium-shadow": 2,
+    "--premium-shadow-soft": 2,
+    "--shadow": 2
+  },
+  "most_repeated_selectors": [
+    {
+      "selector": "#team .team-sheet-grid",
+      "definitions": 11,
+      "contexts": [
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:980px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:700px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:1180px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:980px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:700px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": [
+            "@media(max-width:1120px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": [
+            "@media(max-width:840px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": [
+            "@media(max-width:840px)"
+          ]
+        }
+      ]
+    },
+    {
+      "selector": "#team .profile-panel",
+      "definitions": 10,
+      "contexts": [
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:980px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:980px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:700px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": [
+            "@media(max-width:1120px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": [
+            "@media(max-width:1240px)"
+          ]
+        }
+      ]
+    },
+    {
+      "selector": "#dynasty .annual-draft-pool .player-grid",
+      "definitions": 10,
+      "contexts": [
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:1100px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:700px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": [
+            "@media(max-width:980px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": [
+            "@media(max-width:700px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": [
+            "@media(max-width:1120px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": [
+            "@media(max-width:840px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": [
+            "@media(max-width:560px)"
+          ]
+        }
+      ]
+    },
+    {
+      "selector": ":root",
+      "definitions": 9,
+      "contexts": [
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "selector": "#team .team-squad-column",
+      "definitions": 9,
+      "contexts": [
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:700px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:700px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": [
+            "@media(max-width:840px)"
+          ]
+        }
+      ]
+    },
+    {
+      "selector": "#team .replace-xi-btn",
+      "definitions": 9,
+      "contexts": [
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:700px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:700px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": [
+            "@media(max-width:840px)"
+          ]
+        }
+      ]
+    },
+    {
+      "selector": "#team .xi-toggle-btn",
+      "definitions": 9,
+      "contexts": [
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:700px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:700px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": [
+            "@media(max-width:840px)"
+          ]
+        }
+      ]
+    },
+    {
+      "selector": "#team .team-layout",
+      "definitions": 8,
+      "contexts": [
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:1180px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:980px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:1180px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:980px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": [
+            "@media(max-width:1120px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": [
+            "@media(max-width:1240px)"
+          ]
+        }
+      ]
+    },
+    {
+      "selector": "#team .team-xi-column",
+      "definitions": 8,
+      "contexts": [
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:700px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:700px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "selector": "#recruit .recruit-feed",
+      "definitions": 8,
+      "contexts": [
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:1100px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:700px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:700px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "selector": "#team .remove-xi-btn",
+      "definitions": 8,
+      "contexts": [
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:700px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:700px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": [
+            "@media(max-width:840px)"
+          ]
+        }
+      ]
+    },
+    {
+      "selector": "body",
+      "definitions": 7,
+      "contexts": [
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:700px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "selector": ".brand b",
+      "definitions": 7,
+      "contexts": [
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:700px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:700px)"
+          ]
+        }
+      ]
+    },
+    {
+      "selector": ".brand-mark",
+      "definitions": 7,
+      "contexts": [
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(prefers-reduced-motion:reduce)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:700px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:700px)"
+          ]
+        }
+      ]
+    },
+    {
+      "selector": ".foundation-scene",
+      "definitions": 7,
+      "contexts": [
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:1100px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": [
+            "@media(max-width:700px)"
+          ]
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-foundation.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": []
+        },
+        {
+          "file": "src/styles/legacy-feedback.css",
+          "conditions": [
+            "@media(max-width:700px)"
+          ]
+        }
+      ]
+    }
+  ],
+  "layout_ownership_examples": [
+    {
+      "selector": ".side-panel",
+      "conditions": [
+        "@media(max-width:1100px)"
+      ],
+      "declarations": [
+        "order:-1"
+      ],
+      "file": "src/styles/legacy-foundation.css"
+    },
+    {
+      "selector": "#draft .draft-layout",
+      "conditions": [],
+      "declarations": [
+        "grid-template-columns:minmax(0,1fr) 300px"
+      ],
+      "file": "src/styles/legacy-foundation.css"
+    },
+    {
+      "selector": "#team .team-layout",
+      "conditions": [],
+      "declarations": [
+        "grid-template-columns:minmax(0,1fr) 372px"
+      ],
+      "file": "src/styles/legacy-foundation.css"
+    },
+    {
+      "selector": "#team .team-sheet-grid",
+      "conditions": [],
+      "declarations": [
+        "grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr)"
+      ],
+      "file": "src/styles/legacy-foundation.css"
+    },
+    {
+      "selector": "#draft .draft-layout",
+      "conditions": [
+        "@media(max-width:1180px)"
+      ],
+      "declarations": [
+        "grid-template-columns:minmax(0,1fr) 285px"
+      ],
+      "file": "src/styles/legacy-foundation.css"
+    },
+    {
+      "selector": "#team .team-layout",
+      "conditions": [
+        "@media(max-width:1180px)"
+      ],
+      "declarations": [
+        "grid-template-columns:minmax(0,1fr) 355px"
+      ],
+      "file": "src/styles/legacy-foundation.css"
+    },
+    {
+      "selector": "#draft .draft-layout",
+      "conditions": [
+        "@media(max-width:980px)"
+      ],
+      "declarations": [
+        "grid-template-columns:1fr"
+      ],
+      "file": "src/styles/legacy-foundation.css"
+    },
+    {
+      "selector": "#team .team-layout",
+      "conditions": [
+        "@media(max-width:980px)"
+      ],
+      "declarations": [
+        "grid-template-columns:1fr"
+      ],
+      "file": "src/styles/legacy-foundation.css"
+    },
+    {
+      "selector": "#team .team-sheet-grid",
+      "conditions": [
+        "@media(max-width:980px)"
+      ],
+      "declarations": [
+        "grid-template-columns:1fr 1fr"
+      ],
+      "file": "src/styles/legacy-foundation.css"
+    },
+    {
+      "selector": "#team .team-sheet-grid",
+      "conditions": [
+        "@media(max-width:700px)"
+      ],
+      "declarations": [
+        "grid-template-columns:1fr"
+      ],
+      "file": "src/styles/legacy-foundation.css"
+    },
+    {
+      "selector": "#team .team-layout",
+      "conditions": [],
+      "declarations": [
+        "grid-template-columns:minmax(0,1fr) 340px"
+      ],
+      "file": "src/styles/legacy-foundation.css"
+    },
+    {
+      "selector": "#team .team-sheet-grid",
+      "conditions": [],
+      "declarations": [
+        "grid-template-columns:minmax(250px,.72fr) minmax(0,1.28fr)"
+      ],
+      "file": "src/styles/legacy-foundation.css"
+    },
+    {
+      "selector": "#team .team-layout",
+      "conditions": [
+        "@media(max-width:1180px)"
+      ],
+      "declarations": [
+        "grid-template-columns:minmax(0,1fr) 320px"
+      ],
+      "file": "src/styles/legacy-foundation.css"
+    },
+    {
+      "selector": "#team .team-sheet-grid",
+      "conditions": [
+        "@media(max-width:1180px)"
+      ],
+      "declarations": [
+        "grid-template-columns:minmax(220px,.72fr) minmax(0,1.28fr)"
+      ],
+      "file": "src/styles/legacy-foundation.css"
+    },
+    {
+      "selector": "#team .team-layout",
+      "conditions": [
+        "@media(max-width:980px)"
+      ],
+      "declarations": [
+        "grid-template-columns:1fr"
+      ],
+      "file": "src/styles/legacy-foundation.css"
+    },
+    {
+      "selector": "#team .team-sheet-grid",
+      "conditions": [
+        "@media(max-width:980px)"
+      ],
+      "declarations": [
+        "grid-template-columns:minmax(230px,.72fr) minmax(0,1.28fr)"
+      ],
+      "file": "src/styles/legacy-foundation.css"
+    },
+    {
+      "selector": "#team .team-sheet-grid",
+      "conditions": [
+        "@media(max-width:700px)"
+      ],
+      "declarations": [
+        "grid-template-columns:1fr"
+      ],
+      "file": "src/styles/legacy-foundation.css"
+    },
+    {
+      "selector": "#dynasty .annual-draft-workspace",
+      "conditions": [],
+      "declarations": [
+        "grid-template-columns:minmax(0,1fr) 300px"
+      ],
+      "file": "src/styles/legacy-foundation.css"
+    },
+    {
+      "selector": "#dynasty .annual-draft-workspace",
+      "conditions": [
+        "@media(max-width:980px)"
+      ],
+      "declarations": [
+        "grid-template-columns:1fr"
+      ],
+      "file": "src/styles/legacy-foundation.css"
+    },
+    {
+      "selector": "#season .season-stage-note",
+      "conditions": [],
+      "declarations": [
+        "background:#f8f1e4!important",
+        "border:1px solid #d0c3ad!important"
+      ],
+      "file": "src/styles/legacy-feedback.css"
+    },
+    {
+      "selector": "#dynasty .annual-draft-workspace",
+      "conditions": [],
+      "declarations": [
+        "grid-template-columns:minmax(0,1fr) 310px"
+      ],
+      "file": "src/styles/legacy-feedback.css"
+    },
+    {
+      "selector": "#dynasty .annual-draft-workspace",
+      "conditions": [
+        "@media(max-width:980px)"
+      ],
+      "declarations": [
+        "grid-template-columns:1fr"
+      ],
+      "file": "src/styles/legacy-feedback.css"
+    },
+    {
+      "selector": "#draft .draft-layout",
+      "conditions": [
+        "@media(max-width:1120px)"
+      ],
+      "declarations": [
+        "grid-template-columns:1fr!important"
+      ],
+      "file": "src/styles/legacy-feedback.css"
+    },
+    {
+      "selector": "#team .team-layout",
+      "conditions": [
+        "@media(max-width:1120px)"
+      ],
+      "declarations": [
+        "grid-template-columns:1fr!important"
+      ],
+      "file": "src/styles/legacy-feedback.css"
+    },
+    {
+      "selector": "#team .team-sheet-grid",
+      "conditions": [
+        "@media(max-width:1120px)"
+      ],
+      "declarations": [
+        "grid-template-columns:minmax(300px,.82fr) minmax(0,1.18fr)!important"
+      ],
+      "file": "src/styles/legacy-feedback.css"
+    },
+    {
+      "selector": "#dynasty .annual-draft-workspace",
+      "conditions": [
+        "@media(max-width:1120px)"
+      ],
+      "declarations": [
+        "grid-template-columns:1fr!important"
+      ],
+      "file": "src/styles/legacy-feedback.css"
+    },
+    {
+      "selector": "#team .team-sheet-grid",
+      "conditions": [
+        "@media(max-width:840px)"
+      ],
+      "declarations": [
+        "grid-template-columns:1fr!important"
+      ],
+      "file": "src/styles/legacy-feedback.css"
+    },
+    {
+      "selector": "#team .team-sheet-grid",
+      "conditions": [],
+      "declarations": [
+        "grid-template-columns:minmax(340px,.86fr) minmax(0,1.14fr)!important"
+      ],
+      "file": "src/styles/legacy-feedback.css"
+    },
+    {
+      "selector": "#team .team-layout",
+      "conditions": [
+        "@media(max-width:1240px)"
+      ],
+      "declarations": [
+        "grid-template-columns:1fr!important"
+      ],
+      "file": "src/styles/legacy-feedback.css"
+    },
+    {
+      "selector": "#team .team-sheet-grid",
+      "conditions": [
+        "@media(max-width:840px)"
+      ],
+      "declarations": [
+        "grid-template-columns:1fr!important"
+      ],
+      "file": "src/styles/legacy-feedback.css"
+    }
+  ],
+  "limits": "Static inventory only. Repeated selectors show competing ownership, not proof of visual failure. Browser QA remains required."
+}

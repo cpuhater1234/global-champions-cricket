@@ -1,0 +1,527 @@
+
+/* v7.8 player-experience pass: evidence from real playtest, not feature accumulation. */
+:root{--play-surface:#fffdf7;--play-surface-strong:#f8f1e4;--win-wash:#edf5ed;--loss-wash:#f8ebe8}
+
+/* Signing Week: locked state must be readable and recent-decision dots never touch names. */
+#recruit .recruit-roll.complete{background:linear-gradient(135deg,#163d31,#0d3026)!important;border-color:#173c31!important;color:#fbf6e9!important;box-shadow:0 15px 34px rgba(5,51,31,.16)!important}
+#recruit .recruit-roll.complete .roll-label,#recruit .recruit-roll.complete h3,#recruit .recruit-roll.complete p{color:#fbf6e9!important;text-shadow:none!important}
+#recruit .signing-recent .feed-item{padding-left:22px!important;background:transparent!important}
+#recruit .signing-recent .feed-item::before{left:8px!important;top:50%!important;transform:translateY(-50%);width:6px!important;height:6px!important}
+#recruit .signing-recent .feed-item.signed{background:linear-gradient(90deg,rgba(47,125,83,.065),transparent 48%)!important}
+#recruit .signing-recent .feed-item.declined{background:linear-gradient(90deg,rgba(162,75,67,.06),transparent 48%)!important}
+
+/* Team room: use the bottom of the batting-order column rather than leaving a dead white shelf. */
+#team .team-xi-column{align-self:start;background:rgba(255,253,247,.48)!important;border-radius:8px;padding-bottom:10px!important}
+#team .selection-bench-block{margin:12px 4px 0 2px;padding:11px 12px;border:1px solid #d3c8b5;border-top:2px solid rgba(140,116,67,.62);border-radius:8px;background:#f7f2e7}
+#team .selection-brief-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:7px;border-top:1px solid var(--work-rule-soft);border-bottom:1px solid var(--work-rule-soft)}
+#team .selection-brief-grid>div{padding:8px;border-right:1px solid var(--work-rule-soft)}#team .selection-brief-grid>div:last-child{border-right:0}
+#team .selection-brief-grid span{display:block;font-size:8px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+#team .selection-brief-grid b{display:block;margin-top:2px;font-size:12px}
+#team .selection-bench-block p{margin:8px 0 0;font-size:10px;line-height:1.45;color:var(--muted)}
+
+/* Season Hub: gameplay is a distinct surface and results carry unmistakable W/L feedback. */
+#season [data-season-panel].active,#season .season-panel,#season .ladder-panel{background:var(--play-surface)!important;border-color:#c9bda7!important}
+#season #matchStory .story-card{border:1px solid #c9bda7!important;border-top-width:4px!important;border-radius:11px!important;background:var(--play-surface)!important;box-shadow:0 10px 24px rgba(36,44,41,.055)!important}
+#season #matchStory .story-card.match-win{border-color:#2f7d53!important;border-top-color:#64a97e!important;background:radial-gradient(circle at 86% 12%,rgba(213,187,119,.10),transparent 27%),linear-gradient(140deg,#0d4a38,#073326 72%)!important}
+#season #matchStory .story-card.match-loss{border-color:#864741!important;border-top-color:#c16a61!important;background:radial-gradient(circle at 86% 12%,rgba(226,180,143,.08),transparent 27%),linear-gradient(140deg,#642d29,#3d1d1b 72%)!important}
+#season .season-run-row.is-win{box-shadow:inset 4px 0 0 var(--good);background:linear-gradient(90deg,rgba(47,125,83,.09),rgba(255,255,255,.25) 46%)!important}
+#season .season-run-row.is-loss{box-shadow:inset 4px 0 0 var(--bad);background:linear-gradient(90deg,rgba(162,75,67,.09),rgba(255,255,255,.25) 46%)!important}
+#fixtures .fixture.is-win{box-shadow:inset 3px 0 0 var(--good);background:rgba(237,245,237,.62)}
+#fixtures .fixture.is-loss{box-shadow:inset 3px 0 0 var(--bad);background:rgba(248,235,232,.62)}
+#season .season-stage-note{background:#f8f1e4!important;border:1px solid #d0c3ad!important;border-left:3px solid var(--gold)!important}
+
+/* Finals: bracket stays as context, but the central object now behaves like a sporting event. */
+#finals .final-match.user-match::before{display:none!important}
+#finals .final-match.user-match{border-top:4px solid #8c7443!important;background:#fffdf7!important}
+#finals .final-match.user-match.user-win{border-top-color:var(--good)!important;background:linear-gradient(180deg,var(--win-wash),#fffdf7 58%)!important}
+#finals .final-match.user-match.user-loss{border-top-color:var(--bad)!important;background:linear-gradient(180deg,var(--loss-wash),#fffdf7 58%)!important}
+#finals .final-result-strip{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-top:9px;padding-top:9px;border-top:1px solid var(--work-rule-soft)}
+#finals .final-result-strip span{font-size:8px;font-weight:950;letter-spacing:.09em;color:var(--muted)}#finals .final-result-strip b{font-size:11px}
+#finals .final-result-strip.win b{color:var(--good)}#finals .final-result-strip.loss b{color:var(--bad)}
+#finals .finals-story{padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
+#finals .finals-event-card{position:relative;overflow:hidden;padding:18px 20px;border:1px solid #c4b79e;border-top:4px solid #8c7443;border-radius:11px;background:linear-gradient(180deg,#fffdf7,#f5eee1);box-shadow:0 12px 28px rgba(36,44,41,.07);text-align:left}
+#finals .finals-event-card.event-ready{border-top-color:#8c7443}#finals .finals-event-card.event-win{border-top-color:var(--good);background:linear-gradient(180deg,var(--win-wash),#fffdf7 68%)}#finals .finals-event-card.event-loss{border-top-color:var(--bad);background:linear-gradient(180deg,var(--loss-wash),#fffdf7 68%)}
+#finals .finals-event-top{display:flex;justify-content:space-between;gap:12px;align-items:center;padding-bottom:10px;border-bottom:1px solid var(--work-rule-soft)}
+#finals .finals-event-top span,#finals .finals-event-top b{font-size:9px;font-weight:950;letter-spacing:.09em;text-transform:uppercase}#finals .finals-event-top span{color:var(--gold)}
+#finals .finals-event-score{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center;padding:15px 0 12px}
+#finals .finals-event-score>div{display:grid;grid-template-columns:42px minmax(0,1fr) auto;gap:10px;align-items:center}#finals .finals-event-score>div:last-child{text-align:right;grid-template-columns:auto minmax(0,1fr) 42px}#finals .finals-event-score>div:last-child .club-mark{grid-column:3;grid-row:1}#finals .finals-event-score>div:last-child span{grid-column:2;grid-row:1}
+#finals .finals-event-score span{font:700 14px/1.25 Georgia,"Times New Roman",serif}#finals .finals-event-score strong{font:900 24px/1 Georgia,"Times New Roman",serif}#finals .finals-event-score em{font-style:normal;font-size:10px;font-weight:950;color:var(--muted);text-transform:uppercase}
+#finals .finals-event-card>p{margin:0;padding-top:10px;border-top:1px solid var(--work-rule-soft);font-size:11px;line-height:1.55;color:var(--text)}
+#finals .finals-event-standout{display:grid;grid-template-columns:90px minmax(0,1fr) auto;gap:10px;align-items:baseline;margin-top:10px;padding-top:10px;border-top:1px solid var(--work-rule-soft)}#finals .finals-event-standout span{font-size:8px;font-weight:950;color:var(--gold)}#finals .finals-event-standout b{font-size:11px}#finals .finals-event-standout small{font-size:9px;color:var(--muted)}
+
+/* Review semantics: Fine Margins is not a red failure state. */
+#review .review-grid .review-card:last-child.fine-margins{border-top-color:#a88b52!important;background:linear-gradient(180deg,#fbf7ed,#fffdf8)!important}
+#review .review-grid .review-card:last-child.fine-margins>.kicker{color:#8c7443!important}
+#review #reviewWeaknesses .review-item.needs-work{box-shadow:inset 3px 0 0 rgba(162,75,67,.66);background:#f8eeeb}
+#review #reviewWeaknesses .review-item.fine{box-shadow:inset 3px 0 0 rgba(140,116,67,.58);background:#f8f3e8}
+#review .review-footer{gap:10px!important;flex-wrap:wrap}
+
+/* Dynasty workspaces: give decisions a real surface and make annual Draft visually inherit the foundation Draft. */
+#dynasty .dynasty-main>.dynasty-card{background:var(--play-surface)!important;box-shadow:0 7px 18px rgba(36,44,41,.04)!important}
+#dynasty.dynasty-draft-mode .dynasty-layout{grid-template-columns:1fr!important}#dynasty.dynasty-draft-mode .dynasty-rail{display:none!important}#dynasty.dynasty-draft-mode .dynasty-headline{display:none}
+#dynasty .annual-draft-foundation{display:grid;gap:10px}
+#dynasty .annual-draft-page-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:0}#dynasty .annual-draft-page-head h3{font-size:30px;margin:4px 0 3px}#dynasty .annual-draft-page-head p{margin:0;font-size:12px;color:var(--muted)}
+#dynasty .annual-draft-foundation .draft-flow{margin:0;padding:9px 10px;border:1px solid var(--work-rule);border-radius:8px;background:#f8f3e9}#dynasty .annual-draft-foundation .draft-flow.user-turn{border-color:#9aad9d;background:#f1f5ef;box-shadow:inset 3px 0 0 var(--accent)}
+#dynasty .annual-draft-workspace{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:14px;align-items:start}
+#dynasty .annual-draft-workspace>.panel{align-self:start;padding:14px;background:var(--play-surface)}#dynasty .annual-draft-side{position:sticky;top:12px;background:#f7f2e7!important}
+#dynasty .annual-draft-pool{padding:14px!important}#dynasty .annual-draft-pool .player-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:6px!important;max-height:61vh!important}
+#dynasty .annual-draft-pool .player-card{padding:9px 10px!important;border-radius:8px!important;background:rgba(255,255,255,.34)!important}#dynasty .annual-draft-pool .player-card h4{font-size:14px!important}#dynasty .annual-draft-pool .ovr{font-size:22px!important}
+#dynasty .annual-draft-side .annual-draft-needs{padding:9px 0 10px!important;background:transparent!important;border-bottom:1px solid var(--work-rule-soft)}#dynasty .annual-draft-side .annual-draft-needs-grid{grid-template-columns:1fr 1fr!important}#dynasty .annual-draft-side .annual-picked,#dynasty .annual-draft-side .annual-current-list{margin-top:10px}#dynasty .annual-draft-side .squad-list{max-height:220px;overflow:auto}
+#dynasty .annual-draft-board-view .board-panel{margin:0;background:var(--play-surface);padding:14px}#dynasty .annual-draft-board{grid-template-columns:repeat(8,minmax(128px,1fr));gap:7px}#dynasty .annual-draft-col{background:#f7f2e7;color:var(--text);border-color:var(--line)}#dynasty .annual-draft-col.user{border-color:#98a98d;background:#edf3eb}#dynasty .annual-draft-col-head{background:#ede7d8;color:var(--text);font-size:10px}#dynasty .annual-draft-pick{color:var(--muted);border-color:var(--line);min-height:34px}#dynasty .annual-draft-pick b{color:var(--text);font-size:10px}#dynasty .annual-draft-pick small{color:var(--muted)}#dynasty .annual-draft-pick.current{background:var(--accent-soft);color:var(--accent)}
+
+/* Contract/release logic has a clear player-management object. */
+#dynasty .contract-decision-head,#dynasty .final-list-head{display:flex;justify-content:space-between;align-items:end;gap:14px}#dynasty .contract-cut-count,#dynasty .final-list-count{text-align:right}#dynasty .contract-cut-count b,#dynasty .final-list-count b{display:block;font:900 26px Georgia,serif}#dynasty .contract-cut-count span,#dynasty .final-list-count span{font-size:8px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+#dynasty .contract-list,#dynasty .final-list-table{border:1px solid #d0c5b2;border-radius:8px;overflow:hidden;background:#fffdf8}.contract-row{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:10px;align-items:center;padding:10px 11px;border-bottom:1px solid var(--work-rule-soft)}.contract-row:last-child{border-bottom:0}.contract-row b{font-size:12px}.contract-row span{display:block;margin-top:2px;font-size:9.5px;color:var(--muted)}.contract-row small{font-size:8.5px;font-weight:900;color:var(--gold)}.contract-row .button{font-size:8.5px;padding:7px 9px}.contract-empty{padding:13px}.contract-empty b{display:block;font-size:11px}.contract-empty span{display:block;margin-top:3px;font-size:9.5px;color:var(--muted)}
+#dynasty .final-list-table .cut-row{padding:10px 11px!important;border-top:0!important;border-bottom:1px solid var(--work-rule-soft)}#dynasty .final-list-table .cut-row:last-child{border-bottom:0}#dynasty .final-list-table .cut-row strong{font-size:8.5px;color:var(--gold);max-width:120px;text-align:right}
+
+/* Trade room: scouting, not spreadsheet ratings. */
+.modal-card:has(.trade-centre-shell){width:min(980px,100%)}.trade-centre-shell>p{max-width:780px}.trade-scout-read{border-left-color:#8c7443!important;background:#f8f3e9!important}.trade-scout-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}.trade-scout-card{border:1px solid #d0c4ae;border-radius:8px;background:#fffdf8;padding:11px}.trade-scout-head span{display:block;font-size:8px;font-weight:950;letter-spacing:.08em;color:var(--gold)}.trade-scout-head b{display:block;margin-top:3px;font:700 17px Georgia,serif}.trade-scout-head small{font-size:9px;color:var(--muted)}.trade-scout-grid{display:grid;grid-template-columns:1fr 1fr;margin-top:9px;border-top:1px solid var(--work-rule-soft);border-bottom:1px solid var(--work-rule-soft)}.trade-scout-grid>div{padding:8px;border-right:1px solid var(--work-rule-soft);border-bottom:1px solid var(--work-rule-soft)}.trade-scout-grid>div:nth-child(2n){border-right:0}.trade-scout-grid>div:nth-last-child(-n+2){border-bottom:0}.trade-scout-grid span{display:block;font-size:7.5px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}.trade-scout-grid b{display:block;margin-top:2px;font-size:9.5px}.trade-scout-card p{margin:8px 0 0;font-size:9.5px;line-height:1.45;color:var(--muted)}.trade-scout-note{margin-top:9px;padding-top:8px;border-top:1px solid var(--work-rule-soft);font-size:9px;color:var(--muted)}
+
+@media(max-width:980px){#dynasty .annual-draft-workspace{grid-template-columns:1fr}#dynasty .annual-draft-side{position:static}#dynasty .annual-draft-pool .player-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.trade-scout-pair{grid-template-columns:1fr}}
+@media(max-width:700px){#team .selection-brief-grid{grid-template-columns:1fr}#team .selection-brief-grid>div{border-right:0;border-bottom:1px solid var(--work-rule-soft)}#team .selection-brief-grid>div:last-child{border-bottom:0}#finals .finals-event-score{grid-template-columns:1fr;gap:8px}#finals .finals-event-score>em{text-align:center}#finals .finals-event-score>div,#finals .finals-event-score>div:last-child{grid-template-columns:42px minmax(0,1fr) auto;text-align:left}#finals .finals-event-score>div:last-child .club-mark{grid-column:1;grid-row:1}#finals .finals-event-score>div:last-child span{grid-column:2;grid-row:1}#dynasty .annual-draft-pool .player-grid{grid-template-columns:1fr!important}.contract-row{grid-template-columns:1fr}.contract-row small{margin-top:-3px}.contract-row .button{width:100%}}
+
+
+/* v7.8.4 HARDENING PASS --------------------------------------------
+   Warm cream remains the GCC canvas. Live work, decisions and outcomes
+   get distinct surfaces so the eye knows where cricket is happening. */
+:root{
+  --gcc-canvas:#f2eddf;
+  --gcc-paper:#fffdf7;
+  --gcc-paper-2:#f9f4e9;
+  --gcc-sage:#edf3eb;
+  --gcc-sage-2:#e3ece2;
+  --gcc-gold-wash:#f5ecd8;
+  --gcc-deep:#073b2c;
+  --gcc-deep-2:#0c4937;
+  --gcc-loss:#8c3f39;
+  --gcc-loss-wash:#f7e9e6;
+  --gcc-win:#2f7450;
+  --gcc-win-wash:#eaf3eb;
+  --gcc-shadow:0 12px 28px rgba(35,43,39,.07);
+}
+body{background:var(--gcc-canvas)}
+.screen>.section-head,.screen>.season-head{position:relative}
+
+/* Home: saved careers should read CONTINUE first, NEW DYNASTY second. */
+#homeContinueDynasty.primary{background:var(--gcc-deep);border-color:var(--gcc-deep);color:#fff}
+#homeNewDynasty:not(.primary){background:#f7f2e7;border-color:#c6baa2;color:var(--text)}
+
+/* TEAM ROOM: the actual selection sheet is a white cricket workspace. */
+#team .team-selection-panel{background:var(--gcc-paper)!important;border-color:#b9c8ba!important;border-top:3px solid var(--gcc-deep)!important;box-shadow:var(--gcc-shadow)!important}
+#team .team-squad-column{background:linear-gradient(180deg,rgba(237,243,235,.82),rgba(248,244,233,.42));border-radius:7px;padding:10px 10px 8px!important}
+#team .team-xi-column{background:linear-gradient(180deg,#fffdf8,#f8f3e8)!important;border-radius:7px;padding-top:8px!important}
+#team .profile-panel{background:linear-gradient(180deg,var(--gcc-gold-wash),#f8f3e8)!important;border-color:#c7b27e!important;box-shadow:var(--gcc-shadow)!important}
+#team .xi-essentials,#team .selection-brief{background:var(--gcc-sage)!important}
+#team .batting-slot:hover{background:var(--gcc-sage)!important}
+
+/* SEASON: canvas stays quiet, match/recent-results surfaces carry state. */
+#season .season-panel{background:var(--gcc-paper)!important;box-shadow:var(--gcc-shadow)!important}
+#season .season-run-row.is-win,#season .fixture-row.is-win{background:linear-gradient(90deg,var(--gcc-win-wash),rgba(255,253,247,.72))!important}
+#season .season-run-row.is-loss,#season .fixture-row.is-loss{background:linear-gradient(90deg,var(--gcc-loss-wash),rgba(255,253,247,.72))!important}
+
+/* OFF-SEASON: three different jobs get three distinct surfaces. */
+#dynasty:not(.dynasty-event-mode) .dynasty-main>.dynasty-card{border:1px solid #cbbfa9!important;border-radius:10px!important;box-shadow:var(--gcc-shadow)!important}
+#dynasty .offseason-arrivals-card{background:var(--gcc-paper)!important;border-top:3px solid var(--gcc-deep)!important}
+#dynasty .contract-decisions-card{background:linear-gradient(180deg,var(--gcc-gold-wash),#fbf6eb)!important;border-top:3px solid #a4874d!important}
+#dynasty .trade-period-card{background:linear-gradient(180deg,var(--gcc-sage),#f6f3e8)!important;border-top:3px solid #5f7e67!important}
+#dynasty .dynasty-banner{background:linear-gradient(100deg,var(--gcc-sage),#f8f4e9)!important;border-color:#b9c6b8!important;box-shadow:0 8px 18px rgba(35,43,39,.045)}
+#dynasty .dynasty-rail{background:linear-gradient(180deg,#f4f6ef,#eee9dc)!important;border-top:3px solid #9a8049!important;box-shadow:0 8px 20px rgba(35,43,39,.045)!important}
+#dynasty .arrival-row{background:rgba(255,255,255,.46)}
+#dynasty .contract-row{background:rgba(255,253,247,.72)}
+#dynasty .contract-row:hover{background:#fffdf8}
+
+/* ANNUAL DRAFT: inherit the foundation Draft's event hierarchy. */
+#dynasty .annual-draft-foundation>.draft-flow{background:linear-gradient(180deg,#f8f2e6,#ece4d4)!important;border-color:#c4b69c!important;box-shadow:0 7px 18px rgba(36,44,41,.045)!important}
+#dynasty .annual-draft-foundation>.draft-flow.user-turn{background:linear-gradient(135deg,var(--gcc-deep-2),var(--gcc-deep))!important;border-color:#245b49!important;color:#fff8e8!important;box-shadow:0 15px 32px rgba(5,51,31,.18)!important}
+#dynasty .annual-draft-foundation>.draft-flow.user-turn b,#dynasty .annual-draft-foundation>.draft-flow.user-turn span{color:#fff8e8!important}
+#dynasty .annual-draft-foundation>.draft-flow.user-turn .ball-icon{color:#ddc37d!important}
+#dynasty .annual-draft-foundation>.draft-flow.user-turn .button{background:rgba(255,255,255,.09)!important;border-color:rgba(255,255,255,.27)!important;color:#fff8e8!important}
+#dynasty .annual-draft-workspace>.panel:first-child{background:var(--gcc-paper)!important;border-top:3px solid var(--gcc-deep)!important;box-shadow:var(--gcc-shadow)!important}
+#dynasty .annual-draft-pool .player-card{background:linear-gradient(180deg,#fffef9,#f5efe3)!important;border-color:#c7baa2!important;box-shadow:0 4px 10px rgba(35,43,39,.04)!important}
+#dynasty .annual-draft-pool .player-card:hover{background:#fffdf7!important;border-color:#9aaa9b!important;box-shadow:0 12px 25px rgba(35,43,39,.09)!important}
+#dynasty .annual-draft-side{background:linear-gradient(180deg,var(--gcc-sage),#f3edde)!important;border-top:3px solid #a4874d!important;box-shadow:var(--gcc-shadow)!important}
+#dynasty .annual-draft-side .annual-draft-needs-grid>div{background:rgba(255,253,247,.62)!important}
+#dynasty .annual-board-premium{background:radial-gradient(circle at 90% 0,rgba(194,163,95,.13),transparent 24%),linear-gradient(150deg,var(--gcc-deep-2),#062f24 70%)!important}
+
+/* FINAL 15: this is a confirmation/decision room, not another duplicate list. */
+#dynasty.dynasty-final-list-mode .dynasty-layout{grid-template-columns:1fr!important}
+#dynasty.dynasty-final-list-mode .dynasty-rail{display:none!important}
+#dynasty .premium-list-room{background:var(--gcc-paper)!important;border-top:3px solid #a4874d!important;box-shadow:var(--gcc-shadow)!important}
+#dynasty .final-player-card{background:#fffef9!important;border-color:#cec1aa!important}
+#dynasty .final-player-card.decision-zone{background:linear-gradient(180deg,#fbf1dc,#fffaf0)!important;border-left:4px solid #a4874d!important}
+#dynasty .final-player-card.core-zone{border-left:3px solid #91aa96!important}
+#dynasty .final-player-card.core-zone>div>span{color:#58755e!important}
+#dynasty .turnover-meter{background:linear-gradient(90deg,var(--gcc-gold-wash),#f8f4e9)!important;border-color:#c9b98e!important}
+
+/* TRADE CENTRE: a club negotiation room, not a beige form. */
+.modal-card:has(.trade-centre-shell){background:#f7f2e7!important;border-color:#b8aa90!important;box-shadow:0 24px 70px rgba(20,31,27,.24)!important}
+.trade-room-head{margin:-18px -18px 14px!important;padding:18px 20px 16px!important;border-bottom:0!important;border-radius:11px 11px 0 0;background:linear-gradient(135deg,var(--gcc-deep-2),var(--gcc-deep));color:#fff8e8}
+.trade-room-head .kicker,.trade-room-head h2,.trade-room-head p{color:#fff8e8!important}
+.trade-room-head p{color:rgba(255,248,232,.76)!important}
+.trade-room-stamp{color:#e0c781!important}.trade-room-stamp span{color:rgba(255,248,232,.68)!important}
+.trade-builder-sport{background:linear-gradient(180deg,#f5eddd,#eee4d2)!important;border-color:#c2b293!important}
+.trade-builder-sport .trade-side{background:rgba(255,253,247,.58);border-radius:8px;padding:10px!important}
+.trade-scout-read{background:#f4eedf!important;border-left:4px solid #a4874d!important}
+.trade-scout-card{background:#fffdf8!important;box-shadow:0 5px 13px rgba(35,43,39,.04)}
+.deal-read-band{background:linear-gradient(90deg,var(--gcc-sage),#f6f0e3)!important;border-color:#b7c6b7!important}
+
+/* FINALS: knockout outcomes get unmistakable sporting feedback. */
+#finals .finals-tension{transition:background .16s ease,border-color .16s ease,box-shadow .16s ease}
+#finals .finals-shell[data-outcome="loss"] .finals-tension{padding:13px 16px!important;border:1px solid #c98279!important;border-radius:10px!important;background:linear-gradient(180deg,var(--gcc-loss-wash),#f9f1ed)!important;box-shadow:0 8px 20px rgba(140,63,57,.08)!important}
+#finals .finals-shell[data-outcome="loss"] .finals-tension span,#finals .finals-shell[data-outcome="loss"] .finals-tension b{color:var(--gcc-loss)!important}
+#finals .finals-shell[data-outcome="win"] .finals-tension{padding:13px 16px!important;border:1px solid #90b39a!important;border-radius:10px!important;background:linear-gradient(180deg,var(--gcc-win-wash),#f3f7ef)!important;box-shadow:0 8px 20px rgba(47,116,80,.08)!important}
+#finals .finals-shell[data-outcome="win"] .finals-tension span,#finals .finals-shell[data-outcome="win"] .finals-tension b{color:var(--gcc-win)!important}
+#finals .final-match{background:var(--gcc-paper)!important}
+#finals .final-match.user-loss{background:linear-gradient(180deg,var(--gcc-loss-wash),#fffaf7)!important;border-color:#bb6a62!important}
+#finals .final-match.user-win{background:linear-gradient(180deg,var(--gcc-win-wash),#fbfdf9)!important;border-color:#6e9b7a!important}
+#finals .finals-championship .final-match{background:linear-gradient(135deg,var(--gcc-deep-2),var(--gcc-deep))!important;color:#fff8e8!important;border-color:#285b49!important}
+#finals .finals-championship .final-match b,#finals .finals-championship .final-match h3,#finals .finals-championship .final-match span{color:inherit}
+
+@media(max-width:980px){
+  #dynasty.dynasty-final-list-mode .dynasty-layout{display:block!important}
+}
+
+
+
+/* ---------------- v7.8.5 HUMAN VISUAL HARDENING ----------------
+   Human-viewed breakpoint, contrast and overlap pass. The rule is simple:
+   restructure before squeezing, keep gameplay surfaces distinct, and never
+   rely on low-opacity text for information the player must actually read. */
+:root{
+  --gcc-ink:#1d2927;
+  --gcc-muted:#3d4d49;
+  --gcc-gold-copy:#70582d;
+  --gcc-canvas:#efe9dc;
+  --gcc-paper:#fffdf8;
+  --gcc-paper-2:#faf5ea;
+  --gcc-sage:#e9f0e7;
+  --gcc-sage-2:#dde9dd;
+  --gcc-gold-wash:#f2e6cb;
+  --gcc-deep:#073c2d;
+  --gcc-deep-2:#0a4b38;
+  --gcc-loss:#823934;
+  --gcc-loss-wash:#f4e4e1;
+  --gcc-win:#286a48;
+  --gcc-win-wash:#e5efe6;
+  --gcc-shadow:0 12px 28px rgba(29,40,35,.08)
+}
+body{color:var(--gcc-ink);background:linear-gradient(180deg,#f4efe4 0,#efe9dc 210px,#ece5d6 100%)}
+.kicker,.roll-label,.match-label,.draft-list-label,.ground-report-kicker{color:var(--gcc-gold-copy)!important}
+.section-head p,.world-note p,.profile-note,.trade-room-head p{color:var(--gcc-muted)}
+
+/* Disabled controls stay visibly disabled without becoming illegible. */
+.button:disabled{opacity:1;color:#69756f;background:#e6e1d6;border-color:#c7bdac;box-shadow:none}
+#draft .draft-flow.user-turn .button:disabled,
+#dynasty .annual-draft-foundation>.draft-flow.user-turn .button:disabled{color:rgba(255,248,232,.62);background:rgba(255,255,255,.055);border-color:rgba(255,255,255,.18)}
+
+/* Moment cards are toasts, not page-covering banners. This removes the
+   Franchise Confirmed / screen-heading collision without weakening the moment. */
+.gcc-moment-layer:not(.ceremony){place-items:end center;padding:0 18px 24px}
+.gcc-moment-layer:not(.ceremony) .gcc-moment-card{width:min(500px,calc(100vw - 28px));padding:13px 16px 14px;background:linear-gradient(180deg,#fffdf7,#eee5d4);box-shadow:0 18px 46px rgba(20,31,27,.20)}
+.gcc-moment-layer:not(.ceremony) .gcc-moment-eyebrow{font-size:8.5px;color:var(--gcc-gold-copy)}
+.gcc-moment-layer:not(.ceremony) .gcc-moment-detail{font-size:9.5px;color:#465651}
+
+/* Signing Week needs a stable readable stage at laptop widths. */
+#recruit .recruit-roll{background:var(--gcc-paper);border-color:#c9b990}
+#recruit .recruit-roll .roll-label{font-size:9.5px!important}
+#recruit .signing-recent-head .kicker{font-size:9px}
+#recruit .signing-side p{color:var(--gcc-muted)}
+
+/* Foundation Draft: opaque cards and a readable minimum card width. */
+#draft .draft-layout>.panel:first-child{background:var(--gcc-paper)!important;border-top:3px solid var(--gcc-deep);box-shadow:var(--gcc-shadow)}
+#draft .player-card{background:#fffdf8!important;border-color:#c9bda8!important}
+#draft .player-card:hover{background:#ffffff!important;border-color:#8ca08f!important}
+#draft .player-chip{font-size:9px!important;color:#40504c}
+#draft .player-meta,#draft .player-stats{color:#40504c}
+#draft .draft-flow.user-turn{background:linear-gradient(135deg,var(--gcc-deep-2),var(--gcc-deep))!important;border-color:#235d48!important;color:#fff7e7!important;box-shadow:0 10px 22px rgba(5,51,31,.13)!important}
+#draft .draft-flow.user-turn b,#draft .draft-flow.user-turn span{color:#fff7e7!important}
+#draft .draft-flow.user-turn .button{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.27);color:#fff7e7}
+
+/* XI: make the selection sheet read like two real columns, not a squeezed table. */
+#team .team-selection-panel{background:var(--gcc-paper)!important}
+#team .team-squad-column{background:linear-gradient(180deg,var(--gcc-sage),#f5f3e9)!important}
+#team .team-xi-column{background:#fffdf8!important}
+#team .xi-row-player{min-width:0}
+#team .xi-row-player span{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+#team .xi-row-side{min-width:132px}
+#team .xi-toggle-btn{font-size:9px!important;min-width:58px}
+#team .team-column-note,#team .team-order-note{font-size:10px;color:var(--gcc-muted)}
+#team .batting-no{color:var(--gcc-gold-copy)}
+#team .profile-note{color:var(--gcc-ink)}
+
+/* Season Hub: matte result colour, readable secondary copy, strong semantic red/green. */
+#season .season-panel{background:var(--gcc-paper)!important}
+#matchStory .story-card p{color:rgba(255,248,232,.88)!important}
+#matchStory .story-figures b,#matchStory .story-next b{color:#fff4df!important}
+#matchStory .story-card .kicker,#matchStory .story-figures>span,#matchStory .story-next>span{color:#e0c681!important}
+#matchStory .story-actions .button{color:#fff6e5;background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.32)}
+#season .season-run-row.is-win,#season .fixture-row.is-win{background:linear-gradient(90deg,#e0ede3,#fffdf8)!important}
+#season .season-run-row.is-loss,#season .fixture-row.is-loss{background:linear-gradient(90deg,#f1dfdc,#fffdf8)!important}
+
+/* Trade / Draft event surfaces keep the premium palette but remove washed-out copy. */
+.trade-room-head p{color:rgba(255,248,232,.88)!important}
+.trade-room-stamp span{color:rgba(255,248,232,.82)!important;font-size:8.5px}
+#dynasty .annual-draft-foundation>.draft-flow.user-turn b,#dynasty .annual-draft-foundation>.draft-flow.user-turn span{color:#fff7e7!important}
+#dynasty .annual-draft-foundation>.draft-flow.user-turn .button{color:#fff7e7!important}
+#dynasty .annual-draft-pool .player-card{background:#fffdf8!important;border-color:#c8bba5!important}
+#dynasty .annual-board-premium .annual-draft-pick{color:rgba(255,248,232,.84)!important}
+#dynasty .annual-board-premium .annual-draft-pick small{color:rgba(255,248,232,.76)!important}
+#dynasty .annual-board-premium .annual-draft-col-head{color:#fff4df!important}
+
+/* Finals: preserve the strong sporting hierarchy while raising small-copy contrast. */
+#finals .final-match{background:#fffdf8!important}
+#finals .finals-championship .final-match{background:linear-gradient(135deg,var(--gcc-deep-2),var(--gcc-deep))!important;color:#fff7e7!important}
+#finals .finals-championship .final-match .match-label{color:#e1c77f!important}
+#finals .finals-championship .final-match small{color:rgba(255,248,232,.82)!important}
+
+/* The old stylesheet contains competing 1100/1180 breakpoints. At laptop
+   widths they re-create a two-column layout after the older rule already
+   moved the context rail first. This is the actual source of the 77px Draft
+   cards seen in human review. These terminal rules own the breakpoint. */
+@media(max-width:1120px){
+  #draft .draft-layout{grid-template-columns:1fr!important}
+  #draft .side-panel{order:0!important;position:static!important;top:auto!important}
+  #draft .player-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;max-height:none!important}
+  #draft .squad-list{max-height:none!important}
+
+  #team .team-layout{grid-template-columns:1fr!important}
+  #team .profile-panel{position:static!important;top:auto!important}
+  #team .team-sheet-grid{grid-template-columns:minmax(300px,.82fr) minmax(0,1.18fr)!important}
+
+  #season .season-layout{grid-template-columns:1fr!important}
+
+  #dynasty .annual-draft-workspace{grid-template-columns:1fr!important}
+  #dynasty .annual-draft-side{position:static!important;top:auto!important}
+  #dynasty .annual-draft-pool .player-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;max-height:none!important}
+}
+@media(max-width:840px){
+  #draft .player-grid,#dynasty .annual-draft-pool .player-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  #team .team-sheet-grid{grid-template-columns:1fr!important}
+  #team .team-squad-column{padding-right:0!important;border-right:0!important;border-bottom:1px solid var(--work-rule-soft);padding-bottom:12px!important}
+  #team .xi-row-player span{-webkit-line-clamp:1}
+}
+@media(max-width:560px){
+  .gcc-moment-layer:not(.ceremony){padding:0 10px 12px}
+  #draft .player-grid,#dynasty .annual-draft-pool .player-grid{grid-template-columns:1fr!important}
+  #draft .player-card,#dynasty .annual-draft-pool .player-card{padding:11px 12px!important}
+  #team .xi-row-side{min-width:118px}
+}
+
+/* v7.8.5b: annual Draft follows the same laptop priority as the Foundation Draft. */
+@media(max-width:1120px){
+  #dynasty .annual-draft-side{order:0!important}
+}
+#dynasty .final-player-card div>span{font-size:9px!important;color:var(--gcc-gold-copy)}
+#dynasty .final-player-card small{font-size:9px}
+
+/* Team Room keeps its player rows readable before the profile rail is allowed to squeeze them. */
+#team .team-sheet-grid{grid-template-columns:minmax(340px,.86fr) minmax(0,1.14fr)!important}
+@media(max-width:1240px){
+  #team .team-layout{grid-template-columns:1fr!important}
+  #team .profile-panel{position:static!important;top:auto!important}
+}
+@media(max-width:840px){#team .team-sheet-grid{grid-template-columns:1fr!important}}
+
+
+/* ---------------- v7.8.6 HOME REBUILD ---------------- */
+.home-world-card{background:linear-gradient(180deg,#fffdf8 0%,#f8f2e6 100%)!important;border:1px solid #bcae91!important;box-shadow:0 16px 38px rgba(29,40,35,.08)!important;overflow:hidden!important}
+.foundation-scene{min-height:258px!important;padding:26px 30px 22px!important;background:transparent!important;border-bottom:1px solid #d4c7b0!important;display:grid!important;place-items:center!important}
+.foundation-scene::before,.foundation-scene::after{content:none!important;display:none!important}
+.foundation-scene>.foundation-brand-logo:not(.foundation-wordmark-svg){visibility:hidden!important;position:absolute!important;pointer-events:none!important}
+.foundation-wordmark-svg{width:min(92%,610px)!important;max-width:100%!important;height:auto!important;max-height:218px!important;display:block!important;overflow:visible!important;filter:none!important;opacity:1!important;animation:none!important;color:#05331f!important}
+.home-world-card:hover .foundation-brand-logo{transform:none!important}
+.home-hero .foundation-copy{animation:none!important;opacity:1!important}
+.foundation-copy{padding:0 24px 22px!important;background:transparent!important;opacity:1!important}
+.foundation-statline{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:0!important;margin:0!important;padding:0!important;border-top:0!important;border-bottom:1px solid #c9bda7!important}
+.foundation-statline span{min-width:0!important;min-height:48px!important;padding:10px 12px!important;white-space:normal!important;overflow-wrap:normal!important;line-height:1.22!important;font-size:10.5px!important;letter-spacing:.085em!important;color:#344540!important;opacity:1!important}
+.foundation-statline span+span::before{display:none!important}.foundation-statline span:nth-child(odd){border-right:1px solid #d6cbb8!important}.foundation-statline span:nth-child(-n+2){border-bottom:1px solid #d6cbb8!important}
+.foundation-note{margin-top:18px!important;padding:0 2px!important;opacity:1!important}.foundation-note svg{color:#7a6336!important;opacity:.9!important}.foundation-note b{font-size:13px!important;color:var(--gcc-ink)!important}.foundation-note p{font-size:13px!important;line-height:1.58!important;color:var(--gcc-muted)!important;opacity:1!important}
+@media(max-width:700px){.foundation-scene{min-height:210px!important;padding:22px 16px 18px!important}.foundation-wordmark-svg{width:96%!important;max-height:180px!important}.foundation-copy{padding:0 17px 19px!important}.foundation-statline span{min-height:44px!important;padding:9px 8px!important;font-size:9.5px!important;letter-spacing:.065em!important}.foundation-note{grid-template-columns:28px minmax(0,1fr)!important;gap:9px!important;margin-top:15px!important}.foundation-note svg{width:27px!important}}
+
+
+/* ---------------- v7.8.7 BRUTAL HUMAN QA ----------------
+   Readability and information hierarchy pass after full-screen human review.
+   No simulation or roster rules are changed here. */
+:root{
+  --gcc-micro:#47564f;
+  --gcc-soft-rule:#cbbfa9;
+}
+
+/* Small text must still be text, not texture. */
+#clubs .ground-snapshot-kicker,
+#clubs .ground-snapshot-line>span:first-child,
+#clubs .ground-snapshot-line strong,
+#recruit .signing-scoreline,
+#recruit .signing-recent-head .kicker,
+#draft .draft-profile-label span,#draft .draft-list-label,
+#team .kicker,#team .profile-group-head span,#team .profile-keeper>span,
+#season .kicker,#season .stat span,#season .insight-card .kicker,
+#dynasty .kicker,.dynasty-step span,.dynasty-banner-stat span,
+.dynasty-roster-row span,.wire-row span,.lottery-slot span,.lottery-slot small{
+  font-size:9.5px!important;
+  color:var(--gcc-micro)!important;
+  opacity:1!important;
+}
+
+/* Club choice: keep the ground read legible without making cards taller. */
+#clubs .ground-snapshot-line{min-height:26px}
+#clubs .ground-snapshot-line strong{font-size:9.5px!important}
+#clubs .ground-snapshot-trait{font-size:9.5px!important;max-width:124px}
+#clubs .league-tag{font-size:10px!important}
+
+/* Signing / draw: waiting states should feel intentional, not faded out. */
+#recruit .signing-scoreline{font-size:10px!important;letter-spacing:.065em!important}
+#recruit .day-pill b{font-size:11px!important}
+#recruit .day-pill span{font-size:9.5px!important;color:var(--gcc-muted)!important}
+#draftDraw .reveal-card.placeholder{color:#69736e!important;background:rgba(255,253,248,.55)!important;border-color:#d6cbb8!important}
+#draftDraw .reveal-card.placeholder .reveal-no{color:#9b8b69!important;opacity:1!important}
+
+/* Foundation Draft: preserve density but remove micro-copy. */
+#draft .player-stats{font-size:10px!important;line-height:1.35!important}
+#draft .player-chip{font-size:9.5px!important;line-height:1.3!important}
+#draft .draft-flow-actions .button,#draft .filters .button{font-size:10px!important;min-height:32px!important}
+#draft .draft-profile-label span,#draft .draft-list-label{font-size:9.5px!important}
+#draft .draft-profile-label small,#draft .draft-team-rating small{font-size:9.5px!important}
+#draft .draft-team-rating span,#draft .draft-profile-group-title{font-size:9.5px!important}
+#draft .draft-profile-row span{font-size:10px!important}
+#draft .role-meter span{font-size:9px!important}
+#draft .player-card::after{font-size:8.5px!important}
+
+/* Team Room: this is a decision screen, so controls and role reads cannot be 8px. */
+#team .team-column-note,#team .team-order-note,#team .profile-note{font-size:10.5px!important;line-height:1.42!important}
+#team .xi-row-player b,#team .batting-player b{font-size:12px!important}
+#team .xi-row-player span,#team .batting-player span{font-size:10px!important;line-height:1.35!important}
+#team .xi-toggle-btn,#team .remove-xi-btn,#team .replace-xi-btn{font-size:9.5px!important;min-height:30px!important;padding:7px 9px!important}
+#team .order-btn{min-width:30px!important;width:30px!important;height:30px!important;font-size:11px!important}
+#team .team-auto-order{font-size:9.5px!important;min-height:30px!important}
+#team .profile-metric>span:first-child{font-size:10.5px!important}
+#team .profile-metric-read small,#team .profile-keeper small{font-size:9.5px!important}
+#team .profile-keeper>span,#team .ground-report-selection .ground-report-kicker,
+#team .ground-report-selection .ground-read-label,#team .ground-report-selection .ground-xi-read b{font-size:9.5px!important}
+#team .ground-report-selection .ground-report-trait{font-size:9.5px!important}
+#team .ground-report-selection .ground-read-value,#team .ground-report-selection .ground-xi-read span{font-size:10px!important}
+
+/* Season Hub: stop the dashboard from reading like a tiny spreadsheet. */
+#season .season-actions .button,#matchStory .story-actions .button{font-size:10px!important;min-height:32px!important}
+#season .season-ticker,#season .season-ticker span:last-child{font-size:10px!important}
+#season .season-ticker b{font-size:11px!important}
+#season .stat span{font-size:9px!important}
+#season .season-view-button{font-size:10px!important;min-height:30px!important}
+#season .season-run-round,#season .season-run-status{font-size:9.5px!important}
+#season .season-run-row b,#season .fixture-row b{font-size:10.5px!important}
+#season .season-run-row small,#season .fixture-row small{font-size:9.5px!important;line-height:1.35!important}
+#season .club-mark{font-size:8px!important}
+#matchStory .story-figures>span,#matchStory .story-next>span{font-size:9px!important}
+#matchStory .story-figures b,#matchStory .story-next b{font-size:10px!important}
+#seasonWhy .phase-label span{font-size:10px!important}
+#seasonWhy .phase-label small{font-size:9.5px!important}
+#seasonWhy .phase-row b{font-size:10px!important}
+#seasonShape .team-scorebook-title,#seasonShape .scorebook-read>span{font-size:9.5px!important}
+#seasonShape .scorebook-read p{font-size:10px!important}
+#seasonPlayers .leader-table-title{font-size:9.5px!important}
+#seasonPlayers .leader-table-head{font-size:9px!important}
+#seasonPlayers .leader-club{font-size:10px!important}
+#fixtures .result,#fixtures .scorecard-link{font-size:9.5px!important}
+#ladder th,#ladder td{font-size:10px!important}
+#ladder .side-strength b{font-size:9.5px!important}
+
+/* Finals / review: supporting copy earns enough size to read without zooming. */
+#finals .match-label,#finals .finals-tension span{font-size:9.5px!important}
+#finals .final-team small,#finals .scorecard-link{font-size:9.5px!important}
+#review .review-card p,#review .review-card li{font-size:10.5px!important;line-height:1.45!important}
+
+/* Off-season / trade: move away from admin-spreadsheet density. */
+.dynasty-step{padding:10px 12px!important}
+.dynasty-step b{font-size:11.5px!important}
+.dynasty-banner p{font-size:12.5px!important}
+.dynasty-banner-stat span{font-size:9.5px!important}
+.offseason-row{padding:11px 0!important;gap:12px!important}
+.offseason-row b{font-size:12.5px!important}
+.offseason-row span{font-size:10.5px!important;line-height:1.45!important}
+.offseason-row strong{font-size:9.5px!important;line-height:1.3!important;padding:4px 7px!important;border:1px solid #d1c4ad!important;border-radius:999px!important;background:#fbf7ee!important;color:#526157!important;white-space:nowrap!important}
+.dynasty-roster-row{padding:8px 0!important}
+.dynasty-roster-row b{font-size:11.5px!important}
+.dynasty-roster-row span{font-size:9.5px!important}
+.wire-row span{font-size:9.5px!important}.wire-row b{font-size:11.5px!important}.wire-row p{font-size:10px!important}
+.contract-row b{font-size:12px!important}.contract-row span,.contract-row small{font-size:10px!important;line-height:1.4!important}
+.contract-row .button{font-size:10px!important;min-height:34px!important}
+.trade-side label{font-size:9.5px!important}
+.trade-read{font-size:11.5px!important}
+.trade-scout-card b{font-size:12px!important}
+.trade-scout-card span,.trade-scout-card small{font-size:9.5px!important;line-height:1.35!important}
+.trade-room-head p{font-size:11px!important;line-height:1.5!important}
+.trade-room-stamp span{font-size:9.5px!important}
+
+/* Annual Draft: same readability bar as the foundation Draft. */
+#dynasty .annual-draft-pool .filters .button{font-size:10px!important;min-height:32px!important}
+#dynasty .annual-draft-pool .player-meta,#dynasty .annual-draft-pool .player-stats{font-size:10px!important;line-height:1.35!important}
+#dynasty .annual-draft-pool .player-chip{font-size:9.5px!important}
+#dynasty .annual-draft-pool .draft-pool-controls span,#dynasty .annual-draft-pool .draft-pool-controls .button{font-size:9.5px!important}
+#dynasty .annual-draft-pool .draft-pool-controls .button{min-height:32px!important}
+#dynasty .annual-draft-need>span,#dynasty .annual-draft-need>small{font-size:9.5px!important}
+#dynasty .annual-draft-need>b{font-size:13px!important}
+#dynasty .draft-list-label{font-size:9.5px!important}
+
+/* Full Draft board: readable columns, intentional horizontal exploration on narrow screens. */
+#dynasty .annual-board-premium{overflow-x:auto!important;overscroll-behavior-x:contain;scrollbar-width:auto;padding-bottom:12px!important}
+#dynasty .annual-board-premium .annual-draft-board{grid-template-columns:repeat(8,minmax(132px,1fr))!important;min-width:1100px!important;overflow:visible!important}
+#dynasty .annual-board-premium .annual-draft-col-head{font-size:10px!important}
+#dynasty .annual-board-premium .annual-draft-pick{font-size:10px!important;line-height:1.4!important;min-height:44px!important}
+#dynasty .annual-board-premium .annual-draft-pick b{font-size:10.5px!important}
+#dynasty .annual-board-premium .annual-draft-pick small{font-size:9.5px!important}
+@media(max-width:700px){
+  #dynasty .annual-board-premium{position:relative;padding-top:38px!important}
+  #dynasty .annual-board-premium::before{content:'SWIPE ACROSS ALL 8 CLUBS';position:absolute;left:14px;top:13px;font-size:9.5px;font-weight:900;letter-spacing:.08em;color:#d9c68f}
+  #dynasty .annual-board-premium .annual-draft-board{min-width:1060px!important}
+}
+
+/* Final 15: locked-state text is supporting information, not microprint. */
+#dynasty .final-player-card{padding:12px 13px!important;gap:12px!important}
+#dynasty .final-player-card div>span{font-size:9.5px!important}
+#dynasty .final-player-card b{font-size:12.5px!important}
+#dynasty .final-player-card small{font-size:10px!important}
+#dynasty .final-player-read strong{font-size:9.5px!important}
+#dynasty .final-player-read em{font-size:9.5px!important;line-height:1.3!important}
+
+/* Interaction target floor on phone/tablet. */
+@media(max-width:840px){
+  .button{min-height:36px}
+  #team .xi-toggle-btn,#team .remove-xi-btn,#team .replace-xi-btn{min-height:36px!important}
+  #team .order-btn{width:36px!important;height:36px!important}
+  #season .season-view-button{min-height:36px!important}
+}
+
+/* v7.8.7 FINAL BRUTAL QA: rules below own the defects reproduced in rendered play. */
+#draftDraw .reveal-card.placeholder{
+  color:#59645f!important;
+  background:#f8f3e8!important;
+  border-color:#c8baa0!important;
+  box-shadow:inset 0 0 0 1px rgba(117,96,58,.035)!important;
+  opacity:1!important;
+}
+#draftDraw .reveal-card.placeholder .reveal-no{
+  color:#8a7345!important;
+  font-size:20px!important;
+  font-weight:800!important;
+}
+#team .selection-brief-grid span,#team .xi-essentials span,#team .profile-side-read b{
+  font-size:9.5px!important;
+  color:var(--gcc-micro)!important;
+  opacity:1!important;
+}
+#dynasty .contract-cut-count span,#dynasty .turnover-meter span,.trade-side-kicker,.trade-read>span{
+  font-size:9.5px!important;
+  opacity:1!important;
+}
+@media(max-width:840px){
+  /* Before eleven are chosen the selectable squad is the task. Do not bury it below eleven empty batting slots. */
+  #team.team-needs-picks .team-squad-column{
+    order:1!important;
+    border-top:0!important;
+    border-bottom:1px solid var(--work-rule-soft)!important;
+    padding-top:0!important;
+    padding-bottom:14px!important;
+  }
+  #team.team-needs-picks .team-xi-column{order:2!important;padding-top:14px!important}
+  #team .xi-row-player span{-webkit-line-clamp:2!important}
+}

@@ -1,0 +1,3 @@
+function fullLadderHtml(st = standings()) {
+    return `<table><thead><tr><th>#</th><th>Club</th><th>P</th><th>W</th><th>L</th><th>NRR</th><th>PTS</th></tr></thead><tbody>${st.map((x, i) => `<tr class="${x.club.abbr === state.userClub.abbr ? 'user-row' : ''}"><td>${state.round ? i + 1 : '—'}</td><td><div class="ladder-club"><div class="club-mark" style="--club:${x.club.c};--club-accent:${x.club.a || 'transparent'};--club-text:${x.club.t || '#112018'}">${x.club.abbr}</div><span>${x.club.name}</span></div></td><td>${x.p}</td><td>${x.w}</td><td>${x.l}</td><td>${state.round ? `${x.nrr >= 0 ? '+' : ''}${x.nrr.toFixed(2)}` : '—'}</td><td><b>${x.pts}</b></td></tr>`).join('')}</tbody></table>`;
+  }
