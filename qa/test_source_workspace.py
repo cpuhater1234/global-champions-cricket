@@ -13,7 +13,9 @@ spec.loader.exec_module(module)
 class SourceWorkspaceTests(unittest.TestCase):
     def test_verified_baseline_round_trip(self):
         with tempfile.TemporaryDirectory() as temporary:
-            output = module.build(ROOT / "src", Path(temporary) / "gcc.html")
+            source = Path(temporary) / "protected-src"
+            module.extract(ROOT / "game/gcc_recovery_architecture_checkpoint.html", source)
+            output = module.build(source, Path(temporary) / "gcc.html")
             self.assertEqual(module.digest(output), module.BASE_SHA)
             self.assertNotIn(b"@@GCC_INCLUDE:", output)
 

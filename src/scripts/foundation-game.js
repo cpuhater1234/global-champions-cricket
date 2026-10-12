@@ -375,6 +375,9 @@ window.GCC = (() => {
     openWorldDossier('how');
   }
 
+  @@GCC_INCLUDE:views/shared/modalInteraction.js@@
+  installModalInteraction();
+
   function openModal(html) {
     $('modalBody').innerHTML = html;
     $('modal').classList.add('open');
@@ -1104,9 +1107,9 @@ window.GCC = (() => {
 
     $('draftProfile').innerHTML = ps.length >= 11 ? miniProfile(preview) : '';
     $('draftSquadRead').innerHTML = ps.length < 4 ? `
-      <div class="draft-read-head"><b>EARLY SHAPE</b><span>${15 - ps.length} picks left</span></div>
+      <div class="draft-read-head"><b>EARLY SHAPE</b><span>${15 - ps.length} pick${15 - ps.length===1?'':'s'} left</span></div>
       <div class="draft-read-line">${draftShapeLine(ps, d, preview)}</div>` : `
-      <div class="draft-read-head"><b>SQUAD SHAPE</b><span>${ps.length < 15 ? `${15 - ps.length} picks left` : 'Squad complete'}</span></div>
+      <div class="draft-read-head"><b>SQUAD SHAPE</b><span>${ps.length < 15 ? `${15 - ps.length} pick${15 - ps.length===1?'':'s'} left` : 'Squad complete'}</span></div>
       <div class="role-meter-grid">
         <div class="role-meter"><b>${d.counts.BAT || 0}</b><span>BAT</span></div>
         <div class="role-meter"><b>${d.counts['WK-BAT'] || 0}</b><span>WK</span></div>
@@ -1471,6 +1474,20 @@ window.GCC = (() => {
     renderTeam();
   }
 
+  function preserveTeamInteraction() {
+    const active=document.activeElement;
+    const id=active && active.id;
+    const relevant=active && $('team').contains(active);
+    const x=window.scrollX||0,y=window.scrollY||0;
+    return () => {
+      if(!relevant || !id) return;
+      let next=document.getElementById(id);
+      if(next?.disabled && id.startsWith('order-')) next=document.getElementById(id.replace('order-up-','order-down-')===id?id.replace('order-down-','order-up-'):id.replace('order-up-','order-down-'));
+      if(next && !next.disabled && typeof next.focus==='function') next.focus({preventScroll:true});
+      window.scrollTo({left:x,top:y,behavior:'instant'});
+    };
+  }
+
   function renderBattingOrderEditor() {
     syncBattingOrder();
     const bySlot=new Map(state.battingOrder.map((id,i)=>[i+1,byId(id)]));
@@ -1479,7 +1496,7 @@ window.GCC = (() => {
       if(!p) return `<div class="batting-slot empty-slot"><span class="batting-no">${slot}</span><div class="batting-player"><b>Open slot</b><span>Select a player from the squad</span></div></div>`;
       const fitRead=battingUseRead(p,slot);
       const fitClass=fitRead==='Natural'||fitRead==='Comfortable'?'good':fitRead==='Stretched'?'warn':'bad';
-      return `<div class="batting-slot ${state.pendingSwapIn ? 'swap-target' : ''}"><span class="batting-no">${slot}</span><div class="batting-player"><b>${p.name}</b><span>${roleName(p)} · <em class="batting-fit ${fitClass}">${fitRead}</em></span></div><div class="batting-actions"><button type="button" class="order-btn" aria-label="Move ${p.name} up" onclick="GCC.moveBattingPlayer(${p.id},-1)" ${slot===1?'disabled':''}>↑</button><button type="button" class="order-btn" aria-label="Move ${p.name} down" onclick="GCC.moveBattingPlayer(${p.id},1)" ${slot===state.battingOrder.length?'disabled':''}>↓</button>${state.pendingSwapIn ? `<button type="button" class="replace-xi-btn" onclick="GCC.replaceXI(${p.id})">SWAP OUT</button>` : `<button type="button" class="remove-xi-btn" onclick="GCC.removeXI(${p.id})">REMOVE</button>`}</div></div>`;
+      return `<div class="batting-slot ${state.pendingSwapIn ? 'swap-target' : ''}"><span class="batting-no">${slot}</span><div class="batting-player"><b>${p.name}</b><span>${roleName(p)} · <em class="batting-fit ${fitClass}">${fitRead}</em></span></div><div class="batting-actions"><button type="button" id="order-up-${p.id}" class="order-btn" aria-label="Move ${p.name} up" onclick="GCC.moveBattingPlayer(${p.id},-1)" ${slot===1?'disabled':''}>↑</button><button type="button" id="order-down-${p.id}" class="order-btn" aria-label="Move ${p.name} down" onclick="GCC.moveBattingPlayer(${p.id},1)" ${slot===state.battingOrder.length?'disabled':''}>↓</button>${state.pendingSwapIn ? `<button type="button" class="replace-xi-btn" onclick="GCC.replaceXI(${p.id})">SWAP OUT</button>` : `<button type="button" id="order-remove-${p.id}" class="remove-xi-btn" onclick="GCC.removeXI(${p.id})">REMOVE</button>`}</div></div>`;
     }).join('');
   }
 
@@ -1507,7 +1524,7 @@ window.GCC = (() => {
     }
 
     const keeperRead=keeperValid?keeper.name:'Needed';
-    const shapeRead=partialXI?'Still forming':ratingWord(p.xiShape);
+    const shapeRead=partialXI?'Still forming':p.battingResources<65?'Batting depth thin':p.bowlingResources<65?'Bowling depth thin':ratingWord(p.xiShape);
     $('xiEssentials').innerHTML=`<div><span>Players</span><b>${state.xi.length} / 11</b></div><div><span>Keeper</span><b class="${keeperValid?'':'is-missing'}">${keeperRead}</b></div><div><span>Bowling cover</span><b>${bowlingCover==='—'?'—':`${bowlingCover} ov`}</b></div><div><span>XI shape</span><b>${shapeRead}</b></div>`;
 
     if(partialXI){
@@ -1531,6 +1548,7 @@ window.GCC = (() => {
     let note;
     if (p.roleFit < 84) note = 'Good players, awkward jobs. Too many of the XI are being used outside their natural roles.';
     else if (p.roleFit < 95) note = 'The XI works, but a couple of batting jobs are not quite natural.';
+    else if (p.battingResources < 65) note = 'Batting depth is thin. The attack is strong, but the lower order may struggle if early wickets fall.';
     else if (p.battingShape < 78) note = 'There is batting quality here, but the order is not balanced through all three phases.';
     else if (p.attackShape < 76) note = 'You can bowl twenty overs, but the new ball, middle and death jobs are not shared well.';
     else if (p.bowlingResources < 65) note = 'Bowling depth is thin. The fifth option is likely to be used outside his best phase.';

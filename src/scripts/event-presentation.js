@@ -2,7 +2,7 @@
 /* v6.69 signature-experience choreography. Presentation layer only. */
 (() => {
   if (!window.GCC || !document.body) return;
-  document.body.dataset.uiVersion = 'v7.8.7-brutal-qa';
+  document.body.dataset.uiVersion = 'v7.9.0-recovery-candidate';
   const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const state = window.GCC.state;
 
@@ -86,7 +86,7 @@
       const d=state.recruit && state.recruit.currentDecision;
       if(!d || !d.name || d.name===lastRecruitDecision) return;
       lastRecruitDecision=d.name;
-      reanimate(recruitRoll,'decision-fresh');
+      // Live call cadence is faster than the old fade; keep information opaque.
       if(suppressRecruitMoment || marqueeMoments>=4) return;
       const p=(state.pool||[]).find(x=>x.name===d.name);
       if(!p || (p.overall||0)<93) return;

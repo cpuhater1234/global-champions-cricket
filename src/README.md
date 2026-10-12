@@ -1,7 +1,9 @@
 # GCC source workspace
 
-This is the verified v7.8.7 prototype separated into editable source files. It is
-an architecture checkpoint, not a redesigned release.
+The source workspace now builds the v7.9.0 recovery candidate. The original
+byte-identical v7.8.7 extraction remains in `game/gcc_recovery_architecture_checkpoint.html`.
+The extraction notes below describe that protected checkpoint. Candidate changes
+and verification are recorded in `docs/GCC_V790_RECOVERY_CANDIDATE.md`.
 
 ## Build
 

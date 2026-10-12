@@ -7,6 +7,7 @@
   <style>@@GCC_INCLUDE:styles/legacy-foundation.css@@</style>
 
 <style id="v780-player-feedback">@@GCC_INCLUDE:styles/legacy-feedback.css@@</style>
+<style id="v790-recovery">@@GCC_INCLUDE:styles/recovery.css@@</style>
 </head>
 <body data-model-version="2008-evidence-provenance-hardened-v4" data-ui-version="v6.70.2-story-overlap-fix">
 
@@ -351,7 +352,7 @@
     </main>
   </div>
 
-  <div id="modal" class="modal" onclick="GCC.backdropClose(event)"><div id="modalBody" class="modal-card"></div></div>
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-label="Cricket details" onclick="GCC.backdropClose(event)"><div class="modal-toolbar"><button type="button" id="modalClose" onclick="GCC.closeModal()">CLOSE ✕</button></div><div id="modalBody" class="modal-card" tabindex="-1"></div></div>
   <div id="toast" class="toast"></div>
 
   <script>@@GCC_INCLUDE:scripts/players-2008.js@@</script>

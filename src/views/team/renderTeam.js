@@ -1,5 +1,6 @@
 function renderTeam() {
     if (!state.userClub) return;
+    const restoreInteraction = preserveTeamInteraction();
     const teamScreen=document.querySelector('#team');
     if(teamScreen) teamScreen.classList.toggle('swap-mode',!!state.pendingSwapIn);
     const roster = state.teams[state.userClub.abbr].map(byId).filter(Boolean).sort((a, b) => b.overall - a.overall);
@@ -37,8 +38,8 @@ function renderTeam() {
       else if(state.xi.length>=11){actionFn='beginSwap';actionLabel='SWAP';actionClass='swap';}
       const stateRead=unavailable?'UNAVAILABLE':pending?'SWAP READY':selected?(slotById.has(p.id)?`XI · BAT ${slotById.get(p.id)}`:'IN XI'):(state.xi.length>=11?'BENCH':'AVAILABLE');
       return `<div class="xi-row ${selected?'in':''} ${pending?'swap-pending':''} ${unavailable?'dynasty-injured':''}">
-        <div class="xi-row-player"><b>${p.name}</b><span>${roleName(p)} · ${playerNote(p)}${unavailable?' · OUT':''}</span></div>
-        <div class="xi-row-side"><strong>${p.overall}</strong><span>${stateRead}</span><button type="button" class="xi-toggle-btn ${actionClass}" onclick="GCC.${actionFn}(${p.id})" ${unavailable?'disabled':''}>${actionLabel}</button></div>
+        <div class="xi-row-player"><b>${p.name}</b><span title="${playerNote(p)}">${roleName(p)}${unavailable?' · OUT':''}</span></div>
+        <div class="xi-row-side"><strong>${p.overall}</strong><span>${stateRead}</span><button id="xi-action-${p.id}" type="button" class="xi-toggle-btn ${actionClass}" onclick="GCC.${actionFn}(${p.id})" ${unavailable?'disabled':''}>${actionLabel}</button></div>
       </div>`;
     }).join('');
     renderBattingOrderEditor();
@@ -85,4 +86,5 @@ function renderTeam() {
     const detail=$('teamDetailRead');
     if(detail){ detail.hidden=!complete; if(!complete) detail.open=false; }
     $('groundCard').innerHTML = complete ? groundReportHtml(nextGround||state.userClub, profile, state.xi.length,{round:nextRound,home:nextHome,opponent:nextOpp,weather:nextGround?.weather||null}) : '';
+    restoreInteraction();
   }

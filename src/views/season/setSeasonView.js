@@ -1,6 +1,7 @@
 function setSeasonView(view = 'overview') {
     const allowed = ['overview','fixtures','ladder','analysis','players'];
     seasonView = allowed.includes(view) ? view : 'overview';
+    $('season').dataset.view=seasonView;
     document.querySelectorAll('[data-season-panel]').forEach(panel => {
       const active = panel.dataset.seasonPanel === seasonView;
       panel.hidden = !active;

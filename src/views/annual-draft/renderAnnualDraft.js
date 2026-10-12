@@ -4,7 +4,7 @@ function renderAnnualDraft(){
     const drafted=(o.picks||[]).filter(x=>x.owner===state.userClub.abbr).map(x=>pById(x.playerId)).filter(Boolean);
     const rosterNow=roster(state.userClub.abbr).sort((a,b)=>b.overall-a.overall);
     const title=current?(mine?`${state.userClub.name} on the clock`:`${club?.name||current.owner} on the clock`):`${state.year} Draft complete`;
-    const hint=current?`Round ${round} · Pick ${pick} of ${total}`:'Every club with an open list spot has made its selections.';
+    const hint=current?`${current.supplementary?'Supplementary selection':`Round ${round}`} · Pick ${pick} of ${total}`:'Every club with an open list spot has made its selections.';
     if(annualDraftBoardVisible){
       $('dynastyMain').innerHTML=`<section class="annual-draft-foundation"><header class="section-head compact"><div><span class="kicker"><span class="kicker-icon ball-icon" aria-hidden="true"></span>${state.year} ANNUAL DRAFT</span><h2>Full Draft board</h2><p>Every selection in one place. The snake reverses each round; clubs disappear from the order once their list is full.</p></div><div class="pick-count">${Math.min(pick,total)} / ${total}</div></header><div class="draft-flow user-turn"><div class="draft-flow-copy"><span class="ball-icon" aria-hidden="true"></span><div><b>The room-wide view.</b><span>Return to the player pool to make your selection.</span></div></div><div class="draft-flow-actions"><button class="button primary" onclick="Dynasty.toggleAnnualDraftBoard(false)">BACK TO PLAYER POOL</button></div></div><div class="panel board-panel annual-board-premium"><div class="draft-board annual-draft-board">${annualDraftBoard()}</div></div></section>`;return
     }

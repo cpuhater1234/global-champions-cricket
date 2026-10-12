@@ -29,4 +29,4 @@ for(let year=2008;year<=2026;year++){
  check('annual draft all lists 15 '+s.year,()=>assertRosters(s));D.finishOffseason();assert.equal(o.phase,'ready');D.enterTeamRoom();if(year===2008)reload(h,'next year team');
 }
 check('no game console errors',()=>assert.equal(h.errors.length,0,JSON.stringify(h.errors)));
-report.gameErrors=h.errors;fs.writeFileSync('qa/offline_game_results.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({checks:report.checks,failures:report.failures.length,years:report.years.length,matches:report.matchCount,reloads:report.reloads},null,2));if(report.failures.length)process.exitCode=1;
+report.gameErrors=h.errors;fs.writeFileSync(process.argv[3]||'qa/offline_game_results.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({checks:report.checks,failures:report.failures.length,years:report.years.length,matches:report.matchCount,reloads:report.reloads},null,2));if(report.failures.length)process.exitCode=1;

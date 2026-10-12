@@ -1,5 +1,11 @@
 # Functional testing without a browser
 
+The commands and recorded failures below describe the protected v7.8.7 checkpoint.
+For the implemented v7.9.0 candidate, use the commands and results in
+`docs/GCC_V790_RECOVERY_CANDIDATE.md`. Its full-career suite passes all 1,702 checks,
+and its updated stress suite passes 45. The three reproduced checkpoint defects
+are repaired in that candidate; the baseline evidence remains unchanged.
+
 The recovery checkpoint can be exercised with Node 24 and Python 3, without
 installing packages, downloading Chromium, or running GitHub Actions.
 

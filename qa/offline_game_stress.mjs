@@ -14,10 +14,13 @@ const h=fresh(),s=h.G.state,D=h.context.Dynasty,club=s.league.find(c=>c.abbr!==s
 D.openTradeCentre(false);h.get('tradeClub').value=club;D.refreshTradeTarget();h.get('tradeTarget').value=String(s.teams[club][0]);h.get('tradeOffer').value='-1';
 const original=JSON.stringify(s.teams);D.proposeTrade(false);check('invalid offer cannot mutate rosters',()=>assert.equal(JSON.stringify(s.teams),original));
 D.beginOffseason();D.drawDraftOrder();
-// Deliberately seek an acceptable same-role offer via the real exported trade API.
-let deal=null;outer:for(const targetId of [...s.teams[club]])for(const offerId of [...s.teams[s.userClub.abbr]]){h.get('tradeClub').value=club;h.get('tradeTarget').value=String(targetId);h.get('tradeOffer').value=String(offerId);h.get('tradePick').value='R1';const before=JSON.stringify(s.teams);D.proposeTrade(false);if(JSON.stringify(s.teams)!==before){deal={targetId,offerId};break outer;}}
-check('accepted player and pick trade found',()=>assert.ok(deal));if(deal){check('trade swaps ownership exactly once',()=>{assert.ok(s.teams[s.userClub.abbr].includes(deal.targetId));assert.ok(!s.teams[s.userClub.abbr].includes(deal.offerId));assert.ok(s.teams[club].includes(deal.offerId));assert.equal(s.dynasty.offseason.pickOwners['R1:'+s.userClub.abbr],club)});const before=JSON.stringify(s.teams);h.get('tradeTarget').value=String(s.teams[club][0]);h.get('tradeOffer').value=String(s.teams[s.userClub.abbr][0]);D.proposeTrade(false);check('traded draft pick cannot be spent twice',()=>assert.equal(JSON.stringify(s.teams),before));}
-if(deal){const o=s.dynasty.offseason;D.startAnnualDraft();const slots=[];for(let r=1;r<=Math.max(...Object.values(o.draftNeeds));r++)for(const a of r%2?o.lottery:[...o.lottery].reverse())if(o.draftNeeds[a]>=r)slots.push({round:r,original:a,owner:o.pickOwners[`R${r}:${a}`]||a});const slot=slots.findIndex(p=>p.round===1&&p.original===s.userClub.abbr)+1;let guard=0;while(o.phase==='draft'&&guard++<30){const used=new Set(Object.values(s.teams).flat()),p=s.pool.find(p=>p.available!==false&&!p.dynastyRetired&&!p.draftedBy&&!used.has(p.id));assert.ok(p);D.userAnnualDraft(p.id);}report.tradeScenario={userClub:s.userClub.abbr,acquiringClub:club,draftNeeds:o.draftNeeds,tradedPickSlot:slot||null};check('traded first-round asset corresponds to a real vacancy',()=>assert.ok(slot>0,'The accepted trade spent an R1 pick for a club with no draft vacancy'));if(slot)check('traded first-round pick is exercised by acquiring club',()=>assert.equal(o.picks.find(p=>p.slot===slot)?.owner,club));check('post-trade draft leaves 15 unique players per club',()=>assertRosters(s));}
+// A zero-vacancy club cannot spend a fictional pick, even in an otherwise attractive offer.
+const beforeInvalidPick=JSON.stringify(s.teams);
+for(const targetId of [...s.teams[club]])for(const offerId of [...s.teams[s.userClub.abbr]]){
+ h.get('tradeClub').value=club;h.get('tradeTarget').value=String(targetId);h.get('tradeOffer').value=String(offerId);h.get('tradePick').value='R1';D.proposeTrade(false);
+}
+check('zero-vacancy pick rejected without roster mutation',()=>assert.equal(JSON.stringify(s.teams),beforeInvalidPick));
+check('zero-vacancy pick ownership unchanged',()=>assert.equal(s.dynasty.offseason.pickOwners['R1:'+s.userClub.abbr],s.userClub.abbr));
 check('no game console errors in trading',()=>assert.equal(h.errors.length,0));
 // Contrast the zero-vacancy defect with a genuinely available first-round pick.
 {const h=fresh(),s=h.G.state,D=h.context.Dynasty,user=s.userClub.abbr,club=s.league.find(c=>c.abbr!==user).abbr;
@@ -27,10 +30,14 @@ check('no game console errors in trading',()=>assert.equal(h.errors.length,0));
   h.get('tradeClub').value=club;h.get('tradeTarget').value=String(target);h.get('tradeOffer').value=String(offer);h.get('tradePick').value='R1';const before=JSON.stringify(s.teams);D.proposeTrade(false);if(JSON.stringify(s.teams)!==before){accepted=true;break outer;}
  }
  check('valid vacancy pick trade is accepted',()=>assert.ok(accepted));
+ if(accepted){const before=JSON.stringify(s.teams);h.get('tradeTarget').value=String(s.teams[club][0]);h.get('tradeOffer').value=String(s.teams[user][0]);D.proposeTrade(false);check('traded draft pick cannot be spent twice',()=>assert.equal(JSON.stringify(s.teams),before));}
  if(accepted){D.startAnnualDraft();const o=s.dynasty.offseason;
   check('real first-round pick is exercised by acquiring club',()=>{assert.equal(o.draftNeeds[user],1);assert.equal(o.picks.length,1);assert.equal(o.picks[0].owner,club);assert.equal(o.picks[0].round,1);assert.ok(o.picks[0].playerId)});
-  check('valid pick trade ends with 15 unique players per club',()=>assertRosters(s));D.finishOffseason();report.validPickTrade={userClub:user,acquiringClub:club,rosterSizes:Object.fromEntries(s.league.map(c=>[c.abbr,s.teams[c.abbr].length])),phaseAfterFinish:o.phase};
+  check('transferred pick stops on human supplementary choice',()=>{assert.equal(o.phase,'draft');assert.equal(s.teams[user].length,14);});
+  const used=new Set(Object.values(s.teams).flat()),p=s.pool.find(p=>p.available!==false&&!p.dynastyRetired&&!p.draftedBy&&!used.has(p.id));assert.ok(p);D.userAnnualDraft(p.id);
+  check('supplementary choice belongs to user',()=>assert.equal(o.picks.at(-1).owner,user));
+  check('valid pick trade ends with 15 unique players per club',()=>assertRosters(s));D.finishOffseason();report.validPickTrade={userClub:user,acquiringClub:club,rosterSizes:Object.fromEntries(s.league.map(c=>[c.abbr,s.teams[c.abbr].length])),phaseAfterFinish:o.phase};check('supplementary choice unlocks lodged list',()=>assert.equal(o.phase,'ready'));
  }
  check('valid pick scenario has no console errors',()=>assert.equal(h.errors.length,0));
 }
-fs.writeFileSync('qa/offline_game_stress_results.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));if(report.failures.length)process.exitCode=1;
+fs.writeFileSync(process.argv[3]||'qa/offline_game_stress_results.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));if(report.failures.length)process.exitCode=1;

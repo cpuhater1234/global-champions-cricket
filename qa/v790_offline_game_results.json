@@ -1,0 +1,163 @@
+{
+  "kind": "offline functional regression",
+  "source": "game/global_champions_cricket_v7_9_0_recovery_candidate.html",
+  "sha256": "672dd4a73b68aed050cd3a9ffb2414517167e4f90ad00a9bc765ba90259bf152",
+  "limits": [
+    "DOM render stub, not a browser",
+    "No CSS/layout/click/animation verification",
+    "Controlled timers; direct exported API calls",
+    "One deterministic complete career plus targeted manipulated-state stress cases"
+  ],
+  "checks": 1702,
+  "failures": [],
+  "years": [
+    {
+      "year": 2008,
+      "club": "NOT",
+      "wins": 7,
+      "champion": "REN"
+    },
+    {
+      "year": 2009,
+      "club": "NOT",
+      "wins": 9,
+      "champion": "SIX"
+    },
+    {
+      "year": 2010,
+      "club": "NOT",
+      "wins": 6,
+      "champion": "SIX"
+    },
+    {
+      "year": 2011,
+      "club": "NOT",
+      "wins": 4,
+      "champion": "SIX"
+    },
+    {
+      "year": 2012,
+      "club": "NOT",
+      "wins": 9,
+      "champion": "REN"
+    },
+    {
+      "year": 2013,
+      "club": "NOT",
+      "wins": 6,
+      "champion": "DC"
+    },
+    {
+      "year": 2014,
+      "club": "NOT",
+      "wins": 10,
+      "champion": "STA"
+    },
+    {
+      "year": 2015,
+      "club": "NOT",
+      "wins": 5,
+      "champion": "SIX"
+    },
+    {
+      "year": 2016,
+      "club": "NOT",
+      "wins": 9,
+      "champion": "NOT"
+    },
+    {
+      "year": 2017,
+      "club": "NOT",
+      "wins": 8,
+      "champion": "NOT"
+    },
+    {
+      "year": 2018,
+      "club": "NOT",
+      "wins": 10,
+      "champion": "NOT"
+    },
+    {
+      "year": 2019,
+      "club": "NOT",
+      "wins": 11,
+      "champion": "DC"
+    },
+    {
+      "year": 2020,
+      "club": "NOT",
+      "wins": 6,
+      "champion": "RCB"
+    },
+    {
+      "year": 2021,
+      "club": "NOT",
+      "wins": 12,
+      "champion": "NOT"
+    },
+    {
+      "year": 2022,
+      "club": "NOT",
+      "wins": 10,
+      "champion": "STA"
+    },
+    {
+      "year": 2023,
+      "club": "NOT",
+      "wins": 9,
+      "champion": "SIX"
+    },
+    {
+      "year": 2024,
+      "club": "NOT",
+      "wins": 9,
+      "champion": "STA"
+    },
+    {
+      "year": 2025,
+      "club": "NOT",
+      "wins": 7,
+      "champion": "DC"
+    },
+    {
+      "year": 2026,
+      "club": "NOT",
+      "wins": 6,
+      "champion": "STA"
+    }
+  ],
+  "reloads": [
+    {
+      "label": "foundation team",
+      "expectedScreen": "team",
+      "actualScreen": "team"
+    },
+    {
+      "label": "midseason",
+      "expectedScreen": "season",
+      "actualScreen": "season"
+    },
+    {
+      "label": "finals",
+      "expectedScreen": "finals",
+      "actualScreen": "finals"
+    },
+    {
+      "label": "season review",
+      "expectedScreen": "review",
+      "actualScreen": "review"
+    },
+    {
+      "label": "next year team",
+      "expectedScreen": "team",
+      "actualScreen": "team"
+    },
+    {
+      "label": "career end",
+      "expectedScreen": "legacy",
+      "actualScreen": "legacy"
+    }
+  ],
+  "matchCount": 266,
+  "gameErrors": []
+}
