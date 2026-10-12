@@ -83,3 +83,7 @@ human roster vacancy after trading a genuine pick. No game console errors were
 recorded. The source integrity check and five source-workspace unit tests passed.
 
 Protected build SHA-256: `8dfda284f00ca7f693f96b734ae9a95edb9ad0b133165dcaef9024eae74478c2`.
+
+## v7.9.2 hard audit
+
+The strict-ID host avoids fabricating missing controls. Two complete careers use seeds 101 and 202 and clubs 0 and 3. Targeted control and signing tests execute selected queued callbacks and real exported APIs. Generated markup is parsed separately across 18 states. These tests do not simulate native DOM selection, focus, browser layout, click delivery, animation or frame timing. See `docs/GCC_V792_HARD_AUDIT.md` for findings and evidence.

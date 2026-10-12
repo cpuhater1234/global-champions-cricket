@@ -1,0 +1,168 @@
+{
+  "kind": "offline functional regression",
+  "source": "game/global_champions_cricket_v7_9_2_audited_candidate.html",
+  "sha256": "bb06286b58ea9a70a26e26079eabd2cd109dd8a8bf1afba0e39f9f33d18b9bd4",
+  "limits": [
+    "DOM render stub, not a browser",
+    "No CSS/layout/click/animation verification",
+    "Controlled timers; direct exported API calls",
+    "One deterministic complete career plus targeted manipulated-state stress cases"
+  ],
+  "checks": 1706,
+  "failures": [],
+  "years": [
+    {
+      "year": 2008,
+      "club": "HUR",
+      "wins": 10,
+      "champion": "DC"
+    },
+    {
+      "year": 2009,
+      "club": "HUR",
+      "wins": 5,
+      "champion": "RR"
+    },
+    {
+      "year": 2010,
+      "club": "HUR",
+      "wins": 9,
+      "champion": "YOR"
+    },
+    {
+      "year": 2011,
+      "club": "HUR",
+      "wins": 7,
+      "champion": "HUR"
+    },
+    {
+      "year": 2012,
+      "club": "HUR",
+      "wins": 9,
+      "champion": "RR"
+    },
+    {
+      "year": 2013,
+      "club": "HUR",
+      "wins": 8,
+      "champion": "HUR"
+    },
+    {
+      "year": 2014,
+      "club": "HUR",
+      "wins": 6,
+      "champion": "YOR"
+    },
+    {
+      "year": 2015,
+      "club": "HUR",
+      "wins": 5,
+      "champion": "DC"
+    },
+    {
+      "year": 2016,
+      "club": "HUR",
+      "wins": 9,
+      "champion": "HUR"
+    },
+    {
+      "year": 2017,
+      "club": "HUR",
+      "wins": 5,
+      "champion": "REN"
+    },
+    {
+      "year": 2018,
+      "club": "HUR",
+      "wins": 10,
+      "champion": "DC"
+    },
+    {
+      "year": 2019,
+      "club": "HUR",
+      "wins": 11,
+      "champion": "HUR"
+    },
+    {
+      "year": 2020,
+      "club": "HUR",
+      "wins": 11,
+      "champion": "HUR"
+    },
+    {
+      "year": 2021,
+      "club": "HUR",
+      "wins": 9,
+      "champion": "REN"
+    },
+    {
+      "year": 2022,
+      "club": "HUR",
+      "wins": 10,
+      "champion": "HUR"
+    },
+    {
+      "year": 2023,
+      "club": "HUR",
+      "wins": 6,
+      "champion": "REN"
+    },
+    {
+      "year": 2024,
+      "club": "HUR",
+      "wins": 4,
+      "champion": "NOT"
+    },
+    {
+      "year": 2025,
+      "club": "HUR",
+      "wins": 4,
+      "champion": "NOT"
+    },
+    {
+      "year": 2026,
+      "club": "HUR",
+      "wins": 10,
+      "champion": "RR"
+    }
+  ],
+  "reloads": [
+    {
+      "label": "foundation team",
+      "expectedScreen": "team",
+      "actualScreen": "team"
+    },
+    {
+      "label": "midseason",
+      "expectedScreen": "season",
+      "actualScreen": "season"
+    },
+    {
+      "label": "finals",
+      "expectedScreen": "finals",
+      "actualScreen": "finals"
+    },
+    {
+      "label": "season review",
+      "expectedScreen": "review",
+      "actualScreen": "review"
+    },
+    {
+      "label": "next year team",
+      "expectedScreen": "team",
+      "actualScreen": "team"
+    },
+    {
+      "label": "career end",
+      "expectedScreen": "legacy",
+      "actualScreen": "legacy"
+    },
+    {
+      "label": "completed archive",
+      "expectedScreen": "legacy",
+      "actualScreen": "legacy"
+    }
+  ],
+  "matchCount": 266,
+  "gameErrors": []
+}

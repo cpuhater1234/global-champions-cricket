@@ -10,6 +10,7 @@ function installModalInteraction() {
     if(now===opened)return;
     opened=now;
     if(now){
+      globalThis.GCC?.pauseSeason?.();
       returnTo=document.activeElement;
       oldOverflow=document.body.style.overflow;
       document.body.style.overflow='hidden';
@@ -21,7 +22,8 @@ function installModalInteraction() {
       document.body.style.overflow=oldOverflow;
       blocked.forEach(({el,inert})=>el.inert=inert);
       blocked=[];
-      if(returnTo?.isConnected && !returnTo.disabled)returnTo.focus({preventScroll:true});
+      if(returnTo?.isConnected && !returnTo.disabled && (!returnTo.getClientRects || returnTo.getClientRects().length)) returnTo.focus({preventScroll:true});
+      else document.querySelector?.('.screen.active button:not([disabled]),#nav button:not([disabled])')?.focus({preventScroll:true});
       returnTo=null;
     }
   };

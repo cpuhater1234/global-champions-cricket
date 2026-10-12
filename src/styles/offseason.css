@@ -1,0 +1,130 @@
+/* Offseason and trade ownership: normal-flow text, content-sized cards. */
+#dynasty{container-type:inline-size;--market-paper:#fffdf7;--market-line:#bec8b9;color:#193d31}
+#dynasty *,#dynasty *::before,#dynasty *::after,.trade-centre-shell *{box-sizing:border-box;min-width:0}
+#dynasty :is(h2,h3,h4,b,span,p,small,em),.trade-centre-shell :is(h2,h3,b,span,p,small){white-space:normal;overflow-wrap:anywhere;max-height:none;height:auto;line-height:1.45}
+#dynasty h2{font:700 clamp(28px,3vw,40px)/1.2 Georgia,serif;margin:6px 0 12px}
+#dynasty h3{font:700 24px/1.25 Georgia,serif;margin:6px 0 10px}
+#dynasty p,.trade-centre-shell p{font-size:14px;line-height:1.6;color:#4b6055;margin:8px 0}
+#dynasty .kicker{font-size:11px;line-height:1.5}
+#dynasty .button,.trade-centre-shell .button{min-height:44px;height:auto;font-size:12px;padding:10px 14px;white-space:normal;line-height:1.4}
+#dynasty .button:focus-visible,.trade-centre-shell :is(button,select):focus-visible{outline:3px solid #927539;outline-offset:3px}
+#dynasty .dynasty-head{margin-bottom:20px}
+#dynasty .dynasty-timeline{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+#dynasty .dynasty-step{display:flex;gap:8px;align-items:center;padding:10px 12px;border:1px solid var(--market-line);border-radius:7px;font-size:12px;background:#fffdf7}
+#dynasty .dynasty-step.live{background:#193d31;color:#fffdf7}
+#dynasty .dynasty-step.done{background:#e7eee4}
+#dynasty .dynasty-banner{display:flex;flex-wrap:wrap;gap:16px;align-items:center;background:#193d31;color:#fffdf7;padding:22px;border-radius:10px;margin-bottom:20px}
+#dynasty .dynasty-banner>div:first-child{flex:1 1 280px}
+#dynasty .dynasty-banner p{color:#e6eee2}
+#dynasty .dynasty-banner-stat{display:grid;gap:5px;text-align:right}
+#dynasty .dynasty-banner-stat b{font-size:32px}
+#dynasty .dynasty-banner-stat span{font-size:13px}
+#dynasty .dynasty-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,280px);gap:20px;align-items:start}
+#dynasty #dynastyMain,#dynasty .dynasty-rail{display:grid;gap:20px}
+#dynasty .dynasty-card,#dynasty .dynasty-rail>.panel{padding:20px;background:var(--market-paper);border:1px solid var(--market-line);border-radius:10px;box-shadow:none;overflow:visible;min-height:0}
+#dynasty .dynasty-actions,#dynasty .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+#dynasty .offseason-row,#dynasty .dynasty-roster-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(80px,auto);gap:12px;padding:12px 0;border-bottom:1px solid var(--market-line);align-items:center}
+#dynasty .offseason-row>div,#dynasty .dynasty-roster-row>div{display:grid;gap:5px}
+#dynasty .offseason-row b,#dynasty .dynasty-roster-row b{font-size:14px}
+#dynasty .offseason-row span,#dynasty .dynasty-roster-row span,#dynasty .offseason-row strong,#dynasty .dynasty-roster-row strong{font-size:12px;line-height:1.5}
+#dynasty .dynasty-rail :is(.squad-list,.dynasty-roster,.dynasty-wire){height:auto;max-height:420px;overflow:auto}
+#dynasty .wire-row{display:grid;gap:5px;padding:12px 0;border-bottom:1px solid var(--market-line)}
+#dynasty .wire-row span{font-size:11px;color:#4b6055}
+#dynasty .wire-row b{font-size:14px}
+#dynasty .wire-row p{font-size:13px;margin:0}
+#dynasty .contract-decision-head,#dynasty .final-list-head{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:start}
+#dynasty .contract-decision-head>div:first-child,#dynasty .final-list-head>div:first-child{flex:1 1 250px}
+#dynasty .contract-cut-count,#dynasty .final-list-count{display:grid;gap:4px;text-align:right;position:static}
+#dynasty .contract-cut-count b,#dynasty .final-list-count b{font-size:30px}
+#dynasty .contract-cut-count span,#dynasty .final-list-count span{font-size:12px}
+#dynasty .turnover-meter{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;padding:16px;margin:16px 0;background:#e7eee4;border:1px solid var(--market-line);border-radius:8px}
+#dynasty .turnover-meter>div{display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:space-between}
+#dynasty .turnover-meter span{font-size:11px}
+#dynasty .turnover-meter b{font-size:14px}
+#dynasty .turnover-meter p{margin:0}
+#dynasty .contract-list{display:grid;gap:0}
+#dynasty .contract-row{display:grid;grid-template-columns:minmax(0,1fr) 110px 150px;gap:14px;align-items:center;padding:16px 0;border-bottom:1px solid var(--market-line)}
+#dynasty .contract-row>div,#dynasty .contract-empty{display:grid;gap:6px}
+#dynasty .contract-row b{font-size:16px}
+#dynasty .contract-row :is(span,small),#dynasty .contract-empty{font-size:13px}
+#dynasty .final-list-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:12px}
+#dynasty .final-player-card{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;min-height:0;padding:16px;border:1px solid var(--market-line);border-radius:8px;background:#f5f8f1;position:static}
+#dynasty .final-player-card>div{display:grid;gap:5px}
+#dynasty .final-player-card b{font:700 19px/1.3 Georgia,serif}
+#dynasty .final-player-card :is(span,small,em,strong){font-size:13px;line-height:1.5}
+#dynasty .final-player-read em{font-style:normal;color:#4b6055}
+#dynasty .final-player-card.decision-zone{background:#f4e8dc;border-color:#b99b82}
+#dynasty.dynasty-event-mode .dynasty-head,#dynasty.dynasty-event-mode .dynasty-headline,#dynasty.dynasty-event-mode .dynasty-rail,#dynasty.dynasty-final-list-mode .dynasty-rail{display:none}
+#dynasty.dynasty-event-mode .dynasty-layout,#dynasty.dynasty-final-list-mode .dynasty-layout{display:block}
+#dynasty .annual-draw{min-height:0;padding:0}
+#dynasty .annual-draw .reveal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:14px}
+#dynasty .annual-draw .draft-order-card{display:grid;align-content:start;justify-items:start;gap:10px;min-height:0;padding:18px;background:#fffdf7;border:1px solid var(--market-line);position:static}
+#dynasty .annual-draw .reveal-no{position:static;font-size:26px}
+#dynasty .annual-draw .reveal-prompt{font-size:22px;padding:18px;background:#193d31;color:#fffdf7;margin:18px 0;position:static}
+#dynasty .annual-draw .reveal-prompt small{display:block;font-size:13px;margin-top:8px}
+#dynasty .annual-draft-foundation .section-head{display:flex;flex-wrap:wrap;gap:16px;align-items:start}
+#dynasty .annual-draft-foundation .section-head>div:first-child{flex:1 1 280px}
+#dynasty .annual-stage-note{display:grid;grid-template-columns:32px minmax(0,1fr);gap:8px 12px;padding:16px;margin:16px 0;background:#e7eee4}
+#dynasty .annual-stage-note svg{grid-row:1/3;width:32px;height:32px;position:static}
+#dynasty .annual-stage-note span{grid-column:2;font-size:13px}
+#dynasty .draft-flow{display:flex;flex-wrap:wrap;gap:16px;padding:18px;margin:16px 0;background:#e7eee4;border:1px solid var(--market-line)}
+#dynasty .draft-flow.user-turn{background:#193d31;color:#fffdf7}
+#dynasty .draft-flow-copy{flex:1 1 270px;display:flex;gap:12px}
+#dynasty .draft-flow-copy>div{display:grid;gap:6px}
+#dynasty .draft-flow-copy b{font-size:18px}
+#dynasty .draft-flow-copy span{font-size:13px;line-height:1.5}
+#dynasty .draft-flow-actions{display:flex;flex-wrap:wrap;gap:8px}
+#dynasty .annual-draft-workspace{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:20px;align-items:start}
+#dynasty .annual-draft-pool,#dynasty .annual-draft-side{padding:18px;background:#fffdf7;border:1px solid var(--market-line);border-radius:10px;position:static;max-height:none;overflow:visible}
+#dynasty .annual-draft-pool .toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+#dynasty .annual-draft-pool .input{flex:1 1 220px;width:100%;min-height:44px;font-size:14px}
+#dynasty .annual-draft-pool .filters{display:flex;flex-wrap:wrap;gap:6px}
+#dynasty .annual-draft-pool .player-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px;max-height:none;overflow:visible;align-items:start}
+#dynasty .player-card{padding:16px;background:#fffdf7;border:1px solid var(--market-line);border-radius:10px;min-height:0;height:auto}
+#dynasty .player-top{display:grid;grid-template-columns:minmax(0,1fr) 48px;gap:12px;align-items:start}
+#dynasty .player-card h4{font:700 19px/1.3 Georgia,serif;white-space:normal;overflow:visible;margin:0 0 6px}
+#dynasty .player-card .ovr{position:static;font-size:27px;line-height:1.2;width:auto}
+#dynasty .player-meta,#dynasty .player-role,#dynasty .player-stats{font-size:13px;line-height:1.5}
+#dynasty .player-role{margin:10px 0}
+#dynasty .player-tags,#dynasty .player-stats{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+#dynasty .player-chip{display:inline-flex;font-size:11px;line-height:1.4;padding:4px 7px;background:#e7eee4}
+#dynasty .player-chip::after{content:none}
+#dynasty .annual-draft-needs-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+#dynasty .annual-draft-side .squad-row{display:block;padding:10px 0;border-bottom:1px solid var(--market-line)}
+#dynasty .annual-draft-side .squad-row>div{display:grid;gap:5px}
+#dynasty .annual-draft-side .squad-row b{font-size:14px}
+#dynasty .annual-draft-side .squad-row span{font-size:12px}
+#dynasty .annual-board-premium{overflow:auto;max-width:100%;padding:18px;background:#193d31;border-radius:10px}
+#dynasty .annual-draft-board{display:grid;grid-template-columns:repeat(8,minmax(170px,1fr));gap:12px;min-width:1440px}
+#dynasty .annual-draft-col{padding:12px;background:#fffdf7;color:#193d31;border-radius:8px}
+#dynasty .annual-draft-pick{display:grid;gap:5px;padding:10px 0;border-bottom:1px solid var(--market-line);font-size:13px}
+.trade-centre-shell{container-type:inline-size;color:#193d31}
+.trade-room-head{display:flex;flex-wrap:wrap;gap:16px;align-items:start;margin-bottom:20px}
+.trade-room-head>div:first-child{flex:1 1 280px}
+.trade-room-head h2{font:700 32px/1.2 Georgia,serif;margin:6px 0 12px}
+.trade-room-stamp{display:grid;gap:4px;font-size:26px;padding:12px;border:1px solid #bec8b9;background:#e7eee4}
+.trade-room-stamp span{font-size:11px}
+.trade-builder{display:grid;grid-template-columns:minmax(0,1fr) 40px minmax(0,1fr);gap:16px;align-items:start}
+.trade-side{display:grid;gap:8px;padding:16px;background:#e7eee4;border-radius:8px}
+.trade-side label,.trade-side-kicker{font-size:12px;font-weight:700}
+.trade-side select{display:block;width:100%;max-width:100%;min-height:44px;padding:10px;font:14px/1.4 system-ui;background:#fffdf7;border:1px solid #a6b79f;border-radius:6px}
+.trade-arrow{display:grid;gap:8px;text-align:center;align-self:center;font-size:26px}
+.trade-arrow span{font-size:11px}
+.trade-read{margin:20px 0;font-size:14px;line-height:1.6}
+.deal-read-band{display:grid;gap:8px;padding:18px;background:#193d31;color:#fffdf7;border-radius:8px;margin-bottom:16px}
+.deal-read-band span{font-size:11px}
+.deal-read-band b{font-size:18px;line-height:1.4}
+.deal-read-band p{color:#e6eee2;margin:0}
+.trade-scout-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.trade-scout-card{padding:18px;border:1px solid #bec8b9;border-radius:8px;background:#fffdf7}
+.trade-scout-head{display:grid;gap:6px;padding-bottom:14px;border-bottom:1px solid #bec8b9}
+.trade-scout-head span{font-size:11px}
+.trade-scout-head b{font:700 23px/1.3 Georgia,serif}
+.trade-scout-head small{font-size:13px}
+.trade-scout-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:16px 0}
+.trade-scout-grid>div{display:grid;gap:5px}
+.trade-scout-grid span{font-size:11px;color:#4b6055}
+.trade-scout-grid b{font-size:14px}
+.trade-centre-shell .close-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+@container(max-width:1000px){#dynasty .dynasty-layout,#dynasty .annual-draft-workspace{grid-template-columns:1fr}#dynasty .dynasty-rail{grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))}#dynasty .annual-draft-side{order:0}}
+@container(max-width:620px){#dynasty .contract-row{grid-template-columns:minmax(0,1fr) auto}#dynasty .contract-row .button{grid-column:1/-1}#dynasty .dynasty-card{padding:16px}.trade-builder,.trade-scout-pair{grid-template-columns:1fr}.trade-arrow{display:none}.trade-scout-grid{grid-template-columns:1fr}}

@@ -7,7 +7,9 @@
   <style>@@GCC_INCLUDE:styles/legacy-foundation.css@@</style>
 
 <style id="v780-player-feedback">@@GCC_INCLUDE:styles/legacy-feedback.css@@</style>
-<style id="v790-recovery">@@GCC_INCLUDE:styles/recovery.css@@</style>
+<style id="v790-recovery">@@GCC_INCLUDE:styles/recovery.css@@
+@@GCC_INCLUDE:styles/season.css@@
+@@GCC_INCLUDE:styles/offseason.css@@</style>
 </head>
 <body data-model-version="2008-evidence-provenance-hardened-v4" data-ui-version="v6.70.2-story-overlap-fix">
 
@@ -184,7 +186,7 @@
         <div id="draftWorkspace" class="draft-layout">
           <div class="panel">
             <div class="toolbar">
-              <input id="playerSearch" class="input" placeholder="Search player" oninput="GCC.renderPlayers()">
+              <input id="playerSearch" aria-label="Search draft players" class="input" placeholder="Search player" oninput="GCC.renderPlayers()">
               <div id="filters" class="filters"></div>
             </div>
             <div id="players" class="player-grid"></div>
@@ -252,11 +254,11 @@
         <div id="postSeasonCta" class="post-season-cta"></div>
 
         <nav class="season-view-nav" aria-label="Season views">
-          <button class="season-view-button active" data-season-view="overview" aria-selected="true" onclick="GCC.setSeasonView('overview')">Overview</button>
-          <button class="season-view-button" data-season-view="fixtures" aria-selected="false" onclick="GCC.setSeasonView('fixtures')">Fixtures</button>
-          <button class="season-view-button" data-season-view="ladder" aria-selected="false" onclick="GCC.setSeasonView('ladder')">Ladder</button>
-          <button class="season-view-button" data-season-view="analysis" aria-selected="false" onclick="GCC.setSeasonView('analysis')">Analysis</button>
-          <button class="season-view-button" data-season-view="players" aria-selected="false" onclick="GCC.setSeasonView('players')">Players</button>
+          <button class="season-view-button active" data-season-view="overview" aria-pressed="true" onclick="GCC.setSeasonView('overview')">Overview</button>
+          <button class="season-view-button" data-season-view="fixtures" aria-pressed="false" onclick="GCC.setSeasonView('fixtures')">Fixtures</button>
+          <button class="season-view-button" data-season-view="ladder" aria-pressed="false" onclick="GCC.setSeasonView('ladder')">Ladder</button>
+          <button class="season-view-button" data-season-view="analysis" aria-pressed="false" onclick="GCC.setSeasonView('analysis')">Analysis</button>
+          <button class="season-view-button" data-season-view="players" aria-pressed="false" onclick="GCC.setSeasonView('players')">Players</button>
         </nav>
 
         <div id="seasonOverview" class="season-view active" data-season-panel="overview">

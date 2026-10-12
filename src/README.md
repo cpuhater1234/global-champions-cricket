@@ -1,10 +1,10 @@
 # GCC source workspace
 
-The source workspace now builds the v7.9.1 recovery candidate. The original
+The source workspace now builds the v7.9.3 season layout rebuild. The original
 byte-identical v7.8.7 extraction remains in `game/gcc_recovery_architecture_checkpoint.html`.
 The extraction notes below describe that protected checkpoint. Candidate changes
 and verification are recorded in `docs/GCC_V790_RECOVERY_CANDIDATE.md` and
-`docs/GCC_V791_CASCADE_AUDIT.md`.
+`docs/GCC_V791_CASCADE_AUDIT.md` and `docs/GCC_V792_HARD_AUDIT.md` and `docs/GCC_V793_UI_REBUILD.md`.
 
 ## Build
 

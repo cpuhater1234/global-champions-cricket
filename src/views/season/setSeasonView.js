@@ -10,7 +10,7 @@ function setSeasonView(view = 'overview') {
     document.querySelectorAll('[data-season-view]').forEach(button => {
       const active = button.dataset.seasonView === seasonView;
       button.classList.toggle('active', active);
-      button.setAttribute('aria-selected', active ? 'true' : 'false');
+      button.setAttribute('aria-pressed', active ? 'true' : 'false');
     });
     if (seasonView === 'fixtures') renderSeasonFixtures();
     else if (seasonView === 'ladder') renderSeasonLadder();

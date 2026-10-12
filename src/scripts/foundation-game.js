@@ -379,6 +379,7 @@ window.GCC = (() => {
   installModalInteraction();
 
   function openModal(html) {
+    window.GCC?.pauseSeason?.();
     $('modalBody').innerHTML = html;
     $('modal').classList.add('open');
   }
@@ -413,7 +414,8 @@ window.GCC = (() => {
 
   function runRecruitment() {
     if (!state.userClub || !state.recruit) return toast('Choose your club first');
-    if (state.recruit.complete || state.recruit.running) return;
+    if (state.recruit.complete) return;
+    if(state.recruit.running){clearRecruitTimer();state.recruit.running=false;renderRecruitment();return;}
     if (!state.recruit.started) {
       state.recruit.started = true;
       state.recruit.running = true;
@@ -422,6 +424,7 @@ window.GCC = (() => {
       return;
     }
     state.recruit.running = true;
+    if(state.recruit.betweenDays){startRecruitDay(state.recruit.day+1,100);return;}
     state.recruit.betweenDays = false;
     if (!state.recruit.queue.length) prepareRecruitmentDay(state.recruit.day || 1);
     renderRecruitment();
@@ -713,12 +716,12 @@ window.GCC = (() => {
     $('runRecruit').textContent = state.recruit.complete
       ? 'WINDOW CLOSED'
       : state.recruit.running
-        ? `DAY ${state.recruit.day} LIVE`
+        ? 'PAUSE SIGNING WINDOW'
         : state.recruit.started
-          ? 'CONTINUE WINDOW'
+          ? 'RESUME SIGNING WINDOW'
           : 'OPEN SIGNING WINDOW';
 
-    $('runRecruit').disabled = state.recruit.complete || state.recruit.running;
+    $('runRecruit').disabled = state.recruit.complete;
     $('speedRecruit').textContent = recruitLabels[state.recruit.speedIndex];
     $('speedRecruit').disabled = state.recruit.complete;
     $('skipRecruit').disabled = state.recruit.complete;
@@ -1001,7 +1004,7 @@ window.GCC = (() => {
     const t = currentTeam();
     if (!t || t.abbr !== state.userClub.abbr) return toast('Another club is on the clock');
     const p = state.pool.find(x => x.id === id);
-    if (!p || p.draftedBy) return;
+    if (!p || !p.available || p.draftedBy || p.dynastyRetired) return;
     const beforePs = (state.teams[state.userClub.abbr] || []).map(byId);
     const pickNo = state.pickIndex + 1;
     makePick(t, p, false);
@@ -1420,6 +1423,7 @@ window.GCC = (() => {
   }
 
   function moveBattingPlayer(id, direction) {
+    if(![-1,1].includes(Number(direction)))return;
     syncBattingOrder();
     const i=state.battingOrder.indexOf(id);
     if(i<0) return;
@@ -1438,7 +1442,14 @@ window.GCC = (() => {
     renderTeam();
   }
 
+  function canSelectPlayer(id) {
+    const p=byId(Number(id));
+    return !!(p && state.userClub && (state.teams[state.userClub.abbr]||[]).includes(p.id) && !p.dynastyRetired && state.dynasty?.injuries?.[p.id]?.status!=='OUT');
+  }
+
   function beginSwap(id) {
+    id=Number(id);
+    if(!canSelectPlayer(id)) return toast('Choose an available player from your own squad');
     if(state.xi.includes(id)) return;
     if(state.xi.length<11) return toggleXI(id);
     state.pendingSwapIn=id;
@@ -1453,6 +1464,7 @@ window.GCC = (() => {
   function replaceXI(outId) {
     const inId=Number(state.pendingSwapIn||0);
     if(!inId||!state.xi.includes(outId)||state.xi.includes(inId)) return;
+    if(!canSelectPlayer(inId)){state.pendingSwapIn=null;renderTeam();return toast('That replacement is no longer available. Choose again.');}
     const xiIndex=state.xi.indexOf(outId);
     if(xiIndex<0) return;
     state.xi[xiIndex]=inId;
@@ -1467,8 +1479,10 @@ window.GCC = (() => {
   }
 
   function toggleXI(id) {
+    id=Number(id);
     if (state.xi.includes(id)) return removeXI(id);
     if (state.xi.length >= 11) return toast('Remove a player from the XI before bringing another in');
+    if(!canSelectPlayer(id)) return toast('Choose an available player from your own squad');
     state.xi.push(id);
     syncBattingOrder();
     renderTeam();
@@ -1478,10 +1492,13 @@ window.GCC = (() => {
     const active=document.activeElement;
     const id=active && active.id;
     const relevant=active && $('team').contains(active);
+    const slot=active?.closest?.('[data-batting-slot]')?.dataset.battingSlot;
     const x=window.scrollX||0,y=window.scrollY||0;
     return () => {
       if(!relevant || !id) return;
       let next=document.getElementById(id);
+      if(!next && id.startsWith('order-swap-') && slot) next=$('xiBattingOrder').querySelector(`[data-batting-slot="${slot}"] .remove-xi-btn`);
+      if(!next && id.startsWith('order-')) next=document.getElementById(id.replace(/^order-(?:remove|swap)-/,'xi-action-'));
       if(next?.disabled && id.startsWith('order-')) next=document.getElementById(id.replace('order-up-','order-down-')===id?id.replace('order-down-','order-up-'):id.replace('order-up-','order-down-'));
       if(next && !next.disabled && typeof next.focus==='function') next.focus({preventScroll:true});
       window.scrollTo({left:x,top:y,behavior:'instant'});
@@ -1493,10 +1510,10 @@ window.GCC = (() => {
     const bySlot=new Map(state.battingOrder.map((id,i)=>[i+1,byId(id)]));
     $('xiBattingOrder').innerHTML=Array.from({length:11},(_,i)=>{
       const slot=i+1,p=bySlot.get(slot);
-      if(!p) return `<div class="batting-slot empty-slot"><span class="batting-no">${slot}</span><div class="batting-player"><b>Open slot</b><span>Select a player from the squad</span></div></div>`;
+      if(!p) return `<div class="batting-slot empty-slot" data-batting-slot="${slot}"><span class="batting-no">${slot}</span><div class="batting-player"><b>Open slot</b><span>Select a player from the squad</span></div></div>`;
       const fitRead=battingUseRead(p,slot);
       const fitClass=fitRead==='Natural'||fitRead==='Comfortable'?'good':fitRead==='Stretched'?'warn':'bad';
-      return `<div class="batting-slot ${state.pendingSwapIn ? 'swap-target' : ''}"><span class="batting-no">${slot}</span><div class="batting-player"><b>${p.name}</b><span>${roleName(p)} · <em class="batting-fit ${fitClass}">${fitRead}</em></span></div><div class="batting-actions"><button type="button" id="order-up-${p.id}" class="order-btn" aria-label="Move ${p.name} up" onclick="GCC.moveBattingPlayer(${p.id},-1)" ${slot===1?'disabled':''}>↑</button><button type="button" id="order-down-${p.id}" class="order-btn" aria-label="Move ${p.name} down" onclick="GCC.moveBattingPlayer(${p.id},1)" ${slot===state.battingOrder.length?'disabled':''}>↓</button>${state.pendingSwapIn ? `<button type="button" class="replace-xi-btn" onclick="GCC.replaceXI(${p.id})">SWAP OUT</button>` : `<button type="button" id="order-remove-${p.id}" class="remove-xi-btn" onclick="GCC.removeXI(${p.id})">REMOVE</button>`}</div></div>`;
+      return `<div class="batting-slot ${state.pendingSwapIn ? 'swap-target' : ''}" data-batting-slot="${slot}"><span class="batting-no">${slot}</span><div class="batting-player"><b>${p.name}</b><span>${roleName(p)} · <em class="batting-fit ${fitClass}">${fitRead}</em></span></div><div class="batting-actions"><button type="button" id="order-up-${p.id}" class="order-btn" aria-label="Move ${p.name} up" onclick="GCC.moveBattingPlayer(${p.id},-1)" ${slot===1?'disabled':''}>↑</button><button type="button" id="order-down-${p.id}" class="order-btn" aria-label="Move ${p.name} down" onclick="GCC.moveBattingPlayer(${p.id},1)" ${slot===state.battingOrder.length?'disabled':''}>↓</button>${state.pendingSwapIn ? `<button type="button" id="order-swap-${p.id}" class="replace-xi-btn" onclick="GCC.replaceXI(${p.id})">SWAP OUT</button>` : `<button type="button" id="order-remove-${p.id}" class="remove-xi-btn" onclick="GCC.removeXI(${p.id})">REMOVE</button>`}</div></div>`;
     }).join('');
   }
 
@@ -2519,8 +2536,8 @@ window.GCC = (() => {
 
   @@GCC_INCLUDE:views/matchday/openMatchdayPreview.js@@
 
-  function playNextRound(fromAuto = false) {
-    if (state.round >= 14) return;
+  function playNextRound(fromAuto = false, scheduleNext = true) {
+    if (state.round >= 14 || (fromAuto && !state.seasonRunning)) return;
     if (state.seasonRunning && !fromAuto) return toast('Season simulation is already running');
     const r = state.round + 1;
     const beforePos = standings().findIndex(x => x.club.abbr === state.userClub.abbr) + 1;
@@ -2543,7 +2560,7 @@ window.GCC = (() => {
       finishRegularSeason();
       return;
     }
-    if (state.seasonRunning) scheduleSeasonTick();
+    if (state.seasonRunning && scheduleNext) scheduleSeasonTick();
   }
 
   function simulateSeason() {
@@ -3235,6 +3252,7 @@ window.GCC = (() => {
     openMatchdayPreview,
     simulateSeason,
     cycleSeasonPace,
+    updateSeasonTicker,
     openScorecard,
     openFinalsScorecard,
     proceedPostSeason,

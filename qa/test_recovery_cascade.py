@@ -20,7 +20,7 @@ def rules(text,width):
 def canonical(s):return re.sub(r'\s*([>+~])\s*',r'\1',re.sub(r'\s+',' ',s.strip()))
 def winner(selectors,prop,width=1440):
     candidates=[];order=0;matching={canonical(s) for s in selectors}
-    for name in ['legacy-foundation.css','legacy-feedback.css','recovery.css']:
+    for name in ['legacy-foundation.css','legacy-feedback.css','recovery.css','season.css']:
         for head,body in rules((ROOT/'src/styles'/name).read_text(),width):
             for selector in css.split(head,','):
                 order+=1;s=canonical(selector)
@@ -56,6 +56,20 @@ class CascadeTests(unittest.TestCase):
         self.assertEqual(winner(selectors,'font-size')[0],'12px')
     def test_swap_feedback_does_not_fade_information(self):
         self.assertEqual(winner(['#team .xi-change-land','#team .batting-slot.xi-change-land'],'animation')[0],'none')
+    def test_navigation_remains_available_on_tablet(self):
+        self.assertEqual(winner(['.nav'],'display',980)[0],'flex')
+    def test_season_view_controls_are_readable(self):
+        self.assertEqual(winner(['.season-view-button','#season .season-view-button','#season [data-season-view]'],'font-size')[0],'12px')
+    def test_full_ladder_type_is_readable(self):
+        self.assertEqual(winner(['td','#ladder td','#season table td','#season table :is(td,th)'],'font-size')[0],'13px')
+    def test_fixture_result_is_readable(self):
+        self.assertEqual(winner(['.result','#fixtures .result','#season .fixture .result','#season .fixture :is(b,small,.result)'],'font-size')[0],'13px')
+    def test_overview_opponent_type_is_readable(self):
+        self.assertEqual(winner(['#season .season-run-row b','#season .season-run-opponent b','#season .season-run-opponent :is(b,span)'],'font-size')[0],'13px')
+    def test_overview_score_type_is_readable(self):
+        self.assertEqual(winner(['#season .season-run-opponent span','#season .season-run-opponent :is(b,span)'],'font-size')[0],'13px')
+    def test_draft_role_tags_are_readable(self):
+        self.assertEqual(winner(['.player-chip','#draft .player-chip'],'font-size')[0],'11px')
     def test_sheet_stacks_at_narrow_width(self):
         self.assertEqual(winner(['#team .team-sheet-grid','.team-sheet-grid'],'grid-template-columns',390)[0],'1fr')
 if __name__=='__main__':unittest.main()

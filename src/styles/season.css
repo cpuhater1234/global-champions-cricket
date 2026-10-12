@@ -1,0 +1,121 @@
+/* Season UI ownership. All season-specific legacy branches are retired. */
+#season{--season-paper:#fffdf7;--season-rule:#c3cbbf;--season-muted:#4b6055;container-type:inline-size;color:#19382d}
+#season *,#season *::before,#season *::after{box-sizing:border-box}
+#season :is(div,section,header,nav,b,strong,span,p,h2,h3){min-width:0;overflow-wrap:anywhere}
+#season :is(h2,h3,p){height:auto;max-height:none;white-space:normal}
+#season .season-head{display:flex;flex-wrap:wrap;align-items:start;gap:16px;margin:0 0 20px}
+#season .season-head>div:first-child{flex:1 1 320px;max-width:none}
+#season h2{font:700 clamp(28px,3vw,40px)/1.15 Georgia,serif;margin:6px 0 10px}
+#season h3{font:700 22px/1.25 Georgia,serif;margin:6px 0 10px;padding:0;border:0}
+#season p{font-size:14px;line-height:1.6;margin:0;color:var(--season-muted)}
+#season .kicker{font-size:11px;line-height:1.5;letter-spacing:.07em}
+#season .season-actions{display:flex;flex:0 1 auto;gap:8px;flex-wrap:wrap;justify-content:start;align-items:center}
+#season .button,#season .season-view-button{min-height:44px;padding:11px 14px;font-size:12px;line-height:1.4;white-space:normal;height:auto;flex-shrink:0}
+#season .button:focus-visible,#season .season-view-button:focus-visible,#season .scorecard-link:focus-visible{outline:3px solid #927539;outline-offset:3px}
+#season .season-ticker{display:flex;flex-wrap:wrap;gap:10px;padding:12px;margin:0 0 16px;background:#e5eee6;border:1px solid var(--season-rule);border-radius:8px;font-size:13px;line-height:1.5}
+#season .season-stage-note{display:grid;grid-template-columns:32px minmax(0,1fr);gap:6px 12px;margin:16px 0;padding:16px;background:#e7eee4;border:1px solid var(--season-rule);border-radius:10px}
+#season .season-stage-note .stage-note-icon{grid-row:1/3;width:32px;height:32px;position:static}
+#season .season-stage-note b{font-size:16px;line-height:1.4}
+#season .season-stage-note span{grid-column:2;font-size:13px;line-height:1.5}
+#season .stat-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:16px 0}
+#season .stat-strip>div{padding:12px;background:var(--season-paper);height:auto;min-height:0;border:1px solid var(--season-rule);border-radius:8px}
+#season .story-card{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:24px;margin:0;padding:24px;background:#193d31;color:#fffdf7;border:0;border-radius:12px;box-shadow:none;position:relative;overflow:visible}
+#season .story-card::before,#season .story-card::after{content:none}
+#season .story-card.match-loss{background:#493b32;border-left:6px solid #be6650}
+#season .story-card.match-win{border-left:6px solid #6a9d72}
+#season .story-card :is(.kicker,p,h3,b,span){color:inherit}
+#season .story-card h3{font-size:28px;margin:8px 0 16px;line-height:1.25}
+#season .story-scoreline{display:grid;grid-template-columns:minmax(0,1fr) 20px minmax(0,1fr);gap:12px;align-items:end;margin-bottom:16px}
+#season .story-scoreline>div{display:grid;gap:6px;text-align:left}
+#season .story-scoreline>div>span{font-size:13px;line-height:1.4;letter-spacing:0;text-transform:none;color:#fffdf7}
+#season .story-scoreline b{font-size:30px;line-height:1.15;white-space:nowrap}
+#season .story-side{display:flex;flex-direction:column;gap:16px;border-left:1px solid #789386;padding-left:20px;position:static;width:auto}
+#season .story-figures,#season .story-next{display:grid;gap:6px}
+#season .story-side :is(span,b){font-size:13px;line-height:1.5;white-space:normal}
+#season .story-actions{position:static;margin-top:auto}
+#season .story-actions .button{background:#fffdf7;color:#193d31;width:100%}
+#season .season-view-nav{display:flex;flex-wrap:wrap;gap:6px;margin:20px 0 0;padding:0 0 10px;border-bottom:1px solid var(--season-rule);overflow:visible}
+#season .season-view-button{appearance:none;border:1px solid var(--season-rule);border-radius:7px;background:var(--season-paper);color:#193d31;cursor:pointer;font-weight:700;letter-spacing:0;text-transform:none}
+#season .season-view-button.active{background:#193d31;color:#fffdf7;border-color:#193d31}
+#season .season-view{padding-top:18px}
+#season .season-overview-grid,#season .season-insight-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start;margin:0}
+#season .season-overview-block,#season .season-panel,#season .insight-card{background:var(--season-paper);border:1px solid var(--season-rule);border-radius:10px;padding:18px;box-shadow:none;min-height:0;height:auto}
+#season .season-overview-head,#season .season-panel-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;border-bottom:1px solid var(--season-rule);padding-bottom:12px;margin-bottom:8px;height:auto}
+#season .season-overview-head .kicker,#season .season-panel-head .kicker{flex-basis:100%}
+#season .season-overview-head>span:last-child{font-size:12px;margin:0;line-height:1.5}
+#season .season-run-row{display:grid;grid-template-columns:28px 32px minmax(0,1fr) 65px;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid var(--season-rule);min-height:0}
+#season .season-run-opponent{display:grid;gap:4px}
+#season .season-run-opponent :is(b,span){white-space:normal;text-overflow:clip;overflow:visible;font-size:13px;line-height:1.45}
+#season .season-run-status,#season .season-run-round{font-size:11px;line-height:1.4;letter-spacing:0}
+#season .season-run-status{justify-self:end}
+#season .is-win .season-run-status{color:#27633d}
+#season .is-loss .season-run-status{color:#934534}
+#season .ladder-snapshot-row{display:grid;grid-template-columns:20px 32px minmax(0,1fr) 42px 52px;gap:8px;align-items:center;padding:12px 0;border-bottom:1px solid var(--season-rule);font-size:13px}
+#season .ladder-snapshot-row b{white-space:normal;overflow:visible;text-overflow:clip;font-size:13px;line-height:1.4}
+#season .ladder-snapshot-row strong,#season .ladder-snapshot-row>span{font-size:12px;line-height:1.4;text-align:right;font-variant-numeric:tabular-nums}
+#season .club-mark{width:32px;height:32px;min-width:32px;margin:0;font-size:9px;position:relative}
+#season .is-user,#season .user-row{background:#e6eee2}
+#season .finals-cut{border-bottom:2px solid #947b42}
+#season .season-inline-link,#season .scorecard-link{font-size:13px;line-height:1.4;min-height:44px;padding:10px 0;color:#255a40;background:transparent;border:0;text-align:left;cursor:pointer;letter-spacing:0}
+#season .fixture{display:grid;grid-template-columns:32px minmax(0,1fr) minmax(100px,auto);gap:12px;align-items:center;padding:14px 0;border-top:1px solid var(--season-rule)}
+#season .fixture :is(b,small,.result){font-size:13px;line-height:1.45;white-space:normal}
+#season .fixture-result{text-align:right}
+#season .fixture .scorecard-link{display:block;margin-left:auto}
+#season #ladder,#season .leader-table-wrap{overflow-x:auto;max-width:100%}
+#season table{width:100%;min-width:540px;table-layout:auto}
+#season table :is(td,th){font-size:13px;line-height:1.5;padding:12px 8px;white-space:normal}
+#season .ladder-club{display:flex;align-items:center;gap:10px;min-width:150px}
+#season .post-season-card{display:flex;flex-wrap:wrap;gap:16px;align-items:center;padding:20px;margin:16px 0;background:#e6eee2}
+#season .post-season-card>div{flex:1 1 280px}
+#season .phase-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) 48px;gap:10px;align-items:center;height:auto}
+#season .phase-label{display:grid;gap:4px;font-size:13px}
+#season .phase-label small{font-size:12px;line-height:1.4}
+#season .cricket-leaders,#season .leaderboards-wide,#season .team-scorebook{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px}
+@container(max-width:900px){#season .season-overview-grid,#season .season-insight-grid{grid-template-columns:1fr}#season .story-card{grid-template-columns:1fr}#season .story-side{border-left:0;border-top:1px solid #789386;padding:16px 0 0}}
+@container(max-width:520px){#season .season-actions{width:100%}#season .season-actions .button{flex:1 1 160px}#season .stat-strip{grid-template-columns:repeat(2,minmax(0,1fr))}#season .story-card{padding:18px}#season .fixture{grid-template-columns:32px minmax(0,1fr)}#season .fixture-result{grid-column:2;text-align:left}#season .fixture .scorecard-link{margin-left:0}#season .ladder-snapshot-row{grid-template-columns:20px minmax(0,1fr) 42px 52px}#season .ladder-snapshot-row .club-mark{display:none}#season .season-overview-block,#season .season-panel,#season .insight-card{padding:14px}}
+/* Matchday and scorecards share a content-sized dialog layout. */
+.modal-card{container-type:inline-size}
+.modal-card :is(.matchday-preview,.scorecard-shell) *{box-sizing:border-box;min-width:0;overflow-wrap:anywhere}
+.modal-card :is(.matchday-preview,.scorecard-shell) :is(h2,h3,p,b,span,small){height:auto;white-space:normal;max-height:none;line-height:1.5}
+.modal-card :is(.matchday-preview,.scorecard-shell) h2{font:700 clamp(25px,3vw,36px)/1.2 Georgia,serif;margin:8px 0 12px}
+.matchday-teams{display:grid;grid-template-columns:minmax(0,1fr) 30px minmax(0,1fr);gap:20px;align-items:center;margin:20px 0}
+.matchday-team,.matchday-team.away{display:flex;gap:12px;align-items:center;text-align:left}
+.matchday-team-copy{display:grid;gap:4px}
+.matchday-team-copy b{font:700 21px/1.3 Georgia,serif}
+.matchday-team-copy :is(span,small){font-size:13px}
+.matchday-ground,.matchday-read,.matchday-watch-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:16px 0}
+.matchday-ground>div,.matchday-read>section{background:#e7eee4;padding:16px;border-radius:8px}
+.matchday-ground span,.matchday-read section>span{font-size:11px;display:block;margin-bottom:6px}
+.matchday-preview p{font-size:14px;color:#4b6055}
+.matchday-xi-line{display:flex;flex-wrap:wrap;gap:8px 16px;margin:16px 0;padding:12px;border-top:1px solid #b9c5b4}
+.matchday-actions{display:flex;flex-wrap:wrap;gap:12px;position:static;margin:20px 0 0}
+.matchday-actions .button{flex:1 1 180px;min-height:44px;white-space:normal}
+.scorecard-meta{font-size:13px;color:#4b6055;margin:0 0 16px}
+.scorecard-match-summary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;padding:16px;background:#e7eee4;border-radius:8px}
+.scorecard-result-line,.scorecard-summary-standout{display:grid;gap:5px;white-space:normal}
+.scorecard-match-summary span{font-size:11px;letter-spacing:.06em}
+.scorecard-match-summary b{font-size:14px}
+.scorecard-match-summary small{font-size:13px}
+.scorecard-innings{margin-top:24px}
+.scorecard-innings-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:baseline;margin-bottom:12px}
+.scorecard-innings-head h3{font:700 24px/1.3 Georgia,serif;margin:0}
+.scorecard-total{font-size:25px;font-weight:800}
+.scorecard-phase-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:16px}
+.scorecard-phase-strip>div{display:grid;gap:5px;background:#e7eee4;padding:12px}
+.scorecard-phase-strip span{font-size:11px}
+.scorecard-section{max-width:100%;overflow-x:auto;margin-top:16px}
+.scorecard-section-title{display:block;font-size:14px;font-weight:800;margin-bottom:8px}
+.scorecard-table{min-width:560px;width:100%;table-layout:auto}
+.scorecard-table td,.scorecard-table th{font-size:13px;padding:10px 8px;line-height:1.5;white-space:normal}
+.scorecard-table td:first-child,.scorecard-table th:first-child{text-align:left;min-width:130px}
+.scorecard-table.batting td:nth-child(2){min-width:160px;text-align:left}
+.scorecard-dnb{display:grid;gap:5px;font-size:13px;line-height:1.5;margin:12px 0}
+.scorecard-extras{display:flex;gap:16px;justify-content:space-between;padding:12px 0;font-size:13px}
+@container(max-width:620px){.matchday-teams,.matchday-ground,.matchday-read,.matchday-watch-grid,.scorecard-match-summary{grid-template-columns:1fr}.matchday-vs{display:none}.scorecard-phase-strip{gap:6px}.scorecard-phase-strip>div{padding:8px}}
+
+#season .dynasty-season-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:12px;margin:16px 0}
+#season .dynasty-season-stat{display:grid;align-content:start;gap:8px;padding:14px;background:var(--season-paper);border:1px solid var(--season-rule);border-radius:8px}
+#season .dynasty-season-stat span{font-size:11px;line-height:1.5;color:var(--season-muted)}
+#season .dynasty-season-stat b{font-size:14px;line-height:1.5;white-space:normal;overflow:visible}
+#season .dynasty-season-stat button{font-size:12px;min-height:44px;padding:8px;background:#e6eee2;border:1px solid var(--season-rule);border-radius:6px;cursor:pointer;color:#193d31;white-space:normal}
+#season .dynasty-season-stat b:has(.form-chip){display:flex;flex-wrap:wrap;gap:5px}

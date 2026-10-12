@@ -1,0 +1,17 @@
+{
+  "source": "game/global_champions_cricket_v7_9_2_audited_candidate.html",
+  "checks": [
+    "running signing exposes enabled Pause action",
+    "Pause cancels signing timer and retains pending calls",
+    "already-queued callback cannot progress while paused",
+    "paused signing restores pending calls unchanged",
+    "end of day waits for the following day",
+    "saved day boundary resumes into next day exactly once",
+    "in-memory day boundary resumes into next day",
+    "Pause Resume and Skip preserve the final signing pool",
+    "completed window disables progression controls",
+    "signing scenarios have no console errors"
+  ],
+  "failures": [],
+  "scope": "Real signing functions and selected queued callbacks; no browser rendering."
+}

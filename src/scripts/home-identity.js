@@ -23,3 +23,5 @@
     <text x="500" y="276" fill="#173e30" text-anchor="middle" font-family="Georgia, Times New Roman, serif" font-size="31" letter-spacing="7">GLOBAL CHAMPIONS CRICKET</text>`;
   old.replaceWith(svg);
 })();
+
+@@GCC_INCLUDE:views/shared/layoutDiagnostics.js@@
