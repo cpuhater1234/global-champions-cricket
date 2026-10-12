@@ -149,7 +149,7 @@ body{background:var(--gcc-canvas)}
 #finals .finals-shell[data-outcome="win"] .finals-tension span,#finals .finals-shell[data-outcome="win"] .finals-tension b{color:var(--gcc-win)!important}#finals .final-match{background:var(--gcc-paper)!important;}
 #finals .final-match.user-loss{background:linear-gradient(180deg,var(--gcc-loss-wash),#fffaf7)!important;border-color:#bb6a62!important}
 #finals .final-match.user-win{background:linear-gradient(180deg,var(--gcc-win-wash),#fbfdf9)!important;border-color:#6e9b7a!important}
-#finals .finals-championship .final-match{background:linear-gradient(135deg,var(--gcc-deep-2),var(--gcc-deep))!important;color:#fff8e8!important;border-color:#285b49!important}
+#finals .finals-championship .final-match:not(.final-awaiting){background:linear-gradient(135deg,var(--gcc-deep-2),var(--gcc-deep))!important;color:#fff8e8!important;border-color:#285b49!important}
 #finals .finals-championship .final-match b,#finals .finals-championship .final-match h3,#finals .finals-championship .final-match span{color:inherit}
 
 @media(max-width:980px){
@@ -198,15 +198,12 @@ body{color:var(--gcc-ink);background:linear-gradient(180deg,#f4efe4 0,#efe9dc 21
 #draft .draft-flow.user-turn b,#draft .draft-flow.user-turn span{color:#fff7e7!important}
 #draft .draft-flow.user-turn .button{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.27);color:#fff7e7}#team .team-selection-panel{background:var(--gcc-paper)!important;}
 #team .team-xi-column{background:#fffdf8!important}
-#team .xi-row-player{min-width:0}
-#team .xi-row-player span{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}#team .xi-toggle-btn{min-width:58px;}#team .team-column-note{font-size:10px;color:var(--gcc-muted);}#team .team-order-note{font-size:10px;color:var(--gcc-muted);}
-#team .batting-no{color:var(--gcc-gold-copy)}
-#team .profile-note{color:var(--gcc-ink)}
+#team .xi-row-player{min-width:0}#team .xi-row-player span{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;}#team .xi-toggle-btn{min-width:58px;}#team .team-column-note{font-size:10px;color:var(--gcc-muted);}#team .team-order-note{font-size:10px;color:var(--gcc-muted);}
+#team .batting-no{color:var(--gcc-gold-copy)}#team .profile-note{color:var(--gcc-ink);}
 
 /* Season Hub: matte result colour, readable secondary copy, strong semantic red/green. */
 #season .season-panel{background:var(--gcc-paper)!important}
-#matchStory .story-card p{color:rgba(255,248,232,.88)!important}
-#matchStory .story-figures b,#matchStory .story-next b{color:#fff4df!important}
+#matchStory .story-card p{color:rgba(255,248,232,.88)!important}#matchStory .story-figures b{color:#fff4df!important;}#matchStory .story-next b{color:#fff4df!important;}
 #matchStory .story-card .kicker,#matchStory .story-figures>span,#matchStory .story-next>span{color:#e0c681!important}
 #matchStory .story-actions .button{color:#fff6e5;background:rgba(255,255,255,.11);border-color:rgba(255,255,255,.32)}
 #season .season-run-row.is-win,#season .fixture-row.is-win{background:linear-gradient(90deg,#e0ede3,#fffdf8)!important}
@@ -221,7 +218,7 @@ body{color:var(--gcc-ink);background:linear-gradient(180deg,#f4efe4 0,#efe9dc 21
 #dynasty .annual-board-premium .annual-draft-pick{color:rgba(255,248,232,.84)!important}
 #dynasty .annual-board-premium .annual-draft-pick small{color:rgba(255,248,232,.76)!important}
 #dynasty .annual-board-premium .annual-draft-col-head{color:#fff4df!important}#finals .final-match{background:#fffdf8!important;}
-#finals .finals-championship .final-match{background:linear-gradient(135deg,var(--gcc-deep-2),var(--gcc-deep))!important;color:#fff7e7!important}
+#finals .finals-championship .final-match:not(.final-awaiting){background:linear-gradient(135deg,var(--gcc-deep-2),var(--gcc-deep))!important;color:#fff7e7!important}
 #finals .finals-championship .final-match .match-label{color:#e1c77f!important}
 #finals .finals-championship .final-match small{color:rgba(255,248,232,.82)!important}
 
@@ -241,8 +238,7 @@ body{color:var(--gcc-ink);background:linear-gradient(180deg,#f4efe4 0,#efe9dc 21
   #dynasty .annual-draft-side{position:static!important;top:auto!important}
   #dynasty .annual-draft-pool .player-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;max-height:none!important}}
 @media(max-width:840px){
-  #draft .player-grid,#dynasty .annual-draft-pool .player-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}#team .team-squad-column{padding-right:0!important;border-right:0!important;border-bottom:1px solid var(--work-rule-soft);padding-bottom:12px!important;}
-  #team .xi-row-player span{-webkit-line-clamp:1}}
+  #draft .player-grid,#dynasty .annual-draft-pool .player-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}#team .team-squad-column{padding-right:0!important;border-right:0!important;border-bottom:1px solid var(--work-rule-soft);padding-bottom:12px!important;}#team .xi-row-player span{-webkit-line-clamp:1;}}
 @media(max-width:560px){
   .gcc-moment-layer:not(.ceremony){padding:0 10px 12px}
   #draft .player-grid,#dynasty .annual-draft-pool .player-grid{grid-template-columns:1fr!important}
@@ -300,7 +296,7 @@ body{color:var(--gcc-ink);background:linear-gradient(180deg,#f4efe4 0,#efe9dc 21
 #draft .draft-team-rating span,#draft .draft-profile-group-title{font-size:9.5px!important}
 #draft .draft-profile-row span{font-size:10px!important}
 #draft .role-meter span{font-size:9px!important}
-#draft .player-card::after{font-size:8.5px!important}#team .team-column-note{font-size:10.5px!important;line-height:1.42!important;}#team .team-order-note{font-size:10.5px!important;line-height:1.42!important;}#team .profile-note{font-size:10.5px!important;line-height:1.42!important;}#team .xi-row-player span{font-size:10px!important;line-height:1.35!important;}#team .batting-player span{line-height:1.35!important;}#team .xi-toggle-btn{min-height:30px!important;}#team .remove-xi-btn{min-height:30px!important;}#team .replace-xi-btn{min-height:30px!important;}#team .order-btn{min-width:30px!important;height:30px!important;font-size:11px!important;}
+#draft .player-card::after{font-size:8.5px!important}#team .team-column-note{font-size:10.5px!important;line-height:1.42!important;}#team .team-order-note{font-size:10.5px!important;line-height:1.42!important;}#team .batting-player span{line-height:1.35!important;}#team .xi-toggle-btn{min-height:30px!important;}#team .remove-xi-btn{min-height:30px!important;}#team .replace-xi-btn{min-height:30px!important;}#team .order-btn{min-width:30px!important;height:30px!important;font-size:11px!important;}
 #team .team-auto-order{font-size:9.5px!important;min-height:30px!important}
 #team .profile-metric>span:first-child{font-size:10.5px!important}
 #team .profile-metric-read small,#team .profile-keeper small{font-size:9.5px!important}
@@ -320,7 +316,6 @@ body{color:var(--gcc-ink);background:linear-gradient(180deg,#f4efe4 0,#efe9dc 21
 #season .season-run-row small,#season .fixture-row small{font-size:9.5px!important;line-height:1.35!important}
 #season .club-mark{font-size:8px!important}
 #matchStory .story-figures>span,#matchStory .story-next>span{font-size:9px!important}
-#matchStory .story-figures b,#matchStory .story-next b{font-size:10px!important}
 #seasonWhy .phase-label span{font-size:10px!important}
 #seasonWhy .phase-label small{font-size:9.5px!important}
 #seasonWhy .phase-row b{font-size:10px!important}
@@ -425,5 +420,4 @@ body{color:var(--gcc-ink);background:linear-gradient(180deg,#f4efe4 0,#efe9dc 21
     padding-top:0!important;
     padding-bottom:14px!important;
   }
-  #team.team-needs-picks .team-xi-column{order:2!important;padding-top:14px!important}
-  #team .xi-row-player span{-webkit-line-clamp:2!important}}
+  #team.team-needs-picks .team-xi-column{order:2!important;padding-top:14px!important}#team .xi-row-player span{-webkit-line-clamp:2!important;}}

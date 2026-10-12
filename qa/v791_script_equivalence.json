@@ -1,0 +1,9 @@
+{
+  "candidate": "v7.9.1",
+  "sha256": "054c5cca9ce7936756a0a0e90612008d294f459179dfdf925194c2338365f0fe",
+  "comparison": "All ten runtime scripts are identical to the fully tested v7.9.0 build after normalising only the UI-version label. No gameplay or interaction logic was changed by this CSS correction.",
+  "v790_full_career_checks": 1702,
+  "v790_full_career_failures": 0,
+  "browser_layout_verified": false,
+  "cascade_test_scope": "Curated selectors known to match the actual reviewed components, not a complete selector engine or layout renderer."
+}

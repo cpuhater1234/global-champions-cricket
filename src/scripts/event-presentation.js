@@ -2,7 +2,7 @@
 /* v6.69 signature-experience choreography. Presentation layer only. */
 (() => {
   if (!window.GCC || !document.body) return;
-  document.body.dataset.uiVersion = 'v7.9.0-recovery-candidate';
+  document.body.dataset.uiVersion = 'v7.9.1-recovery-candidate';
   const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const state = window.GCC.state;
 

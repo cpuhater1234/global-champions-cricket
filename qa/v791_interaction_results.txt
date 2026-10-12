@@ -1,0 +1,22 @@
+PASS open focuses persistent close and resets content scroll
+PASS background inert and scroll locked
+PASS Tab wraps from last to first
+PASS Shift Tab wraps from first to last
+PASS outside focus brought back into dialog
+PASS Escape closes and returns focus
+PASS close restores background and overflow
+PASS pre-existing inert state retained
+PASS initial XI has eleven unique players
+PASS move changes only order, not selection
+PASS cancel swap preserves XI
+PASS swap changes one player and keeps eleven
+PASS repeat swap cannot apply twice
+PASS remove and pick restores eleven
+PASS simplified roster retains role information and action ids
+PASS score banner names both clubs
+PASS tab records compact season view
+PASS no game console errors
+PASS XI render restores the clicked control
+PASS XI render preserves page scroll
+PASS order boundary moves focus to the remaining enabled arrow
+21 interaction checks passed. DOM controls mocked; browser geometry, latency and animation remain unverified.
