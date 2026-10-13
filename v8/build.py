@@ -1,6 +1,6 @@
 """Build the fresh UI with a frozen, DOM-backed cricket engine adapter."""
 from pathlib import Path
-import re,hashlib,json,argparse
+import re,hashlib,json,argparse,base64
 ROOT=Path(__file__).resolve().parent
 BASE=ROOT.parent/'game/global_champions_cricket_v7_9_3_layout_rebuild.html'
 EXPECTED='eddec7bc6d92eb494bef26384e0618ea63d5244c63c8a1c9d84b1f5e16e98926'
@@ -30,13 +30,21 @@ def freeze():
  (ROOT/'engine/manifest.json').write_text(json.dumps({'reference_sha256':EXPECTED,'reference_version':'v7.9.3','adapter':'Original rendering runs in an inert hidden host. The fresh visible UI uses state and commands. No old stylesheets are shipped. Domain extraction remains transitional.'},indent=2)+'\n')
 def build(output):
  template=(ROOT/'ui/shell.html').read_text()
+ symbols=[]
+ for path in sorted((ROOT/'assets/tabler').glob('*.svg')):
+  svg=path.read_text();body=re.search(r'<svg\b[^>]*>(.*?)</svg>',svg,re.S)[1]
+  symbols.append(f'<symbol id="g8icon-{path.stem}" viewBox="0 0 24 24">{body}</symbol>')
+ licence=(ROOT/'assets/tabler/LICENSE.txt').read_text()
+ media='<script>window.GCC8_MEDIA='+json.dumps({'stadium':'data:image/jpeg;base64,'+base64.b64encode((ROOT/'assets/mcg-under-lights-source.jpg').read_bytes()).decode()})+';</script>'
+ assets='<!-- Tabler Icons: '+licence+' -->'+ '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="g8iconsprite">'+''.join(symbols)+'</svg>'+media
+ template=template.replace('@@ASSETS@@',assets)
  template=template.replace('@@CSS@@',(ROOT/'ui/game.css').read_text()).replace('@@BRIDGE@@',(ROOT/'engine/bridge.html').read_text())
  # Omit the old home motion, moment overlays and visual identity scripts.
  # Their DOM side effects would escape the inert host; none owns cricket state.
  binding='const {setTimeout,clearTimeout,setInterval,clearInterval,requestAnimationFrame,cancelAnimationFrame}=window.GCC8_CLOCK;const MutationObserver=class{observe(){}disconnect(){}};'
  engine='<script>window.GCC8_ENGINE_SCROLL=()=>{};'+(ROOT/'ui/clock.js').read_text()+'</script>'+ '\n'.join('<script>(()=>{'+binding+(ROOT/'engine'/f'{name}.js').read_text()+'})();</script>' for name in ['players','league','ratings','projections','cpu','foundation','dynasty'])
  ui='\n'.join('<script>'+ (ROOT/'ui'/f'{name}.js').read_text()+'</script>' for name in ['components','data','screens','dom','controller'])
- build_id=hashlib.sha256(((ROOT/'ui/game.css').read_text()+ui+engine).encode()).hexdigest()[:16]
+ build_id=hashlib.sha256(((ROOT/'ui/game.css').read_text()+ui+engine+assets).encode()).hexdigest()[:16]
  template=template.replace('id="g8app"',f'id="g8app" data-build="{build_id}"')
  result=template.replace('@@ENGINE@@',engine).replace('@@UI@@',ui)
  output.parent.mkdir(parents=True,exist_ok=True);output.write_text(result)

@@ -19,8 +19,9 @@ for name,v in snap.items():
  assert len(p.ids)==len(set(p.ids)),f'{name}: duplicate IDs'
  assert not p.inline,f'{name}: legacy inline action leaked'
  assert set(p.actions)<=commands,f'{name}: missing command {set(p.actions)-commands}'
- assert 'undefined' not in v['stage']+v['dialog'],f'{name}: undefined output'
- assert 'NaN' not in v['stage']+v['dialog'],f'{name}: non-finite rating'
+ visible=re.sub(r'data:image/[^\"\s]+','[embedded image]',v['stage']+v['dialog'])
+ assert 'undefined' not in visible,f'{name}: undefined output'
+ assert 'NaN' not in visible,f'{name}: non-finite rating'
  count+=len(p.actions)
 result={'scope':'Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.','view_states':len(snap),'action_bindings':count,'errors':[]}
 Path('qa/v8_markup_results.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))

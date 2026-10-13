@@ -101,3 +101,13 @@ Current candidate: `game/global_champions_cricket_v8_arcade_flow.html`. Build wi
 Automatic club/foundation/annual reveals use the existing single runner. Progress and pace resume from the save. The public import entry point and visible import workflow are removed. The optional-release cap was corrected to the user's maximum of two, further limited by four total controllable departures. No subagents, deployments, Actions or releases were used.
 
 The approved direction is the arcade aesthetic. The user has seen and liked the preceding candidate; that is not a rendered audit of this latest candidate. Native visual alignment, focus, scroll, performance and animation remain unverified under the existing browser restrictions. Passive layout-shift diagnostics and user-operated capture can supply the next evidence. Do not claim smoothness or perfection from VM/DOM-model checks.
+
+## Latest steering: real cricket imagery and published icons
+
+Tom asked for an actual cricket-stadium photo because the drawing did not feel enough like cricket, then requested good real cricket icons throughout. The new artifact is `game/global_champions_cricket_v8_stadium.html`.
+
+The builder embeds a public-domain photograph of a real cricket match at the MCG under floodlights, by Pattav2 via Wikimedia Commons. The source asset was downloaded and inspected; the pitch, players and floodlights are visible. It appears in the title, matchday, final and ending imagery. The caption always identifies it as the MCG rather than claiming it depicts another club's home ground. The image preserves its full aspect ratio and reserves intrinsic dimensions before decoding.
+
+Sixteen Tabler SVG icons are stored in `v8/assets/tabler` and embedded as a symbol sprite: cricket bat-and-ball, trophy, scorecard, kit, team, stadium, calendar, stats, scouting, archive and navigation. Original paths and the full MIT notice are retained. `v8/assets/credits.json` records sources, licence and transformations. No baseball or ten-pin icons are reused as cricket equipment.
+
+No gameplay changes. Build with `python v8/build.py --freeze --output game/global_champions_cricket_v8_stadium.html`. Check scope is in `qa/v8_stadium_scope.json`. Source-photo inspection is not native rendered UI review; existing browser restrictions and no-smoothness-without-evidence rule remain in force.

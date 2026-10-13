@@ -21,7 +21,7 @@
   const body=views[ui.view]();
   stage.dataset.view=ui.view;
   X.patch(stage,body);
-  X.patch(hud,`<div class="g8hudclub"><span class="g8brand">GCC</span>${s.userClub?`${badge(s.userClub)}<div><strong>${esc(s.userClub.name)}</strong><small>${s.year} · ${s.dynasty?.offseason?'Offseason':s.fullSchedule.length?'Round '+s.round:'Foundation'}</small></div>`:''}</div><nav aria-label="Game menu">${s.userClub?btn('Club archive','archive',[],'g8ghost g8small',!s.dynasty?.history?.length):''}${s.dynasty?btn('Export save','export',[],'g8ghost g8small'):''}${btn('How to play','how',[],'g8ghost g8small')}${btn('Title screen','home',[],'g8ghost g8small')}</nav>`);
+  X.patch(hud,`<div class="g8hudclub"><span class="g8brand">${X.icon('cricket')}GCC</span>${s.userClub?`${badge(s.userClub)}<div><strong>${esc(s.userClub.name)}</strong><small>${s.year} · ${s.dynasty?.offseason?'Offseason':s.fullSchedule.length?'Round '+s.round:'Foundation'}</small></div>`:''}</div><nav aria-label="Game menu">${s.userClub?btn('Club archive','archive',[],'g8ghost g8small',!s.dynasty?.history?.length):''}${s.dynasty?btn('Export save','export',[],'g8ghost g8small'):''}${btn('How to play','how',[],'g8ghost g8small')}${btn('Title screen','home',[],'g8ghost g8small')}</nav>`);
   if(changed){stage.focus({preventScroll:true});window.scrollTo({top:0,left:0,behavior:'instant'});}
   else{
    const next=(id&&document.getElementById(id))||(focusAction?[...(focusInHud?hud:stage).querySelectorAll('button[data-action]')].find(b=>b.dataset.action===focusAction&&b.dataset.args===focusArgs):null);if(next&&!next.disabled){next.focus({preventScroll:true});if(typeof next.setSelectionRange==='function'&&start!==null)try{next.setSelectionRange(start,end);}catch{}}
