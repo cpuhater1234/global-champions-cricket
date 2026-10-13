@@ -3,9 +3,25 @@ import fs from 'node:fs';
 import {loadGame} from './offline_game_host.mjs';
 const lastYear=Number(process.env.GCC8_TEST_LAST_YEAR||2026);
 const path=process.env.GCC8_TEST_BUILD||'game/global_champions_cricket_v8_fresh_game.html';
-const host=loadGame(path,101,new Map(),{strictIds:true}),{G,context,get}=host,X=context.GCC8,s=G.state;
-const markup={};let checks=0;const check=(test,msg)=>{assert.ok(test,msg);checks++;};
+const host=loadGame(path,Number(process.env.GCC8_TEST_SEED||101),new Map(),{strictIds:true}),{G,context,get}=host,X=context.GCC8,s=G.state;
+const scorebooks=[];const markup={};let checks=0;const check=(test,msg)=>{assert.ok(test,msg);checks++;};
 const doIt=(name,...args)=>{const ok=X.dispatch(name,args);check(ok,`${name}: ${get('g8feedback').textContent}`);const key=X.ui.view+(X.ui.view==='dynasty'?'-'+s.dynasty.offseason.phase:'')+(X.ui.modal?'-'+X.ui.modal:'');if(!markup[key])markup[key]={stage:get('g8stage').innerHTML,hud:get('g8hud').innerHTML,dialog:X.ui.modal?get('g8dialogContent').innerHTML:''};};
+function auditScorebook(r){
+ for(const i of r.scorecard.innings){
+  check(Number.isInteger(i.total)&&i.total>=0&&i.wickets>=0&&i.wickets<=10,'innings bounds');
+  check(i.balls>0&&i.balls<=120&&i.batting.reduce((n,b)=>n+b.balls,0)===i.balls,'legal balls reconcile');
+  check(i.bowling.reduce((n,b)=>n+b.balls,0)===i.balls&&i.bowling.every(b=>b.balls<=24),'bowling overs and four-over cap');
+  check(Object.values(i.phases).reduce((a,b)=>a+b,0)===i.total,'phase scores reconcile');
+  check(i.batting.filter(b=>!b.dnb&&b.dismissal!=='not out').length===i.wickets,'dismissals reconcile');
+  check(i.batting.every(b=>b.fours*4+b.sixes*6<=b.runs),'boundaries reconcile');
+  const e=i.extrasBreakdown;check(e.wides+e.noBalls+e.byes+e.legByes===i.extras,'extras reconcile');
+  check(i.bowling.reduce((n,b)=>n+b.runs,0)===i.total-e.byes-e.legByes,'bowler runs exclude byes');
+  check(i.bowling.reduce((n,b)=>n+b.wickets,0)<=i.wickets,'bowling wickets exclude run-outs');
+  const inn=i.club.abbr===r.home.abbr?r.homeInnings:r.awayInnings,plan=inn.bowlingPlan.slice(0,Math.ceil(i.balls/6));check(plan.length===Math.ceil(i.balls/6)&&plan.every((id,n)=>!n||id!==plan[n-1]),'bowling sequence has no consecutive overs');
+  check(i.bowling.every(b=>Number.isFinite(b.economy)&&Math.abs(b.economy-b.runs*6/b.balls)<1e-9),'economy uses legal balls');
+ }
+ for(const row of Object.values(s.table)){check(Math.abs(row.nrr-(row.ballsFor?row.runsFor*6/row.ballsFor-row.runsAgainst*6/row.ballsAgainst:0))<1e-9,'net run rate formula');}for(const row of Object.values(s.table))check(row.p===row.w+row.l&&row.pts===row.w*2&&Number.isFinite(row.nrr),'ladder arithmetic');
+}
 function manualXI(){
  // Tests choose a balanced XI, but use only the exposed manual selection commands.
  const available=X.roster().filter(p=>s.dynasty.injuries?.[p.id]?.status!=='OUT');
@@ -18,15 +34,15 @@ function finishSeason(){
   if(context.GCC8_ENGINE_READ.xiProblem()){doIt('editXI');manualXI();doIt('lodge');}
   doIt('prepare');doIt('playMatch',round);
   check(s.round===round,'one match per action');
-  const r=s.results.at(-1);check(r.scorecard.innings.every(i=>i.batting.reduce((n,b)=>n+b.runs,0)+i.extras===i.total),'scorebook reconciles');
+  const r=s.results.at(-1);scorebooks.push(r);auditScorebook(r);check(r.scorecard.innings.every(i=>i.batting.reduce((n,b)=>n+b.runs,0)+i.extras===i.total),'scorebook reconciles');
   doIt('resultScorecard');doIt('close');
  }
  doIt('matchday');doIt('postSeason');
  if(X.ui.view==='team'){manualXI();doIt('lodge');doIt('postSeason');}
  if(X.ui.view==='finals'){
-  doIt('simulateFinals');check(s.finals.stage==='semis','semi finals completed');doIt('finalScorecard','semis',0);doIt('close');doIt('advanceFinals');
+  doIt('simulateFinals');s.finals.semis.forEach(auditScorebook);check(s.finals.stage==='semis','semi finals completed');doIt('finalScorecard','semis',0);doIt('close');doIt('advanceFinals');
   if(context.GCC8_ENGINE_READ.xiProblem()){doIt('editXI','finals');manualXI();doIt('lodge');}
-  doIt('simulateFinals');doIt('review');
+  doIt('simulateFinals');auditScorebook(s.finals.gf);doIt('review');
  }
  check(X.ui.view==='review',`season review: year ${s.year}, view ${X.ui.view}, hidden ${X.screen()}, position ${s.regularSeasonPosition}, XI issue ${context.GCC8_ENGINE_READ.xiProblem()}`);check(s.dynasty.history.some(h=>h.year===s.year),'current season archived');
 }

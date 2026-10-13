@@ -15,7 +15,7 @@ window.GCC8_CLOCK = (() => {
     try{for(const [id,j] of ready){if(!jobs.has(id))continue; if(!j.repeat)jobs.delete(id);j.fn();if(j.repeat&&jobs.has(id))jobs.set(id,{...j,due:now()+j.repeat});}}
     finally{running=false;window.GCC8?.afterTick?.();arm();}
   }
-  function add(fn,delay,repeat=0){const id=++seq;jobs.set(id,{fn,due:now()+Math.max(0,Number(delay)||0),repeat});arm();return id;}
+  function add(fn,delay,repeat=0){const id=++seq;jobs.set(id,{fn,due:(paused?pausedAt:now())+Math.max(0,Number(delay)||0),repeat});arm();return id;}
   const cancel=id=>{const j=jobs.get(id);if(j)j.cancelled=true;jobs.delete(id);arm();};
   return {setTimeout:(fn,d)=>add(fn,d),setInterval:(fn,d)=>add(fn,d,Math.max(1,Number(d)||1)),clearTimeout:cancel,clearInterval:cancel,
     requestAnimationFrame:fn=>add(()=>fn(now()),16),cancelAnimationFrame:cancel,

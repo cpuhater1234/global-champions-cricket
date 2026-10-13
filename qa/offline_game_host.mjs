@@ -20,7 +20,8 @@ export function loadGame(file, seed=101, storage=new Map(), options={}) {
  // Other DOM selectors remain render stubs, as documented above.
  for(const m of html.matchAll(/<(?:section|main|div)\b([^>]*)>/g)){const id=m[1].match(/\bid=["']([^"']+)["']/),cls=m[1].match(/\bclass=["']([^"']*)["']/);if(id&&cls&&cls[1].split(/\s+/).includes('screen'))get(id[1]).className=cls[1];}
 
- const localStorage={getItem:k=>storage.get(k)??null,setItem:(k,v)=>storage.set(k,String(v)),removeItem:k=>storage.delete(k),clear:()=>storage.clear(),key:i=>[...storage.keys()][i]??null,get length(){return storage.size;}};
+ const failStorage=()=>{if(options.storageBlocked)throw new Error('Storage unavailable (test fixture)');};
+ const localStorage={getItem:k=>{failStorage();return storage.get(k)??null;},setItem:(k,v)=>{failStorage();storage.set(k,String(v));},removeItem:k=>storage.delete(k),clear:()=>storage.clear(),key:i=>[...storage.keys()][i]??null,get length(){return storage.size;}};
  const document={body:new Element('body'),documentElement:new Element('html'),getElementById:options.strictIds?(id=>elements.get(id)??null):get,createElement:()=>new Element(),createElementNS:()=>new Element(),querySelector:s=>/^#[\w-]+$/.test(s)?(options.strictIds?elements.get(s.slice(1))??null:get(s.slice(1))):s==='.screen.active'?[...elements.values()].find(e=>e.classList.contains('screen')&&e.classList.contains('active'))??null:null,querySelectorAll:()=>[],addEventListener(){}};
  class FixedDate extends Date {static now(){return seed;}}
  const queue=(fn,delay=0)=>{const id=++timerId;timers.set(id,{fn,delay});return id;};

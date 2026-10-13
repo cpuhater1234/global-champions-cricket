@@ -27,4 +27,12 @@ assert.equal(host.childNodes.length,3);assert.equal(host.childNodes[0],keptClub)
 patch('details',[el('details','stats',[el('summary',null,[text('More stats')])])]);const details=host.firstChild;details.open=true;
 patch('details2',[el('details','stats',[el('summary',null,[text('Full stats')])])]);assert.equal(host.firstChild,details);assert.ok(details.open);
 X.patch(host,'details2');assert.equal(host.firstChild,details);
-const result={scope:'DOM tree model checks for keyed identity, replacement, insertion, removal, typing and details state. Does not certify native focus, scroll, geometry or appearance.',checks:18,errors:[]};fs.writeFileSync('qa/v8_dom_patch_results.json',JSON.stringify(result,null,2)+'\n');console.log(result);
+// Exercise removal and arbitrary keyed reorderings, retaining the identity of surviving controls.
+const permutations=a=>a.length?a.flatMap((x,i)=>permutations(a.filter((_,n)=>n!==i)).map(rest=>[x,...rest])):[[]];let permutationsChecked=0;
+for(const order of permutations(['a','b','c','d'])){
+ patch('reset-'+order.join(''),['a','b','c','d'].map(k=>el('button',k,[text(k)])));
+ const originals=new Map(host.childNodes.map(n=>[n.getAttribute('data-key'),n]));
+ const wanted=order.filter((_,i)=>i!==1);wanted.splice(1,0,'new');patch('permutation-'+order.join(''),wanted.map(k=>el('button',k,[text(k+' changed')])));
+ assert.deepEqual(host.childNodes.map(n=>n.getAttribute('data-key')),wanted);for(const k of wanted.filter(k=>k!=='new'))assert.equal(host.childNodes.find(n=>n.getAttribute('data-key')===k),originals.get(k));permutationsChecked++;
+}
+const result={scope:'DOM tree model checks for keyed identity, replacement, insertion, removal, typing and details state. Does not certify native focus, scroll, geometry or appearance.',checks:18,keyedPermutations:permutationsChecked,errors:[]};fs.writeFileSync('qa/v8_dom_patch_results.json',JSON.stringify(result,null,2)+'\n');console.log(result);

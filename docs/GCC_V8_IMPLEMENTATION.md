@@ -6,8 +6,8 @@ This checkpoint supplies an entirely new visible UI and controller. It does not 
 
 | Stage | New decision and presentation |
 | --- | --- |
-| Title | Play, Continue, separate story and how-to; import/export |
-| Breakaway | Open the eight club invitations manually |
+| Title | Play, Continue, separate story and how-to |
+| Breakaway | Automatic club invitations with pause, speed and reveal-all |
 | Takeover | Select a club and consider its home conditions |
 | Signing | Five-day signing wire, pause/speed/skip, committed and declined names |
 | Draft draw | Snake positions and reverse-round consequences |
@@ -21,9 +21,9 @@ This checkpoint supplies an entirely new visible UI and controller. It does not 
 | Offseason | Contracts, confirmed releases, trade proposals and club responses |
 | Annual draft | Same scouting/decision controls, fresh lottery, roster vacancies and supplementary picks |
 | Archive | Season books using club-attributed player statistics |
-| 2026 | Tenure closes with honours, archive and export |
+| 2026 | Tenure closes with honours and archive |
 
-Forest, cream and restrained gold set the visual roles. Club colours belong to club marks. Player names have their own dark foreground. The visible UI does not ship the v7 stylesheet or its card/screen markup. These are source-level design choices; screenshots are needed to assess the result.
+Navy, lime, cyan and orange set the arcade visual roles. Club colours belong to club marks. Player names have their own dark foreground. The visible UI does not ship the v7 stylesheet or its card/screen markup. These are source-level design choices; screenshots are needed to assess the result.
 
 ## Architecture and limitations
 
@@ -33,9 +33,9 @@ The builder excludes old home motion, global moment overlays and visual-identity
 
 UI commands have stage guards, membership/availability checks, duplicate match protection and explicit decisions for drafting, releases and match preparation. Injuries after Round 14 route the user through XI selection before entering finals. Ratings derive from the manual batting order. Fielding opens a real read. UI forms pass trade decisions into the domain's hidden form temporarily; no old trade markup is copied into the visible dialog.
 
-V8 uses `gcc_dynasty_v8` and `gcc_dynasty_meta_v8`. Continuing a v7.2 save reads it and writes the migrated state to v8, without overwriting the v7 save. Export can copy the persisted dynasty from the title screen. Import uses a native file picker and basic schema checks; file-picker behavior remains untested in a browser. The model's save schema version remains its existing domain version.
+V8 uses `gcc_dynasty_v8` and `gcc_dynasty_meta_v8`. Continuing a v7.2 save reads it and writes the migrated state to v8, without overwriting the v7 save. There are no product import/export controls or download commands. Save restoration checks structure, year, player identities and roster uniqueness before changing the active career. Browser storage failures leave the current session playable and show a save warning. The model's save schema version remains its existing domain version.
 
-Outstanding: rendered desktop/mobile review across all stages, browser playtesting, native import/export, focus/scroll checks, performance measurement, deeper domain extraction, and iteration on game feel from actual pixels and play. This is an implementation candidate, not a polished or visually approved release.
+Outstanding: rendered desktop/mobile review across all stages, browser playtesting, focus/scroll checks, performance measurement, deeper domain extraction, and iteration on game feel from actual pixels and play. This is an implementation candidate, not a polished or visually approved release.
 
 ## Reproduce
 

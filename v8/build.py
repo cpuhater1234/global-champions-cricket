@@ -16,7 +16,19 @@ def freeze():
    assert marker in script
    script=script.replace(marker,"  window.GCC8_FOUNDATION_READ={roleTags:playerRoleTags,playerNote,groundStory,groundBand,projectedDraftProfile,draftSnapshot,effectiveProfile,teamAverages:userTeamAverages,leagueAverages:leagueInningsAverages,standout:matchStandout,pauseDraft:()=>{clearTimeout(draftAutoTimer);draftAutoTimer=null}};\n"+marker)
   if name=='dynasty':
-   script=script.replace(',importSave,clearSaveAndRestart',',clearSaveAndRestart')
+   script=script.replace(',exportSave,importSave,clearSaveAndRestart',',clearSaveAndRestart')
+   # Product saves stay in browser storage; no import/export controls or download commands.
+   script=re.sub(r'  function (?:exportSave|importSave)\(\).*?\n','',script)
+   script=script.replace('Save failed on this device. Export your dynasty before closing.','This browser could not save your progress. Keep this game open to continue playing.')
+   script=script.replace("return base.toast('No dynasty save found')","base.toast('No dynasty save found');return false")
+   script=script.replace("else base.toast(`Dynasty restored · ${state.year}`)}catch(e)","else base.toast(`Dynasty restored · ${state.year}`);return true}catch(e)")
+   script=script.replace("base.toast('Could not restore this save')}}","base.toast('Could not restore this save');return false}}")
+   # Reject malformed storage before it can mutate the current career or replace its save.
+   script=script.replace("const save=migrateLoadedSave(JSON.parse(stored.raw));if(!validSave(save))throw new Error('Invalid GCC save');", "let save=JSON.parse(stored.raw);if(!validSave(save))throw new Error('Invalid GCC save');save=migrateLoadedSave(save);")
+   old="  function validSave(save){return !!(save&&typeof save==='object'&&save.state&&typeof save.state==='object')}"
+   new="  function validSave(save){const s=save?.state;if(!s||!Number.isInteger(s.year)||s.year<2008||s.year>END_YEAR||!Array.isArray(s.pool)||!s.pool.length||!Array.isArray(s.league)||s.league.length!==8||!s.teams||typeof s.teams!=='object'||!Array.isArray(s.xi)||!Array.isArray(s.battingOrder)||!Array.isArray(s.fullSchedule)||!Array.isArray(s.results)||!Number.isInteger(s.round)||s.round<0||s.round>14)return false;const ids=new Set(s.pool.map(p=>p?.id));if(ids.size!==s.pool.length||s.pool.some(p=>!Number.isInteger(p?.id)))return false;const roster=s.league.flatMap(c=>s.teams[c.abbr]||[]);return new Set(roster).size===roster.length&&roster.every(id=>ids.has(id))&&s.xi.every(id=>ids.has(id))&&(!s.userClub||s.league.some(c=>c.abbr===s.userClub.abbr));}"
+   assert old in script
+   script=script.replace(old,new)
    script=script.replace('return Math.max(0,4-userRetirementCount())','return Math.min(2,Math.max(0,4-userRetirementCount()))')
    script=script.replace("SAVE_KEY='gcc_dynasty_v7_2'","SAVE_KEY='gcc_dynasty_v8'").replace("META_KEY='gcc_dynasty_meta_v7_2'","META_KEY='gcc_dynasty_meta_v8'").replace("LEGACY_SAVE_KEY='gcc_dynasty_v7_0'","LEGACY_SAVE_KEY='gcc_dynasty_v7_2'")
    marker='  window.Dynasty={beginOffseason'
@@ -25,6 +37,7 @@ def freeze():
   (ROOT/'engine'/f'{name}.js').write_text(script)
  body=re.search(r'<body[^>]*>(.*?)</body>',text,re.S)[1]
  body=re.sub(r'<script\b[^>]*>[\s\S]*?</script>','',body,flags=re.I)
+ body=re.sub(r'<button\b[^>]*onclick="Dynasty\.(?:exportSave|importSave)\(\)"[^>]*>.*?</button>','',body,flags=re.S)
  body=re.sub(r'src="data:image/[^\"]+"','',body)
  (ROOT/'engine/bridge.html').write_text(body)
  (ROOT/'engine/manifest.json').write_text(json.dumps({'reference_sha256':EXPECTED,'reference_version':'v7.9.3','adapter':'Original rendering runs in an inert hidden host. The fresh visible UI uses state and commands. No old stylesheets are shipped. Domain extraction remains transitional.'},indent=2)+'\n')

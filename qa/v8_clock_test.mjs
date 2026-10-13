@@ -6,4 +6,5 @@ c.setTimeout(()=>fired++,100);c.setTimeout(()=>fired++,200);assert.equal(native.
 c.pause();advance(1000);assert.equal(fired,1);assert.equal(native.size,0);c.resume();advance(99);assert.equal(fired,1);advance(1);assert.equal(fired,2);
 repeat=c.setInterval(()=>{fired++;c.clearInterval(repeat);},10);advance(10);advance(1000);assert.equal(fired,3);assert.equal(c.pending,0);
 const cancelled=c.setTimeout(()=>{throw Error('cancelled callback ran');},10);c.clearTimeout(cancelled);advance(20);
+c.pause();advance(400);c.setTimeout(()=>fired++,100);advance(600);c.resume();advance(99);assert.equal(fired,3);advance(1);assert.equal(fired,4);assert.equal(c.pending,0);
 console.log('Clock: one native runner, pause/resume, cancellation and self-cancelling interval passed.');

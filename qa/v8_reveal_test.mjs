@@ -1,5 +1,5 @@
 import fs from 'node:fs';import assert from 'node:assert/strict';import {loadGame} from './offline_game_host.mjs';
-const file='game/global_champions_cricket_v8_arcade_flow.html',h=loadGame(file,101),X=h.context.GCC8,G=h.G,s=G.state;
+const file=process.env.GCC8_TEST_BUILD||'game/global_champions_cricket_v8_arcade_flow.html',h=loadGame(file,101),X=h.context.GCC8,G=h.G,s=G.state;
 let checks=0;const call=(a,...args)=>{assert.ok(X.dispatch(a,args),`${a}: ${h.get('g8feedback').textContent}`);checks++;};
 call('play');call('world');const seed=s.seed;assert.equal(X.ui.reveal.count,0);h.advance(1500);assert.equal(X.ui.reveal.count,1);checks++;
 call('revealRun');h.advance(3000);assert.equal(X.ui.reveal.count,1);checks++;call('revealSpeed');call('revealRun');h.advance(750);assert.equal(X.ui.reveal.count,2);checks++;

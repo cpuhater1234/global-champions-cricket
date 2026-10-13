@@ -2,7 +2,7 @@
 (() => {
  const X=window.GCC8,{G,R,read,esc,btn,roster}=X,F=window.GCC8_FOUNDATION_READ,s=G.state;
  let cachedRoster='',cachedProfile=null;
- X.squadProfile=()=>{const ps=roster(),key=ps.map(p=>`${p.id}:${p.overall}:${p.form}`).join('|');if(key!==cachedRoster){cachedRoster=key;cachedProfile=F.projectedDraftProfile(ps);}return cachedProfile||R.profile([]);};
+ X.squadProfile=()=>{const ps=roster(),key=JSON.stringify(ps);if(key!==cachedRoster){cachedRoster=key;cachedProfile=F.projectedDraftProfile(ps);}return cachedProfile||R.profile([]);};
  const stat=(l,v)=>`<div class="g8statrow"><span>${esc(l)}</span><b>${esc(v)}</b></div>`;
  X.playerRead=p=>{
   const scout=read.scout(p.id),tags=F.roleTags(p).filter(t=>!t.includes('LOWER MIDDLE')),style=R.bowlingStyle(p),work=R.bowlingWorkload(p),conf=String(p.ratingConfidenceBand||'MEDIUM').toLowerCase();

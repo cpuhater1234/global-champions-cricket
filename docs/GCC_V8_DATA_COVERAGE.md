@@ -10,7 +10,7 @@ Live updates patch existing DOM nodes by key rather than replacing the stage. Pl
 
 A passive browser PerformanceObserver records layout-shift entries when supported. `qa/v8_capture.js` includes those entries and bounds in a user-operated download. No native layout shifts or screenshots have been measured here. CSS reservations and DOM tests are not a visual sign-off.
 
-The visible import button, controller command and public Dynasty import entry point are removed. Play/Continue use the browser's existing save. Export remains available as a backup.
+The visible import button, controller command and public Dynasty import entry point are removed. Play/Continue use the browser's existing save. The export controls, public entry point, download function and hidden export/import buttons have also been removed. Autosave and Continue are the save flow.
 
 ## Cricket data translated
 

@@ -1,0 +1,58 @@
+{
+  "artifact": "global_champions_cricket_v8_reviewed.html",
+  "sha256": "61c4da1ff92f001087364ce868f5c6318b82628d03ee4cc66fdb41cd64a76bcd",
+  "base_reference_sha256": "eddec7bc6d92eb494bef26384e0618ea63d5244c63c8a1c9d84b1f5e16e98926",
+  "verification": {
+    "v8_game_results.json": {
+      "scope": "Real cricket engine + new UI dispatch in a VM DOM stub. No browser, visual, geometry, focus or latency certification.",
+      "checks": 14729,
+      "seasons": 19,
+      "regularSeasonMatches": 266,
+      "errors": []
+    },
+    "v8_smoke_results.json": {
+      "scope": "Real cricket engine + new UI dispatch in a VM DOM stub. No browser, visual, geometry, focus or latency certification.",
+      "checks": 1683,
+      "seasons": 2,
+      "regularSeasonMatches": 28,
+      "errors": []
+    },
+    "v8_audit_results.json": {
+      "scope": "VM adversarial saves, storage failures, resume context and stale-command checks; no browser rendering or server exists in this standalone build.",
+      "checks": 58,
+      "expectedCorruptSaveErrors": 4,
+      "expectedStorageErrors": 9
+    },
+    "v8_reveal_results.json": {
+      "scope": "VM clock and command tests; proves reveal sequencing/save guards and unchanged draw order, not rendered smoothness.",
+      "checks": 43,
+      "errors": []
+    },
+    "v8_interaction_results.json": {
+      "scope": "VM dispatch + real trade, supplementary pick and replacement rules. Injury availability fixture is injected, not naturally simulated; no browser validation.",
+      "checks": 32,
+      "tradeAccepted": true,
+      "pickIncluded": "R1",
+      "errors": []
+    },
+    "v8_dom_patch_results.json": {
+      "scope": "DOM tree model checks for keyed identity, replacement, insertion, removal, typing and details state. Does not certify native focus, scroll, geometry or appearance.",
+      "checks": 18,
+      "keyedPermutations": 24,
+      "errors": []
+    },
+    "v8_markup_results.json": {
+      "scope": "Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.",
+      "view_states": 27,
+      "action_bindings": 535,
+      "errors": []
+    }
+  },
+  "syntax_files_checked": 16,
+  "reproducible_build_identical": true,
+  "clock_checks": "Single native runner, pause/resume, cancellation, self-cancelling interval and timers added during a pause passed.",
+  "backend": "Standalone browser-domain engine and localStorage; no server API exists in this build.",
+  "native_visual_alignment": "Not verified; no native game screenshots rendered or reviewed.",
+  "native_interaction_and_performance": "Not verified; VM dispatch and DOM-tree identity are not native focus, scroll, browser persistence, frame timing or smoothness evidence.",
+  "deployment": "None"
+}
