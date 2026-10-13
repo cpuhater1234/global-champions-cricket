@@ -91,3 +91,13 @@ Tom said he does not mind the new foundation and explicitly asked to go further 
 The latest downloadable artifact is `game/global_champions_cricket_v8_arcade.html`. Build it with `python v8/build.py --output game/global_champions_cricket_v8_arcade.html`. The earlier foundation artifact remains a comparison checkpoint. The cricket model, controller, clock and save rules were not changed in the arcade pass. Spectator finals results now have neutral score labels rather than declaring a user loss.
 
 Source/syntax and VM markup/binding checks passed for the arcade candidate, recorded in `qa/v8_arcade_scope.json` and `qa/v8_arcade_markup_results.json`. There is still no rendered v8 evidence. Do not say the arcade visuals or animations have been visually approved or verified smooth. The permitted user-operated screenshot path remains the next step.
+
+## Latest steering: longer flow, stable live layout and complete cricket reads
+
+Tom liked the arcade candidate. He asked for more length/detail, alignment that does not bounce while entries arrive, automatic order reveals with speed controls, no save import, hard checking and translation of the advanced cricket data.
+
+Current candidate: `game/global_champions_cricket_v8_arcade_flow.html`. Build with `python v8/build.py --freeze --output game/global_champions_cricket_v8_arcade_flow.html`. New UI modules `data.js` and `dom.js` provide cricket reads and keyed live updates. Read `docs/GCC_V8_DATA_COVERAGE.md` and `qa/v8_flow_scope.json` for coverage, exact test digests and outstanding rendered review.
+
+Automatic club/foundation/annual reveals use the existing single runner. Progress and pace resume from the save. The public import entry point and visible import workflow are removed. The optional-release cap was corrected to the user's maximum of two, further limited by four total controllable departures. No subagents, deployments, Actions or releases were used.
+
+The approved direction is the arcade aesthetic. The user has seen and liked the preceding candidate; that is not a rendered audit of this latest candidate. Native visual alignment, focus, scroll, performance and animation remain unverified under the existing browser restrictions. Passive layout-shift diagnostics and user-operated capture can supply the next evidence. Do not claim smoothness or perfection from VM/DOM-model checks.

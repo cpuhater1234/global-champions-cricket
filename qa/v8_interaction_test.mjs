@@ -1,10 +1,10 @@
 import assert from 'node:assert/strict';import fs from 'node:fs';import {loadGame} from './offline_game_host.mjs';
-const saved=fs.readFileSync('qa/v8_smoke_save.json','utf8'),h=loadGame('game/global_champions_cricket_v8_fresh_game.html',303,new Map([['gcc_dynasty_v8',saved]]),{strictIds:true}),X=h.context.GCC8,G=h.G,s=G.state,read=h.context.GCC8_ENGINE_READ;
+const saved=fs.readFileSync('qa/v8_smoke_save.json','utf8'),h=loadGame(process.env.GCC8_TEST_BUILD||'game/global_champions_cricket_v8_fresh_game.html',303,new Map([['gcc_dynasty_v8',saved]]),{strictIds:true}),X=h.context.GCC8,G=h.G,s=G.state,read=h.context.GCC8_ENGINE_READ;
 let checks=0;const call=(a,...args)=>{assert.ok(X.dispatch(a,args),a+': '+h.get('g8feedback').textContent);checks++;};
 call('continue');call('offseason');
 const used=new Set(Object.values(s.teams).flat());assert.ok(read.freeAgents().every(id=>!used.has(id)));checks++;
 call('trade',false);assert.equal(X.ui.modal,'trade');call('inspect',X.ui.tradeTarget);call('close');assert.equal(X.ui.modal,'trade');checks++;call('close');
-call('annualDraw');call('trade',false);
+call('annualDraw');call('revealAll');call('trade',false);
 const offer=X.roster().filter(p=>p.role!=='WK-BAT').sort((a,b)=>b.overall-a.overall)[0];
 const wanted=s.league.filter(c=>c.abbr!==s.userClub.abbr).flatMap(c=>s.teams[c.abbr].map(G.byId).filter(p=>p.role===offer.role).map(p=>({p,c}))).sort((a,b)=>a.p.overall-b.p.overall)[0];
 X.ui.tradeOffer=offer.id;X.ui.tradeTarget=wanted.p.id;X.ui.tradeClub=wanted.c.abbr;

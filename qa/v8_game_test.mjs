@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {loadGame} from './offline_game_host.mjs';
 const lastYear=Number(process.env.GCC8_TEST_LAST_YEAR||2026);
-const path='game/global_champions_cricket_v8_fresh_game.html';
+const path=process.env.GCC8_TEST_BUILD||'game/global_champions_cricket_v8_fresh_game.html';
 const host=loadGame(path,101,new Map(),{strictIds:true}),{G,context,get}=host,X=context.GCC8,s=G.state;
 const markup={};let checks=0;const check=(test,msg)=>{assert.ok(test,msg);checks++;};
 const doIt=(name,...args)=>{const ok=X.dispatch(name,args);check(ok,`${name}: ${get('g8feedback').textContent}`);const key=X.ui.view+(X.ui.view==='dynasty'?'-'+s.dynasty.offseason.phase:'')+(X.ui.modal?'-'+X.ui.modal:'');if(!markup[key])markup[key]={stage:get('g8stage').innerHTML,hud:get('g8hud').innerHTML,dialog:X.ui.modal?get('g8dialogContent').innerHTML:''};};
@@ -33,7 +33,7 @@ function finishSeason(){
 check(X.ui.view==='home','starts at title');check(!X.dispatch('playMatch',[1]),'guarded out of stage');
 doIt('play');doIt('world');for(let i=0;i<8;i++)doIt('revealClub');doIt('clubs');doIt('club',0);doIt('confirmClub');
 check(!X.dispatch('draftDraw'),'signing cannot be bypassed with unfinished state');
-doIt('signingRun');check(s.recruit.running,'signing clock begins');for(let i=0;i<12;i++)host.advance(250);check(s.recruit.feedSeq>1,'real signing callbacks progress');doIt('signingRun');check(!s.recruit.running,'pause signing');doIt('signingSkip');doIt('draftDraw');doIt('beginDraft');
+doIt('signingRun');check(s.recruit.running,'signing clock begins');for(let i=0;i<12;i++)host.advance(250);check(s.recruit.feedSeq>1,'real signing callbacks progress');doIt('signingRun');check(!s.recruit.running,'pause signing');doIt('signingSkip');doIt('draftDraw');doIt('revealAll');doIt('beginDraft');
 for(let guard=0;s.pickIndex<120&&guard<40;guard++){
  doIt('skipPick');if(s.pickIndex>=120)break;
  const rs=X.roster(),free=X.pool();let p=free.find(p=>p.role==='WK-BAT'&&!rs.some(p=>p.role==='WK-BAT'))||free.find(p=>p.maxOvers>=4&&rs.filter(p=>p.maxOvers>=4).length<6)||free[0];
@@ -50,7 +50,7 @@ for(let year=2009;year<=lastYear;year++){
  doIt('offseason');check(s.year===year,'annual year advances');
  const budget=context.GCC8_ENGINE_READ.cutBudget(),eligible=context.GCC8_ENGINE_READ.contractCandidates();
  if(year===2009&&budget.limit&&eligible.length){doIt('release',eligible[0]);doIt('confirmRelease',eligible[0]);}
- doIt('cpuMarket');doIt('annualDraw');doIt('annualDraft');
+ doIt('cpuMarket');doIt('annualDraw');doIt('revealAll');doIt('annualDraft');
  for(let guard=0;s.dynasty.offseason.phase==='draft'&&guard<30;guard++){
   const free=X.pool(true),rs=X.roster();const p=free.find(p=>p.role==='WK-BAT'&&!rs.some(p=>p.role==='WK-BAT'))||free.find(p=>p.maxOvers>=4&&rs.filter(p=>p.maxOvers>=4).length<6)||free[0];check(!!p,'annual player pool');doIt('inspect',p.id);doIt('draftPlayer',p.id);
  }
