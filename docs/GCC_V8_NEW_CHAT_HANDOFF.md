@@ -83,3 +83,11 @@ Read `docs/GCC_V8_IMPLEMENTATION.md`, `qa/v8_validation_scope.json` and `qa/V8_V
 No v8 screenshots have been rendered or seen. Browser restrictions remain unchanged. The next decisive step is permitted user-operated rendered review and actual play feedback, followed by meaningful design/interaction iteration. Do not claim perfected visuals, smoothness, native focus or performance. Do not fall back to v7 CSS patching. Preserve the new decision-led screens and move the domain toward a headless adapter when appropriate.
 
 The assembled file is `game/global_champions_cricket_v8_fresh_game.html`, reproducible from the committed source. It is a candidate foundation, not a polished release. No deployment, Actions run or release was made. No subagents were used.
+
+## Latest steering: arcade design candidate
+
+Tom said he does not mind the new foundation and explicitly asked to go further with a crazier, more arcade-like design and colours. That supersedes the restrained visual treatment in the initial v8 foundation. The visible stylesheet now uses navy, lime, cyan and orange; bold sports typography; chunky controls; club and role accents; a striped, floodlit cricket arena; score panels and short decision-triggered motion. Names retain a fixed dark foreground on pale player cards and signing rows. Reduced motion remains supported.
+
+The latest downloadable artifact is `game/global_champions_cricket_v8_arcade.html`. Build it with `python v8/build.py --output game/global_champions_cricket_v8_arcade.html`. The earlier foundation artifact remains a comparison checkpoint. The cricket model, controller, clock and save rules were not changed in the arcade pass. Spectator finals results now have neutral score labels rather than declaring a user loss.
+
+Source/syntax and VM markup/binding checks passed for the arcade candidate, recorded in `qa/v8_arcade_scope.json` and `qa/v8_arcade_markup_results.json`. There is still no rendered v8 evidence. Do not say the arcade visuals or animations have been visually approved or verified smooth. The permitted user-operated screenshot path remains the next step.

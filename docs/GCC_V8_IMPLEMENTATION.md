@@ -52,3 +52,9 @@ node qa/v8_interaction_test.mjs
 The base SHA256 must be `eddec7bc6d92eb494bef26384e0618ea63d5244c63c8a1c9d84b1f5e16e98926`. `v8/build.py --freeze` creates its generated engine directory. The standalone build is `game/global_champions_cricket_v8_fresh_game.html`. See `qa/V8_VISUAL_REVIEW.md` for the permitted user-operated capture path.
 
 Test scope is explicit in each result JSON. VM tests execute the new controller and real model using a DOM stub. Parsed strings establish action bindings and missing-data checks; they do not establish native events, valid geometry or readable pixels. The trade/replacement fixture uses a deliberately injected OUT injury to exercise that boundary.
+
+## Arcade presentation pass
+
+The latest user direction is a bolder arcade sports treatment. The stylesheet has been rewritten around navy, lime, cyan, orange and pale player surfaces. The shared ground artwork has turf stripes, stands, boundary rope, correct two-bail stumps and floodlights. Club marks and card accents carry club colours, while player role accents distinguish the pool. Title type and scores use a local sports-display font stack without external font dependencies. Controls have pressed/hover states and short decision-triggered motion, disabled by reduced-motion preferences.
+
+Build `game/global_champions_cricket_v8_arcade.html` with the explicit `--output` argument. The controller, clock and cricket model remain the foundation checkpoint's version. This pass changes presentation and result labels only. The arcade-specific scope JSON is authoritative for its checks; prior career tests do not establish anything about its rendered appearance. Screenshots and native play remain outstanding.
