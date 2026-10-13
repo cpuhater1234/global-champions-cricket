@@ -72,3 +72,14 @@ Recovery tests executed real game scripts using a render-only VM host, not a bro
 Earlier cloud-browser localhost/file and Opera local screenshot/read actions were explicitly blocked. Do not bypass those restrictions using another browser, CDP, hosting or execution path. User-operated screen capture and uploaded screenshots/JSONs are the permitted review path established here. Do not repeat connector setup loops or pretend static/VM checks are native browser QA.
 
 Do not deploy, use GitHub Actions, create a release or send messages to other people. No subagents unless explicitly authorized by user or applicable instructions. Save repository-backed work through GitHub and verify branch head. Use expected-head leases. Keep commentary useful and frequent; Tom is frustrated by lengthy vague status and test counts being substituted for a real answer.
+
+
+## Continuation checkpoint: new v8 foundation implemented
+
+The scaffold status above describes the original `308a60e` checkpoint. The current branch now includes new `game.css`, `screens.js`, `controller.js` and `clock.js`. All visible career stages have new views and commands. The cricket engine remains a transitional inert-host adapter. The old home-motion, overlay and identity scripts are omitted; old CSS is not shipped. The builder creates its engine directory on a fresh checkout and produces a standalone HTML.
+
+Read `docs/GCC_V8_IMPLEMENTATION.md`, `qa/v8_validation_scope.json` and `qa/V8_VISUAL_REVIEW.md` before continuing. Full VM career testing completed 2008–2026, 266 regular-season matches and 3,158 assertions on the preceding candidate. The subsequent downloadable candidate passed a two-season smoke/reload and targeted trade, supplementary-pick, replacement and restart tests. Exact tested digests and limits are recorded in the scope JSON. Do not conflate that with native-browser or visual approval.
+
+No v8 screenshots have been rendered or seen. Browser restrictions remain unchanged. The next decisive step is permitted user-operated rendered review and actual play feedback, followed by meaningful design/interaction iteration. Do not claim perfected visuals, smoothness, native focus or performance. Do not fall back to v7 CSS patching. Preserve the new decision-led screens and move the domain toward a headless adapter when appropriate.
+
+The assembled file is `game/global_champions_cricket_v8_fresh_game.html`, reproducible from the committed source. It is a candidate foundation, not a polished release. No deployment, Actions run or release was made. No subagents were used.

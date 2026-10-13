@@ -5,14 +5,16 @@ ROOT=Path(__file__).resolve().parent
 BASE=ROOT.parent/'game/global_champions_cricket_v7_9_3_layout_rebuild.html'
 EXPECTED='eddec7bc6d92eb494bef26384e0618ea63d5244c63c8a1c9d84b1f5e16e98926'
 def freeze():
+ (ROOT/'engine').mkdir(parents=True,exist_ok=True)
  b=BASE.read_bytes();assert hashlib.sha256(b).hexdigest()==EXPECTED
  text=b.decode();scripts=re.findall(r'<script(?:\s[^>]*)?>(.*?)</script>',text,re.S);assert len(scripts)==10
  names=['players','league','ratings','projections','cpu','foundation','home-motion','events','dynasty','identity']
  for name,script in zip(names,scripts):
   if name=='dynasty':
+   script=script.replace("SAVE_KEY='gcc_dynasty_v7_2'","SAVE_KEY='gcc_dynasty_v8'").replace("META_KEY='gcc_dynasty_meta_v7_2'","META_KEY='gcc_dynasty_meta_v8'").replace("LEGACY_SAVE_KEY='gcc_dynasty_v7_0'","LEGACY_SAVE_KEY='gcc_dynasty_v7_2'")
    marker='  window.Dynasty={beginOffseason'
    assert marker in script
-   script=script.replace(marker,"  window.GCC8_ENGINE_READ={contractCandidates:()=>contractDecisionPlayers().map(p=>p.id),pickSlots:()=>slotsWithSupplement().map(x=>({...x})),cutBudget:()=>({limit:voluntaryCutLimit(),retired:userRetirementCount()})};\n"+marker)
+   script=script.replace(marker,"  window.GCC8_ENGINE_READ={contractCandidates:()=>contractDecisionPlayers().map(p=>p.id),pickSlots:()=>slotsWithSupplement().map(x=>({...x})),cutBudget:()=>({limit:voluntaryCutLimit(),retired:userRetirementCount()}),freeAgents:()=>freeAgentPool().map(p=>p.id),replacements:id=>replacementPoolFor(pById(id)).map(p=>p.id),save:()=>autoSave(),xiProblem:()=>userXIProblem(),fresh:()=>{stopFoundationWatch();return startFreshWorld()},archive:()=>archiveSeason(),ownsPick:r=>userOwnsPick(r)};\n"+marker)
   (ROOT/'engine'/f'{name}.js').write_text(script)
  body=re.search(r'<body[^>]*>(.*?)</body>',text,re.S)[1]
  body=re.sub(r'<script\b[^>]*>[\s\S]*?</script>','',body,flags=re.I)
@@ -22,8 +24,13 @@ def freeze():
 def build(output):
  template=(ROOT/'ui/shell.html').read_text()
  template=template.replace('@@CSS@@',(ROOT/'ui/game.css').read_text()).replace('@@BRIDGE@@',(ROOT/'engine/bridge.html').read_text())
- engine='\n'.join('<script>'+ (ROOT/'engine'/f'{name}.js').read_text()+'</script>' for name in ['players','league','ratings','projections','cpu','foundation','home-motion','events','dynasty','identity'])
+ # Omit the old home motion, moment overlays and visual identity scripts.
+ # Their DOM side effects would escape the inert host; none owns cricket state.
+ binding='const {setTimeout,clearTimeout,setInterval,clearInterval,requestAnimationFrame,cancelAnimationFrame}=window.GCC8_CLOCK;const MutationObserver=class{observe(){}disconnect(){}};'
+ engine='<script>'+(ROOT/'ui/clock.js').read_text()+'</script>'+ '\n'.join('<script>(()=>{'+binding+(ROOT/'engine'/f'{name}.js').read_text()+'})();</script>' for name in ['players','league','ratings','projections','cpu','foundation','dynasty'])
  ui='\n'.join('<script>'+ (ROOT/'ui'/f'{name}.js').read_text()+'</script>' for name in ['components','screens','controller'])
+ build_id=hashlib.sha256(((ROOT/'ui/game.css').read_text()+ui+engine).encode()).hexdigest()[:16]
+ template=template.replace('id="g8app"',f'id="g8app" data-build="{build_id}"')
  result=template.replace('@@ENGINE@@',engine).replace('@@UI@@',ui)
  output.parent.mkdir(parents=True,exist_ok=True);output.write_text(result)
  print(output,len(result.encode()),hashlib.sha256(result.encode()).hexdigest())
