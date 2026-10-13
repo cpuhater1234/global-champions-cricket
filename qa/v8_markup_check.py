@@ -1,5 +1,5 @@
 """Checks rendered strings, not pixels or native browser behavior."""
-import json,re
+import json,re,sys
 from html.parser import HTMLParser
 from pathlib import Path
 class View(HTMLParser):
@@ -11,7 +11,7 @@ class View(HTMLParser):
    self.actions.append(a['data-action']);assert isinstance(json.loads(a.get('data-args','[]')),list)
    assert t=='button',f'Action {a["data-action"]} is not a button'
   self.inline.extend(k for k in a if k.startswith('on'))
-snap=json.loads(Path('qa/v8_markup_snapshot.json').read_text())
+snap=json.loads(Path(sys.argv[1] if len(sys.argv)>1 else 'qa/v8_markup_snapshot.json').read_text())
 commands=set(re.findall(r"bind\('([^']+)'",Path('v8/ui/controller.js').read_text()))
 count=0
 for name,v in snap.items():
@@ -24,4 +24,4 @@ for name,v in snap.items():
  assert 'NaN' not in visible,f'{name}: non-finite rating'
  count+=len(p.actions)
 result={'scope':'Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.','view_states':len(snap),'action_bindings':count,'errors':[]}
-Path('qa/v8_markup_results.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))
+Path(sys.argv[2] if len(sys.argv)>2 else 'qa/v8_markup_results.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))

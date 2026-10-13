@@ -34,6 +34,7 @@
  function signature(){return JSON.stringify([X.screen(),s.year,s.recruit?.day,s.recruit?.running,s.recruit?.complete,s.recruit?.feedSeq,s.pickIndex,s.dynasty?.offseason?.phase,s.dynasty?.offseason?.pickCursor,s.round,s.finals?.stage,s.dynasty?.transactions?.[0]?.seq]);}
  X.afterTick=()=>{
   if(['home','story','leagueDraw','draftDraw','archive','result'].includes(ui.view)||ui.modal)return;
+  if(ui.view==='season'&&X.screen()==='team'&&read.xiProblem()){ui.teamReturn='season';setView('team');save();return;}
   const key=signature();if(key===lastSignature)return;
   if(ui.view==='recruit'){
    const el=document.getElementById('g8live'),wire=document.getElementById('g8wire'),scroll=wire?.scrollTop||0,active=document.activeElement;

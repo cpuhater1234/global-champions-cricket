@@ -23,10 +23,13 @@ def freeze():
    script=script.replace("return base.toast('No dynasty save found')","base.toast('No dynasty save found');return false")
    script=script.replace("else base.toast(`Dynasty restored · ${state.year}`)}catch(e)","else base.toast(`Dynasty restored · ${state.year}`);return true}catch(e)")
    script=script.replace("base.toast('Could not restore this save')}}","base.toast('Could not restore this save');return false}}")
+   # Restore failures are transactional, including unexpected rendering errors.
+   script=script.replace("function resumeSave(){const status", "function resumeSave(){const previous=JSON.stringify(state),previousScreen=currentScreen;const status")
+   script=script.replace("catch(e){console.error(e);if(status)status.textContent='This save could not be opened.'", "catch(e){for(const k of Object.keys(state))delete state[k];restoreObject(state,JSON.parse(previous));currentScreen=previousScreen;base.go(previousScreen);console.error(e);if(status)status.textContent='This save could not be opened.'")
    # Reject malformed storage before it can mutate the current career or replace its save.
    script=script.replace("const save=migrateLoadedSave(JSON.parse(stored.raw));if(!validSave(save))throw new Error('Invalid GCC save');", "let save=JSON.parse(stored.raw);if(!validSave(save))throw new Error('Invalid GCC save');save=migrateLoadedSave(save);")
    old="  function validSave(save){return !!(save&&typeof save==='object'&&save.state&&typeof save.state==='object')}"
-   new="  function validSave(save){const s=save?.state;if(!s||!Number.isInteger(s.year)||s.year<2008||s.year>END_YEAR||!Array.isArray(s.pool)||!s.pool.length||!Array.isArray(s.league)||s.league.length!==8||!s.teams||typeof s.teams!=='object'||!Array.isArray(s.xi)||!Array.isArray(s.battingOrder)||!Array.isArray(s.fullSchedule)||!Array.isArray(s.results)||!Number.isInteger(s.round)||s.round<0||s.round>14)return false;const ids=new Set(s.pool.map(p=>p?.id));if(ids.size!==s.pool.length||s.pool.some(p=>!Number.isInteger(p?.id)))return false;const roster=s.league.flatMap(c=>s.teams[c.abbr]||[]);return new Set(roster).size===roster.length&&roster.every(id=>ids.has(id))&&s.xi.every(id=>ids.has(id))&&(!s.userClub||s.league.some(c=>c.abbr===s.userClub.abbr));}"
+   new=(ROOT/'domain/save_validation.js').read_text().strip()
    assert old in script
    script=script.replace(old,new)
    script=script.replace('return Math.max(0,4-userRetirementCount())','return Math.min(2,Math.max(0,4-userRetirementCount()))')

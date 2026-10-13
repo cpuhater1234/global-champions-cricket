@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';import {loadGame} from './offline_game_host.mjs';
+const file=process.env.GCC8_TEST_BUILD||'game/global_champions_cricket_v8_reviewed.html',h=loadGame(file,515,new Map([['gcc_dynasty_v8',fs.readFileSync('qa/v8_smoke_save.json','utf8')]]),{strictIds:true}),X=h.context.GCC8,G=h.G,s=G.state,read=h.context.GCC8_ENGINE_READ;let checks=0;
+const check=(v,m)=>{assert.ok(v,m);checks++;},call=(a,...args)=>check(X.dispatch(a,args),a+': '+h.get('g8feedback').textContent);
+function chooseXI(first=null){call('clearXI');const available=X.roster().filter(p=>s.dynasty.injuries[p.id]?.status!=='OUT'&&p.id!==first);const best=G.bestXI(available);if(first)call('select',first);for(const p of best.slice(0,first?10:11))call('select',p.id);call('lodge');}
+function cold(view){const raw=h.storage.get('gcc_dynasty_v8'),r=loadGame(file,888,new Map([['gcc_dynasty_v8',raw]]),{strictIds:true});check(r.context.GCC8.dispatch('continue'),'cold restore');check(r.context.GCC8.ui.view===view,'restored '+view);check(r.G.state.round===s.round&&JSON.stringify(r.G.state.xi)===JSON.stringify(s.xi),'same round and XI');check(!r.errors.length,'no cold errors');return r;}
+call('continue');call('offseason');call('annualDraw');call('revealAll');call('annualDraft');while(s.dynasty.offseason.phase==='draft'){const free=X.pool(true),p=free.find(p=>p.role==='WK-BAT'&&!X.roster().some(p=>p.role==='WK-BAT'))||free[0];call('inspect',p.id);call('draftPlayer',p.id);}call('lodgeList');call('annualTeam');
+// Two-round OUT fixture, then actual engine recovery through two played rounds.
+const injured=X.roster().find(p=>p.role!=='WK-BAT');s.dynasty.injuries[injured.id]={status:'OUT',roundsLeft:2,type:'QA recovery fixture'};const cover=read.replacements(injured.id)[0];check(!!cover,'cover available');call('cover',injured.id);call('signCover',cover);chooseXI(cover);const slot=s.xi.indexOf(cover),order=s.battingOrder.indexOf(cover);cold('season');
+for(let round=1;round<=7;round++){
+ if(X.ui.view==='result')call('matchday');if(read.xiProblem()){call('editXI');chooseXI();}call('prepare');call('playMatch',round);
+ if(round===1)check(s.dynasty.replacementFor[injured.id]===cover,'cover remains until recovery');
+ if(round===2){check(!s.dynasty.replacementFor[injured.id]&&!s.dynasty.replacementOf[cover],'cover links removed');check(!X.roster().some(p=>p.id===cover)&&!G.byId(cover).dynastyReplacement,'cover leaves squad');check(s.xi[slot]===injured.id&&s.battingOrder[order]===injured.id,'fit player returns to exact XI/order position');check(X.roster().length===15,'base list restored to fifteen');cold('result');}
+}
+call('matchday');if(read.xiProblem()){call('editXI');chooseXI();}
+call('trade',true);
+const offer=s.xi.map(G.byId).filter(p=>p.role!=='WK-BAT'&&!p.dynastyReplacement).sort((a,b)=>b.overall-a.overall)[0],targets=s.league.filter(c=>c.abbr!==s.userClub.abbr).flatMap(c=>s.teams[c.abbr].map(G.byId).filter(p=>p.role===offer.role&&!p.dynastyReplacement).map(p=>({p,c}))).sort((a,b)=>a.p.overall-b.p.overall);
+let target;
+for(const t of targets){X.ui.tradeOffer=offer.id;X.ui.tradeTarget=t.p.id;X.ui.tradeClub=t.c.abbr;X.ui.tradePick='';call('propose');if(X.roster().some(p=>p.id===t.p.id)){target=t;break;}}
+check(!!target,'a real midseason deal is accepted');check(!s.xi.includes(offer.id)&&s.xi.length===10,'traded XI player leaves selection');check(s.dynasty.midseasonDone[s.year],'one-deal flag');check(!X.dispatch('propose'),'cannot submit a second midseason deal');
+call('close');h.advance(650);check(X.ui.view==='team','accepted XI-changing trade routes visible UI to team room');cold('team');check(!X.dispatch('lodge'),'incomplete XI cannot lodge');chooseXI();call('prepare');call('playMatch',8);check(s.round===8,'new side can play next match');
+check(!h.errors.length,'no unexpected errors');const result={scope:'VM real annual draft, actual played-round injury recovery and real midseason trade; initial injury is an explicit fixture. No native rendered evidence.',checks,trade:{offer:offer.id,target:target.p.id,club:target.c.abbr},errors:h.errors};fs.writeFileSync('qa/v8_transition_results.json',JSON.stringify(result,null,2)+'\n');console.log(result);

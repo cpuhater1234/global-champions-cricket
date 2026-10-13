@@ -1,0 +1,4 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {loadGame} from './offline_game_host.mjs';
+const file=process.env.GCC8_TEST_BUILD||'game/global_champions_cricket_v8_quality_tested.html',legacy=JSON.parse(fs.readFileSync('qa/v8_smoke_save.json','utf8'));delete legacy.state.dynasty.v8UI;delete legacy.state.dynasty.v8Reveal;
+const raw=JSON.stringify(legacy),storage=new Map([['gcc_dynasty_v7_2',raw]]),h=loadGame(file,456,storage,{strictIds:true});assert.ok(h.context.GCC8.dispatch('continue'));assert.equal(storage.get('gcc_dynasty_v7_2'),raw);assert.ok(storage.get('gcc_dynasty_v8'));assert.equal(h.G.state.year,legacy.state.year);assert.equal(h.G.state.round,legacy.state.round);assert.equal(h.errors.length,0);
+const result={scope:'VM v7.2-key migration fixture without v8 metadata; original legacy save preserved.',checks:6,errors:[]};fs.writeFileSync('qa/v8_migration_results.json',JSON.stringify(result,null,2)+'\n');console.log(result);
