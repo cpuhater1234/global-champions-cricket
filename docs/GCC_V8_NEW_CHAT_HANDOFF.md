@@ -151,3 +151,9 @@ Tom requested logo-based home navigation instead of the “Title screen” butto
 ## Save wording adjustment
 
 Tom asked to avoid “new save” wording when none exists. Fresh Play is verified to enter the story directly without a prompt. The existing-career replacement prompt now says “Start again?” and its button “Start again”; no new-dynasty wording. Current artifact: `game/global_champions_cricket_v8_play.html`, SHA256 `b68ca333275e2dfdcf4d0ae16db74f4dd337b0c862422237e84cd7de8daaef81`. Targeted no-save/existing-career VM checks passed; no new rendered quality claim.
+
+## Club and ground guides
+
+Tom requested slightly richer club/ground descriptions aligned with the arcade visual standard, then changed the card action to “Select club”. All 20 eligible clubs now have a short in-world identity and practical selection read. Selecting one opens a focused guide with location/league, home-ground story and pace/spin/boundary labels from the existing model, plus takeover confirmation. Full stories stay out of fixed reveal cards to avoid crowding and asynchronous geometry changes. The selected-club footer can reopen the guide. Portrait guides stack and condition bands remain readable in source.
+
+Current artifact: `game/global_champions_cricket_v8_club_guides.html`, SHA256 `7cdfb55e306f5c46fb2a404f72e004c6101cd2457afc01636abb3f8d451e8b28`. All 20 guides were checked read-only against the model ground stories; eight selection dialogs and takeover passed in VM, and their guide markup parsed without missing-data errors. These are not rendered visual checks. Native alignment remains unverified. No real-world historical honours or extra cricket rules were invented.
