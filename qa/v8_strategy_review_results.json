@@ -1,0 +1,4818 @@
+{
+  "scope": "Actual shipped scripts in a VM. Eight complete foundation drafts with current-only user choices; seeded recruitment variation and CPU roster shape. Isolated empty-season advancement fixture measures actual career ratings and retirement, not game outcomes. No native rendering or fun certification.",
+  "artifact": "game/global_champions_cricket_v8_cricket_experience.html",
+  "checks": 355,
+  "runs": [
+    {
+      "seed": 2101,
+      "signedCount": 169,
+      "signedIds": [
+        2,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        20,
+        25,
+        27,
+        28,
+        29,
+        30,
+        33,
+        34,
+        35,
+        36,
+        37,
+        39,
+        40,
+        43,
+        48,
+        50,
+        54,
+        55,
+        57,
+        58,
+        59,
+        60,
+        62,
+        63,
+        64,
+        65,
+        68,
+        69,
+        71,
+        72,
+        73,
+        75,
+        76,
+        77,
+        78,
+        80,
+        81,
+        83,
+        84,
+        85,
+        86,
+        90,
+        94,
+        95,
+        96,
+        99,
+        100,
+        101,
+        105,
+        107,
+        108,
+        110,
+        112,
+        118,
+        120,
+        124,
+        125,
+        126,
+        128,
+        131,
+        133,
+        135,
+        136,
+        137,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        146,
+        147,
+        151,
+        152,
+        153,
+        154,
+        155,
+        157,
+        159,
+        160,
+        161,
+        163,
+        164,
+        165,
+        166,
+        168,
+        169,
+        174,
+        177,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        186,
+        187,
+        188,
+        190,
+        191,
+        193,
+        194,
+        197,
+        198,
+        200,
+        201,
+        202,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        221,
+        222,
+        223,
+        225,
+        226,
+        227,
+        228,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        239,
+        240,
+        242,
+        244,
+        245,
+        246,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269
+      ],
+      "league": [
+        "STR",
+        "SIX",
+        "SUR",
+        "DC",
+        "KKR",
+        "LAN",
+        "REN",
+        "RR"
+      ],
+      "draftOrder": [
+        "DC",
+        "STR",
+        "REN",
+        "LAN",
+        "RR",
+        "KKR",
+        "SIX",
+        "SUR"
+      ],
+      "stars": [
+        {
+          "name": "David Warner",
+          "signed": false,
+          "overall": 71,
+          "hiddenValue": 98,
+          "pick": null,
+          "owner": null
+        },
+        {
+          "name": "Virat Kohli",
+          "signed": true,
+          "overall": 72,
+          "hiddenValue": 99,
+          "pick": 6,
+          "owner": "KKR"
+        },
+        {
+          "name": "AB de Villiers",
+          "signed": false,
+          "overall": 88,
+          "hiddenValue": 99,
+          "pick": null,
+          "owner": null
+        },
+        {
+          "name": "Shane Watson",
+          "signed": true,
+          "overall": 87,
+          "hiddenValue": 97,
+          "pick": 4,
+          "owner": "LAN"
+        },
+        {
+          "name": "Shakib Al Hasan",
+          "signed": false,
+          "overall": 76,
+          "hiddenValue": 99,
+          "pick": null,
+          "owner": null
+        }
+      ],
+      "cpuShapes": [
+        {
+          "club": "SIX",
+          "keepers": 2,
+          "bowlingCapacity": 40,
+          "openers": 3,
+          "battingOptions": 10
+        },
+        {
+          "club": "SUR",
+          "keepers": 2,
+          "bowlingCapacity": 36,
+          "openers": 4,
+          "battingOptions": 10
+        },
+        {
+          "club": "DC",
+          "keepers": 2,
+          "bowlingCapacity": 44,
+          "openers": 2,
+          "battingOptions": 11
+        },
+        {
+          "club": "KKR",
+          "keepers": 3,
+          "bowlingCapacity": 36,
+          "openers": 2,
+          "battingOptions": 10
+        },
+        {
+          "club": "LAN",
+          "keepers": 2,
+          "bowlingCapacity": 40,
+          "openers": 3,
+          "battingOptions": 10
+        },
+        {
+          "club": "REN",
+          "keepers": 2,
+          "bowlingCapacity": 40,
+          "openers": 4,
+          "battingOptions": 11
+        },
+        {
+          "club": "RR",
+          "keepers": 2,
+          "bowlingCapacity": 40,
+          "openers": 4,
+          "battingOptions": 10
+        }
+      ]
+    },
+    {
+      "seed": 2111,
+      "signedCount": 172,
+      "signedIds": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        15,
+        16,
+        18,
+        20,
+        25,
+        30,
+        32,
+        34,
+        36,
+        40,
+        41,
+        43,
+        49,
+        51,
+        53,
+        54,
+        55,
+        56,
+        58,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        67,
+        68,
+        69,
+        70,
+        74,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        83,
+        84,
+        85,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        102,
+        103,
+        104,
+        106,
+        107,
+        109,
+        111,
+        112,
+        113,
+        116,
+        118,
+        121,
+        122,
+        125,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        141,
+        142,
+        143,
+        144,
+        148,
+        150,
+        151,
+        152,
+        153,
+        155,
+        158,
+        159,
+        160,
+        161,
+        163,
+        164,
+        165,
+        166,
+        167,
+        170,
+        171,
+        174,
+        175,
+        176,
+        177,
+        178,
+        180,
+        181,
+        182,
+        183,
+        184,
+        186,
+        187,
+        189,
+        190,
+        191,
+        193,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        202,
+        204,
+        205,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        224,
+        226,
+        227,
+        228,
+        229,
+        230,
+        232,
+        234,
+        237,
+        238,
+        241,
+        242,
+        243,
+        247,
+        248,
+        249,
+        251,
+        252,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269
+      ],
+      "league": [
+        "HEA",
+        "RCB",
+        "MI",
+        "YOR",
+        "RR",
+        "NOT",
+        "HUR",
+        "SCO"
+      ],
+      "draftOrder": [
+        "HEA",
+        "NOT",
+        "YOR",
+        "MI",
+        "SCO",
+        "RR",
+        "RCB",
+        "HUR"
+      ],
+      "stars": [
+        {
+          "name": "David Warner",
+          "signed": false,
+          "overall": 71,
+          "hiddenValue": 98,
+          "pick": null,
+          "owner": null
+        },
+        {
+          "name": "Virat Kohli",
+          "signed": false,
+          "overall": 72,
+          "hiddenValue": 99,
+          "pick": null,
+          "owner": null
+        },
+        {
+          "name": "AB de Villiers",
+          "signed": false,
+          "overall": 88,
+          "hiddenValue": 99,
+          "pick": null,
+          "owner": null
+        },
+        {
+          "name": "Shane Watson",
+          "signed": false,
+          "overall": 87,
+          "hiddenValue": 97,
+          "pick": null,
+          "owner": null
+        },
+        {
+          "name": "Shakib Al Hasan",
+          "signed": true,
+          "overall": 76,
+          "hiddenValue": 99,
+          "pick": 4,
+          "owner": "MI"
+        }
+      ],
+      "cpuShapes": [
+        {
+          "club": "RCB",
+          "keepers": 1,
+          "bowlingCapacity": 44,
+          "openers": 2,
+          "battingOptions": 9
+        },
+        {
+          "club": "MI",
+          "keepers": 3,
+          "bowlingCapacity": 32,
+          "openers": 3,
+          "battingOptions": 13
+        },
+        {
+          "club": "YOR",
+          "keepers": 3,
+          "bowlingCapacity": 40,
+          "openers": 3,
+          "battingOptions": 10
+        },
+        {
+          "club": "RR",
+          "keepers": 5,
+          "bowlingCapacity": 32,
+          "openers": 4,
+          "battingOptions": 9
+        },
+        {
+          "club": "NOT",
+          "keepers": 3,
+          "bowlingCapacity": 36,
+          "openers": 4,
+          "battingOptions": 13
+        },
+        {
+          "club": "HUR",
+          "keepers": 3,
+          "bowlingCapacity": 40,
+          "openers": 2,
+          "battingOptions": 9
+        },
+        {
+          "club": "SCO",
+          "keepers": 1,
+          "bowlingCapacity": 36,
+          "openers": 2,
+          "battingOptions": 9
+        }
+      ]
+    },
+    {
+      "seed": 2129,
+      "signedCount": 174,
+      "signedIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        12,
+        14,
+        16,
+        18,
+        19,
+        20,
+        22,
+        24,
+        25,
+        26,
+        27,
+        29,
+        30,
+        31,
+        34,
+        36,
+        40,
+        41,
+        42,
+        44,
+        47,
+        49,
+        50,
+        52,
+        54,
+        55,
+        57,
+        60,
+        61,
+        63,
+        64,
+        65,
+        67,
+        70,
+        72,
+        74,
+        75,
+        76,
+        77,
+        79,
+        81,
+        83,
+        84,
+        85,
+        86,
+        87,
+        89,
+        90,
+        93,
+        94,
+        95,
+        96,
+        97,
+        99,
+        101,
+        102,
+        104,
+        105,
+        106,
+        109,
+        110,
+        114,
+        117,
+        118,
+        119,
+        121,
+        123,
+        124,
+        125,
+        127,
+        128,
+        129,
+        131,
+        133,
+        134,
+        135,
+        136,
+        137,
+        139,
+        141,
+        142,
+        151,
+        152,
+        153,
+        154,
+        155,
+        157,
+        158,
+        161,
+        163,
+        164,
+        165,
+        168,
+        169,
+        170,
+        172,
+        174,
+        175,
+        176,
+        181,
+        182,
+        183,
+        184,
+        186,
+        187,
+        188,
+        189,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        202,
+        204,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        220,
+        222,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        231,
+        232,
+        234,
+        235,
+        236,
+        240,
+        241,
+        242,
+        243,
+        244,
+        247,
+        249,
+        252,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269
+      ],
+      "league": [
+        "RCB",
+        "DC",
+        "NOT",
+        "SOM",
+        "THU",
+        "STR",
+        "KKR",
+        "SCO"
+      ],
+      "draftOrder": [
+        "SOM",
+        "STR",
+        "KKR",
+        "THU",
+        "SCO",
+        "DC",
+        "NOT",
+        "RCB"
+      ],
+      "stars": [
+        {
+          "name": "David Warner",
+          "signed": true,
+          "overall": 71,
+          "hiddenValue": 98,
+          "pick": 17,
+          "owner": "SOM"
+        },
+        {
+          "name": "Virat Kohli",
+          "signed": false,
+          "overall": 72,
+          "hiddenValue": 99,
+          "pick": null,
+          "owner": null
+        },
+        {
+          "name": "AB de Villiers",
+          "signed": false,
+          "overall": 88,
+          "hiddenValue": 99,
+          "pick": null,
+          "owner": null
+        },
+        {
+          "name": "Shane Watson",
+          "signed": true,
+          "overall": 87,
+          "hiddenValue": 97,
+          "pick": 5,
+          "owner": "SCO"
+        },
+        {
+          "name": "Shakib Al Hasan",
+          "signed": true,
+          "overall": 76,
+          "hiddenValue": 99,
+          "pick": 6,
+          "owner": "DC"
+        }
+      ],
+      "cpuShapes": [
+        {
+          "club": "DC",
+          "keepers": 2,
+          "bowlingCapacity": 40,
+          "openers": 3,
+          "battingOptions": 9
+        },
+        {
+          "club": "NOT",
+          "keepers": 2,
+          "bowlingCapacity": 40,
+          "openers": 3,
+          "battingOptions": 9
+        },
+        {
+          "club": "SOM",
+          "keepers": 1,
+          "bowlingCapacity": 36,
+          "openers": 2,
+          "battingOptions": 10
+        },
+        {
+          "club": "THU",
+          "keepers": 4,
+          "bowlingCapacity": 40,
+          "openers": 3,
+          "battingOptions": 12
+        },
+        {
+          "club": "STR",
+          "keepers": 3,
+          "bowlingCapacity": 40,
+          "openers": 4,
+          "battingOptions": 10
+        },
+        {
+          "club": "KKR",
+          "keepers": 3,
+          "bowlingCapacity": 40,
+          "openers": 3,
+          "battingOptions": 10
+        },
+        {
+          "club": "SCO",
+          "keepers": 3,
+          "bowlingCapacity": 36,
+          "openers": 4,
+          "battingOptions": 9
+        }
+      ]
+    },
+    {
+      "seed": 2141,
+      "signedCount": 164,
+      "signedIds": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12,
+        16,
+        17,
+        23,
+        25,
+        26,
+        28,
+        29,
+        31,
+        32,
+        35,
+        40,
+        41,
+        43,
+        47,
+        48,
+        49,
+        51,
+        54,
+        55,
+        56,
+        57,
+        58,
+        60,
+        61,
+        62,
+        63,
+        65,
+        68,
+        69,
+        76,
+        77,
+        78,
+        79,
+        80,
+        83,
+        84,
+        85,
+        86,
+        89,
+        90,
+        96,
+        97,
+        98,
+        101,
+        103,
+        104,
+        106,
+        107,
+        113,
+        115,
+        117,
+        120,
+        121,
+        123,
+        124,
+        126,
+        128,
+        131,
+        133,
+        135,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        144,
+        147,
+        148,
+        151,
+        152,
+        153,
+        155,
+        157,
+        158,
+        159,
+        160,
+        164,
+        165,
+        167,
+        168,
+        170,
+        172,
+        173,
+        174,
+        175,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        187,
+        188,
+        189,
+        192,
+        193,
+        194,
+        196,
+        197,
+        198,
+        200,
+        201,
+        202,
+        205,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        216,
+        217,
+        218,
+        219,
+        221,
+        225,
+        226,
+        227,
+        230,
+        232,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        245,
+        249,
+        250,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        260,
+        261,
+        262,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269
+      ],
+      "league": [
+        "YOR",
+        "SCO",
+        "STR",
+        "RCB",
+        "MI",
+        "DC",
+        "HEA",
+        "HAM"
+      ],
+      "draftOrder": [
+        "RCB",
+        "HEA",
+        "STR",
+        "HAM",
+        "MI",
+        "DC",
+        "YOR",
+        "SCO"
+      ],
+      "stars": [
+        {
+          "name": "David Warner",
+          "signed": false,
+          "overall": 71,
+          "hiddenValue": 98,
+          "pick": null,
+          "owner": null
+        },
+        {
+          "name": "Virat Kohli",
+          "signed": true,
+          "overall": 72,
+          "hiddenValue": 99,
+          "pick": 18,
+          "owner": "HEA"
+        },
+        {
+          "name": "AB de Villiers",
+          "signed": true,
+          "overall": 88,
+          "hiddenValue": 99,
+          "pick": 5,
+          "owner": "MI"
+        },
+        {
+          "name": "Shane Watson",
+          "signed": true,
+          "overall": 87,
+          "hiddenValue": 97,
+          "pick": 8,
+          "owner": "SCO"
+        },
+        {
+          "name": "Shakib Al Hasan",
+          "signed": false,
+          "overall": 76,
+          "hiddenValue": 99,
+          "pick": null,
+          "owner": null
+        }
+      ],
+      "cpuShapes": [
+        {
+          "club": "SCO",
+          "keepers": 3,
+          "bowlingCapacity": 32,
+          "openers": 4,
+          "battingOptions": 8
+        },
+        {
+          "club": "STR",
+          "keepers": 2,
+          "bowlingCapacity": 44,
+          "openers": 2,
+          "battingOptions": 8
+        },
+        {
+          "club": "RCB",
+          "keepers": 4,
+          "bowlingCapacity": 40,
+          "openers": 4,
+          "battingOptions": 9
+        },
+        {
+          "club": "MI",
+          "keepers": 2,
+          "bowlingCapacity": 32,
+          "openers": 3,
+          "battingOptions": 13
+        },
+        {
+          "club": "DC",
+          "keepers": 2,
+          "bowlingCapacity": 36,
+          "openers": 3,
+          "battingOptions": 12
+        },
+        {
+          "club": "HEA",
+          "keepers": 3,
+          "bowlingCapacity": 36,
+          "openers": 3,
+          "battingOptions": 7
+        },
+        {
+          "club": "HAM",
+          "keepers": 2,
+          "bowlingCapacity": 40,
+          "openers": 4,
+          "battingOptions": 9
+        }
+      ]
+    },
+    {
+      "seed": 2153,
+      "signedCount": 171,
+      "signedIds": [
+        2,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        16,
+        22,
+        23,
+        24,
+        25,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        37,
+        39,
+        41,
+        42,
+        43,
+        44,
+        47,
+        48,
+        49,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        62,
+        63,
+        65,
+        67,
+        68,
+        71,
+        72,
+        76,
+        77,
+        78,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        89,
+        92,
+        93,
+        94,
+        95,
+        98,
+        104,
+        105,
+        106,
+        107,
+        108,
+        114,
+        115,
+        116,
+        117,
+        118,
+        120,
+        126,
+        127,
+        129,
+        130,
+        132,
+        134,
+        135,
+        137,
+        138,
+        141,
+        142,
+        143,
+        144,
+        148,
+        149,
+        151,
+        153,
+        154,
+        155,
+        156,
+        157,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        172,
+        174,
+        176,
+        177,
+        178,
+        180,
+        181,
+        182,
+        183,
+        186,
+        189,
+        191,
+        193,
+        194,
+        195,
+        196,
+        198,
+        199,
+        200,
+        201,
+        202,
+        205,
+        207,
+        208,
+        209,
+        210,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        225,
+        226,
+        227,
+        228,
+        230,
+        234,
+        236,
+        237,
+        238,
+        239,
+        240,
+        242,
+        244,
+        247,
+        249,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269
+      ],
+      "league": [
+        "NOT",
+        "STR",
+        "SCO",
+        "LAN",
+        "MI",
+        "HEA",
+        "DC",
+        "RCB"
+      ],
+      "draftOrder": [
+        "LAN",
+        "NOT",
+        "RCB",
+        "DC",
+        "MI",
+        "STR",
+        "SCO",
+        "HEA"
+      ],
+      "stars": [
+        {
+          "name": "David Warner",
+          "signed": true,
+          "overall": 71,
+          "hiddenValue": 98,
+          "pick": 20,
+          "owner": "DC"
+        },
+        {
+          "name": "Virat Kohli",
+          "signed": true,
+          "overall": 72,
+          "hiddenValue": 99,
+          "pick": 8,
+          "owner": "HEA"
+        },
+        {
+          "name": "AB de Villiers",
+          "signed": true,
+          "overall": 88,
+          "hiddenValue": 99,
+          "pick": 3,
+          "owner": "RCB"
+        },
+        {
+          "name": "Shane Watson",
+          "signed": true,
+          "overall": 87,
+          "hiddenValue": 97,
+          "pick": 5,
+          "owner": "MI"
+        },
+        {
+          "name": "Shakib Al Hasan",
+          "signed": false,
+          "overall": 76,
+          "hiddenValue": 99,
+          "pick": null,
+          "owner": null
+        }
+      ],
+      "cpuShapes": [
+        {
+          "club": "STR",
+          "keepers": 2,
+          "bowlingCapacity": 40,
+          "openers": 3,
+          "battingOptions": 8
+        },
+        {
+          "club": "SCO",
+          "keepers": 2,
+          "bowlingCapacity": 36,
+          "openers": 4,
+          "battingOptions": 11
+        },
+        {
+          "club": "LAN",
+          "keepers": 3,
+          "bowlingCapacity": 36,
+          "openers": 4,
+          "battingOptions": 9
+        },
+        {
+          "club": "MI",
+          "keepers": 1,
+          "bowlingCapacity": 32,
+          "openers": 4,
+          "battingOptions": 11
+        },
+        {
+          "club": "HEA",
+          "keepers": 2,
+          "bowlingCapacity": 40,
+          "openers": 3,
+          "battingOptions": 8
+        },
+        {
+          "club": "DC",
+          "keepers": 2,
+          "bowlingCapacity": 40,
+          "openers": 2,
+          "battingOptions": 11
+        },
+        {
+          "club": "RCB",
+          "keepers": 2,
+          "bowlingCapacity": 32,
+          "openers": 4,
+          "battingOptions": 12
+        }
+      ]
+    },
+    {
+      "seed": 2161,
+      "signedCount": 170,
+      "signedIds": [
+        2,
+        4,
+        9,
+        10,
+        11,
+        12,
+        18,
+        22,
+        23,
+        24,
+        25,
+        26,
+        28,
+        29,
+        35,
+        40,
+        41,
+        42,
+        44,
+        45,
+        46,
+        47,
+        48,
+        56,
+        61,
+        62,
+        63,
+        66,
+        69,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        89,
+        90,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        99,
+        106,
+        110,
+        111,
+        112,
+        116,
+        117,
+        118,
+        120,
+        123,
+        124,
+        125,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        135,
+        136,
+        139,
+        140,
+        141,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        159,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        171,
+        172,
+        173,
+        175,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        192,
+        194,
+        195,
+        197,
+        198,
+        199,
+        200,
+        202,
+        203,
+        204,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        224,
+        226,
+        227,
+        228,
+        229,
+        230,
+        232,
+        234,
+        235,
+        236,
+        237,
+        238,
+        241,
+        242,
+        244,
+        248,
+        250,
+        251,
+        252,
+        254,
+        255,
+        256,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269
+      ],
+      "league": [
+        "SOM",
+        "DC",
+        "KKR",
+        "HUR",
+        "SUR",
+        "SIX",
+        "THU",
+        "RR"
+      ],
+      "draftOrder": [
+        "SOM",
+        "THU",
+        "DC",
+        "RR",
+        "KKR",
+        "HUR",
+        "SIX",
+        "SUR"
+      ],
+      "stars": [
+        {
+          "name": "David Warner",
+          "signed": true,
+          "overall": 71,
+          "hiddenValue": 98,
+          "pick": 8,
+          "owner": "SUR"
+        },
+        {
+          "name": "Virat Kohli",
+          "signed": true,
+          "overall": 72,
+          "hiddenValue": 99,
+          "pick": 18,
+          "owner": "THU"
+        },
+        {
+          "name": "AB de Villiers",
+          "signed": true,
+          "overall": 88,
+          "hiddenValue": 99,
+          "pick": 3,
+          "owner": "DC"
+        },
+        {
+          "name": "Shane Watson",
+          "signed": false,
+          "overall": 87,
+          "hiddenValue": 97,
+          "pick": null,
+          "owner": null
+        },
+        {
+          "name": "Shakib Al Hasan",
+          "signed": true,
+          "overall": 76,
+          "hiddenValue": 99,
+          "pick": 7,
+          "owner": "SIX"
+        }
+      ],
+      "cpuShapes": [
+        {
+          "club": "DC",
+          "keepers": 2,
+          "bowlingCapacity": 32,
+          "openers": 4,
+          "battingOptions": 9
+        },
+        {
+          "club": "KKR",
+          "keepers": 3,
+          "bowlingCapacity": 36,
+          "openers": 4,
+          "battingOptions": 10
+        },
+        {
+          "club": "HUR",
+          "keepers": 2,
+          "bowlingCapacity": 32,
+          "openers": 3,
+          "battingOptions": 11
+        },
+        {
+          "club": "SUR",
+          "keepers": 2,
+          "bowlingCapacity": 36,
+          "openers": 3,
+          "battingOptions": 13
+        },
+        {
+          "club": "SIX",
+          "keepers": 2,
+          "bowlingCapacity": 36,
+          "openers": 3,
+          "battingOptions": 9
+        },
+        {
+          "club": "THU",
+          "keepers": 3,
+          "bowlingCapacity": 36,
+          "openers": 4,
+          "battingOptions": 10
+        },
+        {
+          "club": "RR",
+          "keepers": 2,
+          "bowlingCapacity": 48,
+          "openers": 4,
+          "battingOptions": 8
+        }
+      ]
+    },
+    {
+      "seed": 2179,
+      "signedCount": 171,
+      "signedIds": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        15,
+        16,
+        18,
+        24,
+        27,
+        28,
+        29,
+        32,
+        33,
+        34,
+        36,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        52,
+        53,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        65,
+        67,
+        68,
+        69,
+        76,
+        77,
+        78,
+        80,
+        81,
+        84,
+        85,
+        86,
+        87,
+        89,
+        92,
+        93,
+        94,
+        96,
+        97,
+        98,
+        101,
+        104,
+        105,
+        107,
+        109,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        118,
+        119,
+        120,
+        121,
+        122,
+        124,
+        125,
+        126,
+        127,
+        128,
+        131,
+        133,
+        135,
+        137,
+        142,
+        144,
+        145,
+        147,
+        149,
+        151,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        161,
+        163,
+        165,
+        166,
+        172,
+        173,
+        174,
+        179,
+        180,
+        181,
+        183,
+        184,
+        185,
+        186,
+        187,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        199,
+        200,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        224,
+        226,
+        227,
+        228,
+        229,
+        231,
+        232,
+        235,
+        239,
+        240,
+        241,
+        242,
+        243,
+        250,
+        251,
+        252,
+        254,
+        255,
+        256,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269
+      ],
+      "league": [
+        "RR",
+        "MI",
+        "STA",
+        "NOT",
+        "DC",
+        "THU",
+        "HAM",
+        "SIX"
+      ],
+      "draftOrder": [
+        "NOT",
+        "DC",
+        "RR",
+        "HAM",
+        "STA",
+        "MI",
+        "SIX",
+        "THU"
+      ],
+      "stars": [
+        {
+          "name": "David Warner",
+          "signed": true,
+          "overall": 71,
+          "hiddenValue": 98,
+          "pick": 8,
+          "owner": "THU"
+        },
+        {
+          "name": "Virat Kohli",
+          "signed": false,
+          "overall": 72,
+          "hiddenValue": 99,
+          "pick": null,
+          "owner": null
+        },
+        {
+          "name": "AB de Villiers",
+          "signed": false,
+          "overall": 88,
+          "hiddenValue": 99,
+          "pick": null,
+          "owner": null
+        },
+        {
+          "name": "Shane Watson",
+          "signed": true,
+          "overall": 87,
+          "hiddenValue": 97,
+          "pick": 6,
+          "owner": "MI"
+        },
+        {
+          "name": "Shakib Al Hasan",
+          "signed": false,
+          "overall": 76,
+          "hiddenValue": 99,
+          "pick": null,
+          "owner": null
+        }
+      ],
+      "cpuShapes": [
+        {
+          "club": "MI",
+          "keepers": 3,
+          "bowlingCapacity": 36,
+          "openers": 4,
+          "battingOptions": 10
+        },
+        {
+          "club": "STA",
+          "keepers": 1,
+          "bowlingCapacity": 40,
+          "openers": 3,
+          "battingOptions": 10
+        },
+        {
+          "club": "NOT",
+          "keepers": 3,
+          "bowlingCapacity": 32,
+          "openers": 4,
+          "battingOptions": 9
+        },
+        {
+          "club": "DC",
+          "keepers": 1,
+          "bowlingCapacity": 36,
+          "openers": 2,
+          "battingOptions": 14
+        },
+        {
+          "club": "THU",
+          "keepers": 2,
+          "bowlingCapacity": 40,
+          "openers": 2,
+          "battingOptions": 9
+        },
+        {
+          "club": "HAM",
+          "keepers": 2,
+          "bowlingCapacity": 40,
+          "openers": 3,
+          "battingOptions": 10
+        },
+        {
+          "club": "SIX",
+          "keepers": 3,
+          "bowlingCapacity": 36,
+          "openers": 4,
+          "battingOptions": 9
+        }
+      ]
+    },
+    {
+      "seed": 2197,
+      "signedCount": 173,
+      "signedIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        14,
+        16,
+        20,
+        22,
+        24,
+        25,
+        26,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        35,
+        36,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        47,
+        50,
+        51,
+        55,
+        58,
+        60,
+        61,
+        62,
+        65,
+        67,
+        73,
+        75,
+        76,
+        77,
+        78,
+        79,
+        81,
+        83,
+        84,
+        85,
+        86,
+        90,
+        91,
+        93,
+        94,
+        95,
+        96,
+        99,
+        100,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        113,
+        114,
+        119,
+        120,
+        121,
+        123,
+        124,
+        125,
+        126,
+        127,
+        129,
+        130,
+        131,
+        135,
+        139,
+        141,
+        142,
+        144,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        155,
+        156,
+        158,
+        160,
+        162,
+        163,
+        164,
+        165,
+        166,
+        169,
+        170,
+        172,
+        174,
+        175,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        186,
+        187,
+        189,
+        192,
+        194,
+        195,
+        196,
+        197,
+        198,
+        202,
+        203,
+        204,
+        207,
+        208,
+        209,
+        210,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        220,
+        221,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        232,
+        236,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        247,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        259,
+        260,
+        261,
+        262,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269
+      ],
+      "league": [
+        "STR",
+        "MI",
+        "NOT",
+        "KKR",
+        "SCO",
+        "HAM",
+        "RCB",
+        "THU"
+      ],
+      "draftOrder": [
+        "RCB",
+        "NOT",
+        "STR",
+        "MI",
+        "HAM",
+        "KKR",
+        "SCO",
+        "THU"
+      ],
+      "stars": [
+        {
+          "name": "David Warner",
+          "signed": true,
+          "overall": 71,
+          "hiddenValue": 98,
+          "pick": 8,
+          "owner": "THU"
+        },
+        {
+          "name": "Virat Kohli",
+          "signed": false,
+          "overall": 72,
+          "hiddenValue": 99,
+          "pick": null,
+          "owner": null
+        },
+        {
+          "name": "AB de Villiers",
+          "signed": false,
+          "overall": 88,
+          "hiddenValue": 99,
+          "pick": null,
+          "owner": null
+        },
+        {
+          "name": "Shane Watson",
+          "signed": false,
+          "overall": 87,
+          "hiddenValue": 97,
+          "pick": null,
+          "owner": null
+        },
+        {
+          "name": "Shakib Al Hasan",
+          "signed": false,
+          "overall": 76,
+          "hiddenValue": 99,
+          "pick": null,
+          "owner": null
+        }
+      ],
+      "cpuShapes": [
+        {
+          "club": "MI",
+          "keepers": 1,
+          "bowlingCapacity": 48,
+          "openers": 3,
+          "battingOptions": 7
+        },
+        {
+          "club": "NOT",
+          "keepers": 3,
+          "bowlingCapacity": 32,
+          "openers": 4,
+          "battingOptions": 12
+        },
+        {
+          "club": "KKR",
+          "keepers": 5,
+          "bowlingCapacity": 32,
+          "openers": 4,
+          "battingOptions": 12
+        },
+        {
+          "club": "SCO",
+          "keepers": 2,
+          "bowlingCapacity": 32,
+          "openers": 4,
+          "battingOptions": 10
+        },
+        {
+          "club": "HAM",
+          "keepers": 2,
+          "bowlingCapacity": 36,
+          "openers": 4,
+          "battingOptions": 11
+        },
+        {
+          "club": "RCB",
+          "keepers": 3,
+          "bowlingCapacity": 32,
+          "openers": 4,
+          "battingOptions": 11
+        },
+        {
+          "club": "THU",
+          "keepers": 2,
+          "bowlingCapacity": 44,
+          "openers": 2,
+          "battingOptions": 7
+        }
+      ]
+    }
+  ],
+  "aging": [
+    {
+      "year": 2008,
+      "players": [
+        {
+          "name": "David Warner",
+          "overall": 71,
+          "bat": 68,
+          "bowl": 32,
+          "available": false,
+          "retired": false
+        },
+        {
+          "name": "Virat Kohli",
+          "overall": 72,
+          "bat": 68,
+          "bowl": 28,
+          "available": false,
+          "retired": false
+        },
+        {
+          "name": "AB de Villiers",
+          "overall": 88,
+          "bat": 86,
+          "bowl": 23,
+          "available": true,
+          "retired": false
+        },
+        {
+          "name": "Matthew Hayden",
+          "overall": 86,
+          "bat": 86,
+          "bowl": 33,
+          "available": true,
+          "retired": false
+        },
+        {
+          "name": "Shane Warne",
+          "overall": 88,
+          "bat": 38,
+          "bowl": 89,
+          "available": true,
+          "retired": false
+        },
+        {
+          "name": "Sachin Tendulkar",
+          "overall": 90,
+          "bat": 90,
+          "bowl": 33,
+          "available": false,
+          "retired": false
+        },
+        {
+          "name": "Jos Buttler",
+          "retired": false
+        },
+        {
+          "name": "Jasprit Bumrah",
+          "retired": false
+        }
+      ]
+    },
+    {
+      "year": 2009,
+      "players": [
+        {
+          "name": "David Warner",
+          "overall": 73,
+          "bat": 69,
+          "bowl": 33,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2015,
+            "peak": 71,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Virat Kohli",
+          "overall": 72,
+          "bat": 68,
+          "bowl": 28,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2017,
+            "peak": 72,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "AB de Villiers",
+          "overall": 90,
+          "bat": 88,
+          "bowl": 23,
+          "available": true,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2021,
+            "peakYear": 2012,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Matthew Hayden",
+          "overall": 83,
+          "bat": 83,
+          "bowl": 32,
+          "available": true,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2010,
+            "peakYear": 2008,
+            "peak": 86,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Shane Warne",
+          "overall": 84,
+          "bat": 36,
+          "bowl": 85,
+          "available": true,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2011,
+            "peakYear": 2008,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Sachin Tendulkar",
+          "overall": 87,
+          "bat": 87,
+          "bowl": 32,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2013,
+            "peakYear": 2008,
+            "peak": 90,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Jos Buttler",
+          "overall": 79,
+          "bat": 80,
+          "bowl": 15,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jos Buttler",
+            "country": "ENG",
+            "birthYear": 1990,
+            "debutYear": 2009,
+            "exitYear": 2026,
+            "role": "WK-BAT",
+            "preferredSlot": 1,
+            "peak": 96,
+            "peakYear": 2022,
+            "style": "power"
+          }
+        },
+        {
+          "name": "Jasprit Bumrah",
+          "overall": 99,
+          "bat": 46,
+          "bowl": 97,
+          "available": false,
+          "retired": false,
+          "career": {
+            "name": "Jasprit Bumrah",
+            "country": "IND",
+            "birthYear": 1993,
+            "debutYear": 2013,
+            "exitYear": 2026,
+            "role": "BOWL",
+            "preferredSlot": 10,
+            "peak": 99,
+            "peakYear": 2024,
+            "style": "death"
+          }
+        }
+      ]
+    },
+    {
+      "year": 2010,
+      "players": [
+        {
+          "name": "David Warner",
+          "overall": 74,
+          "bat": 71,
+          "bowl": 33,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2015,
+            "peak": 71,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Virat Kohli",
+          "overall": 74,
+          "bat": 70,
+          "bowl": 29,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2017,
+            "peak": 72,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "AB de Villiers",
+          "overall": 91,
+          "bat": 89,
+          "bowl": 24,
+          "available": true,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2021,
+            "peakYear": 2012,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Matthew Hayden",
+          "overall": 79,
+          "bat": 79,
+          "bowl": 30,
+          "available": true,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2010,
+            "peakYear": 2008,
+            "peak": 86,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Shane Warne",
+          "overall": 80,
+          "bat": 35,
+          "bowl": 81,
+          "available": true,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2011,
+            "peakYear": 2008,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Sachin Tendulkar",
+          "overall": 84,
+          "bat": 84,
+          "bowl": 31,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2013,
+            "peakYear": 2008,
+            "peak": 90,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Jos Buttler",
+          "overall": 80,
+          "bat": 82,
+          "bowl": 15,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jos Buttler",
+            "country": "ENG",
+            "birthYear": 1990,
+            "debutYear": 2009,
+            "exitYear": 2026,
+            "role": "WK-BAT",
+            "preferredSlot": 1,
+            "peak": 96,
+            "peakYear": 2022,
+            "style": "power"
+          }
+        },
+        {
+          "name": "Jasprit Bumrah",
+          "overall": 99,
+          "bat": 46,
+          "bowl": 97,
+          "available": false,
+          "retired": false,
+          "career": {
+            "name": "Jasprit Bumrah",
+            "country": "IND",
+            "birthYear": 1993,
+            "debutYear": 2013,
+            "exitYear": 2026,
+            "role": "BOWL",
+            "preferredSlot": 10,
+            "peak": 99,
+            "peakYear": 2024,
+            "style": "death"
+          }
+        }
+      ]
+    },
+    {
+      "year": 2011,
+      "players": [
+        {
+          "name": "David Warner",
+          "overall": 76,
+          "bat": 72,
+          "bowl": 34,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2015,
+            "peak": 71,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Virat Kohli",
+          "overall": 75,
+          "bat": 71,
+          "bowl": 29,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2017,
+            "peak": 72,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "AB de Villiers",
+          "overall": 91,
+          "bat": 89,
+          "bowl": 24,
+          "available": true,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2021,
+            "peakYear": 2012,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Matthew Hayden",
+          "overall": 79,
+          "bat": 79,
+          "bowl": 30,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2010,
+            "peakYear": 2008,
+            "peak": 86,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Shane Warne",
+          "overall": 80,
+          "bat": 35,
+          "bowl": 81,
+          "available": true,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2011,
+            "peakYear": 2008,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Sachin Tendulkar",
+          "overall": 80,
+          "bat": 80,
+          "bowl": 29,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2013,
+            "peakYear": 2008,
+            "peak": 90,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Jos Buttler",
+          "overall": 81,
+          "bat": 83,
+          "bowl": 15,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jos Buttler",
+            "country": "ENG",
+            "birthYear": 1990,
+            "debutYear": 2009,
+            "exitYear": 2026,
+            "role": "WK-BAT",
+            "preferredSlot": 1,
+            "peak": 96,
+            "peakYear": 2022,
+            "style": "power"
+          }
+        },
+        {
+          "name": "Jasprit Bumrah",
+          "overall": 99,
+          "bat": 46,
+          "bowl": 97,
+          "available": false,
+          "retired": false,
+          "career": {
+            "name": "Jasprit Bumrah",
+            "country": "IND",
+            "birthYear": 1993,
+            "debutYear": 2013,
+            "exitYear": 2026,
+            "role": "BOWL",
+            "preferredSlot": 10,
+            "peak": 99,
+            "peakYear": 2024,
+            "style": "death"
+          }
+        }
+      ]
+    },
+    {
+      "year": 2012,
+      "players": [
+        {
+          "name": "David Warner",
+          "overall": 77,
+          "bat": 73,
+          "bowl": 35,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2015,
+            "peak": 71,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Virat Kohli",
+          "overall": 77,
+          "bat": 73,
+          "bowl": 30,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2017,
+            "peak": 72,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "AB de Villiers",
+          "overall": 91,
+          "bat": 89,
+          "bowl": 24,
+          "available": true,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2021,
+            "peakYear": 2012,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Matthew Hayden",
+          "overall": 79,
+          "bat": 79,
+          "bowl": 30,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2010,
+            "peakYear": 2008,
+            "peak": 86,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Shane Warne",
+          "overall": 80,
+          "bat": 35,
+          "bowl": 81,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2011,
+            "peakYear": 2008,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Sachin Tendulkar",
+          "overall": 77,
+          "bat": 77,
+          "bowl": 28,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2013,
+            "peakYear": 2008,
+            "peak": 90,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Jos Buttler",
+          "overall": 83,
+          "bat": 84,
+          "bowl": 16,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jos Buttler",
+            "country": "ENG",
+            "birthYear": 1990,
+            "debutYear": 2009,
+            "exitYear": 2026,
+            "role": "WK-BAT",
+            "preferredSlot": 1,
+            "peak": 96,
+            "peakYear": 2022,
+            "style": "power"
+          }
+        },
+        {
+          "name": "Jasprit Bumrah",
+          "overall": 99,
+          "bat": 46,
+          "bowl": 97,
+          "available": false,
+          "retired": false,
+          "career": {
+            "name": "Jasprit Bumrah",
+            "country": "IND",
+            "birthYear": 1993,
+            "debutYear": 2013,
+            "exitYear": 2026,
+            "role": "BOWL",
+            "preferredSlot": 10,
+            "peak": 99,
+            "peakYear": 2024,
+            "style": "death"
+          }
+        }
+      ]
+    },
+    {
+      "year": 2013,
+      "players": [
+        {
+          "name": "David Warner",
+          "overall": 77,
+          "bat": 73,
+          "bowl": 35,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2015,
+            "peak": 71,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Virat Kohli",
+          "overall": 78,
+          "bat": 73,
+          "bowl": 30,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2017,
+            "peak": 72,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "AB de Villiers",
+          "overall": 91,
+          "bat": 89,
+          "bowl": 24,
+          "available": true,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2021,
+            "peakYear": 2012,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Matthew Hayden",
+          "overall": 79,
+          "bat": 79,
+          "bowl": 30,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2010,
+            "peakYear": 2008,
+            "peak": 86,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Shane Warne",
+          "overall": 80,
+          "bat": 35,
+          "bowl": 81,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2011,
+            "peakYear": 2008,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Sachin Tendulkar",
+          "overall": 73,
+          "bat": 73,
+          "bowl": 27,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2013,
+            "peakYear": 2008,
+            "peak": 90,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Jos Buttler",
+          "overall": 84,
+          "bat": 86,
+          "bowl": 16,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jos Buttler",
+            "country": "ENG",
+            "birthYear": 1990,
+            "debutYear": 2009,
+            "exitYear": 2026,
+            "role": "WK-BAT",
+            "preferredSlot": 1,
+            "peak": 96,
+            "peakYear": 2022,
+            "style": "power"
+          }
+        },
+        {
+          "name": "Jasprit Bumrah",
+          "overall": 81,
+          "bat": 38,
+          "bowl": 80,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jasprit Bumrah",
+            "country": "IND",
+            "birthYear": 1993,
+            "debutYear": 2013,
+            "exitYear": 2026,
+            "role": "BOWL",
+            "preferredSlot": 10,
+            "peak": 99,
+            "peakYear": 2024,
+            "style": "death"
+          }
+        }
+      ]
+    },
+    {
+      "year": 2014,
+      "players": [
+        {
+          "name": "David Warner",
+          "overall": 77,
+          "bat": 73,
+          "bowl": 35,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2015,
+            "peak": 71,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Virat Kohli",
+          "overall": 78,
+          "bat": 73,
+          "bowl": 30,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2017,
+            "peak": 72,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "AB de Villiers",
+          "overall": 91,
+          "bat": 89,
+          "bowl": 24,
+          "available": true,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2021,
+            "peakYear": 2012,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Matthew Hayden",
+          "overall": 79,
+          "bat": 79,
+          "bowl": 30,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2010,
+            "peakYear": 2008,
+            "peak": 86,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Shane Warne",
+          "overall": 80,
+          "bat": 35,
+          "bowl": 81,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2011,
+            "peakYear": 2008,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Sachin Tendulkar",
+          "overall": 73,
+          "bat": 73,
+          "bowl": 27,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2013,
+            "peakYear": 2008,
+            "peak": 90,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Jos Buttler",
+          "overall": 85,
+          "bat": 87,
+          "bowl": 16,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jos Buttler",
+            "country": "ENG",
+            "birthYear": 1990,
+            "debutYear": 2009,
+            "exitYear": 2026,
+            "role": "WK-BAT",
+            "preferredSlot": 1,
+            "peak": 96,
+            "peakYear": 2022,
+            "style": "power"
+          }
+        },
+        {
+          "name": "Jasprit Bumrah",
+          "overall": 83,
+          "bat": 38,
+          "bowl": 81,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jasprit Bumrah",
+            "country": "IND",
+            "birthYear": 1993,
+            "debutYear": 2013,
+            "exitYear": 2026,
+            "role": "BOWL",
+            "preferredSlot": 10,
+            "peak": 99,
+            "peakYear": 2024,
+            "style": "death"
+          }
+        }
+      ]
+    },
+    {
+      "year": 2015,
+      "players": [
+        {
+          "name": "David Warner",
+          "overall": 77,
+          "bat": 73,
+          "bowl": 35,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2015,
+            "peak": 71,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Virat Kohli",
+          "overall": 78,
+          "bat": 73,
+          "bowl": 30,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2017,
+            "peak": 72,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "AB de Villiers",
+          "overall": 90,
+          "bat": 88,
+          "bowl": 23,
+          "available": true,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2021,
+            "peakYear": 2012,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Matthew Hayden",
+          "overall": 79,
+          "bat": 79,
+          "bowl": 30,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2010,
+            "peakYear": 2008,
+            "peak": 86,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Shane Warne",
+          "overall": 80,
+          "bat": 35,
+          "bowl": 81,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2011,
+            "peakYear": 2008,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Sachin Tendulkar",
+          "overall": 73,
+          "bat": 73,
+          "bowl": 27,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2013,
+            "peakYear": 2008,
+            "peak": 90,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Jos Buttler",
+          "overall": 87,
+          "bat": 89,
+          "bowl": 16,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jos Buttler",
+            "country": "ENG",
+            "birthYear": 1990,
+            "debutYear": 2009,
+            "exitYear": 2026,
+            "role": "WK-BAT",
+            "preferredSlot": 1,
+            "peak": 96,
+            "peakYear": 2022,
+            "style": "power"
+          }
+        },
+        {
+          "name": "Jasprit Bumrah",
+          "overall": 84,
+          "bat": 39,
+          "bowl": 83,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jasprit Bumrah",
+            "country": "IND",
+            "birthYear": 1993,
+            "debutYear": 2013,
+            "exitYear": 2026,
+            "role": "BOWL",
+            "preferredSlot": 10,
+            "peak": 99,
+            "peakYear": 2024,
+            "style": "death"
+          }
+        }
+      ]
+    },
+    {
+      "year": 2016,
+      "players": [
+        {
+          "name": "David Warner",
+          "overall": 77,
+          "bat": 73,
+          "bowl": 35,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2015,
+            "peak": 71,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Virat Kohli",
+          "overall": 78,
+          "bat": 73,
+          "bowl": 30,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2017,
+            "peak": 72,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "AB de Villiers",
+          "overall": 88,
+          "bat": 86,
+          "bowl": 23,
+          "available": true,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2021,
+            "peakYear": 2012,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Matthew Hayden",
+          "overall": 79,
+          "bat": 79,
+          "bowl": 30,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2010,
+            "peakYear": 2008,
+            "peak": 86,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Shane Warne",
+          "overall": 80,
+          "bat": 35,
+          "bowl": 81,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2011,
+            "peakYear": 2008,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Sachin Tendulkar",
+          "overall": 73,
+          "bat": 73,
+          "bowl": 27,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2013,
+            "peakYear": 2008,
+            "peak": 90,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Jos Buttler",
+          "overall": 88,
+          "bat": 90,
+          "bowl": 17,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jos Buttler",
+            "country": "ENG",
+            "birthYear": 1990,
+            "debutYear": 2009,
+            "exitYear": 2026,
+            "role": "WK-BAT",
+            "preferredSlot": 1,
+            "peak": 96,
+            "peakYear": 2022,
+            "style": "power"
+          }
+        },
+        {
+          "name": "Jasprit Bumrah",
+          "overall": 86,
+          "bat": 40,
+          "bowl": 84,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jasprit Bumrah",
+            "country": "IND",
+            "birthYear": 1993,
+            "debutYear": 2013,
+            "exitYear": 2026,
+            "role": "BOWL",
+            "preferredSlot": 10,
+            "peak": 99,
+            "peakYear": 2024,
+            "style": "death"
+          }
+        }
+      ]
+    },
+    {
+      "year": 2017,
+      "players": [
+        {
+          "name": "David Warner",
+          "overall": 77,
+          "bat": 73,
+          "bowl": 35,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2015,
+            "peak": 71,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Virat Kohli",
+          "overall": 78,
+          "bat": 73,
+          "bowl": 30,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2017,
+            "peak": 72,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "AB de Villiers",
+          "overall": 87,
+          "bat": 85,
+          "bowl": 23,
+          "available": true,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2021,
+            "peakYear": 2012,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Matthew Hayden",
+          "overall": 79,
+          "bat": 79,
+          "bowl": 30,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2010,
+            "peakYear": 2008,
+            "peak": 86,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Shane Warne",
+          "overall": 80,
+          "bat": 35,
+          "bowl": 81,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2011,
+            "peakYear": 2008,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Sachin Tendulkar",
+          "overall": 73,
+          "bat": 73,
+          "bowl": 27,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2013,
+            "peakYear": 2008,
+            "peak": 90,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Jos Buttler",
+          "overall": 89,
+          "bat": 91,
+          "bowl": 17,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jos Buttler",
+            "country": "ENG",
+            "birthYear": 1990,
+            "debutYear": 2009,
+            "exitYear": 2026,
+            "role": "WK-BAT",
+            "preferredSlot": 1,
+            "peak": 96,
+            "peakYear": 2022,
+            "style": "power"
+          }
+        },
+        {
+          "name": "Jasprit Bumrah",
+          "overall": 88,
+          "bat": 41,
+          "bowl": 86,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jasprit Bumrah",
+            "country": "IND",
+            "birthYear": 1993,
+            "debutYear": 2013,
+            "exitYear": 2026,
+            "role": "BOWL",
+            "preferredSlot": 10,
+            "peak": 99,
+            "peakYear": 2024,
+            "style": "death"
+          }
+        }
+      ]
+    },
+    {
+      "year": 2018,
+      "players": [
+        {
+          "name": "David Warner",
+          "overall": 77,
+          "bat": 73,
+          "bowl": 35,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2015,
+            "peak": 71,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Virat Kohli",
+          "overall": 78,
+          "bat": 73,
+          "bowl": 30,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2017,
+            "peak": 72,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "AB de Villiers",
+          "overall": 84,
+          "bat": 82,
+          "bowl": 22,
+          "available": true,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2021,
+            "peakYear": 2012,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Matthew Hayden",
+          "overall": 79,
+          "bat": 79,
+          "bowl": 30,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2010,
+            "peakYear": 2008,
+            "peak": 86,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Shane Warne",
+          "overall": 80,
+          "bat": 35,
+          "bowl": 81,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2011,
+            "peakYear": 2008,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Sachin Tendulkar",
+          "overall": 73,
+          "bat": 73,
+          "bowl": 27,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2013,
+            "peakYear": 2008,
+            "peak": 90,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Jos Buttler",
+          "overall": 91,
+          "bat": 93,
+          "bowl": 17,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jos Buttler",
+            "country": "ENG",
+            "birthYear": 1990,
+            "debutYear": 2009,
+            "exitYear": 2026,
+            "role": "WK-BAT",
+            "preferredSlot": 1,
+            "peak": 96,
+            "peakYear": 2022,
+            "style": "power"
+          }
+        },
+        {
+          "name": "Jasprit Bumrah",
+          "overall": 89,
+          "bat": 41,
+          "bowl": 87,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jasprit Bumrah",
+            "country": "IND",
+            "birthYear": 1993,
+            "debutYear": 2013,
+            "exitYear": 2026,
+            "role": "BOWL",
+            "preferredSlot": 10,
+            "peak": 99,
+            "peakYear": 2024,
+            "style": "death"
+          }
+        }
+      ]
+    },
+    {
+      "year": 2019,
+      "players": [
+        {
+          "name": "David Warner",
+          "overall": 76,
+          "bat": 73,
+          "bowl": 34,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2015,
+            "peak": 71,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Virat Kohli",
+          "overall": 78,
+          "bat": 73,
+          "bowl": 30,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2017,
+            "peak": 72,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "AB de Villiers",
+          "overall": 82,
+          "bat": 80,
+          "bowl": 21,
+          "available": true,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2021,
+            "peakYear": 2012,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Matthew Hayden",
+          "overall": 79,
+          "bat": 79,
+          "bowl": 30,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2010,
+            "peakYear": 2008,
+            "peak": 86,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Shane Warne",
+          "overall": 80,
+          "bat": 35,
+          "bowl": 81,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2011,
+            "peakYear": 2008,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Sachin Tendulkar",
+          "overall": 73,
+          "bat": 73,
+          "bowl": 27,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2013,
+            "peakYear": 2008,
+            "peak": 90,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Jos Buttler",
+          "overall": 92,
+          "bat": 94,
+          "bowl": 17,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jos Buttler",
+            "country": "ENG",
+            "birthYear": 1990,
+            "debutYear": 2009,
+            "exitYear": 2026,
+            "role": "WK-BAT",
+            "preferredSlot": 1,
+            "peak": 96,
+            "peakYear": 2022,
+            "style": "power"
+          }
+        },
+        {
+          "name": "Jasprit Bumrah",
+          "overall": 91,
+          "bat": 42,
+          "bowl": 89,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jasprit Bumrah",
+            "country": "IND",
+            "birthYear": 1993,
+            "debutYear": 2013,
+            "exitYear": 2026,
+            "role": "BOWL",
+            "preferredSlot": 10,
+            "peak": 99,
+            "peakYear": 2024,
+            "style": "death"
+          }
+        }
+      ]
+    },
+    {
+      "year": 2020,
+      "players": [
+        {
+          "name": "David Warner",
+          "overall": 74,
+          "bat": 71,
+          "bowl": 34,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2015,
+            "peak": 71,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Virat Kohli",
+          "overall": 78,
+          "bat": 73,
+          "bowl": 30,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2017,
+            "peak": 72,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "AB de Villiers",
+          "overall": 79,
+          "bat": 78,
+          "bowl": 21,
+          "available": true,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2021,
+            "peakYear": 2012,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Matthew Hayden",
+          "overall": 79,
+          "bat": 79,
+          "bowl": 30,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2010,
+            "peakYear": 2008,
+            "peak": 86,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Shane Warne",
+          "overall": 80,
+          "bat": 35,
+          "bowl": 81,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2011,
+            "peakYear": 2008,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Sachin Tendulkar",
+          "overall": 73,
+          "bat": 73,
+          "bowl": 27,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2013,
+            "peakYear": 2008,
+            "peak": 90,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Jos Buttler",
+          "overall": 93,
+          "bat": 95,
+          "bowl": 18,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jos Buttler",
+            "country": "ENG",
+            "birthYear": 1990,
+            "debutYear": 2009,
+            "exitYear": 2026,
+            "role": "WK-BAT",
+            "preferredSlot": 1,
+            "peak": 96,
+            "peakYear": 2022,
+            "style": "power"
+          }
+        },
+        {
+          "name": "Jasprit Bumrah",
+          "overall": 93,
+          "bat": 43,
+          "bowl": 91,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jasprit Bumrah",
+            "country": "IND",
+            "birthYear": 1993,
+            "debutYear": 2013,
+            "exitYear": 2026,
+            "role": "BOWL",
+            "preferredSlot": 10,
+            "peak": 99,
+            "peakYear": 2024,
+            "style": "death"
+          }
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "players": [
+        {
+          "name": "David Warner",
+          "overall": 73,
+          "bat": 69,
+          "bowl": 33,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2015,
+            "peak": 71,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Virat Kohli",
+          "overall": 78,
+          "bat": 73,
+          "bowl": 30,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2017,
+            "peak": 72,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "AB de Villiers",
+          "overall": 76,
+          "bat": 75,
+          "bowl": 20,
+          "available": true,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2021,
+            "peakYear": 2012,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Matthew Hayden",
+          "overall": 79,
+          "bat": 79,
+          "bowl": 30,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2010,
+            "peakYear": 2008,
+            "peak": 86,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Shane Warne",
+          "overall": 80,
+          "bat": 35,
+          "bowl": 81,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2011,
+            "peakYear": 2008,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Sachin Tendulkar",
+          "overall": 73,
+          "bat": 73,
+          "bowl": 27,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2013,
+            "peakYear": 2008,
+            "peak": 90,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Jos Buttler",
+          "overall": 95,
+          "bat": 97,
+          "bowl": 18,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jos Buttler",
+            "country": "ENG",
+            "birthYear": 1990,
+            "debutYear": 2009,
+            "exitYear": 2026,
+            "role": "WK-BAT",
+            "preferredSlot": 1,
+            "peak": 96,
+            "peakYear": 2022,
+            "style": "power"
+          }
+        },
+        {
+          "name": "Jasprit Bumrah",
+          "overall": 94,
+          "bat": 44,
+          "bowl": 92,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jasprit Bumrah",
+            "country": "IND",
+            "birthYear": 1993,
+            "debutYear": 2013,
+            "exitYear": 2026,
+            "role": "BOWL",
+            "preferredSlot": 10,
+            "peak": 99,
+            "peakYear": 2024,
+            "style": "death"
+          }
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "players": [
+        {
+          "name": "David Warner",
+          "overall": 71,
+          "bat": 68,
+          "bowl": 32,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2015,
+            "peak": 71,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Virat Kohli",
+          "overall": 77,
+          "bat": 73,
+          "bowl": 30,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2017,
+            "peak": 72,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "AB de Villiers",
+          "overall": 76,
+          "bat": 75,
+          "bowl": 20,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2021,
+            "peakYear": 2012,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Matthew Hayden",
+          "overall": 79,
+          "bat": 79,
+          "bowl": 30,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2010,
+            "peakYear": 2008,
+            "peak": 86,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Shane Warne",
+          "overall": 80,
+          "bat": 35,
+          "bowl": 81,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2011,
+            "peakYear": 2008,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Sachin Tendulkar",
+          "overall": 73,
+          "bat": 73,
+          "bowl": 27,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2013,
+            "peakYear": 2008,
+            "peak": 90,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Jos Buttler",
+          "overall": 96,
+          "bat": 98,
+          "bowl": 18,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jos Buttler",
+            "country": "ENG",
+            "birthYear": 1990,
+            "debutYear": 2009,
+            "exitYear": 2026,
+            "role": "WK-BAT",
+            "preferredSlot": 1,
+            "peak": 96,
+            "peakYear": 2022,
+            "style": "power"
+          }
+        },
+        {
+          "name": "Jasprit Bumrah",
+          "overall": 96,
+          "bat": 44,
+          "bowl": 94,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jasprit Bumrah",
+            "country": "IND",
+            "birthYear": 1993,
+            "debutYear": 2013,
+            "exitYear": 2026,
+            "role": "BOWL",
+            "preferredSlot": 10,
+            "peak": 99,
+            "peakYear": 2024,
+            "style": "death"
+          }
+        }
+      ]
+    },
+    {
+      "year": 2023,
+      "players": [
+        {
+          "name": "David Warner",
+          "overall": 68,
+          "bat": 65,
+          "bowl": 31,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2015,
+            "peak": 71,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Virat Kohli",
+          "overall": 75,
+          "bat": 71,
+          "bowl": 29,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2017,
+            "peak": 72,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "AB de Villiers",
+          "overall": 76,
+          "bat": 75,
+          "bowl": 20,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2021,
+            "peakYear": 2012,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Matthew Hayden",
+          "overall": 79,
+          "bat": 79,
+          "bowl": 30,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2010,
+            "peakYear": 2008,
+            "peak": 86,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Shane Warne",
+          "overall": 80,
+          "bat": 35,
+          "bowl": 81,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2011,
+            "peakYear": 2008,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Sachin Tendulkar",
+          "overall": 73,
+          "bat": 73,
+          "bowl": 27,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2013,
+            "peakYear": 2008,
+            "peak": 90,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Jos Buttler",
+          "overall": 95,
+          "bat": 97,
+          "bowl": 18,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jos Buttler",
+            "country": "ENG",
+            "birthYear": 1990,
+            "debutYear": 2009,
+            "exitYear": 2026,
+            "role": "WK-BAT",
+            "preferredSlot": 1,
+            "peak": 96,
+            "peakYear": 2022,
+            "style": "power"
+          }
+        },
+        {
+          "name": "Jasprit Bumrah",
+          "overall": 97,
+          "bat": 45,
+          "bowl": 95,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jasprit Bumrah",
+            "country": "IND",
+            "birthYear": 1993,
+            "debutYear": 2013,
+            "exitYear": 2026,
+            "role": "BOWL",
+            "preferredSlot": 10,
+            "peak": 99,
+            "peakYear": 2024,
+            "style": "death"
+          }
+        }
+      ]
+    },
+    {
+      "year": 2024,
+      "players": [
+        {
+          "name": "David Warner",
+          "overall": 66,
+          "bat": 63,
+          "bowl": 30,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2015,
+            "peak": 71,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Virat Kohli",
+          "overall": 73,
+          "bat": 69,
+          "bowl": 28,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2017,
+            "peak": 72,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "AB de Villiers",
+          "overall": 76,
+          "bat": 75,
+          "bowl": 20,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2021,
+            "peakYear": 2012,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Matthew Hayden",
+          "overall": 79,
+          "bat": 79,
+          "bowl": 30,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2010,
+            "peakYear": 2008,
+            "peak": 86,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Shane Warne",
+          "overall": 80,
+          "bat": 35,
+          "bowl": 81,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2011,
+            "peakYear": 2008,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Sachin Tendulkar",
+          "overall": 73,
+          "bat": 73,
+          "bowl": 27,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2013,
+            "peakYear": 2008,
+            "peak": 90,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Jos Buttler",
+          "overall": 94,
+          "bat": 96,
+          "bowl": 18,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jos Buttler",
+            "country": "ENG",
+            "birthYear": 1990,
+            "debutYear": 2009,
+            "exitYear": 2026,
+            "role": "WK-BAT",
+            "preferredSlot": 1,
+            "peak": 96,
+            "peakYear": 2022,
+            "style": "power"
+          }
+        },
+        {
+          "name": "Jasprit Bumrah",
+          "overall": 99,
+          "bat": 46,
+          "bowl": 97,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jasprit Bumrah",
+            "country": "IND",
+            "birthYear": 1993,
+            "debutYear": 2013,
+            "exitYear": 2026,
+            "role": "BOWL",
+            "preferredSlot": 10,
+            "peak": 99,
+            "peakYear": 2024,
+            "style": "death"
+          }
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "players": [
+        {
+          "name": "David Warner",
+          "overall": 63,
+          "bat": 60,
+          "bowl": 28,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2015,
+            "peak": 71,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Virat Kohli",
+          "overall": 71,
+          "bat": 67,
+          "bowl": 28,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2017,
+            "peak": 72,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "AB de Villiers",
+          "overall": 76,
+          "bat": 75,
+          "bowl": 20,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2021,
+            "peakYear": 2012,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Matthew Hayden",
+          "overall": 79,
+          "bat": 79,
+          "bowl": 30,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2010,
+            "peakYear": 2008,
+            "peak": 86,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Shane Warne",
+          "overall": 80,
+          "bat": 35,
+          "bowl": 81,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2011,
+            "peakYear": 2008,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Sachin Tendulkar",
+          "overall": 73,
+          "bat": 73,
+          "bowl": 27,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2013,
+            "peakYear": 2008,
+            "peak": 90,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Jos Buttler",
+          "overall": 92,
+          "bat": 94,
+          "bowl": 17,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jos Buttler",
+            "country": "ENG",
+            "birthYear": 1990,
+            "debutYear": 2009,
+            "exitYear": 2026,
+            "role": "WK-BAT",
+            "preferredSlot": 1,
+            "peak": 96,
+            "peakYear": 2022,
+            "style": "power"
+          }
+        },
+        {
+          "name": "Jasprit Bumrah",
+          "overall": 98,
+          "bat": 45,
+          "bowl": 96,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jasprit Bumrah",
+            "country": "IND",
+            "birthYear": 1993,
+            "debutYear": 2013,
+            "exitYear": 2026,
+            "role": "BOWL",
+            "preferredSlot": 10,
+            "peak": 99,
+            "peakYear": 2024,
+            "style": "death"
+          }
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "players": [
+        {
+          "name": "David Warner",
+          "overall": 60,
+          "bat": 58,
+          "bowl": 27,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2015,
+            "peak": 71,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Virat Kohli",
+          "overall": 68,
+          "bat": 64,
+          "bowl": 26,
+          "available": false,
+          "retired": false,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2026,
+            "peakYear": 2017,
+            "peak": 72,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "AB de Villiers",
+          "overall": 76,
+          "bat": 75,
+          "bowl": 20,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2021,
+            "peakYear": 2012,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Matthew Hayden",
+          "overall": 79,
+          "bat": 79,
+          "bowl": 30,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2010,
+            "peakYear": 2008,
+            "peak": 86,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Shane Warne",
+          "overall": 80,
+          "bat": 35,
+          "bowl": 81,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2011,
+            "peakYear": 2008,
+            "peak": 88,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Sachin Tendulkar",
+          "overall": 73,
+          "bat": 73,
+          "bowl": 27,
+          "available": false,
+          "retired": true,
+          "career": {
+            "debutYear": 2008,
+            "exitYear": 2013,
+            "peakYear": 2008,
+            "peak": 90,
+            "style": "foundation"
+          }
+        },
+        {
+          "name": "Jos Buttler",
+          "overall": 90,
+          "bat": 92,
+          "bowl": 17,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jos Buttler",
+            "country": "ENG",
+            "birthYear": 1990,
+            "debutYear": 2009,
+            "exitYear": 2026,
+            "role": "WK-BAT",
+            "preferredSlot": 1,
+            "peak": 96,
+            "peakYear": 2022,
+            "style": "power"
+          }
+        },
+        {
+          "name": "Jasprit Bumrah",
+          "overall": 97,
+          "bat": 45,
+          "bowl": 95,
+          "available": true,
+          "retired": false,
+          "career": {
+            "name": "Jasprit Bumrah",
+            "country": "IND",
+            "birthYear": 1993,
+            "debutYear": 2013,
+            "exitYear": 2026,
+            "role": "BOWL",
+            "preferredSlot": 10,
+            "peak": 99,
+            "peakYear": 2024,
+            "style": "death"
+          }
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "artifactSha256": "131899e5c596f7adad94ae3089cc8ac0be1802feb69c6c2d47228b6d0ca8756c"
+}
