@@ -2,7 +2,7 @@
 
 No browser has been operated for this rebuild. The previous restrictions against browser localhost/file access, alternate browser paths, deployment, and remote execution remain in force. Do not work around them. VM tests and parsed markup do not certify appearance, native events, focus, scrolling, or performance.
 
-Open `game/global_champions_cricket_v8_final_pass.html` locally in your own browser. Start at the title, play through the new opening flow, then inspect signing, draft scouting, XI order/swap, match preparation, result and scorebook. Later checks must include semi-finals, Grand Final, season review, contract decisions, trade response, annual draft, archive and the 2026 ending.
+Open `game/global_champions_cricket_v8_layout_pass.html` locally in your own browser. Start at the title, play through the new opening flow, then inspect signing, draft scouting, XI order/swap, match preparation, result and scorebook. Later checks must include semi-finals, Grand Final, season review, contract decisions, trade response, annual draft, archive and the 2026 ending.
 
 Capture screenshots at your normal desktop size and at a narrow window around 390 pixels. Include the full screen for hierarchy and a close crop for any unreadable name, collision, unclear control or wasted area. Capture signed names while the wire is running and paused; open Fielding from the team room; open scouting in the draft.
 

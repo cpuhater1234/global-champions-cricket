@@ -195,3 +195,11 @@ Current candidate is `game/global_champions_cricket_v8_final_pass.html`. Read `d
 The extended career helper now signs manual cover when natural injuries leave fewer than eleven fit players; this does not change manual selection in the product. Zero-through-six retirement boundaries explicitly check optional-cut budgets, supplementary ordering, refills, stale controls and resumes. Count only completed final-artifact runs in the scope, not interrupted assessment candidates. The permitted rendered review remains outstanding, and no visual or native interaction perfection is claimed.
 
 Final artifact SHA-256: `f4aa6622f621ce14d16ffcd4725562d186522e633d49a8f05ca3a9932aac811f`. Two completed final-artifact careers (seeds 404/505, Chennai/Sydney Sixers) cover 38 seasons, 532 regular matches and the 2026 ending. All eight foundation paths and the dedicated 604-assertion retirement/cover/swap/stale-command boundary test passed. Exact cold checkpoints, tie-break and natural injury-cover counts are in `qa/v8_final_pass_scope.json`. No native rendered evidence exists.
+
+## Latest checkpoint: whole-game overlap source assessment
+
+Tom requested checking the entire game for overlapping elements. Current candidate: `game/global_champions_cricket_v8_layout_pass.html`, SHA-256 `4ec644d12140f17eba9331376f2eb256b0a763b91e96c9cc937adef7031f74ae`. Read `docs/GCC_V8_LAYOUT_PASS.md` and `qa/v8_layout_scope.json`.
+
+The team-room grid now stacks at narrow widths; signing titles, club cover headers and order cards grow; sealed foundation/annual order slots use intrinsic content reservations. Shrinkable grid/flex children, text wrapping, HUD/search layout, stacked narrow score/stat/archive rows and explicit dialog scrolling address source-level overlap risks. Thirty-nine screen/dialog markup states, all twenty club identities, a two-season smoke and reveal/highlight checks passed. Only order-card markup in screens.js changed among scripts; domain/controller/scheduler/save scripts are byte-identical to the preceding final-pass candidate.
+
+No screenshots or native rendering were produced or inspected. Actual overlap, focus, mobile/zoom layout and smoothness remain unverified. Intentional overlays must be distinguished from collisions in user-operated screenshots. Preserve the browser restrictions; do not claim the entire game is overlap-free.

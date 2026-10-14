@@ -1,0 +1,91 @@
+{
+  "artifact": "global_champions_cricket_v8_layout_pass.html",
+  "sha256": "4ec644d12140f17eba9331376f2eb256b0a763b91e96c9cc937adef7031f74ae",
+  "scope": "CSS/source containment and generated markup checks only. No native layout/rendering, geometric overlap, focus, mouse/keyboard or animation measurements.",
+  "layout": {
+    "scope": "Generated markup for every screen family/dialog and twenty club identities, plus CSS source containment checks. No browser layout, geometric overlap, pixels, keyboard or smoothness measurements.",
+    "checks": 104,
+    "screenStates": 39,
+    "clubVariants": 20,
+    "errors": []
+  },
+  "layout_markup": {
+    "scope": "Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.",
+    "view_states": 39,
+    "action_bindings": 510,
+    "errors": []
+  },
+  "two_season": {
+    "scope": "Real cricket engine + new UI dispatch in a VM DOM stub. No browser, visual, geometry, focus or latency certification.",
+    "seed": 808,
+    "club": "HUR",
+    "coverage": {
+      "reloads": [
+        {
+          "year": 2008,
+          "label": "foundation-user-pick"
+        },
+        {
+          "year": 2008,
+          "label": "manual-XI"
+        },
+        {
+          "year": 2009,
+          "label": "annual-order"
+        },
+        {
+          "year": 2009,
+          "label": "annual-user-pick"
+        }
+      ],
+      "finals": 0,
+      "injurySelections": 4,
+      "injuryCovers": 0,
+      "superOvers": 1,
+      "clubs": []
+    },
+    "checks": 1532,
+    "seasons": 2,
+    "regularSeasonMatches": 28,
+    "errors": []
+  },
+  "playthrough_markup": {
+    "scope": "Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.",
+    "view_states": 26,
+    "action_bindings": 553,
+    "errors": []
+  },
+  "reveal": {
+    "scope": "VM clock and command tests; proves reveal sequencing/save guards and unchanged draw order, not rendered smoothness.",
+    "checks": 43,
+    "errors": []
+  },
+  "highlights": {
+    "scope": "VM actual-score highlights, pacing, pause/modal/title/archive and cold reload; cricket truth unchanged. CSS/markup source protections, no native rendered geometry or smoothness evidence.",
+    "checks": 58,
+    "errors": []
+  },
+  "cricket_feedback": {
+    "scope": "Source/real-script VM checks of cricket reads, drafting, spectator finals, Super Over ledgers and save rejection. No native browser, visual geometry or smoothness evidence.",
+    "checks": 750,
+    "randomTieBreakSeeds": 150,
+    "errors": []
+  },
+  "dom_tree": {
+    "scope": "DOM tree model checks for keyed identity, replacement, insertion, removal, typing and details state. Does not certify native focus, scroll, geometry or appearance.",
+    "checks": 18,
+    "keyedPermutations": 24,
+    "errors": []
+  },
+  "changes": [
+    "Team-room selection stacks below 1100px; XI reads use two columns.",
+    "Signing titles, club covers and order cards grow with their content.",
+    "Foundation/annual sealed order cards contain inert intrinsic reservations of the revealed card.",
+    "Grid/flex children can shrink; names, headings and button labels wrap.",
+    "HUD and headings wrap, search labels sit above their controls, and trade columns use zero minimum tracks.",
+    "Narrow score panels, stat rows, archive rows and identity groups stack/wrap; dialogs explicitly scroll.",
+    "Sealed/revealed order status has identical typography instead of inheriting oversized envelope text."
+  ],
+  "remaining": "All rendered desktop/mobile/zoom overlap checks are outstanding. Intentional layering includes modal dialogs/backdrops, sticky pacing controls, reveal shutters/decorations and the floating feedback toast. Rectangles alone do not prove text collisions.",
+  "script_change": "Only screens.js changed (order-card reservation markup). Domain, controller, scheduler and save scripts are byte-identical to the final-pass candidate."
+}
