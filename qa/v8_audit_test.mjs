@@ -17,7 +17,7 @@ const reload=host(h.storage.get('gcc_dynasty_v8'));call(reload,'continue');asser
 // Preserve the result and archive-return context across a cold load.
 X.ui.view='season';call(h,'result',s.results[0].round);call(h,'archive');call(h,'home');const ar=host(h.storage.get('gcc_dynasty_v8'));call(ar,'continue');assert.equal(ar.context.GCC8.ui.view,'archive');call(ar,'archiveBack');assert.equal(ar.context.GCC8.ui.view,'result');assert.ok(ar.context.GCC8.ui.result.scorecard);checks+=3;
 // Cached squad reads must react to component-rating changes, even if overall stays fixed.
-const p=X.roster()[0];X.squadProfile();const old=p.fielding;p.fielding=old===99?1:99;assert.equal(JSON.stringify(X.squadProfile()),JSON.stringify(h.context.GCC8_FOUNDATION_READ.projectedDraftProfile(X.roster())));p.fielding=old;checks++;
+const p=X.roster()[0];X.squadProfile();const old=p.fielding;p.fielding=old===99?1:99;assert.equal(JSON.stringify(X.squadProfile()),JSON.stringify(h.context.GCC8_FOUNDATION_READ.projectedDraftProfile(X.roster().filter(p=>s.dynasty.injuries[p.id]?.status!=='OUT'))));p.fielding=old;checks++;
 assert.ok(ar.context.GCC8.views.result().includes('data-action="matchday"'));checks++;
 // Storage-denied boot and write failures retain a usable current session.
 const blocked=host(undefined,{storageBlocked:true});assert.equal(blocked.context.GCC8.ui.view,'home');assert.equal(blocked.context.GCC8.hasSave(),false);checks+=2;

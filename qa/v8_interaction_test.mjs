@@ -11,7 +11,7 @@ X.ui.tradeOffer=offer.id;X.ui.tradeTarget=wanted.p.id;X.ui.tradeClub=wanted.c.ab
 const pick=['R1','R2'].find(read.ownsPick);X.ui.tradePick=pick||'';
 call('propose');assert.ok(h.get('g8tradeReply').textContent);checks++;
 const accepted=s.teams[s.userClub.abbr].includes(wanted.p.id);
-if(accepted){assert.ok(!s.teams[s.userClub.abbr].includes(offer.id));assert.ok(s.teams[wanted.c.abbr].includes(offer.id));if(pick)assert.ok(!read.ownsPick(pick));checks++;}
+if(accepted){const movement=X.offseasonState();assert.ok(movement.tradedOut.some(p=>p.id===offer.id)&&movement.incoming.some(p=>p.id===wanted.p.id),'squad update names both sides of the real accepted deal');checks++;assert.ok(!s.teams[s.userClub.abbr].includes(offer.id));assert.ok(s.teams[wanted.c.abbr].includes(offer.id));if(pick)assert.ok(!read.ownsPick(pick));checks++;}
 call('close');call('annualDraft');
 while(s.dynasty.offseason?.phase==='draft'){call('skipPick');if(s.dynasty.offseason?.phase!=='draft')break;
  const rs=X.roster(),pool=X.pool(true),p=pool.find(p=>p.role==='WK-BAT'&&!rs.some(p=>p.role==='WK-BAT'))||pool[0];call('inspect',p.id);call('draftPlayer',p.id);

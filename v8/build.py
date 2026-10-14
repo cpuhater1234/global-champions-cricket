@@ -47,6 +47,11 @@ def freeze():
    assert marker in script
    script=script.replace(marker,"  window.GCC8_FOUNDATION_READ={roleTags:playerRoleTags,playerNote,groundStory,groundBand,projectedDraftProfile,draftSnapshot,effectiveProfile,simulateSuperOver,winningChaseTotal,reconcileChasePhases,teamAverages:userTeamAverages,leagueAverages:leagueInningsAverages,standout:matchStandout,pauseDraft:()=>{clearTimeout(draftAutoTimer);draftAutoTimer=null}};\n"+marker)
   if name=='dynasty':
+   script,n=re.subn(r'^  function runCpuMarket\([^\n]*\n',lambda m:(ROOT/'domain/cpu_market.js').read_text(),script,flags=re.M);assert n==1
+   # Rolling club agreements: retain by default; every permanent player can be reviewed.
+   script=script.replace("log('OFF-SEASON',`${state.year} off-season opens`", "d.offseason.returningIds=rosterIds(state.userClub.abbr).slice();log('OFF-SEASON',`${state.year} off-season opens`")
+   script,n=re.subn(r'^  function contractCycle\(p\).*?\n','',script,flags=re.M);assert n==1
+   script,n=re.subn(r'^  function contractDue\(p\).*?\n',"  function contractDue(p){return !!p&&!p.dynastyRetired&&!p.dynastyReplacement;}\n",script,flags=re.M);assert n==1
    script=script.replace('function applyCareerYear(p,year){const m=', 'function applyCareerYear(p,year){window.GCC8_JOB_MODEL.prepare(p,year);const m=')
    script=script.replace("if(state.userClub)saveFoundation('recruit');","if(state.userClub){addCareerMetaExisting();saveFoundation('recruit');}")
    old='if(p.dynastyBase2008){const ageNow='
@@ -122,7 +127,7 @@ def build(output):
  # Their DOM side effects would escape the inert host; none owns cricket state.
  binding='const {setTimeout,clearTimeout,setInterval,clearInterval,requestAnimationFrame,cancelAnimationFrame}=window.GCC8_CLOCK;const MutationObserver=class{observe(){}disconnect(){}};'
  engine='<script>'+ (ROOT/'domain/career_paths.js').read_text()+'\n'+(ROOT/'domain/player_jobs.js').read_text()+'</script><script>window.GCC8_ENGINE_SCROLL=()=>{};'+(ROOT/'ui/clock.js').read_text()+'</script>'+ '\n'.join('<script>(()=>{'+binding+(ROOT/'engine'/f'{name}.js').read_text()+'})();</script>' for name in ['players','league','ratings','projections','cpu','foundation','dynasty'])
- ui='\n'.join('<script>'+ (ROOT/'ui'/f'{name}.js').read_text()+'</script>' for name in ['components','data','roles','venues','match_story','screens','dom','controller'])
+ ui='\n'.join('<script>'+ (ROOT/'ui'/f'{name}.js').read_text()+'</script>' for name in ['components','data','roles','venues','match_story','offseason','screens','dom','controller'])
  build_id=hashlib.sha256(((ROOT/'ui/game.css').read_text()+ui+engine+assets).encode()).hexdigest()[:16]
  template=template.replace('id="g8app"',f'id="g8app" data-build="{build_id}"')
  result=template.replace('@@ENGINE@@',engine).replace('@@UI@@',ui)
