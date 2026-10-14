@@ -147,3 +147,7 @@ Build: `python v8/build.py --freeze --output game/global_champions_cricket_v8_re
 ## Latest navigation adjustment
 
 Tom requested logo-based home navigation instead of the “Title screen” button. The GCC mark is now a native keyboard-accessible button bound to the existing home/pause/save command. The separate HUD button is removed. Repeated home activation preserves the prior Continue destination. Current artifact: `game/global_champions_cricket_v8_logo_home.html`, SHA256 `8209cf0ef9668c6e73f17a47a063861d2b50f556dde4e0e3d9a9f7d8d181d496`. Targeted VM checks passed for the binding, pause and repeat-home/Continue behaviour. No native rendered review or new full-career claim.
+
+## Save wording adjustment
+
+Tom asked to avoid “new save” wording when none exists. Fresh Play is verified to enter the story directly without a prompt. The existing-career replacement prompt now says “Start again?” and its button “Start again”; no new-dynasty wording. Current artifact: `game/global_champions_cricket_v8_play.html`, SHA256 `b68ca333275e2dfdcf4d0ae16db74f4dd337b0c862422237e84cd7de8daaef81`. Targeted no-save/existing-career VM checks passed; no new rendered quality claim.
