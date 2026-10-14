@@ -12,6 +12,7 @@ def freeze():
  for name,script in zip(names,scripts):
   script=script.replace('window.scrollTo','window.GCC8_ENGINE_SCROLL')
   if name=='foundation':
+   script=script.replace('const draftSpeeds = [520, 260, 90];','const draftSpeeds = [520, 260, 130];')
    # V8 domain additions run inside the foundation closure, beside the real RNG/XIs.
    addition=(ROOT/'domain/super_over.js').read_text()
    marker='  function simulateInningsPair('
@@ -37,6 +38,13 @@ def freeze():
    marker='  function openReplacementMarket('
    assert marker in script
    script=script.replace(marker,(ROOT/'domain/injury_cover.js').read_text()+'\n'+marker)
+   script,n=re.subn(r'^  function runCpuDraftUntilUser\([^\n]*\n','',script,flags=re.M)
+   assert n==1
+   marker='  function userAnnualDraft('
+   assert marker in script
+   script=script.replace(marker,(ROOT/'domain/annual_draft_pace.js').read_text()+'\n'+marker)
+   script=script.replace('runCpuDraftUntilUser();renderOffseason();autoSave()', 'runCpuDraftUntilUser(false);renderOffseason();autoSave()')
+   script=script.replace('function resumeSave(){const previous', 'function resumeSave(){clearTimeout(annualDraftTimer);annualDraftTimer=null;const previous')
    # Forced departures beyond four are filled after the ordinary snake rounds.
    old='maxRounds=Math.max(0,...Object.values(needs));'
    assert old in script

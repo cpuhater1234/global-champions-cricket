@@ -88,6 +88,7 @@ for(let year=2009;year<=lastYear;year++){
  if(year===2009&&budget.limit&&eligible.length){doIt('release',eligible[0]);doIt('confirmRelease',eligible[0]);}
  doIt('cpuMarket');doIt('annualDraw');doIt('revealAll');checkpoint('annual-order');doIt('annualDraft');
  for(let guard=0;s.dynasty.offseason.phase==='draft'&&guard<30;guard++){
+  doIt('skipPick');if(s.dynasty.offseason.phase!=='draft')break;
   const free=X.pool(true),rs=X.roster();const p=free.find(p=>p.role==='WK-BAT'&&!rs.some(p=>p.role==='WK-BAT'))||free.find(p=>p.maxOvers>=4&&rs.filter(p=>p.maxOvers>=4).length<6)||free[0];check(!!p,'annual player pool');if(guard===0)checkpoint('annual-user-pick');doIt('inspect',p.id);doIt('draftPlayer',p.id);
  }
  check(s.dynasty.offseason.phase==='cuts','annual draft ends');doIt('lodgeList');check(Object.values(s.teams).every(ids=>ids.length===15),'annual lists fifteen');

@@ -1,0 +1,191 @@
+{
+  "artifact": "game/global_champions_cricket_v8_draft_controls.html",
+  "sha256": "f182c9e480c17bbfd5aedf44ad8f75deb14f1ef1895de8759c63ecf2931e4c05",
+  "scope": "Source and generated-markup checks plus actual-script VM controls, timer and two-season smoke. No native rendering evidence.",
+  "changes": [
+    "Equal-height club descriptions and bowling involvement labels retained.",
+    "Separate direct Pick and Scout controls, overall rating and batting/bowling visual bars.",
+    "Phase/attribute depth stays in Scout; projected squad ratings and pick feedback live in collapsed analysis.",
+    "Explicit gaps between advice, filters and board. Draft-order controls no longer sticky overlays.",
+    "Adjacent speed/skip buttons on foundation and annual boards; annual CPU choices now paced with same scheduler.",
+    "1x/2x/4x intervals 520/260/130ms; skip/paced picks and RNG are equivalent."
+  ],
+  "suites": {
+    "draft_controls": {
+      "scope": "Actual-script VM foundation/annual paced drafts against instant-skip truth (annual one-vacancy-per-club fixture), direct Pick/Scout/stale actions and modal/home/cold pause. No native pixels or interaction certification.",
+      "checks": 678,
+      "errors": []
+    },
+    "transition": {
+      "scope": "VM real annual draft, actual played-round injury recovery and real midseason trade; initial injury is an explicit fixture. No native rendered evidence.",
+      "checks": 115,
+      "trade": {
+        "offer": 104,
+        "target": 192,
+        "club": "RR"
+      },
+      "errors": []
+    },
+    "fan": {
+      "scope": "Real-script VM commands with explicit replacement injury/legacy-chain and club-transfer fixtures, played-round recovery, cold resume and dialog-message checks. No native rendering evidence.",
+      "checks": 95,
+      "errors": []
+    },
+    "final_pass": {
+      "scope": "Actual VM career commands with explicit 0\u20136 user retirement fixtures, cut budgets, manual draft/XI, stale controls and cold reload. No native rendering evidence.",
+      "checks": 632,
+      "cases": [
+        {
+          "retirements": 0,
+          "cuts": 2,
+          "picks": 2
+        },
+        {
+          "retirements": 1,
+          "cuts": 2,
+          "picks": 3
+        },
+        {
+          "retirements": 2,
+          "cuts": 2,
+          "picks": 4
+        },
+        {
+          "retirements": 3,
+          "cuts": 1,
+          "picks": 4
+        },
+        {
+          "retirements": 4,
+          "cuts": 0,
+          "picks": 4
+        },
+        {
+          "retirements": 5,
+          "cuts": 0,
+          "picks": 5
+        },
+        {
+          "retirements": 6,
+          "cuts": 0,
+          "picks": 6
+        }
+      ],
+      "errors": []
+    },
+    "cricket_polish": {
+      "scope": "Source/real-script VM checks of cricket reads, drafting, spectator finals, Super Over ledgers and save rejection. No native browser, visual geometry or smoothness evidence.",
+      "checks": 750,
+      "randomTieBreakSeeds": 150,
+      "errors": []
+    },
+    "layout": {
+      "scope": "Generated markup for every screen family/dialog and twenty club identities, plus CSS source containment checks. No browser layout, geometric overlap, pixels, keyboard or smoothness measurements.",
+      "checks": 104,
+      "screenStates": 39,
+      "clubVariants": 20,
+      "errors": []
+    },
+    "reveal": {
+      "scope": "VM clock and command tests; proves reveal sequencing/save guards and unchanged draw order, not rendered smoothness.",
+      "checks": 43,
+      "errors": []
+    },
+    "interaction": {
+      "scope": "VM dispatch + real trade, supplementary pick and replacement rules. Injury availability fixture is injected, not naturally simulated; no browser validation.",
+      "checks": 33,
+      "tradeAccepted": true,
+      "pickIncluded": "R1",
+      "errors": []
+    },
+    "save_integrity": {
+      "scope": "VM corrupt-state fixtures must fail before mutating a previously valid career or overwriting saved data.",
+      "checks": 77,
+      "cases": [
+        "table",
+        "statValue",
+        "negativeStat",
+        "selfFixture",
+        "team",
+        "order",
+        "xi",
+        "results",
+        "schedule",
+        "stats",
+        "club",
+        "reveal",
+        "post-validation render failure"
+      ]
+    }
+  },
+  "smoke": {
+    "scope": "Real cricket engine + new UI dispatch in a VM DOM stub. No browser, visual, geometry, focus or latency certification.",
+    "seed": 818,
+    "club": "SUR",
+    "coverage": {
+      "reloads": [
+        {
+          "year": 2008,
+          "label": "foundation-user-pick"
+        },
+        {
+          "year": 2008,
+          "label": "manual-XI"
+        },
+        {
+          "year": 2008,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2008,
+          "label": "grand-final-ready"
+        },
+        {
+          "year": 2009,
+          "label": "annual-order"
+        },
+        {
+          "year": 2009,
+          "label": "annual-user-pick"
+        }
+      ],
+      "finals": 1,
+      "injurySelections": 1,
+      "injuryCovers": 0,
+      "superOvers": 1,
+      "clubs": []
+    },
+    "checks": 1620,
+    "seasons": 2,
+    "regularSeasonMatches": 28,
+    "errors": []
+  },
+  "markup": {
+    "layout": {
+      "scope": "Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.",
+      "view_states": 39,
+      "action_bindings": 560,
+      "errors": []
+    },
+    "paced": {
+      "scope": "Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.",
+      "view_states": 5,
+      "action_bindings": 294,
+      "errors": []
+    },
+    "smoke": {
+      "scope": "Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.",
+      "view_states": 28,
+      "action_bindings": 666,
+      "errors": []
+    }
+  },
+  "rebuildByteIdentical": true,
+  "limitations": [
+    "Annual timer test uses explicit one-vacancy-per-club fixture.",
+    "Two-season smoke uses manual UI commands and Skip to my pick; dedicated timer tests run paced selections.",
+    "This artifact has not rerun the preceding 38-season matrix. Match simulation/rating rules are unchanged; annual draft timing is changed.",
+    "Native geometry, keyboard, focus, scroll and animation smoothness remain unverified."
+  ],
+  "noDeploymentActionsReleaseSubagentsOrExternalMessages": true
+}

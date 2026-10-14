@@ -61,3 +61,29 @@
 .g8revealgrid .g8ordersealed{display:block;position:relative;border:0;padding:0;overflow:visible}.g8orderreserve{visibility:hidden;pointer-events:none;text-align:left}.g8orderreserve .g8club{box-shadow:none}.g8club .g8orderstatus{font:700 1rem Arial,Helvetica,sans-serif;line-height:1.5;color:var(--ink);text-shadow:none}
 @media(max-width:1100px){.g8selection{grid-template-columns:1fr}.g8finals .g8score{grid-template-columns:1fr}.g8finals .g8score>div:last-child{text-align:left}.g8finals .g8score>span{font-size:1.2rem}}
 @media(max-width:600px){.g8score{grid-template-columns:1fr}.g8score>div:last-child{text-align:left}.g8score>span{font-size:1.2rem}.g8statrow,.g8playerdetail .g8statrow{grid-template-columns:1fr;gap:.3rem}.g8statrow b,.g8statrow>div,.g8playerdetail .g8statrow b{text-align:left}.g8clubidentity,.g8inningsclub{flex-wrap:wrap}.g8groundbands>div{flex-wrap:wrap}.g8groundbands b{text-align:left}.g8seasonbook{grid-template-columns:1fr}.g8seasonbook .g8button{grid-column:auto}.g8heading>div:first-child{flex-basis:100%}}
+
+/* Draft decisions and pace controls have their own space, outside player cards. */
+.g8drawcontrols{position:relative;top:auto;z-index:auto;margin-bottom:1.75rem;gap:1.25rem}
+.g8drawcontrols .g8actions{margin:0;min-width:0;gap:.75rem}
+.g8drawcontrols .g8button{margin:0;max-width:100%}
+.g8draftboard{display:grid;gap:1.25rem;align-content:start}
+.g8draftboard .g8search{margin:0;padding:.4rem 0 .6rem;gap:1rem}
+.g8draftboard .g8draftadvice{margin:0}
+.g8draftcontrols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:.75rem;align-self:center;flex:0 1 370px;min-width:0;width:100%;max-width:370px}
+.g8draftcontrols .g8button{min-width:0;margin:0;min-height:52px;padding:.7rem .6rem}
+.g8playeractions{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:.65rem;margin-top:auto;padding-top:.75rem}
+.g8player .g8playeractions .g8button{min-width:0;width:100%;margin:0;padding:.65rem .45rem;font-size:.8rem;min-height:46px}
+@media(max-width:760px){.g8draftcontrols{flex:none;max-width:none;align-self:stretch}.g8drawcontrols .g8actions{width:100%;gap:.65rem}.g8drawcontrols .g8actions .g8button{min-width:0}.g8draftboard{gap:1.1rem}}
+
+/* The board stays simple; Scout and collapsed squad analysis hold the depth. */
+.g8abilitybars{display:grid;gap:.7rem;margin:.25rem 0 .8rem}
+.g8abilitybar{display:grid;grid-template-columns:52px minmax(0,1fr) 24px;align-items:center;gap:.6rem;font-size:.74rem;color:#355969}
+.g8abilitybar b{text-align:right;color:#142a3b;font-variant-numeric:tabular-nums}
+.g8abilitytrack{height:8px;border-radius:5px;background:#d4e0da;overflow:hidden}
+.g8abilitytrack i{display:block;height:100%;width:var(--ability);background:#267b83;border-radius:5px}
+.g8abilitybar:first-child .g8abilitytrack i{background:#398a4d}
+.g8draftplayer .g8rating{background:#15374b;color:#d8f45a;border:2px solid #8fba4b;border-radius:9px;min-width:56px;min-height:56px;display:flex;align-items:center;justify-content:center;font-size:1.9rem}
+.g8draftaside .g8moredata{margin:1rem 0 0}
+.g8draftaside .g8moredata .g8teamread{margin:0;padding-top:.75rem;border-top:0}
+.g8draftaside .g8latestpicks{min-height:0}
+.g8clock .g8pickread{min-height:3em}

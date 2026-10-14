@@ -54,7 +54,7 @@
  };
  X.draftAdvice=()=>{
   const ps=roster(),p=X.squadProfile();
-  const note=!ps.length?'Start with a player you can build around. Then cover the jobs across an innings.':!ps.some(p=>p.keeping>=65)?'No recognised keeper yet. Check keeping alongside batting value.':p.trustedOversCapacity<20?'Your projected attack is short of 20 trusted overs. Compare bowling workload and phase quality.':p.death<70?'Death bowling is a pressure point in the projected side. Compare late-over options.':'Your squad covers the core jobs. Compare phase strengths, batting roles and home conditions for the next pick.';
+  const note=!ps.length?'Start with a player you can build around. Then cover the jobs across an innings.':!ps.some(p=>p.keeping>=65)?'You still need a recognised wicketkeeper.':p.trustedOversCapacity<20?'Your attack needs another dependable bowling option.':p.death<70?'Look for someone who can bowl the closing overs.':'The core jobs are covered. Pick the player who improves your side.';
   return `<p class="g8draftadvice">${esc(note)}</p>`;
  };
  X.seasonContributors=()=>{
