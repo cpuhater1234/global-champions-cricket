@@ -161,3 +161,7 @@ Current artifact: `game/global_champions_cricket_v8_club_guides.html`, SHA256 `7
 ## Front-page arena bar
 
 Tom reported the “Fifteen in the squad…” line only filling half its bar and requested no visible photo credit. The arena paragraph now explicitly uses 100% width and removes the inherited hero-prose 47ch maximum. Visible photo-credit links are removed; venue caption, alt text, intrinsic image dimensions and project asset credits remain. Current artifact: `game/global_champions_cricket_v8_front_page.html`, SHA256 `c51db3c629645436e4d68f298aa81711b46f568cd44e5fb6cfc91c12afe41883`. Scoped CSS/markup checks passed; no native rendered claim.
+
+## Stadium caption alignment
+
+Tom requested the caption centred under the photograph. The shared figcaption now centres its icon/text group and wrapped text. Current artifact: `game/global_champions_cricket_v8_caption.html`, SHA256 `4f4e51121c417188bf3fdb6c0d33138c9666d57e890f58e82f40fb3cbe53d311`. Scoped CSS check passed; native rendering remains unverified.
