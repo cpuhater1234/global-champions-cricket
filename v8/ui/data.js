@@ -14,9 +14,13 @@
   }
   return [...rows.values()];
  };
+ X.bowlingRole=p=>{
+  if(!R.bowlingWorkload(p)||!R.bowlingStyle(p))return 'Batting specialist';
+  const usage=R.bowlingUsagePrior(p);return usage>=3?'Frontline bowler':usage>=1.5?'Supporting bowler':usage>0?'Part-time option':'Occasional option';
+ };
  X.playerRead=p=>{
-  const scout=read.scout(p.id),tags=F.roleTags(p).filter(t=>!t.includes('LOWER MIDDLE')),style=R.bowlingStyle(p),work=R.bowlingWorkload(p),conf=String(p.ratingConfidenceBand||'MEDIUM').toLowerCase();
-  return `<div class="g8playerdetail"><p>${esc(F.playerNote(p))}.</p><div class="g8tags">${tags.map(t=>`<span>${esc(t)}</span>`).join('')}</div>${stat('Career outlook',scout?.outlook||'Still being assessed')}${stat('Scouting confidence',conf)}${stat('Bowling style',style||'Batting specialist')}${stat('Credible bowling ceiling',work?`${work} overs`:'Not a regular option')}${stat('Batting against pace / spin',`${p.pacePlay} / ${p.spinPlay}`)}${stat('Power / control',`${p.power} / ${p.control}`)}${stat('Running / finishing',`${p.running} / ${p.finishing}`)}${stat('Bowling control / variation',`${p.bowlControl} / ${p.variation}`)}${stat('Temperament / leadership',`${p.temperament} / ${p.leadership}`)}${stat('Contract decision',s.dynasty?.offseason?(scout?.contractDue?'Due this offseason':'Not due this offseason'):'Offseason decisions come after the season')}${scout?.recent?`<p>Recent GCC record: ${esc(scout.recent)}</p>`:''}<p class="g8fine">Outlook is a scouting judgement. It does not reveal a guaranteed peak or retirement date.</p></div>`;
+  const scout=read.scout(p.id),tags=F.roleTags(p).filter(t=>!t.includes('LOWER MIDDLE')),style=R.bowlingStyle(p),conf=String(p.ratingConfidenceBand||'MEDIUM').toLowerCase();
+  return `<div class="g8playerdetail"><p>${esc(F.playerNote(p))}.</p><div class="g8tags">${tags.map(t=>`<span>${esc(t)}</span>`).join('')}</div>${stat('Career outlook',scout?.outlook||'Still being assessed')}${stat('Scouting confidence',conf)}${stat('Bowling style',style||'Batting specialist')}${stat('Bowling role',X.bowlingRole(p))}${stat('Batting against pace / spin',`${p.pacePlay} / ${p.spinPlay}`)}${stat('Power / control',`${p.power} / ${p.control}`)}${stat('Running / finishing',`${p.running} / ${p.finishing}`)}${stat('Bowling control / variation',`${p.bowlControl} / ${p.variation}`)}${stat('Temperament / leadership',`${p.temperament} / ${p.leadership}`)}${stat('Contract decision',s.dynasty?.offseason?(scout?.contractDue?'Due this offseason':'Not due this offseason'):'Offseason decisions come after the season')}${scout?.recent?`<p>Recent GCC record: ${esc(scout.recent)}</p>`:''}<p class="g8fine">Outlook is a scouting judgement. It does not reveal a guaranteed peak or retirement date.</p></div>`;
  };
  X.teamRead=(squad=false)=>{
   const p=squad?X.squadProfile():X.profile(),ps=squad?roster():s.xi.map(G.byId).filter(Boolean),keeper=ps.slice().sort((a,b)=>b.keeping-a.keeping)[0],partial=!squad&&ps.length<11;
@@ -46,7 +50,7 @@
  };
  X.draftHints=p=>{
   const strengths=[['PP batting',R.batPhaseScore(p,'powerplay')],['Middle batting',R.batPhaseScore(p,'middle')],['Finishing',R.batPhaseScore(p,'death')],...(R.bowlingWorkload(p)>0?[['New ball',R.bowlPhaseScore(p,'newBall')],['Middle bowling',R.bowlPhaseScore(p,'middle')],['Death bowling',R.bowlPhaseScore(p,'death')]]:[])].sort((a,b)=>b[1]-a[1]).slice(0,2);
-  return `<div class="g8drafthints"><span>${esc(R.battingRoleBand(p))} · ${p.keeping>=65?'Recognised keeper':R.bowlingStyle(p)||'Batting specialist'}</span><b>${strengths.map(([label,n])=>`${label} ${Math.round(n)}`).join(' · ')}</b><span>${R.bowlingWorkload(p)?`Bowling ceiling ${R.bowlingWorkload(p)} overs`:'No regular bowling workload'}</span></div>`;
+  return `<div class="g8drafthints"><span>${esc(R.battingRoleBand(p))} · ${p.keeping>=65?'Recognised keeper':R.bowlingStyle(p)||'Batting specialist'}</span><b>${strengths.map(([label,n])=>`${label} ${Math.round(n)}`).join(' · ')}</b><span>${esc(X.bowlingRole(p))}</span></div>`;
  };
  X.draftAdvice=()=>{
   const ps=roster(),p=X.squadProfile();
