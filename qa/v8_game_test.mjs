@@ -5,9 +5,18 @@ const reportDir=process.env.GCC8_TEST_REPORT_DIR||'qa';fs.mkdirSync(reportDir,{r
 const lastYear=Number(process.env.GCC8_TEST_LAST_YEAR||2026);
 const path=process.env.GCC8_TEST_BUILD||'game/global_champions_cricket_v8_fresh_game.html';
 const host=loadGame(path,Number(process.env.GCC8_TEST_SEED||101),new Map(),{strictIds:true}),{G,context,get}=host,X=context.GCC8,s=G.state;
-const coverage={reloads:[],finals:0,injurySelections:0,clubs:[]};const scorebooks=[];const markup={};let checks=0;const check=(test,msg)=>{assert.ok(test,msg);checks++;};
+const coverage={reloads:[],finals:0,injurySelections:0,superOvers:0,clubs:[]};const scorebooks=[];const markup={};let checks=0;const check=(test,msg)=>{assert.ok(test,msg);checks++;};
 const doIt=(name,...args)=>{const ok=X.dispatch(name,args);check(ok,`${name}: ${get('g8feedback').textContent}`);const key=X.ui.view+(X.ui.view==='dynasty'?'-'+s.dynasty.offseason.phase:'')+(X.ui.modal?'-'+X.ui.modal:'');if(!markup[key])markup[key]={stage:get('g8stage').innerHTML,hud:get('g8hud').innerHTML,dialog:X.ui.modal?get('g8dialogContent').innerHTML:''};if(X.ui.view==='matchReveal'){check(X.dispatch('matchSkip'),'instant match completion');}};
 function auditScorebook(r){
+ if(r.superOver){coverage.superOvers++;check(r.tieBreak&&r.homeInnings.total===r.awayInnings.total,'Super Over only follows tied regulation scores');
+  check(r.superOver.winner.abbr===r.winner.abbr,'tie-break winner owns the match result');
+  for(const [index,round] of r.superOver.rounds.entries()){
+   for(const i of round.innings){check(i.balls>=1&&i.balls<=6&&i.wickets<=2,'Super Over delivery/wicket bounds');check(i.deliveries.reduce((n,d)=>n+d.runs,0)===i.total&&i.deliveries.filter(d=>d.wicket).length===i.wickets,'Super Over ledger reconciles');check(i.batters.reduce((n,b)=>n+b.balls,0)===i.balls&&i.batters.reduce((n,b)=>n+b.runs,0)===i.total,'tie-break batters reconcile');check(s.teams[i.club.abbr].includes(i.batters[0].id),'tie-break hitter belongs to playing club');}
+   const [a,b]=round.innings;check(index===r.superOver.rounds.length-1?a.total!==b.total:a.total===b.total,'only tied overs repeat');
+  }
+  check(X.resultCard(r).includes('SUPER OVER'),'result explains tie-break');
+ }
+
  for(const i of r.scorecard.innings){
   check(Number.isInteger(i.total)&&i.total>=0&&i.wickets>=0&&i.wickets<=10,'innings bounds');
   check(i.balls>0&&i.balls<=120&&i.batting.reduce((n,b)=>n+b.balls,0)===i.balls,'legal balls reconcile');
@@ -48,7 +57,7 @@ function finishSeason(){
  if(X.ui.view==='team'){manualXI();doIt('lodge');doIt('postSeason');}
  if(X.ui.view==='finals'){coverage.finals++;checkpoint('finals-ready');
   doIt('simulateFinals');s.finals.semis.forEach(auditScorebook);check(s.finals.stage==='semis','semi finals completed');doIt('finalScorecard','semis',0);doIt('close');doIt('advanceFinals');checkpoint('grand-final-ready');
-  if(context.GCC8_ENGINE_READ.xiProblem()){doIt('editXI','finals');manualXI();doIt('lodge');}
+  if([s.finals.gfPair.home.abbr,s.finals.gfPair.away.abbr].includes(s.userClub.abbr)&&context.GCC8_ENGINE_READ.xiProblem()){doIt('editXI','finals');manualXI();doIt('lodge');}
   doIt('simulateFinals');auditScorebook(s.finals.gf);doIt('review');
  }
  check(X.ui.view==='review',`season review: year ${s.year}, view ${X.ui.view}, hidden ${X.screen()}, position ${s.regularSeasonPosition}, XI issue ${context.GCC8_ENGINE_READ.xiProblem()}`);check(s.dynasty.history.some(h=>h.year===s.year),'current season archived');

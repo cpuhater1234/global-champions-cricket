@@ -179,3 +179,11 @@ Tom liked the detailed team guides but found the actual club squares basic. Card
 Sealed league invitations reserve their own full intrinsic card layout, hidden/inert to assistive interaction, before opening. Equal minimum frames preserve the reveal arrangement while allowing enlarged text to grow instead of clipping behind a fixed height. Small-phone and reduced-motion rules remain. Source layout is not rendered evidence.
 
 Current artifact: `game/global_champions_cricket_v8_club_cards.html`, SHA256 `c835d09d744d3d2dedfe5c04aff812b9400ca837c96b1f0584f8714239ac7dc7`. See `qa/v8_card_scope.json`: all twenty variants, eight guide/selection routes, a full 2008 foundation season, reveal/resume and parsed action checks passed in VM/source. Earlier highlight tests also passed with unchanged scripts. No native appearance, keyboard, geometry or smoothness certification. No deployment/Actions/release or subagents.
+
+## Latest checkpoint: cricket feedback and tie-break polish
+
+Tom authorised implementation of the brutal assessment findings. Current candidate is `game/global_champions_cricket_v8_cricket_polish.html`; read `docs/GCC_V8_CRICKET_POLISH.md` and `qa/v8_cricket_polish_scope.json` for its exact rules and verification. Fitness-adjusted matchup/XI reads, phase balls/rates with early-chase explanations, spectator finals controls, draft capability sorting/role/phase/workload reads, and batting/bowling season contributors/planning are implemented.
+
+New tied games now use a simplified Super Over, with visible scores and delivery ledger. This is an intentional domain change injected from `v8/domain/super_over.js`, not a modification of the immutable reference. Existing tied results retain their original winner. New tie-break figures do not enter regulation scores, NRR or player season statistics. Subsequent RNG outcomes change after a new tied match.
+
+Three full 2008–2026 VM careers and all eight foundation club paths passed on the exact artifact. No rendered geometry, native mouse/keyboard or smoothness certification exists. Preserve the current arcade club-card design and restart behaviour. No deployment, Actions or release was performed. Browser restrictions and the user-operated rendered-review path still apply.

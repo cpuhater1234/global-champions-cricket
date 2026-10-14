@@ -12,8 +12,27 @@ function validSave(save){
  for(const a of [s.xi,s.battingOrder])if(!Array.isArray(a)||a.length>11||!unique(a)||a.some(id=>!s.userClub||!s.teams[s.userClub.abbr].includes(id)))return false;
  if(s.xi.length!==s.battingOrder.length||s.battingOrder.some(id=>!s.xi.includes(id)))return false;
  const club=c=>record(c)&&clubs.includes(c.abbr),match=r=>record(r)&&club(r.home)&&club(r.away);
+ const superOverValid=r=>{
+  const over=r?.superOver;if(over==null)return true; // Existing careers retain old tied-match results.
+  if(!match(r)||r.tieBreak!==true||r.homeInnings?.total!==r.awayInnings?.total||!record(over)||!club(over.winner)||over.winner.abbr!==r.winner?.abbr||!Array.isArray(over.rounds)||!over.rounds.length)return false;
+  const pair=[r.home.abbr,r.away.abbr];
+  for(let n=0;n<over.rounds.length;n++){
+   const round=over.rounds[n];if(!record(round)||!Array.isArray(round.innings)||round.innings.length!==2)return false;
+   if(!unique(round.innings.map(i=>i.club?.abbr)))return false;
+   for(const i of round.innings){
+    if(!record(i)||!club(i.club)||!pair.includes(i.club.abbr)||!Number.isInteger(i.total)||i.total<0||i.total>36||!Number.isInteger(i.wickets)||i.wickets<0||i.wickets>2||!Number.isInteger(i.balls)||i.balls<1||i.balls>6||!record(i.bowler)||!ids.has(i.bowler.id)||typeof i.bowler.name!=='string'||!Array.isArray(i.batters)||i.batters.length!==3||!unique(i.batters.map(b=>b.id))||i.batters.some(b=>!record(b)||!ids.has(b.id)||typeof b.name!=='string'||!Number.isInteger(b.runs)||b.runs<0||!Number.isInteger(b.balls)||b.balls<0||typeof b.out!=='boolean')||!Array.isArray(i.deliveries)||i.deliveries.length!==i.balls)return false;
+    if(i.deliveries.some((d,index)=>!record(d)||d.ball!==index+1||!i.batters.some(b=>b.id===d.batterId)||![0,1,2,3,4,6].includes(d.runs)||typeof d.wicket!=='boolean'||d.wicket&&d.runs!==0))return false;
+    if(i.deliveries.reduce((a,d)=>a+d.runs,0)!==i.total||i.deliveries.filter(d=>d.wicket).length!==i.wickets)return false;
+    if(i.batters.some(b=>b.runs!==i.deliveries.filter(d=>d.batterId===b.id).reduce((a,d)=>a+d.runs,0)||b.balls!==i.deliveries.filter(d=>d.batterId===b.id).length||b.out!==i.deliveries.some(d=>d.batterId===b.id&&d.wicket)))return false;
+   }
+   const [a,b]=round.innings;if(a.balls<6&&a.wickets<2||b.total<=a.total&&b.balls<6&&b.wickets<2)return false;
+   if(n<over.rounds.length-1&&a.total!==b.total||n===over.rounds.length-1&&(a.total===b.total||(a.total>b.total?a:b).club.abbr!==over.winner.abbr))return false;
+  }
+  return true;
+ };
  if(!Array.isArray(s.fullSchedule)||![0,14].includes(s.fullSchedule.length)||s.fullSchedule.some(round=>!Array.isArray(round)||round.length!==4||round.some(f=>!match(f))))return false;
- if(!Array.isArray(s.results)||s.results.some(r=>!match(r)||!club(r.winner)||!record(r.homeInnings)||!record(r.awayInnings)||!record(r.scorecard)||!Array.isArray(r.scorecard.innings)))return false;
+ if(!Array.isArray(s.results)||s.results.some(r=>!match(r)||!club(r.winner)||!record(r.homeInnings)||!record(r.awayInnings)||!record(r.scorecard)||!Array.isArray(r.scorecard.innings)||!superOverValid(r)))return false;
+ if(s.finals&&[...(s.finals.semis||[]),s.finals.gf].filter(Boolean).some(r=>!superOverValid(r)))return false;
  if(s.fullSchedule.length&&clubs.some(c=>!record(s.table[c])||['p','w','l','pts','nrr','runsFor','runsAgainst','ballsFor','ballsAgainst'].some(k=>!Number.isFinite(s.table[c][k]))))return false;
  if(s.dynasty){
   const d=s.dynasty;if(!record(d)||!Array.isArray(d.history)||!Array.isArray(d.transactions)||!record(d.manager)||!record(d.injuries)||!record(d.replacementFor)||!record(d.replacementOf))return false;

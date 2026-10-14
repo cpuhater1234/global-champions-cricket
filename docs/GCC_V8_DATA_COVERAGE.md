@@ -59,3 +59,7 @@ GCC8_TEST_BUILD=game/global_champions_cricket_v8_arcade_flow.html node qa/v8_gam
 ```
 
 The two-season command creates the local fixture save used by the reveal/trade tests. Its fixture file and markup snapshots are generated scratch outputs, not repository deliverables.
+
+## Cricket polish checkpoint
+
+The latest build uses simulation-adjusted fitness and team cohesion for XI/matchup profiles. Match phase comparisons expose legal balls/rates and early chase completion. Draft cards include individual phase strengths and workload, with explicit capability sorting. Season review includes both batting/bowling contributors and a contextual phase-rate planning read. New tied games expose a separate Super Over ledger without contaminating regulation or season statistics. See `GCC_V8_CRICKET_POLISH.md` and `../qa/v8_cricket_polish_scope.json` for rules, exact artifact and QA limits.

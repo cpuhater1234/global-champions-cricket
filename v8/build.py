@@ -12,9 +12,21 @@ def freeze():
  for name,script in zip(names,scripts):
   script=script.replace('window.scrollTo','window.GCC8_ENGINE_SCROLL')
   if name=='foundation':
+   # V8 domain additions run inside the foundation closure, beside the real RNG/XIs.
+   addition=(ROOT/'domain/super_over.js').read_text()
+   marker='  function simulateInningsPair('
+   assert marker in script
+   script=script.replace(marker,addition+'\n'+marker)
+   old='else { tieBreak = true; winner = rng() > .5 ? home : away; }'
+   assert old in script
+   script=script.replace('    let tieBreak = false;','    let tieBreak = false, superOver = null;')
+   script=script.replace(old,'else { tieBreak = true; superOver = simulateSuperOver(secondClub, firstClub, matchGround); winner = superOver.winner; }')
+   script=script.replace('return { hi, ai, winner, tieBreak, firstClub','return { hi, ai, winner, tieBreak, superOver, firstClub')
+   script=script.replace('tieBreak:pair.tieBreak,','tieBreak:pair.tieBreak, superOver:pair.superOver,')
+   script=script.replace("if(tieBreak) return 'after a tied match';","if(tieBreak) return pair?.superOver ? `in a Super Over${pair.superOver.rounds.length>1?' (tie-break '+pair.superOver.rounds.length+')':''}` : 'after a tied match';")
    marker='  return {\n    state,'
    assert marker in script
-   script=script.replace(marker,"  window.GCC8_FOUNDATION_READ={roleTags:playerRoleTags,playerNote,groundStory,groundBand,projectedDraftProfile,draftSnapshot,effectiveProfile,teamAverages:userTeamAverages,leagueAverages:leagueInningsAverages,standout:matchStandout,pauseDraft:()=>{clearTimeout(draftAutoTimer);draftAutoTimer=null}};\n"+marker)
+   script=script.replace(marker,"  window.GCC8_FOUNDATION_READ={roleTags:playerRoleTags,playerNote,groundStory,groundBand,projectedDraftProfile,draftSnapshot,effectiveProfile,simulateSuperOver,teamAverages:userTeamAverages,leagueAverages:leagueInningsAverages,standout:matchStandout,pauseDraft:()=>{clearTimeout(draftAutoTimer);draftAutoTimer=null}};\n"+marker)
   if name=='dynasty':
    script=script.replace(',exportSave,importSave,clearSaveAndRestart',',clearSaveAndRestart')
    # Product saves stay in browser storage; no import/export controls or download commands.
@@ -36,7 +48,7 @@ def freeze():
    script=script.replace("SAVE_KEY='gcc_dynasty_v7_2'","SAVE_KEY='gcc_dynasty_v8'").replace("META_KEY='gcc_dynasty_meta_v7_2'","META_KEY='gcc_dynasty_meta_v8'").replace("LEGACY_SAVE_KEY='gcc_dynasty_v7_0'","LEGACY_SAVE_KEY='gcc_dynasty_v7_2'")
    marker='  window.Dynasty={beginOffseason'
    assert marker in script
-   script=script.replace(marker,"  window.GCC8_ENGINE_READ={contractCandidates:()=>contractDecisionPlayers().map(p=>p.id),pickSlots:()=>slotsWithSupplement().map(x=>({...x})),cutBudget:()=>({limit:voluntaryCutLimit(),retired:userRetirementCount()}),freeAgents:()=>freeAgentPool().map(p=>p.id),replacements:id=>replacementPoolFor(pById(id)).map(p=>p.id),save:()=>autoSave(),xiProblem:()=>userXIProblem(),fresh:()=>{stopFoundationWatch();return startFreshWorld()},archive:()=>archiveSeason(),ownsPick:r=>userOwnsPick(r),scout:id=>{const p=pById(id);return p?{outlook:developmentRead(p),standing:scoutingLevel(p,state.userClub?.abbr),fit:scoutingFit(p,state.userClub?.abbr),recent:recentSeasonRead(p),contractDue:contractDue(p)}:null},records:()=>archiveRecords(),honours:()=>archiveClubHonours(),legends:()=>archiveUserLegends(),legacyRating:()=>managerScore()};\n"+marker)
+   script=script.replace(marker,"  window.GCC8_ENGINE_READ={matchProfile:c=>withFitnessContext(()=>window.GCC8_FOUNDATION_READ.effectiveProfile(c)),contractCandidates:()=>contractDecisionPlayers().map(p=>p.id),pickSlots:()=>slotsWithSupplement().map(x=>({...x})),cutBudget:()=>({limit:voluntaryCutLimit(),retired:userRetirementCount()}),freeAgents:()=>freeAgentPool().map(p=>p.id),replacements:id=>replacementPoolFor(pById(id)).map(p=>p.id),save:()=>autoSave(),xiProblem:()=>userXIProblem(),fresh:()=>{stopFoundationWatch();return startFreshWorld()},archive:()=>archiveSeason(),ownsPick:r=>userOwnsPick(r),scout:id=>{const p=pById(id);return p?{outlook:developmentRead(p),standing:scoutingLevel(p,state.userClub?.abbr),fit:scoutingFit(p,state.userClub?.abbr),recent:recentSeasonRead(p),contractDue:contractDue(p)}:null},records:()=>archiveRecords(),honours:()=>archiveClubHonours(),legends:()=>archiveUserLegends(),legacyRating:()=>managerScore()};\n"+marker)
   (ROOT/'engine'/f'{name}.js').write_text(script)
  body=re.search(r'<body[^>]*>(.*?)</body>',text,re.S)[1]
  body=re.sub(r'<script\b[^>]*>[\s\S]*?</script>','',body,flags=re.I)

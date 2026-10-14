@@ -18,13 +18,42 @@
   return `<div class="g8pitchread">${[['Pace & carry','pace'],['Spin & grip','spin'],['Boundary','boundary']].map(([label,k])=>stat(label,F.groundBand(conditions[k]||0,k).label)).join('')}<p>${esc(F.groundStory(c))}</p>${w?`<p><b>${esc(w.label)}.</b> ${esc(w.read)}</p>`:''}</div>`;
  };
  X.matchRead=fx=>{
-  if(!fx)return '';const home=G.matchGroundForFixture(fx),op=fx.home.abbr===s.userClub.abbr?fx.away:fx.home,mine=F.effectiveProfile(s.userClub),theirs=F.effectiveProfile(op);
+  if(!fx)return '';const home=G.matchGroundForFixture(fx),op=fx.home.abbr===s.userClub.abbr?fx.away:fx.home,mine=read.matchProfile(s.userClub),theirs=read.matchProfile(op);
   const rows=[['Your powerplay batting',mine.powerplayBat,theirs.newBall],['Your middle-overs batting',mine.middleBat,theirs.middleBowl],['Your death batting',mine.finishing,theirs.death],['Your new-ball attack',mine.newBall,theirs.powerplayBat],['Your middle-overs attack',mine.middleBowl,theirs.middleBat],['Your death attack',mine.death,theirs.finishing]];
-  return `<section class="g8matchread"><span class="g8eyebrow">THE CRICKET MATCHUP</span>${rows.map(([l,a,b])=>stat(l,Math.abs(a-b)<4?'Evenly matched':a>b?'Your stronger phase':'Opposition stronger')).join('')}<p class="g8fine">These compare XI ability, not win probabilities. ${esc(home.weather.read)}</p></section>`;
+  return `<section class="g8matchread"><span class="g8eyebrow">THE CRICKET MATCHUP</span>${rows.map(([l,a,b])=>stat(l,Math.abs(a-b)<4?'Evenly matched':a>b?'Your stronger phase':'Opposition stronger')).join('')}<p class="g8fine">These compare XI ability, including managed-injury penalties, not win probabilities. ${esc(home.weather.read)}</p></section>`;
  };
+ X.phaseBalls=(innings,k)=>k==='pp'?Math.min(36,innings.balls):k==='mid'?Math.max(0,Math.min(54,innings.balls-36)):Math.max(0,innings.balls-90);
  X.resultRead=r=>{
   if(!r)return '';const mine=r.home.abbr===s.userClub.abbr?r.homeInnings:r.awayInnings,theirs=r.home.abbr===s.userClub.abbr?r.awayInnings:r.homeInnings,star=F.standout(r);
-  return `<section class="g8sheet g8resultread"><span class="g8eyebrow">WHERE THE INNINGS TURNED</span><div class="g8phasecards">${[['Powerplay','pp'],['Middle overs','mid'],['Death','death']].map(([l,k])=>`<div><small>${l}</small><b>${mine[k]} <span>v</span> ${theirs[k]}</b><p>${mine[k]>theirs[k]?'You scored more in this phase.':mine[k]<theirs[k]?'They scored more in this phase.':'Level scoring in this phase.'}</p></div>`).join('')}</div><p class="g8fine">Chases can finish early, so phase totals do not always cover the same number of balls.</p>${star?`<p><b>${esc(star.player.name)}</b> · ${esc(star.line)}</p>`:''}${r.weather?`<p>${esc(r.weather.label)} · ${esc(r.weather.read)}</p>`:''}</section>`;
+  const phase=(l,k)=>{const a=X.phaseBalls(mine,k),b=X.phaseBalls(theirs,k),chased=r.battingSecond?.abbr===s.userClub.abbr&&mine.total>theirs.total;
+   const note=!a?(chased?'Target reached before this phase.':'Your innings ended before this phase.'):!b?'Their innings ended before this phase.':a!==b?'Different phase lengths; compare the scoring rates.':mine[k]>theirs[k]?'You scored more across the same number of balls.':mine[k]<theirs[k]?'They scored more across the same number of balls.':'Level scoring across the same number of balls.';
+   return `<div><small>${l}</small><b>${mine[k]} <span>v</span> ${theirs[k]}</b><span class="g8phasecontext">${a} v ${b} balls · ${a?(mine[k]*6/a).toFixed(2):'–'} v ${b?(theirs[k]*6/b).toFixed(2):'–'} runs/over</span><p>${note}</p></div>`;};
+  return `<section class="g8sheet g8resultread"><span class="g8eyebrow">HOW THE INNINGS COMPARED</span><div class="g8phasecards">${[['Powerplay','pp'],['Middle overs','mid'],['Death','death']].map(([l,k])=>phase(l,k)).join('')}</div><p class="g8fine">Your innings is shown first. Scoring rates describe what happened; wickets, targets and conditions also shape the result.</p>${star?`<p><b>${esc(star.player.name)}</b> · ${esc(star.line)}</p>`:''}${r.weather?`<p>${esc(r.weather.label)} · ${esc(r.weather.read)}</p>`:''}</section>`;
+ };
+ X.superOverRead=r=>{
+  if(!r?.superOver)return r?.tieBreak?'<p class="g8fine">This older match used the previous tied-match resolution.</p>':'';
+  return `<section class="g8superover"><span class="g8eyebrow">SUPER OVER${r.superOver.rounds.length>1?'S':''}</span>${r.superOver.rounds.map((round,index)=>`<div class="g8tieblock"><h3>Tie-break ${index+1}</h3>${round.innings.map(i=>`<div class="g8statrow"><b>${esc(i.club.name)}</b><span>${i.total}/${i.wickets} · ${i.balls} balls</span></div><p class="g8fine">Bowled by ${esc(i.bowler.name)} · ${i.deliveries.map(d=>d.wicket?'W':d.runs).join(' · ')}</p>`).join('')}</div>`).join('')}<p class="g8fine">Six legal balls or two wickets. A successful chase ends early; tied overs are replayed. Tie-break figures are separate from season statistics.</p></section>`;
+ };
+ X.draftHints=p=>{
+  const strengths=[['PP batting',R.batPhaseScore(p,'powerplay')],['Middle batting',R.batPhaseScore(p,'middle')],['Finishing',R.batPhaseScore(p,'death')],...(R.bowlingWorkload(p)>0?[['New ball',R.bowlPhaseScore(p,'newBall')],['Middle bowling',R.bowlPhaseScore(p,'middle')],['Death bowling',R.bowlPhaseScore(p,'death')]]:[])].sort((a,b)=>b[1]-a[1]).slice(0,2);
+  return `<div class="g8drafthints"><span>${esc(R.battingRoleBand(p))} · ${p.keeping>=65?'Recognised keeper':R.bowlingStyle(p)||'Batting specialist'}</span><b>${strengths.map(([label,n])=>`${label} ${Math.round(n)}`).join(' · ')}</b><span>${R.bowlingWorkload(p)?`Bowling ceiling ${R.bowlingWorkload(p)} overs`:'No regular bowling workload'}</span></div>`;
+ };
+ X.draftAdvice=()=>{
+  const ps=roster(),p=X.squadProfile();
+  const note=!ps.length?'Start with a player you can build around. Then cover the jobs across an innings.':!ps.some(p=>p.keeping>=65)?'No recognised keeper yet. Check keeping alongside batting value.':p.trustedOversCapacity<20?'Your projected attack is short of 20 trusted overs. Compare bowling workload and phase quality.':p.death<70?'Death bowling is a pressure point in the projected side. Compare late-over options.':'Your squad covers the core jobs. Compare phase strengths, batting roles and home conditions for the next pick.';
+  return `<p class="g8draftadvice">${esc(note)}</p>`;
+ };
+ X.seasonContributors=()=>{
+  const rows=roster().map(p=>({p,t:s.playerSeasonStats[p.id]||{}})),bat=rows.filter(x=>x.t.runs>0).sort((a,b)=>b.t.runs-a.t.runs).slice(0,3),bowl=rows.filter(x=>x.t.bowlBalls>0).sort((a,b)=>b.t.wickets-a.t.wickets||a.t.runsConceded/a.t.bowlBalls-b.t.runsConceded/b.t.bowlBalls).slice(0,3);
+  return `<div class="g8contributors"><section><span class="g8eyebrow">WITH THE BAT</span>${bat.length?bat.map(({p,t})=>stat(p.name,`${t.runs} runs · SR ${(t.runs*100/t.balls).toFixed(1)}`)).join(''):'<p>No batting record yet.</p>'}</section><section><span class="g8eyebrow">WITH THE BALL</span>${bowl.length?bowl.map(({p,t})=>stat(p.name,`${t.wickets} wickets · Econ ${(t.runsConceded*6/t.bowlBalls).toFixed(2)}`)).join(''):'<p>No bowling record yet.</p>'}</section></div>`;
+ };
+ X.seasonPlan=()=>{
+  const totals={pp:[0,0,0,0],mid:[0,0,0,0],death:[0,0,0,0]};
+  for(const r of s.results){const mine=r.home.abbr===s.userClub.abbr?r.homeInnings:r.awayInnings,theirs=r.home.abbr===s.userClub.abbr?r.awayInnings:r.homeInnings;for(const k of Object.keys(totals)){const t=totals[k];t[0]+=mine[k];t[1]+=X.phaseBalls(mine,k);t[2]+=theirs[k];t[3]+=X.phaseBalls(theirs,k);}}
+  const labels={pp:'powerplay',mid:'middle overs',death:'death overs'},reads=Object.entries(totals).filter(([,t])=>t[1]>=36&&t[3]>=36).map(([k,t])=>({k,for:t[0]*6/t[1],against:t[2]*6/t[3]})).sort((a,b)=>(a.for-a.against)-(b.for-b.against));
+  if(!reads.length)return '';
+  const w=reads[0],note=w.for<w.against?`The ${labels[w.k]} had your largest scoring-rate deficit: ${w.for.toFixed(2)} scored versus ${w.against.toFixed(2)} conceded per over. Review both batting options and bowling quality in this phase before replacing players.`:`Your scoring rate led the opposition in every sampled phase. Preserve that balance while planning for departures.`;
+  return `<section class="g8seasonplan"><span class="g8eyebrow">BEFORE YOU BUILD AGAIN</span><p>${esc(note)}</p><p class="g8fine">Based on your regular-season scorebooks. Different chase lengths and wickets affect these rates; this is a starting point for scouting.</p></section>`;
  };
  X.seasonRead=()=>{
   const a=F.teamAverages(),l=F.leagueAverages();if(!a?.matches)return '<p class="g8fine">The first matches will start to show how this XI plays.</p>';

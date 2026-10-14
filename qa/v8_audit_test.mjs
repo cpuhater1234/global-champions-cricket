@@ -12,7 +12,7 @@ call(h,'home');for(const raw of ['{broken',JSON.stringify(duplicated),JSON.strin
 }
 h.storage.set('gcc_dynasty_v8',saved);call(h,'continue');
 // Preserve an in-progress XI edit and its finals destination across a cold load.
-s.finals={...s.finals,stage:'gf-ready'};X.ui.view='finals';call(h,'editXI','finals');call(h,'home');
+s.finals={...s.finals,stage:'gf-ready',gfPair:{home:s.userClub,away:s.league.find(c=>c.abbr!==s.userClub.abbr)}};X.ui.view='finals';call(h,'editXI','finals');call(h,'home');
 const reload=host(h.storage.get('gcc_dynasty_v8'));call(reload,'continue');assert.equal(reload.context.GCC8.ui.view,'team');assert.equal(reload.context.GCC8.ui.teamReturn,'finals');checks+=2;
 // Preserve the result and archive-return context across a cold load.
 X.ui.view='season';call(h,'result',s.results[0].round);call(h,'archive');call(h,'home');const ar=host(h.storage.get('gcc_dynasty_v8'));call(ar,'continue');assert.equal(ar.context.GCC8.ui.view,'archive');call(ar,'archiveBack');assert.equal(ar.context.GCC8.ui.view,'result');assert.ok(ar.context.GCC8.ui.result.scorecard);checks+=3;
