@@ -87,3 +87,39 @@
 .g8draftaside .g8moredata .g8teamread{margin:0;padding-top:.75rem;border-top:0}
 .g8draftaside .g8latestpicks{min-height:0}
 .g8clock .g8pickread{min-height:3em}
+
+/* Actions clear the shared honours rule in signing and every annual review. */
+.g8honours + .g8actions{margin-top:1.25rem;padding-top:.25rem;padding-bottom:.5rem}
+.g8signing .g8actions{align-items:flex-start;align-content:flex-start;gap:.8rem}
+.g8heading .g8actions{padding-bottom:.5rem}
+/* Every dialog keeps its title and corner close control available while scrolling. */
+#g8dialog{padding:0}
+.g8modalhead{position:sticky;top:0;z-index:4;display:grid;grid-template-columns:minmax(0,1fr) 44px;align-items:start;gap:1rem;padding:1rem 1.25rem;background:#fffdf0;border-bottom:2px solid #b5d0c8}
+#g8dialog .g8modalhead h2{margin:.35rem 0 0;line-height:1.2}
+.g8dialogclose{width:44px;height:44px;display:grid;place-items:center;border:2px solid #557785;border-radius:7px;background:#142e42;color:#fffdf0;font:700 1.8rem Arial,sans-serif;cursor:pointer;flex-shrink:0}
+.g8dialogclose:hover{background:#28516a}.g8dialogclose:focus-visible{outline:3px solid #267b83;outline-offset:3px}
+.g8modalbody{padding:1.25rem;min-width:0}
+/* Player jobs use the club's sports palette, with scouting detail behind a disclosure. */
+.g8cricketrole{color:#34596a;font-size:.75rem;line-height:1.5;margin:0 0 .8rem;min-height:3em}
+.g8roleboard{background:#102c40;border:2px solid #4f7f8a;border-top:5px solid var(--gold);border-radius:9px;padding:1rem;color:#e5f4ee}
+.g8roleboardhead{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.7rem;margin-bottom:1rem}
+.g8roleboard .g8eyebrow{color:#b3d5d9}.g8coverread{font-size:.78rem;color:#d8f45a;line-height:1.5}
+.g8jobgrid{display:grid;gap:.7rem;grid-template-columns:repeat(2,minmax(0,1fr))}
+.g8job{padding:.8rem;border:1px solid #4c6f80;border-left:4px solid #7bdbe0;border-radius:5px;background:#17394b;min-width:0}
+.g8jobopen{border-left-color:#e6a167}.g8job h3{display:flex;gap:.4rem;align-items:center;font-size:.83rem;color:#e5f4ee;margin:0 0 .6rem!important}
+.g8jobplayers{display:flex;gap:.4rem;flex-wrap:wrap}.g8roleboard .g8rolechip{margin:0;padding:.35rem .5rem;min-height:36px;background:#234a57;border-color:#648b94;color:#f0f7e5;font-size:.7rem;box-shadow:0 2px 0 #031725;max-width:100%}
+.g8roleboard .g8rolechip:hover:enabled{background:#326373;color:#fffdf0}.g8unavailable{opacity:.6}.g8jobempty{color:#d4b89a;font-size:.72rem;line-height:1.4}
+.g8roleboard.g8teamread>p{color:#b9d3d9;line-height:1.5}.g8roleboard .g8roledetail{border-color:#537785;color:#e5f4ee}.g8roleboard .g8reads{padding-top:.8rem}.g8roleboard .g8read{background:#254452;color:#eef4df;border-color:#638591}
+.g8squadgroup{border-left:4px solid var(--roleaccent,var(--cyan));background:#e6efe4;margin:.75rem 0;padding:.7rem;border-radius:0 6px 6px 0}
+.g8squadgroup h3{color:#214c5d;font-size:.75rem;text-transform:uppercase;letter-spacing:.04em;margin:0 0 .6rem}
+.g8squadmember{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.3rem .5rem;border-top:1px solid #bfd3ca;padding:.6rem 0;min-width:0}.g8squadmember b{font-size:.79rem;overflow-wrap:anywhere}.g8squadmember small{grid-column:1;color:#496975;font-size:.68rem;line-height:1.45}.g8squadmember .g8button{grid-column:2;grid-row:1/3;align-self:center;min-width:0}
+/* Score comparisons and performance moments look like part of the cricket arena. */
+.g8phasecontest{background:linear-gradient(135deg,#143e4d,#142d43);color:#e7f2ed;border:2px solid #547c87;border-top:5px solid var(--cyan);border-radius:8px;padding:1rem;min-width:0}
+.g8phasecontest .g8eyebrow{color:#a6d5db}.g8phasecontest .g8phasescore{display:grid;grid-template-columns:minmax(0,1fr) auto auto auto minmax(0,1fr);align-items:center;gap:.45rem;margin:1rem 0;font-size:.65rem}
+.g8phasecontest .g8phasescore b{font-family:var(--display);font-size:1.9rem;color:#e9f8a6;margin:0}.g8phasescore>span:last-child{text-align:right}
+.g8phasebars{display:grid;gap:.4rem;margin:.5rem 0 1rem}.g8phasebars i{display:block;width:var(--phase);height:7px;border-radius:3px;background:#d8f45a}.g8phasebars i:last-child{background:#7bdbe0}
+.g8sheet .g8phasecontest p{color:#d1e2dd;font-size:.75rem;line-height:1.5}.g8phasefine{border-top:1px solid #507483;padding-top:.6rem;font-size:.7rem}.g8phasefine summary{cursor:pointer}.g8phasecontest .g8phasecontext{color:#b8d6db}
+.g8spotlights{display:grid;gap:.8rem;margin-top:.8rem}.g8spotlight{background:#17394b;border:2px solid #517f8b;border-left:5px solid var(--gold);border-radius:6px;padding:.9rem;color:#e7f5ed;min-width:0}.g8spotlight.g8bowlspot{border-left-color:var(--orange)}.g8spotlight .g8eyebrow{color:#bbd9de}.g8spotlight h3{color:#f0f6df;font-size:1rem;overflow-wrap:anywhere}.g8spotlight strong{font:400 2rem var(--display);color:#d8f45a;display:block}.g8spotlight strong small{font:700 .72rem Arial,sans-serif;color:#c3dbdd}.g8sheet .g8spotlight p{color:#bed4d7;font-size:.72rem;line-height:1.5;margin:.5rem 0 0}
+.g8spotlightreserve{display:grid;min-width:0}.g8spotlightghost,.g8spotlightwaiting{grid-area:1/1}.g8spotlightghost{visibility:hidden;pointer-events:none}.g8sheet .g8spotlightwaiting{align-self:center;text-align:center;font-size:.78rem;color:#527680}
+.g8matchbeat{font-size:.85rem;color:#d8f45a;display:block;margin-top:.4rem}
+@media(max-width:760px){.g8jobgrid{grid-template-columns:1fr}.g8modalhead{padding:.9rem 1rem}.g8modalbody{padding:1rem}.g8phasecards{grid-template-columns:1fr}}

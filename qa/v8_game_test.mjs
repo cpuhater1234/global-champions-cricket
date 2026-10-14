@@ -6,7 +6,8 @@ const lastYear=Number(process.env.GCC8_TEST_LAST_YEAR||2026);
 const path=process.env.GCC8_TEST_BUILD||'game/global_champions_cricket_v8_fresh_game.html';
 const host=loadGame(path,Number(process.env.GCC8_TEST_SEED||101),new Map(),{strictIds:true}),{G,context,get}=host,X=context.GCC8,s=G.state;
 const coverage={reloads:[],finals:0,injurySelections:0,injuryCovers:0,superOvers:0,clubs:[]};const scorebooks=[];const markup={};let checks=0;const check=(test,msg)=>{assert.ok(test,msg);checks++;};
-const doIt=(name,...args)=>{const ok=X.dispatch(name,args);check(ok,`${name}: ${get('g8feedback').textContent}`);const key=X.ui.view+(X.ui.view==='dynasty'?'-'+s.dynasty.offseason.phase:'')+(X.ui.modal?'-'+X.ui.modal:'');if(!markup[key])markup[key]={stage:get('g8stage').innerHTML,hud:get('g8hud').innerHTML,dialog:X.ui.modal?get('g8dialogContent').innerHTML:''};if(X.ui.view==='matchReveal'){check(X.dispatch('matchSkip'),'instant match completion');}};
+const doIt=(name,...args)=>{const ok=X.dispatch(name,args);check(ok,`${name}: ${get('g8feedback').textContent}`);const key=X.ui.view+(X.ui.view==='dynasty'?'-'+s.dynasty.offseason?.phase:'')+(X.ui.modal?'-'+X.ui.modal:'');if(!markup[key])markup[key]={stage:get('g8stage').innerHTML,hud:get('g8hud').innerHTML,dialog:X.ui.modal?get('g8dialogContent').innerHTML:''};if(X.ui.view==='matchReveal'){check(X.dispatch('matchSkip'),'instant match completion');}};
+function captureScorebook(r){scorebooks.push({year:s.year,round:r.round||null,home:r.home.abbr,away:r.away.abbr,winner:r.winner.abbr,battingFirst:r.battingFirst.abbr,battingSecond:r.battingSecond.abbr,marginText:r.marginText,superOver:!!r.superOver,innings:r.scorecard.innings.map(i=>({club:i.club.abbr,total:i.total,wickets:i.wickets,balls:i.balls,extras:i.extras,extrasBreakdown:i.extrasBreakdown,phases:i.phases,batting:i.batting.map(b=>({id:b.player.id,name:b.player.name,runs:b.runs,balls:b.balls,fours:b.fours,sixes:b.sixes,dismissal:b.dismissal,dnb:b.dnb})),bowling:i.bowling.map(b=>({id:b.player.id,name:b.player.name,balls:b.balls,runs:b.runs,wickets:b.wickets})),plan:(i.club.abbr===r.home.abbr?r.homeInnings:r.awayInnings).bowlingPlan}))});}
 function auditScorebook(r){
  if(r.superOver){coverage.superOvers++;check(r.tieBreak&&r.homeInnings.total===r.awayInnings.total,'Super Over only follows tied regulation scores');
   check(r.superOver.winner.abbr===r.winner.abbr,'tie-break winner owns the match result');
@@ -54,15 +55,15 @@ function finishSeason(){
   if(context.GCC8_ENGINE_READ.xiProblem()){coverage.injurySelections++;doIt('editXI');manualXI();doIt('lodge');}
   doIt('prepare');doIt('playMatch',round);
   check(s.round===round,'one match per action');
-  const r=s.results.at(-1);scorebooks.push(r);auditScorebook(r);check(r.scorecard.innings.every(i=>i.batting.reduce((n,b)=>n+b.runs,0)+i.extras===i.total),'scorebook reconciles');
+  const r=s.results.at(-1);captureScorebook(r);auditScorebook(r);check(r.scorecard.innings.every(i=>i.batting.reduce((n,b)=>n+b.runs,0)+i.extras===i.total),'scorebook reconciles');
   doIt('resultScorecard');doIt('close');
  }
  doIt('matchday');doIt('postSeason');
  if(X.ui.view==='team'){manualXI();doIt('lodge');doIt('postSeason');}
  if(X.ui.view==='finals'){coverage.finals++;checkpoint('finals-ready');
-  doIt('simulateFinals');s.finals.semis.forEach(auditScorebook);check(s.finals.stage==='semis','semi finals completed');doIt('finalScorecard','semis',0);doIt('close');doIt('advanceFinals');checkpoint('grand-final-ready');
+  doIt('simulateFinals');s.finals.semis.forEach(r=>{auditScorebook(r);captureScorebook(r);});check(s.finals.stage==='semis','semi finals completed');doIt('finalScorecard','semis',0);doIt('close');doIt('advanceFinals');checkpoint('grand-final-ready');
   if([s.finals.gfPair.home.abbr,s.finals.gfPair.away.abbr].includes(s.userClub.abbr)&&context.GCC8_ENGINE_READ.xiProblem()){doIt('editXI','finals');manualXI();doIt('lodge');}
-  doIt('simulateFinals');auditScorebook(s.finals.gf);doIt('review');
+  doIt('simulateFinals');auditScorebook(s.finals.gf);captureScorebook(s.finals.gf);doIt('review');
  }
  check(X.ui.view==='review',`season review: year ${s.year}, view ${X.ui.view}, hidden ${X.screen()}, position ${s.regularSeasonPosition}, XI issue ${context.GCC8_ENGINE_READ.xiProblem()}`);check(s.dynasty.history.some(h=>h.year===s.year),'current season archived');
 }
@@ -87,16 +88,17 @@ for(let year=2009;year<=lastYear;year++){
  const budget=context.GCC8_ENGINE_READ.cutBudget(),eligible=context.GCC8_ENGINE_READ.contractCandidates();
  if(year===2009&&budget.limit&&eligible.length){doIt('release',eligible[0]);doIt('confirmRelease',eligible[0]);}
  doIt('cpuMarket');doIt('annualDraw');doIt('revealAll');checkpoint('annual-order');doIt('annualDraft');
- for(let guard=0;s.dynasty.offseason.phase==='draft'&&guard<30;guard++){
-  doIt('skipPick');if(s.dynasty.offseason.phase!=='draft')break;
+ for(let guard=0;s.dynasty.offseason?.phase==='draft'&&guard<30;guard++){
+  doIt('skipPick');if(s.dynasty.offseason?.phase!=='draft')break;
   const free=X.pool(true),rs=X.roster();const p=free.find(p=>p.role==='WK-BAT'&&!rs.some(p=>p.role==='WK-BAT'))||free.find(p=>p.maxOvers>=4&&rs.filter(p=>p.maxOvers>=4).length<6)||free[0];check(!!p,'annual player pool');if(guard===0)checkpoint('annual-user-pick');doIt('inspect',p.id);doIt('draftPlayer',p.id);
  }
- check(s.dynasty.offseason.phase==='cuts','annual draft ends');doIt('lodgeList');check(Object.values(s.teams).every(ids=>ids.length===15),'annual lists fifteen');
+ check(X.ui.view==='team'&&!s.dynasty.offseason,'annual draft automatically enters team room');doIt('lodgeList');check(Object.values(s.teams).every(ids=>ids.length===15),'annual lists fifteen');
  for(const c of s.league.filter(c=>c.abbr!==s.userClub.abbr))check(s.teams[c.abbr].map(G.byId).some(p=>p.role==='WK-BAT'||p.keeping>=65),'CPU keeper integrity');
  doIt('annualTeam');manualXI();doIt('lodge');finishSeason();console.log('Closed season',year);
 }
 if(lastYear===2026){doIt('finishCareer');check(X.ui.view==='legacy','2026 ending');check(s.dynasty.history.length===19,'nineteen seasons archived');check(!X.dispatch('offseason'),'career cannot enter 2027');}
 check(host.errors.length===0,JSON.stringify(host.errors));
+if(process.env.GCC8_TEST_SCOREBOOKS)fs.writeFileSync(reportDir+'/v8_scorebooks.json',JSON.stringify(scorebooks));
 const saved=host.storage.get('gcc_dynasty_v8');if(lastYear!==2026)fs.writeFileSync(reportDir+'/v8_smoke_save.json',saved);check(!!saved,'separate v8 save');check(!host.storage.has('gcc_dynasty_v7_2'),'v7 save not overwritten');
 const resumed=loadGame(path,202,new Map([['gcc_dynasty_v8',saved]]),{strictIds:true});check(resumed.context.GCC8.dispatch('continue'),'reload continues');check(resumed.context.GCC8.ui.view===(lastYear===2026?'legacy':'review'),'reload reaches saved career stage');
 fs.writeFileSync(reportDir+'/v8_markup_snapshot.json',JSON.stringify(markup,null,2));

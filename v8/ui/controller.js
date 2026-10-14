@@ -13,9 +13,7 @@
  function modal(title,body,key='info'){
   if(!dialog.open)dialogOpener=document.activeElement;
   clock.pause();ui.modal=key;dialog.dataset.prompt=key;
-  const actions=/<div class="g8actions">((?:(?!<div)[\s\S])*)<\/div>\s*$/;
-  const close=btn('Close','close');body=actions.test(body)?body.replace(actions,(_,buttons)=>`<div class="g8actions">${buttons}${close}</div>`):body+`<div class="g8actions">${close}</div>`;
-  content.innerHTML=`<span class="g8eyebrow">GLOBAL CHAMPIONS CRICKET</span><h2 id="g8dialogTitle">${esc(title)}</h2><div id="g8dialogFeedback" class="g8notice" role="status" hidden></div>${body}`;
+  content.innerHTML=`<header class="g8modalhead"><div><span class="g8eyebrow">GLOBAL CHAMPIONS CRICKET</span><h2 id="g8dialogTitle">${esc(title)}</h2></div><button type="button" class="g8dialogclose" data-action="close" data-args="[]" aria-label="${esc('Close '+title)}">×</button></header><div class="g8modalbody"><div id="g8dialogFeedback" class="g8notice" role="status" hidden></div>${body}</div>`;
   document.getElementById('g8feedback').hidden=true;if(!dialog.open)dialog.showModal();
  }
  function setView(view){assert(views[view],`Unknown screen: ${view}`);ui.view=view;ui.modal=null;if(dialog.open)dialog.close();if(document.hidden||view==='home'||view==='story')clock.pause();else clock.resume();render(true);if(view==='matchReveal')scheduleMatch();}
@@ -34,8 +32,26 @@
   }
   ui.lastScreen=X.screen();lastSignature=signature();
  }
+ function showUndrafted(){
+  const candidates=s.year===2008?s.pool.filter(p=>p.available===true&&!p.draftedBy&&!p.dynastyRetired):read.freeAgents().map(G.byId);
+  const sorted=candidates.slice().sort((a,b)=>b.overall-a.overall||a.id-b.id);
+  modal('Who missed the draft?',`<p>The available player pool after every club has finished choosing. Your fifteen are already in the dressing room.</p><div class="g8board">${sorted.map(p=>playerCard(p,'inspect','Scout')).join('')}</div>`,'undrafted');
+ }
+ function completeDraft(){
+  if(ui.modal||roster().length!==15)return false;
+  if(ui.view==='draft'){
+   if(s.pickIndex<120)G.skipToMyPick();if(s.pickIndex<120)return false;
+   G.enterTeamRoom();
+  }else if(ui.view==='dynasty'&&['draft','cuts','ready'].includes(s.dynasty?.offseason?.phase)){
+   const o=s.dynasty.offseason;if(o.phase==='draft')D.runCpuDraftUntilUser();if(!o.draftComplete)return false;
+   if(o.phase==='cuts')D.finishOffseason();if(o.phase!=='ready')return false;D.enterTeamRoom();
+  }else return false;
+  ui.teamReturn='season';setView('team');modal('Pick your final XI.',`<p>Your squad is complete. Choose who walks out, arrange the batting order and decide who takes the gloves.</p><div class="g8actions">${btn('Pick final XI','close',[],'g8primary')}${btn('View undrafted players','undrafted',[],'g8ghost')}</div>`,'draftComplete');return true;
+ }
+ bind('undrafted',['team'],showUndrafted);
  function signature(){return JSON.stringify([X.screen(),s.year,s.recruit?.day,s.recruit?.running,s.recruit?.complete,s.recruit?.feedSeq,s.pickIndex,s.dynasty?.offseason?.phase,s.dynasty?.offseason?.pickCursor,s.round,s.finals?.stage,s.dynasty?.transactions?.[0]?.seq]);}
  X.afterTick=()=>{
+  if(!ui.modal&&completeDraft()){save();return;}
   if(['home','story','leagueDraw','draftDraw','archive','result','matchReveal'].includes(ui.view)||ui.modal)return;
   if(ui.view==='season'&&X.screen()==='team'&&read.xiProblem()){ui.teamReturn='season';setView('team');save();return;}
   const key=signature();if(key===lastSignature)return;
@@ -53,9 +69,9 @@
  function finishMatch(){cancelMatchTimer();const back=ui.match?.returnView||'result';ui.match=null;setView(back);}
  function scheduleMatch(){
   cancelMatchTimer();const m=ui.match;if(!m||!m.running||ui.view!=='matchReveal')return;
-  matchTimer=clock.setTimeout(()=>{matchTimer=null;if(ui.view!=='matchReveal'||!ui.match?.running)return;ui.match.count++;if(ui.match.count>=6)finishMatch();else{render(false);scheduleMatch();}save();},[1500,750,375][m.speedIndex]);
+  matchTimer=clock.setTimeout(()=>{matchTimer=null;if(ui.view!=='matchReveal'||!ui.match?.running)return;if(ui.match.count>=X.matchBeatCount(ui.result))finishMatch();else{ui.match.count++;render(false);scheduleMatch();}save();},[1500,750,375][m.speedIndex]);
  }
- function beginMatch(r,returnView='result',snapshot=null){assert(r?.scorecard,'That match has no innings highlights.');ui.result=r;ui.match=snapshot?{...snapshot}:{count:0,speedIndex:0,running:true,year:s.year,reference:matchReference(r),returnView};setView('matchReveal');}
+ function beginMatch(r,returnView='result',snapshot=null){assert(r?.scorecard,'That match has no innings highlights.');ui.result=r;ui.match=snapshot?{...snapshot,count:X.matchProgress(snapshot),presentationVersion:2}:{count:0,presentationVersion:2,speedIndex:0,running:true,year:s.year,reference:matchReference(r),returnView};setView('matchReveal');}
  bind('matchRun',['matchReveal'],()=>{assert(ui.match,'The highlights have ended.');ui.match.running=!ui.match.running;scheduleMatch();});
  bind('matchSpeed',['matchReveal'],()=>{assert(ui.match,'The highlights have ended.');ui.match.speedIndex=(ui.match.speedIndex+1)%3;scheduleMatch();});
  bind('matchSkip',['matchReveal'],finishMatch);
@@ -63,7 +79,7 @@
  function resetFilters(){ui.search='';ui.filter='ALL';ui.draftShown=24;}
  function draftable(id){return (annual()?read.freeAgents():s.pool.filter(p=>p.available===true&&!p.draftedBy&&!p.dynastyRetired).map(p=>p.id)).includes(Number(id));}
  function inspect(id){
-  ui.scoutReturn=ui.modal==='trade'?'trade':null;const p=G.byId(Number(id));assert(p,'That player is no longer available.');ui.selectedPlayer=p.id;
+  ui.scoutReturn=['trade','undrafted'].includes(ui.modal)?ui.modal:null;const p=G.byId(Number(id));assert(p,'That player is no longer available.');ui.selectedPlayer=p.id;
   const batting=[['Powerplay',R.batPhaseScore(p,'powerplay')],['Middle overs',R.batPhaseScore(p,'middle')],['Death',R.batPhaseScore(p,'death')]];
   const bowling=[['New ball',R.bowlPhaseScore(p,'newBall')],['Middle overs',R.bowlPhaseScore(p,'middle')],['Death',R.bowlPhaseScore(p,'death')]];
   const rows=a=>a.map(([l,n])=>`<div class="g8statrow"><span>${esc(l)}</span><b>${Math.round(n)}</b></div>`).join('');
@@ -109,7 +125,7 @@
  bind('confirmClub',['clubs'],()=>{assert(!s.userClub,'Your club has already been chosen.');assert(s.selectedClub!==null,'Choose a club.');G.confirmClub();setView('recruit');});
  bind('continue',['home'],()=>{assert(X.hasSave(),'There is no saved dynasty.');if(!X.hasStoredSave()&&s.dynasty?.started){setView(views[ui.resumeView]?ui.resumeView:'team');announce('Continuing this session. This browser has not saved your progress.');return;}assert(D.resumeSave()===true,'The save could not be restored. Your saved data has been kept.');clock.resume();const savedReveal=s.dynasty.v8Reveal,view=X.screen();setView(view==='world'?'clubs':view);if(savedReveal&&savedReveal.year===s.year&&savedReveal.count<=8){if(savedReveal.kind==='league'){setView('leagueDraw');startReveal('league',savedReveal);}else if(savedReveal.kind==='draft'){window.GCC8_FOUNDATION_READ.pauseDraft();setView('draftDraw');startReveal('draft',savedReveal);}else if(savedReveal.kind==='annual'&&s.dynasty.offseason?.phase==='lottery'){setView('dynasty');startReveal('annual',savedReveal);}render(false);}else if(view==='dynasty'&&s.dynasty.offseason?.phase==='lottery'){startReveal('annual',{count:8,running:false});render(false);}const savedUI=s.dynasty.v8UI;if(savedUI){ui.teamReturn=savedUI.teamReturn;ui.seasonTab=savedUI.seasonTab;ui.result=s.results.find(r=>r.round===savedUI.resultRound)||null;archiveReturn=views[savedUI.archiveReturn]?savedUI.archiveReturn:'season';if(savedUI.view==='team'&&s.fullSchedule.length){G.go('team');setView('team');}else if(savedUI.view==='result'&&!savedUI.resultFinal){ui.result=s.results.find(r=>r.round===savedUI.resultRound);if(ui.result)setView('result');}else if(savedUI.view==='archive')setView('archive');render(false);}else if(view==='archive')archiveReturn=s.dynasty.careerClosed?'legacy':s.dynasty.offseason?'dynasty':s.dynasty.archiveReturnScreen||'season';cancelMatchTimer();ui.match=null;const savedMatch=s.dynasty.v8Match;if(savedMatch&&savedMatch.year===s.year){const r=matchFromReference(savedMatch.reference);if(r){ui.match={...savedMatch};ui.result=r;if(savedUI?.view==='matchReveal')beginMatch(r,savedMatch.returnView,savedMatch);}}if(annual())D.runCpuDraftUntilUser(false);});
  bind('how','*',()=>modal('How to play','<p>Take over one of eight clubs. The five-day signing window decides which players enter the league. These are not signings for your club.</p><p>Build a fifteen-player squad in a fifteen-round snake draft. Scout names on the board and consider batting, bowling, keeping and your home ground.</p><p>Choose eleven manually. Move their batting order up or down, and swap players when form, injuries or conditions demand it. Ratings describe quality; results show whether your plans work.</p><p>Play fourteen league matches. The top four enter two semi-finals, followed by a Grand Final. Each offseason brings retirements, contract decisions, trades and a new random draft order.</p><p>Tied scores are settled by a simplified Super Over: six legal balls or two wickets, repeated if tied. The model selects hitters and a bowler from each match XI. Tie-break figures are separate from season statistics.</p><p>Autosave keeps the career on this browser. The career ends after the 2026 season.</p>'));
- bind('close','*',()=>{const back=ui.modal==='player'&&ui.scoutReturn==='trade';closeDialog();if(back)tradeDialog();});
+ bind('close','*',()=>{const back=ui.modal==='player'?ui.scoutReturn:null;ui.scoutReturn=null;closeDialog();if(back==='trade')tradeDialog();else if(back==='undrafted')showUndrafted();});
  bind('signingRun',['recruit'],()=>G.runRecruitment());
  bind('signingSpeed',['recruit'],()=>{G.cycleRecruitSpeed();announce(['Signing speed 1×','Signing speed 2×','Signing speed 4×'][s.recruit.speedIndex]);});
  bind('signingSkip',['recruit'],()=>G.skipRecruitment());
@@ -120,7 +136,7 @@
  bind('more',['draft','dynasty'],()=>{ui.draftShown+=24;});
  bind('inspect','*',inspect);
  bind('draftPlayer',['draft','dynasty'],id=>{assert(ui.view==='draft'||annual(),'The draft is not open.');assert(!ui.modal||ui.modal==='player'&&ui.selectedPlayer===Number(id),'Close the current prompt before picking.');const current=X.draftCurrent(annual());assert(current?.club.abbr===own(),'Another club is on the clock.');assert(draftable(id),'That player is no longer on the board.');closeDialog();if(annual())D.userAnnualDraft(Number(id));else G.userDraft(Number(id));announce(`${G.byId(Number(id)).name} joins your squad.`);});
- bind('team',['draft'],()=>{assert(s.pickIndex>=120&&roster().length===15,'Finish the draft first.');G.enterTeamRoom();ui.teamReturn='season';setView('team');});
+ bind('team',['draft','team'],()=>{if(ui.view==='team'){closeDialog();return;}assert(s.pickIndex>=120&&roster().length===15,'Finish the draft first.');G.enterTeamRoom();ui.teamReturn='season';setView('team');});
  bind('editXI',['season','finals'],from=>{if(ui.view==='finals')assert(s.finals?.stage==='ready'&&s.finals.top.some(c=>c.abbr===own())||s.finals?.stage==='gf-ready'&&[s.finals.gfPair.home,s.finals.gfPair.away].some(c=>c.abbr===own()),'Your club has no pending finals match.');ui.teamReturn=from==='finals'?'finals':'season';G.go('team');setView('team');});
  bind('select',['team'],id=>{assert(roster().some(p=>p.id===Number(id)),'Choose a player from your squad.');assert(s.xi.length<11&&!s.xi.includes(Number(id)),'The XI is already full.');assert(injury(G.byId(Number(id)))?.status!=='OUT','That player is unavailable.');closeDialog();G.toggleXI(Number(id));});
  bind('remove',['team'],id=>{assert(s.xi.includes(Number(id)),'That player is not in the XI.');G.removeXI(Number(id));});
@@ -155,8 +171,8 @@
  bind('annualDraw',['dynasty'],()=>{assert(s.dynasty.offseason?.phase==='market','The market is already closed.');D.drawDraftOrder();startReveal('annual');});
  bind('annualDraft',['dynasty'],()=>{assert(s.dynasty.offseason?.phase==='lottery','Draw the order first.');assert(ui.reveal?.count===8,'Let the order reveal finish.');finishReveal();D.startAnnualDraft();resetFilters();});
  bind('annualList',['dynasty'],()=>{assert(s.dynasty.offseason?.draftComplete,'Finish the annual draft first.');D.renderOffseason();});
- bind('lodgeList',['dynasty'],()=>{assert(s.dynasty.offseason?.phase==='cuts'&&roster().length===15,'Lodge exactly fifteen players.');D.finishOffseason();});
- bind('annualTeam',['dynasty'],()=>{assert(s.dynasty.offseason?.phase==='ready','Lodge the final list first.');D.enterTeamRoom();ui.teamReturn='season';setView('team');});
+ bind('lodgeList',['dynasty','team'],()=>{if(ui.view==='team'){closeDialog();return;}assert(s.dynasty.offseason?.phase==='cuts'&&roster().length===15,'Lodge exactly fifteen players.');D.finishOffseason();});
+ bind('annualTeam',['dynasty','team'],()=>{if(ui.view==='team'){closeDialog();return;}assert(s.dynasty.offseason?.phase==='ready','Lodge the final list first.');D.enterTeamRoom();ui.teamReturn='season';setView('team');});
  bind('release',['dynasty'],id=>{assert(s.dynasty.offseason?.phase==='market'&&read.contractCandidates().includes(Number(id)),'That contract is not due.');modal(`Release ${G.byId(Number(id)).name}?`,`<p>This opens a place in the annual draft. The player returns to the free-agent pool.</p><div class="g8actions">${btn('Confirm release','confirmRelease',[Number(id)],'g8danger')}</div>`,'release');});
  bind('confirmRelease',['dynasty'],id=>{assert(ui.modal==='release'&&s.dynasty.offseason?.phase==='market'&&read.contractCandidates().includes(Number(id)),'Open the contract decision first.');const budget=read.cutBudget(),o=s.dynasty.offseason;assert(o.voluntaryCuts.length+o.finalCuts.length<budget.limit,'No optional release remains.');D.releaseContractPlayer(Number(id));closeDialog();});
  bind('finalCut',['dynasty'],id=>{assert(s.dynasty.offseason?.phase==='cuts'&&roster().length>15,'Only an overfull list needs a final correction.');D.cutPlayer(Number(id));});
@@ -177,7 +193,7 @@
   const fn=commands[action];if(!fn){announce('That control is unavailable.');return false;}
   const where=allow[action];if(where!=='*'&&!where.includes(ui.view)){announce('That action belongs to a different stage of the career.');return false;}
   busy=true;const view=ui.view,x=window.scrollX,y=window.scrollY;
-  try{document.getElementById('g8feedback').textContent='';fn(...args);save();if(ui.view===view&&!ui.modal)render(false);return true;}
+  try{document.getElementById('g8feedback').textContent='';fn(...args);completeDraft();save();if(ui.view===view&&!ui.modal)render(false);return true;}
   catch(e){announce(e.message||'The action could not be completed.');return false;}
   finally{G.closeModal();busy=false;if(ui.view===view)window.scrollTo({left:x,top:y,behavior:'instant'});}
  };
@@ -192,7 +208,7 @@
    ui[key]=['tradeOffer','tradeTarget'].includes(key)?Number(el.value):el.value;if(key==='tradeClub')ui.tradeTarget=s.teams[ui.tradeClub][0];tradeDialog();content.querySelector(`[data-input="${key}"]`)?.focus({preventScroll:true});
   }
  });
- dialog.addEventListener('cancel',event=>{event.preventDefault();closeDialog();});
+ dialog.addEventListener('cancel',event=>{event.preventDefault();X.dispatch('close');});
  window.addEventListener('pagehide',()=>{G.pauseSeason();save();});
  document.addEventListener('visibilitychange',()=>{if(document.hidden){clock.pause();save();}else if(!ui.modal&&!['home','story'].includes(ui.view))clock.resume();});
  X.render=render;X.commands=Object.freeze(Object.keys(commands));X.showScorecard=scorecard;

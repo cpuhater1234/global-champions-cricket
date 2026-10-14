@@ -13,6 +13,18 @@ def freeze():
   script=script.replace('window.scrollTo','window.GCC8_ENGINE_SCROLL')
   if name=='foundation':
    script=script.replace('const draftSpeeds = [520, 260, 90];','const draftSpeeds = [520, 260, 130];')
+   marker='  function resolveChase('
+   assert marker in script
+   script=script.replace(marker,(ROOT/'domain/chase_finish.js').read_text()+'\n'+marker)
+   old='let phaseDiff = target - (pp + mid + death);'
+   assert old in script
+   script=script.replace(old,'const finalScore=winningChaseTotal(target,chasePotential.total,state.seed);\n    let phaseDiff = finalScore - (pp + mid + death);')
+   start=script.index('    let phaseDiff = finalScore - (pp + mid + death);')
+   end=script.index('    pp=phaseRuns.pp; mid=phaseRuns.mid; death=phaseRuns.death;',start)
+   script=script[:start]+'    const phaseRuns=reconcileChasePhases({pp,mid,death},balls,finalScore,target);\n'+script[end:]
+   old='total:target, wickets:scaledWickets'
+   assert old in script
+   script=script.replace(old,'total:finalScore, wickets:scaledWickets')
    # V8 domain additions run inside the foundation closure, beside the real RNG/XIs.
    addition=(ROOT/'domain/super_over.js').read_text()
    marker='  function simulateInningsPair('
@@ -27,7 +39,7 @@ def freeze():
    script=script.replace("if(tieBreak) return 'after a tied match';","if(tieBreak) return pair?.superOver ? `in a Super Over${pair.superOver.rounds.length>1?' (tie-break '+pair.superOver.rounds.length+')':''}` : 'after a tied match';")
    marker='  return {\n    state,'
    assert marker in script
-   script=script.replace(marker,"  window.GCC8_FOUNDATION_READ={roleTags:playerRoleTags,playerNote,groundStory,groundBand,projectedDraftProfile,draftSnapshot,effectiveProfile,simulateSuperOver,teamAverages:userTeamAverages,leagueAverages:leagueInningsAverages,standout:matchStandout,pauseDraft:()=>{clearTimeout(draftAutoTimer);draftAutoTimer=null}};\n"+marker)
+   script=script.replace(marker,"  window.GCC8_FOUNDATION_READ={roleTags:playerRoleTags,playerNote,groundStory,groundBand,projectedDraftProfile,draftSnapshot,effectiveProfile,simulateSuperOver,winningChaseTotal,reconcileChasePhases,teamAverages:userTeamAverages,leagueAverages:leagueInningsAverages,standout:matchStandout,pauseDraft:()=>{clearTimeout(draftAutoTimer);draftAutoTimer=null}};\n"+marker)
   if name=='dynasty':
    old='function replacementPoolFor(injured){const pool=freeAgentPool();'
    assert old in script
@@ -92,7 +104,7 @@ def build(output):
  # Their DOM side effects would escape the inert host; none owns cricket state.
  binding='const {setTimeout,clearTimeout,setInterval,clearInterval,requestAnimationFrame,cancelAnimationFrame}=window.GCC8_CLOCK;const MutationObserver=class{observe(){}disconnect(){}};'
  engine='<script>window.GCC8_ENGINE_SCROLL=()=>{};'+(ROOT/'ui/clock.js').read_text()+'</script>'+ '\n'.join('<script>(()=>{'+binding+(ROOT/'engine'/f'{name}.js').read_text()+'})();</script>' for name in ['players','league','ratings','projections','cpu','foundation','dynasty'])
- ui='\n'.join('<script>'+ (ROOT/'ui'/f'{name}.js').read_text()+'</script>' for name in ['components','data','screens','dom','controller'])
+ ui='\n'.join('<script>'+ (ROOT/'ui'/f'{name}.js').read_text()+'</script>' for name in ['components','data','roles','match_story','screens','dom','controller'])
  build_id=hashlib.sha256(((ROOT/'ui/game.css').read_text()+ui+engine+assets).encode()).hexdigest()[:16]
  template=template.replace('id="g8app"',f'id="g8app" data-build="{build_id}"')
  result=template.replace('@@ENGINE@@',engine).replace('@@UI@@',ui)
