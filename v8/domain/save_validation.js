@@ -18,6 +18,7 @@ function validSave(save){
  if(s.dynasty){
   const d=s.dynasty;if(!record(d)||!Array.isArray(d.history)||!Array.isArray(d.transactions)||!record(d.manager)||!record(d.injuries)||!record(d.replacementFor)||!record(d.replacementOf))return false;
   const r=d.v8Reveal;if(r&&(!record(r)||!['league','draft','annual'].includes(r.kind)||!Number.isInteger(r.count)||r.count<0||r.count>8||!Number.isInteger(r.speedIndex)||r.speedIndex<0||r.speedIndex>2||typeof r.running!=='boolean'))return false;
+  const m=d.v8Match;if(m&&(!record(m)||!Number.isInteger(m.count)||m.count<0||m.count>5||!Number.isInteger(m.speedIndex)||m.speedIndex<0||m.speedIndex>2||typeof m.running!=='boolean'||!['result','finals'].includes(m.returnView)||!record(m.reference)||!['regular','semis','gf'].includes(m.reference.type)))return false;
   const o=d.offseason;if(o&&(!record(o)||!['market','lottery','draft','cuts','ready'].includes(o.phase)||['retirements','arrivals','lottery','picks','voluntaryCuts','finalCuts'].some(k=>!Array.isArray(o[k]))||!Number.isInteger(o.pickCursor)||o.pickCursor<0))return false;
  }
  return true;

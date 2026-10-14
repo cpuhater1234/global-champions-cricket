@@ -1,6 +1,6 @@
 # V8 game-first foundation
 
-Current tested candidate: `game/global_champions_cricket_v8_quality_tested.html`. See `GCC_V8_EXTENSIVE_TESTING.md` and `qa/v8_extensive_scope.json` for the latest fixes, 65-season matrix and explicit native-browser limits.
+Current candidate: `game/global_champions_cricket_v8_refined.html`. See `GCC_V8_REFINEMENT.md` and `qa/v8_refinement_scope.json` for pacing, responsive layout changes and verification limits. The prior 65-season matrix remains in `GCC_V8_EXTENSIVE_TESTING.md`.
 
 This checkpoint supplies an entirely new visible UI and controller. It does not certify visual quality, native browser behavior, focus, frame rate, or smoothness. Rendered review is still outstanding under the browser restrictions in `GCC_V8_NEW_CHAT_HANDOFF.md`.
 

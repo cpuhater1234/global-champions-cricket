@@ -6,7 +6,7 @@ const lastYear=Number(process.env.GCC8_TEST_LAST_YEAR||2026);
 const path=process.env.GCC8_TEST_BUILD||'game/global_champions_cricket_v8_fresh_game.html';
 const host=loadGame(path,Number(process.env.GCC8_TEST_SEED||101),new Map(),{strictIds:true}),{G,context,get}=host,X=context.GCC8,s=G.state;
 const coverage={reloads:[],finals:0,injurySelections:0,clubs:[]};const scorebooks=[];const markup={};let checks=0;const check=(test,msg)=>{assert.ok(test,msg);checks++;};
-const doIt=(name,...args)=>{const ok=X.dispatch(name,args);check(ok,`${name}: ${get('g8feedback').textContent}`);const key=X.ui.view+(X.ui.view==='dynasty'?'-'+s.dynasty.offseason.phase:'')+(X.ui.modal?'-'+X.ui.modal:'');if(!markup[key])markup[key]={stage:get('g8stage').innerHTML,hud:get('g8hud').innerHTML,dialog:X.ui.modal?get('g8dialogContent').innerHTML:''};};
+const doIt=(name,...args)=>{const ok=X.dispatch(name,args);check(ok,`${name}: ${get('g8feedback').textContent}`);const key=X.ui.view+(X.ui.view==='dynasty'?'-'+s.dynasty.offseason.phase:'')+(X.ui.modal?'-'+X.ui.modal:'');if(!markup[key])markup[key]={stage:get('g8stage').innerHTML,hud:get('g8hud').innerHTML,dialog:X.ui.modal?get('g8dialogContent').innerHTML:''};if(X.ui.view==='matchReveal'){check(X.dispatch('matchSkip'),'instant match completion');}};
 function auditScorebook(r){
  for(const i of r.scorecard.innings){
   check(Number.isInteger(i.total)&&i.total>=0&&i.wickets>=0&&i.wickets<=10,'innings bounds');
