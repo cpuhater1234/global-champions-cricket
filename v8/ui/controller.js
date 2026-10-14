@@ -6,17 +6,17 @@
  let busy=false,lastSignature='',archiveReturn='season',dialogOpener=null;
  X.hasStoredSave=()=>{try{return !!localStorage.getItem('gcc_dynasty_v8')||!!localStorage.getItem('gcc_dynasty_v7_2');}catch{return false;}};
  X.hasSave=()=>!!s.dynasty?.started||X.hasStoredSave();
- const announce=t=>{document.getElementById('g8feedback').textContent=t;};
+ const announce=t=>{const feedback=document.getElementById('g8feedback'),inside=document.getElementById('g8dialogFeedback');feedback.textContent=t;feedback.hidden=!!ui.modal;if(inside){inside.textContent=ui.modal?t:'';inside.hidden=!ui.modal||!t;}};
  const bind=(name,where,fn)=>{commands[name]=fn;allow[name]=where;};
  const assert=(condition,text)=>{if(!condition)throw new Error(text);};
- function closeDialog(){if(dialog.open)dialog.close();ui.modal=null;const opener=dialogOpener;dialogOpener=null;opener?.focus?.({preventScroll:true});if(!document.hidden&&!['home','story'].includes(ui.view))clock.resume();}
+ function closeDialog(){if(dialog.open)dialog.close();ui.modal=null;document.getElementById('g8feedback').hidden=false;const opener=dialogOpener;dialogOpener=null;opener?.focus?.({preventScroll:true});if(!document.hidden&&!['home','story'].includes(ui.view))clock.resume();}
  function modal(title,body,key='info'){
   if(!dialog.open)dialogOpener=document.activeElement;
   clock.pause();ui.modal=key;dialog.dataset.prompt=key;
   const actions=/<div class="g8actions">((?:(?!<div)[\s\S])*)<\/div>\s*$/;
   const close=btn('Close','close');body=actions.test(body)?body.replace(actions,(_,buttons)=>`<div class="g8actions">${buttons}${close}</div>`):body+`<div class="g8actions">${close}</div>`;
-  content.innerHTML=`<span class="g8eyebrow">GLOBAL CHAMPIONS CRICKET</span><h2 id="g8dialogTitle">${esc(title)}</h2>${body}`;
-  if(!dialog.open)dialog.showModal();
+  content.innerHTML=`<span class="g8eyebrow">GLOBAL CHAMPIONS CRICKET</span><h2 id="g8dialogTitle">${esc(title)}</h2><div id="g8dialogFeedback" class="g8notice" role="status" hidden></div>${body}`;
+  document.getElementById('g8feedback').hidden=true;if(!dialog.open)dialog.showModal();
  }
  function setView(view){assert(views[view],`Unknown screen: ${view}`);ui.view=view;ui.modal=null;if(dialog.open)dialog.close();if(document.hidden||view==='home'||view==='story')clock.pause();else clock.resume();render(true);if(view==='matchReveal')scheduleMatch();}
  function render(changed=false){
@@ -166,8 +166,8 @@
   D.openTradeCentre(ui.tradeMid);document.getElementById('tradeClub').value=ui.tradeClub;D.refreshTradeTarget();document.getElementById('tradeTarget').value=String(ui.tradeTarget);document.getElementById('tradeOffer').value=String(ui.tradeOffer);const pick=document.getElementById('tradePick');if(pick)pick.value=ui.tradePick;
   D.proposeTrade(ui.tradeMid);const reply=document.getElementById('g8tradeReply');reply.hidden=false;reply.textContent=document.getElementById('tradeRead').textContent;G.closeModal();
  });
- bind('cover',['team'],id=>{const p=G.byId(Number(id));assert(p&&injury(p)?.status==='OUT'&&!s.dynasty.replacementFor[p.id],'Choose a player who needs injury cover.');modal(`Cover ${p.name}`,`<p>The replacement stays until ${esc(p.name)} is cleared to play.</p><div class="g8board">${read.replacements(p.id).slice(0,18).map(G.byId).map(p=>playerCard(p,'signCover','Sign as cover')).join('')}</div>`,'cover');ui.coverId=Number(id);});
- bind('signCover',['team'],id=>{assert(ui.modal==='cover'&&read.replacements(ui.coverId).includes(Number(id)),'Choose an eligible replacement.');assert(injury(G.byId(ui.coverId))?.status==='OUT'&&!s.dynasty.replacementFor[ui.coverId],'That player no longer needs cover.');D.signReplacement(ui.coverId,Number(id));assert(s.dynasty.replacementFor[ui.coverId]===Number(id),'The replacement could not be signed.');closeDialog();});
+ bind('cover',['team'],id=>{const status=read.coverStatus(Number(id));assert(status.canSign&&status.owner===own(),'Choose a player who needs available injury cover.');const p=G.byId(status.originalId),options=read.replacements(p.id);assert(options.length,'No suitable fit replacement is available.');ui.coverId=p.id;modal(status.currentCoverId?`Replace cover for ${p.name}`:`Cover ${p.name}`,`<p>${status.currentCoverId?`${esc(status.coverName)} is unavailable. The new replacement takes over this cover spell.`:'Choose a fit temporary replacement.'} They stay until ${esc(p.name)} is cleared to play. Selection in the XI remains your decision.</p><div class="g8board">${options.slice(0,18).map(G.byId).map(p=>playerCard(p,'signCover','Sign as cover')).join('')}</div>`,'cover');});
+ bind('signCover',['team'],id=>{assert(ui.modal==='cover'&&read.replacements(ui.coverId).includes(Number(id)),'Choose an eligible replacement.');const status=read.coverStatus(ui.coverId);assert(status.canSign&&status.owner===own(),'That cover spell no longer needs a replacement.');D.signReplacement(ui.coverId,Number(id));assert(s.dynasty.replacementFor[ui.coverId]===Number(id),'The replacement could not be signed.');closeDialog();announce('Injury cover signed. Choose whether to put them in your XI.');});
  bind('archive','*',()=>{assert(s.dynasty?.history?.length,'The archive opens after your first completed season.');archiveReturn=ui.view==='archive'?archiveReturn:ui.view;D.openArchive();setView('archive');});
  bind('archiveBack',['archive'],()=>{D.backFromArchive();setView(views[archiveReturn]?archiveReturn:X.screen());});
  bind('archiveSeason',['archive'],year=>{const h=s.dynasty.history.find(h=>h.year===Number(year));assert(h,'That season is not in the archive.');const stats=Object.entries(h.userPlayerStats||{}).sort((a,b)=>b[1].runs-a[1].runs);modal(`${year} · The club scorebook`,`<p>${h.wins} wins · ${h.losses} losses · Finished ${h.userPosition}</p><div class="g8tablewrap"><table class="g8table"><thead><tr><th>Player</th><th>Matches</th><th>Runs</th><th>Wickets</th></tr></thead><tbody>${stats.map(([id,t])=>`<tr><td>${esc(G.byId(Number(id))?.name||id)}</td><td>${t.matches||0}</td><td>${t.runs||0}</td><td>${t.wickets||0}</td></tr>`).join('')}</tbody></table></div>`);});

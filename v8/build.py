@@ -31,6 +31,12 @@ def freeze():
    old='function replacementPoolFor(injured){const pool=freeAgentPool();'
    assert old in script
    script=script.replace(old,'function replacementPoolFor(injured){const pool=freeAgentPool().filter(healthyForSelection);')
+   script=script.replace('function replacementPoolFor(injured){const pool=', 'function replacementPoolFor(injured){if(!injured)return [];injured=pById(coverRoot(injured.id));if(!injured)return [];const pool=')
+   script,n=re.subn(r'^  function (?:cpuReplacement|signReplacement|resolveReplacementReturn)\([^\n]*\n','',script,flags=re.M)
+   assert n==3
+   marker='  function openReplacementMarket('
+   assert marker in script
+   script=script.replace(marker,(ROOT/'domain/injury_cover.js').read_text()+'\n'+marker)
    # Forced departures beyond four are filled after the ordinary snake rounds.
    old='maxRounds=Math.max(0,...Object.values(needs));'
    assert old in script
@@ -55,7 +61,7 @@ def freeze():
    script=script.replace("SAVE_KEY='gcc_dynasty_v7_2'","SAVE_KEY='gcc_dynasty_v8'").replace("META_KEY='gcc_dynasty_meta_v7_2'","META_KEY='gcc_dynasty_meta_v8'").replace("LEGACY_SAVE_KEY='gcc_dynasty_v7_0'","LEGACY_SAVE_KEY='gcc_dynasty_v7_2'")
    marker='  window.Dynasty={beginOffseason'
    assert marker in script
-   script=script.replace(marker,"  window.GCC8_ENGINE_READ={matchProfile:c=>withFitnessContext(()=>window.GCC8_FOUNDATION_READ.effectiveProfile(c)),contractCandidates:()=>contractDecisionPlayers().map(p=>p.id),pickSlots:()=>slotsWithSupplement().map(x=>({...x})),cutBudget:()=>({limit:voluntaryCutLimit(),retired:userRetirementCount()}),freeAgents:()=>freeAgentPool().map(p=>p.id),replacements:id=>replacementPoolFor(pById(id)).map(p=>p.id),save:()=>autoSave(),xiProblem:()=>userXIProblem(),fresh:()=>{stopFoundationWatch();return startFreshWorld()},archive:()=>archiveSeason(),ownsPick:r=>userOwnsPick(r),scout:id=>{const p=pById(id);return p?{outlook:developmentRead(p),standing:scoutingLevel(p,state.userClub?.abbr),fit:scoutingFit(p,state.userClub?.abbr),recent:recentSeasonRead(p),contractDue:contractDue(p)}:null},records:()=>archiveRecords(),honours:()=>archiveClubHonours(),legends:()=>archiveUserLegends(),legacyRating:()=>managerScore()};\n"+marker)
+   script=script.replace(marker,"  window.GCC8_ENGINE_READ={coverStatus,matchProfile:c=>withFitnessContext(()=>window.GCC8_FOUNDATION_READ.effectiveProfile(c)),contractCandidates:()=>contractDecisionPlayers().map(p=>p.id),pickSlots:()=>slotsWithSupplement().map(x=>({...x})),cutBudget:()=>({limit:voluntaryCutLimit(),retired:userRetirementCount()}),freeAgents:()=>freeAgentPool().map(p=>p.id),replacements:id=>replacementPoolFor(pById(id)).map(p=>p.id),save:()=>autoSave(),xiProblem:()=>userXIProblem(),fresh:()=>{stopFoundationWatch();return startFreshWorld()},archive:()=>archiveSeason(),ownsPick:r=>userOwnsPick(r),scout:id=>{const p=pById(id);return p?{outlook:developmentRead(p),standing:scoutingLevel(p,state.userClub?.abbr),fit:scoutingFit(p,state.userClub?.abbr),recent:recentSeasonRead(p),contractDue:contractDue(p)}:null},records:()=>archiveRecords(),honours:()=>archiveClubHonours(),legends:()=>archiveUserLegends(),legacyRating:()=>managerScore()};\n"+marker)
   (ROOT/'engine'/f'{name}.js').write_text(script)
  body=re.search(r'<body[^>]*>(.*?)</body>',text,re.S)[1]
  body=re.sub(r'<script\b[^>]*>[\s\S]*?</script>','',body,flags=re.I)

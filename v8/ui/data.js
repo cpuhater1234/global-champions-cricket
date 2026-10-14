@@ -4,6 +4,16 @@
  let cachedRoster='',cachedProfile=null;
  X.squadProfile=()=>{const ps=roster(),key=JSON.stringify(ps);if(key!==cachedRoster){cachedRoster=key;cachedProfile=F.projectedDraftProfile(ps);}return cachedProfile||R.profile([]);};
  const stat=(l,v)=>`<div class="g8statrow"><span>${esc(l)}</span><b>${esc(v)}</b></div>`;
+ X.clubSeasonRecords=()=>{
+  const rows=new Map(),entry=p=>{if(!rows.has(p.id))rows.set(p.id,{p,t:{matches:0,innings:0,runs:0,balls:0,outs:0,fours:0,sixes:0,wickets:0,bowlBalls:0,runsConceded:0,bestRuns:0,bestWickets:0,bestBowlingRuns:null}});return rows.get(p.id).t;};
+  roster().forEach(entry);
+  const matches=[...s.results,...(s.finals?.semis||[]),s.finals?.gf].filter(r=>r?.scorecard&&[r.home.abbr,r.away.abbr].includes(s.userClub.abbr));
+  for(const r of matches){const mine=r.scorecard.innings.find(i=>i.club.abbr===s.userClub.abbr),theirs=r.scorecard.innings.find(i=>i.club.abbr!==s.userClub.abbr);if(!mine||!theirs)continue;
+   for(const b of mine.batting){const t=entry(G.byId(b.player.id)||b.player);t.matches++;if(!b.dnb){t.innings++;t.runs+=b.runs;t.balls+=b.balls;t.outs+=b.dismissal==='not out'?0:1;t.fours+=b.fours;t.sixes+=b.sixes;t.bestRuns=Math.max(t.bestRuns,b.runs);}}
+   for(const b of theirs.bowling){const t=entry(G.byId(b.player.id)||b.player);t.wickets+=b.wickets;t.bowlBalls+=b.balls;t.runsConceded+=b.runs;if(t.bestBowlingRuns==null||b.wickets>t.bestWickets||b.wickets===t.bestWickets&&b.runs<t.bestBowlingRuns){t.bestWickets=b.wickets;t.bestBowlingRuns=b.runs;}}
+  }
+  return [...rows.values()];
+ };
  X.playerRead=p=>{
   const scout=read.scout(p.id),tags=F.roleTags(p).filter(t=>!t.includes('LOWER MIDDLE')),style=R.bowlingStyle(p),work=R.bowlingWorkload(p),conf=String(p.ratingConfidenceBand||'MEDIUM').toLowerCase();
   return `<div class="g8playerdetail"><p>${esc(F.playerNote(p))}.</p><div class="g8tags">${tags.map(t=>`<span>${esc(t)}</span>`).join('')}</div>${stat('Career outlook',scout?.outlook||'Still being assessed')}${stat('Scouting confidence',conf)}${stat('Bowling style',style||'Batting specialist')}${stat('Credible bowling ceiling',work?`${work} overs`:'Not a regular option')}${stat('Batting against pace / spin',`${p.pacePlay} / ${p.spinPlay}`)}${stat('Power / control',`${p.power} / ${p.control}`)}${stat('Running / finishing',`${p.running} / ${p.finishing}`)}${stat('Bowling control / variation',`${p.bowlControl} / ${p.variation}`)}${stat('Temperament / leadership',`${p.temperament} / ${p.leadership}`)}${stat('Contract decision',s.dynasty?.offseason?(scout?.contractDue?'Due this offseason':'Not due this offseason'):'Offseason decisions come after the season')}${scout?.recent?`<p>Recent GCC record: ${esc(scout.recent)}</p>`:''}<p class="g8fine">Outlook is a scouting judgement. It does not reveal a guaranteed peak or retirement date.</p></div>`;
@@ -44,7 +54,7 @@
   return `<p class="g8draftadvice">${esc(note)}</p>`;
  };
  X.seasonContributors=()=>{
-  const rows=roster().map(p=>({p,t:s.playerSeasonStats[p.id]||{}})),bat=rows.filter(x=>x.t.runs>0).sort((a,b)=>b.t.runs-a.t.runs).slice(0,3),bowl=rows.filter(x=>x.t.bowlBalls>0).sort((a,b)=>b.t.wickets-a.t.wickets||a.t.runsConceded/a.t.bowlBalls-b.t.runsConceded/b.t.bowlBalls).slice(0,3);
+  const rows=X.clubSeasonRecords(),bat=rows.filter(x=>x.t.runs>0).sort((a,b)=>b.t.runs-a.t.runs).slice(0,3),bowl=rows.filter(x=>x.t.bowlBalls>0).sort((a,b)=>b.t.wickets-a.t.wickets||a.t.runsConceded/a.t.bowlBalls-b.t.runsConceded/b.t.bowlBalls).slice(0,3);
   return `<div class="g8contributors"><section><span class="g8eyebrow">WITH THE BAT</span>${bat.length?bat.map(({p,t})=>stat(p.name,`${t.runs} runs · SR ${(t.runs*100/t.balls).toFixed(1)}`)).join(''):'<p>No batting record yet.</p>'}</section><section><span class="g8eyebrow">WITH THE BALL</span>${bowl.length?bowl.map(({p,t})=>stat(p.name,`${t.wickets} wickets · Econ ${(t.runsConceded*6/t.bowlBalls).toFixed(2)}`)).join(''):'<p>No bowling record yet.</p>'}</section></div>`;
  };
  X.seasonPlan=()=>{
@@ -71,7 +81,7 @@
  };
  const simple=X.averages;
  // Installed after screens.js by controller boot: full batting/bowling records support the compact averages.
- X.installDetailedAverages=()=>{const compact=X.averages;X.averages=()=>compact()+`<section class="g8sheet g8seasonread g8tablewrap"><span class="g8eyebrow">THE FULL PLAYER RECORD</span><table class="g8table"><thead><tr><th>Player</th><th>High score</th><th>4s</th><th>6s</th><th>Bowling avg</th><th>Best bowling</th></tr></thead><tbody>${X.roster().map(p=>{const t=s.playerSeasonStats[p.id]||{};return `<tr><td>${esc(p.name)}</td><td>${t.bestRuns||0}</td><td>${t.fours||0}</td><td>${t.sixes||0}</td><td>${t.wickets?(t.runsConceded/t.wickets).toFixed(1):'–'}</td><td>${t.bowlBalls?`${t.bestWickets||0}/${t.bestBowlingRuns??'–'}`:'–'}</td></tr>`;}).join('')}</tbody></table></section>`;};
+ X.installDetailedAverages=()=>{const compact=X.averages;X.averages=()=>compact()+`<section class="g8sheet g8seasonread g8tablewrap"><span class="g8eyebrow">THE FULL PLAYER RECORD</span><table class="g8table"><thead><tr><th>Player</th><th>High score</th><th>4s</th><th>6s</th><th>Bowling avg</th><th>Best bowling</th></tr></thead><tbody>${X.clubSeasonRecords().map(({p,t})=>{return `<tr><td>${esc(p.name)}</td><td>${t.bestRuns||0}</td><td>${t.fours||0}</td><td>${t.sixes||0}</td><td>${t.wickets?(t.runsConceded/t.wickets).toFixed(1):'–'}</td><td>${t.bowlBalls?`${t.bestWickets||0}/${t.bestBowlingRuns??'–'}`:'–'}</td></tr>`;}).join('')}</tbody></table></section>`;};
 })();
 (() => {
  const X=window.GCC8,{G,R,read,esc}=X;
