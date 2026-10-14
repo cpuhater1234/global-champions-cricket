@@ -1,0 +1,49 @@
+{
+  "scope": "Actual-script VM annual-draft stress with explicit 0/1/2/4/5/6 departure and transferred-pick fixtures; mixed paced/skip truth, rapid speed changes, wrong-turn actions, modal pauses and no stale completion callbacks. No native rendering.",
+  "checks": 839,
+  "cases": [
+    {
+      "userVacancies": 0,
+      "transferredPicks": 0,
+      "picks": 16,
+      "supplements": 1,
+      "timedCycles": 2
+    },
+    {
+      "userVacancies": 1,
+      "transferredPicks": 0,
+      "picks": 18,
+      "supplements": 1,
+      "timedCycles": 3
+    },
+    {
+      "userVacancies": 2,
+      "transferredPicks": 0,
+      "picks": 20,
+      "supplements": 1,
+      "timedCycles": 4
+    },
+    {
+      "userVacancies": 4,
+      "transferredPicks": 0,
+      "picks": 24,
+      "supplements": 2,
+      "timedCycles": 5
+    },
+    {
+      "userVacancies": 5,
+      "transferredPicks": 0,
+      "picks": 20,
+      "supplements": 2,
+      "timedCycles": 4
+    },
+    {
+      "userVacancies": 6,
+      "transferredPicks": 2,
+      "picks": 24,
+      "supplements": 5,
+      "timedCycles": 5
+    }
+  ],
+  "errors": []
+}
