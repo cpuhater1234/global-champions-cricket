@@ -1,0 +1,60 @@
+{
+  "artifact": "global_champions_cricket_v8_club_cards.html",
+  "sha256": "c835d09d744d3d2dedfe5c04aff812b9400ca837c96b1f0584f8714239ac7dc7",
+  "scope": "Source/VM card and interaction checks only; no native rendered geometry, keyboard or smoothness certification.",
+  "final_card_assertions": 21,
+  "variants": 20,
+  "selection_guides": 8,
+  "reveal_reservation": "Sealed slots contain inert, aria-hidden intrinsic card reservations. Fixed maximum heights removed, with matching minimum frames. Source arrangement is checked, geometry is not measured.",
+  "native_controls": "Native Select club buttons, club-specific accessible labels, aria-pressed and visible selected text; whole-card focus-within outline.",
+  "foundation": {
+    "scope": "Real cricket engine + new UI dispatch in a VM DOM stub. No browser, visual, geometry, focus or latency certification.",
+    "seed": 101,
+    "club": "NOT",
+    "coverage": {
+      "reloads": [
+        {
+          "year": 2008,
+          "label": "foundation-user-pick"
+        },
+        {
+          "year": 2008,
+          "label": "manual-XI"
+        },
+        {
+          "year": 2008,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2008,
+          "label": "grand-final-ready"
+        }
+      ],
+      "finals": 1,
+      "injurySelections": 0,
+      "clubs": []
+    },
+    "checks": 895,
+    "seasons": 1,
+    "regularSeasonMatches": 14,
+    "errors": []
+  },
+  "markup": {
+    "scope": "Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.",
+    "view_states": 10,
+    "action_bindings": 138,
+    "errors": []
+  },
+  "foundation_markup": {
+    "scope": "Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.",
+    "view_states": 21,
+    "action_bindings": 335,
+    "errors": []
+  },
+  "reveal": {
+    "scope": "VM clock and command tests; proves reveal sequencing/save guards and unchanged draw order, not rendered smoothness.",
+    "checks": 43,
+    "errors": []
+  },
+  "no_cricket_rule_changes": true
+}
