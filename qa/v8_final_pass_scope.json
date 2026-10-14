@@ -1,0 +1,936 @@
+{
+  "artifact": "global_champions_cricket_v8_final_pass.html",
+  "sha256": "f4aa6622f621ce14d16ffcd4725562d186522e633d49a8f05ca3a9932aac811f",
+  "scope": "Completed final-artifact real-script VM runs, callback/DOM-model checks and parsed markup. No native browser, rendered geometry, mouse/keyboard or performance certification.",
+  "summary": {
+    "full_careers": 2,
+    "seasons": 38,
+    "regular_matches": 532,
+    "career_assertions": 30445,
+    "cold_checkpoints": 114,
+    "naturally_simulated_super_overs": 3,
+    "naturally_needed_injury_covers": 1,
+    "club_paths": 8
+  },
+  "careers": [
+    {
+      "scope": "Real cricket engine + new UI dispatch in a VM DOM stub. No browser, visual, geometry, focus or latency certification.",
+      "seed": 404,
+      "club": "SUR",
+      "coverage": {
+        "reloads": [
+          {
+            "year": 2008,
+            "label": "foundation-user-pick"
+          },
+          {
+            "year": 2008,
+            "label": "manual-XI"
+          },
+          {
+            "year": 2008,
+            "label": "finals-ready"
+          },
+          {
+            "year": 2008,
+            "label": "grand-final-ready"
+          },
+          {
+            "year": 2009,
+            "label": "annual-order"
+          },
+          {
+            "year": 2009,
+            "label": "annual-user-pick"
+          },
+          {
+            "year": 2009,
+            "label": "finals-ready"
+          },
+          {
+            "year": 2009,
+            "label": "grand-final-ready"
+          },
+          {
+            "year": 2010,
+            "label": "annual-order"
+          },
+          {
+            "year": 2010,
+            "label": "annual-user-pick"
+          },
+          {
+            "year": 2011,
+            "label": "annual-order"
+          },
+          {
+            "year": 2012,
+            "label": "annual-order"
+          },
+          {
+            "year": 2013,
+            "label": "annual-order"
+          },
+          {
+            "year": 2013,
+            "label": "annual-user-pick"
+          },
+          {
+            "year": 2014,
+            "label": "annual-order"
+          },
+          {
+            "year": 2014,
+            "label": "annual-user-pick"
+          },
+          {
+            "year": 2014,
+            "label": "finals-ready"
+          },
+          {
+            "year": 2014,
+            "label": "grand-final-ready"
+          },
+          {
+            "year": 2015,
+            "label": "annual-order"
+          },
+          {
+            "year": 2015,
+            "label": "annual-user-pick"
+          },
+          {
+            "year": 2015,
+            "label": "finals-ready"
+          },
+          {
+            "year": 2015,
+            "label": "grand-final-ready"
+          },
+          {
+            "year": 2016,
+            "label": "annual-order"
+          },
+          {
+            "year": 2016,
+            "label": "annual-user-pick"
+          },
+          {
+            "year": 2016,
+            "label": "finals-ready"
+          },
+          {
+            "year": 2016,
+            "label": "grand-final-ready"
+          },
+          {
+            "year": 2017,
+            "label": "annual-order"
+          },
+          {
+            "year": 2017,
+            "label": "annual-user-pick"
+          },
+          {
+            "year": 2017,
+            "label": "finals-ready"
+          },
+          {
+            "year": 2017,
+            "label": "grand-final-ready"
+          },
+          {
+            "year": 2018,
+            "label": "annual-order"
+          },
+          {
+            "year": 2018,
+            "label": "annual-user-pick"
+          },
+          {
+            "year": 2018,
+            "label": "finals-ready"
+          },
+          {
+            "year": 2018,
+            "label": "grand-final-ready"
+          },
+          {
+            "year": 2019,
+            "label": "annual-order"
+          },
+          {
+            "year": 2019,
+            "label": "annual-user-pick"
+          },
+          {
+            "year": 2019,
+            "label": "finals-ready"
+          },
+          {
+            "year": 2019,
+            "label": "grand-final-ready"
+          },
+          {
+            "year": 2020,
+            "label": "annual-order"
+          },
+          {
+            "year": 2020,
+            "label": "annual-user-pick"
+          },
+          {
+            "year": 2020,
+            "label": "finals-ready"
+          },
+          {
+            "year": 2020,
+            "label": "grand-final-ready"
+          },
+          {
+            "year": 2021,
+            "label": "annual-order"
+          },
+          {
+            "year": 2021,
+            "label": "annual-user-pick"
+          },
+          {
+            "year": 2022,
+            "label": "annual-order"
+          },
+          {
+            "year": 2022,
+            "label": "annual-user-pick"
+          },
+          {
+            "year": 2022,
+            "label": "finals-ready"
+          },
+          {
+            "year": 2022,
+            "label": "grand-final-ready"
+          },
+          {
+            "year": 2023,
+            "label": "annual-order"
+          },
+          {
+            "year": 2023,
+            "label": "annual-user-pick"
+          },
+          {
+            "year": 2023,
+            "label": "finals-ready"
+          },
+          {
+            "year": 2023,
+            "label": "grand-final-ready"
+          },
+          {
+            "year": 2024,
+            "label": "annual-order"
+          },
+          {
+            "year": 2024,
+            "label": "finals-ready"
+          },
+          {
+            "year": 2024,
+            "label": "grand-final-ready"
+          },
+          {
+            "year": 2025,
+            "label": "annual-order"
+          },
+          {
+            "year": 2025,
+            "label": "annual-user-pick"
+          },
+          {
+            "year": 2025,
+            "label": "finals-ready"
+          },
+          {
+            "year": 2025,
+            "label": "grand-final-ready"
+          },
+          {
+            "year": 2026,
+            "label": "annual-order"
+          },
+          {
+            "year": 2026,
+            "label": "finals-ready"
+          },
+          {
+            "year": 2026,
+            "label": "grand-final-ready"
+          }
+        ],
+        "finals": 14,
+        "injurySelections": 34,
+        "injuryCovers": 0,
+        "superOvers": 1,
+        "clubs": []
+      },
+      "checks": 15596,
+      "seasons": 19,
+      "regularSeasonMatches": 266,
+      "errors": []
+    },
+    {
+      "scope": "Real cricket engine + new UI dispatch in a VM DOM stub. No browser, visual, geometry, focus or latency certification.",
+      "seed": 505,
+      "club": "KKR",
+      "coverage": {
+        "reloads": [
+          {
+            "year": 2008,
+            "label": "foundation-user-pick"
+          },
+          {
+            "year": 2008,
+            "label": "manual-XI"
+          },
+          {
+            "year": 2008,
+            "label": "finals-ready"
+          },
+          {
+            "year": 2008,
+            "label": "grand-final-ready"
+          },
+          {
+            "year": 2009,
+            "label": "annual-order"
+          },
+          {
+            "year": 2009,
+            "label": "annual-user-pick"
+          },
+          {
+            "year": 2010,
+            "label": "annual-order"
+          },
+          {
+            "year": 2010,
+            "label": "annual-user-pick"
+          },
+          {
+            "year": 2010,
+            "label": "finals-ready"
+          },
+          {
+            "year": 2010,
+            "label": "grand-final-ready"
+          },
+          {
+            "year": 2011,
+            "label": "annual-order"
+          },
+          {
+            "year": 2011,
+            "label": "finals-ready"
+          },
+          {
+            "year": 2011,
+            "label": "grand-final-ready"
+          },
+          {
+            "year": 2012,
+            "label": "annual-order"
+          },
+          {
+            "year": 2012,
+            "label": "annual-user-pick"
+          },
+          {
+            "year": 2012,
+            "label": "finals-ready"
+          },
+          {
+            "year": 2012,
+            "label": "grand-final-ready"
+          },
+          {
+            "year": 2013,
+            "label": "annual-order"
+          },
+          {
+            "year": 2013,
+            "label": "annual-user-pick"
+          },
+          {
+            "year": 2014,
+            "label": "annual-order"
+          },
+          {
+            "year": 2015,
+            "label": "annual-order"
+          },
+          {
+            "year": 2015,
+            "label": "annual-user-pick"
+          },
+          {
+            "year": 2016,
+            "label": "annual-order"
+          },
+          {
+            "year": 2016,
+            "label": "annual-user-pick"
+          },
+          {
+            "year": 2017,
+            "label": "annual-order"
+          },
+          {
+            "year": 2017,
+            "label": "finals-ready"
+          },
+          {
+            "year": 2017,
+            "label": "grand-final-ready"
+          },
+          {
+            "year": 2018,
+            "label": "annual-order"
+          },
+          {
+            "year": 2018,
+            "label": "annual-user-pick"
+          },
+          {
+            "year": 2019,
+            "label": "annual-order"
+          },
+          {
+            "year": 2019,
+            "label": "annual-user-pick"
+          },
+          {
+            "year": 2019,
+            "label": "finals-ready"
+          },
+          {
+            "year": 2019,
+            "label": "grand-final-ready"
+          },
+          {
+            "year": 2020,
+            "label": "annual-order"
+          },
+          {
+            "year": 2020,
+            "label": "annual-user-pick"
+          },
+          {
+            "year": 2021,
+            "label": "annual-order"
+          },
+          {
+            "year": 2021,
+            "label": "annual-user-pick"
+          },
+          {
+            "year": 2021,
+            "label": "finals-ready"
+          },
+          {
+            "year": 2021,
+            "label": "grand-final-ready"
+          },
+          {
+            "year": 2022,
+            "label": "annual-order"
+          },
+          {
+            "year": 2022,
+            "label": "annual-user-pick"
+          },
+          {
+            "year": 2022,
+            "label": "finals-ready"
+          },
+          {
+            "year": 2022,
+            "label": "grand-final-ready"
+          },
+          {
+            "year": 2023,
+            "label": "annual-order"
+          },
+          {
+            "year": 2023,
+            "label": "annual-user-pick"
+          },
+          {
+            "year": 2023,
+            "label": "finals-ready"
+          },
+          {
+            "year": 2023,
+            "label": "grand-final-ready"
+          },
+          {
+            "year": 2024,
+            "label": "annual-order"
+          },
+          {
+            "year": 2025,
+            "label": "annual-order"
+          },
+          {
+            "year": 2025,
+            "label": "annual-user-pick"
+          },
+          {
+            "year": 2026,
+            "label": "annual-order"
+          },
+          {
+            "year": 2026,
+            "label": "annual-user-pick"
+          }
+        ],
+        "finals": 9,
+        "injurySelections": 27,
+        "injuryCovers": 1,
+        "superOvers": 2,
+        "clubs": []
+      },
+      "checks": 14849,
+      "seasons": 19,
+      "regularSeasonMatches": 266,
+      "errors": []
+    }
+  ],
+  "club_matrix": [
+    {
+      "club_index": 0,
+      "exit_code": 0,
+      "result": {
+        "scope": "Real cricket engine + new UI dispatch in a VM DOM stub. No browser, visual, geometry, focus or latency certification.",
+        "seed": 101,
+        "club": "NOT",
+        "coverage": {
+          "reloads": [
+            {
+              "year": 2008,
+              "label": "foundation-user-pick"
+            },
+            {
+              "year": 2008,
+              "label": "manual-XI"
+            },
+            {
+              "year": 2008,
+              "label": "finals-ready"
+            },
+            {
+              "year": 2008,
+              "label": "grand-final-ready"
+            }
+          ],
+          "finals": 1,
+          "injurySelections": 0,
+          "injuryCovers": 0,
+          "superOvers": 0,
+          "clubs": []
+        },
+        "checks": 895,
+        "seasons": 1,
+        "regularSeasonMatches": 14,
+        "errors": []
+      }
+    },
+    {
+      "club_index": 1,
+      "exit_code": 0,
+      "result": {
+        "scope": "Real cricket engine + new UI dispatch in a VM DOM stub. No browser, visual, geometry, focus or latency certification.",
+        "seed": 101,
+        "club": "DC",
+        "coverage": {
+          "reloads": [
+            {
+              "year": 2008,
+              "label": "foundation-user-pick"
+            },
+            {
+              "year": 2008,
+              "label": "manual-XI"
+            }
+          ],
+          "finals": 0,
+          "injurySelections": 0,
+          "injuryCovers": 0,
+          "superOvers": 0,
+          "clubs": []
+        },
+        "checks": 763,
+        "seasons": 1,
+        "regularSeasonMatches": 14,
+        "errors": []
+      }
+    },
+    {
+      "club_index": 2,
+      "exit_code": 0,
+      "result": {
+        "scope": "Real cricket engine + new UI dispatch in a VM DOM stub. No browser, visual, geometry, focus or latency certification.",
+        "seed": 101,
+        "club": "CSK",
+        "coverage": {
+          "reloads": [
+            {
+              "year": 2008,
+              "label": "foundation-user-pick"
+            },
+            {
+              "year": 2008,
+              "label": "manual-XI"
+            },
+            {
+              "year": 2008,
+              "label": "finals-ready"
+            },
+            {
+              "year": 2008,
+              "label": "grand-final-ready"
+            }
+          ],
+          "finals": 1,
+          "injurySelections": 0,
+          "injuryCovers": 0,
+          "superOvers": 0,
+          "clubs": []
+        },
+        "checks": 895,
+        "seasons": 1,
+        "regularSeasonMatches": 14,
+        "errors": []
+      }
+    },
+    {
+      "club_index": 3,
+      "exit_code": 0,
+      "result": {
+        "scope": "Real cricket engine + new UI dispatch in a VM DOM stub. No browser, visual, geometry, focus or latency certification.",
+        "seed": 101,
+        "club": "STA",
+        "coverage": {
+          "reloads": [
+            {
+              "year": 2008,
+              "label": "foundation-user-pick"
+            },
+            {
+              "year": 2008,
+              "label": "manual-XI"
+            },
+            {
+              "year": 2008,
+              "label": "finals-ready"
+            },
+            {
+              "year": 2008,
+              "label": "grand-final-ready"
+            }
+          ],
+          "finals": 1,
+          "injurySelections": 0,
+          "injuryCovers": 0,
+          "superOvers": 1,
+          "clubs": []
+        },
+        "checks": 907,
+        "seasons": 1,
+        "regularSeasonMatches": 14,
+        "errors": []
+      }
+    },
+    {
+      "club_index": 4,
+      "exit_code": 0,
+      "result": {
+        "scope": "Real cricket engine + new UI dispatch in a VM DOM stub. No browser, visual, geometry, focus or latency certification.",
+        "seed": 101,
+        "club": "REN",
+        "coverage": {
+          "reloads": [
+            {
+              "year": 2008,
+              "label": "foundation-user-pick"
+            },
+            {
+              "year": 2008,
+              "label": "manual-XI"
+            },
+            {
+              "year": 2008,
+              "label": "finals-ready"
+            },
+            {
+              "year": 2008,
+              "label": "grand-final-ready"
+            }
+          ],
+          "finals": 1,
+          "injurySelections": 0,
+          "injuryCovers": 0,
+          "superOvers": 0,
+          "clubs": []
+        },
+        "checks": 895,
+        "seasons": 1,
+        "regularSeasonMatches": 14,
+        "errors": []
+      }
+    },
+    {
+      "club_index": 5,
+      "exit_code": 0,
+      "result": {
+        "scope": "Real cricket engine + new UI dispatch in a VM DOM stub. No browser, visual, geometry, focus or latency certification.",
+        "seed": 101,
+        "club": "RCB",
+        "coverage": {
+          "reloads": [
+            {
+              "year": 2008,
+              "label": "foundation-user-pick"
+            },
+            {
+              "year": 2008,
+              "label": "manual-XI"
+            }
+          ],
+          "finals": 0,
+          "injurySelections": 0,
+          "injuryCovers": 0,
+          "superOvers": 1,
+          "clubs": []
+        },
+        "checks": 776,
+        "seasons": 1,
+        "regularSeasonMatches": 14,
+        "errors": []
+      }
+    },
+    {
+      "club_index": 6,
+      "exit_code": 0,
+      "result": {
+        "scope": "Real cricket engine + new UI dispatch in a VM DOM stub. No browser, visual, geometry, focus or latency certification.",
+        "seed": 101,
+        "club": "SIX",
+        "coverage": {
+          "reloads": [
+            {
+              "year": 2008,
+              "label": "foundation-user-pick"
+            },
+            {
+              "year": 2008,
+              "label": "manual-XI"
+            },
+            {
+              "year": 2008,
+              "label": "finals-ready"
+            },
+            {
+              "year": 2008,
+              "label": "grand-final-ready"
+            }
+          ],
+          "finals": 1,
+          "injurySelections": 0,
+          "injuryCovers": 0,
+          "superOvers": 0,
+          "clubs": []
+        },
+        "checks": 895,
+        "seasons": 1,
+        "regularSeasonMatches": 14,
+        "errors": []
+      }
+    },
+    {
+      "club_index": 7,
+      "exit_code": 0,
+      "result": {
+        "scope": "Real cricket engine + new UI dispatch in a VM DOM stub. No browser, visual, geometry, focus or latency certification.",
+        "seed": 101,
+        "club": "YOR",
+        "coverage": {
+          "reloads": [
+            {
+              "year": 2008,
+              "label": "foundation-user-pick"
+            },
+            {
+              "year": 2008,
+              "label": "manual-XI"
+            },
+            {
+              "year": 2008,
+              "label": "finals-ready"
+            },
+            {
+              "year": 2008,
+              "label": "grand-final-ready"
+            }
+          ],
+          "finals": 1,
+          "injurySelections": 0,
+          "injuryCovers": 0,
+          "superOvers": 0,
+          "clubs": []
+        },
+        "checks": 895,
+        "seasons": 1,
+        "regularSeasonMatches": 14,
+        "errors": []
+      }
+    }
+  ],
+  "targeted": {
+    "final_pass": {
+      "scope": "Actual VM career commands with explicit 0\u20136 user retirement fixtures, cut budgets, manual draft/XI, stale controls and cold reload. No native rendering evidence.",
+      "checks": 604,
+      "cases": [
+        {
+          "retirements": 0,
+          "cuts": 2,
+          "picks": 2
+        },
+        {
+          "retirements": 1,
+          "cuts": 2,
+          "picks": 3
+        },
+        {
+          "retirements": 2,
+          "cuts": 2,
+          "picks": 4
+        },
+        {
+          "retirements": 3,
+          "cuts": 1,
+          "picks": 4
+        },
+        {
+          "retirements": 4,
+          "cuts": 0,
+          "picks": 4
+        },
+        {
+          "retirements": 5,
+          "cuts": 0,
+          "picks": 5
+        },
+        {
+          "retirements": 6,
+          "cuts": 0,
+          "picks": 6
+        }
+      ],
+      "errors": []
+    },
+    "cricket_polish": {
+      "scope": "Source/real-script VM checks of cricket reads, drafting, spectator finals, Super Over ledgers and save rejection. No native browser, visual geometry or smoothness evidence.",
+      "checks": 750,
+      "randomTieBreakSeeds": 150,
+      "errors": []
+    },
+    "save_integrity": {
+      "scope": "VM corrupt-state fixtures must fail before mutating a previously valid career or overwriting saved data.",
+      "checks": 77,
+      "cases": [
+        "table",
+        "statValue",
+        "negativeStat",
+        "selfFixture",
+        "team",
+        "order",
+        "xi",
+        "results",
+        "schedule",
+        "stats",
+        "club",
+        "reveal",
+        "post-validation render failure"
+      ]
+    },
+    "audit": {
+      "scope": "VM adversarial saves, storage failures, resume context and stale-command checks; no browser rendering or server exists in this standalone build.",
+      "checks": 58,
+      "expectedCorruptSaveErrors": 4,
+      "expectedStorageErrors": 9
+    },
+    "migration": {
+      "scope": "VM v7.2-key migration fixture without v8 metadata; original legacy save preserved.",
+      "checks": 6,
+      "errors": []
+    },
+    "transition": {
+      "scope": "VM real annual draft, actual played-round injury recovery and real midseason trade; initial injury is an explicit fixture. No native rendered evidence.",
+      "checks": 111,
+      "trade": {
+        "offer": 104,
+        "target": 192,
+        "club": "RR"
+      },
+      "errors": []
+    },
+    "match_reveal": {
+      "scope": "VM actual-score highlights, pacing, pause/modal/title/archive and cold reload; cricket truth unchanged. CSS/markup source protections, no native rendered geometry or smoothness evidence.",
+      "checks": 58,
+      "errors": []
+    },
+    "interaction": {
+      "scope": "VM dispatch + real trade, supplementary pick and replacement rules. Injury availability fixture is injected, not naturally simulated; no browser validation.",
+      "checks": 32,
+      "tradeAccepted": true,
+      "pickIncluded": "R1",
+      "errors": []
+    },
+    "reveal": {
+      "scope": "VM clock and command tests; proves reveal sequencing/save guards and unchanged draw order, not rendered smoothness.",
+      "checks": 43,
+      "errors": []
+    },
+    "dom_patch": {
+      "scope": "DOM tree model checks for keyed identity, replacement, insertion, removal, typing and details state. Does not certify native focus, scroll, geometry or appearance.",
+      "checks": 18,
+      "keyedPermutations": 24,
+      "errors": []
+    }
+  },
+  "markup": [
+    {
+      "scope": "Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.",
+      "view_states": 29,
+      "action_bindings": 564,
+      "errors": []
+    },
+    {
+      "scope": "Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.",
+      "view_states": 30,
+      "action_bindings": 651,
+      "errors": []
+    }
+  ],
+  "clock": "Single runner, pause/resume/frozen origin, cancellation and self-cancelling interval checks passed.",
+  "source_review": "Immutable reference and deterministic build digest verified; no external runtime dependencies, intrinsic stadium image sizing, fixed name text colours, responsive grids and reduced motion. These are source properties, not pixel measurements.",
+  "corrections": [
+    "Lodging clears unfinished swaps.",
+    "Unavailable free agents are excluded from player/CPU cover and eligibility is rechecked on confirmation.",
+    "Ordinary annual snake has four rounds; extra vacancies use supplementary slots after ordinary picks.",
+    "Save checks reject malformed counts, self-fixtures, impossible tie-break strike order and deliveries after a chase is won."
+  ],
+  "fixtures": "0\u20136 retirement counts and stale/new cover injuries are injected boundary cases; actual drafts, selection, matches and reloads follow. Full-career seed 505 naturally needed injury cover. Interrupted assessment candidates are excluded from final evidence.",
+  "remaining": "Rendered desktop/mobile/zoom, native events/focus/scroll and smoothness remain unverified. The inert legacy DOM adapter and shared MCG photograph remain transitional."
+}

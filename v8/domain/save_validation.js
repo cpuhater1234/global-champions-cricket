@@ -11,7 +11,9 @@ function validSave(save){
  const roster=clubs.flatMap(c=>s.teams[c]||[]);if(!unique(roster))return false;
  for(const a of [s.xi,s.battingOrder])if(!Array.isArray(a)||a.length>11||!unique(a)||a.some(id=>!s.userClub||!s.teams[s.userClub.abbr].includes(id)))return false;
  if(s.xi.length!==s.battingOrder.length||s.battingOrder.some(id=>!s.xi.includes(id)))return false;
- const club=c=>record(c)&&clubs.includes(c.abbr),match=r=>record(r)&&club(r.home)&&club(r.away);
+ const club=c=>record(c)&&clubs.includes(c.abbr),match=r=>record(r)&&club(r.home)&&club(r.away)&&r.home.abbr!==r.away.abbr;
+ const countKeys=['matches','innings','runs','balls','outs','fours','sixes','wickets','bowlBalls','runsConceded','bestRuns','bestWickets','bestBowlingRuns'];
+ if(Object.values(s.playerSeasonStats).some(t=>!record(t)||countKeys.some(k=>t[k]!=null&&(!Number.isFinite(t[k])||t[k]<0))))return false;
  const superOverValid=r=>{
   const over=r?.superOver;if(over==null)return true; // Existing careers retain old tied-match results.
   if(!match(r)||r.tieBreak!==true||r.homeInnings?.total!==r.awayInnings?.total||!record(over)||!club(over.winner)||over.winner.abbr!==r.winner?.abbr||!Array.isArray(over.rounds)||!over.rounds.length)return false;
@@ -24,8 +26,10 @@ function validSave(save){
     if(i.deliveries.some((d,index)=>!record(d)||d.ball!==index+1||!i.batters.some(b=>b.id===d.batterId)||![0,1,2,3,4,6].includes(d.runs)||typeof d.wicket!=='boolean'||d.wicket&&d.runs!==0))return false;
     if(i.deliveries.reduce((a,d)=>a+d.runs,0)!==i.total||i.deliveries.filter(d=>d.wicket).length!==i.wickets)return false;
     if(i.batters.some(b=>b.runs!==i.deliveries.filter(d=>d.batterId===b.id).reduce((a,d)=>a+d.runs,0)||b.balls!==i.deliveries.filter(d=>d.batterId===b.id).length||b.out!==i.deliveries.some(d=>d.batterId===b.id&&d.wicket)))return false;
+    let striker=0,nonStriker=1,outs=0;for(const d of i.deliveries){if(outs>=2||d.batterId!==i.batters[striker].id)return false;if(d.wicket){outs++;if(outs===1)striker=2;}else if(d.runs%2)[striker,nonStriker]=[nonStriker,striker];}
    }
    const [a,b]=round.innings;if(a.balls<6&&a.wickets<2||b.total<=a.total&&b.balls<6&&b.wickets<2)return false;
+   let chase=0;for(const d of b.deliveries){if(chase>a.total)return false;chase+=d.runs;}
    if(n<over.rounds.length-1&&a.total!==b.total||n===over.rounds.length-1&&(a.total===b.total||(a.total>b.total?a:b).club.abbr!==over.winner.abbr))return false;
   }
   return true;

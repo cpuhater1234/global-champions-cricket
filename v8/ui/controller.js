@@ -130,7 +130,7 @@
  bind('clearXI',['team'],()=>G.clearXI());
  bind('naturalOrder',['team'],()=>G.autoOrderXI());
  bind('rating',['team','review','draft','dynasty'],(key,squad=false)=>{assert(phases.some(([k])=>k===key),'Choose a cricket rating.');const p=squad?X.squadProfile():profile();modal(phases.find(([k])=>k===key)[1],`<p>${Math.round(p[key])}/99 · ${esc(R.explanation(key,p))}</p><p>XI ability ${Math.round(p.overall)}/99 · Role fit ${Math.round(p.roleFit)}/99 · Keeping ${Math.round(p.keeping)}/99</p>${X.phaseOptions(key,squad)}<p>The selected eleven and their batting order determine this read. The scorebooks show what happens in matches.</p>`);});
- bind('lodge',['team'],()=>{assert(!read.xiProblem(),read.xiProblem());if(ui.teamReturn==='finals'&&s.finals){G.go('finals');setView('finals');}else{G.startSeason();assert(s.fullSchedule.length===14,'The fixture could not be created.');setView('season');}});
+ bind('lodge',['team'],()=>{assert(!read.xiProblem(),read.xiProblem());G.cancelSwap();if(ui.teamReturn==='finals'&&s.finals){G.go('finals');setView('finals');}else{G.startSeason();assert(s.fullSchedule.length===14,'The fixture could not be created.');setView('season');}});
  bind('seasonTab',['season'],tab=>{assert(['matchday','ladder','fixtures','players','leaguePlayers'].includes(tab),'Unknown season view.');ui.seasonTab=tab;});
  bind('matchday',['result'],()=>{G.go('season');setView('season');});
  bind('prepare',['season'],()=>{

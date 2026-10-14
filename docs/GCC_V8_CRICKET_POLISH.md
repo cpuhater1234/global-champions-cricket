@@ -25,3 +25,7 @@ Run the club matrix before the dedicated polish test, which uses its naturally s
 ## Remaining evidence gap
 
 These are VM scripts, callback and markup checks. They do not prove actual pixel alignment, visual density, mobile wrapping, mouse/keyboard behaviour, focus, scroll or smoothness. Browser restrictions from the handoff remain authoritative; no rendering/hosting bypass was used. User-operated screenshots and play feedback remain the permitted visual review path. The hidden legacy rendering adapter and shared MCG illustration remain transitional limitations.
+
+## Superseding assessment checkpoint
+
+The current candidate is now `global_champions_cricket_v8_final_pass.html`. See `GCC_V8_FINAL_PASS.md` and `../qa/v8_final_pass_scope.json` for unfinished-swap, injury-cover, supplementary-pick and save-sequence corrections plus final verification. The cricket-feedback work above remains in place.

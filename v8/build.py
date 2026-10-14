@@ -28,6 +28,13 @@ def freeze():
    assert marker in script
    script=script.replace(marker,"  window.GCC8_FOUNDATION_READ={roleTags:playerRoleTags,playerNote,groundStory,groundBand,projectedDraftProfile,draftSnapshot,effectiveProfile,simulateSuperOver,teamAverages:userTeamAverages,leagueAverages:leagueInningsAverages,standout:matchStandout,pauseDraft:()=>{clearTimeout(draftAutoTimer);draftAutoTimer=null}};\n"+marker)
   if name=='dynasty':
+   old='function replacementPoolFor(injured){const pool=freeAgentPool();'
+   assert old in script
+   script=script.replace(old,'function replacementPoolFor(injured){const pool=freeAgentPool().filter(healthyForSelection);')
+   # Forced departures beyond four are filled after the ordinary snake rounds.
+   old='maxRounds=Math.max(0,...Object.values(needs));'
+   assert old in script
+   script=script.replace(old,'maxRounds=Math.min(4,Math.max(0,...Object.values(needs)));')
    script=script.replace(',exportSave,importSave,clearSaveAndRestart',',clearSaveAndRestart')
    # Product saves stay in browser storage; no import/export controls or download commands.
    script=re.sub(r'  function (?:exportSave|importSave)\(\).*?\n','',script)

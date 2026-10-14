@@ -5,7 +5,7 @@ const reportDir=process.env.GCC8_TEST_REPORT_DIR||'qa';fs.mkdirSync(reportDir,{r
 const lastYear=Number(process.env.GCC8_TEST_LAST_YEAR||2026);
 const path=process.env.GCC8_TEST_BUILD||'game/global_champions_cricket_v8_fresh_game.html';
 const host=loadGame(path,Number(process.env.GCC8_TEST_SEED||101),new Map(),{strictIds:true}),{G,context,get}=host,X=context.GCC8,s=G.state;
-const coverage={reloads:[],finals:0,injurySelections:0,superOvers:0,clubs:[]};const scorebooks=[];const markup={};let checks=0;const check=(test,msg)=>{assert.ok(test,msg);checks++;};
+const coverage={reloads:[],finals:0,injurySelections:0,injuryCovers:0,superOvers:0,clubs:[]};const scorebooks=[];const markup={};let checks=0;const check=(test,msg)=>{assert.ok(test,msg);checks++;};
 const doIt=(name,...args)=>{const ok=X.dispatch(name,args);check(ok,`${name}: ${get('g8feedback').textContent}`);const key=X.ui.view+(X.ui.view==='dynasty'?'-'+s.dynasty.offseason.phase:'')+(X.ui.modal?'-'+X.ui.modal:'');if(!markup[key])markup[key]={stage:get('g8stage').innerHTML,hud:get('g8hud').innerHTML,dialog:X.ui.modal?get('g8dialogContent').innerHTML:''};if(X.ui.view==='matchReveal'){check(X.dispatch('matchSkip'),'instant match completion');}};
 function auditScorebook(r){
  if(r.superOver){coverage.superOvers++;check(r.tieBreak&&r.homeInnings.total===r.awayInnings.total,'Super Over only follows tied regulation scores');
@@ -40,7 +40,11 @@ function checkpoint(label){
 }
 function manualXI(){
  // Tests choose a balanced XI, but use only the exposed manual selection commands.
- const available=X.roster().filter(p=>s.dynasty.injuries?.[p.id]?.status!=='OUT');
+ let available=X.roster().filter(p=>s.dynasty.injuries?.[p.id]?.status!=='OUT');
+ // Multiple natural injuries can leave fewer than eleven healthy players. Exercise
+ // the same manual cover market a player must use, rather than failing the harness.
+ while(available.length<11){const injured=X.roster().find(p=>s.dynasty.injuries?.[p.id]?.status==='OUT'&&!s.dynasty.replacementFor[p.id]&&context.GCC8_ENGINE_READ.replacements(p.id).length);check(!!injured,'injury cover available for depleted side');doIt('cover',injured.id);doIt('signCover',context.GCC8_ENGINE_READ.replacements(injured.id)[0]);coverage.injuryCovers++;available=X.roster().filter(p=>s.dynasty.injuries?.[p.id]?.status!=='OUT');}
+
  const best=G.bestXI(available);doIt('clearXI');for(const p of best)doIt('select',p.id);
  check(s.xi.length===11,'manual XI complete');check(new Set(s.battingOrder).size===11,'unique batting order');
 }
