@@ -11,6 +11,12 @@ def freeze():
  names=['players','league','ratings','projections','cpu','foundation','home-motion','events','dynasty','identity']
  for name,script in zip(names,scripts):
   script=script.replace('window.scrollTo','window.GCC8_ENGINE_SCROLL')
+  if name=='ratings':
+   old='if (!p || (p.maxOvers||0)<=0) return null;'
+   assert old in script
+   script=script.replace(old,old+'\n    const job=window.GCC8_PLAYER_JOBS[p.name];if(job)return job.style;')
+  if name=='cpu':
+   script=script.replace('function projectedValue(player, year=2008){ const p=projection(player); return p.draftDynasty ?? p.dynasty; }', 'function projectedValue(player, year=2008){ if(player.dynastyCareer)return window.GCC8_CAREERS.value(player,year);const p=projection(player);return p.draftDynasty??p.dynasty; }')
   if name=='foundation':
    script=script.replace('const draftSpeeds = [520, 260, 90];','const draftSpeeds = [520, 260, 130];')
    marker='  function resolveChase('
@@ -41,6 +47,18 @@ def freeze():
    assert marker in script
    script=script.replace(marker,"  window.GCC8_FOUNDATION_READ={roleTags:playerRoleTags,playerNote,groundStory,groundBand,projectedDraftProfile,draftSnapshot,effectiveProfile,simulateSuperOver,winningChaseTotal,reconcileChasePhases,teamAverages:userTeamAverages,leagueAverages:leagueInningsAverages,standout:matchStandout,pauseDraft:()=>{clearTimeout(draftAutoTimer);draftAutoTimer=null}};\n"+marker)
   if name=='dynasty':
+   script=script.replace('function applyCareerYear(p,year){const m=', 'function applyCareerYear(p,year){window.GCC8_JOB_MODEL.prepare(p,year);const m=')
+   script=script.replace("if(state.userClub)saveFoundation('recruit');","if(state.userClub){addCareerMetaExisting();saveFoundation('recruit');}")
+   old='if(p.dynastyBase2008){const ageNow='
+   assert old in script
+   start=script.index(old);end=script.index('\n  function initDynastyData',start)
+   script=script[:start]+'if(p.dynastyBase2008){window.GCC8_CAREERS.applyFoundation(p,year,attributeKeys);window.GCC8_JOB_MODEL.finish(p,year);}}'+script[end:]
+   old='return Math.round((p.overall||65)*.9+prime+form+runway+injuryPenalty+ground+(forClub?roleNeed(forClub,p):0))'
+   assert old in script
+   script=script.replace(old,'return Math.round((p.overall||65)*.55+window.GCC8_CAREERS.value(p,state.year)*.35+prime+form+runway*.35+injuryPenalty+ground+(forClub?roleNeed(forClub,p):0))')
+   old='tradeValue(p,abbr)+roleNeed(abbr,p)*1.2+prand'
+   assert old in script
+   script=script.replace(old,'window.GCC_AI.evaluateDraft(clubByAbbr(abbr),p,{year:state.year,roster:roster(abbr),available:pool,pickIndex:state.dynasty.offseason?.pickCursor||0}).score+roleNeed(abbr,p)*.45+prand')
    old='function replacementPoolFor(injured){const pool=freeAgentPool();'
    assert old in script
    script=script.replace(old,'function replacementPoolFor(injured){const pool=freeAgentPool().filter(healthyForSelection);')
@@ -96,15 +114,15 @@ def build(output):
   svg=path.read_text();body=re.search(r'<svg\b[^>]*>(.*?)</svg>',svg,re.S)[1]
   symbols.append(f'<symbol id="g8icon-{path.stem}" viewBox="0 0 24 24">{body}</symbol>')
  licence=(ROOT/'assets/tabler/LICENSE.txt').read_text()
- media='<script>window.GCC8_MEDIA='+json.dumps({'stadium':'data:image/jpeg;base64,'+base64.b64encode((ROOT/'assets/mcg-under-lights-source.jpg').read_bytes()).decode()})+';</script>'
- assets='<!-- Tabler Icons: '+licence+' -->'+ '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="g8iconsprite">'+''.join(symbols)+'</svg>'+media
+ media='<script>window.GCC8_MEDIA='+json.dumps({'stadium':'data:image/jpeg;base64,'+base64.b64encode((ROOT/'assets/mcg-under-lights-source.jpg').read_bytes()).decode(),'venues':json.loads((ROOT/'assets/venue_photos.json').read_text())})+';</script>'
+ assets='<!-- Photo source and licence notices (unmodified photos): '+json.dumps(json.loads((ROOT/'assets/venue_photos.json').read_text()))+' -->'+'<!-- Tabler Icons: '+licence+' -->'+ '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="g8iconsprite">'+''.join(symbols)+'</svg>'+media
  template=template.replace('@@ASSETS@@',assets)
  template=template.replace('@@CSS@@',(ROOT/'ui/game.css').read_text()).replace('@@BRIDGE@@',(ROOT/'engine/bridge.html').read_text())
  # Omit the old home motion, moment overlays and visual identity scripts.
  # Their DOM side effects would escape the inert host; none owns cricket state.
  binding='const {setTimeout,clearTimeout,setInterval,clearInterval,requestAnimationFrame,cancelAnimationFrame}=window.GCC8_CLOCK;const MutationObserver=class{observe(){}disconnect(){}};'
- engine='<script>window.GCC8_ENGINE_SCROLL=()=>{};'+(ROOT/'ui/clock.js').read_text()+'</script>'+ '\n'.join('<script>(()=>{'+binding+(ROOT/'engine'/f'{name}.js').read_text()+'})();</script>' for name in ['players','league','ratings','projections','cpu','foundation','dynasty'])
- ui='\n'.join('<script>'+ (ROOT/'ui'/f'{name}.js').read_text()+'</script>' for name in ['components','data','roles','match_story','screens','dom','controller'])
+ engine='<script>'+ (ROOT/'domain/career_paths.js').read_text()+'\n'+(ROOT/'domain/player_jobs.js').read_text()+'</script><script>window.GCC8_ENGINE_SCROLL=()=>{};'+(ROOT/'ui/clock.js').read_text()+'</script>'+ '\n'.join('<script>(()=>{'+binding+(ROOT/'engine'/f'{name}.js').read_text()+'})();</script>' for name in ['players','league','ratings','projections','cpu','foundation','dynasty'])
+ ui='\n'.join('<script>'+ (ROOT/'ui'/f'{name}.js').read_text()+'</script>' for name in ['components','data','roles','venues','match_story','screens','dom','controller'])
  build_id=hashlib.sha256(((ROOT/'ui/game.css').read_text()+ui+engine+assets).encode()).hexdigest()[:16]
  template=template.replace('id="g8app"',f'id="g8app" data-build="{build_id}"')
  result=template.replace('@@ENGINE@@',engine).replace('@@UI@@',ui)

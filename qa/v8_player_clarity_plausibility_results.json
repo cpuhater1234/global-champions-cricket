@@ -1,0 +1,78 @@
+{
+  "scope": "Generated actual game scorebooks: numerical/legal-model bounds and descriptive distributions. Not an empirical fit to real-world IPL/BBL/Blast distributions, and not a ball-by-ball simulator.",
+  "sources": [
+    "qa/clarity/final-career-2801/v8_scorebooks.json",
+    "qa/clarity/release-smoke/v8_scorebooks.json"
+  ],
+  "checks": 14170,
+  "matches": 337,
+  "innings": 674,
+  "scores": {
+    "count": 674,
+    "min": 84,
+    "p10": 120,
+    "median": 156.0,
+    "mean": 159.38,
+    "p90": 205,
+    "max": 234
+  },
+  "fullLengthScores": {
+    "count": 431,
+    "min": 96,
+    "p10": 122,
+    "median": 162,
+    "mean": 164.11,
+    "p90": 211,
+    "max": 231
+  },
+  "firstInningsScores": {
+    "count": 337,
+    "min": 84,
+    "p10": 123,
+    "median": 163,
+    "mean": 166.74,
+    "p90": 212,
+    "max": 231
+  },
+  "wickets": {
+    "count": 674,
+    "min": 0,
+    "p10": 2,
+    "median": 6.0,
+    "mean": 6.03,
+    "p90": 10,
+    "max": 10
+  },
+  "extras": {
+    "count": 674,
+    "min": 4,
+    "p10": 5,
+    "median": 9.0,
+    "mean": 9.43,
+    "p90": 14,
+    "max": 15
+  },
+  "winningChaseExcessFrequency": {
+    "0": 92,
+    "1": 14,
+    "2": 18,
+    "3": 24,
+    "4": 13,
+    "5": 15
+  },
+  "chaseWinPercentage": 52.23,
+  "allOutInnings": 91,
+  "phasesMaxRunsPerOver": 30.0,
+  "errors": [],
+  "ruleReferences": [
+    {
+      "url": "https://images.icc-cricket.com/image/upload/prd/qfnsie8fz6vhyl1pmcli.pdf",
+      "sections": [
+        "13.7.1",
+        "13.9",
+        "16.5.3"
+      ],
+      "use": "Ordinary uninterrupted twenty-over innings, bowling limits and full winning-boundary allowance. The game does not implement every ICC playing condition."
+    }
+  ]
+}

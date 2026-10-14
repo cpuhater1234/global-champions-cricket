@@ -1,6 +1,14 @@
 /* Highlights use completed scorecard facts. No invented deliveries or intermediate wickets. */
 (() => {
  const X=window.GCC8,{esc}=X;
+ X.resultHeadline=r=>{
+  if(!r)return 'The scorebook is ready.';const own=X.G.state.userClub?.abbr,involved=[r.home.abbr,r.away.abbr].includes(own);
+  if(!involved)return `${r.winner.name} take the honours.`;
+  const won=r.winner.abbr===own,chased=r.battingSecond?.abbr===own;
+  if(r.superOver)return won?'Held your nerve in the Super Over.':'The Super Over goes against you.';
+  if(won)return chased?'The chase is complete.':r.marginText?.includes('run')?'The attack defends the total.':'The points are yours.';
+  return chased?'The chase falls short.':'They get home against your attack.';
+ };
  X.matchBeatCount=r=>r?.superOver?9:8;
  X.matchProgress=m=>m?.presentationVersion===2?m.count:(m?.count>=3?m.count+1:m?.count||0);
  X.inningsSpotlight=i=>{

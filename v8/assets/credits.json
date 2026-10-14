@@ -19,5 +19,10 @@
     "source": "https://github.com/tabler/tabler-icons",
     "licence": "MIT; full notice bundled in assets/tabler/LICENSE.txt and embedded in the standalone HTML.",
     "changes": "Original paths wrapped as SVG symbols; rendered inline with currentColor. No baseball or ten-pin bowling icons used as cricket equipment."
+  },
+  "venue_photos": {
+    "manifest": "venue_photos.json",
+    "delivery": "MCG embedded; nineteen other venue photographs externally loaded. All source/creator/licence notices are included in the standalone HTML source.",
+    "transformations": "No raster changes; CSS scales unmodified images into a reserved frame."
   }
 }

@@ -1,0 +1,150 @@
+{
+  "artifactSha256": "a9857c9c5a480deaa87c7c976b37a452ec35310b45c9481287dc0fd9611c682f",
+  "scope": "Read-only instrumentation exposes existing private annual CPU functions in a temporary copy; bodies unchanged. Isolated 2013 twelve-name fixture, not a normal annual draft or proof of typical pick position. Lowering only Bumrah career peak reduces market value. Shared career value is used by annual CPU evaluation.",
+  "checks": 11,
+  "ranking": [
+    {
+      "name": "Jasprit Bumrah",
+      "current": 81,
+      "careerPeak": 99,
+      "publicHiddenBoard": 94.19836694540749,
+      "annualValue": 94,
+      "roleNeed": 6,
+      "actualCareerPeakYear": 2024,
+      "exitYear": 2026
+    },
+    {
+      "name": "David Warner",
+      "current": 90,
+      "careerPeak": 71,
+      "publicHiddenBoard": 99,
+      "annualValue": 105,
+      "roleNeed": 9,
+      "actualCareerPeakYear": 2015,
+      "exitYear": 2026
+    },
+    {
+      "name": "Shahid Afridi",
+      "current": 80,
+      "careerPeak": 84,
+      "publicHiddenBoard": 78.47390842650154,
+      "annualValue": 89,
+      "roleNeed": 11,
+      "actualCareerPeakYear": 2008,
+      "exitYear": 2018
+    },
+    {
+      "name": "Lasith Malinga",
+      "current": 99,
+      "careerPeak": 94,
+      "publicHiddenBoard": 99,
+      "annualValue": 107,
+      "roleNeed": 6,
+      "actualCareerPeakYear": 2013,
+      "exitYear": 2020
+    },
+    {
+      "name": "Dale Steyn",
+      "current": 97,
+      "careerPeak": 92,
+      "publicHiddenBoard": 98.1692761309609,
+      "annualValue": 102,
+      "roleNeed": 6,
+      "actualCareerPeakYear": 2012,
+      "exitYear": 2020
+    },
+    {
+      "name": "Dwayne Bravo",
+      "current": 97,
+      "careerPeak": 87,
+      "publicHiddenBoard": 99,
+      "annualValue": 112,
+      "roleNeed": 11,
+      "actualCareerPeakYear": 2012,
+      "exitYear": 2024
+    },
+    {
+      "name": "Sunil Narine",
+      "current": 85,
+      "careerPeak": 97,
+      "publicHiddenBoard": 96.91722928516603,
+      "annualValue": 97,
+      "roleNeed": 6,
+      "actualCareerPeakYear": 2018,
+      "exitYear": 2026
+    },
+    {
+      "name": "Shane Watson",
+      "current": 84,
+      "careerPeak": 87,
+      "publicHiddenBoard": 84.77657304500296,
+      "annualValue": 98,
+      "roleNeed": 15,
+      "actualCareerPeakYear": 2009,
+      "exitYear": 2020
+    },
+    {
+      "name": "Andre Russell",
+      "current": 86,
+      "careerPeak": 64,
+      "publicHiddenBoard": 99,
+      "annualValue": 104,
+      "roleNeed": 11,
+      "actualCareerPeakYear": 2016,
+      "exitYear": 2026
+    },
+    {
+      "name": "Mitchell Starc",
+      "current": 85,
+      "careerPeak": 95,
+      "publicHiddenBoard": 95.26693313017584,
+      "annualValue": 97,
+      "roleNeed": 6,
+      "actualCareerPeakYear": 2019,
+      "exitYear": 2026
+    },
+    {
+      "name": "Virat Kohli",
+      "current": 87,
+      "careerPeak": 72,
+      "publicHiddenBoard": 99,
+      "annualValue": 99,
+      "roleNeed": 5,
+      "actualCareerPeakYear": 2017,
+      "exitYear": 2026
+    },
+    {
+      "name": "AB de Villiers",
+      "current": 99,
+      "careerPeak": 88,
+      "publicHiddenBoard": 99,
+      "annualValue": 107,
+      "roleNeed": 5,
+      "actualCareerPeakYear": 2012,
+      "exitYear": 2021
+    }
+  ],
+  "chosen": [
+    "Dwayne Bravo",
+    "Andre Russell",
+    "Dale Steyn",
+    "AB de Villiers",
+    "Mitchell Starc",
+    "David Warner",
+    "Lasith Malinga",
+    "Sunil Narine",
+    "Virat Kohli",
+    "Jasprit Bumrah",
+    "Shane Watson",
+    "Shahid Afridi"
+  ],
+  "peakSensitivity": {
+    "originalPeak": 99,
+    "changedPeak": 60,
+    "valueBefore": 94,
+    "valueAfter": 81,
+    "cpuBefore": 97.61870375955208,
+    "cpuAfter": 71.29057997166018
+  },
+  "errors": []
+}

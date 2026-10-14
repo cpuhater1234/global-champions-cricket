@@ -1,0 +1,4306 @@
+{
+  "artifact": "game/global_champions_cricket_v8_player_clarity.html",
+  "finalSha256": "a9857c9c5a480deaa87c7c976b37a452ec35310b45c9481287dc0fd9611c682f",
+  "equivalence": {
+    "matrixSha256": "99d229af1ab957d6b1d7431bd6e2604ec793ba808ef77f1b1570ead4d96da0c9",
+    "finalSha256": "a9857c9c5a480deaa87c7c976b37a452ec35310b45c9481287dc0fd9611c682f",
+    "changedScripts": [
+      0,
+      11,
+      12
+    ],
+    "changes": [
+      "Venue photo metadata refinement",
+      "Five-frontline-bowler cover wording in roles/data UI",
+      "Explicit batting/bowling all-rounder wording"
+    ],
+    "engineControllerSchedulerSaveByteIdentical": true,
+    "freezeRebuildByteIdentical": true,
+    "sourceSyntaxPassed": true
+  },
+  "foundationDrafts": {
+    "completed": 8,
+    "seeds": [
+      2101,
+      2111,
+      2129,
+      2141,
+      2153,
+      2161,
+      2179,
+      2197
+    ],
+    "distinctSignedPools": 8,
+    "warnerPicks": [
+      29,
+      37,
+      27,
+      32,
+      33
+    ],
+    "kohliPicks": [
+      42,
+      42,
+      41,
+      41
+    ]
+  },
+  "matrixCareer": {
+    "scope": "Real cricket engine + new UI dispatch in a VM DOM stub. No browser, visual, geometry, focus or latency certification.",
+    "seed": 2801,
+    "club": "REN",
+    "coverage": {
+      "reloads": [
+        {
+          "year": 2008,
+          "label": "foundation-user-pick"
+        },
+        {
+          "year": 2008,
+          "label": "manual-XI"
+        },
+        {
+          "year": 2008,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2008,
+          "label": "grand-final-ready"
+        },
+        {
+          "year": 2009,
+          "label": "annual-order"
+        },
+        {
+          "year": 2009,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2010,
+          "label": "annual-order"
+        },
+        {
+          "year": 2010,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2011,
+          "label": "annual-order"
+        },
+        {
+          "year": 2011,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2011,
+          "label": "grand-final-ready"
+        },
+        {
+          "year": 2012,
+          "label": "annual-order"
+        },
+        {
+          "year": 2012,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2013,
+          "label": "annual-order"
+        },
+        {
+          "year": 2013,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2014,
+          "label": "annual-order"
+        },
+        {
+          "year": 2014,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2014,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2014,
+          "label": "grand-final-ready"
+        },
+        {
+          "year": 2015,
+          "label": "annual-order"
+        },
+        {
+          "year": 2015,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2015,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2015,
+          "label": "grand-final-ready"
+        },
+        {
+          "year": 2016,
+          "label": "annual-order"
+        },
+        {
+          "year": 2016,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2016,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2016,
+          "label": "grand-final-ready"
+        },
+        {
+          "year": 2017,
+          "label": "annual-order"
+        },
+        {
+          "year": 2017,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2017,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2017,
+          "label": "grand-final-ready"
+        },
+        {
+          "year": 2018,
+          "label": "annual-order"
+        },
+        {
+          "year": 2018,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2019,
+          "label": "annual-order"
+        },
+        {
+          "year": 2019,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2019,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2019,
+          "label": "grand-final-ready"
+        },
+        {
+          "year": 2020,
+          "label": "annual-order"
+        },
+        {
+          "year": 2020,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2020,
+          "label": "grand-final-ready"
+        },
+        {
+          "year": 2021,
+          "label": "annual-order"
+        },
+        {
+          "year": 2021,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2021,
+          "label": "grand-final-ready"
+        },
+        {
+          "year": 2022,
+          "label": "annual-order"
+        },
+        {
+          "year": 2022,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2022,
+          "label": "grand-final-ready"
+        },
+        {
+          "year": 2023,
+          "label": "annual-order"
+        },
+        {
+          "year": 2024,
+          "label": "annual-order"
+        },
+        {
+          "year": 2024,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2024,
+          "label": "grand-final-ready"
+        },
+        {
+          "year": 2025,
+          "label": "annual-order"
+        },
+        {
+          "year": 2025,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2025,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2025,
+          "label": "grand-final-ready"
+        },
+        {
+          "year": 2026,
+          "label": "annual-order"
+        },
+        {
+          "year": 2026,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2026,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2026,
+          "label": "grand-final-ready"
+        }
+      ],
+      "finals": 13,
+      "injurySelections": 17,
+      "injuryCovers": 0,
+      "superOvers": 3,
+      "clubs": []
+    },
+    "checks": 15199,
+    "seasons": 19,
+    "regularSeasonMatches": 266,
+    "errors": []
+  },
+  "uiSmoke": {
+    "sha256": "f534930dd2b4caa4ea79d1b8560acdc43a736717a5b420fd269696412c7af2be",
+    "scope": "Real cricket engine + new UI dispatch in a VM DOM stub. No browser, visual, geometry, focus or latency certification.",
+    "seed": 2917,
+    "club": "HEA",
+    "coverage": {
+      "reloads": [
+        {
+          "year": 2008,
+          "label": "foundation-user-pick"
+        },
+        {
+          "year": 2008,
+          "label": "manual-XI"
+        },
+        {
+          "year": 2008,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2008,
+          "label": "grand-final-ready"
+        },
+        {
+          "year": 2009,
+          "label": "annual-order"
+        },
+        {
+          "year": 2009,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2009,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2009,
+          "label": "grand-final-ready"
+        }
+      ],
+      "finals": 2,
+      "injurySelections": 3,
+      "injuryCovers": 0,
+      "superOvers": 0,
+      "clubs": []
+    },
+    "checks": 1770,
+    "seasons": 2,
+    "regularSeasonMatches": 28,
+    "errors": []
+  },
+  "finalFocused": {
+    "playerClarity": {
+      "artifactSha256": "a9857c9c5a480deaa87c7c976b37a452ec35310b45c9481287dc0fd9611c682f",
+      "scope": "Shipped scripts in VM; full-universe structural role/name validation, eight source-backed bowling identities, shared career/value boundaries, calibrated batting-all-rounder template checks, UI ratings/groups and twenty photo routes. Future-job preparation is an isolated fixture. No native pixels, image loading, factual certification of every historical datum or empirical rating calibration.",
+      "checks": 1373,
+      "players": 399,
+      "records": [
+        {
+          "id": 1,
+          "name": "MS Dhoni",
+          "role": "WK-BAT",
+          "slot": 5,
+          "style": null,
+          "overall": 89,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 2,
+          "name": "Adam Gilchrist",
+          "role": "WK-BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 85,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 3,
+          "name": "Kumar Sangakkara",
+          "role": "WK-BAT",
+          "slot": 3,
+          "style": null,
+          "overall": 88,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 4,
+          "name": "Brendon McCullum",
+          "role": "WK-BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 93,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 5,
+          "name": "Mark Boucher",
+          "role": "WK-BAT",
+          "slot": 6,
+          "style": null,
+          "overall": 76,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 6,
+          "name": "Kamran Akmal",
+          "role": "WK-BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 80,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 7,
+          "name": "Brad Haddin",
+          "role": "WK-BAT",
+          "slot": 2,
+          "style": null,
+          "overall": 77,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 8,
+          "name": "Matt Prior",
+          "role": "WK-BAT",
+          "slot": 6,
+          "style": null,
+          "overall": 79,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 9,
+          "name": "Dinesh Karthik",
+          "role": "WK-BAT",
+          "slot": 5,
+          "style": null,
+          "overall": 79,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 10,
+          "name": "Parthiv Patel",
+          "role": "WK-BAT",
+          "slot": 2,
+          "style": null,
+          "overall": 70,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 11,
+          "name": "Luke Ronchi",
+          "role": "WK-BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 74,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 12,
+          "name": "Tim Paine",
+          "role": "WK-BAT",
+          "slot": 2,
+          "style": null,
+          "overall": 72,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 13,
+          "name": "Virender Sehwag",
+          "role": "BAT",
+          "slot": 1,
+          "style": "SPIN",
+          "overall": 89,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 14,
+          "name": "Sachin Tendulkar",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 87,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 15,
+          "name": "Ricky Ponting",
+          "role": "BAT",
+          "slot": 3,
+          "style": null,
+          "overall": 85,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 16,
+          "name": "Matthew Hayden",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 83,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 17,
+          "name": "Chris Gayle",
+          "role": "BAT",
+          "slot": 1,
+          "style": "SPIN",
+          "overall": 91,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 18,
+          "name": "Kevin Pietersen",
+          "role": "BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 92,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 19,
+          "name": "Graeme Smith",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 84,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 20,
+          "name": "Yuvraj Singh",
+          "role": "BAT",
+          "slot": 5,
+          "style": "SPIN",
+          "overall": 90,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 21,
+          "name": "Mahela Jayawardene",
+          "role": "BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 84,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 22,
+          "name": "Michael Clarke",
+          "role": "BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 89,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 23,
+          "name": "AB de Villiers",
+          "role": "BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 91,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 24,
+          "name": "Gautam Gambhir",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 89,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 25,
+          "name": "Shivnarine Chanderpaul",
+          "role": "BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 85,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 26,
+          "name": "Mohammad Yousuf",
+          "role": "BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 87,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 27,
+          "name": "Herschelle Gibbs",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 75,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 28,
+          "name": "Sanath Jayasuriya",
+          "role": "BAT",
+          "slot": 1,
+          "style": "SPIN",
+          "overall": 76,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 29,
+          "name": "Sourav Ganguly",
+          "role": "BAT",
+          "slot": 1,
+          "style": "PACE",
+          "overall": 75,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 30,
+          "name": "Ross Taylor",
+          "role": "BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 83,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 31,
+          "name": "Misbah-ul-Haq",
+          "role": "BAT",
+          "slot": 5,
+          "style": null,
+          "overall": 75,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 32,
+          "name": "Tillakaratne Dilshan",
+          "role": "BAT",
+          "slot": 2,
+          "style": null,
+          "overall": 76,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 33,
+          "name": "Ramnaresh Sarwan",
+          "role": "BAT",
+          "slot": 3,
+          "style": null,
+          "overall": 80,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 34,
+          "name": "Paul Collingwood",
+          "role": "BAT",
+          "slot": 5,
+          "style": "PACE",
+          "overall": 76,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 35,
+          "name": "Andrew Strauss",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 81,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 36,
+          "name": "Ian Bell",
+          "role": "BAT",
+          "slot": 3,
+          "style": null,
+          "overall": 81,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 37,
+          "name": "Robin Uthappa",
+          "role": "BAT",
+          "slot": 2,
+          "style": null,
+          "overall": 76,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 38,
+          "name": "Rohit Sharma",
+          "role": "BAT",
+          "slot": 5,
+          "style": null,
+          "overall": 83,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 39,
+          "name": "Suresh Raina",
+          "role": "BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 83,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 40,
+          "name": "David Hussey",
+          "role": "BAT",
+          "slot": 5,
+          "style": "SPIN",
+          "overall": 77,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 41,
+          "name": "Mike Hussey",
+          "role": "BAT",
+          "slot": 5,
+          "style": null,
+          "overall": 89,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 42,
+          "name": "Simon Katich",
+          "role": "BAT",
+          "slot": 2,
+          "style": null,
+          "overall": 81,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 43,
+          "name": "Shaun Marsh",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 81,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 44,
+          "name": "David Warner",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 75,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 45,
+          "name": "Martin Guptill",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 75,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 46,
+          "name": "Eoin Morgan",
+          "role": "BAT",
+          "slot": 5,
+          "style": null,
+          "overall": 73,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 47,
+          "name": "Faf du Plessis",
+          "role": "BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 77,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 48,
+          "name": "Virat Kohli",
+          "role": "BAT",
+          "slot": 3,
+          "style": null,
+          "overall": 75,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 49,
+          "name": "JP Duminy",
+          "role": "BAT",
+          "slot": 5,
+          "style": null,
+          "overall": 81,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 50,
+          "name": "Neil McKenzie",
+          "role": "BAT",
+          "slot": 3,
+          "style": null,
+          "overall": 77,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 51,
+          "name": "Lou Vincent",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 73,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 52,
+          "name": "Owais Shah",
+          "role": "BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 79,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 53,
+          "name": "Alastair Cook",
+          "role": "BAT",
+          "slot": 2,
+          "style": null,
+          "overall": 70,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 54,
+          "name": "Jonathan Trott",
+          "role": "BAT",
+          "slot": 3,
+          "style": null,
+          "overall": 69,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 55,
+          "name": "Marcus North",
+          "role": "BAT",
+          "slot": 5,
+          "style": null,
+          "overall": 69,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 56,
+          "name": "Cameron White",
+          "role": "BAT",
+          "slot": 5,
+          "style": null,
+          "overall": 79,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 57,
+          "name": "Shane Watson",
+          "role": "AR",
+          "slot": 2,
+          "style": "PACE",
+          "overall": 87,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 58,
+          "name": "Andrew Flintoff",
+          "role": "AR",
+          "slot": 6,
+          "style": "PACE",
+          "overall": 84,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 59,
+          "name": "Jacques Kallis",
+          "role": "AR",
+          "slot": 3,
+          "style": "PACE",
+          "overall": 83,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 60,
+          "name": "Shahid Afridi",
+          "role": "AR",
+          "slot": 7,
+          "style": "SPIN",
+          "overall": 84,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 61,
+          "name": "Dwayne Bravo",
+          "role": "AR",
+          "slot": 6,
+          "style": "PACE",
+          "overall": 90,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 62,
+          "name": "Daniel Vettori",
+          "role": "AR",
+          "slot": 7,
+          "style": "SPIN",
+          "overall": 87,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 63,
+          "name": "Andrew Symonds",
+          "role": "AR",
+          "slot": 5,
+          "style": "DUAL",
+          "overall": 80,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 64,
+          "name": "Yusuf Pathan",
+          "role": "AR",
+          "slot": 6,
+          "style": "SPIN",
+          "overall": 80,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 65,
+          "name": "Irfan Pathan",
+          "role": "AR",
+          "slot": 7,
+          "style": "PACE",
+          "overall": 78,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 66,
+          "name": "Albie Morkel",
+          "role": "AR",
+          "slot": 7,
+          "style": "PACE",
+          "overall": 75,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 67,
+          "name": "Scott Styris",
+          "role": "AR",
+          "slot": 5,
+          "style": "PACE",
+          "overall": 72,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 68,
+          "name": "Jacob Oram",
+          "role": "AR",
+          "slot": 6,
+          "style": "PACE",
+          "overall": 77,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 69,
+          "name": "Ravi Bopara",
+          "role": "AR",
+          "slot": 4,
+          "style": "PACE",
+          "overall": 76,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 70,
+          "name": "Angelo Mathews",
+          "role": "AR",
+          "slot": 6,
+          "style": "PACE",
+          "overall": 69,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 71,
+          "name": "Moeen Ali",
+          "role": "AR",
+          "slot": 5,
+          "style": "SPIN",
+          "overall": 71,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 72,
+          "name": "Kieron Pollard",
+          "role": "AR",
+          "slot": 6,
+          "style": "PACE",
+          "overall": 70,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 73,
+          "name": "Ravindra Jadeja",
+          "role": "AR",
+          "slot": 7,
+          "style": "SPIN",
+          "overall": 71,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 74,
+          "name": "Shakib Al Hasan",
+          "role": "AR",
+          "slot": 5,
+          "style": "SPIN",
+          "overall": 79,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 75,
+          "name": "Mohammad Hafeez",
+          "role": "AR",
+          "slot": 2,
+          "style": "SPIN",
+          "overall": 76,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 76,
+          "name": "Abdul Razzaq",
+          "role": "AR",
+          "slot": 7,
+          "style": "PACE",
+          "overall": 79,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 77,
+          "name": "Azhar Mahmood",
+          "role": "AR",
+          "slot": 7,
+          "style": "PACE",
+          "overall": 76,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 78,
+          "name": "James Hopes",
+          "role": "AR",
+          "slot": 7,
+          "style": "PACE",
+          "overall": 73,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 79,
+          "name": "Luke Wright",
+          "role": "AR",
+          "slot": 2,
+          "style": "PACE",
+          "overall": 77,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 80,
+          "name": "Dimitri Mascarenhas",
+          "role": "AR",
+          "slot": 7,
+          "style": "PACE",
+          "overall": 75,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 81,
+          "name": "Roelof van der Merwe",
+          "role": "AR",
+          "slot": 7,
+          "style": "SPIN",
+          "overall": 72,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 82,
+          "name": "Jesse Ryder",
+          "role": "AR",
+          "slot": 2,
+          "style": "PACE",
+          "overall": 77,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 83,
+          "name": "Morne Morkel",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "PACE",
+          "overall": 89,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 84,
+          "name": "Dale Steyn",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 93,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 85,
+          "name": "Brett Lee",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 89,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 86,
+          "name": "Mitchell Johnson",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "PACE",
+          "overall": 89,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 87,
+          "name": "Muttiah Muralitharan",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "SPIN",
+          "overall": 86,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 88,
+          "name": "Shane Bond",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 87,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 89,
+          "name": "Lasith Malinga",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 95,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 90,
+          "name": "Zaheer Khan",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 85,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 91,
+          "name": "Chaminda Vaas",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 75,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 92,
+          "name": "Harbhajan Singh",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "SPIN",
+          "overall": 87,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 93,
+          "name": "Anil Kumble",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "SPIN",
+          "overall": 73,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 94,
+          "name": "Shoaib Akhtar",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 84,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 95,
+          "name": "Umar Gul",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 90,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 96,
+          "name": "Mohammad Asif",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 85,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 97,
+          "name": "Sohail Tanvir",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "PACE",
+          "overall": 81,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 98,
+          "name": "RP Singh",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 76,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 99,
+          "name": "Ishant Sharma",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 71,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 100,
+          "name": "Praveen Kumar",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "PACE",
+          "overall": 78,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 101,
+          "name": "Sreesanth",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 76,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 102,
+          "name": "Piyush Chawla",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "SPIN",
+          "overall": 73,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 103,
+          "name": "Amit Mishra",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "SPIN",
+          "overall": 84,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 104,
+          "name": "Nathan Bracken",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 91,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 105,
+          "name": "Stuart Clark",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 76,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 106,
+          "name": "Mitchell McClenaghan",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 74,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 107,
+          "name": "Shaun Tait",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 78,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 108,
+          "name": "Brad Hogg",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "SPIN",
+          "overall": 75,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 109,
+          "name": "Stuart Broad",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "PACE",
+          "overall": 82,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 110,
+          "name": "James Anderson",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 80,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 111,
+          "name": "Ryan Sidebottom",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 80,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 112,
+          "name": "Steve Harmison",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 83,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 113,
+          "name": "Monty Panesar",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "SPIN",
+          "overall": 82,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 114,
+          "name": "Graeme Swann",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "SPIN",
+          "overall": 77,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 115,
+          "name": "Tim Bresnan",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "PACE",
+          "overall": 73,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 116,
+          "name": "Chris Tremlett",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 71,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 117,
+          "name": "Kyle Mills",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "PACE",
+          "overall": 76,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 118,
+          "name": "Chris Martin",
+          "role": "BOWL",
+          "slot": 11,
+          "style": "PACE",
+          "overall": 68,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 119,
+          "name": "Jeetan Patel",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "SPIN",
+          "overall": 69,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 120,
+          "name": "Iain O'Brien",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 71,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 121,
+          "name": "Nuwan Kulasekara",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 80,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 122,
+          "name": "Ajantha Mendis",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "SPIN",
+          "overall": 79,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 123,
+          "name": "Dilhara Fernando",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 81,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 124,
+          "name": "Farveez Maharoof",
+          "role": "BOWL",
+          "slot": 8,
+          "style": "PACE",
+          "overall": 72,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 125,
+          "name": "Jerome Taylor",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 80,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 126,
+          "name": "Fidel Edwards",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 80,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 127,
+          "name": "Daren Powell",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 71,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 128,
+          "name": "Sulieman Benn",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "SPIN",
+          "overall": 70,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 129,
+          "name": "Daren Sammy",
+          "role": "AR",
+          "slot": 7,
+          "style": "PACE",
+          "overall": 79,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 130,
+          "name": "Mashrafe Mortaza",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "PACE",
+          "overall": 78,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 131,
+          "name": "Abdur Razzak",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "SPIN",
+          "overall": 80,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 132,
+          "name": "Nantie Hayward",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 69,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 133,
+          "name": "Andre Nel",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 80,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 134,
+          "name": "Paul Harris",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "SPIN",
+          "overall": 70,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 135,
+          "name": "Johan Botha",
+          "role": "AR",
+          "slot": 8,
+          "style": "SPIN",
+          "overall": 81,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 136,
+          "name": "Charl Langeveldt",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 78,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 137,
+          "name": "Makhaya Ntini",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 75,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 138,
+          "name": "Dirk Nannes",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 81,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 139,
+          "name": "Ben Hilfenhaus",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 73,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 140,
+          "name": "Peter Siddle",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 72,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 141,
+          "name": "Shane Warne",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "SPIN",
+          "overall": 84,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 142,
+          "name": "Glenn McGrath",
+          "role": "BOWL",
+          "slot": 11,
+          "style": "PACE",
+          "overall": 84,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 143,
+          "name": "Stephen Fleming",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 79,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 144,
+          "name": "Shaun Pollock",
+          "role": "AR",
+          "slot": 7,
+          "style": "PACE",
+          "overall": 86,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 145,
+          "name": "Rahul Dravid",
+          "role": "BAT",
+          "slot": 3,
+          "style": null,
+          "overall": 75,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 146,
+          "name": "VVS Laxman",
+          "role": "BAT",
+          "slot": 3,
+          "style": null,
+          "overall": 71,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 147,
+          "name": "Shikhar Dhawan",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 76,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 148,
+          "name": "Subramaniam Badrinath",
+          "role": "BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 75,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 149,
+          "name": "Manoj Tiwary",
+          "role": "BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 74,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 150,
+          "name": "Cheteshwar Pujara",
+          "role": "BAT",
+          "slot": 3,
+          "style": null,
+          "overall": 70,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 151,
+          "name": "Ambati Rayudu",
+          "role": "BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 77,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 152,
+          "name": "Wriddhiman Saha",
+          "role": "WK-BAT",
+          "slot": 2,
+          "style": null,
+          "overall": 75,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 153,
+          "name": "Mohammad Kaif",
+          "role": "BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 69,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 154,
+          "name": "Abhishek Nayar",
+          "role": "AR",
+          "slot": 6,
+          "style": "PACE",
+          "overall": 71,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 155,
+          "name": "Rajat Bhatia",
+          "role": "AR",
+          "slot": 6,
+          "style": "PACE",
+          "overall": 68,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 156,
+          "name": "Ravichandran Ashwin",
+          "role": "AR",
+          "slot": 8,
+          "style": "SPIN",
+          "overall": 71,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 157,
+          "name": "Pragyan Ojha",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "SPIN",
+          "overall": 74,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 158,
+          "name": "Munaf Patel",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 77,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 159,
+          "name": "Ashish Nehra",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 77,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 160,
+          "name": "Lakshmipathy Balaji",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 75,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 161,
+          "name": "Vinay Kumar",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "PACE",
+          "overall": 76,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 162,
+          "name": "Manpreet Gony",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 72,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 163,
+          "name": "Murali Kartik",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "SPIN",
+          "overall": 71,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 164,
+          "name": "Siddharth Trivedi",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 74,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 165,
+          "name": "Brad Hodge",
+          "role": "BAT",
+          "slot": 3,
+          "style": null,
+          "overall": 82,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 166,
+          "name": "Adam Voges",
+          "role": "BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 79,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 167,
+          "name": "George Bailey",
+          "role": "BAT",
+          "slot": 5,
+          "style": null,
+          "overall": 83,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 168,
+          "name": "Steve Smith",
+          "role": "BAT",
+          "slot": 3,
+          "style": "SPIN",
+          "overall": 68,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 169,
+          "name": "Michael Klinger",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 75,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 170,
+          "name": "Travis Birt",
+          "role": "BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 76,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 171,
+          "name": "Luke Pomersbach",
+          "role": "BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 74,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 172,
+          "name": "Doug Bollinger",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 74,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 173,
+          "name": "Clint McKay",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 75,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 174,
+          "name": "Xavier Doherty",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "SPIN",
+          "overall": 74,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 175,
+          "name": "Nathan Hauritz",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "SPIN",
+          "overall": 72,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 176,
+          "name": "Andrew McDonald",
+          "role": "AR",
+          "slot": 6,
+          "style": "PACE",
+          "overall": 73,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 177,
+          "name": "Graham Manou",
+          "role": "WK-BAT",
+          "slot": 7,
+          "style": null,
+          "overall": 68,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 178,
+          "name": "Marcus Trescothick",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 82,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 179,
+          "name": "Joe Denly",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 77,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 180,
+          "name": "Rob Key",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 80,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 181,
+          "name": "Michael Lumb",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 77,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 182,
+          "name": "Craig Kieswetter",
+          "role": "WK-BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 74,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 183,
+          "name": "Phil Mustard",
+          "role": "WK-BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 80,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 184,
+          "name": "James Foster",
+          "role": "WK-BAT",
+          "slot": 6,
+          "style": null,
+          "overall": 77,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 185,
+          "name": "Steven Davies",
+          "role": "WK-BAT",
+          "slot": 2,
+          "style": null,
+          "overall": 75,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 186,
+          "name": "Graham Napier",
+          "role": "AR",
+          "slot": 6,
+          "style": "PACE",
+          "overall": 76,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 187,
+          "name": "Peter Trego",
+          "role": "AR",
+          "slot": 6,
+          "style": "PACE",
+          "overall": 71,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 188,
+          "name": "Samit Patel",
+          "role": "AR",
+          "slot": 5,
+          "style": "SPIN",
+          "overall": 77,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 189,
+          "name": "Rikki Clarke",
+          "role": "AR",
+          "slot": 6,
+          "style": "PACE",
+          "overall": 71,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 190,
+          "name": "Chris Woakes",
+          "role": "AR",
+          "slot": 8,
+          "style": "PACE",
+          "overall": 70,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 191,
+          "name": "Adil Rashid",
+          "role": "AR",
+          "slot": 8,
+          "style": "SPIN",
+          "overall": 71,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 192,
+          "name": "Steven Finn",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 68,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 193,
+          "name": "Graham Onions",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 77,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 194,
+          "name": "Sajid Mahmood",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 73,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 195,
+          "name": "Kabir Ali",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 75,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 196,
+          "name": "Ryan ten Doeschate",
+          "role": "AR",
+          "slot": 5,
+          "style": "PACE",
+          "overall": 77,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 197,
+          "name": "Tim Murtagh",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 74,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 198,
+          "name": "Niall O'Brien",
+          "role": "WK-BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 75,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 199,
+          "name": "Kevin O'Brien",
+          "role": "AR",
+          "slot": 6,
+          "style": "PACE",
+          "overall": 75,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 200,
+          "name": "William Porterfield",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 78,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 201,
+          "name": "Boyd Rankin",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 75,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 202,
+          "name": "Darren Maddy",
+          "role": "AR",
+          "slot": 5,
+          "style": "PACE",
+          "overall": 70,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 203,
+          "name": "Chris Jordan",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "PACE",
+          "overall": 68,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 204,
+          "name": "Younis Khan",
+          "role": "BAT",
+          "slot": 3,
+          "style": null,
+          "overall": 81,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 205,
+          "name": "Shoaib Malik",
+          "role": "AR",
+          "slot": 4,
+          "style": "SPIN",
+          "overall": 84,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 206,
+          "name": "Salman Butt",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 80,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 207,
+          "name": "Imran Nazir",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 81,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 208,
+          "name": "Imran Farhat",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 76,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 209,
+          "name": "Inzamam-ul-Haq",
+          "role": "BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 77,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 210,
+          "name": "Rana Naved-ul-Hasan",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "PACE",
+          "overall": 81,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 211,
+          "name": "Yasir Arafat",
+          "role": "AR",
+          "slot": 7,
+          "style": "PACE",
+          "overall": 81,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 212,
+          "name": "Mohammad Sami",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 79,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 213,
+          "name": "Saqlain Mushtaq",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "SPIN",
+          "overall": 75,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 214,
+          "name": "Mushtaq Ahmed",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "SPIN",
+          "overall": 72,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 215,
+          "name": "Fawad Alam",
+          "role": "AR",
+          "slot": 6,
+          "style": "SPIN",
+          "overall": 70,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 216,
+          "name": "Shahid Nazir",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 72,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 217,
+          "name": "Justin Kemp",
+          "role": "AR",
+          "slot": 6,
+          "style": "PACE",
+          "overall": 72,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 218,
+          "name": "Nicky Boje",
+          "role": "AR",
+          "slot": 7,
+          "style": "SPIN",
+          "overall": 71,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 219,
+          "name": "Andrew Hall",
+          "role": "AR",
+          "slot": 7,
+          "style": "PACE",
+          "overall": 72,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 220,
+          "name": "Morne van Wyk",
+          "role": "WK-BAT",
+          "slot": 2,
+          "style": null,
+          "overall": 77,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 221,
+          "name": "Loots Bosman",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 78,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 222,
+          "name": "Hashim Amla",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 82,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 223,
+          "name": "Ryan McLaren",
+          "role": "AR",
+          "slot": 7,
+          "style": "PACE",
+          "overall": 77,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 224,
+          "name": "Wayne Parnell",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "PACE",
+          "overall": 68,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 225,
+          "name": "Rory Kleinveldt",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 74,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 226,
+          "name": "Johan van der Wath",
+          "role": "AR",
+          "slot": 7,
+          "style": "PACE",
+          "overall": 73,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 227,
+          "name": "Craig McMillan",
+          "role": "BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 78,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 228,
+          "name": "Nathan McCullum",
+          "role": "AR",
+          "slot": 8,
+          "style": "SPIN",
+          "overall": 68,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 229,
+          "name": "James Franklin",
+          "role": "AR",
+          "slot": 7,
+          "style": "PACE",
+          "overall": 76,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 230,
+          "name": "Grant Elliott",
+          "role": "AR",
+          "slot": 5,
+          "style": "PACE",
+          "overall": 70,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 231,
+          "name": "Peter Fulton",
+          "role": "BAT",
+          "slot": 3,
+          "style": null,
+          "overall": 76,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 232,
+          "name": "Peter McGlashan",
+          "role": "WK-BAT",
+          "slot": 5,
+          "style": null,
+          "overall": 73,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 233,
+          "name": "Aaron Redmond",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 74,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 234,
+          "name": "Upul Tharanga",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 79,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 235,
+          "name": "Chamara Kapugedera",
+          "role": "BAT",
+          "slot": 5,
+          "style": null,
+          "overall": 75,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 236,
+          "name": "Chamara Silva",
+          "role": "BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 76,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 237,
+          "name": "Thilan Thushara",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 73,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 238,
+          "name": "Dhammika Prasad",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 74,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 239,
+          "name": "Rangana Herath",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "SPIN",
+          "overall": 77,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 240,
+          "name": "Kaushal Weeraratne",
+          "role": "AR",
+          "slot": 7,
+          "style": "PACE",
+          "overall": 68,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 241,
+          "name": "Denesh Ramdin",
+          "role": "WK-BAT",
+          "slot": 6,
+          "style": null,
+          "overall": 78,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 242,
+          "name": "Dwayne Smith",
+          "role": "AR",
+          "slot": 6,
+          "style": "PACE",
+          "overall": 81,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 243,
+          "name": "Lendl Simmons",
+          "role": "BAT",
+          "slot": 2,
+          "style": null,
+          "overall": 78,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 244,
+          "name": "Ravi Rampaul",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 76,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 245,
+          "name": "Darren Bravo",
+          "role": "BAT",
+          "slot": 3,
+          "style": null,
+          "overall": 65,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 246,
+          "name": "Andre Russell",
+          "role": "AR",
+          "slot": 7,
+          "style": "PACE",
+          "overall": 68,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 247,
+          "name": "Tino Best",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 73,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 248,
+          "name": "Tamim Iqbal",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 76,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 249,
+          "name": "Mushfiqur Rahim",
+          "role": "WK-BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 76,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 250,
+          "name": "Mahmudullah",
+          "role": "AR",
+          "slot": 6,
+          "style": "SPIN",
+          "overall": 73,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 251,
+          "name": "Mohammad Ashraful",
+          "role": "BAT",
+          "slot": 3,
+          "style": null,
+          "overall": 82,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 252,
+          "name": "Aftab Ahmed",
+          "role": "BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 79,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 253,
+          "name": "Shahriar Nafees",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 77,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 254,
+          "name": "Brendan Taylor",
+          "role": "WK-BAT",
+          "slot": 3,
+          "style": null,
+          "overall": 79,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 255,
+          "name": "Tatenda Taibu",
+          "role": "WK-BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 80,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 256,
+          "name": "Elton Chigumbura",
+          "role": "AR",
+          "slot": 6,
+          "style": "PACE",
+          "overall": 75,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 257,
+          "name": "Hamilton Masakadza",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 81,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 258,
+          "name": "Ray Price",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "SPIN",
+          "overall": 78,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 259,
+          "name": "Damien Martyn",
+          "role": "BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 75,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 260,
+          "name": "Jason Gillespie",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 72,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 261,
+          "name": "Michael Kasprowicz",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 69,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 262,
+          "name": "Wavell Hinds",
+          "role": "BAT",
+          "slot": 3,
+          "style": null,
+          "overall": 75,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 263,
+          "name": "Murray Goodwin",
+          "role": "BAT",
+          "slot": 3,
+          "style": null,
+          "overall": 79,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 264,
+          "name": "Heath Streak",
+          "role": "AR",
+          "slot": 7,
+          "style": "PACE",
+          "overall": 73,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 265,
+          "name": "Ian Harvey",
+          "role": "AR",
+          "slot": 7,
+          "style": "PACE",
+          "overall": 70,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 266,
+          "name": "Stuart Law",
+          "role": "BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 76,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 267,
+          "name": "Chris Harris",
+          "role": "AR",
+          "slot": 7,
+          "style": "PACE",
+          "overall": 67,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 268,
+          "name": "Michael Bevan",
+          "role": "BAT",
+          "slot": 5,
+          "style": null,
+          "overall": 74,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 269,
+          "name": "Stuart Binny",
+          "role": "AR",
+          "slot": 7,
+          "style": "PACE",
+          "overall": 71,
+          "source": "foundation-2008"
+        },
+        {
+          "id": 1001,
+          "name": "Aaron Finch",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 75,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1002,
+          "name": "Jos Buttler",
+          "role": "WK-BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 79,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1003,
+          "name": "Mitchell Marsh",
+          "role": "AR",
+          "slot": 4,
+          "style": "PACE",
+          "overall": 75,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1004,
+          "name": "Mitchell Starc",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "PACE",
+          "overall": 78,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1005,
+          "name": "Josh Hazlewood",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 75,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1006,
+          "name": "James Faulkner",
+          "role": "AR",
+          "slot": 7,
+          "style": "PACE",
+          "overall": 77,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1007,
+          "name": "Alex Hales",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 75,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1008,
+          "name": "David Willey",
+          "role": "AR",
+          "slot": 8,
+          "style": "PACE",
+          "overall": 71,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1009,
+          "name": "Bhuvneshwar Kumar",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "PACE",
+          "overall": 75,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1010,
+          "name": "Adam Zampa",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "SPIN",
+          "overall": 92,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1011,
+          "name": "Glenn Maxwell",
+          "role": "AR",
+          "slot": 4,
+          "style": "SPIN",
+          "overall": 96,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1012,
+          "name": "Suryakumar Yadav",
+          "role": "BAT",
+          "slot": 3,
+          "style": null,
+          "overall": 97,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1013,
+          "name": "Jason Roy",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 91,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1014,
+          "name": "Mohammed Shami",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 92,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1015,
+          "name": "Adam Milne",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 88,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1016,
+          "name": "Sikandar Raza",
+          "role": "AR",
+          "slot": 5,
+          "style": "SPIN",
+          "overall": 91,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1017,
+          "name": "Chris Lynn",
+          "role": "BAT",
+          "slot": 2,
+          "style": null,
+          "overall": 92,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1018,
+          "name": "Colin Munro",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 91,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1019,
+          "name": "Joe Root",
+          "role": "BAT",
+          "slot": 3,
+          "style": null,
+          "overall": 91,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1020,
+          "name": "Pat Cummins",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "PACE",
+          "overall": 95,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1021,
+          "name": "Quinton de Kock",
+          "role": "WK-BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 95,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1022,
+          "name": "Sunil Narine",
+          "role": "AR",
+          "slot": 8,
+          "style": "SPIN",
+          "overall": 97,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1023,
+          "name": "Mohammad Rizwan",
+          "role": "WK-BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 95,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1024,
+          "name": "Sanju Samson",
+          "role": "WK-BAT",
+          "slot": 3,
+          "style": null,
+          "overall": 92,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1025,
+          "name": "Reece Topley",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 88,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1026,
+          "name": "Taskin Ahmed",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 89,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1027,
+          "name": "Litton Das",
+          "role": "WK-BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 89,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1028,
+          "name": "Mitchell Santner",
+          "role": "AR",
+          "slot": 7,
+          "style": "SPIN",
+          "overall": 91,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1029,
+          "name": "Mark Wood",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 91,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1030,
+          "name": "Babar Azam",
+          "role": "BAT",
+          "slot": 2,
+          "style": null,
+          "overall": 96,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1031,
+          "name": "Ish Sodhi",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "SPIN",
+          "overall": 89,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1032,
+          "name": "Mohammad Nawaz",
+          "role": "AR",
+          "slot": 7,
+          "style": "SPIN",
+          "overall": 87,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1033,
+          "name": "Heinrich Klaasen",
+          "role": "WK-BAT",
+          "slot": 5,
+          "style": null,
+          "overall": 96,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1034,
+          "name": "Dasun Shanaka",
+          "role": "AR",
+          "slot": 6,
+          "style": "PACE",
+          "overall": 87,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1035,
+          "name": "Dushmantha Chameera",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 88,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1036,
+          "name": "Daryl Mitchell",
+          "role": "AR",
+          "slot": 4,
+          "style": "PACE",
+          "overall": 92,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1037,
+          "name": "Jasprit Bumrah",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 99,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1038,
+          "name": "Hardik Pandya",
+          "role": "AR",
+          "slot": 6,
+          "style": "PACE",
+          "overall": 95,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1039,
+          "name": "Travis Head",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 97,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1040,
+          "name": "Alex Carey",
+          "role": "WK-BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 87,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1041,
+          "name": "Lockie Ferguson",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 91,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1042,
+          "name": "Hasan Ali",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 90,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1043,
+          "name": "Fakhar Zaman",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 92,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1044,
+          "name": "Nicholas Pooran",
+          "role": "WK-BAT",
+          "slot": 5,
+          "style": null,
+          "overall": 97,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1045,
+          "name": "Akeal Hosein",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "SPIN",
+          "overall": 90,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1046,
+          "name": "Kusal Mendis",
+          "role": "WK-BAT",
+          "slot": 2,
+          "style": null,
+          "overall": 91,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1047,
+          "name": "Tom Curran",
+          "role": "AR",
+          "slot": 8,
+          "style": "PACE",
+          "overall": 86,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1048,
+          "name": "Anrich Nortje",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 92,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1049,
+          "name": "Axar Patel",
+          "role": "AR",
+          "slot": 7,
+          "style": "SPIN",
+          "overall": 92,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1050,
+          "name": "Kagiso Rabada",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 97,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1051,
+          "name": "Shreyas Iyer",
+          "role": "BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 91,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1052,
+          "name": "Kuldeep Yadav",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "SPIN",
+          "overall": 94,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1053,
+          "name": "Rinku Singh",
+          "role": "BAT",
+          "slot": 6,
+          "style": null,
+          "overall": 92,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1054,
+          "name": "Mustafizur Rahman",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 94,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1055,
+          "name": "Najmul Hossain Shanto",
+          "role": "BAT",
+          "slot": 3,
+          "style": null,
+          "overall": 87,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1056,
+          "name": "Max O'Dowd",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 84,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1057,
+          "name": "Luke Wood",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 85,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1058,
+          "name": "Rashid Khan",
+          "role": "AR",
+          "slot": 8,
+          "style": "SPIN",
+          "overall": 99,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1059,
+          "name": "Rishabh Pant",
+          "role": "WK-BAT",
+          "slot": 5,
+          "style": null,
+          "overall": 95,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1060,
+          "name": "Sam Curran",
+          "role": "AR",
+          "slot": 7,
+          "style": "PACE",
+          "overall": 94,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1061,
+          "name": "Liam Livingstone",
+          "role": "AR",
+          "slot": 5,
+          "style": "SPIN",
+          "overall": 94,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1062,
+          "name": "Devon Conway",
+          "role": "WK-BAT",
+          "slot": 2,
+          "style": null,
+          "overall": 93,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1063,
+          "name": "Glenn Phillips",
+          "role": "WK-BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 94,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1064,
+          "name": "Aiden Markram",
+          "role": "BAT",
+          "slot": 3,
+          "style": null,
+          "overall": 91,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1065,
+          "name": "Shimron Hetmyer",
+          "role": "BAT",
+          "slot": 5,
+          "style": null,
+          "overall": 92,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1066,
+          "name": "Rovman Powell",
+          "role": "BAT",
+          "slot": 6,
+          "style": null,
+          "overall": 91,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1067,
+          "name": "Shai Hope",
+          "role": "WK-BAT",
+          "slot": 2,
+          "style": null,
+          "overall": 90,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1068,
+          "name": "Wanindu Hasaranga",
+          "role": "AR",
+          "slot": 7,
+          "style": "SPIN",
+          "overall": 96,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1069,
+          "name": "Jofra Archer",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 97,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1070,
+          "name": "Shadab Khan",
+          "role": "AR",
+          "slot": 7,
+          "style": "SPIN",
+          "overall": 93,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1071,
+          "name": "Phil Salt",
+          "role": "WK-BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 95,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1072,
+          "name": "Alzarri Joseph",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 91,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1073,
+          "name": "Romario Shepherd",
+          "role": "AR",
+          "slot": 7,
+          "style": "PACE",
+          "overall": 90,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1074,
+          "name": "Mehidy Hasan Miraz",
+          "role": "AR",
+          "slot": 7,
+          "style": "SPIN",
+          "overall": 88,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1075,
+          "name": "Ryan Burl",
+          "role": "AR",
+          "slot": 6,
+          "style": "SPIN",
+          "overall": 86,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1076,
+          "name": "Josh Little",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 90,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1077,
+          "name": "Ruturaj Gaikwad",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 93,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1078,
+          "name": "Tim David",
+          "role": "BAT",
+          "slot": 6,
+          "style": null,
+          "overall": 94,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1079,
+          "name": "Josh Inglis",
+          "role": "WK-BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 92,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1080,
+          "name": "Finn Allen",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 92,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1081,
+          "name": "Rahmanullah Gurbaz",
+          "role": "WK-BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 92,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1082,
+          "name": "Naveen-ul-Haq",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 91,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1083,
+          "name": "Azmatullah Omarzai",
+          "role": "AR",
+          "slot": 6,
+          "style": "PACE",
+          "overall": 91,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1084,
+          "name": "Harry Tector",
+          "role": "BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 88,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1085,
+          "name": "Bas de Leede",
+          "role": "AR",
+          "slot": 5,
+          "style": "PACE",
+          "overall": 88,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1086,
+          "name": "Brandon King",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 90,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1087,
+          "name": "Shubman Gill",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 96,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1088,
+          "name": "Arshdeep Singh",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 94,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1089,
+          "name": "Abhishek Sharma",
+          "role": "AR",
+          "slot": 1,
+          "style": "SPIN",
+          "overall": 95,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1090,
+          "name": "Varun Chakravarthy",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "SPIN",
+          "overall": 96,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1091,
+          "name": "Shaheen Shah Afridi",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 96,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1092,
+          "name": "Haris Rauf",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 94,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1093,
+          "name": "Rachin Ravindra",
+          "role": "AR",
+          "slot": 3,
+          "style": "SPIN",
+          "overall": 93,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1094,
+          "name": "Maheesh Theekshana",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "SPIN",
+          "overall": 93,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1095,
+          "name": "Gerald Coetzee",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 91,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1096,
+          "name": "Azam Khan",
+          "role": "WK-BAT",
+          "slot": 5,
+          "style": null,
+          "overall": 87,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1097,
+          "name": "Nathan Ellis",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 92,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1098,
+          "name": "Harry Brook",
+          "role": "BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 95,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1099,
+          "name": "Will Jacks",
+          "role": "AR",
+          "slot": 2,
+          "style": "SPIN",
+          "overall": 92,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1100,
+          "name": "Pathum Nissanka",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 91,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1101,
+          "name": "Tilak Varma",
+          "role": "BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 94,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1102,
+          "name": "Naseem Shah",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 94,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1103,
+          "name": "Noor Ahmad",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "SPIN",
+          "overall": 94,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1104,
+          "name": "Marco Jansen",
+          "role": "AR",
+          "slot": 8,
+          "style": "PACE",
+          "overall": 92,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1105,
+          "name": "Yashasvi Jaiswal",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 96,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1106,
+          "name": "Cameron Green",
+          "role": "AR",
+          "slot": 4,
+          "style": "PACE",
+          "overall": 93,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1107,
+          "name": "Tristan Stubbs",
+          "role": "BAT",
+          "slot": 5,
+          "style": null,
+          "overall": 94,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1108,
+          "name": "Jake Fraser-McGurk",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 93,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1109,
+          "name": "Curtis Campher",
+          "role": "AR",
+          "slot": 5,
+          "style": "PACE",
+          "overall": 87,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1110,
+          "name": "Mohammad Wasim Jr",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "PACE",
+          "overall": 88,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1111,
+          "name": "Saim Ayub",
+          "role": "AR",
+          "slot": 1,
+          "style": "SPIN",
+          "overall": 94,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1112,
+          "name": "Dewald Brevis",
+          "role": "BAT",
+          "slot": 3,
+          "style": null,
+          "overall": 93,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1113,
+          "name": "Matheesha Pathirana",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 96,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1114,
+          "name": "Nitish Kumar Reddy",
+          "role": "AR",
+          "slot": 5,
+          "style": "PACE",
+          "overall": 91,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1115,
+          "name": "Towhid Hridoy",
+          "role": "BAT",
+          "slot": 4,
+          "style": null,
+          "overall": 89,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1116,
+          "name": "Nandre Burger",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 88,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1117,
+          "name": "Tom Hartley",
+          "role": "BOWL",
+          "slot": 9,
+          "style": "SPIN",
+          "overall": 86,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1118,
+          "name": "Rehan Ahmed",
+          "role": "AR",
+          "slot": 8,
+          "style": "SPIN",
+          "overall": 90,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1119,
+          "name": "Nehal Wadhera",
+          "role": "BAT",
+          "slot": 5,
+          "style": null,
+          "overall": 87,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1120,
+          "name": "Sai Sudharsan",
+          "role": "BAT",
+          "slot": 3,
+          "style": null,
+          "overall": 94,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1121,
+          "name": "Spencer Johnson",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 91,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1122,
+          "name": "Will O'Rourke",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 90,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1123,
+          "name": "Sameer Rizvi",
+          "role": "BAT",
+          "slot": 5,
+          "style": null,
+          "overall": 86,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1124,
+          "name": "Mayank Yadav",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 93,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1125,
+          "name": "Shamar Joseph",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 90,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1126,
+          "name": "Kwena Maphaka",
+          "role": "BOWL",
+          "slot": 10,
+          "style": "PACE",
+          "overall": 90,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1127,
+          "name": "Angkrish Raghuvanshi",
+          "role": "BAT",
+          "slot": 3,
+          "style": null,
+          "overall": 87,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1128,
+          "name": "Vaibhav Suryavanshi",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 91,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1129,
+          "name": "Priyansh Arya",
+          "role": "BAT",
+          "slot": 1,
+          "style": null,
+          "overall": 89,
+          "source": "dynasty-career-window-v1"
+        },
+        {
+          "id": 1130,
+          "name": "Ashutosh Sharma",
+          "role": "BAT",
+          "slot": 6,
+          "style": null,
+          "overall": 87,
+          "source": "dynasty-career-window-v1"
+        }
+      ],
+      "errors": []
+    },
+    "careerStrategy": {
+      "artifactSha256": "a9857c9c5a480deaa87c7c976b37a452ec35310b45c9481287dc0fd9611c682f",
+      "scope": "Read-only instrumentation exposes existing private annual CPU functions in a temporary copy; bodies unchanged. Isolated 2013 twelve-name fixture, not a normal annual draft or proof of typical pick position. Lowering only Bumrah career peak reduces market value. Shared career value is used by annual CPU evaluation.",
+      "checks": 11,
+      "ranking": [
+        {
+          "name": "Jasprit Bumrah",
+          "current": 81,
+          "careerPeak": 99,
+          "publicHiddenBoard": 94.19836694540749,
+          "annualValue": 94,
+          "roleNeed": 6,
+          "actualCareerPeakYear": 2024,
+          "exitYear": 2026
+        },
+        {
+          "name": "David Warner",
+          "current": 90,
+          "careerPeak": 71,
+          "publicHiddenBoard": 99,
+          "annualValue": 105,
+          "roleNeed": 9,
+          "actualCareerPeakYear": 2015,
+          "exitYear": 2026
+        },
+        {
+          "name": "Shahid Afridi",
+          "current": 80,
+          "careerPeak": 84,
+          "publicHiddenBoard": 78.47390842650154,
+          "annualValue": 89,
+          "roleNeed": 11,
+          "actualCareerPeakYear": 2008,
+          "exitYear": 2018
+        },
+        {
+          "name": "Lasith Malinga",
+          "current": 99,
+          "careerPeak": 94,
+          "publicHiddenBoard": 99,
+          "annualValue": 107,
+          "roleNeed": 6,
+          "actualCareerPeakYear": 2013,
+          "exitYear": 2020
+        },
+        {
+          "name": "Dale Steyn",
+          "current": 97,
+          "careerPeak": 92,
+          "publicHiddenBoard": 98.1692761309609,
+          "annualValue": 102,
+          "roleNeed": 6,
+          "actualCareerPeakYear": 2012,
+          "exitYear": 2020
+        },
+        {
+          "name": "Dwayne Bravo",
+          "current": 97,
+          "careerPeak": 87,
+          "publicHiddenBoard": 99,
+          "annualValue": 112,
+          "roleNeed": 11,
+          "actualCareerPeakYear": 2012,
+          "exitYear": 2024
+        },
+        {
+          "name": "Sunil Narine",
+          "current": 85,
+          "careerPeak": 97,
+          "publicHiddenBoard": 96.91722928516603,
+          "annualValue": 97,
+          "roleNeed": 6,
+          "actualCareerPeakYear": 2018,
+          "exitYear": 2026
+        },
+        {
+          "name": "Shane Watson",
+          "current": 84,
+          "careerPeak": 87,
+          "publicHiddenBoard": 84.77657304500296,
+          "annualValue": 98,
+          "roleNeed": 15,
+          "actualCareerPeakYear": 2009,
+          "exitYear": 2020
+        },
+        {
+          "name": "Andre Russell",
+          "current": 86,
+          "careerPeak": 64,
+          "publicHiddenBoard": 99,
+          "annualValue": 104,
+          "roleNeed": 11,
+          "actualCareerPeakYear": 2016,
+          "exitYear": 2026
+        },
+        {
+          "name": "Mitchell Starc",
+          "current": 85,
+          "careerPeak": 95,
+          "publicHiddenBoard": 95.26693313017584,
+          "annualValue": 97,
+          "roleNeed": 6,
+          "actualCareerPeakYear": 2019,
+          "exitYear": 2026
+        },
+        {
+          "name": "Virat Kohli",
+          "current": 87,
+          "careerPeak": 72,
+          "publicHiddenBoard": 99,
+          "annualValue": 99,
+          "roleNeed": 5,
+          "actualCareerPeakYear": 2017,
+          "exitYear": 2026
+        },
+        {
+          "name": "AB de Villiers",
+          "current": 99,
+          "careerPeak": 88,
+          "publicHiddenBoard": 99,
+          "annualValue": 107,
+          "roleNeed": 5,
+          "actualCareerPeakYear": 2012,
+          "exitYear": 2021
+        }
+      ],
+      "chosen": [
+        "Dwayne Bravo",
+        "Andre Russell",
+        "Dale Steyn",
+        "AB de Villiers",
+        "Mitchell Starc",
+        "David Warner",
+        "Lasith Malinga",
+        "Sunil Narine",
+        "Virat Kohli",
+        "Jasprit Bumrah",
+        "Shane Watson",
+        "Shahid Afridi"
+      ],
+      "peakSensitivity": {
+        "originalPeak": 99,
+        "changedPeak": 60,
+        "valueBefore": 94,
+        "valueAfter": 81,
+        "cpuBefore": 97.61870375955208,
+        "cpuAfter": 71.29057997166018
+      },
+      "errors": []
+    },
+    "experienceChecks": 121,
+    "markup": {
+      "scope": "Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.",
+      "view_states": 3,
+      "action_bindings": 108,
+      "errors": []
+    }
+  },
+  "regressionsOnMatrixDigest": {
+    "experience": {
+      "scope": "Actual-script VM known player jobs, foundation/annual automatic XI handoff, undrafted Scout/close, qualitative squad feedback, truthful player spotlights, close controls and old/new save resume. CSS/markup checks only for layout, no native pixels.",
+      "checks": 121,
+      "errors": []
+    },
+    "cricket_polish": {
+      "scope": "Source/real-script VM checks of cricket reads, drafting, spectator finals, Super Over ledgers and save rejection. No native browser, visual geometry or smoothness evidence.",
+      "checks": 750,
+      "randomTieBreakSeeds": 150,
+      "errors": []
+    },
+    "draft_controls": {
+      "scope": "Actual-script VM foundation/annual paced drafts against instant-skip truth (annual two-vacancies-per-club fixture), direct Pick/Scout/stale actions and modal/home/cold pause. No native pixels or interaction certification.",
+      "checks": 701,
+      "errors": []
+    },
+    "draft_stress": {
+      "scope": "Actual-script VM annual-draft stress with explicit 0/1/2/4/5/6 departure and transferred-pick fixtures; mixed paced/skip truth, rapid speed changes, wrong-turn actions, modal pauses and no stale completion callbacks. No native rendering.",
+      "checks": 755,
+      "cases": [
+        {
+          "userVacancies": 0,
+          "transferredPicks": 0,
+          "picks": 16,
+          "supplements": 1,
+          "timedCycles": 0
+        },
+        {
+          "userVacancies": 1,
+          "transferredPicks": 0,
+          "picks": 18,
+          "supplements": 1,
+          "timedCycles": 2
+        },
+        {
+          "userVacancies": 2,
+          "transferredPicks": 0,
+          "picks": 20,
+          "supplements": 1,
+          "timedCycles": 3
+        },
+        {
+          "userVacancies": 4,
+          "transferredPicks": 0,
+          "picks": 24,
+          "supplements": 2,
+          "timedCycles": 5
+        },
+        {
+          "userVacancies": 5,
+          "transferredPicks": 0,
+          "picks": 20,
+          "supplements": 2,
+          "timedCycles": 4
+        },
+        {
+          "userVacancies": 6,
+          "transferredPicks": 2,
+          "picks": 24,
+          "supplements": 5,
+          "timedCycles": 5
+        }
+      ],
+      "errors": []
+    },
+    "layout": {
+      "scope": "Generated markup for every screen family/dialog and twenty club identities, plus CSS source containment checks. No browser layout, geometric overlap, pixels, keyboard or smoothness measurements.",
+      "checks": 104,
+      "screenStates": 39,
+      "clubVariants": 20,
+      "errors": []
+    },
+    "save_integrity": {
+      "scope": "VM corrupt-state fixtures must fail before mutating a previously valid career or overwriting saved data.",
+      "checks": 77,
+      "cases": [
+        "table",
+        "statValue",
+        "negativeStat",
+        "selfFixture",
+        "team",
+        "order",
+        "xi",
+        "results",
+        "schedule",
+        "stats",
+        "club",
+        "reveal",
+        "post-validation render failure"
+      ]
+    },
+    "match_reveal": {
+      "scope": "VM actual-score highlights, pacing, pause/modal/title/archive and cold reload; cricket truth unchanged. CSS/markup source protections, no native rendered geometry or smoothness evidence.",
+      "checks": 58,
+      "errors": []
+    },
+    "fan": {
+      "scope": "Real-script VM commands with explicit replacement injury/legacy-chain and club-transfer fixtures, played-round recovery, cold resume and dialog-message checks. No native rendering evidence.",
+      "checks": 95,
+      "errors": []
+    },
+    "transition": {
+      "scope": "VM real annual draft, actual played-round injury recovery and real midseason trade; initial injury is an explicit fixture. No native rendered evidence.",
+      "checks": 115,
+      "trade": {
+        "offer": 104,
+        "target": 163,
+        "club": "SCO"
+      },
+      "errors": []
+    }
+  },
+  "scorebookAudit": {
+    "scope": "Generated actual game scorebooks: numerical/legal-model bounds and descriptive distributions. Not an empirical fit to real-world IPL/BBL/Blast distributions, and not a ball-by-ball simulator.",
+    "sources": [
+      "qa/clarity/final-career-2801/v8_scorebooks.json",
+      "qa/clarity/release-smoke/v8_scorebooks.json"
+    ],
+    "checks": 14170,
+    "matches": 337,
+    "innings": 674,
+    "scores": {
+      "count": 674,
+      "min": 84,
+      "p10": 120,
+      "median": 156.0,
+      "mean": 159.38,
+      "p90": 205,
+      "max": 234
+    },
+    "fullLengthScores": {
+      "count": 431,
+      "min": 96,
+      "p10": 122,
+      "median": 162,
+      "mean": 164.11,
+      "p90": 211,
+      "max": 231
+    },
+    "firstInningsScores": {
+      "count": 337,
+      "min": 84,
+      "p10": 123,
+      "median": 163,
+      "mean": 166.74,
+      "p90": 212,
+      "max": 231
+    },
+    "wickets": {
+      "count": 674,
+      "min": 0,
+      "p10": 2,
+      "median": 6.0,
+      "mean": 6.03,
+      "p90": 10,
+      "max": 10
+    },
+    "extras": {
+      "count": 674,
+      "min": 4,
+      "p10": 5,
+      "median": 9.0,
+      "mean": 9.43,
+      "p90": 14,
+      "max": 15
+    },
+    "winningChaseExcessFrequency": {
+      "0": 92,
+      "1": 14,
+      "2": 18,
+      "3": 24,
+      "4": 13,
+      "5": 15
+    },
+    "chaseWinPercentage": 52.23,
+    "allOutInnings": 91,
+    "phasesMaxRunsPerOver": 30.0,
+    "errors": [],
+    "ruleReferences": [
+      {
+        "url": "https://images.icc-cricket.com/image/upload/prd/qfnsie8fz6vhyl1pmcli.pdf",
+        "sections": [
+          "13.7.1",
+          "13.9",
+          "16.5.3"
+        ],
+        "use": "Ordinary uninterrupted twenty-over innings, bowling limits and full winning-boundary allowance. The game does not implement every ICC playing condition."
+      }
+    ]
+  },
+  "limitations": [
+    "No native rendered geometry, focus, zoom/mobile, smoothness or remote-image loading certification",
+    "399-player structural audit is not primary-source verification of every historical biographical/statistical field",
+    "Career peaks and batting-all-rounder bowling caps are simulation calibration, not empirical historical ratings",
+    "New venue photographs are externally loaded; offline/error fallback is a correctly labelled pitch frame",
+    "Earlier partial candidate careers and old strategy runs excluded"
+  ]
+}
