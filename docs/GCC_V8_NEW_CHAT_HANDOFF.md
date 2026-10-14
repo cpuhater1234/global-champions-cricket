@@ -165,3 +165,9 @@ Tom reported the “Fifteen in the squad…” line only filling half its bar an
 ## Stadium caption alignment
 
 Tom requested the caption centred under the photograph. The shared figcaption now centres its icon/text group and wrapped text. Current artifact: `game/global_champions_cricket_v8_caption.html`, SHA256 `4f4e51121c417188bf3fdb6c0d33138c9666d57e890f58e82f40fb3cbe53d311`. Scoped CSS check passed; native rendering remains unverified.
+
+## Saudi breakaway story and compact prompts
+
+Tom cancelled removal of the restart confirmation and confirmed that it was fine. Keep the existing Start again confirmation. He requested less empty space in prompts and restoration of the Saudi-backed breakaway story. The home/intro now explicitly describe the fictional Saudi-funded alternate-2008 league, eight clubs leaving domestic competitions and the five-day player commitment window. Short restart/release prompts use a narrower width; modal Close shares an existing final action row; dossier headers/cards remove screen-only height reservations; club-guide columns fit their content.
+
+The centred photo caption, full-width arena strapline, logo navigation and club guides remain. Current artifact: `game/global_champions_cricket_v8_breakaway.html`, SHA256 `c436c0373c6e1af74f9fb8813212a6dc03da6aaa4ea4ae0ec9e3ba27a11d9ee5`. Targeted modal/story tests plus existing trade/restart and highlight/resume VM suites are the verification scope; no native rendered alignment claim.

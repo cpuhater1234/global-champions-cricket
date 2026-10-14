@@ -12,7 +12,10 @@
  function closeDialog(){if(dialog.open)dialog.close();ui.modal=null;const opener=dialogOpener;dialogOpener=null;opener?.focus?.({preventScroll:true});if(!document.hidden&&!['home','story'].includes(ui.view))clock.resume();}
  function modal(title,body,key='info'){
   if(!dialog.open)dialogOpener=document.activeElement;
-  clock.pause();ui.modal=key;content.innerHTML=`<span class="g8eyebrow">GLOBAL CHAMPIONS CRICKET</span><h2 id="g8dialogTitle">${esc(title)}</h2>${body}<div class="g8actions">${btn('Close','close')}</div>`;
+  clock.pause();ui.modal=key;dialog.dataset.prompt=key;
+  const actions=/<div class="g8actions">((?:(?!<div)[\s\S])*)<\/div>\s*$/;
+  const close=btn('Close','close');body=actions.test(body)?body.replace(actions,(_,buttons)=>`<div class="g8actions">${buttons}${close}</div>`):body+`<div class="g8actions">${close}</div>`;
+  content.innerHTML=`<span class="g8eyebrow">GLOBAL CHAMPIONS CRICKET</span><h2 id="g8dialogTitle">${esc(title)}</h2>${body}`;
   if(!dialog.open)dialog.showModal();
  }
  function setView(view){assert(views[view],`Unknown screen: ${view}`);ui.view=view;ui.modal=null;if(dialog.open)dialog.close();if(document.hidden||view==='home'||view==='story')clock.pause();else clock.resume();render(true);if(view==='matchReveal')scheduleMatch();}
