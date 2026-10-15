@@ -1,7 +1,9 @@
 """Read-only secondary cross-row audit of captured game scorebooks."""
 from pathlib import Path
-import json
+import json,argparse
+p=argparse.ArgumentParser();p.add_argument("directories",nargs="*");p.add_argument("--output",default="qa/v8_numeric_crosscheck_results.json");args=p.parse_args()
 roots=[Path('qa/logic/final-career-5603'),Path('qa/logic/final-career-5701')]+[Path('qa/logic/final-clubs')/str(i) for i in range(8)]
+if args.directories:roots=[Path(x) for x in args.directories]
 errors=[];checks=0;matches=0
 for root in roots:
  for r in json.loads((root/'v8_scorebooks.json').read_text()):
@@ -25,5 +27,5 @@ for root in roots:
      fielder=d[3:].split(' b ')[0];checks+=1
      if fielder not in names:errors.append({'case':'stumping outside fielding XI','fielder':fielder})
 result={'scope':'Secondary cross-row identity/wicket/dismissal audit of existing captured scorebooks, additional to phase/extras/balls/NRR checks. No new matches or empirical calibration.','matches':matches,'checks':checks,'errors':errors,'warnings':[]}
-Path('qa/v8_numeric_crosscheck_results.json').write_text(json.dumps(result,indent=2)+'\n');print({'matches':matches,'checks':checks,'errors':len(errors)})
+Path(args.output).write_text(json.dumps(result,indent=2)+'\n');print({'matches':matches,'checks':checks,'errors':len(errors)})
 assert not errors

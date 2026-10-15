@@ -4,6 +4,9 @@ function validSave(save){
  const s=save?.state,record=x=>!!x&&typeof x==='object'&&!Array.isArray(x),unique=a=>new Set(a).size===a.length;
  if(!record(s)||!Number.isInteger(s.year)||s.year<2008||s.year>END_YEAR||!Number.isFinite(s.seed)||!Array.isArray(s.pool)||!s.pool.length||!Array.isArray(s.league)||s.league.length!==8||!record(s.teams)||!record(s.table)||!record(s.playerSeasonStats)||!Number.isInteger(s.round)||s.round<0||s.round>14)return false;
  if(s.pool.some(p=>!record(p)||!Number.isInteger(p.id)||typeof p.name!=='string'||typeof p.role!=='string')||!unique(s.pool.map(p=>p.id)))return false;
+ if(s.dynasty?.careerModel!=null){const m=s.dynasty.careerModel;if(m.version!==1||!Number.isInteger(m.seed)||m.seed<0||m.seed>4294967295)return false;}
+ if(s.pool.some(p=>p.careerOutcome!=null&&(!window.GCC8_CAREER_STATE.validRecord(p.careerOutcome,p)||!p.careerExpected||!window.GCC8_OUTCOMES.validate({...p.careerOutcome,baselineByYear:p.careerExpected.baselineByYear}))))return false;
+ if(s.dynasty?.careerStore!=null){const store=s.dynasty.careerStore;if(!record(store))return false;const keys=Object.keys(store);for(const key of keys){const r=store[key],p=s.pool.find(p=>p.careerKey===key);if(!p||!record(r)||!window.GCC8_CAREER_STATE.validRecord(r.outcome,p)||!r.expected||r.expected.anchorYear!==r.outcome.anchorYear||!window.GCC8_OUTCOMES.validate({...r.outcome,baselineByYear:r.expected.baselineByYear}))return false;}for(const p of s.pool){if(!p.dynastyRetired&&(p.dynastyCareer?.exitYear??2026)>=s.year&&!store[p.careerKey])return false;}}
  const ids=new Set(s.pool.map(p=>p.id)),clubs=s.league.map(c=>c?.abbr);
  if(!unique(clubs)||clubs.some(c=>typeof c!=='string')||s.league.some(c=>!record(c)||typeof c.name!=='string')||s.userClub&&!clubs.includes(s.userClub.abbr))return false;
  const preDraft=s.year===2008&&Array.isArray(s.draftOrder)&&!s.draftOrder.length&&Object.keys(s.teams).length===0;
@@ -40,6 +43,7 @@ function validSave(save){
  if(s.fullSchedule.length&&clubs.some(c=>!record(s.table[c])||['p','w','l','pts','nrr','runsFor','runsAgainst','ballsFor','ballsAgainst'].some(k=>!Number.isFinite(s.table[c][k]))))return false;
  if(s.dynasty){
   const d=s.dynasty;if(!record(d)||!Array.isArray(d.history)||!Array.isArray(d.transactions)||!record(d.manager)||!record(d.injuries)||!record(d.replacementFor)||!record(d.replacementOf))return false;
+  if(d.developmentByYear!=null){if(!record(d.developmentByYear))return false;for(const [year,rows]of Object.entries(d.developmentByYear)){if(!Number.isInteger(Number(year))||Number(year)<2009||Number(year)>2026||!Array.isArray(rows)||rows.some(r=>!record(r)||r.year!==Number(year)||!ids.has(r.playerId)||typeof r.name!=='string'||!Number.isFinite(r.fromOverall)||!Number.isFinite(r.toOverall)||r.delta!==r.toOverall-r.fromOverall||Math.abs(r.delta)>98)||!unique(rows.map(r=>r.playerId)))return false;}}
   const r=d.v8Reveal;if(r&&(!record(r)||!['league','draft','annual'].includes(r.kind)||!Number.isInteger(r.count)||r.count<0||r.count>8||!Number.isInteger(r.speedIndex)||r.speedIndex<0||r.speedIndex>2||typeof r.running!=='boolean'))return false;
   const m=d.v8Match;if(m&&(!record(m)||!Number.isInteger(m.count)||m.count<0||m.count>(m.presentationVersion===2?9:5)||!Number.isInteger(m.speedIndex)||m.speedIndex<0||m.speedIndex>2||typeof m.running!=='boolean'||!['result','finals'].includes(m.returnView)||!record(m.reference)||!['regular','semis','gf'].includes(m.reference.type)))return false;
   if(m?.presentationVersion!=null&&m.presentationVersion!==2)return false;

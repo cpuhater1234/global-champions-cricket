@@ -1,0 +1,12 @@
+/* Factual sources and model priors stay distinct from realised career outcomes. */
+window.GCC8_PROFILES=(()=>{
+ const catalog=window.GCC8_PROFILE_CATALOG||[],index=new Map();
+ for(const p of catalog)for(const key of [p.careerKey,p.canonicalName,...p.aliases])index.set(key,p);
+ function lookup(key){return index.get(key)||null;}
+ function roleAt(p,year){return p.roleWindows.find(w=>year>=w.from&&year<=w.to)||p.roleWindows[0];}
+ function validateCatalog(rows){const errors=[],keys=new Set(),names=new Set();for(const p of rows){if(!p.careerKey||keys.has(p.careerKey))errors.push('duplicate key '+p.careerKey);keys.add(p.careerKey);for(const n of [p.canonicalName,...p.aliases]){if(names.has(n))errors.push('duplicate name '+n);names.add(n);}if(!['batting','bowling','balanced'].includes(p.primaryFamily)||!p.roleWindows?.length)errors.push('invalid profile '+p.careerKey);for(const v of Object.values(p.peakSkills||{}))if(!Number.isFinite(v)||v<1||v>99)errors.push('invalid skill '+p.careerKey);let last=2007;for(const w of p.roleWindows||[]){if(w.from!==last+1||w.to<w.from||!['BAT','WK-BAT','AR','BOWL'].includes(w.role)||w.preferredSlot<1||w.preferredSlot>11)errors.push('role window '+p.careerKey);last=w.to;}if(last!==2026)errors.push('incomplete role windows '+p.careerKey);}return errors;}
+ const bat=['bat','power','control','pacePlay','spinPlay','finishing'],bowl=['bowl','newBall','death','bowlControl','variation','spin','pace'];
+ function expectedSkills(profile,year,legacyBaseline){const p={...legacyBaseline};if(!profile)return p;const original={...p};Object.assign(p,roleAt(profile,year));if(year>2008){for(const [key,group]of [['bat',bat],['bowl',bowl]]){const target=profile.peakSkills[key];if(!target)continue;const currentPeak=Number(p._peakSkills?.[key]||p[key]||target),ratio=target/currentPeak;for(const k of group)if(Number.isFinite(p[k]))p[k]=Math.max(1,Math.min(99,Math.round(p[k]*ratio)));}for(const [k,v]of Object.entries(profile.peakSkills))if(!['bat','bowl'].includes(k))p[k]=Math.max(1,Math.min(99,Math.round(v*(p._factor??1))));if(p.dynastyBase2008){const weight=Math.max(0,Math.min(1,(year-2008)/Math.max(1,(p.dynastyCareer?.peakYear||2009)-2008)));for(const k of [...bat,...bowl])p[k]=Math.round(original[k]+(p[k]-original[k])*weight);}}p.bowlingUsage=profile.bowlingUsage;if(profile.bowlingStyle)p.bowlingStyleVerified=profile.bowlingStyle;delete p._peakSkills;delete p._factor;return p;}
+
+ return {lookup,roleAt,validateCatalog,expectedSkills,all:()=>catalog};
+})();

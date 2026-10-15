@@ -1,6 +1,7 @@
 """Build the fresh UI with a frozen, DOM-backed cricket engine adapter."""
 from pathlib import Path
 import re,hashlib,json,argparse,base64
+from domain.career_adapter import adapt as adapt_careers
 ROOT=Path(__file__).resolve().parent
 BASE=ROOT.parent/'game/global_champions_cricket_v7_9_3_layout_rebuild.html'
 EXPECTED='eddec7bc6d92eb494bef26384e0618ea63d5244c63c8a1c9d84b1f5e16e98926'
@@ -132,6 +133,7 @@ def freeze():
    marker='  window.Dynasty={beginOffseason'
    assert marker in script
    script=script.replace(marker,"  window.GCC8_ENGINE_READ={coverStatus,fitPlayer:id=>withFitnessContext(()=>({...pById(id)})),squadProfile:ps=>withFitnessContext(()=>window.GCC8_FOUNDATION_READ.projectedDraftProfile(ps)),matchProfile:c=>withFitnessContext(()=>window.GCC8_FOUNDATION_READ.effectiveProfile(c)),contractCandidates:()=>contractDecisionPlayers().map(p=>p.id),pickSlots:()=>slotsWithSupplement().map(x=>({...x})),cutBudget:()=>({limit:voluntaryCutLimit(),retired:userRetirementCount()}),freeAgents:()=>freeAgentPool().map(p=>p.id),replacements:id=>replacementPoolFor(pById(id)).map(p=>p.id),save:()=>autoSave(),xiProblem:()=>userXIProblem(),fresh:()=>{stopFoundationWatch();return startFreshWorld()},archive:()=>archiveSeason(),ownsPick:r=>userOwnsPick(r),scout:id=>{const p=pById(id);return p?{outlook:developmentRead(p),standing:scoutingLevel(p,state.userClub?.abbr),fit:scoutingFit(p,state.userClub?.abbr),recent:recentSeasonRead(p),contractDue:contractDue(p)}:null},records:()=>archiveRecords(),honours:()=>archiveClubHonours(),legends:()=>archiveUserLegends(),legacyRating:()=>managerScore()};\n"+marker)
+  script=adapt_careers(name,script)
   (ROOT/'engine'/f'{name}.js').write_text(script)
  body=re.search(r'<body[^>]*>(.*?)</body>',text,re.S)[1]
  body=re.sub(r'<script\b[^>]*>[\s\S]*?</script>','',body,flags=re.I)
@@ -153,7 +155,7 @@ def build(output):
  # Omit the old home motion, moment overlays and visual identity scripts.
  # Their DOM side effects would escape the inert host; none owns cricket state.
  binding='const {setTimeout,clearTimeout,setInterval,clearInterval,requestAnimationFrame,cancelAnimationFrame}=window.GCC8_CLOCK;const MutationObserver=class{observe(){}disconnect(){}};'
- engine='<script>window.GCC8_IDENTITIES='+json.dumps(json.loads((ROOT/'domain/player_identity.json').read_text()))+';'+ (ROOT/'domain/player_identity.js').read_text()+'\n'+(ROOT/'domain/phase_exposure.js').read_text()+'\n'+(ROOT/'domain/draft_guard.js').read_text()+'\n'+(ROOT/'domain/career_paths.js').read_text()+'\n'+(ROOT/'domain/player_jobs.js').read_text()+'</script><script>window.GCC8_ENGINE_SCROLL=()=>{};'+(ROOT/'ui/clock.js').read_text()+'</script>'+ '\n'.join('<script>(()=>{'+binding+(ROOT/'engine'/f'{name}.js').read_text()+'})();</script>' for name in ['players','league','ratings','projections','cpu','foundation','dynasty'])
+ engine='<script>window.GCC8_IDENTITIES='+json.dumps(json.loads((ROOT/'domain/player_identity.json').read_text()))+';'+ 'window.GCC8_PROFILE_CATALOG='+json.dumps(json.loads((ROOT/'domain/player_profiles.json').read_text()))+';'+(ROOT/'domain/player_profiles.js').read_text()+'\n'+(ROOT/'domain/career_outcomes.js').read_text()+'\n'+(ROOT/'domain/career_state.js').read_text()+'\n'+(ROOT/'domain/scouting.js').read_text()+'\n'+(ROOT/'domain/development_feedback.js').read_text()+'\n'+ (ROOT/'domain/player_identity.js').read_text()+'\n'+(ROOT/'domain/phase_exposure.js').read_text()+'\n'+(ROOT/'domain/draft_guard.js').read_text()+'\n'+(ROOT/'domain/career_paths.js').read_text()+'\n'+(ROOT/'domain/player_jobs.js').read_text()+'</script><script>window.GCC8_ENGINE_SCROLL=()=>{};'+(ROOT/'ui/clock.js').read_text()+'</script>'+ '\n'.join('<script>(()=>{'+binding+(ROOT/'engine'/f'{name}.js').read_text()+'})();</script>' for name in ['players','league','ratings','projections','cpu','foundation','dynasty'])
  ui='\n'.join('<script>'+ (ROOT/'ui'/f'{name}.js').read_text()+'</script>' for name in ['components','data','roles','venues','match_story','offseason','screens','dom','controller'])
  build_id=hashlib.sha256(((ROOT/'ui/game.css').read_text()+ui+engine+assets).encode()).hexdigest()[:16]
  template=template.replace('id="g8app"',f'id="g8app" data-build="{build_id}"')
