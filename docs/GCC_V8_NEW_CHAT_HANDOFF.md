@@ -291,3 +291,10 @@ Full inventory identifies 130 generated profiles; bowling-led all-rounder templa
 Tom approved the uncertainty direction. The proposed architectural specification is `docs/superpowers/specs/2026-10-15-player-careers-design.md`. It defines anchored per-world saved outcomes, skill-family variation, non-omniscient shared CPU/scouting estimates, reviewed individual profiles, old-save migration and evidence requirements. Main `state.seed` is mutable; the design requires a separate immutable career seed, using stable weatherSeed or a one-time saved migration fallback for old saves.
 
 The written spec has been self-reviewed but is NOT yet approved. The next stage is Tom's written-spec review, then writing-plans and plan/execution-method review under the current brainstorming workflow. No product implementation or new playable in this checkpoint. Product and Library remain the logic-review build/version 23 and the unchanged SHA256 above. All defects in the uncertainty audit remain open.
+
+
+## Written specification approved; implementation plan ready for review
+
+Tom approved the written player-career spec with “im sure it is good you know the standard i am after get to work”. The native, inline implementation plan is `docs/superpowers/plans/2026-10-15-player-careers.md`. It covers reviewed catalog/identities, pure saved outcomes, migration, public-only scouting and all CPU valuation routes, observed arcade feedback, distribution/strategy evidence and final regression/delivery. Existing no-subagent restrictions determine inline execution.
+
+The plan has been self-reviewed, but plan review remains pending under writing-plans/brainstorming; no product implementation started. Once approved use executing-plans. Preserve the old diagnostic evidence: the existing career_strategy test explicitly expects hidden future sensitivity and must be replaced with invariance plus separate public-prior sensitivity, not silently deleted. Product remains logic-review SHA256 `356325d44873facc0bcea04c667112d50c10acf1fab67e390b51f08b1ba13d03`, Library version23.
