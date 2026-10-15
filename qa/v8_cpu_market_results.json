@@ -1,41 +1,41 @@
 {
-  "artifactSha256": "2a33e49e2bea94349ad93516253370a10043179f6ae1b55be9f8ed35cae97a52",
+  "artifactSha256": "356325d44873facc0bcea04c667112d50c10acf1fab67e390b51f08b1ba13d03",
   "scope": "Three real CPU market windows from a completed-season fixture. Temporary copies count unchanged tradeValue calls; uncached copy restores original direct lookups. Equal market truth and rosters required, not timing thresholds. VM timings are diagnostic, not native responsiveness evidence.",
   "rows": [
     {
       "seed": 3803,
       "identical": true,
       "uncached": {
-        "calls": 1518,
-        "ms": 504.48557400000004
+        "calls": 1188,
+        "ms": 981.6740989999994
       },
       "cached": {
-        "calls": 324,
-        "ms": 202.96046499999989
+        "calls": 312,
+        "ms": 313.06176499999947
       }
     },
     {
       "seed": 4409,
       "identical": true,
       "uncached": {
-        "calls": 2856,
-        "ms": 925.2348280000001
+        "calls": 1182,
+        "ms": 1012.1176730000007
       },
       "cached": {
-        "calls": 414,
-        "ms": 352.6618209999997
+        "calls": 312,
+        "ms": 712.9643939999987
       }
     },
     {
       "seed": 4513,
       "identical": true,
       "uncached": {
-        "calls": 2934,
-        "ms": 880.005427
+        "calls": 2118,
+        "ms": 1391.6167999999998
       },
       "cached": {
-        "calls": 414,
-        "ms": 322.4093520000001
+        "calls": 390,
+        "ms": 1132.8159149999992
       }
     }
   ],

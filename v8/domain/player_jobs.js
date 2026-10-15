@@ -9,10 +9,12 @@ window.GCC8_PLAYER_JOBS={
  "Hardik Pandya":{style:"PACE",source:"https://www.icc-cricket.com/rankings/63751/hardik-pandya"}
 };
 window.GCC8_PLAYER_JOBS['Saim Ayub']={style:'SPIN',source:'https://www.icc-cricket.com/rankings/70241/saim-ayub?appview=true'};
+window.GCC8_PLAYER_JOBS['Josh Hazlewood']={style:'PACE',source:'https://www.cricket.com.au/players/CA:1185/josh-hazlewood'};
 window.GCC8_JOB_MODEL=(()=>{
  // Game calibration separates batting all-rounders from frontline bowlers.
  const bowlingPeaks={'Mitchell Marsh':74,'Glenn Maxwell':68,'Daryl Mitchell':62,'Liam Livingstone':70,'Abhishek Sharma':66,'Will Jacks':66,'Saim Ayub':68,'Rachin Ravindra':74};
  function prepare(p,year){
+  if(p.name==='Josh Hazlewood'&&p.dynastyPeak)p.dynastyPeak.pace=Math.max(p.dynastyPeak.pace||0,(p.dynastyCareer?.peak||92)-2);
   const job=window.GCC8_PLAYER_JOBS[p.name];if(job)p.bowlingStyleVerified=job.style;
   if(p.dynastyPeak&&p.bowlingUsage===0&&['BOWL','AR'].includes(p.role))p.bowlingUsage=p.role==='BOWL'?3.65:2.35;
   if(p.dynastyPeak&&bowlingPeaks[p.name]){const cap=bowlingPeaks[p.name],ratio=Math.min(1,cap/(p.dynastyPeak.bowl||cap));for(const k of ['bowl','newBall','death','bowlControl','variation','spin','pace'])p.dynastyPeak[k]=Math.max(1,Math.round((p.dynastyPeak[k]||1)*ratio));p.bowlingUsage=p.name==='Daryl Mitchell'?.65:1.4;}

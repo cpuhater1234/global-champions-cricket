@@ -1,0 +1,86 @@
+{
+  "scope": "Generated actual game scorebooks: numerical/legal-model bounds and descriptive distributions. Not an empirical fit to real-world IPL/BBL/Blast distributions, and not a ball-by-ball simulator.",
+  "sources": [
+    "qa/logic/final-career-5603/v8_scorebooks.json",
+    "qa/logic/final-career-5701/v8_scorebooks.json",
+    "qa/logic/final-clubs/0/v8_scorebooks.json",
+    "qa/logic/final-clubs/1/v8_scorebooks.json",
+    "qa/logic/final-clubs/2/v8_scorebooks.json",
+    "qa/logic/final-clubs/3/v8_scorebooks.json",
+    "qa/logic/final-clubs/4/v8_scorebooks.json",
+    "qa/logic/final-clubs/5/v8_scorebooks.json",
+    "qa/logic/final-clubs/6/v8_scorebooks.json",
+    "qa/logic/final-clubs/7/v8_scorebooks.json"
+  ],
+  "checks": 27981,
+  "matches": 664,
+  "innings": 1328,
+  "scores": {
+    "count": 1328,
+    "min": 74,
+    "p10": 111,
+    "median": 148.0,
+    "mean": 151.42,
+    "p90": 195,
+    "max": 236
+  },
+  "fullLengthScores": {
+    "count": 810,
+    "min": 74,
+    "p10": 113,
+    "median": 156.0,
+    "mean": 157.19,
+    "p90": 202,
+    "max": 236
+  },
+  "firstInningsScores": {
+    "count": 664,
+    "min": 82,
+    "p10": 115,
+    "median": 156.0,
+    "mean": 158.0,
+    "p90": 203,
+    "max": 236
+  },
+  "wickets": {
+    "count": 1328,
+    "min": 0,
+    "p10": 2,
+    "median": 6.0,
+    "mean": 6.07,
+    "p90": 10,
+    "max": 10
+  },
+  "extras": {
+    "count": 1328,
+    "min": 4,
+    "p10": 5,
+    "median": 9.0,
+    "mean": 9.46,
+    "p90": 14,
+    "max": 15
+  },
+  "winningChaseExcessFrequency": {
+    "0": 186,
+    "1": 26,
+    "2": 35,
+    "3": 65,
+    "4": 38,
+    "5": 28
+  },
+  "chaseWinPercentage": 56.93,
+  "allOutInnings": 192,
+  "phasesMaxRunsPerOver": 24.0,
+  "errors": [],
+  "ruleReferences": [
+    {
+      "url": "https://images.icc-cricket.com/image/upload/prd/qfnsie8fz6vhyl1pmcli.pdf",
+      "sections": [
+        "13.7.1",
+        "13.9",
+        "16.5.3"
+      ],
+      "use": "Ordinary uninterrupted twenty-over innings, bowling limits and full winning-boundary allowance. The game does not implement every ICC playing condition."
+    }
+  ]
+}

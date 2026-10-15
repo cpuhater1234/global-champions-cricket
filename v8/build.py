@@ -11,13 +11,27 @@ def freeze():
  names=['players','league','ratings','projections','cpu','foundation','home-motion','events','dynasty','identity']
  for name,script in zip(names,scripts):
   script=script.replace('window.scrollTo','window.GCC8_ENGINE_SCROLL')
+  if name=='players':
+   script+="\nwindow.GCC_PLAYERS_2008.forEach(window.GCC8_applyIdentity);"
   if name=='ratings':
+   script=script.replace('  const battingEligible', "  const isKeeper=p=>!!p&&(p.role==='WK-BAT'||Number(p.keeping||0)>=65);\n  const battingEligible")
+   script=script.replace('return {powerplayBat:', 'return {keeperPresent:xi.some(isKeeper),powerplayBat:',1).replace('function emptyProfile(){return {powerplayBat:', 'function emptyProfile(){return {keeperPresent:false,powerplayBat:')
+   script=script.replace('return {profile,', 'return {isKeeper,profile,')
+   script=script.replace('  function explanation(key,p){', "  function explanation(key,p){if(key==='keeping'&&p.keeping<65&&p.keeperPresent)return 'A recognised keeper is selected, but current glove work is a weakness.';")
+   for key,phase,old_score in [('Pp','powerplay',"weightedTop(topSix,p=>batPhaseScore(p,'powerplay'),[1,1,.9,.8,.7,.6])"),('Middle','middle',"weightedTop(topSix,p=>batPhaseScore(p,'middle'),[1,1,.9,.8,.7,.6])"),('Finish','death',"weightedTop(batting,p=>batPhaseScore(p,'death'),[1,1,.75,.55])")]:
+    assert old_score in script
+    script=script.replace(old_score,"window.GCC8_PHASE_EXPOSURE.battingScore(xi,'"+phase+"',window.GCC_RATINGS)")
    old='if (!p || (p.maxOvers||0)<=0) return null;'
    assert old in script
    script=script.replace(old,old+'\n    const job=window.GCC8_PLAYER_JOBS[p.name];if(job)return job.style;')
   if name=='cpu':
    script=script.replace('function projectedValue(player, year=2008){ const p=projection(player); return p.draftDynasty ?? p.dynasty; }', 'function projectedValue(player, year=2008){ if(player.dynastyCareer)return window.GCC8_CAREERS.value(player,year);const p=projection(player);return p.draftDynasty??p.dynasty; }')
   if name=='foundation':
+   guard_old="const available = state.pool.filter(p => p.available && !p.draftedBy);\n    const roster = (state.teams[t.abbr] || []).map(id => byId(id));"
+   guard_new="const roster = (state.teams[t.abbr] || []).map(id => byId(id));\n    const available = window.GCC8_DRAFT_GUARD.candidates(roster,state.pool.filter(p => p.available && !p.draftedBy),15-roster.length,R);"
+   assert guard_old in script
+   script=script.replace(guard_old,guard_new)
+   script=script.replace('p.keeping >= 65 && score > bestKeeperScore','xi.some(R.isKeeper) && score > bestKeeperScore').replace('p.keeping >= 65 && p.oversCapacity >= 20','xi.some(R.isKeeper) && p.oversCapacity >= 20')
    script=script.replace('const draftSpeeds = [520, 260, 90];','const draftSpeeds = [520, 260, 130];')
    marker='  function resolveChase('
    assert marker in script
@@ -47,9 +61,22 @@ def freeze():
    assert marker in script
    script=script.replace(marker,"  window.GCC8_FOUNDATION_READ={roleTags:playerRoleTags,playerNote,groundStory,groundBand,projectedDraftProfile,draftSnapshot,effectiveProfile,simulateSuperOver,winningChaseTotal,reconcileChasePhases,teamAverages:userTeamAverages,leagueAverages:leagueInningsAverages,standout:matchStandout,pauseDraft:()=>{clearTimeout(draftAutoTimer);draftAutoTimer=null}};\n"+marker)
   if name=='dynasty':
+   marker='  function beginOffseason('
+   assert marker in script
+   script=script.replace(marker,(ROOT/'domain/cpu_releases.js').read_text()+'\n'+marker)
+   guard_old="function cpuDraftPick(abbr){const pool=freeAgentPool();"
+   guard_new="function cpuDraftPick(abbr){const o=state.dynasty.offseason,remaining=o?.phase==='draft'?slotsWithSupplement().slice(o.pickCursor).filter(slot=>slot.owner===abbr).length:Math.max(0,15-rosterIds(abbr).length);const pool=window.GCC8_DRAFT_GUARD.candidates(roster(abbr),freeAgentPool(),remaining,R);"
+   assert guard_old in script
+   script=script.replace(guard_old,guard_new)
+   assert '}ensureCpuRosterShape(abbr)}' in script
+   script=script.replace('}ensureCpuRosterShape(abbr)}','}}')
+   script=script.replace('function addCareerMetaExisting(){for(const p of state.pool){', 'function addCareerMetaExisting(){for(const p of state.pool){window.GCC8_applyIdentity(p);')
+   script=script.replace("load=state.xi?.includes(p.id)?1:0","load=state.xi?.includes(p.id)||Object.values(state.cpuXIs||{}).some(ids=>ids.includes(p.id))?1:0")
+   script=script.replace('function isKeeper(p){return (p.keeping||0)>=65||p.role===\'WK-BAT\'}','function isKeeper(p){return R.isKeeper(p)}')
+   script=script.replace('`${state.seed}|scout-upside|${state.year}|${p.id}`','`${p.birthYear}|scout-upside|${state.year}|${p.id}`')
    script,n=re.subn(r'^  function runCpuMarket\([^\n]*\n',lambda m:(ROOT/'domain/cpu_market.js').read_text(),script,flags=re.M);assert n==1
    # Rolling club agreements: retain by default; every permanent player can be reviewed.
-   script=script.replace("log('OFF-SEASON',`${state.year} off-season opens`", "d.offseason.returningIds=rosterIds(state.userClub.abbr).slice();log('OFF-SEASON',`${state.year} off-season opens`")
+   script=script.replace("log('OFF-SEASON',`${state.year} off-season opens`", "cpuReleaseDecisions();d.offseason.returningIds=rosterIds(state.userClub.abbr).slice();log('OFF-SEASON',`${state.year} off-season opens`")
    script,n=re.subn(r'^  function contractCycle\(p\).*?\n','',script,flags=re.M);assert n==1
    script,n=re.subn(r'^  function contractDue\(p\).*?\n',"  function contractDue(p){return !!p&&!p.dynastyRetired&&!p.dynastyReplacement;}\n",script,flags=re.M);assert n==1
    script=script.replace('function applyCareerYear(p,year){const m=', 'function applyCareerYear(p,year){window.GCC8_JOB_MODEL.prepare(p,year);const m=')
@@ -104,7 +131,7 @@ def freeze():
    script=script.replace("SAVE_KEY='gcc_dynasty_v7_2'","SAVE_KEY='gcc_dynasty_v8'").replace("META_KEY='gcc_dynasty_meta_v7_2'","META_KEY='gcc_dynasty_meta_v8'").replace("LEGACY_SAVE_KEY='gcc_dynasty_v7_0'","LEGACY_SAVE_KEY='gcc_dynasty_v7_2'")
    marker='  window.Dynasty={beginOffseason'
    assert marker in script
-   script=script.replace(marker,"  window.GCC8_ENGINE_READ={coverStatus,matchProfile:c=>withFitnessContext(()=>window.GCC8_FOUNDATION_READ.effectiveProfile(c)),contractCandidates:()=>contractDecisionPlayers().map(p=>p.id),pickSlots:()=>slotsWithSupplement().map(x=>({...x})),cutBudget:()=>({limit:voluntaryCutLimit(),retired:userRetirementCount()}),freeAgents:()=>freeAgentPool().map(p=>p.id),replacements:id=>replacementPoolFor(pById(id)).map(p=>p.id),save:()=>autoSave(),xiProblem:()=>userXIProblem(),fresh:()=>{stopFoundationWatch();return startFreshWorld()},archive:()=>archiveSeason(),ownsPick:r=>userOwnsPick(r),scout:id=>{const p=pById(id);return p?{outlook:developmentRead(p),standing:scoutingLevel(p,state.userClub?.abbr),fit:scoutingFit(p,state.userClub?.abbr),recent:recentSeasonRead(p),contractDue:contractDue(p)}:null},records:()=>archiveRecords(),honours:()=>archiveClubHonours(),legends:()=>archiveUserLegends(),legacyRating:()=>managerScore()};\n"+marker)
+   script=script.replace(marker,"  window.GCC8_ENGINE_READ={coverStatus,fitPlayer:id=>withFitnessContext(()=>({...pById(id)})),squadProfile:ps=>withFitnessContext(()=>window.GCC8_FOUNDATION_READ.projectedDraftProfile(ps)),matchProfile:c=>withFitnessContext(()=>window.GCC8_FOUNDATION_READ.effectiveProfile(c)),contractCandidates:()=>contractDecisionPlayers().map(p=>p.id),pickSlots:()=>slotsWithSupplement().map(x=>({...x})),cutBudget:()=>({limit:voluntaryCutLimit(),retired:userRetirementCount()}),freeAgents:()=>freeAgentPool().map(p=>p.id),replacements:id=>replacementPoolFor(pById(id)).map(p=>p.id),save:()=>autoSave(),xiProblem:()=>userXIProblem(),fresh:()=>{stopFoundationWatch();return startFreshWorld()},archive:()=>archiveSeason(),ownsPick:r=>userOwnsPick(r),scout:id=>{const p=pById(id);return p?{outlook:developmentRead(p),standing:scoutingLevel(p,state.userClub?.abbr),fit:scoutingFit(p,state.userClub?.abbr),recent:recentSeasonRead(p),contractDue:contractDue(p)}:null},records:()=>archiveRecords(),honours:()=>archiveClubHonours(),legends:()=>archiveUserLegends(),legacyRating:()=>managerScore()};\n"+marker)
   (ROOT/'engine'/f'{name}.js').write_text(script)
  body=re.search(r'<body[^>]*>(.*?)</body>',text,re.S)[1]
  body=re.sub(r'<script\b[^>]*>[\s\S]*?</script>','',body,flags=re.I)
@@ -126,7 +153,7 @@ def build(output):
  # Omit the old home motion, moment overlays and visual identity scripts.
  # Their DOM side effects would escape the inert host; none owns cricket state.
  binding='const {setTimeout,clearTimeout,setInterval,clearInterval,requestAnimationFrame,cancelAnimationFrame}=window.GCC8_CLOCK;const MutationObserver=class{observe(){}disconnect(){}};'
- engine='<script>'+ (ROOT/'domain/career_paths.js').read_text()+'\n'+(ROOT/'domain/player_jobs.js').read_text()+'</script><script>window.GCC8_ENGINE_SCROLL=()=>{};'+(ROOT/'ui/clock.js').read_text()+'</script>'+ '\n'.join('<script>(()=>{'+binding+(ROOT/'engine'/f'{name}.js').read_text()+'})();</script>' for name in ['players','league','ratings','projections','cpu','foundation','dynasty'])
+ engine='<script>window.GCC8_IDENTITIES='+json.dumps(json.loads((ROOT/'domain/player_identity.json').read_text()))+';'+ (ROOT/'domain/player_identity.js').read_text()+'\n'+(ROOT/'domain/phase_exposure.js').read_text()+'\n'+(ROOT/'domain/draft_guard.js').read_text()+'\n'+(ROOT/'domain/career_paths.js').read_text()+'\n'+(ROOT/'domain/player_jobs.js').read_text()+'</script><script>window.GCC8_ENGINE_SCROLL=()=>{};'+(ROOT/'ui/clock.js').read_text()+'</script>'+ '\n'.join('<script>(()=>{'+binding+(ROOT/'engine'/f'{name}.js').read_text()+'})();</script>' for name in ['players','league','ratings','projections','cpu','foundation','dynasty'])
  ui='\n'.join('<script>'+ (ROOT/'ui'/f'{name}.js').read_text()+'</script>' for name in ['components','data','roles','venues','match_story','offseason','screens','dom','controller'])
  build_id=hashlib.sha256(((ROOT/'ui/game.css').read_text()+ui+engine+assets).encode()).hexdigest()[:16]
  template=template.replace('id="g8app"',f'id="g8app" data-build="{build_id}"')

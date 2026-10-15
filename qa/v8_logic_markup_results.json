@@ -1,0 +1,92 @@
+{
+  "scope": "Parsed VM HTML strings, not native rendered appearance, geometry, focus, scroll or input verification.",
+  "runs": [
+    {
+      "directory": "qa/logic/final-career-5603",
+      "scope": "Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.",
+      "view_states": 28,
+      "action_bindings": 738,
+      "errors": []
+    },
+    {
+      "directory": "qa/logic/final-career-5701",
+      "scope": "Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.",
+      "view_states": 28,
+      "action_bindings": 736,
+      "errors": []
+    },
+    {
+      "directory": "qa/logic/final-clubs/0",
+      "scope": "Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.",
+      "view_states": 22,
+      "action_bindings": 450,
+      "errors": []
+    },
+    {
+      "directory": "qa/logic/final-clubs/1",
+      "scope": "Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.",
+      "view_states": 20,
+      "action_bindings": 441,
+      "errors": []
+    },
+    {
+      "directory": "qa/logic/final-clubs/2",
+      "scope": "Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.",
+      "view_states": 22,
+      "action_bindings": 453,
+      "errors": []
+    },
+    {
+      "directory": "qa/logic/final-clubs/3",
+      "scope": "Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.",
+      "view_states": 22,
+      "action_bindings": 450,
+      "errors": []
+    },
+    {
+      "directory": "qa/logic/final-clubs/4",
+      "scope": "Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.",
+      "view_states": 22,
+      "action_bindings": 453,
+      "errors": []
+    },
+    {
+      "directory": "qa/logic/final-clubs/5",
+      "scope": "Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.",
+      "view_states": 20,
+      "action_bindings": 441,
+      "errors": []
+    },
+    {
+      "directory": "qa/logic/final-clubs/6",
+      "scope": "Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.",
+      "view_states": 22,
+      "action_bindings": 451,
+      "errors": []
+    },
+    {
+      "directory": "qa/logic/final-clubs/7",
+      "scope": "Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.",
+      "view_states": 22,
+      "action_bindings": 453,
+      "errors": []
+    },
+    {
+      "directory": "qa/v8_offseason_snapshot.json",
+      "scope": "Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.",
+      "view_states": 4,
+      "action_bindings": 104,
+      "errors": []
+    },
+    {
+      "directory": "qa/layout_pass/v8_markup_snapshot.json",
+      "scope": "Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.",
+      "view_states": 26,
+      "action_bindings": 553,
+      "errors": []
+    }
+  ],
+  "view_states": 258,
+  "action_bindings": 5723,
+  "errors": []
+}

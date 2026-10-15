@@ -1,0 +1,157 @@
+{
+  "artifact": "game/global_champions_cricket_v8_logic_review.html",
+  "artifactSha256": "356325d44873facc0bcea04c667112d50c10acf1fab67e390b51f08b1ba13d03",
+  "scope": "Full-universe career traversal and diagnostic flags, not primary-source certification of all players or empirical calibration. A flag is a review prompt, not necessarily a defect. Keeper quality below 65 retains specialist identity; early entry includes real young debuts. A badge/composite difference compares different model summaries.",
+  "players": 399,
+  "playerYears": 4946,
+  "flags": {
+    "earlyEntryReview": [
+      {
+        "name": "Noor Ahmad",
+        "year": 2019,
+        "age": 14
+      },
+      {
+        "name": "Vaibhav Suryavanshi",
+        "year": 2025,
+        "age": 14
+      }
+    ],
+    "lowKeeperQuality": [
+      {
+        "name": "Graham Manou",
+        "year": 2018,
+        "keeping": 61
+      },
+      {
+        "name": "Graham Manou",
+        "year": 2019,
+        "keeping": 59
+      },
+      {
+        "name": "Peter McGlashan",
+        "year": 2019,
+        "keeping": 64
+      },
+      {
+        "name": "James Foster",
+        "year": 2020,
+        "keeping": 64
+      },
+      {
+        "name": "Kamran Akmal",
+        "year": 2021,
+        "keeping": 63
+      },
+      {
+        "name": "Matt Prior",
+        "year": 2021,
+        "keeping": 63
+      },
+      {
+        "name": "Niall O'Brien",
+        "year": 2021,
+        "keeping": 62
+      },
+      {
+        "name": "Kamran Akmal",
+        "year": 2022,
+        "keeping": 61
+      },
+      {
+        "name": "Matt Prior",
+        "year": 2022,
+        "keeping": 60
+      },
+      {
+        "name": "Luke Ronchi",
+        "year": 2022,
+        "keeping": 63
+      },
+      {
+        "name": "Parthiv Patel",
+        "year": 2024,
+        "keeping": 62
+      },
+      {
+        "name": "Tim Paine",
+        "year": 2024,
+        "keeping": 63
+      },
+      {
+        "name": "Parthiv Patel",
+        "year": 2025,
+        "keeping": 60
+      },
+      {
+        "name": "Tim Paine",
+        "year": 2025,
+        "keeping": 60
+      }
+    ],
+    "forecastDisagreement": [],
+    "badgeVersusCompositeGap": [
+      {
+        "name": "Glenn Maxwell",
+        "year": 2021,
+        "overall": 96,
+        "roleFit": 79.747,
+        "bat": 90,
+        "bowl": 68,
+        "role": "AR"
+      },
+      {
+        "name": "Liam Livingstone",
+        "year": 2022,
+        "overall": 94,
+        "roleFit": 79.92420000000001,
+        "bat": 89,
+        "bowl": 70,
+        "role": "AR"
+      },
+      {
+        "name": "Daryl Mitchell",
+        "year": 2023,
+        "overall": 92,
+        "roleFit": 75.59259999999999,
+        "bat": 87,
+        "bowl": 62,
+        "role": "AR"
+      },
+      {
+        "name": "Will Jacks",
+        "year": 2024,
+        "overall": 92,
+        "roleFit": 77.02879999999999,
+        "bat": 89,
+        "bowl": 66,
+        "role": "AR"
+      },
+      {
+        "name": "Abhishek Sharma",
+        "year": 2025,
+        "overall": 95,
+        "roleFit": 79.89819999999999,
+        "bat": 92,
+        "bowl": 66,
+        "role": "AR"
+      },
+      {
+        "name": "Saim Ayub",
+        "year": 2026,
+        "overall": 94,
+        "roleFit": 78.31559999999999,
+        "bat": 87,
+        "bowl": 68,
+        "role": "AR"
+      }
+    ],
+    "thinFrontline": []
+  },
+  "injuryOwnershipComparison": {
+    "name": "Dale Steyn",
+    "human": 0.0175,
+    "cpu": 0.0175
+  },
+  "errors": []
+}

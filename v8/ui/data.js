@@ -2,7 +2,7 @@
 (() => {
  const X=window.GCC8,{G,R,read,esc,btn,roster}=X,F=window.GCC8_FOUNDATION_READ,s=G.state;
  let cachedRoster='',cachedProfile=null;
- X.squadProfile=()=>{const ps=roster().filter(p=>G.state.dynasty?.injuries?.[p.id]?.status!=='OUT'),key=JSON.stringify(ps);if(key!==cachedRoster){cachedRoster=key;cachedProfile=F.projectedDraftProfile(ps);}return cachedProfile||R.profile([]);};
+ X.squadProfile=()=>{const ps=roster().filter(p=>G.state.dynasty?.injuries?.[p.id]?.status!=='OUT'),key=JSON.stringify([ps,ps.map(p=>s.dynasty?.injuries?.[p.id]?.status||null)]);if(key!==cachedRoster){cachedRoster=key;cachedProfile=read.squadProfile(ps);}return cachedProfile||R.profile([]);};
  const stat=(l,v)=>`<div class="g8statrow"><span>${esc(l)}</span><b>${esc(v)}</b></div>`;
  X.clubSeasonRecords=()=>{
   const rows=new Map(),entry=p=>{if(!rows.has(p.id))rows.set(p.id,{p,t:{matches:0,innings:0,runs:0,balls:0,outs:0,fours:0,sixes:0,wickets:0,bowlBalls:0,runsConceded:0,bestRuns:0,bestWickets:0,bestBowlingRuns:null}});return rows.get(p.id).t;};
@@ -46,11 +46,11 @@
  };
  X.draftHints=p=>{
   const strengths=[['PP batting',R.batPhaseScore(p,'powerplay')],['Middle batting',R.batPhaseScore(p,'middle')],['Finishing',R.batPhaseScore(p,'death')],...(R.bowlingWorkload(p)>0?[['New ball',R.bowlPhaseScore(p,'newBall')],['Middle bowling',R.bowlPhaseScore(p,'middle')],['Death bowling',R.bowlPhaseScore(p,'death')]]:[])].sort((a,b)=>b[1]-a[1]).slice(0,2);
-  return `<div class="g8drafthints"><span>${esc(R.battingRoleBand(p))} · ${p.keeping>=65?'Recognised keeper':R.bowlingStyle(p)||'Batting specialist'}</span><b>${strengths.map(([label,n])=>`${label} ${Math.round(n)}`).join(' · ')}</b><span>${esc(X.bowlingRole(p))}</span></div>`;
+  return `<div class="g8drafthints"><span>${esc(R.battingRoleBand(p))} · ${R.isKeeper(p)?'Recognised keeper':R.bowlingStyle(p)||'Batting specialist'}</span><b>${strengths.map(([label,n])=>`${label} ${Math.round(n)}`).join(' · ')}</b><span>${esc(X.bowlingRole(p))}</span></div>`;
  };
  X.draftAdvice=()=>{
   const ps=roster(),p=X.squadProfile();
-  const note=!ps.length?'Start with a player you can build around. Then cover the jobs across an innings.':!ps.some(p=>p.keeping>=65)?'You still need a recognised wicketkeeper.':(p.oversCapacity<20||p.trustedOversCapacity<18)?'Your attack needs another dependable bowling option.':p.death<70?'Look for someone who can bowl the closing overs.':'The core jobs are covered. Pick the player who improves your side.';
+  const note=!ps.length?'Start with a player you can build around. Then cover the jobs across an innings.':!ps.some(R.isKeeper)?'You still need a recognised wicketkeeper.':(p.oversCapacity<20||p.trustedOversCapacity<18)?'Your attack needs another dependable bowling option.':p.death<70?'Look for someone who can bowl the closing overs.':'The core jobs are covered. Pick the player who improves your side.';
   return `<p class="g8draftadvice">${esc(note)}</p>`;
  };
  X.seasonContributors=()=>{
@@ -88,8 +88,8 @@
  X.phaseOptions=(key,squad=false)=>{
   const ps=squad?X.roster():G.state.xi.map(G.byId).filter(Boolean),scorers={powerplayBat:p=>R.batPhaseScore(p,'powerplay'),middleBat:p=>R.batPhaseScore(p,'middle'),finishing:p=>R.batPhaseScore(p,'death'),newBall:p=>R.bowlPhaseScore(p,'newBall'),middleBowl:p=>R.bowlPhaseScore(p,'middle'),death:p=>R.bowlPhaseScore(p,'death'),fielding:p=>p.fielding,keeping:p=>p.keeping};
   const fn=scorers[key];if(!fn)return '';
-  const bowling=['newBall','middleBowl','death'].includes(key),options=ps.filter(p=>!bowling||R.bowlingWorkload(p)>0).map(p=>({p,score:fn(p)})).sort((a,b)=>b.score-a.score).slice(0,3);
-  return `<div class="g8phaseoptions"><span class="g8eyebrow">LEADING OPTIONS · ${squad?'SQUAD':'XI'}</span>${options.map(({p,score})=>`<div class="g8statrow"><b>${esc(p.name)}</b><span>${Math.round(score)}</span></div>`).join('')}<p class="g8fine">Individual ability in this phase. Team roles, conditions and workload still affect the match.</p></div>`;
+  const bowling=['newBall','middleBowl','death'].includes(key),options=ps.filter(p=>G.state.dynasty?.injuries?.[p.id]?.status!=='OUT'&&(!bowling||R.bowlingWorkload(p)>0&&R.bowlingStyle(p))).map(p=>({p,score:fn(read.fitPlayer(p.id))})).sort((a,b)=>b.score-a.score).slice(0,3);
+  return `<div class="g8phaseoptions"><span class="g8eyebrow">LEADING OPTIONS · ${squad?'SQUAD':'XI'}</span>${options.map(({p,score})=>`<div class="g8statrow"><b>${esc(p.name)}</b><span>${Math.round(score)}</span></div>`).join('')}<p class="g8fine">Available options, including managed-fitness effects. Team roles, conditions and workload still affect the match.</p></div>`;
  };
  X.historyRead=()=>{
   const r=read.records(),honours=read.honours(),legends=read.legends();

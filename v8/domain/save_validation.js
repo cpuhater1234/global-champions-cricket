@@ -44,8 +44,10 @@ function validSave(save){
   const m=d.v8Match;if(m&&(!record(m)||!Number.isInteger(m.count)||m.count<0||m.count>(m.presentationVersion===2?9:5)||!Number.isInteger(m.speedIndex)||m.speedIndex<0||m.speedIndex>2||typeof m.running!=='boolean'||!['result','finals'].includes(m.returnView)||!record(m.reference)||!['regular','semis','gf'].includes(m.reference.type)))return false;
   if(m?.presentationVersion!=null&&m.presentationVersion!==2)return false;
   if(m?.presentationVersion===2){const ref=m.reference,r=ref.type==='regular'?s.results.find(x=>x.round===ref.round):ref.type==='gf'?s.finals?.gf:s.finals?.semis?.[ref.index];if(!r||m.count>(r.superOver?9:8))return false;}
+
   const o=d.offseason;if(o?.returningIds&&(!Array.isArray(o.returningIds)||!unique(o.returningIds)||o.returningIds.some(id=>!Number.isInteger(id)||!ids.has(id))))return false;
   if(o&&(!record(o)||!['market','lottery','draft','cuts','ready'].includes(o.phase)||['retirements','arrivals','lottery','picks','voluntaryCuts','finalCuts'].some(k=>!Array.isArray(o[k]))||!Number.isInteger(o.pickCursor)||o.pickCursor<0))return false;
+  if(o?.cpuReleases!=null){const moves=o.cpuReleases;if(!record(moves))return false;const released=[];for(const [abbr,cutIds] of Object.entries(moves)){if(!clubs.includes(abbr)||abbr===s.userClub?.abbr||!Array.isArray(cutIds)||cutIds.length>Math.min(2,Math.max(0,4-o.retirements.filter(r=>r.owner===abbr).length))||cutIds.some(id=>!Number.isInteger(id)||!ids.has(id)))return false;released.push(...cutIds);}if(!unique(released))return false;}
  }
  return true;
 }
