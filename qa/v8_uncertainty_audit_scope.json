@@ -1,0 +1,23 @@
+{
+  "artifact": "game/global_champions_cricket_v8_logic_review.html",
+  "artifactSha256": "356325d44873facc0bcea04c667112d50c10acf1fab67e390b51f08b1ba13d03",
+  "productChanged": false,
+  "careerVarianceFixed": false,
+  "status": "Read-only audit; architectural design approval pending",
+  "evidence": {
+    "qa/v8_uncertainty_audit.mjs": "1f5c7c4ae6cd35d6d8760341ecdfe3a18c337b3772408c4a6dcc89127d6667ae",
+    "qa/v8_statistics_crosscheck.py": "05e13218ea079d1f3676c86e1b9ca01f88af00c108e751cf66ff4d1be33e8275",
+    "qa/v8_statistics_frontend_review.mjs": "b6ecab5d3fbc8fe69fbc36dfe7cef558ab602891b31b1a31ae6ecf79f2060469",
+    "qa/v8_uncertainty_review_results.json": "1635e98c1594fb9728a5fa2fefe85d0651105b1a1fa82b8045bf20c76670cc4e",
+    "qa/v8_individual_player_audit.json": "8982cabf618d21b396daa8ae70b0c3bc5b219f16c54d3a2ecd773b0b3eec4415",
+    "qa/v8_numeric_crosscheck_results.json": "77deebef1ab8639c734cadf31b98e4b8ea289263f6b6c8974a3d7930cc1083f3",
+    "qa/v8_statistics_frontend_review_results.json": "8772c20d164cc1dffea0d3cadf143b1221f364484eb81a0110bb3f5904f203e3"
+  },
+  "limits": [
+    "No native rendered evidence",
+    "No empirical historical calibration",
+    "No full primary-source biography certification",
+    "No new full careers; secondary checks reuse captured fixtures",
+    "Large captured fixtures not included in this checkpoint"
+  ]
+}
