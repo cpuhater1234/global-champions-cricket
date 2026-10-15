@@ -1,0 +1,12 @@
+{
+  "policyArtifactSha256": "6fc841507500a34eb3238d931907c24f5c9c8d7b9f82ece9938fb8209a83fab1",
+  "finalArtifactSha256": "ff3b637d3af692e361b0c96b452c4384dacd218c035ac38a1b6f50171843f485",
+  "freshWorldsCompared": 12,
+  "repeatedCohortsIdentical": 16,
+  "changedBlocks": [
+    1,
+    15
+  ],
+  "scope": "Completed 48 policy cohorts retained at recorded original digest. Later migration module differs only on old-save initialisation; cohort never loads a save. All twelve fresh world pools/curves/seeds/leagues are byte-identical. Every match/AI/rating engine block is identical; other change is retained-development UI filtering. Partial redundant rerun excluded from headline counts.",
+  "errors": []
+}

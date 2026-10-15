@@ -10,7 +10,7 @@
   return (p.dynastyCareer?.debutYear||2008)>s.year?'Not yet eligible':p.available===false?'Outside the GCC player pool':'Available in the player pool';
  };
  X.developmentPanel=()=>{
-  const rows=(s.dynasty?.developmentByYear?.[s.year]||[]).filter(r=>r.owner===s.userClub?.abbr),top=window.GCC8_DEVELOPMENT.summary(rows);
+  const retained=new Set(roster().filter(p=>!p.dynastyRetired).map(p=>p.id)),rows=(s.dynasty?.developmentByYear?.[s.year]||[]).filter(r=>r.owner===s.userClub?.abbr&&retained.has(r.playerId)),top=window.GCC8_DEVELOPMENT.summary(rows);
   if(!rows.length)return '';
   const line=r=>`<div class="g8developmentrow ${r.delta>0?'improved':r.delta<0?'declined':'steady'}"><div><b>${esc(r.name)}</b><span>${r.delta>=2?'Finding another gear':r.delta<=-2?'A tougher year ahead':'Holding his level'} · ${esc(r.role==='AR'?'All-rounder':r.role==='BOWL'?'Bowler':r.role==='WK-BAT'?'Wicketkeeper-batter':'Batter')}</span></div><strong aria-label="Rating ${r.fromOverall} to ${r.toOverall}">${r.fromOverall} <span aria-hidden="true">→</span> ${r.toOverall}</strong></div>`;
   return `<section class="g8development"><span class="g8eyebrow">PLAYER DEVELOPMENT · ${s.year}</span><h3>The returning core.</h3><p>Underlying ability since last season. Form and fitness are separate.</p>${top.length?top.map(line).join(''):'<p>The group is holding its level. No major rating changes this year.</p>'}<details class="g8moredata"><summary>View every returning player's development</summary>${rows.map(line).join('')}</details></section>`;

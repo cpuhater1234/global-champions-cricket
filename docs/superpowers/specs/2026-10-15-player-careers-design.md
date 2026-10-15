@@ -1,6 +1,6 @@
 # Player identity, uncertain careers and fair scouting
 
-Status: proposed written design for Tom's review. Direction approved in conversation; this document and an implementation plan are not yet approved. No product changes accompany this specification.
+Status: approved and implemented. Tom approved the written specification and plan, then explicitly requested implementation. See `docs/GCC_V8_CAREER_VARIATION.md` for actual evidence and documented implementation rulings.
 
 ## Intended experience
 
@@ -99,6 +99,8 @@ Native rendered review must inspect long names, all role labels, contrasting gai
 
 ## Review and implementation handoff
 
-Self-review: the design separates facts, estimates and outcomes; private/public APIs; new-world versus old-save behaviour; and current-year versus future changes. Numeric probabilities are proposed game defaults with explicit tests, not sourced cricket facts. No implementation has started. Read the latest handoff and uncertainty audit alongside this specification.
+Self-review: the design separates facts, estimates and outcomes; private/public APIs; new-world versus old-save behaviour; and current-year versus future changes. Numeric probabilities are proposed game defaults with explicit tests, not sourced cricket facts. Implementation and verification are recorded in the completed review. Read the latest handoff alongside this specification.
 
-After Tom approves this written specification, create the detailed implementation plan with the writing-plans skill. Its review and execution-method selection precede product changes under the currently applicable brainstorming workflow.
+Tom approved the written specification and native implementation plan. Execution is complete; actual evidence and scoped limitations are recorded in the career-variation review.
+
+Implementation note: outcomes and public priors persist once per key in dynasty.careerStore, with non-enumerable runtime references on players. Snapshots use packed vectors. Continuing active players preserve current skills and bridge future profile corrections over up to four years; future arrivals use corrected entry profiles. These implement the approved persistence/compatibility goals without duplicating metadata into scorecards.

@@ -1,0 +1,9 @@
+{
+  "matrixArtifactSha256": "d4f8516bf5878c9baa14465c922dafdb3c659800f753e19fdeb50b30a563b9ae",
+  "finalArtifactSha256": "ff3b637d3af692e361b0c96b452c4384dacd218c035ac38a1b6f50171843f485",
+  "scriptBlocks": 19,
+  "changedBlocks": [
+    15
+  ],
+  "scope": "Only offseason UI read module changed: returning-development panel now filters to retained roster. Every other script block, including career, CPU, match, validation, persistence and controller, is byte-identical."
+}

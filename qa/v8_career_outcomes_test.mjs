@@ -1,6 +1,7 @@
 import fs from 'node:fs';import vm from 'node:vm';import assert from 'node:assert/strict';
 const ctx={window:{}};ctx.window=ctx;vm.createContext(ctx);vm.runInContext(fs.readFileSync('v8/engine/ratings.js','utf8'),ctx);const path='v8/domain/career_outcomes.js';assert.ok(fs.existsSync(path),'saved outcome domain must exist');vm.runInContext(fs.readFileSync(path,'utf8'),ctx);const O=ctx.GCC8_OUTCOMES;
 const keys=['bat','power','control','pacePlay','spinPlay','finishing','bowl','newBall','death','bowlControl','variation','spin','pace','running','fielding','keeping','temperament','leadership','overall'],anchor=Object.fromEntries(keys.map(k=>[k,75]));Object.assign(anchor,{role:'AR',preferredSlot:5,maxOvers:4,form:0});const base=Object.fromEntries(Array.from({length:19},(_,i)=>[2008+i,{...anchor}]));const profile={careerKey:'fixture',primaryFamily:'balanced'};
+assert.equal(O.draw(1,'glenn-maxwell','component'),0.0960291363298893,'version-one hash vector');assert.equal(O.draw(6007,'rashid-khan','amplitude'),0.6840471928007901,'version-one hash vector');
 const o=O.create(profile,1901,2008,anchor,base);assert.ok(O.validate(o));assert.deepEqual(JSON.parse(JSON.stringify(O.skillsAt(o,2008))),anchor);assert.deepEqual(O.skillsAt(o,2017),O.skillsAt(o,2017));assert.deepEqual(O.create(profile,1901,2008,anchor,base),o);
 for(const [u,want]of [[0,'typical'],[.939999,'typical'],[.94,'moderate'],[.96,'severe'],[.97,'breakout']])assert.equal(O.componentAt(u),want);
 assert.equal(O.smoothstep(0),0);assert.equal(O.smoothstep(1),1);assert.equal(O.smoothstep(.5),.5);

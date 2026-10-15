@@ -18,10 +18,16 @@ window.GCC8_CAREER_STATE=(()=>{
    const baseline={};for(let year=anchorYear;year<=end;year++){
     const q=copy(p);baselineAt(q,year);q._peakSkills=peak;q._factor=q.overall/Math.max(1,peakPlayer.overall);
     // Old current ratings are authoritative; corrections affect new worlds or future years only.
-    const expected=mode==='loaded'?snapshot(q):snapshot(P.expectedSkills(profile,year,q));
+    const expected=snapshot(P.expectedSkills(profile,year,q));
     baseline[year]=O.packSkills(expected);
    }
    let anchor=mode==='loaded'&&anchorYear===state.year?snapshot(p):O.unpackSkills(baseline[anchorYear]);
+   if(mode==='loaded'&&anchorYear===state.year){
+    // Correct future templates without rewriting the saved current ability. Bridge
+    // any calibration difference over the same four-year development window.
+    const correctedAnchor=O.unpackSkills(baseline[anchorYear]),finish=Math.min(end,anchorYear+4);
+    for(let y=anchorYear+1;y<=end;y++){const q=O.unpackSkills(baseline[y]),weight=1-O.smoothstep((y-anchorYear)/Math.max(1,finish-anchorYear));for(const k of O.keys)q[k]=Math.max(1,Math.min(99,Math.round(q[k]+(anchor[k]-correctedAnchor[k])*weight)));baseline[y]=O.packSkills(q);}
+   }
    baseline[anchorYear]=O.packSkills(anchor);
    p.careerExpected={anchorYear,baselineByYear:copy(baseline),primaryFamily:profile.primaryFamily};
    p.careerOutcome=O.create(profile,d.careerModel.seed,anchorYear,anchor,baseline);
