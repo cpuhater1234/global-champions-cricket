@@ -113,11 +113,11 @@ window.GCC8_DELIVERY=(()=>{
      if(d.wicket){wickets++;b.outs++;if(!d.dismissal.startsWith('run out'))bo.wickets++;}
      if(d.total!==total||d.wickets!==wickets||d.balls!==balls||bo.balls>24)return false;previous=d;
     }
-    if(inn.total!==total||inn.balls!==balls||inn.wickets!==wickets||card.total!==total||card.balls!==balls||card.wickets!==wickets||card.extras!==ex.total)return false;
+    if(inn.total!==total||inn.balls!==balls||inn.wickets!==wickets||card.total!==total||card.balls!==balls||card.wickets!==wickets||card.extras!==ex.total||card.overs!==overs(balls))return false;
     for(const k of ['pp','mid','death'])if(inn[k]!==ph[k]||card.phases[k]!==ph[k]||card.phaseBalls?.[k]!==pb[k]||inn.phaseBalls?.[k]!==pb[k])return false;
     for(const k of Object.keys(ex))if(card.extrasBreakdown[k]!==ex[k]||inn.extrasBreakdown?.[k]!==ex[k])return false;
     for(const b of card.batting){const t=bats.get(b.player.id),historicalBalls=t.balls-ds.filter(d=>d.batterId===b.player.id&&d.extra==='noBalls').length;/* Previous delivery saves omitted no-balls from balls faced. Preserve those records without rewriting them. */const savedBalls=b.balls;if(b.runs!==t.runs||inn.batterRuns?.[b.player.id]!==t.runs||![t.balls,historicalBalls].includes(savedBalls)||b.fours!==t.fours||b.sixes!==t.sixes||(b.dismissal!=='not out'&&!b.dnb?1:0)!==t.outs||(savedBalls?(!Number.isFinite(b.sr)||Math.abs(b.sr-b.runs*100/savedBalls)>1e-9):b.sr!==null))return false;}
-    for(const b of card.bowling){const t=bowls.get(b.player.id);if(b.runs!==t.runs||b.balls!==t.balls||b.wickets!==t.wickets||(b.balls?(!Number.isFinite(b.economy)||Math.abs(b.economy-b.runs*6/b.balls)>1e-9):b.economy!==null))return false;}
+    for(const b of card.bowling){const t=bowls.get(b.player.id);if(b.runs!==t.runs||b.balls!==t.balls||b.wickets!==t.wickets||b.overs!==overs(t.balls)||(b.balls?(!Number.isFinite(b.economy)||Math.abs(b.economy-b.runs*6/b.balls)>1e-9):b.economy!==null))return false;}
     for(const n of inn.notices){if(!Number.isInteger(n.after)||n.after<0||n.after>ds.length||typeof n.text!=='string'||n.text.length>500)return false;const last=ds[n.after-1];if(n.total!==(last?.total||0)||n.balls!==(last?.balls||0)||n.wickets!==(last?.wickets||0))return false;}
     const chasing=r.battingSecond?.abbr===club.abbr,target=chasing?(r.battingFirst.abbr===r.home.abbr?r.homeInnings:r.awayInnings).total+1:0;
     if(target&&ds.slice(0,-1).some(d=>d.total>=target)||balls!==120&&wickets!==10&&!(target&&total>=target))return false;
