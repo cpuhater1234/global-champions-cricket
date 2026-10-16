@@ -75,3 +75,11 @@ This document is an execution contract, not proof tests were run. The new delive
 **One narrow executed check:** reconstructed the exact functional body of the connected-source `v8/ui/clock.js` into a local Node VM harness with deterministic fake timers. The pause/same-time/resume/cancel test completed with `PASS timer boundaries`. This is independent narrow evidence using a manually transferred module body, **not** an execution of the repository checkout or the shipped HTML. GitHub source was re-read during this checkpoint.
 
 G0 stays blocked pending an environment with authenticated repository checkout plus Python/Node. Do not elevate reconstructed-module smoke results to release certification. Existing source changes and unexecuted regression scripts remain preserved on the working branch.
+
+## Additional source hardening, current turn
+
+- Container checkout probe repeated: `git ls-remote` remains blocked by `Could not resolve host: github.com`. Full clean checkout/build cannot run here.
+- Local previously preserved timer harness rerun with Node: `PASS: same-time pause, resume, cancellation, and retained pending job`; separate `qa/clock_test.cjs` also reported `PASS timer boundaries`. These are narrow module tests, not the full game.
+- GitHub source inspection identified NaN / Infinity bypass in numeric scorecard comparisons (`Math.abs(NaN - expected) > tolerance` evaluates false). Source fix `c107fa78` requires `Number.isFinite` for batting strike rates and bowling economy when balls > 0.
+- Regression script updated at `4d4d918` with explicit NaN, positive/negative Infinity, null strike-rate tampering and nonfinite bowling economy rejection. These newly committed tests have **not** been run in a full checkout; they remain outstanding in G0.
+- No promotion, full career certification, or native visual approval.
