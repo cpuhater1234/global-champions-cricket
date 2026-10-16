@@ -37,3 +37,9 @@ The engine still uses a transitional hidden legacy adapter. Native browser inter
 - `qa/v8_delivery_boundary_regression.mjs` (`169a0a8a`): exercises the actual delivery module across deterministic RNG seeds until it encounters both wides and no-balls, checks batting balls faced / strike rates, legal bowling counts and innings terminal references. Newly committed but not yet executed against a checkout.
 
 **Verification distinction:** A local deterministic timer harness passed against copied logic; it is not equivalent to running the exact committed source nor does it certify the playable. The environment cannot resolve github.com for a full clone. Full suites, rebuilt playable, native rendering and save compatibility remain pending. No promotion or release has been made.
+
+## Precision audit follow-up
+
+Commit `998bfc69` extends `qa/v8_delivery_boundary_regression.mjs` with 100 seeded complete two-innings result fixtures, strict `validResult()` acceptance checks, reproduction of historical no-ball undercounts with historical strike rates, and intentional batter balls / strike-rate tampering that must be rejected. This is committed **test code**, not an executed passing result. `scorecard()` mutates innings by removing their transient `card` fields; the fixture assembles the match after generation accordingly.
+
+Additional inspection confirmed the live bowling-change view derives surge labels from the innings surge start. The current validator accepts both historical and corrected ball counts to preserve old saves. That tolerance is limited to the actual number of no-balls delivered to each batter; it is not a blanket permissive numeric range. A full executable verification and rendered playtest are still mandatory before main promotion.
