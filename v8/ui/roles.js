@@ -28,6 +28,6 @@
  };
  X.squadRoster=()=>{
   const groups=[['WK-BAT','Wicketkeeper-batters'],['BAT','Batters'],['AR','All-rounders'],['BOWL','Bowlers']];
-  return `<div class="g8dressingroom">${groups.map(([role,label])=>{const players=roster().filter(p=>p.role===role);return players.length?`<section class="g8squadgroup g8role-${role}"><h3>${label}</h3>${players.map(p=>`<div class="g8squadmember"><div><b>${esc(p.name)}</b><span class="g8rowrating" aria-label="Current player rating ${p.overall}">${p.overall}</span></div><small>${esc(X.roleLine(p))}</small>${btn('Scout','inspect',[p.id],'g8small')}</div>`).join('')}</section>`:'';}).join('')}</div>`;
+  return `<div class="g8dressingroom">${groups.map(([role,label])=>{const players=roster().filter(p=>p.role===role);return players.length?`<section class="g8squadgroup g8role-${role}"><h3>${label}</h3>${players.map(p=>`<div class="g8squadmember"><div><b>${esc(p.name)}</b><span class="g8rowrating" aria-label="Current player rating ${p.overall}">${p.overall}</span></div>${btn('Scout','inspect',[p.id],'g8small')}</div>`).join('')}</section>`:'';}).join('')}</div>`;
  };
 })();

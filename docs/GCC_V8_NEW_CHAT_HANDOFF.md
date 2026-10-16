@@ -333,3 +333,20 @@ Final artifact:34 focused suites passed, all20 catalog clubs completed naturally
 Long-career main hosts began on3dd41d2; later cold loads read the final file. Only visible controller script19 differs, adding stale-empty-intro prevention and consuming fresh-start confirmation. Every engine/codec/player/CPU/match script is byte-identical, with a reconstructed exact matrix digest checked. Do not call these pure final-controller full careers. Fresh9901 completed2008–2026; old completed2008 save9919 continued2009–2026; both cold-loaded legacy under a5 MiB UTF-16 quota model. Peak attempted save2,210,890 bytes; zero quota failures. Total59 newly played season runs/826 regular user matches excludes pre-existing2008 and duplicate diagnostics.855 captured matches/1,710 innings passed35,928 bounds and46,132 identity checks. All20 saves passed6,526 frontend checks/299 displayed books/300 average rows, and501 parsed states/11,076 bindings passed markup. Superseded/interrupted runs are excluded. Raw large fixtures remain local; reports are not a complete reproduction bundle.
 
 No native rendering/input/focus/scroll/zoom/photo/smoothness certification.371 legacy identities remain uncertified; rating estimates, badge/composite calibration, club-games chemistry, historical calibration and human enjoyment limits remain. CPU/match rules unchanged. Preserve all browser/no-deployment/no-subagent restrictions, accepted arcade design, manual XI, no salary-cap/wage/renewal or JSON UI. Source is checkpointed on the existing feature branch; playable remains a separate file.
+
+
+## Latest: draft and lineup micro-layout pass · 16 October 2026
+
+Supersedes the gap-review playable as the latest artifact. User approves the arcade direction; requests less crowding, intact labels, easier full-lineup viewing and home overlap fixes.
+
+- Source parent `95c19a10d7022a9300b928e7c2c55fa4065f8697`; checkpoint remains on `work/v8-game-first-rebuild`.
+- Playable `game/global_champions_cricket_v8_micro_layout.html`, SHA256 `99a874d19b0cd5d398ec13af8386298728f3c55a6a1784f22949e73910647e0d`.
+- Same Library identity `libfile_8796918e6cd48191a99df448f56dbf70`, version27, canonical `/global_champions_cricket_v8_micro_layout.html`; local metadata applied.
+- Draft sidebar has a compact roster without a fixed-height inner scroll area. Role groups, names, ratings and Scout stay visible. Analysis and latest16 picks are dedicated dialogs, pausing CPU reveals, for foundation and annual drafts.
+- Matchup read controls have 240px intrinsic tracks and normal word boundaries. Wide team room uses full-width panels and two numbered batting-order columns (1–6 /7–11) from900px; compact rows retain role-fit and editing controls. Narrow screens remain one column and can require page scrolling.
+- Lime feedback no longer floats over the game: it sits in normal flow beneath HUD. Home actions have more shadow/movement spacing. The specific reported rectangle is not visually identified.
+- Final artifact passed12 focused regression suites (2883 assertions), including64 new micro-layout checks; two-season HEA seed8831 run passed1722 checks/28 regular matches,2 finals paths and8 reload checkpoints, zero reported errors/quota failures. Markup parser results under `qa/micro-layout`.
+- Build still reproducible via `python3 v8/build.py --freeze --output game/global_champions_cricket_v8_micro_layout.html`. Never patch generated engine files.
+- No simulation, save codec, player data or CPU model changes. Only executable blocks13(roles),17(screens),19(controller) differ from prior1799 artifact. CSS and shell changed separately.
+- Read `docs/GCC_V8_MICRO_LAYOUT.md` and `qa/v8_micro_layout_scope.json` for exact scope. Generated raw VM snapshots stay local; compact results and source tests are checkpointed.
+- **No rendered evidence obtained.** Do not claim all overlaps fixed, whole XI fits every screen, measured native scroll/focus, image layout, or smoothness. Existing browser restrictions and all previous data/model limitations remain. Next visual verification must use permitted user-operated screenshots/layout captures.
