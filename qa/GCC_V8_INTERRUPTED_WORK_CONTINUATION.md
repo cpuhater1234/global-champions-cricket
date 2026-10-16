@@ -30,3 +30,10 @@ Commits in application order:
 ## Unresolved baseline limitations
 
 The engine still uses a transitional hidden legacy adapter. Native browser interaction, photo delivery and smoothness were not verified. Several historical player identities and match-distribution calibration remain uncertified. The current continuation did not execute a full playable rebuild or test run, and did not deploy, promote to main, or create a release.
+
+## Additional regression coverage in this continuation
+
+- `qa/v8_clock_pause_regression.mjs` (`dd220ab2`): deterministic execution of the committed timer module with a fake monotonic clock. Covers same-due jobs, pause/resume and cancellation during pause. A local mirrored-source smoke case passed; the committed test file must still be run in a clean checkout.
+- `qa/v8_delivery_boundary_regression.mjs` (`169a0a8a`): exercises the actual delivery module across deterministic RNG seeds until it encounters both wides and no-balls, checks batting balls faced / strike rates, legal bowling counts and innings terminal references. Newly committed but not yet executed against a checkout.
+
+**Verification distinction:** A local deterministic timer harness passed against copied logic; it is not equivalent to running the exact committed source nor does it certify the playable. The environment cannot resolve github.com for a full clone. Full suites, rebuilt playable, native rendering and save compatibility remain pending. No promotion or release has been made.
