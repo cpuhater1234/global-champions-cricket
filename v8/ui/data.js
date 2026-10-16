@@ -104,7 +104,7 @@
  const X=window.GCC8;
  X.bowlingChanges=(r,card)=>{
   const innings=card.club.abbr===r.home.abbr?r.homeInnings:r.awayInnings,plan=innings.bowlingPlan||[],used=plan.slice(0,innings.deliveries?new Set(innings.deliveries.map(d=>d.over)).size:Math.ceil(card.balls/6));if(!used.length)return '';
-  return `<details class="g8moredata"><summary>The bowling changes</summary><p class="g8fine">The model’s over-by-over bowling allocation. The final over may be incomplete when the innings ends.</p><div class="g8overplan">${used.map((id,i)=>`<div><small>OVER ${i+1} · ${i<6?'POWERPLAY':i<15?'MIDDLE':'DEATH'}</small><b>${X.esc(X.G.byId(id)?.name||'Bowler')}</b></div>`).join('')}</div></details>`;
+  return `<details class="g8moredata"><summary>The bowling changes</summary><p class="g8fine">The model’s over-by-over bowling allocation. The final over may be incomplete when the innings ends.</p><div class="g8overplan">${used.map((id,i)=>`<div><small>OVER ${i+1} · ${i<4?'POWERPLAY':innings.surge?.startOver&&i+1>=innings.surge.startOver&&i+1<innings.surge.startOver+2?'POWER SURGE':i<15?'MIDDLE':'DEATH'}</small><b>${X.esc(X.G.byId(id)?.name||'Bowler')}</b></div>`).join('')}</div></details>`;
  };
 })();
 
