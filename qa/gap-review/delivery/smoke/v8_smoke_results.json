@@ -1,0 +1,48 @@
+{
+  "scope": "Real cricket engine + new UI dispatch in a VM DOM stub. No browser, visual, geometry, focus or latency certification.",
+  "seed": 9937,
+  "club": "RR",
+  "coverage": {
+    "reloads": [
+      {
+        "year": 2008,
+        "label": "foundation-user-pick"
+      },
+      {
+        "year": 2008,
+        "label": "manual-XI"
+      },
+      {
+        "year": 2009,
+        "label": "annual-order"
+      },
+      {
+        "year": 2009,
+        "label": "annual-user-pick"
+      },
+      {
+        "year": 2009,
+        "label": "finals-ready"
+      },
+      {
+        "year": 2009,
+        "label": "grand-final-ready"
+      }
+    ],
+    "finals": 1,
+    "injurySelections": 1,
+    "injuryCovers": 0,
+    "superOvers": 0,
+    "clubs": []
+  },
+  "checks": 1603,
+  "seasons": 2,
+  "regularSeasonMatches": 28,
+  "storageStats": {
+    "writes": 1154,
+    "maxCodeUnits": 961491,
+    "maxUtf16Bytes": 1922982,
+    "quotaFailures": 0
+  },
+  "errors": []
+}

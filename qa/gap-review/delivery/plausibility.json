@@ -1,0 +1,99 @@
+{
+  "scope": "Generated actual game scorebooks: numerical/legal-model bounds and descriptive distributions. Not an empirical fit to real-world IPL/BBL/Blast distributions, and not a ball-by-ball simulator.",
+  "sources": [
+    "qa/gap-review/release/budget-career/v8_scorebooks.json",
+    "qa/gap-review/release/resumed-career/v8_scorebooks.json",
+    "qa/gap-review/delivery/smoke/v8_scorebooks.json",
+    "qa/gap-review/delivery/all-clubs/CSK/v8_scorebooks.json",
+    "qa/gap-review/delivery/all-clubs/DC/v8_scorebooks.json",
+    "qa/gap-review/delivery/all-clubs/HAM/v8_scorebooks.json",
+    "qa/gap-review/delivery/all-clubs/HEA/v8_scorebooks.json",
+    "qa/gap-review/delivery/all-clubs/HUR/v8_scorebooks.json",
+    "qa/gap-review/delivery/all-clubs/KKR/v8_scorebooks.json",
+    "qa/gap-review/delivery/all-clubs/LAN/v8_scorebooks.json",
+    "qa/gap-review/delivery/all-clubs/MI/v8_scorebooks.json",
+    "qa/gap-review/delivery/all-clubs/NOT/v8_scorebooks.json",
+    "qa/gap-review/delivery/all-clubs/RCB/v8_scorebooks.json",
+    "qa/gap-review/delivery/all-clubs/REN/v8_scorebooks.json",
+    "qa/gap-review/delivery/all-clubs/RR/v8_scorebooks.json",
+    "qa/gap-review/delivery/all-clubs/SCO/v8_scorebooks.json",
+    "qa/gap-review/delivery/all-clubs/SIX/v8_scorebooks.json",
+    "qa/gap-review/delivery/all-clubs/SOM/v8_scorebooks.json",
+    "qa/gap-review/delivery/all-clubs/STA/v8_scorebooks.json",
+    "qa/gap-review/delivery/all-clubs/STR/v8_scorebooks.json",
+    "qa/gap-review/delivery/all-clubs/SUR/v8_scorebooks.json",
+    "qa/gap-review/delivery/all-clubs/THU/v8_scorebooks.json",
+    "qa/gap-review/delivery/all-clubs/YOR/v8_scorebooks.json"
+  ],
+  "checks": 35928,
+  "matches": 855,
+  "innings": 1710,
+  "scores": {
+    "count": 1710,
+    "min": 78,
+    "p10": 111,
+    "median": 147.5,
+    "mean": 150.26,
+    "p90": 194,
+    "max": 241
+  },
+  "fullLengthScores": {
+    "count": 1060,
+    "min": 78,
+    "p10": 112,
+    "median": 155.0,
+    "mean": 156.03,
+    "p90": 200,
+    "max": 241
+  },
+  "firstInningsScores": {
+    "count": 855,
+    "min": 78,
+    "p10": 115,
+    "median": 157,
+    "mean": 157.95,
+    "p90": 203,
+    "max": 241
+  },
+  "wickets": {
+    "count": 1710,
+    "min": 0,
+    "p10": 2,
+    "median": 7.0,
+    "mean": 6.27,
+    "p90": 10,
+    "max": 10
+  },
+  "extras": {
+    "count": 1710,
+    "min": 4,
+    "p10": 5,
+    "median": 10.0,
+    "mean": 9.47,
+    "p90": 14,
+    "max": 15
+  },
+  "winningChaseExcessFrequency": {
+    "0": 227,
+    "1": 31,
+    "2": 43,
+    "3": 69,
+    "4": 34,
+    "5": 32
+  },
+  "chaseWinPercentage": 50.99,
+  "allOutInnings": 258,
+  "phasesMaxRunsPerOver": 36.0,
+  "errors": [],
+  "ruleReferences": [
+    {
+      "url": "https://images.icc-cricket.com/image/upload/prd/qfnsie8fz6vhyl1pmcli.pdf",
+      "sections": [
+        "13.7.1",
+        "13.9",
+        "16.5.3"
+      ],
+      "use": "Ordinary uninterrupted twenty-over innings, bowling limits and full winning-boundary allowance. The game does not implement every ICC playing condition."
+    }
+  ]
+}

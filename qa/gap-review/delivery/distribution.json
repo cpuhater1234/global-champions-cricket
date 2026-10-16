@@ -1,0 +1,21 @@
+{
+  "artifactSha256": "1799dd652e4eaf8f00149f5597830315c19a39429989bd3d9c9a3aa2984b59ee",
+  "scope": "10,000 world draws for Maxwell and a lower-rated long-run fixture; every shipped player/year checked in one actual world. Not 10,000 complete careers or historical calibration.",
+  "worlds": 10000,
+  "players": 412,
+  "activePlayerYears": 5149,
+  "counts": {
+    "typical": 9437,
+    "moderate": 186,
+    "severe": 97,
+    "breakout": 280
+  },
+  "maxwell": {
+    "expectedPeak": 96,
+    "withinSixPoints": 9760,
+    "majorDisappointments": 72
+  },
+  "lowerRatedBreakouts": 302,
+  "repeatChecks": 10000,
+  "errors": []
+}

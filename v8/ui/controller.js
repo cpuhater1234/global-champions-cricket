@@ -61,7 +61,7 @@
    if(action)el.querySelector(`[data-action="${action}"]`)?.focus({preventScroll:true});lastSignature=key;
   }else render(false);
  };
- function save(){if(s.dynasty){s.dynasty.v8UI={view:ui.view==='home'?ui.resumeView:ui.view,teamReturn:ui.teamReturn,seasonTab:ui.seasonTab,archiveReturn,resultRound:ui.result?.round,resultFinal:ui.result?.final};s.dynasty.v8Match=ui.match?{...ui.match}:null;s.dynasty.v8Reveal=ui.reveal?{...ui.reveal,timer:undefined,year:s.year}:null;}if(s.dynasty&&!read.save())announce('This browser could not save your progress. Keep this game open to continue playing.');}
+ function save(){if(s.dynasty){s.dynasty.v8UI={view:ui.view==='home'?ui.resumeView:ui.view,teamReturn:ui.teamReturn,seasonTab:ui.seasonTab,archiveReturn,resultRound:ui.result?.round,resultFinal:ui.result?.final};s.dynasty.v8Match=ui.match?{...ui.match}:null;s.dynasty.v8Reveal=ui.reveal?{...ui.reveal,timer:undefined,year:s.year}:null;}if(s.dynasty&&!read.save())announce(read.saveConflict?.()?'Another open game saved newer progress. Return home and choose Continue to load it.':'This browser could not save your progress. Keep this game open to continue playing.');}
  let matchTimer=null;
  const matchReference=r=>s.results.includes(r)?{type:'regular',round:r.round}:s.finals?.gf===r?{type:'gf'}:{type:'semis',index:s.finals?.semis?.indexOf(r)};
  const matchFromReference=ref=>ref?.type==='regular'?s.results.find(r=>r.round===ref.round):ref?.type==='gf'?s.finals?.gf:ref?.type==='semis'?s.finals?.semis?.[ref.index]:null;
@@ -115,7 +115,7 @@
  }
  function startReveal(kind,snapshot=null){cancelReveal();ui.reveal={kind,count:snapshot?.count||0,speedIndex:snapshot?.speedIndex||0,running:snapshot?.running??true};ui.revealed=ui.reveal.count;scheduleReveal();}
  function finishReveal(){cancelReveal();ui.reveal=null;}
- bind('world',['story'],()=>{cancelMatchTimer();ui.match=null;finishReveal();read.fresh();G.skipLeagueReveal();ui.revealed=0;setView('leagueDraw');startReveal('league');render(false);save();});
+ bind('world',['story'],()=>{assert(ui.newCareer||!X.hasStoredSave(),'Another open game has started a career. Return home and choose Continue, or confirm Start again.');cancelMatchTimer();ui.match=null;finishReveal();read.fresh();ui.newCareer=false;G.skipLeagueReveal();ui.revealed=0;setView('leagueDraw');startReveal('league');render(false);save();});
  bind('revealClub',['leagueDraw'],()=>{assert(revealActive(),'Open the reveal first.');ui.reveal.count=Math.min(8,ui.reveal.count+1);ui.revealed=ui.reveal.count;if(ui.reveal.count===8)ui.reveal.running=false;scheduleReveal();});
  bind('revealAll',['leagueDraw','draftDraw','dynasty'],()=>{assert(revealActive(),'Open the order reveal first.');cancelReveal();ui.reveal.count=8;ui.revealed=8;ui.reveal.running=false;});
  bind('revealRun',['leagueDraw','draftDraw','dynasty'],()=>{assert(revealActive()&&ui.reveal.count<8,'The reveal is complete.');ui.reveal.running=!ui.reveal.running;scheduleReveal();});
@@ -210,7 +210,8 @@
   }
  });
  dialog.addEventListener('cancel',event=>{event.preventDefault();X.dispatch('close');});
- window.addEventListener('pagehide',()=>{G.pauseSeason();save();});
+ window.addEventListener('pagehide',()=>{clock.pause();G.pauseSeason();save();});
+ window.addEventListener('pageshow',()=>{if(!document.hidden&&!ui.modal&&!['home','story'].includes(ui.view))clock.resume();});
  document.addEventListener('visibilitychange',()=>{if(document.hidden){clock.pause();save();}else if(!ui.modal&&!['home','story'].includes(ui.view))clock.resume();});
  X.render=render;X.commands=Object.freeze(Object.keys(commands));X.showScorecard=scorecard;
  clock.pause();render(true);

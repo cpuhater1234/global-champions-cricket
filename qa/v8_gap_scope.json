@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-16",
+  "sourceParent": "f990234916cf7c0f096d6f7b57881dfcaa51cd31",
+  "artifact": "game/global_champions_cricket_v8_gap_review.html",
+  "artifactSha256": "1799dd652e4eaf8f00149f5597830315c19a39429989bd3d9c9a3aa2984b59ee",
+  "library": {
+    "id": "libfile_8796918e6cd48191a99df448f56dbf70",
+    "version": 26,
+    "path": "/global_champions_cricket_v8_gap_review.html"
+  },
+  "focusedSuites": 34,
+  "targetedChecks": {
+    "events": 107,
+    "storage": 38,
+    "codec": 27,
+    "combined": 107
+  },
+  "catalogClubs": 20,
+  "newSeasonRuns": 59,
+  "newRegularUserMatches": 826,
+  "countScope": "19 fresh +18 resumed +20 opening-club seasons +2 final-smoke seasons. Existing resumed2008 excluded. Eight rounds in the separate combined fixture and duplicate diagnostics are not added.",
+  "careerScope": {
+    "matrixMainHostSha256": "3dd41d25473cdef2c47a5673b813e28aa4679f877c6c35ffd320ac0f4bcd93e3",
+    "finalSha256": "1799dd652e4eaf8f00149f5597830315c19a39429989bd3d9c9a3aa2984b59ee",
+    "scriptBlocks": 19,
+    "differentScriptBlocks": [
+      19
+    ],
+    "scope": "Only the visible controller differs: stale empty-launcher prevention and clearing new-career confirmation after use. All engine, codec, catalog, CPU, rating and match scripts are identical. Full-career main hosts began on matrix digest; later cold loads read final file. Final focused suites, all-club runs and smoke use final digest.",
+    "errors": []
+  },
+  "storageBudgetUtf16Bytes": 5242880,
+  "peakAttemptedSaveUtf16Bytes": 2210890,
+  "quotaFailures": 0,
+  "capturedMatches": 855,
+  "capturedInnings": 1710,
+  "arithmeticChecks": 35928,
+  "crossRowChecks": 46132,
+  "frontendChecks": 6526,
+  "displayedScorecards": 299,
+  "averageRows": 300,
+  "parsedMarkup": {
+    "states": 501,
+    "bindings": 11076
+  },
+  "limits": [
+    "Native geometry/input/focus/scroll/zoom/photos/smoothness unverified; established browser restriction retained.",
+    "Sequential stale-write checks are not atomic browser-process locking and cannot patch older open builds.",
+    "Long-career main hosts began on3dd; later cold loads use final1799. Only startup guard differs, all engine/codec scripts byte-identical. Final34 focused suites,20 clubs and2-season smoke use final artifact.",
+    "371 legacy identities remain uncertified; model rating/composite, chemistry, historical calibration and human enjoyment limits remain.",
+    "Raw large fixture bundles stay local. Codec oversized fixture derives from uncompressed seed9901 opening season."
+  ],
+  "excluded": [
+    "All superseded a5/7032 diagnostics and interrupted duplicate runs",
+    "Initial failed capacity/events/stale-save tests, preserved as defect reproductions",
+    "Initial insufficient consecutive-seed club search; final uses wide seeds naturally covering all20",
+    "First resumed-harness run whose old storage-anchor replacement failed after QA options changed"
+  ],
+  "errors": [],
+  "evidenceSha256": {
+    "v8/build.py": "59aeac5c0c2b244c19f41eea0fedcb5a52a02370d00f6a106c4b8743322ba9f6",
+    "v8/ui/controller.js": "9f5b9c0ce5b91e039fc5a3d2494e1f5d5166fcd646e6f74b3bc342c7adf12445",
+    "v8/domain/storage_adapter.py": "8f1813b38683afa38d29902c437b80a000652243e37f847df7387fa0befa0ba6",
+    "v8/domain/save_codec.js": "befcb9dda5d8a15ab6b8535f92ad32a2b3e1c58266b53ed0bddc745a8acbbe09",
+    "v8/vendor/lz-string-1.5.0.js": "550034b821027008776cb9bcd1700bb5d31e8b3de224cb130fc966a75dab0e5e",
+    "v8/vendor/lz-string-LICENSE.txt": "433fc9dfe659dbfb1e91eed8351f13651e97bfa3ac6d03394c3d63f61d4bbc80",
+    "v8/vendor/README.md": "ae52dd0464a89e42e61bcbd539b4451e7862a23ae780b79147c1ada794c187bf",
+    "qa/offline_game_host.mjs": "3e94ca1cc3910f1850f079b73c90b403d4e0a106d2af636e420439fc224c2379",
+    "qa/v8_game_test.mjs": "3accd86ab3e6d12aa7c052768393fe0f83e24d20443ca26420bef1c119c56547",
+    "qa/v8_existing_career_test.mjs": "2b9bd8f67f49bb2f25d9a5b202b80d42518ea2f47575c739086b16ebfd34fad1",
+    "qa/v8_career_state_test.mjs": "2c329537120dce3b261959d3df16591403582a0425e39dc47860792b1fb73118",
+    "qa/v8_statistics_frontend_review.mjs": "2047cf04f60a0e2f6764c19edcad19211d943de38fc504528c72a7d9251cb521",
+    "qa/v8_gap_events_test.mjs": "a29a54387c2299074e31b940c27e1df434df22b487022321fc7ae572726dc4cc",
+    "qa/v8_gap_storage_test.mjs": "000948b3f707a616f31473203e2387da618fdd0f864ed20bbc24cb1373e91dc0",
+    "qa/v8_gap_codec_test.mjs": "7658e4324334f8eb29c66a856f6368d8ae05106dffbff87f830d2438a896f16d",
+    "qa/v8_gap_combined_test.mjs": "b4b59de630eae78814b51b6f975401dd703b7e805a388464d9cf8f2e8ccd72db",
+    "qa/v8_gap_clubs_review.mjs": "3f369f00ada7152bb742987ea8fc16328b678272a1226a19d204569cc04cde62",
+    "qa/gap-review/delivery/suites.json": "86a38971c89263879f2d81593670a9b6c8712b954a6e48433fe04e8eeee611fa",
+    "qa/gap-review/delivery/events.json": "819c69963e77d2d18ee84dd9c76eb0030790bef6bd326eaf17d2d10d8e68fda0",
+    "qa/gap-review/delivery/storage.json": "1bcbbb944f8afaaad68681d3c7fe3c22b4ec30265a581a9979a5c155d2042a31",
+    "qa/gap-review/delivery/codec.json": "19d3dba337640b5a4a021bfdd7c0ff8f2479f95481ead650d669880a168aebc6",
+    "qa/gap-review/delivery/combined.json": "f11d0c4dde4667ea4cc7a902e59b22014db8b4b2b649fa7f01f83d8d82a44a88",
+    "qa/gap-review/delivery/frontend.json": "0c92e9f4a6869315f0bd4e68a982cfa7f5c4e26ac2993ffd76f68a7c83d3aab8",
+    "qa/gap-review/delivery/plausibility.json": "c057212d653a9d9b4c928289e551d88b36859a85b93528b85dbb27f88580df01",
+    "qa/gap-review/delivery/crosscheck.json": "57bd5dd363eb3c4a5dd6684ae3a5ff3f75e787d9097f338f14d628f2a82fbabd",
+    "qa/gap-review/delivery/build.json": "d385bbe3a31c5357ff84a8fa5f0fa3387fe234d5dd5823fb54989eb57e96e9fa",
+    "qa/gap-review/delivery/equivalence.json": "c5c3656685940088e49ad9fc966a7f11e778b14b6a38547f8da20fd3cf53123a",
+    "qa/gap-review/delivery/all-clubs.json": "8e8a148f806974f82824be2e47597bb38e96dd49630e3a6787abdc578bacb16e",
+    "qa/gap-review/delivery/careers.json": "3785484d587b7b210ba710e9dc1281b8262cded04c1d14e6df57936213527361",
+    "qa/gap-review/delivery/distribution.json": "32a2f381d28a7f04c4cec88f7a55581b4c77da6b8c30d86de0f45a40804e6671",
+    "qa/gap-review/delivery/markup.json": "f404de15de425f323b183bc3f10f8f09cbdc48cf98a751481bd6d1e9b7ce185b",
+    "docs/GCC_V8_GAP_REVIEW.md": "6dfe1eab33e62579f246596663c5b185d13680248e164f106f7d0a06df3d680e",
+    "docs/GCC_V8_NEW_CHAT_HANDOFF.md": "e5454ce38cdec6a8e43d506461c2d3bae12389d8ff591bd65d85c4b0ec9036b5",
+    "qa/gap-review/delivery/smoke/v8_smoke_results.json": "e20c944e00a98e3cc8d7171a771feee05002dbbb6a0ae8d782a3c9907becc664"
+  }
+}

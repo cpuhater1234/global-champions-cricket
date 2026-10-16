@@ -1,0 +1,7 @@
+{
+  "artifactSha256": "1799dd652e4eaf8f00149f5597830315c19a39429989bd3d9c9a3aa2984b59ee",
+  "scope": "Two actual VM game instances share a storage map, with sequential interleaving. Covers stale writes, page exit, reload, explicit restart, transient failure and failed-restore acknowledgement rollback. Not a browser scheduling race or atomic cross-process lock certification.",
+  "checks": 38,
+  "expectedRestoreErrors": 1,
+  "errors": []
+}

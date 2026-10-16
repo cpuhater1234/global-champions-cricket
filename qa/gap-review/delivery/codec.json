@@ -1,0 +1,9 @@
+{
+  "artifactSha256": "1799dd652e4eaf8f00149f5597830315c19a39429989bd3d9c9a3aa2984b59ee",
+  "scope": "Full actual oversized first-season payload, legacy and packed restores, exact field round-trip, mutation invalidation, Unicode and deliberate block corruptions. Conservative UTF-16 budget is a test model, not browser quota certification.",
+  "checks": 27,
+  "corruptions": 16,
+  "rawUtf16Bytes": 5758942,
+  "packedUtf16Bytes": 1881018,
+  "errors": []
+}
