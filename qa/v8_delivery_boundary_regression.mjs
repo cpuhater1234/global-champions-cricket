@@ -65,6 +65,16 @@ for(let seed=151;seed<=250;seed++){
   const entry=wrongRate.scorecard.innings[0].batting.find(b=>b.balls>0);
   entry.sr+=3;
   assert.equal(model.validResult(wrongRate,ids),false,'fabricated strike rate must be rejected');
+  for(const bad of [NaN,Infinity,-Infinity,null]){
+   const badStrike=structuredClone(result);
+   badStrike.scorecard.innings[0].batting.find(b=>b.balls>0).sr=bad;
+   assert.equal(model.validResult(badStrike,ids),false,'invalid strike rate must be rejected: '+String(bad));
+  }
+  const badEconomy=structuredClone(result);
+  const bowlingRow=badEconomy.scorecard.innings[0].bowling.find(b=>b.balls>0);
+  assert.ok(bowlingRow,'innings contains a bowler with legal deliveries');
+  bowlingRow.economy=NaN;
+  assert.equal(model.validResult(badEconomy,ids),false,'non-finite bowling economy must be rejected');
   legacyChecked++;
  }
 }
