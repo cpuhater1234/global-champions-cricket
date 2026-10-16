@@ -75,6 +75,12 @@ for(let seed=151;seed<=250;seed++){
   assert.ok(bowlingRow,'innings contains a bowler with legal deliveries');
   bowlingRow.economy=NaN;
   assert.equal(model.validResult(badEconomy,ids),false,'non-finite bowling economy must be rejected');
+  const invalidInningsOvers=structuredClone(result);
+  invalidInningsOvers.scorecard.innings[0].overs='20.0';
+  assert.equal(model.validResult(invalidInningsOvers,ids),false,'incorrect total over notation must be rejected');
+  const invalidBowlerOvers=structuredClone(result);
+  invalidBowlerOvers.scorecard.innings[0].bowling.find(b=>b.balls>0).overs='0.0';
+  assert.equal(model.validResult(invalidBowlerOvers,ids),false,'incorrect bowler over notation must be rejected');
   legacyChecked++;
  }
 }
