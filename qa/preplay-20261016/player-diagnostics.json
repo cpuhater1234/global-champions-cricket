@@ -1,0 +1,337 @@
+{
+  "artifact": "game/global_champions_cricket_v8_career_variation.html",
+  "artifactSha256": "ff3b637d3af692e361b0c96b452c4384dacd218c035ac38a1b6f50171843f485",
+  "scope": "Full-universe career traversal and diagnostic flags, not primary-source certification of all players or empirical calibration. A flag is a review prompt, not necessarily a defect. Keeper quality below 65 retains specialist identity; early entry includes real young debuts. A badge/composite difference compares different model summaries.",
+  "players": 412,
+  "playerYears": 5149,
+  "flags": {
+    "earlyEntryReview": [
+      {
+        "name": "Noor Ahmad",
+        "year": 2019,
+        "age": 14
+      },
+      {
+        "name": "Vaibhav Suryavanshi",
+        "year": 2025,
+        "age": 14
+      }
+    ],
+    "lowKeeperQuality": [
+      {
+        "name": "Graham Manou",
+        "year": 2018,
+        "keeping": 61
+      },
+      {
+        "name": "Peter McGlashan",
+        "year": 2018,
+        "keeping": 64
+      },
+      {
+        "name": "Graham Manou",
+        "year": 2019,
+        "keeping": 59
+      },
+      {
+        "name": "Peter McGlashan",
+        "year": 2019,
+        "keeping": 64
+      },
+      {
+        "name": "Niall O'Brien",
+        "year": 2020,
+        "keeping": 63
+      },
+      {
+        "name": "Kamran Akmal",
+        "year": 2021,
+        "keeping": 62
+      },
+      {
+        "name": "Niall O'Brien",
+        "year": 2021,
+        "keeping": 59
+      },
+      {
+        "name": "Kamran Akmal",
+        "year": 2022,
+        "keeping": 60
+      },
+      {
+        "name": "Matt Prior",
+        "year": 2022,
+        "keeping": 63
+      },
+      {
+        "name": "Luke Ronchi",
+        "year": 2022,
+        "keeping": 64
+      },
+      {
+        "name": "Parthiv Patel",
+        "year": 2024,
+        "keeping": 62
+      },
+      {
+        "name": "Tim Paine",
+        "year": 2024,
+        "keeping": 64
+      },
+      {
+        "name": "Parthiv Patel",
+        "year": 2025,
+        "keeping": 60
+      },
+      {
+        "name": "Tim Paine",
+        "year": 2025,
+        "keeping": 62
+      }
+    ],
+    "realisationDisagreement": [],
+    "badgeVersusCompositeGap": [
+      {
+        "name": "Shoaib Malik",
+        "year": 2010,
+        "overall": 91,
+        "roleFit": 76.93119999999999,
+        "bat": 85,
+        "bowl": 69,
+        "role": "AR"
+      },
+      {
+        "name": "Yasir Arafat",
+        "year": 2010,
+        "overall": 88,
+        "roleFit": 69.77780000000001,
+        "bat": 55,
+        "bowl": 85,
+        "role": "AR"
+      },
+      {
+        "name": "Ryan McLaren",
+        "year": 2011,
+        "overall": 90,
+        "roleFit": 70.6558,
+        "bat": 58,
+        "bowl": 82,
+        "role": "AR"
+      },
+      {
+        "name": "Dwayne Smith",
+        "year": 2011,
+        "overall": 92,
+        "roleFit": 74.2596,
+        "bat": 85,
+        "bowl": 66,
+        "role": "AR"
+      },
+      {
+        "name": "Kevin O'Brien",
+        "year": 2012,
+        "overall": 92,
+        "roleFit": 72.5648,
+        "bat": 80,
+        "bowl": 63,
+        "role": "AR"
+      },
+      {
+        "name": "Stuart Binny",
+        "year": 2012,
+        "overall": 83,
+        "roleFit": 68.96300000000001,
+        "bat": 65,
+        "bowl": 69,
+        "role": "AR"
+      },
+      {
+        "name": "Ravichandran Ashwin",
+        "year": 2014,
+        "overall": 98,
+        "roleFit": 73.7198,
+        "bat": 48,
+        "bowl": 94,
+        "role": "AR"
+      },
+      {
+        "name": "Mahmudullah",
+        "year": 2014,
+        "overall": 94,
+        "roleFit": 73.93020000000001,
+        "bat": 82,
+        "bowl": 63,
+        "role": "AR"
+      },
+      {
+        "name": "Elton Chigumbura",
+        "year": 2014,
+        "overall": 89,
+        "roleFit": 68.997,
+        "bat": 76,
+        "bowl": 63,
+        "role": "AR"
+      },
+      {
+        "name": "Kieron Pollard",
+        "year": 2015,
+        "overall": 95,
+        "roleFit": 76.5364,
+        "bat": 86,
+        "bowl": 65,
+        "role": "AR"
+      },
+      {
+        "name": "Adil Rashid",
+        "year": 2016,
+        "overall": 90,
+        "roleFit": 61.761799999999994,
+        "bat": 33,
+        "bowl": 82,
+        "role": "AR"
+      },
+      {
+        "name": "Chris Woakes",
+        "year": 2017,
+        "overall": 96,
+        "roleFit": 74.8754,
+        "bat": 57,
+        "bowl": 88,
+        "role": "AR"
+      },
+      {
+        "name": "Tom Curran",
+        "year": 2019,
+        "overall": 84,
+        "roleFit": 69.8484,
+        "bat": 56,
+        "bowl": 77,
+        "role": "AR"
+      },
+      {
+        "name": "Glenn Maxwell",
+        "year": 2021,
+        "overall": 97,
+        "roleFit": 81.36019999999999,
+        "bat": 94,
+        "bowl": 69,
+        "role": "AR"
+      },
+      {
+        "name": "Rashid Khan",
+        "year": 2022,
+        "overall": 99,
+        "roleFit": 81.2188,
+        "bat": 59,
+        "bowl": 98,
+        "role": "AR"
+      },
+      {
+        "name": "Sam Curran",
+        "year": 2022,
+        "overall": 93,
+        "roleFit": 78.17099999999998,
+        "bat": 68,
+        "bowl": 84,
+        "role": "AR"
+      },
+      {
+        "name": "Wanindu Hasaranga",
+        "year": 2022,
+        "overall": 97,
+        "roleFit": 82.025,
+        "bat": 64,
+        "bowl": 95,
+        "role": "AR"
+      },
+      {
+        "name": "Daryl Mitchell",
+        "year": 2023,
+        "overall": 90,
+        "roleFit": 73.78619999999998,
+        "bat": 85,
+        "bowl": 60,
+        "role": "AR"
+      },
+      {
+        "name": "Romario Shepherd",
+        "year": 2024,
+        "overall": 90,
+        "roleFit": 75.21739999999998,
+        "bat": 65,
+        "bowl": 81,
+        "role": "AR"
+      },
+      {
+        "name": "Mehidy Hasan Miraz",
+        "year": 2024,
+        "overall": 89,
+        "roleFit": 74.246,
+        "bat": 63,
+        "bowl": 84,
+        "role": "AR"
+      },
+      {
+        "name": "Will Jacks",
+        "year": 2024,
+        "overall": 88,
+        "roleFit": 73.20640000000002,
+        "bat": 84,
+        "bowl": 62,
+        "role": "AR"
+      },
+      {
+        "name": "Abhishek Sharma",
+        "year": 2025,
+        "overall": 94,
+        "roleFit": 78.49499999999999,
+        "bat": 89,
+        "bowl": 66,
+        "role": "AR"
+      },
+      {
+        "name": "Marco Jansen",
+        "year": 2025,
+        "overall": 93,
+        "roleFit": 76.0574,
+        "bat": 60,
+        "bowl": 89,
+        "role": "AR"
+      },
+      {
+        "name": "Saim Ayub",
+        "year": 2026,
+        "overall": 94,
+        "roleFit": 78.4292,
+        "bat": 87,
+        "bowl": 68,
+        "role": "AR"
+      },
+      {
+        "name": "Nitish Kumar Reddy",
+        "year": 2026,
+        "overall": 87,
+        "roleFit": 70.75739999999999,
+        "bat": 73,
+        "bowl": 62,
+        "role": "AR"
+      },
+      {
+        "name": "Rehan Ahmed",
+        "year": 2026,
+        "overall": 90,
+        "roleFit": 72.24019999999999,
+        "bat": 54,
+        "bowl": 83,
+        "role": "AR"
+      }
+    ],
+    "thinFrontline": []
+  },
+  "injuryOwnershipComparison": {
+    "name": "Dale Steyn",
+    "human": 0.0175,
+    "cpu": 0.0175
+  },
+  "errors": []
+}

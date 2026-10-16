@@ -1,0 +1,205 @@
+[
+  {
+    "name": "final_pass",
+    "script": "qa/v8_final_pass_test.mjs",
+    "exit": 0,
+    "seconds": 84.07,
+    "logSha256": "6ef4841c407abc8731e436a815529aaf9402717eae08ff780a0ca63a058d197b"
+  },
+  {
+    "name": "draft_stress",
+    "script": "qa/v8_draft_stress_test.mjs",
+    "exit": 0,
+    "seconds": 43.5,
+    "logSha256": "a647d76af574632b752c6b093ec585b7e21c85e8ef2c53c3be7b423f9fe08f3d"
+  },
+  {
+    "name": "draft_controls",
+    "script": "qa/v8_draft_controls_test.mjs",
+    "exit": 0,
+    "seconds": 24.85,
+    "logSha256": "e6c94f63eebae0ac1b19b4985e730ba9b993e461baad9e91d087ba3b44015657"
+  },
+  {
+    "name": "experience",
+    "script": "qa/v8_experience_test.mjs",
+    "exit": 0,
+    "seconds": 15.15,
+    "logSha256": "1a4166b48947b6ae944895776871615ae431ce30a8224289305e2e87d97303a2"
+  },
+  {
+    "name": "fan",
+    "script": "qa/v8_fan_test.mjs",
+    "exit": 0,
+    "seconds": 23.01,
+    "logSha256": "8c84e14bcd5ce162a191dc0657493575040892909321180ef184969c379ddd62"
+  },
+  {
+    "name": "transition",
+    "script": "qa/v8_transition_test.mjs",
+    "exit": 0,
+    "seconds": 15.77,
+    "logSha256": "47d5d7fd97060af1644d071c1ea7f238bc6e0fb123702d51acfd61bfcafba408"
+  },
+  {
+    "name": "cricket_polish",
+    "script": "qa/v8_cricket_polish_test.mjs",
+    "exit": 0,
+    "seconds": 2.6,
+    "logSha256": "6227a7796a664cebadb19a8843fc7003defbbad518749f4864b1d12a5645a5d4"
+  },
+  {
+    "name": "save_integrity",
+    "script": "qa/v8_save_integrity_test.mjs",
+    "exit": 0,
+    "seconds": 9.03,
+    "logSha256": "5cb989b4fa7f0d8fd01752380c57bb419bb6a1bb1d56a4982d3c0f27822a1ef6"
+  },
+  {
+    "name": "audit",
+    "script": "qa/v8_audit_test.mjs",
+    "exit": 0,
+    "seconds": 2.78,
+    "logSha256": "262ce910b85aee80fc7e4fed73eab3b5c23886b951b265e83b59a733df10f1f7"
+  },
+  {
+    "name": "reveal",
+    "script": "qa/v8_reveal_test.mjs",
+    "exit": 0,
+    "seconds": 4.09,
+    "logSha256": "d35553fd02fc5c2117a812744f6b8c36a7e6879cc1d5b53e32a6180b16faa8fa"
+  },
+  {
+    "name": "match_reveal",
+    "script": "qa/v8_match_reveal_test.mjs",
+    "exit": 0,
+    "seconds": 2.82,
+    "logSha256": "f3625b3372a94297e4af437330da0280c628081f4e14bf9ad17f64c634eb4d7f"
+  },
+  {
+    "name": "interaction",
+    "script": "qa/v8_interaction_test.mjs",
+    "exit": 0,
+    "seconds": 5.8,
+    "logSha256": "b0ebb9ae33ea5394944531bc2edaf328a8eb4e5b9de1e733d680e44f666bbb77"
+  },
+  {
+    "name": "layout",
+    "script": "qa/v8_layout_test.mjs",
+    "exit": 0,
+    "seconds": 3.24,
+    "logSha256": "8ddcfad3209f589006e42092934c2a25df6e33567f0116e5884a2b2d3404d2d6"
+  },
+  {
+    "name": "migration",
+    "script": "qa/v8_migration_test.mjs",
+    "exit": 0,
+    "seconds": 0.63,
+    "logSha256": "75e2ca19175ad17ded1c022edd747ea32c5b911af88c308365f08c3f7fb10dd5"
+  },
+  {
+    "name": "player_clarity",
+    "script": "qa/v8_player_clarity_test.mjs",
+    "exit": 0,
+    "seconds": 0.7,
+    "logSha256": "cd2863196a2232fe5d9fa6668631403539b06a44d2e3405feaa79e88a7e9c746"
+  },
+  {
+    "name": "chase_logic",
+    "script": "qa/v8_chase_logic_test.mjs",
+    "exit": 0,
+    "seconds": 0.12,
+    "logSha256": "b658f36974b8c405287a9aab57ff7928a9348c0386d9ce291ea7a8dc3aaad983"
+  },
+  {
+    "name": "career_strategy",
+    "script": "qa/v8_career_strategy_test.mjs",
+    "exit": 0,
+    "seconds": 0.93,
+    "logSha256": "59a97919766f348ea338b4bf4ecf070e92ff74db8753c424b374d6f6aed4f342"
+  },
+  {
+    "name": "dom_patch",
+    "script": "qa/v8_dom_patch_test.mjs",
+    "exit": 0,
+    "seconds": 0.07,
+    "logSha256": "4f00ce2c4fa1c8a72ddaf92dcd357fd6e2fb58ec886e8837beaaa34b352ec3b7"
+  },
+  {
+    "name": "clock",
+    "script": "qa/v8_clock_test.mjs",
+    "exit": 0,
+    "seconds": 0.07,
+    "logSha256": "11361323556e1332014bfa8e573d10890a462ccd10d6d3da86304fc41ea2f455"
+  },
+  {
+    "name": "offseason",
+    "script": "qa/v8_offseason_test.mjs",
+    "exit": 0,
+    "seconds": 11.02,
+    "logSha256": "df39fb51e087bdb6ed8406485b898d386c39a09f4d4bab319348b964ee984749"
+  },
+  {
+    "name": "cpu_market",
+    "script": "qa/v8_cpu_market_test.mjs",
+    "exit": 0,
+    "seconds": 13.34,
+    "logSha256": "65d795cc5543e845f4388059d0254be464e8c7696df7099ac6074fd84db6d68d"
+  },
+  {
+    "name": "logic",
+    "script": "qa/v8_logic_test.mjs",
+    "exit": 0,
+    "seconds": 5.35,
+    "logSha256": "f2de402a9997585d1503edeeb6c51eb25763c82cb51df31abb6f1557680bf15e"
+  },
+  {
+    "name": "logic_review",
+    "script": "qa/v8_logic_review.mjs",
+    "exit": 0,
+    "seconds": 1.12,
+    "logSha256": "e0ade5549b1e679fd8e1fe2aaec1975986fc48e8f4e3625328242325103e5893"
+  },
+  {
+    "name": "player_profiles",
+    "script": "qa/v8_player_profiles_test.mjs",
+    "exit": 0,
+    "seconds": 0.06,
+    "logSha256": "1dadabce2ad1b42b431cf77c883da6fedca2647afe84ee5f1ab353b17d5a4346"
+  },
+  {
+    "name": "career_outcomes",
+    "script": "qa/v8_career_outcomes_test.mjs",
+    "exit": 0,
+    "seconds": 0.33,
+    "logSha256": "31ac58b994f23b4335dbb53af63df90655a21ac533e1bc5c5b5228cfc289172a"
+  },
+  {
+    "name": "career_state",
+    "script": "qa/v8_career_state_test.mjs",
+    "exit": 0,
+    "seconds": 1.59,
+    "logSha256": "65dc19dbedab4a60aa70063e931aabb751cad4c9a827c05cd69971a13b0b2966"
+  },
+  {
+    "name": "fair_scouting",
+    "script": "qa/v8_fair_scouting_test.mjs",
+    "exit": 0,
+    "seconds": 0.57,
+    "logSha256": "dee754feb716fdacdb962a18a3a65c41b8904d9a115ce685373094664e1a6a3e"
+  },
+  {
+    "name": "development_feedback",
+    "script": "qa/v8_development_feedback_test.mjs",
+    "exit": 0,
+    "seconds": 0.54,
+    "logSha256": "738b525fb727d581b107197f1df27e611e79bfc911849703fe601c9b8771e738"
+  },
+  {
+    "name": "career_distribution",
+    "script": "qa/v8_career_distribution_test.mjs",
+    "exit": 0,
+    "seconds": 13.71,
+    "logSha256": "5908071ab4b9cb48debed249495cbaf8c4fe9f583d95587ce8019b3237e280bd"
+  }
+]

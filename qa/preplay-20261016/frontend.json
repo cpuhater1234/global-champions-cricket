@@ -1,0 +1,51 @@
+{
+  "artifactSha256": "ff3b637d3af692e361b0c96b452c4384dacd218c035ac38a1b6f50171843f485",
+  "scope": "Read-only VM checks of eight existing completed 2008 saved games. Actual scorebook data independently summed and compared with frontend averages; scorebook strings checked against arithmetic and legal-ball overs. Parsed strings, not rendered presentation.",
+  "checks": 2678,
+  "scorecards": 123,
+  "averageRows": 120,
+  "runs": [
+    {
+      "club": "HAM",
+      "matches": 16,
+      "players": 15
+    },
+    {
+      "club": "CSK",
+      "matches": 14,
+      "players": 15
+    },
+    {
+      "club": "REN",
+      "matches": 15,
+      "players": 15
+    },
+    {
+      "club": "CSK",
+      "matches": 16,
+      "players": 15
+    },
+    {
+      "club": "SUR",
+      "matches": 14,
+      "players": 15
+    },
+    {
+      "club": "DC",
+      "matches": 16,
+      "players": 15
+    },
+    {
+      "club": "HEA",
+      "matches": 16,
+      "players": 15
+    },
+    {
+      "club": "DC",
+      "matches": 16,
+      "players": 15
+    }
+  ],
+  "findings": [],
+  "errors": []
+}

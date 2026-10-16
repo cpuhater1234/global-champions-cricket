@@ -1,0 +1,257 @@
+{
+  "date": "2026-10-16",
+  "sourceHead": "9ed0daab33c9f3a7348321dc1d4cf0897854cddc",
+  "artifact": "game/global_champions_cricket_v8_career_variation.html",
+  "artifactSha256": "ff3b637d3af692e361b0c96b452c4384dacd218c035ac38a1b6f50171843f485",
+  "productCodeChanged": false,
+  "focusedSuites": 30,
+  "suiteManifest": "qa/preplay-20261016/suites.json",
+  "supplementalControls": {
+    "artifactSha256": "ff3b637d3af692e361b0c96b452c4384dacd218c035ac38a1b6f50171843f485",
+    "scope": "Real-script VM direct commands and synthetic captured input/change/cancel callbacks. Finals-return uses an actual completed-final fixture; compatibility list correction uses an explicit overfull roster fixture. No native pointer, keyboard, geometry, focus or rendering certification.",
+    "checks": 90,
+    "commands": [
+      "annualDraft",
+      "annualDraw",
+      "annualList",
+      "averages",
+      "beginDraft",
+      "cancelSwap",
+      "clearXI",
+      "close",
+      "club",
+      "clubs",
+      "confirmClub",
+      "continue",
+      "draftDraw",
+      "draftPlayer",
+      "finalCut",
+      "finalsReturn",
+      "lodge",
+      "matchSkip",
+      "matchday",
+      "more",
+      "naturalOrder",
+      "offseason",
+      "play",
+      "playMatch",
+      "prepare",
+      "result",
+      "revealAll",
+      "scorecard",
+      "seasonTab",
+      "select",
+      "signingSkip",
+      "signingSpeed",
+      "skipPick",
+      "swapIn",
+      "world"
+    ],
+    "errors": []
+  },
+  "newRegularSeasonMatches": 630,
+  "newSeasonRuns": 45,
+  "oldSaveScope": "Completed 2008 save continued through 2009\u20132026; its original season/matches are excluded from new totals.",
+  "clubScope": "Eight club-selection indices in separately seeded worlds; not every catalog club identity played through a whole career.",
+  "fullCareers": {
+    "freshSeed": 9103,
+    "resumedSeed": 9301,
+    "results": "qa/preplay-20261016/careers.json"
+  },
+  "audits": {
+    "build": {
+      "artifactSha256": "ff3b637d3af692e361b0c96b452c4384dacd218c035ac38a1b6f50171843f485",
+      "rebuildSha256": "ff3b637d3af692e361b0c96b452c4384dacd218c035ac38a1b6f50171843f485",
+      "identical": true,
+      "syntaxBlocks": 19,
+      "errors": []
+    },
+    "plausibility": {
+      "scope": "Generated actual game scorebooks: numerical/legal-model bounds and descriptive distributions. Not an empirical fit to real-world IPL/BBL/Blast distributions, and not a ball-by-ball simulator.",
+      "sources": [
+        "qa/preplay-20261016/career-9103/v8_scorebooks.json",
+        "qa/preplay-20261016/resumed-9301/v8_scorebooks.json",
+        "qa/preplay-20261016/clubs/0/v8_scorebooks.json",
+        "qa/preplay-20261016/clubs/1/v8_scorebooks.json",
+        "qa/preplay-20261016/clubs/2/v8_scorebooks.json",
+        "qa/preplay-20261016/clubs/3/v8_scorebooks.json",
+        "qa/preplay-20261016/clubs/4/v8_scorebooks.json",
+        "qa/preplay-20261016/clubs/5/v8_scorebooks.json",
+        "qa/preplay-20261016/clubs/6/v8_scorebooks.json",
+        "qa/preplay-20261016/clubs/7/v8_scorebooks.json"
+      ],
+      "checks": 27467,
+      "matches": 654,
+      "innings": 1308,
+      "scores": {
+        "count": 1308,
+        "min": 81,
+        "p10": 112,
+        "median": 152.0,
+        "mean": 153.36,
+        "p90": 196,
+        "max": 241
+      },
+      "fullLengthScores": {
+        "count": 838,
+        "min": 81,
+        "p10": 114,
+        "median": 158.5,
+        "mean": 158.54,
+        "p90": 201,
+        "max": 241
+      },
+      "firstInningsScores": {
+        "count": 654,
+        "min": 85,
+        "p10": 118,
+        "median": 163.0,
+        "mean": 161.83,
+        "p90": 204,
+        "max": 241
+      },
+      "wickets": {
+        "count": 1308,
+        "min": 0,
+        "p10": 2,
+        "median": 7.0,
+        "mean": 6.31,
+        "p90": 10,
+        "max": 10
+      },
+      "extras": {
+        "count": 1308,
+        "min": 4,
+        "p10": 5,
+        "median": 10.0,
+        "mean": 9.54,
+        "p90": 14,
+        "max": 15
+      },
+      "winningChaseExcessFrequency": {
+        "0": 158,
+        "1": 28,
+        "2": 32,
+        "3": 61,
+        "4": 21,
+        "5": 26
+      },
+      "chaseWinPercentage": 49.85,
+      "allOutInnings": 178,
+      "phasesMaxRunsPerOver": 30.0,
+      "errors": [],
+      "ruleReferences": [
+        {
+          "url": "https://images.icc-cricket.com/image/upload/prd/qfnsie8fz6vhyl1pmcli.pdf",
+          "sections": [
+            "13.7.1",
+            "13.9",
+            "16.5.3"
+          ],
+          "use": "Ordinary uninterrupted twenty-over innings, bowling limits and full winning-boundary allowance. The game does not implement every ICC playing condition."
+        }
+      ]
+    },
+    "crosscheck": {
+      "scope": "Secondary cross-row identity/wicket/dismissal audit of existing captured scorebooks, additional to phase/extras/balls/NRR checks. No new matches or empirical calibration.",
+      "matches": 654,
+      "checks": 35388,
+      "errors": [],
+      "warnings": []
+    },
+    "frontend": {
+      "artifactSha256": "ff3b637d3af692e361b0c96b452c4384dacd218c035ac38a1b6f50171843f485",
+      "scope": "Read-only VM checks of eight existing completed 2008 saved games. Actual scorebook data independently summed and compared with frontend averages; scorebook strings checked against arithmetic and legal-ball overs. Parsed strings, not rendered presentation.",
+      "checks": 2678,
+      "scorecards": 123,
+      "averageRows": 120,
+      "runs": [
+        {
+          "club": "HAM",
+          "matches": 16,
+          "players": 15
+        },
+        {
+          "club": "CSK",
+          "matches": 14,
+          "players": 15
+        },
+        {
+          "club": "REN",
+          "matches": 15,
+          "players": 15
+        },
+        {
+          "club": "CSK",
+          "matches": 16,
+          "players": 15
+        },
+        {
+          "club": "SUR",
+          "matches": 14,
+          "players": 15
+        },
+        {
+          "club": "DC",
+          "matches": 16,
+          "players": 15
+        },
+        {
+          "club": "HEA",
+          "matches": 16,
+          "players": 15
+        },
+        {
+          "club": "DC",
+          "matches": 16,
+          "players": 15
+        }
+      ],
+      "findings": [],
+      "errors": []
+    },
+    "controls-markup-results": {
+      "scope": "Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.",
+      "view_states": 8,
+      "action_bindings": 192,
+      "errors": []
+    }
+  },
+  "markup": {
+    "states": 224,
+    "actionBindings": 4985,
+    "errors": []
+  },
+  "diagnosticFlagCounts": {
+    "earlyEntryReview": 2,
+    "lowKeeperQuality": 14,
+    "realisationDisagreement": 0,
+    "badgeVersusCompositeGap": 26,
+    "thinFrontline": 0
+  },
+  "testFixtureCorrection": "Initial supplemental finals-return fixture lacked finals; corrected to a real completed final. No product fix or failed production-path claim.",
+  "limitations": [
+    "No native rendering, overlap/geometry, pointer/keyboard input, focus, scroll, photo delivery or smoothness verification; established browser restriction retained.",
+    "371 legacy player identities remain uncertified, numeric priors are estimates and historical score-distribution calibration remains open.",
+    "Overall/role-composite calibration, club-games chemistry and human enjoyment/difficulty remain open.",
+    "Static references to all 74 commands do not establish exhaustive branch/state coverage.",
+    "Large raw saves/scorebooks and full logs are local fixtures; committed summary is not a self-contained reproduction bundle."
+  ],
+  "errors": [],
+  "evidenceSha256": {
+    "qa/v8_preplay_controls_test.mjs": "81a354e83d4e09e6ee9ede2ce06f5154630f71a6b4c44c290cd3ea7d1880ec68",
+    "docs/GCC_V8_PREPLAY_TESTING.md": "8fcb890bc1dff829d32143a7dbb325bf5a8bdbe83d59d683703995468f59dd14",
+    "qa/preplay-20261016/suites.json": "1a9096fe84e2d58da46b338c4b61022793d29f215e78f1a0c5895bc0b905a6c3",
+    "qa/preplay-20261016/controls.json": "a24b6b196e53055bc1a236f639d8714e7839b253d536c1f0fd72b3b71cc624fd",
+    "qa/preplay-20261016/build.json": "93c867bb62343a600cbbe4a07d7f90cba99203904992f5a4f27e2ea2d592dca0",
+    "qa/preplay-20261016/frontend.json": "bb38a6afc34f3ed4663fc49fcf525786eae276973b2fe2caebd54b614679555c",
+    "qa/preplay-20261016/plausibility.json": "9556e6cd1e7dd833597b973a5846af405dc53163cb8b163b2701d09eace609d4",
+    "qa/preplay-20261016/crosscheck.json": "4aead230aae330676cee521768b9ad4bb2b4b9b42766134a2e8f811a2b5b44fe",
+    "qa/preplay-20261016/markup.json": "16aaceef06ff1a89c13d37aeb79fc0743d2715126d900c27a6063b4358ef7b36",
+    "qa/preplay-20261016/command-inventory.json": "8360e7da7f6dfa4f1a7b2bc259de29d2a274d20c04cf934c885eaa8efc4302d2",
+    "qa/preplay-20261016/distribution.json": "f6e845d00bb9120c0c3423161a03a035776c5dd251191ca2e5373f14989a2e85",
+    "qa/preplay-20261016/player-diagnostics.json": "540cc943ff59697c128279e7d063d1873931a913e69f6be9d2c655e35b08778b",
+    "qa/preplay-20261016/careers.json": "41c805e46af1c3129f326d752c34bc34ce31cce660ec9ac847c5120cf7053194",
+    "qa/preplay-20261016/controls-markup-results.json": "23fb6f04f0e9ee954da385e5239e04f1832edb93d48611f7035d2a75ed7d5c4e"
+  }
+}
