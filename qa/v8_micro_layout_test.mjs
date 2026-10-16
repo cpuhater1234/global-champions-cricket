@@ -15,7 +15,7 @@ const shell=fs.readFileSync('v8/ui/shell.html','utf8');check(shell.indexOf('id="
 const css=fs.readFileSync('v8/ui/game.css','utf8');check(!/\.g8draftroster\{[^}]*height:\s*\d+px/.test(css),'no fixed-height nested roster scroll');
 check(css.includes('minmax(min(100%,240px),1fr)'),'phase labels get usable track width');check(css.includes('.g8read>span{overflow-wrap:normal;word-break:normal}'),'cricket words stay intact');
 check(!/#g8feedback\{[^}]*position:fixed/.test(css),'feedback cannot float over home controls');
-check(css.includes('grid-template-rows:repeat(6,auto);grid-auto-flow:column'),'wide batting order uses two numbered columns');
+check(css.includes('.g8selection.g8teamworkspace{grid-template-columns:minmax(0,1.4fr) minmax(340px,1fr)'),'wide team workspace keeps bench beside XI');
 const annual=loadGame(file,818,new Map([['gcc_dynasty_v8',fs.readFileSync('qa/extensive/clubs/0/v8_smoke_save.json','utf8')]]),{strictIds:true}),Y=annual.context.GCC8;
 check(Y.dispatch('continue'),'resume annual fixture');
 for(const p of Y.roster())check(Y.squadRoster().includes(Y.esc(p.name)),'complete fifteen visible in roster markup');

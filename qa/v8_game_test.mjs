@@ -28,8 +28,8 @@ function auditScorebook(r){
   const e=i.extrasBreakdown;check(e.wides+e.noBalls+e.byes+e.legByes===i.extras,'extras reconcile');
   check(i.bowling.reduce((n,b)=>n+b.runs,0)===i.total-e.byes-e.legByes,'bowler runs exclude byes');
   check(i.bowling.reduce((n,b)=>n+b.wickets,0)<=i.wickets,'bowling wickets exclude run-outs');
-  const inn=i.club.abbr===r.home.abbr?r.homeInnings:r.awayInnings,plan=inn.bowlingPlan.slice(0,Math.ceil(i.balls/6));check(plan.length===Math.ceil(i.balls/6)&&plan.every((id,n)=>!n||id!==plan[n-1]),'bowling sequence has no consecutive overs');
-  check(i.bowling.every(b=>Number.isFinite(b.economy)&&Math.abs(b.economy-b.runs*6/b.balls)<1e-9),'economy uses legal balls');
+  const inn=i.club.abbr===r.home.abbr?r.homeInnings:r.awayInnings,overCount=inn.deliveries?new Set(inn.deliveries.map(d=>d.over)).size:Math.ceil(i.balls/6),plan=inn.bowlingPlan.slice(0,overCount);check(plan.length===overCount&&plan.every((id,n)=>!n||id!==plan[n-1]),'bowling sequence has no consecutive overs');
+  check(i.bowling.every(b=>b.balls===0?b.economy===null&&b.wickets===0:Number.isFinite(b.economy)&&Math.abs(b.economy-b.runs*6/b.balls)<1e-9),'economy uses legal balls');
  }
  for(const row of Object.values(s.table)){check(Math.abs(row.nrr-(row.ballsFor?row.runsFor*6/row.ballsFor-row.runsAgainst*6/row.ballsAgainst:0))<1e-9,'net run rate formula');}for(const row of Object.values(s.table))check(row.p===row.w+row.l&&row.pts===row.w*2&&Number.isFinite(row.nrr),'ladder arithmetic');
 }

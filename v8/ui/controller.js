@@ -6,7 +6,9 @@
  let busy=false,lastSignature='',archiveReturn='season',dialogOpener=null;
  X.hasStoredSave=()=>{try{return !!localStorage.getItem('gcc_dynasty_v8')||!!localStorage.getItem('gcc_dynasty_v7_2');}catch{return false;}};
  X.hasSave=()=>!!s.dynasty?.started||X.hasStoredSave();
- const announce=t=>{const feedback=document.getElementById('g8feedback'),inside=document.getElementById('g8dialogFeedback');feedback.textContent=t;feedback.hidden=!!ui.modal;if(inside){inside.textContent=ui.modal?t:'';inside.hidden=!ui.modal||!t;}};
+ let feedbackTimer=null;
+ const clearFeedback=()=>{if(feedbackTimer!==null)clock.clearTimeout(feedbackTimer);feedbackTimer=null;const feedback=document.getElementById('g8feedback');feedback.classList.remove('g8toast','g8fading');feedback.textContent='';};
+ const announce=(t,brief=false)=>{clearFeedback();const feedback=document.getElementById('g8feedback'),inside=document.getElementById('g8dialogFeedback');feedback.textContent=t;feedback.hidden=!!ui.modal;if(inside){inside.textContent=ui.modal?t:'';inside.hidden=!ui.modal||!t;}if(brief&&!ui.modal){feedback.classList.add('g8toast');feedbackTimer=clock.setTimeout(()=>{feedback.classList.add('g8fading');feedbackTimer=clock.setTimeout(clearFeedback,250);},1000);}};
  const bind=(name,where,fn)=>{commands[name]=fn;allow[name]=where;};
  const assert=(condition,text)=>{if(!condition)throw new Error(text);};
  function closeDialog(){if(dialog.open)dialog.close();ui.modal=null;document.getElementById('g8feedback').hidden=false;const opener=dialogOpener;dialogOpener=null;opener?.focus?.({preventScroll:true});if(!document.hidden&&!['home','story'].includes(ui.view))clock.resume();}
@@ -30,6 +32,7 @@
    window.scrollTo({left:x,top:y,behavior:'instant'});
    const newWire=document.getElementById('g8wire');if(newWire){newWire.scrollTop=wireScroll;X.restoreAnchor(newWire,wireAnchor);}
   }
+  if(s.userClub)X.primeVenue?.(G.nextUserFixture()?.home||s.userClub);
   ui.lastScreen=X.screen();lastSignature=signature();
  }
  function showUndrafted(){
@@ -69,11 +72,11 @@
  function finishMatch(){cancelMatchTimer();const back=ui.match?.returnView||'result';ui.match=null;setView(back);}
  function scheduleMatch(){
   cancelMatchTimer();const m=ui.match;if(!m||!m.running||ui.view!=='matchReveal')return;
-  matchTimer=clock.setTimeout(()=>{matchTimer=null;if(ui.view!=='matchReveal'||!ui.match?.running)return;if(ui.match.count>=X.matchBeatCount(ui.result))finishMatch();else{ui.match.count++;render(false);scheduleMatch();}save();},[1500,750,375][m.speedIndex]);
+  matchTimer=clock.setTimeout(()=>{matchTimer=null;if(ui.view!=='matchReveal'||!ui.match?.running)return;if(ui.match.count>=X.matchBeatCount(ui.result))finishMatch();else{ui.match.count++;render(false);scheduleMatch();}save();},X.matchDelay(m,ui.result));
  }
- function beginMatch(r,returnView='result',snapshot=null){assert(r?.scorecard,'That match has no innings highlights.');ui.result=r;ui.match=snapshot?{...snapshot,count:X.matchProgress(snapshot),presentationVersion:2}:{count:0,presentationVersion:2,speedIndex:0,running:true,year:s.year,reference:matchReference(r),returnView};setView('matchReveal');}
- bind('matchRun',['matchReveal'],()=>{assert(ui.match,'The highlights have ended.');ui.match.running=!ui.match.running;scheduleMatch();});
- bind('matchSpeed',['matchReveal'],()=>{assert(ui.match,'The highlights have ended.');ui.match.speedIndex=(ui.match.speedIndex+1)%3;scheduleMatch();});
+ function beginMatch(r,returnView='result',snapshot=null){assert(r?.scorecard,'That match has no scorebook.');ui.result=r;const version=X.hasBallLog(r)?3:2;ui.match=snapshot?{...snapshot,count:Math.min(X.matchBeatCount(r),X.matchProgress(snapshot)),presentationVersion:version}:{count:0,presentationVersion:version,speedIndex:0,running:true,year:s.year,reference:matchReference(r),returnView};setView('matchReveal');}
+ bind('matchRun',['matchReveal'],()=>{assert(ui.match,'The match playback has ended.');ui.match.running=!ui.match.running;scheduleMatch();});
+ bind('matchSpeed',['matchReveal'],()=>{assert(ui.match,'The match playback has ended.');ui.match.speedIndex=(ui.match.speedIndex+1)%(ui.match.presentationVersion===3?4:3);scheduleMatch();});
  bind('matchSkip',['matchReveal'],finishMatch);
  bind('watchMatch',['result'],()=>beginMatch(ui.result));
  function resetFilters(){ui.search='';ui.filter='ALL';ui.draftShown=24;}
@@ -84,12 +87,12 @@
   const bowling=[['New ball',R.bowlPhaseScore(p,'newBall')],['Middle overs',R.bowlPhaseScore(p,'middle')],['Death',R.bowlPhaseScore(p,'death')]];
   const rows=a=>a.map(([l,n])=>`<div class="g8statrow"><span>${esc(l)}</span><b>${Math.round(n)}</b></div>`).join('');
   const current=X.draftCurrent(annual()),canDraft=['draft','dynasty'].includes(ui.view)&&current?.club.abbr===own()&&draftable(p.id);
-  modal(p.name,`<p>${esc(p.country)} · ${esc(p.role)} · Age ${s.year-(p.birthYear||s.year-28)} · ${esc(form(p))}</p><div class="g8trade"><section class="g8sheet"><span class="g8eyebrow">BATTING</span>${rows(batting)}</section><section class="g8sheet"><span class="g8eyebrow">BOWLING</span>${rows(bowling)}</section></div>${X.playerRead(p)}<p>Fielding ${p.fielding} · Keeping ${p.keeping} · Preferred batting position ${p.preferredSlot}</p>${injury(p)?`<p>${esc(injury(p).status)} · ${injury(p).roundsLeft} rounds to recover</p>`:''}<p>${p.birthYear?(s.year-p.birthYear<24?'A young player still developing.':s.year-p.birthYear>33?'An experienced player in the later part of his career.':'A player in the main years of his career.'):''}</p><div class="g8actions">${canDraft?btn('Pick '+p.name,'draftPlayer',[p.id],'g8primary'):''}${['team'].includes(ui.view)&&roster().some(x=>x.id===p.id)&&!s.xi.includes(p.id)?btn(s.xi.length===11?'Swap into XI':'Select for XI',s.xi.length===11?'swapIn':'select',[p.id],'g8primary',injury(p)?.status==='OUT'):''}</div>`,'player');
+  modal(p.name,`<p>${esc(p.country)} · ${esc(p.role)} · Age ${s.year-(p.birthYear||s.year-28)} · ${esc(form(p))}</p><div class="g8trade"><section class="g8sheet"><span class="g8eyebrow">BATTING</span>${rows(batting)}</section><section class="g8sheet"><span class="g8eyebrow">BOWLING</span>${rows(bowling)}</section></div>${X.playerRead(p)}<p>Fielding ${p.fielding} · Keeping ${p.keeping} · Preferred batting position ${p.preferredSlot}</p>${injury(p)?`<p>${esc(injury(p).status)} · ${injury(p).roundsLeft} rounds to recover</p>`:''}<p>${p.birthYear?(s.year-p.birthYear<24?'A young player still developing.':s.year-p.birthYear>33?'An experienced player in the later part of his career.':'A player in the main years of his career.'):''}</p><div class="g8actions">${canDraft?btn('Pick '+p.name,'draftPlayer',[p.id],'g8primary'):''}${ui.view==='team'&&roster().some(x=>x.id===p.id)&&!p.dynastyReplacement&&read.coverStatus(p.id).canSign?btn(s.dynasty.replacementFor[p.id]?'Replace cover':'Find cover','cover',[p.id],'g8primary'):''}${['team'].includes(ui.view)&&roster().some(x=>x.id===p.id)&&!s.xi.includes(p.id)?btn(s.xi.length===11?'Swap into XI':'Select for XI',s.xi.length===11?'swapIn':'select',[p.id],'g8primary',injury(p)?.status==='OUT'):''}</div>`,'player');
  }
  function scorecard(r){
   assert(r?.scorecard,'This match has no scorebook.');
   const table=(caption,heads,rows)=>`<div class="g8tablewrap"><table class="g8table"><caption>${esc(caption)}</caption><thead><tr>${heads.map(h=>`<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr>${row.map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
-  modal('The match scorebook',r.scorecard.innings.map(i=>`<section class="g8sheet"><h3>${esc(i.club.name)} · ${i.total}/${i.wickets} (${i.overs} overs)</h3>${table('Batting',['Player','Dismissal','R','B','4','6','SR'],i.batting.map(b=>[b.player.name,b.dismissal,b.runs,b.balls,b.fours,b.sixes,b.sr?.toFixed(1)||'–']))}<p>Extras ${i.extras} · Powerplay ${i.phases.pp} · Middle ${i.phases.mid} · Death ${i.phases.death}</p>${table('Bowling',['Player','O','R','W','Econ'],i.bowling.map(b=>[b.player.name,`${Math.floor(b.balls/6)}.${b.balls%6}`,b.runs,b.wickets,Number(b.economy||0).toFixed(2)]))}${X.bowlingChanges(r,i)}</section>`).join('')+X.superOverRead(r),'scorecard');
+  modal('The match scorebook',r.scorecard.innings.map(i=>`<section class="g8sheet"><h3>${esc(i.club.name)} · ${i.total}/${i.wickets} (${i.overs} overs)</h3>${table('Batting',['Player','Dismissal','R','B','4','6','SR'],i.batting.map(b=>[b.player.name,b.dismissal,b.runs,b.balls,b.fours,b.sixes,b.sr?.toFixed(1)||'–']))}<p>Extras ${i.extras} · ${i.deliveryVersion===1?'Powerplay + surge':'Powerplay'} ${i.phases.pp} · Middle ${i.phases.mid} · Death ${i.phases.death}</p>${table('Bowling',['Player','O','R','W','Econ'],i.bowling.map(b=>[b.player.name,`${Math.floor(b.balls/6)}.${b.balls%6}`,b.runs,b.wickets,b.balls?(b.runs*6/b.balls).toFixed(2):'–']))}${X.bowlingChanges(r,i)}</section>`).join('')+X.superOverRead(r),'scorecard');
  }
  function trade(mid=false){
   assert(mid?(s.round===7&&!s.dynasty.midseasonDone[s.year]):['market','lottery'].includes(s.dynasty?.offseason?.phase),'The trade window is closed.');
@@ -127,7 +130,7 @@
  bind('how','*',()=>modal('How to play','<p>Take over one of eight clubs. The five-day signing window decides which players enter the league. These are not signings for your club.</p><p>Build a fifteen-player squad in a fifteen-round snake draft. Scout names on the board and consider batting, bowling, keeping and your home ground.</p><p>Choose eleven manually. Move their batting order up or down, and swap players when form, injuries or conditions demand it. Ratings describe quality; results show whether your plans work.</p><p>Play fourteen league matches. The top four enter two semi-finals, followed by a Grand Final. Each offseason starts with a squad update. Players stay automatically unless they retire, are traded or you confirm an optional release. Trade only if it improves your side, then draft any vacant places and choose a fresh XI. There is no salary cap or wage management.</p><p>Tied scores are settled by a simplified Super Over: six legal balls or two wickets, repeated if tied. The model selects hitters and a bowler from each match XI. Tie-break figures are separate from season statistics.</p><p>Autosave keeps the career on this browser. The career ends after the 2026 season.</p>'));
  bind('close','*',()=>{const back=ui.modal==='player'?ui.scoutReturn:null;ui.scoutReturn=null;closeDialog();if(back==='trade')tradeDialog();else if(back==='undrafted')showUndrafted();});
  bind('signingRun',['recruit'],()=>G.runRecruitment());
- bind('signingSpeed',['recruit'],()=>{G.cycleRecruitSpeed();announce(['Signing speed 1×','Signing speed 2×','Signing speed 4×'][s.recruit.speedIndex]);});
+ bind('signingSpeed',['recruit'],()=>{G.cycleRecruitSpeed();announce(['Signing speed 1×','Signing speed 2×','Signing speed 4×'][s.recruit.speedIndex],true);});
  bind('signingSkip',['recruit'],()=>G.skipRecruitment());
  bind('draftDraw',['recruit'],()=>{assert(s.recruit.complete,'Wait for the signing window to close.');G.setupDraft();G.skipDraftReveal();setView('draftDraw');startReveal('draft');render(false);});
  bind('beginDraft',['draftDraw'],()=>{assert(ui.reveal?.count===8,'Let the order reveal finish.');finishReveal();G.beginDraft();resetFilters();setView('draft');});
@@ -158,7 +161,7 @@
  bind('matchday',['result'],()=>{G.go('season');setView('season');});
  bind('prepare',['season'],()=>{
   const fx=G.nextUserFixture();assert(fx,'The regular season is finished.');const problem=read.xiProblem();assert(!problem,problem);const c=G.matchGroundForFixture(fx),weather=G.matchWeather?.(fx.home,fx.round),op=fx.home.abbr===own()?fx.away:fx.home;
-  modal(`Round ${s.round+1} · ${s.userClub.name} v ${op.name}`,`<p>${esc(fx.home.ground)} · ${esc(c?.trait||fx.home.trait)} · ${esc(weather?.label||weather?.name||'')}</p>${X.groundDetail(c)}${X.matchRead(fx)}<p>Your XI is lodged. The batting order is the one you set in the team room.</p><ol class="g8roster">${s.battingOrder.map((id,i)=>`<li><b>${i+1}. ${esc(G.byId(id)?.name)}</b><small>${esc(G.byId(id)?.role)}</small></li>`).join('')}</ol><div class="g8actions">${btn('Play the match','playMatch',[s.round+1],'g8primary')}${btn('Change XI','editXI')}</div>`,'prepare');
+  modal(`Round ${s.round+1} · ${fx.home.name} v ${fx.away.name}`,`<p>${esc(fx.home.ground)} · ${esc(c?.trait||fx.home.trait)} · ${esc(weather?.label||weather?.name||'')}</p>${X.groundDetail(c)}${X.matchRead(fx)}<p>Your XI is lodged. The batting order is the one you set in the team room.</p><ol class="g8roster">${s.battingOrder.map((id,i)=>`<li><b>${i+1}. ${esc(G.byId(id)?.name)}</b><small>${esc(G.byId(id)?.role)}</small></li>`).join('')}</ol><div class="g8actions">${btn('Play the match','playMatch',[s.round+1],'g8primary')}${btn('Change XI','editXI')}</div>`,'prepare');
  });
  bind('playMatch',['season'],round=>{assert(ui.modal==='prepare'&&round===s.round+1,'Prepare the next match first.');assert(!read.xiProblem(),read.xiProblem());closeDialog();G.playNextRound();assert(s.round===round,'The match could not be played.');ui.result=s.results.at(-1);beginMatch(ui.result);});
  bind('result',['season'],round=>{ui.result=s.results.find(r=>r.round===Number(round));assert(ui.result,'That match is not complete.');setView('result');});
@@ -200,7 +203,7 @@
   const fn=commands[action];if(!fn){announce('That control is unavailable.');return false;}
   const where=allow[action];if(where!=='*'&&!where.includes(ui.view)){announce('That action belongs to a different stage of the career.');return false;}
   busy=true;const view=ui.view,x=window.scrollX,y=window.scrollY;
-  try{document.getElementById('g8feedback').textContent='';fn(...args);completeDraft();save();if(ui.view===view&&!ui.modal)render(false);return true;}
+  try{clearFeedback();fn(...args);completeDraft();save();if(ui.view===view&&!ui.modal)render(false);return true;}
   catch(e){announce(e.message||'The action could not be completed.');return false;}
   finally{G.closeModal();busy=false;if(ui.view===view)window.scrollTo({left:x,top:y,behavior:'instant'});}
  };
