@@ -64,7 +64,7 @@ window.GCC8_DELIVERY=(()=>{
     if(e.wicket){wickets++;b.dismissal=e.dismissal;if(!runOut)br.wickets++;if(wickets<10&&(!target||total<target)&&balls<120){striker=next++;batting[striker].dnb=false;}}
     else if((e.batRuns+(['byes','legByes'].includes(e.extra)?e.extraRuns:0))%2)[striker,nonStriker]=[nonStriker,striker];
     if(e.legal&&legal===6&&wickets<10)[striker,nonStriker]=[nonStriker,striker];
-    Object.assign(e,{total,wickets,balls,nextStrikerId:wickets<10?order[striker]?.id:null,nextNonStrikerId:wickets<10?order[nonStriker]?.id:null});deliveries.push(e);
+    Object.assign(e,{total,wickets,balls,nextStrikerId:wickets<10&&balls<120&&(!target||total<target)?order[striker]?.id:null,nextNonStrikerId:wickets<10&&balls<120&&(!target||total<target)?order[nonStriker]?.id:null});deliveries.push(e);
     if(beforeRuns<50&&b.runs>=50)note('fifty',`${p.name} reaches fifty from ${b.balls} balls.`);
     if(beforeRuns<100&&b.runs>=100)note('hundred',`A century for ${p.name}. ${b.runs} from ${b.balls} balls.`);
    }
