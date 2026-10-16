@@ -89,3 +89,16 @@ G0 stays blocked pending an environment with authenticated repository checkout p
 - Commit `afe8469d`: `validResult()` now rejects scorecard innings over notation that differs from the reconstructed count of legal balls, and individual bowling over notation that differs from each bowler's recorded legal deliveries. This covers a separate integrity gap not addressed by rate validation.
 - Commit `66d8eeaf`: adds explicit mutation tests for false innings overs and false bowling overs to `qa/v8_delivery_boundary_regression.mjs`.
 - Source implementation was re-read and expected matches confirmed before commit. These edits remain **unexecuted against the clean rebuilt playable**; G0 and later gates remain blocked/open. No release or main promotion.
+
+## Executable suite orchestration checkpoint
+
+A new executable entrypoint, `qa/v8_release_gate_runner.mjs`, was committed at `15982cd7549121219a78aa3e407967008f794357`. It reads the previously verified historical 29-suite manifest and adds the supplemental preplay-controls test, clock pause regression and delivery boundary regression: **32 targeted suites**. It checks every required file before running, pins the same artifact path via `GCC8_TEST_BUILD`, records the artifact SHA-256, captures individual exit codes, duration and log hashes, and emits a machine-readable report. Failures return exit status 1; missing inputs/manifest mismatch return 2.
+
+Invoke from a clean GCC checkout after building the candidate:
+
+```sh
+python3 v8/build.py --freeze --output game/global_champions_cricket_v8_career_variation.html
+GCC8_TEST_BUILD=game/global_champions_cricket_v8_career_variation.html node qa/v8_release_gate_runner.mjs
+```
+
+The runner covers only the 32 suites, **not** full 2008–2026 careers or native visual QA. Those remain separate gates. An equivalent local runner script was syntax-checked and invoked in this container: it correctly reported missing project inputs with exit code 2. This is fail-closed infrastructure validation, not a test-suite pass. GitHub DNS remains unavailable in this environment, preventing a checked-out complete execution.
