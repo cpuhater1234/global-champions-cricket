@@ -1,0 +1,495 @@
+{
+  "sourceParent": "2c1c4e54828ce82e9955aa7eb00eaa111749c440",
+  "branch": "work/v8-game-first-rebuild",
+  "artifact": "game/global_champions_cricket_v8_familiar_career.html",
+  "sha256": "142a28437e152a5b8b8c70762d14dbceee392f0e779d613d7c72b81b19d22be4",
+  "bytes": 1607781,
+  "reproducibleFreeze": true,
+  "library": {
+    "library_file_id": "libfile_8796918e6cd48191a99df448f56dbf70",
+    "version": 29,
+    "path": "/global_champions_cricket_v8_familiar_career.html",
+    "file_id": "file_000000000d3881fa9f59aabbdcc03d02"
+  },
+  "broadCohort": {
+    "artifact": "game/global_champions_cricket_v8_player_first.html",
+    "sha256": "211bd697296fd44034059ea31b569ceb865aa3207ee7a67610acf2e0695b4e43",
+    "suites": [
+      {
+        "suite": "audit",
+        "exit": 0,
+        "output": "{\n  scope: 'VM adversarial saves, storage failures, resume context and stale-command checks; no browser rendering or server exists in this standalone build.',\n  checks: 58,\n  expectedCorruptSaveErrors: 4,\n  expectedStorageErrors: 9\n}\n"
+      },
+      {
+        "suite": "ball_playback",
+        "exit": 0,
+        "output": "{\n  checks: 844,\n  frames: 280,\n  scope: 'Actual simulated delivery playback, every frame markup, all speeds, pause, same/cold save and skip; no native animation evidence'\n}\n"
+      },
+      {
+        "suite": "career_distribution",
+        "exit": 0,
+        "output": "{\n  artifactSha256: '211bd697296fd44034059ea31b569ceb865aa3207ee7a67610acf2e0695b4e43',\n  scope: '10,000 world draws for Maxwell and a lower-rated long-run fixture; every shipped player/year checked in one actual world. Not 10,000 complete careers or historical calibration.',\n  worlds: 10000,\n  players: 412,\n  activePlayerYears: 5149,\n  counts: { typical: 9437, moderate: 186, severe: 97, breakout: 280 },\n  maxwell: { expectedPeak: 96, withinSixPoints: 9760, majorDisappointments: 72 },\n  lowerRatedBreakouts: 302,\n  repeatChecks: 10000,\n  errors: []\n}\n"
+      },
+      {
+        "suite": "career_outcomes",
+        "exit": 0,
+        "output": "Career outcome pure checks passed\n"
+      },
+      {
+        "suite": "career_state",
+        "exit": 0,
+        "output": "Career state anchors/migration/cold resume/quota/future correction checks passed\n"
+      },
+      {
+        "suite": "career_strategy",
+        "exit": 0,
+        "output": "{\n  artifactSha256: '211bd697296fd44034059ea31b569ceb865aa3207ee7a67610acf2e0695b4e43',\n  scope: 'Read-only instrumentation exposes existing private annual CPU functions in a temporary copy; bodies unchanged. Isolated 2013 twelve-name fixture, not a normal annual draft or proof of typical pick position. Changing only private career peak cannot alter market or CPU values; changing the public expected curve does.',\n  checks: 12,\n  ranking: [\n    {\n      name: 'Jasprit Bumrah',\n      current: 81,\n      careerPeak: 99,\n      publicHiddenBoard: 94.19836694540749,\n      annualValue: 94,\n      roleNeed: 6,\n      actualCareerPeakYear: 2024,\n      exitYear: 2026\n    },\n    {\n      name: 'David Warner',\n      current: 98,\n      careerPeak: 71,\n      publicHiddenBoard: 99,\n      annualValue: 109,\n      roleNeed: 9,\n      actualCareerPeakYear: 2014,\n      exitYear: 2026\n    },\n    {\n      name: 'Shahid Afridi',\n      current: 82,\n      careerPeak: 84,\n      publicHiddenBoard: 80.69160818051117,\n      annualValue: 86,\n      roleNeed: 6,\n      actualCareerPeakYear: 2008,\n      exitYear: 2018\n    },\n    {\n      name: 'Lasith Malinga',\n      current: 99,\n      careerPeak: 94,\n      publicHiddenBoard: 99,\n      annualValue: 107,\n      roleNeed: 6,\n      actualCareerPeakYear: 2013,\n      exitYear: 2020\n    },\n    {\n      name: 'Dale Steyn',\n      current: 98,\n      careerPeak: 92,\n      publicHiddenBoard: 98.09952662352671,\n      annualValue: 103,\n      roleNeed: 6,\n      actualCareerPeakYear: 2012,\n      exitYear: 2020\n    },\n    {\n      name: 'Dwayne Bravo',\n      current: 99,\n      careerPeak: 87,\n      publicHiddenBoard: 99,\n      annualValue: 113,\n      roleNeed: 11,\n      actualCareerPeakYear: 2012,\n      exitYear: 2024\n    },\n    {\n      name: 'Sunil Narine',\n      current: 84,\n      careerPeak: 97,\n      publicHiddenBoard: 96.54549054403141,\n      annualValue: 97,\n      roleNeed: 6,\n      actualCareerPeakYear: 2018,\n      exitYear: 2026\n    },\n    {\n      name: 'Shane Watson',\n      current: 84,\n      careerPeak: 87,\n      publicHiddenBoard: 83.58697435336609,\n      annualValue: 98,\n      roleNeed: 15,\n      actualCareerPeakYear: 2009,\n      exitYear: 2020\n    },\n    {\n      name: 'Andre Russell',\n      current: 89,\n      careerPeak: 64,\n      publicHiddenBoard: 99,\n      annualValue: 106,\n      roleNeed: 11,\n      actualCareerPeakYear: 2016,\n      exitYear: 2026\n    },\n    {\n      name: 'Mitchell Starc',\n      current: 86,\n      careerPeak: 95,\n      publicHiddenBoard: 95.99566930184699,\n      annualValue: 97,\n      roleNeed: 6,\n      actualCareerPeakYear: 2019,\n      exitYear: 2026\n    },\n    {\n      name: 'Virat Kohli',\n      current: 87,\n      careerPeak: 72,\n      publicHiddenBoard: 99,\n      annualValue: 99,\n      roleNeed: 5,\n      actualCareerPeakYear: 2016,\n      exitYear: 2026\n    },\n    {\n      name: 'AB de Villiers',\n      current: 98,\n      careerPeak: 88,\n      publicHiddenBoard: 99,\n      annualValue: 106,\n      roleNeed: 5,\n      actualCareerPeakYear: 2012,\n      exitYear: 2021\n    }\n  ],\n  chosen: [\n    'Andre Russell',\n    'Dwayne Bravo',\n    'Mitchell Starc',\n    'AB de Villiers',\n    'Dale Steyn',\n    'Lasith Malinga',\n    'David Warner',\n    'Virat Kohli',\n    'Sunil Narine',\n    'Jasprit Bumrah',\n    'Shane Watson',\n    'Shahid Afridi'\n  ],\n  peakSensitivity: {\n    originalPeak: 99,\n    changedPeak: 60,\n    valueBefore: 94,\n    valueAfter: 94,\n    cpuBefore: 97.61870375955208,\n    cpuAfter: 97.61870375955208\n  },\n  errors: []\n}\n"
+      },
+      {
+        "suite": "chase_logic",
+        "exit": 0,
+        "output": "{\n  scope: 'Exact injected chase helpers: legal winning-score excess, the observed 91/92-ball ledger defects and 1820 generated phase/target budgets. These aggregate phases do not invent a final delivery.',\n  checks: 6478,\n  winningExcessValues: [ 0, 1, 2, 3, 4, 5 ],\n  errors: []\n}\n"
+      },
+      {
+        "suite": "clock",
+        "exit": 0,
+        "output": "Clock: one native runner, pause/resume, cancellation and self-cancelling interval passed.\n"
+      },
+      {
+        "suite": "cpu_market",
+        "exit": 0,
+        "output": "{\n  artifactSha256: '211bd697296fd44034059ea31b569ceb865aa3207ee7a67610acf2e0695b4e43',\n  scope: 'Three real CPU market windows from a completed-season fixture. Temporary copies count unchanged tradeValue calls; uncached copy restores original direct lookups. Equal market truth and rosters required, not timing thresholds. VM timings are diagnostic, not native responsiveness evidence.',\n  rows: [\n    {\n      seed: 3803,\n      identical: true,\n      uncached: [Object],\n      cached: [Object]\n    },\n    {\n      seed: 4409,\n      identical: true,\n      uncached: [Object],\n      cached: [Object]\n    },\n    {\n      seed: 4513,\n      identical: true,\n      uncached: [Object],\n      cached: [Object]\n    }\n  ],\n  errors: []\n}\n"
+      },
+      {
+        "suite": "cricket_polish",
+        "exit": 0,
+        "output": "{\n  scope: 'Source/real-script VM checks of cricket reads, drafting, spectator finals, Super Over ledgers and save rejection. No native browser, visual geometry or smoothness evidence.',\n  checks: 750,\n  randomTieBreakSeeds: 150,\n  errors: []\n}\n"
+      },
+      {
+        "suite": "delivery_engine",
+        "exit": 0,
+        "output": "{\n  checks: 9118,\n  innings: 500,\n  baselineMean: 162.628,\n  scope: 'Seeded genuine delivery outcomes, arithmetic, legal endpoints and surge rules; plausibility envelope is not empirical calibration'\n}\n"
+      },
+      {
+        "suite": "delivery_fitness",
+        "exit": 0,
+        "output": "{\n  checks: 5,\n  expected: 84,\n  seen: [ 84, 84 ],\n  scope: 'Actual complete round through dynasty fitness wrapper; injected replay fixture'\n}\n"
+      },
+      {
+        "suite": "delivery_save",
+        "exit": 0,
+        "output": "{\n  checks: 26,\n  scope: 'Causal-ledger save validation and cold rejection without overwrite; legacy saves remain covered by migration suites'\n}\n"
+      },
+      {
+        "suite": "development_feedback",
+        "exit": 0,
+        "output": "Observed annual development checks passed\nReturning-core development UI checks passed\n"
+      },
+      {
+        "suite": "dom_patch",
+        "exit": 0,
+        "output": "{\n  scope: 'DOM tree model checks for keyed identity, replacement, insertion, removal, typing and details state. Does not certify native focus, scroll, geometry or appearance.',\n  checks: 18,\n  keyedPermutations: 24,\n  errors: []\n}\n"
+      },
+      {
+        "suite": "draft_controls",
+        "exit": 1,
+        "output": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Scout retains workload depth\n    at check (file:///workspace/scratch/c4af180a518b/gcc/qa/v8_draft_controls_test.mjs:2:149)\n    at run (file:///workspace/scratch/c4af180a518b/gcc/qa/v8_draft_controls_test.mjs:11:182)\n    at file:///workspace/scratch/c4af180a518b/gcc/qa/v8_draft_controls_test.mjs:16:7\n    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)\n    at async node:internal/modules/esm/loader:643:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.19.0\n"
+      },
+      {
+        "suite": "draft_stress",
+        "exit": 0,
+        "output": "{\n  scope: 'Actual-script VM annual-draft stress with explicit 0/1/2/4/5/6 departure and transferred-pick fixtures; mixed paced/skip truth, rapid speed changes, wrong-turn actions, modal pauses and no stale completion callbacks. No native rendering.',\n  checks: 755,\n  cases: [\n    {\n      userVacancies: 0,\n      transferredPicks: 0,\n      picks: 16,\n      supplements: 1,\n      timedCycles: 0\n    },\n    {\n      userVacancies: 1,\n      transferredPicks: 0,\n      picks: 18,\n      supplements: 1,\n      timedCycles: 2\n    },\n    {\n      userVacancies: 2,\n      transferredPicks: 0,\n      picks: 20,\n      supplements: 1,\n      timedCycles: 3\n    },\n    {\n      userVacancies: 4,\n      transferredPicks: 0,\n      picks: 24,\n      supplements: 2,\n      timedCycles: 5\n    },\n    {\n      userVacancies: 5,\n      transferredPicks: 0,\n      picks: 20,\n      supplements: 2,\n      timedCycles: 4\n    },\n    {\n      userVacancies: 6,\n      transferredPicks: 2,\n      picks: 24,\n      supplements: 5,\n      timedCycles: 5\n    }\n  ],\n  errors: []\n}\n"
+      },
+      {
+        "suite": "experience",
+        "exit": 0,
+        "output": "{\n  scope: 'Actual-script VM known player jobs, foundation/annual automatic XI handoff, undrafted Scout/close, qualitative squad feedback, truthful player spotlights, close controls and old/new save resume. CSS/markup checks only for layout, no native pixels.',\n  checks: 121,\n  errors: []\n}\n"
+      },
+      {
+        "suite": "fair_scouting",
+        "exit": 0,
+        "output": "Fair public scouting/draft/trade checks passed\n"
+      },
+      {
+        "suite": "fan",
+        "exit": 0,
+        "output": "{\n  scope: 'Real-script VM commands with explicit replacement injury/legacy-chain and club-transfer fixtures, played-round recovery, cold resume and dialog-message checks. No native rendering evidence.',\n  checks: 95,\n  errors: []\n}\n"
+      },
+      {
+        "suite": "final_pass",
+        "exit": 0,
+        "output": "{\n  checks: 644,\n  cases: [\n    { retirements: 0, cuts: 2, picks: 2 },\n    { retirements: 1, cuts: 2, picks: 3 },\n    { retirements: 2, cuts: 2, picks: 4 },\n    { retirements: 3, cuts: 1, picks: 4 },\n    { retirements: 4, cuts: 0, picks: 4 },\n    { retirements: 5, cuts: 0, picks: 5 },\n    { retirements: 6, cuts: 0, picks: 6 }\n  ]\n}\n"
+      },
+      {
+        "suite": "gap_codec",
+        "exit": 0,
+        "output": "{\n  artifactSha256: '211bd697296fd44034059ea31b569ceb865aa3207ee7a67610acf2e0695b4e43',\n  scope: 'Full actual oversized first-season payload, legacy and packed restores, exact field round-trip, mutation invalidation, Unicode and deliberate block corruptions. Conservative UTF-16 budget is a test model, not browser quota certification.',\n  checks: 27,\n  corruptions: 16,\n  rawUtf16Bytes: 5758942,\n  packedUtf16Bytes: 1881018,\n  errors: []\n}\n"
+      },
+      {
+        "suite": "gap_combined",
+        "exit": 0,
+        "output": "{\n  artifactSha256: '211bd697296fd44034059ea31b569ceb865aa3207ee7a67610acf2e0695b4e43',\n  scope: 'Real annual draft after retirement/release, seven played rounds, explicitly injured selected original, selected temporary cover, actual accepted trade through dropdown events, cover cleanup, repeated page-exit/cold reload and manual XI repair before round eight.',\n  checks: 122,\n  offer: 85,\n  cover: 77,\n  target: 128,\n  errors: []\n}\n"
+      },
+      {
+        "suite": "gap_events",
+        "exit": 0,
+        "output": "{\n  artifactSha256: '211bd697296fd44034059ea31b569ceb865aa3207ee7a67610acf2e0695b4e43',\n  scope: 'Actual registered callbacks in the VM host: lifecycle, click delegation, trade changes and phase sorts. Synthetic events; no native rendering/focus or browser lifecycle certification.',\n  checks: 107,\n  cases: [\n    'signing',\n    'club reveal',\n    'foundation draft',\n    'annual draft',\n    'match highlights'\n  ],\n  errors: []\n}\n"
+      },
+      {
+        "suite": "gap_storage",
+        "exit": 0,
+        "output": "{\n  artifactSha256: '211bd697296fd44034059ea31b569ceb865aa3207ee7a67610acf2e0695b4e43',\n  scope: 'Two actual VM game instances share a storage map, with sequential interleaving. Covers stale writes, page exit, reload, explicit restart, transient failure and failed-restore acknowledgement rollback. Not a browser scheduling race or atomic cross-process lock certification.',\n  checks: 38,\n  expectedRestoreErrors: 1,\n  errors: []\n}\n"
+      },
+      {
+        "suite": "interaction",
+        "exit": 1,
+        "output": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(h.get('g8tradeReply').textContent)\n\n    at file:///workspace/scratch/c4af180a518b/gcc/qa/v8_interaction_test.mjs:12:45\n    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)\n    at async node:internal/modules/esm/loader:643:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: '',\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.19.0\n"
+      },
+      {
+        "suite": "layout",
+        "exit": 0,
+        "output": "{\n  scope: 'Generated markup for every screen family/dialog and twenty club identities, plus CSS source containment checks. No browser layout, geometric overlap, pixels, keyboard or smoothness measurements.',\n  checks: 104,\n  screenStates: 39,\n  clubVariants: 20,\n  errors: []\n}\n"
+      },
+      {
+        "suite": "logic",
+        "exit": 0,
+        "output": "{\n  artifactSha256: '211bd697296fd44034059ea31b569ceb865aa3207ee7a67610acf2e0695b4e43',\n  scope: 'Private-function exports only in a temporary copy; full-universe year/attribute checks, counterfactual decision effects, actual innings challenge and explicit boundary fixtures. No native rendered geometry, subjective enjoyment, historical rating calibration or full factual certification.',\n  checks: 16155,\n  fixtures: {\n    universe: { players: 412, playerYears: 5149, lowKeeperQualityYears: 14 },\n    injury: { user: 0.0175, cpu: 0.0175 },\n    battingOpportunity: { buried: 68, promoted: 70, roleFit: 91 },\n    fitness: { healthy: 72, managing: 70 },\n    cpuDraft: {\n      legalListUnchanged: true,\n      lastPickKeeper: true,\n      lastPickBowling: true\n    },\n    cpuReleases: { count: 13, budgetShared: true, coldResume: true },\n    challenge: {\n      samples: 500,\n      strongWins: 374,\n      strongWinPct: 74.8,\n      averageFor: 150.75,\n      averageAgainst: 134.536,\n      scope: 'Controlled synthetic 85-v-65 cricket skills, identical overall 75; not typical league balance or player enjoyment.'\n    }\n  },\n  errors: []\n}\n"
+      },
+      {
+        "suite": "management_boundaries",
+        "exit": 0,
+        "output": "{\n  checks: 30,\n  scope: 'VM stale package/release substitution, Scout return, unconfirmed reload and explicit overfull legacy-list confirmation boundaries'\n}\n"
+      },
+      {
+        "suite": "match_reveal",
+        "exit": 0,
+        "output": "{\n  scope: 'VM actual-score highlights, pacing, pause/modal/title/archive and cold reload; cricket truth unchanged. CSS/markup source protections, no native rendered geometry or smoothness evidence.',\n  checks: 58,\n  errors: []\n}\n"
+      },
+      {
+        "suite": "matchday_visual_reads",
+        "exit": 0,
+        "output": "{\n  checks: 54,\n  scope: 'VM home/away ordering, conditions and comparative markup; image request attributes only, no network latency measurement'\n}\n"
+      },
+      {
+        "suite": "matchup_overview",
+        "exit": 0,
+        "output": "{\n  checks: 78,\n  scope: 'VM profile-to-markup arithmetic, inline detail availability and CSS-independent labels; no rendered appearance evidence'\n}\n"
+      },
+      {
+        "suite": "micro_layout",
+        "exit": 0,
+        "output": "{\"checks\":64,\"scope\":\"VM controls, complete roster markup and CSS contracts; no rendered geometry\"}\n"
+      },
+      {
+        "suite": "migration",
+        "exit": 0,
+        "output": "{\n  scope: 'VM v7.2-key migration fixture without v8 metadata; original legacy save preserved.',\n  checks: 6,\n  errors: []\n}\n"
+      },
+      {
+        "suite": "offseason",
+        "exit": 0,
+        "output": "{\n  artifactSha256: '211bd697296fd44034059ea31b569ceb865aa3207ee7a67610acf2e0695b4e43',\n  scope: 'Actual-script VM season review, named list movements, rolling agreements, optional/cancelled releases and trades, automatic CPU market, cold squad-update resume, draw closure, zero-pick/manual XI/2026 boundaries, malformed metadata and exact 2008 skill preservation. No native rendered geometry or fun certification.',\n  checks: 72,\n  errors: []\n}\n"
+      },
+      {
+        "suite": "player_clarity",
+        "exit": 0,
+        "output": "{ checks: 1420, players: 412, errors: [] }\n"
+      },
+      {
+        "suite": "player_profiles",
+        "exit": 0,
+        "output": "{ profiles: 412, checkedExisting: 399, errors: 0 }\n"
+      },
+      {
+        "suite": "preplay_controls",
+        "exit": 0,
+        "output": "{\n  artifactSha256: '211bd697296fd44034059ea31b569ceb865aa3207ee7a67610acf2e0695b4e43',\n  scope: 'Real-script VM direct commands and synthetic captured input/change/cancel callbacks. Finals-return uses an actual completed-final fixture; compatibility list correction uses an explicit overfull roster fixture. No native pointer, keyboard, geometry, focus or rendering certification.',\n  checks: 91,\n  commands: [\n    'annualDraft',  'annualDraw',   'annualList',\n    'averages',     'beginDraft',   'cancelSwap',\n    'clearXI',      'close',        'club',\n    'clubs',        'confirmClub',  'confirmFinalCut',\n    'continue',     'draftDraw',    'draftPlayer',\n    'finalCut',     'finalsReturn', 'lodge',\n    'matchSkip',    'matchday',     'more',\n    'naturalOrder', 'offseason',    'play',\n    'playMatch',    'prepare',      'result',\n    'revealAll',    'scorecard',    'seasonTab',\n    'select',       'signingSkip',  'signingSpeed',\n    'skipPick',     'swapIn',       'world'\n  ],\n  errors: []\n}\n"
+      },
+      {
+        "suite": "readable_feedback",
+        "exit": 0,
+        "output": "{\n  checks: 24,\n  scope: 'Real-script ability arithmetic, card/scout/season markup and typography source contracts; no pixels or native geometry'\n}\n"
+      },
+      {
+        "suite": "reveal",
+        "exit": 0,
+        "output": "{\n  scope: 'VM clock and command tests; proves reveal sequencing/save guards and unchanged draw order, not rendered smoothness.',\n  checks: 43,\n  errors: []\n}\n"
+      },
+      {
+        "suite": "save_integrity",
+        "exit": 0,
+        "output": "{\n  scope: 'VM corrupt-state fixtures must fail before mutating a previously valid career or overwriting saved data.',\n  checks: 77,\n  cases: [\n    'table',\n    'statValue',\n    'negativeStat',\n    'selfFixture',\n    'team',\n    'order',\n    'xi',\n    'results',\n    'schedule',\n    'stats',\n    'club',\n    'reveal',\n    'post-validation render failure'\n  ]\n}\n"
+      },
+      {
+        "suite": "signing_notice",
+        "exit": 0,
+        "output": "{\n  checks: 37,\n  scope: 'VM notification lifecycle and CSS contracts; no rendered size or animation certification'\n}\n"
+      },
+      {
+        "suite": "squad_management",
+        "exit": 0,
+        "output": "{\n  checks: 133,\n  scope: 'Real completed-2009 save to 2010 management, release consequences/cancel, actual trade review/edit/accept/reject, cold resume; VM only'\n}\n"
+      },
+      {
+        "suite": "team_workspace",
+        "exit": 0,
+        "output": "{\n  checks: 18,\n  scope: 'Real-script VM selection, swap, reorder and complete lineup markup; no rendered alignment evidence'\n}\n"
+      },
+      {
+        "suite": "transition",
+        "exit": 0,
+        "output": "{\n  scope: 'VM real annual draft, actual played-round injury recovery and real midseason trade; initial injury is an explicit fixture. No native rendered evidence.',\n  checks: 105,\n  trade: { offer: 104, target: 192, club: 'RR' },\n  errors: []\n}\n"
+      },
+      {
+        "suite": "venue_loading",
+        "exit": 0,
+        "output": "{\n  checks: 7,\n  scope: 'Synthetic native-image request/load/error callbacks; no actual network or browser speed measurement'\n}\n"
+      }
+    ]
+  },
+  "finalFocused": {
+    "artifact": "game/global_champions_cricket_v8_familiar_career.html",
+    "sha256": "142a28437e152a5b8b8c70762d14dbceee392f0e779d613d7c72b81b19d22be4",
+    "suites": [
+      {
+        "suite": "readable_feedback",
+        "exit": 0,
+        "output": "{\n  checks: 24,\n  scope: 'Real-script ability arithmetic, card/scout/season markup and typography source contracts; no pixels or native geometry'\n}\n"
+      },
+      {
+        "suite": "squad_management",
+        "exit": 0,
+        "output": "{\n  checks: 133,\n  scope: 'Real completed-2009 save to 2010 management, release consequences/cancel, actual trade review/edit/accept/reject, cold resume; VM only'\n}\n"
+      },
+      {
+        "suite": "management_boundaries",
+        "exit": 0,
+        "output": "{\n  checks: 30,\n  scope: 'VM stale package/release substitution, Scout return, unconfirmed reload and explicit overfull legacy-list confirmation boundaries'\n}\n"
+      },
+      {
+        "suite": "draft_controls",
+        "exit": 0,
+        "output": "{\n  scope: 'Actual-script VM foundation/annual paced drafts against instant-skip truth (annual two-vacancies-per-club fixture), direct Pick/Scout/stale actions and modal/home/cold pause. No native pixels or interaction certification.',\n  checks: 692,\n  errors: []\n}\n"
+      },
+      {
+        "suite": "interaction",
+        "exit": 0,
+        "output": "{\n  scope: 'VM dispatch + real trade, supplementary pick and replacement rules. Injury availability fixture is injected, not naturally simulated; no browser validation.',\n  checks: 35,\n  tradeAccepted: true,\n  pickIncluded: 'R1',\n  errors: []\n}\n"
+      },
+      {
+        "suite": "lifecycle_consistency",
+        "exit": 0,
+        "output": "{\n  checks: 78,\n  scope: 'Actual completed2009/2019/2025 saves through2010/2020/2026 squad updates, real annual drafts, shared manual XI/Scout and cold resume. VM only; not three newly simulated full careers.'\n}\n"
+      },
+      {
+        "suite": "layout",
+        "exit": 0,
+        "output": "{\n  scope: 'Generated markup for every screen family/dialog and twenty club identities, plus CSS source containment checks. No browser layout, geometric overlap, pixels, keyboard or smoothness measurements.',\n  checks: 104,\n  screenStates: 39,\n  clubVariants: 20,\n  errors: []\n}\n"
+      },
+      {
+        "suite": "experience",
+        "exit": 0,
+        "output": "{\n  scope: 'Actual-script VM known player jobs, foundation/annual automatic XI handoff, undrafted Scout/close, qualitative squad feedback, truthful player spotlights, close controls and old/new save resume. CSS/markup checks only for layout, no native pixels.',\n  checks: 121,\n  errors: []\n}\n"
+      },
+      {
+        "suite": "offseason",
+        "exit": 0,
+        "output": "{\n  artifactSha256: '142a28437e152a5b8b8c70762d14dbceee392f0e779d613d7c72b81b19d22be4',\n  scope: 'Actual-script VM season review, named list movements, rolling agreements, optional/cancelled releases and trades, automatic CPU market, cold squad-update resume, draw closure, zero-pick/manual XI/2026 boundaries, malformed metadata and exact 2008 skill preservation. No native rendered geometry or fun certification.',\n  checks: 72,\n  errors: []\n}\n"
+      },
+      {
+        "suite": "team_workspace",
+        "exit": 0,
+        "output": "{\n  checks: 18,\n  scope: 'Real-script VM selection, swap, reorder and complete lineup markup; no rendered alignment evidence'\n}\n"
+      },
+      {
+        "suite": "matchup_overview",
+        "exit": 0,
+        "output": "{\n  checks: 78,\n  scope: 'VM profile-to-markup arithmetic, inline detail availability and CSS-independent labels; no rendered appearance evidence'\n}\n"
+      },
+      {
+        "suite": "preplay_controls",
+        "exit": 0,
+        "output": "{\n  artifactSha256: '142a28437e152a5b8b8c70762d14dbceee392f0e779d613d7c72b81b19d22be4',\n  scope: 'Real-script VM direct commands and synthetic captured input/change/cancel callbacks. Finals-return uses an actual completed-final fixture; compatibility list correction uses an explicit overfull roster fixture. No native pointer, keyboard, geometry, focus or rendering certification.',\n  checks: 91,\n  commands: [\n    'annualDraft',  'annualDraw',   'annualList',\n    'averages',     'beginDraft',   'cancelSwap',\n    'clearXI',      'close',        'club',\n    'clubs',        'confirmClub',  'confirmFinalCut',\n    'continue',     'draftDraw',    'draftPlayer',\n    'finalCut',     'finalsReturn', 'lodge',\n    'matchSkip',    'matchday',     'more',\n    'naturalOrder', 'offseason',    'play',\n    'playMatch',    'prepare',      'result',\n    'revealAll',    'scorecard',    'seasonTab',\n    'select',       'signingSkip',  'signingSpeed',\n    'skipPick',     'swapIn',       'world'\n  ],\n  errors: []\n}\n"
+      },
+      {
+        "suite": "gap_events",
+        "exit": 0,
+        "output": "{\n  artifactSha256: '142a28437e152a5b8b8c70762d14dbceee392f0e779d613d7c72b81b19d22be4',\n  scope: 'Actual registered callbacks in the VM host: lifecycle, click delegation, trade changes and phase sorts. Synthetic events; no native rendering/focus or browser lifecycle certification.',\n  checks: 107,\n  cases: [\n    'signing',\n    'club reveal',\n    'foundation draft',\n    'annual draft',\n    'match highlights'\n  ],\n  errors: []\n}\n"
+      },
+      {
+        "suite": "fan",
+        "exit": 0,
+        "output": "{\n  scope: 'Real-script VM commands with explicit replacement injury/legacy-chain and club-transfer fixtures, played-round recovery, cold resume and dialog-message checks. No native rendering evidence.',\n  checks: 95,\n  errors: []\n}\n"
+      }
+    ]
+  },
+  "initialFailures": [
+    {
+      "suite": "draft_controls",
+      "finding": "Streamlined Scout omitted explicit bowling-workload role. Restored in final script12; final draft_controls passes692 checks."
+    },
+    {
+      "suite": "interaction",
+      "finding": "Assertion read textContent on an element created from innerHTML in a non-parsing VM stub. Corrected assertion reads actual generated result markup plus existing ownership checks. Final interaction passes."
+    }
+  ],
+  "twoSeason": {
+    "scope": "Real cricket engine + new UI dispatch in a VM DOM stub. No browser, visual, geometry, focus or latency certification.",
+    "seed": 8831,
+    "club": "HEA",
+    "coverage": {
+      "reloads": [
+        {
+          "year": 2008,
+          "label": "foundation-user-pick"
+        },
+        {
+          "year": 2008,
+          "label": "manual-XI"
+        },
+        {
+          "year": 2008,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2008,
+          "label": "grand-final-ready"
+        },
+        {
+          "year": 2009,
+          "label": "annual-order"
+        },
+        {
+          "year": 2009,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2009,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2009,
+          "label": "grand-final-ready"
+        }
+      ],
+      "finals": 2,
+      "injurySelections": 2,
+      "injuryCovers": 0,
+      "superOvers": 2,
+      "clubs": []
+    },
+    "checks": 1778,
+    "seasons": 2,
+    "regularSeasonMatches": 28,
+    "storageStats": {
+      "writes": 1226,
+      "maxCodeUnits": 1013851,
+      "maxUtf16Bytes": 2027702,
+      "quotaFailures": 0
+    },
+    "errors": []
+  },
+  "twoSeasonArtifactSha256": "211bd697296fd44034059ea31b569ceb865aa3207ee7a67610acf2e0695b4e43",
+  "lifecycle": {
+    "completedSaveYears": [
+      2009,
+      2019,
+      2025
+    ],
+    "transitionYears": [
+      2010,
+      2020,
+      2026
+    ],
+    "finalChecks": 78,
+    "scope": "Genuine prior completed-career checkpoints through actual new squad update, annual draft, shared manual XI and Scout, and cold resume; not three newly simulated full careers."
+  },
+  "hostEquivalence": {
+    "cohortSha256": "211bd697296fd44034059ea31b569ceb865aa3207ee7a67610acf2e0695b4e43",
+    "finalSha256": "142a28437e152a5b8b8c70762d14dbceee392f0e779d613d7c72b81b19d22be4",
+    "changedExecutableBlocks": [
+      12
+    ],
+    "explanation": "Only Scout playerRead restores explicit bowling workload role. Every engine, save, controller, other UI script and stylesheet is byte-identical. Build fingerprint changes as expected."
+  },
+  "markup": [
+    {
+      "scope": "Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.",
+      "view_states": 39,
+      "action_bindings": 556,
+      "errors": []
+    },
+    {
+      "scope": "Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.",
+      "view_states": 4,
+      "action_bindings": 294,
+      "errors": []
+    },
+    {
+      "scope": "Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.",
+      "view_states": 6,
+      "action_bindings": 21,
+      "errors": []
+    },
+    {
+      "scope": "Parsed HTML strings from the VM DOM stub; does not validate geometry or visual quality.",
+      "view_states": 27,
+      "action_bindings": 684,
+      "errors": []
+    }
+  ],
+  "typographyAudit": {
+    "uiFiles": [
+      "v8/ui/match_story.js",
+      "v8/ui/screens.js",
+      "v8/ui/offseason.js",
+      "v8/ui/data.js",
+      "v8/ui/dom.js",
+      "v8/ui/venues.js",
+      "v8/ui/controller.js",
+      "v8/ui/components.js",
+      "v8/ui/clock.js",
+      "v8/ui/roles.js"
+    ],
+    "screenFamilies": [
+      "home",
+      "story",
+      "leagueDraw",
+      "clubs",
+      "recruit",
+      "draftDraw",
+      "draft",
+      "team",
+      "season",
+      "matchReveal",
+      "result",
+      "finals",
+      "review",
+      "dynasty",
+      "archive",
+      "legacy"
+    ],
+    "subRemSizes": [],
+    "root18px": true,
+    "bodyWeight600": true,
+    "inlineFontStyles": [],
+    "remainingNumericTables": "Scorecards, player averages, league leaders and archives retain cricket tables; these are intentional statistical views, not squad-management instructions.",
+    "sharedSystems": [
+      "One draftRoom for foundation and annual drafts",
+      "One v.team for every season",
+      "One inspect/playerRead for every season",
+      "Shared playerCard and abilityRead for foundation, annual pool and cover",
+      "One offseasonMarket for every annual transition"
+    ],
+    "limits": "Source/VM markup only. No measured native font size, screen fitting, alignment, scroll or pixels."
+  },
+  "remainingLimits": [
+    "No native rendered alignment, text fitting, input/focus/scroll, zoom, image latency or animation smoothness measurement",
+    "18px root and heavier body copy are source contracts, not measured pixels; narrow screens can require scrolling",
+    "Scorecards/averages/records intentionally retain statistical tables",
+    "Existing371 uncertified identities and rating/career/chemistry calibration limitations remain",
+    "No empirical cricket calibration or human enjoyment/learnability certification",
+    "No new full19-season career in this pass; previous delivery-model full career is separate evidence",
+    "Large raw checkpoint fixtures remain local; tests and compact manifest are not a complete reproduction bundle"
+  ]
+}

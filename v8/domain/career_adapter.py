@@ -12,6 +12,7 @@ def adapt(name, script):
     if name == 'foundation':
         script = script.replace('    state.recruit.universeSize=state.pool.length;', '    window.GCC8_SEED_FOUNDATION();\n    state.recruit.universeSize=state.pool.length;')
     if name == 'dynasty':
+        script=script.replace("log('CONTRACT',", "log('RELEASE',").replace('Contract not renewed · one Draft selection opened.', 'Player released · one draft place opened.')
         script = script.replace('function applyCareerYear(p,year){window.GCC8_JOB_MODEL.prepare', 'function applyExpectedCareerYear(p,year){window.GCC8_JOB_MODEL.prepare', 1)
         old = 'function initDynastyData(){ensureDynasty();addCareerMetaExisting();seedArrivalUniverse();for(const p of state.pool)if(activePlayer(p,state.year))applyCareerYear(p,state.year)}'
         assert old in script

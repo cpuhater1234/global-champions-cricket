@@ -370,3 +370,29 @@ Supersedes the micro-layout playable. The visible user feedback approves navy/li
 - Build: `python3 v8/build.py --freeze --output game/global_champions_cricket_v8_arcade_matchday.html`. Read latest report/manifest first. Source checkpoint stores code/tests/compact evidence, standalone separately saved; raw large fixtures remain local.
 
 Final career verification:2008–2026 completed as2 fresh seasons plus17 resumed seasons,266 regular user matches total. Initial run1778 checks; resume13140 checks. Zero quota failures under5,242,880 UTF-16 bytes; peak attempted save2315940 bytes. Final career reaches the legacy ending and cold-loads it. Failed/superseded diagnostic runs excluded.
+
+
+## Latest: familiar career controls and player-first readability · 16 October 2026
+
+Tom reports that later seasons became confusing: contract wording without a real contract system, unclear trading/releases and small description-heavy text. He approved the concrete squad-management rework and then stressed that time should advance inside consistent familiar systems. Do not invent a separate later-season UI.
+
+- Source parent `2c1c4e54828ce82e9955aa7eb00eaa111749c440`; branch `work/v8-game-first-rebuild`.
+- Latest playable `game/global_champions_cricket_v8_familiar_career.html`, SHA256 `142a28437e152a5b8b8c70762d14dbceee392f0e779d613d7c72b81b19d22be4`,1,607,781 bytes. Freeze rebuild byte-identical.
+- Same Library identity `libfile_8796918e6cd48191a99df448f56dbf70`, version29, canonical `/global_champions_cricket_v8_familiar_career.html`, file ID `file_000000000d3881fa9f59aabbdcc03d02`; metadata applied.
+- Squad update uses occupied/vacant places, one row per player with Scout/Trade/Release, actual departure/incoming lists and clear keep/continue. Development, deeper squad reads and arrival scouting are expandable. No fake contract/agreement/renewal wording; permanent players remain until retirement/trade/confirmed release. Existing limits/draft rules remain.
+- Release review shows exact before/after squad and draft vacancies, remaining allowance and keeper/bowling warnings. Keep is explicit. Confirmation bound to the exact player; exhausted allowance blocked before review. Legacy overfull-list final cuts also require review/confirm.
+- Trade starts without guessed target or outgoing player (except named row action). You give/You receive, shared ability bars/roles, before/after fit-player squad phase-average/keeping comparisons and actual CPU shape reasons. Owned tradable picks only; loss explicit. Separate review and confirmation, stale package/pick/ownership/window checks, clear acceptance/refusal/edit, Scout returns to correct review. Existing CPU acceptance, pick transfer and midseason XI/cover engine remain unchanged.
+-18px root/substantial body text, wider label tracks and responsive stacking apply across all16 screen families. Shared ordinary/draft/cover cards use labelled ability bars. Shared Scout has clear role/rating/ability summary and retained detailed/phase skills; workload role restored after a regression caught its omission. Season summaries/planning use labelled scored/conceded comparisons and W/L strip. Statistical scorecards/averages/archives remain tables.
+- Read `docs/GCC_V8_PLAYER_FIRST.md` and `qa/v8_player_first_scope.json` for exact scope, commands, fixtures and provenance.
+
+## Completed evidence
+
+Final playable SHA256 `142a28437e152a5b8b8c70762d14dbceee392f0e779d613d7c72b81b19d22be4`,1,607,781 bytes; freeze rebuild matches. Same playable identity is version29.
+
+The broad46-suite cohort ran on211bd697:44 passed and two initial failures were addressed. Draft controls caught the missing explicit bowling-workload role; final script12 restores it. Interaction encountered a VM stub assertion that read textContent from an element created through innerHTML; the assertion now checks actual result markup, while ownership/pick-transfer checks remain. All14 final focused suites pass on142a2843, including both previously failing suites and the new management, boundary, readability and lifecycle tests. No outstanding automated failures. Do not represent all46 as running on the final digest.
+
+Fresh2008–2009 HEA seed8831 completed1,778 checks/28 regular user matches, two finals paths, two Super Overs and eight cold checkpoints with no reported errors or quota failures; peak attempted save2,027,702 UTF-16 bytes under5,242,880. That run used211bd697. Script comparison confirms only data script12 differs from final (the restored Scout bowling-role line); engine, codec, controller, all other scripts and CSS are byte-identical. Final lifecycle78 checks use142a2843. No new full19-season career was run for these presentation/confirmation changes.
+
+Final markup:39 general states/556 action bindings;4 management states/294 bindings;6 lifecycle states/21 bindings; the two-season capture adds27 states/684 bindings. These are string/command checks, not native geometric measurements. Source audit covers all16 screen families and all10 UI JS files, with no sub-rem font declarations or inline font/scale overrides.
+
+Preserve approved arcade colours, manual XI,2008–2026, no salary cap/wage/renewal/JSON UI, delivery-model4+2 rules and all established browser/no-deployment/no-subagent restrictions. No native rendering or whole-viewport-fit/smoothness claims.371 uncertified identities and existing model/chemistry limits remain. Raw large fixtures stay local; compact evidence is not a complete reproduction bundle. Never patch generated `v8/engine` scripts; build with `python3 v8/build.py --freeze --output game/global_champions_cricket_v8_familiar_career.html`.

@@ -58,7 +58,7 @@ const L=legacy.context.GCC8,ls=legacy.G.state,o=ls.dynasty.offseason,own=ls.user
 o.retirements=o.retirements.filter(r=>r.owner!==own);o.voluntaryCuts=[];o.finalCuts=[];
 while(ls.teams[own].length<16){const p=L.read.freeAgents().map(legacy.G.byId).find(p=>!ls.teams[own].includes(p.id));check(!!p,'legacy overfull fixture candidate');ls.teams[own].push(p.id);p.draftedBy=own;}
 o.phase='cuts';o.draftComplete=true;L.ui.view='dynasty';call(legacy,'annualList');
-const extra=ls.teams[own].at(-1);call(legacy,'finalCut',extra);check(ls.teams[own].length===15&&o.finalCuts.includes(extra)&&!ls.teams[own].includes(extra),'legacy final cut removes exactly one extra player');
+const extra=ls.teams[own].at(-1);call(legacy,'finalCut',extra);call(legacy,'confirmFinalCut',extra);check(ls.teams[own].length===15&&o.finalCuts.includes(extra)&&!ls.teams[own].includes(extra),'legacy final cut removes exactly one extra player');
 check(!L.dispatch('finalCut',[extra]),'cannot cut a legal fifteen-player list');
 check(!h.errors.length&&!fresh.errors.length&&!finalHost.errors.length&&!legacy.errors.length,'no unexpected script errors');
 const report={artifactSha256:crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex'),scope:'Real-script VM direct commands and synthetic captured input/change/cancel callbacks. Finals-return uses an actual completed-final fixture; compatibility list correction uses an explicit overfull roster fixture. No native pointer, keyboard, geometry, focus or rendering certification.',checks,commands:[...commands].sort(),errors:[]};

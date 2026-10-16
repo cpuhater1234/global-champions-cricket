@@ -248,3 +248,36 @@
 @media(prefers-reduced-motion:reduce){.g8venueframe>.g8stadiumphoto{transition:none}}
 
 .g8teamworkspace .g8squadrow>div>b{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.75rem;align-items:center}
+
+/* Player-first readability: one text floor, substantial body weight, no narrow rating labels. */
+:root{font-size:18px}
+body{font-weight:600;line-height:1.5}
+small,.g8fine,p,td,option{font-weight:600}
+.g8eyebrow{letter-spacing:.07em}.g8heading p{max-width:62ch}
+.g8abilitybar{grid-template-columns:minmax(5.1rem,auto) minmax(3rem,1fr) 2rem;gap:.65rem;font-weight:800;min-height:2rem}
+.g8abilitybar>span{overflow-wrap:normal;word-break:normal;line-height:1.35}
+.g8abilitytrack{height:.65rem;min-width:0}.g8abilitytrack i{max-width:100%}
+.g8skillgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem 1.5rem;margin:1rem 0}
+.g8scoutsummary{padding:1rem;background:#15374b;color:#eef8dd;border:2px solid #5e8996;border-left:6px solid var(--gold);border-radius:7px}
+#g8dialog .g8scoutsummary p{color:#d7e9e2}.g8scoutsummary .g8abilitybar{color:#e3f1e7}.g8scoutsummary .g8rowrating{background:var(--gold);color:var(--ink);font-size:1.7rem}
+.g8scoutsummary .g8abilitytrack{background:#325867}.g8scoutsummary .g8abilitytrack i{background:var(--gold)}
+.g8scoutoutlook{padding:1rem 0;border-block:1px solid #bdd1c9}.g8scoutoutlook h3{font-size:1.2rem}
+.g8developmentbadge{display:flex;gap:.8rem;align-items:center;flex-wrap:wrap;padding:.75rem;background:#e1eccf;border-left:4px solid #467d5a;border-radius:4px}.g8developmentbadge b{font-size:1.3rem}
+.g8compare{min-width:0}.g8compare h3{margin:0 0 .6rem;font-size:1.05rem}
+.g8comparebars{display:grid;gap:.6rem}.g8comparebars>div{display:grid;grid-template-columns:minmax(5rem,auto) minmax(3rem,1fr) auto;gap:.65rem;align-items:center;font-size:1rem;font-weight:800}
+.g8comparebars .g8strengthtrack{height:.7rem;background:#ccdbd0}.g8comparebars>div:first-child .g8strengthtrack>span{background:#438293}.g8comparebars>div:last-child .g8strengthtrack>span{background:#477b38}
+.g8seasoncomparison,.g8impactgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem;margin:1rem 0}
+.g8formstrip{display:flex;flex-wrap:wrap;gap:.4rem;margin:.8rem 0 1.3rem}.g8formstrip span{display:grid;place-items:center;min-width:2rem;min-height:2rem;border-radius:5px;font-weight:900}.g8formstrip .won{background:#d6edb0;color:#255438;border:2px solid #5f9151}.g8formstrip .lost{background:#f8d5c4;color:#873725;border:2px solid #b96b50}
+.g8squadplaces{display:grid;grid-template-columns:repeat(15,minmax(0,1fr));gap:.35rem;max-width:42rem;margin:.9rem 0}
+.g8squadplaces>span{min-height:2rem;display:grid;place-items:center;border:2px solid #82a479;border-radius:4px;color:#17384a;background:#d8efb1}.g8squadplaces .g8role-BOWL{background:#ffd4a5}.g8squadplaces .g8role-WK-BAT{background:#e4f65c}.g8squadplaces .g8role-AR{background:#7fe0ce}.g8squadplaces .vacant{background:#153247;border:2px dashed #88aebb;color:#c8dfdc;font-size:1.3rem}.g8squadplaces .g8icon{width:1rem;height:1rem;flex-basis:1rem}
+.g8windowbanner>div:first-child{flex:1 1 32rem;min-width:0}.g8windowbanner h2{font-size:1.9rem}.g8windowaction{flex:0 1 23rem}.g8offseasonlayout{grid-template-columns:minmax(0,1.7fr) minmax(17rem,.8fr)}
+.g8releaseallowance{display:flex;align-items:center;justify-content:space-between;gap:.7rem;flex-wrap:wrap;background:#e9efda;border:1px solid #bdcfc0;border-left:5px solid #cc8d4a;padding:.85rem;margin:1rem 0;border-radius:5px}.g8releaseallowance span{color:#3d6067}
+.g8managerow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1rem;align-items:center;padding:1rem 0;border-bottom:1px solid #bfcfc5;min-width:0}.g8manageidentity{min-width:0}.g8manageidentity .g8nameandrating b{font-size:1.1rem;font-weight:800;overflow-wrap:anywhere}.g8manageidentity p{margin:.4rem 0;font-size:1rem;line-height:1.4;color:#35596a}.g8playerstate{display:inline-block;padding:.25rem .5rem;background:#dcebcf;color:#31523a;border-radius:4px;font-size:1rem;font-weight:800}
+.g8manageactions{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;justify-content:flex-end}.g8manageactions .g8button{min-height:44px}
+.g8tradepackage>section{padding:1rem;border:2px solid #b9cec4;border-radius:7px;min-width:0;background:#f5f8e8}.g8tradepackage .g8give{border-top:6px solid #de9462}.g8tradepackage .g8receive{border-top:6px solid #73a940}.g8tradepackage>section>h3{font:400 1.6rem var(--display);display:flex;align-items:center;gap:.5rem;margin-bottom:1rem}
+.g8tradepackage label{margin:.8rem 0}.g8tradepackage select{width:100%;min-width:0;white-space:normal;font-weight:700}.g8tradeplayer h3{font-size:1.2rem;margin:0}.g8tradeplayer{border-top:1px solid #b7cdc0;padding-top:1rem}.g8tradeplayer .g8nameandrating{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem}.g8tradeplayer .g8nameandrating h3{min-width:0;overflow-wrap:anywhere}.g8tradeplayer .g8rowrating{flex-shrink:0;font-size:1.5rem}.g8tradeplayer .g8abilitybar{grid-template-columns:5.1rem minmax(2.5rem,1fr) 2rem}.g8tradeplayer .g8cricketrole{min-height:0;margin:.7rem 0}.g8tradeempty{padding:1.5rem .5rem;border:2px dashed #b2c6bb;border-radius:5px;text-align:center;color:#3c6370}
+.g8tradeimpact{margin:1.2rem 0;padding:1rem;border:2px solid #547a87;border-radius:7px;background:#e7efdb}.g8tradeimpact .g8eyebrow{color:#345d69}.g8offerread{padding:.65rem 0;border-top:1px solid #acc3b3}.g8decisionwarning{padding:.8rem 1rem;background:#fff0d3;border-left:5px solid #b66f36;border-radius:4px;color:#624323!important;font-weight:800}
+.g8consequences{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1rem 0}.g8consequences>div{display:flex;flex-direction:column;gap:.6rem;border:2px solid #a9c5b4;border-radius:6px;padding:1rem;background:#e5efce;min-width:0}.g8consequences strong{font-size:1.6rem;font-weight:900;overflow-wrap:anywhere}
+.g8phaseoptions .g8statrow{display:block}.g8phaseoptions .g8abilitybar{margin-top:.5rem}
+@media(max-width:1250px){.g8offseasonlayout{grid-template-columns:1fr}.g8managerow{grid-template-columns:minmax(0,1fr) auto}.g8manageactions{max-width:17rem}}
+@media(max-width:800px){.g8skillgrid,.g8impactgrid,.g8seasoncomparison,.g8tradepackage{grid-template-columns:1fr}.g8managerow{grid-template-columns:1fr}.g8manageactions{max-width:none;justify-content:flex-start}.g8squadplaces{grid-template-columns:repeat(5,minmax(0,1fr));max-width:24rem}.g8windowaction{flex-basis:100%}.g8consequences{grid-template-columns:1fr}.g8comparebars>div{grid-template-columns:5rem minmax(2rem,1fr) auto}.g8tradeplayer .g8abilitybar{grid-template-columns:5.1rem minmax(2rem,1fr) 2rem}}

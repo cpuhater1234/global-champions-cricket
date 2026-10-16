@@ -3,13 +3,13 @@ const saved=fs.readFileSync('qa/v8_smoke_save.json','utf8'),h=loadGame(process.e
 let checks=0;const call=(a,...args)=>{assert.ok(X.dispatch(a,args),a+': '+h.get('g8feedback').textContent);checks++;};
 call('continue');call('offseason');
 const used=new Set(Object.values(s.teams).flat());assert.ok(read.freeAgents().every(id=>!used.has(id)));checks++;
-call('trade',false);assert.equal(X.ui.modal,'trade');call('inspect',X.ui.tradeTarget);call('close');assert.equal(X.ui.modal,'trade');checks++;call('close');
+call('trade',false);assert.equal(X.ui.modal,'trade');X.ui.tradeTarget=s.teams[X.ui.tradeClub][0];call('inspect',X.ui.tradeTarget);call('close');assert.equal(X.ui.modal,'trade');checks++;call('close');
 call('annualDraw');call('revealAll');call('trade',false);
 const offer=X.roster().filter(p=>p.role!=='WK-BAT').sort((a,b)=>b.overall-a.overall)[0];
 const wanted=s.league.filter(c=>c.abbr!==s.userClub.abbr).flatMap(c=>s.teams[c.abbr].map(G.byId).filter(p=>p.role===offer.role).map(p=>({p,c}))).sort((a,b)=>a.p.overall-b.p.overall)[0];
 X.ui.tradeOffer=offer.id;X.ui.tradeTarget=wanted.p.id;X.ui.tradeClub=wanted.c.abbr;
 const pick=['R1','R2'].find(read.ownsPick);X.ui.tradePick=pick||'';
-call('propose');assert.ok(h.get('g8tradeReply').textContent);checks++;
+call('propose');call('confirmTrade');assert.ok(/Trade completed|Offer declined/.test(h.get('g8dialogContent').innerHTML)&&h.get('g8dialogContent').innerHTML.includes('id="g8tradeReply"'));checks++;
 const accepted=s.teams[s.userClub.abbr].includes(wanted.p.id);
 if(accepted){const movement=X.offseasonState();assert.ok(movement.tradedOut.some(p=>p.id===offer.id)&&movement.incoming.some(p=>p.id===wanted.p.id),'squad update names both sides of the real accepted deal');checks++;assert.ok(!s.teams[s.userClub.abbr].includes(offer.id));assert.ok(s.teams[wanted.c.abbr].includes(offer.id));if(pick)assert.ok(!read.ownsPick(pick));checks++;}
 call('close');call('annualDraft');
