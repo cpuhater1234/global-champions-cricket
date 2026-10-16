@@ -83,3 +83,9 @@ G0 stays blocked pending an environment with authenticated repository checkout p
 - GitHub source inspection identified NaN / Infinity bypass in numeric scorecard comparisons (`Math.abs(NaN - expected) > tolerance` evaluates false). Source fix `c107fa78` requires `Number.isFinite` for batting strike rates and bowling economy when balls > 0.
 - Regression script updated at `4d4d918` with explicit NaN, positive/negative Infinity, null strike-rate tampering and nonfinite bowling economy rejection. These newly committed tests have **not** been run in a full checkout; they remain outstanding in G0.
 - No promotion, full career certification, or native visual approval.
+
+## Continued scorebook consistency review
+
+- Commit `afe8469d`: `validResult()` now rejects scorecard innings over notation that differs from the reconstructed count of legal balls, and individual bowling over notation that differs from each bowler's recorded legal deliveries. This covers a separate integrity gap not addressed by rate validation.
+- Commit `66d8eeaf`: adds explicit mutation tests for false innings overs and false bowling overs to `qa/v8_delivery_boundary_regression.mjs`.
+- Source implementation was re-read and expected matches confirmed before commit. These edits remain **unexecuted against the clean rebuilt playable**; G0 and later gates remain blocked/open. No release or main promotion.
