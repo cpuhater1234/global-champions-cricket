@@ -12,7 +12,7 @@ window.GCC8_CLOCK = (() => {
   function tick(){
     runner=null;running=true;
     const time=now(),ready=[...jobs].filter(([,j])=>j.due<=time+1);
-    try{for(const [id,j] of ready){if(!jobs.has(id))continue; if(!j.repeat)jobs.delete(id);j.fn();if(j.repeat&&jobs.has(id))jobs.set(id,{...j,due:now()+j.repeat});}}
+    try{for(const [id,j] of ready){if(paused)break; if(!jobs.has(id))continue; if(!j.repeat)jobs.delete(id);j.fn();if(j.repeat&&jobs.has(id))jobs.set(id,{...j,due:now()+j.repeat});}}
     finally{running=false;window.GCC8?.afterTick?.();arm();}
   }
   function add(fn,delay,repeat=0){const id=++seq;jobs.set(id,{fn,due:(paused?pausedAt:now())+Math.max(0,Number(delay)||0),repeat});arm();return id;}
