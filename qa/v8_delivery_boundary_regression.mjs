@@ -29,3 +29,44 @@ for(let seed=1;seed<=150;seed++){
 }
 assert.ok(found,'test fixture must exercise both no-ball and wide outcomes');
 console.log('PASS delivery extras, striker accounting, legal balls and terminal state');
+
+function completeMatch(seed){
+ const first=model.play({batClub:home,bowlClub:away,order:bat,bowlers:bowl,estimate,batProfile:profile,bowlProfile:profile,random:rng(seed),R});
+ const second=model.play({batClub:away,bowlClub:home,order:bowl,bowlers:bat,estimate,batProfile:profile,bowlProfile:profile,context:{chasing:true,target:first.total+1},random:rng(seed+10000),R});
+ const r={home,away,battingFirst:home,battingSecond:away,homeInnings:first,awayInnings:second};
+ r.scorecard=model.scorecard(home,away,first,second,home);
+ return r;
+}
+const ids=new Set([...bat,...bowl].map(p=>p.id));
+let checked=0,legacyChecked=0;
+for(let seed=151;seed<=250;seed++){
+ const result=completeMatch(seed);
+ assert.equal(model.validResult(result,ids),true,'new delivery scorecard must pass ledger validator at seed '+seed);
+ checked++;
+ const old=structuredClone(result);
+ let changed=0;
+ for(const card of old.scorecard.innings){
+  const ds=(card.club.abbr===home.abbr?old.homeInnings:old.awayInnings).deliveries;
+  for(const row of card.batting){
+   const count=ds.filter(d=>d.batterId===row.player.id&&d.extra==='noBalls').length;
+   if(!count)continue;
+   row.balls-=count;row.sr=row.balls?row.runs*100/row.balls:null;changed+=count;
+  }
+ }
+ if(changed){
+  assert.equal(model.validResult(old,ids),true,'prior no-ball statistics must remain valid without save migration');
+  const altered=structuredClone(result);
+  const card=altered.scorecard.innings[0];
+  const row=card.batting.find(b=>b.balls>0);
+  assert.ok(row,'scorecard has a batter who faced a ball');
+  row.balls+=2;
+  assert.equal(model.validResult(altered,ids),false,'fabricated batter balls must be rejected');
+  const wrongRate=structuredClone(result);
+  const entry=wrongRate.scorecard.innings[0].batting.find(b=>b.balls>0);
+  entry.sr+=3;
+  assert.equal(model.validResult(wrongRate,ids),false,'fabricated strike rate must be rejected');
+  legacyChecked++;
+ }
+}
+assert.ok(checked===100&&legacyChecked>0,'complete new and legacy scorecard fixtures must run');
+console.log('PASS two-innings ledger, historic no-ball compatibility and tamper rejection: '+checked+' seeds');
