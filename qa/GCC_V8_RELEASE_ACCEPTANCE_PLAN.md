@@ -67,3 +67,11 @@ Working branch: `work/v8-game-first-rebuild`. Do not modify protected baseline o
 ## Current execution truth
 
 This document is an execution contract, not proof tests were run. The new delivery and timer regression scripts have been committed, but the full rebuilt game and suite still require execution in a clean checkout. Prior VM testing cannot certify native browser layout, focus, pointer hit targets or motion. No release, deployment or main promotion authorized.
+
+## Execution checkpoint: 16 October 2026, current runtime
+
+**G0 BLOCKED, not passed.** Attempted `git ls-remote https://github.com/cpuhater1234/global-champions-cricket.git HEAD` in the execution container. It failed: `Could not resolve host: github.com`. Consequently, a clean checkout, artifact rebuild, precise digest, full 30-suite execution, nineteen-season VM runs and rendered UI approval cannot be claimed in this runtime.
+
+**One narrow executed check:** reconstructed the exact functional body of the connected-source `v8/ui/clock.js` into a local Node VM harness with deterministic fake timers. The pause/same-time/resume/cancel test completed with `PASS timer boundaries`. This is independent narrow evidence using a manually transferred module body, **not** an execution of the repository checkout or the shipped HTML. GitHub source was re-read during this checkpoint.
+
+G0 stays blocked pending an environment with authenticated repository checkout plus Python/Node. Do not elevate reconstructed-module smoke results to release certification. Existing source changes and unexecuted regression scripts remain preserved on the working branch.
