@@ -59,7 +59,7 @@ window.GCC8_DELIVERY=(()=>{
     e.runs=e.batRuns+e.extraRuns;total+=e.runs;phases[phase]+=e.runs;b.runs+=e.batRuns;if(e.batRuns===4)b.fours++;if(e.batRuns===6)b.sixes++;
     if(e.extra){extras[e.extra]+=e.extraRuns;extras.total+=e.extraRuns;if(['wides','noBalls'].includes(e.extra))extras.bowlerCharged+=e.extraRuns;}
     br.runs+=e.batRuns+(['wides','noBalls'].includes(e.extra)?e.extraRuns:0);
-    if(e.legal){legal++;balls++;b.balls++;br.balls++;phaseBalls[phase]++;freeHit=false;}
+    if(e.legal){legal++;balls++;br.balls++;phaseBalls[phase]++;freeHit=false;}if(e.extra!=='wides')b.balls++;
     if(e.extra==='noBalls')freeHit=true;
     if(e.wicket){wickets++;b.dismissal=e.dismissal;if(!runOut)br.wickets++;if(wickets<10&&(!target||total<target)&&balls<120){striker=next++;batting[striker].dnb=false;}}
     else if((e.batRuns+(['byes','legByes'].includes(e.extra)?e.extraRuns:0))%2)[striker,nonStriker]=[nonStriker,striker];
@@ -109,14 +109,14 @@ window.GCC8_DELIVERY=(()=>{
      if(d.wicket&&(typeof d.dismissal!=='string'||!d.legal||freeHit&&!d.dismissal.startsWith('run out')))return false;
      const b=bats.get(d.batterId),bo=bowls.get(d.bowlerId);total+=d.runs;ph[phase]+=d.runs;b.runs+=d.batRuns;if(d.batRuns===4)b.fours++;if(d.batRuns===6)b.sixes++;
      if(d.extra){ex[d.extra]+=d.extraRuns;ex.total+=d.extraRuns;}bo.runs+=d.batRuns+(['wides','noBalls'].includes(d.extra)?d.extraRuns:0);
-     if(d.legal){balls++;b.balls++;bo.balls++;pb[phase]++;freeHit=false;}if(d.extra==='noBalls')freeHit=true;
+     if(d.legal){balls++;bo.balls++;pb[phase]++;freeHit=false;}if(d.extra!=='wides')b.balls++;if(d.extra==='noBalls')freeHit=true;
      if(d.wicket){wickets++;b.outs++;if(!d.dismissal.startsWith('run out'))bo.wickets++;}
      if(d.total!==total||d.wickets!==wickets||d.balls!==balls||bo.balls>24)return false;previous=d;
     }
     if(inn.total!==total||inn.balls!==balls||inn.wickets!==wickets||card.total!==total||card.balls!==balls||card.wickets!==wickets||card.extras!==ex.total)return false;
     for(const k of ['pp','mid','death'])if(inn[k]!==ph[k]||card.phases[k]!==ph[k]||card.phaseBalls?.[k]!==pb[k]||inn.phaseBalls?.[k]!==pb[k])return false;
     for(const k of Object.keys(ex))if(card.extrasBreakdown[k]!==ex[k]||inn.extrasBreakdown?.[k]!==ex[k])return false;
-    for(const b of card.batting){const t=bats.get(b.player.id);if(b.runs!==t.runs||inn.batterRuns?.[b.player.id]!==t.runs||b.balls!==t.balls||b.fours!==t.fours||b.sixes!==t.sixes||(b.dismissal!=='not out'&&!b.dnb?1:0)!==t.outs)return false;}
+    for(const b of card.batting){const t=bats.get(b.player.id),historicalBalls=t.balls-ds.filter(d=>d.batterId===b.player.id&&d.extra==='noBalls').length;/* Previous delivery saves omitted no-balls from balls faced. Preserve those records without rewriting them. */const savedBalls=b.balls;if(b.runs!==t.runs||inn.batterRuns?.[b.player.id]!==t.runs||![t.balls,historicalBalls].includes(savedBalls)||b.fours!==t.fours||b.sixes!==t.sixes||(b.dismissal!=='not out'&&!b.dnb?1:0)!==t.outs||(savedBalls?Math.abs(b.sr-b.runs*100/savedBalls)>1e-9:b.sr!==null))return false;}
     for(const b of card.bowling){const t=bowls.get(b.player.id);if(b.runs!==t.runs||b.balls!==t.balls||b.wickets!==t.wickets||(b.balls?Math.abs(b.economy-b.runs*6/b.balls)>1e-9:b.economy!==null))return false;}
     for(const n of inn.notices){if(!Number.isInteger(n.after)||n.after<0||n.after>ds.length||typeof n.text!=='string'||n.text.length>500)return false;const last=ds[n.after-1];if(n.total!==(last?.total||0)||n.balls!==(last?.balls||0)||n.wickets!==(last?.wickets||0))return false;}
     const chasing=r.battingSecond?.abbr===club.abbr,target=chasing?(r.battingFirst.abbr===r.home.abbr?r.homeInnings:r.awayInnings).total+1:0;
