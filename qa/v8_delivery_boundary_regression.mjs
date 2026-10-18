@@ -76,7 +76,7 @@ for(let seed=151;seed<=250;seed++){
   bowlingRow.economy=NaN;
   assert.equal(model.validResult(badEconomy,ids),false,'non-finite bowling economy must be rejected');
   const invalidInningsOvers=structuredClone(result);
-  invalidInningsOvers.scorecard.innings[0].overs='20.0';
+  invalidInningsOvers.scorecard.innings[0].overs=invalidInningsOvers.scorecard.innings[0].overs==='20.0'?'19.5':'20.0';
   assert.equal(model.validResult(invalidInningsOvers,ids),false,'incorrect total over notation must be rejected');
   const invalidBowlerOvers=structuredClone(result);
   invalidBowlerOvers.scorecard.innings[0].bowling.find(b=>b.balls>0).overs='0.0';

@@ -51,6 +51,7 @@ function validSave(save){
 
   const o=d.offseason;if(o?.returningIds&&(!Array.isArray(o.returningIds)||!unique(o.returningIds)||o.returningIds.some(id=>!Number.isInteger(id)||!ids.has(id))))return false;
   if(o&&(!record(o)||!['market','lottery','draft','cuts','ready'].includes(o.phase)||['retirements','arrivals','lottery','picks','voluntaryCuts','finalCuts'].some(k=>!Array.isArray(o[k]))||!Number.isInteger(o.pickCursor)||o.pickCursor<0))return false;
+  if(o?.releasePickPolicy!=null&&o.releasePickPolicy!==1)return false;
   if(o?.cpuReleases!=null){const moves=o.cpuReleases;if(!record(moves))return false;const released=[];for(const [abbr,cutIds] of Object.entries(moves)){if(!clubs.includes(abbr)||abbr===s.userClub?.abbr||!Array.isArray(cutIds)||cutIds.length>Math.min(2,Math.max(0,4-o.retirements.filter(r=>r.owner===abbr).length))||cutIds.some(id=>!Number.isInteger(id)||!ids.has(id)))return false;released.push(...cutIds);}if(!unique(released))return false;}
  }
  return true;

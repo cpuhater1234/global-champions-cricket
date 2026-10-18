@@ -2,7 +2,7 @@
  const X=window.GCC8,{G,D,R,read,ui,views,esc,btn,badge,roster,playerCard,profile,phases,injury,form}=X,s=G.state,clock=window.GCC8_CLOCK;
  const stage=document.getElementById('g8stage'),hud=document.getElementById('g8hud'),dialog=document.getElementById('g8dialog'),content=document.getElementById('g8dialogContent');
  X.installDetailedAverages();
- const commands={},allow={},own=()=>s.userClub?.abbr,annual=()=>ui.view==='dynasty'&&s.dynasty?.offseason?.phase==='draft';
+ const commands=Object.create(null),allow=Object.create(null),own=()=>s.userClub?.abbr,annual=()=>ui.view==='dynasty'&&s.dynasty?.offseason?.phase==='draft';
  let busy=false,lastSignature='',archiveReturn='season',dialogOpener=null;
  X.hasStoredSave=()=>{try{return !!localStorage.getItem('gcc_dynasty_v8')||!!localStorage.getItem('gcc_dynasty_v7_2');}catch{return false;}};
  X.hasSave=()=>!!s.dynasty?.started||X.hasStoredSave();

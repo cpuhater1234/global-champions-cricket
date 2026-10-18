@@ -1,0 +1,168 @@
+{
+  "verifiedAt": "2026-10-18T22:42:56.323981+00:00",
+  "artifactSha256": "0ee49de063af555e0d6b9d80c81b692c132bf33ff9d5fe11571f5960c8ccb4cd",
+  "regression": {
+    "batchSuites": 55,
+    "initialBatchPassed": 53,
+    "initialBatchFailed": 2,
+    "artifactUnchangedDuringBatch": true,
+    "sourceUnchangedDuringBatch": true,
+    "rerunsAndAdditional": [
+      {
+        "script": "qa/v8_gap_combined_test.mjs",
+        "scriptSha256": "ce8ddf5979126a9acd02b3fcecceda394cc31ac6be58b9bf2b98017badbd9338",
+        "exitCode": 0,
+        "log": "qa/stabilisation/evidence/20261019/verified-combined-rerun.log",
+        "logSha256": "fe0a75c8b0c02885ba62dcf94f80d760dfb757d08f4a5658b8d5c3e6a9ce2aeb",
+        "kind": "corrected fixture rerun"
+      },
+      {
+        "script": "qa/v8_squad_management_test.mjs",
+        "scriptSha256": "2205d46448b4f2f6d5f3d1769a6f9a408911f6494e3ba0bc0f970fac60f54290",
+        "exitCode": 0,
+        "log": "qa/stabilisation/evidence/20261019/verified-squad-rerun.log",
+        "logSha256": "e210348d46b7132399a17cf60b526a064a982b175e8934363fdc2ab25ee9fbf8",
+        "kind": "corrected fixture rerun"
+      },
+      {
+        "script": "qa/v8_logic_review.mjs",
+        "scriptSha256": "5a5e9d134bb15975311a1d2976ca8eb594c8b5a98cac4a2a1cf3e7d717529021",
+        "exitCode": 0,
+        "log": "qa/stabilisation/evidence/20261019/verified-logic-review.log",
+        "logSha256": "820bb3acbde811a50bb65c54c813223ecad79946665f297d53888c31c20ef094",
+        "kind": "additional suite"
+      },
+      {
+        "script": "qa/v8_unbalanced_lineup_probe.mjs",
+        "scriptSha256": "3a478397e7c91d25f08ecab022f7737d7d3253f5ef85df0d2ba14c82f7b580ef",
+        "exitCode": 0,
+        "log": "qa/stabilisation/evidence/20261019/verified-unbalanced.log",
+        "logSha256": "059a62f8e436ca5f07b2285785ad45d5357887964a028c50c8f5bf174e88ad8a",
+        "kind": "additional suite"
+      }
+    ],
+    "uniquePassingSuites": 57,
+    "unresolvedFailures": [],
+    "fixtureCorrections": [
+      "Highest overall was not a viable injured-player trade package. Choose by actual market value and permit keeper trades.",
+      "An ended user cover may legally be signed by a CPU club; verify it cannot reappear in the user squad or XI.",
+      "Management fixture now explicitly exercises a genuinely declined deal before a viable accepted exchange."
+    ]
+  },
+  "careers": [
+    {
+      "kind": "fresh",
+      "seed": 4294967295,
+      "selectedClubIndex": 7,
+      "club": "DC",
+      "archivedSeasons": 19,
+      "newSeasons": 19,
+      "newLeagueMatches": 266,
+      "checks": 15046,
+      "maxSavedUtf16Bytes": 2308160,
+      "folder": "verified-career"
+    },
+    {
+      "kind": "fresh",
+      "seed": 20260317,
+      "selectedClubIndex": 3,
+      "club": "KKR",
+      "archivedSeasons": 19,
+      "newSeasons": 19,
+      "newLeagueMatches": 266,
+      "checks": 15105,
+      "maxSavedUtf16Bytes": 2310164,
+      "folder": "verified-career-club3"
+    },
+    {
+      "kind": "older-save continuation",
+      "seed": 101,
+      "selectedClubIndex": null,
+      "club": "NOT",
+      "archivedSeasons": 19,
+      "newSeasons": 18,
+      "newLeagueMatches": 252,
+      "checks": 14710,
+      "maxSavedUtf16Bytes": 2319524,
+      "folder": "verified-older-career"
+    }
+  ],
+  "clubCampaigns": [
+    {
+      "case": "club-0",
+      "club": "HAM",
+      "seed": 1,
+      "seasons": 3,
+      "leagueMatches": 42,
+      "checks": 2681
+    },
+    {
+      "case": "club-1",
+      "club": "KKR",
+      "seed": 2,
+      "seasons": 3,
+      "leagueMatches": 42,
+      "checks": 2462
+    },
+    {
+      "case": "club-2",
+      "club": "CSK",
+      "seed": 17,
+      "seasons": 3,
+      "leagueMatches": 42,
+      "checks": 2661
+    },
+    {
+      "case": "club-3",
+      "club": "HAM",
+      "seed": 2147483647,
+      "seasons": 3,
+      "leagueMatches": 42,
+      "checks": 2788
+    },
+    {
+      "case": "club-4",
+      "club": "REN",
+      "seed": 2147483648,
+      "seasons": 3,
+      "leagueMatches": 42,
+      "checks": 2562
+    },
+    {
+      "case": "club-5",
+      "club": "REN",
+      "seed": 65535,
+      "seasons": 3,
+      "leagueMatches": 42,
+      "checks": 2804
+    },
+    {
+      "case": "club-6",
+      "club": "DC",
+      "seed": 3735928559,
+      "seasons": 3,
+      "leagueMatches": 42,
+      "checks": 2522
+    },
+    {
+      "case": "club-7",
+      "club": "DC",
+      "seed": 4294967295,
+      "seasons": 3,
+      "leagueMatches": 42,
+      "checks": 2530
+    }
+  ],
+  "newCompletedSeasons": 80,
+  "newManagedLeagueMatches": 1120,
+  "deliveryStress": {
+    "innings": 6000,
+    "matchPairs": 3000,
+    "checks": 4397010
+  },
+  "replayColdResumePositions": 104,
+  "signingResumeCases": 20,
+  "build": "A separate clean source assembly reproduced the exact candidate bytes. Protected v7.9.3 reference remains eddec7bc6d92eb494bef26384e0618ea63d5244c63c8a1c9d84b1f5e16e98926.",
+  "nativeVisualReview": "NOT VERIFIED",
+  "release": "Working-branch checkpoint only; no main promotion or deployment."
+}

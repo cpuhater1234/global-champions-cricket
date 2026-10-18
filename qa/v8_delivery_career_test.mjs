@@ -1,6 +1,7 @@
+import {fixturePath} from './v8_fixture_paths.mjs';
 /* Continue a genuine delivery-model save through the original game interaction harness. */
 import fs from 'node:fs';import path from 'node:path';import {spawnSync} from 'node:child_process';import assert from 'node:assert/strict';
-const root=path.resolve('qa'),saveFile=process.env.GCC8_EXISTING_SAVE||'qa/ball-by-ball/corrected-smoke/v8_final_save.json',saved=JSON.parse(fs.readFileSync(saveFile,'utf8')),startYear=saved.state.year;
+const root=path.resolve('qa'),saveFile=process.env.GCC8_EXISTING_SAVE||fixturePath('career',2009),saved=JSON.parse(fs.readFileSync(saveFile,'utf8')),startYear=saved.state.year;
 assert(startYear>=2008&&startYear<2026);const source=fs.readFileSync('qa/v8_game_test.mjs','utf8'),start=source.indexOf("check(X.ui.view==='home'"),end=source.indexOf('for(let year=2009;',start);assert(start>0&&end>start);
 let body=source.slice(0,start)+"check(X.dispatch('continue'),'delivery career resumes');check(s.year==="+startYear+",'expected resume year');\n"+source.slice(end);
 body=body.replace('new Map(),',"new Map([['gcc_dynasty_v8',fs.readFileSync(process.env.GCC8_EXISTING_SAVE,'utf8')]]),").replace('for(let year=2009;','for(let year='+String(startYear+1)+';');

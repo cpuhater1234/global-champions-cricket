@@ -1,7 +1,8 @@
+import {fixturePath} from './v8_fixture_paths.mjs';
 // Lossless storage must fit an actual oversized save and reject corrupted blocks.
 import fs from 'node:fs';import assert from 'node:assert/strict';import crypto from 'node:crypto';import {loadGame} from './offline_game_host.mjs';
 const file=process.env.GCC8_TEST_BUILD||'game/global_champions_cricket_v8_gap_review.html',out=process.env.GCC8_GAP_DIR||'qa/gap-review';fs.mkdirSync(out,{recursive:true});const h=loadGame(file,9811,new Map(),{strictIds:true}),C=h.context.GCC8_SAVE_CODEC;assert.ok(C,'versioned lossless save codec is installed');let checks=1;
-const source=fs.readFileSync('qa/gap-review/size-diagnostic/v8_smoke_save.json','utf8'),value=JSON.parse(source),raw=JSON.stringify(value),packed=C.stringify(value),decoded=C.parse(packed);assert.equal(JSON.stringify(decoded),raw,'all actual saved fields round-trip exactly');checks++;
+const source=fs.readFileSync(fixturePath('foundation'),'utf8'),value=JSON.parse(source),raw=JSON.stringify(value),packed=C.stringify(value),decoded=C.parse(packed);assert.equal(JSON.stringify(decoded),raw,'all actual saved fields round-trip exactly');checks++;
 assert.ok(packed.length*2<5*1024*1024,'oversized real save fits conservative storage budget');checks++;
 assert.equal(JSON.stringify(C.parse(raw)),raw,'legacy clear JSON remains supported');checks++;
 const before=JSON.stringify(value);C.stringify(value);assert.equal(JSON.stringify(value),before,'encoding never mutates live or archived objects');checks++;

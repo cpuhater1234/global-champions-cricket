@@ -1,7 +1,8 @@
+import {fixturePath} from './v8_fixture_paths.mjs';
 // Catches an older game instance silently replacing progress saved by another.
 import fs from 'node:fs';import assert from 'node:assert/strict';import crypto from 'node:crypto';import {loadGame} from './offline_game_host.mjs';
 const file=process.env.GCC8_TEST_BUILD||'game/global_champions_cricket_v8_gap_review.html',out=process.env.GCC8_GAP_DIR||'qa/gap-review';fs.mkdirSync(out,{recursive:true});
-const raw=fs.readFileSync('qa/logic/final-clubs/0/v8_smoke_save.json','utf8'),shared=new Map([['gcc_dynasty_v8',raw]]);let checks=0;const check=(v,m)=>{assert.ok(v,m);checks++;},call=(h,a,...args)=>check(h.context.GCC8.dispatch(a,args),a+': '+h.get('g8feedback').textContent);
+const raw=fs.readFileSync(fixturePath('foundation'),'utf8'),shared=new Map([['gcc_dynasty_v8',raw]]);let checks=0;const check=(v,m)=>{assert.ok(v,m);checks++;},call=(h,a,...args)=>check(h.context.GCC8.dispatch(a,args),a+': '+h.get('g8feedback').textContent);
 const empty=new Map(),first=loadGame(file,9791,empty,{strictIds:true}),second=loadGame(file,9793,empty,{strictIds:true});call(first,'play');call(second,'play');call(first,'world');const firstWorld=empty.get('gcc_dynasty_v8');check(!second.context.GCC8.dispatch('world'),'a stale empty launcher cannot replace a newly created career');check(empty.get('gcc_dynasty_v8')===firstWorld,'first new career survives second launcher');
 const a=loadGame(file,9801,shared,{strictIds:true,captureEvents:true});call(a,'continue');
 const b=loadGame(file,9803,shared,{strictIds:true,captureEvents:true});call(b,'continue');call(b,'offseason');const latest=shared.get('gcc_dynasty_v8');check(b.G.state.year===2009,'second instance advances to next year');

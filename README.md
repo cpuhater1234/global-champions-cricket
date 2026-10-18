@@ -1,5 +1,9 @@
 # Global Champions Cricket
 
+The current working game is GCC v8. Build the standalone with `python3 v8/build.py --freeze --output game/gcc_v8_stabilised.html` after reconstructing the v7.9.3 reference as described in [the stabilisation notes](docs/GCC_V8_STABILISATION.md). Those notes describe the corrected draft rules, saved-draft compatibility, fixture generation and verification limits.
+
+The following section records the original protected baseline.
+
 This repository starts from the protected **v7.0.14** GCC build and exists to make aggressive QA safer, not to redesign the game.
 
 ## Protected baseline

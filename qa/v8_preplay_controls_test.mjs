@@ -1,3 +1,4 @@
+import {fixturePath} from './v8_fixture_paths.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import crypto from 'node:crypto';
@@ -27,7 +28,7 @@ app.emit('input',{target:{dataset:{input:'search'},value:''}});
 for(const role of ['BAT','WK-BAT','AR','BOWL']){app.emit('change',{target:{dataset:{input:'filter'},value:role}});check(F.pool().length>0&&F.pool().every(p=>p.role===role),'role filter contains only '+role);}
 app.emit('change',{target:{dataset:{input:'filter'},value:'ALL'}});app.emit('change',{target:{dataset:{input:'sort'},value:'keeping'}});
 check(F.pool().every((p,i,a)=>!i||a[i-1].keeping>=p.keeping),'keeping sort descends by glove rating');
-const saved=fs.readFileSync('qa/logic/final-clubs/0/v8_smoke_save.json','utf8');
+const saved=fs.readFileSync(fixturePath('foundation'),'utf8');
 const h=loadGame(file,9403,new Map([['gcc_dynasty_v8',saved]]),{strictIds:true,captureEvents:true}),X=h.context.GCC8,s=h.G.state;
 call(h,'continue');call(h,'averages');check(h.get('g8dialogContent').innerHTML.includes('<table'),'averages opens actual table');snap(h,'averages');call(h,'close');
 call(h,'offseason');call(h,'annualDraw');call(h,'revealAll');call(h,'annualDraft');

@@ -1,5 +1,6 @@
+import {fixturePath} from './v8_fixture_paths.mjs';
 import fs from 'node:fs';import assert from 'node:assert/strict';import {loadGame} from './offline_game_host.mjs';
-const h=loadGame(process.env.GCC8_TEST_BUILD||'game/global_champions_cricket_v8_notice_polish.html',909,new Map([['gcc_dynasty_v8',fs.readFileSync('qa/extensive/clubs/0/v8_smoke_save.json','utf8')]]),{strictIds:true}),X=h.context.GCC8,s=h.G.state;let checks=0;const check=(v,m)=>{assert.ok(v,m);checks++;};check(X.dispatch('continue'),'continue');X.ui.view='team';h.G.go('team');
+const h=loadGame(process.env.GCC8_TEST_BUILD||'game/global_champions_cricket_v8_notice_polish.html',909,new Map([['gcc_dynasty_v8',fs.readFileSync(fixturePath('foundation'),'utf8')]]),{strictIds:true}),X=h.context.GCC8,s=h.G.state;let checks=0;const check=(v,m)=>{assert.ok(v,m);checks++;};check(X.dispatch('continue'),'continue');X.ui.view='team';h.G.go('team');
 const rows=()=>((X.views.team().match(/class="g8squadrow"/g))||[]).length;
 check(rows()===X.roster().filter(p=>!s.xi.includes(p.id)).length,'selection list shows bench rather than duplicating XI');
 check((X.views.team().match(/class="g8slot"/g)||[]).length===11,'all batting order places retained');

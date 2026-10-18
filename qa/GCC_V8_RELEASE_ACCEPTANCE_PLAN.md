@@ -102,3 +102,10 @@ GCC8_TEST_BUILD=game/global_champions_cricket_v8_career_variation.html node qa/v
 ```
 
 The runner covers only the 32 suites, **not** full 2008–2026 careers or native visual QA. Those remain separate gates. An equivalent local runner script was syntax-checked and invoked in this container: it correctly reported missing project inputs with exit code 2. This is fail-closed infrastructure validation, not a test-suite pass. GitHub DNS remains unavailable in this environment, preventing a checked-out complete execution.
+
+
+## Executed functional checkpoint: 19 October 2026
+
+The source was reconciled with the later playable, then rebuilt and independently reassembled at SHA-256 `0ee49de063af555e0d6b9d80c81b692c132bf33ff9d5fe11571f5960c8ccb4cd`. The protected v7.9.3 build digest remains unchanged. The final functional battery includes 57 focused suites, two fresh 19-season careers, an older-save continuation through 2026, all eight club selections through 2010, and 6,000 seeded innings. The initial 55-suite batch passed 53; both failed trade fixtures were diagnosed, corrected and rerun successfully against the same artifact. No trade-AI acceptance rule was relaxed.
+
+See `docs/GCC_V8_STABILISATION.md` and `qa/stabilisation/verified-summary.json` for exact seeds, evidence, corrections and limitations. G4 native visual/interaction approval remains unperformed; G5 release promotion remains withheld. No deployment or main promotion is included.

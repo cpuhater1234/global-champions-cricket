@@ -561,7 +561,8 @@ function installModalInteraction() {
   }
 
   function resolveRecruitEvent(event, emitFeed) {
-    const { player, joins } = event;
+    const player = byId(event.player.id), joins = event.joins;
+    if (!player) throw new Error('Signing decision refers to an unavailable player.');
     player.available = joins;
     state.recruit.dayResolved += 1;
     if (joins) state.recruit.daySigned += 1;
@@ -2155,7 +2156,13 @@ function installModalInteraction() {
     return Math.max(72, Math.min(120, Math.round(82 + total*.19 + rng()*8)));
   }
 
-  function innings(batClub, bowlClub, ground, context = {}) {
+  function innings(batClub,bowlClub,ground,context={}){
+    const estimate=estimateInnings(batClub,bowlClub,ground,context);
+    // Dynasty already applies fitness around the complete simulation. Snapshot it once.
+    const fit=p=>({...p});
+    return window.GCC8_DELIVERY.play({batClub,bowlClub,ground,context,estimate,order:matchBattingOrder(batClub).map(fit),bowlers:clubXI(bowlClub).map(fit),batProfile:effectiveProfile(batClub),bowlProfile:effectiveProfile(bowlClub),random:rng,R});
+  }
+  function estimateInnings(batClub, bowlClub, ground, context = {}) {
     const bat = effectiveProfile(batClub);
     const bowl = effectiveProfile(bowlClub);
     const boundary = ground.conditions.boundary || 0;
@@ -2247,6 +2254,7 @@ function installModalInteraction() {
   }
 
   function resolveChase(firstInnings, chasePotential) {
+    if(chasePotential.deliveryVersion===1)return chasePotential;
     const target = firstInnings.total + 1;
     if (chasePotential.total < target) return chasePotential;
     const ratio = Math.max(.18, Math.min(.995, target / Math.max(target,chasePotential.total)));
@@ -2661,6 +2669,7 @@ function installModalInteraction() {
   }
 
   function buildMatchScorecard(home, away, hi, ai, homeRuns, awayRuns, homeExtras, awayExtras, seed, firstBattingClub = home) {
+    if(hi.deliveryVersion===1&&ai.deliveryVersion===1)return window.GCC8_DELIVERY.scorecard(home,away,hi,ai,firstBattingClub);
     const homeExtraDetail = typeof homeExtras === 'number' ? {total:homeExtras,wides:homeExtras,noBalls:0,byes:0,legByes:0,bowlerCharged:homeExtras} : homeExtras;
     const awayExtraDetail = typeof awayExtras === 'number' ? {total:awayExtras,wides:awayExtras,noBalls:0,byes:0,legByes:0,bowlerCharged:awayExtras} : awayExtras;
     const awayAllocation=bowlingBallAllocation(away,hi,seed+':awaybowling');
@@ -2748,10 +2757,10 @@ function installModalInteraction() {
     const hi=pair.hi, ai=pair.ai, winner=pair.winner;
     updateTableNumbers(home,away,hi,ai,winner);
     const detailSeed = `${home.abbr}-${away.abbr}-${state.round + 1}-${pair.firstClub.abbr}-${hi.total}-${ai.total}`;
-    const homeExtras = scorecardExtrasBreakdown(hi.total, detailSeed + ':he');
-    const awayExtras = scorecardExtrasBreakdown(ai.total, detailSeed + ':ae');
-    const homeRuns = allocateRuns(home, Math.max(0,hi.total-homeExtras.total), hi.wickets, detailSeed + ':home');
-    const awayRuns = allocateRuns(away, Math.max(0,ai.total-awayExtras.total), ai.wickets, detailSeed + ':away');
+    const homeExtras = hi.extrasBreakdown || scorecardExtrasBreakdown(hi.total, detailSeed + ':he');
+    const awayExtras = ai.extrasBreakdown || scorecardExtrasBreakdown(ai.total, detailSeed + ':ae');
+    const homeRuns = hi.batterRuns || allocateRuns(home, Math.max(0,hi.total-homeExtras.total), hi.wickets, detailSeed + ':home');
+    const awayRuns = ai.batterRuns || allocateRuns(away, Math.max(0,ai.total-awayExtras.total), ai.wickets, detailSeed + ':away');
     const scorecard = buildMatchScorecard(home, away, hi, ai, homeRuns, awayRuns, homeExtras, awayExtras, detailSeed, pair.firstClub);
     const homeWickets=scorecard.wickets.home, awayWickets=scorecard.wickets.away;
     const homeCard=scorecardInningsFor(scorecard,home), awayCard=scorecardInningsFor(scorecard,away);
@@ -3495,10 +3504,10 @@ function installModalInteraction() {
     const pair=simulateInningsPair(home,away,weatherRound);
     const hi=pair.hi, ai=pair.ai, winner=pair.winner;
     const detailSeed = `final-${home.abbr}-${away.abbr}-${pair.firstClub.abbr}-${hi.total}-${ai.total}-${state.teamGames[home.abbr] || 0}`;
-    const homeExtras = scorecardExtrasBreakdown(hi.total, detailSeed + ':he');
-    const awayExtras = scorecardExtrasBreakdown(ai.total, detailSeed + ':ae');
-    const homeRuns = allocateRuns(home, Math.max(0,hi.total-homeExtras.total), hi.wickets, detailSeed + ':home');
-    const awayRuns = allocateRuns(away, Math.max(0,ai.total-awayExtras.total), ai.wickets, detailSeed + ':away');
+    const homeExtras = hi.extrasBreakdown || scorecardExtrasBreakdown(hi.total, detailSeed + ':he');
+    const awayExtras = ai.extrasBreakdown || scorecardExtrasBreakdown(ai.total, detailSeed + ':ae');
+    const homeRuns = hi.batterRuns || allocateRuns(home, Math.max(0,hi.total-homeExtras.total), hi.wickets, detailSeed + ':home');
+    const awayRuns = ai.batterRuns || allocateRuns(away, Math.max(0,ai.total-awayExtras.total), ai.wickets, detailSeed + ':away');
     const scorecard = buildMatchScorecard(home, away, hi, ai, homeRuns, awayRuns, homeExtras, awayExtras, detailSeed, pair.firstClub);
     const homeWickets=scorecard.wickets.home, awayWickets=scorecard.wickets.away;
     const homeCard=scorecardInningsFor(scorecard,home), awayCard=scorecardInningsFor(scorecard,away);

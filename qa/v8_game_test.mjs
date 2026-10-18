@@ -20,7 +20,7 @@ function auditScorebook(r){
 
  for(const i of r.scorecard.innings){
   check(Number.isInteger(i.total)&&i.total>=0&&i.wickets>=0&&i.wickets<=10,'innings bounds');
-  check(i.balls>0&&i.balls<=120&&i.batting.reduce((n,b)=>n+b.balls,0)===i.balls,'legal balls reconcile');
+  const sourceInnings=i.club.abbr===r.home.abbr?r.homeInnings:r.awayInnings;check(i.balls>0&&i.balls<=120,'innings legal ball bounds');if(sourceInnings.deliveries){check(sourceInnings.deliveries.filter(d=>d.legal).length===i.balls,'delivery legal balls reconcile');check(i.batting.reduce((n,b)=>n+b.balls,0)===sourceInnings.deliveries.filter(d=>d.extra!=='wides').length,'batter balls faced include no-balls and exclude wides');}else check(i.batting.reduce((n,b)=>n+b.balls,0)===i.balls,'legacy legal balls reconcile');
   check(i.bowling.reduce((n,b)=>n+b.balls,0)===i.balls&&i.bowling.every(b=>b.balls<=24),'bowling overs and four-over cap');
   check(Object.values(i.phases).reduce((a,b)=>a+b,0)===i.total,'phase scores reconcile');
   check(i.batting.filter(b=>!b.dnb&&b.dismissal!=='not out').length===i.wickets,'dismissals reconcile');
@@ -94,7 +94,7 @@ for(let year=2009;year<=lastYear;year++){
  }
  check(X.ui.view==='team'&&!s.dynasty.offseason,'annual draft automatically enters team room');doIt('lodgeList');check(Object.values(s.teams).every(ids=>ids.length===15),'annual lists fifteen');
  for(const c of s.league.filter(c=>c.abbr!==s.userClub.abbr))check(s.teams[c.abbr].map(G.byId).some(p=>p.role==='WK-BAT'||p.keeping>=65),'CPU keeper integrity');
- doIt('annualTeam');manualXI();doIt('lodge');finishSeason();console.log('Closed season',year);
+ doIt('annualTeam');manualXI();doIt('lodge');finishSeason();fs.writeFileSync(reportDir+'/checkpoint-'+year+'.json',host.storage.get('gcc_dynasty_v8'));console.log('Closed season',year);
 }
 if(lastYear===2026){doIt('finishCareer');check(X.ui.view==='legacy','2026 ending');check(s.dynasty.history.length===19,'nineteen seasons archived');check(!X.dispatch('offseason'),'career cannot enter 2027');}
 check(host.errors.length===0,JSON.stringify(host.errors));

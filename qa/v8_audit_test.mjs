@@ -1,5 +1,6 @@
+import {fixturePath} from './v8_fixture_paths.mjs';
 import assert from 'node:assert/strict';import fs from 'node:fs';import {loadGame} from './offline_game_host.mjs';
-const file=process.env.GCC8_TEST_BUILD||'game/global_champions_cricket_v8_reviewed.html',saved=fs.readFileSync('qa/v8_smoke_save.json','utf8');let checks=0;
+const file=process.env.GCC8_TEST_BUILD||'game/global_champions_cricket_v8_reviewed.html',saved=fs.readFileSync(fixturePath('foundation'),'utf8');let checks=0;
 const host=(raw=saved,options={})=>loadGame(file,707,new Map([['gcc_dynasty_v8',raw]]),{strictIds:true,...options});
 const call=(h,a,...args)=>{assert.ok(h.context.GCC8.dispatch(a,args),a+': '+h.get('g8feedback').textContent);checks++;};
 const h=host(),X=h.context.GCC8,s=h.G.state;call(h,'continue');

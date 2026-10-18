@@ -1,8 +1,9 @@
+import {fixturePath} from './v8_fixture_paths.mjs';
 // Catches lost lifecycle saves, event-routing mistakes and incorrect board ordering.
 import fs from 'node:fs';import assert from 'node:assert/strict';import crypto from 'node:crypto';
 import {loadGame} from './offline_game_host.mjs';
 const file=process.env.GCC8_TEST_BUILD||'game/global_champions_cricket_v8_gap_review.html',out=process.env.GCC8_GAP_DIR||'qa/gap-review';fs.mkdirSync(out,{recursive:true});
-const fixture=fs.readFileSync('qa/logic/final-clubs/0/v8_smoke_save.json','utf8');let checks=0;const cases=[];
+const fixture=fs.readFileSync(fixturePath('foundation'),'utf8');let checks=0;const cases=[];
 const check=(v,m)=>{assert.ok(v,m);checks++;},call=(h,a,...args)=>check(h.context.GCC8.dispatch(a,args),a+': '+h.get('g8feedback').textContent);
 const host=(raw,seed=9701)=>loadGame(file,seed,raw?new Map([['gcc_dynasty_v8',raw]]):new Map(),{strictIds:true,captureEvents:true});
 function foundation(){const h=host();for(const [a,args] of [['play',[]],['world',[]],['revealAll',[]],['clubs',[]],['club',[0]],['confirmClub',[]]])call(h,a,...args);return h;}

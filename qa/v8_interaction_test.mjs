@@ -1,5 +1,6 @@
+import {fixturePath} from './v8_fixture_paths.mjs';
 import assert from 'node:assert/strict';import fs from 'node:fs';import {loadGame} from './offline_game_host.mjs';
-const saved=fs.readFileSync('qa/v8_smoke_save.json','utf8'),h=loadGame(process.env.GCC8_TEST_BUILD||'game/global_champions_cricket_v8_fresh_game.html',303,new Map([['gcc_dynasty_v8',saved]]),{strictIds:true}),X=h.context.GCC8,G=h.G,s=G.state,read=h.context.GCC8_ENGINE_READ;
+const saved=fs.readFileSync(fixturePath('foundation'),'utf8'),h=loadGame(process.env.GCC8_TEST_BUILD||'game/global_champions_cricket_v8_fresh_game.html',303,new Map([['gcc_dynasty_v8',saved]]),{strictIds:true}),X=h.context.GCC8,G=h.G,s=G.state,read=h.context.GCC8_ENGINE_READ;
 let checks=0;const call=(a,...args)=>{assert.ok(X.dispatch(a,args),a+': '+h.get('g8feedback').textContent);checks++;};
 call('continue');call('offseason');
 const used=new Set(Object.values(s.teams).flat());assert.ok(read.freeAgents().every(id=>!used.has(id)));checks++;

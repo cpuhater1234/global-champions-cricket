@@ -1,5 +1,6 @@
+import {fixturePath} from './v8_fixture_paths.mjs';
 import fs from 'node:fs';import assert from 'node:assert/strict';import {loadGame} from './offline_game_host.mjs';
-const file=process.env.GCC8_TEST_BUILD||'game/global_champions_cricket_v8_familiar_career.html',h=loadGame(file,813,new Map([['gcc_dynasty_v8',fs.readFileSync('qa/ball-by-ball/corrected-smoke/v8_final_save.json','utf8')]]),{strictIds:true});let checks=0;const check=(v,m)=>{assert.ok(v,m);checks++;},X=h.context.GCC8;check(X.dispatch('continue'),'actual career loads');
+const file=process.env.GCC8_TEST_BUILD||'game/global_champions_cricket_v8_familiar_career.html',h=loadGame(file,813,new Map([['gcc_dynasty_v8',fs.readFileSync(fixturePath('career',2009),'utf8')]]),{strictIds:true});let checks=0;const check=(v,m)=>{assert.ok(v,m);checks++;},X=h.context.GCC8;check(X.dispatch('continue'),'actual career loads');
 check(typeof X.abilityRead==='function','shared labelled ability bars replace raw paired ratings');
 for(const n of [0,47,70,88,99]){const text=X.abilityRead('Batting',n);check(text.includes(`Batting ${n} out of 99`),'bar accessible label reflects '+n);check(text.includes('g8abilitytrack')&&text.includes(`--ability:${n*100/99}%`),'bar geometry matches value '+n);}
 const card=X.playerCard(X.roster()[0]);check(card.includes('g8abilitytrack')&&!card.includes('g8attributes'),'ordinary player card uses same visual language as draft');

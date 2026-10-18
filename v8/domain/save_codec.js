@@ -17,7 +17,11 @@ window.GCC8_SAVE_CODEC=(()=>{
   if(v.gccPacked!==1||!Number.isInteger(v.length)||v.length<0||v.length>20000000||typeof v.data!=='string'||v.data.length>10000000||typeof v.checksum!=='string')throw Error('Invalid packed save block');
   const plain=LZString.decompressFromUTF16(v.data);
   if(typeof plain!=='string'||plain.length!==v.length||checksum(plain)!==v.checksum)throw Error('Damaged packed save block');
-  return JSON.parse(plain);
+  const decoded=JSON.parse(plain);
+  // Reuse only a block whose length, checksum and JSON have all been verified.
+  // stringify still compares the full plain value, so in-place edits invalidate it.
+  if(key!=='pool')cache.set(key,{plain,packed:v});
+  return decoded;
  });}
  return Object.freeze({stringify,parse});
 })();

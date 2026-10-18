@@ -63,6 +63,11 @@ def freeze():
    marker='  return {\n    state,'
    assert marker in script
    script=script.replace(marker,"  window.GCC8_FOUNDATION_READ={roleTags:playerRoleTags,playerNote,groundStory,groundBand,projectedDraftProfile,draftSnapshot,effectiveProfile,simulateSuperOver,winningChaseTotal,reconcileChasePhases,teamAverages:userTeamAverages,leagueAverages:leagueInningsAverages,standout:matchStandout,pauseDraft:()=>{clearTimeout(draftAutoTimer);draftAutoTimer=null}};\n"+marker)
+   # JSON restores duplicate object references. Resolve signing decisions against
+   # the canonical pool so a resumed final day can actually close its window.
+   old='const { player, joins } = event;'
+   assert script.count(old)==1
+   script=script.replace(old,"const player = byId(event.player.id), joins = event.joins;\n    if (!player) throw new Error('Signing decision refers to an unavailable player.');")
   if name=='dynasty':
    marker='  function beginOffseason('
    assert marker in script
@@ -114,6 +119,17 @@ def freeze():
    old='maxRounds=Math.max(0,...Object.values(needs));'
    assert old in script
    script=script.replace(old,'maxRounds=Math.min(4,Math.max(0,...Object.values(needs)));')
+   start=script.index('  function draftSlots(){');end=script.index('\n\n  function freeAgentPool',start)
+   script=script[:start]+script[end:]
+   start=script.index('  function slotsWithSupplement(){');end=script.index('\n\n  function draftOwner',start)
+   script=script[:start]+script[end:]
+   script,n=re.subn(r'^  function userOwnsPick\([^\n]*\n','',script,flags=re.M);assert n==1
+   marker='  function freeAgentPool('
+   script=script.replace(marker,(ROOT/'domain/draft_slots.js').read_text()+'\n'+marker,1)
+   old='o.lottery=[...state.league].sort('
+   assert script.count(old)==1
+   script=script.replace(old,'o.releasePickPolicy=1;'+old)
+
    script=script.replace(',exportSave,importSave,clearSaveAndRestart',',clearSaveAndRestart')
    # Product saves stay in browser storage; no import/export controls or download commands.
    script=re.sub(r'  function (?:exportSave|importSave)\(\).*?\n','',script)
