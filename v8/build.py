@@ -163,6 +163,13 @@ def freeze():
  (ROOT/'engine/manifest.json').write_text(json.dumps({'reference_sha256':EXPECTED,'reference_version':'v7.9.3','adapter':'Original rendering runs in an inert hidden host. The fresh visible UI uses state and commands. No old stylesheets are shipped. Domain extraction remains transitional.'},indent=2)+'\n')
 def build(output):
  template=(ROOT/'ui/shell.html').read_text()
+ # Start the selected home photograph before parsing styles, media and engine.
+ # Keep its identity so the visible home uses precisely this request.
+ photos=json.loads((ROOT/'assets/venue_photos.json').read_text())
+ clubs=re.findall(r"abbr:'([^']+)'",(ROOT/'engine/league.js').read_text())
+ home_sources=[{'abbr':abbr,'src':None if abbr=='STA' else photos[abbr]['url'].replace('width=1280','width=960')} for abbr in clubs]
+ startup='<script id="g8homephoto">(()=>{const choices='+json.dumps(home_sources)+';const chosen=choices[Math.floor(Math.random()*choices.length)];window.GCC8_HOME_PHOTO=chosen;if(chosen.src&&typeof Image!=="undefined"){const img=new Image();img.decoding="async";img.fetchPriority="high";img.referrerPolicy="no-referrer";chosen.image=img;img.src=chosen.src;}})();</script>'
+ template=template.replace('<title>',startup+'<title>',1)
  symbols=[]
  for path in sorted((ROOT/'assets/tabler').glob('*.svg')):
   svg=path.read_text();body=re.search(r'<svg\b[^>]*>(.*?)</svg>',svg,re.S)[1]

@@ -1,7 +1,8 @@
 /* Venue selection is presentation-only: never consume the cricket RNG. */
 (()=>{
  const X=window.GCC8,photos=window.GCC8_MEDIA.venues,clubs=window.GCC_DATA.clubs;
- let homeClub=clubs[Math.floor(Math.random()*clubs.length)];
+ const early=window.GCC8_HOME_PHOTO;
+ let homeClub=clubs.find(c=>c.abbr===early?.abbr)||clubs[Math.floor(Math.random()*clubs.length)];
  X.homeVenue=()=>homeClub;
  // Choose one actual club ground on each page load. Render only that ground;
  // never display a pitch illustration or an unrelated fallback image first.
