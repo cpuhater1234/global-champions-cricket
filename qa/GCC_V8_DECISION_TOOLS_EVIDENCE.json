@@ -1,0 +1,132 @@
+{
+  "baseCommit": "a45a882dbca2f8d101a86ab7e8eb4f267bb78f73",
+  "artifactSha256": "e55bc318d10d5d1b07c7ba64e02e326ee5f7ea9a4d20d04be3ce4b96b8644da9",
+  "sources": {
+    "v8/ui/components.js": "3f640a0216d49522f20d4be1f5df6c61f08e2ef73719fa35fa71aef7a52faafc",
+    "v8/ui/controller.js": "17df3c08bb3a4a37c9a76df9dda7b6da139720ddf51c956b97448c4669deadd9",
+    "v8/ui/data.js": "8127ae87ac562f47c4e3a550f4b234d8a685791e9326438e3c75be7a390c2b6d",
+    "v8/ui/offseason.js": "ef9cf098cafb5f94d8da6c9e876351ef7e79077479126ee157dcfd0571c69d98",
+    "v8/ui/roles.js": "4373e524afb0f63b4ddfae2daa3eba2e06b7a1b2d05220aaafb71058d932ef03",
+    "v8/ui/screens.js": "4bc4b947e8b5040541895fdf7eda41fa273682d8750e6d3b29e70e56e2e4db0a",
+    "v8/ui/workspace.css": "13bf0cd0d280829d5fcf8409c43a94647ebc20a006339402ffcb6461cea8ede1"
+  },
+  "browser": {
+    "cases": 100,
+    "issues": [],
+    "errors": [],
+    "reportSha256": "9b5d7217a9d5d0acf7634120028b6c8df874c4808ede6dbcb19bff7d3e828c40"
+  },
+  "nativeComparison": {
+    "rows": [
+      {
+        "width": 1440,
+        "bad": []
+      },
+      {
+        "width": 1024,
+        "bad": []
+      },
+      {
+        "width": 768,
+        "bad": []
+      },
+      {
+        "width": 390,
+        "bad": []
+      },
+      {
+        "width": 320,
+        "bad": []
+      }
+    ],
+    "errors": []
+  },
+  "decisionTools": {
+    "checks": 34,
+    "scope": "Read-only/guarded VM commands; final build.",
+    "logSha256": "d22a50365fe600a129ee9c70078156d34438f2ef80922636b031617a9fd1bbb3"
+  },
+  "focusedSuites": [
+    {
+      "suite": "decision_flow",
+      "exit": 0
+    },
+    {
+      "suite": "team_workspace",
+      "exit": 0
+    },
+    {
+      "suite": "draft_controls",
+      "exit": 0
+    },
+    {
+      "suite": "offseason",
+      "exit": 0
+    },
+    {
+      "suite": "preplay_controls",
+      "exit": 0
+    },
+    {
+      "suite": "management_boundaries",
+      "exit": 0
+    },
+    {
+      "suite": "readable_feedback",
+      "exit": 0
+    }
+  ],
+  "twoSeasons": {
+    "scope": "Real cricket engine + new UI dispatch in a VM DOM stub. No browser, visual, geometry, focus or latency certification.",
+    "seed": 101,
+    "club": "NOT",
+    "coverage": {
+      "reloads": [
+        {
+          "year": 2008,
+          "label": "foundation-user-pick"
+        },
+        {
+          "year": 2008,
+          "label": "manual-XI"
+        },
+        {
+          "year": 2009,
+          "label": "annual-order"
+        },
+        {
+          "year": 2009,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2009,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2009,
+          "label": "grand-final-ready"
+        }
+      ],
+      "finals": 1,
+      "injurySelections": 1,
+      "injuryCovers": 0,
+      "superOvers": 0,
+      "clubs": []
+    },
+    "checks": 1735,
+    "seasons": 2,
+    "regularSeasonMatches": 28,
+    "storageStats": {
+      "writes": 1136,
+      "maxCodeUnits": 1015577,
+      "maxUtf16Bytes": 2031154,
+      "quotaFailures": 0
+    },
+    "errors": []
+  },
+  "twoSeasonArtifactScope": "Started before final mobile column headers and age text. Engine/interaction rules unchanged; reloads read current path. Final browser/decision-tool runs use frozen final artifact.",
+  "review": "No critical/important findings. Injury-label and default-test-path minors fixed.",
+  "engineOrSaveChanges": false,
+  "rebuild": "Frozen-engine rebuild byte-identical",
+  "priorEvidence": "Earlier 19-season and 188-case browser evidence not counted here."
+}

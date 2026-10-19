@@ -53,7 +53,7 @@
  X.draftAdvice=()=>{
   const ps=roster(),p=X.squadProfile();
   const note=!ps.length?'Start with a player you can build around. Then cover the jobs across an innings.':!ps.some(R.isKeeper)?'You still need a recognised wicketkeeper.':(p.oversCapacity<20||p.trustedOversCapacity<18)?'Your attack needs another dependable bowling option.':p.death<70?'Look for someone who can bowl the closing overs.':'The core jobs are covered. Pick the player who improves your side.';
-  return `<p class="g8draftadvice">${esc(note)}</p>`;
+  return X.squadCoverage(ps,'Your squad · '+ps.length+'/15')+`<p class="g8draftadvice">${esc(note)}</p>`;
  };
  X.seasonContributors=()=>{
   const rows=X.clubSeasonRecords(),bat=rows.filter(x=>x.t.runs>0).sort((a,b)=>b.t.runs-a.t.runs).slice(0,3),bowl=rows.filter(x=>x.t.bowlBalls>0).sort((a,b)=>b.t.wickets-a.t.wickets||a.t.runsConceded/a.t.bowlBalls-b.t.runsConceded/b.t.bowlBalls).slice(0,3);

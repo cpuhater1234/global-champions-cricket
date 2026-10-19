@@ -32,3 +32,26 @@
   return `<div class="g8dressingroom">${groups.map(([role,label])=>{const players=roster().filter(p=>p.role===role);return players.length?`<section class="g8squadgroup g8role-${role}"><h3>${label}</h3>${players.map(p=>`<div class="g8squadmember"><div><b>${esc(p.name)}</b><span class="g8rowrating" aria-label="Current player rating ${p.overall}">${p.overall}</span></div>${btn('Scout','inspect',[p.id],'g8small')}</div>`).join('')}</section>`:'';}).join('')}</div>`;
  };
 })();
+
+/* Decision tools use the existing ratings and eligibility rules only. */
+(()=>{
+ const X=window.GCC8,{G,R,ui,esc,btn,roster,injury}=X,s=G.state;
+ X.squadFilters=()=>`<div class="g8squadfilters" role="group" aria-label="Filter squad by role">${[['ALL','All'],['BAT','Batters'],['WK-BAT','Keepers'],['AR','All-rounders'],['BOWL','Bowlers']].map(([key,label])=>btn(label,'squadFilter',[key],'g8small '+((ui.squadFilter||'ALL')===key?'selected':'' )).replace('type="button"',`type="button" aria-pressed="${(ui.squadFilter||'ALL')===key}"`)).join('')}</div>`;
+ X.filterSquad=ps=>ps.filter(p=>!ui.squadFilter||ui.squadFilter==='ALL'||p.role===ui.squadFilter);
+ X.teamCandidates=()=>X.filterSquad(roster().filter(p=>!s.xi.includes(p.id)));
+ X.squadCoverage=(ps,label='Available squad')=>{
+  const fit=ps.filter(p=>injury(p)?.status!=='OUT'),keepers=fit.filter(R.isKeeper).length,bowlers=fit.filter(p=>R.bowlingWorkload(p)>=4&&R.bowlingUsagePrior(p)>=1.5).length,openers=fit.filter(p=>R.battingRoleBand(p)==='OPEN').length;
+  return `<section class="g8squadcoverage" aria-label="${esc(label)} coverage"><span class="g8eyebrow">${esc(label)}</span><div>${[[keepers,'Keeper'+(keepers===1?'':'s')],[bowlers,'Regular bowlers'],[openers,'Opener'+(openers===1?'':'s')]].map(([n,name])=>`<span><strong>${n}</strong>${name}</span>`).join('')}</div></section>`;
+ };
+ X.comparisonCandidates=id=>{
+  const p=G.byId(Number(id));if(!p)return [];
+  const ps=ui.view==='team'?roster():ui.view==='draft'?s.pool.filter(q=>q.available===true&&!q.draftedBy&&!q.dynastyRetired):ui.view==='dynasty'&&s.dynasty?.offseason?.phase==='draft'?X.read.freeAgents().map(G.byId):[];
+  if(!ps.some(q=>q.id===p.id))return [];
+  return ps.filter(q=>q.id!==p.id).sort((a,b)=>Number(b.role===p.role)-Number(a.role===p.role)||Number(s.xi.includes(b.id))-Number(s.xi.includes(a.id))||b.overall-a.overall||a.id-b.id);
+ };
+ X.playerComparison=(p,q)=>{
+  const row=(name,a,b)=>`<tr><th scope="row">${esc(name)}</th><td>${Math.round(a)}</td><td>${Math.round(b)}</td></tr>`;
+  const table=(label,rows)=>`<table class="g8playercompare"><caption>${esc(label)}</caption><thead><tr><th scope="col">Ability</th><th scope="col" aria-label="${esc(p.name)}"><span class="g8comparefullname">${esc(p.name)}</span><span class="g8comparenumber" aria-hidden="true">Player 1</span></th><th scope="col" aria-label="${esc(q.name)}"><span class="g8comparefullname">${esc(q.name)}</span><span class="g8comparenumber" aria-hidden="true">Player 2</span></th></tr></thead><tbody>${rows.map(([label,a,b])=>row(label,a,b)).join('')}</tbody></table>`;
+  return `<div class="g8compareidentities">${[p,q].map((x,i)=>`<section><span class="g8eyebrow">Player ${i+1}</span><h3>${esc(x.name)}</h3><p>${esc(X.roleLine(x))}</p><span>${x.birthYear?'Age '+(s.year-x.birthYear)+' · ':''}${s.xi.includes(x.id)?'In your XI · ':''}${esc(injury(x)?.status||X.form(x))}</span></section>`).join('')}</div>`+table('Current ability · out of 99',[['Overall',p.overall,q.overall],['Batting',p.bat,q.bat],['Bowling',p.bowl,q.bowl],['Fielding',p.fielding,q.fielding],['Keeping',p.keeping,q.keeping]])+X.disclosure('Innings skills',table('Phase ability · out of 99',[...['powerplay','middle','death'].map((k,i)=>[['Powerplay batting','Middle batting','Death batting'][i],R.batPhaseScore(p,k),R.batPhaseScore(q,k)]),...['newBall','middle','death'].map((k,i)=>[['New-ball bowling','Middle bowling','Death bowling'][i],R.bowlPhaseScore(p,k),R.bowlPhaseScore(q,k)])]));
+ };
+})();
