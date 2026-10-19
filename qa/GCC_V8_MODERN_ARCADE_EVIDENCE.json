@@ -1,0 +1,211 @@
+{
+  "baseCommit": "5fe9fc5e6f2e0f19cd04b2e45cc8d5160142e9f8",
+  "artifactSha256": "ad8eb244b5adfce38dc66c6cb5152319ac82dd8376344b844637b5c241ded1c7",
+  "sources": {
+    "v8/ui/components.js": "b644d035d9bc47b46f40da16a71644fd427efb96cd30dc06341321c310775f59",
+    "v8/ui/controller.js": "7c05fde17bbecb0baf158e3f424cd922d5dcee97daf0cbad6e43440ffe2c785d",
+    "v8/ui/offseason.js": "5bd7164a30ad86784a277e069c0b856ef356d3cf17208e76acbeef30c829e052",
+    "v8/ui/roles.js": "ef982420907ea202e336783f9e09d7374f99cf6c37c6e41be8dc400faa9fd7fb",
+    "v8/ui/screens.js": "cc32ce602d8d996cda5c52ad7ec0ed2c539211f6ff218e9302697694adb40a30",
+    "v8/ui/workspace.css": "b6bc03257a2659e76f4cc3852827d8d7609de072287638d63585864fca2f3bd4"
+  },
+  "geometry": {
+    "core": {
+      "cases": 68,
+      "errors": [],
+      "issues": [],
+      "scope": "Rendered real-save screens; matchday/draft stages reconstructed for presentation. Native management, player, reorder, compare and swap actions."
+    },
+    "wholeFlowFinalArtifact": {
+      "cases": 84,
+      "errors": [],
+      "issues": []
+    },
+    "laterCareer": {
+      "cases": 104,
+      "errors": [],
+      "issues": [],
+      "scope": "Real completed save renders; historical finals stages reconstructed from actual finalists and results. Remote images forced to fail for deterministic offline geometry."
+    },
+    "artifactScope": "68 core and104 later-career cases precede final legacy-surface contrast migration.84 whole-flow cases and8 contrast probes use final artifact."
+  },
+  "contrast": [
+    {
+      "name": "clubs",
+      "bad": []
+    },
+    {
+      "name": "club-guide",
+      "bad": []
+    },
+    {
+      "name": "signing",
+      "bad": []
+    },
+    {
+      "name": "review",
+      "bad": []
+    },
+    {
+      "name": "draft-class",
+      "bad": []
+    },
+    {
+      "name": "management",
+      "bad": []
+    },
+    {
+      "name": "release",
+      "bad": []
+    },
+    {
+      "name": "scouting",
+      "bad": []
+    }
+  ],
+  "density": [
+    {
+      "label": "before",
+      "width": 1440,
+      "view": "team",
+      "buttons": 60,
+      "candidates": 0,
+      "candidateMaxHeight": 0,
+      "height": 1592
+    },
+    {
+      "label": "before",
+      "width": 1440,
+      "view": "draft",
+      "buttons": 41,
+      "candidates": 12,
+      "candidateMaxHeight": 373.953125,
+      "height": 2341
+    },
+    {
+      "label": "before",
+      "width": 390,
+      "view": "team",
+      "buttons": 60,
+      "candidates": 0,
+      "candidateMaxHeight": 0,
+      "height": 3003
+    },
+    {
+      "label": "before",
+      "width": 390,
+      "view": "draft",
+      "buttons": 41,
+      "candidates": 12,
+      "candidateMaxHeight": 280,
+      "height": 4952
+    },
+    {
+      "label": "after",
+      "width": 1440,
+      "view": "team",
+      "buttons": 16,
+      "candidates": 0,
+      "candidateMaxHeight": 0,
+      "height": 1355
+    },
+    {
+      "label": "after",
+      "width": 1440,
+      "view": "draft",
+      "buttons": 16,
+      "candidates": 12,
+      "candidateMaxHeight": 94,
+      "height": 1150
+    },
+    {
+      "label": "after",
+      "width": 390,
+      "view": "team",
+      "buttons": 14,
+      "candidates": 0,
+      "candidateMaxHeight": 0,
+      "height": 1406
+    },
+    {
+      "label": "after",
+      "width": 390,
+      "view": "draft",
+      "buttons": 16,
+      "candidates": 12,
+      "candidateMaxHeight": 82,
+      "height": 2243
+    }
+  ],
+  "focusedSuites": [
+    {
+      "suite": "quiet_arcade",
+      "exit": 0,
+      "log": "qa/quiet-arcade-final-flow.log",
+      "logSha256": "271bc44d415cb9bd91cdf6b1d125f8ed99cb71e9d8243181eb6f7e6622ddcb5a"
+    },
+    {
+      "suite": "team_workspace",
+      "exit": 0,
+      "log": "qa/quiet-arcade/focused/team_workspace.log",
+      "logSha256": "2a22aab4cb568325254896a4475cfc546b32d4f7396765448e7d18a33e550927"
+    },
+    {
+      "suite": "decision_flow",
+      "exit": 0,
+      "initialExit": 1,
+      "log": "qa/quiet-arcade-decision-rerun.log",
+      "logSha256": "6a2bf3bcab911ab2ce3893b5bb14054580235c302dbf4ee1d5a42176427da72d"
+    },
+    {
+      "suite": "draft_controls",
+      "exit": 0,
+      "initialExit": 1,
+      "log": "qa/quiet-arcade-draft-rerun.log",
+      "logSha256": "fa022c936219f19ea6ec00c8a2516b8118d5db1e23630a468ca9b1526c597949"
+    },
+    {
+      "suite": "management_boundaries",
+      "exit": 0,
+      "log": "qa/quiet-arcade/focused/management_boundaries.log",
+      "logSha256": "9554b491811ac7829043b4d9863642f42a823f6d993485aa5987df62355c2a9a"
+    },
+    {
+      "suite": "preplay_controls",
+      "exit": 0,
+      "log": "qa/quiet-arcade/focused/preplay_controls.log",
+      "logSha256": "6e423229c0519fb03057088fb492ad5a25c1f330b165625a9d513f10ba53361c"
+    },
+    {
+      "suite": "offseason",
+      "exit": 0,
+      "log": "qa/quiet-arcade/focused/offseason.log",
+      "logSha256": "2cd57d0996f5f0e3edeaa901caac484c1a9a41dce5e86662b7f7bed607fac15b"
+    },
+    {
+      "suite": "decision_tools",
+      "exit": 0,
+      "log": "qa/quiet-arcade/focused/decision_tools.log",
+      "logSha256": "d22a50365fe600a129ee9c70078156d34438f2ef80922636b031617a9fd1bbb3"
+    }
+  ],
+  "mobileJourney": {
+    "individualSelections": 11,
+    "automaticSelections": 0,
+    "reviewPaneVisible": true,
+    "logSha256": "801f945f3b52ecb53ae604e68496d76241ed874a9e3a1526234b11196e9b4ab1"
+  },
+  "newRegressionChecks": {
+    "quietWorkspaces": 21,
+    "playbackContext": 3,
+    "incomingClass": "Restored before release locking"
+  },
+  "draftChecks": 714,
+  "review": {
+    "important": "Incoming draft-class scouting removed from overview",
+    "resolution": "Restored as a collapsed overview section with regression coverage."
+  },
+  "engineAndSaveFormatChanges": false,
+  "rebuild": "Frozen-engine rebuild byte-identical",
+  "priorCareerTests": "Not counted as fresh coverage."
+}

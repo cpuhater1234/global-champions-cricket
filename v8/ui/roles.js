@@ -36,7 +36,7 @@
 /* Decision tools use the existing ratings and eligibility rules only. */
 (()=>{
  const X=window.GCC8,{G,R,ui,esc,btn,roster,injury}=X,s=G.state;
- X.squadFilters=()=>`<div class="g8squadfilters" role="group" aria-label="Filter squad by role">${[['ALL','All'],['BAT','Batters'],['WK-BAT','Keepers'],['AR','All-rounders'],['BOWL','Bowlers']].map(([key,label])=>btn(label,'squadFilter',[key],'g8small '+((ui.squadFilter||'ALL')===key?'selected':'' )).replace('type="button"',`type="button" aria-pressed="${(ui.squadFilter||'ALL')===key}"`)).join('')}</div>`;
+ X.squadFilters=()=>`<label class="g8squadfilters" for="g8squadrole"><span>Role</span><select id="g8squadrole" data-input="squadFilter">${[['ALL','All roles'],['BAT','Batters'],['WK-BAT','Keepers'],['AR','All-rounders'],['BOWL','Bowlers']].map(([key,label])=>`<option value="${key}" ${(ui.squadFilter||'ALL')===key?'selected':''}>${label}</option>`).join('')}</select></label>`;
  X.filterSquad=ps=>ps.filter(p=>!ui.squadFilter||ui.squadFilter==='ALL'||p.role===ui.squadFilter);
  X.teamCandidates=()=>X.filterSquad(roster().filter(p=>!s.xi.includes(p.id)));
  X.squadCoverage=(ps,label='Available squad')=>{
