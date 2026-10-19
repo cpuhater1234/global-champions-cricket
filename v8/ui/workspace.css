@@ -1,0 +1,168 @@
+/* Decision-first workspaces. Screen hierarchy lives here, separate from the shared skin. */
+#g8stage{max-width:1440px;padding:1.4rem 2.5vw 3rem}
+#g8feedback:empty{display:none}
+.g8heading{min-height:0;align-items:center;margin:0 0 1.25rem;padding:0 0 1rem;gap:1rem}
+.g8heading h1{font-size:clamp(1.75rem,3vw,2.8rem);line-height:1.12;max-width:none}
+.g8heading .g8actions:empty{display:none}
+.g8heading p{margin-top:.5rem}
+.g8sheet{padding:1.25rem}
+.g8sheet h2{font-size:1.5rem}
+#g8hud .g8careernav{display:flex;flex:1 0 100%;width:100%;gap:.35rem;flex-wrap:wrap;padding:.7rem 0 0;margin-top:.25rem;border-top:1px solid #3c5b6b}
+.g8navitem{background:transparent;border-color:transparent;color:#d5e6e6;box-shadow:none;min-height:44px;padding:.55rem .9rem;border-radius:5px}
+.g8navitem.selected{background:#244857;border-color:#82d5bf;color:#fffdf0;box-shadow:inset 0 -3px 0 #82d5bf}
+.g8navitem:hover:enabled{transform:none;box-shadow:none;background:#244857;color:#fffdf0}
+.g8metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.g8metrics>div{display:flex;flex-direction:column;gap:.35rem;min-width:0}
+.g8metrics strong{font:400 2.1rem var(--display);line-height:1.1;color:inherit}
+.g8metrics span{font-size:1rem;color:inherit;opacity:.85}
+.g8disclosure{margin:1.25rem 0 0;background:#102b3d;border:1px solid #4c7180;border-radius:8px;min-width:0}
+.g8disclosure>summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;list-style:none;cursor:pointer;padding:1rem 1.2rem;min-height:52px;font-weight:800;color:#e5f3ed}
+.g8disclosure>summary::-webkit-details-marker{display:none}
+.g8disclosure>summary>span{font-size:1.5rem;line-height:1}
+.g8disclosure[open]>summary>span{transform:rotate(45deg)}
+.g8disclosure>summary:focus-visible,.g8groundpreview>summary:focus-visible,.g8rowoptions>summary:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+.g8disclosurebody{padding:0 1.2rem 1.2rem;min-width:0}
+.g8disclosurebody>.g8sheet{margin:0}
+#g8dialog .g8disclosure{background:#f2f5e5;border-color:#a6c3b6;color:#17394a}
+#g8dialog .g8disclosure>summary{color:#17394a}
+.g8matchhub{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(280px,1fr);gap:1.25rem;align-items:start}
+.g8fixturehero{padding:1.5rem;border:2px solid #467d83;border-top:5px solid #7fe0d7;border-radius:10px;background:linear-gradient(135deg,#143a45,#0b2236);min-width:0;container-type:inline-size;container-name:matchhero}
+.g8fixtureintro{display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:.5rem 1.5rem;color:#bdd8da;line-height:1.5}
+.g8fixtureintro .g8eyebrow{margin:0;color:#d8f45a}
+.g8fixturehero .g8fixture{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:1rem;margin:2rem 0;align-items:center;justify-content:stretch}
+.g8fixturehero .g8fixture>div{max-width:none;text-align:center}
+.g8fixturehero .g8fixture>span{color:#9edbcf;text-align:center}
+.g8fixturehero .g8fixture h2{font-size:clamp(1rem,3.2cqi,1.5rem);margin:.8rem 0 .4rem;overflow-wrap:normal}
+.g8fixturehero .g8fixture small{color:#a5c8cb}
+.g8matchaction{display:flex;justify-content:center;margin:1.5rem 0 .5rem}
+.g8matchaction .g8button{min-width:220px;max-width:100%}
+.g8groundpreview{margin-top:1.25rem;border-top:1px solid #4c7180}
+.g8groundpreview>summary{cursor:pointer;min-height:48px;padding:.85rem 0;font-weight:800;color:#c5dedb}
+.g8groundpreview .g8stadium{margin:.75rem 0;max-width:560px}
+.g8matchsidebar{display:grid;gap:1rem}
+.g8matchsidebar .g8sheet{margin:0}
+.g8matchsidebar .g8formstrip{margin:1rem 0 0}
+.g8selectioncheck h3{margin-bottom:.5rem}
+.g8selectioncheck p{margin:.5rem 0 1rem}
+.g8lastmatch h3{margin-bottom:.85rem}
+.g8windowcallout{display:grid;gap:.65rem;margin-top:1.2rem;padding-top:1rem;border-top:1px solid #afc6b8}
+.g8selectionstatus{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1.25rem;padding:1rem 1.25rem;border:1px solid #497b82;border-radius:8px;background:#123544}
+.g8selectioncount{display:flex;gap:1rem;align-items:center;min-width:0}
+.g8selectioncount>strong{font:400 2.6rem var(--display);color:#eff8d7;white-space:nowrap}
+.g8selectioncount>strong>span{font:700 1.2rem Arial,sans-serif;color:#bdd7d7}
+.g8selectiondots{display:flex;gap:.3rem;margin-top:.55rem}
+.g8selectiondots i{width:12px;height:12px;border:1px solid #8fb8b7;border-radius:3px;background:#284958}
+.g8selectiondots i.filled{background:#bee775;border-color:#d6fca4}
+.g8xiquality{display:flex;gap:.6rem;align-items:center;flex-shrink:0}
+.g8xiquality strong{font:400 2rem var(--display);color:#d8f45a}
+.g8xiquality span{max-width:3rem;line-height:1.3}
+.g8selection.g8teamworkspace{grid-template-columns:minmax(0,1.2fr) minmax(320px,1fr);gap:1.25rem;align-items:start}
+.g8teamworkspace>.g8sheet{container-type:inline-size;container-name:teamsection}
+.g8teamworkspace .g8slot{grid-template-columns:30px minmax(0,1fr) auto;gap:.6rem;padding:.6rem 0;min-height:64px}
+.g8teamworkspace .g8slot .g8actions{grid-column:auto;gap:.3rem}
+.g8teamworkspace .g8slot>span{width:28px;min-height:34px;font-size:1.3rem}
+.g8teamworkspace .g8slot .g8nameandrating b{overflow-wrap:normal;word-break:normal}
+.g8teamworkspace .g8slot small{font-size:1rem;line-height:1.45}
+.g8teamworkspace .g8slot .g8button{min-width:40px;min-height:40px}
+.g8teamworkspace .g8order+.g8actions{margin-top:1rem}
+.g8selectionempty{padding:1.3rem;border:2px dashed #a7c2af;border-radius:7px;margin:1rem 0;background:#eef2dc;color:#365748}
+.g8selectionempty p{margin-top:.45rem}
+.g8squadrow{padding:.8rem 0;gap:1rem}
+.g8squadrow>div:first-child>b{display:flex;justify-content:space-between;gap:.7rem}
+.g8squadrow small{display:block;margin-top:.35rem}
+.g8teamdepth{margin-top:1rem}
+.g8clock{min-height:0;padding:1rem 1.25rem;margin-bottom:1rem;gap:1rem}
+.g8clock h2{font-size:1.4rem;line-height:1.25}
+.g8clock p{margin-top:.4rem;min-height:0}
+.g8draftsplit{grid-template-columns:minmax(0,1fr) minmax(250px,.38fr);gap:1.25rem;align-items:start}
+.g8draftaside{position:sticky;top:1rem}
+.g8draftadvice{margin-bottom:1rem}
+.g8search{padding:.85rem;background:#173546;border:1px solid #487180;border-radius:7px;margin-bottom:1rem;gap:.7rem}
+.g8search label{flex-basis:150px}
+.g8draftplayer{padding:1rem;min-height:0;gap:0}
+.g8draftplayer .g8playerhead{align-items:start;gap:.6rem;min-height:0}
+.g8draftplayer .g8playerhead h3{font-size:1.12rem;min-height:2.65rem;margin-top:.35rem;overflow-wrap:normal}
+.g8draftplayer .g8playerhead small{line-height:1.4}
+.g8draftplayer .g8rating{font-size:1.55rem;min-width:2.3rem;padding:.25rem}
+.g8draftplayer .g8cricketrole{min-height:0;margin:.5rem 0 .75rem}
+.g8draftplayer .g8abilitybars{gap:.4rem}
+.g8draftplayer .g8playeractions{margin-top:.9rem;gap:.5rem}
+.g8draftplayer .g8playeractions .g8button{min-height:42px;padding:.55rem .65rem;flex:1}
+.g8draftroster{min-height:0}
+.g8draftaside .g8squadmember{padding:.55rem 0}
+.g8draftaside .g8squadgroup>h3{margin:.8rem 0 .3rem}
+.g8preflightfixture{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:1rem;align-items:center}
+.g8preflightfixture h3{font-size:1.3rem;overflow-wrap:normal}
+.g8preflightfixture p{margin:.4rem 0;color:#315568}
+.g8preflightfixture>div>span{color:#315568;line-height:1.5}
+.g8preflightactions{margin-top:1rem}
+.g8previewxi li{padding:.6rem 0;gap:1rem}
+.g8previewxi li>small{white-space:normal;max-width:45%;text-align:right}
+.g8resulttools{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem;margin:1.25rem 0}
+.g8resulttools>span{margin-left:auto;color:#bbd6d8}
+.g8result{margin-bottom:0}
+.g8result>h2{font-size:clamp(1.2rem,4cqi,2rem)}
+.g8reviewsummary{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;padding:1.5rem;border:2px solid #4f7c80;border-radius:9px;background:#163746;margin-bottom:1.25rem}
+.g8reviewsummary>div:not(.g8metrics){flex:1;min-width:180px}
+.g8reviewsummary h2{font-size:1.65rem}
+.g8reviewsummary p{color:#c0d9d8;margin-top:.4rem}
+.g8reviewsummary .g8metrics{flex:1;min-width:300px;color:#eff7d9}
+.g8titlewon{border-color:#d1e88c;background:linear-gradient(135deg,#244b3a,#163746)}
+.g8seasonstars .g8contributors{grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem}
+.g8seasonstars .g8contributors .g8eyebrow{color:#3f645c}
+.g8seasonstars .g8statrow{padding:.7rem 0;gap:.2rem}
+.g8reviewfoot{display:flex;justify-content:space-between;gap:1rem;align-items:center;flex-wrap:wrap;margin-top:1.25rem;color:#bfd7d7}
+.g8offseasonsteps{gap:.6rem;margin:0 0 1.25rem}
+.g8offseasonsteps li{padding:.7rem;min-height:0;gap:.6rem}
+.g8offseasonsteps li span{display:none}
+.g8windowbanner{min-height:0;padding:1.25rem;gap:1rem;margin-bottom:1.25rem}
+.g8windowbanner h2{font-size:1.8rem}
+.g8windowbanner p{margin:.6rem 0 0}
+.g8windowaction{min-width:0;flex-basis:auto}
+.g8squadplaces{display:flex;flex-wrap:wrap;gap:.35rem;max-width:none;margin:.8rem 0}
+.g8squadplaces>span{width:24px;height:24px;min-height:0;border-width:1px}
+.g8squadplaces .g8icon{width:16px;height:16px}
+.g8offseasonlayout{grid-template-columns:minmax(0,1.8fr) minmax(280px,1fr);gap:1.25rem;align-items:start}
+.g8managerow{padding:.8rem 0;gap:1rem;align-items:start}
+.g8managerow .g8manageidentity p{margin:.3rem 0}
+.g8playerstate{font-size:1rem}
+.g8manageactions{align-items:start;gap:.5rem;max-width:none}
+.g8rowoptions{min-width:0}
+.g8rowoptions>summary{display:flex;align-items:center;justify-content:center;min-height:40px;list-style:none;padding:.5rem .65rem;border:2px solid #98b9ae;border-radius:6px;background:#eef4dd;color:#214d51;cursor:pointer;font-weight:800}
+.g8rowoptions>summary::-webkit-details-marker{display:none}
+.g8rowoptions>div{display:grid;gap:.5rem;padding-top:.6rem}
+.g8rowoptions[open]>summary{background:#dfecc5}
+.g8releaseallowance{margin:1rem 0;padding:.75rem;gap:.4rem}
+.g8tradeplayer .g8abilitybars{display:none}
+.g8tradeplayer .g8cricketrole{margin:.5rem 0}
+.g8tradeplayer .g8tradefacts{margin:.6rem 0}
+.g8tradepackage>section{padding:1rem}
+.g8tradepackage>section>h3{font-size:1.3rem;margin-bottom:.7rem}
+.g8tradeimpact{padding:.85rem 1rem;margin:1rem 0}
+.g8tradeimpact .g8offerread{border:0;padding:0}
+.g8tradeimpact .g8disclosure{margin-top:.8rem}
+.g8dialogcontext{margin-bottom:1rem;color:#365b66}
+.g8exchangereview{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:1rem;align-items:center;margin-bottom:1.25rem}
+.g8exchangereview>section{padding:1rem;border:1px solid #a9c7b7;border-radius:7px;background:#edf3de;min-width:0}
+.g8exchangereview h3{font-size:1.25rem;overflow-wrap:normal}
+.g8exchangereview p{margin:.6rem 0 0}
+.g8exchangereview .g8eyebrow{color:#315f65}
+.g8exchangereview>span{font-size:2rem;color:#315f65}
+@container teamsection (max-width:36rem){.g8teamworkspace .g8slot{grid-template-columns:30px minmax(0,1fr)}.g8teamworkspace .g8slot .g8actions{grid-column:2}}
+@media(max-width:1050px){.g8draftsplit{grid-template-columns:minmax(0,1fr) 260px}.g8offseasonlayout{grid-template-columns:1fr}.g8offseasonlayout>aside{display:grid;gap:1rem;grid-template-columns:repeat(2,minmax(0,1fr))}.g8offseasonlayout>aside>.g8sheet{margin:0}}
+@media(max-width:900px){.g8matchhub{grid-template-columns:1fr}.g8matchsidebar{grid-template-columns:repeat(2,minmax(0,1fr))}.g8selection.g8teamworkspace{grid-template-columns:1fr}.g8draftsplit{grid-template-columns:1fr}.g8draftaside{position:static}.g8draftaside .g8dressingroom{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.g8fixturehero .g8fixture{grid-template-columns:1fr}.g8fixturehero .g8fixture>div{display:grid;grid-template-columns:52px minmax(0,1fr);column-gap:1rem;text-align:left;align-items:center}.g8fixturehero .g8fixture .g8badge{grid-row:1 / span 2;width:52px;height:58px}.g8fixturehero .g8fixture h2{margin:0;font-size:clamp(1rem,5cqi,1.25rem)}.g8fixturehero .g8fixture small{grid-column:2}}
+@media(max-width:600px){#g8stage{padding:1rem 1rem 2rem}.g8heading{gap:.8rem;align-items:start}.g8heading h1{font-size:1.8rem}.g8heading .g8actions{width:100%}.g8heading .g8actions .g8primary{width:100%}.g8sheet,.g8fixturehero{padding:1rem}.g8matchsidebar{grid-template-columns:1fr}.g8fixturehero .g8fixture{margin:1.25rem 0}.g8matchaction .g8button{width:100%;min-width:0}.g8selectionstatus{padding:.9rem}.g8xiquality{flex-direction:column;gap:.2rem}.g8selectiondots{gap:.2rem}.g8selectiondots i{width:10px;height:10px}.g8selectioncount{gap:.7rem}.g8selectioncount>strong{font-size:2.1rem}.g8squadrow{display:block}.g8squadrow>.g8actions{margin-top:.65rem}.g8draftaside .g8dressingroom{grid-template-columns:1fr}.g8draftplayer .g8abilitybars{display:none}.g8draftplayer .g8playerhead h3{min-height:0}.g8draftplayer .g8cricketrole{margin:.4rem 0 .7rem}.g8board .g8draftplayer{padding:.9rem}.g8seasonstars .g8contributors{grid-template-columns:1fr;gap:1rem}.g8reviewsummary{padding:1rem;gap:1rem}.g8reviewsummary .g8metrics{min-width:0;flex-basis:100%}.g8offseasonsteps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.4rem}.g8offseasonsteps li{display:block;padding:.65rem .4rem;text-align:center}.g8offseasonsteps li>b{margin:0 auto .45rem}.g8offseasonsteps strong{font-size:1rem;line-height:1.3}.g8windowbanner{padding:1rem}.g8windowaction{flex-basis:100%}.g8windowaction .g8primary{width:100%}.g8managerow{grid-template-columns:minmax(0,1fr) auto}.g8manageactions{display:grid;gap:.5rem}.g8manageactions .g8button{padding:.5rem}.g8offseasonlayout>aside{grid-template-columns:1fr}.g8preflightfixture{grid-template-columns:44px minmax(0,1fr)}.g8preflightfixture>.g8badge{width:44px;height:52px}.g8preflightfixture>.g8badge:last-child{display:none}.g8previewxi li{display:block}.g8previewxi li>small{display:block;max-width:none;text-align:left;margin-top:.2rem}.g8exchangereview{grid-template-columns:1fr;gap:.7rem}.g8exchangereview>span{text-align:center;line-height:1}.g8resulttools>span{margin-left:0}.g8metrics{gap:.7rem}.g8metrics strong{font-size:1.8rem}}
+@media(prefers-reduced-motion:reduce){.g8disclosure>summary>span{transition:none}}
+/* Reading density: normal prose, clear names, compact chrome. */
+:root{font-size:16px}
+.g8heading p,.g8storyline,.g8slot small,.g8squadrow small,.g8manageidentity p,.g8metrics span,.g8fixtureintro,.g8selectioncheck p{font-weight:400}
+.g8squadrow b,.g8squadrow small,.g8reviewsummary h2,.g8reviewsummary p,.g8manageidentity .g8nameandrating b{overflow-wrap:normal;word-break:normal}
+.g8signingtitle{min-height:0;height:auto;font-size:2rem;margin:.6rem 0 1rem}
+.g8signing .g8storyline{min-height:0;margin:.6rem 0 1rem}
+.g8signing .g8honours{font-size:1.2rem;line-height:1.6;margin:1rem 0;padding:1rem 0}
+.g8signing .g8actions{min-height:0}
+.g8wire:has(>.g8empty:only-child){height:auto;min-height:100px}
+.g8preflightfixture>.g8badge{font-size:1rem}
+.g8managerow .g8nameandrating{flex-wrap:wrap}
+@container teamsection (max-width:36rem){.g8squadrow{display:block}.g8squadrow>.g8actions{margin-top:.6rem}}
+@media(max-width:600px){#g8hud{padding:.75rem 1rem;gap:.65rem}.g8hudclub{gap:.65rem}.g8hudclub>.g8badge{width:40px;height:46px;font-size:1rem}.g8hudclub .g8brand{height:36px;min-width:70px;font-size:1.3rem}.g8hudclub strong{font-size:1rem}.g8hudclub small{font-size:1rem}#g8hud>nav:not(.g8careernav) .g8button{min-height:40px;padding:.45rem .65rem}.g8navitem{padding:.55rem .65rem}.g8days{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.3rem}.g8days span{padding:.6rem .2rem;text-align:center}.g8signing>section:first-child{padding:1rem}.g8signingtitle{font-size:1.7rem}.g8signing .g8actions{gap:.7rem}.g8reviewsummary>div:not(.g8metrics){min-width:0;flex-basis:100%}.g8managerow{grid-template-columns:1fr}.g8manageactions{display:flex}.g8rowoptions>div{display:flex;flex-wrap:wrap}}

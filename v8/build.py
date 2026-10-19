@@ -178,14 +178,15 @@ def build(output):
  media='<script>window.GCC8_MEDIA='+json.dumps({'stadium':'data:image/jpeg;base64,'+base64.b64encode((ROOT/'assets/mcg-under-lights-source.jpg').read_bytes()).decode(),'venues':json.loads((ROOT/'assets/venue_photos.json').read_text())})+';</script>'
  assets='<!-- Photo source and licence notices (unmodified photos): '+json.dumps(json.loads((ROOT/'assets/venue_photos.json').read_text()))+' -->'+'<!-- Tabler Icons: '+licence+' -->'+ '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="g8iconsprite">'+''.join(symbols)+'</svg>'+media
  template=template.replace('@@ASSETS@@',assets)
- template=template.replace('@@CSS@@',(ROOT/'ui/game.css').read_text()).replace('@@BRIDGE@@',(ROOT/'engine/bridge.html').read_text())
+ styles=(ROOT/'ui/game.css').read_text()+'\n'+(ROOT/'ui/workspace.css').read_text()
+ template=template.replace('@@CSS@@',styles).replace('@@BRIDGE@@',(ROOT/'engine/bridge.html').read_text())
  # Omit the old home motion, moment overlays and visual identity scripts.
  # Their DOM side effects would escape the inert host; none owns cricket state.
  binding='const {setTimeout,clearTimeout,setInterval,clearInterval,requestAnimationFrame,cancelAnimationFrame}=window.GCC8_CLOCK;const MutationObserver=class{observe(){}disconnect(){}};'
  codec='/* '+(ROOT/'vendor/lz-string-LICENSE.txt').read_text()+' */\n'+(ROOT/'vendor/lz-string-1.5.0.js').read_text()+'\n'+(ROOT/'domain/save_codec.js').read_text()+'\n'
  engine='<script>'+codec+'window.GCC8_IDENTITIES='+json.dumps(json.loads((ROOT/'domain/player_identity.json').read_text()))+';'+ 'window.GCC8_PROFILE_CATALOG='+json.dumps(json.loads((ROOT/'domain/player_profiles.json').read_text()))+';'+(ROOT/'domain/player_profiles.js').read_text()+'\n'+(ROOT/'domain/career_outcomes.js').read_text()+'\n'+(ROOT/'domain/career_state.js').read_text()+'\n'+(ROOT/'domain/scouting.js').read_text()+'\n'+(ROOT/'domain/development_feedback.js').read_text()+'\n'+ (ROOT/'domain/player_identity.js').read_text()+'\n'+(ROOT/'domain/phase_exposure.js').read_text()+'\n'+(ROOT/'domain/draft_guard.js').read_text()+'\n'+(ROOT/'domain/career_paths.js').read_text()+'\n'+(ROOT/'domain/player_jobs.js').read_text()+'\n'+(ROOT/'domain/delivery_engine.js').read_text()+'</script><script>window.GCC8_ENGINE_SCROLL=()=>{};'+(ROOT/'ui/clock.js').read_text()+'</script>'+ '\n'.join('<script>(()=>{'+binding+(ROOT/'engine'/f'{name}.js').read_text()+'})();</script>' for name in ['players','league','ratings','projections','cpu','foundation','dynasty'])
  ui='\n'.join('<script>'+ (ROOT/'ui'/f'{name}.js').read_text()+'</script>' for name in ['components','data','roles','venues','match_story','offseason','screens','dom','controller'])
- build_id=hashlib.sha256(((ROOT/'ui/game.css').read_text()+ui+engine+assets).encode()).hexdigest()[:16]
+ build_id=hashlib.sha256((styles+ui+engine+assets).encode()).hexdigest()[:16]
  template=template.replace('id="g8app"',f'id="g8app" data-build="{build_id}"')
  result=template.replace('@@ENGINE@@',engine).replace('@@UI@@',ui)
  output.parent.mkdir(parents=True,exist_ok=True);output.write_text(result)

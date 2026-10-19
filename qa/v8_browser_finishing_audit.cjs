@@ -14,7 +14,7 @@ const out=process.env.GCC8_BROWSER_REPORT_DIR||'qa/finishing/browser';fs.mkdirSy
   for(const width of [1440,1024,768,390]){
    await page.setViewportSize({width,height:1000});
    const metrics=await page.evaluate(()=>{
-    const visible=e=>{const r=e.getBoundingClientRect(),c=getComputedStyle(e);return r.width&&r.height&&c.visibility!=='hidden'&&c.display!=='none'&&!e.closest('[hidden], [inert]');};
+    const visible=e=>{const r=e.getBoundingClientRect(),c=getComputedStyle(e);return e.checkVisibility({checkVisibilityCSS:true})&&r.width&&r.height&&c.visibility!=='hidden'&&c.display!=='none'&&!e.closest('[hidden], [inert]');};
     const root=document.querySelector('dialog[open]')||document.getElementById('g8app');
     const clipped=[];for(const e of root.querySelectorAll('button,h1,h2,h3,summary,label')){
      if(!visible(e))continue;const box=e.getBoundingClientRect();

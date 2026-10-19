@@ -14,13 +14,13 @@ const fresh=loadGame(file,9401,new Map(),{strictIds:true,captureEvents:true}),F=
 for(const [a,args] of [['play',[]],['world',[]],['revealAll',[]],['clubs',[]],['club',[0]],['confirmClub',[]]])call(fresh,a,...args);
 const speed=fresh.G.state.recruit.speedIndex;for(let i=0;i<3;i++)call(fresh,'signingSpeed');check(fresh.G.state.recruit.speedIndex===speed,'signing speed cycles back');
 for(const a of ['signingSkip','draftDraw','revealAll','beginDraft'])call(fresh,a);
-const before=F.ui.draftShown;call(fresh,'more');check(F.ui.draftShown===before+24,'show more extends board');
+const before=F.ui.draftShown;call(fresh,'more');check(F.ui.draftShown===before+12,'show more extends board');
 const app=fresh.get('g8app');
 app.emit('input',{target:{dataset:{input:'search'},value:'warner'}});
-check(F.ui.search==='warner'&&F.ui.draftShown===24,'search event resets pagination');
+check(F.ui.search==='warner'&&F.ui.draftShown===12,'search event resets pagination');
 for(const key of ['filter','sort']){
  const value=key==='filter'?'AR':'overall';app.emit('change',{target:{dataset:{input:key},value}});
- check(F.ui[key]===value&&F.ui.draftShown===24,key+' event updates board');
+ check(F.ui[key]===value&&F.ui.draftShown===12,key+' event updates board');
 }
 snap(fresh,'draft-filtered');
 check(F.pool().every(p=>p.role==='AR'&&`${p.name} ${p.country}`.toLowerCase().includes('warner')),'combined search and role filtering');

@@ -1,6 +1,6 @@
 window.GCC8 = (()=>{
  const G=window.GCC,D=window.Dynasty,R=window.GCC_RATINGS,read=window.GCC8_ENGINE_READ;
- const ui={view:'home',filter:'ALL',search:'',selectedPlayer:null,seasonTab:'matchday',sort:'overall',modal:null,lastScreen:null,draftShown:24,revealed:0,result:null,teamReturn:'season',reveal:null,match:null};
+ const ui={view:'home',filter:'ALL',search:'',selectedPlayer:null,seasonTab:'matchday',sort:'overall',modal:null,lastScreen:null,draftShown:12,revealed:0,result:null,teamReturn:'season',reveal:null,match:null};
  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const icon=name=>`<svg class="g8icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#g8icon-${name}"></use></svg>`;
  const actionIcons={play:'player-play',continue:'player-play',clubs:'users-group',club:'shirt-sport',confirmClub:'shirt-sport',world:'building-stadium',revealAll:'player-track-next',revealRun:'player-play',revealSpeed:'player-track-next',draftDraw:'arrows-sort',annualDraw:'arrows-sort',beginDraft:'cricket',annualDraft:'cricket',draftPlayer:'cricket',team:'shirt-sport',annualTeam:'shirt-sport',editXI:'shirt-sport',select:'shirt-sport',swapIn:'arrows-sort',swapOut:'arrows-sort',lodge:'clipboard-list',lodgeList:'clipboard-list',prepare:'cricket',playMatch:'cricket',scorecard:'clipboard-list',resultScorecard:'clipboard-list',finalScorecard:'clipboard-list',result:'chart-bar',postSeason:'trophy',simulateFinals:'trophy',advanceFinals:'trophy',review:'chart-bar',archive:'book',archiveSeason:'book',inspect:'search',draftSpeed:'player-track-next',skipPick:'player-track-next',trade:'users-group',offseason:'calendar-event',finishCareer:'trophy'};
@@ -22,7 +22,7 @@ window.GCC8 = (()=>{
  const playerCard=(p,action='inspect',label='Scout player',disabled=false,draft=false)=>{
   const role={'BAT':'Batter','WK-BAT':'Wicketkeeper','AR':'All-rounder','BOWL':'Bowler'}[p.role]||p.role;
   const bars=[['Batting',p.bat],['Bowling',p.bowl]].map(([label,n])=>abilityRead(label,n)).join('');
-  return `<article data-key="player-${p.id}" class="g8player ${draft?'g8draftplayer ':''}g8role-${esc(p.role)}"><div class="g8playerhead"><div><small>${esc(p.country)} · ${esc(role)} · ${G.state.year-p.birthYear} this season</small><h3>${esc(p.name)}</h3></div><strong class="g8rating" aria-label="Current player rating ${p.overall} out of 99" title="Current ability, out of 99">${p.overall}</strong></div><p class="g8cricketrole">${esc(window.GCC8.roleLine(p))}</p><div class="g8abilitybars">${bars}</div>${!draft?`<p class="g8fine">${esc(injury(p)?`${injury(p).status} · ${injury(p).roundsLeft} rounds`:form(p))}</p>`:''}${draft?`<div class="g8playeractions">${btn('Pick','draftPlayer',[p.id],'g8primary',disabled)}${btn('Scout','inspect',[p.id],'g8ghost')}</div>`:btn(label,action,[p.id],'',disabled)}</article>`;
+  return `<article data-key="player-${p.id}" class="g8player ${draft?'g8draftplayer ':''}g8role-${esc(p.role)}"><div class="g8playerhead"><div><small>${draft?esc(role):`${esc(p.country)} · ${esc(role)} · Age ${G.state.year-p.birthYear}`}</small><h3>${esc(p.name)}</h3></div><strong class="g8rating" aria-label="Current player rating ${p.overall} out of 99" title="Current ability, out of 99">${p.overall}</strong></div><p class="g8cricketrole">${esc(draft?(p.role==='BOWL'?window.GCC8.bowlingType(p):window.GCC8.battingJob(p)):window.GCC8.roleLine(p))}</p><div class="g8abilitybars">${bars}</div>${!draft?`<p class="g8fine">${esc(injury(p)?`${injury(p).status} · ${injury(p).roundsLeft} rounds`:form(p))}</p>`:''}${draft?`<div class="g8playeractions">${btn('Pick','draftPlayer',[p.id],'g8primary',disabled)}${btn('Scout','inspect',[p.id],'g8ghost')}</div>`:btn(label,action,[p.id],'',disabled)}</article>`;
  };
 
  const table=()=>Object.entries(G.state.table||{}).map(([abbr,t])=>({club:G.state.league.find(c=>c.abbr===abbr),...t})).sort((a,b)=>b.pts-a.pts||b.nrr-a.nrr);
@@ -37,4 +37,17 @@ window.GCC8 = (()=>{
  const ground=c=>`<div class="g8groundnote"><span class="g8eyebrow">${esc(c?.ground||'The ground')}</span><h3>${esc(c?.trait||'Conditions to come')}</h3><p>${esc(c?G.matchGroundForFixture({home:c,round:Math.min(14,G.state.round+1)})?.weather?.label||c.region:'')}</p></div>`;
  const empty=t=>`<p class="g8empty">${esc(t)}</p>`;
  return {G,D,R,read,ui,esc,icon,stadium,btn,badge,roster,screen,pitch,heading,abilityRead,compareRead,playerCard,table,pool,resultCard,phases,profile,reads,ground,injury,form,empty,views:{}};
+})();
+
+/* Shared decision hierarchy; supporting detail stays available without filling the workspace. */
+(()=>{
+ const X=window.GCC8,{G,ui,esc,btn}=X,s=G.state;
+ X.metrics=items=>`<div class="g8metrics">${items.map(([label,value])=>`<div><strong>${esc(value)}</strong><span>${esc(label)}</span></div>`).join('')}</div>`;
+ X.disclosure=(label,body,kind='')=>`<details class="g8disclosure ${kind}"><summary>${esc(label)}<span aria-hidden="true">+</span></summary><div class="g8disclosurebody">${body}</div></details>`;
+ X.regularWorkspace=()=>!!s.userClub&&!!s.fullSchedule.length&&!s.dynasty?.offseason&&!s.dynasty?.careerClosed&&['season','team','result'].includes(ui.view)&&!(ui.view==='team'&&ui.teamReturn==='finals')&&!(ui.view==='result'&&!s.results.includes(ui.result));
+ X.careerNavigation=()=>{
+  if(!X.regularWorkspace())return '';const current=ui.view==='team'?'squad':ui.view==='season'?({players:'stats',leaguePlayers:'stats',ladder:'ladder',fixtures:'fixtures'}[ui.seasonTab]||'matchday'):'';
+  return `<nav class="g8careernav" aria-label="Season navigation">${[['matchday','Matchday'],['squad','My XI'],['ladder','Ladder'],['fixtures','Fixtures'],['stats','Player stats']].map(([key,label])=>btn(label,'careerSection',[key],'g8navitem '+(current===key?'selected':'')).replace('type="button"',`type="button" ${current===key?'aria-current="page"':''}`)).join('')}</nav>`;
+ };
+ X.selectionStatus=()=>{const n=s.xi.length,p=X.profile();return `<div class="g8selectionstatus"><div class="g8selectioncount"><strong>${n}<span>/11</span></strong><div><b>${n===11?'XI selected':n===0?'Choose your eleven':`${11-n} ${11-n===1?'place':'places'} to fill`}</b><div class="g8selectiondots" aria-hidden="true">${Array.from({length:11},(_,i)=>`<i class="${i<n?'filled':''}"></i>`).join('')}</div></div></div><div class="g8xiquality"><strong>${n?Math.round(p.overall):'–'}</strong><span>XI rating</span></div></div>`;};
 })();

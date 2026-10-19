@@ -1,0 +1,146 @@
+{
+  "artifactSha256": "32fdae18fb4dddc2c8542f20b05bd51d62adddffdabeee9eff9daf9f5c9413bd",
+  "baseCommit": "a7ae0705c53b499f25e62d7c54eb118329f73d8c",
+  "sources": {
+    "v8/build.py": "d266008fc7cf826ffa0780c2e7ecd3981af7956cb74c5243d34df890200f5ead",
+    "v8/ui/components.js": "701893234b7407b5e503089c8e53f43daac03610c36b7085996b078265df4057",
+    "v8/ui/controller.js": "1ad52d2493342aa560e0bb580609e69d3c7780811ccf0395d7994ba3d2f9f0ec",
+    "v8/ui/screens.js": "2d51d056dc392e4fb7b6cb70365a83e58093fec1aa61c4bb56871b3b554d7b76",
+    "v8/ui/offseason.js": "ba5fc7000e14b6ad2988c69d0c1c2bb61018667a58182a9d914a24fdba91f6a4",
+    "v8/ui/workspace.css": "86e90baf28d0df8efc1fcd46a96b025d89601369458784f3b99049f18589c9c8"
+  },
+  "focusedSuites": [
+    {
+      "suite": "decision_flow",
+      "exit": 0,
+      "seconds": 85.98,
+      "log": "qa/decision-first/focused/decision_flow.log",
+      "logSha256": "748021261e9bc36838a8f68deca53dda99d8698392d4ed3d4a0b9121f7093998"
+    },
+    {
+      "suite": "team_workspace",
+      "exit": 0,
+      "seconds": 30.03,
+      "log": "qa/decision-first/focused/team_workspace.log",
+      "logSha256": "2a22aab4cb568325254896a4475cfc546b32d4f7396765448e7d18a33e550927"
+    },
+    {
+      "suite": "draft_controls",
+      "exit": 0,
+      "seconds": 200.74,
+      "log": "qa/decision-first/focused/draft_controls.log",
+      "logSha256": "482272c530d7bcde99d39fd31db751ed939e7ffa8fd43bfd84442a2284ac0eba"
+    },
+    {
+      "suite": "offseason",
+      "exit": 0,
+      "seconds": 22.92,
+      "log": "qa/decision-first/offseason-rerun.log",
+      "initialExit": 1,
+      "resolution": "Updated intentional review-copy / 12-player pagination contract; rerun passed.",
+      "logSha256": "3e600d316cf15b6c81864ac98de919683bb2b298386947c3859e1d0a4684afb7"
+    },
+    {
+      "suite": "management_boundaries",
+      "exit": 0,
+      "seconds": 52.52,
+      "log": "qa/decision-first/focused/management_boundaries.log",
+      "logSha256": "9554b491811ac7829043b4d9863642f42a823f6d993485aa5987df62355c2a9a"
+    },
+    {
+      "suite": "preplay_controls",
+      "exit": 0,
+      "seconds": 7.01,
+      "log": "qa/decision-first/preplay-rerun.log",
+      "initialExit": 1,
+      "resolution": "Updated intentional review-copy / 12-player pagination contract; rerun passed.",
+      "logSha256": "49aa26fb599e7ff5568a75a53d732bc968d5183575fbfc86db065e14b552128c"
+    },
+    {
+      "suite": "final_pass",
+      "exit": 0,
+      "seconds": 661.54,
+      "log": "qa/decision-first/focused/final_pass.log",
+      "logSha256": "87e8ee42b6f71df49621e75d947c7df1a2c5cc190708b49ae6b3172f693556c6"
+    },
+    {
+      "suite": "interaction",
+      "exit": 0,
+      "seconds": 36.41,
+      "log": "qa/decision-first/focused/interaction.log",
+      "logSha256": "5c2f06ac6a39461d2b10fca0adfcacbd9813e81369f828913c90e96cf961a860"
+    },
+    {
+      "suite": "player_profiles",
+      "exit": 0,
+      "seconds": 0.24,
+      "log": "qa/decision-first/focused/player_profiles.log",
+      "logSha256": "1dadabce2ad1b42b431cf77c883da6fedca2647afe84ee5f1ab353b17d5a4346"
+    },
+    {
+      "suite": "readable_feedback",
+      "exit": 0,
+      "seconds": 16.12,
+      "log": "qa/decision-first/focused/readable_feedback.log",
+      "logSha256": "92032e7fb6555e2ab0cae7a9d8561eb8bfb2b1e6f8707609e3c12ac562675c69"
+    },
+    {
+      "suite": "live_score_feedback",
+      "exit": 0,
+      "seconds": 55.62,
+      "log": "qa/decision-first/focused/live_score_feedback.log",
+      "logSha256": "47a96db1c82c472604ec9c6d6835d43e1523f048a7e7981cc0a0ff5260b673ab"
+    },
+    {
+      "suite": "save_integrity",
+      "exit": 0,
+      "seconds": 333.38,
+      "log": "qa/decision-first/focused/save_integrity.log",
+      "logSha256": "5cb989b4fa7f0d8fd01752380c57bb419bb6a1bb1d56a4982d3c0f27822a1ef6"
+    }
+  ],
+  "passedFocusedSuites": 12,
+  "browser": {
+    "cases": 84,
+    "errors": [],
+    "issues": [],
+    "reportSha256": "510b1efdabcfcf6f616b60e3536348d968e408c52d89ede847ea4bddb41bb8ab"
+  },
+  "laterCareerBrowser": {
+    "cases": 104,
+    "years": [
+      2019,
+      2025,
+      2026
+    ],
+    "errors": [],
+    "issues": [],
+    "reportSha256": "d223ce67a498de7cc197124237ac2b682530971ae4b366b347fd5b9adaa93503",
+    "scope": "Real completed save renders; historical finals stages reconstructed from actual finalists and results. Remote images forced to fail for deterministic offline geometry."
+  },
+  "nativeClicks": {
+    "checks": 14,
+    "errors": []
+  },
+  "foundation": {
+    "checks": 819,
+    "regularSeasonMatches": 14,
+    "storageStats": {
+      "writes": 548,
+      "maxCodeUnits": 995536,
+      "maxUtf16Bytes": 1991072,
+      "quotaFailures": 0
+    },
+    "errors": []
+  },
+  "review": {
+    "importantFindings": 0,
+    "minorFinding": "Return to matchday retained earlier tab; fixed and regression covered."
+  },
+  "rebuild": "Frozen-engine rebuild byte-identical to delivered artifact. No engine/domain source diff.",
+  "limitations": [
+    "Later-career browser cases reconstruct saved states, not a new 19-season playthrough.",
+    "Remote photos deliberately failed for deterministic layout.",
+    "Broad runner overlapped a source update and is excluded from final candidate acceptance counts."
+  ]
+}
