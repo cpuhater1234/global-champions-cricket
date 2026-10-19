@@ -3,7 +3,7 @@
  const stage=document.getElementById('g8stage'),hud=document.getElementById('g8hud'),dialog=document.getElementById('g8dialog'),content=document.getElementById('g8dialogContent');
  X.installDetailedAverages();
  const commands=Object.create(null),allow=Object.create(null),own=()=>s.userClub?.abbr,annual=()=>ui.view==='dynasty'&&s.dynasty?.offseason?.phase==='draft';
- let busy=false,lastSignature='',archiveReturn='season',dialogOpener=null;
+ let busy=false,lastSignature='',archiveReturn='season',dialogOpener=null,pendingFocus=null;
  X.hasStoredSave=()=>{try{return !!localStorage.getItem('gcc_dynasty_v8')||!!localStorage.getItem('gcc_dynasty_v7_2');}catch{return false;}};
  X.hasSave=()=>!!s.dynasty?.started||X.hasStoredSave();
  let feedbackTimer=null;
@@ -148,9 +148,9 @@
  bind('select',['team'],id=>{assert(roster().some(p=>p.id===Number(id)),'Choose a player from your squad.');assert(s.xi.length<11&&!s.xi.includes(Number(id)),'The XI is already full.');assert(injury(G.byId(Number(id)))?.status!=='OUT','That player is unavailable.');closeDialog();G.toggleXI(Number(id));});
  bind('remove',['team'],id=>{assert(s.xi.includes(Number(id)),'That player is not in the XI.');G.removeXI(Number(id));});
  bind('move',['team'],(id,dir)=>{assert(s.xi.includes(Number(id))&&[-1,1].includes(Number(dir)),'Choose a valid place in the batting order.');G.moveBattingPlayer(Number(id),Number(dir));});
- bind('swapIn',['team'],id=>{assert(roster().some(p=>p.id===Number(id))&&!s.xi.includes(Number(id))&&injury(G.byId(Number(id)))?.status!=='OUT','Choose an available player from the bench.');closeDialog();G.beginSwap(Number(id));});
- bind('swapOut',['team'],id=>{assert(s.pendingSwapIn&&s.xi.includes(Number(id)),'Choose a player to replace.');G.replaceXI(Number(id));});
- bind('cancelSwap',['team'],()=>G.cancelSwap());
+ bind('swapIn',['team'],id=>{assert(roster().some(p=>p.id===Number(id))&&!s.xi.includes(Number(id))&&injury(G.byId(Number(id)))?.status!=='OUT','Choose an available player from the bench.');closeDialog();G.beginSwap(Number(id));pendingFocus='[data-action="swapOut"]';});
+ bind('swapOut',['team'],id=>{assert(s.pendingSwapIn&&s.xi.includes(Number(id)),'Choose a player to replace.');const incoming=s.pendingSwapIn;G.replaceXI(Number(id));pendingFocus='#g8xi-'+incoming;});
+ bind('cancelSwap',['team'],()=>{const incoming=s.pendingSwapIn;G.cancelSwap();pendingFocus='#g8select-'+incoming;});
  bind('clearXI',['team'],()=>G.clearXI());
  bind('naturalOrder',['team'],()=>G.autoOrderXI());
  bind('draftDetail',['draft','dynasty'],kind=>{
@@ -160,7 +160,7 @@
   modal(kind==='analysis'?'Squad analysis':'Recent picks',kind==='analysis'?X.teamRead(true):`<div class="g8pickhistory">${picks.length?picks.slice(-16).reverse().map(p=>`<article><b>${esc(G.byId(p.player??p.playerId)?.name||'No selection')}</b><span>${esc(p.team||p.owner)}</span></article>`).join(''):'<p>No selections yet. Each club’s picks will appear here.</p>'}</div>`,'draftDetail');
  });
  bind('rating',['team','review','draft','dynasty'],(key,squad=false)=>{assert(phases.some(([k])=>k===key),'Choose a cricket rating.');const p=squad?X.squadProfile():profile();modal(phases.find(([k])=>k===key)[1],`<p>${Math.round(p[key])}/99 · ${esc(R.explanation(key,p))}</p><p>XI ability ${Math.round(p.overall)}/99 · Role fit ${Math.round(p.roleFit)}/99 · Keeping ${Math.round(p.keeping)}/99</p>${X.phaseOptions(key,squad)}<p>The selected eleven and their batting order determine this read. The scorebooks show what happens in matches.</p>`);});
- bind('lodge',['team'],()=>{assert(!read.xiProblem(),read.xiProblem());G.cancelSwap();if(ui.teamReturn==='finals'&&s.finals){G.go('finals');setView('finals');}else{G.startSeason();assert(s.fullSchedule.length===14,'The fixture could not be created.');setView('season');}});
+ bind('lodge',['team'],()=>{assert(!s.pendingSwapIn,'Finish or cancel your swap before lodging the XI.');assert(!read.xiProblem(),read.xiProblem());G.cancelSwap();if(ui.teamReturn==='finals'&&s.finals){G.go('finals');setView('finals');}else{G.startSeason();assert(s.fullSchedule.length===14,'The fixture could not be created.');setView('season');}});
  bind('seasonTab',['season'],tab=>{assert(['matchday','ladder','fixtures','players','leaguePlayers'].includes(tab),'Unknown season view.');ui.seasonTab=tab;});
  bind('matchday',['result'],()=>{G.go('season');setView('season');});
  bind('prepare',['season'],()=>{
@@ -217,7 +217,7 @@
   busy=true;const view=ui.view,x=window.scrollX,y=window.scrollY;
   try{clearFeedback();fn(...args);completeDraft();save();if(ui.view===view&&!ui.modal)render(false);return true;}
   catch(e){announce(e.message||'The action could not be completed.');return false;}
-  finally{G.closeModal();busy=false;if(ui.view===view)window.scrollTo({left:x,top:y,behavior:'instant'});}
+  finally{G.closeModal();busy=false;if(pendingFocus){const target=document.querySelector(pendingFocus);pendingFocus=null;target?.focus?.({preventScroll:true});target?.scrollIntoView?.({block:'center',behavior:'instant'});}else if(ui.view===view)window.scrollTo({left:x,top:y,behavior:'instant'});}
  };
  document.getElementById('g8app').addEventListener('click',event=>{const b=event.target.closest?.('button[data-action]');if(!b||b.disabled)return;X.dispatch(b.dataset.action,JSON.parse(b.dataset.args||'[]'));});
  document.getElementById('g8app').addEventListener('input',event=>{

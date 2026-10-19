@@ -1,0 +1,123 @@
+{
+  "startingCommit": "11d0fb28706a552cb2a730aec742c9608b059923",
+  "branch": "work/v8-game-first-rebuild",
+  "artifact": "game/gcc_v8_player_experience.html",
+  "artifactSha256": "9e4928932fcca965e1a69f89014fe989f2565e873136823bf37c6e15a8dd5baf",
+  "focusedSuites": {
+    "resolvedPassing": 57,
+    "initialPassed": 44,
+    "initialFailed": 13,
+    "suiteArtifactSha256": "3b53794ae3aae4d064779f522ec110418ece234477056de7e9b6839449f4fcbb",
+    "rerunArtifactSha256": "03b8ba77f69532dc3d2e6db9daec84e3ee626fa27e3aeb294a6d557e6d53bac9",
+    "initialRunnerSourceChanges": [
+      "v8/ui/game.css",
+      "qa/logic_game_host.mjs",
+      "qa/v8_final_pass_test.mjs"
+    ],
+    "rerunArtifactUnchanged": false,
+    "notes": "Late CSS and singular-honours copy changed after functional cohorts started. Do not describe all cohorts as exact-final-artifact runs. Initial missing fixtures/output folders/inventory and one local helper copy error were corrected; final-pass expectation now requires explicit swap cancellation. Ball playback reran again after its missing output folder was created.",
+    "resolved": {
+      "qa/v8_audit_test.mjs": true,
+      "qa/v8_ball_playback_test.mjs": true,
+      "qa/v8_brutal_commands_test.mjs": true,
+      "qa/v8_brutal_delivery_test.mjs": true,
+      "qa/v8_brutal_playback_resume_test.mjs": true,
+      "qa/v8_career_distribution_test.mjs": true,
+      "qa/v8_career_outcomes_test.mjs": true,
+      "qa/v8_career_state_test.mjs": true,
+      "qa/v8_career_strategy_test.mjs": true,
+      "qa/v8_chase_logic_test.mjs": true,
+      "qa/v8_clock_pause_regression.mjs": true,
+      "qa/v8_clock_test.mjs": true,
+      "qa/v8_codec_resume_cache_test.mjs": true,
+      "qa/v8_cpu_market_test.mjs": true,
+      "qa/v8_cricket_polish_test.mjs": true,
+      "qa/v8_delivery_boundary_regression.mjs": true,
+      "qa/v8_delivery_engine_test.mjs": true,
+      "qa/v8_delivery_fitness_test.mjs": true,
+      "qa/v8_delivery_save_test.mjs": true,
+      "qa/v8_development_feedback_test.mjs": true,
+      "qa/v8_dom_patch_test.mjs": true,
+      "qa/v8_draft_controls_test.mjs": true,
+      "qa/v8_draft_stress_test.mjs": true,
+      "qa/v8_experience_test.mjs": true,
+      "qa/v8_fair_scouting_test.mjs": true,
+      "qa/v8_fan_test.mjs": true,
+      "qa/v8_final_pass_test.mjs": true,
+      "qa/v8_gap_codec_test.mjs": true,
+      "qa/v8_gap_combined_test.mjs": true,
+      "qa/v8_gap_events_test.mjs": true,
+      "qa/v8_gap_storage_test.mjs": true,
+      "qa/v8_home_photo_startup_test.mjs": true,
+      "qa/v8_interaction_test.mjs": true,
+      "qa/v8_layout_test.mjs": true,
+      "qa/v8_lifecycle_consistency_test.mjs": true,
+      "qa/v8_live_score_feedback_test.mjs": true,
+      "qa/v8_logic_test.mjs": true,
+      "qa/v8_management_boundaries_test.mjs": true,
+      "qa/v8_match_reveal_test.mjs": true,
+      "qa/v8_matchday_visual_reads_test.mjs": true,
+      "qa/v8_matchup_overview_test.mjs": true,
+      "qa/v8_micro_layout_test.mjs": true,
+      "qa/v8_migration_test.mjs": true,
+      "qa/v8_offseason_test.mjs": true,
+      "qa/v8_player_clarity_test.mjs": true,
+      "qa/v8_player_profiles_test.mjs": true,
+      "qa/v8_preplay_controls_test.mjs": true,
+      "qa/v8_readable_feedback_test.mjs": true,
+      "qa/v8_release_pick_policy_test.mjs": true,
+      "qa/v8_reveal_test.mjs": true,
+      "qa/v8_save_integrity_test.mjs": true,
+      "qa/v8_signing_notice_test.mjs": true,
+      "qa/v8_signing_resume_test.mjs": true,
+      "qa/v8_squad_management_test.mjs": true,
+      "qa/v8_team_workspace_test.mjs": true,
+      "qa/v8_transition_test.mjs": true,
+      "qa/v8_venue_loading_test.mjs": true
+    }
+  },
+  "nativeFinal": {
+    "cases": 84,
+    "widths": [
+      390,
+      768,
+      1024,
+      1440
+    ],
+    "errors": [],
+    "issues": [],
+    "imagePolicy": "Remote image requests intentionally failed; bundled image available. No external-photo latency certification."
+  },
+  "nativeLateCareer": {
+    "cases": 104,
+    "years": [
+      2019,
+      2025,
+      2026
+    ],
+    "artifactSha256": "03b8ba77f69532dc3d2e6db9daec84e3ee626fa27e3aeb294a6d557e6d53bac9",
+    "historicalFinals": "Rendered actual completed-season finalists/results in each presentation stage, not new historical match simulations.",
+    "issues": []
+  },
+  "career": {
+    "checks": 15522,
+    "seasons": 19,
+    "regularSeasonMatches": 266,
+    "errors": []
+  },
+  "careerArtifactSha256": "3b53794ae3aae4d064779f522ec110418ece234477056de7e9b6839449f4fcbb",
+  "baselineCareerArtifactSha256": "4927c560c5b544088a89f191f49ff0d19ef6480f13fd62298f81165ea80efb0b",
+  "careerNote": "Baseline and revised controls each ran the same 101 seed across 2008\u20132026. This is a regression comparison, not independent balance sampling. Final changes after that cohort are CSS and singular/plural honours copy; engine unchanged.",
+  "targetedLiveFeedback": {
+    "checks": 30,
+    "noBallPositions": 22,
+    "allOutChases": 5,
+    "superOverScoreboard": true
+  },
+  "targetedNativeSelection": {
+    "checks": 13,
+    "failures": []
+  },
+  "cleanRebuild": "byte-identical",
+  "releaseLimit": "Human first-time-player usability, long-session enjoyment, other browser engines and actual remote-photo speed remain unverified."
+}
