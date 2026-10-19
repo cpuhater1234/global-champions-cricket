@@ -11,7 +11,7 @@ const out=process.env.GCC8_BROWSER_REPORT_DIR||'qa/finishing/browser';fs.mkdirSy
  await page.goto('file://'+build,{waitUntil:'domcontentloaded'});
  async function call(a,...args){const result=await page.evaluate(([a,args])=>({ok:window.GCC8.dispatch(a,args),feedback:document.getElementById('g8feedback').textContent}),[a,args]);if(!result.ok)throw Error(a+': '+result.feedback);}
  async function capture(name){
-  for(const width of [1440,1024,768,390]){
+  for(const width of (process.env.GCC8_BROWSER_WIDTHS||'1440,1024,768,390').split(',').map(Number)){
    await page.setViewportSize({width,height:1000});
    const metrics=await page.evaluate(()=>{
     const visible=e=>{const r=e.getBoundingClientRect(),c=getComputedStyle(e);return e.checkVisibility({checkVisibilityCSS:true})&&r.width&&r.height&&c.visibility!=='hidden'&&c.display!=='none'&&!e.closest('[hidden], [inert]');};

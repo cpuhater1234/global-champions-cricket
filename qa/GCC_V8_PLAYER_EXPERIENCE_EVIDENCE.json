@@ -1,0 +1,123 @@
+{
+  "artifact": "game/gcc_v8_quiet_arcade.html",
+  "artifactSha256": "80878842a99700dee5fc96152ad5b09d8b7ab3cc4997ea78c55fa0249c557046",
+  "sourceBase": "22c671a9f309b39db6d51f60dde62c5e995efb86",
+  "initialTitleFailure": {
+    "cases": 201,
+    "failed": 59,
+    "widthExamples": [
+      320,
+      328,
+      336,
+      1480
+    ]
+  },
+  "title": {
+    "cases": 603,
+    "bad": []
+  },
+  "browserReports": [
+    {
+      "name": "core",
+      "cases": 119,
+      "failures": 0,
+      "errors": [],
+      "reportSha256": "f89dd398ab8f0ecc311a03a9197121a621478e74479be4988950f274cf6d9d1f"
+    },
+    {
+      "name": "flow",
+      "cases": 147,
+      "failures": 0,
+      "errors": [],
+      "reportSha256": "6a93d44527041349a50b41bfe2612b71960b2974c4fdc9a794a2341640eafd61"
+    },
+    {
+      "name": "career",
+      "cases": 182,
+      "failures": 0,
+      "errors": [],
+      "reportSha256": "f46880b63dcb03fa414350ad728a74f79245a12fd3c7229b3a75e2e454a5e0a8"
+    }
+  ],
+  "stress": {
+    "cases": 144,
+    "failures": 0,
+    "scope": "Native keyboard, manual selection, replacement, direct playback, save/reload; geometry across short/narrow/intermediate screens and 125% root text sizing. Width640 represents effective layout width of a 1280px window at 200% zoom, not native browser zoom automation.",
+    "reportSha256": "7647b12612369f85f3adc0dcc2b1e532139c2f07cba8501a55dd250ae91ce3a6"
+  },
+  "contrast": {
+    "probes": 8,
+    "failures": 0
+  },
+  "nativeCareer": {
+    "actions": 150,
+    "manualSelections": 22,
+    "firstSeasonMatches": 14,
+    "secondSeasonMatches": 1,
+    "errors": [],
+    "scope": "Fresh career entirely through native UI clicks; read-only queries guide balanced manual decisions; no fixture injection or direct state mutation.",
+    "reportSha256": "6b36cc51f6130b8d232f1ab0a7754e8f693dd8f65a0c239b4439bb7edfb03453"
+  },
+  "runtimeSuites": [
+    {
+      "script": "qa/v8_experience_actions_test.mjs",
+      "exit": 0
+    },
+    {
+      "script": "qa/v8_quiet_arcade_test.mjs",
+      "exit": 0
+    },
+    {
+      "script": "qa/v8_team_workspace_test.mjs",
+      "exit": 0
+    },
+    {
+      "script": "qa/v8_decision_flow_test.mjs",
+      "exit": 0
+    },
+    {
+      "script": "qa/v8_decision_tools_test.mjs",
+      "exit": 0
+    },
+    {
+      "script": "qa/v8_management_boundaries_test.mjs",
+      "exit": 0
+    },
+    {
+      "script": "qa/v8_preplay_controls_test.mjs",
+      "exit": 0
+    },
+    {
+      "script": "qa/v8_squad_management_test.mjs",
+      "exit": 0
+    },
+    {
+      "script": "qa/v8_clock_pause_regression.mjs",
+      "exit": 0
+    },
+    {
+      "script": "qa/v8_ball_playback_test.mjs",
+      "exit": 0
+    },
+    {
+      "script": "qa/v8_match_context_test.mjs",
+      "exit": 0
+    },
+    {
+      "script": "qa/v8_draft_controls_test.mjs",
+      "exit": 0
+    }
+  ],
+  "review": {
+    "initialFinding": "AR strongest phase excluded bowling and used ambiguous labels",
+    "resolution": "Compare eligible batting/bowling and explicitly label discipline; Ashwin Middle bowling 79; 13-check regression passes",
+    "remainingImportantFindings": 0
+  },
+  "rebuildIdentical": true,
+  "limits": [
+    "No unfamiliar-player observation",
+    "No new nineteen-season manual playthrough",
+    "Native browser zoom not automated; effective layout widths and root text scaling checked",
+    "Remote images intentionally failed for deterministic geometry; no complete photograph contrast/accessibility certification"
+  ]
+}
