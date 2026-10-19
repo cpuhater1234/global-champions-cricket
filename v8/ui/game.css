@@ -305,3 +305,41 @@ small,.g8fine,p,td,option{font-weight:600}
 .g8venueframe>.g8venuefallback{grid-area:1/1;z-index:0;padding:1rem;color:#d0e2e0;text-align:center;font-size:1rem;font-weight:700}
 .g8venueframe>.g8stadiumphoto[hidden]{display:none!important}
 .g8photofallback{color:#d0e2e0;font-weight:700;text-align:center;padding:1rem}
+
+/* Components fit their available panel, including nested dialogs and sidebars. */
+.g8groundbands{grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));align-items:stretch}
+.g8groundbands>.g8conditionread{display:block;padding:1rem;min-width:0}
+.g8conditionread>div:first-child{display:grid;gap:.45rem;align-content:start;line-height:1.4}
+.g8groundbands .g8conditionread b,.g8conditionread strong{overflow-wrap:normal;word-break:normal;hyphens:none;text-align:left}
+.g8conditionends{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem .75rem;line-height:1.45}
+.g8conditionends>span{white-space:nowrap;overflow-wrap:normal;word-break:normal;flex:0 0 auto}
+.g8board,.g8moredata .g8board,.g8contract{grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr))}
+.g8phasecards,.g8overplan{grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr))}
+.g8abilitybar{grid-template-columns:minmax(0,5.1rem) minmax(0,1fr) 2rem}
+.g8tradeplayer .g8abilitybar{grid-template-columns:minmax(0,5.1rem) minmax(0,1fr) 2rem}
+.g8comparebars>div{grid-template-columns:minmax(0,5rem) minmax(0,1fr) auto}
+.g8matchuprow>summary{align-items:center;line-height:1.45}
+.g8matchuprow>summary>strong{justify-self:end}
+.g8matchuprow>summary>.g8strengthtrack{grid-column:1/-1;width:100%;margin:.2rem 0}
+.g8matchuprow>summary>.g8strengthword{grid-column:1}
+.g8matchuprow>summary:after{grid-column:2;text-align:right;white-space:nowrap}
+.g8matchupboard>section>h3{margin-bottom:.65rem}
+.g8matchupdetail .g8phaseoptions{margin-top:1rem}
+.g8matchupdetail .g8statrow{padding:.85rem 0}
+.g8roleboard .g8strengthword,.g8roleboard .g8matchuprow>summary:after{color:#bfdde2}
+.g8roleboard .g8abilitybar,.g8roleboard .g8abilitybar b{color:#e5f4ee}
+.g8roleboard .g8abilitytrack{background:#416273}
+.g8roleboard .g8abilitytrack i{background:#85d9bd}
+.g8roleboard .g8moredata{border-color:#638590}
+.g8roleboard .g8read .g8icon{color:#b8e8d7}
+.g8scoutsummary .g8abilitybar b{color:#eef8dd}
+.g8development{color:#e5f4ee}
+.g8sheet .g8development p,#g8dialog .g8development p,.g8sheet .g8roleboard p,#g8dialog .g8roleboard p{color:#c3dcdf}
+.g8sheet .g8development .g8eyebrow,#g8dialog .g8development .g8eyebrow,.g8sheet .g8roleboard .g8eyebrow,#g8dialog .g8roleboard .g8eyebrow{color:#b3d5d9}
+.g8windowaction>span{color:#c2d9d8}
+.g8windowaction .g8button>span{color:inherit}
+.g8finals .g8fixture>span{color:#7b4622}
+.g8roleboard,.g8development,.g8scoutsummary{color-scheme:dark}
+.g8roleboard .g8matchuprow>summary:focus-visible,.g8roleboard .g8moredata>summary:focus-visible{outline:3px solid var(--cyan);outline-offset:3px;border-radius:3px}
+.g8modalbody>p+section,.g8modalbody>section+section{margin-top:1.25rem}
+@media(max-width:600px){.g8board,.g8moredata .g8board,.g8contract{grid-template-columns:1fr}.g8sheet .g8actions .g8button{flex:0 1 auto}.g8roleboard,.g8development{padding:.85rem}#g8dialog{padding:0}}
