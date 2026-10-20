@@ -63,6 +63,12 @@
   const note=!ps.length?'Start with a player you can build around. Then cover the jobs across an innings.':!ps.some(R.isKeeper)?'You still need a recognised wicketkeeper.':(p.oversCapacity<20||p.trustedOversCapacity<18)?'Your attack needs another dependable bowling option.':p.death<70?'Look for someone who can bowl the closing overs.':'The core jobs are covered. Pick the player who improves your side.';
   return X.squadCoverage(ps,'Your squad · '+ps.length+'/15')+`<p class="g8draftadvice">${esc(note)}</p>`;
  };
+ X.seasonProgress=()=>{
+  const prior=s.dynasty?.history?.find(h=>h.year===s.year-1),table=s.table[s.userClub?.abbr];
+  if(!prior||!table||!Number.isFinite(prior.wins)||!Number.isFinite(table.w))return '';
+  const delta=table.w-prior.wins,phrase=delta===0?'Same number of league wins':`${Math.abs(delta)} ${delta>0?'more':'fewer'} league ${Math.abs(delta)===1?'win':'wins'}`;
+  return `<p class="g8seasonprogress"><strong>${esc(phrase)} ${delta===0?'as':'than'} ${prior.year}.</strong> ${prior.wins} then · ${table.w} now. League matches only.</p>`;
+ };
  X.seasonContributors=()=>{
   const rows=X.clubSeasonRecords(),bat=rows.filter(x=>x.t.runs>0).sort((a,b)=>b.t.runs-a.t.runs).slice(0,3),bowl=rows.filter(x=>x.t.bowlBalls>0).sort((a,b)=>b.t.wickets-a.t.wickets||a.t.runsConceded/a.t.bowlBalls-b.t.runsConceded/b.t.bowlBalls).slice(0,3);
   return `<div class="g8contributors"><section><span class="g8eyebrow">WITH THE BAT</span>${bat.length?bat.map(({p,t})=>stat(p.name,`${t.runs} runs · SR ${(t.runs*100/t.balls).toFixed(1)}`)).join(''):'<p>No batting record yet.</p>'}</section><section><span class="g8eyebrow">WITH THE BALL</span>${bowl.length?bowl.map(({p,t})=>stat(p.name,`${t.wickets} wickets · Econ ${(t.runsConceded*6/t.bowlBalls).toFixed(2)}`)).join(''):'<p>No bowling record yet.</p>'}</section></div>`;

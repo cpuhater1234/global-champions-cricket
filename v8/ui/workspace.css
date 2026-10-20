@@ -100,3 +100,14 @@ p,small,.g8fine{font-weight:400;line-height:1.5}small,.g8fine{font-size:1rem;col
 
 /* One visible scorebook finding; full phase comparisons stay optional. */
 .g8matchsummary{border-left:3px solid var(--cyan);padding:1rem 1.25rem;margin:1.25rem 0;background:#142636}.g8matchsummary h2{font-size:1.25rem;margin:0 0 .6rem}.g8matchsummary p{margin:0 0 .6rem;line-height:1.55;max-width:75ch}.g8matchsummary>span,.g8matchsummary>small{display:block;color:#c3d5e4;font-size:1rem;line-height:1.5}.g8matchsummary>small{margin-top:.4rem}
+
+/* Keep both innings together when their names fit; enlarged text can stack. */
+.g8seasonprogress{padding:1rem 0;color:#bdcede;line-height:1.5}.g8seasonprogress strong{color:#eef6fc}
+@media(max-width:760px){.g8result{padding:16px}.g8result h3,.g8result>h2{overflow-wrap:break-word}.g8drafttip{margin:.4rem 0 1rem;line-height:1.5;color:#bed2e2}
+ @container(min-width:18rem){.g8result .g8score{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1rem;align-items:start;margin:1rem 0}.g8result .g8score>span{display:none}.g8result .g8score>div:last-child{text-align:right}.g8result .g8score h3{font-size:1rem;line-height:1.35;min-height:4.05em}.g8result .g8score .g8badge{width:48px;height:54px;font-size:1rem}.g8result .g8score strong{font-size:2rem;padding:.3rem .45rem}.g8result .g8inningsdetail{display:block;font-size:1rem;line-height:1.5}}
+}
+
+@media(max-width:760px){.g8hudclub strong{overflow-wrap:break-word}.g8matchsummary{padding:16px}.g8matchsummary h2,.g8button>span{overflow-wrap:break-word;min-width:0}}
+
+@media(max-width:760px){.g8clock .g8pickread{display:none}.g8clock h2{font-size:1.25rem;line-height:1.25;min-height:2.5em}@container(min-width:30rem){.g8result .g8score h3{min-height:2.7em}}}
+@media(max-width:760px){.g8clock{padding:12px;margin-bottom:16px}.g8draftcontrols{margin-top:8px}.g8draftcontrols .g8button{padding:8px;gap:.4rem}.g8draftcontrols [data-action="skipPick"]>.g8icon{display:none}}

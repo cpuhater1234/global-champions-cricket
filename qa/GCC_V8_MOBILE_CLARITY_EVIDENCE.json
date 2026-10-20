@@ -1,0 +1,108 @@
+{
+  "artifactSha256": "4e3e50ca51c1759f1a410494a4a8cc473dfd671cef1450eeca81397bf4737afa",
+  "logicCandidateSha256": "f3057d02ad2c7b2306872bbf646b17a937f24684889edfbf8a3c275a0a275f8b",
+  "executablePayloadSha256": "05d3f61ab8668c86fea0742aa1f66f16c1c69fd60eefc44fcd5a37b9f4e4d398",
+  "executablePayloadsIdentical": true,
+  "scope": "65 stable-input suites on logic candidate; final changes are CSS-only. Six focused suites, native paging and final230 browser screen states retested on final artifact. Browser audits are not unfamiliar-player or real-device certification.",
+  "outcomes": {
+    "stableSuites": 65,
+    "failedSuites": 0,
+    "finalFocusedSuites": 6,
+    "browserStates": 230,
+    "browserIssues": 0,
+    "textSizingCases": 9,
+    "horizontalOverflowCases": 0,
+    "mobileInitialCandidates": 6,
+    "mobileExpandedCandidates": 12,
+    "desktopInitialCandidates": 12,
+    "nativeDraft": {
+      "initial": 6,
+      "expanded": 12,
+      "coldResume": 6,
+      "guidance": {
+        "turn": "Delhi Capitals are choosing.",
+        "clock": [
+          {
+            "cls": "g8clock",
+            "height": 155.984375,
+            "padding": "12px",
+            "margin": "0px 0px 16px"
+          },
+          {
+            "cls": "",
+            "height": 50,
+            "padding": "0px",
+            "margin": "0px"
+          },
+          {
+            "cls": "g8draftcontrols",
+            "height": 44,
+            "padding": "0px",
+            "margin": "8px 0px 0px"
+          }
+        ],
+        "guide": 423.296875,
+        "board": 705.4375
+      },
+      "passed": true
+    }
+  },
+  "reports": {
+    "suites/report.json": {
+      "sha256": "6c87ef1298e23220a38d20527f47ae916e0dfa07e8410d0b95d1bd19c5373897",
+      "bytes": 39650
+    },
+    "verified-final-browser/report.json": {
+      "sha256": "00dafdec6358c03d0350be752605fcd45ba0f177f298d0c85d01165f6fa5b998",
+      "bytes": 40354
+    },
+    "verified-final-career-browser/report.json": {
+      "sha256": "1fbc293a3a7f692171b5641b771558a02afd9760b7c1da30c17107529aff7723",
+      "bytes": 19132
+    },
+    "final-layout.json": {
+      "sha256": "b6c8e89a90415f0b225d3d62fa5fcf033b5b34326f5fc2480667f93493d1248b",
+      "bytes": 1979
+    },
+    "baseline-layout.json": {
+      "sha256": "b2315c320dcf94bc2b3a9aa049a27f5c7b46ba44c1e109f159d8006e7ee45d9b",
+      "bytes": 1359
+    },
+    "native-draft.json": {
+      "sha256": "f113e3998fc66374e7399372c6cf213c79acbf03903b0dfc5f8a830815076499",
+      "bytes": 578
+    },
+    "v8_mobile_journey_test-final.log": {
+      "sha256": "eacdf74c6c7871ff4693419b03ce4eeabb10792e2bf2fd6c6ddbf731a61695be",
+      "bytes": 37
+    },
+    "v8_player_journey_test-final.log": {
+      "sha256": "a496f723e4e8fbd602e99e6c99d7ca092e89c4814cfff723f6580dd2b922017b",
+      "bytes": 37
+    },
+    "v8_quiet_arcade_test-final.log": {
+      "sha256": "271bc44d415cb9bd91cdf6b1d125f8ed99cb71e9d8243181eb6f7e6622ddcb5a",
+      "bytes": 109
+    },
+    "v8_layout_test-final.log": {
+      "sha256": "8ddcfad3209f589006e42092934c2a25df6e33567f0116e5884a2b2d3404d2d6",
+      "bytes": 279
+    },
+    "v8_micro_layout_test-final.log": {
+      "sha256": "a01453fbad91f8f878bb3cb291cd0ecf0cb5950049398f447fd47b697969552e",
+      "bytes": 100
+    },
+    "v8_team_workspace_test-final.log": {
+      "sha256": "2a22aab4cb568325254896a4475cfc546b32d4f7396765448e7d18a33e550927",
+      "bytes": 128
+    },
+    "red.log": {
+      "sha256": "13238a06b86b4f5f6954d4b5eeea74fb2e498725fcd9d18036d38326050fdd08",
+      "bytes": 718
+    },
+    "alignment-red.log": {
+      "sha256": "8d99cca902bc2210381095f7e9e2159905491d02d72686633cbde081fe086b38",
+      "bytes": 2281
+    }
+  }
+}
