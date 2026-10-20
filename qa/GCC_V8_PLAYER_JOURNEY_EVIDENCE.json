@@ -1,0 +1,77 @@
+{
+  "artifactSha256": "8582719b7271d39715e243a12b5e2b50718a72ea495de1d3f6b495f43afe302b",
+  "baselineCommit": "fd724bdb286c127ff12b45403bcf26126377fffb",
+  "verification": {
+    "broad": {
+      "passed": 63,
+      "failed": 1,
+      "failure": "v8_quiet_arcade_test obsolete Draft class label assertion",
+      "sourcesUnchanged": true,
+      "artifactUnchanged": true
+    },
+    "rerun": {
+      "suite": "v8_quiet_arcade_test",
+      "passed": true,
+      "change": "Replace old label-only assertion with New arrivals plus scout action for every incoming player",
+      "sourceSha256": "ba7903d9c7fea91b840c0a6db77f636d64886ac4849175475a4df99096466d80"
+    },
+    "uniqueSuitesPassingAfterRerun": 64,
+    "browserScreenStates": 126,
+    "nativeTaskJourneys": 5,
+    "focusedChecks": 20,
+    "balancePilotSeasons": 6,
+    "balancePilotLeagueMatches": 84
+  },
+  "reports": {
+    "verified-suites/report.json": {
+      "sha256": "add91423301f038c2d193cb65b3c2cd1495d6e35c382781308772ad19914ee86",
+      "bytes": 39730
+    },
+    "verified-browser/report.json": {
+      "sha256": "4f438a811fbf03a8f74a33e1730a2208de311a0ff5331a11a007482964da7a47",
+      "bytes": 40354
+    },
+    "native-tasks.json": {
+      "sha256": "3ee6d40c5f6632ada2748618b8622a3017fd57372f05d4250829ba7675336157",
+      "bytes": 1254
+    },
+    "result-contrast.json": {
+      "sha256": "69d8cc352b268a0186e8ff29ef1029f9c3158be0dddc86c96c895ece247c830c",
+      "bytes": 1638
+    },
+    "trade-retention-pilot-summary.json": {
+      "sha256": "911c8322974ff4dffaff88cc9cf678f588c9368e9ba66484a0839f0ff185b45d",
+      "bytes": 21443
+    },
+    "pick-balance-results.json": {
+      "sha256": "bd6ea838b941d6da02743c0ffe5799533381eadcb39c9ff8a57e1c4eb5008370",
+      "bytes": 13162
+    },
+    "pick-balance-checkpoint-2009-results.json": {
+      "sha256": "42818b61d4ca33ea61a42003b733d128d02e697105844a36c3c9db4413796f2d",
+      "bytes": 12006
+    },
+    "quiet-arcade-rerun.log": {
+      "sha256": "271bc44d415cb9bd91cdf6b1d125f8ed99cb71e9d8243181eb6f7e6622ddcb5a",
+      "bytes": 109
+    },
+    "focused-green.log": {
+      "sha256": "a496f723e4e8fbd602e99e6c99d7ca092e89c4814cfff723f6580dd2b922017b",
+      "bytes": 37
+    },
+    "red.log": {
+      "sha256": "a4c603f954b9e2c441f45c900e826d49ccf66d8e2b1ea4553134cb8efc322e96",
+      "bytes": 1238
+    },
+    "result-contrast-red.log": {
+      "sha256": "d69af5074b5859251d8e91fcf61fed14c2758d438e1bfdabad692ec9163d9e90",
+      "bytes": 2047
+    }
+  },
+  "resultContrastMinimums": {
+    "g8win": 5.968187548097997,
+    "g8loss": 7.247006129626809,
+    "g8neutral": 7.721855135294723
+  },
+  "scope": "Expert task inspection plus guided native browser interaction. Six-season balance pilot is one world with naturally diverging RNG, not an estimate of comparative win rates. No unfamiliar-person or real-device certification."
+}

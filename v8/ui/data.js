@@ -34,6 +34,14 @@
   return `<section class="g8matchread"><span class="g8eyebrow">THE CRICKET MATCHUP</span>${rows.map(([l,a,b])=>{const even=Math.abs(a-b)<4,edge=even?'even':a>b?'you':'them',bars=fx.home.abbr===s.userClub.abbr?[[s.userClub.abbr,a],[op.abbr,b]]:[[op.abbr,b],[s.userClub.abbr,a]];return `<article class="g8duel"><div><b>${l}</b><strong class="g8edge g8edge-${edge}">${even?'Evenly matched':a>b?'Your edge':'Their edge'}</strong></div><div class="g8duelbars">${bars.map(([club,value])=>`<div><span>${esc(club)}</span><span class="g8strengthtrack"><span style="--strength:${Math.max(0,Math.min(100,value*100/99))}%"></span></span><b>${Math.round(value)}</b></div>`).join('')}</div></article>`;}).join('')}<p class="g8fine">XI ability, including managed-injury penalties. These are cricket comparisons, not win probabilities. ${esc(home.weather.read)}</p></section>`;
  };
  X.phaseBalls=(innings,k)=>innings.phaseBalls?innings.phaseBalls[k]||0:k==='pp'?Math.min(36,innings.balls):k==='mid'?Math.max(0,Math.min(54,innings.balls-36)):Math.max(0,innings.balls-90);
+ // Describe observed scorebook differences, never inferred causes or hidden ability.
+ X.resultSummary=r=>{
+  const own=s.userClub?.abbr;if(!r||![r.home.abbr,r.away.abbr].includes(own))return '';
+  const mine=r.home.abbr===own?r.homeInnings:r.awayInnings,theirs=r.home.abbr===own?r.awayInnings:r.homeInnings,op=r.home.abbr===own?r.away:r.home;
+  const phases=[['Powerplay'+(mine.deliveryVersion===1?' + surge':''),'pp'],['Middle overs','mid'],['Death overs','death']].map(([label,key])=>{const a=X.phaseBalls(mine,key),b=X.phaseBalls(theirs,key);return {label,a,b,for:a?mine[key]*6/a:0,against:b?theirs[key]*6/b:0};}).filter(v=>v.a>=6&&v.b>=6&&Number.isFinite(v.for)&&Number.isFinite(v.against)).sort((a,b)=>Math.abs(b.for-b.against)-Math.abs(a.for-a.against));
+  const p=phases[0],line=r.superOver?'Scores were level after the two innings. The Super Over settled the match.':p?`${p.label}: ${own} scored at ${p.for.toFixed(2)} runs/over across ${p.a} balls; ${op.abbr} at ${p.against.toFixed(2)} across ${p.b}.`:'No phase has six legal balls in both innings to compare.';
+  return `<section class="g8matchsummary"><h2>${r.superOver?'Decided in the Super Over':'Where the innings differed'}</h2><p>${esc(line)}</p><span>${mine.wickets} wickets lost · ${theirs.wickets} taken</span>${p&&!r.superOver?'<small>Largest rate gap among phases with six or more balls per side. A comparison, not a diagnosis.</small>':''}</section>`;
+ };
  X.resultRead=r=>{
   if(!r)return '';const mine=r.home.abbr===s.userClub.abbr?r.homeInnings:r.awayInnings,theirs=r.home.abbr===s.userClub.abbr?r.awayInnings:r.homeInnings,star=F.standout(r);
   const phase=(l,k)=>{const a=X.phaseBalls(mine,k),b=X.phaseBalls(theirs,k),chased=r.battingSecond?.abbr===s.userClub.abbr&&mine.total>theirs.total;

@@ -1,0 +1,760 @@
+{
+  "artifactSha256": "8582719b7271d39715e243a12b5e2b50718a72ea495de1d3f6b495f43afe302b",
+  "scope": "One completed2008 fixture forked into keep-picks and two confirmed2009 star-trades. Actual2009–2011 seasons/finals, actual engine drafting/career transitions; no further user trades or optional releases. User drafts highest visible overall with id tie-break. Manual select commands use exposed balanced bestXI on available players. CPU markets proceed in2010/2011. RNG diverges naturally: no win-rate inference.",
+  "rows": [
+    {
+      "mode": "keepPicks",
+      "openings": [
+        {
+          "year": 2009,
+          "xiSum": 921,
+          "profile": 84,
+          "battingResources": 71,
+          "bowlingResources": 87,
+          "tracked": [
+            {
+              "name": "Dale Steyn",
+              "id": 84,
+              "age": 26,
+              "overall": 95,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "Developing · earning his place"
+            },
+            {
+              "name": "Chris Gayle",
+              "id": 17,
+              "age": 30,
+              "overall": 91,
+              "owner": "REN",
+              "retired": false,
+              "outlook": "Established · prime years"
+            },
+            {
+              "name": "Jos Buttler",
+              "id": 1002,
+              "age": 19,
+              "overall": 79,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "High upside · still developing"
+            },
+            {
+              "name": "Josh Hazlewood",
+              "id": 1005,
+              "age": 18,
+              "overall": 75,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "High upside · still developing"
+            },
+            {
+              "name": "Aaron Finch",
+              "id": 1001,
+              "age": 23,
+              "overall": 75,
+              "owner": "RCB",
+              "retired": false,
+              "outlook": "High upside · still developing"
+            }
+          ]
+        },
+        {
+          "year": 2010,
+          "xiSum": 903,
+          "profile": 83,
+          "battingResources": 71,
+          "bowlingResources": 87,
+          "tracked": [
+            {
+              "name": "Dale Steyn",
+              "id": 84,
+              "age": 27,
+              "overall": 98,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "Developing · earning his place"
+            },
+            {
+              "name": "Chris Gayle",
+              "id": 17,
+              "age": 31,
+              "overall": 90,
+              "owner": "REN",
+              "retired": false,
+              "outlook": "Established · prime years"
+            },
+            {
+              "name": "Jos Buttler",
+              "id": 1002,
+              "age": 20,
+              "overall": 79,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "High upside · still developing"
+            },
+            {
+              "name": "Josh Hazlewood",
+              "id": 1005,
+              "age": 19,
+              "overall": 77,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "High upside · still developing"
+            },
+            {
+              "name": "Aaron Finch",
+              "id": 1001,
+              "age": 24,
+              "overall": 76,
+              "owner": "RCB",
+              "retired": false,
+              "outlook": "High upside · still developing"
+            }
+          ]
+        },
+        {
+          "year": 2011,
+          "xiSum": 883,
+          "profile": 82,
+          "battingResources": 69,
+          "bowlingResources": 87,
+          "tracked": [
+            {
+              "name": "Dale Steyn",
+              "id": 84,
+              "age": 28,
+              "overall": 99,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "Developing · earning his place"
+            },
+            {
+              "name": "Chris Gayle",
+              "id": 17,
+              "age": 32,
+              "overall": 88,
+              "owner": "REN",
+              "retired": false,
+              "outlook": "Established · prime years"
+            },
+            {
+              "name": "Jos Buttler",
+              "id": 1002,
+              "age": 21,
+              "overall": 80,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "High upside · still developing"
+            },
+            {
+              "name": "Josh Hazlewood",
+              "id": 1005,
+              "age": 20,
+              "overall": 78,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "High upside · still developing"
+            },
+            {
+              "name": "Aaron Finch",
+              "id": 1001,
+              "age": 25,
+              "overall": 78,
+              "owner": "RCB",
+              "retired": false,
+              "outlook": "High upside · still developing"
+            }
+          ]
+        }
+      ],
+      "seasons": [
+        {
+          "year": 2009,
+          "wins": 11,
+          "losses": 3,
+          "position": 1,
+          "champion": "YOR",
+          "tracked": [
+            {
+              "name": "Dale Steyn",
+              "id": 84,
+              "age": 26,
+              "overall": 95,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "Developing · earning his place",
+              "matches": 14,
+              "runs": 33,
+              "wickets": 11
+            },
+            {
+              "name": "Chris Gayle",
+              "id": 17,
+              "age": 30,
+              "overall": 91,
+              "owner": "REN",
+              "retired": false,
+              "outlook": "Established · prime years",
+              "matches": 14,
+              "runs": 401,
+              "wickets": 0
+            },
+            {
+              "name": "Jos Buttler",
+              "id": 1002,
+              "age": 19,
+              "overall": 79,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "High upside · still developing",
+              "matches": 14,
+              "runs": 357,
+              "wickets": 0
+            },
+            {
+              "name": "Josh Hazlewood",
+              "id": 1005,
+              "age": 18,
+              "overall": 75,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "High upside · still developing",
+              "matches": 14,
+              "runs": 0,
+              "wickets": 9
+            },
+            {
+              "name": "Aaron Finch",
+              "id": 1001,
+              "age": 23,
+              "overall": 75,
+              "owner": "RCB",
+              "retired": false,
+              "outlook": "High upside · still developing",
+              "matches": 14,
+              "runs": 205,
+              "wickets": 0
+            }
+          ]
+        },
+        {
+          "year": 2010,
+          "wins": 6,
+          "losses": 8,
+          "position": 6,
+          "champion": "REN",
+          "tracked": [
+            {
+              "name": "Dale Steyn",
+              "id": 84,
+              "age": 27,
+              "overall": 98,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "Developing · earning his place",
+              "matches": 15,
+              "runs": 12,
+              "wickets": 29
+            },
+            {
+              "name": "Chris Gayle",
+              "id": 17,
+              "age": 31,
+              "overall": 90,
+              "owner": "REN",
+              "retired": false,
+              "outlook": "Established · prime years",
+              "matches": 16,
+              "runs": 303,
+              "wickets": 5
+            },
+            {
+              "name": "Jos Buttler",
+              "id": 1002,
+              "age": 20,
+              "overall": 79,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "High upside · still developing",
+              "matches": 15,
+              "runs": 431,
+              "wickets": 0
+            },
+            {
+              "name": "Josh Hazlewood",
+              "id": 1005,
+              "age": 19,
+              "overall": 77,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "High upside · still developing",
+              "matches": 15,
+              "runs": 6,
+              "wickets": 3
+            },
+            {
+              "name": "Aaron Finch",
+              "id": 1001,
+              "age": 24,
+              "overall": 76,
+              "owner": "RCB",
+              "retired": false,
+              "outlook": "High upside · still developing",
+              "matches": 14,
+              "runs": 322,
+              "wickets": 0
+            }
+          ]
+        },
+        {
+          "year": 2011,
+          "wins": 6,
+          "losses": 8,
+          "position": 6,
+          "champion": "STA",
+          "tracked": [
+            {
+              "name": "Dale Steyn",
+              "id": 84,
+              "age": 28,
+              "overall": 99,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "Developing · earning his place",
+              "matches": 16,
+              "runs": 5,
+              "wickets": 23
+            },
+            {
+              "name": "Chris Gayle",
+              "id": 17,
+              "age": 32,
+              "overall": 88,
+              "owner": "REN",
+              "retired": false,
+              "outlook": "Established · prime years",
+              "matches": 14,
+              "runs": 312,
+              "wickets": 6
+            },
+            {
+              "name": "Jos Buttler",
+              "id": 1002,
+              "age": 21,
+              "overall": 80,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "High upside · still developing",
+              "matches": 16,
+              "runs": 386,
+              "wickets": 0
+            },
+            {
+              "name": "Josh Hazlewood",
+              "id": 1005,
+              "age": 20,
+              "overall": 78,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "High upside · still developing",
+              "matches": 0,
+              "runs": 0,
+              "wickets": 0
+            },
+            {
+              "name": "Aaron Finch",
+              "id": 1001,
+              "age": 25,
+              "overall": 78,
+              "owner": "RCB",
+              "retired": false,
+              "outlook": "High upside · still developing",
+              "matches": 10,
+              "runs": 131,
+              "wickets": 0
+            }
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "mode": "tradePicks",
+      "openings": [
+        {
+          "year": 2009,
+          "xiSum": 945,
+          "profile": 86,
+          "battingResources": 72,
+          "bowlingResources": 94,
+          "tracked": [
+            {
+              "name": "Dale Steyn",
+              "id": 84,
+              "age": 26,
+              "overall": 95,
+              "owner": "NOT",
+              "retired": false,
+              "outlook": "Developing · earning his place"
+            },
+            {
+              "name": "Chris Gayle",
+              "id": 17,
+              "age": 30,
+              "overall": 91,
+              "owner": "NOT",
+              "retired": false,
+              "outlook": "Established · prime years"
+            },
+            {
+              "name": "Jos Buttler",
+              "id": 1002,
+              "age": 19,
+              "overall": 79,
+              "owner": "REN",
+              "retired": false,
+              "outlook": "High upside · still developing"
+            },
+            {
+              "name": "Josh Hazlewood",
+              "id": 1005,
+              "age": 18,
+              "overall": 75,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "High upside · still developing"
+            },
+            {
+              "name": "Aaron Finch",
+              "id": 1001,
+              "age": 23,
+              "overall": 75,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "High upside · still developing"
+            }
+          ]
+        },
+        {
+          "year": 2010,
+          "xiSum": 928,
+          "profile": 85,
+          "battingResources": 71,
+          "bowlingResources": 94,
+          "tracked": [
+            {
+              "name": "Dale Steyn",
+              "id": 84,
+              "age": 27,
+              "overall": 98,
+              "owner": "NOT",
+              "retired": false,
+              "outlook": "Developing · earning his place"
+            },
+            {
+              "name": "Chris Gayle",
+              "id": 17,
+              "age": 31,
+              "overall": 90,
+              "owner": "NOT",
+              "retired": false,
+              "outlook": "Established · prime years"
+            },
+            {
+              "name": "Jos Buttler",
+              "id": 1002,
+              "age": 20,
+              "overall": 79,
+              "owner": "REN",
+              "retired": false,
+              "outlook": "High upside · still developing"
+            },
+            {
+              "name": "Josh Hazlewood",
+              "id": 1005,
+              "age": 19,
+              "overall": 77,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "High upside · still developing"
+            },
+            {
+              "name": "Aaron Finch",
+              "id": 1001,
+              "age": 24,
+              "overall": 76,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "High upside · still developing"
+            }
+          ]
+        },
+        {
+          "year": 2011,
+          "xiSum": 904,
+          "profile": 84,
+          "battingResources": 69,
+          "bowlingResources": 94,
+          "tracked": [
+            {
+              "name": "Dale Steyn",
+              "id": 84,
+              "age": 28,
+              "overall": 99,
+              "owner": "NOT",
+              "retired": false,
+              "outlook": "Developing · earning his place"
+            },
+            {
+              "name": "Chris Gayle",
+              "id": 17,
+              "age": 32,
+              "overall": 88,
+              "owner": "NOT",
+              "retired": false,
+              "outlook": "Established · prime years"
+            },
+            {
+              "name": "Jos Buttler",
+              "id": 1002,
+              "age": 21,
+              "overall": 80,
+              "owner": "REN",
+              "retired": false,
+              "outlook": "High upside · still developing"
+            },
+            {
+              "name": "Josh Hazlewood",
+              "id": 1005,
+              "age": 20,
+              "overall": 78,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "High upside · still developing"
+            },
+            {
+              "name": "Aaron Finch",
+              "id": 1001,
+              "age": 25,
+              "overall": 78,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "High upside · still developing"
+            }
+          ]
+        }
+      ],
+      "seasons": [
+        {
+          "year": 2009,
+          "wins": 8,
+          "losses": 6,
+          "position": 4,
+          "champion": "DC",
+          "tracked": [
+            {
+              "name": "Dale Steyn",
+              "id": 84,
+              "age": 26,
+              "overall": 95,
+              "owner": "NOT",
+              "retired": false,
+              "outlook": "Developing · earning his place",
+              "matches": 16,
+              "runs": 42,
+              "wickets": 21
+            },
+            {
+              "name": "Chris Gayle",
+              "id": 17,
+              "age": 30,
+              "overall": 91,
+              "owner": "NOT",
+              "retired": false,
+              "outlook": "Established · prime years",
+              "matches": 16,
+              "runs": 594,
+              "wickets": 1
+            },
+            {
+              "name": "Jos Buttler",
+              "id": 1002,
+              "age": 19,
+              "overall": 79,
+              "owner": "REN",
+              "retired": false,
+              "outlook": "High upside · still developing",
+              "matches": 14,
+              "runs": 344,
+              "wickets": 0
+            },
+            {
+              "name": "Josh Hazlewood",
+              "id": 1005,
+              "age": 18,
+              "overall": 75,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "High upside · still developing",
+              "matches": 15,
+              "runs": 0,
+              "wickets": 17
+            },
+            {
+              "name": "Aaron Finch",
+              "id": 1001,
+              "age": 23,
+              "overall": 75,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "High upside · still developing",
+              "matches": 0,
+              "runs": 0,
+              "wickets": 0
+            }
+          ]
+        },
+        {
+          "year": 2010,
+          "wins": 10,
+          "losses": 4,
+          "position": 2,
+          "champion": "DC",
+          "tracked": [
+            {
+              "name": "Dale Steyn",
+              "id": 84,
+              "age": 27,
+              "overall": 98,
+              "owner": "NOT",
+              "retired": false,
+              "outlook": "Developing · earning his place",
+              "matches": 16,
+              "runs": 42,
+              "wickets": 28
+            },
+            {
+              "name": "Chris Gayle",
+              "id": 17,
+              "age": 31,
+              "overall": 90,
+              "owner": "NOT",
+              "retired": false,
+              "outlook": "Established · prime years",
+              "matches": 16,
+              "runs": 493,
+              "wickets": 1
+            },
+            {
+              "name": "Jos Buttler",
+              "id": 1002,
+              "age": 20,
+              "overall": 79,
+              "owner": "REN",
+              "retired": false,
+              "outlook": "High upside · still developing",
+              "matches": 14,
+              "runs": 453,
+              "wickets": 0
+            },
+            {
+              "name": "Josh Hazlewood",
+              "id": 1005,
+              "age": 19,
+              "overall": 77,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "High upside · still developing",
+              "matches": 14,
+              "runs": 26,
+              "wickets": 11
+            },
+            {
+              "name": "Aaron Finch",
+              "id": 1001,
+              "age": 24,
+              "overall": 76,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "High upside · still developing",
+              "matches": 2,
+              "runs": 43,
+              "wickets": 0
+            }
+          ]
+        },
+        {
+          "year": 2011,
+          "wins": 4,
+          "losses": 10,
+          "position": 8,
+          "champion": "YOR",
+          "tracked": [
+            {
+              "name": "Dale Steyn",
+              "id": 84,
+              "age": 28,
+              "overall": 99,
+              "owner": "NOT",
+              "retired": false,
+              "outlook": "Developing · earning his place",
+              "matches": 14,
+              "runs": 32,
+              "wickets": 21
+            },
+            {
+              "name": "Chris Gayle",
+              "id": 17,
+              "age": 32,
+              "overall": 88,
+              "owner": "NOT",
+              "retired": false,
+              "outlook": "Established · prime years",
+              "matches": 14,
+              "runs": 210,
+              "wickets": 0
+            },
+            {
+              "name": "Jos Buttler",
+              "id": 1002,
+              "age": 21,
+              "overall": 80,
+              "owner": "REN",
+              "retired": false,
+              "outlook": "High upside · still developing",
+              "matches": 14,
+              "runs": 220,
+              "wickets": 0
+            },
+            {
+              "name": "Josh Hazlewood",
+              "id": 1005,
+              "age": 20,
+              "overall": 78,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "High upside · still developing",
+              "matches": 15,
+              "runs": 75,
+              "wickets": 3
+            },
+            {
+              "name": "Aaron Finch",
+              "id": 1001,
+              "age": 25,
+              "overall": 78,
+              "owner": "STA",
+              "retired": false,
+              "outlook": "High upside · still developing",
+              "matches": 11,
+              "runs": 279,
+              "wickets": 0
+            }
+          ]
+        }
+      ],
+      "errors": []
+    }
+  ]
+}
