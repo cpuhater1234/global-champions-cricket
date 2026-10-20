@@ -30,6 +30,13 @@ def freeze():
   if name=='cpu':
    script=script.replace('function projectedValue(player, year=2008){ const p=projection(player); return p.draftDynasty ?? p.dynasty; }', 'function projectedValue(player, year=2008){ if(player.dynastyCareer)return window.GCC8_CAREERS.value(player,year);const p=projection(player);return p.draftDynasty??p.dynasty; }')
   if name=='foundation':
+   # Future debutants are deliberately unavailable, not declined invitations.
+   old='const declined = state.pool.filter(p => p.available === false);'
+   assert script.count(old)==1
+   script=script.replace(old,'const declined = state.pool.filter(p => p.available === false && (p.dynastyCareer?.debutYear ?? 2008) <= 2008);')
+   old='${state.pool.length - signed.length} declined.'
+   assert script.count(old)==1
+   script=script.replace(old,'${declined.length} declined.')
    old='if(!state.orderTouched){\n      order=autoOrderIds'
    assert script.count(old)==1
    script=script.replace(old,'if(!state.orderTouched&&(missing.length||order.length!==(state.battingOrder||[]).length||new Set(order).size!==order.length)){\n      order=autoOrderIds')

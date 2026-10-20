@@ -612,12 +612,12 @@ function installModalInteraction() {
     state.recruit.betweenDays = false;
 
     const signed = state.pool.filter(p => p.available === true);
-    const declined = state.pool.filter(p => p.available === false);
+    const declined = state.pool.filter(p => p.available === false && (p.dynastyCareer?.debutYear ?? 2008) <= 2008);
     if (signed.length < 120) throw new Error(`Recruitment plan produced only ${signed.length} signed players`);
     if (state.recruit.targetSigned && signed.length !== state.recruit.targetSigned) throw new Error(`Recruitment plan mismatch: expected ${state.recruit.targetSigned}, got ${signed.length}`);
 
     state.recruit.complete = true;
-    pushRecruitFeed('Signing window closed', `${signed.length} players entered the GCC draft pool. ${state.pool.length - signed.length} declined.`, 'day');
+    pushRecruitFeed('Signing window closed', `${signed.length} players entered the GCC draft pool. ${declined.length} declined.`, 'day');
     renderRecruitment();
     $('draftSetup').disabled = false;
     toast('Signing window closed');

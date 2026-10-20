@@ -7,13 +7,14 @@ Updated 20 October 2026. This replaces the obsolete initial-scaffold handoff. A 
 Repository: `cpuhater1234/global-champions-cricket`.
 Working branch: `work/v8-game-first-rebuild`. Fetch its current head before editing or publishing. `main` is not automatically promoted.
 
-Latest versioned playable: `game/gcc_v8_mobile_clarity.html`.
+Latest versioned playable: `game/gcc_v8_understanding_review.html`.
 Canonical continuation build: `game/gcc_v8_quiet_arcade.html`, copied from the latest verified versioned build.
-Delivered filename: `GCC_v8_Mobile_Clarity.html`.
-Final mobile-clarity SHA-256: `4e3e50ca51c1759f1a410494a4a8cc473dfd671cef1450eeca81397bf4737afa`.
+Delivered filename: `GCC_v8_Understanding_Review.html`.
+Final understanding-review SHA-256: `24f91cafc6b4469afe730e8cca1f84c07b3c80abeb3b8a7fa9f3ab2bea0171a1`.
 
 Read the latest review before changing anything:
 
+- `docs/GCC_V8_EXPERIENCE_TEST_PROGRAMME.md` and `qa/experience-programme/assessment.json` for the new actor/assessor programme, pilot findings and explicit remaining gaps.
 - `docs/GCC_V8_MOBILE_CLARITY.md` and `qa/GCC_V8_MOBILE_CLARITY_EVIDENCE.json`.
 - `docs/GCC_V8_PLAYER_JOURNEY_REVIEW.md` and its evidence JSON.
 - `docs/GCC_V8_MICROSCOPIC_AUDIT.md` and its evidence JSON.
@@ -53,7 +54,11 @@ The mobile pass uses six initial candidates on narrow screens, puts bowling guid
 
 Do not collapse different evidence layers into a universal release claim. Runtime suites use a VM host; browser tasks are guided; later-screen checks use fixtures. The earlier nineteen-season career and eight-club matrix covered43 seasons and602 managed league matches on their documented corrected code. The later six-season paired trade pilot found a persistent rating advantage but no demonstrated winning dominance; its RNG naturally diverged, so it cannot estimate comparative win rates.
 
-The latest 65-suite batch ran the mobile logic candidate. Finishing changes were CSS-only; final executable scripts were checked byte-identical and final layouts/native interactions were retested separately. Consult the evidence JSON for hashes and exact outcomes.
+The understanding-review candidate passed66 stable-input suites with no source changes during execution,68 rendered browser states, four skipped/paced signing cases and three-world player-pool/RNG parity. Its CSS is byte-identical to mobile clarity; only closing-summary calculation and signing-wire rendering changed. No new full-career claim is made.
+
+The earlier65-suite batch ran the mobile logic candidate. Finishing changes were CSS-only; final executable scripts were checked byte-identical and final layouts/native interactions were retested separately. Consult the evidence JSON for hashes and exact outcomes.
+
+The new cold AI pilot found a real signing-count contradiction: future debutants were being called declined invitations. The source summary and old completed feed display now use eligible counts without modifying player state. The limited immediate same-career resume and directed count check are source-blind AI evidence, with full-page transport and harness-recovery limitations. Current future actor transport is viewport screenshot-only after review caught offscreen and clipped text exposure. Do not retroactively apply that improved scope to earlier trials. A later39-action same-career session completed the15-player draft and consulted projected XI analysis, but stopped at XI0/11 near its budget with transport limitations; no match/enjoyment claim. It used intermediate viewport text, not current screenshot-only transport. Initial operating batch and human sessions remain incomplete.
 
 Still unestablished: unfamiliar-player comprehension, sustained enjoyment, larger multi-seed/club strategic balance, native Windows/Safari/touch comfort, screen-reader speech and genuine background-tab behavior. Automated contrast engines can miss gradients: the loss card previously passed broad flows while remaining unreadable. Include win/loss/neutral variants and actual visual inspection, not only viewport counts.
 

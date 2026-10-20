@@ -1,6 +1,6 @@
 # First-player observation protocol
 
-This protocol is ready to run; no unfamiliar-player sessions have been conducted by the automated audit. Its purpose is to find misunderstanding, friction and boredom that scripted tests cannot establish.
+This protocol is ready to run; no unfamiliar-player sessions have been conducted by the automated audit. Its purpose is to find misunderstanding, friction and boredom that scripted tests cannot establish. See `GCC_V8_EXPERIENCE_TEST_PROGRAMME.md` for the parallel AI/technical lanes and `qa/experience-programme/human-session-record.json` for a blank session record.
 
 ## People and conditions
 

@@ -1,0 +1,78 @@
+{
+  "baseline_build_sha256": "4e3e50ca51c1759f1a410494a4a8cc473dfd671cef1450eeca81397bf4737afa",
+  "candidate_build_sha256": "24f91cafc6b4469afe730e8cca1f84c07b3c80abeb3b8a7fa9f3ab2bea0171a1",
+  "human_sessions": 0,
+  "independent_cold_actors": 1,
+  "original_cold_scope": "Two fresh trial attempts by one actor, two draft picks; full-page transport; first-attempt screenshots overwritten. Not viewport discovery or a human success-rate sample.",
+  "findings": [
+    {
+      "id": "C001",
+      "class": "application",
+      "grade": "supported",
+      "observation": "Same signing screen showed106 declined in header and248 declined in closing wire.",
+      "assessor_reproduction": "Seed20261020:168 signed,102 eligible declined,142 future debutants; stored summary incorrectly said244 declined.",
+      "root_cause": "Closing summary subtracted signed from complete catalogue, including future debutants unavailable in2008.",
+      "regression_red": "Seed773 baseline:242 declined instead of100.",
+      "repair": "Count eligible declined in source adapter; correct old completed summary at display without mutating saved event or player pool.",
+      "verification": [
+        "v8_signing_understanding_test",
+        "signing-parity.json",
+        "continuity-evidence.json"
+      ]
+    },
+    {
+      "id": "C002",
+      "class": "actor_understanding",
+      "grade": "partly_supported",
+      "observation": "Actor expected clicking a club title to open its guide; explicit club button was required.",
+      "interpretation": "One proxy wrong turn; possible affordance issue, not established novice confusion. Hidden duplicate and exact-name locator failures are harness issues.",
+      "repair": "No speculative product interaction change. Improve transport and retest independently."
+    },
+    {
+      "id": "C003",
+      "class": "understanding_evidence",
+      "grade": "supported",
+      "observation": "Actor chose Steyn for seam/fielding and Gilchrist for keeper/opener coverage; visible coverage changed accordingly.",
+      "limit": "Supports interpretation of those visible roles and immediate feedback; not optimal drafting, future outcomes, emotional attachment or novice comprehension."
+    },
+    {
+      "id": "H001",
+      "class": "harness",
+      "grade": "supported",
+      "observation": "Full-page text exposed offscreen content; intermediate viewport text could still expose overflow-clipped text.",
+      "repair": "Current transport emits viewport screenshot paths only, with explicit scrolling and native-control visibility guards.",
+      "verification": "transport_test.cjs; synthetic page only, separate from GCC evidence."
+    }
+  ],
+  "pending": [
+    "Second independent cold actor through manual XI and first match",
+    "Season-two fixture comprehension trial",
+    "Returning career across later sessions, real setbacks and annual transitions",
+    "Human uncoached play, optional return and enjoyment observations"
+  ],
+  "release_claim": "No claim of proven first-time human understanding or sustained enjoyment.",
+  "technical_verification": {
+    "suites": 66,
+    "passed": 66,
+    "failed": 0,
+    "changed_sources": [],
+    "artifact_unchanged": true,
+    "browser_states": 68,
+    "browser_page_errors": 0,
+    "browser_geometry_issues": 0,
+    "synthetic_transport_pass": true,
+    "new_full_career_run": false
+  },
+  "returning_session_3": {
+    "successful_actions": 39,
+    "full_squad": 15,
+    "xi_selected": 0,
+    "matches_played": 0,
+    "primary_stop_class": "harness_failure",
+    "context": "At39 of40 action budget; disclosure and selection role locators failed. Original boundary reason preserved in evidence.",
+    "evidence": "session3-assessment.md",
+    "analysis_use": "Projected death batting61 informed finishing recruitment; supported use of visible estimate, no match impact verified.",
+    "transport_scope": "intermediate viewport text, not screenshot-only"
+  },
+  "current_transport": "Screenshot-only, native pointer/role actions and explicit scroll; synthetic transport verification only. No GCC trial is retroactively upgraded to this scope."
+}

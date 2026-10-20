@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "lanes": [
+    "cold_understanding",
+    "returning_career",
+    "technical_integrity",
+    "human_observation"
+  ],
+  "actor_access": [
+    "rendered_screens",
+    "visible_text",
+    "accessible_controls",
+    "normal_navigation",
+    "own_prior_session_notes"
+  ],
+  "actor_prohibited": [
+    "product_source",
+    "engine_apis",
+    "hidden_state",
+    "hidden_dom_data",
+    "developer_walkthrough",
+    "other_cold_trial_transcripts"
+  ],
+  "trial_metadata": [
+    "build_sha256",
+    "starting_world_provenance",
+    "viewport",
+    "tool_configuration",
+    "task",
+    "assisted_from_event",
+    "stop_reason",
+    "trial_id",
+    "session_id",
+    "previous_session_id",
+    "session_budget"
+  ],
+  "episode_fields": [
+    "intended_outcome",
+    "prediction_before_action",
+    "visible_evidence",
+    "action",
+    "observed_result",
+    "assessor_grade",
+    "screenshot_reference",
+    "uncertainty",
+    "episode_id",
+    "prediction_event_id",
+    "action_event_id"
+  ],
+  "assessor_grades": [
+    "supported",
+    "partly_supported",
+    "unsupported",
+    "incorrect",
+    "unassessed"
+  ],
+  "stop_reasons": [
+    "goal_reached",
+    "task_budget",
+    "harness_failure",
+    "app_blocked",
+    "participant_chose_to_stop",
+    "no_visible_management_goal"
+  ],
+  "separate_failure_classes": [
+    "harness",
+    "infrastructure",
+    "application",
+    "actor_understanding"
+  ],
+  "acceptance_statuses": [
+    "technical_integrity",
+    "understanding_findings",
+    "human_experience_evidence"
+  ],
+  "invalid_inferences": [
+    "ai_continuation_equals_human_retention",
+    "simulation_completion_equals_enjoyment",
+    "screen_repetition_equals_boredom",
+    "eloquent_explanation_equals_supported_cause",
+    "one_seed_rating_advantage_equals_dominance"
+  ],
+  "initial_batch": {
+    "independent_cold_trials": 2,
+    "fixture_rebuild_trial": 1,
+    "returning_career": 1
+  },
+  "product_changes": false,
+  "telemetry_backend": false,
+  "participant_sessions_conducted": 0,
+  "product_changes_scope": "QA harness adds no shipped controls or telemetry; independently found product defects are fixed separately.",
+  "session_boundary_fields": [
+    "trial_id",
+    "session_id",
+    "previous_session_id",
+    "opaque_save_reference",
+    "session_budget",
+    "unaided_recap_before_prior_notes",
+    "next_management_goal",
+    "goal_spontaneous_or_prompted",
+    "visible_basis_for_goal",
+    "evidence_sought_next",
+    "stop_reason",
+    "assistance"
+  ]
+}

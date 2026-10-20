@@ -1,0 +1,1918 @@
+{
+  "build_sha256": "24f91cafc6b4469afe730e8cca1f84c07b3c80abeb3b8a7fa9f3ab2bea0171a1",
+  "actor": "same source-blind AI as original probe",
+  "immediate_resume": true,
+  "independent_cold_retest": false,
+  "raw_images_and_opaque_saves": "local only, not published",
+  "sessions": [
+    {
+      "directory": "continuity-session-1",
+      "metadata": {
+        "session_id": "continuity-1",
+        "build_sha256": "24f91cafc6b4469afe730e8cca1f84c07b3c80abeb3b8a7fa9f3ab2bea0171a1",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "origin": "http://127.0.0.1:8766/game.html",
+        "world_provenance": "fresh browser context",
+        "resume_file_supplied": false,
+        "external_images_blocked": false,
+        "actor_scope": "visible text/screens and role controls only"
+      },
+      "screen_scope": "full-page older transport; no viewport discovery conclusions",
+      "events": [
+        {
+          "session_id": "continuity-1",
+          "event_id": 1,
+          "timestamp": "2026-10-20T10:54:17.290Z",
+          "type": "snapshot",
+          "screenshot": "screen-0001.png",
+          "screenshot_sha256": "752fa91ca99c1fc1f5df9acebfce44fa2b78229ec10f7dd20be8342a02df6cd6",
+          "signing_count_lines": []
+        },
+        {
+          "session_id": "continuity-1",
+          "event_id": 2,
+          "timestamp": "2026-10-20T10:54:22.101Z",
+          "type": "prediction",
+          "episode_id": "c1-1",
+          "intended_outcome": "Begin fresh career",
+          "prediction": "Opens career premise and setup.",
+          "visible_evidence": "Premise says one club is yours to build; Play is sole progression.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-1",
+          "event_id": 3,
+          "timestamp": "2026-10-20T10:54:22.157Z",
+          "type": "action_completed",
+          "episode_id": "c1-1",
+          "role": "button",
+          "name": "Play",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-1",
+          "event_id": 4,
+          "timestamp": "2026-10-20T10:54:22.270Z",
+          "type": "snapshot",
+          "screenshot": "screen-0004.png",
+          "screenshot_sha256": "913f63218d2f94f4e926f7260da73f2a92e7df23b305bf541ce8b666b1ad6443",
+          "signing_count_lines": []
+        },
+        {
+          "session_id": "continuity-1",
+          "event_id": 5,
+          "timestamp": "2026-10-20T10:54:26.436Z",
+          "type": "prediction",
+          "episode_id": "c1-2",
+          "intended_outcome": "Find available teams",
+          "prediction": "Shows league club draw.",
+          "visible_evidence": "Eight clubs accept; reveal label follows premise.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-1",
+          "event_id": 6,
+          "timestamp": "2026-10-20T10:54:26.666Z",
+          "type": "action_completed",
+          "episode_id": "c1-2",
+          "role": "button",
+          "name": "Reveal the eight clubs",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-1",
+          "event_id": 7,
+          "timestamp": "2026-10-20T10:54:26.837Z",
+          "type": "snapshot",
+          "screenshot": "screen-0007.png",
+          "screenshot_sha256": "75c732fd50268114777ac6c2265ff5338a1797aa1a8d7da86b47f6b7eb428826",
+          "signing_count_lines": []
+        },
+        {
+          "session_id": "continuity-1",
+          "event_id": 8,
+          "timestamp": "2026-10-20T10:54:31.458Z",
+          "type": "prediction",
+          "episode_id": "c1-3",
+          "intended_outcome": "See all available clubs",
+          "prediction": "Completes team draw immediately.",
+          "visible_evidence": "0 of8 revealed and Reveal all control.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-1",
+          "event_id": 9,
+          "timestamp": "2026-10-20T10:54:31.523Z",
+          "type": "action_completed",
+          "episode_id": "c1-3",
+          "role": "button",
+          "name": "Reveal all",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-1",
+          "event_id": 10,
+          "timestamp": "2026-10-20T10:54:31.766Z",
+          "type": "snapshot",
+          "screenshot": "screen-0010.png",
+          "screenshot_sha256": "74ce2e27eeb5162e9eaf9af23e897725c1c5e2a264e4930e6f4cca5cc09846c6",
+          "signing_count_lines": []
+        },
+        {
+          "session_id": "continuity-1",
+          "event_id": 11,
+          "timestamp": "2026-10-20T10:54:36.029Z",
+          "type": "prediction",
+          "episode_id": "c1-4",
+          "intended_outcome": "Select balanced-surface Sydney Sixers",
+          "prediction": "Opens club selection cards.",
+          "visible_evidence": "Sydney Sixers SCG balanced surface listed; Choose your club now shown.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-1",
+          "event_id": 12,
+          "timestamp": "2026-10-20T10:54:36.103Z",
+          "type": "action_completed",
+          "episode_id": "c1-4",
+          "role": "button",
+          "name": "Choose your club",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-1",
+          "event_id": 13,
+          "timestamp": "2026-10-20T10:54:36.254Z",
+          "type": "snapshot",
+          "screenshot": "screen-0013.png",
+          "screenshot_sha256": "d3594034181ef677985f5a91b1454ab7c754331ef2431e5d49800abfedf61a2c",
+          "signing_count_lines": []
+        },
+        {
+          "session_id": "continuity-1",
+          "event_id": 14,
+          "timestamp": "2026-10-20T10:54:43.810Z",
+          "type": "prediction",
+          "episode_id": "c1-5",
+          "intended_outcome": "Review balanced-surface club",
+          "prediction": "Opens Sixers ground detail without takeover.",
+          "visible_evidence": "Club card title Sydney Sixers and View club & ground; instruction open a club.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-1",
+          "event_id": 15,
+          "timestamp": "2026-10-20T10:54:48.812Z",
+          "type": "transport_or_action_failure",
+          "episode_id": "c1-5",
+          "message": "locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Sydney Sixers', exact: true }).first()\u001b[22m\n"
+        },
+        {
+          "session_id": "continuity-1",
+          "event_id": 16,
+          "timestamp": "2026-10-20T10:54:56.497Z",
+          "type": "prediction",
+          "episode_id": "c1-5b",
+          "intended_outcome": "Open Sixers detail",
+          "prediction": "Composite visible card name targets Sixers button.",
+          "visible_evidence": "All words are visible on Sydney card; exact title locator failed.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-1",
+          "event_id": 17,
+          "timestamp": "2026-10-20T10:55:01.498Z",
+          "type": "transport_or_action_failure",
+          "episode_id": "c1-5b",
+          "message": "locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'SIX SIX Big Bash CLUB 08 Sydney \u00b7 Australia Sydney Sixers SCG Balanced surface View club & ground', exact: true }).first()\u001b[22m\n"
+        },
+        {
+          "session_id": "continuity-1",
+          "event_id": 18,
+          "timestamp": "2026-10-20T10:55:32.375Z",
+          "type": "snapshot",
+          "screenshot": "screen-0018.png",
+          "screenshot_sha256": "10d37c40a340e6a9f4fd650f9950b02dda99e6d758f3f11824babafc9c7920f7",
+          "signing_count_lines": []
+        },
+        {
+          "session_id": "continuity-1",
+          "event_id": 19,
+          "timestamp": "2026-10-20T10:55:41.674Z",
+          "type": "session_boundary",
+          "record": {
+            "stop_reason": "harness_failure",
+            "next_management_goal": "Open Sydney Sixers detail and commit club then reach signing window",
+            "visible_basis_for_goal": "Club selection shows Sydney Sixers balanced surface at SCG, open club instruction",
+            "goal_spontaneous_or_prompted": "prompted",
+            "assistance": [
+              "Root enabled exact:false for visible partial accessible button labels after two exact-name locator failures. No product advice."
+            ]
+          }
+        },
+        {
+          "session_id": "continuity-1",
+          "event_id": 20,
+          "timestamp": "2026-10-20T10:55:41.710Z",
+          "type": "opaque_save_captured"
+        }
+      ]
+    },
+    {
+      "directory": "continuity-session-1b",
+      "metadata": {
+        "session_id": "continuity-1b",
+        "build_sha256": "24f91cafc6b4469afe730e8cca1f84c07b3c80abeb3b8a7fa9f3ab2bea0171a1",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "origin": "http://127.0.0.1:8766/game.html",
+        "world_provenance": "opaque previous-session browser storage",
+        "resume_file_supplied": true,
+        "external_images_blocked": false,
+        "actor_scope": "visible text/screens and role controls only"
+      },
+      "screen_scope": "full-page older transport; no viewport discovery conclusions",
+      "events": [
+        {
+          "session_id": "continuity-1b",
+          "event_id": 1,
+          "timestamp": "2026-10-20T10:55:47.029Z",
+          "type": "snapshot",
+          "screenshot": "screen-0001.png",
+          "screenshot_sha256": "ad4daf7b11fa7794731e4dd757c8e69ca4ae7995f24b55422d7cbc64d1eb8a8c",
+          "signing_count_lines": []
+        },
+        {
+          "session_id": "continuity-1b",
+          "event_id": 2,
+          "timestamp": "2026-10-20T10:55:50.905Z",
+          "type": "prediction",
+          "episode_id": "c1b-1",
+          "intended_outcome": "Recover interrupted takeover",
+          "prediction": "Restores saved club selection stage.",
+          "visible_evidence": "Continue career appears after supplied opaque save; earlier stopped at club selection.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-1b",
+          "event_id": 3,
+          "timestamp": "2026-10-20T10:55:51.064Z",
+          "type": "action_completed",
+          "episode_id": "c1b-1",
+          "role": "button",
+          "name": "Continue career",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-1b",
+          "event_id": 4,
+          "timestamp": "2026-10-20T10:55:51.269Z",
+          "type": "snapshot",
+          "screenshot": "screen-0004.png",
+          "screenshot_sha256": "697e2928c43cf2028c53014ee95973866bcf7cf5574b46d02ef4aa82f55ccafa",
+          "signing_count_lines": []
+        },
+        {
+          "session_id": "continuity-1b",
+          "event_id": 5,
+          "timestamp": "2026-10-20T10:55:55.602Z",
+          "type": "prediction",
+          "episode_id": "c1b-2",
+          "intended_outcome": "Review club before commitment",
+          "prediction": "Opens Sixers club/ground detail.",
+          "visible_evidence": "Sydney Sixers card has balanced surface and View club & ground.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-1b",
+          "event_id": 6,
+          "timestamp": "2026-10-20T10:55:55.668Z",
+          "type": "action_completed",
+          "episode_id": "c1b-2",
+          "role": "button",
+          "name": "Sydney Sixers",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-1b",
+          "event_id": 7,
+          "timestamp": "2026-10-20T10:55:55.977Z",
+          "type": "snapshot",
+          "screenshot": "screen-0007.png",
+          "screenshot_sha256": "1f5c7b0cd4cef4bcb4d28019e87cf6cf808672df5ccb25e025ad7ec8b746ceaa",
+          "signing_count_lines": []
+        },
+        {
+          "session_id": "continuity-1b",
+          "event_id": 8,
+          "timestamp": "2026-10-20T10:56:00.290Z",
+          "type": "prediction",
+          "episode_id": "c1b-3",
+          "intended_outcome": "Take over balanced club",
+          "prediction": "Commits Sixers and opens league signing stage.",
+          "visible_evidence": "Detail says balanced challenge, reliable top order and varied bowling; Take over this club explicit.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-1b",
+          "event_id": 9,
+          "timestamp": "2026-10-20T10:56:00.769Z",
+          "type": "action_completed",
+          "episode_id": "c1b-3",
+          "role": "button",
+          "name": "Take over this club",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-1b",
+          "event_id": 10,
+          "timestamp": "2026-10-20T10:56:00.858Z",
+          "type": "snapshot",
+          "screenshot": "screen-0010.png",
+          "screenshot_sha256": "7d3201afaaadadfa8eed1fe74eee0d0d34659474fb478b7414964a0c42b8a71c",
+          "signing_count_lines": [
+            "0 committed",
+            "0 declined"
+          ]
+        },
+        {
+          "session_id": "continuity-1b",
+          "event_id": 11,
+          "timestamp": "2026-10-20T10:56:11.133Z",
+          "type": "session_boundary",
+          "record": {
+            "stop_reason": "task_budget",
+            "next_management_goal": "Close the league signing window and inspect final counts before entering draft",
+            "visible_basis_for_goal": "Sixers2008 league signings shows0 committed/0 declined; club drafts afterwards; Skip to close visible",
+            "goal_spontaneous_or_prompted": "prompted",
+            "assistance": [
+              "Harness recovery enabled partial accessible-name matching; no product guidance"
+            ]
+          }
+        },
+        {
+          "session_id": "continuity-1b",
+          "event_id": 12,
+          "timestamp": "2026-10-20T10:56:11.202Z",
+          "type": "opaque_save_captured"
+        }
+      ]
+    },
+    {
+      "directory": "continuity-session-2",
+      "metadata": {
+        "session_id": "continuity-2",
+        "build_sha256": "24f91cafc6b4469afe730e8cca1f84c07b3c80abeb3b8a7fa9f3ab2bea0171a1",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "origin": "http://127.0.0.1:8766/game.html",
+        "world_provenance": "opaque previous-session browser storage",
+        "resume_file_supplied": true,
+        "external_images_blocked": false,
+        "actor_scope": "visible text/screens and role controls only"
+      },
+      "screen_scope": "full-page older transport; no viewport discovery conclusions",
+      "events": [
+        {
+          "session_id": "continuity-2",
+          "event_id": 1,
+          "timestamp": "2026-10-20T10:56:17.184Z",
+          "type": "snapshot",
+          "screenshot": "screen-0001.png",
+          "screenshot_sha256": "bb4abba42492c2023f3dcd40b49c5b33a143cef78f6c9d1885713bf241e69b73",
+          "signing_count_lines": []
+        },
+        {
+          "session_id": "continuity-2",
+          "event_id": 2,
+          "timestamp": "2026-10-20T10:56:21.333Z",
+          "type": "prediction",
+          "episode_id": "c2-1",
+          "intended_outcome": "Recover stage and next management goal",
+          "prediction": "Restores Sixers signing window before opening,0 committed/declined.",
+          "visible_evidence": "Continue career shown after opaque saved context; immediate memory recap records Sixers signings.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-2",
+          "event_id": 3,
+          "timestamp": "2026-10-20T10:56:21.595Z",
+          "type": "action_completed",
+          "episode_id": "c2-1",
+          "role": "button",
+          "name": "Continue career",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-2",
+          "event_id": 4,
+          "timestamp": "2026-10-20T10:56:21.680Z",
+          "type": "snapshot",
+          "screenshot": "screen-0004.png",
+          "screenshot_sha256": "7d3201afaaadadfa8eed1fe74eee0d0d34659474fb478b7414964a0c42b8a71c",
+          "signing_count_lines": [
+            "0 committed",
+            "0 declined"
+          ]
+        },
+        {
+          "session_id": "continuity-2",
+          "event_id": 5,
+          "timestamp": "2026-10-20T10:56:26.926Z",
+          "type": "prediction",
+          "episode_id": "c2-2",
+          "intended_outcome": "Check signing totals and progress toward draft",
+          "prediction": "Completes league signings and exposes final summary; expecting header and wire totals to agree but prior bug knowledge makes this directed check.",
+          "visible_evidence": "Skip to close and league commitments instruction;0 committed/declined.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-2",
+          "event_id": 6,
+          "timestamp": "2026-10-20T10:56:27.059Z",
+          "type": "action_completed",
+          "episode_id": "c2-2",
+          "role": "button",
+          "name": "Skip to close",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-2",
+          "event_id": 7,
+          "timestamp": "2026-10-20T10:56:27.165Z",
+          "type": "snapshot",
+          "screenshot": "screen-0007.png",
+          "screenshot_sha256": "4622dfd275a91f8ebad0e9642b381158f65aa16766ea7ab62796f9e109006bb1",
+          "signing_count_lines": [
+            "173 committed",
+            "97 declined",
+            "173 players entered the GCC draft pool. 97 declined."
+          ]
+        },
+        {
+          "session_id": "continuity-2",
+          "event_id": 8,
+          "timestamp": "2026-10-20T10:56:32.053Z",
+          "type": "prediction",
+          "episode_id": "c2-3",
+          "intended_outcome": "Get draft slot; counts agree173 committed97 declined in both header and wire",
+          "prediction": "Opens random order reveal before draft.",
+          "visible_evidence": "Closed window header173/97, wire173 entered97 declined; Draw the draft order visible.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-2",
+          "event_id": 9,
+          "timestamp": "2026-10-20T10:56:32.195Z",
+          "type": "action_completed",
+          "episode_id": "c2-3",
+          "role": "button",
+          "name": "Draw the draft order",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-2",
+          "event_id": 10,
+          "timestamp": "2026-10-20T10:56:32.414Z",
+          "type": "snapshot",
+          "screenshot": "screen-0010.png",
+          "screenshot_sha256": "589f8ad16cc4554dce7e9b7fa3649015db2136ef7efea89c1d590d3c46fbc863",
+          "signing_count_lines": []
+        },
+        {
+          "session_id": "continuity-2",
+          "event_id": 11,
+          "timestamp": "2026-10-20T10:56:36.595Z",
+          "type": "prediction",
+          "episode_id": "c2-4",
+          "intended_outcome": "Reach own draft position",
+          "prediction": "Completes draw immediately and exposes draft entry.",
+          "visible_evidence": "0 of8 order envelopes, Reveal all.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-2",
+          "event_id": 12,
+          "timestamp": "2026-10-20T10:56:36.688Z",
+          "type": "action_completed",
+          "episode_id": "c2-4",
+          "role": "button",
+          "name": "Reveal all",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-2",
+          "event_id": 13,
+          "timestamp": "2026-10-20T10:56:36.807Z",
+          "type": "snapshot",
+          "screenshot": "screen-0013.png",
+          "screenshot_sha256": "991d4bca8ee8c25e9c3f49c4b515efcce9505e9f79c77f48b6a19ddb8f21467e",
+          "signing_count_lines": []
+        },
+        {
+          "session_id": "continuity-2",
+          "event_id": 14,
+          "timestamp": "2026-10-20T10:56:41.089Z",
+          "type": "prediction",
+          "episode_id": "c2-5",
+          "intended_outcome": "Resume career through drafting stage",
+          "prediction": "Opens drafting with Sixers seventh, likely rival choices first.",
+          "visible_evidence": "Order shows Sixers7 YOUR CLUB and Enter the draft room.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-2",
+          "event_id": 15,
+          "timestamp": "2026-10-20T10:56:41.256Z",
+          "type": "action_completed",
+          "episode_id": "c2-5",
+          "role": "button",
+          "name": "Enter the draft room",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-2",
+          "event_id": 16,
+          "timestamp": "2026-10-20T10:56:41.475Z",
+          "type": "snapshot",
+          "screenshot": "screen-0016.png",
+          "screenshot_sha256": "f044789c934ce14797face9feb63381d4984c73034b272f99876db6b1711fd26",
+          "signing_count_lines": []
+        },
+        {
+          "session_id": "continuity-2",
+          "event_id": 17,
+          "timestamp": "2026-10-20T10:57:05.918Z",
+          "type": "session_boundary",
+          "record": {
+            "stop_reason": "task_budget",
+            "next_management_goal": "Choose first draft player when Sixers turn arrives, balancing keeper and bowling coverage",
+            "visible_basis_for_goal": "Draft room shows Sixers seventh order,0/15 selected, Keeper needed and0 regular bowlers; instructions cover20 overs",
+            "goal_spontaneous_or_prompted": "prompted",
+            "assistance": [
+              "Prior exact:false harness repair in1b; same actor knew signing-count bug from earlier probe",
+              "Session2 already running old full-page-text harness when viewport restriction update announced; finishing preserved old scope."
+            ]
+          }
+        },
+        {
+          "session_id": "continuity-2",
+          "event_id": 18,
+          "timestamp": "2026-10-20T10:57:05.985Z",
+          "type": "opaque_save_captured"
+        }
+      ]
+    },
+    {
+      "directory": "continuity-session-3",
+      "metadata": {
+        "session_id": "continuity-3",
+        "build_sha256": "24f91cafc6b4469afe730e8cca1f84c07b3c80abeb3b8a7fa9f3ab2bea0171a1",
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "origin": "http://127.0.0.1:8766/game.html",
+        "world_provenance": "opaque previous-session browser storage",
+        "resume_file_supplied": true,
+        "external_images_blocked": false,
+        "screen_scope": "viewport-only; explicit scrolling",
+        "actor_scope": "visible text/screens and role controls only"
+      },
+      "screen_scope": "intermediate viewport DOM text; overflow-clipped text could leak; not screenshot-only",
+      "events": [
+        {
+          "session_id": "continuity-3",
+          "event_id": 1,
+          "timestamp": "2026-10-20T10:58:40.057Z",
+          "type": "snapshot",
+          "screenshot": "screen-0001.png",
+          "screenshot_sha256": "d2a2871fe2b27a987efea724bf94e2e4e21a37fffe390e5437e2712f910980df"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 2,
+          "timestamp": "2026-10-20T10:58:47.587Z",
+          "type": "actor_note",
+          "record": {
+            "unaided_recap": "Sydney Sixers2008, balanced SCG. Signing window closed with173 entrants97 declined matching both summaries. We drew seventh and entered draft with rivals choosing; no squad players selected yet. Need keeper, enough bowlers for20 overs and balanced top order. This is immediate memory without rereading prior notes. Goal now build squad I would manage and prepare opening match within40 actions; no milestone forcing."
+          }
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 3,
+          "timestamp": "2026-10-20T10:58:47.587Z",
+          "type": "prediction",
+          "episode_id": "c3-1",
+          "intended_outcome": "Recover career and assess available squad-building choices",
+          "prediction": "Restores Sixers draft with zero selected, likely at our first turn after rival choices.",
+          "visible_evidence": "Continue career on landing plus unaided memory of saved draft stage.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 4,
+          "timestamp": "2026-10-20T10:58:47.858Z",
+          "type": "action_completed",
+          "episode_id": "c3-1",
+          "role": "button",
+          "name": "Continue career",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 5,
+          "timestamp": "2026-10-20T10:58:48.025Z",
+          "type": "snapshot",
+          "screenshot": "screen-0005.png",
+          "screenshot_sha256": "982823e343f2063493018f81dae2affa6c7cf7dd899a6da9106a50d281521cb3"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 6,
+          "timestamp": "2026-10-20T10:58:55.444Z",
+          "type": "prediction",
+          "episode_id": "c3-2",
+          "intended_outcome": "Assess elite middle-over spinner as bowling foundation",
+          "prediction": "Opens detailed scouting before commitment.",
+          "visible_evidence": "Listed spin bowler overall90, middle bowling94; balanced club values varied bowling. Age36 a visible longevity tradeoff.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 7,
+          "timestamp": "2026-10-20T10:58:55.539Z",
+          "type": "action_completed",
+          "episode_id": "c3-2",
+          "role": "button",
+          "name": "Muttiah Muralitharan",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 8,
+          "timestamp": "2026-10-20T10:58:55.801Z",
+          "type": "snapshot",
+          "screenshot": "screen-0008.png",
+          "screenshot_sha256": "8fa76ab052166d819f407091c88fcd836e168ebd4a38e58ef4eb756f32e3f74d"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 9,
+          "timestamp": "2026-10-20T10:59:00.438Z",
+          "type": "prediction",
+          "episode_id": "c3-3",
+          "intended_outcome": "Secure middle-over specialist; accept older age for high current skill",
+          "prediction": "Adds spinner and increments regular bowling coverage.",
+          "visible_evidence": "Bowling89 overall90 fielding80, middle-over spin; middle phase94 on list.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 10,
+          "timestamp": "2026-10-20T10:59:00.560Z",
+          "type": "action_completed",
+          "episode_id": "c3-3",
+          "role": "button",
+          "name": "Pick Muttiah Muralitharan",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 11,
+          "timestamp": "2026-10-20T10:59:00.735Z",
+          "type": "snapshot",
+          "screenshot": "screen-0011.png",
+          "screenshot_sha256": "98ea0e7cfa38df80282be6223d452b412d76ba81d395d8f8ca0de1c871d5671c"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 12,
+          "timestamp": "2026-10-20T10:59:04.353Z",
+          "type": "snapshot",
+          "screenshot": "screen-0012.png",
+          "screenshot_sha256": "7d7e030c25f1edd46e7d82f08e4975e4c1b2801d739b2df5228d99fa7e65d3bb"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 13,
+          "timestamp": "2026-10-20T10:59:09.618Z",
+          "type": "prediction",
+          "episode_id": "c3-4",
+          "intended_outcome": "Find keeper/opener after taking specialist spinner",
+          "prediction": "Reveals lower player cards, potentially keepers not yet in viewport."
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 14,
+          "timestamp": "2026-10-20T10:59:09.779Z",
+          "type": "action_completed",
+          "episode_id": "c3-4",
+          "action": "scroll"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 15,
+          "timestamp": "2026-10-20T10:59:09.851Z",
+          "type": "snapshot",
+          "screenshot": "screen-0015.png",
+          "screenshot_sha256": "c6682bfbd5e7edc6f7e7371531e6caffc231109d5b35a6c158465226f199f2c1"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 16,
+          "timestamp": "2026-10-20T10:59:15.551Z",
+          "type": "prediction",
+          "episode_id": "c3-5",
+          "intended_outcome": "Evaluate keeper/opener coverage",
+          "prediction": "Shows keeper and batting details.",
+          "visible_evidence": "Opener Keeper88 finishing87; age37 visible tradeoff, earlier Murali also older.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 17,
+          "timestamp": "2026-10-20T10:59:15.632Z",
+          "type": "action_completed",
+          "episode_id": "c3-5",
+          "role": "button",
+          "name": "Adam Gilchrist",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 18,
+          "timestamp": "2026-10-20T10:59:15.918Z",
+          "type": "snapshot",
+          "screenshot": "screen-0018.png",
+          "screenshot_sha256": "cb57fb83a6298edf2ddb8ea35e11cc8dffecc622ba0a6f1ba0c07ea4b3c468c2"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 19,
+          "timestamp": "2026-10-20T10:59:20.599Z",
+          "type": "prediction",
+          "episode_id": "c3-6",
+          "intended_outcome": "Secure excellent keeping and fielding despite age37",
+          "prediction": "Adds keeper and opener coverage, returns list.",
+          "visible_evidence": "Keeping92 fielding91 batting85; still zero keepers/openers.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 20,
+          "timestamp": "2026-10-20T10:59:20.711Z",
+          "type": "action_completed",
+          "episode_id": "c3-6",
+          "role": "button",
+          "name": "Pick Adam Gilchrist",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 21,
+          "timestamp": "2026-10-20T10:59:20.855Z",
+          "type": "snapshot",
+          "screenshot": "screen-0021.png",
+          "screenshot_sha256": "7e180ef3dfd74883043814d1caefd17959e91592ce0648c4c0cdd886b45c1e6c"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 22,
+          "timestamp": "2026-10-20T10:59:27.135Z",
+          "type": "snapshot",
+          "screenshot": "screen-0022.png",
+          "screenshot_sha256": "b84664a197a5cd9d5e9b018c713b1ac7e93017c3ec6750f020f5233df38ba5a2"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 23,
+          "timestamp": "2026-10-20T10:59:32.335Z",
+          "type": "prediction",
+          "episode_id": "c3-7",
+          "intended_outcome": "Confirm timing before third pick; current scroll retains list but hides status",
+          "prediction": "Restores draft-turn header so I can tell whether selection is ours."
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 24,
+          "timestamp": "2026-10-20T10:59:32.488Z",
+          "type": "action_completed",
+          "episode_id": "c3-7",
+          "action": "scroll"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 25,
+          "timestamp": "2026-10-20T10:59:32.619Z",
+          "type": "snapshot",
+          "screenshot": "screen-0025.png",
+          "screenshot_sha256": "831a4539d183c0b4267dd8a88296b1547be8a4bd40221d8651d272cf7a37edb6"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 26,
+          "timestamp": "2026-10-20T10:59:37.786Z",
+          "type": "prediction",
+          "episode_id": "c3-8",
+          "intended_outcome": "Add pace variety to spinner foundation",
+          "prediction": "Opens pace scouting details.",
+          "visible_evidence": "Pace bowler90 middle bowling90 age31; our only regular bowler is spinner.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 27,
+          "timestamp": "2026-10-20T10:59:37.890Z",
+          "type": "action_completed",
+          "episode_id": "c3-8",
+          "role": "button",
+          "name": "Brett Lee",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 28,
+          "timestamp": "2026-10-20T10:59:38.163Z",
+          "type": "snapshot",
+          "screenshot": "screen-0028.png",
+          "screenshot_sha256": "8058af301342ff501c16a345a61c776cdfd0b25aa6e27255ea7244de38ee66e2"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 29,
+          "timestamp": "2026-10-20T10:59:44.004Z",
+          "type": "prediction",
+          "episode_id": "c3-9",
+          "intended_outcome": "Cover new-ball/death roles with strong fielder alongside middle-over spinner",
+          "prediction": "Adds second regular bowler.",
+          "visible_evidence": "New ball & death, bowling89 fielding91; batting26 means still need batting core.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 30,
+          "timestamp": "2026-10-20T10:59:44.134Z",
+          "type": "action_completed",
+          "episode_id": "c3-9",
+          "role": "button",
+          "name": "Pick Brett Lee",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 31,
+          "timestamp": "2026-10-20T10:59:44.302Z",
+          "type": "snapshot",
+          "screenshot": "screen-0031.png",
+          "screenshot_sha256": "99f2e02cad937a8f420d346817b4150cbadc1a0b52e9547a2bafb034c2ede59b"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 32,
+          "timestamp": "2026-10-20T10:59:48.765Z",
+          "type": "snapshot",
+          "screenshot": "screen-0032.png",
+          "screenshot_sha256": "17b5e3e43ab92240021c0e4aa5450048efd3c16971154c63cc5dee2f855e0cfe"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 33,
+          "timestamp": "2026-10-20T10:59:53.956Z",
+          "type": "prediction",
+          "episode_id": "c3-10",
+          "intended_outcome": "Build batting core after two bowling picks",
+          "prediction": "Opens middle-order batter report.",
+          "visible_evidence": "Highest listed overall91 middle batting91, age33; currently only keeper-opener Gilchrist bats strongly.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 34,
+          "timestamp": "2026-10-20T10:59:54.036Z",
+          "type": "action_completed",
+          "episode_id": "c3-10",
+          "role": "button",
+          "name": "Mike Hussey",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 35,
+          "timestamp": "2026-10-20T10:59:54.313Z",
+          "type": "snapshot",
+          "screenshot": "screen-0035.png",
+          "screenshot_sha256": "d1ee075b2ff48aab68d61ec4c8f60ebee88c3840263842332de84a24780ba2f5"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 36,
+          "timestamp": "2026-10-20T10:59:58.738Z",
+          "type": "prediction",
+          "episode_id": "c3-11",
+          "intended_outcome": "Secure finishing power and high fielding",
+          "prediction": "Adds middle-order batter; bowling count unchanged.",
+          "visible_evidence": "Batting91 fielding93 finishing role; bowling23 means specialist bat.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 37,
+          "timestamp": "2026-10-20T10:59:58.871Z",
+          "type": "action_completed",
+          "episode_id": "c3-11",
+          "role": "button",
+          "name": "Pick Mike Hussey",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 38,
+          "timestamp": "2026-10-20T10:59:59.102Z",
+          "type": "snapshot",
+          "screenshot": "screen-0038.png",
+          "screenshot_sha256": "35d3f92013fdc66ed3c556b518a1f79535efffe11cee96197fca4175ece43374"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 39,
+          "timestamp": "2026-10-20T11:00:07.635Z",
+          "type": "actor_note",
+          "record": {
+            "transport_update": "Session3 already running intermediate viewport-text harness when screenshot-only update announced. Preserve session; text may include inner-panel-clipped content. No viewport discovery conclusions.",
+            "agency": "Chose older elite spinner first, then older keeper-opener, then younger pace and middle-order batting; current ability prioritized over longevity, no retirement mechanism inspected.",
+            "admin": "After list scrolling, draft-turn header leaves viewport; spent explicit scroll to recover status. Rival picks advance automatically during reading."
+          }
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 40,
+          "timestamp": "2026-10-20T11:00:07.751Z",
+          "type": "snapshot",
+          "screenshot": "screen-0040.png",
+          "screenshot_sha256": "e8765c88d8065b60ce8b10044a67ed8113693477897b4389e1350f850e4da700"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 41,
+          "timestamp": "2026-10-20T11:00:14.363Z",
+          "type": "prediction",
+          "episode_id": "c3-12",
+          "intended_outcome": "Add third bowling option without overly weak lower order",
+          "prediction": "Opens all-rounder detail to assess batting versus specialist options.",
+          "visible_evidence": "All-rounder86 middle bowling89, age34; existing two bowlers bat22/26.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 42,
+          "timestamp": "2026-10-20T11:00:14.455Z",
+          "type": "action_completed",
+          "episode_id": "c3-12",
+          "role": "button",
+          "name": "Shaun Pollock",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 43,
+          "timestamp": "2026-10-20T11:00:14.678Z",
+          "type": "snapshot",
+          "screenshot": "screen-0043.png",
+          "screenshot_sha256": "8326739b7a391936a6655d8b5ba90be319ec07c02b3081a42d73efe69f92b06e"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 44,
+          "timestamp": "2026-10-20T11:00:21.282Z",
+          "type": "prediction",
+          "episode_id": "c3-13",
+          "intended_outcome": "Strengthen bowling depth and fielding while maintaining batting",
+          "prediction": "Adds third regular bowler and useful lower-order bat.",
+          "visible_evidence": "Bat78 bowl87 field94 lower-order pace all-rounder; preferable balance over another specialist.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 45,
+          "timestamp": "2026-10-20T11:00:21.417Z",
+          "type": "action_completed",
+          "episode_id": "c3-13",
+          "role": "button",
+          "name": "Pick Shaun Pollock",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 46,
+          "timestamp": "2026-10-20T11:00:21.594Z",
+          "type": "snapshot",
+          "screenshot": "screen-0046.png",
+          "screenshot_sha256": "15cf14343ca8791d148cc6d11f20d24b7b450f2481359abd54aac33711e829fb"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 47,
+          "timestamp": "2026-10-20T11:00:27.881Z",
+          "type": "snapshot",
+          "screenshot": "screen-0047.png",
+          "screenshot_sha256": "5b9de7ebf47d9d2b81d4bcb0d9fa7d853637613d7911793fb68378dfbb2e3cb8"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 48,
+          "timestamp": "2026-10-20T11:00:33.257Z",
+          "type": "prediction",
+          "episode_id": "c3-14",
+          "intended_outcome": "Add reliable batting alongside Gilchrist and Hussey",
+          "prediction": "Shows top-order batting details.",
+          "visible_evidence": "Top-order89 PP batting89 highest listed; squad needs top batting depth more than fourth specialist now.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 49,
+          "timestamp": "2026-10-20T11:00:33.340Z",
+          "type": "action_completed",
+          "episode_id": "c3-14",
+          "role": "button",
+          "name": "Mohammad Yousuf",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 50,
+          "timestamp": "2026-10-20T11:00:33.534Z",
+          "type": "snapshot",
+          "screenshot": "screen-0050.png",
+          "screenshot_sha256": "01389563e66dadabf6a99540ef4c48b7fa39dfe1127e16c21c2d281a78d3d988"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 51,
+          "timestamp": "2026-10-20T11:00:38.381Z",
+          "type": "prediction",
+          "episode_id": "c3-15",
+          "intended_outcome": "Improve batting core rather than chase another bowler",
+          "prediction": "Adds sixth squad player with top-order/finishing flexibility.",
+          "visible_evidence": "Bat89 field83 top-order finishing role. Fielding lower than Hussey but batting strong.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 52,
+          "timestamp": "2026-10-20T11:00:38.506Z",
+          "type": "action_completed",
+          "episode_id": "c3-15",
+          "role": "button",
+          "name": "Pick Mohammad Yousuf",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 53,
+          "timestamp": "2026-10-20T11:00:38.683Z",
+          "type": "snapshot",
+          "screenshot": "screen-0053.png",
+          "screenshot_sha256": "cf25e4b72cc60fc36b70b973573577ee932831f41cd8b0600756627f102c910c"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 54,
+          "timestamp": "2026-10-20T11:00:45.364Z",
+          "type": "prediction",
+          "episode_id": "c3-16",
+          "intended_outcome": "Check needs before remaining picks rather than only overall rankings",
+          "prediction": "Expands guidance about squad coverage and missing roles.",
+          "visible_evidence": "Six selected, keeper covered,3 bowlers1 opener; analysis expandable label.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 55,
+          "timestamp": "2026-10-20T11:00:45.455Z",
+          "type": "action_completed",
+          "episode_id": "c3-16",
+          "role": "button",
+          "name": "Squad analysis",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 56,
+          "timestamp": "2026-10-20T11:00:45.754Z",
+          "type": "snapshot",
+          "screenshot": "screen-0056.png",
+          "screenshot_sha256": "7030473850bf39f465f3ec3a0685561d1903f9427fe62d9c059abf4ab01a98df"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 57,
+          "timestamp": "2026-10-20T11:00:52.280Z",
+          "type": "prediction",
+          "episode_id": "c3-17",
+          "intended_outcome": "Return to draft; death batting61 highlighted weak despite two finishing labels",
+          "prediction": "Closes squad analysis without changes.",
+          "visible_evidence": "Modal heading Squad analysis and \u00d7; analysis says early estimates and manual selection may differ.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 58,
+          "timestamp": "2026-10-20T11:01:22.282Z",
+          "type": "transport_or_action_failure",
+          "episode_id": "c3-17",
+          "message": "locator.boundingBox: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '\u00d7', exact: true }).first()\u001b[22m\n"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 59,
+          "timestamp": "2026-10-20T11:01:22.282Z",
+          "type": "prediction",
+          "episode_id": "c3-17b",
+          "intended_outcome": "Return to drafting",
+          "prediction": "Close accessible button dismisses analysis modal; glyph-name attempt failed.",
+          "visible_evidence": "Modal \u00d7 close convention; no other footer visible.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 60,
+          "timestamp": "2026-10-20T11:01:22.346Z",
+          "type": "action_completed",
+          "episode_id": "c3-17b",
+          "role": "button",
+          "name": "Close",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 61,
+          "timestamp": "2026-10-20T11:01:22.454Z",
+          "type": "snapshot",
+          "screenshot": "screen-0061.png",
+          "screenshot_sha256": "41b2dd97b3584a709777deeaa81fc6c24e4a87c209aa50714bc4e4a3ca1bc9c5"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 62,
+          "timestamp": "2026-10-20T11:01:31.447Z",
+          "type": "prediction",
+          "episode_id": "c3-18",
+          "intended_outcome": "Add third specialist batter as top-order anchor",
+          "prediction": "Opens top-order report.",
+          "visible_evidence": "Highest listed87 middle batting88; death batting estimate weak but no obvious finisher at top.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 63,
+          "timestamp": "2026-10-20T11:01:31.522Z",
+          "type": "action_completed",
+          "episode_id": "c3-18",
+          "role": "button",
+          "name": "Ricky Ponting",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 64,
+          "timestamp": "2026-10-20T11:01:31.641Z",
+          "type": "snapshot",
+          "screenshot": "screen-0064.png",
+          "screenshot_sha256": "65978a9302cfe8309c77e79c1bec9c45e50446f0010dfab3d5bc1dd8f157da9d"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 65,
+          "timestamp": "2026-10-20T11:01:37.125Z",
+          "type": "prediction",
+          "episode_id": "c3-19",
+          "intended_outcome": "Strengthen middle/top batting balance",
+          "prediction": "Adds top-order specialist without bowling coverage.",
+          "visible_evidence": "Bat85 field87 top-order; current only6 players,3 regular bowlers.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 66,
+          "timestamp": "2026-10-20T11:01:37.246Z",
+          "type": "action_completed",
+          "episode_id": "c3-19",
+          "role": "button",
+          "name": "Pick Ricky Ponting",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 67,
+          "timestamp": "2026-10-20T11:01:37.423Z",
+          "type": "snapshot",
+          "screenshot": "screen-0067.png",
+          "screenshot_sha256": "dd6a3f76df3074d8708e06129cbf5987443a69db7c8c3ad37e4ac16ac67dc01a"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 68,
+          "timestamp": "2026-10-20T11:01:41.469Z",
+          "type": "snapshot",
+          "screenshot": "screen-0068.png",
+          "screenshot_sha256": "552bf8be2df1eb5f74614733e9724668e4dd42c903cb626bd7fff554292cce21"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 69,
+          "timestamp": "2026-10-20T11:01:46.452Z",
+          "type": "prediction",
+          "episode_id": "c3-20",
+          "intended_outcome": "Fill second opener rather than add surplus top-order player",
+          "prediction": "Shows opener detail.",
+          "visible_evidence": "Only1 opener; Marcus84 PP batting86 while Mahela85 is top order.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 70,
+          "timestamp": "2026-10-20T11:01:46.557Z",
+          "type": "action_completed",
+          "episode_id": "c3-20",
+          "role": "button",
+          "name": "Marcus Trescothick",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 71,
+          "timestamp": "2026-10-20T11:01:46.781Z",
+          "type": "snapshot",
+          "screenshot": "screen-0071.png",
+          "screenshot_sha256": "ea952e0666edc1491b3bd9a7230fa897fab2fc6ebef4da04317960ed75e2d3fc"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 72,
+          "timestamp": "2026-10-20T11:01:51.346Z",
+          "type": "prediction",
+          "episode_id": "c3-21",
+          "intended_outcome": "Build opening pair with Gilchrist accepting lower fielding74 for batting89",
+          "prediction": "Adds second opener; other coverage stays.",
+          "visible_evidence": "Opener batting89 fielding74 age33;1 opener shown.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 73,
+          "timestamp": "2026-10-20T11:01:51.476Z",
+          "type": "action_completed",
+          "episode_id": "c3-21",
+          "role": "button",
+          "name": "Pick Marcus Trescothick",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 74,
+          "timestamp": "2026-10-20T11:01:51.650Z",
+          "type": "snapshot",
+          "screenshot": "screen-0074.png",
+          "screenshot_sha256": "769516d5caade89feef397ef4312d000338f6ba0f0e553582114bc3d80f14887"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 75,
+          "timestamp": "2026-10-20T11:01:57.777Z",
+          "type": "prediction",
+          "episode_id": "c3-22",
+          "intended_outcome": "Find batting/bowling flexibility and fourth bowler",
+          "prediction": "Shows lower list including all-rounders/finishers."
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 76,
+          "timestamp": "2026-10-20T11:01:57.929Z",
+          "type": "action_completed",
+          "episode_id": "c3-22",
+          "action": "scroll"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 77,
+          "timestamp": "2026-10-20T11:01:58.107Z",
+          "type": "snapshot",
+          "screenshot": "screen-0077.png",
+          "screenshot_sha256": "223b6aeb18a8dae25bb3694f9e5779db1713a6b5d469cd11382a1f6af8e5543c"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 78,
+          "timestamp": "2026-10-20T11:02:03.959Z",
+          "type": "prediction",
+          "episode_id": "c3-23",
+          "intended_outcome": "Address death batting weakness while adding bowling flexibility",
+          "prediction": "Shows all-rounder batting/bowling balance.",
+          "visible_evidence": "All-rounder82 finishing84; squad3 regular bowlers, finishing need from analysis.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 79,
+          "timestamp": "2026-10-20T11:02:04.058Z",
+          "type": "action_completed",
+          "episode_id": "c3-23",
+          "role": "button",
+          "name": "Andrew Symonds",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 80,
+          "timestamp": "2026-10-20T11:02:04.309Z",
+          "type": "snapshot",
+          "screenshot": "screen-0080.png",
+          "screenshot_sha256": "53435d26af8cba47990b4754db0012917f0c6ab7b2ce123a6ebb344f9e3f4706"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 81,
+          "timestamp": "2026-10-20T11:02:09.223Z",
+          "type": "prediction",
+          "episode_id": "c3-24",
+          "intended_outcome": "Improve finishing and retain excellent fielding",
+          "prediction": "Adds flexible all-rounder; may increment regular bowler count but threshold unknown.",
+          "visible_evidence": "Bat83 bowl77 field93 pace/spin option. Lower bowling than specialist accepted for batting depth.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 82,
+          "timestamp": "2026-10-20T11:02:09.344Z",
+          "type": "action_completed",
+          "episode_id": "c3-24",
+          "role": "button",
+          "name": "Pick Andrew Symonds",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 83,
+          "timestamp": "2026-10-20T11:02:09.489Z",
+          "type": "snapshot",
+          "screenshot": "screen-0083.png",
+          "screenshot_sha256": "ed123000d4575d2b1a5569fa3518290d13d6c5f6dc0a20703b5864a5023214b1"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 84,
+          "timestamp": "2026-10-20T11:02:16.234Z",
+          "type": "snapshot",
+          "screenshot": "screen-0084.png",
+          "screenshot_sha256": "a14948b073eefd29f849dc6ba188113609d0d4e0f29541882fdb82d2baeb6e85"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 85,
+          "timestamp": "2026-10-20T11:02:21.960Z",
+          "type": "prediction",
+          "episode_id": "c3-25",
+          "intended_outcome": "Add fifth regular bowler for full overs coverage",
+          "prediction": "Opens death-specialist scouting.",
+          "visible_evidence": "Death bowling83 pace82; existing4 regular bowlers, need20 overs.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 86,
+          "timestamp": "2026-10-20T11:02:22.054Z",
+          "type": "action_completed",
+          "episode_id": "c3-25",
+          "role": "button",
+          "name": "Rana Naved-ul-Hasan",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 87,
+          "timestamp": "2026-10-20T11:02:22.298Z",
+          "type": "snapshot",
+          "screenshot": "screen-0087.png",
+          "screenshot_sha256": "bd50f1c39e113ad29cdc76ea177729f4786d9976923d5e3ae443535ec8503507"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 88,
+          "timestamp": "2026-10-20T11:02:32.611Z",
+          "type": "prediction",
+          "episode_id": "c3-26",
+          "intended_outcome": "Secure death-bowling role accepting weak batting33",
+          "prediction": "Adds fifth regular bowler; full20-over coverage possible if selected in XI.",
+          "visible_evidence": "Bowling89 field81 death option;4 existing bowlers.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 89,
+          "timestamp": "2026-10-20T11:02:32.712Z",
+          "type": "action_completed",
+          "episode_id": "c3-26",
+          "role": "button",
+          "name": "Pick Rana Naved-ul-Hasan",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 90,
+          "timestamp": "2026-10-20T11:02:32.894Z",
+          "type": "snapshot",
+          "screenshot": "screen-0090.png",
+          "screenshot_sha256": "73f20515353f30abf82fc564930fddd5f2c5124e106241c07e5eec66d84d8881"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 91,
+          "timestamp": "2026-10-20T11:02:41.834Z",
+          "type": "snapshot",
+          "screenshot": "screen-0091.png",
+          "screenshot_sha256": "e861cc6e9e2a58936250052a3eb8e1a5a4cacb335f6a46a04ac48268256f691a"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 92,
+          "timestamp": "2026-10-20T11:02:48.742Z",
+          "type": "prediction",
+          "episode_id": "c3-27",
+          "intended_outcome": "Improve late-innings hitting rather than third opener",
+          "prediction": "Opens batting detail on finishing option.",
+          "visible_evidence": "Finishing84 overall80 vs Katich83 opener; two opener coverage already filled, death batting prior weak.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 93,
+          "timestamp": "2026-10-20T11:02:48.831Z",
+          "type": "action_completed",
+          "episode_id": "c3-27",
+          "role": "button",
+          "name": "Craig McMillan",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 94,
+          "timestamp": "2026-10-20T11:02:49.070Z",
+          "type": "snapshot",
+          "screenshot": "screen-0094.png",
+          "screenshot_sha256": "09270792e02e680c45d35ae7a58abee3d2638db64fbdc4394d3932e8a593215c"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 95,
+          "timestamp": "2026-10-20T11:02:54.415Z",
+          "type": "prediction",
+          "episode_id": "c3-28",
+          "intended_outcome": "Complete provisionalXI balance before bench depth",
+          "prediction": "Adds11th player with finishing role; no extra bowler.",
+          "visible_evidence": "Bat83 finishing84, lower field75 accepted; six batting options incl two allrounders already.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 96,
+          "timestamp": "2026-10-20T11:02:54.544Z",
+          "type": "action_completed",
+          "episode_id": "c3-28",
+          "role": "button",
+          "name": "Pick Craig McMillan",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 97,
+          "timestamp": "2026-10-20T11:02:54.722Z",
+          "type": "snapshot",
+          "screenshot": "screen-0097.png",
+          "screenshot_sha256": "b18ccd9e377bc933f462077465df471435312de06739faad0097246868b5f348"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 98,
+          "timestamp": "2026-10-20T11:03:03.349Z",
+          "type": "prediction",
+          "episode_id": "c3-29",
+          "intended_outcome": "Find younger bench depth or backup keeper beyond current shortlist",
+          "prediction": "Shows remaining cards and Show more control."
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 99,
+          "timestamp": "2026-10-20T11:03:03.506Z",
+          "type": "action_completed",
+          "episode_id": "c3-29",
+          "action": "scroll"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 100,
+          "timestamp": "2026-10-20T11:03:03.583Z",
+          "type": "snapshot",
+          "screenshot": "screen-0100.png",
+          "screenshot_sha256": "a3dc4d4c969553d9408d8e53e0d302282b5c7764271377351d322fa14855e4d6"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 101,
+          "timestamp": "2026-10-20T11:03:09.470Z",
+          "type": "prediction",
+          "episode_id": "c3-30",
+          "intended_outcome": "Add flexible bench option and finishing cover",
+          "prediction": "Shows younger all-rounder details.",
+          "visible_evidence": "Age28 all-rounder79 finishing83; many core players older, six bowling options useful depth.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 102,
+          "timestamp": "2026-10-20T11:03:09.613Z",
+          "type": "action_completed",
+          "episode_id": "c3-30",
+          "role": "button",
+          "name": "Abdul Razzaq",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 103,
+          "timestamp": "2026-10-20T11:03:09.770Z",
+          "type": "snapshot",
+          "screenshot": "screen-0103.png",
+          "screenshot_sha256": "dae6b29121efea75cb595a7a66d39ddb6600c1537e69ce9475a22de181f979d8"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 104,
+          "timestamp": "2026-10-20T11:03:14.279Z",
+          "type": "prediction",
+          "episode_id": "c3-31",
+          "intended_outcome": "Reserve finishing/bowling option at younger age28",
+          "prediction": "Adds all-rounder depth and likely sixth regular bowler.",
+          "visible_evidence": "Bat78 bowl76 field79; less current skill accepted for versatile reserve.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 105,
+          "timestamp": "2026-10-20T11:03:14.410Z",
+          "type": "action_completed",
+          "episode_id": "c3-31",
+          "role": "button",
+          "name": "Pick Abdul Razzaq",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 106,
+          "timestamp": "2026-10-20T11:03:14.557Z",
+          "type": "snapshot",
+          "screenshot": "screen-0106.png",
+          "screenshot_sha256": "263faa0017e9a8c9ce23e05ddb1d7f8150ebecaa50440d4e516eeb23bdd72b71"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 107,
+          "timestamp": "2026-10-20T11:03:24.869Z",
+          "type": "prediction",
+          "episode_id": "c3-32",
+          "intended_outcome": "Expand options to seek backup keeper instead of surplus bowler",
+          "prediction": "Reaches Show more beneath refreshed12-player list."
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 108,
+          "timestamp": "2026-10-20T11:03:25.023Z",
+          "type": "action_completed",
+          "episode_id": "c3-32",
+          "action": "scroll"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 109,
+          "timestamp": "2026-10-20T11:03:25.076Z",
+          "type": "snapshot",
+          "screenshot": "screen-0109.png",
+          "screenshot_sha256": "74d2de37dc1b9564bedbe9b15d467a8ec65464f60373c6426ceb6551856fd9ae"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 110,
+          "timestamp": "2026-10-20T11:03:31.191Z",
+          "type": "prediction",
+          "episode_id": "c3-33",
+          "intended_outcome": "Protect keeper position and add third opener",
+          "prediction": "Opens backup keeper report.",
+          "visible_evidence": "Age30 opener/keeper78 PP batting78; current sole keeper age37.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 111,
+          "timestamp": "2026-10-20T11:03:31.266Z",
+          "type": "action_completed",
+          "episode_id": "c3-33",
+          "role": "button",
+          "name": "Brad Haddin",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 112,
+          "timestamp": "2026-10-20T11:03:31.499Z",
+          "type": "snapshot",
+          "screenshot": "screen-0112.png",
+          "screenshot_sha256": "bc09e847fb75d7f7548c78ce4e9b5353d5601571faf97f5960b4f6745619058c"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 113,
+          "timestamp": "2026-10-20T11:03:36.355Z",
+          "type": "prediction",
+          "episode_id": "c3-34",
+          "intended_outcome": "Bank keeper cover despite lower batting75 than current XI",
+          "prediction": "Adds second keeper and third opener.",
+          "visible_evidence": "Keeping82, opener role, age30; Gilchrist remains first choice keeping92.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 114,
+          "timestamp": "2026-10-20T11:03:36.482Z",
+          "type": "action_completed",
+          "episode_id": "c3-34",
+          "role": "button",
+          "name": "Pick Brad Haddin",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 115,
+          "timestamp": "2026-10-20T11:03:36.633Z",
+          "type": "snapshot",
+          "screenshot": "screen-0115.png",
+          "screenshot_sha256": "3fd042f6318639f0c2ad7f4d151c7c77c89be6867a12e26371e3db1b955a9176"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 116,
+          "timestamp": "2026-10-20T11:03:42.155Z",
+          "type": "snapshot",
+          "screenshot": "screen-0116.png",
+          "screenshot_sha256": "e4781453b11b11d61ffb79e14db29387a1b73959309bf21f67b4cf56124aef23"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 117,
+          "timestamp": "2026-10-20T11:03:47.828Z",
+          "type": "prediction",
+          "episode_id": "c3-35",
+          "intended_outcome": "Add specialist spin cover behind age36 Murali",
+          "prediction": "Opens reserve spinner report.",
+          "visible_evidence": "Spin bowler80 middle bowling87 age32; other six bowlers mostly pace plus Symonds mixed option.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 118,
+          "timestamp": "2026-10-20T11:03:47.926Z",
+          "type": "action_completed",
+          "episode_id": "c3-35",
+          "role": "button",
+          "name": "Ray Price",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 119,
+          "timestamp": "2026-10-20T11:03:48.142Z",
+          "type": "snapshot",
+          "screenshot": "screen-0119.png",
+          "screenshot_sha256": "8092f3d41f9701c9f1f5c52fdc86e4f50a4dc6de42ecaa3a0a0bf4df0a411feb"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 120,
+          "timestamp": "2026-10-20T11:03:53.060Z",
+          "type": "prediction",
+          "episode_id": "c3-36",
+          "intended_outcome": "Provide spin alternative accepting bat25 field74",
+          "prediction": "Adds seventh regular bowler as specialist reserve.",
+          "visible_evidence": "Bowling86 middle spin; specialist cover rather than likely firstXI starter.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 121,
+          "timestamp": "2026-10-20T11:03:53.213Z",
+          "type": "action_completed",
+          "episode_id": "c3-36",
+          "role": "button",
+          "name": "Pick Ray Price",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 122,
+          "timestamp": "2026-10-20T11:03:53.344Z",
+          "type": "snapshot",
+          "screenshot": "screen-0122.png",
+          "screenshot_sha256": "b5e4140444e5eaf5218449ccd5962d01979540b9e57a5f9e01031b4165acc65e"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 123,
+          "timestamp": "2026-10-20T11:03:58.022Z",
+          "type": "snapshot",
+          "screenshot": "screen-0123.png",
+          "screenshot_sha256": "96622ff6090c816477d1139cbbb3099215a3483737e4211fdb9d2fc0bde51387"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 124,
+          "timestamp": "2026-10-20T11:04:04.199Z",
+          "type": "prediction",
+          "episode_id": "c3-37",
+          "intended_outcome": "Finish squad with batting/finishing cover instead of eighth bowler",
+          "prediction": "Opens reserve middle-order batting report.",
+          "visible_evidence": "Middle order78 finishing80 age30; two keepers,7bowlers3openers already.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 125,
+          "timestamp": "2026-10-20T11:04:04.289Z",
+          "type": "action_completed",
+          "episode_id": "c3-37",
+          "role": "button",
+          "name": "David Hussey",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 126,
+          "timestamp": "2026-10-20T11:04:04.760Z",
+          "type": "snapshot",
+          "screenshot": "screen-0126.png",
+          "screenshot_sha256": "616ba341da774919e300be338c08f0eac4029ac43c4403e750b9d07538b5b965"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 127,
+          "timestamp": "2026-10-20T11:04:10.064Z",
+          "type": "prediction",
+          "episode_id": "c3-38",
+          "intended_outcome": "Add reserve middle-order batter to manageable balanced squad",
+          "prediction": "Completes15-player squad and offers next career stage after draft ends.",
+          "visible_evidence": "Bat77 field78 age30;14/15 already filled with role coverage.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 128,
+          "timestamp": "2026-10-20T11:04:10.500Z",
+          "type": "action_completed",
+          "episode_id": "c3-38",
+          "role": "button",
+          "name": "Pick David Hussey",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 129,
+          "timestamp": "2026-10-20T11:04:10.651Z",
+          "type": "snapshot",
+          "screenshot": "screen-0129.png",
+          "screenshot_sha256": "8d94c6083ef785e4d1d9d06273e73e59415ef480d5ce684006325b37d678a5c2"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 130,
+          "timestamp": "2026-10-20T11:04:16.075Z",
+          "type": "prediction",
+          "episode_id": "c3-39",
+          "intended_outcome": "Begin opening-match preparation within remaining two actions",
+          "prediction": "Dismisses completion prompt and lets me choose eleven, batting order and keeper.",
+          "visible_evidence": "Squad complete; prompt says choose who walks out, order and gloves; underlying0/11.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 131,
+          "timestamp": "2026-10-20T11:04:16.170Z",
+          "type": "action_completed",
+          "episode_id": "c3-39",
+          "role": "button",
+          "name": "Pick final XI",
+          "action": "click"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 132,
+          "timestamp": "2026-10-20T11:04:16.277Z",
+          "type": "snapshot",
+          "screenshot": "screen-0132.png",
+          "screenshot_sha256": "a7ace2de5acae2fda138edad2d71ccfcb4292d8aba927c44c3bc0a09359ac383"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 133,
+          "timestamp": "2026-10-20T11:04:21.798Z",
+          "type": "prediction",
+          "episode_id": "c3-40",
+          "intended_outcome": "Inspect preparation workflow before stopping at budget",
+          "prediction": "Expands ways to arrange or choose XI; uncertain if offers recommendation or only ordering controls.",
+          "visible_evidence": "0/11 selected and visible Order & selection tools disclosure; manual player opening available.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 134,
+          "timestamp": "2026-10-20T11:04:51.801Z",
+          "type": "transport_or_action_failure",
+          "episode_id": "c3-40",
+          "message": "locator.boundingBox: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Order & selection tools' }).first()\u001b[22m\n"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 135,
+          "timestamp": "2026-10-20T11:04:51.930Z",
+          "type": "snapshot",
+          "screenshot": "screen-0135.png",
+          "screenshot_sha256": "a7ace2de5acae2fda138edad2d71ccfcb4292d8aba927c44c3bc0a09359ac383"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 136,
+          "timestamp": "2026-10-20T11:05:02.208Z",
+          "type": "prediction",
+          "episode_id": "c3-40b",
+          "intended_outcome": "Begin XI with main middle-overs spinner before stop",
+          "prediction": "Selects first visible squad card, Muralitharan, into XI.",
+          "visible_evidence": "First visible card Muttiah Muralitharan90 spin bowler followed Select; tool disclosure button locator failed, transport issue.",
+          "uncertainty": ""
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 137,
+          "timestamp": "2026-10-20T11:05:32.210Z",
+          "type": "transport_or_action_failure",
+          "episode_id": "c3-40b",
+          "message": "locator.boundingBox: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Select', exact: true }).first()\u001b[22m\n"
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 138,
+          "timestamp": "2026-10-20T11:06:01.616Z",
+          "type": "session_boundary",
+          "record": {
+            "stop_reason": "task_budget_with_transport_limit",
+            "successful_native_actions": 39,
+            "reached": [
+              "career recovery",
+              "15-player squad complete",
+              "team selection screen"
+            ],
+            "unreached": [
+              "starting XI selected",
+              "XI lodged",
+              "opening match played",
+              "opening result"
+            ],
+            "next_management_goal": "Choose balanced openingXI from drafted squad, assign Gilchrist keeper and arrange batting order",
+            "visible_basis_for_goal": "Team selection shows0/11 and instructions open player to add XI; complete15-player squad available",
+            "goal_spontaneous_or_prompted": "prompted",
+            "assistance": [
+              "Same actor prior flow knowledge",
+              "Harness partial accessible names previously enabled",
+              "Parent allowed stop at39 after final control locator transport failures"
+            ],
+            "unsupported_causal_explanations": [
+              "No match played; cannot claim picks improved results",
+              "Age tradeoffs are preferences, retirement/decline not inspected"
+            ],
+            "transport_configuration": "Intermediate viewport-text process; later screenshot-only update not used retroactively"
+          }
+        },
+        {
+          "session_id": "continuity-3",
+          "event_id": 139,
+          "timestamp": "2026-10-20T11:06:01.673Z",
+          "type": "opaque_save_captured"
+        }
+      ]
+    }
+  ]
+}
