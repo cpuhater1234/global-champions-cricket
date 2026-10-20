@@ -1496,7 +1496,7 @@ function installModalInteraction() {
     const selected=new Set(state.xi);
     let order=(state.battingOrder||[]).filter(id=>selected.has(id));
     const missing=state.xi.filter(id=>!order.includes(id));
-    if(!state.orderTouched){
+    if(!state.orderTouched&&(missing.length||order.length!==(state.battingOrder||[]).length||new Set(order).size!==order.length)){
       order=autoOrderIds(state.xi.map(byId).filter(Boolean));
     } else {
       for(const id of missing){
@@ -2725,7 +2725,7 @@ function installModalInteraction() {
     return st.runs + st.wickets * 24 + (p.form || 0) * 9 + Math.min(50, st.matches * 2);
   }
 
-  function nrrBalls(inn){ return inn.wickets === 10 ? 120 : Math.max(1,inn.balls||120); }
+  function nrrBalls(inn){ return inn.wickets === 10 ? 120 : Math.max(1,inn.balls??120); }
   function recalcNRR(row){
     if(!row.ballsFor || !row.ballsAgainst){ row.nrr=0; return; }
     row.nrr=(row.runsFor/(row.ballsFor/6))-(row.runsAgainst/(row.ballsAgainst/6));
@@ -2745,7 +2745,7 @@ function installModalInteraction() {
     const secondInnings=pair?.secondInnings || ai;
     const firstInnings=pair?.firstInnings || hi;
     if(winner.abbr===secondClub.abbr){
-      const wickets=Math.max(1,10-secondInnings.wickets), balls=Math.max(0,120-(secondInnings.balls||120));
+      const wickets=Math.max(1,10-secondInnings.wickets), balls=Math.max(0,120-(secondInnings.balls??120));
       return `by ${wickets} wicket${wickets===1?'':'s'}${balls?` with ${balls} ball${balls===1?'':'s'} remaining`:''}`;
     }
     const runs=Math.max(1,firstInnings.total-secondInnings.total);

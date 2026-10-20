@@ -43,7 +43,7 @@ window.GCC8 = (()=>{
  const reads=()=>{const p=profile();return `<div class="g8reads">${phases.map(([key,label])=>btn(`${label} · ${Math.round(p[key]||0)}`,'rating',[key],'g8read')).join('')}</div>`;};
  const ground=c=>`<div class="g8groundnote"><span class="g8eyebrow">${esc(c?.ground||'The ground')}</span><h3>${esc(c?.trait||'Conditions to come')}</h3><p>${esc(c?G.matchGroundForFixture({home:c,round:Math.min(14,G.state.round+1)})?.weather?.label||c.region:'')}</p></div>`;
  const empty=t=>`<p class="g8empty">${esc(t)}</p>`;
- return {G,D,R,read,ui,esc,icon,stadium,btn,badge,roster,screen,pitch,heading,abilityRead,compareRead,playerCard,table,pool,resultCard,phases,profile,reads,ground,injury,form,empty,views:{}};
+ return {G,D,R,read,ui,esc,icon,stadium,btn,badge,roster,screen,pitch,heading,abilityRead,compareRead,playerCard,table,pool,resultCard,phases,profile,reads,ground,injury,form,empty,views:Object.create(null)};
 })();
 
 /* Shared decision hierarchy; supporting detail stays available without filling the workspace. */

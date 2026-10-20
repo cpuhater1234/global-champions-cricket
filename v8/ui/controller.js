@@ -13,18 +13,18 @@
  const assert=(condition,text)=>{if(!condition)throw new Error(text);};
  function closeDialog(){if(dialog.open)dialog.close();ui.modal=null;document.getElementById('g8feedback').hidden=false;const opener=dialogOpener;dialogOpener=null;opener?.focus?.({preventScroll:true});if(!document.hidden&&!['home','story'].includes(ui.view))clock.resume();}
  function modal(title,body,key='info'){
-  if(!dialog.open)dialogOpener=document.activeElement;
+  const replacing=dialog.open;if(!replacing)dialogOpener=document.activeElement;
   clock.pause();ui.modal=key;dialog.dataset.prompt=key;
   content.innerHTML=`<header class="g8modalhead"><div><span class="g8eyebrow">GLOBAL CHAMPIONS CRICKET</span><h2 id="g8dialogTitle">${esc(title)}</h2></div><button type="button" class="g8dialogclose" data-action="close" data-args="[]" aria-label="${esc('Close '+title)}">×</button></header><div class="g8modalbody"><div id="g8dialogFeedback" class="g8notice" role="status" hidden></div>${body}</div>`;
-  document.getElementById('g8feedback').hidden=true;if(!dialog.open)dialog.showModal();
+  document.getElementById('g8feedback').hidden=true;if(!dialog.open)dialog.showModal();X.accessibleTables(content);if(replacing)content.querySelector('button:not(:disabled),input:not(:disabled),select:not(:disabled)')?.focus({preventScroll:true});
  }
- function setView(view){assert(views[view],`Unknown screen: ${view}`);ui.view=view;ui.modal=null;if(dialog.open)dialog.close();if(document.hidden||view==='home'||view==='story')clock.pause();else clock.resume();render(true);if(view==='matchReveal')scheduleMatch();}
+ function setView(view){assert(typeof view==='string'&&typeof views[view]==='function',`Unknown screen: ${view}`);ui.view=view;ui.modal=null;if(dialog.open)dialog.close();if(document.hidden||view==='home'||view==='story')clock.pause();else clock.resume();render(true);if(view==='matchReveal')scheduleMatch();}
  function render(changed=false){
   const active=document.activeElement,id=active?.id,within=stage.contains(active),focusAction=active?.dataset?.action,focusArgs=active?.dataset?.args,focusInHud=hud.contains(active),start=active?.selectionStart,end=active?.selectionEnd,x=window.scrollX,y=window.scrollY;
   const wire=document.getElementById('g8wire'),wireScroll=wire?.scrollTop||0,wireAnchor=X.scrollAnchor(wire);
   const body=views[ui.view]();
   stage.dataset.view=ui.view;
-  X.patch(stage,body);
+  X.patch(stage,body);X.accessibleTables(stage);
   X.patch(hud,`<div class="g8hudclub"><button type="button" class="g8brand" data-action="home" data-args="[]" aria-label="Global Champions Cricket home">${X.icon('cricket')}GCC</button>${s.userClub?`${badge(s.userClub)}<div><strong>${esc(s.userClub.name)}</strong><small>${s.year} · ${ui.view==='matchReveal'?(ui.result?.round?'Round '+ui.result.round:'Finals'):s.dynasty?.offseason?'Offseason':s.finals&&s.finals.stage!=='done'?'Finals':s.fullSchedule.length?(s.round===14?'Season complete':'Round '+(s.round+1)):s.year===2008?'Foundation':'Preseason'}</small></div>`:''}</div><nav aria-label="Game menu"><details class="g8utilitymenu"><summary>Menu</summary><div>${s.userClub?btn('Club archive','archive',[],'g8ghost g8small',!s.dynasty?.history?.length):''}${btn('How to play','how',[],'g8ghost g8small')}</div></details></nav>${X.careerNavigation()}`);
   if(changed){stage.focus({preventScroll:true});window.scrollTo({top:0,left:0,behavior:'instant'});}
   else{
@@ -254,6 +254,7 @@
   }
  });
  dialog.addEventListener('cancel',event=>{event.preventDefault();X.dispatch('close');});
+ window.addEventListener('resize',()=>X.accessibleTables(dialog.open?content:stage));
  window.addEventListener('pagehide',()=>{clock.pause();G.pauseSeason();save();});
  window.addEventListener('pageshow',()=>{if(!document.hidden&&!ui.modal&&!['home','story'].includes(ui.view))clock.resume();});
  document.addEventListener('visibilitychange',()=>{if(document.hidden){clock.pause();save();}else if(!ui.modal&&!['home','story'].includes(ui.view))clock.resume();});

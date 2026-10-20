@@ -9,6 +9,8 @@ def adapt(name,script):
         script=script.replace(marker,"  if(m?.presentationVersion===3){const ref=m.reference,r=ref.type==='regular'?s.results.find(x=>x.round===ref.round):ref.type==='gf'?s.finals?.gf:s.finals?.semis?.[ref.index];if(!r||r.homeInnings?.deliveryVersion!==1||m.count>window.GCC8_DELIVERY.frameCount(r))return false;}\n"+marker)
         return script
     if name != 'foundation': return script
+    assert 'inn.balls||120' in script and 'secondInnings.balls||120' in script
+    script=script.replace('inn.balls||120','inn.balls??120').replace('secondInnings.balls||120','secondInnings.balls??120')
     old='  function innings(batClub, bowlClub, ground, context = {}) {'
     assert old in script
     script=script.replace(old,'''  function innings(batClub,bowlClub,ground,context={}){

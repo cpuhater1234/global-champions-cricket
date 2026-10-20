@@ -1,0 +1,349 @@
+{
+  "artifactSha256": "25e6ea914053a861b2db2be1582f429ccaa60132c0e495f944431a341207d6b6",
+  "reports": {
+    "verified-suites/report.json": {
+      "sha256": "c182c185062160ee786704e252e44e2bfbda8b34ad881ded8bcfe416919db5f7",
+      "outcome": {
+        "mode": "suites",
+        "artifactSha256": "25e6ea914053a861b2db2be1582f429ccaa60132c0e495f944431a341207d6b6",
+        "artifactUnchanged": true,
+        "changedSources": [],
+        "passed": 63,
+        "failed": 0,
+        "nativeBrowser": "NOT VERIFIED",
+        "resultsCount": 63
+      }
+    },
+    "verified-clubs/report.json": {
+      "sha256": "d691cb748a429eafd1a031b30086fd67eedd4cc34ae88323fb3ffb6452f21813",
+      "outcome": {
+        "mode": "clubs",
+        "artifactSha256": "25e6ea914053a861b2db2be1582f429ccaa60132c0e495f944431a341207d6b6",
+        "artifactUnchanged": true,
+        "changedSources": [],
+        "passed": 8,
+        "failed": 0,
+        "nativeBrowser": "NOT VERIFIED",
+        "resultsCount": 8
+      }
+    },
+    "final-career/v8_game_results.json": {
+      "sha256": "7c6e40a2ceb71cac9007920357f08929231ddaf681d83d0197a8de847f5e8485",
+      "outcome": {
+        "scope": "Real cricket engine + new UI dispatch in a VM DOM stub. No browser, visual, geometry, focus or latency certification.",
+        "seed": 20261020,
+        "club": "SCO",
+        "regularSeasonMatches": 266,
+        "storageStats": {
+          "writes": 11492,
+          "maxCodeUnits": 1154979,
+          "maxUtf16Bytes": 2309958,
+          "quotaFailures": 0
+        },
+        "errors": [],
+        "checksCount": 16087,
+        "seasonsCount": 19
+      }
+    },
+    "verified-browser/report.json": {
+      "sha256": "2e527a1d52f466f061b58f448986bad4d842241b916da578bbea0cfa00630dce",
+      "outcome": {
+        "build": "/workspace/scratch/24b2d895d4e2/gcc/game/gcc_v8_microscopic.html",
+        "errors": [],
+        "report": {
+          "count": 315,
+          "details": "Retained in local raw report; report hash recorded."
+        }
+      }
+    },
+    "verified-browser-career/report.json": {
+      "sha256": "336ced963d298a45e879bba17e6eacd9741f8c78ac3ded6656227cd9eb57842d",
+      "outcome": {
+        "errors": [],
+        "scope": "Real completed save renders; historical finals stages reconstructed from actual finalists and results. Remote images forced to fail for deterministic offline geometry.",
+        "statesCount": 182
+      }
+    },
+    "native-career.json": {
+      "sha256": "c3ab0d64831788cd31509f4fcf1dc6f4f0fde41e07fb2ab29359f4df71da011b",
+      "outcome": {
+        "events": {
+          "count": 146,
+          "details": "Retained in local raw report; report hash recorded."
+        },
+        "errors": [],
+        "failure": null,
+        "scope": "Fresh career entirely through native UI clicks; read-only queries guide balanced manual decisions; no fixture injection or direct state mutation."
+      }
+    },
+    "native-cover.json": {
+      "sha256": "910a2218b41d3c6ffd9abc9aa9ac87c640b02e852cc513f2f1ee526ea6245a92",
+      "outcome": {
+        "original": 1,
+        "cover": 7,
+        "violations": [],
+        "manualReplacement": true,
+        "coldRestore": true,
+        "scope": "Native cover sign/swap/reload with one explicitly injected injury; not a naturally occurring injury sample."
+      }
+    },
+    "review-state/native-state.json": {
+      "sha256": "8004ecb95ab4e7443d34815091ee85c20034625fede531759f5d2656ca797720",
+      "outcome": {
+        "conflict": {
+          "ok": true,
+          "feedback": "Another open game saved newer progress. Return home and choose Continue to load it.",
+          "year": 2008
+        },
+        "failure": {
+          "ok": true,
+          "unchanged": true,
+          "feedback": "This browser could not save your progress. Keep this game open to continue playing.",
+          "pane": "players",
+          "recovered": true,
+          "persisted": true
+        },
+        "lifecycle": {
+          "before": {
+            "hidden": false,
+            "paused": false
+          },
+          "after": {
+            "hidden": false,
+            "paused": false
+          },
+          "visibilitySupport": "cdpSession.send: Protocol error (Emulation.setPageVisibilityState): 'Emulation.setPageVisibilityState' wasn't found",
+          "limitation": "CDP frozen/active accepted; document.hidden remained false. This does not certify genuine visibilitychange pause or pagehide restoration."
+        }
+      }
+    },
+    "performance.json": {
+      "sha256": "de3e09755904296576afe4983b0301c02ca30d7e953aea8968def86bd9bbcd3e",
+      "outcome": {
+        "rows": [
+          {
+            "year": 2008,
+            "view": "review",
+            "nodes": 999,
+            "htmlBytes": 6465,
+            "continueMs": 376.30000000004657,
+            "render100Ms": 50.199999999953434,
+            "nodeChange": 0
+          },
+          {
+            "year": 2019,
+            "view": "review",
+            "nodes": 1060,
+            "htmlBytes": 6458,
+            "continueMs": 399.19999999995343,
+            "render100Ms": 76.59999999997672,
+            "nodeChange": 0
+          },
+          {
+            "year": 2026,
+            "view": "review",
+            "nodes": 1021,
+            "htmlBytes": 6436,
+            "continueMs": 542.2000000000698,
+            "render100Ms": 84.19999999995343,
+            "nodeChange": 0
+          }
+        ],
+        "scope": "Browser synchronous handler/render timing on a shared test host with concurrent CPU tests. Diagnostic only, not device benchmarks; 100 unchanged rerenders check mounted DOM growth."
+      }
+    },
+    "text-scale.json": {
+      "sha256": "80eb8952520f696774823460779506813d5f6222a01d2d94f18b6b65db985658",
+      "outcome": {
+        "caseCount": 16,
+        "data": [
+          {
+            "width": 320,
+            "font": "16px",
+            "overflow": false,
+            "bad": []
+          },
+          {
+            "width": 390,
+            "font": "16px",
+            "overflow": false,
+            "bad": []
+          },
+          {
+            "width": 640,
+            "font": "16px",
+            "overflow": false,
+            "bad": []
+          },
+          {
+            "width": 1280,
+            "font": "16px",
+            "overflow": false,
+            "bad": []
+          },
+          {
+            "width": 320,
+            "font": "20px",
+            "overflow": false,
+            "bad": []
+          },
+          {
+            "width": 390,
+            "font": "20px",
+            "overflow": false,
+            "bad": []
+          },
+          {
+            "width": 640,
+            "font": "20px",
+            "overflow": false,
+            "bad": []
+          },
+          {
+            "width": 1280,
+            "font": "20px",
+            "overflow": false,
+            "bad": []
+          },
+          {
+            "width": 320,
+            "font": "24px",
+            "overflow": false,
+            "bad": []
+          },
+          {
+            "width": 390,
+            "font": "24px",
+            "overflow": false,
+            "bad": []
+          },
+          {
+            "width": 640,
+            "font": "24px",
+            "overflow": false,
+            "bad": []
+          },
+          {
+            "width": 1280,
+            "font": "24px",
+            "overflow": false,
+            "bad": []
+          },
+          {
+            "width": 320,
+            "font": "32px",
+            "overflow": false,
+            "bad": []
+          },
+          {
+            "width": 390,
+            "font": "32px",
+            "overflow": false,
+            "bad": []
+          },
+          {
+            "width": 640,
+            "font": "32px",
+            "overflow": false,
+            "bad": []
+          },
+          {
+            "width": 1280,
+            "font": "32px",
+            "overflow": false,
+            "bad": []
+          }
+        ]
+      }
+    },
+    "ui-metadata-fuzz.json": {
+      "sha256": "8ec028c9c84a4f1687f6b1b56f503224f0bccea8c2606ea4a56d01695c888453",
+      "outcome": {
+        "caseCount": 7,
+        "data": [
+          {
+            "value": "constructor",
+            "opened": true,
+            "back": true,
+            "view": "season",
+            "stage": "<div class=\"g8heading\"><div><span class=\"g8eyebrow g8iconlabel\"><svg class=\"g8icon\" viewBo",
+            "feedback": "",
+            "errors": []
+          },
+          {
+            "value": "__proto__",
+            "opened": true,
+            "back": true,
+            "view": "season",
+            "stage": "<div class=\"g8heading\"><div><span class=\"g8eyebrow g8iconlabel\"><svg class=\"g8icon\" viewBo",
+            "feedback": "",
+            "errors": []
+          },
+          {
+            "value": "toString",
+            "opened": true,
+            "back": true,
+            "view": "season",
+            "stage": "<div class=\"g8heading\"><div><span class=\"g8eyebrow g8iconlabel\"><svg class=\"g8icon\" viewBo",
+            "feedback": "",
+            "errors": []
+          },
+          {
+            "value": "invalid",
+            "opened": true,
+            "back": true,
+            "view": "season",
+            "stage": "<div class=\"g8heading\"><div><span class=\"g8eyebrow g8iconlabel\"><svg class=\"g8icon\" viewBo",
+            "feedback": "",
+            "errors": []
+          },
+          {
+            "value": null,
+            "opened": true,
+            "back": true,
+            "view": "season",
+            "stage": "<div class=\"g8heading\"><div><span class=\"g8eyebrow g8iconlabel\"><svg class=\"g8icon\" viewBo",
+            "feedback": "",
+            "errors": []
+          },
+          {
+            "value": [],
+            "opened": true,
+            "back": true,
+            "view": "season",
+            "stage": "<div class=\"g8heading\"><div><span class=\"g8eyebrow g8iconlabel\"><svg class=\"g8icon\" viewBo",
+            "feedback": "",
+            "errors": []
+          },
+          {
+            "value": {},
+            "opened": true,
+            "back": true,
+            "view": "season",
+            "stage": "<div class=\"g8heading\"><div><span class=\"g8eyebrow g8iconlabel\"><svg class=\"g8icon\" viewBo",
+            "feedback": "",
+            "errors": []
+          }
+        ]
+      }
+    }
+  },
+  "executablePayloadSha256": "438ce221eb6be4db4503c87d018028ce74ca58722823af0faad827c0f2a1aa33",
+  "careerScope": "19 seasons / 266 league matches / 16087 checks on career-candidate.html; final HTML differs only by CSS, executable payloads identical.",
+  "totals": {
+    "suitesPassed": 63,
+    "clubRunsPassed": 8,
+    "simulatedSeasons": 43,
+    "managedLeagueMatches": 602,
+    "browserScreenStates": 497,
+    "expandedInteractionCases": 144,
+    "titleWidthFontCases": 603,
+    "textScaleCases": 16
+  },
+  "limits": [
+    "Linux headless Chromium; no all-platform certification",
+    "Native visibility/background throttling not established",
+    "Unfamiliar-player enjoyment and real touch-device testing remain",
+    "Native injury cover uses controlled injury fixture"
+  ]
+}

@@ -12,6 +12,9 @@ def adapt(name, script):
     if name == 'foundation':
         script = script.replace('    state.recruit.universeSize=state.pool.length;', '    window.GCC8_SEED_FOUNDATION();\n    state.recruit.universeSize=state.pool.length;')
     if name == 'dynasty':
+        trade='state.teams[club]=rosterIds(club).filter(id=>id!==target.id).concat(offer.id);'
+        assert script.count(trade)==1
+        script=script.replace(trade,trade+'target.draftedBy=state.userClub.abbr;offer.draftedBy=club;')
         script=script.replace("log('CONTRACT',", "log('RELEASE',").replace('Contract not renewed · one Draft selection opened.', 'Player released · one draft place opened.')
         script = script.replace('function applyCareerYear(p,year){window.GCC8_JOB_MODEL.prepare', 'function applyExpectedCareerYear(p,year){window.GCC8_JOB_MODEL.prepare', 1)
         old = 'function initDynastyData(){ensureDynasty();addCareerMetaExisting();seedArrivalUniverse();for(const p of state.pool)if(activePlayer(p,state.year))applyCareerYear(p,state.year)}'
@@ -28,7 +31,7 @@ def adapt(name, script):
         script=script.replace('window.GCC8_CAREERS.value(p,state.year)', 'window.GCC_AI.projectedValue(p,state.year)')
         start=script.index('  function developmentRead(');end=script.index('\n',start)
         script=script[:start]+"  function developmentRead(p){return window.GCC8_SCOUTING.outlook(window.GCC8_SCOUTING.publicView(p,state.year)).label;}"+script[end:]
-        script=script.replace('initDynastyData();state.year++;', 'initDynastyData();const careerBefore=window.GCC8_DEVELOPMENT.captureBefore(state.pool,state.year);state.year++;')
+        script=script.replace('initDynastyData();state.year++;', 'initDynastyData();const careerBefore=window.GCC8_DEVELOPMENT.captureBefore(state.pool,state.year,state.teams);state.year++;')
         script=script.replace('const arrivals=arrivalsForYear(state.year);d.injuries={};', "const arrivals=arrivalsForYear(state.year);d.developmentByYear??={};if(!d.developmentByYear[state.year])d.developmentByYear[state.year]=window.GCC8_DEVELOPMENT.rows(careerBefore,state.pool,state.year);d.injuries={};")
         script=script.replace('restoreObject(state,JSON.parse(previous));currentScreen=', "restoreObject(state,JSON.parse(previous));if(state.dynasty?.careerStore)window.GCC8_CAREER_STATE.initialise(state,'loaded',applyExpectedCareerYear);currentScreen=")
     return script

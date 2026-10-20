@@ -30,6 +30,9 @@ def freeze():
   if name=='cpu':
    script=script.replace('function projectedValue(player, year=2008){ const p=projection(player); return p.draftDynasty ?? p.dynasty; }', 'function projectedValue(player, year=2008){ if(player.dynastyCareer)return window.GCC8_CAREERS.value(player,year);const p=projection(player);return p.draftDynasty??p.dynasty; }')
   if name=='foundation':
+   old='if(!state.orderTouched){\n      order=autoOrderIds'
+   assert script.count(old)==1
+   script=script.replace(old,'if(!state.orderTouched&&(missing.length||order.length!==(state.battingOrder||[]).length||new Set(order).size!==order.length)){\n      order=autoOrderIds')
    guard_old="const available = state.pool.filter(p => p.available && !p.draftedBy);\n    const roster = (state.teams[t.abbr] || []).map(id => byId(id));"
    guard_new="const roster = (state.teams[t.abbr] || []).map(id => byId(id));\n    const available = window.GCC8_DRAFT_GUARD.candidates(roster,state.pool.filter(p => p.available && !p.draftedBy),15-roster.length,R);"
    assert guard_old in script

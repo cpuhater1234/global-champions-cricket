@@ -20,7 +20,7 @@ function auditScorebook(r){
 
  for(const i of r.scorecard.innings){
   check(Number.isInteger(i.total)&&i.total>=0&&i.wickets>=0&&i.wickets<=10,'innings bounds');
-  const sourceInnings=i.club.abbr===r.home.abbr?r.homeInnings:r.awayInnings;check(i.balls>0&&i.balls<=120,'innings legal ball bounds');if(sourceInnings.deliveries){check(sourceInnings.deliveries.filter(d=>d.legal).length===i.balls,'delivery legal balls reconcile');check(i.batting.reduce((n,b)=>n+b.balls,0)===sourceInnings.deliveries.filter(d=>d.extra!=='wides').length,'batter balls faced include no-balls and exclude wides');}else check(i.batting.reduce((n,b)=>n+b.balls,0)===i.balls,'legacy legal balls reconcile');
+  const sourceInnings=i.club.abbr===r.home.abbr?r.homeInnings:r.awayInnings;check(i.balls>=0&&i.balls<=120,'innings legal ball bounds include a chase won on extras before a legal ball');if(sourceInnings.deliveries){check(sourceInnings.deliveries.filter(d=>d.legal).length===i.balls,'delivery legal balls reconcile');check(i.batting.reduce((n,b)=>n+b.balls,0)===sourceInnings.deliveries.filter(d=>d.extra!=='wides').length,'batter balls faced include no-balls and exclude wides');}else check(i.batting.reduce((n,b)=>n+b.balls,0)===i.balls,'legacy legal balls reconcile');
   check(i.bowling.reduce((n,b)=>n+b.balls,0)===i.balls&&i.bowling.every(b=>b.balls<=24),'bowling overs and four-over cap');
   check(Object.values(i.phases).reduce((a,b)=>a+b,0)===i.total,'phase scores reconcile');
   check(i.batting.filter(b=>!b.dnb&&b.dismissal!=='not out').length===i.wickets,'dismissals reconcile');
