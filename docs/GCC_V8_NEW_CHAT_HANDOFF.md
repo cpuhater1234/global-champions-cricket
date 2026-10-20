@@ -7,12 +7,14 @@ Updated 20 October 2026. This replaces the obsolete initial-scaffold handoff. A 
 Repository: `cpuhater1234/global-champions-cricket`.
 Working branch: `work/v8-game-first-rebuild`. Fetch its current head before editing or publishing. `main` is not automatically promoted.
 
-Latest versioned playable: `game/gcc_v8_understanding_review.html`.
+Latest versioned playable: `game/gcc_v8_rendering_clarity.html`.
 Canonical continuation build: `game/gcc_v8_quiet_arcade.html`, copied from the latest verified versioned build.
-Delivered filename: `GCC_v8_Understanding_Review.html`.
-Final understanding-review SHA-256: `24f91cafc6b4469afe730e8cca1f84c07b3c80abeb3b8a7fa9f3ab2bea0171a1`.
+Delivered filename: `GCC_v8_Rendering_Clarity.html`.
+Final rendering-clarity SHA-256: `5fc59c8e40456faa9fe4571403aef45ef76da8837732b7392ba27947150cb582`.
 
 Read the latest review before changing anything:
+
+- `docs/GCC_V8_RENDERING_CLARITY.md` and `qa/GCC_V8_RENDERING_CLARITY_EVIDENCE.json`. Direct player reports exposed transient/expanded states missed previously. This pass fixes reported rendering and changes comparison actions; final48expanded cases and11focused suites pass. Broader browser evidence is scoped to identical scripts with final comparison-bar CSS retested separately.
 
 - `docs/GCC_V8_EXPERIENCE_TEST_PROGRAMME.md` and `qa/experience-programme/assessment.json` for the new actor/assessor programme, pilot findings and explicit remaining gaps.
 - `docs/GCC_V8_MOBILE_CLARITY.md` and `qa/GCC_V8_MOBILE_CLARITY_EVIDENCE.json`.

@@ -1,0 +1,74 @@
+{
+  "artifactSha256": "5fc59c8e40456faa9fe4571403aef45ef76da8837732b7392ba27947150cb582",
+  "artifactUnchanged": true,
+  "passed": 11,
+  "failed": 0,
+  "result": [
+    {
+      "script": "qa/v8_team_workspace_test.mjs",
+      "scriptSha256": "dbe976975c30e1ead3935d3aeeeb5fb886877fe16c8608619cf72dd8f0e945ec",
+      "pass": true,
+      "exit": 0
+    },
+    {
+      "script": "qa/v8_decision_flow_test.mjs",
+      "scriptSha256": "a68fe30b0e3e0212976b53233599ba2009dd9999c2e7a2ef09c582a7e0f60f94",
+      "pass": true,
+      "exit": 0
+    },
+    {
+      "script": "qa/v8_micro_layout_test.mjs",
+      "scriptSha256": "0c25b159d06a4408077033b517c3017c3eb1c5ddcd96bb8309b15a20af014843",
+      "pass": true,
+      "exit": 0
+    },
+    {
+      "script": "qa/v8_decision_tools_test.mjs",
+      "scriptSha256": "e9ea1858d2e22c05501b048d06da92de4ea7e339810655bfd7c1a2b9f1a87d32",
+      "pass": true,
+      "exit": 0
+    },
+    {
+      "script": "qa/v8_signing_notice_test.mjs",
+      "scriptSha256": "6005fb460913fa06776c747cd3cb1c822787cf89831cfb1f3dbb9884b15b1fe5",
+      "pass": true,
+      "exit": 0
+    },
+    {
+      "script": "qa/v8_layout_test.mjs",
+      "scriptSha256": "34a4df9359f1cf71965670756d4077043024faa6e153cc4354870da0049d7939",
+      "pass": true,
+      "exit": 0
+    },
+    {
+      "script": "qa/v8_mobile_journey_test.mjs",
+      "scriptSha256": "5ad55fc485e0f05f1108e1bf2885aa22fcdea14e835c4d25820a3355fb1e940e",
+      "pass": true,
+      "exit": 0
+    },
+    {
+      "script": "qa/v8_reveal_test.mjs",
+      "scriptSha256": "00961e1fc92d03e8093ed27049e414f12be3d99b6ec4c17930eaa62f80a963a9",
+      "pass": true,
+      "exit": 0
+    },
+    {
+      "script": "qa/v8_player_clarity_test.mjs",
+      "scriptSha256": "85d9bc2cd2123b4409a0896ee4375940c5552c45e8e9cbbfe1f2a83ee9e9d1d8",
+      "pass": true,
+      "exit": 0
+    },
+    {
+      "script": "qa/v8_player_journey_test.mjs",
+      "scriptSha256": "f2ae58558f229f29f5822eafb20a54b2716f4d729156019cfa8f3f4e66a802b3",
+      "pass": true,
+      "exit": 0
+    },
+    {
+      "script": "qa/v8_signing_understanding_test.mjs",
+      "scriptSha256": "29e5405d1c67dd7f8e42a2030dcfa382a18a662c370abecfcae7fb9d2b337ade",
+      "pass": true,
+      "exit": 0
+    }
+  ]
+}

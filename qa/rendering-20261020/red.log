@@ -1,0 +1,10 @@
+{"errors":[],"rows":[{"name":"club-priorities","count":0},{"name":"speed-notice","text":"Signing speed 2×","color":"rgb(241, 245, 250)","background":"rgb(230, 250, 151)","contrast":1.0376414038774582},{"name":"draw","heights":[310,310,310,310,310,310,310,310],"mine":1},{"name":"skills","width":320,"font":16,"overlap":["Temperament"]},{"name":"skills","width":320,"font":24,"overlap":["Temperament"]},{"name":"skills","width":320,"font":32,"overlap":["Temperament","Leadership"]},{"name":"skills","width":390,"font":16,"overlap":["Temperament"]},{"name":"skills","width":390,"font":24,"overlap":["Temperament"]},{"name":"skills","width":390,"font":32,"overlap":["Temperament"]},{"name":"skills","width":760,"font":16,"overlap":["Temperament"]},{"name":"skills","width":760,"font":24,"overlap":["Temperament"]},{"name":"skills","width":760,"font":32,"overlap":["Temperament"]},{"name":"skills","width":1280,"font":16,"overlap":["Temperament"]},{"name":"skills","width":1280,"font":24,"overlap":["Temperament"]},{"name":"skills","width":1280,"font":32,"overlap":["Temperament"]}]}
+AssertionError [ERR_ASSERTION]: three useful club priorities
+    at /workspace/scratch/24b2d895d4e2/gcc/qa/rendering-20261020/review.cjs:5:154 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}

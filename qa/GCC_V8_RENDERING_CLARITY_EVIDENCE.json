@@ -1,0 +1,24 @@
+{
+  "artifactSha256": "5fc59c8e40456faa9fe4571403aef45ef76da8837732b7392ba27947150cb582",
+  "finalFocusedSuites": 11,
+  "finalExpandedStates": 48,
+  "finalExpandedErrors": 0,
+  "finalExpandedContrastIssues": 0,
+  "earlierCssCandidate": {
+    "sha256": "ed1254f8731d2543635dd9176175998a6fd600f3ea66ed78d59c33e65594d9d3",
+    "generalBrowserStates": 68,
+    "careerBrowserStates": 104,
+    "guideAndDrawStates": 76,
+    "issues": 0,
+    "differenceToFinal": "Only two comparison bar-colour selectors; executable scripts identical. Final comparison/layout/contrast retested in48expanded states."
+  },
+  "broaderLogicCandidate": {
+    "sha256": "099536dc9672dc38d431daa9430117fb7b63e38db5957e977e1fb1847181b6fa",
+    "passed": 63,
+    "failed": 3,
+    "failures": "Exact class-string selectors became obsolete after role classes were added. All three were updated to preserve row-count assertions and passed on final build. Not presented as66final-build passes."
+  },
+  "humanSessions": 0,
+  "newFullCareerRun": false,
+  "contrastLimit": "CSS nearest opaque background scan; gradients and images require visual inspection. Screenshots were inspected separately; this does not certify every possible state."
+}

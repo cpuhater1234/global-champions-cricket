@@ -20,7 +20,7 @@ check(css.includes('.g8selection.g8teamworkspace{grid-template-columns:minmax(0,
 const annual=loadGame(file,818,new Map([['gcc_dynasty_v8',fs.readFileSync(fixturePath('foundation'),'utf8')]]),{strictIds:true}),Y=annual.context.GCC8;
 check(Y.dispatch('continue'),'resume annual fixture');
 for(const p of Y.roster())check(Y.squadRoster().includes(Y.esc(p.name)),'complete fifteen visible in roster markup');
-check((Y.views.team().match(/class="g8slot"/g)||[]).length===11,'all eleven order slots rendered');
+check((Y.views.team().match(/class="g8slot(?: [^"]*)?"/g)||[]).length===11,'all eleven order slots rendered');
 check(Y.dispatch('offseason'),'enter offseason');for(const c of annual.G.state.league){for(let i=0;i<2;i++){const id=annual.G.state.teams[c.abbr].pop();annual.G.byId(id).draftedBy=null;}}
 for(const a of ['annualDraw','revealAll','annualDraft'])check(Y.dispatch(a),a);
 check(Y.dispatch('draftDetail',['analysis']),'annual squad analysis');snapshots.annualAnalysis={stage:'',hud:'',dialog:annual.get('g8dialogContent').innerHTML};check(annual.context.GCC8_CLOCK.paused,'annual detail pauses draft');check(Y.dispatch('close'),'close annual detail');
