@@ -1,0 +1,17 @@
+{
+  "artifactSha256": "5fc59c8e40456faa9fe4571403aef45ef76da8837732b7392ba27947150cb582",
+  "rows": [
+    {
+      "test": "v8_comparison_intent_test.mjs",
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: opening comparison must not invent an alternative\n\n87 !== null\n\n    at file:///workspace/scratch/24b2d895d4e2/gcc/qa/v8_comparison_intent_test.mjs:11:8\n    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)\n    at async node:internal/modules/esm/loader:643:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: 87,\n  expected: null,\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.19.0\n"
+    },
+    {
+      "test": "v8_selection_recovery_test.mjs",
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: clearing the XI returns narrow-screen players to the available squad\n+ actual - expected\n\n+ undefined\n- 'squad'\n\n    at file:///workspace/scratch/24b2d895d4e2/gcc/qa/v8_selection_recovery_test.mjs:4:90\n    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)\n    at async node:internal/modules/esm/loader:643:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: undefined,\n  expected: 'squad',\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.19.0\n"
+    }
+  ]
+}

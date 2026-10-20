@@ -1,18 +1,20 @@
 # Global Champions Cricket: current v8 handoff
 
-Updated 20 October 2026. This replaces the obsolete initial-scaffold handoff. A playable v8 exists and has received substantial gameplay, state, native interaction and visual testing. Do not restart the rebuild or revert to the old cream theme.
+Updated 21 October 2026. This replaces the obsolete initial-scaffold handoff. A playable v8 exists and has received substantial gameplay, state, native interaction and visual testing. Do not restart the rebuild or revert to the old cream theme.
 
 ## Current source and delivery
 
 Repository: `cpuhater1234/global-champions-cricket`.
 Working branch: `work/v8-game-first-rebuild`. Fetch its current head before editing or publishing. `main` is not automatically promoted.
 
-Latest versioned playable: `game/gcc_v8_rendering_clarity.html`.
+Latest versioned playable: `game/gcc_v8_decision_clarity.html`.
 Canonical continuation build: `game/gcc_v8_quiet_arcade.html`, copied from the latest verified versioned build.
-Delivered filename: `GCC_v8_Rendering_Clarity.html`.
-Final rendering-clarity SHA-256: `5fc59c8e40456faa9fe4571403aef45ef76da8837732b7392ba27947150cb582`.
+Delivered filename: `GCC_v8_Decision_Clarity.html`.
+Final decision-clarity SHA-256: `bc1a0a884e4666e16eb1e7039de246147d8aa1c103ef5b4a7c316bfbe292e41d`.
 
 Read the latest review before changing anything:
+
+- `docs/GCC_V8_DECISION_CLARITY.md` and `qa/GCC_V8_DECISION_CLARITY_EVIDENCE.json`. Repairs arbitrary automatic comparisons and two real narrow-screen XI transitions. Final evidence: 60 expanded states, native comparison keyboard checks, fresh native 390px draft-to-first-match/reload, five focused suites and one runtime season. These are informed tests; human and independent cold-player evidence remains open. Do not repeat the previous assessment-to-completion overclaim.
 
 - `docs/GCC_V8_RENDERING_CLARITY.md` and `qa/GCC_V8_RENDERING_CLARITY_EVIDENCE.json`. Direct player reports exposed transient/expanded states missed previously. This pass fixes reported rendering and changes comparison actions; final48expanded cases and11focused suites pass. Broader browser evidence is scoped to identical scripts with final comparison-bar CSS retested separately.
 

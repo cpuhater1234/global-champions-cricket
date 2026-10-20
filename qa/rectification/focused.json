@@ -1,0 +1,35 @@
+{
+  "artifactSha256": "bc1a0a884e4666e16eb1e7039de246147d8aa1c103ef5b4a7c316bfbe292e41d",
+  "rows": [
+    {
+      "test": "v8_comparison_intent_test.mjs",
+      "exitCode": 0,
+      "stdout": "Comparison intent: all assertions passed; VM commands only.\n",
+      "stderr": ""
+    },
+    {
+      "test": "v8_selection_recovery_test.mjs",
+      "exitCode": 0,
+      "stdout": "Selection recovery: all assertions passed; no geometry claim.\n",
+      "stderr": ""
+    },
+    {
+      "test": "v8_decision_tools_test.mjs",
+      "exitCode": 0,
+      "stdout": "{\n  checks: 34,\n  scope: 'Read-only comparison, filters, coverage and annual summary; real-script VM commands.'\n}\n",
+      "stderr": ""
+    },
+    {
+      "test": "v8_player_journey_test.mjs",
+      "exitCode": 0,
+      "stdout": "{\n  \"checks\": 20,\n  \"failures\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "test": "v8_team_workspace_test.mjs",
+      "exitCode": 0,
+      "stdout": "{\n  checks: 18,\n  scope: 'Real-script VM selection, swap, reorder and complete lineup markup; no rendered alignment evidence'\n}\n",
+      "stderr": ""
+    }
+  ]
+}

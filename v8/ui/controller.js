@@ -150,25 +150,26 @@
  bind('comparePlayers',['team','draft','dynasty'],(id,target)=>{
   assert(!s.pendingSwapIn,'Finish or cancel the current swap first.');assert(!ui.modal||['player','compare'].includes(ui.modal),'Close the current decision first.');
   const p=G.byId(Number(id)),options=X.comparisonCandidates(id);assert(p&&options.length,'Choose a current squad or draft player.');
-  const q=target==null?options[0]:options.find(x=>x.id===Number(target));assert(q,'Choose another current player.');ui.comparePlayer=p.id;ui.compareTarget=q.id;
+  const q=target==null?null:options.find(x=>x.id===Number(target));assert(target==null||q,'Choose another current player.');ui.comparePlayer=p.id;ui.compareTarget=q?.id??null;
   const mine=X.draftCurrent(annual())?.club.abbr===own(),choose=x=>{
    if((ui.view==='draft'||annual())&&mine&&draftable(x.id))return btn('Pick '+x.name,'draftPlayer',[x.id],'g8primary');
    if(ui.view==='team'&&!s.xi.includes(x.id)&&injury(x)?.status!=='OUT')return btn(s.xi.length===11?'Swap '+x.name+' into XI':'Select '+x.name,s.xi.length===11?'swapIn':'select',[x.id],'g8primary');
    return '';
   };
-  modal('Compare your options',`<label class="g8comparechoice" for="g8compareTarget">Choose an alternative to ${esc(p.name)}<select id="g8compareTarget" data-input="compareTarget">${options.map(x=>`<option value="${x.id}" ${x.id===q.id?'selected':''}>${esc(x.name)} · ${esc(X.roleLine(x))} · ${x.overall}${s.xi.includes(x.id)?' · In XI':''}</option>`).join('')}</select></label>${X.playerComparison(p,q,{[p.id]:choose(p),[q.id]:choose(q)})}<div class="g8actions">${btn('Back to players','close',[],'g8ghost')}</div>`,'compare');
+  const option=x=>`<option value="${x.id}" ${x.id===q?.id?'selected':''}>${esc(x.name)} · ${esc(X.roleLine(x))} · ${x.overall}${s.xi.includes(x.id)?' · In XI':''}</option>`,same=options.filter(x=>x.role===p.role),other=options.filter(x=>x.role!==p.role);
+  modal('Compare your options',`<label class="g8comparechoice" for="g8compareTarget">Compare ${esc(p.name)} with<select id="g8compareTarget" data-input="compareTarget"><option value="" disabled ${q?'':'selected'}>Choose a player</option>${same.length?`<optgroup label="Same role">${same.map(option).join('')}</optgroup>`:''}${other.length?`<optgroup label="Other roles">${other.map(option).join('')}</optgroup>`:''}</select></label>${q?X.playerComparison(p,q,{[p.id]:choose(p),[q.id]:choose(q)}):`<p class="g8comparecontext">Choose the player you are deciding between. Same-role options appear first.</p>`}<div class="g8actions">${btn('Back to players','close',[],'g8ghost')}</div>`,'compare');
  });
 
  bind('draftPlayer',['draft','dynasty'],id=>{assert(ui.view==='draft'||annual(),'The draft is not open.');assert(!ui.modal||ui.modal==='player'&&ui.selectedPlayer===Number(id)||ui.modal==='compare'&&[ui.comparePlayer,ui.compareTarget].includes(Number(id)),'Close the current prompt before picking.');const current=X.draftCurrent(annual());assert(current?.club.abbr===own(),'Another club is on the clock.');assert(draftable(id),'That player is no longer on the board.');closeDialog();if(annual())D.userAnnualDraft(Number(id));else G.userDraft(Number(id));announce(`${G.byId(Number(id)).name} joins your squad.`);});
  bind('team',['draft','team'],()=>{if(ui.view==='team'){closeDialog();return;}assert(s.pickIndex>=120&&roster().length===15,'Finish the draft first.');G.enterTeamRoom();ui.teamReturn='season';setView('team');});
  bind('editXI',['season','finals'],from=>{ui.squadFilter='ALL';if(ui.view==='finals')assert(s.finals?.stage==='ready'&&s.finals.top.some(c=>c.abbr===own())||s.finals?.stage==='gf-ready'&&[s.finals.gfPair.home,s.finals.gfPair.away].some(c=>c.abbr===own()),'Your club has no pending finals match.');ui.teamReturn=from==='finals'?'finals':'season';G.go('team');setView('team');});
- bind('select',['team'],id=>{assert(roster().some(p=>p.id===Number(id)),'Choose a player from your squad.');assert(s.xi.length<11&&!s.xi.includes(Number(id)),'The XI is already full.');assert(injury(G.byId(Number(id)))?.status!=='OUT','That player is unavailable.');closeDialog();G.toggleXI(Number(id));if(s.xi.length===11)ui.teamPane='xi';});
+ bind('select',['team'],id=>{assert(roster().some(p=>p.id===Number(id)),'Choose a player from your squad.');assert(s.xi.length<11&&!s.xi.includes(Number(id)),'The XI is already full.');assert(injury(G.byId(Number(id)))?.status!=='OUT','That player is unavailable.');closeDialog();G.toggleXI(Number(id));ui.teamPane=s.xi.length===11?'xi':'squad';});
  bind('remove',['team'],id=>{assert(s.xi.includes(Number(id)),'That player is not in the XI.');closeDialog();G.removeXI(Number(id));ui.teamPane='squad';pendingFocus='#g8select-'+id;});
  bind('move',['team'],(id,dir)=>{assert(s.xi.includes(Number(id))&&[-1,1].includes(Number(dir)),'Choose a valid place in the batting order.');G.moveBattingPlayer(Number(id),Number(dir));if(ui.modal==='player'){inspect(Number(id));content.querySelector('[data-action=\"move\"]:not(:disabled)')?.focus({preventScroll:true});}});
  bind('swapIn',['team'],id=>{assert(roster().some(p=>p.id===Number(id))&&!s.xi.includes(Number(id))&&injury(G.byId(Number(id)))?.status!=='OUT','Choose an available player from the bench.');closeDialog();ui.teamPane='xi';G.beginSwap(Number(id));pendingFocus='[data-action="swapOut"]';});
  bind('swapOut',['team'],id=>{assert(s.pendingSwapIn&&s.xi.includes(Number(id)),'Choose a player to replace.');const incoming=s.pendingSwapIn;G.replaceXI(Number(id));pendingFocus='#g8xi-'+incoming;});
  bind('cancelSwap',['team'],()=>{const incoming=s.pendingSwapIn;ui.teamPane='squad';G.cancelSwap();pendingFocus='#g8select-'+incoming;});
- bind('clearXI',['team'],()=>G.clearXI());
+ bind('clearXI',['team'],()=>{G.clearXI();ui.teamPane='squad';pendingFocus='#g8squadrole';});
  bind('naturalOrder',['team'],()=>G.autoOrderXI());
  bind('draftDetail',['draft','dynasty'],kind=>{
   assert(ui.view==='draft'||annual(),'The draft room is closed.');
