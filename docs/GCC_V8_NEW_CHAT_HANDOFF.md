@@ -79,3 +79,6 @@ See docs/GCC_V8_SAVE_VISIBILITY_REVIEW.md. New artifact hash add512cdc4f7945924b
 
 ## Draft and scouting presentation follow-up
 See docs/GCC_V8_SCOUT_CLARITY_REVIEW.md and qa/scout-clarity. Current artifact hash 20106af30b6002b05f3e05ce7a1ac7f4ecc7eee363e0001c8eaef23a5952c3c3. Detailed skills grouped and cricket terminology revised; header sizing, straight-toe bat icon, latest-signing sidebar and XI rating contrast repaired. Comparison logic unchanged. Builder now replaces data and screens modules as well as controller/offseason, and applies source cricket SVG.
+
+## Player-facing audit after scout clarity
+Read docs/GCC_V8_PLAYER_FACING_REVIEW.md. Inspection only; no product changes. Fresh 1280/390 native opening capture through first pick under qa/player-facing-review. Confirmed layout-shifting draft feedback, long mobile intro/club-choice pacing, repeated signing explanation and result Round 1 vs global Round 2 context. Prioritised next pass recorded. Real photos, systematic motion, finals/archive/end-career visual replay and independent enjoyment remain outside this inspection.
