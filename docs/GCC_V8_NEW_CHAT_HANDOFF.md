@@ -1,5 +1,38 @@
 # Global Champions Cricket: current v8 handoff
 
+## Latest transition checkpoint: 22 October 2026
+
+This section supersedes older build hashes and status entries below. The user asked only to prepare a new-chat transition and has no further feedback yet. Do not invent new requirements or restart the rebuild. Continue from this checkpoint when Tom supplies his next instruction.
+
+### Authoritative playable
+- Repository: cpuhater1234/global-champions-cricket; branch: work/v8-game-first-rebuild. Latest playable commit: 6d251407e5533e829397a8f3cb785f24cc6cadec; tree:65f10e8e44dee4b92dcd5e0cfc2ae9f6d9ebf729. A later handoff-only commit may sit above it. Fetch the branch before editing.
+- game/gcc_v8_product_candidate.html and game/gcc_v8_quiet_arcade.html are identical. SHA256:a875259ab3a5857e90d1c1cb225387bcd0d04f268b756eb9a5895bd233277841. Blob:d20b166f75efb76ba99e6cf64a73c4e891be353b.
+- Delivered local path:/workspace/scratch/24b2d895d4e2/GCC_v8_Career_Clarity.html. Existing Library identity:libfile_ebabb63004ac81919b41b246675c703d, current version31. Replace this same item with the retained version guard; do not create another variant. Local xattr records31.
+
+### Latest completed presentation work
+- User-supplied bat, stumps and stitched ball faithfully traced into SVG; use these, not improvised cricket drawings. Sources:v8/assets/tabler/cricket.svg, stumps.svg, cricket-ball.svg. Larger translucent watermarks sit behind panel content. Old unused illustrated-pitch helper replaced. No player-logo decorations.
+- Home has an organised title/action panel and stadium panel, equal width and height on desktop, stacked on mobile. Format row centred. Start career first/primary; Continue career second with saved club and season beside it. Restart still requires confirmation.
+- Header slogan:BUILD YOUR XI. / LEAVE A LEGACY. in two deliberate lines. Header has restrained colour depth. Background has visible but subtle dotted grain/diagonal texture and blue-green shading. User said the first texture appeared unchanged, so the final version is stronger. Preserve random real stadium photography; QA blocks photos and therefore screenshots show neutral venue fallback, not a product decision to remove photos.
+- Simple confirmation dialogs have centred headings, copy and actions. X occupies its own top corner row; redundant game-name eyebrow hidden to avoid cramped wrapping. Detailed scouts, comparisons and scorebooks retain readable data alignment.
+- Menu trigger AND its buttons have hover/pressed/focus-visible feedback. Dropdown closes on valid commands, screen changes, outside click and Escape. Escape returns focus to summary. How to play opens correctly.
+- Breakaway screen no longer has the story disclosure. Menu has The breakaway story, rewritten as a short alternate-history cricket feature with section headings and spaced paragraphs.
+- Menu now also has How it works, formatted using the same feature style. Explains ratings, roles/XI balance, conditions, match uncertainty, watching speed and career development without revealing hidden formulae. How to play remains a separate practical guide.
+- Draft-order cards read Pick with numerals1–8, no leading zeros. Same order-card helper serves foundation and annual draws. Club-number labels were not changed.
+
+### Verification and limits
+Final exact build passed twelve home geometry cases, twelve How it works modal cases (four widths and16/24/32px root text), modal close/menu behaviour, and an actual native opening flow verifying Pick1–8. Latest menu lifecycle and prompt fixes have targeted browser checks in qa/menu-dismissal and qa/prompt-alignment; source tests in qa/breakaway-story/how-it-works.cjs. Earlier broader header/watermark builds passed228 geometry/contrast cases across entry, XI, live match, finals, review/archive and synthetic ending layouts. Do not present those earlier broad suites as rerun on the final copy-only/texture/label update. Native two-match/reload was verified before latest menu-guide additions. No claim of human enjoyment, visual perfection, empirical cricket calibration or release readiness.
+
+### Working methods and open work
+- Current scratch repo is a partial checkout without .git. Builder:python qa/completion/build_candidate.py. It reconstructs the artifact from the verified core-loop base plus source modules/CSS, engine patches and supplied SVGs. Edit source and rebuild, then copy verified candidate to canonical/delivered files.
+- GitHub is authorised; do not keep asking approval. Use explicit changed-file Git tree entries atop the current remote tree, exact expected head lease, no force, preserve unrelated remote files. Do not promote main or deploy.
+- Browser runtime:/workspace/scratch/24b2d895d4e2/browser-runtime/chromium; recreate /tmp/gcc-chromium symlink if needed. Tool refreshes can clear /tmp. Playwright is available. Real external photos are blocked by the QA scripts intentionally.
+- Preserve accepted arcade styling, manual XI, save compatibility, fixed cricket rules, development feedback, annual retained-XI flow, calibrated new entrants and repaired pick-trading valuation. Read the structural/calibration review documents below before further model work.
+- Broader strategic exploit checks (conditions, batting order, trading), player-data provenance, first-time human understanding and sustained nineteen-season enjoyment remain open. Prior simulation coverage is not enjoyment evidence.
+- Keep explanations short, no em dashes or perfection claims. User wants concrete fixes and careful visual checks, not repeated approvals or more invented cricket assets.
+
+## Earlier history and supporting detail
+
+
 Updated 21 October 2026. This replaces the obsolete initial-scaffold handoff. A playable v8 exists and has received substantial gameplay, state, native interaction and visual testing. Do not restart the rebuild or revert to the old cream theme.
 
 ## Current source and delivery
