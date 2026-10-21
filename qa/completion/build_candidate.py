@@ -7,7 +7,7 @@ root = Path(__file__).resolve().parents[2]
 base = root / 'game/gcc_v8_core_loop.html'
 assert hashlib.sha256(base.read_bytes()).hexdigest() == 'a9ea493eebb4ddaa6146eaaf6ece06a3e4d1e0eb85cfd00edda99b11c21f0189'
 html = base.read_text()
-for name, marker in {'offseason': 'X.offseasonMarket=()=>', 'controller': "bind('comparePlayers'", 'data': 'X.playerRead=p=>', 'screens': 'X.orderReveal='}.items():
+for name, marker in {'offseason': 'X.offseasonMarket=()=>', 'controller': "bind('comparePlayers'", 'data': 'X.playerRead=p=>', 'screens': 'X.orderReveal=', 'match_story': 'X.ballReveal=()=>'}.items():
     matches = [m for m in re.finditer(r'<script\b[^>]*>([\s\S]*?)</script>', html) if marker in m[1]]
     assert len(matches) == 1, name
     m = matches[0]

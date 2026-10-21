@@ -1,0 +1,66 @@
+{
+  "artifactSha256": "1b6376ea5d1358d12daea4932b7f9ec79d41fa1fb1220fd8cddf50c30bfedb3d",
+  "artifactUnchanged": true,
+  "rows": [
+    {
+      "test": "v8_offseason_decisions_test.mjs",
+      "exitCode": 0,
+      "stdout": "Offseason decisions assertions passed.\n",
+      "stderr": ""
+    },
+    {
+      "test": "v8_trade_review_safety_test.mjs",
+      "exitCode": 0,
+      "stdout": "Trade review safety passed.\n",
+      "stderr": ""
+    },
+    {
+      "test": "v8_offseason_test.mjs",
+      "exitCode": 0,
+      "stdout": "{\n  artifactSha256: '1b6376ea5d1358d12daea4932b7f9ec79d41fa1fb1220fd8cddf50c30bfedb3d',\n  scope: 'Actual-script VM season review, named list movements, rolling agreements, optional/cancelled releases and trades, automatic CPU market, cold squad-update resume, draw closure, zero-pick/manual XI/2026 boundaries, malformed metadata and exact 2008 skill preservation. No native rendered geometry or fun certification.',\n  checks: 75,\n  errors: []\n}\n",
+      "stderr": ""
+    },
+    {
+      "test": "v8_squad_management_test.mjs",
+      "exitCode": 0,
+      "stdout": "{\n  checks: 57,\n  scope: 'Real completed-2009 save to 2010 management, release consequences/cancel, actual trade review/edit/accept/reject, cold resume; VM only'\n}\n",
+      "stderr": ""
+    },
+    {
+      "test": "v8_core_loop_hierarchy_test.mjs",
+      "exitCode": 0,
+      "stdout": "Core-loop hierarchy assertions passed.\n",
+      "stderr": ""
+    },
+    {
+      "test": "v8_comparison_intent_test.mjs",
+      "exitCode": 0,
+      "stdout": "Comparison intent: all assertions passed; VM commands only.\n",
+      "stderr": ""
+    },
+    {
+      "test": "v8_selection_recovery_test.mjs",
+      "exitCode": 0,
+      "stdout": "Selection recovery: all assertions passed; no geometry claim.\n",
+      "stderr": ""
+    },
+    {
+      "test": "v8_decision_tools_test.mjs",
+      "exitCode": 0,
+      "stdout": "{\n  checks: 34,\n  scope: 'Read-only comparison, filters, coverage and annual summary; real-script VM commands.'\n}\n",
+      "stderr": ""
+    },
+    {
+      "test": "v8_player_journey_test.mjs",
+      "exitCode": 0,
+      "stdout": "{\n  \"checks\": 20,\n  \"failures\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "test": "v8_team_workspace_test.mjs",
+      "exitCode": 0,
+      "stdout": "{\n  checks: 18,\n  scope: 'Real-script VM selection, swap, reorder and complete lineup markup; no rendered alignment evidence'\n}\n",
+      "stderr": ""
+    }
+  ]
+}
