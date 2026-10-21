@@ -23,6 +23,13 @@ html = html[:start] + (root / 'v8/ui/workspace.css').read_text().strip() + old[l
 icon=(root/'v8/assets/tabler/cricket.svg').read_text()
 body=re.search(r'<svg[^>]*>([\s\S]*?)</svg>',icon)[1]
 html=re.sub(r'(<symbol id="g8icon-cricket"[^>]*>)[\s\S]*?(</symbol>)',lambda m:m[1]+body+m[2],html,count=1)
+# Structural career feedback and a saved, explicit previous-XI choice.
+start = html.index('window.GCC8_DEVELOPMENT=(()=>{')
+end = html.index('\n})();', start) + len('\n})();')
+html = html[:start] + (root/'v8/core/development.js').read_text().strip() + html[end:]
+old = 'const careerBefore=window.GCC8_DEVELOPMENT.captureBefore(state.pool,state.year,state.teams);'
+assert html.count(old)==1
+html = html.replace(old, 'state.dynasty.previousXI={year:state.year,ids:[...state.xi],order:[...state.battingOrder]};'+old)
 output = root / 'game/gcc_v8_product_candidate.html'
 output.write_text(html)
 print(hashlib.sha256(output.read_bytes()).hexdigest())

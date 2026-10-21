@@ -10,7 +10,7 @@ Working branch: `work/v8-game-first-rebuild`. Fetch its current head before edit
 Latest versioned playable: `game/gcc_v8_product_candidate.html`.
 Canonical continuation build: `game/gcc_v8_quiet_arcade.html`, copied from the latest verified versioned build.
 Delivered filename: `GCC_v8_Career_Clarity.html`.
-Final career-clarity SHA-256: `fbdf332daf353070410815461ba62a112be14a4354ad82f912229cba4c679291`.
+Final career-clarity SHA-256: `2a8fc0e8ab1a19b7cbc8f1f13dd33c13d4d60fe6a05f724d13700eebffda50ba`.
 
 Read the latest review before changing anything:
 
@@ -95,3 +95,7 @@ See docs/GCC_V8_CRICKET_DETAIL_REVIEW.md. Artifact hash 6b4f46967d347f3f23c67554
 
 ## Structural career-risk investigation
 Read docs/GCC_V8_STRUCTURAL_RISK_REVIEW.md and qa/structural-risk/README.md. Investigation only; playable hash remains 6b4f46967d347f3f23c67554dfbb3c8f19f7af732c7fb6fa2086036715e7d030. One actual 19-season full-flow VM career, twelve controlled simplified policy cohorts, three CPU-board probes and two native annual paths completed. Confirmed annual friction (21 clicks with two picks, 19 with no vacancies), overall-only development feedback concealing seven flat-overall skill changes, and one-world development-driven mean rating rise 77.858 to 90.042. Overall-only 54.4% versus balanced-current 53.9% with mixed paired results: no dominant strategy established. Opening CPU top-ten boards overlap heavily, but actual squads and all eight champions varied. No product fixes, human enjoyment evidence or release gates claimed. Next work: remove no-decision annual ceremony while preserving explicit manual XI; expose skill changes with legacy-save fallback; confirm rating inflation across full-flow worlds before balance tuning. Exact scope and unclosed questions are in the report.
+
+
+## Career friction and development implementation
+Read docs/GCC_V8_CAREER_EXPERIENCE_REVIEW.md and qa/career-experience/README.md. Current playable hash 2a8fc0e8ab1a19b7cbc8f1f13dd33c13d4d60fe6a05f724d13700eebffda50ba; same delivered filename, version18. Full squad skips annual draw ceremony while CPUs still draft; explicit retain-available-XI action preserves prior batting order, never selects replacements and still requires lodging. Saved previous-XI snapshot at annual boundary. Per-skill development recording with overall-only legacy fallback, relevant changes in annual/scout disclosures; scout badge contrast and compact header word splitting fixed. Final ten suites,156 render cases,four native annual routes pass. Two additional full-flow careers (seeds202/303) began before final scout-only cosmetic refinements; exact-final continuation exercises2021–2026 from a real completed2020 save and verifies archive/end/reload. No human enjoyment claim. Twelve-world career-population probe confirms rating scale shift; foundation survivors themselves decline, so investigate incoming-cohort peak calibration and selection alongside young-player growth. Do not blanket-nerf saved outcomes or reroll careers. CPU weights/match logic unchanged. User requests continuing what remains unfinished; next priority is consistent rating calibration evidence and broader exploit/CPU decision assessment, preserving these delivered improvements.
