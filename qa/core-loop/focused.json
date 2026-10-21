@@ -1,0 +1,41 @@
+{
+  "artifactSha256": "a9ea493eebb4ddaa6146eaaf6ece06a3e4d1e0eb85cfd00edda99b11c21f0189",
+  "rows": [
+    {
+      "test": "v8_core_loop_hierarchy_test.mjs",
+      "exitCode": 0,
+      "stdout": "Core-loop hierarchy assertions passed.\n",
+      "stderr": ""
+    },
+    {
+      "test": "v8_comparison_intent_test.mjs",
+      "exitCode": 0,
+      "stdout": "Comparison intent: all assertions passed; VM commands only.\n",
+      "stderr": ""
+    },
+    {
+      "test": "v8_selection_recovery_test.mjs",
+      "exitCode": 0,
+      "stdout": "Selection recovery: all assertions passed; no geometry claim.\n",
+      "stderr": ""
+    },
+    {
+      "test": "v8_decision_tools_test.mjs",
+      "exitCode": 0,
+      "stdout": "{\n  checks: 34,\n  scope: 'Read-only comparison, filters, coverage and annual summary; real-script VM commands.'\n}\n",
+      "stderr": ""
+    },
+    {
+      "test": "v8_player_journey_test.mjs",
+      "exitCode": 0,
+      "stdout": "{\n  \"checks\": 20,\n  \"failures\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "test": "v8_team_workspace_test.mjs",
+      "exitCode": 0,
+      "stdout": "{\n  checks: 18,\n  scope: 'Real-script VM selection, swap, reorder and complete lineup markup; no rendered alignment evidence'\n}\n",
+      "stderr": ""
+    }
+  ]
+}

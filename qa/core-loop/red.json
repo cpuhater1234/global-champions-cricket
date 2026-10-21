@@ -1,0 +1,6 @@
+{
+  "artifactSha256": "bc1a0a884e4666e16eb1e7039de246147d8aa1c103ef5b4a7c316bfbe292e41d",
+  "exitCode": 1,
+  "stdout": "",
+  "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: reviewed XI has an explicit route back\n    at file:///workspace/scratch/24b2d895d4e2/gcc/qa/v8_core_loop_hierarchy_test.mjs:4:33\n    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)\n    at async node:internal/modules/esm/loader:643:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.19.0\n"
+}

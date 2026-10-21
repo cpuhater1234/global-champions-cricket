@@ -1,0 +1,14 @@
+{
+  "artifactSha256": "a9ea493eebb4ddaa6146eaaf6ece06a3e4d1e0eb85cfd00edda99b11c21f0189",
+  "baseSha256": "bc1a0a884e4666e16eb1e7039de246147d8aa1c103ef5b4a7c316bfbe292e41d",
+  "reports": [
+    "qa/core-loop/focused.json",
+    "qa/core-loop/expanded/report.json",
+    "qa/core-loop/results/report.json",
+    "qa/core-loop/native/report.json"
+  ],
+  "seasonReport": "qa/core-loop/season/v8_smoke_results.json",
+  "redReport": "qa/core-loop/red.json",
+  "humanSessions": 0,
+  "releaseReadinessEstablished": false
+}

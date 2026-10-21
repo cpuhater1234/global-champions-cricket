@@ -7,12 +7,14 @@ Updated 21 October 2026. This replaces the obsolete initial-scaffold handoff. A 
 Repository: `cpuhater1234/global-champions-cricket`.
 Working branch: `work/v8-game-first-rebuild`. Fetch its current head before editing or publishing. `main` is not automatically promoted.
 
-Latest versioned playable: `game/gcc_v8_decision_clarity.html`.
+Latest versioned playable: `game/gcc_v8_core_loop.html`.
 Canonical continuation build: `game/gcc_v8_quiet_arcade.html`, copied from the latest verified versioned build.
-Delivered filename: `GCC_v8_Decision_Clarity.html`.
-Final decision-clarity SHA-256: `bc1a0a884e4666e16eb1e7039de246147d8aa1c103ef5b4a7c316bfbe292e41d`.
+Delivered filename: `GCC_v8_Core_Loop.html`.
+Final core-loop SHA-256: `a9ea493eebb4ddaa6146eaaf6ece06a3e4d1e0eb85cfd00edda99b11c21f0189`.
 
 Read the latest review before changing anything:
+
+- `docs/GCC_V8_CORE_LOOP_REVIEW.md` and `qa/GCC_V8_CORE_LOOP_EVIDENCE.json`. Direct guarded picks on draft cards, less repeated draft information, explicit midseason XI return, result-first continuation with the actual next opponent. Final evidence: six focused suites, 120 rendered fixture checks, fresh native two-match journey with save/reload and XI review, and one runtime season. Broader offseason design and genuine unfamiliar-player/human enjoyment evidence remain open.
 
 - `docs/GCC_V8_DECISION_CLARITY.md` and `qa/GCC_V8_DECISION_CLARITY_EVIDENCE.json`. Repairs arbitrary automatic comparisons and two real narrow-screen XI transitions. Final evidence: 60 expanded states, native comparison keyboard checks, fresh native 390px draft-to-first-match/reload, five focused suites and one runtime season. These are informed tests; human and independent cold-player evidence remains open. Do not repeat the previous assessment-to-completion overclaim.
 

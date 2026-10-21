@@ -155,3 +155,22 @@ p,small,.g8fine{font-weight:400;line-height:1.5}small,.g8fine{font-size:1rem;col
 @container(max-width:14rem){.g8clubpriorities li{display:block;padding:12px}.g8clubpriorities .g8prioritynumber{margin-bottom:8px}}
 .g8finals .g8fixture>span{color:#bfd2e4}
 .g8comparemetric .g8abilitybar .g8abilitytrack i{background:#c8fa49}.g8comparemetric .g8comparesecond .g8abilitytrack i{background:#80c4f8}
+
+/* Core match loop: the outcome leads, the next decision follows. */
+.g8boardheading{padding:0 0 12px;margin-bottom:16px;border-bottom:2px solid #73c5e1}
+.g8boardheading h2{font-size:1.25rem;color:#eaf5ff;margin:0}
+.g8draftaside .g8drafttip{border-top:1px solid #344c60;padding-top:12px;margin:12px 0 0}
+.g8nextstep{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin:16px 0;padding:16px 20px;border:1px solid #42637b;border-left:4px solid #7fe0ee;border-radius:8px;background:#132b3b;color:#edf5fc}
+.g8nextstep>div{flex:1 1 14rem;min-width:0}
+.g8nextstep .g8eyebrow{margin:0 0 6px;color:#a9dfe8}
+.g8nextstep h2{margin:0;font-size:1.15rem;font-style:normal;text-transform:none;line-height:1.4;overflow-wrap:break-word}
+.g8nextstep>.g8button{flex:0 1 auto;max-width:100%;min-height:48px}
+@media(max-width:600px){.g8nextstep{padding:14px}.g8nextstep>.g8button{flex-basis:100%}.g8boardheading{margin-bottom:12px}}
+
+.g8draftplayer.g8directpick{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:10px;padding:12px}
+.g8directpick .g8candidate{display:grid;grid-template-columns:28px minmax(0,1fr);padding:0;min-height:0;height:100%;gap:10px}
+.g8directpick .g8candidateidentity{min-width:0}
+.g8directpick .g8candidatechoice{display:flex;flex-direction:column;align-items:center;gap:8px;min-width:0}
+.g8directpick .g8candidatechoice .g8button{margin:0;min-height:44px;padding:6px 10px}
+.g8directpick .g8scoutcue{color:#b9d8e9;font-size:1rem;margin-top:4px}
+@container(max-width:20rem){.g8directpick .g8candidate{grid-column:1/-1;grid-template-columns:minmax(0,1fr)}.g8directpick .g8candidate .g8playeravatar{display:none}.g8directpick .g8candidatechoice{grid-column:1/-1;flex-direction:row;justify-content:space-between}}
