@@ -88,3 +88,6 @@ See docs/GCC_V8_ENTRY_CLARITY_REVIEW.md. Artifact hash fbb56696056606156f336d565
 
 ## Match / XI / career presentation
 See docs/GCC_V8_MATCH_CAREER_REVIEW.md. New artifact hash 1b6376ea5d1358d12daea4932b7f9ec79d41fa1fb1220fd8cddf50c30bfedb3d. Score-first ball playback, compact controls after batters/bowler, readable boundary markers, no empty trail reserve; sticky XI command panel; shared archive/final career records; finals name/badge wrapping. Current QA in qa/match-career: 156 match/career +84 annual render cases, ten suites, fresh native two-match/reload. Synthetic long archive and 2026 layout explicitly distinguished from actual career play. Builder replaces match_story too. Independent enjoyment/platform/model/provenance gates remain open.
+
+## Cricket detail / alignment follow-up
+See docs/GCC_V8_CRICKET_DETAIL_REVIEW.md. Artifact hash 6b4f46967d347f3f23c67554dfbb3c8f19f7af732c7fb6fa2086036715e7d030. Draft avatars and Pick icons removed, bat redrawn with long blade/narrow handle, club-guide side-by-side panels equal height, standalone takeover/intro/scout decision actions centred, clearer cricket guidance and compact trade spacing. 60 specific +84 annual layout cases, ten suites, fresh native two-match/reload pass. Builder now also patches components/roles. Remaining engagement/completion gates still open.

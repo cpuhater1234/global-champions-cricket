@@ -242,3 +242,9 @@ p,small,.g8fine{font-weight:400;line-height:1.5}small,.g8fine{font-size:1rem;col
 .g8livefixture>span{overflow-wrap:anywhere;white-space:normal}.g8heading h1{overflow-wrap:anywhere}
 #g8stage[data-view="finals"] .g8fixture h2{font-size:1.25rem;font-style:normal;text-transform:none;overflow-wrap:anywhere}#g8stage[data-view="finals"] .g8badge{min-width:max-content;padding-inline:.3rem}#g8stage[data-view="finals"] .g8eyebrow,#g8stage[data-view="finals"] .g8groundnote p,#g8stage[data-view="finals"] .g8matcharena p{overflow-wrap:anywhere;white-space:normal}
 .g8ballmoment{min-height:0}.g8balltrail{min-height:0}.g8balltrail:empty{display:none}
+/* Draft names and roles carry player identity without decorative avatars. */
+.g8directpick .g8candidate{grid-template-columns:minmax(0,1fr)}
+/* Side-by-side club-guide panels share the same outer edges. */
+.g8clubbrief{align-items:stretch}.g8clubbrief>.g8sheet{margin:0;align-self:stretch;height:auto}.g8clubconfirm{justify-content:center;margin-top:1.25rem}.g8careerintro>.g8actions{justify-content:center}.g8playerdecision{justify-content:center}.g8seasoncomplete{text-align:center}.g8seasoncomplete>.g8button{margin-inline:auto;display:flex;width:max-content}.g8clubcardaction{justify-content:center}
+/* Exchange selections already name each player; keep supporting facts compact. */
+.g8tradepackage .g8tradeplayer{padding-top:.65rem}.g8tradepackage .g8tradeplayer .g8nameandrating{gap:.6rem}.g8tradepackage .g8tradefacts{gap:.4rem;margin:.6rem 0}.g8tradepackage .g8cricketrole{margin:.5rem 0}.g8tradepackage>section{padding:1rem}
