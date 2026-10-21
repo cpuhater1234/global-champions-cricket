@@ -253,3 +253,31 @@ p,small,.g8fine{font-weight:400;line-height:1.5}small,.g8fine{font-size:1rem;col
 @media(max-width:520px){.g8returningxi>.g8button{width:100%}.g8skillchanges li{gap:.4rem}.g8annualdevelopment .g8developmentrow{display:grid}.g8developmentoverall{font-size:1.15rem}}
 @media(max-width:760px){#g8hud .g8hudclub strong{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;overflow-wrap:normal;word-break:normal}}
 .g8developmentbadge{background:#203b3c;border-color:#95c884;color:#e3edf6}.g8developmentbadge b,.g8developmentbadge span{color:#e3edf6!important}
+
+/* Group each decision and its context into a readable surface. */
+.g8welcomepanel,.g8introbrief,.g8careerlaunch,.g8heading{background:#152636;border:1px solid #3b5369;border-radius:12px;box-shadow:0 8px 24px #060e1726}
+.g8welcomepanel{padding:clamp(1.1rem,3vw,2rem);border-top:4px solid #c8fa49;align-self:stretch;display:flex;flex-direction:column;justify-content:center}
+.g8welcomepanel>.g8eyebrow{line-height:1.5;margin-bottom:1rem;color:#b8cfdf}
+.g8welcomepanel>h1{margin-top:0;margin-bottom:0}
+.g8welcomepanel>.g8heroformat{padding-block:1rem;border-block:1px solid #3b5369;gap:.8rem 1.4rem}
+.g8welcomepanel>.g8actions{justify-content:center;margin-top:.25rem}
+.g8introbrief{padding:clamp(1rem,3vw,1.75rem);border-left:4px solid #c8fa49}
+.g8introbrief>h1{margin-top:0;margin-bottom:1rem;line-height:1.15}
+.g8introbrief>p{max-width:65ch;margin:0;color:#bdcfde;font-size:1.1rem;line-height:1.6}
+.g8careersteps{align-items:stretch}
+.g8careersteps li{padding:1.1rem;background:#192e40;border:1px solid #3b5369;border-top:3px solid #72cbd5;border-radius:9px}
+.g8careersteps li:nth-child(2){border-top-color:#c8fa49}
+.g8careersteps li:nth-child(3){border-top-color:#e7ad77}
+.g8careerlaunch{padding:1.1rem 1.5rem;margin-bottom:1.25rem}
+.g8careerlaunch>.g8careerformat{justify-content:center;margin:0;padding-bottom:1rem;border-bottom:1px solid #3b5369;line-height:1.5}
+.g8careerlaunch>.g8actions{justify-content:center;margin-top:1rem}
+.g8heading{padding:1.25rem 1.5rem;border-left:4px solid #72cbd5;align-items:center}
+.g8heading>div:first-child{min-width:0}
+.g8heading h1{margin-top:0;line-height:1.15}
+.g8heading p{margin-bottom:0;max-width:65ch;line-height:1.5;color:#bdcfde}
+@media(max-width:760px){.g8hero{gap:1rem}.g8careersteps{gap:.75rem}.g8careersteps li{padding:1rem}.g8introbrief>p{font-size:1rem}.g8careerlaunch{padding:1rem}.g8heading{padding:1rem;border-left-width:3px}.g8welcomepanel>.g8heroformat{gap:.6rem 1rem}.g8welcomepanel>.g8heroformat span{font-size:1rem;line-height:1.5}}
+
+.g8introbrief{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}.g8introcopy{flex:1 1 300px;min-width:0}.g8introcopy>h1{margin-top:0;line-height:1.2;overflow-wrap:normal;word-break:normal}.g8introcopy>p{margin-bottom:0;color:#bdcfde;font-size:1.1rem;line-height:1.6}.g8introart{flex:0 0 96px;display:grid;place-items:center;color:#edb58d}.g8introart>.g8icon{width:96px;height:112px;flex-basis:96px}.g8arenatitle{display:flex;align-items:center;gap:.75rem;min-width:0}.g8arenatitle>.g8icon{width:48px;height:48px;flex:0 0 48px;color:#b8cfdf}.g8arenaheader{gap:1rem;flex-wrap:wrap}.g8arenaheader>span:last-child{white-space:normal}.g8careersteps{grid-template-columns:repeat(auto-fit,minmax(min(100%,14rem),1fr))}.g8careersteps li{flex-wrap:wrap}.g8careersteps li>div{flex:1 1 10rem}.g8careersteps h2{overflow-wrap:normal;word-break:normal}
+@media(max-width:760px){.g8introcopy{flex-basis:100%}.g8introart{flex-basis:100%;border-top:1px solid #3b5369;padding-top:1rem}.g8introart>.g8icon{height:80px;width:80px}.g8introcopy>p{font-size:1rem}.g8introcopy>h1{font-size:clamp(1.25rem,7vw,1.8rem)}.g8arenatitle>.g8icon{width:40px;height:40px;flex-basis:40px}}
+.g8clock{min-width:0}.g8clock h2{max-width:100%;overflow-wrap:anywhere;word-break:normal;line-height:1.4}
+.g8heroart>.g8arenaheader{display:flex;padding:1rem;align-items:center;justify-content:space-between;background:#192e40}

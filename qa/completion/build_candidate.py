@@ -23,6 +23,12 @@ html = html[:start] + (root / 'v8/ui/workspace.css').read_text().strip() + old[l
 icon=(root/'v8/assets/tabler/cricket.svg').read_text()
 body=re.search(r'<svg[^>]*>([\s\S]*?)</svg>',icon)[1]
 html=re.sub(r'(<symbol id="g8icon-cricket"[^>]*>)[\s\S]*?(</symbol>)',lambda m:m[1]+body+m[2],html,count=1)
+# Supplied cricket illustrations retain their traced contours and inherit UI ink.
+for name in ['stumps','cricket-ball']:
+    asset=(root/f'v8/assets/tabler/{name}.svg').read_text()
+    inner=re.search(r'<svg[^>]*>([\s\S]*?)</svg>',asset)[1]
+    symbol=f'<symbol id="g8icon-{name}" viewBox="0 0 24 24">{inner}</symbol>'
+    html=html.replace('</symbol>', '</symbol>'+symbol,1)
 # Structural career feedback and a saved, explicit previous-XI choice.
 start = html.index('window.GCC8_DEVELOPMENT=(()=>{')
 end = html.index('\n})();', start) + len('\n})();')
