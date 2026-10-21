@@ -1,0 +1,394 @@
+{
+  "finalArtifactSha256": "bf67db340a2f4614d1a5ca58d1fdabe467d673af29ce74a62a7a1b41d366ce1a",
+  "populationProbe": {
+    "worlds": 12,
+    "scope": "Active eligible universe, no recruitment or matches; cohort composition varies by year.",
+    "baseline2026Mean": 87.03736074112157,
+    "candidate2026Mean": 83.80568320558044,
+    "baseline2026Count90": 68.33333333333333,
+    "candidate2026Count90": 27.916666666666668
+  },
+  "fullCareerPairedSeed": 404,
+  "fullCareerScope": "One informed full-flow career per version, same seed and management policy. Candidate prototype, with final pool/outcome equivalence separately tested. No player-directed trades in either career.",
+  "baselineLeague": [
+    {
+      "year": 2008,
+      "meanOverall": 77.69166666666666,
+      "atLeast90": 3,
+      "userPosition": 8,
+      "champion": "THU"
+    },
+    {
+      "year": 2009,
+      "meanOverall": 78.96666666666667,
+      "atLeast90": 3,
+      "userPosition": 5,
+      "champion": "NOT"
+    },
+    {
+      "year": 2010,
+      "meanOverall": 80.34166666666667,
+      "atLeast90": 4,
+      "userPosition": 2,
+      "champion": "DC"
+    },
+    {
+      "year": 2011,
+      "meanOverall": 81.43333333333334,
+      "atLeast90": 6,
+      "userPosition": 8,
+      "champion": "CSK"
+    },
+    {
+      "year": 2012,
+      "meanOverall": 82.45833333333333,
+      "atLeast90": 10,
+      "userPosition": 8,
+      "champion": "HUR"
+    },
+    {
+      "year": 2013,
+      "meanOverall": 82.98333333333333,
+      "atLeast90": 20,
+      "userPosition": 7,
+      "champion": "NOT"
+    },
+    {
+      "year": 2014,
+      "meanOverall": 83.75,
+      "atLeast90": 21,
+      "userPosition": 7,
+      "champion": "HUR"
+    },
+    {
+      "year": 2015,
+      "meanOverall": 84.175,
+      "atLeast90": 22,
+      "userPosition": 7,
+      "champion": "STA"
+    },
+    {
+      "year": 2016,
+      "meanOverall": 84.64166666666667,
+      "atLeast90": 26,
+      "userPosition": 7,
+      "champion": "KKR"
+    },
+    {
+      "year": 2017,
+      "meanOverall": 85.24166666666666,
+      "atLeast90": 29,
+      "userPosition": 6,
+      "champion": "THU"
+    },
+    {
+      "year": 2018,
+      "meanOverall": 85.78333333333333,
+      "atLeast90": 33,
+      "userPosition": 6,
+      "champion": "THU"
+    },
+    {
+      "year": 2019,
+      "meanOverall": 86.25833333333334,
+      "atLeast90": 34,
+      "userPosition": 8,
+      "champion": "NOT"
+    },
+    {
+      "year": 2020,
+      "meanOverall": 86.88333333333334,
+      "atLeast90": 44,
+      "userPosition": 8,
+      "champion": "KKR"
+    },
+    {
+      "year": 2021,
+      "meanOverall": 87.13333333333334,
+      "atLeast90": 50,
+      "userPosition": 8,
+      "champion": "SUR"
+    },
+    {
+      "year": 2022,
+      "meanOverall": 88.025,
+      "atLeast90": 54,
+      "userPosition": 8,
+      "champion": "HUR"
+    },
+    {
+      "year": 2023,
+      "meanOverall": 88.95,
+      "atLeast90": 64,
+      "userPosition": 8,
+      "champion": "STA"
+    },
+    {
+      "year": 2024,
+      "meanOverall": 89.65,
+      "atLeast90": 72,
+      "userPosition": 8,
+      "champion": "HUR"
+    },
+    {
+      "year": 2025,
+      "meanOverall": 89.76666666666667,
+      "atLeast90": 73,
+      "userPosition": 7,
+      "champion": "CSK"
+    },
+    {
+      "year": 2026,
+      "meanOverall": 89.475,
+      "atLeast90": 69,
+      "userPosition": 6,
+      "champion": "SUR"
+    }
+  ],
+  "candidateLeague": [
+    {
+      "year": 2008,
+      "meanOverall": 77.69166666666666,
+      "atLeast90": 3,
+      "userPosition": 8,
+      "champion": "THU"
+    },
+    {
+      "year": 2009,
+      "meanOverall": 78.875,
+      "atLeast90": 3,
+      "userPosition": 1,
+      "champion": "NOT"
+    },
+    {
+      "year": 2010,
+      "meanOverall": 79.88333333333334,
+      "atLeast90": 4,
+      "userPosition": 1,
+      "champion": "CSK"
+    },
+    {
+      "year": 2011,
+      "meanOverall": 80.825,
+      "atLeast90": 6,
+      "userPosition": 6,
+      "champion": "KKR"
+    },
+    {
+      "year": 2012,
+      "meanOverall": 81.63333333333334,
+      "atLeast90": 10,
+      "userPosition": 7,
+      "champion": "SUR"
+    },
+    {
+      "year": 2013,
+      "meanOverall": 82.09166666666667,
+      "atLeast90": 20,
+      "userPosition": 8,
+      "champion": "CSK"
+    },
+    {
+      "year": 2014,
+      "meanOverall": 82.73333333333333,
+      "atLeast90": 20,
+      "userPosition": 5,
+      "champion": "CSK"
+    },
+    {
+      "year": 2015,
+      "meanOverall": 83.08333333333333,
+      "atLeast90": 20,
+      "userPosition": 2,
+      "champion": "CSK"
+    },
+    {
+      "year": 2016,
+      "meanOverall": 83.05,
+      "atLeast90": 23,
+      "userPosition": 8,
+      "champion": "THU"
+    },
+    {
+      "year": 2017,
+      "meanOverall": 83.25833333333334,
+      "atLeast90": 21,
+      "userPosition": 8,
+      "champion": "HUR"
+    },
+    {
+      "year": 2018,
+      "meanOverall": 83.775,
+      "atLeast90": 23,
+      "userPosition": 7,
+      "champion": "STA"
+    },
+    {
+      "year": 2019,
+      "meanOverall": 83.875,
+      "atLeast90": 21,
+      "userPosition": 8,
+      "champion": "SUR"
+    },
+    {
+      "year": 2020,
+      "meanOverall": 84.09166666666667,
+      "atLeast90": 21,
+      "userPosition": 8,
+      "champion": "STA"
+    },
+    {
+      "year": 2021,
+      "meanOverall": 84.125,
+      "atLeast90": 27,
+      "userPosition": 7,
+      "champion": "HUR"
+    },
+    {
+      "year": 2022,
+      "meanOverall": 84.76666666666667,
+      "atLeast90": 27,
+      "userPosition": 8,
+      "champion": "CSK"
+    },
+    {
+      "year": 2023,
+      "meanOverall": 85.44166666666666,
+      "atLeast90": 28,
+      "userPosition": 8,
+      "champion": "CSK"
+    },
+    {
+      "year": 2024,
+      "meanOverall": 86.09166666666667,
+      "atLeast90": 27,
+      "userPosition": 3,
+      "champion": "STA"
+    },
+    {
+      "year": 2025,
+      "meanOverall": 86.54166666666667,
+      "atLeast90": 29,
+      "userPosition": 2,
+      "champion": "DC"
+    },
+    {
+      "year": 2026,
+      "meanOverall": 86.225,
+      "atLeast90": 27,
+      "userPosition": 3,
+      "champion": "STA"
+    }
+  ],
+  "baselinePolicies": [
+    {
+      "policy": "balanced-current",
+      "worlds": 3,
+      "matches": 798,
+      "wins": 430,
+      "winPercentage": 53.88471177944862,
+      "finalsQualifications": 30,
+      "retirements": 55,
+      "meanRunsFor": 150.0375939849624,
+      "meanRunsAgainst": 145.46491228070175
+    },
+    {
+      "policy": "balanced-youth",
+      "worlds": 3,
+      "matches": 798,
+      "wins": 394,
+      "winPercentage": 49.3734335839599,
+      "finalsQualifications": 24,
+      "retirements": 41,
+      "meanRunsFor": 150.71177944862154,
+      "meanRunsAgainst": 147.89097744360902
+    },
+    {
+      "policy": "overall-only",
+      "worlds": 3,
+      "matches": 798,
+      "wins": 434,
+      "winPercentage": 54.3859649122807,
+      "finalsQualifications": 30,
+      "retirements": 58,
+      "meanRunsFor": 149.41854636591478,
+      "meanRunsAgainst": 143.21804511278197
+    },
+    {
+      "policy": "allrounder-heavy",
+      "worlds": 3,
+      "matches": 798,
+      "wins": 398,
+      "winPercentage": 49.87468671679198,
+      "finalsQualifications": 25,
+      "retirements": 51,
+      "meanRunsFor": 156.48370927318297,
+      "meanRunsAgainst": 154.04260651629073
+    }
+  ],
+  "candidatePolicies": [
+    {
+      "policy": "balanced-current",
+      "worlds": 3,
+      "wins": 397,
+      "matches": 798,
+      "winPercentage": 49.74937343358396,
+      "pairedWins": {
+        "8201": 132,
+        "8202": 131,
+        "8203": 134
+      }
+    },
+    {
+      "policy": "balanced-youth",
+      "worlds": 3,
+      "wins": 409,
+      "matches": 798,
+      "winPercentage": 51.2531328320802,
+      "pairedWins": {
+        "8201": 139,
+        "8202": 134,
+        "8203": 136
+      }
+    },
+    {
+      "policy": "overall-only",
+      "worlds": 3,
+      "wins": 407,
+      "matches": 798,
+      "winPercentage": 51.00250626566416,
+      "pairedWins": {
+        "8201": 120,
+        "8202": 141,
+        "8203": 146
+      }
+    },
+    {
+      "policy": "allrounder-heavy",
+      "worlds": 3,
+      "wins": 403,
+      "matches": 798,
+      "winPercentage": 50.50125313283208,
+      "pairedWins": {
+        "8201": 126,
+        "8202": 142,
+        "8203": 135
+      }
+    }
+  ],
+  "baselinePrototypeSha256": "e37610785399ad8e6f207e3b585ce1a02caf7477c2f94bc38a4978e2fdf43a6e",
+  "tradeFix": {
+    "oldPickCredit": 95,
+    "oldPlayerBid": 66,
+    "targetAsk": 98,
+    "oldUserOverallGain": 17,
+    "pairedCpuOverallLoss": 17,
+    "note": "Same actual completed2008 save through annual draft. Fixed package rejection and legitimate pick-assisted acceptance tested separately."
+  },
+  "openGates": [
+    "Human sustained enjoyment and unfamiliar-player comprehension",
+    "Broader strategy space, including bowling-type/conditions and batting-order exploits",
+    "Player-data provenance beyond game-model calibration",
+    "Target-platform release rehearsal"
+  ]
+}

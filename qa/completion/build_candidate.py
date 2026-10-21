@@ -30,6 +30,23 @@ html = html[:start] + (root/'v8/core/development.js').read_text().strip() + html
 old = 'const careerBefore=window.GCC8_DEVELOPMENT.captureBefore(state.pool,state.year,state.teams);'
 assert html.count(old)==1
 html = html.replace(old, 'state.dynasty.previousXI={year:state.year,ids:[...state.xi],order:[...state.battingOrder]};'+old)
+start = html.index('  function pickAssetValue(round)')
+end = html.index('  function transferUserPick(',start)
+html = html[:start] + '  ' + (root/'v8/core/draft_pick_value.js').read_text().strip() + '\n' + html[end:]
+html = html.replace('offered+=pickAssetValue(pick);','offered+=pickAssetValue(pick,club);')
+html = html.replace('pickValue:r=>pickAssetValue(r)', 'pickValue:(r,c)=>pickAssetValue(r,c)')
+anchor = 'window.GCC8_PROFILES=(()=>{'
+assert html.count(anchor)==1
+html = html.replace(anchor,(root/'v8/core/arrival_calibration.js').read_text().strip()+'\n'+anchor)
+anchor = 'const p=template(m,next++);p.available=m.debutYear<=2008;'
+assert html.count(anchor)==1
+html = html.replace(anchor,'const p=template(window.GCC8_ARRIVAL_CALIBRATION.meta(m),next++);p.available=m.debutYear<=2008;')
+anchor = 'const p=template(m,next++);p.available=null;'
+assert html.count(anchor)==1
+html = html.replace(anchor,'const p=template(window.GCC8_ARRIVAL_CALIBRATION.meta(m),next++);p.available=null;')
+anchor = 'if(!profile)return p;const original={...p};'
+assert html.count(anchor)==1
+html = html.replace(anchor,'if(!profile)return p;profile=window.GCC8_ARRIVAL_CALIBRATION.profile(profile,p);const original={...p};')
 output = root / 'game/gcc_v8_product_candidate.html'
 output.write_text(html)
 print(hashlib.sha256(output.read_bytes()).hexdigest())
