@@ -15,7 +15,7 @@
  function closeDialog(){if(dialog.open)dialog.close();ui.modal=null;document.getElementById('g8feedback').hidden=false;const opener=dialogOpener;dialogOpener=null;opener?.focus?.({preventScroll:true});if(!document.hidden&&!['home','story'].includes(ui.view))clock.resume();}
  function modal(title,body,key='info'){
   const replacing=dialog.open;if(!replacing)dialogOpener=document.activeElement;
-  clock.pause();ui.modal=key;dialog.dataset.prompt=key;
+  clock.pause();ui.modal=key;dialog.dataset.prompt=key;dialog.dataset.layout=['fresh','draftComplete','listReview','release','finalCut','tradeReview'].includes(key)?'prompt':'detail';
   content.innerHTML=`<header class="g8modalhead"><div><span class="g8eyebrow">GLOBAL CHAMPIONS CRICKET</span><h2 id="g8dialogTitle">${esc(title)}</h2></div><button type="button" class="g8dialogclose" data-action="close" data-args="[]" aria-label="${esc('Close '+title)}">×</button></header><div class="g8modalbody"><div id="g8dialogFeedback" class="g8notice" role="status" hidden></div>${body}</div>`;
   document.getElementById('g8feedback').hidden=true;if(!dialog.open)dialog.showModal();X.accessibleTables(content);if(replacing)content.querySelector('button:not(:disabled),input:not(:disabled),select:not(:disabled)')?.focus({preventScroll:true});
  }

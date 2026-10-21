@@ -321,3 +321,17 @@ p,small,.g8fine{font-weight:400;line-height:1.5}small,.g8fine{font-size:1rem;col
 #g8hud>.g8headerslogan{min-width:0;overflow-wrap:normal}
 #g8hud .g8hudclub strong{display:block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .g8headerslogan>span{display:block}
+.g8utilitymenu>summary{cursor:pointer;transition:background-color .15s,border-color .15s,color .15s,box-shadow .15s}
+.g8utilitymenu>summary:hover,.g8utilitymenu[open]>summary{background:#294456;border-color:#c8fa49;color:#e7ffad;box-shadow:0 0 0 1px #c8fa4933}
+.g8utilitymenu>summary:focus-visible{outline:3px solid #c8fa49;outline-offset:4px;background:#294456;color:#f1f7fc}
+.g8utilitymenu>summary:active{background:#35576a;border-color:#e7ffad}
+@media(prefers-reduced-motion:reduce){.g8utilitymenu>summary{transition:none}}
+
+#g8dialog[data-layout="prompt"] .g8modalhead{position:relative;justify-content:center;text-align:center;padding-inline:4rem}
+#g8dialog[data-layout="prompt"] .g8modalhead>div{width:100%;min-width:0}
+#g8dialog[data-layout="prompt"] .g8modalhead .g8eyebrow{display:block}
+#g8dialog[data-layout="prompt"] .g8dialogclose{position:absolute;right:1rem;top:1rem}
+#g8dialog[data-layout="prompt"] .g8modalbody>p{text-align:center;max-width:58ch;margin-inline:auto}
+#g8dialog .g8modalbody>.g8actions{justify-content:center;flex-wrap:wrap}
+#g8dialog[data-layout="prompt"] .g8consequences{text-align:center}
+@media(max-width:760px){#g8dialog[data-layout="prompt"] .g8modalhead{padding:1.25rem 3.5rem}#g8dialog[data-layout="prompt"] .g8dialogclose{right:.5rem;top:.75rem}}
