@@ -62,7 +62,7 @@
  };
  X.draftAdvice=()=>{
   const ps=roster(),p=X.squadProfile();
-  const note=!ps.length?'Start with a player you can build around. Then cover the jobs across an innings.':!ps.some(R.isKeeper)?'You still need a recognised wicketkeeper.':(p.oversCapacity<20||p.trustedOversCapacity<18)?'Your attack needs another dependable bowling option.':p.death<70?'Look for someone who can bowl the closing overs.':'The core jobs are covered. Pick the player who improves your side.';
+  const note=!ps.length?'Start with a player you can build around. Then balance your batting and bowling.':!ps.some(R.isKeeper)?'You still need a recognised wicketkeeper.':(p.oversCapacity<20||p.trustedOversCapacity<18)?'Your attack needs another dependable bowling option.':p.death<70?'Look for someone who can bowl the closing overs.':'Your squad has the key roles covered. Pick the player who improves your side.';
   return X.squadCoverage(ps,'Your squad · '+ps.length+'/15')+`<p class="g8draftadvice">${esc(note)}</p>`;
  };
  X.seasonProgress=()=>{
@@ -120,7 +120,7 @@
  const X=window.GCC8;
  X.bowlingChanges=(r,card)=>{
   const innings=card.club.abbr===r.home.abbr?r.homeInnings:r.awayInnings,plan=innings.bowlingPlan||[],used=plan.slice(0,innings.deliveries?new Set(innings.deliveries.map(d=>d.over)).size:Math.ceil(card.balls/6));if(!used.length)return '';
-  return `<details class="g8moredata"><summary>The bowling changes</summary><p class="g8fine">The model’s over-by-over bowling allocation. The final over may be incomplete when the innings ends.</p><div class="g8overplan">${used.map((id,i)=>`<div><small>OVER ${i+1} · ${i<4?'POWERPLAY':innings.surge?.startOver&&i+1>=innings.surge.startOver&&i+1<innings.surge.startOver+2?'POWER SURGE':i<15?'MIDDLE':'DEATH'}</small><b>${X.esc(X.G.byId(id)?.name||'Bowler')}</b></div>`).join('')}</div></details>`;
+  return `<details class="g8moredata"><summary>The bowling changes</summary><p class="g8fine">Bowling spells, over by over. The final over may be incomplete when the innings ends.</p><div class="g8overplan">${used.map((id,i)=>`<div><small>OVER ${i+1} · ${i<4?'POWERPLAY':innings.surge?.startOver&&i+1>=innings.surge.startOver&&i+1<innings.surge.startOver+2?'POWER SURGE':i<15?'MIDDLE':'DEATH'}</small><b>${X.esc(X.G.byId(id)?.name||'Bowler')}</b></div>`).join('')}</div></details>`;
  };
 })();
 

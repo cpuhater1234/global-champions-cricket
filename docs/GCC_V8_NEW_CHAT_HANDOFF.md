@@ -82,3 +82,6 @@ See docs/GCC_V8_SCOUT_CLARITY_REVIEW.md and qa/scout-clarity. Current artifact h
 
 ## Player-facing audit after scout clarity
 Read docs/GCC_V8_PLAYER_FACING_REVIEW.md. Inspection only; no product changes. Fresh 1280/390 native opening capture through first pick under qa/player-facing-review. Confirmed layout-shifting draft feedback, long mobile intro/club-choice pacing, repeated signing explanation and result Round 1 vs global Round 2 context. Prioritised next pass recorded. Real photos, systematic motion, finals/archive/end-career visual replay and independent enjoyment remain outside this inspection.
+
+## Entry pacing and draft stability implementation
+See docs/GCC_V8_ENTRY_CLARITY_REVIEW.md. Artifact hash fbb56696056606156f336d56587e37df4fcea2c06158fa49c402f4321376eebf. First audit priorities now implemented: concise optional-story intro, compact mobile club chooser, non-shifting draft acknowledgement, no empty selected disclosure, viewed-result HUD round and explicit next round. 60 opening cases, 84 annual cases, ten gameplay suites and native fresh two-match/reload verified. Continue remaining player-facing priorities rather than repeating another inspection-only pass. Preserve manual XI and accepted comparison design.
