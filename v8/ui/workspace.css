@@ -281,3 +281,18 @@ p,small,.g8fine{font-weight:400;line-height:1.5}small,.g8fine{font-size:1rem;col
 @media(max-width:760px){.g8introcopy{flex-basis:100%}.g8introart{flex-basis:100%;border-top:1px solid #3b5369;padding-top:1rem}.g8introart>.g8icon{height:80px;width:80px}.g8introcopy>p{font-size:1rem}.g8introcopy>h1{font-size:clamp(1.25rem,7vw,1.8rem)}.g8arenatitle>.g8icon{width:40px;height:40px;flex-basis:40px}}
 .g8clock{min-width:0}.g8clock h2{max-width:100%;overflow-wrap:anywhere;word-break:normal;line-height:1.4}
 .g8heroart>.g8arenaheader{display:flex;padding:1rem;align-items:center;justify-content:space-between;background:#192e40}
+
+/* Supplied reference artwork: large, quiet, and outside the interaction layer. */
+.g8welcomepanel,.g8introbrief,.g8heading{position:relative;isolation:isolate;overflow:hidden}
+.g8welcomepanel>*,.g8introbrief>*,.g8heading>*{position:relative;z-index:1}
+.g8panelart,.g8introbrief>.g8introart{position:absolute!important;z-index:0!important;pointer-events:none;user-select:none;right:-1rem;top:50%;transform:translateY(-50%);width:180px;height:180px;opacity:.22;color:#d4e5ec;display:block;border:0;padding:0;mask-image:linear-gradient(90deg,transparent,#000 75%)}
+.g8panelart>.g8icon{width:100%;height:100%;display:block}
+.g8welcomepanel>.g8panelart{width:340px;height:340px;right:-4rem;top:38%;opacity:.18}
+.g8introbrief>.g8introart{height:240px;width:200px;right:.5rem;opacity:.3;color:#edb58d}
+.g8introbrief>.g8introart>.g8icon{height:100%;width:100%}
+.g8introcopy{flex:1 1 100%;padding-right:3rem}
+.g8heading>div:first-of-type{flex:1;min-width:0}
+.g8heading>.g8panelart{width:220px;height:220px;opacity:.25}
+.g8referencearena{display:flex;align-items:center;justify-content:center;gap:2rem;color:#9cb9ca;opacity:.35;pointer-events:none}
+.g8referencearena>.g8icon{width:180px;height:220px}
+@media(max-width:760px){.g8welcomepanel>.g8panelart{width:270px;height:270px;right:-5rem}.g8introbrief>.g8introart{width:180px;height:220px;right:-2rem;opacity:.22}.g8introcopy{padding-right:0}.g8heading>.g8panelart{width:180px;height:180px;right:-3rem;opacity:.18}.g8referencearena>.g8icon{width:120px;height:160px}}
