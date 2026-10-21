@@ -73,3 +73,6 @@ Still unestablished: unfamiliar-player comprehension, sustained enjoyment, large
 Keep old versioned artifacts as checkpoints. Update the canonical build only after verification, replace the existing user deliverable rather than proliferating unrelated copies, and keep the handoff current.
 
 The previous checkpoint chronology is preserved in `docs/archive/GCC_V8_HANDOFF_HISTORY.md`. Earlier player-data, empirical calibration, composite-rating and chemistry limits are not closed by presentation audits; consult the corresponding career/profile reports before claiming otherwise.
+
+## Save visibility follow-up, 21 October 2026
+See docs/GCC_V8_SAVE_VISIBILITY_REVIEW.md. New artifact hash add512cdc4f7945924b4c3c764cc85dd93ea66909367d32663a22b32d677c525. Persistent header warning clears only on successful save; season-review enlarged-text overflow repaired. Independent player review attempts produced no evidence because workspace credits blocked agents. Broader completion gates remain open.

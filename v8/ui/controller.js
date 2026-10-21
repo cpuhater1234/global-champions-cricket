@@ -6,7 +6,8 @@
  let busy=false,lastSignature='',archiveReturn='season',dialogOpener=null,pendingFocus=null;
  X.hasStoredSave=()=>{try{return !!localStorage.getItem('gcc_dynasty_v8')||!!localStorage.getItem('gcc_dynasty_v7_2');}catch{return false;}};
  X.hasSave=()=>!!s.dynasty?.started||X.hasStoredSave();
- let feedbackTimer=null;
+ let feedbackTimer=null,saveWarning='';
+ const saveStatus=()=>saveWarning?`<div class="g8savewarning" role="status"><strong>Progress not saved</strong><span>${esc(saveWarning)}</span></div>`:'';
  const clearFeedback=()=>{if(feedbackTimer!==null)clock.clearTimeout(feedbackTimer);feedbackTimer=null;const feedback=document.getElementById('g8feedback');feedback.classList.remove('g8toast','g8fading');feedback.textContent='';};
  const announce=(t,brief=false)=>{clearFeedback();const feedback=document.getElementById('g8feedback'),inside=document.getElementById('g8dialogFeedback');feedback.textContent=t;feedback.hidden=!!ui.modal;if(inside){inside.textContent=ui.modal?t:'';inside.hidden=!ui.modal||!t;}if(brief&&!ui.modal){feedback.classList.add('g8toast');feedbackTimer=clock.setTimeout(()=>{feedback.classList.add('g8fading');feedbackTimer=clock.setTimeout(clearFeedback,250);},1000);}};
  const bind=(name,where,fn)=>{commands[name]=fn;allow[name]=where;};
@@ -25,7 +26,7 @@
   const body=views[ui.view]();
   stage.dataset.view=ui.view;
   X.patch(stage,body);X.accessibleTables(stage);
-  X.patch(hud,`<div class="g8hudclub"><button type="button" class="g8brand" data-action="home" data-args="[]" aria-label="Global Champions Cricket home">${X.icon('cricket')}GCC</button>${s.userClub?`${badge(s.userClub)}<div><strong>${esc(s.userClub.name)}</strong><small>${s.year} · ${ui.view==='matchReveal'?(ui.result?.round?'Round '+ui.result.round:'Finals'):s.dynasty?.offseason?'Offseason':s.finals&&s.finals.stage!=='done'?'Finals':s.fullSchedule.length?(s.round===14?'Season complete':'Round '+(s.round+1)):s.year===2008?'Foundation':'Preseason'}</small></div>`:''}</div><nav aria-label="Game menu"><details class="g8utilitymenu"><summary>Menu</summary><div>${s.userClub?btn('Club archive','archive',[],'g8ghost g8small',!s.dynasty?.history?.length):''}${btn('How to play','how',[],'g8ghost g8small')}</div></details></nav>${X.careerNavigation()}`);
+  X.patch(hud,`<div class="g8hudclub"><button type="button" class="g8brand" data-action="home" data-args="[]" aria-label="Global Champions Cricket home">${X.icon('cricket')}GCC</button>${s.userClub?`${badge(s.userClub)}<div><strong>${esc(s.userClub.name)}</strong><small>${s.year} · ${ui.view==='matchReveal'?(ui.result?.round?'Round '+ui.result.round:'Finals'):s.dynasty?.offseason?'Offseason':s.finals&&s.finals.stage!=='done'?'Finals':s.fullSchedule.length?(s.round===14?'Season complete':'Round '+(s.round+1)):s.year===2008?'Foundation':'Preseason'}</small></div>`:''}</div><nav aria-label="Game menu"><details class="g8utilitymenu"><summary>Menu</summary><div>${s.userClub?btn('Club archive','archive',[],'g8ghost g8small',!s.dynasty?.history?.length):''}${btn('How to play','how',[],'g8ghost g8small')}</div></details></nav>${X.careerNavigation()}${saveStatus()}`);
   if(changed){stage.focus({preventScroll:true});window.scrollTo({top:0,left:0,behavior:'instant'});}
   else{
    const next=(id&&document.getElementById(id))||(focusAction?[...(focusInHud?hud:stage).querySelectorAll('button[data-action]')].find(b=>b.dataset.action===focusAction&&b.dataset.args===focusArgs):null);if(next&&!next.disabled){next.focus({preventScroll:true});if(typeof next.setSelectionRange==='function'&&start!==null)try{next.setSelectionRange(start,end);}catch{}}
@@ -64,7 +65,7 @@
    if(action)el.querySelector(`[data-action="${action}"]`)?.focus({preventScroll:true});lastSignature=key;
   }else render(false);
  };
- function save(){if(s.dynasty){s.dynasty.v8UI={view:ui.view==='home'?ui.resumeView:ui.view,teamReturn:ui.teamReturn,seasonTab:ui.seasonTab,archiveReturn,resultRound:ui.result?.round,resultFinal:ui.result?.final};s.dynasty.v8Match=ui.match?{...ui.match}:null;s.dynasty.v8Reveal=ui.reveal?{...ui.reveal,timer:undefined,year:s.year}:null;}if(s.dynasty&&!read.save())announce(read.saveConflict?.()?'Another open game saved newer progress. Return home and choose Continue to load it.':'This browser could not save your progress. Keep this game open to continue playing.');}
+ function save(){if(s.dynasty){s.dynasty.v8UI={view:ui.view==='home'?ui.resumeView:ui.view,teamReturn:ui.teamReturn,seasonTab:ui.seasonTab,archiveReturn,resultRound:ui.result?.round,resultFinal:ui.result?.final};s.dynasty.v8Match=ui.match?{...ui.match}:null;s.dynasty.v8Reveal=ui.reveal?{...ui.reveal,timer:undefined,year:s.year}:null;}if(s.dynasty){const previous=saveWarning;saveWarning=read.save()?'':read.saveConflict?.()?'Another open game saved newer progress. Return home and choose Continue to load it.':'This browser could not save your progress. Keep this game open to continue playing.';if(saveWarning&&ui.modal)announce(saveWarning);if(previous!==saveWarning)render(false);}}
  let matchTimer=null;
  const matchReference=r=>s.results.includes(r)?{type:'regular',round:r.round}:s.finals?.gf===r?{type:'gf'}:{type:'semis',index:s.finals?.semis?.indexOf(r)};
  const matchFromReference=ref=>ref?.type==='regular'?s.results.find(r=>r.round===ref.round):ref?.type==='gf'?s.finals?.gf:ref?.type==='semis'?s.finals?.semis?.[ref.index]:null;

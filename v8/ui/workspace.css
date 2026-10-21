@@ -203,3 +203,9 @@ p,small,.g8fine{font-weight:400;line-height:1.5}small,.g8fine{font-size:1rem;col
 .g8annualworkspace .g8eyebrow{white-space:normal;overflow-wrap:break-word}
 .g8manageworkspace .g8sectionhead{flex-wrap:wrap;align-items:baseline;gap:8px}.g8manageworkspace .g8sectionhead>span{max-width:100%;white-space:normal;text-align:left}
 .g8tradepackage>section>h3{display:block;font-size:1.1rem;font-weight:700;line-height:1.4;white-space:normal}.g8tradepackage>section>h3 .g8icon{display:inline-block;vertical-align:middle;margin-right:6px}
+
+/* Save failures remain visible independently of action feedback. */
+.g8savewarning{flex:1 0 100%;min-width:0;display:grid;gap:.3rem;background:#332f22;color:#f5dfaa;border:1px solid #746343;border-left:3px solid #e1bb69;border-radius:6px;padding:.75rem 1rem;overflow-wrap:anywhere}.g8savewarning strong{color:#fff0c5}.g8savewarning span{font-size:.9rem}
+.g8savewarning{grid-template-columns:minmax(0,1fr)}.g8savewarning>*{min-width:0;white-space:normal;overflow-wrap:anywhere}
+/* Season review must accommodate club names and enlarged text. */
+.g8reviewsummary h2{overflow-wrap:anywhere}.g8reviewsummary>.g8badge{min-width:max-content;padding-inline:.4rem}.g8reviewsummary .g8metrics{grid-template-columns:repeat(auto-fit,minmax(min(100%,6rem),1fr))}.g8reviewsummary .g8metrics>*{min-width:0;overflow-wrap:anywhere}
