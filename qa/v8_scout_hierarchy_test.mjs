@@ -1,0 +1,4 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {loadGame} from './offline_game_host.mjs';
+const h=loadGame(process.env.GCC8_TEST_BUILD||'game/gcc_v8_product_candidate.html',101,new Map([['gcc_dynasty_v8',fs.readFileSync('qa/stabilisation/fixtures/foundation.json','utf8')]]),{strictIds:true}),X=h.context.GCC8,s=h.G.state;assert(X.dispatch('continue'));const before=JSON.stringify(s);
+for(const role of ['BAT','BOWL','AR','WK-BAT']){const p=s.pool.find(p=>p.role===role);assert(p);const html=X.playerRead(p);assert(!html.includes('Bowl control'));assert(html.includes('g8skillcategory'));assert(html.includes('Mental attributes'));assert.equal(html.includes('Bowling accuracy'),X.R.bowlingWorkload(p)>0);assert(html.includes('Shot control'));assert(html.includes('Against pace'));}
+assert.equal(JSON.stringify(s),before,'Scouting does not change career truth');console.log('Role-relevant scouting hierarchy and state preservation passed.');

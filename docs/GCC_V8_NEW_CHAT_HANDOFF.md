@@ -76,3 +76,6 @@ The previous checkpoint chronology is preserved in `docs/archive/GCC_V8_HANDOFF_
 
 ## Save visibility follow-up, 21 October 2026
 See docs/GCC_V8_SAVE_VISIBILITY_REVIEW.md. New artifact hash add512cdc4f7945924b4c3c764cc85dd93ea66909367d32663a22b32d677c525. Persistent header warning clears only on successful save; season-review enlarged-text overflow repaired. Independent player review attempts produced no evidence because workspace credits blocked agents. Broader completion gates remain open.
+
+## Draft and scouting presentation follow-up
+See docs/GCC_V8_SCOUT_CLARITY_REVIEW.md and qa/scout-clarity. Current artifact hash 20106af30b6002b05f3e05ce7a1ac7f4ecc7eee363e0001c8eaef23a5952c3c3. Detailed skills grouped and cricket terminology revised; header sizing, straight-toe bat icon, latest-signing sidebar and XI rating contrast repaired. Comparison logic unchanged. Builder now replaces data and screens modules as well as controller/offseason, and applies source cricket SVG.
