@@ -1,0 +1,18 @@
+{
+  "artifactSha256": "fbdf332daf353070410815461ba62a112be14a4354ad82f912229cba4c679291",
+  "baseSha256": "a9ea493eebb4ddaa6146eaaf6ece06a3e4d1e0eb85cfd00edda99b11c21f0189",
+  "reports": [
+    "qa/completion/focused.json",
+    "qa/completion/browser/report.json",
+    "qa/completion/native/report.json",
+    "qa/completion/core-expanded-report.json",
+    "qa/completion/core-results-report.json"
+  ],
+  "runtimeReport": "qa/completion/release-two-season/v8_smoke_results.json",
+  "redReport": "qa/completion/red.json",
+  "renderingCases": 204,
+  "focusedSuites": 10,
+  "humanSessions": 0,
+  "releaseReadinessEstablished": false,
+  "completionContract": "docs/GCC_V8_PRODUCT_COMPLETION.md"
+}

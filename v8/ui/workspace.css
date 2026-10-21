@@ -174,3 +174,32 @@ p,small,.g8fine{font-weight:400;line-height:1.5}small,.g8fine{font-size:1rem;col
 .g8directpick .g8candidatechoice .g8button{margin:0;min-height:44px;padding:6px 10px}
 .g8directpick .g8scoutcue{color:#b9d8e9;font-size:1rem;margin-top:4px}
 @container(max-width:20rem){.g8directpick .g8candidate{grid-column:1/-1;grid-template-columns:minmax(0,1fr)}.g8directpick .g8candidate .g8playeravatar{display:none}.g8directpick .g8candidatechoice{grid-column:1/-1;flex-direction:row;justify-content:space-between}}
+
+/* Annual decisions: retained squad, observed development and explicit moves. */
+.g8annualworkspace{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:20px;align-items:start}
+.g8annualworkspace .g8annualhero{margin:0;padding:24px}
+.g8annualdevelopment{background:#142d27;border:1px solid #3f6c58;border-top:3px solid #b3df82;border-radius:10px;padding:20px;min-width:0}
+.g8annualdevelopment .g8development{margin:0;padding:0;border:0;border-radius:0;box-shadow:none;background:none}.g8annualdevelopment .g8development h3{font-size:1.25rem;margin:8px 0}.g8annualdevelopment .g8development>p{color:#c4d9cf;line-height:1.5}
+.g8annualdevelopment .g8developmentrow{padding:12px 0;gap:12px;flex-wrap:wrap}.g8annualdevelopment .g8developmentrow strong{white-space:normal}
+.g8manageworkspace .g8managerow{grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:16px;padding:12px 0;min-height:0}
+.g8manageworkspace .g8managescout{padding:4px;min-width:0;max-width:100%}.g8managescout .g8nameandrating{gap:12px}.g8managescout small{margin-top:4px}
+.g8managescoutcue{display:block;color:#b9d8e9;font-size:1rem;margin-top:4px}.g8manageworkspace .g8manageactions{display:flex;flex-wrap:wrap;gap:8px}.g8manageactions .g8button{min-height:44px}
+.g8tradeeffects{margin:16px 0}.g8tradeeffects h3{font-size:1.1rem;margin:0 0 10px}.g8tradeeffects>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.g8tradeeffects>div>div{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;padding:12px;background:#102735;border:1px solid #405b70;border-radius:6px;min-width:0}
+.g8tradeeffects strong{color:#e7f1f8;font-size:1.3rem}.g8tradeeffects strong.improved{color:#c8fa49}.g8tradeeffects strong.declined{color:#ffb9ac}.g8tradeeffects small{flex-basis:100%;color:#b9d0e0;font-size:1rem}.g8tradeeffects p{color:#b9d0e0;line-height:1.5}
+@media(max-width:900px){.g8annualworkspace{grid-template-columns:1fr}.g8annualworkspace .g8annualhero,.g8annualdevelopment{padding:16px}}
+@media(max-width:600px){.g8manageworkspace .g8managerow{grid-template-columns:1fr;gap:8px}.g8manageworkspace .g8manageactions .g8button{flex:1 1 8rem}.g8tradeeffects>div{grid-template-columns:1fr}.g8tradeeffects small{flex-basis:auto}.g8managescout .g8nameandrating{align-items:start}}
+
+.g8offseasonsteps{flex-wrap:wrap}.g8offseasonsteps li{min-width:0;max-width:100%}.g8offseasonsteps strong{white-space:normal}
+.g8manageworkspace{container-type:inline-size;padding:clamp(12px,2vw,20px);min-width:0}
+.g8managescout .g8nameandrating{display:flex;flex-wrap:wrap;align-items:baseline}.g8managescout .g8nameandrating b{flex:1 1 12rem;min-width:0;overflow-wrap:break-word}.g8managescout .g8rowrating{flex:0 0 auto}
+.g8annualdevelopment .g8developmentrow span{font-weight:400}
+@container(max-width:38rem){.g8manageworkspace .g8managerow{grid-template-columns:minmax(0,1fr)}.g8manageworkspace .g8manageactions .g8button{flex:1 1 8rem}}
+
+.g8annualworkspace>*{min-width:0;max-width:100%}.g8annualworkspace .g8button{min-width:0;max-width:100%;white-space:normal}.g8annualworkspace .g8button>span{min-width:0}
+.g8annualworkspace .g8metrics{grid-template-columns:repeat(auto-fit,minmax(min(100%,6rem),1fr));gap:12px}
+@media(max-width:900px){.g8annualworkspace{grid-template-columns:minmax(0,1fr)}}
+
+.g8annualworkspace .g8eyebrow{white-space:normal;overflow-wrap:break-word}
+.g8manageworkspace .g8sectionhead{flex-wrap:wrap;align-items:baseline;gap:8px}.g8manageworkspace .g8sectionhead>span{max-width:100%;white-space:normal;text-align:left}
+.g8tradepackage>section>h3{display:block;font-size:1.1rem;font-weight:700;line-height:1.4;white-space:normal}.g8tradepackage>section>h3 .g8icon{display:inline-block;vertical-align:middle;margin-right:6px}

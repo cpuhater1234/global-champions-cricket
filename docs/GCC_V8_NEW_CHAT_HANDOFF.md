@@ -7,12 +7,14 @@ Updated 21 October 2026. This replaces the obsolete initial-scaffold handoff. A 
 Repository: `cpuhater1234/global-champions-cricket`.
 Working branch: `work/v8-game-first-rebuild`. Fetch its current head before editing or publishing. `main` is not automatically promoted.
 
-Latest versioned playable: `game/gcc_v8_core_loop.html`.
+Latest versioned playable: `game/gcc_v8_product_candidate.html`.
 Canonical continuation build: `game/gcc_v8_quiet_arcade.html`, copied from the latest verified versioned build.
-Delivered filename: `GCC_v8_Core_Loop.html`.
-Final core-loop SHA-256: `a9ea493eebb4ddaa6146eaaf6ece06a3e4d1e0eb85cfd00edda99b11c21f0189`.
+Delivered filename: `GCC_v8_Career_Clarity.html`.
+Final career-clarity SHA-256: `fbdf332daf353070410815461ba62a112be14a4354ad82f912229cba4c679291`.
 
 Read the latest review before changing anything:
+
+- `docs/GCC_V8_PRODUCT_COMPLETION.md` is the release-gate contract. `docs/GCC_V8_CAREER_CLARITY_REVIEW.md` and `qa/GCC_V8_CAREER_CLARITY_EVIDENCE.json` describe the current checkpoint: visible annual development, direct guarded management actions, upfront trade effects/warnings carried to final review, responsive repairs, native release/trade/reload/draft/manual-XI/first-2009-match, 204 rendered cases, ten suites and an exact-build two-season regression. Human comprehension/enjoyment, model/provenance and target-platform/release rehearsal gates remain open. Do not relabel progress as a completed elite product.
 
 - `docs/GCC_V8_CORE_LOOP_REVIEW.md` and `qa/GCC_V8_CORE_LOOP_EVIDENCE.json`. Direct guarded picks on draft cards, less repeated draft information, explicit midseason XI return, result-first continuation with the actual next opponent. Final evidence: six focused suites, 120 rendered fixture checks, fresh native two-match journey with save/reload and XI review, and one runtime season. Broader offseason design and genuine unfamiliar-player/human enjoyment evidence remain open.
 
