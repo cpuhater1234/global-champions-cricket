@@ -344,3 +344,5 @@ p,small,.g8fine{font-weight:400;line-height:1.5}small,.g8fine{font-size:1rem;col
 #g8dialog[data-layout="prompt"] .g8modalhead .g8eyebrow{display:none}
 #g8dialog[data-layout="prompt"] .g8modalhead h2{margin:0;line-height:1.35}
 #g8dialog[data-layout="prompt"] .g8dialogclose{position:absolute;top:.75rem;right:.75rem;width:44px;height:44px}
+/* Fine surface grain is visible only in the space around opaque game panels. */
+#g8app{background-image:radial-gradient(circle,#bcd8e20a .65px,transparent .9px),radial-gradient(ellipse at 0 35%,#23534222,transparent 50%),radial-gradient(ellipse at 95% 0,#31577b44,transparent 52%),repeating-linear-gradient(135deg,transparent 0,transparent 31px,#8ebfd406 31px,#8ebfd406 32px);background-size:7px 7px,100% 100%,100% 100%,auto;background-color:#0b111a}
