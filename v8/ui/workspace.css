@@ -308,3 +308,16 @@ p,small,.g8fine{font-weight:400;line-height:1.5}small,.g8fine{font-size:1rem;col
 }
 
 .g8resumechoice{display:flex;align-items:center;justify-content:center;gap:.75rem;flex-wrap:wrap;min-width:0}.g8resumemeta{color:#c2d5e4;font-size:1rem;line-height:1.5;overflow-wrap:anywhere;max-width:24ch}.g8welcomepanel>.g8actions{flex-wrap:wrap;gap:.8rem}.g8resumemeta{text-align:center}
+
+/* Quiet arcade texture outside the content surfaces. */
+#g8app{background:radial-gradient(ellipse at 0 35%,#23534222,transparent 50%),radial-gradient(ellipse at 95% 0,#31577b44,transparent 52%),repeating-linear-gradient(135deg,transparent 0,transparent 31px,#8ebfd406 31px,#8ebfd406 32px),#0b111a}
+#g8hud{background:linear-gradient(110deg,#132b36f5,#101b2bf5 65%,#1c2f3af5);border-bottom:1px solid #4a6879;box-shadow:0 3px 0 #c8fa4912,0 10px 30px #02070e40}
+#g8hud>.g8headerslogan{margin:0;padding:.35rem 1rem;border-left:2px solid #c8fa49;color:#d1dfeb;font-size:1rem;font-weight:700;line-height:1.6;letter-spacing:.07em;flex:0 1 290px;text-align:left}
+.g8headerslogan>span{color:#c8fa49;white-space:nowrap}
+#g8hud>.g8hudclub{flex:1 1 260px}
+#g8hud>nav[aria-label="Game menu"]{flex:0 0 auto}
+@media(max-width:760px){#g8hud>.g8hudclub{flex:1 1 0}#g8hud>.g8headerslogan{order:3;flex:1 0 100%;padding:.5rem 0 0;border-left:0;border-top:1px solid #3d5668;font-size:1rem;text-align:center;letter-spacing:.035em}#g8hud>.g8careernav{order:4}#g8hud>.g8savestatus{order:5}}
+.g8headerslogan>span{white-space:normal}
+#g8hud>.g8headerslogan{min-width:0;overflow-wrap:normal}
+#g8hud .g8hudclub strong{display:block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.g8headerslogan>span{display:block}
