@@ -19,7 +19,8 @@
   content.innerHTML=`<header class="g8modalhead"><div><span class="g8eyebrow">GLOBAL CHAMPIONS CRICKET</span><h2 id="g8dialogTitle">${esc(title)}</h2></div><button type="button" class="g8dialogclose" data-action="close" data-args="[]" aria-label="${esc('Close '+title)}">×</button></header><div class="g8modalbody"><div id="g8dialogFeedback" class="g8notice" role="status" hidden></div>${body}</div>`;
   document.getElementById('g8feedback').hidden=true;if(!dialog.open)dialog.showModal();X.accessibleTables(content);if(replacing)content.querySelector('button:not(:disabled),input:not(:disabled),select:not(:disabled)')?.focus({preventScroll:true});
  }
- function setView(view){assert(typeof view==='string'&&typeof views[view]==='function',`Unknown screen: ${view}`);ui.view=view;ui.modal=null;if(dialog.open)dialog.close();if(document.hidden||view==='home'||view==='story')clock.pause();else clock.resume();render(true);if(view==='matchReveal')scheduleMatch();}
+ function closeUtilityMenu(focus=false){const menu=hud.querySelector('.g8utilitymenu');if(menu?.open){menu.open=false;if(focus)menu.querySelector('summary')?.focus();}}
+ function setView(view){assert(typeof view==='string'&&typeof views[view]==='function',`Unknown screen: ${view}`);closeUtilityMenu();ui.view=view;ui.modal=null;if(dialog.open)dialog.close();if(document.hidden||view==='home'||view==='story')clock.pause();else clock.resume();render(true);if(view==='matchReveal')scheduleMatch();}
  function render(changed=false){
   const active=document.activeElement,id=active?.id,within=stage.contains(active),focusAction=active?.dataset?.action,focusArgs=active?.dataset?.args,focusInHud=hud.contains(active),start=active?.selectionStart,end=active?.selectionEnd,x=window.scrollX,y=window.scrollY;
   const wire=document.getElementById('g8wire'),wireScroll=wire?.scrollTop||0,wireAnchor=X.scrollAnchor(wire);
@@ -243,11 +244,13 @@
   if(busy)return false;if(!Array.isArray(args)){announce('Invalid command arguments.');return false;}
   const fn=commands[action];if(!fn){announce('That control is unavailable.');return false;}
   const where=allow[action];if(where!=='*'&&!where.includes(ui.view)){announce('That action belongs to a different stage of the career.');return false;}
-  busy=true;const view=ui.view,x=window.scrollX,y=window.scrollY;
+  closeUtilityMenu();busy=true;const view=ui.view,x=window.scrollX,y=window.scrollY;
   try{clearFeedback();fn(...args);completeDraft();save();if(ui.view===view&&!ui.modal)render(false);return true;}
   catch(e){announce(e.message||'The action could not be completed.');return false;}
   finally{G.closeModal();busy=false;if(pendingFocus){const target=document.querySelector(pendingFocus);pendingFocus=null;target?.focus?.({preventScroll:true});target?.scrollIntoView?.({block:'center',behavior:'instant'});}else if(ui.view===view)window.scrollTo({left:x,top:y,behavior:'instant'});}
  };
+ document.addEventListener('click',event=>{if(!event.target.closest?.('.g8utilitymenu'))closeUtilityMenu();});
+ document.addEventListener('keydown',event=>{if(event.key==='Escape'&&hud.querySelector('.g8utilitymenu[open]')){closeUtilityMenu(true);event.preventDefault();}});
  document.getElementById('g8app').addEventListener('click',event=>{const b=event.target.closest?.('button[data-action]');if(!b||b.disabled)return;X.dispatch(b.dataset.action,JSON.parse(b.dataset.args||'[]'));});
  document.getElementById('g8app').addEventListener('input',event=>{
   const el=event.target,key=el.dataset?.input;if(!key)return;
