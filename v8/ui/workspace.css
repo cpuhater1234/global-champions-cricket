@@ -296,3 +296,4 @@ p,small,.g8fine{font-weight:400;line-height:1.5}small,.g8fine{font-size:1rem;col
 .g8referencearena{display:flex;align-items:center;justify-content:center;gap:2rem;color:#9cb9ca;opacity:.35;pointer-events:none}
 .g8referencearena>.g8icon{width:180px;height:220px}
 @media(max-width:760px){.g8welcomepanel>.g8panelart{width:270px;height:270px;right:-5rem}.g8introbrief>.g8introart{width:180px;height:220px;right:-2rem;opacity:.22}.g8introcopy{padding-right:0}.g8heading>.g8panelart{width:180px;height:180px;right:-3rem;opacity:.18}.g8referencearena>.g8icon{width:120px;height:160px}}
+.g8welcomepanel>.g8heroformat{justify-content:center;text-align:center}
