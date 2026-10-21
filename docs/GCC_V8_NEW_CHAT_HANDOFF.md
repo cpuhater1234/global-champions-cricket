@@ -148,3 +148,8 @@ Home format row centred. Both home panels equal width/height on desktop; stadium
 
 ## Menu lifecycle and close-button spacing
 Current candidate SHA25674ad7af5a4fb99f9dac7bc8c7683a0bc50d9761c655c88bfaaca5207553962ac. How to play/archive menu items now have hover, pressed and focus-visible feedback. Menu closes before valid commands, on setView, outside click and Escape; Escape returns focus to summary. Native qa/menu-dismissal/browser.cjs checks these paths and opening help. Prompt headers place44px X in its own top corner row, title centred underneath, redundant game-name eyebrow hidden to avoid three-line wrapping. Twelve native restart geometry cases and actual saved-career metadata/restart-preservation checks passed. Existing menu trigger feedback retained. Engine unchanged.
+
+## Follow-up after transition: drawing labels
+User requested ENVELOPE → Drawing on unrevealed draft-order cards, aligned with the numeral. Source screens.js now uses Drawing; scoped CSS uses a centred two-column baseline-aligned label/number group, Awaiting draw beneath with breathing room. Same helper covers annual and foundation draw. Twelve native width/text-size cases passed in qa/drawing-label/browser.cjs. New playable SHA25641230642eb4cfe4cd249bf323bcf526ab39eb5b47ecdddb4cd80a2ca2a3e8661, superseding prior artifact hash; delivered Library item advances to version32. Gameplay unchanged.
+
+Draft player cards now show existing scorecard country codes before age/role, with full country names in title/aria-label. Applies to shared draft cards in foundation and annual drafts. Country mapping includes all13 current source codes. Latest published update combines drawing-label alignment and draft countries; delivered item version32.
