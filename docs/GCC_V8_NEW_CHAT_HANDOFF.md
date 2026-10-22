@@ -1,3 +1,19 @@
+# Latest continuation checkpoint: player-card rework, 22 October 2026
+
+Resume this checkpoint before older notes below. User requests seamless transition after interrupted GitHub artifact transfers. Current verified local playable SHA256: c5b5393a148021cdfd439e955cba12409567d3e310b38c25211095273d2e2e18.
+
+Latest changes: sports-roster-style draft cards with large left overall rating, name/country/age/discipline, three role-relevant cricket attributes, then a supporting best-phase row and independent Pick. Keep whole-card scouting, keyboard/focus feedback, strong discipline surfaces and safe wrapping. Available players text is LEFT aligned; user meant balanced vertical distance above/below the bar when saying centred. Filter labels remain centred.
+
+Verification: 7,416 component layouts across all 412 templates, 60 entry rendering cases and native pointer/keyboard/Pick/focus/alignment suite passed on this candidate. No gameplay changes. Latest source edits are components.js, workspace.css and draft-interaction/browser.cjs. Tests/logs are under qa/universal-containment and qa/draft-interaction. Do not rerun or redesign completed work without a reason.
+
+Last confirmed remote branch head before this checkpoint: 70ee398e18a3ab9a08aec1e3bebc3059b2b704d6; tree 2a9cb15737885023f9defdc02c0199c6c4e49907. Recheck branch head before resuming. Current playable path: /workspace/scratch/24b2d895d4e2/GCC_v8_Career_Clarity.html. Durable playable identity: libfile_ebabb63004ac81919b41b246675c703d; last confirmed version 42 before checkpoint save. Replace same identity; never create another variant. Source branch: work/v8-game-first-rebuild, repo cpuhater1234/global-champions-cricket. Main is not to be changed.
+
+Partial checkout has no .git. Publish explicit changed-file trees atop remote base tree, with expected-SHA lease. Preserve unrelated remote files. Interrupted blob uploads may have created orphan blobs but did not move the branch. Transfer artifact in concurrent chunks if needed, rather than 40 sequential shell calls. Broad GitHub authorization already granted. No repeat permission requests.
+
+Preserve all earlier accepted features: real random stadium/venue photos; exact user-supplied vector cricket icons; manual XI; numbered, club-coloured recent picks; compact restart popup; club-coloured Continue with saved team/year beneath Start new career; subtle nonreplaying draw animations/reduced motion; centred invitation numbers and unpadded CLUB1–8 labels; team-coloured invitation covers; dismissed club guide clears provisional selection; structured signing wire/status. Await further feedback after confirming checkpoint.
+
+---
+
 # Global Champions Cricket: current v8 handoff
 
 ## Latest transition checkpoint: 22 October 2026
@@ -188,3 +204,6 @@ Fresh prompt now caps at28rem with compact balanced44px/title/44px header instea
 
 ## Club invitation identity, dismissed guide state and wire rows
 Club labels now CLUB1–8 without leading zeroes. Invitation covers use actual team colours with clubInk foreground; invitation/chooser bodies share subtle club tint. Contrast of all8revealed invitation cards checked, alongside number-centre and60entry cases. Dismissing club guide with X/Escape clears selectedClub and removes provisional green state; explicit takeover still works. Wire entries now use an aligned name/status header, full-width decision below a separator, compact padding and distinct IN/OUT fills. Final72signing layout/contrast cases and control/draw transition passed. FinalSHA256cdcb894aeda84b49104a6e126046051c3381d36028910327551490d3ab9f3651. Entry/club tests ran immediately before wire-only CSS refinement.
+
+## Recruitment cards and vertical heading spacing, 22 October continuation
+Recovered the interrupted local card work and verified it. Draft recruitment cards now use an overall rail, clear identity/country/age/role, three role-relevant current attributes, and a secondary phase row beside independent Pick. No portraits or decorative player badges. Available players text remains left-aligned; equal .75rem gaps above/below its bar restore the requested vertical spacing. Final SHA256 c5b5393a148021cdfd439e955cba12409567d3e310b38c25211095273d2e2e18. Exact build passes 60 native entry width/text/contrast cases, 7,416 component cases across 412 players, and pointer/keyboard/focus/disabled/enabled Pick interaction checks. Desktop/mobile screenshots inspected. No gameplay or save changes. Broader career/enjoyment gates remain open.
