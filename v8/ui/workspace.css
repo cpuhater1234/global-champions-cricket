@@ -355,3 +355,28 @@ p,small,.g8fine{font-weight:400;line-height:1.5}small,.g8fine{font-size:1rem;col
 .g8ordersealed .g8sealedlabel>small{grid-column:1/-1;line-height:1.5}
 
 .g8draftcountry{display:inline-block;font-weight:700;color:#c4d8e6;letter-spacing:.035em;white-space:nowrap}
+
+.g8draftroster .g8squadgroup{padding:.8rem;background:#172b3a;border:1px solid #3b5369;border-left:3px solid var(--roleaccent,#80c4f8);border-radius:8px;text-align:left}
+.g8draftroster .g8squadgroup h3{display:flex;align-items:baseline;justify-content:space-between;gap:.75rem;border:0;padding:0;margin:0 0 .6rem;color:#d7e5ee;line-height:1.4;letter-spacing:0}
+.g8groupcount{font-variant-numeric:tabular-nums;color:#a8c0d3}
+.g8draftroster .g8squadscout{grid-template-columns:minmax(0,1fr) max-content;justify-content:stretch;justify-items:stretch;align-items:start;gap:.6rem .75rem;text-align:left;margin:0}
+.g8selectedidentity{min-width:0;display:grid;gap:.35rem;text-align:left}
+.g8draftroster .g8selectedname{font-size:1rem;text-align:left;line-height:1.4;overflow-wrap:anywhere}
+.g8selectedcontext{display:block;font-size:1rem;line-height:1.5;font-weight:400;color:#b9cfdf;text-align:left}
+.g8selectedrating{position:static;font-size:1.25rem;line-height:1.4;color:#d5fc89;font-variant-numeric:tabular-nums;text-align:right}
+.g8selectedcue{grid-column:1/-1;display:block;font-size:1rem;line-height:1.4;color:#b7d8e8;font-weight:400;text-align:left}
+.g8draftroster .g8squadscout:hover{border-color:#c8fa49;background:#294456}
+.g8draftroster .g8squadscout:focus-visible{outline:3px solid #c8fa49;outline-offset:2px}
+.g8latestmetrics{grid-template-columns:minmax(0,1fr);gap:.5rem}
+.g8latestmetrics>div{grid-template-columns:minmax(0,1fr) max-content;align-items:baseline;gap:.75rem}
+.g8latestmetrics span{min-width:0;line-height:1.5;overflow-wrap:anywhere}
+.g8latestmetrics b{line-height:1.3;text-align:right;font-variant-numeric:tabular-nums}
+.g8draftroster .g8squadgroup h3>span:first-child{min-width:0;overflow-wrap:anywhere}
+/* Every standalone filled surface has a visible edge. Nested structural wrappers stay quiet. */
+:is(.g8rowrating,.g8rating,.g8days span,.g8wire,.g8stamp,.g8formstrip span,.g8compareidentities>section,.g8tags span,.g8read,.g8summarytiles>div,.g8phasecards>div,.g8phasecontest,.g8job,.g8jobplayer,.g8phasechip,.g8profilechip,.g8consequences>div,.g8tradefacts span,.g8latestmetrics>div,.g8developmentbadge,.g8clubheader small,.g8attributes span,.g8slot>span,.g8score strong,.g8fixturecard,.g8overplan>div,.g8revealScore,.g8groundtrait,.g8groundbands>div,.g8clubcompetition,.g8draftadvice,.g8superover,.g8roleboard,.g8roleboard .g8rolechip,.g8squadgroup,.g8spotlight,.g8teamrating,.g8windowbanner,.g8retentionread,.g8nextchapter,.g8development,.g8pickhistory article,.g8edge,.g8balltrail>span,.g8squadplaces>span,.g8releaseallowance,.g8playerstate,.g8tradepackage>section,.g8tradeimpact){border-width:1px;border-style:solid;border-color:#4a657b;box-sizing:border-box}
+.g8latestmetrics>div,.g8compareidentities>section{border-color:#52758b}
+.g8stamp,.g8formstrip .won{border-color:#5b8b70}.g8stamp.declined,.g8formstrip .lost{border-color:#926176}
+.g8developmentbadge{border-color:#95c884}
+.g8prioritynumber,.g8careersteps li>b{border:1px solid #71952c;box-sizing:border-box}
+.g8balltrail>.g8ballboundary{border-color:#88af58}.g8balltrail>.g8ballwicket{border-color:#be758c}
+.g8brand{border:1px solid #8ab632}
