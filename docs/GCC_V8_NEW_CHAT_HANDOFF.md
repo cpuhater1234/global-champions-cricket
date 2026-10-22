@@ -182,3 +182,6 @@ Continue career is one club-coloured button containing team/year, stacked below 
 
 ## Compact restart confirmation
 Fresh prompt now caps at28rem with compact balanced44px/title/44px header instead of an empty top row, content-sized body and paired Keep career/Start again buttons. Twelve viewport/font cases passed containment, contrast and title/close separation. Cancel preserves saved bytes; confirm enters story. SHA256d14199f8070eaab6d24cdb80868b704528ef0e207b1e4e93111784d548516dbf. qa/restart-spacing contains harness/report. Other prompts unchanged.
+
+## Intro format strip and invitation alignment
+14league matches/Top four reach finals/2008–2026 is an equal three-column bordered strip with dividers and balanced padding, stacking on small screens. Invitation label/number/status explicitly centred, scoped separately from left-aligned draft Drawing.12width/font layouts verify all8invitation number centres;60entry regressions passed. SHA25605fecaf86c7b137d35e729684b7ec1dd591cac2becb82275a54d9b1ee186db0d.
