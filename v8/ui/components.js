@@ -62,5 +62,9 @@ window.GCC8 = (()=>{
   if(!X.regularWorkspace())return '';const current=ui.view==='team'?'squad':ui.view==='season'?({players:'stats',leaguePlayers:'stats',ladder:'ladder',fixtures:'fixtures'}[ui.seasonTab]||'matchday'):'';
   return `<nav class="g8careernav" aria-label="Season navigation">${[['matchday','Matchday'],['squad','My XI'],['ladder','Ladder'],['fixtures','Fixtures'],['stats','Stats']].map(([key,label])=>btn(label,'careerSection',[key],'g8navitem '+(current===key?'selected':'')).replace('type="button"',`type="button" ${current===key?'aria-current="page"':''}`)).join('')}</nav>`;
  };
- X.selectionStatus=()=>{const n=s.xi.length,p=X.profile();return `<div class="g8selectionstatus"><div><strong>${n}<span> / 11</span></strong><span>${n===11?'Eleven selected':`${11-n} to select`}</span></div><progress max="11" value="${n}" aria-label="${n} of 11 players selected"></progress><span class="g8xiquality">XI rating <strong>${n?Math.round(p.overall):'–'}</strong></span></div>`;};
+ X.selectionStatus=()=>{
+  const n=s.xi.length,p=X.profile(),fit=s.xi.map(G.byId).filter(p=>X.injury(p)?.status!=='OUT'),keeper=fit.some(X.R.isKeeper),overs=Math.min(20,Math.round((p.trustedOversCapacity||0)*10)/10),bowling=overs>=18;
+  return `<div class="g8selectionstatus" aria-live="polite"><div class="g8selectioncount"><strong>${n}<span> / 11</span></strong><span>selected</span></div><div class="g8xirating" style="--rating-color:${n?X.ratingTone(p.overall):'#c5d9e8'}"><strong>${n?Math.round(p.overall):'–'}</strong><span>${n&&n<11?'XI estimate':'XI rating'}</span></div><div class="g8xibalance"><span class="${keeper?'g8covered':'g8gap'}">${keeper?'Keeper selected':'Keeper needed'}</span><span class="${bowling?'g8covered':'g8gap'}">Bowling cover <b>${overs}/20 overs</b></span></div></div>`;
+ };
+
 })();

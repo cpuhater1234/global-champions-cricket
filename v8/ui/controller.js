@@ -151,6 +151,7 @@
  bind('skipPick',['draft','dynasty'],()=>{assert(ui.view==='draft'||annual(),'The draft is not open.');if(annual())D.runCpuDraftUntilUser();else G.skipToMyPick();});
  bind('more',['draft','dynasty'],()=>{ui.draftShown+=X.draftPageSize();});
  bind('inspect','*',inspect);
+ bind('teamAnalysis',['team'],()=>{assert(!s.pendingSwapIn,'Finish or cancel your swap first.');modal('Team analysis',X.teamRead()+X.developmentPanel(),'teamAnalysis');});
  bind('teamPane',['team'],pane=>{assert(!ui.modal&&!s.pendingSwapIn,'Finish the current selection first.');assert(['xi','squad'].includes(pane),'Choose a selection view.');ui.teamPane=pane;});
  bind('offseasonPane',['dynasty'],pane=>{assert(!ui.modal&&s.dynasty?.offseason?.phase==='market','Return to the squad update first.');assert(['overview','players'].includes(pane),'Choose a squad view.');ui.offseasonPane=pane;});
  bind('squadFilter',['team','dynasty'],role=>{assert(!ui.modal&&!s.pendingSwapIn,'Finish the current decision first.');assert(ui.view==='team'||s.dynasty?.offseason?.phase==='market','The squad list is not open.');assert(['ALL','BAT','WK-BAT','AR','BOWL'].includes(role),'Choose a squad role.');ui.squadFilter=role;});

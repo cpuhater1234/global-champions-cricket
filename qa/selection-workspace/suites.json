@@ -1,0 +1,55 @@
+{
+  "finalHash": "ddb850ba09b42a591443d3eb0519e18cf81dbd3c81ce765cc602eb661e2dede3",
+  "scope": "Two-season engine run and four earlier focused suites used the immediately preceding 31c16f build. Final refinements added only the batting-order hint and draft-analysis accessible label. Four affected suites rerun on final build. Whole-career test was stopped to scope engine verification to two seasons.",
+  "results": [
+    {
+      "test": "v8_comparison_intent_test.mjs",
+      "code": 0,
+      "output": "Comparison intent: all assertions passed; VM commands only.\n"
+    },
+    {
+      "test": "v8_match_career_hierarchy_test.mjs",
+      "code": 0,
+      "output": "Match, XI and career hierarchy preserve cricket state.\n"
+    },
+    {
+      "test": "v8_squad_management_test.mjs",
+      "code": 0,
+      "output": "{\n  checks: 57,\n  scope: 'Real completed-2009 save to 2010 management, release consequences/cancel, actual trade review/edit/accept/reject, cold resume; VM only'\n}\n"
+    },
+    {
+      "test": "v8_offseason_decisions_test.mjs",
+      "code": 0,
+      "output": "Offseason decisions assertions passed.\n"
+    },
+    {
+      "test": "v8_game_test.mjs",
+      "code": 0,
+      "output": "Closed season 2009\n{\n  \"scope\": \"Real cricket engine + new UI dispatch in a VM DOM stub. No browser, visual, geometry, focus or latency certification.\",\n  \"seed\": 101,\n  \"club\": \"NOT\",\n  \"coverage\": {\n    \"reloads\": [\n      {\n        \"year\": 2008,\n        \"label\": \"foundation-user-pick\"\n      },\n      {\n        \"year\": 2008,\n        \"label\": \"manual-XI\"\n      },\n      {\n        \"year\": 2009,\n        \"label\": \"annual-order\"\n      },\n      {\n        \"year\": 2009,\n        \"label\": \"annual-user-pick\"\n      },\n      {\n        \"year\": 2009,\n        \"label\": \"finals-ready\"\n      },\n      {\n        \"year\": 2009,\n        \"label\": \"grand-final-ready\"\n      }\n    ],\n    \"finals\": 1,\n    \"injurySelections\": 1,\n    \"injuryCovers\": 0,\n    \"superOvers\": 0,\n    \"clubs\": []\n  },\n  \"checks\": 1735,\n  \"seasons\": 2,\n  \"regularSeasonMatches\": 28,\n  \"storageStats\": {\n    \"writes\": 1134,\n    \"maxCodeUnits\": 1033211,\n    \"maxUtf16Bytes\": 2066422,\n    \"quotaFailures\": 0\n  },\n  \"errors\": []\n}\n"
+    },
+    {
+      "test": "v8_selection_recovery_test.mjs",
+      "code": 0,
+      "hash": "ddb850ba09b42a591443d3eb0519e18cf81dbd3c81ce765cc602eb661e2dede3",
+      "output": "Selection recovery: all assertions passed; no geometry claim.\n"
+    },
+    {
+      "test": "v8_decision_tools_test.mjs",
+      "code": 0,
+      "hash": "ddb850ba09b42a591443d3eb0519e18cf81dbd3c81ce765cc602eb661e2dede3",
+      "output": "{\n  checks: 34,\n  scope: 'Read-only comparison, filters, coverage and annual summary; real-script VM commands.'\n}\n"
+    },
+    {
+      "test": "v8_core_loop_hierarchy_test.mjs",
+      "code": 0,
+      "hash": "ddb850ba09b42a591443d3eb0519e18cf81dbd3c81ce765cc602eb661e2dede3",
+      "output": "Core-loop hierarchy assertions passed.\n"
+    },
+    {
+      "test": "v8_team_workspace_test.mjs",
+      "code": 0,
+      "hash": "ddb850ba09b42a591443d3eb0519e18cf81dbd3c81ce765cc602eb661e2dede3",
+      "output": "{\n  checks: 18,\n  scope: 'Real-script VM selection, swap, reorder and complete lineup markup; no rendered alignment evidence'\n}\n"
+    }
+  ]
+}
