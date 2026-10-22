@@ -406,3 +406,48 @@ p,small,.g8fine{font-weight:400;line-height:1.5}small,.g8fine{font-size:1rem;col
 .g8clubchooser .g8clubticket{min-width:0;max-width:100%;flex:1 1 8rem}
 .g8clubchooser .g8clubticket>span{min-width:0;max-width:100%;white-space:normal;overflow-wrap:anywhere}
 .g8skillchanges li{grid-template-columns:minmax(0,1fr) max-content}
+
+/* Draft cards: one scouting surface with an independent pick action. */
+.g8board{align-items:stretch}
+.g8board .g8player.g8draftplayer{align-self:stretch}
+.g8draftplayer.g8directpick{position:relative;isolation:isolate;display:flex;flex-direction:column;align-items:stretch;gap:0;padding:0;transition:border-color .16s ease,box-shadow .16s ease;background:#172a3b}
+.g8directpick .g8candidate{display:block;position:static;width:100%;height:auto;flex:1;padding:1rem;text-align:left;border-radius:0;background:transparent;outline:none}
+.g8directpick .g8candidate::after{content:"";position:absolute;inset:0;z-index:1;cursor:pointer;border-radius:8px}
+.g8directpick:has(.g8candidate:hover){border-color:#8ebdd7;box-shadow:0 0 0 1px #8ebdd744}
+.g8directpick:has(.g8candidate:focus-visible){outline:3px solid #bde887;outline-offset:3px}
+.g8directpick:has(.g8candidate:active){background:#25435a}
+.g8directpick .g8candidateidentity{display:flex;gap:.65rem;height:100%}
+.g8candidateheadline{display:grid;grid-template-columns:minmax(0,1fr) max-content;gap:.75rem;align-items:start;width:100%}
+.g8candidateheadline>strong{font-size:1.1rem;line-height:1.4;padding-top:.15rem}
+.g8cardoverall{display:flex;flex-direction:column;align-items:center;gap:.2rem;padding:.4rem .6rem;background:#253e4c;border:1px solid #52758a;border-radius:6px;color:#e0f5af}
+.g8cardoverall small{font-size:.8rem;color:#c5d8e4}.g8cardoverall b{font-size:1.5rem;font-variant-numeric:tabular-nums;line-height:1.2}
+.g8cardbio{display:flex;flex-wrap:wrap;gap:.4rem .65rem;padding:.65rem 0;border-block:1px solid #3c566c;color:#cbddeb;font-size:.9rem}
+.g8cardbio>span+span{border-left:1px solid #567084;padding-left:.65rem}
+.g8directpick .g8candidatecontext{font-size:.9rem;line-height:1.4;color:#bfdaeb}
+.g8directpick .g8candidatestrength{display:grid;grid-template-columns:minmax(0,1fr) max-content;align-items:center;gap:.6rem;padding:.65rem .75rem;background:#102333;border:1px solid #3d596f;border-radius:5px;margin-top:auto;font-size:.9rem;color:#d0dfeb}
+.g8candidatestrength b{color:#e1f1c3;font-size:1.1rem;font-variant-numeric:tabular-nums}
+.g8directpick .g8candidatechoice{display:flex;flex-direction:row;justify-content:flex-end;align-items:center;padding:.65rem 1rem;border-top:1px solid #3c566c;background:#132536}
+.g8directpick .g8candidatechoice .g8button{position:relative;z-index:2;min-width:5rem}
+/* Repeated rating rows use the same label/value rhythm. */
+.g8scoutability,.g8scoutoutlook{padding:1rem;border:1px solid #4a657b;border-radius:8px;background:#172c3d;margin:1rem 0}
+.g8scoutability>h3{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem;margin:0 0 .8rem;font-size:1.05rem}
+.g8scoutability>h3 small{color:#aec5d6;font-size:.85rem;font-weight:400}
+.g8scoutability .g8skillgrid{display:grid;grid-template-columns:1fr;gap:0;margin:0}
+:is(.g8scoutability,.g8skillcategory) .g8abilitybar{display:grid;grid-template-columns:minmax(0,1fr) max-content;gap:.45rem .75rem;margin:0;padding:.75rem 0;border-top:1px solid #3a5368}
+:is(.g8scoutability,.g8skillcategory) .g8abilitybar>span{grid-column:1;grid-row:1;font-weight:500}
+:is(.g8scoutability,.g8skillcategory) .g8abilitybar>b{grid-column:2;grid-row:1;font-variant-numeric:tabular-nums;min-width:2ch;text-align:right}
+:is(.g8scoutability,.g8skillcategory) .g8abilitytrack{grid-column:1/-1;grid-row:2;height:.35rem;align-self:center}
+.g8skillcategory h3{padding-bottom:.75rem;margin-bottom:0;border-bottom:2px solid #688fa6}
+.g8skillcategory .g8abilitybar:first-of-type{border-top:0}
+.g8teamread .g8matchupboard>section{border:1px solid #4a657b;border-radius:7px;padding:.75rem;background:#172c3d;min-width:0}
+.g8teamread .g8matchupboard h3{margin:0;padding:.3rem 0 .75rem;border-bottom:2px solid #688fa6}
+.g8teamread .g8matchuprow{margin:0;border:0;border-bottom:1px solid #3a5368;border-radius:0;background:transparent}
+.g8teamread .g8matchuprow>summary{padding:.85rem 0;gap:.5rem;min-height:44px}
+.g8teamread .g8matchuprow:last-child{border-bottom:0}
+.g8teamread .g8teamrating{justify-content:space-between;width:100%;box-sizing:border-box}
+@container(max-width:15rem){.g8candidateheadline{grid-template-columns:1fr}.g8cardoverall{flex-direction:row;justify-content:space-between;align-items:center}.g8directpick .g8candidate{padding:.75rem}}
+@media(prefers-reduced-motion:reduce){.g8draftplayer.g8directpick{transition:none}}
+.g8skillcategory{container-type:inline-size}
+@container(max-width:12rem){.g8skillcategory .g8abilitybar>span{grid-column:1/-1}.g8skillcategory .g8abilitybar>b{grid-row:2}.g8skillcategory .g8abilitytrack{grid-column:1;grid-row:2}}
+.g8directpick .g8candidate::after{inset:-4px}
+.g8clublocation{min-width:0;max-width:100%;overflow-wrap:anywhere}
