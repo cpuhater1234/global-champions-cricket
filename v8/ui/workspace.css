@@ -548,3 +548,33 @@ p,small,.g8fine{font-weight:400;line-height:1.5}small,.g8fine{font-size:1rem;col
 .g8directpick .g8candidate{display:block;grid-column:1/-1;padding:0;margin:0 0 .5rem}
 .g8directpick .g8candidateidentity{display:flex;gap:.45rem}
 .g8directpick .g8candidateheadline,.g8directpick .g8cardbio,.g8directpick .g8candidatecontext{margin-bottom:0}
+/* Signing week: status, pool totals, decision and controls form distinct sections. */
+.g8signing{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:1.2rem;align-items:start}
+.g8signing>section:first-child{padding:1.1rem;border:1px solid #64868c;border-top:3px solid #8ae2cb;background:#142e33;border-radius:9px}
+.g8windowhead{display:flex;justify-content:space-between;align-items:center;gap:.65rem;flex-wrap:wrap;padding-bottom:.85rem;border-bottom:1px solid #4e7078}
+.g8windowhead .g8eyebrow{margin:0;color:#bce7de;font-size:.85rem}
+.g8windowstatus{display:block;padding:.4rem .6rem;background:#203e33;color:#d9f3c8;border:1px solid #80a884;border-radius:5px;font-weight:700;line-height:1.4}
+.g8windowclosed .g8windowstatus{background:#353047;color:#eadff9;border-color:#a994c6}
+.g8signing .g8signingtitle{font-size:1.65rem;line-height:1.3;margin:1rem 0;color:#f2f7f9;min-height:0}
+.g8signingcounts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,10rem),1fr));gap:.65rem;margin:1rem 0}
+.g8signingcounts>div{display:flex;flex-direction:column;gap:.3rem;background:#10232d;border:1px solid #5a7d89;border-top:3px solid #8ae2cb;border-radius:6px;padding:.8rem}
+.g8signingcounts>div:last-child{border-top-color:#ffb49e}
+.g8signingcounts strong{color:#fff;font-size:2rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.g8signingcounts span{color:#c8dce5;font-size:.9rem;line-height:1.5}
+.g8signingfocus{padding:.85rem;background:#1c3446;border:1px solid #67879c;border-radius:6px;margin:1rem 0}
+.g8signingfocus .g8eyebrow{color:#abd7f5;font-size:.85rem}.g8signingfocus h3{margin:.5rem 0;font-size:1.1rem;color:#f0f5fa;line-height:1.4}.g8signingfocus p{margin:0;color:#c2d6e5;line-height:1.5}
+.g8signing .g8signingactions{display:flex;flex-wrap:wrap;gap:.6rem;padding-top:.9rem;border-top:1px solid #4e7078;margin-top:1rem}
+.g8signingactions>.g8button{flex:1 1 9rem;min-height:44px}
+.g8signingactions>.g8button:last-child:not(.g8primary){flex-basis:100%}
+.g8wirepanel{padding:1rem;border:1px solid #67879c;border-top:3px solid #9bd7ff;background:#132737;border-radius:9px;min-width:0}
+.g8wirehead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:.5rem;padding-bottom:.85rem;border-bottom:1px solid #506e84;margin-bottom:.8rem}
+.g8wirehead h2{margin:0;color:#e4f2fa;font-size:1.15rem}.g8wirehead>span{color:#b7cddd;font-size:.9rem}
+.g8wirepanel .g8wire{display:grid;gap:.55rem;background:transparent;border:0;min-height:0;max-height:33rem;overflow-y:auto;scrollbar-gutter:stable;padding-right:.3rem}
+.g8wirepanel .g8wireline{display:grid;grid-template-columns:minmax(0,1fr) max-content;align-items:start;gap:.7rem;padding:.8rem;background:#1b3345;border:1px solid #526f84;border-left:3px solid #91b9d2;border-radius:6px}
+.g8wirepanel .g8wirein{border-left-color:#8ae2cb}.g8wirepanel .g8wireout{border-left-color:#ffb49e}.g8wirepanel .g8wireupdate{border-left-color:#e3c88b;background:#302f2b}
+.g8wireline>div{min-width:0}.g8wirepanel .g8signedname{display:block;color:#eaf2f7;font-size:1rem;line-height:1.4;overflow-wrap:anywhere}.g8wirepanel .g8wireline p{color:#bfd1df;font-size:.9rem;line-height:1.5;margin:.35rem 0 0}
+.g8wirepanel .g8stamp{color:#d6f2e4;background:#183e33;border:1px solid #79aa96;min-width:2.5ch;max-width:100%;text-align:center;font-size:.85rem;padding:.3rem .45rem;line-height:1.4;border-radius:4px}
+.g8wirepanel .g8stamp.declined{color:#ffe1d6;background:#49322e;border-color:#b88374}.g8wireupdate .g8stamp{color:#f6e4bc;background:#443b28;border-color:#b19a6b}
+.g8wirepanel{container-type:inline-size}
+@container(max-width:17rem){.g8wirepanel .g8wireline{grid-template-columns:minmax(0,1fr)}.g8wirepanel .g8stamp{justify-self:start}}
+@media(max-width:760px){.g8signing{grid-template-columns:minmax(0,1fr)}.g8signing>section:first-child{padding:1rem}.g8wirepanel .g8wire{max-height:28rem}}
