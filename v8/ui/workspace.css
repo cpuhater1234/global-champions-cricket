@@ -655,3 +655,19 @@ p,small,.g8fine{font-weight:400;line-height:1.5}small,.g8fine{font-size:1rem;col
 @media(max-width:600px){.g8careerlaunch>.g8careerformat{grid-template-columns:minmax(0,1fr)}.g8careerformat>span{padding:.75rem}.g8careerformat>span+span{border-left:0;border-top:1px solid #6f8ea4}}
 .g8invitationsealed .g8sealedlabel{align-items:center;justify-items:center;text-align:center}
 .g8invitationsealed .g8sealedlabel>b{align-self:center;justify-self:center;text-align:center;margin-inline:auto}
+/* Invited clubs carry the same identity before and during club selection. */
+.g8invitationgrid .g8franchise,.g8clubchooser .g8franchise{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 18%,#142535)}
+.g8invitationgrid .g8clubbody,.g8clubchooser .g8clubbody{background:transparent}
+.g8invitationgrid .g8clubcover{background:var(--accent);color:var(--club-ink);border-bottom-color:var(--club-secondary)}
+.g8invitationgrid .g8clubentry{color:var(--club-ink)}
+.g8invitationgrid .g8clubwatermark{color:var(--club-ink);opacity:.16}
+.g8invitationgrid .g8clubcommit{color:#d2e4ec;border-top-color:#738da0}
+/* Wire entries separate identity/status from the decision details. */
+.g8wirepanel .g8wireline{grid-template-columns:minmax(0,1fr) max-content;gap:.45rem .65rem;padding:.65rem .75rem;align-items:center}
+.g8wirepanel .g8wireline>div{display:contents}
+.g8wirepanel .g8signedname{grid-column:1;grid-row:1;min-width:0;font-size:1rem}
+.g8wirepanel .g8wireline>.g8stamp{grid-column:2;grid-row:1;align-self:start}
+.g8wirepanel .g8wireline p{grid-column:1/-1;grid-row:2;margin:0;padding-top:.45rem;border-top:1px solid #658094;font-size:.9rem;line-height:1.45;color:#d1e0ea}
+.g8wirepanel .g8wireupdate p{border-top-color:#8c8064}
+.g8wirepanel .g8wirein{background:#173b3b}.g8wirepanel .g8wireout{background:#3b2d32}
+@container(max-width:14rem){.g8wirepanel .g8wireline{grid-template-columns:minmax(0,1fr)}.g8wirepanel .g8wireline>.g8stamp{grid-column:1;grid-row:2;justify-self:start}.g8wirepanel .g8wireline p{grid-row:3}}

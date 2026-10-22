@@ -185,3 +185,6 @@ Fresh prompt now caps at28rem with compact balanced44px/title/44px header instea
 
 ## Intro format strip and invitation alignment
 14league matches/Top four reach finals/2008–2026 is an equal three-column bordered strip with dividers and balanced padding, stacking on small screens. Invitation label/number/status explicitly centred, scoped separately from left-aligned draft Drawing.12width/font layouts verify all8invitation number centres;60entry regressions passed. SHA25605fecaf86c7b137d35e729684b7ec1dd591cac2becb82275a54d9b1ee186db0d.
+
+## Club invitation identity, dismissed guide state and wire rows
+Club labels now CLUB1–8 without leading zeroes. Invitation covers use actual team colours with clubInk foreground; invitation/chooser bodies share subtle club tint. Contrast of all8revealed invitation cards checked, alongside number-centre and60entry cases. Dismissing club guide with X/Escape clears selectedClub and removes provisional green state; explicit takeover still works. Wire entries now use an aligned name/status header, full-width decision below a separator, compact padding and distinct IN/OUT fills. Final72signing layout/contrast cases and control/draw transition passed. FinalSHA256cdcb894aeda84b49104a6e126046051c3381d36028910327551490d3ab9f3651. Entry/club tests ran immediately before wire-only CSS refinement.

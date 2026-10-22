@@ -12,7 +12,7 @@
  const announce=(t,brief=false,quiet=false)=>{clearFeedback();const feedback=document.getElementById('g8feedback'),inside=document.getElementById('g8dialogFeedback');feedback.textContent=t;feedback.hidden=!!ui.modal;if(quiet)feedback.classList.add('g8quiet');if(inside){inside.textContent=ui.modal?t:'';inside.hidden=!ui.modal||!t;}if(brief&&!ui.modal){feedback.classList.add('g8toast');feedbackTimer=clock.setTimeout(()=>{feedback.classList.add('g8fading');feedbackTimer=clock.setTimeout(clearFeedback,250);},1000);}};
  const bind=(name,where,fn)=>{commands[name]=fn;allow[name]=where;};
  const assert=(condition,text)=>{if(!condition)throw new Error(text);};
- function closeDialog(){if(dialog.open)dialog.close();ui.modal=null;document.getElementById('g8feedback').hidden=false;const opener=dialogOpener;dialogOpener=null;opener?.focus?.({preventScroll:true});if(!document.hidden&&!['home','story'].includes(ui.view))clock.resume();}
+ function closeDialog(){if(ui.modal==='club'&&!s.userClub)s.selectedClub=null;if(dialog.open)dialog.close();ui.modal=null;document.getElementById('g8feedback').hidden=false;const opener=dialogOpener;dialogOpener=null;opener?.focus?.({preventScroll:true});if(!document.hidden&&!['home','story'].includes(ui.view))clock.resume();}
  function modal(title,body,key='info'){
   const replacing=dialog.open;if(!replacing)dialogOpener=document.activeElement;
   clock.pause();ui.modal=key;dialog.dataset.prompt=key;dialog.dataset.layout=['fresh','draftComplete','listReview','release','finalCut','tradeReview'].includes(key)?'prompt':'detail';
