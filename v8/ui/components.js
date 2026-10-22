@@ -21,8 +21,9 @@ window.GCC8 = (()=>{
  const heading=(eyebrow,title,copy='',actions='')=>`<div class="g8heading"><span class="g8panelart" aria-hidden="true">${icon(/draft|draw/i.test(eyebrow+title)?'cricket':/team|XI|squad/i.test(eyebrow+title)?'stumps':'cricket-ball')}</span><div><span class="g8eyebrow g8iconlabel">${icon(/FINAL|champion/i.test(eyebrow+title)?'trophy':/draft|draw/i.test(eyebrow+title)?'arrows-sort':/team|XI/i.test(eyebrow+title)?'shirt-sport':'cricket')}${esc(eyebrow)}</span><h1>${esc(title)}</h1>${copy?`<p>${esc(copy)}</p>`:''}</div><div class="g8actions">${actions}</div></div>`;
  const injury=p=>G.state.dynasty?.injuries?.[p.id];
  const form=p=>p.form>=2?'In form':p.form>=1?'Finding rhythm':p.form<=-2?'Searching for form':p.form<=-1?'Quiet spell':'Steady';
- const abilityRead=(label,value)=>{const n=Math.max(0,Math.min(99,Math.round(Number(value)||0)));return `<div class="g8abilitybar"><span>${esc(label)}</span><div class="g8abilitytrack" role="img" aria-label="${esc(label)} ${n} out of 99"><i style="--ability:${n*100/99}%"></i></div><b>${n}</b></div>`;};
- const compareRead=(label,a,b,first='Now',second='After',maximum=99)=>{const top=Math.max(1,maximum,Number(a)||0,Number(b)||0);return `<article class="g8compare"><h3>${esc(label)}</h3><div class="g8comparebars">${[[first,a],[second,b]].map(([name,n])=>`<div><span>${esc(name)}</span><div class="g8strengthtrack" role="img" aria-label="${esc(name)} ${esc(label)} ${esc(n)}"><span style="--strength:${Math.max(0,Number(n)||0)*100/top}%"></span></div><b>${esc(n)}</b></div>`).join('')}</div></article>`;};
+ const ratingTone=value=>Number(value)>=80?'#9ee59c':Number(value)>=65?'#f5d96c':'#ff9f99';
+ const abilityRead=(label,value)=>{const n=Math.max(0,Math.min(99,Math.round(Number(value)||0)));return `<div class="g8abilitybar g8rated" style="--rating-color:${ratingTone(n)}"><span>${esc(label)}</span><div class="g8abilitytrack" role="img" aria-label="${esc(label)} ${n} out of 99"><i style="--ability:${n*100/99}%"></i></div><b>${n}</b></div>`;};
+ const compareRead=(label,a,b,first='Now',second='After',maximum=99)=>{const top=Math.max(1,maximum,Number(a)||0,Number(b)||0);return `<article class="g8compare${maximum===99?' g8ratingcompare':''}"><h3>${esc(label)}</h3><div class="g8comparebars">${[[first,a],[second,b]].map(([name,n])=>`<div ${maximum===99?`style="--rating-color:${ratingTone(n)}"`:""}><span>${esc(name)}</span><div class="g8strengthtrack" role="img" aria-label="${esc(name)} ${esc(label)} ${esc(n)}"><span style="--strength:${Math.max(0,Number(n)||0)*100/top}%"></span></div><b>${esc(n)}</b></div>`).join('')}</div></article>`;};
  const countryNames={AFG:'Afghanistan',AUS:'Australia',BAN:'Bangladesh',ENG:'England',IND:'India',IRE:'Ireland',NED:'Netherlands',NZ:'New Zealand',PAK:'Pakistan',SA:'South Africa',SL:'Sri Lanka',WI:'West Indies',ZIM:'Zimbabwe'};
  const playerCard=(p,action='inspect',label='Scout player',disabled=false,draft=false)=>{
   const role={'BAT':'Batter','WK-BAT':'Wicketkeeper','AR':'All-rounder','BOWL':'Bowler'}[p.role]||p.role;
@@ -47,7 +48,7 @@ window.GCC8 = (()=>{
  const reads=()=>{const p=profile();return `<div class="g8reads">${phases.map(([key,label])=>btn(`${label} · ${Math.round(p[key]||0)}`,'rating',[key],'g8read')).join('')}</div>`;};
  const ground=c=>`<div class="g8groundnote"><span class="g8eyebrow">${esc(c?.ground||'The ground')}</span><h3>${esc(c?.trait||'Conditions to come')}</h3><p>${esc(c?G.matchGroundForFixture({home:c,round:Math.min(14,G.state.round+1)})?.weather?.label||c.region:'')}</p></div>`;
  const empty=t=>`<p class="g8empty">${esc(t)}</p>`;
- return {G,D,R,read,ui,esc,icon,stadium,btn,badge,clubInk,roster,screen,pitch,heading,abilityRead,compareRead,playerCard,table,pool,resultCard,phases,profile,reads,ground,injury,form,empty,views:Object.create(null)};
+ return {G,D,R,read,ui,esc,icon,stadium,btn,badge,clubInk,roster,screen,pitch,heading,ratingTone,abilityRead,compareRead,playerCard,table,pool,resultCard,phases,profile,reads,ground,injury,form,empty,views:Object.create(null)};
 })();
 
 /* Shared decision hierarchy; supporting detail stays available without filling the workspace. */

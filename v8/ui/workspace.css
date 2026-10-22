@@ -698,3 +698,19 @@ p,small,.g8fine{font-weight:400;line-height:1.5}small,.g8fine{font-size:1rem;col
 .g8draftboard>.g8boardheading{justify-content:flex-start;text-align:left;padding:.75rem .85rem;margin:0 0 .75rem}
 .g8draftboard>.g8boardheading h2{text-align:left}
 .g8draftboard>.g8search{margin-top:0}
+
+/* Independent disclosures and consistent low-to-high ability colours. */
+.g8teamread .g8matchupboard{align-items:start}
+.g8rated.g8abilitybar .g8abilitytrack i,.g8scoutability .g8rated.g8abilitybar .g8abilitytrack i,.g8skillcategory .g8rated.g8abilitybar .g8abilitytrack i{background:var(--rating-color)}
+.g8rated.g8abilitybar>b,.g8teamread .g8matchuprow summary>strong{color:var(--rating-color)}
+.g8teamread .g8matchuprow .g8strengthtrack>span,.g8ratingcompare .g8comparebars .g8strengthtrack>span{background:var(--rating-color)}
+.g8teamread .g8strengthword{color:var(--rating-color)}
+.g8teamread .g8roleboardhead>.g8eyebrow{flex-basis:100%;margin-bottom:0}
+.g8teamread .g8teamrating{display:grid;grid-template-columns:max-content minmax(0,1fr);width:fit-content;max-width:100%;justify-content:start;gap:1rem;background:#152d3b;border:1px solid #6e8b9e;border-left:4px solid var(--rating-color);padding:.85rem 1rem;flex:0 1 auto}
+.g8teamread .g8teamrating strong{font-size:2.8rem;line-height:1.1;color:var(--rating-color);padding-right:1rem;border-right:1px solid #607b8f;align-self:center}
+.g8teamread .g8teamrating>span{display:block;color:#edf5fb;font-size:1.05rem;line-height:1.4;text-align:left}
+.g8teamread .g8teamrating small{display:block;font-size:.85rem;line-height:1.5;color:#c5d9e8;font-weight:500;margin-top:.2rem}
+.g8teamread .g8coverread{flex:1 1 12rem;text-align:left;line-height:1.5}
+.g8teamread .g8roleboardhead{container-type:inline-size}
+.g8teamread .g8teamrating>span{min-width:0;overflow-wrap:anywhere}
+@container(max-width:14rem){.g8teamread .g8teamrating{grid-template-columns:minmax(0,1fr);width:100%;gap:.65rem}.g8teamread .g8teamrating strong{padding:0 0 .55rem;border-right:0;border-bottom:1px solid #607b8f}}
