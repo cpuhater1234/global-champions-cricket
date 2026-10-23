@@ -1214,6 +1214,106 @@ p,small,.g8fine{font-weight:400;line-height:1.5}small,.g8fine{font-size:1rem;col
 @media(hover:hover){.g8directpick.g8recruitcard:has(.g8candidate:hover){transform:translateY(-3px);border-color:#a1b7c8;box-shadow:0 7px 0 #070f18,0 12px 18px #0003}.g8directpick.g8recruitcard:has(.g8candidate:active){transform:translateY(1px);box-shadow:0 2px 0 #070f18}}
 @container(max-width:18rem){.g8recruitcard .g8cardheader{grid-template-columns:minmax(0,1fr)}.g8directpick.g8recruitcard .g8cardoverall{grid-row:1;grid-column:1;flex-direction:row;justify-content:space-between;padding:.35rem .6rem}.g8directpick.g8recruitcard .g8candidateheadline{grid-row:2;grid-column:1}.g8directpick.g8recruitcard .g8cardbio{grid-row:3;grid-column:1}.g8directpick.g8recruitcard .g8candidatecontext{grid-row:4;grid-column:1}.g8directpick.g8recruitcard .g8candidatestrength{grid-column:1/-1;grid-row:2;border-radius:0}.g8directpick.g8recruitcard .g8candidatechoice{grid-column:1/-1;grid-row:3;padding:.2rem .85rem .75rem;justify-self:stretch;border-radius:0 0 8px 8px}.g8directpick.g8recruitcard .g8candidatechoice .g8button{width:100%}}
 @media(prefers-reduced-motion:reduce){.g8draftplayer.g8directpick.g8recruitcard,.g8directpick.g8recruitcard .g8candidatechoice .g8button{transition:none}.g8directpick.g8recruitcard:has(.g8candidate:hover),.g8directpick.g8recruitcard:has(.g8candidate:active){transform:none}}
+/* Whole-game solid arcade system. This supersedes the draft-only visual trial. */
+:root{--navy:#0d1724;--surface:#1b2c40;--surface-raised:#263e55;--surface-inset:#102033;--line:#526b80;--paper:#1b2c40;--forest:#14283b}
+html,body{background:#0d1724}
+#g8app,#g8app:has(.g8draftsplit){background:#0d1724;background-image:none}
+#g8hud,#g8app:has(.g8draftsplit) #g8hud{background:#142235;border-bottom:1px solid #476078;box-shadow:0 3px 0 #07101a}
+.g8heading,#g8stage:has(.g8draftsplit)>.g8heading{background:#192b3f;background-image:none;border-color:#496176;border-left-color:#82badb;box-shadow:0 4px 0 #07101a;border-radius:8px}
+.g8sheet,#g8dialog .g8sheet{background:#1b2c40;background-image:none;border-color:#526b80;box-shadow:0 3px 0 #07101a}
+.g8sheet>.g8sectionhead{background:#263e55;border-color:#6b869c;border-radius:4px}
+.g8welcomepanel,.g8introbrief,.g8careerlaunch{background:#1c3349;background-image:none;border-color:#5a7991;box-shadow:0 5px 0 #07101a;border-radius:9px}
+.g8heroart{background:#14283b;background-image:none;border-color:#6d8fa5;box-shadow:0 5px 0 #07101a}
+.g8arenaheader{background:#25465e;color:#edf5fa;border-color:#6d8fa5}
+.g8arenaheader>span:last-child{color:#d1e9e3}
+.g8careersteps li{background:#1c3349;border-color:#58768e;box-shadow:0 3px 0 #07101a}
+.g8careersteps li:nth-child(1){background:#203f55}.g8careersteps li:nth-child(2){background:#234536}.g8careersteps li:nth-child(3){background:#4a3828}
+.g8careerformat,.g8careerlaunch>.g8careerformat{background:#14283b;border-color:#7190a6}
+.g8club.g8franchise,.g8invitationgrid .g8franchise,.g8clubchooser .g8franchise{background:#1b2c40;background-image:none;border-color:#607d93;box-shadow:0 4px 0 #07101a}
+.g8clubchooser .g8franchise{border-left-color:var(--accent)}
+.g8clubbody,.g8invitationgrid .g8clubbody,.g8clubchooser .g8clubbody{background:#1b2c40}
+.g8clubchooser .g8franchise.selected{background:#1b2c40;border-color:#bde96e;box-shadow:0 4px 0 #07101a}
+.g8clubidentity.g8clubidentitypanel{background:#1b2c40;border-color:#6d8da3;border-top-color:var(--club-accent);box-shadow:0 3px 0 #07101a}
+.g8clubidentitypanel .g8clubmark{background:#102033}
+.g8clubidentitypanel .g8clubmetastrip{background:#263e55}
+.g8sealed,.g8ordersealed .g8sealedlabel{background:#1b2c40;background-image:none;border-color:#607d93;box-shadow:0 3px 0 #07101a}
+.g8ordergrid .g8ordercard,.g8ordergrid .g8ordermine{background:#1b2c40;border-color:#607d93;box-shadow:0 3px 0 #07101a}
+.g8ordergrid .g8ordermine{border-left-color:#bde96e}
+.g8signing>section:first-child{background:#1b2c40;background-image:none;border-color:#58778c;border-top-color:#8ae2cb;box-shadow:0 4px 0 #07101a}
+.g8windowhead{background:#1e4b42;border-color:#6d9d8d;border-radius:5px}
+.g8signingcounts>div,.g8signingfocus{background:#14283b;border-color:#68859a}
+.g8wirepanel{background:#1b2c40;border-color:#526b80}
+.g8wirepanel .g8wirein{background:#214739}.g8wirepanel .g8wireout{background:#4c3138}.g8wirepanel .g8wireupdate{background:#443e29}
+.g8windowstatus{background:#2a523b;border-color:#80ae8c}.g8windowclosed .g8windowstatus{background:#283f58;border-color:#859eb4;color:#e1edf6}
+.g8teamworkspace>.g8sheet,.g8compactwork>.g8sheet{background:#1b2c40;border-color:#526b80;box-shadow:0 4px 0 #07101a}
+.g8teamworkspace .g8startingxi>.g8sectionhead{background:#244c3d;color:#e8f3ec;border-color:#759a84}
+.g8teamworkspace .g8bench>.g8sectionhead{background:#263e55;border-color:#7692a7}
+.g8teamworkspace .g8slot,.g8teamworkspace .g8squadrow{background:#1b2c40}
+.g8teamworkspace .g8slot:nth-child(even),.g8teamworkspace .g8squadrow:nth-child(even){background:#20354b}
+.g8namescout:hover,.g8squadscout:hover{background:#304d64}
+.g8xicommand{background:#1a3043;border-color:#607d93;box-shadow:0 4px 0 #07101a}
+.g8returningxi,.g8retentionread{background:#234536;border-color:#7c9c80}
+.g8teamread.g8roleboard{background:#1b2c40;border-color:#607d93}
+.g8teamread .g8matchupboard>section:first-child,.g8teamread .g8matchupboard>section:nth-child(2){background:#1b2c40;border-color:#607d93}
+.g8teamread .g8matchupboard>section:first-child h3{background:#224b69;color:#e2f1fb;border-color:#7098b2}
+.g8teamread .g8matchupboard>section:nth-child(2) h3{background:#643c36;color:#ffddd0;border-color:#b2877d}
+.g8teamread .g8matchuprow,.g8teamread .g8matchuprow:last-child,.g8teamread .g8matchupboard>section:nth-child(2) .g8matchuprow{background:#102033;border-color:#657e93}
+.g8teamread .g8teamrating{background:#14283b;border-color:#718ba0;border-left-color:var(--rating-color);box-shadow:0 2px 0 #07101a}
+.g8fixturehero,.g8matcharena,.g8ballarena,.g8liveboard{background:#1b2c40;background-image:none;border-color:#5d7c93;box-shadow:0 4px 0 #07101a}
+.g8matchfooter,.g8playbackcontrols{background:#14283b;border-color:#607d93;border-radius:5px}
+.g8liveScore,.g8revealScore,.g8score strong{background:#102033;border-color:#67849b;box-shadow:0 3px 0 #07101a}
+.g8livebatter,.g8livebowler,.g8overplan>div,.g8phasecontest,.g8spotlight{background:#203c52;border-color:#66859b}
+.g8ballmoment{background:#234536;border-color:#7da083}
+.g8result{background:#213c52;background-image:none;border-color:#6d8fa5;box-shadow:0 4px 0 #07101a}
+.g8result.g8win{background:#214739;background-image:none;border-color:#7c9f87}
+.g8result.g8loss{background:#4b303b;background-image:none;border-color:#ae8795}
+.g8result.g8neutral{background:#213c52;background-image:none}
+.g8win .g8resultbanner{background:#2d6545;color:#f1f8ec}.g8loss .g8resultbanner{background:#7c3d48;color:#fff1ef}.g8neutral .g8resultbanner{background:#315e7a;color:#eff8fd}
+.g8fixturecard{background:#1b2c40;border-color:#6d899e;box-shadow:0 3px 0 #07101a}
+.g8table th{background:#29475e;color:#e0edf5;border-color:#6c879c}
+.g8table td{background:#1b2c40;border-color:#4c657b}
+.g8table tbody tr:nth-child(even) td{background:#20354b}
+.g8table tr.mine td{background:#264c3d}
+.g8annualhero,.g8annualbrief,.g8reviewsummary,.g8windowbanner,.g8nextchapter{background:#1c3349;background-image:none;border-color:#66869b;box-shadow:0 4px 0 #07101a}
+.g8reviewsummary.g8titlewon{background:#214739;border-color:#7c9f87}
+.g8managerow,.g8developmentrow,.g8seasonbook,.g8careerrecord{background:#1b2c40;border-color:#5d798f}
+.g8tradepackage>section,.g8tradeimpact,.g8exchangereview>section,.g8tradeempty,.g8consequences>div{background:#213a50;border-color:#6c879c;box-shadow:0 2px 0 #07101a}
+.g8developmentbadge{background:#234536;border-color:#87aa85}
+#g8dialog{background:#1b2c40;border-color:#718da3;border-top-color:#8bb3cf;box-shadow:0 8px 0 #070f18,0 22px 40px #0006}
+.g8modalhead{background:#263e55;border-bottom-color:#6b869c}
+.g8modalbody{background:#1b2c40}
+.g8scoutsummary{background:var(--drafthead,#263e55);border-color:#6c8599}
+.g8skillcategory,.g8compareidentities>section,.g8comparemetrics,.g8groundbands>div,.g8clubpriorities li,.g8developmentrow .g8skillchanges li{background:#20384e;border-color:#607d93}
+.g8utilitymenu[open]{background:#1b2c40;border-color:#6c879c;box-shadow:0 4px 0 #07101a}
+.g8ghost,.g8actions>.g8button:not(.g8primary):not(.g8danger):not(.g8continueclub){background:#263b51;background-image:none;border-color:#6a8397;color:#e4edf4;box-shadow:0 2px 0 #081321}
+.g8ghost:hover:enabled,.g8actions>.g8button:not(.g8primary):not(.g8danger):not(.g8continueclub):hover:enabled{background:#345771;color:#f1f7fb;border-color:#9bb7cb;box-shadow:0 3px 0 #081321}
+.g8button:active:enabled{transform:translateY(1px);box-shadow:none}
+.g8button:focus-visible,.g8namescout:focus-visible,.g8squadscout:focus-visible{outline:3px solid #c9ef7d;outline-offset:3px}
+#g8app details>summary:hover{background:#284259}
+#g8app details>summary:active{background:#20384c}
+#g8app details>summary:focus-visible{outline:3px solid #c9ef7d;outline-offset:3px}
+.g8clublocation,.g8clubground p{color:#c9dae7}
+@media(hover:hover){.g8club.g8franchise:has(button:hover){transform:translateY(-2px);box-shadow:0 6px 0 #07101a;border-color:#9bb7cb}}
+@media(prefers-reduced-motion:reduce){.g8button,.g8namescout,.g8club,.g8squadscout{transition:none}.g8button:hover:enabled,.g8club.g8franchise:has(button:hover){transform:none}}
+.g8namescout:hover,.g8squadscout:hover{background:#294255}
+.g8namescout:hover small,.g8squadscout:hover small{color:#d2e1ed}
+.g8sheet>.g8sectionhead{padding:.4rem .55rem}
+.g8liveScore{padding:.6rem .75rem;border-radius:5px}
+.g8livebatter{padding:.4rem .55rem;border:1px solid #66859b;border-radius:5px}
+.g8livebowler{padding:.6rem .55rem;border:1px solid #66859b;border-radius:5px}
+.g8ballmoment{padding:.8rem 1rem;border:1px solid #7da083;border-radius:7px}
+.g8matchfooter{padding:.75rem;border:1px solid #607d93}
+.g8playbackcontrols{padding:.7rem;border:1px solid #607d93}
+.g8annualdevelopment,.g8development{background:#1b2c40;border-color:#607d93}
+.g8development>.g8eyebrow{background:#244c3d;padding:.45rem .55rem;border-radius:4px;color:#d5e8d8}
+.g8annualdevelopment .g8developmentrow{padding:.85rem .6rem}
+.g8player:not(.g8recruitcard){background:#1b2c40;border-color:#607d93;box-shadow:0 3px 0 #07101a}
+.g8player:not(.g8recruitcard) .g8playerhead{background:var(--drafthead,#263e55);padding:.6rem;border-radius:5px}
+.g8player:not(.g8recruitcard) .g8playerhead h3{color:#fff}
+.g8player:not(.g8recruitcard) .g8playerhead small{color:#d5e4ee}
+.g8liveScore{padding:.6rem .3rem}
+.g8annualdevelopment .g8developmentrow{padding-inline:.25rem}
+#g8stage[data-view="legacy"] .g8hero>div:first-child{background:#1c3349;border:1px solid #5a7991;border-radius:9px;padding:1.5rem;box-shadow:0 5px 0 #07101a}
 </style></head><body>
 <!-- Photo source and licence notices (unmodified photos): {"CSK": {"title": "Chidambaram stadium after renovation.jpg", "author": "Ashwin Kumar", "licence": "by-sa/2.0", "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0/", "source": "https://commons.wikimedia.org/wiki/File:Chidambaram_stadium_after_renovation.jpg", "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chidambaram_stadium_after_renovation.jpg?width=1280", "width": 4080, "height": 2551, "changes": "Unmodified external photograph; scaled to fit a reserved 4:3 frame. No implication that the photograph depicts the simulated year or current match."}, "MI": {"title": "Wankhede stadium.jpg", "author": "Manas46951", "licence": "by-sa/4.0", "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/", "source": "https://commons.wikimedia.org/wiki/File:Wankhede_stadium.jpg", "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wankhede_stadium.jpg?width=1280", "width": 3264, "height": 2448, "changes": "Unmodified external photograph; scaled to fit a reserved 4:3 frame. No implication that the photograph depicts the simulated year or current match."}, "RR": {"title": "Sawai-Mansingh-Stadium-Jaipur.jpg", "author": "Bholi Aman", "licence": "CC0", "licenceUrl": "https://creativecommons.org/publicdomain/zero/1.0/", "source": "https://commons.wikimedia.org/wiki/File:Sawai-Mansingh-Stadium-Jaipur.jpg", "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sawai-Mansingh-Stadium-Jaipur.jpg?width=1280", "width": 600, "height": 400, "changes": "Unmodified external photograph; scaled to fit a reserved 4:3 frame. No implication that the photograph depicts the simulated year or current match."}, "KKR": {"title": "Eden gardens ipl 2011.jpg", "author": "Suraj100", "licence": "PD", "licenceUrl": null, "source": "https://commons.wikimedia.org/wiki/File:Eden_gardens_ipl_2011.jpg", "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Eden_gardens_ipl_2011.jpg?width=1280", "width": 2299, "height": 1840, "changes": "Unmodified external photograph; scaled to fit a reserved 4:3 frame. No implication that the photograph depicts the simulated year or current match."}, "RCB": {"title": "Chinnaswamy stadium.jpg", "author": "Schumrossi", "licence": "PD", "licenceUrl": null, "source": "https://commons.wikimedia.org/wiki/File:Chinnaswamy_stadium.jpg", "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chinnaswamy_stadium.jpg?width=1280", "width": 1600, "height": 1200, "changes": "Unmodified external photograph; scaled to fit a reserved 4:3 frame. No implication that the photograph depicts the simulated year or current match."}, "DC": {"title": "FerozShah Kotla IPL2017.jpg", "author": "Paramgoel", "licence": "by-sa/4.0", "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/", "source": "https://commons.wikimedia.org/wiki/File:FerozShah_Kotla_IPL2017.jpg", "url": "https://commons.wikimedia.org/wiki/Special:FilePath/FerozShah_Kotla_IPL2017.jpg?width=1280", "width": 960, "height": 720, "changes": "Unmodified external photograph; scaled to fit a reserved 4:3 frame. No implication that the photograph depicts the simulated year or current match."}, "SIX": {"title": "Sydney Cricket Ground, Warne final balls, 2007.jpg", "author": "Mdmanser", "licence": "by-sa/2.5", "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.5/", "source": "https://commons.wikimedia.org/wiki/File:Sydney_Cricket_Ground,_Warne_final_balls,_2007.jpg", "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sydney_Cricket_Ground,_Warne_final_balls,_2007.jpg?width=1280", "width": 1600, "height": 1200, "changes": "Unmodified external photograph; scaled to fit a reserved 4:3 frame. No implication that the photograph depicts the simulated year or current match."}, "THU": {"title": "Sydney Showground Main Arena.jpg", "author": "Edwin Lee", "licence": "by/2.0", "licenceUrl": "https://creativecommons.org/licenses/by/2.0/", "source": "https://commons.wikimedia.org/wiki/File:Sydney_Showground_Main_Arena.jpg", "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sydney_Showground_Main_Arena.jpg?width=1280", "width": 640, "height": 480, "changes": "Unmodified external photograph; scaled to fit a reserved 4:3 frame. No implication that the photograph depicts the simulated year or current match."}, "STA": {"title": "MCG under lights.jpg", "author": "Pattav2", "licence": "PD", "licenceUrl": null, "source": "https://commons.wikimedia.org/wiki/File:MCG_under_lights.jpg", "url": "https://commons.wikimedia.org/wiki/Special:FilePath/MCG_under_lights.jpg?width=1280", "width": 1280, "height": 960, "changes": "Unmodified external photograph; scaled to fit a reserved 4:3 frame. No implication that the photograph depicts the simulated year or current match."}, "REN": {"title": "Telstra Dome 2.jpg", "author": "Vincent Pac Soo", "licence": "PD", "licenceUrl": null, "source": "https://commons.wikimedia.org/wiki/File:Telstra_Dome_2.jpg", "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Telstra_Dome_2.jpg?width=1280", "width": 1024, "height": 768, "changes": "Unmodified external photograph; scaled to fit a reserved 4:3 frame. No implication that the photograph depicts the simulated year or current match."}, "SCO": {"title": "WACA north.JPG", "author": "Edelmand", "licence": "PD", "licenceUrl": null, "source": "https://commons.wikimedia.org/wiki/File:WACA_north.JPG", "url": "https://commons.wikimedia.org/wiki/Special:FilePath/WACA_north.JPG?width=1280", "width": 2048, "height": 1536, "changes": "Unmodified external photograph; scaled to fit a reserved 4:3 frame. No implication that the photograph depicts the simulated year or current match."}, "STR": {"title": "AdelaideSkylineAdelaideOval.jpg", "author": "Normangerman", "licence": "PD", "licenceUrl": null, "source": "https://commons.wikimedia.org/wiki/File:AdelaideSkylineAdelaideOval.jpg", "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AdelaideSkylineAdelaideOval.jpg?width=1280", "width": 3264, "height": 2448, "changes": "Unmodified external photograph; scaled to fit a reserved 4:3 frame. No implication that the photograph depicts the simulated year or current match."}, "HEA": {"title": "Thegabbaahes2006.jpg", "author": "Ryanlerch", "licence": "PD", "licenceUrl": null, "source": "https://commons.wikimedia.org/wiki/File:Thegabbaahes2006.jpg", "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Thegabbaahes2006.jpg?width=1280", "width": 1632, "height": 1224, "changes": "Unmodified external photograph; scaled to fit a reserved 4:3 frame. No implication that the photograph depicts the simulated year or current match."}, "HUR": {"title": "Members area and view of ground.jpg", "author": "Aaroncrick", "licence": "PD", "licenceUrl": null, "source": "https://commons.wikimedia.org/wiki/File:Members_area_and_view_of_ground.jpg", "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Members_area_and_view_of_ground.jpg?width=1280", "width": 2574, "height": 1688, "changes": "Unmodified external photograph; scaled to fit a reserved 4:3 frame. No implication that the photograph depicts the simulated year or current match."}, "SUR": {"title": "The Oval 7August2008.jpg", "author": "PaddyBriggs", "licence": "PD", "licenceUrl": null, "source": "https://commons.wikimedia.org/wiki/File:The_Oval_7August2008.jpg", "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Oval_7August2008.jpg?width=1280", "width": 1759, "height": 1069, "changes": "Unmodified external photograph; scaled to fit a reserved 4:3 frame. No implication that the photograph depicts the simulated year or current match."}, "LAN": {"title": "New pavilion, Old Trafford Cricket Ground, July 2013.jpg", "author": "LordSarnoc", "licence": "by-sa/3.0", "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/", "source": "https://commons.wikimedia.org/wiki/File:New_pavilion,_Old_Trafford_Cricket_Ground,_July_2013.jpg", "url": "https://commons.wikimedia.org/wiki/Special:FilePath/New_pavilion,_Old_Trafford_Cricket_Ground,_July_2013.jpg?width=1280", "width": 3000, "height": 2206, "changes": "Unmodified external photograph; scaled to fit a reserved 4:3 frame. No implication that the photograph depicts the simulated year or current match."}, "YOR": {"title": "Headingley.jpg", "author": "Joe p15", "licence": "PD", "licenceUrl": null, "source": "https://commons.wikimedia.org/wiki/File:Headingley.jpg", "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Headingley.jpg?width=1280", "width": 1280, "height": 960, "changes": "Unmodified external photograph; scaled to fit a reserved 4:3 frame. No implication that the photograph depicts the simulated year or current match."}, "NOT": {"title": "Trent Bridge at Night.JPG", "author": "PaddyBriggs", "licence": "PD", "licenceUrl": null, "source": "https://commons.wikimedia.org/wiki/File:Trent_Bridge_at_Night.JPG", "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Trent_Bridge_at_Night.JPG?width=1280", "width": 3264, "height": 2448, "changes": "Unmodified external photograph; scaled to fit a reserved 4:3 frame. No implication that the photograph depicts the simulated year or current match."}, "SOM": {"title": "The County Ground, Taunton.jpg", "author": "John Lamper", "licence": "by-sa/2.0", "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0/", "source": "https://commons.wikimedia.org/wiki/File:The_County_Ground,_Taunton.jpg", "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_County_Ground,_Taunton.jpg?width=1280", "width": 640, "height": 427, "changes": "Unmodified external photograph; scaled to fit a reserved 4:3 frame. No implication that the photograph depicts the simulated year or current match."}, "HAM": {"title": "Rose bowl3.JPG", "author": "AssociateAffiliate", "licence": "by-sa/3.0", "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/", "source": "https://commons.wikimedia.org/wiki/File:Rose_bowl3.JPG", "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rose_bowl3.JPG?width=1280", "width": 2304, "height": 1728, "changes": "Unmodified external photograph; scaled to fit a reserved 4:3 frame. No implication that the photograph depicts the simulated year or current match."}} --><!-- Tabler Icons: MIT License
 
