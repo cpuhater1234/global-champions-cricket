@@ -1984,8 +1984,8 @@ function installModalInteraction() {
 
   function clubXI(c) {
     if (c.abbr === state.userClub.abbr) return state.xi.map(byId);
-    const cached=(state.cpuXIs?.[c.abbr]||[]).map(byId).filter(Boolean);
-    if(cached.length===11) return cached;
+    const owned=new Set(state.teams[c.abbr]||[]),cached=(state.cpuXIs?.[c.abbr]||[]).filter(id=>owned.has(id)).map(byId).filter(Boolean);
+    if(cached.length===11&&new Set(cached.map(p=>p.id)).size===11) return cached;
     const roster = state.teams[c.abbr].map(byId);
     return bestXI(roster);
   }

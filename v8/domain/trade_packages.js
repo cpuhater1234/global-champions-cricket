@@ -1,6 +1,6 @@
   function clubOwnsPick(round,abbr){const o=state.dynasty?.offseason;return !!(o&&['market','lottery'].includes(o.phase)&&['R1','R2'].includes(round)&&draftSlots().some(p=>p.key===`${round}:${abbr}`&&p.owner===abbr));}
   function packageShapeBlock(abbr,outIds,inIds){
-    const before=roster(abbr),after=before.filter(p=>!outIds.includes(p.id)).concat(inIds.map(pById));
+    const before=roster(abbr).filter(p=>!p.dynastyReplacement),after=before.filter(p=>!outIds.includes(p.id)).concat(inIds.map(pById));
     for(const [test,min,label]of [[isKeeper,1,'recognised wicketkeeper'],[isBowler,6,'viable bowling group'],[isBattingOption,7,'viable batting depth']]){const a=before.filter(test).length,b=after.filter(test).length;if(b<Math.min(min,a))return `They will not weaken their ${label}.`;}
     return '';
   }
@@ -18,7 +18,8 @@
       if(!seasonTradeAllowance(abbr))return `${abbr===own?'Your club':clubByAbbr(abbr).name} has already completed two trades this season.`;
       if(n>clubDepartureBudget(abbr).remaining)return `${abbr===own?'Your club':clubByAbbr(abbr).name} has no voluntary departures available for this package. Retirements, releases and outgoing players share the four-departure allowance.`;
     }
-    if(rosterIds(own).length-give.length+take.length>15||rosterIds(club).length-take.length+give.length>15)return 'This package would leave a club with more than fifteen players. Balance the players or create a vacancy first.';
+    const permanentCount=abbr=>roster(abbr).filter(p=>!p.dynastyReplacement).length;
+    if(permanentCount(own)-give.length+take.length>15||permanentCount(club)-take.length+give.length>15)return 'This package would leave a club with more than fifteen players. Balance the players or create a vacancy first.';
     if(mid&&give.length!==take.length)return 'Midseason exchanges must leave both squads at fifteen players.';
     return packageShapeBlock(club,take,give);
   }
@@ -47,6 +48,7 @@
     for(const r of givePicks)state.dynasty.offseason.pickOwners[`${r}:${own}`]=club;
     for(const r of takePicks)state.dynasty.offseason.pickOwners[`${r}:${club}`]=own;
     recordOffseasonTrade(own,club,give.length,take.length);
+    if(mid){state.cpuXIs??={};refreshCpuXIs();}
     const receive=take.map(id=>pById(id).name).join(', ')||takePicks.join(' + '),send=give.map(id=>pById(id).name).join(', ')||givePicks.join(' + ');
     log('TRADE',`${own} acquire ${receive}`,`${send} → ${club}${givePicks.length?` · ${givePicks.join(' + ')} picks included`:''}`,'good');
     if(mid){base.renderTeam();renderSeasonLayer();if(tradedFromXI)specialGo('team');}else renderOffseason();autoSave();return {accepted:true,message:`${club} accept. The players and picks have changed clubs.`,give:[...give],take:[...take]};

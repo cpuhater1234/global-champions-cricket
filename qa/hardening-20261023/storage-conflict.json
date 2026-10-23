@@ -1,0 +1,6 @@
+{
+  "newerBytesProtected": true,
+  "coldAdoption": true,
+  "warningClears": true,
+  "scope": "Two actual VM game instances sharing one storage map. Stale in-memory action may proceed but cannot overwrite newer bytes; warning directs explicit recovery."
+}

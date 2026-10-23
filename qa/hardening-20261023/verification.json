@@ -1,0 +1,76 @@
+{
+  "hash": "5088df01d3355c7a71a090e951bfe42f1e2976c0879ace591414205ad315d2b9",
+  "baseHash": "b96edcdbe94bdd2b244bdfd05c552289345de248665852a1ce55e4c738bd3106",
+  "freshCareers": [
+    {
+      "seed": 811,
+      "club": "RR",
+      "seasons": 19,
+      "matches": 266,
+      "checks": 15480,
+      "reloads": 44,
+      "injuryRecoveries": 23,
+      "superOvers": 4,
+      "maxSaveUtf16Bytes": 2664150,
+      "quotaFailures": 0
+    },
+    {
+      "seed": 1601,
+      "club": "SUR",
+      "seasons": 19,
+      "matches": 266,
+      "checks": 15991,
+      "reloads": 51,
+      "injuryRecoveries": 28,
+      "superOvers": 4,
+      "maxSaveUtf16Bytes": 2656022,
+      "quotaFailures": 0
+    }
+  ],
+  "freshSeasons": 38,
+  "freshManagedMatches": 532,
+  "freshLeagueFixtures": 2128,
+  "freshFinalsFixtures": 114,
+  "intermediateCandidateSeasons": 12,
+  "exactFinalCandidateSeasons": 2,
+  "parity": [
+    {
+      "seed": 811,
+      "rostersScoresTableStatsFinalsHistoryIdentical": true
+    },
+    {
+      "seed": 1601,
+      "rostersScoresTableStatsFinalsHistoryIdentical": true
+    }
+  ],
+  "vmSuites": 14,
+  "browserSuites": 19,
+  "browserCoverageHash": "b96edcdbe94bdd2b244bdfd05c552289345de248665852a1ce55e4c738bd3106",
+  "matchStress": {
+    "matches": 336,
+    "checks": 3379,
+    "deliveries": 73045,
+    "events": {
+      "wides": 1819,
+      "noBalls": 467,
+      "freeHits": 482,
+      "surgeBalls": 7283,
+      "allOuts": 174,
+      "chases": 199,
+      "superOvers": 3
+    }
+  },
+  "savedSeasonAssertions": 287182,
+  "savedScorebooks": 612,
+  "validCareerCheckpoints": 72,
+  "corruptDraftSaveCases": 13,
+  "coverTradeChecks": 27,
+  "tradeTenureChecks": 36,
+  "scope": "Fresh full careers and broad browser suites ran on frozen incoming build. Intermediate candidate exercised twelve late seasons; exact final exercised two late seasons, scoring stress, all VM suites, new save/caching/cover regressions and native targeted tests. Only two independent worlds; reruns are not additional fresh careers.",
+  "limits": [
+    "Chromium only, not physical-device or cross-browser certification.",
+    "Automated informed actors do not certify novice comprehension or enjoyment.",
+    "No speculative career-rating, CPU-draft-variety or balance changes.",
+    "Past affected scorecards are preserved; cache repair prevents future duplicate selection, not retrospective rewriting."
+  ]
+}

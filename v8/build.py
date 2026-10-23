@@ -5,6 +5,7 @@ from domain.career_adapter import adapt as adapt_careers
 from domain.storage_adapter import adapt as adapt_storage
 from domain.delivery_adapter import adapt as adapt_deliveries
 from domain.departure_adapter import adapt as adapt_departures
+from domain.hardening_adapter import adapt as adapt_hardening
 ROOT=Path(__file__).resolve().parent
 BASE=ROOT.parent/'game/global_champions_cricket_v7_9_3_layout_rebuild.html'
 EXPECTED='eddec7bc6d92eb494bef26384e0618ea63d5244c63c8a1c9d84b1f5e16e98926'
@@ -166,6 +167,7 @@ def freeze():
   script=adapt_storage(name,script)
   script=adapt_deliveries(name,script)
   script=adapt_departures(name,script)
+  script=adapt_hardening(name,script)
   (ROOT/'engine'/f'{name}.js').write_text(script)
  body=re.search(r'<body[^>]*>(.*?)</body>',text,re.S)[1]
  body=re.sub(r'<script\b[^>]*>[\s\S]*?</script>','',body,flags=re.I)

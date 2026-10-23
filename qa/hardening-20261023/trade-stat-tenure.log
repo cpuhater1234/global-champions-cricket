@@ -1,0 +1,20 @@
+preseason 13 { retired: 2, cuts: 0, traded: 0, total: 2, remaining: 2 }
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: incoming player has one user appearance despite earlier CPU match
+    at ck (file:///workspace/scratch/bed56f4334a5/gcc/qa/hardening-20261023/trade-stat-tenure.mjs:2:361)
+    at file:///workspace/scratch/bed56f4334a5/gcc/qa/hardening-20261023/trade-stat-tenure.mjs:4:418
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

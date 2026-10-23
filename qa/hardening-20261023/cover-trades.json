@@ -1,0 +1,45 @@
+{
+  "hash": "5088df01d3355c7a71a090e951bfe42f1e2976c0879ace591414205ad315d2b9",
+  "checks": 27,
+  "rows": [
+    {
+      "tradeRoot": false,
+      "selected": {
+        "club": "YOR",
+        "give": [
+          94
+        ],
+        "take": [
+          72
+        ],
+        "givePicks": [],
+        "takePicks": [],
+        "mid": true
+      },
+      "permanent": 15,
+      "roster": 16,
+      "coverCleanup": false,
+      "coldRestore": true
+    },
+    {
+      "tradeRoot": true,
+      "selected": {
+        "club": "YOR",
+        "give": [
+          94
+        ],
+        "take": [
+          72
+        ],
+        "givePicks": [],
+        "takePicks": [],
+        "mid": true
+      },
+      "permanent": 15,
+      "roster": 15,
+      "coverCleanup": true,
+      "coldRestore": true
+    }
+  ],
+  "scope": "Actual cover UI commands and accepted engine trade packages on controlled early-season injury fixtures, unrelated player and injured-original exchange, cover expiry, unique ownership, fifteen permanent players and cold save recovery."
+}

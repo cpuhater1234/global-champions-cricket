@@ -1,0 +1,19 @@
+{"hash":"7d97eee12508154fb1476b51554392447e825e2aaed715b810ce1e3974fff47e","rows":[{"name":"negative-vacancies","rejected":false,"storedBytesPreserved":false,"statePreserved":false},{"name":"fractional-vacancies","rejected":false,"storedBytesPreserved":false,"statePreserved":false},{"name":"unknown-pick-owner","rejected":true,"storedBytesPreserved":false,"statePreserved":false},{"name":"malformed-pick-owner-map","rejected":false,"storedBytesPreserved":false,"statePreserved":false},{"name":"unknown-lottery-club","rejected":true,"storedBytesPreserved":false,"statePreserved":false},{"name":"duplicate-lottery-club","rejected":false,"storedBytesPreserved":false,"statePreserved":false},{"name":"cursor-overflow","rejected":false,"storedBytesPreserved":false,"statePreserved":false},{"name":"unknown-retirement-player","rejected":false,"storedBytesPreserved":false,"statePreserved":false},{"name":"unknown-retirement-club","rejected":false,"storedBytesPreserved":false,"statePreserved":false},{"name":"unknown-arrival-player","rejected":false,"storedBytesPreserved":false,"statePreserved":false},{"name":"unknown-release-player","rejected":false,"storedBytesPreserved":false,"statePreserved":false},{"name":"malformed-draft-pick","rejected":false,"storedBytesPreserved":false,"statePreserved":false},{"name":"missing-frozen-club","rejected":false,"storedBytesPreserved":false,"statePreserved":false}],"scope":"Corrupt actual newly started annual-draft save: vacancies, entitlements, owner map, lottery, cursor and movement IDs must reject atomically."}
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Malformed annual-draft metadata must reject before restoring/rewriting progress.
+    at file:///workspace/scratch/bed56f4334a5/gcc/qa/hardening-20261023/draft-save-validation.mjs:5:382
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0
