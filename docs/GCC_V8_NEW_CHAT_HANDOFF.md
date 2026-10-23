@@ -1,4 +1,20 @@
-# Latest continuation checkpoint: recruitment and draft-order polish, 23 October 2026
+# Latest continuation checkpoint: balanced palette and player disciplines, 23 October 2026
+
+## Completed balanced palette and neutral player disciplines, 23 October 2026
+
+This is the authoritative current visual checkpoint, superseding the navy-heavy palette below. Tom approved charcoal backgrounds, warmer information surfaces and stronger club identity, then clarified that solid colours should replace neon/highlighter styling; gradients are optional only when they improve the result.
+
+- Rebalanced shared structural colours to charcoal and neutral greys, with warm paper for screen headings, player identities, table headings and selected club/squad information. Match areas use a restrained cricket green; offseason summaries use warm stone/brown.
+- Removed discipline colour coding throughout player cards, discipline text, role borders, scout summaries and squad rows. BAT/WK-BAT/AR/BOWL share the same neutral surface and ink. Red/yellow/green ability meanings remain unchanged.
+- Removed remaining fluorescent lime accents and hover/focus treatments in workspace.css; focus uses a restrained warm outline. Main surfaces remain solid with subtle physical shadows; no broad gradients or glow added.
+- Actual club colours now appear in draft-squad and starting-XI headers as well as club covers, marks and draft-order edges. Text uses the existing contrast-aware clubInk helper. Controller render sets only --club-accent and --club-ink on the root.
+- Sources changed: v8/ui/workspace.css and v8/ui/controller.js. All 20 script blocks checked against the prior delivery: engine/data/gameplay/save scripts are byte-identical; only two CSS variable assignments differ in the controller. Layout and interaction rules preserved.
+- Exact playable SHA256 32f9396b38627c2c4112905abaf1bad43567bf56e20c3914d288af0da3b4c040; Git blob 005e878ac95df670d9a6c970ca11f4d8910f4da2; 1908409 bytes. Both canonical HTML files and deliver/GCC_v8_Career_Clarity.html are identical.
+- Existing delivery libfile_ebabb63004ac81919b41b246675c703d replaced successfully at version 54, file id file_000000000330820bac3d83c4e0fc97f2.
+- Final exact build passed 852 responsive/contrast cases: 684 shared existing cases, 60 recruitment/order, 48 all-discipline draft layouts and 60 XI-workspace cases. Additional 12 solid-surface screens, 36 real win/loss/neutral contrast variants and 8 selected-club squad-header fixtures passed. Native manual-XI/swap/order/lodge/reload, signing controls/draw transition, draft pointer/keyboard/focus/Pick, eight comparison modes, hover/reduced-motion and draw no-replay passed.
+- New evidence: qa/palette-balance/browser.cjs, report.json and verification.json. Recruitment test now checks genuinely neutral outcome surfaces rather than expecting the old navy RGB constants. All referenced reports match the final hash.
+- Visual inspection: desktop draft/player cards, home/continue and XI, plus earlier mobile recruitment. Country-label and nested home-stadium-label contrast inheritance were identified and corrected. Real random stadium photography and exact supplied cricket artwork preserved; photos were deliberately blocked in browser QA. Saved/synthetic later layouts are presentation tests, not a new 19-season or enjoyment claim.
+- Runtime remains /workspace/scratch/bed56f4334a5/browser-runtime/chromium, symlinked at /tmp/gcc-chromium. Build: python3 qa/completion/build_candidate.py. Branch work/v8-game-first-rebuild only; no main promotion or hosting deployment.
 
 ## Completed recruitment and draft-order polish, 23 October 2026
 

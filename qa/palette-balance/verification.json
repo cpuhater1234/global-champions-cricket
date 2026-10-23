@@ -1,0 +1,100 @@
+{
+  "sha256": "32f9396b38627c2c4112905abaf1bad43567bf56e20c3914d288af0da3b4c040",
+  "bytes": 1908409,
+  "results": [
+    {
+      "report": "qa/signing-layout/report.json",
+      "cases": 72,
+      "resultVariants": 0,
+      "passed": true
+    },
+    {
+      "report": "qa/universal-containment/entry-browser.json",
+      "cases": 60,
+      "resultVariants": 0,
+      "passed": true
+    },
+    {
+      "report": "qa/universal-containment/browser.json",
+      "cases": 156,
+      "resultVariants": 0,
+      "passed": true
+    },
+    {
+      "report": "qa/universal-containment/modals.json",
+      "cases": 120,
+      "resultVariants": 0,
+      "passed": true
+    },
+    {
+      "report": "qa/universal-containment/offseason/report.json",
+      "cases": 84,
+      "resultVariants": 0,
+      "passed": true
+    },
+    {
+      "report": "qa/home-continue/report.json",
+      "cases": 96,
+      "resultVariants": 0,
+      "passed": true
+    },
+    {
+      "report": "qa/club-identity/report.json",
+      "cases": 96,
+      "resultVariants": 0,
+      "passed": true
+    },
+    {
+      "report": "qa/solid-game/report.json",
+      "cases": 12,
+      "resultVariants": 36,
+      "passed": true
+    },
+    {
+      "report": "qa/recruitment-polish/report.json",
+      "cases": 60,
+      "resultVariants": 0,
+      "passed": true
+    },
+    {
+      "report": "qa/solid-draft/report.json",
+      "cases": 0,
+      "resultVariants": 0,
+      "passed": true
+    },
+    {
+      "report": "qa/draw-motion/report.json",
+      "cases": 0,
+      "resultVariants": 0,
+      "passed": true
+    },
+    {
+      "report": "qa/draft-interaction/report.json",
+      "cases": 0,
+      "resultVariants": 0,
+      "passed": true
+    },
+    {
+      "report": "qa/palette-balance/report.json",
+      "cases": 48,
+      "resultVariants": 0,
+      "passed": true
+    },
+    {
+      "report": "qa/selection-workspace/report.json",
+      "cases": 60,
+      "resultVariants": 0,
+      "passed": true
+    },
+    {
+      "report": "qa/draft-card-polish/report.json",
+      "cases": 0,
+      "resultVariants": 0,
+      "passed": true
+    }
+  ],
+  "engineAndDataScripts": "All unchanged byte-for-byte; only controller adds two CSS custom-property assignments for chosen club identity.",
+  "browser": "Chromium 153.0.8010.0 via @sparticuz/chromium 153.0.0",
+  "scope": "Presentation, contrast, responsive containment and native controls. Saved/synthetic later layouts as detailed in source reports. External photos blocked. No new full-career or enjoyment claim.",
+  "issues": []
+}

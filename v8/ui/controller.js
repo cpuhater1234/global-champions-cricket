@@ -26,6 +26,8 @@
   const wire=document.getElementById('g8wire'),wireScroll=wire?.scrollTop||0,wireAnchor=X.scrollAnchor(wire);
   const sealedKeys=new Set([...stage.querySelectorAll('.g8revealgrid>.g8sealed[data-key]')].map(e=>e.dataset.key));
   const body=views[ui.view]();
+  document.documentElement.style.setProperty('--club-accent',s.userClub?.c||'#91aa82');
+  document.documentElement.style.setProperty('--club-ink',X.clubInk(s.userClub));
   stage.dataset.view=ui.view;
   X.patch(stage,body);X.accessibleTables(stage);
   if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches)for(const card of stage.querySelectorAll('.g8revealgrid>[data-key]:not(.g8sealed)'))if(sealedKeys.has(card.dataset.key))card.animate([{opacity:0,transform:'translateY(6px)'},{opacity:1,transform:'translateY(0)'}],{duration:260,easing:'cubic-bezier(.2,.7,.3,1)'});
