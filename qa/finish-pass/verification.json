@@ -1,0 +1,680 @@
+{
+  "hash": "3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf",
+  "gitBlob": "f5059bb1890951b9816c8cdf57670d6b21e0d0f2",
+  "bytes": 1922930,
+  "baseCommit": "2b604dc15ebf1242730728d12123c896cb23aab0",
+  "productionChanges": [
+    "v8/domain/career_outcomes.js",
+    "v8/domain/career_state.js",
+    "v8/domain/scouting.js"
+  ],
+  "regressions": [
+    {
+      "test": "qa/v8_audit_test.mjs",
+      "exitCode": 0,
+      "seconds": 37.95
+    },
+    {
+      "test": "qa/v8_ball_playback_test.mjs",
+      "exitCode": 0,
+      "seconds": 26.77
+    },
+    {
+      "test": "qa/v8_brutal_commands_test.mjs",
+      "exitCode": 0,
+      "seconds": 35.16
+    },
+    {
+      "test": "qa/v8_brutal_delivery_test.mjs",
+      "exitCode": 0,
+      "seconds": 42.74
+    },
+    {
+      "test": "qa/v8_brutal_playback_resume_test.mjs",
+      "exitCode": 0,
+      "seconds": 319.86,
+      "hash": "3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf",
+      "run": "v8_brutal_playback_resume_test-final-long.log",
+      "reportDirectory": "qa/finish-pass/final-v8_brutal_playback_resume_test"
+    },
+    {
+      "test": "qa/v8_career_distribution_test.mjs",
+      "exitCode": 0,
+      "seconds": 35.9
+    },
+    {
+      "test": "qa/v8_career_outcomes_test.mjs",
+      "exitCode": 0,
+      "seconds": 0.49
+    },
+    {
+      "test": "qa/v8_career_state_test.mjs",
+      "exitCode": 0,
+      "seconds": 10.92
+    },
+    {
+      "test": "qa/v8_career_strategy_test.mjs",
+      "exitCode": 0,
+      "seconds": 4.73
+    },
+    {
+      "test": "qa/v8_chase_logic_test.mjs",
+      "exitCode": 0,
+      "seconds": 0.29
+    },
+    {
+      "test": "qa/v8_clock_test.mjs",
+      "exitCode": 0,
+      "seconds": 0.12
+    },
+    {
+      "test": "qa/v8_codec_resume_cache_test.mjs",
+      "exitCode": 0,
+      "seconds": 10.08
+    },
+    {
+      "test": "qa/v8_comparison_intent_test.mjs",
+      "exitCode": 0,
+      "seconds": 5.98
+    },
+    {
+      "test": "qa/v8_core_loop_hierarchy_test.mjs",
+      "exitCode": 0,
+      "seconds": 7.09
+    },
+    {
+      "test": "qa/v8_cpu_market_test.mjs",
+      "exitCode": 0,
+      "seconds": 77.33
+    },
+    {
+      "test": "qa/v8_cricket_polish_test.mjs",
+      "exitCode": 0,
+      "seconds": 27.65
+    },
+    {
+      "test": "qa/v8_decision_flow_test.mjs",
+      "exitCode": 0,
+      "seconds": 11.35
+    },
+    {
+      "test": "qa/v8_decision_tools_test.mjs",
+      "exitCode": 0,
+      "seconds": 7.73
+    },
+    {
+      "test": "qa/v8_delivery_career_test.mjs",
+      "exitCode": 0,
+      "seconds": 1575.7,
+      "hash": "3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf",
+      "run": "v8_delivery_career_test-final-long.log",
+      "reportDirectory": "qa/finish-pass/final-v8_delivery_career_test"
+    },
+    {
+      "test": "qa/v8_delivery_engine_test.mjs",
+      "exitCode": 0,
+      "seconds": 15.68
+    },
+    {
+      "test": "qa/v8_delivery_fitness_test.mjs",
+      "exitCode": 0,
+      "seconds": 15.17
+    },
+    {
+      "test": "qa/v8_delivery_save_test.mjs",
+      "exitCode": 0,
+      "seconds": 17.07
+    },
+    {
+      "test": "qa/v8_development_feedback_test.mjs",
+      "exitCode": 0,
+      "seconds": 3.1
+    },
+    {
+      "test": "qa/v8_dom_patch_test.mjs",
+      "exitCode": 0,
+      "seconds": 0.14
+    },
+    {
+      "test": "qa/v8_draft_controls_test.mjs",
+      "exitCode": 0,
+      "seconds": 83.69
+    },
+    {
+      "test": "qa/v8_draft_stress_test.mjs",
+      "exitCode": 0,
+      "run": "v8_draft_stress_test-final-long.log",
+      "scope": "Actual-script VM annual-draft stress with explicit 0/1/2/4/5/6 departure and transferred-pick fixtures; mixed paced/skip truth, rapid speed changes, wrong-turn actions, modal pauses and no stale completion callbacks. No native rendering.",
+      "checks": 647
+    },
+    {
+      "test": "qa/v8_existing_career_test.mjs",
+      "exitCode": 0,
+      "seconds": 1892.43,
+      "hash": "3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf",
+      "run": "v8_existing_career_test-final-long.log",
+      "reportDirectory": "qa/finish-pass/final-v8_existing_career_test"
+    },
+    {
+      "test": "qa/v8_experience_actions_test.mjs",
+      "exitCode": 0,
+      "seconds": 18.94
+    },
+    {
+      "test": "qa/v8_experience_test.mjs",
+      "exitCode": 0,
+      "run": "v8_experience_test-final-corrected.log",
+      "scope": "Whole experience suite after correcting fixture-dependent injury wording; actual UI correctly explained incomplete XI with10 fit players."
+    },
+    {
+      "test": "qa/v8_fair_scouting_test.mjs",
+      "exitCode": 0,
+      "seconds": 5.39
+    },
+    {
+      "test": "qa/v8_fan_test.mjs",
+      "exitCode": 0,
+      "seconds": 58.44
+    },
+    {
+      "test": "qa/v8_final_pass_test.mjs",
+      "exitCode": 0,
+      "run": "v8_final_pass_test-final-long.log",
+      "checks": 665,
+      "scope": "Actual VM career commands with explicit 0\u20136 user retirement fixtures, cut budgets, manual draft/XI, stale controls and cold reload. No native rendering evidence."
+    },
+    {
+      "test": "qa/v8_gap_codec_test.mjs",
+      "exitCode": 0,
+      "seconds": 41.62
+    },
+    {
+      "test": "qa/v8_gap_combined_test.mjs",
+      "exitCode": 0,
+      "seconds": 69.95
+    },
+    {
+      "test": "qa/v8_gap_events_test.mjs",
+      "exitCode": 0,
+      "seconds": 64.18
+    },
+    {
+      "test": "qa/v8_gap_storage_test.mjs",
+      "exitCode": 0,
+      "seconds": 33.63
+    },
+    {
+      "test": "qa/v8_home_photo_startup_test.mjs",
+      "exitCode": 0,
+      "seconds": 0.27
+    },
+    {
+      "test": "qa/v8_interaction_test.mjs",
+      "exitCode": 0,
+      "seconds": 31.48
+    },
+    {
+      "test": "qa/v8_layout_test.mjs",
+      "exitCode": 0,
+      "seconds": 14.81
+    },
+    {
+      "test": "qa/v8_lifecycle_consistency_test.mjs",
+      "exitCode": 0,
+      "run": "v8_lifecycle_consistency_test-final-long.log",
+      "scope": "Actual completed2009/2019/2025 saves through annual transitions, draft, manual XI/Scout and cold restore."
+    },
+    {
+      "test": "qa/v8_live_score_feedback_test.mjs",
+      "exitCode": 0,
+      "seconds": 11.61
+    },
+    {
+      "test": "qa/v8_logic_test.mjs",
+      "exitCode": 0,
+      "seconds": 33.78
+    },
+    {
+      "test": "qa/v8_management_boundaries_test.mjs",
+      "exitCode": 0,
+      "seconds": 29.18
+    },
+    {
+      "test": "qa/v8_match_career_hierarchy_test.mjs",
+      "exitCode": 0,
+      "seconds": 17.39
+    },
+    {
+      "test": "qa/v8_match_context_test.mjs",
+      "exitCode": 0,
+      "seconds": 7.89
+    },
+    {
+      "test": "qa/v8_match_reveal_test.mjs",
+      "exitCode": 0,
+      "seconds": 66.97
+    },
+    {
+      "test": "qa/v8_matchday_visual_reads_test.mjs",
+      "exitCode": 0,
+      "seconds": 4.03
+    },
+    {
+      "test": "qa/v8_matchup_overview_test.mjs",
+      "exitCode": 0,
+      "seconds": 4.25
+    },
+    {
+      "test": "qa/v8_micro_layout_test.mjs",
+      "exitCode": 0,
+      "seconds": 11.89
+    },
+    {
+      "test": "qa/v8_microscopic_regression_test.mjs",
+      "exitCode": 0,
+      "seconds": 39.05
+    },
+    {
+      "test": "qa/v8_migration_test.mjs",
+      "exitCode": 0,
+      "seconds": 10.77
+    },
+    {
+      "test": "qa/v8_mobile_journey_test.mjs",
+      "exitCode": 0,
+      "seconds": 15.01
+    },
+    {
+      "test": "qa/v8_offseason_decisions_test.mjs",
+      "exitCode": 0,
+      "seconds": 12.37
+    },
+    {
+      "test": "qa/v8_offseason_test.mjs",
+      "exitCode": 0,
+      "seconds": 42.87
+    },
+    {
+      "test": "qa/v8_player_clarity_test.mjs",
+      "exitCode": 0,
+      "seconds": 5.62
+    },
+    {
+      "test": "qa/v8_player_journey_test.mjs",
+      "exitCode": 0,
+      "seconds": 11.67
+    },
+    {
+      "test": "qa/v8_player_profiles_test.mjs",
+      "exitCode": 0,
+      "seconds": 0.19
+    },
+    {
+      "test": "qa/v8_preplay_controls_test.mjs",
+      "exitCode": 0,
+      "seconds": 46.63
+    },
+    {
+      "test": "qa/v8_quiet_arcade_test.mjs",
+      "exitCode": 0,
+      "seconds": 7.68
+    },
+    {
+      "test": "qa/v8_readable_feedback_test.mjs",
+      "exitCode": 0,
+      "seconds": 1.51
+    },
+    {
+      "test": "qa/v8_release_pick_policy_test.mjs",
+      "exitCode": 0,
+      "seconds": 0.13
+    },
+    {
+      "test": "qa/v8_result_context_test.mjs",
+      "exitCode": 0,
+      "seconds": 4.51
+    },
+    {
+      "test": "qa/v8_reveal_test.mjs",
+      "exitCode": 0,
+      "seconds": 12.07
+    },
+    {
+      "test": "qa/v8_save_integrity_test.mjs",
+      "exitCode": 0,
+      "seconds": 72.74
+    },
+    {
+      "test": "qa/v8_save_visibility_test.mjs",
+      "exitCode": 0,
+      "seconds": 6.27
+    },
+    {
+      "test": "qa/v8_scout_hierarchy_test.mjs",
+      "exitCode": 0,
+      "seconds": 7.26
+    },
+    {
+      "test": "qa/v8_selection_recovery_test.mjs",
+      "exitCode": 0,
+      "seconds": 10.77
+    },
+    {
+      "test": "qa/v8_signing_notice_test.mjs",
+      "exitCode": 0,
+      "seconds": 5.56
+    },
+    {
+      "test": "qa/v8_signing_resume_test.mjs",
+      "exitCode": 0,
+      "seconds": 112.88
+    },
+    {
+      "test": "qa/v8_signing_understanding_test.mjs",
+      "exitCode": 0,
+      "seconds": 53.87
+    },
+    {
+      "test": "qa/v8_squad_management_test.mjs",
+      "exitCode": 0,
+      "seconds": 5.64
+    },
+    {
+      "test": "qa/v8_team_workspace_test.mjs",
+      "exitCode": 0,
+      "seconds": 9.37
+    },
+    {
+      "test": "qa/v8_trade_review_safety_test.mjs",
+      "exitCode": 0,
+      "seconds": 7.8
+    },
+    {
+      "test": "qa/v8_transition_test.mjs",
+      "exitCode": 0,
+      "seconds": 26.45
+    },
+    {
+      "test": "qa/v8_venue_loading_test.mjs",
+      "exitCode": 0,
+      "seconds": 0.19
+    }
+  ],
+  "finalRegressionPasses": 75,
+  "freshCareer": {
+    "scope": "Real cricket engine + new UI dispatch in a VM DOM stub. No browser, visual, geometry, focus or latency certification.",
+    "seed": 8602,
+    "club": "HAM",
+    "coverage": {
+      "reloads": [
+        {
+          "year": 2008,
+          "label": "foundation-user-pick"
+        },
+        {
+          "year": 2008,
+          "label": "manual-XI"
+        },
+        {
+          "year": 2008,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2008,
+          "label": "grand-final-ready"
+        },
+        {
+          "year": 2009,
+          "label": "annual-order"
+        },
+        {
+          "year": 2009,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2009,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2009,
+          "label": "grand-final-ready"
+        },
+        {
+          "year": 2010,
+          "label": "annual-order"
+        },
+        {
+          "year": 2011,
+          "label": "annual-order"
+        },
+        {
+          "year": 2011,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2012,
+          "label": "annual-order"
+        },
+        {
+          "year": 2012,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2013,
+          "label": "annual-order"
+        },
+        {
+          "year": 2013,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2013,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2013,
+          "label": "grand-final-ready"
+        },
+        {
+          "year": 2014,
+          "label": "annual-order"
+        },
+        {
+          "year": 2014,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2015,
+          "label": "annual-order"
+        },
+        {
+          "year": 2015,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2015,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2015,
+          "label": "grand-final-ready"
+        },
+        {
+          "year": 2016,
+          "label": "annual-order"
+        },
+        {
+          "year": 2016,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2017,
+          "label": "annual-order"
+        },
+        {
+          "year": 2018,
+          "label": "annual-order"
+        },
+        {
+          "year": 2018,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2019,
+          "label": "annual-order"
+        },
+        {
+          "year": 2019,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2019,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2019,
+          "label": "grand-final-ready"
+        },
+        {
+          "year": 2020,
+          "label": "annual-order"
+        },
+        {
+          "year": 2021,
+          "label": "annual-order"
+        },
+        {
+          "year": 2021,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2022,
+          "label": "annual-order"
+        },
+        {
+          "year": 2022,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2023,
+          "label": "annual-order"
+        },
+        {
+          "year": 2023,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2024,
+          "label": "annual-order"
+        },
+        {
+          "year": 2024,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2024,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2024,
+          "label": "grand-final-ready"
+        },
+        {
+          "year": 2025,
+          "label": "annual-order"
+        },
+        {
+          "year": 2025,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2026,
+          "label": "annual-order"
+        },
+        {
+          "year": 2026,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2026,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2026,
+          "label": "grand-final-ready"
+        }
+      ],
+      "finals": 7,
+      "injurySelections": 32,
+      "injuryCovers": 0,
+      "superOvers": 3,
+      "clubs": []
+    },
+    "checks": 15868,
+    "seasons": 19,
+    "regularSeasonMatches": 266,
+    "storageStats": {
+      "writes": 11488,
+      "maxCodeUnits": 1335943,
+      "maxUtf16Bytes": 2671886,
+      "quotaFailures": 0
+    },
+    "errors": []
+  },
+  "exactFinalLegacyContinuations": [
+    {
+      "suite": "v8_existing_career_test",
+      "startingCompletedYear": 2008,
+      "newSeasons": 18,
+      "newManagedLeagueMatches": 252,
+      "checks": 14801
+    },
+    {
+      "suite": "v8_delivery_career_test",
+      "startingCompletedYear": 2009,
+      "newSeasons": 17,
+      "newManagedLeagueMatches": 238,
+      "checks": 13691
+    }
+  ],
+  "exactFinalNewFullFlowSeasons": 54,
+  "exactFinalNewManagedLeagueMatches": 756,
+  "precedingCandidateLegacyContinuations": [
+    {
+      "folder": "legacy-2008",
+      "hash": "8032645f0712cca8b00c1ff7927c724bb3ab9bd54f72c8a10a38a287ccafca9b",
+      "newSeasons": 18,
+      "newManagedLeagueMatches": 252,
+      "scope": "Preceding private candidate; earlier completed saved history excluded"
+    },
+    {
+      "folder": "legacy-2009",
+      "hash": "8032645f0712cca8b00c1ff7927c724bb3ab9bd54f72c8a10a38a287ccafca9b",
+      "newSeasons": 17,
+      "newManagedLeagueMatches": 238,
+      "scope": "Preceding private candidate; earlier completed saved history excluded"
+    }
+  ],
+  "controlledStrategy": {
+    "worlds": 8,
+    "cohorts": 32,
+    "managedMatches": 8512,
+    "scope": "Controlled 19-season policy cohorts: actual career/guard/public CPU evaluation/match functions, same fixture RNG across policies. Simplified replacement snake; omits the full annual CPU wrapper with extra role need and seeded noise. Retirements/new arrivals and fifteen-player snake replacement; no trades, optional releases, injuries or performance-form updates. Finals qualification by wins with alphabetical ties; not actual finals or complete UI careers. These limitations isolate recruitment decisions; complete-career UI regression is separate.",
+    "design": "Four policies paired within each of eight distinct worlds and user club indices0\u20137. Roster/arrival/development functions real; annual replacement administration simplified. Intervals use paired world-level differences with t critical2.365(df7); eight worlds still do not establish universal balance or trade exploit resistance."
+  },
+  "controlledInnings": 20000,
+  "browserCases": 162,
+  "compatibilityCheckpoints": 72,
+  "compatibilityChecks": 30168,
+  "sourceMatches": 7102,
+  "sourceMappedPlayers": 339,
+  "unresolvedIdentities": 73,
+  "independentReview": "No blocking defect; numerical consistency is not historical calibration",
+  "openGates": [
+    "Historical bowling/role validity and unresolved identities",
+    "143 provisional arrival models",
+    "Human novice and returning-player playtests",
+    "Physical-device and screen-reader-user sessions",
+    "Keeping and new-ball effect uncertainty"
+  ]
+}

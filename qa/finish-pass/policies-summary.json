@@ -1,0 +1,118 @@
+{
+  "hash": "3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf",
+  "worlds": 8,
+  "cohorts": 32,
+  "managedMatches": 8512,
+  "scope": "Controlled 19-season policy cohorts: actual career/guard/public CPU evaluation/match functions, same fixture RNG across policies. Simplified replacement snake; omits the full annual CPU wrapper with extra role need and seeded noise. Retirements/new arrivals and fifteen-player snake replacement; no trades, optional releases, injuries or performance-form updates. Finals qualification by wins with alphabetical ties; not actual finals or complete UI careers. These limitations isolate recruitment decisions; complete-career UI regression is separate.",
+  "design": "Four policies paired within each of eight distinct worlds and user club indices0\u20137. Roster/arrival/development functions real; annual replacement administration simplified. Intervals use paired world-level differences with t critical2.365(df7); eight worlds still do not establish universal balance or trade exploit resistance.",
+  "summary": [
+    {
+      "policy": "allrounder-heavy",
+      "worlds": 8,
+      "matches": 2128,
+      "wins": 1123,
+      "winPercentage": 52.77255639097744,
+      "finalsQualifications": 88,
+      "meanRunsFor": 151.55216165413535,
+      "worldWinPercentages": [
+        52.255639097744364,
+        56.390977443609025,
+        53.00751879699248,
+        48.49624060150376,
+        55.6390977443609,
+        51.50375939849624,
+        51.8796992481203,
+        53.00751879699248
+      ]
+    },
+    {
+      "policy": "balanced-current",
+      "worlds": 8,
+      "matches": 2128,
+      "wins": 1064,
+      "winPercentage": 50.0,
+      "finalsQualifications": 76,
+      "meanRunsFor": 145.6748120300752,
+      "worldWinPercentages": [
+        49.24812030075188,
+        52.63157894736842,
+        53.00751879699248,
+        44.3609022556391,
+        52.63157894736842,
+        45.11278195488722,
+        57.142857142857146,
+        45.86466165413534
+      ]
+    },
+    {
+      "policy": "balanced-youth",
+      "worlds": 8,
+      "matches": 2128,
+      "wins": 976,
+      "winPercentage": 45.86466165413534,
+      "finalsQualifications": 57,
+      "meanRunsFor": 149.3171992481203,
+      "worldWinPercentages": [
+        40.225563909774436,
+        48.87218045112782,
+        41.35338345864662,
+        51.8796992481203,
+        50.75187969924812,
+        47.744360902255636,
+        45.11278195488722,
+        40.97744360902256
+      ]
+    },
+    {
+      "policy": "overall-only",
+      "worlds": 8,
+      "matches": 2128,
+      "wins": 1124,
+      "winPercentage": 52.81954887218045,
+      "finalsQualifications": 89,
+      "meanRunsFor": 149.65695488721803,
+      "worldWinPercentages": [
+        51.8796992481203,
+        52.255639097744364,
+        50.75187969924812,
+        48.87218045112782,
+        62.03007518796993,
+        51.12781954887218,
+        56.766917293233085,
+        48.87218045112782
+      ]
+    }
+  ],
+  "contrasts": [
+    {
+      "policy": "allrounder-heavy",
+      "versus": "balanced-current",
+      "pairedMeanWinPercentagePointDifference": 2.7725563909774436,
+      "worldCluster95Interval": [
+        -0.5025587526121993,
+        6.047671534567087
+      ],
+      "positiveWorlds": 6
+    },
+    {
+      "policy": "balanced-youth",
+      "versus": "balanced-current",
+      "pairedMeanWinPercentagePointDifference": -4.135338345864661,
+      "worldCluster95Interval": [
+        -9.877718157606132,
+        1.6070414658768106
+      ],
+      "positiveWorlds": 2
+    },
+    {
+      "policy": "overall-only",
+      "versus": "balanced-current",
+      "pairedMeanWinPercentagePointDifference": 2.819548872180451,
+      "worldCluster95Interval": [
+        -0.38173218862180924,
+        6.0208299329827115
+      ],
+      "positiveWorlds": 5
+    }
+  ]
+}

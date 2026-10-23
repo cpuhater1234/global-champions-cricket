@@ -1,0 +1,171 @@
+{
+  "scope": "Real cricket engine + new UI dispatch in a VM DOM stub. No browser, visual, geometry, focus or latency certification.",
+  "seed": 101,
+  "club": "NOT",
+  "coverage": {
+    "reloads": [
+      {
+        "year": 2010,
+        "label": "annual-order"
+      },
+      {
+        "year": 2010,
+        "label": "annual-user-pick"
+      },
+      {
+        "year": 2011,
+        "label": "annual-order"
+      },
+      {
+        "year": 2012,
+        "label": "annual-order"
+      },
+      {
+        "year": 2012,
+        "label": "annual-user-pick"
+      },
+      {
+        "year": 2013,
+        "label": "annual-order"
+      },
+      {
+        "year": 2014,
+        "label": "annual-order"
+      },
+      {
+        "year": 2014,
+        "label": "annual-user-pick"
+      },
+      {
+        "year": 2015,
+        "label": "annual-order"
+      },
+      {
+        "year": 2015,
+        "label": "annual-user-pick"
+      },
+      {
+        "year": 2016,
+        "label": "annual-order"
+      },
+      {
+        "year": 2016,
+        "label": "annual-user-pick"
+      },
+      {
+        "year": 2017,
+        "label": "annual-order"
+      },
+      {
+        "year": 2017,
+        "label": "annual-user-pick"
+      },
+      {
+        "year": 2018,
+        "label": "annual-order"
+      },
+      {
+        "year": 2018,
+        "label": "annual-user-pick"
+      },
+      {
+        "year": 2018,
+        "label": "finals-ready"
+      },
+      {
+        "year": 2018,
+        "label": "grand-final-ready"
+      },
+      {
+        "year": 2019,
+        "label": "annual-order"
+      },
+      {
+        "year": 2019,
+        "label": "annual-user-pick"
+      },
+      {
+        "year": 2019,
+        "label": "finals-ready"
+      },
+      {
+        "year": 2019,
+        "label": "grand-final-ready"
+      },
+      {
+        "year": 2020,
+        "label": "annual-order"
+      },
+      {
+        "year": 2021,
+        "label": "annual-order"
+      },
+      {
+        "year": 2021,
+        "label": "annual-user-pick"
+      },
+      {
+        "year": 2022,
+        "label": "annual-order"
+      },
+      {
+        "year": 2023,
+        "label": "annual-order"
+      },
+      {
+        "year": 2023,
+        "label": "annual-user-pick"
+      },
+      {
+        "year": 2024,
+        "label": "annual-order"
+      },
+      {
+        "year": 2024,
+        "label": "annual-user-pick"
+      },
+      {
+        "year": 2025,
+        "label": "annual-order"
+      },
+      {
+        "year": 2025,
+        "label": "annual-user-pick"
+      },
+      {
+        "year": 2025,
+        "label": "finals-ready"
+      },
+      {
+        "year": 2025,
+        "label": "grand-final-ready"
+      },
+      {
+        "year": 2026,
+        "label": "annual-order"
+      },
+      {
+        "year": 2026,
+        "label": "annual-user-pick"
+      }
+    ],
+    "finals": 3,
+    "injurySelections": 29,
+    "injuryCovers": 0,
+    "superOvers": 5,
+    "clubs": []
+  },
+  "checks": 13691,
+  "seasons": 19,
+  "regularSeasonMatches": 266,
+  "storageStats": {
+    "writes": 10152,
+    "maxCodeUnits": 1316507,
+    "maxUtf16Bytes": 2633014,
+    "quotaFailures": 0
+  },
+  "errors": [],
+  "startingCompletedYear": 2009,
+  "newSeasonRuns": 17,
+  "newRegularUserMatches": 238
+}

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/bed56f4334a5/gcc/qa/finish-pass/source-reconciliation.py", line 30, in <module>
+    assert got[k]==totals[n][k],(n,k,got[k],totals[n][k]);checks+=1
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('MS Dhoni', 'batOuts', 178, 185)

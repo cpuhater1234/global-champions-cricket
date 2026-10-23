@@ -1,0 +1,94 @@
+{
+  "hash": "3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf",
+  "retirementBoundaries": {
+    "scope": "Actual VM career commands with explicit 0\u20136 user retirement fixtures, cut budgets, manual draft/XI, stale controls and cold reload. No native rendering evidence.",
+    "checks": 665,
+    "cases": [
+      {
+        "retirements": 0,
+        "cuts": 2,
+        "picks": 2
+      },
+      {
+        "retirements": 1,
+        "cuts": 2,
+        "picks": 3
+      },
+      {
+        "retirements": 2,
+        "cuts": 2,
+        "picks": 4
+      },
+      {
+        "retirements": 3,
+        "cuts": 1,
+        "picks": 4
+      },
+      {
+        "retirements": 4,
+        "cuts": 0,
+        "picks": 4
+      },
+      {
+        "retirements": 5,
+        "cuts": 0,
+        "picks": 5
+      },
+      {
+        "retirements": 6,
+        "cuts": 0,
+        "picks": 6
+      }
+    ],
+    "errors": []
+  },
+  "annualDraftStress": {
+    "scope": "Actual-script VM annual-draft stress with explicit 0/1/2/4/5/6 departure and transferred-pick fixtures; mixed paced/skip truth, rapid speed changes, wrong-turn actions, modal pauses and no stale completion callbacks. No native rendering.",
+    "checks": 647,
+    "cases": [
+      {
+        "userVacancies": 0,
+        "transferredPicks": 0,
+        "picks": 16,
+        "supplements": 7,
+        "timedCycles": 0
+      },
+      {
+        "userVacancies": 1,
+        "transferredPicks": 0,
+        "picks": 18,
+        "supplements": 8,
+        "timedCycles": 1
+      },
+      {
+        "userVacancies": 2,
+        "transferredPicks": 0,
+        "picks": 20,
+        "supplements": 9,
+        "timedCycles": 1
+      },
+      {
+        "userVacancies": 4,
+        "transferredPicks": 0,
+        "picks": 24,
+        "supplements": 8,
+        "timedCycles": 1
+      },
+      {
+        "userVacancies": 5,
+        "transferredPicks": 0,
+        "picks": 20,
+        "supplements": 8,
+        "timedCycles": 2
+      },
+      {
+        "userVacancies": 6,
+        "transferredPicks": 2,
+        "picks": 24,
+        "supplements": 11,
+        "timedCycles": 7
+      }
+    ],
+    "errors": []
+  }
+}

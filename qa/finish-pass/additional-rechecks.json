@@ -7,6 +7,25 @@
       "run": "v8_draft_stress_test-final-long.log",
       "scope": "Actual-script VM annual-draft stress with explicit 0/1/2/4/5/6 departure and transferred-pick fixtures; mixed paced/skip truth, rapid speed changes, wrong-turn actions, modal pauses and no stale completion callbacks. No native rendering.",
       "checks": 647
+    },
+    {
+      "test": "qa/v8_experience_test.mjs",
+      "exitCode": 0,
+      "run": "v8_experience_test-final-corrected.log",
+      "scope": "Whole experience suite after correcting fixture-dependent injury wording; actual UI correctly explained incomplete XI with10 fit players."
+    },
+    {
+      "test": "qa/v8_final_pass_test.mjs",
+      "exitCode": 0,
+      "run": "v8_final_pass_test-final-long.log",
+      "checks": 665,
+      "scope": "Actual VM career commands with explicit 0\u20136 user retirement fixtures, cut budgets, manual draft/XI, stale controls and cold reload. No native rendering evidence."
+    },
+    {
+      "test": "qa/v8_lifecycle_consistency_test.mjs",
+      "exitCode": 0,
+      "run": "v8_lifecycle_consistency_test-final-long.log",
+      "scope": "Actual completed2009/2019/2025 saves through annual transitions, draft, manual XI/Scout and cold restore."
     }
   ]
 }

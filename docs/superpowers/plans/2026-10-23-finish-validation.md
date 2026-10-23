@@ -28,7 +28,7 @@ Files: qa/finish-pass/numeric-audit.mjs, docs/GCC_V8_FINISH_ASSESSMENT.md.
 
 ### Task 2: Strategy, CPU and cricket effects
 Files: qa/finish-pass/policy-run.mjs, effect-audit.mjs.
-- [ ] Run multiple paired policy worlds and all club starting positions, explicitly label simplified annual administration.
+- [x] Run multiple paired policy worlds and all club starting positions, explicitly label simplified annual administration.
 - [x] Check actual completed squads/CPU XI integrity and recruitment needs.
 - [x] Run controlled production-match interventions with paired RNG and report effect sizes/uncertainty.
 
@@ -46,14 +46,14 @@ Files: qa/finish-pass/browser.cjs, chaos.mjs.
 
 ### Task 5: Integrated career and final review
 Files: qa/finish-pass/verification.json and existing suites.
-- [ ] Run affected full-flow careers, required VM/browser regressions and save compatibility on exact final artifact.
+- [x] Run affected full-flow careers, required VM/browser regressions and save compatibility on exact final artifact.
 - [x] Independent review, resolve consequential findings with failing/passing evidence.
 
 ### Task 6: Publish and handoff
 Files: canonical game files, source changes, audit reports, docs/GCC_V8_NEW_CHAT_HANDOFF.md.
-- [ ] Publish verified source/evidence to existing work branch and update stable playable if changed.
-- [ ] Report each priority as passed, addressed with remaining external gate, or unresolved. No finished-product claim beyond evidence.
+- [x] Publish verified source/evidence to existing work branch and update stable playable if changed.
+- [x] Report each priority as passed, addressed with remaining external gate, or unresolved. No finished-product claim beyond evidence.
 
 ## Evidence discipline
 
-This checklist records the automated work and artefacts, not closure of human playtesting or historical calibration. The final assessment explicitly retains those gates. The first private overall method was rejected during review before publication; the replacement has a separate saved marker and frozen older evaluators. Exact-final long career/strategy/regression runs remain in progress at the current checkpoint.
+This checklist records the automated work and artefacts, not closure of human playtesting or historical calibration. The final assessment explicitly retains those gates. The first private overall method was rejected during review before publication; the replacement has a separate saved marker and frozen older evaluators. Exact-final long career/strategy/regression runs completed successfully; final assessment retains historical and human validation gates.

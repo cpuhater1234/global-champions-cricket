@@ -1,0 +1,9 @@
+{
+  "build": "qa/finish-pass/candidate.html",
+  "artifactSha256": "3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf",
+  "seed": 8602,
+  "clubIndex": 1,
+  "storageLimitUtf16Bytes": 4194304,
+  "runner": "qa/structural-risk/career-run.mjs",
+  "evidence": "Launched after final build was constructed; candidate bytes remain frozen until all cold-restore runs finish. This context record was written during the run, not represented as a start timestamp."
+}

@@ -1,0 +1,19 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Shane Watson 2008: extra bowling cannot lower identical batter rating 87 vs 88.01520000000001
+    at ck (file:///workspace/scratch/bed56f4334a5/gcc/qa/finish-pass/ar-overall-invariant.mjs:2:190)
+    at file:///workspace/scratch/bed56f4334a5/gcc/qa/finish-pass/ar-overall-invariant.mjs:2:516
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

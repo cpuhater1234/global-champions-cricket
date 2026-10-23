@@ -1,0 +1,16 @@
+chromium desktop passed
+chromium phone passed
+chromium narrow passed
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+firefox desktop passed
+firefox phone passed
+firefox narrow passed
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+webkit desktop passed
+webkit phone passed
+webkit narrow passed
+[
+  { name: 'chromium', status: 'launched' },
+  { name: 'firefox', status: 'launched' },
+  { name: 'webkit', status: 'launched' }
+]

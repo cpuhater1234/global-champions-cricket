@@ -1848,7 +1848,7 @@ SOFTWARE.
 
 
 </div>
-<div id="g8app" data-build="9aff8c56012f8e9a"><header id="g8hud"></header><div id="g8feedback" role="status" aria-live="polite"></div><main id="g8stage" tabindex="-1"></main><dialog id="g8dialog" aria-labelledby="g8dialogTitle"><div id="g8dialogContent"></div></dialog></div>
+<div id="g8app" data-build="3150a2cb78850f89"><header id="g8hud"></header><div id="g8feedback" role="status" aria-live="polite"></div><main id="g8stage" tabindex="-1"></main><dialog id="g8dialog" aria-labelledby="g8dialogTitle"><div id="g8dialogContent"></div></dialog></div>
 <script>/* MIT License
 
 Copyright (c) 2013 pieroxy
@@ -2436,27 +2436,29 @@ window.GCC8_OUTCOMES=(()=>{
  const triangular=u=>u<.5?Math.sqrt(2*u)-1:1-Math.sqrt(2*(1-u));
  const componentAt=u=>u<.94?'typical':u<.96?'moderate':u<.97?'severe':'breakout';
  const smoothstep=t=>{t=clamp(t,0,1);return t*t*(3-2*t);};
- function create(profile,seed,anchorYear,anchorSkills,baselineByYear){
+ function create(profile,seed,anchorYear,anchorSkills,baselineByYear,overallMethod=null){
   const r=n=>draw(seed,profile.careerKey,n),component=componentAt(r('component')),u=r('amplitude'),amplitude=component==='typical'?triangular(u)*4:component==='moderate'?-14+u*6:component==='severe'?-28+u*8:8+u*8;
   const balanced=profile.primaryFamily==='balanced',ar=anchorSkills.role==='AR',familyOffsets={};
   for(const f of ['batting','bowling'])familyOffsets[f]=balanced?amplitude+triangular(r(f+'-jitter'))*2:profile.primaryFamily===f?amplitude:ar?amplitude*.5+triangular(r(f+'-jitter'))*2:0;
   for(const f of ['movement','keeping','mental'])familyOffsets[f]=amplitude*.25+triangular(r(f+'-jitter'));
-  const t=r('timing');return {version:1,careerKey:profile.careerKey,anchorYear,anchorSkills:copy(anchorSkills),baselineByYear:copy(baselineByYear),component,familyOffsets,timingOffset:t<.2?-1:t<.8?0:1};
+  const t=r('timing');return {...(overallMethod?{overallMethod}:{}),version:1,careerKey:profile.careerKey,anchorYear,anchorSkills:copy(anchorSkills),baselineByYear:copy(baselineByYear),component,familyOffsets,timingOffset:t<.2?-1:t<.8?0:1};
  }
  const metadata=['role','preferredSlot','maxOvers','bowlingUsage','bowlingStyleVerified'];
  function packSkills(p){return [...keys,...metadata].map(k=>p[k]??null);}
  function unpackSkills(p){return Array.isArray(p)?Object.fromEntries([...keys,...metadata].map((k,i)=>[k,p[i]])):p;}
+ // Overall is strongest specialist-equivalent ability; secondary skills cannot penalise an all-rounder.
+ function overall(p){const rate=role=>window.GCC_RATINGS.roleFit({...p,role,form:0});return clamp(Math.round(p.role==='AR'?Math.max(rate('AR'),rate('BAT'),rate('BOWL')):rate(p.role)),1,99);}
  function skillsAt(o,year){
   if(year<=o.anchorYear)return copy(o.anchorSkills);
   const years=Object.keys(o.baselineByYear).map(Number).sort((a,b)=>a-b),end=years.at(-1),base=unpackSkills(o.baselineByYear[year]);if(!base)return copy(o.anchorSkills);
   const p=copy(base),last=Math.min(end,o.anchorYear+4),ramp=last>o.anchorYear?smoothstep((year-o.anchorYear)/(last-o.anchorYear)):0;
   const shifted=unpackSkills(o.baselineByYear[clamp(year-o.timingOffset,years[0],end)])||base;
   for(const [family,fields]of Object.entries(groups))for(const k of fields){const n=Number(base[k]);if(!Number.isFinite(n))continue;const offset=Number(o.familyOffsets[family]||0);p[k]=clamp(Math.round(n+ramp*(offset+Number(shifted[k]??n)-n)),1,99);}
-  const rate=x=>window.GCC_RATINGS.roleFit({...x,form:0});p.overall=clamp(Math.round(base.overall+rate(p)-rate(base)),1,99);p.careerAnchor=p.overall;return p;
+  const rate=x=>window.GCC_RATINGS.roleFit({...x,form:0});p.overall=clamp(Math.round(o.overallMethod==='skill-overall-v1'?overall(p):o.overallMethod==='role-fit-v1'?rate(p):base.overall+rate(p)-rate(base)),1,99);p.careerAnchor=p.overall;return p;
  }
  function validSkills(p){return p&&keys.every(k=>Number.isFinite(p[k])&&p[k]>=1&&p[k]<=99)&&['BAT','WK-BAT','AR','BOWL'].includes(p.role)&&Number.isInteger(p.preferredSlot)&&p.preferredSlot>=1&&p.preferredSlot<=11&&Number.isFinite(p.maxOvers)&&p.maxOvers>=0&&p.maxOvers<=4&&(p.bowlingUsage==null||Number.isFinite(p.bowlingUsage)&&p.bowlingUsage>=0&&p.bowlingUsage<=4)&&(p.bowlingStyleVerified==null||['PACE','SPIN','DUAL'].includes(p.bowlingStyleVerified));}
- function validate(o){if(!o||o.version!==1||typeof o.careerKey!=='string'||!Number.isInteger(o.anchorYear)||o.anchorYear<2008||o.anchorYear>2026||!validSkills(o.anchorSkills)||!['typical','moderate','severe','breakout'].includes(o.component)||![-1,0,1].includes(o.timingOffset))return false;if(!o.familyOffsets||Object.keys(groups).some(f=>!Number.isFinite(o.familyOffsets[f])||Math.abs(o.familyOffsets[f])>32))return false;const years=Object.keys(o.baselineByYear||{}).map(Number).sort((a,b)=>a-b);return years.length>0&&years[0]===o.anchorYear&&years.every((y,i)=>Number.isInteger(y)&&y<=2026&&y===o.anchorYear+i&&validSkills(unpackSkills(o.baselineByYear[y])));}
- return {modelVersion:1,create,skillsAt,validate,draw,componentAt,smoothstep,keys,groups,packSkills,unpackSkills};
+ function validate(o){if(!o||o.overallMethod!=null&&!['role-fit-v1','skill-overall-v1'].includes(o.overallMethod)||o.version!==1||typeof o.careerKey!=='string'||!Number.isInteger(o.anchorYear)||o.anchorYear<2008||o.anchorYear>2026||!validSkills(o.anchorSkills)||!['typical','moderate','severe','breakout'].includes(o.component)||![-1,0,1].includes(o.timingOffset))return false;if(!o.familyOffsets||Object.keys(groups).some(f=>!Number.isFinite(o.familyOffsets[f])||Math.abs(o.familyOffsets[f])>32))return false;const years=Object.keys(o.baselineByYear||{}).map(Number).sort((a,b)=>a-b);return years.length>0&&years[0]===o.anchorYear&&years.every((y,i)=>Number.isInteger(y)&&y<=2026&&y===o.anchorYear+i&&validSkills(unpackSkills(o.baselineByYear[y])));}
+ return {modelVersion:1,overall,create,skillsAt,validate,draw,componentAt,smoothstep,keys,groups,packSkills,unpackSkills};
 })();
 
 /* Initialisation and migration only. Outcome records are never rebuilt on routine reload. */
@@ -2480,6 +2482,7 @@ window.GCC8_CAREER_STATE=(()=>{
     const q=copy(p);baselineAt(q,year);q._peakSkills=peak;q._factor=q.overall/Math.max(1,peakPlayer.overall);
     // Old current ratings are authoritative; corrections affect new worlds or future years only.
     const expected=snapshot(P.expectedSkills(profile,year,q));
+    if(mode==='new'){expected.overall=O.overall(expected);}
     baseline[year]=O.packSkills(expected);
    }
    let anchor=mode==='loaded'&&anchorYear===state.year?snapshot(p):O.unpackSkills(baseline[anchorYear]);
@@ -2491,7 +2494,7 @@ window.GCC8_CAREER_STATE=(()=>{
    }
    baseline[anchorYear]=O.packSkills(anchor);
    p.careerExpected={anchorYear,baselineByYear:copy(baseline),primaryFamily:profile.primaryFamily};
-   p.careerOutcome=O.create(profile,d.careerModel.seed,anchorYear,anchor,baseline);
+   p.careerOutcome=O.create(profile,d.careerModel.seed,anchorYear,anchor,baseline,mode==='new'?'skill-overall-v1':null);
    if(!O.validate(p.careerOutcome))throw Error('Invalid initial career: '+p.name);
    const record={outcome:p.careerOutcome,expected:p.careerExpected};d.careerStore[p.careerKey]=record;attach(p,record);
   }
@@ -2511,7 +2514,7 @@ window.GCC8_SCOUTING=(()=>{
   const publicExpectedByYear={},snapshots=Object.keys(raw).map(Number).sort((a,b)=>a-b),last=snapshots.at(-1),first=snapshots[0];
   for(let y=anchorYear;y<=2026;y++){const known=O.unpackSkills(raw[y]);if(known)publicExpectedByYear[y]={overall:known.overall,composite:composite(known)};else if(last&&y>last){const tail=O.unpackSkills(raw[last]),factor=Math.pow(.975,y-last);publicExpectedByYear[y]={overall:tail.overall*factor,composite:composite(tail)*factor};}else{const base=O.unpackSkills(raw[first])||currentSkills,t=clamp((y-anchorYear)/Math.max(1,pkYear-anchorYear),0,1),v=y<=pkYear?base.overall+(peak-base.overall)*t:peak*Math.pow(.98,y-pkYear);publicExpectedByYear[y]={overall:v,composite:composite(base)+(v-base.overall)};}}
   const expected=publicExpectedByYear[year]||{overall:p.overall,composite:composite(currentSkills)};
-  return {careerKey:profile?.careerKey||p.name,year,currentSkills,currentOverall:Number(p.overall||65),age,role:p.role,publicExpectedByYear,confidence:profile?.identityStatus==='source-linked'?'MEDIUM':'LOW',anchorYear,anchorExpectedComposite:publicExpectedByYear[anchorYear]?.composite||expected.composite,currentExpectedComposite:expected.composite};
+  return {careerKey:profile?.careerKey||p.name,year,currentSkills,currentOverall:Number(p.overall||65),age,role:p.role,publicExpectedByYear,confidence:!/provisional/.test(p.ratingAuditStatus||'')&&Math.max(0,...Object.values(p.ratingCoreConfidence||{}).map(Number))>=.25?'MEDIUM':'LOW',anchorYear,anchorExpectedComposite:publicExpectedByYear[anchorYear]?.composite||expected.composite,currentExpectedComposite:expected.composite};
  }
  function estimateAt(v,year){const prior=v.publicExpectedByYear[year]?.overall??v.currentOverall,weight=clamp((v.year-v.anchorYear)*.25,0,.75),residual=composite(v.currentSkills)-v.currentExpectedComposite;return clamp(prior+residual*weight,1,99);}
  function value(v){const endAge=v.role==='BOWL'||v.role==='AR'?36:v.role==='WK-BAT'?37:38,end=Math.min(2026,v.year+Math.max(0,endAge-v.age)),scores=[];for(let y=v.year;y<=end;y++)scores.push(y===v.year?v.currentOverall:estimateAt(v,y));const useful=scores.slice(0,6),den=useful.reduce((n,_,i)=>n+Math.pow(.86,i),0),weighted=useful.reduce((n,x,i)=>n+x*Math.pow(.86,i),0)/den,best=Math.max(...scores.map((_,i)=>{const w=scores.slice(i,i+5);return w.reduce((a,b)=>a+b,0)/w.length;}));return clamp(weighted*.65+best*.35+Math.min(5,(scores.length-1)*.65),1,99);}
@@ -2519,8 +2522,6 @@ window.GCC8_SCOUTING=(()=>{
  return {publicView,estimateAt,value,outlook};
 })();
 
-/* Facts observed at annual boundaries, never forecasts or hidden career rolls. */
-/* Observed permanent skill changes only. Old overall-only save rows remain readable. */
 window.GCC8_DEVELOPMENT=(()=>{
  const labels={bat:'Batting',power:'Boundary hitting',control:'Shot control',pacePlay:'Against pace',spinPlay:'Against spin',finishing:'Finishing',bowl:'Bowling',newBall:'New ball',death:'Death bowling',bowlControl:'Bowling accuracy',variation:'Variation',spin:'Spin',pace:'Pace',running:'Running',fielding:'Fielding',keeping:'Wicketkeeping',temperament:'Temperament',leadership:'Leadership'};
  function relevant(role){return [...(role==='BOWL'?['bowl','newBall','death','bowlControl','variation','spin','pace']:role==='AR'?['bat','power','control','pacePlay','spinPlay','finishing','bowl','newBall','death','bowlControl','variation','spin','pace']:['bat','power','control','pacePlay','spinPlay','finishing']),...(role==='WK-BAT'?['keeping']:[]),'running','fielding','temperament','leadership'];}

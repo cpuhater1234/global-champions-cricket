@@ -1,0 +1,12 @@
+chromium desktop passed
+locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-action="continue"]:visible').first()[22m
+
+    at click (/workspace/scratch/bed56f4334a5/gcc/qa/finish-pass/browser.cjs:4:524)
+    at /workspace/scratch/bed56f4334a5/gcc/qa/finish-pass/browser.cjs:10:248 {
+  log: [
+    `  - waiting for locator('[data-action="continue"]:visible').first()`
+  ],
+  name: 'TimeoutError'
+}

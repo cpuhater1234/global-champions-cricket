@@ -3,7 +3,7 @@ from pathlib import Path
 import hashlib,json,re
 root=Path(__file__).resolve().parents[2];q=root/'qa/finish-pass';load=lambda n:json.loads((q/n).read_text());sha=hashlib.sha256((q/'candidate.html').read_bytes()).hexdigest()
 assert sha=='3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf'
-reports={n:load(n) for n in ['ratings-regression.json','ratings-persistence.json','ar-overall-invariant.json','overall-version-compatibility.json','effects.json','cpu.json','browser.json','chaos.json','save-compatibility.json','statistics.json','policies-summary.json','source-reconciliation.json','regressions.json']}
+reports={n:load(n) for n in ['ratings-regression.json','ratings-persistence.json','ar-overall-invariant.json','overall-version-compatibility.json','private-rolefit-save-compat.json','effects.json','cpu.json','browser.json','chaos.json','save-compatibility.json','statistics.json','policies-summary.json','source-reconciliation.json','regressions.json']}
 for name,r in reports.items():
  if 'hash' in r:assert r['hash']==sha,name
 rows={r['test']:r for r in reports['regressions.json']['rows']}
@@ -30,6 +30,7 @@ v={'hash':sha,'gitBlob':'f5059bb1890951b9816c8cdf57670d6b21e0d0f2','bytes':(q/'c
 policy_table='\n'.join(f"| {r['policy']} | {r['winPercentage']:.2f}% |" for r in pol['summary'])
 contrast_table='\n'.join(f"| {r['policy']} | {r['pairedMeanWinPercentagePointDifference']:+.2f} | {r['worldCluster95Interval'][0]:+.2f} to {r['worldCluster95Interval'][1]:+.2f} |" for r in pol['contrasts'])
 effect_table='\n'.join(f"| {r['name']} | {r['pairedRunDelta']:+.2f} | {r['paired95Interval'][0]:+.2f} to {r['paired95Interval'][1]:+.2f} |" for r in effects['summaries'])
+population_table='\n'.join(f"| {r['year']} | {r['beforeMeanOverall']:.2f} | {r['afterMeanOverall']:.2f} | {r['beforeEliteCount']:.2f} | {r['afterEliteCount']:.2f} |" for r in stats['population'])
 corr_table='\n'.join(f"| {r['kind']} {r['phase']} | {r['uniquePlayers']} | {r['expectedBaselineSpearman']:.3f} |" for r in stats['phaseRankAssociation'])
 doc=f'''# GCC six-priority finishing assessment
 
@@ -37,11 +38,11 @@ This pass delivers focused numerical fixes and extensive automated validation. I
 
 ## Exact build
 
-SHA256 `{sha}`. Git blob `{v['gitBlob']}`. {v['bytes']:,} bytes. Base commit `{v['baseCommit']}`. Both canonical playables must contain identical bytes. `qa/finish-pass/build.py` reconstructs this candidate from the preserved accepted baseline.
+SHA-256 `{sha}`. Git blob `{v['gitBlob']}`. {v['bytes']:,} bytes. Base commit `{v['baseCommit']}`. Both canonical playables contain identical bytes. `qa/finish-pass/build.py` reconstructs this candidate from the preserved accepted baseline.
 
 New careers use `overallMethod=skill-overall-v1`: rounded role-based skill composites, with all-rounders rated at least as highly as identical batting or bowling specialists. This avoids penalising a strong batter for having an additional bowling option. It measures strongest specialist-equivalent ability for AR, not complete utility, win probability or historical certification. Form remains a separate context.
 
-The preceding private candidate used direct AR roleFit, which could rate Maxwell78 despite batting90. That candidate was not published. A failing invariant reproduced the problem before this correction. Both preceding role-fit-v1 and legacy absent/null evaluators remain frozen; global roleFit is unchanged to preserve older saved futures. Existing current skills and outcomes are not retroactively rewritten.
+The preceding private candidate used direct AR roleFit, which could rate Maxwell78 despite batting90. That candidate was not promoted to the delivered playable. A failing invariant reproduced the problem before this correction. Both preceding role-fit-v1 and legacy absent/null evaluators remain frozen; global roleFit is unchanged to preserve older saved futures. Existing current skills and outcomes are not retroactively rewritten.
 
 Scouting confidence now follows numeric evidence metadata. A biography/identity URL cannot confer skill confidence. Provisional arrival profiles remain LOW. No match probability formula, visual palette, manual-XI requirement or current trade/retirement rule changed.
 
@@ -53,7 +54,7 @@ Scouting confidence now follows numeric evidence metadata. A biography/identity 
 | CPU and cricket behaviour | Eight real foundation drafts/64 squads, production CPU XI checks and20,000 controlled innings | Historical bowling validity, uncertain small effects and broader trade-strategy balance |
 | Feedback, pacing and continuity | Replay/speed/skip/reload checks, fresh19-season full-flow career, older save continuations | Actual returning-player enjoyment, attachment and pacing feedback |
 | Device/accessibility and resilience | Three browser engines,162 viewport/text cases, chaotic-state checks and72 older saved checkpoints | Physical phones/tablets and regular screen-reader users |
-| Targeted fixes and retesting | Three production modules,75 VM regression suites, independent review | No blanket guarantee that every unseen interaction is impossible |
+| Targeted fixes and retesting | Three production modules,75 VM regression suites, independent review | No blocking defect identified in the tested scope |
 | Numerical/statistical credibility | All412 players across5,149 active player-years per world in8 worlds;7,102 source matches and per-player evidence ledger | Full attribute-level generation, role/identity review and held-out historical validation |
 
 ## Exact-build verification
@@ -63,9 +64,18 @@ Scouting confidence now follows numeric evidence metadata. A biography/identity 
 - Two exact-final legacy careers continued from completed2008/2009 saves through2026:35 additional newly exercised seasons and490 managed league matches. Combined with the fresh career,54 newly tested full-flow seasons and756 managed league matches. Loaded earlier history is excluded.
 -72 older saved checkpoints across4 worlds: {v['compatibilityChecks']:,} comparisons against baseline restore. Existing cover normalisation may legitimately differ from raw saved bytes equally in both versions. Current skills, expected/private future stores, rosters, selection, score/stat facts agree between versions.
 -{reports['ratings-regression.json']['checks']:,} rating checks;{reports['ratings-persistence.json']['checks']:,} persistence/privacy checks;{reports['ar-overall-invariant.json']['checks']:,} all-rounder/skill monotonicity checks;{reports['overall-version-compatibility.json']['checks']:,} frozen-evaluator comparisons.
+-{reports['private-rolefit-save-compat.json']['checks']:,} comparisons on an actual preceding private role-fit-v1 saved career confirm unchanged current facts and later player states; this is separate from the72 historical saves.
 - Chromium, Firefox and WebKit:162 cases across3 widths,3 text sizes and6 stages. Actual fresh draft/scouting plus saved-team/analysis/focus/playback journeys. Images blocked for repeatability. Phone/touch emulation is not physical-device or screen-reader-user evidence.
 
 The preceding8032645 candidate separately completed a fresh19-season career and two older completed2008/2009 careers through2026 (35 additional newly exercised seasons,490 managed league matches). These are supplementary earlier-candidate results, **not** exact-final career totals. Earlier saved history is never counted as newly played seasons.
+
+## Overall calculation across matched worlds
+
+| Year | Previous mean | New mean | Previous90+ players | New90+ players |
+| --- | --- | --- | --- | --- |
+{population_table}
+
+Values average the active eligible pool across8 matched worlds. They quantify this calculation change; they do not certify underlying historical attributes or prove a preferred talent distribution.
 
 ## Strategy assessment
 
@@ -79,7 +89,7 @@ Each policy has2,128 matches across8 paired worlds. Contrasts against balanced-c
 | --- | --- | --- |
 {contrast_table}
 
-These cohorts use production career, guard, public CPU evaluation and match functions, with simplified annual replacement administration. They omit the full CPU wrapper's extra role need/noise, optional trades/releases, injuries and performance-form updates. Finals qualification uses wins/alphabetical ties. They are not32 full UI careers or proof of universal strategy balance. See the intervals rather than interpreting tiny pooled differences as superiority.
+These cohorts use production career, guard, public CPU evaluation and match functions, with simplified annual replacement administration. They omit the full CPU wrapper's extra role need/noise, optional trades/releases, injuries and performance-form updates. Finals qualification uses wins/alphabetical ties. They are not32 full UI careers or proof of universal strategy balance. See the intervals rather than interpreting pooled differences as superiority.
 
 ## Controlled simulation effects
 
@@ -120,5 +130,8 @@ for i in range(0,len(parts),2):
  parts[i]=re.sub(r'(?<=[A-Za-z,;:])(?=[0-9])', ' ', parts[i])
  parts[i]=re.sub(r'(?<=[0-9])(?=[A-Za-z])', ' ', parts[i])
 doc='`'.join(parts)
+doc=re.sub(r'(?<=\d), (?=\d{3}(?:\D|$))', ',', doc)
+doc=re.sub(r'^-(?=\d)', '- ', doc, flags=re.M)
+for a,b in [('role-fit-v 1','role-fit-v1'),('T 20 I','T20I'),('T 20','T20'),('UTF 16','UTF-16'),('df 7','df=7'),('manifests.7','manifests. 7'),('applied.143','applied. 143'),('labelledAR','labelled AR'),('|95%','| 95%')]:doc=doc.replace(a,b)
 (root/'docs/GCC_V8_FINISH_ASSESSMENT_20261024.md').write_text(doc)
 print(json.dumps({k:v for k,v in v.items() if k not in ['regressions','freshCareer']},indent=2))

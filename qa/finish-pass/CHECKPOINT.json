@@ -1,5 +1,5 @@
 {
-  "status": "Final all-rounder correction under verification; not published",
+  "status": "Automated pass complete; canonical candidate promoted and stable playable version57 saved",
   "hash": "3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf",
   "blob": "f5059bb1890951b9816c8cdf57670d6b21e0d0f2",
   "baseCommit": "2b604dc15ebf1242730728d12123c896cb23aab0",
@@ -47,15 +47,50 @@
     "persistencePrivacy": 845,
     "frozenEvaluatorComparisons": 11129,
     "careerDistributionWorldDraws": 10000,
-    "maxOverallContractGap": 0
+    "maxOverallContractGap": 0,
+    "freshCareer": {
+      "seed": 8602,
+      "club": "HAM",
+      "seasons": 19,
+      "managedLeagueMatches": 266,
+      "checks": 15868,
+      "coldRestores": 49,
+      "injurySelections": 32,
+      "superOvers": 3,
+      "maxSaveUtf16Bytes": 2671886,
+      "quotaFailures": 0,
+      "errors": []
+    }
   },
   "preservedRawInputs": [
     "GCC_Cricsheet_Source_Snapshot_20261024.zip",
     "GCC_QA_Save_Fixtures_20261024.tar.xz"
   ],
-  "remainingLongRuns": [
-    "fresh career currently through2017",
-    "full regression batch and isolated long-suite rechecks",
-    "32 controlled policy cohorts"
-  ]
+  "remainingLongRuns": [],
+  "automatedVerification": "qa/finish-pass/verification.json",
+  "delivery": {
+    "playable": {
+      "localPath": "/workspace/scratch/bed56f4334a5/deliver/GCC_v8_Career_Clarity.html",
+      "libraryFileId": "libfile_ebabb63004ac81919b41b246675c703d",
+      "fileId": "file_00000000f83481f585198c5910a42ded",
+      "version": 57,
+      "metadataApplied": true
+    },
+    "cricsheetSnapshot": {
+      "libraryFileId": "libfile_82fe227b1c8c819189e6125c6cbf6df3",
+      "fileId": "file_00000000b27881f5be7e0eb6966f1741",
+      "filename": "GCC_Cricsheet_Source_Snapshot_20261024.zip",
+      "metadataApplied": true
+    },
+    "saveFixtures": {
+      "libraryFileId": "libfile_de250924348c8191b09edb448dec8d3f",
+      "fileId": "file_00000000989481f5973e0da9c6fd1278",
+      "filename": "GCC_QA_Save_Fixtures_20261024.tar.xz",
+      "metadataApplied": true
+    }
+  },
+  "sixPriorityStatus": "Targeted fixes and automated evidence delivered; historical numerical calibration and actual human/device gates remain open",
+  "priorInProgressCheckpointCommit": "211391a34a7e0f9ec316f980d2fdcdbb2d7c503e",
+  "priorInProgressCheckpointTree": "2d72be65d11f505d3f0d5245dd272644c0dfb79a",
+  "canonicalBlob": "f5059bb1890951b9816c8cdf57670d6b21e0d0f2"
 }
