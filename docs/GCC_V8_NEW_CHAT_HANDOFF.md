@@ -1,5 +1,12 @@
 # Latest continuation checkpoint: player-card rework, 22 October 2026
 
+## Pending build: recruitment and draft-order surface corrections
+
+2026-10-23: Updated v8/ui/workspace.css to give the recruitment label/status a padded responsive grid, replace signing-wire full-row outcome fills with neutral solid navy and small status accents, and restore each draft-order card's club-colour left border. Your-club marking now uses a separate neutral outline.
+
+Execution environment failed to initialize. Source replacements and balanced braces checked, but browser verification and candidate regeneration were unavailable. IMPORTANT: game/gcc_v8_product_candidate.html, game/gcc_v8_quiet_arcade.html and Library delivery version 52 still contain the previous styling. Next step: run qa/completion/build_candidate.py, synchronize quiet_arcade from candidate, run signing-layout and draft-order responsive checks, then update the existing downloadable item. Do not claim this source-only checkpoint is delivered in the playable HTML.
+
+
 ## Current visual direction: whole-game solid surfaces, 23 October 2026
 Tom clarified the solid-colour direction applies throughout the whole game, not a draft-only trial. This supersedes the draft-trial scope below. Shared solid navy canvas, solid panel fills and distinct content/header/action surfaces now apply to home/introduction, invitations/club choice/guides, signing, foundation/annual drafts, XI/team analysis, matchday/live playback, win/loss/neutral results, tables/stats, finals, review, trading/releasing/development/offseason, archive and career ending. Real stadium photography and supplied cricket artwork retained; external photos intentionally blocked in browser QA. Club branding, discipline colours and red/yellow/green rating meanings preserved. Shared buttons/disclosures have readable hover/press/focus states and reduced-motion handling. Gameplay and save rules unchanged.
 Current exact playable SHA256 53efb5e9751ff897cbdc88788f6837ca59d9c4b3b50bd5c566d383fd75bd725f, both canonical HTML files identical. Build with python3 qa/completion/build_candidate.py. Current workspace/workflow remains as documented below. Existing deliverable identity libfile_ebabb63004ac81919b41b246675c703d, version before this replacement51.

@@ -848,13 +848,21 @@ html,body{background:#0d1724}
 .g8clubidentitypanel .g8clubmetastrip{background:#263e55}
 .g8sealed,.g8ordersealed .g8sealedlabel{background:#1b2c40;background-image:none;border-color:#607d93;box-shadow:0 3px 0 #07101a}
 .g8ordergrid .g8ordercard,.g8ordergrid .g8ordermine{background:#1b2c40;border-color:#607d93;box-shadow:0 3px 0 #07101a}
-.g8ordergrid .g8ordermine{border-left-color:#bde96e}
+.g8ordergrid .g8ordercard,.g8ordergrid .g8ordermine{border-left:5px solid var(--accent)}
+.g8ordergrid .g8ordermine{outline:2px solid #a9bfd0;outline-offset:2px}
+.g8ordergrid .g8ordermine .g8orderrank,.g8ordergrid .g8club .g8orderstatus{color:#e1edf6}
 .g8signing>section:first-child{background:#1b2c40;background-image:none;border-color:#58778c;border-top-color:#8ae2cb;box-shadow:0 4px 0 #07101a}
-.g8windowhead{background:#1e4b42;border-color:#6d9d8d;border-radius:5px}
+.g8windowhead{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,11rem),1fr));align-items:center;gap:.75rem 1rem;padding:.85rem 1rem;background:#102033;border:1px solid #526b80;border-radius:5px}
+.g8windowhead .g8eyebrow{min-width:0;color:#d2e1ed;line-height:1.5;overflow-wrap:anywhere}
+.g8windowhead .g8windowstatus{min-width:0;justify-self:start;max-width:100%;box-sizing:border-box;overflow-wrap:anywhere}
 .g8signingcounts>div,.g8signingfocus{background:#14283b;border-color:#68859a}
 .g8wirepanel{background:#1b2c40;border-color:#526b80}
-.g8wirepanel .g8wirein{background:#214739}.g8wirepanel .g8wireout{background:#4c3138}.g8wirepanel .g8wireupdate{background:#443e29}
-.g8windowstatus{background:#2a523b;border-color:#80ae8c}.g8windowclosed .g8windowstatus{background:#283f58;border-color:#859eb4;color:#e1edf6}
+.g8wirepanel .g8wireline,.g8wirepanel .g8wireline:first-child{background:#14283b;border-color:#526b80;border-left-color:#819caf}
+.g8wirepanel .g8wireline p,.g8wirepanel .g8wireupdate p{border-top-color:#526b80}
+.g8wirepanel .g8stamp,.g8wirepanel .g8stamp.declined,.g8wirepanel .g8wireupdate .g8stamp{background:#263b51;border-color:#71899d;color:#e1edf6}
+.g8wirepanel .g8wirein .g8stamp{border-left:3px solid #86b59a}
+.g8wirepanel .g8wireout .g8stamp{border-left:3px solid #c49499}
+.g8windowstatus{background:#263b51;border-color:#71899d;color:#e1edf6}.g8windowclosed .g8windowstatus{background:#283f58;border-color:#859eb4;color:#e1edf6}
 .g8teamworkspace>.g8sheet,.g8compactwork>.g8sheet{background:#1b2c40;border-color:#526b80;box-shadow:0 4px 0 #07101a}
 .g8teamworkspace .g8startingxi>.g8sectionhead{background:#244c3d;color:#e8f3ec;border-color:#759a84}
 .g8teamworkspace .g8bench>.g8sectionhead{background:#263e55;border-color:#7692a7}
