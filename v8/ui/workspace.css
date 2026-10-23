@@ -756,3 +756,26 @@ p,small,.g8fine{font-weight:400;line-height:1.5}small,.g8fine{font-size:1rem;col
 @container(min-width:30rem){.g8compactwork .g8startingxi .g8namescout.g8compactscout{grid-template-columns:minmax(0,1fr) minmax(0,10rem) max-content;gap:.5rem}.g8compactwork .g8startingxi .g8compactscout small{grid-column:2;grid-row:1;text-align:right}.g8compactwork .g8startingxi .g8compactscout .g8rowrating{grid-column:3;grid-row:1}.g8compactwork .g8startingxi .g8slot{min-height:44px}}
 .g8compactcommand .g8selectionstatus>div>span{display:block}
 .g8compactwork .g8startingxi>.g8orderhint{font-size:.9rem;line-height:1.4;color:#c5d9e8;margin:0 0 .5rem}
+
+/* Club guide identity: crest, facts strip and description share one framed panel. */
+.g8clubidentity.g8clubidentitypanel{display:grid;grid-template-columns:minmax(0,6rem) minmax(0,1fr);gap:0;margin:0 0 1rem;padding:0;align-items:stretch;border:1px solid #6d8da3;border-top:3px solid var(--club-accent);border-radius:8px;background:color-mix(in srgb,var(--club-accent) 9%,#142b3c);overflow:hidden;container-type:inline-size}
+.g8clubidentitypanel .g8clubmark{grid-column:1;grid-row:1/3;display:flex;align-items:center;justify-content:center;padding:1rem .6rem;border-right:1px solid #6d8da3;background:#ffffff06;min-width:0}
+.g8clubidentitypanel .g8clubmark .g8badge{margin:0;max-width:100%;box-sizing:border-box}
+.g8clubidentitypanel .g8clubmetastrip{grid-column:2;grid-row:1;display:flex;align-items:center;flex-wrap:wrap;gap:.4rem 0;padding:.75rem 1rem;border-bottom:1px solid #6d8da3;min-width:0}
+.g8clubidentitypanel .g8clubmetastrip>span{font-size:.95rem;line-height:1.5;font-weight:700;color:#e3eff7;padding:0 .7rem;min-width:0;overflow-wrap:anywhere}
+.g8clubidentitypanel .g8clubmetastrip>span:first-child{padding-left:0}
+.g8clubidentitypanel .g8clubmetastrip>span+span{border-left:1px solid #8ba5b6}
+#g8dialog .g8clubidentitypanel>.g8clubidentitytext{grid-column:2;grid-row:2;margin:0;padding:.85rem 1rem;font-size:1rem;line-height:1.6;color:#cbdde9;min-width:0;max-width:none;overflow-wrap:anywhere}
+@container(max-width:26rem){.g8clubidentitypanel .g8clubmark{grid-row:1;padding:.7rem}.g8clubidentitypanel .g8clubmetastrip{border-bottom:0;padding:.65rem .8rem}#g8dialog .g8clubidentitypanel>.g8clubidentitytext{grid-column:1/-1;grid-row:2;border-top:1px solid #6d8da3;padding:.8rem}}
+@container(max-width:16rem){.g8clubidentitypanel .g8clubmark{grid-column:1/-1;border-right:0;border-bottom:1px solid #6d8da3;justify-content:flex-start}.g8clubidentitypanel .g8clubmetastrip{grid-column:1/-1;grid-row:2}#g8dialog .g8clubidentitypanel>.g8clubidentitytext{grid-row:3}.g8clubidentitypanel .g8clubmetastrip>span{padding:0;border:0;flex-basis:100%}}
+@container(max-width:26rem){.g8clubidentitypanel .g8clubmetastrip{display:grid;grid-template-columns:minmax(0,1fr);gap:0}.g8clubidentitypanel .g8clubmetastrip>span{padding:.2rem 0;border:0}.g8clubidentitypanel .g8clubmetastrip>span+span{border-top:1px solid #6d8da3}}
+
+/* Draft cards: phase name and score form one read, never opposite ends of a row. */
+.g8directpick.g8recruitcard .g8candidatestrength{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:.2rem;min-width:0;min-height:44px;padding:.1rem 0}
+.g8directpick.g8recruitcard .g8phasevalue{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:flex-start;gap:.2rem .5rem;max-width:100%;min-width:0;line-height:1.4}
+.g8directpick.g8recruitcard .g8phasevalue .g8skillname{flex:0 1 auto;min-width:0;font-size:.95rem;line-height:1.4;font-weight:700;overflow-wrap:anywhere}
+.g8directpick.g8recruitcard .g8phasevalue>b{flex:0 0 auto;margin:0;padding:0;font-size:1.15rem;line-height:1.25;color:var(--rating-color);font-variant-numeric:tabular-nums}
+.g8directpick.g8recruitcard .g8skillcaption{font-size:.85rem;line-height:1.4;color:#c7d8e4}
+.g8directpick.g8recruitcard .g8cardoverall b,.g8recruitcard .g8cardattributes b{color:var(--rating-color)}
+.g8directpick.g8recruitcard .g8candidatechoice{justify-content:center;align-items:flex-end;min-width:0}
+.g8directpick.g8recruitcard .g8candidatechoice .g8button{min-height:44px;min-width:4.2rem;padding:.55rem .8rem}
