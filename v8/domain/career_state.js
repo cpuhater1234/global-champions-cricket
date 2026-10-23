@@ -19,6 +19,7 @@ window.GCC8_CAREER_STATE=(()=>{
     const q=copy(p);baselineAt(q,year);q._peakSkills=peak;q._factor=q.overall/Math.max(1,peakPlayer.overall);
     // Old current ratings are authoritative; corrections affect new worlds or future years only.
     const expected=snapshot(P.expectedSkills(profile,year,q));
+    if(mode==='new'){expected.overall=O.overall(expected);}
     baseline[year]=O.packSkills(expected);
    }
    let anchor=mode==='loaded'&&anchorYear===state.year?snapshot(p):O.unpackSkills(baseline[anchorYear]);
@@ -30,7 +31,7 @@ window.GCC8_CAREER_STATE=(()=>{
    }
    baseline[anchorYear]=O.packSkills(anchor);
    p.careerExpected={anchorYear,baselineByYear:copy(baseline),primaryFamily:profile.primaryFamily};
-   p.careerOutcome=O.create(profile,d.careerModel.seed,anchorYear,anchor,baseline);
+   p.careerOutcome=O.create(profile,d.careerModel.seed,anchorYear,anchor,baseline,mode==='new'?'skill-overall-v1':null);
    if(!O.validate(p.careerOutcome))throw Error('Invalid initial career: '+p.name);
    const record={outcome:p.careerOutcome,expected:p.careerExpected};d.careerStore[p.careerKey]=record;attach(p,record);
   }
@@ -39,3 +40,4 @@ window.GCC8_CAREER_STATE=(()=>{
  function validRecord(record,p){return O.validate(record)&&record.careerKey===p.careerKey&&P.lookup(p.name)?.careerKey===record.careerKey;}
  return {initialise,applyYear,validRecord,snapshot};
 })();
+

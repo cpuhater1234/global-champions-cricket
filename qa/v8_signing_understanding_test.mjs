@@ -18,7 +18,7 @@ for(const seed of [773,20261020])for(const mode of ['skip','paced']){
  const expected=`${signed} players entered the GCC draft pool. ${declined} declined.`;
  assert.equal(summary.text,expected,'stored closing summary excludes future debutants');
  assert(X.signingLive().includes(expected),'wire agrees with eligible pool');
- assert(X.signingLive().includes(`${signed} committed<br>${declined} declined`),'header agrees with wire');
+ assert(X.signingLive().includes(`<strong>${signed}</strong><span>Committed to GCC</span>`)&&X.signingLive().includes(`<strong>${declined}</strong><span>Declined the invitation</span>`),'labelled header counts agree with wire');
  // An old completed save can contain the original inflated event text.
  summary.text=`${signed} players entered the GCC draft pool. ${s.pool.length-signed} declined.`;
  const before=JSON.stringify(s.pool),oldText=summary.text;
@@ -29,3 +29,4 @@ for(const seed of [773,20261020])for(const mode of ['skip','paced']){
  checks+=12;
 }
 console.log({checks,scope:'Two worlds, skipped and paced completion; eligible accounting, header/wire agreement and old completed feed display. VM, not visual QA.'});
+

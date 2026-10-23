@@ -1,0 +1,118 @@
+{
+  "hash": "3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf",
+  "checks": 20016,
+  "innings": 20000,
+  "scope": "Production innings on controlled legal XIs, identical paired seed schedules; batting/bowling ability-family interventions and isolated remaining interventions, not full seasons or historical calibration. Mean paired intervals quantify sampling uncertainty, not a claim of exact monotonicity for every match.",
+  "summaries": [
+    {
+      "name": "baseline",
+      "n": 2000,
+      "meanTotal": 159.021,
+      "meanWickets": 6.424,
+      "pairedRunDelta": 0,
+      "paired95Interval": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "batting",
+      "n": 2000,
+      "meanTotal": 173.323,
+      "meanWickets": 6.1755,
+      "pairedRunDelta": 14.302,
+      "paired95Interval": [
+        12.034450153643878,
+        16.56954984635612
+      ]
+    },
+    {
+      "name": "bowling",
+      "n": 2000,
+      "meanTotal": 140.4185,
+      "meanWickets": 6.693,
+      "pairedRunDelta": -18.6025,
+      "paired95Interval": [
+        -20.667718685879358,
+        -16.53728131412064
+      ]
+    },
+    {
+      "name": "keeping",
+      "n": 2000,
+      "meanTotal": 158.7955,
+      "meanWickets": 6.4655,
+      "pairedRunDelta": -0.2255,
+      "paired95Interval": [
+        -0.4775798924465994,
+        0.026579892446599335
+      ]
+    },
+    {
+      "name": "fielding",
+      "n": 2000,
+      "meanTotal": 157.7525,
+      "meanWickets": 6.4965,
+      "pairedRunDelta": -1.2685,
+      "paired95Interval": [
+        -1.561599536805226,
+        -0.9754004631947739
+      ]
+    },
+    {
+      "name": "newBall",
+      "n": 2000,
+      "meanTotal": 158.1455,
+      "meanWickets": 6.373,
+      "pairedRunDelta": -0.8755,
+      "paired95Interval": [
+        -2.4695081282340543,
+        0.7185081282340544
+      ]
+    },
+    {
+      "name": "death",
+      "n": 2000,
+      "meanTotal": 157.7475,
+      "meanWickets": 6.453,
+      "pairedRunDelta": -1.2735,
+      "paired95Interval": [
+        -1.5203882961048936,
+        -1.0266117038951066
+      ]
+    },
+    {
+      "name": "displayOverallOnly",
+      "n": 2000,
+      "meanTotal": 159.021,
+      "meanWickets": 6.424,
+      "pairedRunDelta": 0,
+      "paired95Interval": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "form",
+      "n": 2000,
+      "meanTotal": 162.405,
+      "meanWickets": 6.2945,
+      "pairedRunDelta": 3.384,
+      "paired95Interval": [
+        2.0781056244185345,
+        4.689894375581465
+      ]
+    },
+    {
+      "name": "shortBoundary",
+      "n": 2000,
+      "meanTotal": 163.991,
+      "meanWickets": 6.3885,
+      "pairedRunDelta": 4.97,
+      "paired95Interval": [
+        3.3534161825319853,
+        6.586583817468014
+      ]
+    }
+  ]
+}

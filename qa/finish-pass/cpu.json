@@ -1,0 +1,6839 @@
+{
+  "hash": "3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf",
+  "checks": 600,
+  "scope": "Eight real foundation drafts, every user club position, deliberately weak but role-legal user drafting. Seven actual CPU rivals per world; legal ownership/keeper/bowling and production CPU XI selections. Does not imply distinct player overlap inside a world: draft ownership itself makes squads disjoint.",
+  "worlds": [
+    {
+      "seed": 8701,
+      "user": "CSK",
+      "clubs": [
+        {
+          "club": "CSK",
+          "user": true,
+          "meanOverall": 69.33333333333333,
+          "roles": {
+            "BAT": 3,
+            "WK-BAT": 4,
+            "AR": 3,
+            "BOWL": 5
+          },
+          "xiRating": 71,
+          "players": [
+            {
+              "id": 203,
+              "name": "Chris Jordan",
+              "role": "BOWL",
+              "overall": 65
+            },
+            {
+              "id": 72,
+              "name": "Kieron Pollard",
+              "role": "AR",
+              "overall": 67
+            },
+            {
+              "id": 10,
+              "name": "Parthiv Patel",
+              "role": "WK-BAT",
+              "overall": 68
+            },
+            {
+              "id": 177,
+              "name": "Graham Manou",
+              "role": "WK-BAT",
+              "overall": 68
+            },
+            {
+              "id": 53,
+              "name": "Alastair Cook",
+              "role": "BAT",
+              "overall": 69
+            },
+            {
+              "id": 54,
+              "name": "Jonathan Trott",
+              "role": "BAT",
+              "overall": 69
+            },
+            {
+              "id": 153,
+              "name": "Mohammad Kaif",
+              "role": "BAT",
+              "overall": 69
+            },
+            {
+              "id": 11,
+              "name": "Luke Ronchi",
+              "role": "WK-BAT",
+              "overall": 70
+            },
+            {
+              "id": 12,
+              "name": "Tim Paine",
+              "role": "WK-BAT",
+              "overall": 70
+            },
+            {
+              "id": 118,
+              "name": "Chris Martin",
+              "role": "BOWL",
+              "overall": 70
+            },
+            {
+              "id": 132,
+              "name": "Nantie Hayward",
+              "role": "BOWL",
+              "overall": 70
+            },
+            {
+              "id": 240,
+              "name": "Kaushal Weeraratne",
+              "role": "AR",
+              "overall": 70
+            },
+            {
+              "id": 228,
+              "name": "Nathan McCullum",
+              "role": "AR",
+              "overall": 71
+            },
+            {
+              "id": 115,
+              "name": "Tim Bresnan",
+              "role": "BOWL",
+              "overall": 72
+            },
+            {
+              "id": 120,
+              "name": "Iain O'Brien",
+              "role": "BOWL",
+              "overall": 72
+            }
+          ],
+          "keeperCount": 4,
+          "trustedOvers": 17.990000000000002
+        },
+        {
+          "club": "SOM",
+          "user": false,
+          "meanOverall": 78.13333333333334,
+          "roles": {
+            "BAT": 5,
+            "WK-BAT": 2,
+            "AR": 5,
+            "BOWL": 3
+          },
+          "xiRating": 81,
+          "players": [
+            {
+              "id": 4,
+              "name": "Brendon McCullum",
+              "role": "WK-BAT",
+              "overall": 89
+            },
+            {
+              "id": 104,
+              "name": "Nathan Bracken",
+              "role": "BOWL",
+              "overall": 92
+            },
+            {
+              "id": 167,
+              "name": "George Bailey",
+              "role": "BAT",
+              "overall": 74
+            },
+            {
+              "id": 222,
+              "name": "Hashim Amla",
+              "role": "BAT",
+              "overall": 78
+            },
+            {
+              "id": 147,
+              "name": "Shikhar Dhawan",
+              "role": "BAT",
+              "overall": 71
+            },
+            {
+              "id": 151,
+              "name": "Ambati Rayudu",
+              "role": "BAT",
+              "overall": 74
+            },
+            {
+              "id": 215,
+              "name": "Fawad Alam",
+              "role": "AR",
+              "overall": 73
+            },
+            {
+              "id": 65,
+              "name": "Irfan Pathan",
+              "role": "AR",
+              "overall": 78
+            },
+            {
+              "id": 69,
+              "name": "Ravi Bopara",
+              "role": "AR",
+              "overall": 77
+            },
+            {
+              "id": 270,
+              "name": "Tim Southee",
+              "role": "BOWL",
+              "overall": 70
+            },
+            {
+              "id": 76,
+              "name": "Abdul Razzaq",
+              "role": "AR",
+              "overall": 80
+            },
+            {
+              "id": 212,
+              "name": "Mohammad Sami",
+              "role": "BOWL",
+              "overall": 79
+            },
+            {
+              "id": 180,
+              "name": "Rob Key",
+              "role": "BAT",
+              "overall": 80
+            },
+            {
+              "id": 184,
+              "name": "James Foster",
+              "role": "WK-BAT",
+              "overall": 77
+            },
+            {
+              "id": 217,
+              "name": "Justin Kemp",
+              "role": "AR",
+              "overall": 80
+            }
+          ],
+          "keeperCount": 2,
+          "trustedOvers": 15.07
+        },
+        {
+          "club": "DC",
+          "user": false,
+          "meanOverall": 76.53333333333333,
+          "roles": {
+            "BAT": 3,
+            "WK-BAT": 3,
+            "AR": 4,
+            "BOWL": 5
+          },
+          "xiRating": 81,
+          "players": [
+            {
+              "id": 83,
+              "name": "Morne Morkel",
+              "role": "BOWL",
+              "overall": 89
+            },
+            {
+              "id": 2,
+              "name": "Adam Gilchrist",
+              "role": "WK-BAT",
+              "overall": 88
+            },
+            {
+              "id": 188,
+              "name": "Samit Patel",
+              "role": "AR",
+              "overall": 77
+            },
+            {
+              "id": 135,
+              "name": "Johan Botha",
+              "role": "AR",
+              "overall": 77
+            },
+            {
+              "id": 47,
+              "name": "Faf du Plessis",
+              "role": "BAT",
+              "overall": 72
+            },
+            {
+              "id": 48,
+              "name": "Virat Kohli",
+              "role": "BAT",
+              "overall": 72
+            },
+            {
+              "id": 158,
+              "name": "Munaf Patel",
+              "role": "BOWL",
+              "overall": 75
+            },
+            {
+              "id": 100,
+              "name": "Praveen Kumar",
+              "role": "BOWL",
+              "overall": 77
+            },
+            {
+              "id": 201,
+              "name": "Boyd Rankin",
+              "role": "BOWL",
+              "overall": 72
+            },
+            {
+              "id": 185,
+              "name": "Steven Davies",
+              "role": "WK-BAT",
+              "overall": 73
+            },
+            {
+              "id": 225,
+              "name": "Rory Kleinveldt",
+              "role": "BOWL",
+              "overall": 71
+            },
+            {
+              "id": 199,
+              "name": "Kevin O'Brien",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 187,
+              "name": "Peter Trego",
+              "role": "AR",
+              "overall": 78
+            },
+            {
+              "id": 198,
+              "name": "Niall O'Brien",
+              "role": "WK-BAT",
+              "overall": 75
+            },
+            {
+              "id": 208,
+              "name": "Imran Farhat",
+              "role": "BAT",
+              "overall": 76
+            }
+          ],
+          "keeperCount": 3,
+          "trustedOvers": 19.549999999999997
+        },
+        {
+          "club": "HAM",
+          "user": false,
+          "meanOverall": 79.93333333333334,
+          "roles": {
+            "BAT": 3,
+            "WK-BAT": 1,
+            "AR": 4,
+            "BOWL": 7
+          },
+          "xiRating": 80,
+          "players": [
+            {
+              "id": 17,
+              "name": "Chris Gayle",
+              "role": "BAT",
+              "overall": 91
+            },
+            {
+              "id": 92,
+              "name": "Harbhajan Singh",
+              "role": "BOWL",
+              "overall": 87
+            },
+            {
+              "id": 60,
+              "name": "Shahid Afridi",
+              "role": "AR",
+              "overall": 85
+            },
+            {
+              "id": 85,
+              "name": "Brett Lee",
+              "role": "BOWL",
+              "overall": 90
+            },
+            {
+              "id": 182,
+              "name": "Craig Kieswetter",
+              "role": "WK-BAT",
+              "overall": 72
+            },
+            {
+              "id": 205,
+              "name": "Shoaib Malik",
+              "role": "AR",
+              "overall": 81
+            },
+            {
+              "id": 161,
+              "name": "Vinay Kumar",
+              "role": "BOWL",
+              "overall": 73
+            },
+            {
+              "id": 56,
+              "name": "Cameron White",
+              "role": "BAT",
+              "overall": 77
+            },
+            {
+              "id": 36,
+              "name": "Ian Bell",
+              "role": "BAT",
+              "overall": 81
+            },
+            {
+              "id": 238,
+              "name": "Dhammika Prasad",
+              "role": "BOWL",
+              "overall": 71
+            },
+            {
+              "id": 223,
+              "name": "Ryan McLaren",
+              "role": "AR",
+              "overall": 75
+            },
+            {
+              "id": 138,
+              "name": "Dirk Nannes",
+              "role": "BOWL",
+              "overall": 83
+            },
+            {
+              "id": 79,
+              "name": "Luke Wright",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 133,
+              "name": "Andre Nel",
+              "role": "BOWL",
+              "overall": 81
+            },
+            {
+              "id": 117,
+              "name": "Kyle Mills",
+              "role": "BOWL",
+              "overall": 76
+            }
+          ],
+          "keeperCount": 1,
+          "trustedOvers": 26.55
+        },
+        {
+          "club": "HUR",
+          "user": false,
+          "meanOverall": 80.93333333333334,
+          "roles": {
+            "BAT": 4,
+            "WK-BAT": 1,
+            "AR": 4,
+            "BOWL": 6
+          },
+          "xiRating": 80,
+          "players": [
+            {
+              "id": 84,
+              "name": "Dale Steyn",
+              "role": "BOWL",
+              "overall": 92
+            },
+            {
+              "id": 241,
+              "name": "Denesh Ramdin",
+              "role": "WK-BAT",
+              "overall": 76
+            },
+            {
+              "id": 103,
+              "name": "Amit Mishra",
+              "role": "BOWL",
+              "overall": 82
+            },
+            {
+              "id": 88,
+              "name": "Shane Bond",
+              "role": "BOWL",
+              "overall": 89
+            },
+            {
+              "id": 142,
+              "name": "Glenn McGrath",
+              "role": "BOWL",
+              "overall": 88
+            },
+            {
+              "id": 45,
+              "name": "Martin Guptill",
+              "role": "BAT",
+              "overall": 72
+            },
+            {
+              "id": 196,
+              "name": "Ryan ten Doeschate",
+              "role": "AR",
+              "overall": 83
+            },
+            {
+              "id": 207,
+              "name": "Imran Nazir",
+              "role": "BAT",
+              "overall": 81
+            },
+            {
+              "id": 106,
+              "name": "Mitchell McClenaghan",
+              "role": "BOWL",
+              "overall": 72
+            },
+            {
+              "id": 186,
+              "name": "Graham Napier",
+              "role": "AR",
+              "overall": 79
+            },
+            {
+              "id": 211,
+              "name": "Yasir Arafat",
+              "role": "AR",
+              "overall": 77
+            },
+            {
+              "id": 35,
+              "name": "Andrew Strauss",
+              "role": "BAT",
+              "overall": 82
+            },
+            {
+              "id": 178,
+              "name": "Marcus Trescothick",
+              "role": "BAT",
+              "overall": 84
+            },
+            {
+              "id": 66,
+              "name": "Albie Morkel",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 111,
+              "name": "Ryan Sidebottom",
+              "role": "BOWL",
+              "overall": 81
+            }
+          ],
+          "keeperCount": 1,
+          "trustedOvers": 25.24
+        },
+        {
+          "club": "STA",
+          "user": false,
+          "meanOverall": 79.73333333333333,
+          "roles": {
+            "BAT": 4,
+            "WK-BAT": 1,
+            "AR": 3,
+            "BOWL": 7
+          },
+          "xiRating": 83,
+          "players": [
+            {
+              "id": 86,
+              "name": "Mitchell Johnson",
+              "role": "BOWL",
+              "overall": 86
+            },
+            {
+              "id": 9,
+              "name": "Dinesh Karthik",
+              "role": "WK-BAT",
+              "overall": 77
+            },
+            {
+              "id": 30,
+              "name": "Ross Taylor",
+              "role": "BAT",
+              "overall": 80
+            },
+            {
+              "id": 59,
+              "name": "Jacques Kallis",
+              "role": "AR",
+              "overall": 89
+            },
+            {
+              "id": 141,
+              "name": "Shane Warne",
+              "role": "BOWL",
+              "overall": 88
+            },
+            {
+              "id": 121,
+              "name": "Nuwan Kulasekara",
+              "role": "BOWL",
+              "overall": 77
+            },
+            {
+              "id": 94,
+              "name": "Shoaib Akhtar",
+              "role": "BOWL",
+              "overall": 86
+            },
+            {
+              "id": 173,
+              "name": "Clint McKay",
+              "role": "BOWL",
+              "overall": 71
+            },
+            {
+              "id": 16,
+              "name": "Matthew Hayden",
+              "role": "BAT",
+              "overall": 86
+            },
+            {
+              "id": 33,
+              "name": "Ramnaresh Sarwan",
+              "role": "BAT",
+              "overall": 80
+            },
+            {
+              "id": 174,
+              "name": "Xavier Doherty",
+              "role": "BOWL",
+              "overall": 71
+            },
+            {
+              "id": 256,
+              "name": "Elton Chigumbura",
+              "role": "AR",
+              "overall": 78
+            },
+            {
+              "id": 181,
+              "name": "Michael Lumb",
+              "role": "BAT",
+              "overall": 77
+            },
+            {
+              "id": 68,
+              "name": "Jacob Oram",
+              "role": "AR",
+              "overall": 78
+            },
+            {
+              "id": 162,
+              "name": "Manpreet Gony",
+              "role": "BOWL",
+              "overall": 72
+            }
+          ],
+          "keeperCount": 1,
+          "trustedOvers": 21.180000000000003
+        },
+        {
+          "club": "RCB",
+          "user": false,
+          "meanOverall": 81.53333333333333,
+          "roles": {
+            "BAT": 7,
+            "WK-BAT": 1,
+            "AR": 4,
+            "BOWL": 3
+          },
+          "xiRating": 85,
+          "players": [
+            {
+              "id": 20,
+              "name": "Yuvraj Singh",
+              "role": "BAT",
+              "overall": 88
+            },
+            {
+              "id": 57,
+              "name": "Shane Watson",
+              "role": "AR",
+              "overall": 88
+            },
+            {
+              "id": 109,
+              "name": "Stuart Broad",
+              "role": "BOWL",
+              "overall": 80
+            },
+            {
+              "id": 183,
+              "name": "Phil Mustard",
+              "role": "WK-BAT",
+              "overall": 79
+            },
+            {
+              "id": 129,
+              "name": "Daren Sammy",
+              "role": "AR",
+              "overall": 78
+            },
+            {
+              "id": 144,
+              "name": "Shaun Pollock",
+              "role": "AR",
+              "overall": 89
+            },
+            {
+              "id": 63,
+              "name": "Andrew Symonds",
+              "role": "AR",
+              "overall": 84
+            },
+            {
+              "id": 26,
+              "name": "Mohammad Yousuf",
+              "role": "BAT",
+              "overall": 89
+            },
+            {
+              "id": 200,
+              "name": "William Porterfield",
+              "role": "BAT",
+              "overall": 76
+            },
+            {
+              "id": 165,
+              "name": "Brad Hodge",
+              "role": "BAT",
+              "overall": 84
+            },
+            {
+              "id": 253,
+              "name": "Shahriar Nafees",
+              "role": "BAT",
+              "overall": 75
+            },
+            {
+              "id": 25,
+              "name": "Shivnarine Chanderpaul",
+              "role": "BAT",
+              "overall": 87
+            },
+            {
+              "id": 235,
+              "name": "Chamara Kapugedera",
+              "role": "BAT",
+              "overall": 74
+            },
+            {
+              "id": 164,
+              "name": "Siddharth Trivedi",
+              "role": "BOWL",
+              "overall": 72
+            },
+            {
+              "id": 258,
+              "name": "Ray Price",
+              "role": "BOWL",
+              "overall": 80
+            }
+          ],
+          "keeperCount": 1,
+          "trustedOvers": 19.17
+        },
+        {
+          "club": "HEA",
+          "user": false,
+          "meanOverall": 79.86666666666666,
+          "roles": {
+            "BAT": 3,
+            "WK-BAT": 2,
+            "AR": 4,
+            "BOWL": 6
+          },
+          "xiRating": 81,
+          "players": [
+            {
+              "id": 95,
+              "name": "Umar Gul",
+              "role": "BOWL",
+              "overall": 89
+            },
+            {
+              "id": 3,
+              "name": "Kumar Sangakkara",
+              "role": "WK-BAT",
+              "overall": 89
+            },
+            {
+              "id": 41,
+              "name": "Mike Hussey",
+              "role": "BAT",
+              "overall": 91
+            },
+            {
+              "id": 96,
+              "name": "Mohammad Asif",
+              "role": "BOWL",
+              "overall": 84
+            },
+            {
+              "id": 97,
+              "name": "Sohail Tanvir",
+              "role": "BOWL",
+              "overall": 80
+            },
+            {
+              "id": 248,
+              "name": "Tamim Iqbal",
+              "role": "BAT",
+              "overall": 74
+            },
+            {
+              "id": 157,
+              "name": "Pragyan Ojha",
+              "role": "BOWL",
+              "overall": 72
+            },
+            {
+              "id": 242,
+              "name": "Dwayne Smith",
+              "role": "AR",
+              "overall": 80
+            },
+            {
+              "id": 81,
+              "name": "Roelof van der Merwe",
+              "role": "AR",
+              "overall": 70
+            },
+            {
+              "id": 82,
+              "name": "Jesse Ryder",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 110,
+              "name": "James Anderson",
+              "role": "BOWL",
+              "overall": 79
+            },
+            {
+              "id": 154,
+              "name": "Abhishek Nayar",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 210,
+              "name": "Rana Naved-ul-Hasan",
+              "role": "BOWL",
+              "overall": 82
+            },
+            {
+              "id": 220,
+              "name": "Morne van Wyk",
+              "role": "WK-BAT",
+              "overall": 77
+            },
+            {
+              "id": 221,
+              "name": "Loots Bosman",
+              "role": "BAT",
+              "overall": 79
+            }
+          ],
+          "keeperCount": 2,
+          "trustedOvers": 21.520000000000003
+        }
+      ]
+    },
+    {
+      "seed": 8702,
+      "user": "DC",
+      "clubs": [
+        {
+          "club": "STA",
+          "user": false,
+          "meanOverall": 79,
+          "roles": {
+            "BAT": 5,
+            "WK-BAT": 2,
+            "AR": 3,
+            "BOWL": 5
+          },
+          "xiRating": 82,
+          "players": [
+            {
+              "id": 23,
+              "name": "AB de Villiers",
+              "role": "BAT",
+              "overall": 88
+            },
+            {
+              "id": 103,
+              "name": "Amit Mishra",
+              "role": "BOWL",
+              "overall": 82
+            },
+            {
+              "id": 30,
+              "name": "Ross Taylor",
+              "role": "BAT",
+              "overall": 80
+            },
+            {
+              "id": 142,
+              "name": "Glenn McGrath",
+              "role": "BOWL",
+              "overall": 88
+            },
+            {
+              "id": 64,
+              "name": "Yusuf Pathan",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 241,
+              "name": "Denesh Ramdin",
+              "role": "WK-BAT",
+              "overall": 76
+            },
+            {
+              "id": 179,
+              "name": "Joe Denly",
+              "role": "BAT",
+              "overall": 75
+            },
+            {
+              "id": 174,
+              "name": "Xavier Doherty",
+              "role": "BOWL",
+              "overall": 71
+            },
+            {
+              "id": 270,
+              "name": "Tim Southee",
+              "role": "BOWL",
+              "overall": 70
+            },
+            {
+              "id": 185,
+              "name": "Steven Davies",
+              "role": "WK-BAT",
+              "overall": 73
+            },
+            {
+              "id": 210,
+              "name": "Rana Naved-ul-Hasan",
+              "role": "BOWL",
+              "overall": 82
+            },
+            {
+              "id": 178,
+              "name": "Marcus Trescothick",
+              "role": "BAT",
+              "overall": 84
+            },
+            {
+              "id": 76,
+              "name": "Abdul Razzaq",
+              "role": "AR",
+              "overall": 80
+            },
+            {
+              "id": 68,
+              "name": "Jacob Oram",
+              "role": "AR",
+              "overall": 78
+            },
+            {
+              "id": 263,
+              "name": "Murray Goodwin",
+              "role": "BAT",
+              "overall": 82
+            }
+          ],
+          "keeperCount": 2,
+          "trustedOvers": 17.18
+        },
+        {
+          "club": "DC",
+          "user": true,
+          "meanOverall": 67.86666666666666,
+          "roles": {
+            "BAT": 1,
+            "WK-BAT": 2,
+            "AR": 7,
+            "BOWL": 5
+          },
+          "xiRating": 72,
+          "players": [
+            {
+              "id": 246,
+              "name": "Andre Russell",
+              "role": "AR",
+              "overall": 64
+            },
+            {
+              "id": 192,
+              "name": "Steven Finn",
+              "role": "BOWL",
+              "overall": 65
+            },
+            {
+              "id": 224,
+              "name": "Wayne Parnell",
+              "role": "BOWL",
+              "overall": 66
+            },
+            {
+              "id": 70,
+              "name": "Angelo Mathews",
+              "role": "AR",
+              "overall": 67
+            },
+            {
+              "id": 72,
+              "name": "Kieron Pollard",
+              "role": "AR",
+              "overall": 67
+            },
+            {
+              "id": 128,
+              "name": "Sulieman Benn",
+              "role": "BOWL",
+              "overall": 67
+            },
+            {
+              "id": 168,
+              "name": "Steve Smith",
+              "role": "AR",
+              "overall": 67
+            },
+            {
+              "id": 10,
+              "name": "Parthiv Patel",
+              "role": "WK-BAT",
+              "overall": 68
+            },
+            {
+              "id": 155,
+              "name": "Rajat Bhatia",
+              "role": "AR",
+              "overall": 68
+            },
+            {
+              "id": 177,
+              "name": "Graham Manou",
+              "role": "WK-BAT",
+              "overall": 68
+            },
+            {
+              "id": 54,
+              "name": "Jonathan Trott",
+              "role": "BAT",
+              "overall": 69
+            },
+            {
+              "id": 118,
+              "name": "Chris Martin",
+              "role": "BOWL",
+              "overall": 70
+            },
+            {
+              "id": 240,
+              "name": "Kaushal Weeraratne",
+              "role": "AR",
+              "overall": 70
+            },
+            {
+              "id": 116,
+              "name": "Chris Tremlett",
+              "role": "BOWL",
+              "overall": 71
+            },
+            {
+              "id": 228,
+              "name": "Nathan McCullum",
+              "role": "AR",
+              "overall": 71
+            }
+          ],
+          "keeperCount": 2,
+          "trustedOvers": 21.61
+        },
+        {
+          "club": "STR",
+          "user": false,
+          "meanOverall": 77.6,
+          "roles": {
+            "BAT": 0,
+            "WK-BAT": 7,
+            "AR": 4,
+            "BOWL": 4
+          },
+          "xiRating": 83,
+          "players": [
+            {
+              "id": 1,
+              "name": "MS Dhoni",
+              "role": "WK-BAT",
+              "overall": 89
+            },
+            {
+              "id": 62,
+              "name": "Daniel Vettori",
+              "role": "AR",
+              "overall": 90
+            },
+            {
+              "id": 109,
+              "name": "Stuart Broad",
+              "role": "BOWL",
+              "overall": 80
+            },
+            {
+              "id": 88,
+              "name": "Shane Bond",
+              "role": "BOWL",
+              "overall": 89
+            },
+            {
+              "id": 157,
+              "name": "Pragyan Ojha",
+              "role": "BOWL",
+              "overall": 72
+            },
+            {
+              "id": 205,
+              "name": "Shoaib Malik",
+              "role": "AR",
+              "overall": 81
+            },
+            {
+              "id": 255,
+              "name": "Tatenda Taibu",
+              "role": "WK-BAT",
+              "overall": 79
+            },
+            {
+              "id": 182,
+              "name": "Craig Kieswetter",
+              "role": "WK-BAT",
+              "overall": 72
+            },
+            {
+              "id": 152,
+              "name": "Wriddhiman Saha",
+              "role": "WK-BAT",
+              "overall": 71
+            },
+            {
+              "id": 201,
+              "name": "Boyd Rankin",
+              "role": "BOWL",
+              "overall": 72
+            },
+            {
+              "id": 11,
+              "name": "Luke Ronchi",
+              "role": "WK-BAT",
+              "overall": 70
+            },
+            {
+              "id": 12,
+              "name": "Tim Paine",
+              "role": "WK-BAT",
+              "overall": 70
+            },
+            {
+              "id": 256,
+              "name": "Elton Chigumbura",
+              "role": "AR",
+              "overall": 78
+            },
+            {
+              "id": 79,
+              "name": "Luke Wright",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 198,
+              "name": "Niall O'Brien",
+              "role": "WK-BAT",
+              "overall": 75
+            }
+          ],
+          "keeperCount": 7,
+          "trustedOvers": 20.16
+        },
+        {
+          "club": "YOR",
+          "user": false,
+          "meanOverall": 79.6,
+          "roles": {
+            "BAT": 3,
+            "WK-BAT": 3,
+            "AR": 2,
+            "BOWL": 7
+          },
+          "xiRating": 82,
+          "players": [
+            {
+              "id": 86,
+              "name": "Mitchell Johnson",
+              "role": "BOWL",
+              "overall": 86
+            },
+            {
+              "id": 3,
+              "name": "Kumar Sangakkara",
+              "role": "WK-BAT",
+              "overall": 89
+            },
+            {
+              "id": 85,
+              "name": "Brett Lee",
+              "role": "BOWL",
+              "overall": 90
+            },
+            {
+              "id": 135,
+              "name": "Johan Botha",
+              "role": "AR",
+              "overall": 77
+            },
+            {
+              "id": 147,
+              "name": "Shikhar Dhawan",
+              "role": "BAT",
+              "overall": 71
+            },
+            {
+              "id": 123,
+              "name": "Dilhara Fernando",
+              "role": "BOWL",
+              "overall": 81
+            },
+            {
+              "id": 161,
+              "name": "Vinay Kumar",
+              "role": "BOWL",
+              "overall": 73
+            },
+            {
+              "id": 183,
+              "name": "Phil Mustard",
+              "role": "WK-BAT",
+              "overall": 79
+            },
+            {
+              "id": 56,
+              "name": "Cameron White",
+              "role": "BAT",
+              "overall": 77
+            },
+            {
+              "id": 69,
+              "name": "Ravi Bopara",
+              "role": "AR",
+              "overall": 77
+            },
+            {
+              "id": 165,
+              "name": "Brad Hodge",
+              "role": "BAT",
+              "overall": 84
+            },
+            {
+              "id": 133,
+              "name": "Andre Nel",
+              "role": "BOWL",
+              "overall": 81
+            },
+            {
+              "id": 193,
+              "name": "Graham Onions",
+              "role": "BOWL",
+              "overall": 76
+            },
+            {
+              "id": 184,
+              "name": "James Foster",
+              "role": "WK-BAT",
+              "overall": 77
+            },
+            {
+              "id": 117,
+              "name": "Kyle Mills",
+              "role": "BOWL",
+              "overall": 76
+            }
+          ],
+          "keeperCount": 3,
+          "trustedOvers": 19.43
+        },
+        {
+          "club": "MI",
+          "user": false,
+          "meanOverall": 78.53333333333333,
+          "roles": {
+            "BAT": 5,
+            "WK-BAT": 1,
+            "AR": 5,
+            "BOWL": 4
+          },
+          "xiRating": 82,
+          "players": [
+            {
+              "id": 83,
+              "name": "Morne Morkel",
+              "role": "BOWL",
+              "overall": 89
+            },
+            {
+              "id": 2,
+              "name": "Adam Gilchrist",
+              "role": "WK-BAT",
+              "overall": 88
+            },
+            {
+              "id": 60,
+              "name": "Shahid Afridi",
+              "role": "AR",
+              "overall": 85
+            },
+            {
+              "id": 96,
+              "name": "Mohammad Asif",
+              "role": "BOWL",
+              "overall": 84
+            },
+            {
+              "id": 243,
+              "name": "Lendl Simmons",
+              "role": "BAT",
+              "overall": 75
+            },
+            {
+              "id": 151,
+              "name": "Ambati Rayudu",
+              "role": "BAT",
+              "overall": 74
+            },
+            {
+              "id": 73,
+              "name": "Ravindra Jadeja",
+              "role": "AR",
+              "overall": 69
+            },
+            {
+              "id": 125,
+              "name": "Jerome Taylor",
+              "role": "BOWL",
+              "overall": 80
+            },
+            {
+              "id": 215,
+              "name": "Fawad Alam",
+              "role": "AR",
+              "overall": 73
+            },
+            {
+              "id": 252,
+              "name": "Aftab Ahmed",
+              "role": "BAT",
+              "overall": 77
+            },
+            {
+              "id": 212,
+              "name": "Mohammad Sami",
+              "role": "BOWL",
+              "overall": 79
+            },
+            {
+              "id": 229,
+              "name": "James Franklin",
+              "role": "AR",
+              "overall": 77
+            },
+            {
+              "id": 154,
+              "name": "Abhishek Nayar",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 208,
+              "name": "Imran Farhat",
+              "role": "BAT",
+              "overall": 76
+            },
+            {
+              "id": 170,
+              "name": "Travis Birt",
+              "role": "BAT",
+              "overall": 76
+            }
+          ],
+          "keeperCount": 1,
+          "trustedOvers": 23.35
+        },
+        {
+          "club": "RCB",
+          "user": false,
+          "meanOverall": 79.86666666666666,
+          "roles": {
+            "BAT": 7,
+            "WK-BAT": 2,
+            "AR": 2,
+            "BOWL": 4
+          },
+          "xiRating": 81,
+          "players": [
+            {
+              "id": 89,
+              "name": "Lasith Malinga",
+              "role": "BOWL",
+              "overall": 94
+            },
+            {
+              "id": 22,
+              "name": "Michael Clarke",
+              "role": "BAT",
+              "overall": 89
+            },
+            {
+              "id": 249,
+              "name": "Mushfiqur Rahim",
+              "role": "WK-BAT",
+              "overall": 73
+            },
+            {
+              "id": 113,
+              "name": "Monty Panesar",
+              "role": "BOWL",
+              "overall": 82
+            },
+            {
+              "id": 49,
+              "name": "JP Duminy",
+              "role": "BAT",
+              "overall": 78
+            },
+            {
+              "id": 248,
+              "name": "Tamim Iqbal",
+              "role": "BAT",
+              "overall": 74
+            },
+            {
+              "id": 191,
+              "name": "Adil Rashid",
+              "role": "AR",
+              "overall": 71
+            },
+            {
+              "id": 107,
+              "name": "Shaun Tait",
+              "role": "BOWL",
+              "overall": 77
+            },
+            {
+              "id": 106,
+              "name": "Mitchell McClenaghan",
+              "role": "BOWL",
+              "overall": 72
+            },
+            {
+              "id": 16,
+              "name": "Matthew Hayden",
+              "role": "BAT",
+              "overall": 86
+            },
+            {
+              "id": 6,
+              "name": "Kamran Akmal",
+              "role": "WK-BAT",
+              "overall": 79
+            },
+            {
+              "id": 186,
+              "name": "Graham Napier",
+              "role": "AR",
+              "overall": 79
+            },
+            {
+              "id": 25,
+              "name": "Shivnarine Chanderpaul",
+              "role": "BAT",
+              "overall": 87
+            },
+            {
+              "id": 227,
+              "name": "Craig McMillan",
+              "role": "BAT",
+              "overall": 80
+            },
+            {
+              "id": 181,
+              "name": "Michael Lumb",
+              "role": "BAT",
+              "overall": 77
+            }
+          ],
+          "keeperCount": 2,
+          "trustedOvers": 15.09
+        },
+        {
+          "club": "SUR",
+          "user": false,
+          "meanOverall": 77.66666666666667,
+          "roles": {
+            "BAT": 5,
+            "WK-BAT": 1,
+            "AR": 4,
+            "BOWL": 5
+          },
+          "xiRating": 80,
+          "players": [
+            {
+              "id": 24,
+              "name": "Gautam Gambhir",
+              "role": "BAT",
+              "overall": 86
+            },
+            {
+              "id": 104,
+              "name": "Nathan Bracken",
+              "role": "BOWL",
+              "overall": 92
+            },
+            {
+              "id": 254,
+              "name": "Brendan Taylor",
+              "role": "WK-BAT",
+              "overall": 76
+            },
+            {
+              "id": 188,
+              "name": "Samit Patel",
+              "role": "AR",
+              "overall": 77
+            },
+            {
+              "id": 257,
+              "name": "Hamilton Masakadza",
+              "role": "BAT",
+              "overall": 77
+            },
+            {
+              "id": 244,
+              "name": "Ravi Rampaul",
+              "role": "BOWL",
+              "overall": 73
+            },
+            {
+              "id": 173,
+              "name": "Clint McKay",
+              "role": "BOWL",
+              "overall": 71
+            },
+            {
+              "id": 65,
+              "name": "Irfan Pathan",
+              "role": "AR",
+              "overall": 78
+            },
+            {
+              "id": 81,
+              "name": "Roelof van der Merwe",
+              "role": "AR",
+              "overall": 70
+            },
+            {
+              "id": 207,
+              "name": "Imran Nazir",
+              "role": "BAT",
+              "overall": 81
+            },
+            {
+              "id": 199,
+              "name": "Kevin O'Brien",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 225,
+              "name": "Rory Kleinveldt",
+              "role": "BOWL",
+              "overall": 71
+            },
+            {
+              "id": 37,
+              "name": "Robin Uthappa",
+              "role": "BAT",
+              "overall": 75
+            },
+            {
+              "id": 138,
+              "name": "Dirk Nannes",
+              "role": "BOWL",
+              "overall": 83
+            },
+            {
+              "id": 221,
+              "name": "Loots Bosman",
+              "role": "BAT",
+              "overall": 79
+            }
+          ],
+          "keeperCount": 1,
+          "trustedOvers": 13.18
+        },
+        {
+          "club": "REN",
+          "user": false,
+          "meanOverall": 81.8,
+          "roles": {
+            "BAT": 7,
+            "WK-BAT": 1,
+            "AR": 4,
+            "BOWL": 3
+          },
+          "xiRating": 84,
+          "players": [
+            {
+              "id": 4,
+              "name": "Brendon McCullum",
+              "role": "WK-BAT",
+              "overall": 89
+            },
+            {
+              "id": 57,
+              "name": "Shane Watson",
+              "role": "AR",
+              "overall": 88
+            },
+            {
+              "id": 41,
+              "name": "Mike Hussey",
+              "role": "BAT",
+              "overall": 91
+            },
+            {
+              "id": 141,
+              "name": "Shane Warne",
+              "role": "BOWL",
+              "overall": 88
+            },
+            {
+              "id": 196,
+              "name": "Ryan ten Doeschate",
+              "role": "AR",
+              "overall": 83
+            },
+            {
+              "id": 242,
+              "name": "Dwayne Smith",
+              "role": "AR",
+              "overall": 80
+            },
+            {
+              "id": 130,
+              "name": "Mashrafe Mortaza",
+              "role": "BOWL",
+              "overall": 77
+            },
+            {
+              "id": 26,
+              "name": "Mohammad Yousuf",
+              "role": "BAT",
+              "overall": 89
+            },
+            {
+              "id": 211,
+              "name": "Yasir Arafat",
+              "role": "AR",
+              "overall": 77
+            },
+            {
+              "id": 200,
+              "name": "William Porterfield",
+              "role": "BAT",
+              "overall": 76
+            },
+            {
+              "id": 110,
+              "name": "James Anderson",
+              "role": "BOWL",
+              "overall": 79
+            },
+            {
+              "id": 35,
+              "name": "Andrew Strauss",
+              "role": "BAT",
+              "overall": 82
+            },
+            {
+              "id": 235,
+              "name": "Chamara Kapugedera",
+              "role": "BAT",
+              "overall": 74
+            },
+            {
+              "id": 253,
+              "name": "Shahriar Nafees",
+              "role": "BAT",
+              "overall": 75
+            },
+            {
+              "id": 52,
+              "name": "Owais Shah",
+              "role": "BAT",
+              "overall": 79
+            }
+          ],
+          "keeperCount": 1,
+          "trustedOvers": 16.97
+        }
+      ]
+    },
+    {
+      "seed": 8703,
+      "user": "THU",
+      "clubs": [
+        {
+          "club": "RR",
+          "user": false,
+          "meanOverall": 75.26666666666667,
+          "roles": {
+            "BAT": 4,
+            "WK-BAT": 2,
+            "AR": 4,
+            "BOWL": 5
+          },
+          "xiRating": 78,
+          "players": [
+            {
+              "id": 89,
+              "name": "Lasith Malinga",
+              "role": "BOWL",
+              "overall": 94
+            },
+            {
+              "id": 188,
+              "name": "Samit Patel",
+              "role": "AR",
+              "overall": 77
+            },
+            {
+              "id": 249,
+              "name": "Mushfiqur Rahim",
+              "role": "WK-BAT",
+              "overall": 73
+            },
+            {
+              "id": 47,
+              "name": "Faf du Plessis",
+              "role": "BAT",
+              "overall": 72
+            },
+            {
+              "id": 44,
+              "name": "David Warner",
+              "role": "BAT",
+              "overall": 71
+            },
+            {
+              "id": 191,
+              "name": "Adil Rashid",
+              "role": "AR",
+              "overall": 71
+            },
+            {
+              "id": 158,
+              "name": "Munaf Patel",
+              "role": "BOWL",
+              "overall": 75
+            },
+            {
+              "id": 152,
+              "name": "Wriddhiman Saha",
+              "role": "WK-BAT",
+              "overall": 71
+            },
+            {
+              "id": 157,
+              "name": "Pragyan Ojha",
+              "role": "BOWL",
+              "overall": 72
+            },
+            {
+              "id": 79,
+              "name": "Luke Wright",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 270,
+              "name": "Tim Southee",
+              "role": "BOWL",
+              "overall": 70
+            },
+            {
+              "id": 76,
+              "name": "Abdul Razzaq",
+              "role": "AR",
+              "overall": 80
+            },
+            {
+              "id": 235,
+              "name": "Chamara Kapugedera",
+              "role": "BAT",
+              "overall": 74
+            },
+            {
+              "id": 117,
+              "name": "Kyle Mills",
+              "role": "BOWL",
+              "overall": 76
+            },
+            {
+              "id": 181,
+              "name": "Michael Lumb",
+              "role": "BAT",
+              "overall": 77
+            }
+          ],
+          "keeperCount": 2,
+          "trustedOvers": 19.95
+        },
+        {
+          "club": "HAM",
+          "user": false,
+          "meanOverall": 81,
+          "roles": {
+            "BAT": 5,
+            "WK-BAT": 1,
+            "AR": 3,
+            "BOWL": 6
+          },
+          "xiRating": 81,
+          "players": [
+            {
+              "id": 104,
+              "name": "Nathan Bracken",
+              "role": "BOWL",
+              "overall": 92
+            },
+            {
+              "id": 254,
+              "name": "Brendan Taylor",
+              "role": "WK-BAT",
+              "overall": 76
+            },
+            {
+              "id": 88,
+              "name": "Shane Bond",
+              "role": "BOWL",
+              "overall": 89
+            },
+            {
+              "id": 144,
+              "name": "Shaun Pollock",
+              "role": "AR",
+              "overall": 89
+            },
+            {
+              "id": 131,
+              "name": "Abdur Razzak",
+              "role": "BOWL",
+              "overall": 77
+            },
+            {
+              "id": 257,
+              "name": "Hamilton Masakadza",
+              "role": "BAT",
+              "overall": 77
+            },
+            {
+              "id": 107,
+              "name": "Shaun Tait",
+              "role": "BOWL",
+              "overall": 77
+            },
+            {
+              "id": 234,
+              "name": "Upul Tharanga",
+              "role": "BAT",
+              "overall": 77
+            },
+            {
+              "id": 26,
+              "name": "Mohammad Yousuf",
+              "role": "BAT",
+              "overall": 89
+            },
+            {
+              "id": 130,
+              "name": "Mashrafe Mortaza",
+              "role": "BOWL",
+              "overall": 77
+            },
+            {
+              "id": 165,
+              "name": "Brad Hodge",
+              "role": "BAT",
+              "overall": 84
+            },
+            {
+              "id": 33,
+              "name": "Ramnaresh Sarwan",
+              "role": "BAT",
+              "overall": 80
+            },
+            {
+              "id": 186,
+              "name": "Graham Napier",
+              "role": "AR",
+              "overall": 79
+            },
+            {
+              "id": 66,
+              "name": "Albie Morkel",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 98,
+              "name": "RP Singh",
+              "role": "BOWL",
+              "overall": 76
+            }
+          ],
+          "keeperCount": 1,
+          "trustedOvers": 23.04
+        },
+        {
+          "club": "THU",
+          "user": true,
+          "meanOverall": 68,
+          "roles": {
+            "BAT": 4,
+            "WK-BAT": 3,
+            "AR": 2,
+            "BOWL": 6
+          },
+          "xiRating": 69,
+          "players": [
+            {
+              "id": 245,
+              "name": "Darren Bravo",
+              "role": "BAT",
+              "overall": 63
+            },
+            {
+              "id": 246,
+              "name": "Andre Russell",
+              "role": "AR",
+              "overall": 64
+            },
+            {
+              "id": 224,
+              "name": "Wayne Parnell",
+              "role": "BOWL",
+              "overall": 66
+            },
+            {
+              "id": 128,
+              "name": "Sulieman Benn",
+              "role": "BOWL",
+              "overall": 67
+            },
+            {
+              "id": 168,
+              "name": "Steve Smith",
+              "role": "AR",
+              "overall": 67
+            },
+            {
+              "id": 10,
+              "name": "Parthiv Patel",
+              "role": "WK-BAT",
+              "overall": 68
+            },
+            {
+              "id": 177,
+              "name": "Graham Manou",
+              "role": "WK-BAT",
+              "overall": 68
+            },
+            {
+              "id": 54,
+              "name": "Jonathan Trott",
+              "role": "BAT",
+              "overall": 69
+            },
+            {
+              "id": 55,
+              "name": "Marcus North",
+              "role": "BAT",
+              "overall": 69
+            },
+            {
+              "id": 119,
+              "name": "Jeetan Patel",
+              "role": "BOWL",
+              "overall": 69
+            },
+            {
+              "id": 153,
+              "name": "Mohammad Kaif",
+              "role": "BAT",
+              "overall": 69
+            },
+            {
+              "id": 12,
+              "name": "Tim Paine",
+              "role": "WK-BAT",
+              "overall": 70
+            },
+            {
+              "id": 99,
+              "name": "Ishant Sharma",
+              "role": "BOWL",
+              "overall": 70
+            },
+            {
+              "id": 134,
+              "name": "Paul Harris",
+              "role": "BOWL",
+              "overall": 70
+            },
+            {
+              "id": 116,
+              "name": "Chris Tremlett",
+              "role": "BOWL",
+              "overall": 71
+            }
+          ],
+          "keeperCount": 3,
+          "trustedOvers": 16.729999999999997
+        },
+        {
+          "club": "SIX",
+          "user": false,
+          "meanOverall": 81,
+          "roles": {
+            "BAT": 6,
+            "WK-BAT": 1,
+            "AR": 2,
+            "BOWL": 6
+          },
+          "xiRating": 80,
+          "players": [
+            {
+              "id": 24,
+              "name": "Gautam Gambhir",
+              "role": "BAT",
+              "overall": 86
+            },
+            {
+              "id": 92,
+              "name": "Harbhajan Singh",
+              "role": "BOWL",
+              "overall": 87
+            },
+            {
+              "id": 255,
+              "name": "Tatenda Taibu",
+              "role": "WK-BAT",
+              "overall": 79
+            },
+            {
+              "id": 85,
+              "name": "Brett Lee",
+              "role": "BOWL",
+              "overall": 90
+            },
+            {
+              "id": 49,
+              "name": "JP Duminy",
+              "role": "BAT",
+              "overall": 78
+            },
+            {
+              "id": 43,
+              "name": "Shaun Marsh",
+              "role": "BAT",
+              "overall": 79
+            },
+            {
+              "id": 205,
+              "name": "Shoaib Malik",
+              "role": "AR",
+              "overall": 81
+            },
+            {
+              "id": 112,
+              "name": "Steve Harmison",
+              "role": "BOWL",
+              "overall": 83
+            },
+            {
+              "id": 123,
+              "name": "Dilhara Fernando",
+              "role": "BOWL",
+              "overall": 81
+            },
+            {
+              "id": 211,
+              "name": "Yasir Arafat",
+              "role": "AR",
+              "overall": 77
+            },
+            {
+              "id": 149,
+              "name": "Manoj Tiwary",
+              "role": "BAT",
+              "overall": 72
+            },
+            {
+              "id": 110,
+              "name": "James Anderson",
+              "role": "BOWL",
+              "overall": 79
+            },
+            {
+              "id": 111,
+              "name": "Ryan Sidebottom",
+              "role": "BOWL",
+              "overall": 81
+            },
+            {
+              "id": 263,
+              "name": "Murray Goodwin",
+              "role": "BAT",
+              "overall": 82
+            },
+            {
+              "id": 227,
+              "name": "Craig McMillan",
+              "role": "BAT",
+              "overall": 80
+            }
+          ],
+          "keeperCount": 1,
+          "trustedOvers": 20
+        },
+        {
+          "club": "CSK",
+          "user": false,
+          "meanOverall": 81.46666666666667,
+          "roles": {
+            "BAT": 4,
+            "WK-BAT": 3,
+            "AR": 2,
+            "BOWL": 6
+          },
+          "xiRating": 82,
+          "players": [
+            {
+              "id": 95,
+              "name": "Umar Gul",
+              "role": "BOWL",
+              "overall": 89
+            },
+            {
+              "id": 9,
+              "name": "Dinesh Karthik",
+              "role": "WK-BAT",
+              "overall": 77
+            },
+            {
+              "id": 141,
+              "name": "Shane Warne",
+              "role": "BOWL",
+              "overall": 88
+            },
+            {
+              "id": 58,
+              "name": "Andrew Flintoff",
+              "role": "AR",
+              "overall": 86
+            },
+            {
+              "id": 142,
+              "name": "Glenn McGrath",
+              "role": "BOWL",
+              "overall": 88
+            },
+            {
+              "id": 243,
+              "name": "Lendl Simmons",
+              "role": "BAT",
+              "overall": 75
+            },
+            {
+              "id": 94,
+              "name": "Shoaib Akhtar",
+              "role": "BOWL",
+              "overall": 86
+            },
+            {
+              "id": 182,
+              "name": "Craig Kieswetter",
+              "role": "WK-BAT",
+              "overall": 72
+            },
+            {
+              "id": 242,
+              "name": "Dwayne Smith",
+              "role": "AR",
+              "overall": 80
+            },
+            {
+              "id": 6,
+              "name": "Kamran Akmal",
+              "role": "WK-BAT",
+              "overall": 79
+            },
+            {
+              "id": 178,
+              "name": "Marcus Trescothick",
+              "role": "BAT",
+              "overall": 84
+            },
+            {
+              "id": 204,
+              "name": "Younis Khan",
+              "role": "BAT",
+              "overall": 82
+            },
+            {
+              "id": 193,
+              "name": "Graham Onions",
+              "role": "BOWL",
+              "overall": 76
+            },
+            {
+              "id": 42,
+              "name": "Simon Katich",
+              "role": "BAT",
+              "overall": 83
+            },
+            {
+              "id": 114,
+              "name": "Graeme Swann",
+              "role": "BOWL",
+              "overall": 77
+            }
+          ],
+          "keeperCount": 3,
+          "trustedOvers": 22.319999999999997
+        },
+        {
+          "club": "MI",
+          "user": false,
+          "meanOverall": 77.6,
+          "roles": {
+            "BAT": 4,
+            "WK-BAT": 1,
+            "AR": 7,
+            "BOWL": 3
+          },
+          "xiRating": 83,
+          "players": [
+            {
+              "id": 57,
+              "name": "Shane Watson",
+              "role": "AR",
+              "overall": 88
+            },
+            {
+              "id": 62,
+              "name": "Daniel Vettori",
+              "role": "AR",
+              "overall": 90
+            },
+            {
+              "id": 109,
+              "name": "Stuart Broad",
+              "role": "BOWL",
+              "overall": 80
+            },
+            {
+              "id": 183,
+              "name": "Phil Mustard",
+              "role": "WK-BAT",
+              "overall": 79
+            },
+            {
+              "id": 129,
+              "name": "Daren Sammy",
+              "role": "AR",
+              "overall": 78
+            },
+            {
+              "id": 147,
+              "name": "Shikhar Dhawan",
+              "role": "BAT",
+              "overall": 71
+            },
+            {
+              "id": 244,
+              "name": "Ravi Rampaul",
+              "role": "BOWL",
+              "overall": 73
+            },
+            {
+              "id": 46,
+              "name": "Eoin Morgan",
+              "role": "BAT",
+              "overall": 69
+            },
+            {
+              "id": 215,
+              "name": "Fawad Alam",
+              "role": "AR",
+              "overall": 73
+            },
+            {
+              "id": 252,
+              "name": "Aftab Ahmed",
+              "role": "BAT",
+              "overall": 77
+            },
+            {
+              "id": 212,
+              "name": "Mohammad Sami",
+              "role": "BOWL",
+              "overall": 79
+            },
+            {
+              "id": 199,
+              "name": "Kevin O'Brien",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 229,
+              "name": "James Franklin",
+              "role": "AR",
+              "overall": 77
+            },
+            {
+              "id": 187,
+              "name": "Peter Trego",
+              "role": "AR",
+              "overall": 78
+            },
+            {
+              "id": 170,
+              "name": "Travis Birt",
+              "role": "BAT",
+              "overall": 76
+            }
+          ],
+          "keeperCount": 1,
+          "trustedOvers": 22.669999999999998
+        },
+        {
+          "club": "NOT",
+          "user": false,
+          "meanOverall": 77.8,
+          "roles": {
+            "BAT": 5,
+            "WK-BAT": 2,
+            "AR": 4,
+            "BOWL": 4
+          },
+          "xiRating": 82,
+          "players": [
+            {
+              "id": 86,
+              "name": "Mitchell Johnson",
+              "role": "BOWL",
+              "overall": 86
+            },
+            {
+              "id": 2,
+              "name": "Adam Gilchrist",
+              "role": "WK-BAT",
+              "overall": 88
+            },
+            {
+              "id": 167,
+              "name": "George Bailey",
+              "role": "BAT",
+              "overall": 74
+            },
+            {
+              "id": 222,
+              "name": "Hashim Amla",
+              "role": "BAT",
+              "overall": 78
+            },
+            {
+              "id": 135,
+              "name": "Johan Botha",
+              "role": "AR",
+              "overall": 77
+            },
+            {
+              "id": 48,
+              "name": "Virat Kohli",
+              "role": "BAT",
+              "overall": 72
+            },
+            {
+              "id": 151,
+              "name": "Ambati Rayudu",
+              "role": "BAT",
+              "overall": 74
+            },
+            {
+              "id": 126,
+              "name": "Fidel Edwards",
+              "role": "BOWL",
+              "overall": 80
+            },
+            {
+              "id": 100,
+              "name": "Praveen Kumar",
+              "role": "BOWL",
+              "overall": 77
+            },
+            {
+              "id": 69,
+              "name": "Ravi Bopara",
+              "role": "AR",
+              "overall": 77
+            },
+            {
+              "id": 174,
+              "name": "Xavier Doherty",
+              "role": "BOWL",
+              "overall": 71
+            },
+            {
+              "id": 154,
+              "name": "Abhishek Nayar",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 63,
+              "name": "Andrew Symonds",
+              "role": "AR",
+              "overall": 84
+            },
+            {
+              "id": 208,
+              "name": "Imran Farhat",
+              "role": "BAT",
+              "overall": 76
+            },
+            {
+              "id": 220,
+              "name": "Morne van Wyk",
+              "role": "WK-BAT",
+              "overall": 77
+            }
+          ],
+          "keeperCount": 2,
+          "trustedOvers": 20.299999999999997
+        },
+        {
+          "club": "REN",
+          "user": false,
+          "meanOverall": 79.53333333333333,
+          "roles": {
+            "BAT": 3,
+            "WK-BAT": 3,
+            "AR": 3,
+            "BOWL": 6
+          },
+          "xiRating": 83,
+          "players": [
+            {
+              "id": 4,
+              "name": "Brendon McCullum",
+              "role": "WK-BAT",
+              "overall": 89
+            },
+            {
+              "id": 87,
+              "name": "Muttiah Muralitharan",
+              "role": "BOWL",
+              "overall": 90
+            },
+            {
+              "id": 74,
+              "name": "Shakib Al Hasan",
+              "role": "AR",
+              "overall": 79
+            },
+            {
+              "id": 96,
+              "name": "Mohammad Asif",
+              "role": "BOWL",
+              "overall": 84
+            },
+            {
+              "id": 122,
+              "name": "Ajantha Mendis",
+              "role": "BOWL",
+              "overall": 77
+            },
+            {
+              "id": 241,
+              "name": "Denesh Ramdin",
+              "role": "WK-BAT",
+              "overall": 76
+            },
+            {
+              "id": 196,
+              "name": "Ryan ten Doeschate",
+              "role": "AR",
+              "overall": 83
+            },
+            {
+              "id": 161,
+              "name": "Vinay Kumar",
+              "role": "BOWL",
+              "overall": 73
+            },
+            {
+              "id": 207,
+              "name": "Imran Nazir",
+              "role": "BAT",
+              "overall": 81
+            },
+            {
+              "id": 210,
+              "name": "Rana Naved-ul-Hasan",
+              "role": "BOWL",
+              "overall": 82
+            },
+            {
+              "id": 11,
+              "name": "Luke Ronchi",
+              "role": "WK-BAT",
+              "overall": 70
+            },
+            {
+              "id": 180,
+              "name": "Rob Key",
+              "role": "BAT",
+              "overall": 80
+            },
+            {
+              "id": 164,
+              "name": "Siddharth Trivedi",
+              "role": "BOWL",
+              "overall": 72
+            },
+            {
+              "id": 68,
+              "name": "Jacob Oram",
+              "role": "AR",
+              "overall": 78
+            },
+            {
+              "id": 52,
+              "name": "Owais Shah",
+              "role": "BAT",
+              "overall": 79
+            }
+          ],
+          "keeperCount": 3,
+          "trustedOvers": 22.66
+        }
+      ]
+    },
+    {
+      "seed": 8704,
+      "user": "HEA",
+      "clubs": [
+        {
+          "club": "SOM",
+          "user": false,
+          "meanOverall": 77.53333333333333,
+          "roles": {
+            "BAT": 2,
+            "WK-BAT": 1,
+            "AR": 6,
+            "BOWL": 6
+          },
+          "xiRating": 82,
+          "players": [
+            {
+              "id": 61,
+              "name": "Dwayne Bravo",
+              "role": "AR",
+              "overall": 87
+            },
+            {
+              "id": 4,
+              "name": "Brendon McCullum",
+              "role": "WK-BAT",
+              "overall": 89
+            },
+            {
+              "id": 39,
+              "name": "Suresh Raina",
+              "role": "BAT",
+              "overall": 81
+            },
+            {
+              "id": 74,
+              "name": "Shakib Al Hasan",
+              "role": "AR",
+              "overall": 79
+            },
+            {
+              "id": 243,
+              "name": "Lendl Simmons",
+              "role": "BAT",
+              "overall": 75
+            },
+            {
+              "id": 135,
+              "name": "Johan Botha",
+              "role": "AR",
+              "overall": 77
+            },
+            {
+              "id": 158,
+              "name": "Munaf Patel",
+              "role": "BOWL",
+              "overall": 75
+            },
+            {
+              "id": 244,
+              "name": "Ravi Rampaul",
+              "role": "BOWL",
+              "overall": 73
+            },
+            {
+              "id": 100,
+              "name": "Praveen Kumar",
+              "role": "BOWL",
+              "overall": 77
+            },
+            {
+              "id": 190,
+              "name": "Chris Woakes",
+              "role": "AR",
+              "overall": 71
+            },
+            {
+              "id": 238,
+              "name": "Dhammika Prasad",
+              "role": "BOWL",
+              "overall": 71
+            },
+            {
+              "id": 212,
+              "name": "Mohammad Sami",
+              "role": "BOWL",
+              "overall": 79
+            },
+            {
+              "id": 187,
+              "name": "Peter Trego",
+              "role": "AR",
+              "overall": 78
+            },
+            {
+              "id": 186,
+              "name": "Graham Napier",
+              "role": "AR",
+              "overall": 79
+            },
+            {
+              "id": 115,
+              "name": "Tim Bresnan",
+              "role": "BOWL",
+              "overall": 72
+            }
+          ],
+          "keeperCount": 1,
+          "trustedOvers": 24.25
+        },
+        {
+          "club": "RCB",
+          "user": false,
+          "meanOverall": 81.06666666666666,
+          "roles": {
+            "BAT": 6,
+            "WK-BAT": 1,
+            "AR": 6,
+            "BOWL": 2
+          },
+          "xiRating": 84,
+          "players": [
+            {
+              "id": 84,
+              "name": "Dale Steyn",
+              "role": "BOWL",
+              "overall": 92
+            },
+            {
+              "id": 13,
+              "name": "Virender Sehwag",
+              "role": "BAT",
+              "overall": 89
+            },
+            {
+              "id": 60,
+              "name": "Shahid Afridi",
+              "role": "AR",
+              "overall": 85
+            },
+            {
+              "id": 255,
+              "name": "Tatenda Taibu",
+              "role": "WK-BAT",
+              "overall": 79
+            },
+            {
+              "id": 59,
+              "name": "Jacques Kallis",
+              "role": "AR",
+              "overall": 89
+            },
+            {
+              "id": 242,
+              "name": "Dwayne Smith",
+              "role": "AR",
+              "overall": 80
+            },
+            {
+              "id": 248,
+              "name": "Tamim Iqbal",
+              "role": "BAT",
+              "overall": 74
+            },
+            {
+              "id": 205,
+              "name": "Shoaib Malik",
+              "role": "AR",
+              "overall": 81
+            },
+            {
+              "id": 157,
+              "name": "Pragyan Ojha",
+              "role": "BOWL",
+              "overall": 72
+            },
+            {
+              "id": 15,
+              "name": "Ricky Ponting",
+              "role": "BAT",
+              "overall": 87
+            },
+            {
+              "id": 207,
+              "name": "Imran Nazir",
+              "role": "BAT",
+              "overall": 81
+            },
+            {
+              "id": 37,
+              "name": "Robin Uthappa",
+              "role": "BAT",
+              "overall": 75
+            },
+            {
+              "id": 223,
+              "name": "Ryan McLaren",
+              "role": "AR",
+              "overall": 75
+            },
+            {
+              "id": 229,
+              "name": "James Franklin",
+              "role": "AR",
+              "overall": 77
+            },
+            {
+              "id": 227,
+              "name": "Craig McMillan",
+              "role": "BAT",
+              "overall": 80
+            }
+          ],
+          "keeperCount": 1,
+          "trustedOvers": 17.23
+        },
+        {
+          "club": "MI",
+          "user": false,
+          "meanOverall": 80.13333333333334,
+          "roles": {
+            "BAT": 3,
+            "WK-BAT": 4,
+            "AR": 2,
+            "BOWL": 6
+          },
+          "xiRating": 80,
+          "players": [
+            {
+              "id": 89,
+              "name": "Lasith Malinga",
+              "role": "BOWL",
+              "overall": 94
+            },
+            {
+              "id": 254,
+              "name": "Brendan Taylor",
+              "role": "WK-BAT",
+              "overall": 76
+            },
+            {
+              "id": 22,
+              "name": "Michael Clarke",
+              "role": "BAT",
+              "overall": 89
+            },
+            {
+              "id": 58,
+              "name": "Andrew Flintoff",
+              "role": "AR",
+              "overall": 86
+            },
+            {
+              "id": 113,
+              "name": "Monty Panesar",
+              "role": "BOWL",
+              "overall": 82
+            },
+            {
+              "id": 43,
+              "name": "Shaun Marsh",
+              "role": "BAT",
+              "overall": 79
+            },
+            {
+              "id": 121,
+              "name": "Nuwan Kulasekara",
+              "role": "BOWL",
+              "overall": 77
+            },
+            {
+              "id": 179,
+              "name": "Joe Denly",
+              "role": "BAT",
+              "overall": 75
+            },
+            {
+              "id": 126,
+              "name": "Fidel Edwards",
+              "role": "BOWL",
+              "overall": 80
+            },
+            {
+              "id": 6,
+              "name": "Kamran Akmal",
+              "role": "WK-BAT",
+              "overall": 79
+            },
+            {
+              "id": 123,
+              "name": "Dilhara Fernando",
+              "role": "BOWL",
+              "overall": 81
+            },
+            {
+              "id": 82,
+              "name": "Jesse Ryder",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 184,
+              "name": "James Foster",
+              "role": "WK-BAT",
+              "overall": 77
+            },
+            {
+              "id": 98,
+              "name": "RP Singh",
+              "role": "BOWL",
+              "overall": 76
+            },
+            {
+              "id": 198,
+              "name": "Niall O'Brien",
+              "role": "WK-BAT",
+              "overall": 75
+            }
+          ],
+          "keeperCount": 4,
+          "trustedOvers": 20.25
+        },
+        {
+          "club": "HEA",
+          "user": true,
+          "meanOverall": 68.33333333333333,
+          "roles": {
+            "BAT": 5,
+            "WK-BAT": 3,
+            "AR": 3,
+            "BOWL": 4
+          },
+          "xiRating": 70,
+          "players": [
+            {
+              "id": 245,
+              "name": "Darren Bravo",
+              "role": "BAT",
+              "overall": 63
+            },
+            {
+              "id": 224,
+              "name": "Wayne Parnell",
+              "role": "BOWL",
+              "overall": 66
+            },
+            {
+              "id": 70,
+              "name": "Angelo Mathews",
+              "role": "AR",
+              "overall": 67
+            },
+            {
+              "id": 168,
+              "name": "Steve Smith",
+              "role": "AR",
+              "overall": 67
+            },
+            {
+              "id": 10,
+              "name": "Parthiv Patel",
+              "role": "WK-BAT",
+              "overall": 68
+            },
+            {
+              "id": 155,
+              "name": "Rajat Bhatia",
+              "role": "AR",
+              "overall": 68
+            },
+            {
+              "id": 46,
+              "name": "Eoin Morgan",
+              "role": "BAT",
+              "overall": 69
+            },
+            {
+              "id": 54,
+              "name": "Jonathan Trott",
+              "role": "BAT",
+              "overall": 69
+            },
+            {
+              "id": 55,
+              "name": "Marcus North",
+              "role": "BAT",
+              "overall": 69
+            },
+            {
+              "id": 150,
+              "name": "Cheteshwar Pujara",
+              "role": "BAT",
+              "overall": 69
+            },
+            {
+              "id": 11,
+              "name": "Luke Ronchi",
+              "role": "WK-BAT",
+              "overall": 70
+            },
+            {
+              "id": 12,
+              "name": "Tim Paine",
+              "role": "WK-BAT",
+              "overall": 70
+            },
+            {
+              "id": 99,
+              "name": "Ishant Sharma",
+              "role": "BOWL",
+              "overall": 70
+            },
+            {
+              "id": 132,
+              "name": "Nantie Hayward",
+              "role": "BOWL",
+              "overall": 70
+            },
+            {
+              "id": 134,
+              "name": "Paul Harris",
+              "role": "BOWL",
+              "overall": 70
+            }
+          ],
+          "keeperCount": 3,
+          "trustedOvers": 15.049999999999999
+        },
+        {
+          "club": "SCO",
+          "user": false,
+          "meanOverall": 81.06666666666666,
+          "roles": {
+            "BAT": 5,
+            "WK-BAT": 2,
+            "AR": 1,
+            "BOWL": 7
+          },
+          "xiRating": 82,
+          "players": [
+            {
+              "id": 86,
+              "name": "Mitchell Johnson",
+              "role": "BOWL",
+              "overall": 86
+            },
+            {
+              "id": 1,
+              "name": "MS Dhoni",
+              "role": "WK-BAT",
+              "overall": 89
+            },
+            {
+              "id": 103,
+              "name": "Amit Mishra",
+              "role": "BOWL",
+              "overall": 82
+            },
+            {
+              "id": 88,
+              "name": "Shane Bond",
+              "role": "BOWL",
+              "overall": 89
+            },
+            {
+              "id": 97,
+              "name": "Sohail Tanvir",
+              "role": "BOWL",
+              "overall": 80
+            },
+            {
+              "id": 144,
+              "name": "Shaun Pollock",
+              "role": "AR",
+              "overall": 89
+            },
+            {
+              "id": 90,
+              "name": "Zaheer Khan",
+              "role": "BOWL",
+              "overall": 85
+            },
+            {
+              "id": 234,
+              "name": "Upul Tharanga",
+              "role": "BAT",
+              "overall": 77
+            },
+            {
+              "id": 185,
+              "name": "Steven Davies",
+              "role": "WK-BAT",
+              "overall": 73
+            },
+            {
+              "id": 252,
+              "name": "Aftab Ahmed",
+              "role": "BAT",
+              "overall": 77
+            },
+            {
+              "id": 149,
+              "name": "Manoj Tiwary",
+              "role": "BAT",
+              "overall": 72
+            },
+            {
+              "id": 253,
+              "name": "Shahriar Nafees",
+              "role": "BAT",
+              "overall": 75
+            },
+            {
+              "id": 110,
+              "name": "James Anderson",
+              "role": "BOWL",
+              "overall": 79
+            },
+            {
+              "id": 111,
+              "name": "Ryan Sidebottom",
+              "role": "BOWL",
+              "overall": 81
+            },
+            {
+              "id": 263,
+              "name": "Murray Goodwin",
+              "role": "BAT",
+              "overall": 82
+            }
+          ],
+          "keeperCount": 2,
+          "trustedOvers": 21.689999999999998
+        },
+        {
+          "club": "SUR",
+          "user": false,
+          "meanOverall": 79.2,
+          "roles": {
+            "BAT": 6,
+            "WK-BAT": 1,
+            "AR": 4,
+            "BOWL": 4
+          },
+          "xiRating": 82,
+          "players": [
+            {
+              "id": 95,
+              "name": "Umar Gul",
+              "role": "BOWL",
+              "overall": 89
+            },
+            {
+              "id": 9,
+              "name": "Dinesh Karthik",
+              "role": "WK-BAT",
+              "overall": 77
+            },
+            {
+              "id": 92,
+              "name": "Harbhajan Singh",
+              "role": "BOWL",
+              "overall": 87
+            },
+            {
+              "id": 41,
+              "name": "Mike Hussey",
+              "role": "BAT",
+              "overall": 91
+            },
+            {
+              "id": 44,
+              "name": "David Warner",
+              "role": "BAT",
+              "overall": 71
+            },
+            {
+              "id": 196,
+              "name": "Ryan ten Doeschate",
+              "role": "AR",
+              "overall": 83
+            },
+            {
+              "id": 45,
+              "name": "Martin Guptill",
+              "role": "BAT",
+              "overall": 72
+            },
+            {
+              "id": 73,
+              "name": "Ravindra Jadeja",
+              "role": "AR",
+              "overall": 69
+            },
+            {
+              "id": 161,
+              "name": "Vinay Kumar",
+              "role": "BOWL",
+              "overall": 73
+            },
+            {
+              "id": 81,
+              "name": "Roelof van der Merwe",
+              "role": "AR",
+              "overall": 70
+            },
+            {
+              "id": 16,
+              "name": "Matthew Hayden",
+              "role": "BAT",
+              "overall": 86
+            },
+            {
+              "id": 225,
+              "name": "Rory Kleinveldt",
+              "role": "BOWL",
+              "overall": 71
+            },
+            {
+              "id": 63,
+              "name": "Andrew Symonds",
+              "role": "AR",
+              "overall": 84
+            },
+            {
+              "id": 35,
+              "name": "Andrew Strauss",
+              "role": "BAT",
+              "overall": 82
+            },
+            {
+              "id": 42,
+              "name": "Simon Katich",
+              "role": "BAT",
+              "overall": 83
+            }
+          ],
+          "keeperCount": 1,
+          "trustedOvers": 14.68
+        },
+        {
+          "club": "CSK",
+          "user": false,
+          "meanOverall": 82.33333333333333,
+          "roles": {
+            "BAT": 6,
+            "WK-BAT": 1,
+            "AR": 2,
+            "BOWL": 6
+          },
+          "xiRating": 83,
+          "players": [
+            {
+              "id": 83,
+              "name": "Morne Morkel",
+              "role": "BOWL",
+              "overall": 89
+            },
+            {
+              "id": 62,
+              "name": "Daniel Vettori",
+              "role": "AR",
+              "overall": 90
+            },
+            {
+              "id": 24,
+              "name": "Gautam Gambhir",
+              "role": "BAT",
+              "overall": 86
+            },
+            {
+              "id": 183,
+              "name": "Phil Mustard",
+              "role": "WK-BAT",
+              "overall": 79
+            },
+            {
+              "id": 64,
+              "name": "Yusuf Pathan",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 131,
+              "name": "Abdur Razzak",
+              "role": "BOWL",
+              "overall": 77
+            },
+            {
+              "id": 142,
+              "name": "Glenn McGrath",
+              "role": "BOWL",
+              "overall": 88
+            },
+            {
+              "id": 94,
+              "name": "Shoaib Akhtar",
+              "role": "BOWL",
+              "overall": 86
+            },
+            {
+              "id": 25,
+              "name": "Shivnarine Chanderpaul",
+              "role": "BAT",
+              "overall": 87
+            },
+            {
+              "id": 36,
+              "name": "Ian Bell",
+              "role": "BAT",
+              "overall": 81
+            },
+            {
+              "id": 206,
+              "name": "Salman Butt",
+              "role": "BAT",
+              "overall": 78
+            },
+            {
+              "id": 178,
+              "name": "Marcus Trescothick",
+              "role": "BAT",
+              "overall": 84
+            },
+            {
+              "id": 210,
+              "name": "Rana Naved-ul-Hasan",
+              "role": "BOWL",
+              "overall": 82
+            },
+            {
+              "id": 164,
+              "name": "Siddharth Trivedi",
+              "role": "BOWL",
+              "overall": 72
+            },
+            {
+              "id": 180,
+              "name": "Rob Key",
+              "role": "BAT",
+              "overall": 80
+            }
+          ],
+          "keeperCount": 1,
+          "trustedOvers": 17.61
+        },
+        {
+          "club": "REN",
+          "user": false,
+          "meanOverall": 80.46666666666667,
+          "roles": {
+            "BAT": 4,
+            "WK-BAT": 1,
+            "AR": 6,
+            "BOWL": 4
+          },
+          "xiRating": 84,
+          "players": [
+            {
+              "id": 20,
+              "name": "Yuvraj Singh",
+              "role": "BAT",
+              "overall": 88
+            },
+            {
+              "id": 87,
+              "name": "Muttiah Muralitharan",
+              "role": "BOWL",
+              "overall": 90
+            },
+            {
+              "id": 2,
+              "name": "Adam Gilchrist",
+              "role": "WK-BAT",
+              "overall": 88
+            },
+            {
+              "id": 85,
+              "name": "Brett Lee",
+              "role": "BOWL",
+              "overall": 90
+            },
+            {
+              "id": 122,
+              "name": "Ajantha Mendis",
+              "role": "BOWL",
+              "overall": 77
+            },
+            {
+              "id": 257,
+              "name": "Hamilton Masakadza",
+              "role": "BAT",
+              "overall": 77
+            },
+            {
+              "id": 151,
+              "name": "Ambati Rayudu",
+              "role": "BAT",
+              "overall": 74
+            },
+            {
+              "id": 65,
+              "name": "Irfan Pathan",
+              "role": "AR",
+              "overall": 78
+            },
+            {
+              "id": 211,
+              "name": "Yasir Arafat",
+              "role": "AR",
+              "overall": 77
+            },
+            {
+              "id": 201,
+              "name": "Boyd Rankin",
+              "role": "BOWL",
+              "overall": 72
+            },
+            {
+              "id": 165,
+              "name": "Brad Hodge",
+              "role": "BAT",
+              "overall": 84
+            },
+            {
+              "id": 76,
+              "name": "Abdul Razzaq",
+              "role": "AR",
+              "overall": 80
+            },
+            {
+              "id": 154,
+              "name": "Abhishek Nayar",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 256,
+              "name": "Elton Chigumbura",
+              "role": "AR",
+              "overall": 78
+            },
+            {
+              "id": 68,
+              "name": "Jacob Oram",
+              "role": "AR",
+              "overall": 78
+            }
+          ],
+          "keeperCount": 1,
+          "trustedOvers": 22.029999999999998
+        }
+      ]
+    },
+    {
+      "seed": 8705,
+      "user": "RR",
+      "clubs": [
+        {
+          "club": "MI",
+          "user": false,
+          "meanOverall": 78.6,
+          "roles": {
+            "BAT": 5,
+            "WK-BAT": 1,
+            "AR": 5,
+            "BOWL": 4
+          },
+          "xiRating": 83,
+          "players": [
+            {
+              "id": 83,
+              "name": "Morne Morkel",
+              "role": "BOWL",
+              "overall": 89
+            },
+            {
+              "id": 4,
+              "name": "Brendon McCullum",
+              "role": "WK-BAT",
+              "overall": 89
+            },
+            {
+              "id": 58,
+              "name": "Andrew Flintoff",
+              "role": "AR",
+              "overall": 86
+            },
+            {
+              "id": 167,
+              "name": "George Bailey",
+              "role": "BAT",
+              "overall": 74
+            },
+            {
+              "id": 129,
+              "name": "Daren Sammy",
+              "role": "AR",
+              "overall": 78
+            },
+            {
+              "id": 243,
+              "name": "Lendl Simmons",
+              "role": "BAT",
+              "overall": 75
+            },
+            {
+              "id": 73,
+              "name": "Ravindra Jadeja",
+              "role": "AR",
+              "overall": 69
+            },
+            {
+              "id": 65,
+              "name": "Irfan Pathan",
+              "role": "AR",
+              "overall": 78
+            },
+            {
+              "id": 252,
+              "name": "Aftab Ahmed",
+              "role": "BAT",
+              "overall": 77
+            },
+            {
+              "id": 174,
+              "name": "Xavier Doherty",
+              "role": "BOWL",
+              "overall": 71
+            },
+            {
+              "id": 212,
+              "name": "Mohammad Sami",
+              "role": "BOWL",
+              "overall": 79
+            },
+            {
+              "id": 256,
+              "name": "Elton Chigumbura",
+              "role": "AR",
+              "overall": 78
+            },
+            {
+              "id": 208,
+              "name": "Imran Farhat",
+              "role": "BAT",
+              "overall": 76
+            },
+            {
+              "id": 111,
+              "name": "Ryan Sidebottom",
+              "role": "BOWL",
+              "overall": 81
+            },
+            {
+              "id": 28,
+              "name": "Sanath Jayasuriya",
+              "role": "BAT",
+              "overall": 79
+            }
+          ],
+          "keeperCount": 1,
+          "trustedOvers": 22.6
+        },
+        {
+          "club": "HAM",
+          "user": false,
+          "meanOverall": 82.2,
+          "roles": {
+            "BAT": 6,
+            "WK-BAT": 1,
+            "AR": 2,
+            "BOWL": 6
+          },
+          "xiRating": 82,
+          "players": [
+            {
+              "id": 104,
+              "name": "Nathan Bracken",
+              "role": "BOWL",
+              "overall": 92
+            },
+            {
+              "id": 254,
+              "name": "Brendan Taylor",
+              "role": "WK-BAT",
+              "overall": 76
+            },
+            {
+              "id": 88,
+              "name": "Shane Bond",
+              "role": "BOWL",
+              "overall": 89
+            },
+            {
+              "id": 41,
+              "name": "Mike Hussey",
+              "role": "BAT",
+              "overall": 91
+            },
+            {
+              "id": 47,
+              "name": "Faf du Plessis",
+              "role": "BAT",
+              "overall": 72
+            },
+            {
+              "id": 90,
+              "name": "Zaheer Khan",
+              "role": "BOWL",
+              "overall": 85
+            },
+            {
+              "id": 112,
+              "name": "Steve Harmison",
+              "role": "BOWL",
+              "overall": 83
+            },
+            {
+              "id": 19,
+              "name": "Graeme Smith",
+              "role": "BAT",
+              "overall": 84
+            },
+            {
+              "id": 63,
+              "name": "Andrew Symonds",
+              "role": "AR",
+              "overall": 84
+            },
+            {
+              "id": 200,
+              "name": "William Porterfield",
+              "role": "BAT",
+              "overall": 76
+            },
+            {
+              "id": 223,
+              "name": "Ryan McLaren",
+              "role": "AR",
+              "overall": 75
+            },
+            {
+              "id": 138,
+              "name": "Dirk Nannes",
+              "role": "BOWL",
+              "overall": 83
+            },
+            {
+              "id": 35,
+              "name": "Andrew Strauss",
+              "role": "BAT",
+              "overall": 82
+            },
+            {
+              "id": 133,
+              "name": "Andre Nel",
+              "role": "BOWL",
+              "overall": 81
+            },
+            {
+              "id": 209,
+              "name": "Inzamam-ul-Haq",
+              "role": "BAT",
+              "overall": 80
+            }
+          ],
+          "keeperCount": 1,
+          "trustedOvers": 20
+        },
+        {
+          "club": "SIX",
+          "user": false,
+          "meanOverall": 80.2,
+          "roles": {
+            "BAT": 4,
+            "WK-BAT": 2,
+            "AR": 3,
+            "BOWL": 6
+          },
+          "xiRating": 83,
+          "players": [
+            {
+              "id": 89,
+              "name": "Lasith Malinga",
+              "role": "BOWL",
+              "overall": 94
+            },
+            {
+              "id": 241,
+              "name": "Denesh Ramdin",
+              "role": "WK-BAT",
+              "overall": 76
+            },
+            {
+              "id": 39,
+              "name": "Suresh Raina",
+              "role": "BAT",
+              "overall": 81
+            },
+            {
+              "id": 64,
+              "name": "Yusuf Pathan",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 142,
+              "name": "Glenn McGrath",
+              "role": "BOWL",
+              "overall": 88
+            },
+            {
+              "id": 244,
+              "name": "Ravi Rampaul",
+              "role": "BOWL",
+              "overall": 73
+            },
+            {
+              "id": 205,
+              "name": "Shoaib Malik",
+              "role": "AR",
+              "overall": 81
+            },
+            {
+              "id": 16,
+              "name": "Matthew Hayden",
+              "role": "BAT",
+              "overall": 86
+            },
+            {
+              "id": 125,
+              "name": "Jerome Taylor",
+              "role": "BOWL",
+              "overall": 80
+            },
+            {
+              "id": 185,
+              "name": "Steven Davies",
+              "role": "WK-BAT",
+              "overall": 73
+            },
+            {
+              "id": 15,
+              "name": "Ricky Ponting",
+              "role": "BAT",
+              "overall": 87
+            },
+            {
+              "id": 79,
+              "name": "Luke Wright",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 193,
+              "name": "Graham Onions",
+              "role": "BOWL",
+              "overall": 76
+            },
+            {
+              "id": 258,
+              "name": "Ray Price",
+              "role": "BOWL",
+              "overall": 80
+            },
+            {
+              "id": 170,
+              "name": "Travis Birt",
+              "role": "BAT",
+              "overall": 76
+            }
+          ],
+          "keeperCount": 2,
+          "trustedOvers": 19.250000000000004
+        },
+        {
+          "club": "SUR",
+          "user": false,
+          "meanOverall": 81.6,
+          "roles": {
+            "BAT": 6,
+            "WK-BAT": 1,
+            "AR": 7,
+            "BOWL": 1
+          },
+          "xiRating": 79,
+          "players": [
+            {
+              "id": 84,
+              "name": "Dale Steyn",
+              "role": "BOWL",
+              "overall": 92
+            },
+            {
+              "id": 2,
+              "name": "Adam Gilchrist",
+              "role": "WK-BAT",
+              "overall": 88
+            },
+            {
+              "id": 30,
+              "name": "Ross Taylor",
+              "role": "BAT",
+              "overall": 80
+            },
+            {
+              "id": 14,
+              "name": "Sachin Tendulkar",
+              "role": "BAT",
+              "overall": 90
+            },
+            {
+              "id": 135,
+              "name": "Johan Botha",
+              "role": "AR",
+              "overall": 77
+            },
+            {
+              "id": 196,
+              "name": "Ryan ten Doeschate",
+              "role": "AR",
+              "overall": 83
+            },
+            {
+              "id": 242,
+              "name": "Dwayne Smith",
+              "role": "AR",
+              "overall": 80
+            },
+            {
+              "id": 190,
+              "name": "Chris Woakes",
+              "role": "AR",
+              "overall": 71
+            },
+            {
+              "id": 56,
+              "name": "Cameron White",
+              "role": "BAT",
+              "overall": 77
+            },
+            {
+              "id": 186,
+              "name": "Graham Napier",
+              "role": "AR",
+              "overall": 79
+            },
+            {
+              "id": 165,
+              "name": "Brad Hodge",
+              "role": "BAT",
+              "overall": 84
+            },
+            {
+              "id": 25,
+              "name": "Shivnarine Chanderpaul",
+              "role": "BAT",
+              "overall": 87
+            },
+            {
+              "id": 187,
+              "name": "Peter Trego",
+              "role": "AR",
+              "overall": 78
+            },
+            {
+              "id": 227,
+              "name": "Craig McMillan",
+              "role": "BAT",
+              "overall": 80
+            },
+            {
+              "id": 68,
+              "name": "Jacob Oram",
+              "role": "AR",
+              "overall": 78
+            }
+          ],
+          "keeperCount": 1,
+          "trustedOvers": 9.97
+        },
+        {
+          "club": "RR",
+          "user": true,
+          "meanOverall": 68.13333333333334,
+          "roles": {
+            "BAT": 4,
+            "WK-BAT": 1,
+            "AR": 2,
+            "BOWL": 8
+          },
+          "xiRating": 69,
+          "players": [
+            {
+              "id": 246,
+              "name": "Andre Russell",
+              "role": "AR",
+              "overall": 64
+            },
+            {
+              "id": 192,
+              "name": "Steven Finn",
+              "role": "BOWL",
+              "overall": 65
+            },
+            {
+              "id": 203,
+              "name": "Chris Jordan",
+              "role": "BOWL",
+              "overall": 65
+            },
+            {
+              "id": 128,
+              "name": "Sulieman Benn",
+              "role": "BOWL",
+              "overall": 67
+            },
+            {
+              "id": 71,
+              "name": "Moeen Ali",
+              "role": "AR",
+              "overall": 68
+            },
+            {
+              "id": 177,
+              "name": "Graham Manou",
+              "role": "WK-BAT",
+              "overall": 68
+            },
+            {
+              "id": 53,
+              "name": "Alastair Cook",
+              "role": "BAT",
+              "overall": 69
+            },
+            {
+              "id": 54,
+              "name": "Jonathan Trott",
+              "role": "BAT",
+              "overall": 69
+            },
+            {
+              "id": 55,
+              "name": "Marcus North",
+              "role": "BAT",
+              "overall": 69
+            },
+            {
+              "id": 119,
+              "name": "Jeetan Patel",
+              "role": "BOWL",
+              "overall": 69
+            },
+            {
+              "id": 150,
+              "name": "Cheteshwar Pujara",
+              "role": "BAT",
+              "overall": 69
+            },
+            {
+              "id": 99,
+              "name": "Ishant Sharma",
+              "role": "BOWL",
+              "overall": 70
+            },
+            {
+              "id": 118,
+              "name": "Chris Martin",
+              "role": "BOWL",
+              "overall": 70
+            },
+            {
+              "id": 132,
+              "name": "Nantie Hayward",
+              "role": "BOWL",
+              "overall": 70
+            },
+            {
+              "id": 134,
+              "name": "Paul Harris",
+              "role": "BOWL",
+              "overall": 70
+            }
+          ],
+          "keeperCount": 1,
+          "trustedOvers": 17.759999999999998
+        },
+        {
+          "club": "DC",
+          "user": false,
+          "meanOverall": 77.66666666666667,
+          "roles": {
+            "BAT": 4,
+            "WK-BAT": 2,
+            "AR": 5,
+            "BOWL": 4
+          },
+          "xiRating": 82,
+          "players": [
+            {
+              "id": 61,
+              "name": "Dwayne Bravo",
+              "role": "AR",
+              "overall": 87
+            },
+            {
+              "id": 13,
+              "name": "Virender Sehwag",
+              "role": "BAT",
+              "overall": 89
+            },
+            {
+              "id": 74,
+              "name": "Shakib Al Hasan",
+              "role": "AR",
+              "overall": 79
+            },
+            {
+              "id": 255,
+              "name": "Tatenda Taibu",
+              "role": "WK-BAT",
+              "overall": 79
+            },
+            {
+              "id": 121,
+              "name": "Nuwan Kulasekara",
+              "role": "BOWL",
+              "overall": 77
+            },
+            {
+              "id": 191,
+              "name": "Adil Rashid",
+              "role": "AR",
+              "overall": 71
+            },
+            {
+              "id": 152,
+              "name": "Wriddhiman Saha",
+              "role": "WK-BAT",
+              "overall": 71
+            },
+            {
+              "id": 173,
+              "name": "Clint McKay",
+              "role": "BOWL",
+              "overall": 71
+            },
+            {
+              "id": 207,
+              "name": "Imran Nazir",
+              "role": "BAT",
+              "overall": 81
+            },
+            {
+              "id": 206,
+              "name": "Salman Butt",
+              "role": "BAT",
+              "overall": 78
+            },
+            {
+              "id": 238,
+              "name": "Dhammika Prasad",
+              "role": "BOWL",
+              "overall": 71
+            },
+            {
+              "id": 76,
+              "name": "Abdul Razzaq",
+              "role": "AR",
+              "overall": 80
+            },
+            {
+              "id": 33,
+              "name": "Ramnaresh Sarwan",
+              "role": "BAT",
+              "overall": 80
+            },
+            {
+              "id": 66,
+              "name": "Albie Morkel",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 101,
+              "name": "Sreesanth",
+              "role": "BOWL",
+              "overall": 75
+            }
+          ],
+          "keeperCount": 2,
+          "trustedOvers": 19.5
+        },
+        {
+          "club": "HEA",
+          "user": false,
+          "meanOverall": 78.93333333333334,
+          "roles": {
+            "BAT": 4,
+            "WK-BAT": 4,
+            "AR": 1,
+            "BOWL": 6
+          },
+          "xiRating": 81,
+          "players": [
+            {
+              "id": 95,
+              "name": "Umar Gul",
+              "role": "BOWL",
+              "overall": 89
+            },
+            {
+              "id": 60,
+              "name": "Shahid Afridi",
+              "role": "AR",
+              "overall": 85
+            },
+            {
+              "id": 249,
+              "name": "Mushfiqur Rahim",
+              "role": "WK-BAT",
+              "overall": 73
+            },
+            {
+              "id": 97,
+              "name": "Sohail Tanvir",
+              "role": "BOWL",
+              "overall": 80
+            },
+            {
+              "id": 257,
+              "name": "Hamilton Masakadza",
+              "role": "BAT",
+              "overall": 77
+            },
+            {
+              "id": 49,
+              "name": "JP Duminy",
+              "role": "BAT",
+              "overall": 78
+            },
+            {
+              "id": 126,
+              "name": "Fidel Edwards",
+              "role": "BOWL",
+              "overall": 80
+            },
+            {
+              "id": 106,
+              "name": "Mitchell McClenaghan",
+              "role": "BOWL",
+              "overall": 72
+            },
+            {
+              "id": 6,
+              "name": "Kamran Akmal",
+              "role": "WK-BAT",
+              "overall": 79
+            },
+            {
+              "id": 26,
+              "name": "Mohammad Yousuf",
+              "role": "BAT",
+              "overall": 89
+            },
+            {
+              "id": 225,
+              "name": "Rory Kleinveldt",
+              "role": "BOWL",
+              "overall": 71
+            },
+            {
+              "id": 253,
+              "name": "Shahriar Nafees",
+              "role": "BAT",
+              "overall": 75
+            },
+            {
+              "id": 210,
+              "name": "Rana Naved-ul-Hasan",
+              "role": "BOWL",
+              "overall": 82
+            },
+            {
+              "id": 220,
+              "name": "Morne van Wyk",
+              "role": "WK-BAT",
+              "overall": 77
+            },
+            {
+              "id": 184,
+              "name": "James Foster",
+              "role": "WK-BAT",
+              "overall": 77
+            }
+          ],
+          "keeperCount": 4,
+          "trustedOvers": 17.47
+        },
+        {
+          "club": "THU",
+          "user": false,
+          "meanOverall": 79.46666666666667,
+          "roles": {
+            "BAT": 6,
+            "WK-BAT": 1,
+            "AR": 2,
+            "BOWL": 6
+          },
+          "xiRating": 82,
+          "players": [
+            {
+              "id": 18,
+              "name": "Kevin Pietersen",
+              "role": "BAT",
+              "overall": 92
+            },
+            {
+              "id": 92,
+              "name": "Harbhajan Singh",
+              "role": "BOWL",
+              "overall": 87
+            },
+            {
+              "id": 22,
+              "name": "Michael Clarke",
+              "role": "BAT",
+              "overall": 89
+            },
+            {
+              "id": 222,
+              "name": "Hashim Amla",
+              "role": "BAT",
+              "overall": 78
+            },
+            {
+              "id": 183,
+              "name": "Phil Mustard",
+              "role": "WK-BAT",
+              "overall": 79
+            },
+            {
+              "id": 151,
+              "name": "Ambati Rayudu",
+              "role": "BAT",
+              "overall": 74
+            },
+            {
+              "id": 94,
+              "name": "Shoaib Akhtar",
+              "role": "BOWL",
+              "overall": 86
+            },
+            {
+              "id": 161,
+              "name": "Vinay Kumar",
+              "role": "BOWL",
+              "overall": 73
+            },
+            {
+              "id": 154,
+              "name": "Abhishek Nayar",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 211,
+              "name": "Yasir Arafat",
+              "role": "AR",
+              "overall": 77
+            },
+            {
+              "id": 115,
+              "name": "Tim Bresnan",
+              "role": "BOWL",
+              "overall": 72
+            },
+            {
+              "id": 110,
+              "name": "James Anderson",
+              "role": "BOWL",
+              "overall": 79
+            },
+            {
+              "id": 164,
+              "name": "Siddharth Trivedi",
+              "role": "BOWL",
+              "overall": 72
+            },
+            {
+              "id": 221,
+              "name": "Loots Bosman",
+              "role": "BAT",
+              "overall": 79
+            },
+            {
+              "id": 52,
+              "name": "Owais Shah",
+              "role": "BAT",
+              "overall": 79
+            }
+          ],
+          "keeperCount": 1,
+          "trustedOvers": 16.51
+        }
+      ]
+    },
+    {
+      "seed": 8706,
+      "user": "SUR",
+      "clubs": [
+        {
+          "club": "STR",
+          "user": false,
+          "meanOverall": 80.53333333333333,
+          "roles": {
+            "BAT": 4,
+            "WK-BAT": 1,
+            "AR": 3,
+            "BOWL": 7
+          },
+          "xiRating": 80,
+          "players": [
+            {
+              "id": 23,
+              "name": "AB de Villiers",
+              "role": "BAT",
+              "overall": 88
+            },
+            {
+              "id": 88,
+              "name": "Shane Bond",
+              "role": "BOWL",
+              "overall": 89
+            },
+            {
+              "id": 39,
+              "name": "Suresh Raina",
+              "role": "BAT",
+              "overall": 81
+            },
+            {
+              "id": 141,
+              "name": "Shane Warne",
+              "role": "BOWL",
+              "overall": 88
+            },
+            {
+              "id": 196,
+              "name": "Ryan ten Doeschate",
+              "role": "AR",
+              "overall": 83
+            },
+            {
+              "id": 182,
+              "name": "Craig Kieswetter",
+              "role": "WK-BAT",
+              "overall": 72
+            },
+            {
+              "id": 242,
+              "name": "Dwayne Smith",
+              "role": "AR",
+              "overall": 80
+            },
+            {
+              "id": 106,
+              "name": "Mitchell McClenaghan",
+              "role": "BOWL",
+              "overall": 72
+            },
+            {
+              "id": 207,
+              "name": "Imran Nazir",
+              "role": "BAT",
+              "overall": 81
+            },
+            {
+              "id": 107,
+              "name": "Shaun Tait",
+              "role": "BOWL",
+              "overall": 77
+            },
+            {
+              "id": 36,
+              "name": "Ian Bell",
+              "role": "BAT",
+              "overall": 81
+            },
+            {
+              "id": 199,
+              "name": "Kevin O'Brien",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 138,
+              "name": "Dirk Nannes",
+              "role": "BOWL",
+              "overall": 83
+            },
+            {
+              "id": 111,
+              "name": "Ryan Sidebottom",
+              "role": "BOWL",
+              "overall": 81
+            },
+            {
+              "id": 117,
+              "name": "Kyle Mills",
+              "role": "BOWL",
+              "overall": 76
+            }
+          ],
+          "keeperCount": 1,
+          "trustedOvers": 20.380000000000003
+        },
+        {
+          "club": "SIX",
+          "user": false,
+          "meanOverall": 81.33333333333333,
+          "roles": {
+            "BAT": 4,
+            "WK-BAT": 2,
+            "AR": 3,
+            "BOWL": 6
+          },
+          "xiRating": 82,
+          "players": [
+            {
+              "id": 84,
+              "name": "Dale Steyn",
+              "role": "BOWL",
+              "overall": 92
+            },
+            {
+              "id": 24,
+              "name": "Gautam Gambhir",
+              "role": "BAT",
+              "overall": 86
+            },
+            {
+              "id": 9,
+              "name": "Dinesh Karthik",
+              "role": "WK-BAT",
+              "overall": 77
+            },
+            {
+              "id": 113,
+              "name": "Monty Panesar",
+              "role": "BOWL",
+              "overall": 82
+            },
+            {
+              "id": 14,
+              "name": "Sachin Tendulkar",
+              "role": "BAT",
+              "overall": 90
+            },
+            {
+              "id": 94,
+              "name": "Shoaib Akhtar",
+              "role": "BOWL",
+              "overall": 86
+            },
+            {
+              "id": 244,
+              "name": "Ravi Rampaul",
+              "role": "BOWL",
+              "overall": 73
+            },
+            {
+              "id": 255,
+              "name": "Tatenda Taibu",
+              "role": "WK-BAT",
+              "overall": 79
+            },
+            {
+              "id": 215,
+              "name": "Fawad Alam",
+              "role": "AR",
+              "overall": 73
+            },
+            {
+              "id": 178,
+              "name": "Marcus Trescothick",
+              "role": "BAT",
+              "overall": 84
+            },
+            {
+              "id": 210,
+              "name": "Rana Naved-ul-Hasan",
+              "role": "BOWL",
+              "overall": 82
+            },
+            {
+              "id": 76,
+              "name": "Abdul Razzaq",
+              "role": "AR",
+              "overall": 80
+            },
+            {
+              "id": 154,
+              "name": "Abhishek Nayar",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 227,
+              "name": "Craig McMillan",
+              "role": "BAT",
+              "overall": 80
+            },
+            {
+              "id": 258,
+              "name": "Ray Price",
+              "role": "BOWL",
+              "overall": 80
+            }
+          ],
+          "keeperCount": 2,
+          "trustedOvers": 18.85
+        },
+        {
+          "club": "MI",
+          "user": false,
+          "meanOverall": 78.8,
+          "roles": {
+            "BAT": 3,
+            "WK-BAT": 3,
+            "AR": 3,
+            "BOWL": 6
+          },
+          "xiRating": 80,
+          "players": [
+            {
+              "id": 20,
+              "name": "Yuvraj Singh",
+              "role": "BAT",
+              "overall": 88
+            },
+            {
+              "id": 92,
+              "name": "Harbhajan Singh",
+              "role": "BOWL",
+              "overall": 87
+            },
+            {
+              "id": 58,
+              "name": "Andrew Flintoff",
+              "role": "AR",
+              "overall": 86
+            },
+            {
+              "id": 249,
+              "name": "Mushfiqur Rahim",
+              "role": "WK-BAT",
+              "overall": 73
+            },
+            {
+              "id": 131,
+              "name": "Abdur Razzak",
+              "role": "BOWL",
+              "overall": 77
+            },
+            {
+              "id": 191,
+              "name": "Adil Rashid",
+              "role": "AR",
+              "overall": 71
+            },
+            {
+              "id": 179,
+              "name": "Joe Denly",
+              "role": "BAT",
+              "overall": 75
+            },
+            {
+              "id": 100,
+              "name": "Praveen Kumar",
+              "role": "BOWL",
+              "overall": 77
+            },
+            {
+              "id": 16,
+              "name": "Matthew Hayden",
+              "role": "BAT",
+              "overall": 86
+            },
+            {
+              "id": 185,
+              "name": "Steven Davies",
+              "role": "WK-BAT",
+              "overall": 73
+            },
+            {
+              "id": 8,
+              "name": "Matt Prior",
+              "role": "WK-BAT",
+              "overall": 79
+            },
+            {
+              "id": 212,
+              "name": "Mohammad Sami",
+              "role": "BOWL",
+              "overall": 79
+            },
+            {
+              "id": 187,
+              "name": "Peter Trego",
+              "role": "AR",
+              "overall": 78
+            },
+            {
+              "id": 133,
+              "name": "Andre Nel",
+              "role": "BOWL",
+              "overall": 81
+            },
+            {
+              "id": 162,
+              "name": "Manpreet Gony",
+              "role": "BOWL",
+              "overall": 72
+            }
+          ],
+          "keeperCount": 3,
+          "trustedOvers": 22.74
+        },
+        {
+          "club": "RR",
+          "user": false,
+          "meanOverall": 76.93333333333334,
+          "roles": {
+            "BAT": 5,
+            "WK-BAT": 2,
+            "AR": 3,
+            "BOWL": 5
+          },
+          "xiRating": 81,
+          "players": [
+            {
+              "id": 86,
+              "name": "Mitchell Johnson",
+              "role": "BOWL",
+              "overall": 86
+            },
+            {
+              "id": 3,
+              "name": "Kumar Sangakkara",
+              "role": "WK-BAT",
+              "overall": 89
+            },
+            {
+              "id": 103,
+              "name": "Amit Mishra",
+              "role": "BOWL",
+              "overall": 82
+            },
+            {
+              "id": 135,
+              "name": "Johan Botha",
+              "role": "AR",
+              "overall": 77
+            },
+            {
+              "id": 48,
+              "name": "Virat Kohli",
+              "role": "BAT",
+              "overall": 72
+            },
+            {
+              "id": 248,
+              "name": "Tamim Iqbal",
+              "role": "BAT",
+              "overall": 74
+            },
+            {
+              "id": 46,
+              "name": "Eoin Morgan",
+              "role": "BAT",
+              "overall": 69
+            },
+            {
+              "id": 234,
+              "name": "Upul Tharanga",
+              "role": "BAT",
+              "overall": 77
+            },
+            {
+              "id": 270,
+              "name": "Tim Southee",
+              "role": "BOWL",
+              "overall": 70
+            },
+            {
+              "id": 69,
+              "name": "Ravi Bopara",
+              "role": "AR",
+              "overall": 77
+            },
+            {
+              "id": 79,
+              "name": "Luke Wright",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 110,
+              "name": "James Anderson",
+              "role": "BOWL",
+              "overall": 79
+            },
+            {
+              "id": 180,
+              "name": "Rob Key",
+              "role": "BAT",
+              "overall": 80
+            },
+            {
+              "id": 124,
+              "name": "Farveez Maharoof",
+              "role": "BOWL",
+              "overall": 71
+            },
+            {
+              "id": 198,
+              "name": "Niall O'Brien",
+              "role": "WK-BAT",
+              "overall": 75
+            }
+          ],
+          "keeperCount": 2,
+          "trustedOvers": 17.84
+        },
+        {
+          "club": "CSK",
+          "user": false,
+          "meanOverall": 80.4,
+          "roles": {
+            "BAT": 5,
+            "WK-BAT": 3,
+            "AR": 3,
+            "BOWL": 4
+          },
+          "xiRating": 85,
+          "players": [
+            {
+              "id": 1,
+              "name": "MS Dhoni",
+              "role": "WK-BAT",
+              "overall": 89
+            },
+            {
+              "id": 83,
+              "name": "Morne Morkel",
+              "role": "BOWL",
+              "overall": 89
+            },
+            {
+              "id": 22,
+              "name": "Michael Clarke",
+              "role": "BAT",
+              "overall": 89
+            },
+            {
+              "id": 30,
+              "name": "Ross Taylor",
+              "role": "BAT",
+              "overall": 80
+            },
+            {
+              "id": 142,
+              "name": "Glenn McGrath",
+              "role": "BOWL",
+              "overall": 88
+            },
+            {
+              "id": 144,
+              "name": "Shaun Pollock",
+              "role": "AR",
+              "overall": 89
+            },
+            {
+              "id": 161,
+              "name": "Vinay Kumar",
+              "role": "BOWL",
+              "overall": 73
+            },
+            {
+              "id": 152,
+              "name": "Wriddhiman Saha",
+              "role": "WK-BAT",
+              "overall": 71
+            },
+            {
+              "id": 81,
+              "name": "Roelof van der Merwe",
+              "role": "AR",
+              "overall": 70
+            },
+            {
+              "id": 56,
+              "name": "Cameron White",
+              "role": "BAT",
+              "overall": 77
+            },
+            {
+              "id": 165,
+              "name": "Brad Hodge",
+              "role": "BAT",
+              "overall": 84
+            },
+            {
+              "id": 223,
+              "name": "Ryan McLaren",
+              "role": "AR",
+              "overall": 75
+            },
+            {
+              "id": 164,
+              "name": "Siddharth Trivedi",
+              "role": "BOWL",
+              "overall": 72
+            },
+            {
+              "id": 263,
+              "name": "Murray Goodwin",
+              "role": "BAT",
+              "overall": 82
+            },
+            {
+              "id": 7,
+              "name": "Brad Haddin",
+              "role": "WK-BAT",
+              "overall": 78
+            }
+          ],
+          "keeperCount": 3,
+          "trustedOvers": 17.63
+        },
+        {
+          "club": "SUR",
+          "user": true,
+          "meanOverall": 68.8,
+          "roles": {
+            "BAT": 3,
+            "WK-BAT": 3,
+            "AR": 4,
+            "BOWL": 5
+          },
+          "xiRating": 71,
+          "players": [
+            {
+              "id": 203,
+              "name": "Chris Jordan",
+              "role": "BOWL",
+              "overall": 65
+            },
+            {
+              "id": 128,
+              "name": "Sulieman Benn",
+              "role": "BOWL",
+              "overall": 67
+            },
+            {
+              "id": 10,
+              "name": "Parthiv Patel",
+              "role": "WK-BAT",
+              "overall": 68
+            },
+            {
+              "id": 71,
+              "name": "Moeen Ali",
+              "role": "AR",
+              "overall": 68
+            },
+            {
+              "id": 155,
+              "name": "Rajat Bhatia",
+              "role": "AR",
+              "overall": 68
+            },
+            {
+              "id": 177,
+              "name": "Graham Manou",
+              "role": "WK-BAT",
+              "overall": 68
+            },
+            {
+              "id": 53,
+              "name": "Alastair Cook",
+              "role": "BAT",
+              "overall": 69
+            },
+            {
+              "id": 54,
+              "name": "Jonathan Trott",
+              "role": "BAT",
+              "overall": 69
+            },
+            {
+              "id": 153,
+              "name": "Mohammad Kaif",
+              "role": "BAT",
+              "overall": 69
+            },
+            {
+              "id": 12,
+              "name": "Tim Paine",
+              "role": "WK-BAT",
+              "overall": 70
+            },
+            {
+              "id": 99,
+              "name": "Ishant Sharma",
+              "role": "BOWL",
+              "overall": 70
+            },
+            {
+              "id": 118,
+              "name": "Chris Martin",
+              "role": "BOWL",
+              "overall": 70
+            },
+            {
+              "id": 134,
+              "name": "Paul Harris",
+              "role": "BOWL",
+              "overall": 70
+            },
+            {
+              "id": 240,
+              "name": "Kaushal Weeraratne",
+              "role": "AR",
+              "overall": 70
+            },
+            {
+              "id": 228,
+              "name": "Nathan McCullum",
+              "role": "AR",
+              "overall": 71
+            }
+          ],
+          "keeperCount": 3,
+          "trustedOvers": 16
+        },
+        {
+          "club": "SOM",
+          "user": false,
+          "meanOverall": 76.86666666666666,
+          "roles": {
+            "BAT": 5,
+            "WK-BAT": 2,
+            "AR": 3,
+            "BOWL": 5
+          },
+          "xiRating": 81,
+          "players": [
+            {
+              "id": 61,
+              "name": "Dwayne Bravo",
+              "role": "AR",
+              "overall": 87
+            },
+            {
+              "id": 2,
+              "name": "Adam Gilchrist",
+              "role": "WK-BAT",
+              "overall": 88
+            },
+            {
+              "id": 60,
+              "name": "Shahid Afridi",
+              "role": "AR",
+              "overall": 85
+            },
+            {
+              "id": 49,
+              "name": "JP Duminy",
+              "role": "BAT",
+              "overall": 78
+            },
+            {
+              "id": 243,
+              "name": "Lendl Simmons",
+              "role": "BAT",
+              "overall": 75
+            },
+            {
+              "id": 158,
+              "name": "Munaf Patel",
+              "role": "BOWL",
+              "overall": 75
+            },
+            {
+              "id": 151,
+              "name": "Ambati Rayudu",
+              "role": "BAT",
+              "overall": 74
+            },
+            {
+              "id": 173,
+              "name": "Clint McKay",
+              "role": "BOWL",
+              "overall": 71
+            },
+            {
+              "id": 190,
+              "name": "Chris Woakes",
+              "role": "AR",
+              "overall": 71
+            },
+            {
+              "id": 206,
+              "name": "Salman Butt",
+              "role": "BAT",
+              "overall": 78
+            },
+            {
+              "id": 238,
+              "name": "Dhammika Prasad",
+              "role": "BOWL",
+              "overall": 71
+            },
+            {
+              "id": 37,
+              "name": "Robin Uthappa",
+              "role": "BAT",
+              "overall": 75
+            },
+            {
+              "id": 193,
+              "name": "Graham Onions",
+              "role": "BOWL",
+              "overall": 76
+            },
+            {
+              "id": 184,
+              "name": "James Foster",
+              "role": "WK-BAT",
+              "overall": 77
+            },
+            {
+              "id": 115,
+              "name": "Tim Bresnan",
+              "role": "BOWL",
+              "overall": 72
+            }
+          ],
+          "keeperCount": 2,
+          "trustedOvers": 17.52
+        },
+        {
+          "club": "REN",
+          "user": false,
+          "meanOverall": 81,
+          "roles": {
+            "BAT": 6,
+            "WK-BAT": 1,
+            "AR": 3,
+            "BOWL": 5
+          },
+          "xiRating": 84,
+          "players": [
+            {
+              "id": 104,
+              "name": "Nathan Bracken",
+              "role": "BOWL",
+              "overall": 92
+            },
+            {
+              "id": 62,
+              "name": "Daniel Vettori",
+              "role": "AR",
+              "overall": 90
+            },
+            {
+              "id": 183,
+              "name": "Phil Mustard",
+              "role": "WK-BAT",
+              "overall": 79
+            },
+            {
+              "id": 41,
+              "name": "Mike Hussey",
+              "role": "BAT",
+              "overall": 91
+            },
+            {
+              "id": 90,
+              "name": "Zaheer Khan",
+              "role": "BOWL",
+              "overall": 85
+            },
+            {
+              "id": 205,
+              "name": "Shoaib Malik",
+              "role": "AR",
+              "overall": 81
+            },
+            {
+              "id": 26,
+              "name": "Mohammad Yousuf",
+              "role": "BAT",
+              "overall": 89
+            },
+            {
+              "id": 130,
+              "name": "Mashrafe Mortaza",
+              "role": "BOWL",
+              "overall": 77
+            },
+            {
+              "id": 201,
+              "name": "Boyd Rankin",
+              "role": "BOWL",
+              "overall": 72
+            },
+            {
+              "id": 200,
+              "name": "William Porterfield",
+              "role": "BAT",
+              "overall": 76
+            },
+            {
+              "id": 102,
+              "name": "Piyush Chawla",
+              "role": "BOWL",
+              "overall": 72
+            },
+            {
+              "id": 42,
+              "name": "Simon Katich",
+              "role": "BAT",
+              "overall": 83
+            },
+            {
+              "id": 208,
+              "name": "Imran Farhat",
+              "role": "BAT",
+              "overall": 76
+            },
+            {
+              "id": 66,
+              "name": "Albie Morkel",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 170,
+              "name": "Travis Birt",
+              "role": "BAT",
+              "overall": 76
+            }
+          ],
+          "keeperCount": 1,
+          "trustedOvers": 16.439999999999998
+        }
+      ]
+    },
+    {
+      "seed": 8707,
+      "user": "RCB",
+      "clubs": [
+        {
+          "club": "DC",
+          "user": false,
+          "meanOverall": 77.26666666666667,
+          "roles": {
+            "BAT": 8,
+            "WK-BAT": 1,
+            "AR": 2,
+            "BOWL": 4
+          },
+          "xiRating": 79,
+          "players": [
+            {
+              "id": 104,
+              "name": "Nathan Bracken",
+              "role": "BOWL",
+              "overall": 92
+            },
+            {
+              "id": 254,
+              "name": "Brendan Taylor",
+              "role": "WK-BAT",
+              "overall": 76
+            },
+            {
+              "id": 167,
+              "name": "George Bailey",
+              "role": "BAT",
+              "overall": 74
+            },
+            {
+              "id": 47,
+              "name": "Faf du Plessis",
+              "role": "BAT",
+              "overall": 72
+            },
+            {
+              "id": 131,
+              "name": "Abdur Razzak",
+              "role": "BOWL",
+              "overall": 77
+            },
+            {
+              "id": 151,
+              "name": "Ambati Rayudu",
+              "role": "BAT",
+              "overall": 74
+            },
+            {
+              "id": 130,
+              "name": "Mashrafe Mortaza",
+              "role": "BOWL",
+              "overall": 77
+            },
+            {
+              "id": 190,
+              "name": "Chris Woakes",
+              "role": "AR",
+              "overall": 71
+            },
+            {
+              "id": 102,
+              "name": "Piyush Chawla",
+              "role": "BOWL",
+              "overall": 72
+            },
+            {
+              "id": 206,
+              "name": "Salman Butt",
+              "role": "BAT",
+              "overall": 78
+            },
+            {
+              "id": 35,
+              "name": "Andrew Strauss",
+              "role": "BAT",
+              "overall": 82
+            },
+            {
+              "id": 76,
+              "name": "Abdul Razzaq",
+              "role": "AR",
+              "overall": 80
+            },
+            {
+              "id": 180,
+              "name": "Rob Key",
+              "role": "BAT",
+              "overall": 80
+            },
+            {
+              "id": 52,
+              "name": "Owais Shah",
+              "role": "BAT",
+              "overall": 79
+            },
+            {
+              "id": 148,
+              "name": "Subramaniam Badrinath",
+              "role": "BAT",
+              "overall": 75
+            }
+          ],
+          "keeperCount": 1,
+          "trustedOvers": 16.259999999999998
+        },
+        {
+          "club": "SOM",
+          "user": false,
+          "meanOverall": 78.46666666666667,
+          "roles": {
+            "BAT": 4,
+            "WK-BAT": 2,
+            "AR": 6,
+            "BOWL": 3
+          },
+          "xiRating": 82,
+          "players": [
+            {
+              "id": 18,
+              "name": "Kevin Pietersen",
+              "role": "BAT",
+              "overall": 92
+            },
+            {
+              "id": 60,
+              "name": "Shahid Afridi",
+              "role": "AR",
+              "overall": 85
+            },
+            {
+              "id": 183,
+              "name": "Phil Mustard",
+              "role": "WK-BAT",
+              "overall": 79
+            },
+            {
+              "id": 88,
+              "name": "Shane Bond",
+              "role": "BOWL",
+              "overall": 89
+            },
+            {
+              "id": 43,
+              "name": "Shaun Marsh",
+              "role": "BAT",
+              "overall": 79
+            },
+            {
+              "id": 73,
+              "name": "Ravindra Jadeja",
+              "role": "AR",
+              "overall": 69
+            },
+            {
+              "id": 211,
+              "name": "Yasir Arafat",
+              "role": "AR",
+              "overall": 77
+            },
+            {
+              "id": 215,
+              "name": "Fawad Alam",
+              "role": "AR",
+              "overall": 73
+            },
+            {
+              "id": 270,
+              "name": "Tim Southee",
+              "role": "BOWL",
+              "overall": 70
+            },
+            {
+              "id": 110,
+              "name": "James Anderson",
+              "role": "BOWL",
+              "overall": 79
+            },
+            {
+              "id": 149,
+              "name": "Manoj Tiwary",
+              "role": "BAT",
+              "overall": 72
+            },
+            {
+              "id": 186,
+              "name": "Graham Napier",
+              "role": "AR",
+              "overall": 79
+            },
+            {
+              "id": 181,
+              "name": "Michael Lumb",
+              "role": "BAT",
+              "overall": 77
+            },
+            {
+              "id": 220,
+              "name": "Morne van Wyk",
+              "role": "WK-BAT",
+              "overall": 77
+            },
+            {
+              "id": 217,
+              "name": "Justin Kemp",
+              "role": "AR",
+              "overall": 80
+            }
+          ],
+          "keeperCount": 2,
+          "trustedOvers": 18.029999999999998
+        },
+        {
+          "club": "HEA",
+          "user": false,
+          "meanOverall": 77.66666666666667,
+          "roles": {
+            "BAT": 2,
+            "WK-BAT": 3,
+            "AR": 6,
+            "BOWL": 4
+          },
+          "xiRating": 82,
+          "players": [
+            {
+              "id": 95,
+              "name": "Umar Gul",
+              "role": "BOWL",
+              "overall": 89
+            },
+            {
+              "id": 22,
+              "name": "Michael Clarke",
+              "role": "BAT",
+              "overall": 89
+            },
+            {
+              "id": 241,
+              "name": "Denesh Ramdin",
+              "role": "WK-BAT",
+              "overall": 76
+            },
+            {
+              "id": 90,
+              "name": "Zaheer Khan",
+              "role": "BOWL",
+              "overall": 85
+            },
+            {
+              "id": 135,
+              "name": "Johan Botha",
+              "role": "AR",
+              "overall": 77
+            },
+            {
+              "id": 45,
+              "name": "Martin Guptill",
+              "role": "BAT",
+              "overall": 72
+            },
+            {
+              "id": 255,
+              "name": "Tatenda Taibu",
+              "role": "WK-BAT",
+              "overall": 79
+            },
+            {
+              "id": 81,
+              "name": "Roelof van der Merwe",
+              "role": "AR",
+              "overall": 70
+            },
+            {
+              "id": 69,
+              "name": "Ravi Bopara",
+              "role": "AR",
+              "overall": 77
+            },
+            {
+              "id": 82,
+              "name": "Jesse Ryder",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 225,
+              "name": "Rory Kleinveldt",
+              "role": "BOWL",
+              "overall": 71
+            },
+            {
+              "id": 256,
+              "name": "Elton Chigumbura",
+              "role": "AR",
+              "overall": 78
+            },
+            {
+              "id": 187,
+              "name": "Peter Trego",
+              "role": "AR",
+              "overall": 78
+            },
+            {
+              "id": 198,
+              "name": "Niall O'Brien",
+              "role": "WK-BAT",
+              "overall": 75
+            },
+            {
+              "id": 194,
+              "name": "Sajid Mahmood",
+              "role": "BOWL",
+              "overall": 73
+            }
+          ],
+          "keeperCount": 3,
+          "trustedOvers": 18.1
+        },
+        {
+          "club": "MI",
+          "user": false,
+          "meanOverall": 81.4,
+          "roles": {
+            "BAT": 5,
+            "WK-BAT": 1,
+            "AR": 3,
+            "BOWL": 6
+          },
+          "xiRating": 82,
+          "players": [
+            {
+              "id": 89,
+              "name": "Lasith Malinga",
+              "role": "BOWL",
+              "overall": 94
+            },
+            {
+              "id": 2,
+              "name": "Adam Gilchrist",
+              "role": "WK-BAT",
+              "overall": 88
+            },
+            {
+              "id": 87,
+              "name": "Muttiah Muralitharan",
+              "role": "BOWL",
+              "overall": 90
+            },
+            {
+              "id": 97,
+              "name": "Sohail Tanvir",
+              "role": "BOWL",
+              "overall": 80
+            },
+            {
+              "id": 64,
+              "name": "Yusuf Pathan",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 19,
+              "name": "Graeme Smith",
+              "role": "BAT",
+              "overall": 84
+            },
+            {
+              "id": 242,
+              "name": "Dwayne Smith",
+              "role": "AR",
+              "overall": 80
+            },
+            {
+              "id": 107,
+              "name": "Shaun Tait",
+              "role": "BOWL",
+              "overall": 77
+            },
+            {
+              "id": 33,
+              "name": "Ramnaresh Sarwan",
+              "role": "BAT",
+              "overall": 80
+            },
+            {
+              "id": 212,
+              "name": "Mohammad Sami",
+              "role": "BOWL",
+              "overall": 79
+            },
+            {
+              "id": 199,
+              "name": "Kevin O'Brien",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 204,
+              "name": "Younis Khan",
+              "role": "BAT",
+              "overall": 82
+            },
+            {
+              "id": 178,
+              "name": "Marcus Trescothick",
+              "role": "BAT",
+              "overall": 84
+            },
+            {
+              "id": 170,
+              "name": "Travis Birt",
+              "role": "BAT",
+              "overall": 76
+            },
+            {
+              "id": 101,
+              "name": "Sreesanth",
+              "role": "BOWL",
+              "overall": 75
+            }
+          ],
+          "keeperCount": 1,
+          "trustedOvers": 18.61
+        },
+        {
+          "club": "SIX",
+          "user": false,
+          "meanOverall": 81.86666666666666,
+          "roles": {
+            "BAT": 7,
+            "WK-BAT": 2,
+            "AR": 2,
+            "BOWL": 4
+          },
+          "xiRating": 83,
+          "players": [
+            {
+              "id": 61,
+              "name": "Dwayne Bravo",
+              "role": "AR",
+              "overall": 87
+            },
+            {
+              "id": 249,
+              "name": "Mushfiqur Rahim",
+              "role": "WK-BAT",
+              "overall": 73
+            },
+            {
+              "id": 85,
+              "name": "Brett Lee",
+              "role": "BOWL",
+              "overall": 90
+            },
+            {
+              "id": 141,
+              "name": "Shane Warne",
+              "role": "BOWL",
+              "overall": 88
+            },
+            {
+              "id": 122,
+              "name": "Ajantha Mendis",
+              "role": "BOWL",
+              "overall": 77
+            },
+            {
+              "id": 205,
+              "name": "Shoaib Malik",
+              "role": "AR",
+              "overall": 81
+            },
+            {
+              "id": 234,
+              "name": "Upul Tharanga",
+              "role": "BAT",
+              "overall": 77
+            },
+            {
+              "id": 26,
+              "name": "Mohammad Yousuf",
+              "role": "BAT",
+              "overall": 89
+            },
+            {
+              "id": 200,
+              "name": "William Porterfield",
+              "role": "BAT",
+              "overall": 76
+            },
+            {
+              "id": 6,
+              "name": "Kamran Akmal",
+              "role": "WK-BAT",
+              "overall": 79
+            },
+            {
+              "id": 210,
+              "name": "Rana Naved-ul-Hasan",
+              "role": "BOWL",
+              "overall": 82
+            },
+            {
+              "id": 165,
+              "name": "Brad Hodge",
+              "role": "BAT",
+              "overall": 84
+            },
+            {
+              "id": 42,
+              "name": "Simon Katich",
+              "role": "BAT",
+              "overall": 83
+            },
+            {
+              "id": 263,
+              "name": "Murray Goodwin",
+              "role": "BAT",
+              "overall": 82
+            },
+            {
+              "id": 227,
+              "name": "Craig McMillan",
+              "role": "BAT",
+              "overall": 80
+            }
+          ],
+          "keeperCount": 2,
+          "trustedOvers": 15.67
+        },
+        {
+          "club": "NOT",
+          "user": false,
+          "meanOverall": 80.86666666666666,
+          "roles": {
+            "BAT": 6,
+            "WK-BAT": 2,
+            "AR": 3,
+            "BOWL": 4
+          },
+          "xiRating": 83,
+          "players": [
+            {
+              "id": 4,
+              "name": "Brendon McCullum",
+              "role": "WK-BAT",
+              "overall": 89
+            },
+            {
+              "id": 92,
+              "name": "Harbhajan Singh",
+              "role": "BOWL",
+              "overall": 87
+            },
+            {
+              "id": 41,
+              "name": "Mike Hussey",
+              "role": "BAT",
+              "overall": 91
+            },
+            {
+              "id": 144,
+              "name": "Shaun Pollock",
+              "role": "AR",
+              "overall": 89
+            },
+            {
+              "id": 44,
+              "name": "David Warner",
+              "role": "BAT",
+              "overall": 71
+            },
+            {
+              "id": 244,
+              "name": "Ravi Rampaul",
+              "role": "BOWL",
+              "overall": 73
+            },
+            {
+              "id": 63,
+              "name": "Andrew Symonds",
+              "role": "AR",
+              "overall": 84
+            },
+            {
+              "id": 207,
+              "name": "Imran Nazir",
+              "role": "BAT",
+              "overall": 81
+            },
+            {
+              "id": 36,
+              "name": "Ian Bell",
+              "role": "BAT",
+              "overall": 81
+            },
+            {
+              "id": 238,
+              "name": "Dhammika Prasad",
+              "role": "BOWL",
+              "overall": 71
+            },
+            {
+              "id": 79,
+              "name": "Luke Wright",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 25,
+              "name": "Shivnarine Chanderpaul",
+              "role": "BAT",
+              "overall": 87
+            },
+            {
+              "id": 184,
+              "name": "James Foster",
+              "role": "WK-BAT",
+              "overall": 77
+            },
+            {
+              "id": 117,
+              "name": "Kyle Mills",
+              "role": "BOWL",
+              "overall": 76
+            },
+            {
+              "id": 209,
+              "name": "Inzamam-ul-Haq",
+              "role": "BAT",
+              "overall": 80
+            }
+          ],
+          "keeperCount": 2,
+          "trustedOvers": 15.25
+        },
+        {
+          "club": "RCB",
+          "user": true,
+          "meanOverall": 69.06666666666666,
+          "roles": {
+            "BAT": 3,
+            "WK-BAT": 3,
+            "AR": 3,
+            "BOWL": 6
+          },
+          "xiRating": 70,
+          "players": [
+            {
+              "id": 245,
+              "name": "Darren Bravo",
+              "role": "BAT",
+              "overall": 63
+            },
+            {
+              "id": 203,
+              "name": "Chris Jordan",
+              "role": "BOWL",
+              "overall": 65
+            },
+            {
+              "id": 10,
+              "name": "Parthiv Patel",
+              "role": "WK-BAT",
+              "overall": 68
+            },
+            {
+              "id": 71,
+              "name": "Moeen Ali",
+              "role": "AR",
+              "overall": 68
+            },
+            {
+              "id": 177,
+              "name": "Graham Manou",
+              "role": "WK-BAT",
+              "overall": 68
+            },
+            {
+              "id": 53,
+              "name": "Alastair Cook",
+              "role": "BAT",
+              "overall": 69
+            },
+            {
+              "id": 54,
+              "name": "Jonathan Trott",
+              "role": "BAT",
+              "overall": 69
+            },
+            {
+              "id": 12,
+              "name": "Tim Paine",
+              "role": "WK-BAT",
+              "overall": 70
+            },
+            {
+              "id": 99,
+              "name": "Ishant Sharma",
+              "role": "BOWL",
+              "overall": 70
+            },
+            {
+              "id": 134,
+              "name": "Paul Harris",
+              "role": "BOWL",
+              "overall": 70
+            },
+            {
+              "id": 240,
+              "name": "Kaushal Weeraratne",
+              "role": "AR",
+              "overall": 70
+            },
+            {
+              "id": 124,
+              "name": "Farveez Maharoof",
+              "role": "BOWL",
+              "overall": 71
+            },
+            {
+              "id": 228,
+              "name": "Nathan McCullum",
+              "role": "AR",
+              "overall": 71
+            },
+            {
+              "id": 139,
+              "name": "Ben Hilfenhaus",
+              "role": "BOWL",
+              "overall": 72
+            },
+            {
+              "id": 140,
+              "name": "Peter Siddle",
+              "role": "BOWL",
+              "overall": 72
+            }
+          ],
+          "keeperCount": 3,
+          "trustedOvers": 21.21
+        },
+        {
+          "club": "THU",
+          "user": false,
+          "meanOverall": 78.66666666666667,
+          "roles": {
+            "BAT": 6,
+            "WK-BAT": 2,
+            "AR": 5,
+            "BOWL": 2
+          },
+          "xiRating": 82,
+          "players": [
+            {
+              "id": 24,
+              "name": "Gautam Gambhir",
+              "role": "BAT",
+              "overall": 86
+            },
+            {
+              "id": 62,
+              "name": "Daniel Vettori",
+              "role": "AR",
+              "overall": 90
+            },
+            {
+              "id": 182,
+              "name": "Craig Kieswetter",
+              "role": "WK-BAT",
+              "overall": 72
+            },
+            {
+              "id": 58,
+              "name": "Andrew Flintoff",
+              "role": "AR",
+              "overall": 86
+            },
+            {
+              "id": 112,
+              "name": "Steve Harmison",
+              "role": "BOWL",
+              "overall": 83
+            },
+            {
+              "id": 196,
+              "name": "Ryan ten Doeschate",
+              "role": "AR",
+              "overall": 83
+            },
+            {
+              "id": 174,
+              "name": "Xavier Doherty",
+              "role": "BOWL",
+              "overall": 71
+            },
+            {
+              "id": 252,
+              "name": "Aftab Ahmed",
+              "role": "BAT",
+              "overall": 77
+            },
+            {
+              "id": 223,
+              "name": "Ryan McLaren",
+              "role": "AR",
+              "overall": 75
+            },
+            {
+              "id": 8,
+              "name": "Matt Prior",
+              "role": "WK-BAT",
+              "overall": 79
+            },
+            {
+              "id": 154,
+              "name": "Abhishek Nayar",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 235,
+              "name": "Chamara Kapugedera",
+              "role": "BAT",
+              "overall": 74
+            },
+            {
+              "id": 208,
+              "name": "Imran Farhat",
+              "role": "BAT",
+              "overall": 76
+            },
+            {
+              "id": 221,
+              "name": "Loots Bosman",
+              "role": "BAT",
+              "overall": 79
+            },
+            {
+              "id": 171,
+              "name": "Luke Pomersbach",
+              "role": "BAT",
+              "overall": 73
+            }
+          ],
+          "keeperCount": 2,
+          "trustedOvers": 17.93
+        }
+      ]
+    },
+    {
+      "seed": 8708,
+      "user": "STA",
+      "clubs": [
+        {
+          "club": "RR",
+          "user": false,
+          "meanOverall": 76.33333333333333,
+          "roles": {
+            "BAT": 5,
+            "WK-BAT": 2,
+            "AR": 1,
+            "BOWL": 7
+          },
+          "xiRating": 78,
+          "players": [
+            {
+              "id": 17,
+              "name": "Chris Gayle",
+              "role": "BAT",
+              "overall": 91
+            },
+            {
+              "id": 92,
+              "name": "Harbhajan Singh",
+              "role": "BOWL",
+              "overall": 87
+            },
+            {
+              "id": 88,
+              "name": "Shane Bond",
+              "role": "BOWL",
+              "overall": 89
+            },
+            {
+              "id": 152,
+              "name": "Wriddhiman Saha",
+              "role": "WK-BAT",
+              "overall": 71
+            },
+            {
+              "id": 129,
+              "name": "Daren Sammy",
+              "role": "AR",
+              "overall": 78
+            },
+            {
+              "id": 151,
+              "name": "Ambati Rayudu",
+              "role": "BAT",
+              "overall": 74
+            },
+            {
+              "id": 201,
+              "name": "Boyd Rankin",
+              "role": "BOWL",
+              "overall": 72
+            },
+            {
+              "id": 270,
+              "name": "Tim Southee",
+              "role": "BOWL",
+              "overall": 70
+            },
+            {
+              "id": 252,
+              "name": "Aftab Ahmed",
+              "role": "BAT",
+              "overall": 77
+            },
+            {
+              "id": 225,
+              "name": "Rory Kleinveldt",
+              "role": "BOWL",
+              "overall": 71
+            },
+            {
+              "id": 235,
+              "name": "Chamara Kapugedera",
+              "role": "BAT",
+              "overall": 74
+            },
+            {
+              "id": 12,
+              "name": "Tim Paine",
+              "role": "WK-BAT",
+              "overall": 70
+            },
+            {
+              "id": 162,
+              "name": "Manpreet Gony",
+              "role": "BOWL",
+              "overall": 72
+            },
+            {
+              "id": 98,
+              "name": "RP Singh",
+              "role": "BOWL",
+              "overall": 76
+            },
+            {
+              "id": 171,
+              "name": "Luke Pomersbach",
+              "role": "BAT",
+              "overall": 73
+            }
+          ],
+          "keeperCount": 2,
+          "trustedOvers": 21.56
+        },
+        {
+          "club": "DC",
+          "user": false,
+          "meanOverall": 78.4,
+          "roles": {
+            "BAT": 4,
+            "WK-BAT": 2,
+            "AR": 4,
+            "BOWL": 5
+          },
+          "xiRating": 79,
+          "players": [
+            {
+              "id": 89,
+              "name": "Lasith Malinga",
+              "role": "BOWL",
+              "overall": 94
+            },
+            {
+              "id": 9,
+              "name": "Dinesh Karthik",
+              "role": "WK-BAT",
+              "overall": 77
+            },
+            {
+              "id": 103,
+              "name": "Amit Mishra",
+              "role": "BOWL",
+              "overall": 82
+            },
+            {
+              "id": 44,
+              "name": "David Warner",
+              "role": "BAT",
+              "overall": 71
+            },
+            {
+              "id": 121,
+              "name": "Nuwan Kulasekara",
+              "role": "BOWL",
+              "overall": 77
+            },
+            {
+              "id": 65,
+              "name": "Irfan Pathan",
+              "role": "AR",
+              "overall": 78
+            },
+            {
+              "id": 179,
+              "name": "Joe Denly",
+              "role": "BAT",
+              "overall": 75
+            },
+            {
+              "id": 125,
+              "name": "Jerome Taylor",
+              "role": "BOWL",
+              "overall": 80
+            },
+            {
+              "id": 69,
+              "name": "Ravi Bopara",
+              "role": "AR",
+              "overall": 77
+            },
+            {
+              "id": 206,
+              "name": "Salman Butt",
+              "role": "BAT",
+              "overall": 78
+            },
+            {
+              "id": 154,
+              "name": "Abhishek Nayar",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 212,
+              "name": "Mohammad Sami",
+              "role": "BOWL",
+              "overall": 79
+            },
+            {
+              "id": 256,
+              "name": "Elton Chigumbura",
+              "role": "AR",
+              "overall": 78
+            },
+            {
+              "id": 7,
+              "name": "Brad Haddin",
+              "role": "WK-BAT",
+              "overall": 78
+            },
+            {
+              "id": 208,
+              "name": "Imran Farhat",
+              "role": "BAT",
+              "overall": 76
+            }
+          ],
+          "keeperCount": 2,
+          "trustedOvers": 22.82
+        },
+        {
+          "club": "NOT",
+          "user": false,
+          "meanOverall": 78.4,
+          "roles": {
+            "BAT": 4,
+            "WK-BAT": 2,
+            "AR": 3,
+            "BOWL": 6
+          },
+          "xiRating": 81,
+          "players": [
+            {
+              "id": 84,
+              "name": "Dale Steyn",
+              "role": "BOWL",
+              "overall": 92
+            },
+            {
+              "id": 241,
+              "name": "Denesh Ramdin",
+              "role": "WK-BAT",
+              "overall": 76
+            },
+            {
+              "id": 109,
+              "name": "Stuart Broad",
+              "role": "BOWL",
+              "overall": 80
+            },
+            {
+              "id": 135,
+              "name": "Johan Botha",
+              "role": "AR",
+              "overall": 77
+            },
+            {
+              "id": 43,
+              "name": "Shaun Marsh",
+              "role": "BAT",
+              "overall": 79
+            },
+            {
+              "id": 244,
+              "name": "Ravi Rampaul",
+              "role": "BOWL",
+              "overall": 73
+            },
+            {
+              "id": 63,
+              "name": "Andrew Symonds",
+              "role": "AR",
+              "overall": 84
+            },
+            {
+              "id": 207,
+              "name": "Imran Nazir",
+              "role": "BAT",
+              "overall": 81
+            },
+            {
+              "id": 8,
+              "name": "Matt Prior",
+              "role": "WK-BAT",
+              "overall": 79
+            },
+            {
+              "id": 76,
+              "name": "Abdul Razzaq",
+              "role": "AR",
+              "overall": 80
+            },
+            {
+              "id": 238,
+              "name": "Dhammika Prasad",
+              "role": "BOWL",
+              "overall": 71
+            },
+            {
+              "id": 193,
+              "name": "Graham Onions",
+              "role": "BOWL",
+              "overall": 76
+            },
+            {
+              "id": 164,
+              "name": "Siddharth Trivedi",
+              "role": "BOWL",
+              "overall": 72
+            },
+            {
+              "id": 221,
+              "name": "Loots Bosman",
+              "role": "BAT",
+              "overall": 79
+            },
+            {
+              "id": 181,
+              "name": "Michael Lumb",
+              "role": "BAT",
+              "overall": 77
+            }
+          ],
+          "keeperCount": 2,
+          "trustedOvers": 15.939999999999998
+        },
+        {
+          "club": "YOR",
+          "user": false,
+          "meanOverall": 80.6,
+          "roles": {
+            "BAT": 1,
+            "WK-BAT": 3,
+            "AR": 4,
+            "BOWL": 7
+          },
+          "xiRating": 81,
+          "players": [
+            {
+              "id": 61,
+              "name": "Dwayne Bravo",
+              "role": "AR",
+              "overall": 87
+            },
+            {
+              "id": 2,
+              "name": "Adam Gilchrist",
+              "role": "WK-BAT",
+              "overall": 88
+            },
+            {
+              "id": 141,
+              "name": "Shane Warne",
+              "role": "BOWL",
+              "overall": 88
+            },
+            {
+              "id": 222,
+              "name": "Hashim Amla",
+              "role": "BAT",
+              "overall": 78
+            },
+            {
+              "id": 90,
+              "name": "Zaheer Khan",
+              "role": "BOWL",
+              "overall": 85
+            },
+            {
+              "id": 158,
+              "name": "Munaf Patel",
+              "role": "BOWL",
+              "overall": 75
+            },
+            {
+              "id": 94,
+              "name": "Shoaib Akhtar",
+              "role": "BOWL",
+              "overall": 86
+            },
+            {
+              "id": 126,
+              "name": "Fidel Edwards",
+              "role": "BOWL",
+              "overall": 80
+            },
+            {
+              "id": 185,
+              "name": "Steven Davies",
+              "role": "WK-BAT",
+              "overall": 73
+            },
+            {
+              "id": 184,
+              "name": "James Foster",
+              "role": "WK-BAT",
+              "overall": 77
+            },
+            {
+              "id": 229,
+              "name": "James Franklin",
+              "role": "AR",
+              "overall": 77
+            },
+            {
+              "id": 187,
+              "name": "Peter Trego",
+              "role": "AR",
+              "overall": 78
+            },
+            {
+              "id": 133,
+              "name": "Andre Nel",
+              "role": "BOWL",
+              "overall": 81
+            },
+            {
+              "id": 66,
+              "name": "Albie Morkel",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 258,
+              "name": "Ray Price",
+              "role": "BOWL",
+              "overall": 80
+            }
+          ],
+          "keeperCount": 3,
+          "trustedOvers": 25.88
+        },
+        {
+          "club": "RCB",
+          "user": false,
+          "meanOverall": 80.26666666666667,
+          "roles": {
+            "BAT": 6,
+            "WK-BAT": 2,
+            "AR": 2,
+            "BOWL": 5
+          },
+          "xiRating": 82,
+          "players": [
+            {
+              "id": 4,
+              "name": "Brendon McCullum",
+              "role": "WK-BAT",
+              "overall": 89
+            },
+            {
+              "id": 57,
+              "name": "Shane Watson",
+              "role": "AR",
+              "overall": 88
+            },
+            {
+              "id": 85,
+              "name": "Brett Lee",
+              "role": "BOWL",
+              "overall": 90
+            },
+            {
+              "id": 49,
+              "name": "JP Duminy",
+              "role": "BAT",
+              "overall": 78
+            },
+            {
+              "id": 97,
+              "name": "Sohail Tanvir",
+              "role": "BOWL",
+              "overall": 80
+            },
+            {
+              "id": 71,
+              "name": "Moeen Ali",
+              "role": "AR",
+              "overall": 68
+            },
+            {
+              "id": 173,
+              "name": "Clint McKay",
+              "role": "BOWL",
+              "overall": 71
+            },
+            {
+              "id": 183,
+              "name": "Phil Mustard",
+              "role": "WK-BAT",
+              "overall": 79
+            },
+            {
+              "id": 102,
+              "name": "Piyush Chawla",
+              "role": "BOWL",
+              "overall": 72
+            },
+            {
+              "id": 25,
+              "name": "Shivnarine Chanderpaul",
+              "role": "BAT",
+              "overall": 87
+            },
+            {
+              "id": 178,
+              "name": "Marcus Trescothick",
+              "role": "BAT",
+              "overall": 84
+            },
+            {
+              "id": 138,
+              "name": "Dirk Nannes",
+              "role": "BOWL",
+              "overall": 83
+            },
+            {
+              "id": 166,
+              "name": "Adam Voges",
+              "role": "BAT",
+              "overall": 79
+            },
+            {
+              "id": 170,
+              "name": "Travis Birt",
+              "role": "BAT",
+              "overall": 76
+            },
+            {
+              "id": 227,
+              "name": "Craig McMillan",
+              "role": "BAT",
+              "overall": 80
+            }
+          ],
+          "keeperCount": 2,
+          "trustedOvers": 17
+        },
+        {
+          "club": "SIX",
+          "user": false,
+          "meanOverall": 80.2,
+          "roles": {
+            "BAT": 5,
+            "WK-BAT": 2,
+            "AR": 2,
+            "BOWL": 6
+          },
+          "xiRating": 81,
+          "players": [
+            {
+              "id": 95,
+              "name": "Umar Gul",
+              "role": "BOWL",
+              "overall": 89
+            },
+            {
+              "id": 254,
+              "name": "Brendan Taylor",
+              "role": "WK-BAT",
+              "overall": 76
+            },
+            {
+              "id": 58,
+              "name": "Andrew Flintoff",
+              "role": "AR",
+              "overall": 86
+            },
+            {
+              "id": 113,
+              "name": "Monty Panesar",
+              "role": "BOWL",
+              "overall": 82
+            },
+            {
+              "id": 122,
+              "name": "Ajantha Mendis",
+              "role": "BOWL",
+              "overall": 77
+            },
+            {
+              "id": 205,
+              "name": "Shoaib Malik",
+              "role": "AR",
+              "overall": 81
+            },
+            {
+              "id": 26,
+              "name": "Mohammad Yousuf",
+              "role": "BAT",
+              "overall": 89
+            },
+            {
+              "id": 182,
+              "name": "Craig Kieswetter",
+              "role": "WK-BAT",
+              "overall": 72
+            },
+            {
+              "id": 16,
+              "name": "Matthew Hayden",
+              "role": "BAT",
+              "overall": 86
+            },
+            {
+              "id": 200,
+              "name": "William Porterfield",
+              "role": "BAT",
+              "overall": 76
+            },
+            {
+              "id": 37,
+              "name": "Robin Uthappa",
+              "role": "BAT",
+              "overall": 75
+            },
+            {
+              "id": 110,
+              "name": "James Anderson",
+              "role": "BOWL",
+              "overall": 79
+            },
+            {
+              "id": 263,
+              "name": "Murray Goodwin",
+              "role": "BAT",
+              "overall": 82
+            },
+            {
+              "id": 117,
+              "name": "Kyle Mills",
+              "role": "BOWL",
+              "overall": 76
+            },
+            {
+              "id": 114,
+              "name": "Graeme Swann",
+              "role": "BOWL",
+              "overall": 77
+            }
+          ],
+          "keeperCount": 2,
+          "trustedOvers": 23.41
+        },
+        {
+          "club": "SCO",
+          "user": false,
+          "meanOverall": 79,
+          "roles": {
+            "BAT": 5,
+            "WK-BAT": 2,
+            "AR": 3,
+            "BOWL": 5
+          },
+          "xiRating": 80,
+          "players": [
+            {
+              "id": 86,
+              "name": "Mitchell Johnson",
+              "role": "BOWL",
+              "overall": 86
+            },
+            {
+              "id": 62,
+              "name": "Daniel Vettori",
+              "role": "AR",
+              "overall": 90
+            },
+            {
+              "id": 255,
+              "name": "Tatenda Taibu",
+              "role": "WK-BAT",
+              "overall": 79
+            },
+            {
+              "id": 167,
+              "name": "George Bailey",
+              "role": "BAT",
+              "overall": 74
+            },
+            {
+              "id": 257,
+              "name": "Hamilton Masakadza",
+              "role": "BAT",
+              "overall": 77
+            },
+            {
+              "id": 243,
+              "name": "Lendl Simmons",
+              "role": "BAT",
+              "overall": 75
+            },
+            {
+              "id": 112,
+              "name": "Steve Harmison",
+              "role": "BOWL",
+              "overall": 83
+            },
+            {
+              "id": 123,
+              "name": "Dilhara Fernando",
+              "role": "BOWL",
+              "overall": 81
+            },
+            {
+              "id": 190,
+              "name": "Chris Woakes",
+              "role": "AR",
+              "overall": 71
+            },
+            {
+              "id": 199,
+              "name": "Kevin O'Brien",
+              "role": "AR",
+              "overall": 76
+            },
+            {
+              "id": 253,
+              "name": "Shahriar Nafees",
+              "role": "BAT",
+              "overall": 75
+            },
+            {
+              "id": 210,
+              "name": "Rana Naved-ul-Hasan",
+              "role": "BOWL",
+              "overall": 82
+            },
+            {
+              "id": 111,
+              "name": "Ryan Sidebottom",
+              "role": "BOWL",
+              "overall": 81
+            },
+            {
+              "id": 198,
+              "name": "Niall O'Brien",
+              "role": "WK-BAT",
+              "overall": 75
+            },
+            {
+              "id": 209,
+              "name": "Inzamam-ul-Haq",
+              "role": "BAT",
+              "overall": 80
+            }
+          ],
+          "keeperCount": 2,
+          "trustedOvers": 22.909999999999997
+        },
+        {
+          "club": "STA",
+          "user": true,
+          "meanOverall": 68.26666666666667,
+          "roles": {
+            "BAT": 3,
+            "WK-BAT": 2,
+            "AR": 4,
+            "BOWL": 6
+          },
+          "xiRating": 70,
+          "players": [
+            {
+              "id": 246,
+              "name": "Andre Russell",
+              "role": "AR",
+              "overall": 64
+            },
+            {
+              "id": 192,
+              "name": "Steven Finn",
+              "role": "BOWL",
+              "overall": 65
+            },
+            {
+              "id": 224,
+              "name": "Wayne Parnell",
+              "role": "BOWL",
+              "overall": 66
+            },
+            {
+              "id": 72,
+              "name": "Kieron Pollard",
+              "role": "AR",
+              "overall": 67
+            },
+            {
+              "id": 10,
+              "name": "Parthiv Patel",
+              "role": "WK-BAT",
+              "overall": 68
+            },
+            {
+              "id": 155,
+              "name": "Rajat Bhatia",
+              "role": "AR",
+              "overall": 68
+            },
+            {
+              "id": 54,
+              "name": "Jonathan Trott",
+              "role": "BAT",
+              "overall": 69
+            },
+            {
+              "id": 55,
+              "name": "Marcus North",
+              "role": "BAT",
+              "overall": 69
+            },
+            {
+              "id": 119,
+              "name": "Jeetan Patel",
+              "role": "BOWL",
+              "overall": 69
+            },
+            {
+              "id": 153,
+              "name": "Mohammad Kaif",
+              "role": "BAT",
+              "overall": 69
+            },
+            {
+              "id": 11,
+              "name": "Luke Ronchi",
+              "role": "WK-BAT",
+              "overall": 70
+            },
+            {
+              "id": 99,
+              "name": "Ishant Sharma",
+              "role": "BOWL",
+              "overall": 70
+            },
+            {
+              "id": 132,
+              "name": "Nantie Hayward",
+              "role": "BOWL",
+              "overall": 70
+            },
+            {
+              "id": 134,
+              "name": "Paul Harris",
+              "role": "BOWL",
+              "overall": 70
+            },
+            {
+              "id": 240,
+              "name": "Kaushal Weeraratne",
+              "role": "AR",
+              "overall": 70
+            }
+          ],
+          "keeperCount": 2,
+          "trustedOvers": 17.169999999999998
+        }
+      ]
+    }
+  ]
+}

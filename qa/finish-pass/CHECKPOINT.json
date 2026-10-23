@@ -1,0 +1,61 @@
+{
+  "status": "Final all-rounder correction under verification; not published",
+  "hash": "3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf",
+  "blob": "f5059bb1890951b9816c8cdf57670d6b21e0d0f2",
+  "baseCommit": "2b604dc15ebf1242730728d12123c896cb23aab0",
+  "implemented": [
+    "Strongest specialist-equivalent floor for AR in new careers",
+    "Frozen legacy and preceding role-fit-v1 evaluators",
+    "Numerical scouting confidence separated from identity links"
+  ],
+  "initialPasses": [
+    "10001 AR/skill invariants",
+    "5165 numeric regressions",
+    "845 persistence/privacy",
+    "11129 legacy evaluator comparisons"
+  ],
+  "running": [
+    "fresh 19-season full UI career seed8602 club index1",
+    "72 old save comparisons",
+    "8 worlds x4 strategy policies",
+    "75 regression scripts",
+    "8 real CPU drafts",
+    "source assessment refresh"
+  ],
+  "browserNote": "Runtime cache reset between turns; restoring browser engines before exact-final browser rerun",
+  "open": [
+    "Historical rating calibration and unresolved identities",
+    "Uncoached and returning human playtest",
+    "Physical device and screen-reader sessions"
+  ],
+  "completedExactBuild": {
+    "browserCases": 162,
+    "engines": [
+      "Chromium",
+      "Firefox",
+      "WebKit"
+    ],
+    "controlledInnings": 20000,
+    "saveCheckpoints": 72,
+    "saveComparisons": 30168,
+    "cpuDrafts": 8,
+    "cpuSquads": 64,
+    "cpuChecks": 600,
+    "chaosChecks": 141,
+    "numericChecks": 5165,
+    "ARSkillInvariants": 10001,
+    "persistencePrivacy": 845,
+    "frozenEvaluatorComparisons": 11129,
+    "careerDistributionWorldDraws": 10000,
+    "maxOverallContractGap": 0
+  },
+  "preservedRawInputs": [
+    "GCC_Cricsheet_Source_Snapshot_20261024.zip",
+    "GCC_QA_Save_Fixtures_20261024.tar.xz"
+  ],
+  "remainingLongRuns": [
+    "fresh career currently through2017",
+    "full regression batch and isolated long-suite rechecks",
+    "32 controlled policy cohorts"
+  ]
+}

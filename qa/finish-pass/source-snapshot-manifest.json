@@ -1,0 +1,42 @@
+{
+  "sources": [
+    {
+      "url": "https://cricsheet.org/downloads/bbl_json.zip",
+      "sha256": "7946b113c55ff4be695b2f0f7fccd12b8ce8afd652a67784a81bd6109f9b5907",
+      "bytes": 2706940,
+      "matches": 662,
+      "earliest": "2011-12-16",
+      "latest": "2026-01-25"
+    },
+    {
+      "url": "https://cricsheet.org/downloads/ipl_json.zip",
+      "sha256": "5757e04287179767ff8495f02902bd13812b9572ec8fa2ac1347ec2e9c6d4709",
+      "bytes": 5187770,
+      "matches": 1243,
+      "earliest": "2008-04-18",
+      "latest": "2026-05-31"
+    },
+    {
+      "url": "https://cricsheet.org/downloads/ntb_json.zip",
+      "sha256": "a9461d44a3209ce29ed7012cb3e2046725633e37fa7016d82f58c57ad8df307a",
+      "bytes": 6203980,
+      "matches": 1570,
+      "earliest": "2014-05-16",
+      "latest": "2026-07-18"
+    },
+    {
+      "url": "https://cricsheet.org/downloads/t20s_male_json.zip",
+      "sha256": "95305bc2dae8dcce7b8da7755f3992521874b14598ea5828129f37834e8b860a",
+      "bytes": 14479929,
+      "matches": 3627,
+      "earliest": "2005-02-17",
+      "latest": "2026-10-14"
+    }
+  ],
+  "register": {
+    "url": "https://cricsheet.org/register/people.csv",
+    "sha256": "a643e7f4479c7e6d448c9ab8d36b1254917d3de356b707f728612ab47113a08f"
+  },
+  "attribution": "Cricsheet.org; original archive LICENSE.txt files retained. Raw archives captured for reproducibility, not independent certification of game ratings.",
+  "scope": "Four published original match archives and people register; snapshot used for GCC numerical assessment."
+}

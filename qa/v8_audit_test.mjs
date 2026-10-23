@@ -22,8 +22,9 @@ const p=X.roster()[0];X.squadProfile();const old=p.fielding;p.fielding=old===99?
 assert.ok(ar.context.GCC8.views.result().includes('data-action="matchday"'));checks++;
 // Storage-denied boot and write failures retain a usable current session.
 const blocked=host(undefined,{storageBlocked:true});assert.equal(blocked.context.GCC8.ui.view,'home');assert.equal(blocked.context.GCC8.hasSave(),false);checks+=2;
-call(blocked,'play');call(blocked,'how');call(blocked,'close');assert.ok(blocked.context.GCC8_CLOCK.paused);checks++;call(blocked,'world');assert.ok(blocked.get('g8feedback').textContent.includes('could not save'));call(blocked,'home');call(blocked,'continue');assert.equal(blocked.context.GCC8.ui.view,'leagueDraw');checks+=2;blocked.document.hidden=true;call(blocked,'how');call(blocked,'close');assert.ok(blocked.context.GCC8_CLOCK.paused);checks++;
+call(blocked,'play');call(blocked,'how');call(blocked,'close');assert.ok(blocked.context.GCC8_CLOCK.paused);checks++;call(blocked,'world');assert.ok(blocked.get('g8hud').innerHTML.includes('Progress not saved')&&blocked.get('g8hud').innerHTML.includes('could not save'));call(blocked,'home');call(blocked,'continue');assert.equal(blocked.context.GCC8.ui.view,'leagueDraw');checks+=2;blocked.document.hidden=true;call(blocked,'how');call(blocked,'close');assert.ok(blocked.context.GCC8_CLOCK.paused);checks++;
 // Malformed arguments and stale draft buttons cannot mutate a market stage.
 assert.equal(X.dispatch('inspect',null),false);checks++;X.ui.view='dynasty';s.dynasty.offseason={phase:'market'};const prior=JSON.stringify(s);assert.equal(X.dispatch('skipPick'),false);assert.equal(JSON.stringify(s),prior);checks+=2;
 assert.equal(reload.errors.length+ar.errors.length,0);checks++;
 const result={scope:'VM adversarial saves, storage failures, resume context and stale-command checks; no browser rendering or server exists in this standalone build.',checks,expectedCorruptSaveErrors:h.errors.length,expectedStorageErrors:blocked.errors.length};fs.writeFileSync('qa/v8_audit_results.json',JSON.stringify(result,null,2)+'\n');console.log(result);
+

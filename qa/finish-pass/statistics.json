@@ -1,0 +1,951 @@
+{
+  "roleIdentityReviewFlags": [
+    {
+      "name": "Daniel Vettori",
+      "primaryFamily": "bowling",
+      "battingPeak": 58,
+      "roleWindows": [
+        {
+          "from": 2008,
+          "to": 2026,
+          "role": "AR",
+          "preferredSlot": 7
+        }
+      ],
+      "status": "Review role identity against T20 evidence; heuristic flag, not automatic reclassification"
+    },
+    {
+      "name": "Ravichandran Ashwin",
+      "primaryFamily": "bowling",
+      "battingPeak": 48,
+      "roleWindows": [
+        {
+          "from": 2008,
+          "to": 2026,
+          "role": "AR",
+          "preferredSlot": 8
+        }
+      ],
+      "status": "Review role identity against T20 evidence; heuristic flag, not automatic reclassification"
+    },
+    {
+      "name": "Chris Woakes",
+      "primaryFamily": "bowling",
+      "battingPeak": 57,
+      "roleWindows": [
+        {
+          "from": 2008,
+          "to": 2026,
+          "role": "AR",
+          "preferredSlot": 8
+        }
+      ],
+      "status": "Review role identity against T20 evidence; heuristic flag, not automatic reclassification"
+    },
+    {
+      "name": "Adil Rashid",
+      "primaryFamily": "bowling",
+      "battingPeak": 38,
+      "roleWindows": [
+        {
+          "from": 2008,
+          "to": 2026,
+          "role": "AR",
+          "preferredSlot": 8
+        }
+      ],
+      "status": "Review role identity against T20 evidence; heuristic flag, not automatic reclassification"
+    },
+    {
+      "name": "Yasir Arafat",
+      "primaryFamily": "bowling",
+      "battingPeak": 55,
+      "roleWindows": [
+        {
+          "from": 2008,
+          "to": 2026,
+          "role": "AR",
+          "preferredSlot": 7
+        }
+      ],
+      "status": "Review role identity against T20 evidence; heuristic flag, not automatic reclassification"
+    },
+    {
+      "name": "Ryan McLaren",
+      "primaryFamily": "bowling",
+      "battingPeak": 57,
+      "roleWindows": [
+        {
+          "from": 2008,
+          "to": 2026,
+          "role": "AR",
+          "preferredSlot": 7
+        }
+      ],
+      "status": "Review role identity against T20 evidence; heuristic flag, not automatic reclassification"
+    },
+    {
+      "name": "Nathan McCullum",
+      "primaryFamily": "bowling",
+      "battingPeak": 57,
+      "roleWindows": [
+        {
+          "from": 2008,
+          "to": 2026,
+          "role": "AR",
+          "preferredSlot": 8
+        }
+      ],
+      "status": "Review role identity against T20 evidence; heuristic flag, not automatic reclassification"
+    },
+    {
+      "name": "David Willey",
+      "primaryFamily": "bowling",
+      "battingPeak": 58,
+      "roleWindows": [
+        {
+          "from": 2008,
+          "to": 2026,
+          "role": "AR",
+          "preferredSlot": 8
+        }
+      ],
+      "status": "Review role identity against T20 evidence; heuristic flag, not automatic reclassification"
+    },
+    {
+      "name": "Tom Curran",
+      "primaryFamily": "bowling",
+      "battingPeak": 57,
+      "roleWindows": [
+        {
+          "from": 2008,
+          "to": 2026,
+          "role": "AR",
+          "preferredSlot": 8
+        }
+      ],
+      "status": "Review role identity against T20 evidence; heuristic flag, not automatic reclassification"
+    },
+    {
+      "name": "Rashid Khan",
+      "primaryFamily": "bowling",
+      "battingPeak": 59,
+      "roleWindows": [
+        {
+          "from": 2008,
+          "to": 2026,
+          "role": "AR",
+          "preferredSlot": 8
+        }
+      ],
+      "status": "Review role identity against T20 evidence; heuristic flag, not automatic reclassification"
+    },
+    {
+      "name": "Marco Jansen",
+      "primaryFamily": "bowling",
+      "battingPeak": 59,
+      "roleWindows": [
+        {
+          "from": 2008,
+          "to": 2026,
+          "role": "AR",
+          "preferredSlot": 8
+        }
+      ],
+      "status": "Review role identity against T20 evidence; heuristic flag, not automatic reclassification"
+    },
+    {
+      "name": "Rehan Ahmed",
+      "primaryFamily": "bowling",
+      "battingPeak": 54,
+      "roleWindows": [
+        {
+          "from": 2008,
+          "to": 2026,
+          "role": "AR",
+          "preferredSlot": 8
+        }
+      ],
+      "status": "Review role identity against T20 evidence; heuristic flag, not automatic reclassification"
+    },
+    {
+      "name": "Michael Neser",
+      "primaryFamily": "bowling",
+      "battingPeak": 57,
+      "roleWindows": [
+        {
+          "from": 2008,
+          "to": 2026,
+          "role": "AR",
+          "preferredSlot": 8
+        }
+      ],
+      "status": "Review role identity against T20 evidence; heuristic flag, not automatic reclassification"
+    }
+  ],
+  "scope": "Independent diagnostic only. Pooled repeated player-year windows are correlated; no p-values or causal calibration claims. Historical six-over PP differs from GCC surge. Comparisons depend on reviewable identity mappings and selected archives. Positive rank association is not certification; weak association remains a release watch.",
+  "sourceMatches": 7102,
+  "mappedPlayers": 339,
+  "playersWithDeliveries": 325,
+  "unresolvedIdentities": 73,
+  "phaseRankAssociation": [
+    {
+      "kind": "bat",
+      "phase": "pp",
+      "playerWindows": 697,
+      "uniquePlayers": 108,
+      "pooledSpearman": 0.293931874027697,
+      "expectedBaselineSpearman": 0.3106835282049982
+    },
+    {
+      "kind": "bat",
+      "phase": "middle",
+      "playerWindows": 1077,
+      "uniquePlayers": 157,
+      "pooledSpearman": 0.30677671907732074,
+      "expectedBaselineSpearman": 0.3403946659828006
+    },
+    {
+      "kind": "bat",
+      "phase": "death",
+      "playerWindows": 344,
+      "uniquePlayers": 72,
+      "pooledSpearman": 0.3870018657557105,
+      "expectedBaselineSpearman": 0.3794126653611758
+    },
+    {
+      "kind": "bowl",
+      "phase": "pp",
+      "playerWindows": 627,
+      "uniquePlayers": 101,
+      "pooledSpearman": 0.04070895212039859,
+      "expectedBaselineSpearman": 0.03488181208895193
+    },
+    {
+      "kind": "bowl",
+      "phase": "middle",
+      "playerWindows": 755,
+      "uniquePlayers": 125,
+      "pooledSpearman": 0.15123409270451646,
+      "expectedBaselineSpearman": 0.18215332335785273
+    },
+    {
+      "kind": "bowl",
+      "phase": "death",
+      "playerWindows": 408,
+      "uniquePlayers": 84,
+      "pooledSpearman": 0.06557495081825583,
+      "expectedBaselineSpearman": 0.07172476827749422
+    }
+  ],
+  "population": [
+    {
+      "year": 2008,
+      "beforeMeanOverall": 76.69259259259259,
+      "afterMeanOverall": 77.28518518518518,
+      "beforeEliteCount": 9.0,
+      "afterEliteCount": 10.0
+    },
+    {
+      "year": 2013,
+      "beforeMeanOverall": 77.25612745098039,
+      "afterMeanOverall": 76.68545751633987,
+      "beforeEliteCount": 28.5,
+      "afterEliteCount": 22.75
+    },
+    {
+      "year": 2018,
+      "beforeMeanOverall": 76.50332225913621,
+      "afterMeanOverall": 75.18812292358804,
+      "beforeEliteCount": 30.875,
+      "afterEliteCount": 20.25
+    },
+    {
+      "year": 2023,
+      "beforeMeanOverall": 79.70464601769912,
+      "afterMeanOverall": 77.74225663716814,
+      "beforeEliteCount": 29.625,
+      "afterEliteCount": 16.75
+    },
+    {
+      "year": 2026,
+      "beforeMeanOverall": 82.66568047337277,
+      "afterMeanOverall": 80.42529585798816,
+      "beforeEliteCount": 27.5,
+      "afterEliteCount": 16.25
+    }
+  ],
+  "maxRawRoleCompositeGapDiagnosticOnly": 20.930000000000007,
+  "maxNewOverallContractGap": 0,
+  "sourceManifest": [
+    {
+      "url": "https://cricsheet.org/downloads/bbl_json.zip",
+      "sha256": "7946b113c55ff4be695b2f0f7fccd12b8ce8afd652a67784a81bd6109f9b5907",
+      "bytes": 2706940,
+      "matches": 662,
+      "earliest": "2011-12-16",
+      "latest": "2026-01-25"
+    },
+    {
+      "url": "https://cricsheet.org/downloads/ipl_json.zip",
+      "sha256": "5757e04287179767ff8495f02902bd13812b9572ec8fa2ac1347ec2e9c6d4709",
+      "bytes": 5187770,
+      "matches": 1243,
+      "earliest": "2008-04-18",
+      "latest": "2026-05-31"
+    },
+    {
+      "url": "https://cricsheet.org/downloads/ntb_json.zip",
+      "sha256": "a9461d44a3209ce29ed7012cb3e2046725633e37fa7016d82f58c57ad8df307a",
+      "bytes": 6203980,
+      "matches": 1570,
+      "earliest": "2014-05-16",
+      "latest": "2026-07-18"
+    },
+    {
+      "url": "https://cricsheet.org/downloads/t20s_male_json.zip",
+      "sha256": "95305bc2dae8dcce7b8da7755f3992521874b14598ea5828129f37834e8b860a",
+      "bytes": 14479929,
+      "matches": 3627,
+      "earliest": "2005-02-17",
+      "latest": "2026-10-14"
+    }
+  ],
+  "register": {
+    "url": "https://cricsheet.org/register/people.csv",
+    "sha256": "a643e7f4479c7e6d448c9ab8d36b1254917d3de356b707f728612ab47113a08f"
+  },
+  "identityExceptions": [
+    {
+      "name": "Dinesh Karthik",
+      "candidates": []
+    },
+    {
+      "name": "Parthiv Patel",
+      "candidates": [
+        "PA Patel",
+        "P Jayeshbhai Patel"
+      ]
+    },
+    {
+      "name": "Graeme Smith",
+      "candidates": [
+        "GC Smith",
+        "GJ Smith",
+        "GM Smith",
+        "GP Smith",
+        "G Smith"
+      ]
+    },
+    {
+      "name": "Yuvraj Singh",
+      "candidates": [
+        "Yuvraj Singh",
+        "Yuvraj Singh"
+      ]
+    },
+    {
+      "name": "Mahela Jayawardene",
+      "candidates": []
+    },
+    {
+      "name": "Ross Taylor",
+      "candidates": [
+        "RML Taylor",
+        "RR Taylor",
+        "RW Taylor"
+      ]
+    },
+    {
+      "name": "Tillakaratne Dilshan",
+      "candidates": [
+        "T Dilshan",
+        "TM Dilshan"
+      ]
+    },
+    {
+      "name": "Rohit Sharma",
+      "candidates": [
+        "Rohit Sharma",
+        "Rohit Sharma"
+      ]
+    },
+    {
+      "name": "Jonathan Trott",
+      "candidates": []
+    },
+    {
+      "name": "Cameron White",
+      "candidates": [
+        "CJ White",
+        "CL White",
+        "C White"
+      ]
+    },
+    {
+      "name": "Shahid Afridi",
+      "candidates": [
+        "Shahid Afridi",
+        "Shahid Afridi"
+      ]
+    },
+    {
+      "name": "Albie Morkel",
+      "candidates": []
+    },
+    {
+      "name": "Dimitri Mascarenhas",
+      "candidates": []
+    },
+    {
+      "name": "Jesse Ryder",
+      "candidates": [
+        "JD Ryder",
+        "J Ryder"
+      ]
+    },
+    {
+      "name": "Mitchell Johnson",
+      "candidates": [
+        "MA Johnson",
+        "MG Johnson",
+        "MR Johnson"
+      ]
+    },
+    {
+      "name": "Chaminda Vaas",
+      "candidates": []
+    },
+    {
+      "name": "Mohammad Asif",
+      "candidates": [
+        "Mohammad Asif",
+        "Mohammad Asif",
+        "Mohammad Asif"
+      ]
+    },
+    {
+      "name": "RP Singh",
+      "candidates": [
+        "RP Singh",
+        "RP Singh"
+      ]
+    },
+    {
+      "name": "Praveen Kumar",
+      "candidates": [
+        "P Kumar",
+        "PM Sarvesh Kumar",
+        "P Saravana Kumar",
+        "PS Kumar"
+      ]
+    },
+    {
+      "name": "Amit Mishra",
+      "candidates": [
+        "Amit Mishra",
+        "Amit Mishra"
+      ]
+    },
+    {
+      "name": "Shaun Tait",
+      "candidates": [
+        "S Tait",
+        "SW Tait"
+      ]
+    },
+    {
+      "name": "Brad Hogg",
+      "candidates": []
+    },
+    {
+      "name": "Ryan Sidebottom",
+      "candidates": [
+        "RJ Sidebottom",
+        "RN Sidebottom"
+      ]
+    },
+    {
+      "name": "Chris Martin",
+      "candidates": [
+        "C Martin",
+        "CS Martin"
+      ]
+    },
+    {
+      "name": "Jeetan Patel",
+      "candidates": [
+        "JH Patel",
+        "JM Patel",
+        "JS Patel"
+      ]
+    },
+    {
+      "name": "Nuwan Kulasekara",
+      "candidates": []
+    },
+    {
+      "name": "Ajantha Mendis",
+      "candidates": []
+    },
+    {
+      "name": "Farveez Maharoof",
+      "candidates": []
+    },
+    {
+      "name": "Jerome Taylor",
+      "candidates": [
+        "JE Taylor",
+        "JMR Taylor",
+        "JM Taylor",
+        "JO Taylor",
+        "JPA Taylor",
+        "JP Taylor",
+        "JWA Taylor"
+      ]
+    },
+    {
+      "name": "Nantie Hayward",
+      "candidates": []
+    },
+    {
+      "name": "Paul Harris",
+      "candidates": [
+        "PGZ Harris",
+        "PL Harris"
+      ]
+    },
+    {
+      "name": "Johan Botha",
+      "candidates": [
+        "J Botha",
+        "J Botha"
+      ]
+    },
+    {
+      "name": "Rajat Bhatia",
+      "candidates": [
+        "R Bhatia",
+        "RN Bhatia"
+      ]
+    },
+    {
+      "name": "Munaf Patel",
+      "candidates": [
+        "MC Patel",
+        "MD Patel",
+        "MIA Patel",
+        "MK Patel",
+        "MK Patel",
+        "ML Patel",
+        "MM Patel",
+        "MM Patel",
+        "M Patel",
+        "M Sohel Patel"
+      ]
+    },
+    {
+      "name": "Vinay Kumar",
+      "candidates": [
+        "V Jatinder Kumar",
+        "VV Kumar"
+      ]
+    },
+    {
+      "name": "Joe Denly",
+      "candidates": [
+        "JK Denly",
+        "JL Denly"
+      ]
+    },
+    {
+      "name": "James Foster",
+      "candidates": [
+        "J Foster",
+        "JS Foster"
+      ]
+    },
+    {
+      "name": "Samit Patel",
+      "candidates": [
+        "SA Patel",
+        "SB Patel",
+        "SC Patel",
+        "SD Patel",
+        "SJ Patel",
+        "SK Patel",
+        "SK Patel",
+        "SN Patel",
+        "S Patel",
+        "S Patel",
+        "SP Patel",
+        "SR Patel"
+      ]
+    },
+    {
+      "name": "Rikki Clarke",
+      "candidates": [
+        "RA Clarke",
+        "R Clarke"
+      ]
+    },
+    {
+      "name": "Sajid Mahmood",
+      "candidates": [
+        "SI Mahmood",
+        "S Mahmood"
+      ]
+    },
+    {
+      "name": "Boyd Rankin",
+      "candidates": []
+    },
+    {
+      "name": "Rana Naved-ul-Hasan",
+      "candidates": []
+    },
+    {
+      "name": "Justin Kemp",
+      "candidates": [
+        "J Kemp",
+        "JM Kemp"
+      ]
+    },
+    {
+      "name": "Upul Tharanga",
+      "candidates": []
+    },
+    {
+      "name": "Rangana Herath",
+      "candidates": []
+    },
+    {
+      "name": "Dwayne Smith",
+      "candidates": [
+        "DBM Smith",
+        "DC Smith",
+        "DJ Smith",
+        "D Langford-Smith",
+        "DLR Smith",
+        "DM Smith",
+        "DR Smith",
+        "DR Smith",
+        "D Smith",
+        "D Smith",
+        "D Smith",
+        "DS Smith",
+        "DV Smith"
+      ]
+    },
+    {
+      "name": "Aftab Ahmed",
+      "candidates": [
+        "Aftab Ahmed",
+        "Aftab Ahmed"
+      ]
+    },
+    {
+      "name": "Brendan Taylor",
+      "candidates": [
+        "BJ Taylor",
+        "BRM Taylor",
+        "BR Taylor",
+        "BV Taylor"
+      ]
+    },
+    {
+      "name": "Bhuvneshwar Kumar",
+      "candidates": [
+        "B Kalki Kumar",
+        "B Kumar"
+      ]
+    },
+    {
+      "name": "Dawid Malan",
+      "candidates": [
+        "DJ Malan",
+        "D Malan"
+      ]
+    },
+    {
+      "name": "Suryakumar Yadav",
+      "candidates": [
+        "SA Yadav",
+        "SK Yadav",
+        "SU Yadav"
+      ]
+    },
+    {
+      "name": "Jason Roy",
+      "candidates": [
+        "J Ghose Roy",
+        "JJ Roy"
+      ]
+    },
+    {
+      "name": "Litton Das",
+      "candidates": []
+    },
+    {
+      "name": "Dasun Shanaka",
+      "candidates": []
+    },
+    {
+      "name": "Dushmantha Chameera",
+      "candidates": []
+    },
+    {
+      "name": "Kusal Mendis",
+      "candidates": []
+    },
+    {
+      "name": "Axar Patel",
+      "candidates": [
+        "AAA Patel",
+        "AK Patel",
+        "AM Patel",
+        "A Patel",
+        "A Patel",
+        "A Patel",
+        "ARH Patel",
+        "AR Patel",
+        "AY Patel"
+      ]
+    },
+    {
+      "name": "Rinku Singh",
+      "candidates": [
+        "RK Singh",
+        "RK Singh",
+        "R Pratap Singh",
+        "RP Singh",
+        "RP Singh",
+        "RR Singh",
+        "R Singh"
+      ]
+    },
+    {
+      "name": "Najmul Hossain Shanto",
+      "candidates": []
+    },
+    {
+      "name": "Rashid Khan",
+      "candidates": [
+        "Rashid Khan",
+        "Rashid Khan",
+        "Rashid Khan",
+        "Rashid Khan",
+        "Rashid Khan"
+      ]
+    },
+    {
+      "name": "Rovman Powell",
+      "candidates": [
+        "RL Powell",
+        "R Powell"
+      ]
+    },
+    {
+      "name": "Wanindu Hasaranga",
+      "candidates": []
+    },
+    {
+      "name": "Mehidy Hasan Miraz",
+      "candidates": []
+    },
+    {
+      "name": "Finn Allen",
+      "candidates": [
+        "FA Allen",
+        "FH Allen"
+      ]
+    },
+    {
+      "name": "Bas de Leede",
+      "candidates": [
+        "B de Leede",
+        "BFW de Leede"
+      ]
+    },
+    {
+      "name": "Varun Chakravarthy",
+      "candidates": []
+    },
+    {
+      "name": "Azam Khan",
+      "candidates": [
+        "Azam Khan",
+        "Azam Khan"
+      ]
+    },
+    {
+      "name": "Marco Jansen",
+      "candidates": [
+        "M Jansen",
+        "MS Jansen"
+      ]
+    },
+    {
+      "name": "Cameron Green",
+      "candidates": [
+        "C Green",
+        "CJ Green",
+        "CL Green",
+        "CM Green"
+      ]
+    },
+    {
+      "name": "Mohammad Wasim Jr",
+      "candidates": []
+    },
+    {
+      "name": "Sai Sudharsan",
+      "candidates": []
+    },
+    {
+      "name": "Spencer Johnson",
+      "candidates": [
+        "SH Johnson",
+        "SJ Johnson"
+      ]
+    },
+    {
+      "name": "Shamar Joseph",
+      "candidates": [
+        "SC Joseph",
+        "S Joseph"
+      ]
+    }
+  ],
+  "modelBasisCounts": {
+    "uniquePlayers": 412,
+    "playerSeasons": 5149,
+    "foundation": 269,
+    "arrival": 143,
+    "explicitNumericSourceLinks": 83,
+    "identitySourceLinks": 41,
+    "provisional": 143,
+    "largestOverallCompositeGaps": [
+      {
+        "name": "Adil Rashid",
+        "year": 2023,
+        "overall": 88,
+        "composite": 67.07
+      },
+      {
+        "name": "Adil Rashid",
+        "year": 2017,
+        "overall": 90,
+        "composite": 69.12
+      },
+      {
+        "name": "Adil Rashid",
+        "year": 2018,
+        "overall": 90,
+        "composite": 69.12
+      },
+      {
+        "name": "Adil Rashid",
+        "year": 2019,
+        "overall": 90,
+        "composite": 69.12
+      },
+      {
+        "name": "Adil Rashid",
+        "year": 2021,
+        "overall": 89,
+        "composite": 68.29
+      },
+      {
+        "name": "Adil Rashid",
+        "year": 2025,
+        "overall": 85,
+        "composite": 64.49
+      },
+      {
+        "name": "Adil Rashid",
+        "year": 2022,
+        "overall": 88,
+        "composite": 67.65
+      },
+      {
+        "name": "Adil Rashid",
+        "year": 2024,
+        "overall": 86,
+        "composite": 65.75
+      },
+      {
+        "name": "Adil Rashid",
+        "year": 2020,
+        "overall": 89,
+        "composite": 68.92
+      },
+      {
+        "name": "Adil Rashid",
+        "year": 2026,
+        "overall": 82,
+        "composite": 62.09
+      },
+      {
+        "name": "Adil Rashid",
+        "year": 2016,
+        "overall": 90,
+        "composite": 70.92
+      },
+      {
+        "name": "Ravichandran Ashwin",
+        "year": 2025,
+        "overall": 82,
+        "composite": 64.1
+      },
+      {
+        "name": "Ravichandran Ashwin",
+        "year": 2022,
+        "overall": 87,
+        "composite": 69.4
+      },
+      {
+        "name": "Ravichandran Ashwin",
+        "year": 2023,
+        "overall": 85,
+        "composite": 67.51
+      },
+      {
+        "name": "Ravichandran Ashwin",
+        "year": 2021,
+        "overall": 88,
+        "composite": 70.64
+      },
+      {
+        "name": "Ravichandran Ashwin",
+        "year": 2024,
+        "overall": 83,
+        "composite": 65.84
+      },
+      {
+        "name": "Ravichandran Ashwin",
+        "year": 2020,
+        "overall": 88,
+        "composite": 71.21
+      },
+      {
+        "name": "Ravichandran Ashwin",
+        "year": 2026,
+        "overall": 78,
+        "composite": 61.55
+      },
+      {
+        "name": "Adil Rashid",
+        "year": 2015,
+        "overall": 89,
+        "composite": 72.61
+      },
+      {
+        "name": "Ravichandran Ashwin",
+        "year": 2018,
+        "overall": 89,
+        "composite": 72.82
+      }
+    ]
+  }
+}
