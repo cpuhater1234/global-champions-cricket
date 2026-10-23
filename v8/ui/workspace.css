@@ -779,3 +779,48 @@ p,small,.g8fine{font-weight:400;line-height:1.5}small,.g8fine{font-size:1rem;col
 .g8directpick.g8recruitcard .g8cardoverall b,.g8recruitcard .g8cardattributes b{color:var(--rating-color)}
 .g8directpick.g8recruitcard .g8candidatechoice{justify-content:center;align-items:flex-end;min-width:0}
 .g8directpick.g8recruitcard .g8candidatechoice .g8button{min-height:44px;min-width:4.2rem;padding:.55rem .8rem}
+/* Solid-surface draft trial. Colour identifies the role; depth and states guide interaction. */
+.g8role-BAT{--drafthead:#224b69}.g8role-WK-BAT{--drafthead:#615025}.g8role-AR{--drafthead:#20574b}.g8role-BOWL{--drafthead:#643c36}
+#g8app:has(.g8draftsplit){background:#0d1724;background-image:none}
+#g8app:has(.g8draftsplit) #g8hud{background:#142235;border-bottom:1px solid #476078}
+#g8stage:has(.g8draftsplit)>.g8heading{background:#192b3f;border:1px solid #496176;border-left:4px solid #82badb;box-shadow:0 4px 0 #07101a;border-radius:8px}
+#g8stage:has(.g8draftsplit)>.g8clock{background:#192a3b;border:1px solid #4c657b;border-left:4px solid #7897af;box-shadow:0 3px 0 #07101a}
+#g8stage:has(.g8draftsplit)>.g8clock .g8eyebrow{color:#c4d9e8}
+#g8stage:has(.g8draftsplit)>.g8clockmine{background:#17372f;border-left-color:#bde96e;border-color:#6d9b7e}
+#g8stage:has(.g8draftsplit)>.g8clockmine .g8eyebrow{color:#c5ee9f}
+.g8draftpulse>span{background:#1b2e42;border:1px solid #4c657b;color:#e0ebf3;box-shadow:0 2px 0 #07101a}
+.g8draftpulse>span.g8need{background:#49352c;border-color:#9d7a5e;color:#ffdab7}
+.g8draftboard>.g8boardheading{background:#1b3045;border:1px solid #526d84;border-left:0;border-bottom:2px solid #6e8fa7;box-shadow:0 3px 0 #07101a;border-radius:6px}
+.g8draftboard>.g8search{background:#1b2c40;border:1px solid #496176;border-top-width:1px;padding:.85rem;box-shadow:0 3px 0 #07101a}
+.g8draftboard>.g8search label{background:transparent;border:0;padding:0 .15rem;line-height:1.5;color:#d3e2ed}
+.g8draftboard>.g8search :is(input,select){background:#0e1d2d;border:1px solid #718ba1;border-radius:5px;color:#eef5fa}
+.g8draftaside.g8sheet{background:#1a2b3e;border:1px solid #58748b;border-top:3px solid #88aac1;border-radius:8px;box-shadow:0 4px 0 #07101a}
+.g8draftaside .g8latestpick{background:#112234;border-color:#617b90;border-left:3px solid var(--roleaccent)}
+.g8draftaside .g8latestmetrics>div,.g8draftaside .g8squadgroup{background:#1c3045;border-color:#526d84}
+.g8draftaside .g8latestmetrics>div{border-radius:4px}
+.g8draftaside .g8draftdetails .g8button{background:#263b51;border:1px solid #6a8397;border-left-width:1px;color:#e4edf4;box-shadow:0 2px 0 #081321}
+.g8draftplayer.g8directpick.g8recruitcard{padding:0;column-gap:0;row-gap:0;border:1px solid #526b80;border-radius:9px;overflow:visible;background:#1b2c40;background-image:none;box-shadow:0 4px 0 #070f18,0 7px 12px #0003;transition:transform 140ms ease,box-shadow 140ms ease,border-color 140ms ease}
+.g8recruitcard .g8candidate{margin:0;border-radius:8px 8px 0 0;align-self:stretch}
+.g8recruitcard .g8candidateidentity{display:block;height:100%}
+.g8recruitcard .g8cardheader{display:grid;grid-template-columns:3.7rem minmax(0,1fr);gap:.2rem .75rem;align-items:start;min-width:0;padding:.85rem;background:var(--drafthead);border-top:3px solid var(--roleaccent);border-radius:8px 8px 0 0}
+.g8directpick.g8recruitcard .g8cardoverall{background:#102233;border:1px solid #8ea9bc;box-shadow:0 2px 0 #081321}
+.g8directpick.g8recruitcard .g8candidateheadline>strong{font-size:1.15rem;line-height:1.3;color:#fff}
+.g8directpick.g8recruitcard .g8cardbio{color:#e8f0f6}
+.g8directpick.g8recruitcard .g8candidatecontext{color:#d9e5ee}
+.g8recruitcard .g8cardattributes{margin:0;padding:.75rem .6rem;border-top:1px solid #6c8396;border-bottom:1px solid #6c8396;background:#1b2c40;box-sizing:border-box}
+.g8recruitcard .g8cardattributes>span+span{border-color:#5c748a}
+.g8recruitcard .g8cardattributes small{color:#e0ebf3}
+.g8directpick.g8recruitcard .g8candidatestrength{grid-column:1;grid-row:2;background:#102033;padding:.75rem .5rem .75rem .85rem;border-radius:0 0 0 8px;min-width:0}
+.g8directpick.g8recruitcard .g8candidatechoice{grid-column:2;grid-row:2;background:#102033;padding:.65rem .85rem .65rem .5rem;border-radius:0 0 8px 0;align-items:center;justify-content:center}
+.g8directpick.g8recruitcard .g8candidatechoice .g8button{background:#2a523b;border:1px solid #80ae8c;color:#e1f5da;box-shadow:0 3px 0 #071610;min-width:4.3rem;transition:transform 100ms ease,background 100ms ease,box-shadow 100ms ease}
+.g8directpick.g8recruitcard .g8candidatechoice .g8button:hover:enabled{background:#c5ee79;border-color:#c5ee79;color:#142a21;transform:translateY(-1px);box-shadow:0 4px 0 #071610}
+.g8directpick.g8recruitcard .g8candidatechoice .g8button:active:enabled{transform:translateY(2px);box-shadow:none}
+.g8directpick.g8recruitcard .g8candidatechoice .g8button:disabled{opacity:1;background:#293b4e;border-color:#536b7f;color:#adbfce;box-shadow:none}
+.g8directpick.g8recruitcard:has(.g8candidate:hover){background:#1b2c40;border-color:#8ca7bb;box-shadow:0 4px 0 #070f18,0 7px 12px #0003}
+.g8directpick.g8recruitcard:has(.g8candidate:focus-visible){outline:3px solid #c9ef7d;outline-offset:4px}
+.g8directpick.g8recruitcard:has(.g8candidate:active){transform:translateY(1px);box-shadow:0 2px 0 #070f18}
+#g8app:has(.g8draftsplit) .g8scoutsummary{background:var(--drafthead);border-color:#6c8599}
+#g8app:has(.g8draftsplit) .g8button:disabled{opacity:1}
+@media(hover:hover){.g8directpick.g8recruitcard:has(.g8candidate:hover){transform:translateY(-3px);border-color:#a1b7c8;box-shadow:0 7px 0 #070f18,0 12px 18px #0003}.g8directpick.g8recruitcard:has(.g8candidate:active){transform:translateY(1px);box-shadow:0 2px 0 #070f18}}
+@container(max-width:18rem){.g8recruitcard .g8cardheader{grid-template-columns:minmax(0,1fr)}.g8directpick.g8recruitcard .g8cardoverall{grid-row:1;grid-column:1;flex-direction:row;justify-content:space-between;padding:.35rem .6rem}.g8directpick.g8recruitcard .g8candidateheadline{grid-row:2;grid-column:1}.g8directpick.g8recruitcard .g8cardbio{grid-row:3;grid-column:1}.g8directpick.g8recruitcard .g8candidatecontext{grid-row:4;grid-column:1}.g8directpick.g8recruitcard .g8candidatestrength{grid-column:1/-1;grid-row:2;border-radius:0}.g8directpick.g8recruitcard .g8candidatechoice{grid-column:1/-1;grid-row:3;padding:.2rem .85rem .75rem;justify-self:stretch;border-radius:0 0 8px 8px}.g8directpick.g8recruitcard .g8candidatechoice .g8button{width:100%}}
+@media(prefers-reduced-motion:reduce){.g8draftplayer.g8directpick.g8recruitcard,.g8directpick.g8recruitcard .g8candidatechoice .g8button{transition:none}.g8directpick.g8recruitcard:has(.g8candidate:hover),.g8directpick.g8recruitcard:has(.g8candidate:active){transform:none}}
