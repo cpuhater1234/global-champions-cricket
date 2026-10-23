@@ -1,0 +1,83 @@
+{
+  "sha256": "d2124b981e31668f648b5c9754470776470571071c507e6facebd4c76ca81f0f",
+  "bytes": 1902443,
+  "results": [
+    {
+      "report": "qa/signing-layout/report.json",
+      "cases": 72,
+      "resultVariants": 0,
+      "passed": true
+    },
+    {
+      "report": "qa/universal-containment/entry-browser.json",
+      "cases": 60,
+      "resultVariants": 0,
+      "passed": true
+    },
+    {
+      "report": "qa/universal-containment/browser.json",
+      "cases": 156,
+      "resultVariants": 0,
+      "passed": true
+    },
+    {
+      "report": "qa/universal-containment/modals.json",
+      "cases": 120,
+      "resultVariants": 0,
+      "passed": true
+    },
+    {
+      "report": "qa/universal-containment/offseason/report.json",
+      "cases": 84,
+      "resultVariants": 0,
+      "passed": true
+    },
+    {
+      "report": "qa/home-continue/report.json",
+      "cases": 96,
+      "resultVariants": 0,
+      "passed": true
+    },
+    {
+      "report": "qa/club-identity/report.json",
+      "cases": 96,
+      "resultVariants": 0,
+      "passed": true
+    },
+    {
+      "report": "qa/solid-game/report.json",
+      "cases": 12,
+      "resultVariants": 36,
+      "passed": true
+    },
+    {
+      "report": "qa/recruitment-polish/report.json",
+      "cases": 60,
+      "resultVariants": 0,
+      "passed": true
+    },
+    {
+      "report": "qa/solid-draft/report.json",
+      "cases": 0,
+      "resultVariants": 0,
+      "passed": true
+    },
+    {
+      "report": "qa/draw-motion/report.json",
+      "cases": 0,
+      "resultVariants": 0,
+      "passed": true
+    },
+    {
+      "report": "qa/draft-interaction/report.json",
+      "cases": 0,
+      "resultVariants": 0,
+      "passed": true
+    }
+  ],
+  "drawingLabelLayouts": 12,
+  "browser": "Chromium 153.0.8010.0 via @sparticuz/chromium 153.0.0",
+  "scope": "Presentation, contrast, responsive containment and targeted native controls. Saved/synthetic later layouts as detailed in source reports. External photos blocked. No full-career or enjoyment claim.",
+  "deliveryVersion": 53,
+  "issues": []
+}
