@@ -1,0 +1,50 @@
+8201 balanced-current 132/266
+8201 balanced-youth 139/266
+8201 overall-only 120/266
+8201 allrounder-heavy 126/266
+[
+  {
+    policy: 'balanced-current',
+    worlds: 1,
+    matches: 266,
+    wins: 132,
+    winPercentage: 49.62406015037594,
+    finalsQualifications: 10,
+    retirements: 19,
+    meanRunsFor: 143.22932330827066,
+    meanRunsAgainst: 139.5187969924812
+  },
+  {
+    policy: 'balanced-youth',
+    worlds: 1,
+    matches: 266,
+    wins: 139,
+    winPercentage: 52.255639097744364,
+    finalsQualifications: 8,
+    retirements: 13,
+    meanRunsFor: 149.9248120300752,
+    meanRunsAgainst: 148.8684210526316
+  },
+  {
+    policy: 'overall-only',
+    worlds: 1,
+    matches: 266,
+    wins: 120,
+    winPercentage: 45.11278195488722,
+    finalsQualifications: 6,
+    retirements: 18,
+    meanRunsFor: 148.33834586466165,
+    meanRunsAgainst: 149.00375939849624
+  },
+  {
+    policy: 'allrounder-heavy',
+    worlds: 1,
+    matches: 266,
+    wins: 126,
+    winPercentage: 47.36842105263158,
+    finalsQualifications: 8,
+    retirements: 17,
+    meanRunsFor: 153.78571428571428,
+    meanRunsAgainst: 150.30075187969925
+  }
+]

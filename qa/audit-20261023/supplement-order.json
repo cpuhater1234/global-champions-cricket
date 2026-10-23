@@ -1,0 +1,15 @@
+{
+  "scenario": "Two clubs exceed four natural departures; A needs six, B five; ordinary round four ends in reverse order",
+  "actual": [
+    "A",
+    "A",
+    "B"
+  ],
+  "expected": [
+    "A",
+    "B",
+    "A"
+  ],
+  "passes": false,
+  "finding": "Supplementary picks are grouped by club in lottery order rather than continuing snake rounds."
+}

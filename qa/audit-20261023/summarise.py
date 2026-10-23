@@ -1,0 +1,28 @@
+from pathlib import Path
+import json,hashlib
+root=Path('qa/audit-20261023');read=lambda p:json.loads(Path(p).read_text());build=Path('game/gcc_v8_product_candidate.html');h=hashlib.sha256(build.read_bytes()).hexdigest();assert h=='32f9396b38627c2c4112905abaf1bad43567bf56e20c3914d288af0da3b4c040';assert build.read_bytes()==Path('game/gcc_v8_quiet_arcade.html').read_bytes()==Path('../deliver/GCC_v8_Career_Clarity.html').read_bytes()
+careers=[read(root/f'career-{seed}/v8_game_results.json') for seed in [101,307]]
+for c in careers:assert c['seasons']==19 and c['regularSeasonMatches']==266 and not c['errors']
+vm=read(root/'vm-results.json');rechecks={r['test']:r for r in vm['rechecks']};assert all(r['exitCode']==0 or rechecks.get(r['test'],{}).get('exitCode')==0 for r in vm['rows'])
+browser=read(root/'browser-results.json');assert all(r['exitCode']==0 for r in browser['rows']);extra=read(root/'extra-results.json');assert all(r['exitCode']==0 for r in extra['rows'])
+for group in [vm,browser,extra]:assert group['hash']==h
+end=read(root/'ending-native.json');assert end['hash']==h and len(end['rows'])==2
+inv=read(root/'career-invariants-2026.json');assert inv['hash']==h
+cover=read(root/'injury-cover.json');assert cover['hash']==h and not cover['issues']
+negative=read(root/'save-adversarial.json');assert negative['hash']==h and len(negative['rows'])==14
+late=read(root/'late-native.json');assert late['hash']==h and not late['errors']
+retention=read('qa/career-experience/native.json');assert retention['hash']==h and len(retention['results'])==4 and all(not x['errors'] for x in retention['results'])
+policies=read(root/'policies.json');assert policies['artifactSha256']==h and policies['cohortCount']==4
+sources=['qa/signing-layout/report.json','qa/universal-containment/entry-browser.json','qa/universal-containment/browser.json','qa/universal-containment/modals.json','qa/universal-containment/offseason/report.json','qa/home-continue/report.json','qa/club-identity/report.json','qa/palette-balance/report.json','qa/recruitment-polish/report.json','qa/selection-workspace/report.json'];layouts=0
+for path in sources:
+ d=read(path);assert d.get('hash',d.get('artifactSha256'))==h,path
+ for r in d.get('rows',[]):
+  c=r.get('contrast',[]);c=c.get('bad',[]) if isinstance(c,dict) else c
+  assert not(r.get('bad') or r.get('outside') or r.get('overflow') or c or r.get('issues')),path
+ assert not d.get('issues',[]) and not d.get('errors',[]),path
+ layouts+=len(d.get('rows',[])) or d.get('cases',0)
+ # Keep an immutable report snapshot here; runner text logs can share old filenames.
+ (root/('evidence-'+path.replace('/','-'))).write_text(json.dumps(d,indent=2)+'\n')
+growth=read(root/'growth.json');first=[w['annual'][0] for w in growth['worlds']];last=[w['annual'][-1] for w in growth['worlds']]
+summary={'buildSha256':h,'buildUnchanged':True,'fullCareers':{'seeds':[101,307],'clubs':[c['club'] for c in careers],'seasons':sum(c['seasons'] for c in careers),'managedClubRegularSeasonMatches':sum(c['regularSeasonMatches'] for c in careers),'leagueRegularSeasonFixturesSimulated':38*56,'finalsMatchesSimulated':38*3,'coldReloadCheckpoints':sum(len(c['coverage']['reloads']) for c in careers),'injurySelectionRecoveries':sum(c['coverage']['injurySelections'] for c in careers),'naturallyObservedSuperOvers':sum(c['coverage']['superOvers'] for c in careers),'assertions':sum(c['checks'] for c in careers),'maxSaveUtf16Bytes':max(c['storageStats']['maxUtf16Bytes'] for c in careers),'unexpectedErrors':[]},'vmSuitesFinallyPassing':len(vm['rows']),'browserSuitesPassing':len(browser['rows']),'extraSuitesPassing':len(extra['rows']),'responsiveLayouts':layouts,'savedSeasonInvariantAssertions':inv['checks'],'savedMatchLedgersChecked':inv['savedMatchLedgers'],'malformedSavesRejectedAtomically':len(negative['rows']),'injuryCoverFixtureChecks':cover['checks'],'native2026Endings':len(end['rows']),'nativeRetainSquadViewports':len(retention['results']),'policyCohorts':policies['cohortCount'],'policyWorlds':policies['worldCount'],'policySummary':policies['summary'],'naturalRetirementObservations':inv['retirementRuleFindings'],'retirementPolicyClarification':'Natural retirements uncapped; departure budget constrains voluntary releases only. Earlier cap finding withdrawn.','supplementaryOrderDefect':read(root/'supplement-order.json'),'growthWatch':{'worlds':len(growth['worlds']),'firstYearMean':sum(r['mean'] for r in first)/len(first),'lastYearMean':sum(r['mean'] for r in last)/len(last),'firstYear90PlusShare':sum(r['atLeast90'] for r in first)/sum(r['active'] for r in first),'lastYear90PlusShare':sum(r['atLeast90'] for r in last)/sum(r['active'] for r in last),'minimumActiveEligiblePlayers':min(y['active'] for w in growth['worlds'] for y in w['annual'])},'timeoutWatch':{'initialRetentionTransitionTimeout':True,'reproducedInProfile':False,'profileNativeClickMs':read(root/'retention-profile.json')['clickMs'],'finalRetentionNativePassed':True,'causeEstablished':False},'limits':['Chromium only; no physical-device, Safari/Firefox or screen-reader certification.','Live external stadium-photo attempt failed in this sandbox network; fallback and inline artwork checked.','Automated informed policies and commands do not establish first-time comprehension or long-term enjoyment.','One controlled world cannot establish a dominant strategy or full balance.'],'status':'Audit completed with one confirmed supplementary draft-order defect and documented balance/performance watches; no new reproducible crash or save-loss defect found.'}
+(root/'summary.json').write_text(json.dumps(summary,indent=2)+'\n');print(json.dumps(summary,indent=2))

@@ -1,0 +1,10 @@
+locator.click: Error: strict mode violation: locator('[data-action="archive"]:visible') resolved to 2 elements:
+    1) <button type="button" data-args="[]" data-action="archive" class="g8button g8ghost g8small">…</button> aka getByRole('button', { name: 'Club archive' })
+    2) <button type="button" data-args="[]" data-action="archive" class="g8button g8primary">…</button> aka getByRole('button', { name: 'Read your history' })
+
+Call log:
+[2m  - waiting for locator('[data-action="archive"]:visible')[22m
+
+    at /workspace/scratch/bed56f4334a5/gcc/qa/audit-20261023/ending-native.cjs:1:1428 {
+  log: [ `  - waiting for locator('[data-action="archive"]:visible')` ]
+}

@@ -1,0 +1,28 @@
+AssertionError [ERR_ASSERTION]: development horizontal overflow
++ actual - expected
+
++ [
++   {
++     cls: 'g8panelart',
++     tag: 'SPAN',
++     text: ''
++   },
++   {
++     cls: {},
++     tag: 'svg',
++     text: ''
++   }
++ ]
+- []
+
+    at inspect (/workspace/scratch/bed56f4334a5/gcc/qa/career-experience/native.cjs:2:1200)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at process.processImmediate (node:internal/timers:502:9)
+    at async /workspace/scratch/bed56f4334a5/gcc/qa/career-experience/native.cjs:2:1517 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: [Array],
+  expected: [],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}

@@ -1,0 +1,120 @@
+{
+  "buildSha256": "32f9396b38627c2c4112905abaf1bad43567bf56e20c3914d288af0da3b4c040",
+  "buildUnchanged": true,
+  "fullCareers": {
+    "seeds": [
+      101,
+      307
+    ],
+    "clubs": [
+      "NOT",
+      "YOR"
+    ],
+    "seasons": 38,
+    "managedClubRegularSeasonMatches": 532,
+    "leagueRegularSeasonFixturesSimulated": 2128,
+    "finalsMatchesSimulated": 114,
+    "coldReloadCheckpoints": 104,
+    "injurySelectionRecoveries": 63,
+    "naturallyObservedSuperOvers": 3,
+    "assertions": 32018,
+    "maxSaveUtf16Bytes": 2646586,
+    "unexpectedErrors": []
+  },
+  "vmSuitesFinallyPassing": 14,
+  "browserSuitesPassing": 19,
+  "extraSuitesPassing": 5,
+  "responsiveLayouts": 852,
+  "savedSeasonInvariantAssertions": 286488,
+  "savedMatchLedgersChecked": 612,
+  "malformedSavesRejectedAtomically": 14,
+  "injuryCoverFixtureChecks": 26,
+  "native2026Endings": 2,
+  "nativeRetainSquadViewports": 4,
+  "policyCohorts": 4,
+  "policyWorlds": 1,
+  "policySummary": [
+    {
+      "policy": "balanced-current",
+      "worlds": 1,
+      "matches": 266,
+      "wins": 132,
+      "winPercentage": 49.62406015037594,
+      "finalsQualifications": 10,
+      "retirements": 19,
+      "meanRunsFor": 143.22932330827066,
+      "meanRunsAgainst": 139.5187969924812
+    },
+    {
+      "policy": "balanced-youth",
+      "worlds": 1,
+      "matches": 266,
+      "wins": 139,
+      "winPercentage": 52.255639097744364,
+      "finalsQualifications": 8,
+      "retirements": 13,
+      "meanRunsFor": 149.9248120300752,
+      "meanRunsAgainst": 148.8684210526316
+    },
+    {
+      "policy": "overall-only",
+      "worlds": 1,
+      "matches": 266,
+      "wins": 120,
+      "winPercentage": 45.11278195488722,
+      "finalsQualifications": 6,
+      "retirements": 18,
+      "meanRunsFor": 148.33834586466165,
+      "meanRunsAgainst": 149.00375939849624
+    },
+    {
+      "policy": "allrounder-heavy",
+      "worlds": 1,
+      "matches": 266,
+      "wins": 126,
+      "winPercentage": 47.36842105263158,
+      "finalsQualifications": 8,
+      "retirements": 17,
+      "meanRunsFor": 153.78571428571428,
+      "meanRunsAgainst": 150.30075187969925
+    }
+  ],
+  "retirementRuleDiscrepancies": [
+    {
+      "seed": 101,
+      "year": 2023,
+      "club": "NOT",
+      "count": 5,
+      "names": [
+        "Chris Gayle",
+        "Amit Mishra",
+        "Rory Kleinveldt",
+        "George Bailey",
+        "Ian Bell"
+      ],
+      "permanentRosterRestored": true
+    }
+  ],
+  "growthWatch": {
+    "worlds": 12,
+    "firstYearMean": 76.78789182899044,
+    "lastYearMean": 83.80568320558044,
+    "firstYear90PlusShare": 0.02710843373493976,
+    "lastYear90PlusShare": 0.1821642196846112,
+    "minimumActiveEligiblePlayers": 150
+  },
+  "timeoutWatch": {
+    "initialRetentionTransitionTimeout": true,
+    "reproducedInProfile": false,
+    "profileNativeClickMs": 3696,
+    "finalRetentionNativePassed": true,
+    "causeEstablished": false
+  },
+  "limits": [
+    "Chromium only; no physical-device, Safari/Firefox or screen-reader certification.",
+    "Live external stadium-photo attempt failed in this sandbox network; fallback and inline artwork checked.",
+    "Automated informed policies and commands do not establish first-time comprehension or long-term enjoyment.",
+    "One controlled world cannot establish a dominant strategy or full balance."
+  ],
+  "status": "Audit completed with one retirement-rule discrepancy and documented balance/performance watches; no new reproducible crash or save-loss defect found."
+}

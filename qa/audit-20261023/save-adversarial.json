@@ -1,0 +1,94 @@
+{
+  "hash": "32f9396b38627c2c4112905abaf1bad43567bf56e20c3914d288af0da3b4c040",
+  "rows": [
+    {
+      "name": "malformed-json",
+      "rejected": true,
+      "savedBytesPreserved": true,
+      "currentStatePreserved": true
+    },
+    {
+      "name": "year-outside-career",
+      "rejected": true,
+      "savedBytesPreserved": true,
+      "currentStatePreserved": true
+    },
+    {
+      "name": "duplicate-player-id",
+      "rejected": true,
+      "savedBytesPreserved": true,
+      "currentStatePreserved": true
+    },
+    {
+      "name": "duplicate-club",
+      "rejected": true,
+      "savedBytesPreserved": true,
+      "currentStatePreserved": true
+    },
+    {
+      "name": "player-owned-twice",
+      "rejected": true,
+      "savedBytesPreserved": true,
+      "currentStatePreserved": true
+    },
+    {
+      "name": "unknown-roster-id",
+      "rejected": true,
+      "savedBytesPreserved": true,
+      "currentStatePreserved": true
+    },
+    {
+      "name": "foreign-XI-player",
+      "rejected": true,
+      "savedBytesPreserved": true,
+      "currentStatePreserved": true
+    },
+    {
+      "name": "duplicate-batting-order",
+      "rejected": true,
+      "savedBytesPreserved": true,
+      "currentStatePreserved": true
+    },
+    {
+      "name": "illegal-round",
+      "rejected": true,
+      "savedBytesPreserved": true,
+      "currentStatePreserved": true
+    },
+    {
+      "name": "negative-season-stat",
+      "rejected": true,
+      "savedBytesPreserved": true,
+      "currentStatePreserved": true
+    },
+    {
+      "name": "same-club-fixture",
+      "rejected": true,
+      "savedBytesPreserved": true,
+      "currentStatePreserved": true
+    },
+    {
+      "name": "bad-innings-total",
+      "rejected": true,
+      "savedBytesPreserved": true,
+      "currentStatePreserved": true
+    },
+    {
+      "name": "bad-career-model-seed",
+      "rejected": true,
+      "savedBytesPreserved": true,
+      "currentStatePreserved": true
+    },
+    {
+      "name": "invalid-reveal-count",
+      "rejected": true,
+      "savedBytesPreserved": true,
+      "currentStatePreserved": true
+    }
+  ],
+  "storageUnavailable": {
+    "playable": true,
+    "persistentWarning": true
+  },
+  "scope": "Malformed saves must fail atomically without overwriting stored bytes or current state. Storage-blocked session remains playable with visible warning. Expected validation errors are deliberate."
+}

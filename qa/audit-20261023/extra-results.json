@@ -1,0 +1,35 @@
+{
+  "hash": "32f9396b38627c2c4112905abaf1bad43567bf56e20c3914d288af0da3b4c040",
+  "rows": [
+    {
+      "test": "qa/trade-structure/pick-value-test.mjs",
+      "exitCode": 0,
+      "seconds": 36.74,
+      "log": "qa/audit-20261023/extra-qa-trade-structure-pick-value-test.mjs.log"
+    },
+    {
+      "test": "qa/career-experience/behaviour.mjs",
+      "exitCode": 0,
+      "seconds": 29.3,
+      "log": "qa/audit-20261023/extra-qa-career-experience-behaviour.mjs.log"
+    },
+    {
+      "test": "qa/career-experience/growth-probe.mjs",
+      "exitCode": 0,
+      "seconds": 45.15,
+      "log": "qa/audit-20261023/extra-qa-career-experience-growth-probe.mjs.log"
+    },
+    {
+      "test": "qa/calibration/compatibility.mjs",
+      "exitCode": 0,
+      "seconds": 6.8,
+      "log": "qa/audit-20261023/extra-qa-calibration-compatibility.mjs.log"
+    },
+    {
+      "test": "qa/structural-risk/cpu-boards.mjs",
+      "exitCode": 0,
+      "seconds": 10.95,
+      "log": "qa/audit-20261023/extra-qa-structural-risk-cpu-boards.mjs.log"
+    }
+  ]
+}

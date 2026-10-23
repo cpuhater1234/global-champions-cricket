@@ -2,9 +2,9 @@ import fs from 'node:fs';import assert from 'node:assert/strict';import {loadGam
 const file=process.env.GCC8_TEST_BUILD||'game/gcc_v8_microscopic.html',h=loadGame(file,20261020,new Map([['gcc_dynasty_v8',fs.readFileSync('qa/stabilisation/fixtures/foundation.json','utf8')]]),{strictIds:true}),X=h.context.GCC8,s=h.G.state;assert(X.dispatch('continue'));const failures=[];let checks=0;const check=(v,m)=>{checks++;if(!v)failures.push(m)};
 const truth=()=>JSON.stringify({teams:s.teams,xi:s.xi,order:s.battingOrder,seed:s.seed,results:s.results}),before=truth();
 for(const [key,label,fn]of [['keeping','Keeping',p=>p.keeping],['powerplayBat','Powerplay batting',p=>X.R.batPhaseScore(p,'powerplay')],['middleBowl','Middle bowling',p=>X.R.bowlPhaseScore(p,'middle')]]){
- X.ui.sort=key;const p=s.pool.find(p=>X.R.bowlingWorkload(p)>0);const html=X.playerCard(p,'inspect','Scout',false,true);check(html.includes(`${label} <b>${Math.round(fn(p))}</b>`),'Draft card exposes selected '+key+' metric');
+ X.ui.sort=key;const p=s.pool.find(p=>X.R.bowlingWorkload(p)>0);const html=X.playerCard(p,'inspect','Scout',false,true);const phase=html.match(/class="g8phasevalue"[^>]*>([\s\S]*?)<\/span><\/span>/)?.[1]||'';const visible=phase.replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim();check(visible===`${label} ${Math.round(fn(p))}`,'Draft card exposes selected '+key+' metric beside its label');
 }
-X.ui.sort='overall';X.ui.view='team';check(X.views.team().includes('Open an XI player to edit batting order.'),'Full XI retains batting-order instruction');
+X.ui.sort='overall';X.ui.view='team';check(X.views.team().includes('Select a name to edit batting order.'),'Full XI retains batting-order instruction');
 check(typeof X.resultSummary==='function','Result has a compact factual summary');
 if(X.resultSummary){
  const r=s.results.find(r=>r.winner.abbr!==s.userClub.abbr)||s.results[0],own=s.userClub.abbr,op=r.home.abbr===own?r.away:r.home;

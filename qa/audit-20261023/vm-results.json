@@ -1,0 +1,97 @@
+{
+  "hash": "32f9396b38627c2c4112905abaf1bad43567bf56e20c3914d288af0da3b4c040",
+  "rows": [
+    {
+      "test": "qa/v8_comparison_intent_test.mjs",
+      "exitCode": 0,
+      "seconds": 7.93,
+      "log": "qa/audit-20261023/v8_comparison_intent_test.log"
+    },
+    {
+      "test": "qa/v8_core_loop_hierarchy_test.mjs",
+      "exitCode": 0,
+      "seconds": 10.49,
+      "log": "qa/audit-20261023/v8_core_loop_hierarchy_test.log"
+    },
+    {
+      "test": "qa/v8_decision_tools_test.mjs",
+      "exitCode": 0,
+      "seconds": 15.68,
+      "log": "qa/audit-20261023/v8_decision_tools_test.log"
+    },
+    {
+      "test": "qa/v8_match_career_hierarchy_test.mjs",
+      "exitCode": 0,
+      "seconds": 18.74,
+      "log": "qa/audit-20261023/v8_match_career_hierarchy_test.log"
+    },
+    {
+      "test": "qa/v8_offseason_decisions_test.mjs",
+      "exitCode": 0,
+      "seconds": 18.0,
+      "log": "qa/audit-20261023/v8_offseason_decisions_test.log"
+    },
+    {
+      "test": "qa/v8_offseason_test.mjs",
+      "exitCode": 0,
+      "seconds": 58.1,
+      "log": "qa/audit-20261023/v8_offseason_test.log"
+    },
+    {
+      "test": "qa/v8_player_journey_test.mjs",
+      "exitCode": 1,
+      "seconds": 14.86,
+      "log": "qa/audit-20261023/v8_player_journey_test.log"
+    },
+    {
+      "test": "qa/v8_result_context_test.mjs",
+      "exitCode": 0,
+      "seconds": 13.98,
+      "log": "qa/audit-20261023/v8_result_context_test.log"
+    },
+    {
+      "test": "qa/v8_save_visibility_test.mjs",
+      "exitCode": 0,
+      "seconds": 9.23,
+      "log": "qa/audit-20261023/v8_save_visibility_test.log"
+    },
+    {
+      "test": "qa/v8_scout_hierarchy_test.mjs",
+      "exitCode": 0,
+      "seconds": 11.55,
+      "log": "qa/audit-20261023/v8_scout_hierarchy_test.log"
+    },
+    {
+      "test": "qa/v8_selection_recovery_test.mjs",
+      "exitCode": 0,
+      "seconds": 16.13,
+      "log": "qa/audit-20261023/v8_selection_recovery_test.log"
+    },
+    {
+      "test": "qa/v8_squad_management_test.mjs",
+      "exitCode": 0,
+      "seconds": 9.22,
+      "log": "qa/audit-20261023/v8_squad_management_test.log"
+    },
+    {
+      "test": "qa/v8_team_workspace_test.mjs",
+      "exitCode": 0,
+      "seconds": 38.94,
+      "log": "qa/audit-20261023/v8_team_workspace_test.log"
+    },
+    {
+      "test": "qa/v8_trade_review_safety_test.mjs",
+      "exitCode": 0,
+      "seconds": 16.08,
+      "log": "qa/audit-20261023/v8_trade_review_safety_test.log"
+    }
+  ],
+  "rechecks": [
+    {
+      "test": "qa/v8_player_journey_test.mjs",
+      "exitCode": 0,
+      "log": "qa/audit-20261023/v8_player_journey_recheck.log",
+      "reason": "Updated stale card-markup and batting-order-copy expectations; all 20 substantive checks pass."
+    }
+  ]
+}

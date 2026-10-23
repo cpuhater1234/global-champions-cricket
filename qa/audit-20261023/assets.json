@@ -1,0 +1,40 @@
+{
+  "images": [
+    {
+      "src": "",
+      "alt": "Global Champions Cricket logo",
+      "visible": false,
+      "loaded": false,
+      "naturalWidth": 0,
+      "box": {
+        "width": 0,
+        "height": 0
+      }
+    },
+    {
+      "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Telstra_Dome_2.jpg?width=960",
+      "alt": "Docklands Stadium · Melbourne Renegades home ground",
+      "visible": false,
+      "loaded": false,
+      "naturalWidth": 0,
+      "box": {
+        "width": 0,
+        "height": 0
+      }
+    }
+  ],
+  "requests": [],
+  "errors": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Telstra_Dome_2.jpg?width=960",
+      "failure": "net::ERR_EMPTY_RESPONSE"
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Telstra_Dome_2.jpg?width=960",
+      "failure": "net::ERR_EMPTY_RESPONSE"
+    }
+  ],
+  "overflow": false,
+  "icons": 3,
+  "scope": "Real external-image attempt without request blocking, using this sandbox network and Chromium only. Cannot certify another network/browser."
+}

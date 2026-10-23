@@ -1,0 +1,20 @@
+[
+  {
+    "test": "qa/signing-layout/browser.cjs",
+    "exitCode": 0,
+    "seconds": 14.15,
+    "log": "qa/audit-20261023/supplement-qa-signing-layout-browser.cjs.log"
+  },
+  {
+    "test": "qa/career-experience/native.cjs",
+    "exitCode": 1,
+    "seconds": 43.23,
+    "log": "qa/audit-20261023/supplement-qa-career-experience-native.cjs.log"
+  },
+  {
+    "test": "qa/audit-20261023/assets.cjs",
+    "exitCode": 0,
+    "seconds": 1.66,
+    "log": "qa/audit-20261023/supplement-qa-audit-20261023-assets.cjs.log"
+  }
+]
