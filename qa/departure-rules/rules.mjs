@@ -1,0 +1,22 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {loadGame} from '../offline_game_host.mjs';
+const file=process.env.GCC8_TEST_BUILD||'game/gcc_v8_product_candidate.html',html=fs.readFileSync(file,'utf8');let checks=0;const ck=(v,m)=>{assert.ok(v,m);checks++};const eq=(a,b,m)=>{assert.deepEqual(JSON.parse(JSON.stringify(a)),b,m);checks++};
+const raw=fs.readFileSync('qa/stabilisation/fixtures/foundation.json','utf8');
+const fresh=()=>{const h=loadGame(file,101,new Map([['gcc_dynasty_v8',raw]]),{strictIds:true});assert(h.context.GCC8.dispatch('continue'));assert(h.context.GCC8.dispatch('offseason'));return h;};
+const h=fresh(),X=h.context.GCC8,s=h.G.state,o=s.dynasty.offseason,own=s.userClub.abbr,rival=s.league.find(c=>c.abbr!==own).abbr;
+// Existing saves without structured trade accounting retain already accepted departures.
+delete o.tradeDepartures;o.retirements=Array.from({length:3},(_,i)=>({id:s.pool[i].id,owner:own}));s.dynasty.transactions=[{year:s.year,type:'TRADE',title:`${own} acquire Sample`,detail:`Outgoing → ${rival}`}];
+eq(X.read.cutBudget().limit,0,'three retirements plus one accepted outgoing trade leave no optional cut');
+for(let ret=0;ret<=6;ret++)for(let trades=0;trades<=4;trades++){o.retirements=Array.from({length:ret},(_,i)=>({id:s.pool[i].id,owner:own}));o.tradeDepartures={[own]:trades,[rival]:0};eq(X.read.cutBudget().limit,Math.min(2,Math.max(0,4-ret-trades)),`cut allowance after ${ret} retirements and ${trades} trades`);}
+const source=html.slice(html.indexOf('  function draftSlots(){'),html.indexOf('  function userOwnsPick('));
+function slots(needs,{snake=1,cuts={},owners={},net={}}={}){const state={userClub:{abbr:'A'},dynasty:{offseason:{lottery:['A','B','C','D'],draftNeeds:needs,releasePickPolicy:1,supplementSnakePolicy:snake,voluntaryCuts:Array(cuts.A||0).fill(1),finalCuts:[],cpuReleases:Object.fromEntries(['B','C','D'].map(a=>[a,Array(cuts[a]||0).fill(1)])),pickOwners:owners,netTradeDepartures:net}}};const rosterIds=()=>[];return eval(source+';slotsWithSupplement()');}
+const owners=ps=>ps.map(p=>p.owner);eq(owners(slots({A:6,B:5,C:4,D:4}).filter(p=>p.supplementary)),['A','B','A'],'round five forward and round six reverse');
+eq(owners(slots({A:4,B:4,C:4,D:4},{cuts:{A:2,B:2}}).filter(p=>p.supplementary)),['A','B','B','A'],'two release rounds continue the snake');
+eq(owners(slots({A:1,B:1,C:0,D:0},{cuts:{A:1,B:1}})),['A','B'],'supplement-only draft starts forward');
+eq(owners(slots({A:2,B:2,C:0,D:0},{cuts:{A:1,B:1}}).filter(p=>p.supplementary)),['B','A'],'supplement starts reverse after odd ordinary round');
+eq(owners(slots({A:6,B:5,C:4,D:4},{snake:undefined}).filter(p=>p.supplementary)),['A','B','A'],'default test policy');
+eq(owners(slots({A:6,B:5,C:4,D:4},{snake:null}).filter(p=>p.supplementary)),['A','A','B'],'already-started legacy order preserved');
+const uneven=slots({A:3,B:1,C:0,D:0},{net:{A:1,B:-1}});eq(uneven.filter(p=>p.owner==='A'&&!p.supplementary).length,2,'uneven outgoing trade does not buy an early ordinary pick');eq(uneven.filter(p=>p.owner==='A'&&p.supplementary).length,1,'net outgoing vacancy is refilled at the end');
+const tradeSlots=slots({A:3,B:3,C:2,D:1},{owners:{'R1:A':'B'}});eq(tradeSlots.filter(p=>p.original==='A'&&!p.supplementary)[0].owner,'B','traded ordinary pick retains ownership');eq(tradeSlots.filter(p=>p.owner==='A').length,3,'traded-away pick receives supplementary refill');ck(tradeSlots.filter(p=>p.owner==='B').length===4,'receiving club retains traded pick rights; full-list guards handle surplus');
+// Independent oracle: every club gets max(need, ordinary picks owned), no missing or duplicated supplementary keys.
+for(let a=0;a<=7;a++)for(let b=0;b<=7;b++)for(let cut=0;cut<=2;cut++){const needs={A:a,B:b,C:3,D:0},ps=slots(needs,{cuts:{A:Math.min(a,cut),B:Math.min(b,cut)}});let round=0;for(const p of ps){ck(p.round>=round,'rounds never run backwards');round=p.round;}for(const club of ['A','B','C','D'])eq(ps.filter(p=>p.owner===club).length,needs[club],'one selection per actual vacancy');ck(new Set(ps.map(p=>p.key)).size===ps.length,'unique slot keys');}
+ck(h.errors.length===0,'no VM error');fs.writeFileSync('qa/departure-rules/rules.json',JSON.stringify({checks,build:file,scope:'Actual UI cut-budget reads and unchanged-closure draft-slot functions, multi-club snake permutations, release allowances, pick transfers and legacy draft order.'},null,2));console.log('Departure and supplementary rules passed',checks);

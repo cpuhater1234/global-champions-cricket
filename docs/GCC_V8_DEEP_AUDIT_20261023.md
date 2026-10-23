@@ -1,3 +1,5 @@
+> Follow-up: the supplementary ordering defect and requested trade/departure rules were addressed in the subsequent build. Read `docs/GCC_V8_TRADE_RULES_20261023.md`. The evidence and build hash below describe the original audited build.
+
 # GCC v8 deep audit · 23 October 2026
 
 **Outcome: mechanically stable in the completed tests, with one confirmed supplementary draft-order defect and balance/performance watches.** No new reproducible crash, save-loss or blocked-career defect was found. This is an audit of the current game, not a release-readiness or enjoyment certification.

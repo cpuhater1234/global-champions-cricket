@@ -44,6 +44,17 @@ function validSave(save){
  if(s.dynasty){
   const d=s.dynasty;if(!record(d)||!Array.isArray(d.history)||!Array.isArray(d.transactions)||!record(d.manager)||!record(d.injuries)||!record(d.replacementFor)||!record(d.replacementOf))return false;
   if(d.developmentByYear!=null){if(!record(d.developmentByYear))return false;for(const [year,rows]of Object.entries(d.developmentByYear)){if(!Number.isInteger(Number(year))||Number(year)<2009||Number(year)>2026||!Array.isArray(rows)||rows.some(r=>!record(r)||r.year!==Number(year)||!ids.has(r.playerId)||typeof r.name!=='string'||!Number.isFinite(r.fromOverall)||!Number.isFinite(r.toOverall)||r.delta!==r.toOverall-r.fromOverall||Math.abs(r.delta)>98)||!unique(rows.map(r=>r.playerId)))return false;}}
+  for(const key of ['tradeDealsByYear','departureBudgetsByYear'])if(d[key]!=null){
+    if(!record(d[key]))return false;
+    for(const [year,rows]of Object.entries(d[key])){
+      if(!Number.isInteger(Number(year))||Number(year)<2008||Number(year)>2026||!record(rows))return false;
+      for(const [abbr,v]of Object.entries(rows)){
+        if(!clubs.includes(abbr))return false;
+        if(key==='tradeDealsByYear'){if(!Number.isInteger(v)||v<0||v>120)return false;}
+        else if(!record(v)||['retired','cuts','traded'].some(k=>!Number.isInteger(v[k])||v[k]<0||v[k]>120))return false;
+      }
+    }
+  }
   const r=d.v8Reveal;if(r&&(!record(r)||!['league','draft','annual'].includes(r.kind)||!Number.isInteger(r.count)||r.count<0||r.count>8||!Number.isInteger(r.speedIndex)||r.speedIndex<0||r.speedIndex>2||typeof r.running!=='boolean'))return false;
   const m=d.v8Match;if(m&&(!record(m)||!Number.isInteger(m.count)||m.count<0||m.count>(m.presentationVersion===2?9:5)||!Number.isInteger(m.speedIndex)||m.speedIndex<0||m.speedIndex>2||typeof m.running!=='boolean'||!['result','finals'].includes(m.returnView)||!record(m.reference)||!['regular','semis','gf'].includes(m.reference.type)))return false;
   if(m?.presentationVersion!=null&&m.presentationVersion!==2)return false;
@@ -52,7 +63,12 @@ function validSave(save){
   const o=d.offseason;if(o?.returningIds&&(!Array.isArray(o.returningIds)||!unique(o.returningIds)||o.returningIds.some(id=>!Number.isInteger(id)||!ids.has(id))))return false;
   if(o&&(!record(o)||!['market','lottery','draft','cuts','ready'].includes(o.phase)||['retirements','arrivals','lottery','picks','voluntaryCuts','finalCuts'].some(k=>!Array.isArray(o[k]))||!Number.isInteger(o.pickCursor)||o.pickCursor<0))return false;
   if(o?.releasePickPolicy!=null&&o.releasePickPolicy!==1)return false;
+  if(o?.ordinaryPickCounts!=null&&(!record(o.ordinaryPickCounts)||Object.entries(o.ordinaryPickCounts).some(([a,n])=>!clubs.includes(a)||!Number.isInteger(n)||n<0||n>4)))return false;
+  if(o?.supplementSnakePolicy!=null&&o.supplementSnakePolicy!==1)return false;
+  if(o?.netTradeDepartures!=null&&(!record(o.netTradeDepartures)||Object.entries(o.netTradeDepartures).some(([a,n])=>!clubs.includes(a)||!Number.isInteger(n)||Math.abs(n)>120)))return false;
+  if(o?.tradeDepartures!=null&&(!record(o.tradeDepartures)||Object.entries(o.tradeDepartures).some(([a,n])=>!clubs.includes(a)||!Number.isInteger(n)||n<0||n>120)))return false;
   if(o?.cpuReleases!=null){const moves=o.cpuReleases;if(!record(moves))return false;const released=[];for(const [abbr,cutIds] of Object.entries(moves)){if(!clubs.includes(abbr)||abbr===s.userClub?.abbr||!Array.isArray(cutIds)||cutIds.length>Math.min(2,Math.max(0,4-o.retirements.filter(r=>r.owner===abbr).length))||cutIds.some(id=>!Number.isInteger(id)||!ids.has(id)))return false;released.push(...cutIds);}if(!unique(released))return false;}
  }
  return true;
 }
+

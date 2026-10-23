@@ -1,0 +1,75 @@
+{
+  "hash": "b96edcdbe94bdd2b244bdfd05c552289345de248665852a1ce55e4c738bd3106",
+  "rows": [
+    {
+      "test": "qa/v8_comparison_intent_test.mjs",
+      "exitCode": 0,
+      "seconds": 4.74
+    },
+    {
+      "test": "qa/v8_core_loop_hierarchy_test.mjs",
+      "exitCode": 0,
+      "seconds": 5.31
+    },
+    {
+      "test": "qa/v8_decision_tools_test.mjs",
+      "exitCode": 0,
+      "seconds": 7.55
+    },
+    {
+      "test": "qa/v8_match_career_hierarchy_test.mjs",
+      "exitCode": 0,
+      "seconds": 4.5
+    },
+    {
+      "test": "qa/v8_offseason_decisions_test.mjs",
+      "exitCode": 0,
+      "seconds": 6.48
+    },
+    {
+      "test": "qa/v8_offseason_test.mjs",
+      "exitCode": 0,
+      "seconds": 25.68
+    },
+    {
+      "test": "qa/v8_player_journey_test.mjs",
+      "exitCode": 0,
+      "seconds": 6.79
+    },
+    {
+      "test": "qa/v8_result_context_test.mjs",
+      "exitCode": 0,
+      "seconds": 4.53
+    },
+    {
+      "test": "qa/v8_save_visibility_test.mjs",
+      "exitCode": 0,
+      "seconds": 4.6
+    },
+    {
+      "test": "qa/v8_scout_hierarchy_test.mjs",
+      "exitCode": 0,
+      "seconds": 4.43
+    },
+    {
+      "test": "qa/v8_selection_recovery_test.mjs",
+      "exitCode": 0,
+      "seconds": 6.43
+    },
+    {
+      "test": "qa/v8_squad_management_test.mjs",
+      "exitCode": 0,
+      "seconds": 7.37
+    },
+    {
+      "test": "qa/v8_team_workspace_test.mjs",
+      "exitCode": 0,
+      "seconds": 5.37
+    },
+    {
+      "test": "qa/v8_trade_review_safety_test.mjs",
+      "exitCode": 0,
+      "seconds": 7.67
+    }
+  ]
+}

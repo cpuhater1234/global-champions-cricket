@@ -1,0 +1,29 @@
+{
+  "hash": "b96edcdbe94bdd2b244bdfd05c552289345de248665852a1ce55e4c738bd3106",
+  "checks": 127,
+  "rows": [
+    {
+      "retirements": 3,
+      "releases": 0,
+      "trades": 1,
+      "coldRestored": true
+    },
+    {
+      "retirements": 2,
+      "releases": 1,
+      "trades": 1,
+      "coldRestored": true
+    },
+    {
+      "retirements": 1,
+      "releases": 2,
+      "trades": 1,
+      "coldRestored": true
+    },
+    {
+      "tradedPick": true,
+      "allRosters15": true
+    }
+  ],
+  "scope": "Actual engine/UI accepted trade + release sequences, cold restores, both-club outgoing ledgers, hard-cap bypass attempts, traded-pick draft completion with 15 each, exhausted CPU market and malformed metadata."
+}

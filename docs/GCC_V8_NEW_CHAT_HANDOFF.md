@@ -1,3 +1,16 @@
+# Latest continuation checkpoint: trade rules and supplementary draft fixes, 23 October 2026
+
+The current playable supersedes the audit-only checkpoint below. SHA256 `b96edcdbe94bdd2b244bdfd05c552289345de248665852a1ce55e4c738bd3106`; Git blob `c6014417c97da8921fa079f308e8b0e82da864a6`; 1920353 bytes. Both canonical HTML files and delivered GCC_v8_Career_Clarity.html are identical. Delivery version: 55, existing Library identity libfile_ebabb63004ac81919b41b246675c703d, file_00000000e9088211bb3cacb94f0f2c7a.
+
+User-confirmed rules: natural retirements are uncapped. Retirements, cuts and every outgoing traded player consume the four-departure allowance; forced exits beyond four happen normally but leave no voluntary departures. Cuts remain at most two. Each club can complete at most two trades per season across offseason and the in-season window. A deal may include up to two players and two owned ordinary R1/R2 picks from each club. Incoming players do not refund departures. The in-season window closes immediately after completed Round 3: rounds 0/1/2 open, 3 onward closed. Both clubs' allowances and asset ownership are enforced in the engine.
+
+- New visible trade builder supports both second players and two picks on each side, full review/edit/cancel and explicit remaining budgets. Draft picks are still only available after the annual order draw. In-season player exchanges must leave both squads at fifteen; offseason unequal packages require genuine roster capacity.
+- Supplementary rounds now continue snake parity after ordinary rounds. Releases and net outgoing vacancies from uneven trades refill at the end. Natural retirements above four refill normally. Full clubs skip surplus acquired selections; no forced seventeenth/sixteenth player or extra cut is introduced.
+- Ordinary pick entitlements freeze at the annual draw, including before a trade in an older lottery save. A sold pick cannot disappear when an incoming player fills the seller's vacancy. Existing already-started saved drafts retain their previous exposed order and cursor; their policy is not silently reindexed.
+- Per-season deal counts and departure summaries persist through annual completion, early-season trades and cold saves. Old single-player logged trades are read for compatibility; no invented historical player exits. New optional metadata is validated before restore.
+- Verification and evidence: docs/GCC_V8_TRADE_RULES_20261023.md and qa/departure-rules. Main full-career audit below belongs to the preceding build; do not claim 38 full seasons rerun on this rule change. Current scoring, career calibration, visual CSS, stadium photos and manual-XI requirements are preserved.
+- Rebuild this checkpoint using qa/departure-rules/build.py from the exact prior playable at commit9494eb1 (instructions in its docstring), with final v8 source modules. The generated v8/engine/dynasty.js now matches the current playable engine script rather than the older frozen snapshot.
+
 # Latest continuation checkpoint: deep audit, 23 October 2026
 
 ## Completed deep audit of the current balanced-palette game
