@@ -41,3 +41,12 @@ The participant/session kit is ready. Automated or emulated sessions must never 
 ## Final integrity rule
 
 Do not restart the broad v8 audit and do not rewrite the accepted game to make the final checklist look closed. The correct release posture is: preserve v57, keep unsupported reratings out, keep the isolated accessibility patch queued, and only advance the stable playable after the exact frozen numerical gate or genuine human/hardware evidence supports it.
+
+
+## Precision recovery update — later 24 October session
+
+See `docs/GCC_V8_PRE_HOLDOUT_INDEPENDENT_REVIEW_20261024.md`.
+
+The numerical gate remains unopened. A second Actions route using `ubuntu-latest` also failed before runner allocation (run `40093517831`), confirming that the earlier failure was not caused by the Ubuntu 24.04 label. Library/date-bounded recovery found no hidden expanded source bundle or SQLite. Current Cricsheet catalogue counts match the frozen expansion manifest, but byte identity cannot be established in this environment and therefore cannot be used for promotion.
+
+A separate pre-holdout model review found no future-data leakage. It records conservative limitations including unseen target-year categorical effects and cold-start players. These must remain in the frozen evaluation rather than being filtered or tuned away after results.

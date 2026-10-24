@@ -1,3 +1,9 @@
+# Precision recovery checkpoint — later 24 October
+
+Read `docs/GCC_V8_PRE_HOLDOUT_INDEPENDENT_REVIEW_20261024.md` with the final completion checkpoint. The accepted playable is still untouched. GitHub Actions also fails before runner allocation on `ubuntu-latest` (run `40093517831`), Library contains no hidden expanded dataset, and no substitute data has been accepted. The 2023–2026 holdout remains unopened. A separate model review found no future leakage and documented conservative cold-start/year-context limitations that must not be tuned away.
+
+---
+
 # Final completion checkpoint — 24 October, later session
 
 Read `docs/GCC_V8_FINAL_COMPLETION_CHECKPOINT_20261024.md` before doing any more finishing work. Stable v57 / SHA `3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf` remains authoritative and was re-materialised from Library byte-identically. No rating or production-UI change was promoted.
