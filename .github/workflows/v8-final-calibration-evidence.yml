@@ -1,0 +1,177 @@
+name: GCC v8 final calibration evidence
+
+on:
+  push:
+    branches:
+      - work/v8-game-first-rebuild
+    paths:
+      - '.github/workflows/v8-final-calibration-evidence.yml'
+  workflow_dispatch:
+
+jobs:
+  calibrate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Record runtime
+        run: |
+          python --version
+          node --version
+          sha256sum qa/calibration-20261024/model.py
+          sha256sum qa/calibration-20261024/identities.json
+          python - <<'PY'
+          import hashlib,json,pathlib,sys
+          root=pathlib.Path('qa/calibration-20261024')
+          pre=json.loads((root/'preregistration.json').read_text())
+          got=hashlib.sha256((root/'model.py').read_bytes()).hexdigest()
+          ids=hashlib.sha256((root/'identities.json').read_bytes()).hexdigest()
+          print('model',got)
+          print('identity',ids)
+          assert got==pre['modelCodeSha256'], (got,pre['modelCodeSha256'])
+          assert ids==pre['identityMappingSha256'], (ids,pre['identityMappingSha256'])
+          assert pre['heldOutMetricsObserved'] is False
+          PY
+
+      - name: Install frozen modelling dependencies
+        run: |
+          python -m pip install --disable-pip-version-check --no-input "numpy==2.1.3" "scipy==1.14.1" "scikit-learn==1.5.2"
+          python - <<'PY'
+          import numpy,scipy,sklearn
+          print({'numpy':numpy.__version__,'scipy':scipy.__version__,'sklearn':sklearn.__version__})
+          PY
+
+      - name: Download exact frozen Cricsheet archives
+        run: |
+          set -euo pipefail
+          mkdir -p qa/calibration-20261024/sources
+          curl -fL --retry 3 -o qa/finish-pass/bbl_json.zip https://cricsheet.org/downloads/bbl_json.zip
+          curl -fL --retry 3 -o qa/finish-pass/ipl_json.zip https://cricsheet.org/downloads/ipl_json.zip
+          curl -fL --retry 3 -o qa/finish-pass/ntb_json.zip https://cricsheet.org/downloads/ntb_json.zip
+          curl -fL --retry 3 -o qa/finish-pass/t20s_male_json.zip https://cricsheet.org/downloads/t20s_male_json.zip
+          curl -fL --retry 3 -o qa/calibration-20261024/sources/bpl_male_json.zip https://cricsheet.org/downloads/bpl_male_json.zip
+          curl -fL --retry 3 -o qa/calibration-20261024/sources/cpl_male_json.zip https://cricsheet.org/downloads/cpl_male_json.zip
+          curl -fL --retry 3 -o qa/calibration-20261024/sources/ctc_male_json.zip https://cricsheet.org/downloads/ctc_male_json.zip
+          curl -fL --retry 3 -o qa/calibration-20261024/sources/ilt_male_json.zip https://cricsheet.org/downloads/ilt_male_json.zip
+          curl -fL --retry 3 -o qa/calibration-20261024/sources/lpl_male_json.zip https://cricsheet.org/downloads/lpl_male_json.zip
+          curl -fL --retry 3 -o qa/calibration-20261024/sources/mlc_male_json.zip https://cricsheet.org/downloads/mlc_male_json.zip
+          curl -fL --retry 3 -o qa/calibration-20261024/sources/psl_male_json.zip https://cricsheet.org/downloads/psl_male_json.zip
+          curl -fL --retry 3 -o qa/calibration-20261024/sources/sat_male_json.zip https://cricsheet.org/downloads/sat_male_json.zip
+          curl -fL --retry 3 -o qa/calibration-20261024/sources/sma_male_json.zip https://cricsheet.org/downloads/sma_male_json.zip
+          curl -fL --retry 3 -o qa/calibration-20261024/sources/ssm_male_json.zip https://cricsheet.org/downloads/ssm_male_json.zip
+          cat > /tmp/source.sha256 <<'EOF'
+          7946b113c55ff4be695b2f0f7fccd12b8ce8afd652a67784a81bd6109f9b5907  qa/finish-pass/bbl_json.zip
+          5757e04287179767ff8495f02902bd13812b9572ec8fa2ac1347ec2e9c6d4709  qa/finish-pass/ipl_json.zip
+          a9461d44a3209ce29ed7012cb3e2046725633e37fa7016d82f58c57ad8df307a  qa/finish-pass/ntb_json.zip
+          95305bc2dae8dcce7b8da7755f3992521874b14598ea5828129f37834e8b860a  qa/finish-pass/t20s_male_json.zip
+          4b1a314300ca105fa5396c426ac060db6a1db1541f97d9fadcddeb5bb09bd736  qa/calibration-20261024/sources/bpl_male_json.zip
+          67752aff53de41e844d16c37de4d3767d8f9e7fbe1e544c5de5e4efaec76c430  qa/calibration-20261024/sources/cpl_male_json.zip
+          ca259cbc6ab5cf2bb3c5650f3ff9fbe848a4ee1da28547b13d7bdf29d5bac170  qa/calibration-20261024/sources/ctc_male_json.zip
+          5630f1640d8e982f01b6abe2b5449108d9b0c6f11ca88d720b99b7eef485a88d  qa/calibration-20261024/sources/ilt_male_json.zip
+          5dc76095dc40c55c538ac977f500810a3eb20db4aceb30f7f5d39cc1c4b87cbd  qa/calibration-20261024/sources/lpl_male_json.zip
+          bbf66eb5178dfcea928747efc7801fe75ad71ddca6f1c17962ac34487e2ff90e  qa/calibration-20261024/sources/mlc_male_json.zip
+          e8172deb1f97fa23230bd717a88c8af689fdb374f6f9e2ce5be88a718d909401  qa/calibration-20261024/sources/psl_male_json.zip
+          284adb5fa7f2b510bec440a40fad648c376ecea52781d22e983fc9a8a79c3cb7  qa/calibration-20261024/sources/sat_male_json.zip
+          14ebfdc1541d6211a8041249d5c8cc9b460fb729a27169959f0de68971444455  qa/calibration-20261024/sources/sma_male_json.zip
+          a9ea24a3f09dd15fab83848d25dd3e99f20c7a7303ac83a219cd022347b8b7d5  qa/calibration-20261024/sources/ssm_male_json.zip
+          EOF
+          sha256sum -c /tmp/source.sha256
+
+      - name: Pre-evaluation unit tests
+        run: |
+          python qa/calibration-20261024/test_pipeline.py
+          OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python qa/calibration-20261024/test_model.py
+
+      - name: Rebuild and verify normalised dataset
+        run: |
+          OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python qa/calibration-20261024/ingest.py | tee qa/calibration-20261024/actions-ingest.log
+          python - <<'PY'
+          import hashlib,json,pathlib
+          root=pathlib.Path('qa/calibration-20261024')
+          pre=json.loads((root/'preregistration.json').read_text())
+          report=json.loads((root/'ingest-report.json').read_text())
+          got=hashlib.sha256((root/'deliveries.sqlite').read_bytes()).hexdigest()
+          print('dataset',got)
+          assert got==report['datasetSha256']
+          assert got==pre['datasetSha256'], (got,pre['datasetSha256'])
+          assert report['totals']['matches']==9422
+          assert report['totals']['deliveries']==2219067
+          PY
+
+      - name: Reproduce exact game numeric baseline
+        run: |
+          GCC8_TEST_BUILD=game/gcc_v8_product_candidate.html node qa/finish-pass/numeric-audit.mjs | tee qa/calibration-20261024/actions-numeric-audit.log
+          python - <<'PY'
+          import json
+          d=json.load(open('qa/finish-pass/numeric-audit.json'))
+          assert d['hash']=='3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf'
+          assert d['summary']['uniquePlayers']==412
+          assert d['summary']['playerSeasons']==5149
+          PY
+
+      - name: Open held-out years exactly once
+        env:
+          OPENBLAS_NUM_THREADS: "1"
+          OMP_NUM_THREADS: "1"
+        run: |
+          python qa/calibration-20261024/model.py 2>&1 | tee qa/calibration-20261024/actions-model.log
+
+      - name: Independent decision and outlier review
+        run: |
+          python - <<'PY'
+          import json,math,pathlib,collections
+          root=pathlib.Path('qa/calibration-20261024')
+          rep=json.loads((root/'heldout-report.json').read_text())
+          obs=json.loads((root/'heldout-observations.json').read_text())
+          pre=json.loads((root/'preregistration.json').read_text())
+          checks={
+            'frozenValidationYears':rep['validation'][0] is not None and pre['validationYears']==[2020,2021,2022],
+            'frozenTestYears':pre['lockedTestYears']==[2023,2024,2025,2026],
+            'baselineHash':rep['baselineArtifactSha256']=='3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf',
+            'finiteMetrics':all(math.isfinite(v) for f in ['bat','bowl'] for block in ['walkForwardHeldOut','locked2022HeldOut'] for v in [rep[block][f]['modelSpearman'],rep[block][f]['legacySpearman'],*rep[block][f]['gainInterval975']])
+          }
+          by=collections.defaultdict(list)
+          for r in obs: by[r['family']].append(r)
+          review={}
+          for fam,rows in by.items():
+            ranked=sorted(rows,key=lambda r:abs(r['prediction']-r['actual']),reverse=True)
+            legacy_bad=sorted(rows,key=lambda r:abs(r['legacy']-r['actual']),reverse=True)
+            review[fam]={
+              'rows':len(rows),
+              'players':len({r['id'] for r in rows}),
+              'largestModelErrors':ranked[:20],
+              'largestLegacyErrors':legacy_bad[:20],
+              'promotionGate':rep['promotionGates'][fam],
+              'walkForward':rep['walkForwardHeldOut'][fam],
+              'locked2022':rep['locked2022HeldOut'][fam]
+            }
+          decision={
+            'preRegistered':True,
+            'noPostHoldoutRetuning':True,
+            'checks':checks,
+            'promotionGates':rep['promotionGates'],
+            'rule':'Promote a family only when its predeclared gate is true; otherwise preserve the published ratings for that family.',
+            'review':review
+          }
+          assert all(checks.values()),checks
+          (root/'completion-review.json').write_text(json.dumps(decision,indent=2))
+          print(json.dumps({'promotionGates':decision['promotionGates'],'checks':checks},indent=2))
+          PY
+
+      - name: Upload calibration evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gcc-v8-final-calibration-evidence
+          if-no-files-found: error
+          retention-days: 14
+          path: |
+            qa/calibration-20261024/actions-*.log
+            qa/calibration-20261024/ingest-report.json
+            qa/calibration-20261024/model-contract.json
+            qa/calibration-20261024/validation-selection.json
+            qa/calibration-20261024/heldout-report.json
+            qa/calibration-20261024/heldout-observations.json
+            qa/calibration-20261024/completion-review.json
+            qa/finish-pass/numeric-audit.json
