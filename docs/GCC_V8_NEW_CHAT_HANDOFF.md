@@ -114,3 +114,10 @@ Natural retirements are uncapped. Shared four-departure allowance limits further
 Scratch repo is a partial checkout without `.git`; use the GitHub connector and expected-head lease for writes. Fetch current branch head before advancing it. Browser runtimes persist under `/workspace/scratch/bed56f4334a5/browser-runtime/playwright`; recreate `/root/.cache/ms-playwright` and `/tmp/gcc-chromium` symlinks if a runtime reset removed them. Local WebKit libraries link inside minibrowser sys/lib. The managed browser harness uses PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=1 and MOZ_DISABLE_CONTENT_SANDBOX=1; these are test-environment settings, not product instructions.
 
 No long final-verification job remains pending. Do not restart the broad finishing audit from old chat history. Start from the open numerical/human gates above, or the user's new concrete direction.
+
+
+## Current-session precision addendum
+
+Main work branch source isolation is restored at commit `30c483d33732f76ec05a699f89f11f7f10df9b55`: `v8/ui/match_story.js` is back to its protected unpatched blob, and canonical v57 remains Git blob `f5059bb1890951b9816c8cdf57670d6b21e0d0f2` / SHA-256 `3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf`.
+
+Accessibility candidate branch `work/v8-a11y-live-score-candidate` now has an additional full-playback regression at commit `ee7caf81a869f1d3196b4c3d2361e4aec3568e14`. Actual Chromium rendered all 292 delivery frames from the retained foundation fixture with deterministic time/RNG. Original and candidate had identical delivery-frame data, identical pre/post game state, no render-time state mutation, and identical visible per-frame score/overs/phase/commentary/trail/fixture/control output. This supplements the existing four-state pixel-identical and accessibility-tree evidence. Canonical v57 is still not promoted; human screen-reader timing/comprehension remains external.
