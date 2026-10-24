@@ -1,0 +1,22 @@
+FF
+======================================================================
+FAIL: test_delivery_attribution (__main__.Pipeline.test_delivery_attribution)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/bed56f4334a5/gcc/qa/calibration-20261024/test_pipeline.py", line 7, in test_delivery_attribution
+    self.assertTrue(hasattr(M,'delivery_stats'),'normalised delivery contract missing')
+AssertionError: False is not true : normalised delivery contract missing
+
+======================================================================
+FAIL: test_phase_and_cutoff (__main__.Pipeline.test_phase_and_cutoff)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/bed56f4334a5/gcc/qa/calibration-20261024/test_pipeline.py", line 17, in test_phase_and_cutoff
+    self.assertTrue(hasattr(M,'phase'),'phase contract missing');self.assertEqual([M.phase(o)for o in [0,3,4,14,15,19]],[0,0,1,1,2,2])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : phase contract missing
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+FAILED (failures=2)

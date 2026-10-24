@@ -1,0 +1,86 @@
+{
+  "scope": "Actual headless Chromium DOM/live-region semantics. No spoken screen-reader output or human usability certification.",
+  "originalHash": "3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf",
+  "rows": [
+    {
+      "file": "game/gcc_v8_product_candidate.html",
+      "stage": "ball",
+      "live": "0.1 · LIVE BALLSimon Katich. No run. The field holds.",
+      "atomic": null,
+      "score": "0/0",
+      "overs": "0.1 overs",
+      "hiddenSummary": null,
+      "cumulativeScoreIncluded": false
+    },
+    {
+      "file": "game/gcc_v8_product_candidate.html",
+      "stage": "wicket",
+      "live": "5.6 · WICKETSimon Katich: b Shane Watson.",
+      "atomic": null,
+      "score": "27/1",
+      "overs": "6.0 overs",
+      "hiddenSummary": null,
+      "cumulativeScoreIncluded": false
+    },
+    {
+      "file": "game/gcc_v8_product_candidate.html",
+      "stage": "chase",
+      "live": "0.1 · SIXShane Watson. Into the stands for six.",
+      "atomic": null,
+      "score": "6/0",
+      "overs": "0.1 overs",
+      "hiddenSummary": null,
+      "cumulativeScoreIncluded": false
+    },
+    {
+      "file": "game/gcc_v8_product_candidate.html",
+      "stage": "end",
+      "live": "MATCH MOMENTNottinghamshire finish on 141/5.",
+      "atomic": null,
+      "score": "141/5",
+      "overs": "20.0 overs",
+      "hiddenSummary": null,
+      "cumulativeScoreIncluded": false
+    },
+    {
+      "file": "qa/accessibility-20261024/live-score-candidate.html",
+      "stage": "ball",
+      "live": "Nottinghamshire: 0 for 0 after 0.1 overs. 0.1 · LIVE BALLSimon Katich. No run. The field holds.",
+      "atomic": "true",
+      "score": "0/0",
+      "overs": "0.1 overs",
+      "hiddenSummary": "Nottinghamshire: 0 for 0 after 0.1 overs. ",
+      "cumulativeScoreIncluded": true
+    },
+    {
+      "file": "qa/accessibility-20261024/live-score-candidate.html",
+      "stage": "wicket",
+      "live": "Nottinghamshire: 27 for 1 after 6.0 overs. 5.6 · WICKETSimon Katich: b Shane Watson.",
+      "atomic": "true",
+      "score": "27/1",
+      "overs": "6.0 overs",
+      "hiddenSummary": "Nottinghamshire: 27 for 1 after 6.0 overs. ",
+      "cumulativeScoreIncluded": true
+    },
+    {
+      "file": "qa/accessibility-20261024/live-score-candidate.html",
+      "stage": "chase",
+      "live": "Yorkshire: 6 for 0 after 0.1 overs. 136 needed from 119 balls. 0.1 · SIXShane Watson. Into the stands for six.",
+      "atomic": "true",
+      "score": "6/0",
+      "overs": "0.1 overs",
+      "hiddenSummary": "Yorkshire: 6 for 0 after 0.1 overs. 136 needed from 119 balls. ",
+      "cumulativeScoreIncluded": true
+    },
+    {
+      "file": "qa/accessibility-20261024/live-score-candidate.html",
+      "stage": "end",
+      "live": "Nottinghamshire: 141 for 5 after 20.0 overs. MATCH MOMENTNottinghamshire finish on 141/5.",
+      "atomic": "true",
+      "score": "141/5",
+      "overs": "20.0 overs",
+      "hiddenSummary": "Nottinghamshire: 141 for 5 after 20.0 overs. ",
+      "cumulativeScoreIncluded": true
+    }
+  ]
+}

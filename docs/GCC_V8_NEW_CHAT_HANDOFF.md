@@ -1,3 +1,13 @@
+# Active24October calibration work — read first
+
+User asked to complete remaining areas. Published playable remains3973116/SHA3dd348dd, stableversion57; no new ratings promoted yet. Main work now lives in docs/superpowers/plans/2026-10-24-calibration-completion.md and qa/calibration-20261024/progress.md. All412 identities verified, zero unresolved; five earlier mappings corrected. Fourteen official source archives,9,422 clean eligible matches; two source roster-ID collisions quarantined rather than repaired by guessing. Independent raw/SQLite reconciliation passes. DatasetSHA60d38fb30ff38f72a7d344437ed881b2ba93731a739dd35fdd556a82386c3ce9. No held-out metrics observed before preregistration checkpoint.
+
+Next execute model.py with OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1, verify hash against preregistration.json. Validation2020–22 selects fixed regularisation; walk-forward forecasts2023–26 and a separate locked2022 whole-block test govern promotion. Do not tune on results. If family gates fail, do not ship unsupported reratings. Existing mental/keeping/technique attributes are not magically measured by delivery archives.
+
+qa/accessibility-20261024 contains actual Chromium checks, anonymous local participant recorder, direct-normal-build session kit and proposed live-score source patch. Production patch not applied. Recorder is offline/fallback artwork and must not be labelled normal full visual testing. No actual humans or physical devices were observed; these remain genuine external gates. Current Chromium restored by decompressing bundled chromium.br to /tmp/accessibility-chromium, with LD_LIBRARY_PATH=browser-runtime. No .git directory; use connector expected-head leases. User alreadyauthorised repository actions and execution without repeated permission.
+
+---
+
 # GCC current handoff — verified finishing build
 
 ## Authoritative state

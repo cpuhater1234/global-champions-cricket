@@ -1,0 +1,34 @@
+{
+  "design": "docs/superpowers/specs/2026-10-24-calibration-completion-design.md",
+  "modelCodeSha256": "41fd2a71c617f4dc9dacd9d2123f1994fe8c2b77ab8d6f769f44fc570cb0b635",
+  "validationYears": [
+    2020,
+    2021,
+    2022
+  ],
+  "lockedTestYears": [
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "alphaCandidates": [
+    60,
+    180,
+    480,
+    1200
+  ],
+  "wicketCostTrainingCutoff": 2019,
+  "promotionGate": "Per-family walk-forward player-cluster97.5% lower bound of Spearman gain over published expected phase ratings >0 AND locked2022 whole-block point gain>=0.",
+  "unidentifiableSkills": "No inference of precise mental, leadership, keeping or technique ratings from absent delivery evidence.",
+  "quarantine": [
+    "1229824",
+    "1130677"
+  ],
+  "heldOutMetricsObserved": false,
+  "publishedBaselineCommit": "397311626bf1fb7c30b58a223c81063cac17e279",
+  "testDesign": "Walk-forward next-year forecasts with frozen validation-selected hyperparameters; separate fixed2022 model predicts entire2023\u20132026 block.",
+  "preEvaluationRevision": "Clarified walk-forward vs locked holdout before any model fitting/evaluation; added independent whole-block robustness gate.",
+  "datasetSha256": "60d38fb30ff38f72a7d344437ed881b2ba93731a739dd35fdd556a82386c3ce9",
+  "identityMappingSha256": "aca5815c638349a304dc547ee94bc95c03cd4e52b055989deb065e0d7fef280a"
+}

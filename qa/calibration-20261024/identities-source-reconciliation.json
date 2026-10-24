@@ -1,0 +1,1075 @@
+{
+  "status": "PASS",
+  "statusMeaning": "PASS means independent cleaned raw counts reconcile to frozen SQLite; general opposing-roster ID collision guard quarantines the two source defects. It does not certify biographies or numerical ratings.",
+  "databaseSha256": "60d38fb30ff38f72a7d344437ed881b2ba93731a739dd35fdd556a82386c3ce9",
+  "priorUncleanedDiscovery": {
+    "path": "/workspace/scratch/bed56f4334a5/gcc/qa/calibration-20261024/identities-source-reconciliation-before-quarantine.json",
+    "sha256": "db04c42005effae39b9245a17ea4bd4db35b49aa24d3e5a4f501db45a1a63a2e",
+    "comparisonStatus": "PASS",
+    "eligibleMatches": 9424,
+    "rawGlobal": {
+      "matches": 9424,
+      "deliveries": 2219512,
+      "legal": 2135897,
+      "faced": 2145293,
+      "batOuts": 120292,
+      "credited": 111369
+    },
+    "selfIdentityEvents": 11,
+    "opposingRosterIdentityCollisions": [
+      {
+        "match": "1229824",
+        "date": "2020-08-21",
+        "source": "qa/finish-pass/t20s_male_json.zip",
+        "identifiersInOpposingRosters": {
+          "efcb778e": [
+            "Guernsey",
+            "Isle of Man"
+          ]
+        }
+      },
+      {
+        "match": "1130677",
+        "date": "2018-01-09",
+        "source": "/workspace/scratch/bed56f4334a5/gcc/qa/calibration-20261024/sources/sma_male_json.zip",
+        "identifiersInOpposingRosters": {
+          "119678fd": [
+            "Railways",
+            "Vidarbha"
+          ]
+        }
+      }
+    ]
+  },
+  "independentImplementation": true,
+  "importsIngestHelpers": false,
+  "eligibility": "male T20, scheduled20 overs,6 balls/over, first date <=2026-10-24, no adjusted outcome method/no-result, no shortened target, at least2 innings; exclude whole matches if any identifier appears in opposing team player rosters; skip Super Overs; canonical match-ID dedup with content-hash conflict assertion.",
+  "attribution": "Bat and bowl SQL queries are separate. Non-striker dismissals increase only actual player_out batting dismissals; credited bowling wickets counted once on original delivery. Self-ID events are tracked but never used to union both sides.",
+  "sourceCount": 14,
+  "sources": [
+    {
+      "path": "qa/finish-pass/bbl_json.zip",
+      "sha256": "7946b113c55ff4be695b2f0f7fccd12b8ce8afd652a67784a81bd6109f9b5907",
+      "eligibleMatches": 611
+    },
+    {
+      "path": "qa/finish-pass/ipl_json.zip",
+      "sha256": "5757e04287179767ff8495f02902bd13812b9572ec8fa2ac1347ec2e9c6d4709",
+      "eligibleMatches": 1201
+    },
+    {
+      "path": "qa/finish-pass/ntb_json.zip",
+      "sha256": "a9461d44a3209ce29ed7012cb3e2046725633e37fa7016d82f58c57ad8df307a",
+      "eligibleMatches": 1415
+    },
+    {
+      "path": "qa/finish-pass/t20s_male_json.zip",
+      "sha256": "95305bc2dae8dcce7b8da7755f3992521874b14598ea5828129f37834e8b860a",
+      "eligibleMatches": 3310
+    },
+    {
+      "path": "/workspace/scratch/bed56f4334a5/gcc/qa/calibration-20261024/sources/bpl_male_json.zip",
+      "sha256": "4b1a314300ca105fa5396c426ac060db6a1db1541f97d9fadcddeb5bb09bd736",
+      "eligibleMatches": 466
+    },
+    {
+      "path": "/workspace/scratch/bed56f4334a5/gcc/qa/calibration-20261024/sources/cpl_male_json.zip",
+      "sha256": "67752aff53de41e844d16c37de4d3767d8f9e7fbe1e544c5de5e4efaec76c430",
+      "eligibleMatches": 403
+    },
+    {
+      "path": "/workspace/scratch/bed56f4334a5/gcc/qa/calibration-20261024/sources/ctc_male_json.zip",
+      "sha256": "ca259cbc6ab5cf2bb3c5650f3ff9fbe848a4ee1da28547b13d7bdf29d5bac170",
+      "eligibleMatches": 266
+    },
+    {
+      "path": "/workspace/scratch/bed56f4334a5/gcc/qa/calibration-20261024/sources/ilt_male_json.zip",
+      "sha256": "5630f1640d8e982f01b6abe2b5449108d9b0c6f11ca88d720b99b7eef485a88d",
+      "eligibleMatches": 132
+    },
+    {
+      "path": "/workspace/scratch/bed56f4334a5/gcc/qa/calibration-20261024/sources/lpl_male_json.zip",
+      "sha256": "5dc76095dc40c55c538ac977f500810a3eb20db4aceb30f7f5d39cc1c4b87cbd",
+      "eligibleMatches": 130
+    },
+    {
+      "path": "/workspace/scratch/bed56f4334a5/gcc/qa/calibration-20261024/sources/mlc_male_json.zip",
+      "sha256": "bbf66eb5178dfcea928747efc7801fe75ad71ddca6f1c17962ac34487e2ff90e",
+      "eligibleMatches": 102
+    },
+    {
+      "path": "/workspace/scratch/bed56f4334a5/gcc/qa/calibration-20261024/sources/psl_male_json.zip",
+      "sha256": "e8172deb1f97fa23230bd717a88c8af689fdb374f6f9e2ce5be88a718d909401",
+      "eligibleMatches": 343
+    },
+    {
+      "path": "/workspace/scratch/bed56f4334a5/gcc/qa/calibration-20261024/sources/sat_male_json.zip",
+      "sha256": "284adb5fa7f2b510bec440a40fad648c376ecea52781d22e983fc9a8a79c3cb7",
+      "eligibleMatches": 118
+    },
+    {
+      "path": "/workspace/scratch/bed56f4334a5/gcc/qa/calibration-20261024/sources/sma_male_json.zip",
+      "sha256": "14ebfdc1541d6211a8041249d5c8cc9b460fb729a27169959f0de68971444455",
+      "eligibleMatches": 685
+    },
+    {
+      "path": "/workspace/scratch/bed56f4334a5/gcc/qa/calibration-20261024/sources/ssm_male_json.zip",
+      "sha256": "a9ea24a3f09dd15fab83848d25dd3e99f20c7a7303ac83a219cd022347b8b7d5",
+      "eligibleMatches": 240
+    }
+  ],
+  "eligibleMatches": 9422,
+  "excluded": {
+    "ineligibleFormatDateOrAdjustedMatch": 555,
+    "shortenedTarget": 189,
+    "opposingRosterIdentityCollision": 2
+  },
+  "rawGlobal": {
+    "matches": 9422,
+    "deliveries": 2219067,
+    "legal": 2135468,
+    "faced": 2144863,
+    "batOuts": 120265,
+    "credited": 111346
+  },
+  "sqliteGlobal": {
+    "legal": 2135468,
+    "faced": 2144863,
+    "batOuts": 120265,
+    "credited": 111346
+  },
+  "matchDifferences": {
+    "missingInSql": [],
+    "extraInSql": []
+  },
+  "perMatchSideFieldMismatches": [],
+  "opposingRosterIdentityCollisions": [
+    {
+      "match": "1229824",
+      "date": "2020-08-21",
+      "source": "qa/finish-pass/t20s_male_json.zip",
+      "identifiersInOpposingRosters": {
+        "efcb778e": [
+          "Guernsey",
+          "Isle of Man"
+        ]
+      }
+    },
+    {
+      "match": "1130677",
+      "date": "2018-01-09",
+      "source": "/workspace/scratch/bed56f4334a5/gcc/qa/calibration-20261024/sources/sma_male_json.zip",
+      "identifiersInOpposingRosters": {
+        "119678fd": [
+          "Railways",
+          "Vidarbha"
+        ]
+      }
+    }
+  ],
+  "sameBatterBowlerIdentifierEvents": 0,
+  "sameBatterBowlerIdentifierExamples": [],
+  "players": [
+    {
+      "name": "Lasith Malinga",
+      "identifier": "a12e1d51",
+      "nonStrikerDismissals": 6,
+      "bat": {
+        "raw": {
+          "faced": 261,
+          "runs": 236,
+          "outs": 35,
+          "four": 17,
+          "six": 10,
+          "dot": 138,
+          "events": 268
+        },
+        "sqlite": {
+          "faced": 261,
+          "runs": 236,
+          "outs": 35,
+          "four": 17,
+          "six": 10,
+          "dot": 138,
+          "events": 268
+        },
+        "equal": true,
+        "matchesWithNonzeroEvidence": 54
+      },
+      "bowl": {
+        "raw": {
+          "legal": 5017,
+          "charged": 6002,
+          "credited": 293,
+          "events": 5287
+        },
+        "sqlite": {
+          "legal": 5017,
+          "charged": 6002,
+          "credited": 293,
+          "events": 5287
+        },
+        "equal": true,
+        "matchesWithNonzeroEvidence": 220
+      }
+    },
+    {
+      "name": "Dilhara Fernando",
+      "identifier": "342d8ade",
+      "nonStrikerDismissals": 0,
+      "bat": {
+        "raw": {
+          "faced": 30,
+          "runs": 29,
+          "outs": 5,
+          "four": 4,
+          "six": 0,
+          "dot": 16,
+          "events": 31
+        },
+        "sqlite": {
+          "faced": 30,
+          "runs": 29,
+          "outs": 5,
+          "four": 4,
+          "six": 0,
+          "dot": 16,
+          "events": 31
+        },
+        "equal": true,
+        "matchesWithNonzeroEvidence": 7
+      },
+      "bowl": {
+        "raw": {
+          "legal": 534,
+          "charged": 657,
+          "credited": 28,
+          "events": 565
+        },
+        "sqlite": {
+          "legal": 534,
+          "charged": 657,
+          "credited": 28,
+          "events": 565
+        },
+        "equal": true,
+        "matchesWithNonzeroEvidence": 24
+      }
+    },
+    {
+      "name": "Chamara Silva",
+      "identifier": "1be70c88",
+      "nonStrikerDismissals": 0,
+      "bat": {
+        "raw": {
+          "faced": 203,
+          "runs": 215,
+          "outs": 15,
+          "four": 24,
+          "six": 4,
+          "dot": 93,
+          "events": 211
+        },
+        "sqlite": {
+          "faced": 203,
+          "runs": 215,
+          "outs": 15,
+          "four": 24,
+          "six": 4,
+          "dot": 93,
+          "events": 211
+        },
+        "equal": true,
+        "matchesWithNonzeroEvidence": 18
+      },
+      "bowl": {
+        "raw": {
+          "legal": 18,
+          "charged": 32,
+          "credited": 0,
+          "events": 18
+        },
+        "sqlite": {
+          "legal": 18,
+          "charged": 32,
+          "credited": 0,
+          "events": 18
+        },
+        "equal": true,
+        "matchesWithNonzeroEvidence": 2
+      }
+    },
+    {
+      "name": "Dhammika Prasad",
+      "identifier": "9b79b9de",
+      "nonStrikerDismissals": 0,
+      "bat": {
+        "raw": {
+          "faced": 6,
+          "runs": 7,
+          "outs": 1,
+          "four": 1,
+          "six": 0,
+          "dot": 2,
+          "events": 6
+        },
+        "sqlite": {
+          "faced": 6,
+          "runs": 7,
+          "outs": 1,
+          "four": 1,
+          "six": 0,
+          "dot": 2,
+          "events": 6
+        },
+        "equal": true,
+        "matchesWithNonzeroEvidence": 1
+      },
+      "bowl": {
+        "raw": {
+          "legal": 45,
+          "charged": 94,
+          "credited": 1,
+          "events": 47
+        },
+        "sqlite": {
+          "legal": 45,
+          "charged": 94,
+          "credited": 1,
+          "events": 47
+        },
+        "equal": true,
+        "matchesWithNonzeroEvidence": 3
+      }
+    },
+    {
+      "name": "Nitish Kumar Reddy",
+      "identifier": "aad0c365",
+      "nonStrikerDismissals": 0,
+      "bat": {
+        "raw": {
+          "faced": 701,
+          "runs": 990,
+          "outs": 34,
+          "four": 63,
+          "six": 57,
+          "dot": 235,
+          "events": 732
+        },
+        "sqlite": {
+          "faced": 701,
+          "runs": 990,
+          "outs": 34,
+          "four": 63,
+          "six": 57,
+          "dot": 235,
+          "events": 732
+        },
+        "equal": true,
+        "matchesWithNonzeroEvidence": 43
+      },
+      "bowl": {
+        "raw": {
+          "legal": 397,
+          "charged": 689,
+          "credited": 17,
+          "events": 422
+        },
+        "sqlite": {
+          "legal": 397,
+          "charged": 689,
+          "credited": 17,
+          "events": 422
+        },
+        "equal": true,
+        "matchesWithNonzeroEvidence": 31
+      }
+    },
+    {
+      "name": "MS Dhoni",
+      "identifier": "4a8a2e3b",
+      "nonStrikerDismissals": 7,
+      "bat": {
+        "raw": {
+          "faced": 5102,
+          "runs": 6847,
+          "outs": 181,
+          "four": 475,
+          "six": 304,
+          "dot": 1707,
+          "events": 5295
+        },
+        "sqlite": {
+          "faced": 5102,
+          "runs": 6847,
+          "outs": 181,
+          "four": 475,
+          "six": 304,
+          "dot": 1707,
+          "events": 5295
+        },
+        "equal": true,
+        "matchesWithNonzeroEvidence": 313
+      },
+      "bowl": {
+        "raw": {},
+        "sqlite": {},
+        "equal": true,
+        "matchesWithNonzeroEvidence": 0
+      }
+    },
+    {
+      "name": "Jasprit Bumrah",
+      "identifier": "462411b3",
+      "nonStrikerDismissals": 3,
+      "bat": {
+        "raw": {
+          "faced": 105,
+          "runs": 84,
+          "outs": 15,
+          "four": 7,
+          "six": 1,
+          "dot": 52,
+          "events": 109
+        },
+        "sqlite": {
+          "faced": 105,
+          "runs": 84,
+          "outs": 15,
+          "four": 7,
+          "six": 1,
+          "dot": 52,
+          "events": 109
+        },
+        "equal": true,
+        "matchesWithNonzeroEvidence": 38
+      },
+      "bowl": {
+        "raw": {
+          "legal": 5601,
+          "charged": 6578,
+          "credited": 303,
+          "events": 5789
+        },
+        "sqlite": {
+          "legal": 5601,
+          "charged": 6578,
+          "credited": 303,
+          "events": 5789
+        },
+        "equal": true,
+        "matchesWithNonzeroEvidence": 247
+      }
+    }
+  ],
+  "archivedProfileEvidenceChecks": {
+    "records": 86,
+    "nonuniqueOrMissingExactAliasCases": 83,
+    "allConsistent": true,
+    "checks": [
+      {
+        "name": "Matt Prior",
+        "registerIdentifier": "1200550f",
+        "key_cricinfo": "18675",
+        "url": "https://www.cricinfo.com/cricketers/matt-prior-18675",
+        "consistent": true
+      },
+      {
+        "name": "Yuvraj Singh",
+        "registerIdentifier": "1c914163",
+        "key_cricinfo": "36084",
+        "url": "https://www.cricinfo.com/cricketers/yuvraj-singh-36084",
+        "consistent": true
+      },
+      {
+        "name": "Robin Uthappa",
+        "registerIdentifier": "1c17e270",
+        "key_cricinfo": "35582",
+        "url": "https://www.cricinfo.com/cricketers/robin-uthappa-35582",
+        "consistent": true
+      },
+      {
+        "name": "Rohit Sharma",
+        "registerIdentifier": "740742ef",
+        "key_cricinfo": "34102",
+        "url": "https://www.cricinfo.com/cricketers/rohit-sharma-34102",
+        "consistent": true
+      },
+      {
+        "name": "David Hussey",
+        "registerIdentifier": "fd835ab3",
+        "key_cricinfo": "5766",
+        "url": "https://www.cricinfo.com/cricketers/david-hussey-5766",
+        "consistent": true
+      },
+      {
+        "name": "Mike Hussey",
+        "registerIdentifier": "48fd7349",
+        "key_cricinfo": "5939",
+        "url": "https://www.cricinfo.com/cricketers/michael-hussey-5939",
+        "consistent": true
+      },
+      {
+        "name": "JP Duminy",
+        "registerIdentifier": "2e8994e7",
+        "key_cricinfo": "44932",
+        "url": "https://www.cricinfo.com/cricketers/jean-paul-duminy-44932",
+        "consistent": true
+      },
+      {
+        "name": "Shahid Afridi",
+        "registerIdentifier": "0dc00542",
+        "key_cricinfo": "42639",
+        "url": "https://www.cricinfo.com/cricketers/shahid-afridi-42639",
+        "consistent": true
+      },
+      {
+        "name": "Kieron Pollard",
+        "registerIdentifier": "a757b0d8",
+        "key_cricinfo": "230559",
+        "url": "https://www.cricinfo.com/cricketers/kieron-pollard-230559",
+        "consistent": true
+      },
+      {
+        "name": "James Hopes",
+        "registerIdentifier": "2498e163",
+        "key_cricinfo": "5702",
+        "url": "https://www.cricinfo.com/cricketers/james-hopes-5702",
+        "consistent": true
+      },
+      {
+        "name": "Luke Wright",
+        "registerIdentifier": "cca50cd6",
+        "key_cricinfo": "23460",
+        "url": "https://www.cricinfo.com/cricketers/luke-wright-23460",
+        "consistent": true
+      },
+      {
+        "name": "Dimitri Mascarenhas",
+        "registerIdentifier": "3edb58fc",
+        "key_cricinfo": "16932",
+        "url": "https://www.cricinfo.com/cricketers/dimitri-mascarenhas-16932",
+        "consistent": true
+      },
+      {
+        "name": "Mohammad Asif",
+        "registerIdentifier": "e03b66ec",
+        "key_cricinfo": "41411",
+        "url": "https://www.cricinfo.com/cricketers/mohammad-asif-41411",
+        "consistent": true
+      },
+      {
+        "name": "RP Singh",
+        "registerIdentifier": "c3d1402f",
+        "key_cricinfo": "35280",
+        "url": "https://www.cricinfo.com/cricketers/rp-singh-35280",
+        "consistent": true
+      },
+      {
+        "name": "Amit Mishra",
+        "registerIdentifier": "6b19d823",
+        "key_cricinfo": "31107",
+        "url": "https://www.cricinfo.com/cricketers/amit-mishra-31107",
+        "consistent": true
+      },
+      {
+        "name": "Chris Tremlett",
+        "registerIdentifier": "a72b14ff",
+        "key_cricinfo": "21650",
+        "url": "https://www.cricinfo.com/cricketers/chris-tremlett-21650",
+        "consistent": true
+      },
+      {
+        "name": "Dirk Nannes",
+        "registerIdentifier": "c404f58a",
+        "key_cricinfo": "6981",
+        "url": "https://www.cricinfo.com/cricketers/dirk-nannes-6981",
+        "consistent": true
+      },
+      {
+        "name": "Ambati Rayudu",
+        "registerIdentifier": "70d205c9",
+        "key_cricinfo": "33141",
+        "url": "https://www.cricinfo.com/cricketers/ambati-rayudu-33141",
+        "consistent": true
+      },
+      {
+        "name": "Ravichandran Ashwin",
+        "registerIdentifier": "495d42a5",
+        "key_cricinfo": "26421",
+        "url": "https://www.cricinfo.com/cricketers/ravichandran-ashwin-26421",
+        "consistent": true
+      },
+      {
+        "name": "Manpreet Gony",
+        "registerIdentifier": "ae78bc32",
+        "key_cricinfo": "317293",
+        "url": "https://www.cricinfo.com/cricketers/manpreet-gony-317293",
+        "consistent": true
+      },
+      {
+        "name": "Siddharth Trivedi",
+        "registerIdentifier": "3d7e087f",
+        "key_cricinfo": "35353",
+        "url": "https://www.cricinfo.com/cricketers/siddharth-trivedi-35353",
+        "consistent": true
+      },
+      {
+        "name": "Brad Hodge",
+        "registerIdentifier": "b57f8a9a",
+        "key_cricinfo": "5674",
+        "url": "https://www.cricinfo.com/cricketers/brad-hodge-5674",
+        "consistent": true
+      },
+      {
+        "name": "Steve Smith",
+        "registerIdentifier": "30a45b23",
+        "key_cricinfo": "267192",
+        "url": "https://www.cricinfo.com/cricketers/steven-smith-267192",
+        "consistent": true
+      },
+      {
+        "name": "Michael Klinger",
+        "registerIdentifier": "b970a03f",
+        "key_cricinfo": "6161",
+        "url": "https://www.cricinfo.com/cricketers/michael-klinger-6161",
+        "consistent": true
+      },
+      {
+        "name": "Travis Birt",
+        "registerIdentifier": "d2d4bb0a",
+        "key_cricinfo": "4292",
+        "url": "https://www.cricinfo.com/cricketers/travis-birt-4292",
+        "consistent": true
+      },
+      {
+        "name": "Luke Pomersbach",
+        "registerIdentifier": "b63ab531",
+        "key_cricinfo": "232284",
+        "url": "https://www.cricinfo.com/cricketers/luke-pomersbach-232284",
+        "consistent": true
+      },
+      {
+        "name": "Clint McKay",
+        "registerIdentifier": "94eac556",
+        "key_cricinfo": "6903",
+        "url": "https://www.cricinfo.com/cricketers/clint-mckay-6903",
+        "consistent": true
+      },
+      {
+        "name": "Rob Key",
+        "registerIdentifier": "bcb01d8c",
+        "key_cricinfo": "15876",
+        "url": "https://www.cricinfo.com/cricketers/rob-key-15876",
+        "consistent": true
+      },
+      {
+        "name": "Michael Lumb",
+        "registerIdentifier": "11df3dc8",
+        "key_cricinfo": "16406",
+        "url": "https://www.cricinfo.com/cricketers/michael-lumb-16406",
+        "consistent": true
+      },
+      {
+        "name": "Craig Kieswetter",
+        "registerIdentifier": "1e960f2a",
+        "key_cricinfo": "230855",
+        "url": "https://www.cricinfo.com/cricketers/craig-kieswetter-230855",
+        "consistent": true
+      },
+      {
+        "name": "Phil Mustard",
+        "registerIdentifier": "1b6fef02",
+        "key_cricinfo": "17185",
+        "url": "https://www.cricinfo.com/cricketers/phil-mustard-17185",
+        "consistent": true
+      },
+      {
+        "name": "Steven Davies",
+        "registerIdentifier": "8fc65c2b",
+        "key_cricinfo": "12450",
+        "url": "https://www.cricinfo.com/cricketers/steven-davies-12450",
+        "consistent": true
+      },
+      {
+        "name": "Graham Napier",
+        "registerIdentifier": "611926bc",
+        "key_cricinfo": "17991",
+        "url": "https://www.cricinfo.com/cricketers/graham-napier-17991",
+        "consistent": true
+      },
+      {
+        "name": "Peter Trego",
+        "registerIdentifier": "93e06301",
+        "key_cricinfo": "21577",
+        "url": "https://www.cricinfo.com/cricketers/peter-trego-21577",
+        "consistent": true
+      },
+      {
+        "name": "Ryan ten Doeschate",
+        "registerIdentifier": "4ec07775",
+        "key_cricinfo": "47660",
+        "url": "https://www.cricinfo.com/cricketers/ryan-ten-doeschate-47660",
+        "consistent": true
+      },
+      {
+        "name": "Rana Naved-ul-Hasan",
+        "registerIdentifier": "33f28243",
+        "key_cricinfo": "42272",
+        "url": "https://www.cricinfo.com/cricketers/naved-ul-hasan-42272",
+        "consistent": true
+      },
+      {
+        "name": "Nicky Boje",
+        "registerIdentifier": "6a0537aa",
+        "key_cricinfo": "44091",
+        "url": "https://www.cricinfo.com/cricketers/nicky-boje-44091",
+        "consistent": true
+      },
+      {
+        "name": "Morne van Wyk",
+        "registerIdentifier": "710dd98c",
+        "key_cricinfo": "47711",
+        "url": "https://www.cricinfo.com/cricketers/morne-van-wyk-47711",
+        "consistent": true
+      },
+      {
+        "name": "Loots Bosman",
+        "registerIdentifier": "73e749e1",
+        "key_cricinfo": "44098",
+        "url": "https://www.cricinfo.com/cricketers/loots-bosman-44098",
+        "consistent": true
+      },
+      {
+        "name": "Johan van der Wath",
+        "registerIdentifier": "6821ac10",
+        "key_cricinfo": "47693",
+        "url": "https://www.cricinfo.com/cricketers/johan-van-der-wath-47693",
+        "consistent": true
+      },
+      {
+        "name": "Nathan McCullum",
+        "registerIdentifier": "5673a3fc",
+        "key_cricinfo": "37749",
+        "url": "https://www.cricinfo.com/cricketers/nathan-mccullum-37749",
+        "consistent": true
+      },
+      {
+        "name": "Peter McGlashan",
+        "registerIdentifier": "024fe464",
+        "key_cricinfo": "37770",
+        "url": "https://www.cricinfo.com/cricketers/peter-mcglashan-37770",
+        "consistent": true
+      },
+      {
+        "name": "Chamara Silva",
+        "registerIdentifier": "1be70c88",
+        "key_cricinfo": "50431",
+        "url": "https://www.cricinfo.com/cricketers/chamara-silva-50431",
+        "consistent": true
+      },
+      {
+        "name": "Kaushal Weeraratne",
+        "registerIdentifier": "7e38d2de",
+        "key_cricinfo": "50860",
+        "url": "https://www.cricinfo.com/cricketers/kaushalya-weeraratne-50860",
+        "consistent": true
+      },
+      {
+        "name": "Aftab Ahmed",
+        "registerIdentifier": "53bc7b84",
+        "key_cricinfo": "56266",
+        "url": "https://www.cricinfo.com/cricketers/aftab-ahmed-56266",
+        "consistent": true
+      },
+      {
+        "name": "Ian Harvey",
+        "registerIdentifier": "3227beb4",
+        "key_cricinfo": "5597",
+        "url": "https://www.cricinfo.com/cricketers/ian-harvey-5597",
+        "consistent": true
+      },
+      {
+        "name": "David Willey",
+        "registerIdentifier": "7f048519",
+        "key_cricinfo": "308251",
+        "url": "https://www.cricinfo.com/cricketers/david-willey-308251",
+        "consistent": true
+      },
+      {
+        "name": "Suryakumar Yadav",
+        "registerIdentifier": "271f83cd",
+        "key_cricinfo": "446507",
+        "url": "https://www.cricinfo.com/cricketers/suryakumar-yadav-446507",
+        "consistent": true
+      },
+      {
+        "name": "Reece Topley",
+        "registerIdentifier": "8db7f47f",
+        "key_cricinfo": "461632",
+        "url": "https://www.cricinfo.com/cricketers/reece-topley-461632",
+        "consistent": true
+      },
+      {
+        "name": "Litton Das",
+        "registerIdentifier": "0404d43c",
+        "key_cricinfo": "536936",
+        "url": "https://www.cricinfo.com/cricketers/litton-das-536936",
+        "consistent": true
+      },
+      {
+        "name": "Max O'Dowd",
+        "registerIdentifier": "b699df47",
+        "key_cricinfo": "643197",
+        "url": "https://www.cricinfo.com/cricketers/max-o-dowd-643197",
+        "consistent": true
+      },
+      {
+        "name": "Luke Wood",
+        "registerIdentifier": "65b6943c",
+        "key_cricinfo": "573170",
+        "url": "https://www.cricinfo.com/cricketers/luke-wood-573170",
+        "consistent": true
+      },
+      {
+        "name": "Rashid Khan",
+        "registerIdentifier": "5f547c8b",
+        "key_cricinfo": "793463",
+        "url": "https://www.cricinfo.com/cricketers/rashid-khan-793463",
+        "consistent": true
+      },
+      {
+        "name": "Shimron Hetmyer",
+        "registerIdentifier": "48a1d7b7",
+        "key_cricinfo": "670025",
+        "url": "https://www.cricinfo.com/cricketers/shimron-hetmyer-670025",
+        "consistent": true
+      },
+      {
+        "name": "Rovman Powell",
+        "registerIdentifier": "650d5e49",
+        "key_cricinfo": "820351",
+        "url": "https://www.cricinfo.com/cricketers/rovman-powell-820351",
+        "consistent": true
+      },
+      {
+        "name": "Phil Salt",
+        "registerIdentifier": "3d284ca3",
+        "key_cricinfo": "669365",
+        "url": "https://www.cricinfo.com/cricketers/phil-salt-669365",
+        "consistent": true
+      },
+      {
+        "name": "Romario Shepherd",
+        "registerIdentifier": "c5aef772",
+        "key_cricinfo": "677077",
+        "url": "https://www.cricinfo.com/cricketers/romario-shepherd-677077",
+        "consistent": true
+      },
+      {
+        "name": "Mehidy Hasan Miraz",
+        "registerIdentifier": "c58b0108",
+        "key_cricinfo": "629063",
+        "url": "https://www.cricinfo.com/cricketers/mehidy-hasan-miraz-629063",
+        "consistent": true
+      },
+      {
+        "name": "Josh Little",
+        "registerIdentifier": "9061a703",
+        "key_cricinfo": "928067",
+        "url": "https://www.cricinfo.com/cricketers/josh-little-928067",
+        "consistent": true
+      },
+      {
+        "name": "Ruturaj Gaikwad",
+        "registerIdentifier": "45a43fe2",
+        "key_cricinfo": "1060380",
+        "url": "https://www.cricinfo.com/cricketers/ruturaj-gaikwad-1060380",
+        "consistent": true
+      },
+      {
+        "name": "Finn Allen",
+        "registerIdentifier": "bf74b130",
+        "key_cricinfo": "959759",
+        "url": "https://www.cricinfo.com/cricketers/finn-allen-959759",
+        "consistent": true
+      },
+      {
+        "name": "Harry Tector",
+        "registerIdentifier": "59ea70a4",
+        "key_cricinfo": "961407",
+        "url": "https://www.cricinfo.com/cricketers/harry-tector-961407",
+        "consistent": true
+      },
+      {
+        "name": "Bas de Leede",
+        "registerIdentifier": "fc4375ef",
+        "key_cricinfo": "1036191",
+        "url": "https://www.cricinfo.com/cricketers/bas-de-leede-1036191",
+        "consistent": true
+      },
+      {
+        "name": "Brandon King",
+        "registerIdentifier": "7fca84b7",
+        "key_cricinfo": "670035",
+        "url": "https://www.cricinfo.com/cricketers/brandon-king-670035",
+        "consistent": true
+      },
+      {
+        "name": "Varun Chakravarthy",
+        "registerIdentifier": "5b7ab5a9",
+        "key_cricinfo": "1108375",
+        "url": "https://www.cricinfo.com/cricketers/varun-chakravarthy-1108375",
+        "consistent": true
+      },
+      {
+        "name": "Maheesh Theekshana",
+        "registerIdentifier": "f24c6701",
+        "key_cricinfo": "1138316",
+        "url": "https://www.cricinfo.com/cricketers/maheesh-theekshana-1138316",
+        "consistent": true
+      },
+      {
+        "name": "Azam Khan",
+        "registerIdentifier": "ee8f1a6d",
+        "key_cricinfo": "1137262",
+        "url": "https://www.cricinfo.com/cricketers/azam-khan-1137262",
+        "consistent": true
+      },
+      {
+        "name": "Harry Brook",
+        "registerIdentifier": "4ae1755b",
+        "key_cricinfo": "911707",
+        "url": "https://www.cricinfo.com/cricketers/harry-brook-911707",
+        "consistent": true
+      },
+      {
+        "name": "Yashasvi Jaiswal",
+        "registerIdentifier": "6c19c6e5",
+        "key_cricinfo": "1151278",
+        "url": "https://www.cricinfo.com/cricketers/yashasvi-jaiswal-1151278",
+        "consistent": true
+      },
+      {
+        "name": "Curtis Campher",
+        "registerIdentifier": "478a63e7",
+        "key_cricinfo": "595921",
+        "url": "https://www.cricinfo.com/cricketers/curtis-campher-595921",
+        "consistent": true
+      },
+      {
+        "name": "Mohammad Wasim Jr",
+        "registerIdentifier": "9e9af5f2",
+        "key_cricinfo": "1185538",
+        "url": "https://www.cricinfo.com/cricketers/mohammad-wasim-1185538",
+        "consistent": true
+      },
+      {
+        "name": "Matheesha Pathirana",
+        "registerIdentifier": "64839cb3",
+        "key_cricinfo": "1194795",
+        "url": "https://www.cricinfo.com/cricketers/matheesha-pathirana-1194795",
+        "consistent": true
+      },
+      {
+        "name": "Nitish Kumar Reddy",
+        "registerIdentifier": "aad0c365",
+        "key_cricinfo": "1175496",
+        "url": "https://www.cricinfo.com/cricketers/nitish-kumar-reddy-1175496",
+        "consistent": true
+      },
+      {
+        "name": "Nandre Burger",
+        "registerIdentifier": "465aa633",
+        "key_cricinfo": "971349",
+        "url": "https://www.cricinfo.com/cricketers/nandre-burger-971349",
+        "consistent": true
+      },
+      {
+        "name": "Tom Hartley",
+        "registerIdentifier": "22b98d7c",
+        "key_cricinfo": "1150772",
+        "url": "https://www.cricinfo.com/cricketers/tom-hartley-1150772",
+        "consistent": true
+      },
+      {
+        "name": "Nehal Wadhera",
+        "registerIdentifier": "d1a60072",
+        "key_cricinfo": "1151273",
+        "url": "https://www.cricinfo.com/cricketers/nehal-wadhera-1151273",
+        "consistent": true
+      },
+      {
+        "name": "Sai Sudharsan",
+        "registerIdentifier": "d5130a30",
+        "key_cricinfo": "1151288",
+        "url": "https://www.cricinfo.com/cricketers/sai-sudharsan-1151288",
+        "consistent": true
+      },
+      {
+        "name": "Spencer Johnson",
+        "registerIdentifier": "83c3e8e3",
+        "key_cricinfo": "1123718",
+        "url": "https://www.cricinfo.com/cricketers/spencer-johnson-1123718",
+        "consistent": true
+      },
+      {
+        "name": "Will O'Rourke",
+        "registerIdentifier": "cb9b8664",
+        "key_cricinfo": "1211825",
+        "url": "https://www.cricinfo.com/cricketers/will-o-rourke-1211825",
+        "consistent": true
+      },
+      {
+        "name": "Mayank Yadav",
+        "registerIdentifier": "b1ad996b",
+        "key_cricinfo": "1292563",
+        "url": "https://www.cricinfo.com/cricketers/mayank-yadav-1292563",
+        "consistent": true
+      },
+      {
+        "name": "Shamar Joseph",
+        "registerIdentifier": "97290faf",
+        "key_cricinfo": "1356971",
+        "url": "https://www.cricinfo.com/cricketers/shamar-joseph-1356971",
+        "consistent": true
+      },
+      {
+        "name": "Angkrish Raghuvanshi",
+        "registerIdentifier": "d7017798",
+        "key_cricinfo": "1292495",
+        "url": "https://www.cricinfo.com/cricketers/angkrish-raghuvanshi-1292495",
+        "consistent": true
+      },
+      {
+        "name": "Vaibhav Suryavanshi",
+        "registerIdentifier": "470f446b",
+        "key_cricinfo": "1408688",
+        "url": "https://www.cricinfo.com/cricketers/vaibhav-sooryavanshi-1408688",
+        "consistent": true
+      },
+      {
+        "name": "Lasith Malinga",
+        "registerIdentifier": "a12e1d51",
+        "key_cricinfo": "49758",
+        "url": "https://www.cricinfo.com/cricketers/lasith-malinga-49758",
+        "consistent": true
+      },
+      {
+        "name": "Dilhara Fernando",
+        "registerIdentifier": "342d8ade",
+        "key_cricinfo": "48835",
+        "url": "https://www.cricinfo.com/cricketers/dilhara-fernando-48835",
+        "consistent": true
+      },
+      {
+        "name": "Dhammika Prasad",
+        "registerIdentifier": "9b79b9de",
+        "key_cricinfo": "50163",
+        "url": "https://www.cricinfo.com/cricketers/dhammika-prasad-50163",
+        "consistent": true
+      }
+    ]
+  },
+  "limitations": "Primary profile checks reconcile archived retrieved name/URL/profile-ID evidence against current identity output; this run does not recrawl biographies or validate DOB."
+}

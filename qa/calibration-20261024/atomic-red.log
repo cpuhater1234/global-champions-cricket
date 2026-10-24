@@ -1,0 +1,13 @@
+....F.
+======================================================================
+FAIL: test_single_writer_guard (__main__.Pipeline.test_single_writer_guard)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/bed56f4334a5/gcc/qa/calibration-20261024/test_pipeline.py", line 28, in test_single_writer_guard
+    self.assertTrue(hasattr(M,'dataset_lock'),'single-writer guard missing')
+AssertionError: False is not true : single-writer guard missing
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+FAILED (failures=1)

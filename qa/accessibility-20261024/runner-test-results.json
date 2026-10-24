@@ -1,0 +1,87 @@
+{
+  "automated": true,
+  "notHumanSession": true,
+  "passed": true,
+  "checks": [
+    "consent-gated local HTML",
+    "opaque sandbox game launch",
+    "isolated memory storage",
+    "dispatch action and transition telemetry",
+    "observer task timing and outcome",
+    "participant confidence",
+    "local anonymous JSON export"
+  ],
+  "exampleExport": {
+    "schema": 1,
+    "sessionId": "5fa1a343-164e-465d-93b7-aeeb6348f719",
+    "buildSha256": "3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf",
+    "cohort": "novice",
+    "setup": "Automation / emulation (not a human session)",
+    "consented": true,
+    "exposureMode": "offline-fallback-artwork-network-blocked",
+    "scope": "Local anonymous observer session. Outcomes entered by observer, not inferred. Physical/human evidence only if actual participant and setup observed.",
+    "events": [
+      {
+        "ms": 45,
+        "type": "session-start"
+      },
+      {
+        "ms": 287,
+        "type": "ready",
+        "view": "home"
+      },
+      {
+        "ms": 1071,
+        "type": "task-start",
+        "task": "club"
+      },
+      {
+        "ms": 1166,
+        "type": "action",
+        "action": "play",
+        "accepted": true,
+        "from": "home",
+        "to": "story"
+      },
+      {
+        "ms": 1166,
+        "type": "transition",
+        "view": "story",
+        "modal": null
+      },
+      {
+        "ms": 1173,
+        "type": "action",
+        "action": "invalidTestAction",
+        "accepted": false,
+        "from": "story",
+        "to": "story"
+      },
+      {
+        "ms": 1204,
+        "type": "task-end",
+        "task": "club",
+        "outcome": "unassessed"
+      },
+      {
+        "ms": 1243,
+        "type": "confidence",
+        "value": 4
+      },
+      {
+        "ms": 1254,
+        "type": "session-stop"
+      }
+    ],
+    "tasks": [
+      {
+        "task": "club",
+        "startMs": 1071,
+        "outcome": "unassessed",
+        "confidence": 4,
+        "endMs": 1204,
+        "durationMs": 133
+      }
+    ]
+  }
+}

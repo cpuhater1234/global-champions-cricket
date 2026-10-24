@@ -1,0 +1,598 @@
+{
+  "hash": "3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf",
+  "scope": "Automated actual browser engines, emulated viewport/touch/text. No physical device or screen-reader user.",
+  "engines": [
+    {
+      "engine": "chromium",
+      "available": true
+    },
+    {
+      "engine": "firefox",
+      "available": false,
+      "reason": "browserType.launch: Executable doesn't exist at /root/.cache/ms-playwright/firefox-1538/firefox/firefox\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Te"
+    },
+    {
+      "engine": "webkit",
+      "available": false,
+      "reason": "browserType.launch: Executable doesn't exist at /root/.cache/ms-playwright/webkit-2336/pw_run.sh\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team     "
+    }
+  ],
+  "checks": [
+    {
+      "engine": "chromium",
+      "name": "keyboard entry focus visible",
+      "pass": true,
+      "evidence": {
+        "tag": "BUTTON",
+        "text": "Play",
+        "outline": "rgb(212, 185, 125) solid 3px"
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "dialog named",
+      "pass": true,
+      "evidence": "g8dialogTitle"
+    },
+    {
+      "engine": "chromium",
+      "name": "native modal keyboard containment",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "name": "Escape restores opener",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "name": "team reflow 1280px root 16px",
+      "pass": true,
+      "evidence": {
+        "overflow": false,
+        "overflowElements": [],
+        "smallTargets": []
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "team reflow 1280px root 32px",
+      "pass": true,
+      "evidence": {
+        "overflow": false,
+        "overflowElements": [],
+        "smallTargets": []
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "team reflow 1280px root 64px",
+      "pass": true,
+      "evidence": {
+        "overflow": false,
+        "overflowElements": [
+          {
+            "tag": "SPAN",
+            "cls": "g8panelart",
+            "text": "",
+            "right": 1304.609375
+          },
+          {
+            "tag": "svg",
+            "cls": {},
+            "text": "",
+            "right": 1304.609375
+          }
+        ],
+        "smallTargets": []
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "team reflow 640px root 16px",
+      "pass": true,
+      "evidence": {
+        "overflow": false,
+        "overflowElements": [
+          {
+            "tag": "SPAN",
+            "cls": "g8panelart",
+            "text": "",
+            "right": 675
+          },
+          {
+            "tag": "svg",
+            "cls": {},
+            "text": "",
+            "right": 675
+          }
+        ],
+        "smallTargets": []
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "team reflow 640px root 32px",
+      "pass": true,
+      "evidence": {
+        "overflow": false,
+        "overflowElements": [
+          {
+            "tag": "BUTTON",
+            "cls": "g8button g8navitem ",
+            "text": "Stats",
+            "right": 728.9375
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "Stats",
+            "right": 716.75
+          },
+          {
+            "tag": "SPAN",
+            "cls": "g8panelart",
+            "text": "",
+            "right": 723
+          },
+          {
+            "tag": "svg",
+            "cls": {},
+            "text": "",
+            "right": 723
+          },
+          {
+            "tag": "use",
+            "cls": {},
+            "text": "",
+            "right": 674.2781982421875
+          }
+        ],
+        "smallTargets": []
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "team reflow 640px root 64px",
+      "pass": true,
+      "evidence": {
+        "overflow": false,
+        "overflowElements": [
+          {
+            "tag": "BUTTON",
+            "cls": "g8button g8navitem selected",
+            "text": "My XI",
+            "right": 671.40625
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "My XI",
+            "right": 648.015625
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "g8button g8navitem ",
+            "text": "Ladder",
+            "right": 940
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "Ladder",
+            "right": 916.609375
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "g8button g8navitem ",
+            "text": "Fixtures",
+            "right": 1237.875
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "Fixtures",
+            "right": 1214.484375
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "g8button g8navitem ",
+            "text": "Stats",
+            "right": 1448.03125
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "Stats",
+            "right": 1424.640625
+          },
+          {
+            "tag": "SPAN",
+            "cls": "g8panelart",
+            "text": "",
+            "right": 819
+          },
+          {
+            "tag": "svg",
+            "cls": {},
+            "text": "",
+            "right": 819
+          },
+          {
+            "tag": "use",
+            "cls": {},
+            "text": "",
+            "right": 770.2781982421875
+          }
+        ],
+        "smallTargets": []
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "team reflow 320px root 16px",
+      "pass": true,
+      "evidence": {
+        "overflow": false,
+        "overflowElements": [
+          {
+            "tag": "BUTTON",
+            "cls": "g8button g8navitem ",
+            "text": "Stats",
+            "right": 369.484375
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "Stats",
+            "right": 362.890625
+          },
+          {
+            "tag": "SPAN",
+            "cls": "g8panelart",
+            "text": "",
+            "right": 355
+          },
+          {
+            "tag": "svg",
+            "cls": {},
+            "text": "",
+            "right": 355
+          }
+        ],
+        "smallTargets": []
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "team reflow 320px root 32px",
+      "pass": true,
+      "evidence": {
+        "overflow": false,
+        "overflowElements": [
+          {
+            "tag": "BUTTON",
+            "cls": "g8button g8navitem selected",
+            "text": "My XI",
+            "right": 337.671875
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "My XI",
+            "right": 325.484375
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "g8button g8navitem ",
+            "text": "Ladder",
+            "right": 472.953125
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "Ladder",
+            "right": 460.765625
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "g8button g8navitem ",
+            "text": "Fixtures",
+            "right": 622.875
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "Fixtures",
+            "right": 610.6875
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "g8button g8navitem ",
+            "text": "Stats",
+            "right": 728.9375
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "Stats",
+            "right": 716.75
+          },
+          {
+            "tag": "SPAN",
+            "cls": "g8panelart",
+            "text": "",
+            "right": 403
+          },
+          {
+            "tag": "svg",
+            "cls": {},
+            "text": "",
+            "right": 403
+          },
+          {
+            "tag": "use",
+            "cls": {},
+            "text": "",
+            "right": 354.2781982421875
+          }
+        ],
+        "smallTargets": []
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "team reflow 320px root 64px",
+      "pass": false,
+      "evidence": {
+        "overflow": true,
+        "overflowElements": [
+          {
+            "tag": "BUTTON",
+            "cls": "g8button g8navitem selected",
+            "text": "My XI",
+            "right": 448
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "My XI",
+            "right": 424.609375
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "g8button g8navitem ",
+            "text": "Ladder",
+            "right": 640
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "Ladder",
+            "right": 616.609375
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "g8button g8navitem ",
+            "text": "Fixtures",
+            "right": 832
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "Fixtures",
+            "right": 808.609375
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "g8button g8navitem ",
+            "text": "Stats",
+            "right": 1024
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "Stats",
+            "right": 1000.609375
+          },
+          {
+            "tag": "SPAN",
+            "cls": "g8panelart",
+            "text": "",
+            "right": 499
+          },
+          {
+            "tag": "svg",
+            "cls": {},
+            "text": "",
+            "right": 499
+          },
+          {
+            "tag": "use",
+            "cls": {},
+            "text": "",
+            "right": 450.2781982421875
+          },
+          {
+            "tag": "STRONG",
+            "cls": "",
+            "text": "11 / 11",
+            "right": 340.21875
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": " / 11",
+            "right": 340.21875
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "selected",
+            "right": 410.234375
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "XI rating",
+            "right": 352.546875
+          }
+        ],
+        "smallTargets": []
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "scout move controls have descriptive names",
+      "pass": true,
+      "evidence": [
+        {
+          "text": "",
+          "aria": "Move batter up"
+        },
+        {
+          "text": "",
+          "aria": "Move batter down"
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "name": "match commentary live semantics",
+      "pass": true,
+      "evidence": {
+        "role": "status",
+        "text": "1.4 · LIVE BALLAndrew Strauss. Keeps the scoreboard moving.",
+        "scoreIncluded": false
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "score announcement review",
+      "pass": null,
+      "evidence": {
+        "role": "status",
+        "text": "1.4 · LIVE BALLAndrew Strauss. Keeps the scoreboard moving.",
+        "scoreIncluded": false
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "playback focus retained",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "name": "reduced motion active animations absent",
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "name": "storage denied startup playable without uncaught errors",
+      "pass": true,
+      "evidence": []
+    }
+  ],
+  "defects": [
+    {
+      "engine": "chromium",
+      "name": "team reflow 320px root 64px",
+      "evidence": {
+        "overflow": true,
+        "overflowElements": [
+          {
+            "tag": "BUTTON",
+            "cls": "g8button g8navitem selected",
+            "text": "My XI",
+            "right": 448
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "My XI",
+            "right": 424.609375
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "g8button g8navitem ",
+            "text": "Ladder",
+            "right": 640
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "Ladder",
+            "right": 616.609375
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "g8button g8navitem ",
+            "text": "Fixtures",
+            "right": 832
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "Fixtures",
+            "right": 808.609375
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "g8button g8navitem ",
+            "text": "Stats",
+            "right": 1024
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "Stats",
+            "right": 1000.609375
+          },
+          {
+            "tag": "SPAN",
+            "cls": "g8panelart",
+            "text": "",
+            "right": 499
+          },
+          {
+            "tag": "svg",
+            "cls": {},
+            "text": "",
+            "right": 499
+          },
+          {
+            "tag": "use",
+            "cls": {},
+            "text": "",
+            "right": 450.2781982421875
+          },
+          {
+            "tag": "STRONG",
+            "cls": "",
+            "text": "11 / 11",
+            "right": 340.21875
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": " / 11",
+            "right": 340.21875
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "selected",
+            "right": 410.234375
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "XI rating",
+            "right": 352.546875
+          }
+        ],
+        "smallTargets": []
+      }
+    }
+  ]
+}

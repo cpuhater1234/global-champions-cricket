@@ -1,0 +1,14 @@
+bbl_json.zip 611
+ipl_json.zip 1201
+ntb_json.zip 1415
+t20s_male_json.zip 3310
+bpl_male_json.zip 466
+cpl_male_json.zip 403
+Traceback (most recent call last):
+  File "/workspace/scratch/bed56f4334a5/gcc/qa/calibration-20261024/ingest.py", line 66, in <module>
+    if __name__=='__main__':print(json.dumps(build(),indent=2))
+                                             ^^^^^^^
+  File "/workspace/scratch/bed56f4334a5/gcc/qa/calibration-20261024/ingest.py", line 60, in build
+    if len(pending)>10000:c.executemany('INSERT INTO records VALUES('+','.join('?'for _ in range(20))+')',pending);pending=[]
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: database disk image is malformed

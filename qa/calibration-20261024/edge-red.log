@@ -1,0 +1,14 @@
+.F.
+======================================================================
+FAIL: test_penalty_and_non_boundary (__main__.Pipeline.test_penalty_and_non_boundary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/bed56f4334a5/gcc/qa/calibration-20261024/test_pipeline.py", line 18, in test_penalty_and_non_boundary
+    x=M.delivery_stats(d);self.assertEqual(x['charged'],4);self.assertEqual(x['four'],0)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 9 != 4
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (failures=1)

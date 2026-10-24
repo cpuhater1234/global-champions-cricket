@@ -1,0 +1,155 @@
+{
+  "auditDate": "2026-10-24",
+  "catalogNames": 412,
+  "numericAuditNames": 412,
+  "mappedCanonicalNames": 412,
+  "distinctRegisterIdentities": 412,
+  "unresolved": [],
+  "verifiedByUniqueOfficialExactNameOrAlias": 329,
+  "selectedIdentityHasOfficialExactNameOrAliasIncludingAmbiguousAliases": 341,
+  "nonUniqueOrMissingExactAliasCasesResolvedByRetrievedPrimaryProfile": 83,
+  "additionalCorrectedProfilesRetrieved": 3,
+  "primaryProfileRetrievals": 86,
+  "withRawMatchPlayerRegistryContext": 401,
+  "withoutRawMatchPlayerRegistryContext": [
+    "Nantie Hayward",
+    "Paul Harris",
+    "Saqlain Mushtaq",
+    "Mushtaq Ahmed",
+    "Shahid Nazir",
+    "Shahriar Nafees",
+    "Heath Streak",
+    "Ian Harvey",
+    "Stuart Law",
+    "Chris Harris",
+    "Michael Bevan"
+  ],
+  "duplicateCanonicalIdentifierGroups": [],
+  "catalogAliasReconciliation": [
+    {
+      "canonicalName": "Mike Hussey",
+      "alias": "Michael Hussey",
+      "identifier": "48fd7349",
+      "canonicalGameIds": [
+        41
+      ],
+      "aliasGameIds": [],
+      "separatePoolPlayer": false,
+      "evidenceCountingPolicy": "Aggregate delivery evidence by register identifier once; catalog aliases refer to that same identity."
+    }
+  ],
+  "previousMappingCorrections": [
+    {
+      "name": "Lasith Malinga",
+      "previous": {
+        "id": "79eb117d",
+        "registerName": "LN Malinga",
+        "method": "unique-surname-initial"
+      },
+      "correct": {
+        "identifier": "a12e1d51",
+        "registerName": "SL Malinga",
+        "key_cricinfo": "49758"
+      },
+      "reason": "Official register exact alias and/or retrieved primary profile external ID contradicts old selection; source method was unique-surname-initial."
+    },
+    {
+      "name": "Dilhara Fernando",
+      "previous": {
+        "id": "7d112257",
+        "registerName": "DTM Fernando",
+        "method": "unique-surname-initial"
+      },
+      "correct": {
+        "identifier": "342d8ade",
+        "registerName": "CRD Fernando",
+        "key_cricinfo": "48835"
+      },
+      "reason": "Official register exact alias and/or retrieved primary profile external ID contradicts old selection; source method was unique-surname-initial."
+    },
+    {
+      "name": "Chamara Silva",
+      "previous": {
+        "id": "b94c13e3",
+        "registerName": "Chamara Silva",
+        "method": "explicit-name"
+      },
+      "correct": {
+        "identifier": "1be70c88",
+        "registerName": "LPC Silva",
+        "key_cricinfo": "50431"
+      },
+      "reason": "Official register exact alias and/or retrieved primary profile external ID contradicts old selection; source method was explicit-name."
+    },
+    {
+      "name": "Dhammika Prasad",
+      "previous": {
+        "id": "d1b825c8",
+        "registerName": "DRH Prasad",
+        "method": "unique-surname-initial"
+      },
+      "correct": {
+        "identifier": "9b79b9de",
+        "registerName": "KTGD Prasad",
+        "key_cricinfo": "50163"
+      },
+      "reason": "Official register exact alias and/or retrieved primary profile external ID contradicts old selection; source method was unique-surname-initial."
+    },
+    {
+      "name": "Nitish Kumar Reddy",
+      "previous": {
+        "id": "79c4a798",
+        "registerName": "N Kranthi Reddy",
+        "method": "unique-surname-initial"
+      },
+      "correct": {
+        "identifier": "aad0c365",
+        "registerName": "Nithish Kumar Reddy",
+        "key_cricinfo": "1175496"
+      },
+      "reason": "Official register exact alias and/or retrieved primary profile external ID contradicts old selection; source method was unique-surname-initial."
+    }
+  ],
+  "countryAndBiographyScope": "Country codes are game catalog labels. Raw team registry establishes participation for named teams and dates only. Retrieved profile title establishes playing nation association for ambiguous/abbreviated cases. Birth year/DOB and nationality eligibility were not independently audited. Identity evidence confers no numeric skill confidence.",
+  "duplicateEvidencePolicy": "Key every observed delivery by source match and delivery location, and every player by Cricsheet identifier. Alias labels must never create additional observations. Current catalog has 412 distinct canonical IDs; Mike/Michael Hussey is one catalog identity, not duplicate active pool IDs.",
+  "registerDocumentation": "https://cricsheet.org/register/",
+  "registerLicense": "Open Data Commons Attribution License; credit Cricsheet (https://cricsheet.org/) and retain source/licensing references.",
+  "registerCurrentSnapshotMatchesPriorPeopleCsv": true,
+  "sources": [
+    {
+      "path": "qa/finish-pass/people.csv",
+      "sha256": "a643e7f4479c7e6d448c9ab8d36b1254917d3de356b707f728612ab47113a08f",
+      "bytes": 1184677
+    },
+    {
+      "path": "qa/calibration-20261024/identities-names.csv",
+      "sha256": "cde5292c15be1cf03e0b366875b5aa2e23c29283ca9d368bb0f768ea85761fb1",
+      "bytes": 162471
+    },
+    {
+      "path": "qa/calibration-20261024/identities-profile-retrieval.json",
+      "sha256": "359fb20010d27dae94c5ba7d39089e3f3df7680e099966dff7162f6699fafcbb",
+      "bytes": 41318
+    },
+    {
+      "path": "v8/domain/player_profiles.json",
+      "sha256": "d70c216e3831ad4467489eb6fb0ac34cbfa749f8e3ea629d0a4a62c1332c812d",
+      "bytes": 302628
+    },
+    {
+      "path": "qa/finish-pass/numeric-audit.json",
+      "sha256": "a30ff136373570db54a8964411f9716c0b431fbf157edc2c0bea27a2be0e5a69",
+      "bytes": 7661608
+    }
+  ],
+  "reproduce": [
+    "python qa/calibration-20261024/identities-build.py > /tmp/gcc-identity-review.log",
+    "python qa/calibration-20261024/identities-resolve.py"
+  ],
+  "limitations": [
+    "Profile verification uses primary-source search retrieval; direct www.espncricinfo.com fetch returned HTTP 403, but www.cricinfo.com indexed primary profile title and URL were retrieved.",
+    "Exact official aliases were searched across all register names; aliases are not presumed globally unique.",
+    "Country/team participation is supporting identity context, not DOB certification.",
+    "No production data or saved-game IDs were modified by this audit."
+  ]
+}

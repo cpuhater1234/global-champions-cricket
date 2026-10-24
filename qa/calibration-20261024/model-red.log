@@ -1,0 +1,29 @@
+FFF
+======================================================================
+FAIL: test_cluster_uncertainty (__main__.Model.test_cluster_uncertainty)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/bed56f4334a5/gcc/qa/calibration-20261024/test_model.py", line 13, in test_cluster_uncertainty
+    self.assertTrue(hasattr(M,'cluster_interval'),'player-cluster interval missing')
+AssertionError: False is not true : player-cluster interval missing
+
+======================================================================
+FAIL: test_no_future_leakage (__main__.Model.test_no_future_leakage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/bed56f4334a5/gcc/qa/calibration-20261024/test_model.py", line 7, in test_no_future_leakage
+    self.assertTrue(hasattr(M,'training_rows'),'chronological training filter missing')
+AssertionError: False is not true : chronological training filter missing
+
+======================================================================
+FAIL: test_phase_identity_features (__main__.Model.test_phase_identity_features)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/bed56f4334a5/gcc/qa/calibration-20261024/test_model.py", line 10, in test_phase_identity_features
+    self.assertTrue(hasattr(M,'features'),'opponent features missing')
+AssertionError: False is not true : opponent features missing
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (failures=3)

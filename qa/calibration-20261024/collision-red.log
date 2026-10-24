@@ -1,0 +1,13 @@
+.F..
+======================================================================
+FAIL: test_opposing_id_collision (__main__.Pipeline.test_opposing_id_collision)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/bed56f4334a5/gcc/qa/calibration-20261024/test_pipeline.py", line 21, in test_opposing_id_collision
+    self.assertTrue(hasattr(M,'valid_rosters'),'roster identity guard missing')
+AssertionError: False is not true : roster identity guard missing
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=1)
