@@ -1,3 +1,13 @@
+# Exact-holdout continuation package — latest checkpoint
+
+Branch head now includes `qa/calibration-20261024/run_exact_holdout.sh` and `EXACT_HOLDOUT_UNLOCK.md`. In an environment with outbound Cricsheet access, run the launcher from repository root. It verifies model, identity, all fourteen archive hashes, exact dataset hash, v57 hash and numeric baseline before it is permitted to open 2023–2026. It never promotes production automatically.
+
+Persistent recovery surfaces were exhausted: native Library and mounted Google Drive were both checked and contain no expanded ten-archive calibration bundle or `deliveries.sqlite`. GitHub Actions failed before runner allocation on both `ubuntu-24.04` and `ubuntu-latest`. The current container cannot resolve GitHub/Cricsheet directly and no connector-to-container binary bridge is exposed. Therefore do not reinterpret the infrastructure block as a model failure, and do not substitute reduced/stale data.
+
+Authoritative playable remains v57 / SHA-256 `3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf` with no production changes.
+
+---
+
 # Precision recovery checkpoint — later 24 October
 
 Read `docs/GCC_V8_PRE_HOLDOUT_INDEPENDENT_REVIEW_20261024.md` with the final completion checkpoint. The accepted playable is still untouched. GitHub Actions also fails before runner allocation on `ubuntu-latest` (run `40093517831`), Library contains no hidden expanded dataset, and no substitute data has been accepted. The 2023–2026 holdout remains unopened. A separate model review found no future leakage and documented conservative cold-start/year-context limitations that must not be tuned away.

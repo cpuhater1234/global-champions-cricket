@@ -17,3 +17,6 @@ Accessibility: retain the already verified isolated cumulative-score live-region
 
 
 Precision recovery update: canonical product blobs were rechecked unchanged. Actions retry on `ubuntu-latest` (run `40093517831`) again failed with no runner/steps. Library metadata sweep found no expanded archive bundle or `deliveries.sqlite`. Public Cricsheet catalogue counts still match the ten-source manifest, but this is not byte/hash proof. Public GitHub mirror ZIPs inspected so far are stale/nonmatching and cannot replace the frozen sources. Pre-holdout independent model review found no future-data leak; conservative year-category/cold-start limitations are now documented. Held-out metrics remain unopened and production remains NO CHANGE.
+
+
+Exact continuation package added at branch commit following the precision recovery review: `qa/calibration-20261024/run_exact_holdout.sh` and `EXACT_HOLDOUT_UNLOCK.md`. The launcher is fail-closed and non-promoting. It requires exact model/identity/game/source/dataset hashes and recorded totals before opening the frozen 2023–2026 evaluation. Native Library and mounted Google Drive were both checked; neither contains the expanded ten-source bundle or `deliveries.sqlite`. Container direct network access also fails, and no GitHub binary-to-container handoff tool is exposed. Holdout therefore remains genuinely unopened.

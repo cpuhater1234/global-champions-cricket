@@ -50,3 +50,10 @@ See `docs/GCC_V8_PRE_HOLDOUT_INDEPENDENT_REVIEW_20261024.md`.
 The numerical gate remains unopened. A second Actions route using `ubuntu-latest` also failed before runner allocation (run `40093517831`), confirming that the earlier failure was not caused by the Ubuntu 24.04 label. Library/date-bounded recovery found no hidden expanded source bundle or SQLite. Current Cricsheet catalogue counts match the frozen expansion manifest, but byte identity cannot be established in this environment and therefore cannot be used for promotion.
 
 A separate pre-holdout model review found no future-data leakage. It records conservative limitations including unseen target-year categorical effects and cold-start players. These must remain in the frozen evaluation rather than being filtered or tuned away after results.
+
+
+## Exact continuation package
+
+`qa/calibration-20261024/run_exact_holdout.sh` is now the canonical numerical continuation command. It is designed to fail before test evaluation on any source/model/game/dataset mismatch and does not alter production after a successful run. `qa/calibration-20261024/EXACT_HOLDOUT_UNLOCK.md` documents the release rule.
+
+A final persistent-storage sweep also checked the mounted Google Drive in addition to native Library. No expanded ten-archive calibration snapshot or hash-identical `deliveries.sqlite` is present. Direct container network access cannot resolve GitHub/Cricsheet and the available GitHub connector has no binary-to-container transfer for repository blobs. This closes the remaining in-session recovery routes without weakening the preregistration.
