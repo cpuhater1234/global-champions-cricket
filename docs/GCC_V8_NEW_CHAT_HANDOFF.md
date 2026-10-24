@@ -1,3 +1,18 @@
+# Precision continuation checkpoint — 24 October 2026, current session
+
+Authoritative playable is still v57 / SHA-256 `3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf`. No production playable or player rating was changed.
+
+Numerical calibration remains scientifically unopened. Exact frozen dataset SHA is `60d38fb30ff38f72a7d344437ed881b2ba93731a739dd35fdd556a82386c3ce9`; 412/412 identities remain verified; preregistered 2023–2026 holdout has not been observed. Recovery surfaces checked in this session: native Library, conversation files, mounted Drive from prior checkpoint, Git history, current Cricsheet URLs, public release mirrors and local outbound transport. No exact ten-archive bundle or SQLite was recovered. Do not substitute a mirror/current dataset unless the rebuilt SQLite hashes exactly to the frozen SHA.
+
+Two fail-closed numerical launchers now exist:
+- `qa/calibration-20261024/run_exact_holdout.sh`: recover/verify all 14 frozen archives, rebuild and verify the exact SQLite, reproduce the v57 numeric baseline, then open the frozen holdout.
+- `qa/calibration-20261024/run_exact_holdout_from_db.sh`: accept a recovered `deliveries.sqlite` only if SHA-256 is exactly `60d38fb...`, SQLite integrity/schema and 9,422-match count pass, then reproduce the v57 numeric baseline and open the same frozen holdout.
+Neither launcher promotes production automatically.
+
+Accessibility work is isolated on branch `work/v8-a11y-live-score-candidate`, based on the protected checkpoint. Source patch commit `da03259d600d61875986b199651b1354f679fddd` changes only `v8/ui/match_story.js` to add cumulative score/overs/chase context to the existing live status region and `aria-atomic=true`. Fresh actual Chromium execution against the exact v57 and retained foundation save reproduced the omission in the original and passed ordinary-ball, wicket, chase and innings-end assertions in the isolated candidate. Evidence commits: `99bd8166f25c4b19a2dc5c5f2b8e8d9e47da83bd` (semantic live-region evidence) and `feb7d37aba967dcf32533ffe823958d4ae8f9ae3` (four-state pixel comparison). The four tested `.g8ballarena` screenshots were pixel-identical original vs candidate. Canonical v57 remains untouched; do not merge/promote until an authoritative source rebuild and affected exact-build regression are available. Human screen-reader timing/comprehension remains an external gate.
+
+---
+
 # Exact-holdout continuation package — latest checkpoint
 
 Branch head now includes `qa/calibration-20261024/run_exact_holdout.sh` and `EXACT_HOLDOUT_UNLOCK.md`. In an environment with outbound Cricsheet access, run the launcher from repository root. It verifies model, identity, all fourteen archive hashes, exact dataset hash, v57 hash and numeric baseline before it is permitted to open 2023–2026. It never promotes production automatically.
