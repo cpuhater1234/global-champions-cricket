@@ -1,0 +1,62 @@
+{
+  "executedAt": "2026-10-24",
+  "baseCommit": "bfa1cb3d6afa57d9500bf9d6bf8d091d09771e6a",
+  "sourcePatchCommit": "da03259d600d61875986b199651b1354f679fddd",
+  "originalPlayableSha256": "3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf",
+  "isolatedCandidateSha256": "4984ca07411b3583d6585d8fd831e89f4144584109f5f8527d91650844726aac",
+  "engine": "/usr/bin/chromium via Python Playwright",
+  "fixture": "retained qa/stabilisation/fixtures/foundation.json from GCC_QA_Save_Fixtures_20261024.tar.xz",
+  "harness": "page.set_content; in-memory localStorage shim only; external network aborted; product files on disk unchanged",
+  "assertions": {
+    "original": [
+      {
+        "stage": "ball",
+        "cumulativeScoreIncluded": false,
+        "ariaAtomic": null
+      },
+      {
+        "stage": "wicket",
+        "cumulativeScoreIncluded": false,
+        "ariaAtomic": null
+      },
+      {
+        "stage": "chase",
+        "cumulativeScoreIncluded": false,
+        "ariaAtomic": null
+      },
+      {
+        "stage": "inningsEnd",
+        "cumulativeScoreIncluded": false,
+        "ariaAtomic": null
+      }
+    ],
+    "candidate": [
+      {
+        "stage": "ball",
+        "cumulativeScoreIncluded": true,
+        "ariaAtomic": "true",
+        "summary": "Nottinghamshire: 0 for 0 after 0.1 overs."
+      },
+      {
+        "stage": "wicket",
+        "cumulativeScoreIncluded": true,
+        "ariaAtomic": "true",
+        "summary": "Nottinghamshire: 27 for 1 after 6.0 overs."
+      },
+      {
+        "stage": "chase",
+        "cumulativeScoreIncluded": true,
+        "ariaAtomic": "true",
+        "summary": "Yorkshire: 6 for 0 after 0.1 overs. 136 needed from 119 balls."
+      },
+      {
+        "stage": "inningsEnd",
+        "cumulativeScoreIncluded": true,
+        "ariaAtomic": "true",
+        "summary": "Nottinghamshire: 141 for 5 after 20.0 overs."
+      }
+    ]
+  },
+  "releaseStatus": "candidate only; canonical v57 and work/v8-game-first-rebuild unchanged; source rebuild still required before promotion",
+  "humanLimit": "No claim about spoken screen-reader queue/timing or human comprehension."
+}
