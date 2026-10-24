@@ -1,0 +1,25 @@
+{
+  "engine": "Chromium CDP Accessibility.getFullAXTree via Python Playwright",
+  "state": "first chase delivery from retained 2008 foundation save",
+  "original": {
+    "statusRole": "status",
+    "live": "polite",
+    "descendants": [
+      "0.1 · SIX",
+      "Shane Watson. Into the stands for six."
+    ],
+    "cumulativeStateExposed": false
+  },
+  "candidate": {
+    "statusRole": "status",
+    "live": "polite",
+    "ariaAtomic": true,
+    "descendants": [
+      "Yorkshire: 6 for 0 after 0.1 overs. 136 needed from 119 balls.",
+      "0.1 · SIX",
+      "Shane Watson. Into the stands for six."
+    ],
+    "cumulativeStateExposed": true
+  },
+  "conclusion": "Candidate exposes cumulative score, overs and chase requirement in Chrome's accessibility tree; visual comparison remains pixel-identical. Spoken screen-reader queue/timing remains a human assistive-technology gate."
+}
