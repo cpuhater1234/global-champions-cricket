@@ -1,4 +1,5 @@
 name: GCC v8 final calibration evidence
+# runner allocation retry: ubuntu-latest only; calibration contract unchanged
 
 on:
   push:
