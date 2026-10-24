@@ -1,3 +1,13 @@
+# Final completion checkpoint — 24 October, later session
+
+Read `docs/GCC_V8_FINAL_COMPLETION_CHECKPOINT_20261024.md` before doing any more finishing work. Stable v57 / SHA `3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf` remains authoritative and was re-materialised from Library byte-identically. No rating or production-UI change was promoted.
+
+A hash-gated preregistered calibration workflow was added at `3508d981f24a8160348ba30c7accf1a36c3a306e`; Actions run `40092717453` failed twice before any step received a runner (runner_id 0), so no held-out metric was opened. The retained Cricsheet Library snapshot contains the original four archives only; the later ten frozen expansion archives are not retained in Git/Library and current binary retrieval cannot restore them. Do not substitute stale/reduced data: promotion remains NO CHANGE until the exact 14-source dataset or hash-identical SQLite dataset can be executed.
+
+The tested live-score accessibility patch remains isolated and must not be hand-edited into v57. Apply through `v8/ui/match_story.js` only when an exact rebuild and affected regressions are available. Human/device gates remain genuinely external.
+
+---
+
 # Active24October calibration work — read first
 
 User asked to complete remaining areas. Published playable remains3973116/SHA3dd348dd, stableversion57; no new ratings promoted yet. Main work now lives in docs/superpowers/plans/2026-10-24-calibration-completion.md and qa/calibration-20261024/progress.md. All412 identities verified, zero unresolved; five earlier mappings corrected. Fourteen official source archives,9,422 clean eligible matches; two source roster-ID collisions quarantined rather than repaired by guessing. Independent raw/SQLite reconciliation passes. DatasetSHA60d38fb30ff38f72a7d344437ed881b2ba93731a739dd35fdd556a82386c3ce9. No held-out metrics observed before preregistration checkpoint.
