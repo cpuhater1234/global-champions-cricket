@@ -1044,3 +1044,20 @@ html,body,#g8app,#g8app:has(.g8draftsplit){background:#191c19;background-image:n
 .g8draftpickedmeta>small{font-size:.64rem;line-height:1.2;margin:0;color:#cdd7c6}
 .g8draftpickedmeta>strong{display:block;color:var(--rating-color);font-size:.95rem;font-variant-numeric:tabular-nums;line-height:1.25}
 @media(max-width:360px){.g8draftsuggestions{grid-template-columns:1fr}}
+
+/* Quiet, centred analysis: ratings only, without expandable detail. */
+.g8simpleanalysis .g8roleboardhead{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.65rem;text-align:center;padding:1rem .5rem;margin-bottom:1rem}
+.g8simpleanalysis .g8roleboardhead>.g8eyebrow{flex-basis:auto;text-align:center;margin:0;line-height:1.5}
+.g8teamread.g8simpleanalysis .g8teamrating{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.25rem;width:min(100%,16rem);box-sizing:border-box;margin:0;padding:.85rem;border:1px solid #7f8978;border-radius:6px;background:#242c23;box-shadow:none}
+.g8teamread.g8simpleanalysis .g8teamrating strong{border:0;padding:0;line-height:1.1;font-size:2.8rem;text-align:center}
+.g8teamread.g8simpleanalysis .g8teamrating>span{font-size:.9rem;line-height:1.4;text-align:center;color:#dce4d4}
+.g8simpleanalysis .g8coverread{flex:none;width:100%;text-align:center;font-size:.9rem;line-height:1.4}
+.g8analysisgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.g8analysissection{min-width:0;border:1px solid #6c7766;border-radius:5px;padding:.7rem;background:#293127}
+.g8analysissection:last-child{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:1rem}
+.g8analysissection h3{font-size:.95rem;font-weight:600;line-height:1.4;color:#eaece1;background:none;border:0;padding:0 0 .45rem;margin:0 0 .25rem;text-align:left}
+.g8analysissection:last-child h3{grid-column:1/-1}
+.g8analysisrow{display:flex;justify-content:space-between;align-items:baseline;gap:.75rem;padding:.5rem 0;border-top:1px solid #56624f;font-size:.85rem;line-height:1.4;min-width:0}
+.g8analysisrow>span{min-width:0;overflow-wrap:anywhere;color:#e0e6d8}
+.g8analysisrow>strong{color:var(--rating-color);font-size:1.05rem;font-variant-numeric:tabular-nums}
+@media(max-width:600px){.g8analysisgrid{grid-template-columns:1fr;gap:.65rem}.g8analysissection:last-child{grid-template-columns:1fr}.g8simpleanalysis .g8roleboardhead{padding:.75rem 0}.g8analysissection{padding:.65rem}}

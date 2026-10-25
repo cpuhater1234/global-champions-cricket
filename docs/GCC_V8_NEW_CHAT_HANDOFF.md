@@ -1,3 +1,15 @@
+# Current release: simplified squad analysis — 25 October 2026
+
+Stable playable v62, file_000000006ccc81fa923562d5aaaf6c98, existing Library identity libfile_ebabb63004ac81919b41b246675c703d. HTML SHA256 8ba0fc8ba43e944efdf8de025f251aa59be073d21ff67ca590cd4c59f013301d; Git blob 6e2b7ff597fb17eccd964c007a4c58ae429eb3c5.
+
+User explicitly removed ALL draft pick suggestions/guidance and visible rating denominators. Draft keeps boxed rating, balance and open selected roster. Squad/XI analysis now centres source label, overall box and completeness status, with twelve static label-number rows under plain Batting, Bowling and Team balance headings. No expandable details, role lists, phase breakdowns, strength bars or verbose explanations. All values still use existing profile fields. Model, simulation, RNG and saves unchanged.
+
+Authoritative changes: v8/ui/roles.js and workspace.css. qa/simple-analysis-20261025/build.py rebuilds from versioned39ec baseline and module copies; only script13 plusCSS changes. Fresh54 browser cases (18each Chromium,Firefox,WebKit) verify empty/partial squads, all12values, centring, desktop/mobile/enlarged text, no suggestions/details/denominators and read-only state. Screenshots inspected internally, not uploaded. Independent review found no blockers. Prior v61 suggestion/target tests describe a feature intentionally removed; run against that versioned candidate rather than treating them as requirements for current UI.
+
+Everything below is historical where superseded.
+
+---
+
 # Current release: open draft companion — 25 October 2026
 
 Stable playable version61, file_00000000b284820bb546fa903c8697d9, sameLibrary identity libfile_ebabb63004ac81919b41b246675c703d. HTML SHA25639ec4a2e9fafcfc15e4ac11f9fbc59bbc9756cde40b22f3d28873071a15ee2df; Gitblob149afa09a489cc1822738462647ae0760f954e78. Both canonical HTML aliases match.
