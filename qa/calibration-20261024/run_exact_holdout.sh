@@ -4,7 +4,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 CAL="$ROOT/qa/calibration-20261024"
 FIN="$ROOT/qa/finish-pass"
-GAME="$ROOT/game/gcc_v8_product_candidate.html"
+GAME="${GCC8_CALIBRATION_BASELINE:-$CAL/published-baseline.html}"
 VENV="${GCC8_CALIB_VENV:-$ROOT/.tmp/gcc-v8-calibration-venv}"
 
 cd "$ROOT"
@@ -28,9 +28,9 @@ print('preregistration/model/identity: OK')
 PY
 
 EXPECTED_GAME="3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf"
-[ -f "$GAME" ] || fail "missing canonical playable: $GAME"
-[ "$(hash_file "$GAME")" = "$EXPECTED_GAME" ] || fail "canonical playable hash mismatch"
-printf '%s\n' "canonical playable: OK"
+[ -f "$GAME" ] || fail "missing frozen baseline; restore pinned3973116 game as documented:: $GAME"
+[ "$(hash_file "$GAME")" = "$EXPECTED_GAME" ] || fail "frozen baseline hash mismatch"
+printf '%s\n' "frozen baseline: OK"
 
 fetch_exact(){
   rel="$1"; url="$2"; expected="$3"

@@ -1,0 +1,48 @@
+{
+  "hash": "728f4afac83aa6290a5c9241d2f0ee8885b6b363f1af6dd78736986a12ee9fc4",
+  "scope": "Synthetic renderer boundary inputs in real Chromium; checks announcement/visible-context agreement, not engine outcome generation or spoken screen-reader output.",
+  "rows": [
+    {
+      "name": "chase-won",
+      "expected": "Target reached.",
+      "visible": "Target reached.",
+      "live": "Yorkshire: 100 for 0 after 10.0 overs. Target reached.",
+      "atomic": "true"
+    },
+    {
+      "name": "chase-lost",
+      "expected": "The chase is over. Target not reached.",
+      "visible": "The chase is over. Target not reached.",
+      "live": "Yorkshire: 98 for 0 after 20.0 overs. The chase is over. Target not reached.",
+      "atomic": "true"
+    },
+    {
+      "name": "chase-tied",
+      "expected": "Scores level.",
+      "visible": "Scores level.",
+      "live": "Yorkshire: 99 for 0 after 20.0 overs. Scores level.",
+      "atomic": "true"
+    },
+    {
+      "name": "super-over-won",
+      "expected": "Target reached.",
+      "visible": "Target reached.",
+      "live": "Yorkshire: 100 for 0 after 1.0 overs. Target reached.",
+      "atomic": "true"
+    },
+    {
+      "name": "super-over-lost",
+      "expected": "The chase is over. Target not reached.",
+      "visible": "The chase is over. Target not reached.",
+      "live": "Yorkshire: 98 for 0 after 1.0 overs. The chase is over. Target not reached.",
+      "atomic": "true"
+    },
+    {
+      "name": "super-over-tied",
+      "expected": "Scores level.",
+      "visible": "Scores level.",
+      "live": "Yorkshire: 99 for 0 after 1.0 overs. Scores level.",
+      "atomic": "true"
+    }
+  ]
+}

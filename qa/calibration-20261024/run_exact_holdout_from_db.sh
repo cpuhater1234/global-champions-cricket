@@ -4,7 +4,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 CAL="$ROOT/qa/calibration-20261024"
 FIN="$ROOT/qa/finish-pass"
-GAME="$ROOT/game/gcc_v8_product_candidate.html"
+GAME="${GCC8_CALIBRATION_BASELINE:-$CAL/published-baseline.html}"
 VENV="${GCC8_CALIB_VENV:-$ROOT/.tmp/gcc-v8-calibration-venv}"
 INPUT="${1:-${GCC8_FROZEN_DB:-}}"
 EXPECTED_DB="60d38fb30ff38f72a7d344437ed881b2ba93731a739dd35fdd556a82386c3ce9"
@@ -29,8 +29,8 @@ assert hashlib.sha256((root/'identities.json').read_bytes()).hexdigest()==pre['i
 print('preregistration/model/identity: OK')
 PY
 
-[ -f "$GAME" ] || fail "missing canonical playable"
-[ "$(hash_file "$GAME")" = "$EXPECTED_GAME" ] || fail "canonical playable hash mismatch"
+[ -f "$GAME" ] || fail "missing frozen baseline; restore pinned3973116 game as documented:"
+[ "$(hash_file "$GAME")" = "$EXPECTED_GAME" ] || fail "frozen baseline hash mismatch"
 [ "$(hash_file "$INPUT")" = "$EXPECTED_DB" ] || fail "frozen database hash mismatch"
 
 python3 - "$INPUT" <<'PY'

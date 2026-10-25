@@ -1,3 +1,25 @@
+# CURRENT RELEASE — 25 October 2026
+
+Read `docs/GCC_V8_CALIBRATION_RELEASE_20261025.md` and `qa/calibration-20261024/release-verification.json` first. All outside-session commits through05cbc0b are preserved; continuation reconciliation committed5f95258 on top. Current branch remains `work/v8-game-first-rebuild` (query its latest head before writing; never use old head leases).
+
+Released HTML SHA256 **728f4afac83aa6290a5c9241d2f0ee8885b6b363f1af6dd78736986a12ee9fc4**, Git blob **d18cda795beee7eb63e3065d5c087840801a3c03**. Canonical two game paths and stable playable are byte-identical. Library playable **libfile_ebabb63004ac81919b41b246675c703d version58**, filefile_00000000832481f6bab4a6ec2eb6bdd8.
+
+Changes:412 verified distinct identity metadata records;410 undisputed full DOBs;74 birth-year corrections for NEW careers only, AFTER stored templates. Same absolute alternate-history career windows and numeric skill futures. Existing saves retain saved DOB/ages and full state. Corrected new ages intentionally change age-sensitive scouting/recruitment, outlook, trade and injury behaviour. Do not assert identical new-world outcomes. Country/role/style rules unchanged. Umar Gul and Angkrish Raghuvanshi are source-conflicted; retain original years and no invented full date. Twelve ESPN API errors were resolved using official board/league/club fallback review; distinguish manual profile matching from exact ESPN response-ID matching.
+
+Live status now exposes cumulative score, overs and same visible chase/terminal context, atomic region. Accepted visible palette/layout unchanged. Only script blocks2and15 changed from3ddbaseline; authoritative modules/candidate builder in release report.
+
+Fresh final-hash evidence:18,099 compatibility,2,478 biography,600 CPU draft/eight club positions,845 persistence/fairness,162 browser cases/all three engines;292 recorded match frames plusfour named landmarks andsix synthetic terminal/Super Over render cases. Final8802 three-season career:2,804checks/42managed league matches, zero runtime/quota errors. Pre-fallbackd647 full19season8801:15,284checks/266managed league matches,43reload checkpoints,30injury selections,four actual Super Overs; its original hash is retained, NOT silently attributed to728final. Independent review acceptable/no blocking issue after scope resolution.
+
+Frozen statistical evaluation completed and reproduced with unchanged preregistered inputs. BOTH promotion gates FAIL. No empirical rerating. Priors are not certified just because challenger failed. Do not retune on observed2023–2026 tests. Immutable preregistration heldOutMetricsObserved=false describes registration time; heldout-report is actual result. Recovery scripts now use pinned3973116baseline, not current released HTML.
+
+Durable recovery: exact DB+14source archives **libfile_44cbb9e6ef248191925722dc20472cc2 version0**, ZIP SHAe45153104241086da60901125adebba8c0705a2006d7688d833aaf7e60193097. New synthetic QA saves/observations **libfile_303e62aac70c8191bc008a0eae1abb0e version0**, ZIP SHA54522142a685e48176fed918d854f2f8d2765a859fb2e415a620f8ebfd6d77f1.
+
+OPEN, cannot fabricate: actual novice/returning-player playtests, physical phone behaviour and regular screen-reader-user speech pacing. Recorder/session kit is ready, no actual human/device sessions observed. Some precise technique/mental/leadership/keeping/fielding numbers remain unidentifiable model priors. Extreme320px+400%root-text overflow remains separately documented; ordinary reflow cases pass. Do not say all six priorities fully proven or every rating perfected.
+
+Everything below is historical and superseded where inconsistent.
+
+---
+
 # Active continuation — 25 October 2026
 
 Read `docs/GCC_V8_CONTINUATION_RECONCILIATION_20261025.md` first. Outside-session commits through05cbc0b preserved. Exact frozen database recovered from this original environment and preregistered evaluation re-executed with unchanged hashes: BOTH promotion gates FALSE. `heldout-report.json` now contains actual results; older unopened/blocked statements below are historical. No empirical bulk rerating. Recovery archive now durable: Library libfile_44cbb9e6ef248191925722dc20472cc2 version0. Candidate1d9b284 remains staged, canonical3dd348d unchanged pending release verification. Biography audit and browser review continue. Do not overwrite outside work or repeat model tuning against observed test years.
