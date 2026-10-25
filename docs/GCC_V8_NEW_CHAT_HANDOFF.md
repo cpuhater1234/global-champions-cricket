@@ -1,3 +1,8 @@
+## Current checkpoint · analysis tiles and selected-XI coverage · 25 October 2026
+
+Current candidate SHA256: `22960c8b1ac875d7e905177072fd7319cbf5d2bd1093e453af682a2bb2d625b7`.
+Source: roles.js, screens.js, components.js, workspace.css. QA: qa/analysis-coverage-20261025. Analysis is now compact grouped tiles. XI role counts use fitness-adjusted players: keeper, opening batters, bowling options, new-ball options, death options. Guide targets, no added penalties. User rejected bowling cover: removed that metric and overs capacity from selection UI. Suggestions remain removed. Prior notes below historical.
+
 # Current release: simplified squad analysis — 25 October 2026
 
 Stable playable v62, file_000000006ccc81fa923562d5aaaf6c98, existing Library identity libfile_ebabb63004ac81919b41b246675c703d. HTML SHA256 8ba0fc8ba43e944efdf8de025f251aa59be073d21ff67ca590cd4c59f013301d; Git blob 6e2b7ff597fb17eccd964c007a4c58ae429eb3c5.

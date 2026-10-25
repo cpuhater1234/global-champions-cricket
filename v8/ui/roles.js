@@ -23,8 +23,14 @@
   const ps=squad?roster():G.state.xi.map(G.byId).filter(Boolean),fit=ps.filter(p=>injury(p)?.status!=='OUT'),profile=squad?X.squadProfile():X.profile();
   const cover=fit.length<11?'XI incomplete':profile.oversCapacity>=20&&profile.trustedOversCapacity>=18?'Bowling depth covered':profile.trustedOversCapacity>=16?'A little short on bowling':'Needs another bowling option';
   const row=(key,label)=>{const value=Math.round(profile[key]||0);return `<div class="g8analysisrow" data-matchup="${key}"><span>${esc(label)}</span><strong style="--rating-color:${X.ratingTone(value)}">${value}</strong></div>`;};
-  const section=(label,keys)=>`<section class="g8analysissection"><h3>${label}</h3>${X.phases.filter(([key])=>keys.includes(key)).map(([k,l])=>row(k,l)).join('')}</section>`;
+  const section=(label,keys)=>`<section class="g8analysissection"><h3>${label}</h3><div class="g8analysistiles">${X.phases.filter(([key])=>keys.includes(key)).map(([k,l])=>row(k,l)).join('')}</div></section>`;
   return `<section class="g8teamread g8roleboard g8simpleanalysis"><div class="g8roleboardhead"><span class="g8eyebrow">${squad?'PROJECTED XI · FROM YOUR SQUAD':'YOUR XI'}</span><div class="g8teamrating" style="--rating-color:${fit.length?X.ratingTone(profile.overall):'#c4d7e5'}"><strong>${fit.length?Math.round(profile.overall):'—'}</strong><span>Overall</span></div><b class="g8coverread">${cover}</b></div><div class="g8analysisgrid">${section('Batting',['powerplayBat','middleBat','finishing','battingResources'])}${section('Bowling',['newBall','middleBowl','death','bowlingResources'])}${section('Team balance',['keeping','fielding','roleFit','chemistry'])}</div></section>`;
+ };
+ X.xiCoverage=()=>{
+  const ps=G.state.xi.map(G.byId).filter(p=>p&&injury(p)?.status!=='OUT').map(p=>X.read.fitPlayer(p.id));
+  const bowlers=ps.filter(p=>R.bowlingWorkload(p)>0&&R.bowlingStyle(p)&&(p.bowl>=28||R.bowlingUsagePrior(p)>=.35));
+  const rows=[['Keepers',ps.filter(R.isKeeper).length,1],['Opening batters',ps.filter(p=>p.bat>=55&&p.preferredSlot<=2).length,2],['Bowling options',bowlers.length,5],['New-ball options',bowlers.filter(p=>R.bowlPhaseScore(p,'newBall')>=72).length,2],['Death options',bowlers.filter(p=>R.bowlPhaseScore(p,'death')>=72).length,2]];
+  return `<section class="g8xicoverage" aria-label="Selected XI role coverage"><div class="g8coveragehead"><h3>Role coverage</h3><span>Guide targets</span></div><div class="g8coveragegrid">${rows.map(([label,n,target])=>{const status=n>=target?'Covered':n?'Short':'Missing';return `<div class="g8coverageitem ${n>=target?'covered':n?'short':'missing'}"><span>${label}</span><strong>${n}<small> / ${target}</small></strong><span class="g8coveragestate">${status}</span></div>`;}).join('')}</div></section>`;
  };
  X.draftRead=()=>{
   const ps=roster(),fit=ps.filter(p=>injury(p)?.status!=='OUT'),n=ps.length,slots=Math.max(0,15-n),profile=X.squadProfile();

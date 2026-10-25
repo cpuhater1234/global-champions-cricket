@@ -64,7 +64,7 @@ window.GCC8 = (()=>{
  };
  X.selectionStatus=()=>{
   const n=s.xi.length,p=X.profile(),fit=s.xi.map(G.byId).filter(p=>X.injury(p)?.status!=='OUT'),keeper=fit.some(X.R.isKeeper),overs=Math.min(20,Math.round((p.trustedOversCapacity||0)*10)/10),bowling=overs>=18;
-  return `<div class="g8selectionstatus" aria-live="polite"><div class="g8selectioncount"><strong>${n}<span> / 11</span></strong><span>selected</span></div><div class="g8xirating" style="--rating-color:${n?X.ratingTone(p.overall):'#c5d9e8'}"><strong>${n?Math.round(p.overall):'–'}</strong><span>${n&&n<11?'XI estimate':'XI rating'}</span></div><div class="g8xibalance"><span class="${keeper?'g8covered':'g8gap'}">${keeper?'Keeper selected':'Keeper needed'}</span><span class="${bowling?'g8covered':'g8gap'}">Bowling cover <b>${overs}/20 overs</b></span></div></div>`;
+  return `<div class="g8selectionstatus" aria-live="polite"><div class="g8selectioncount"><strong>${n}<span> / 11</span></strong><span>selected</span></div><div class="g8xirating" style="--rating-color:${n?X.ratingTone(p.overall):'#c5d9e8'}"><strong>${n?Math.round(p.overall):'–'}</strong><span>${n&&n<11?'XI estimate':'XI rating'}</span></div></div>`;
  };
 
 })();
