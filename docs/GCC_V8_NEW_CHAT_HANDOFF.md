@@ -1,3 +1,15 @@
+# Current release: open draft companion — 25 October 2026
+
+Stable playable version61, file_00000000b284820bb546fa903c8697d9, sameLibrary identity libfile_ebabb63004ac81919b41b246675c703d. HTML SHA25639ec4a2e9fafcfc15e4ac11f9fbc59bbc9756cde40b22f3d28873071a15ee2df; Gitblob149afa09a489cc1822738462647ae0760f954e78. Both canonical HTML aliases match.
+
+Draft sidebar now has a boxed projectedXI rating, provisional label before11players, balance verdict and compact coverage, next-needed role plus two legal available scouting suggestions, and everypicked player always visible in compact two-column rows. Detailed analysis/history are optional secondary dialogs. Removed duplicated latest-signing and roster accordion; mobilepanel precedes playerpool. No nested panel scroll. Full foundation draft still automatically enters teamroom. Existing two-ability playercards retained.
+
+Guidance uses currentpublic ratings/rolebands and existingguard/freeagent rules, not hiddencareer truth. No new numerical draftgrade. UI-only changes: v8/ui/roles.js, screens.js, workspace.css. Engine/RNG/ratings/save code unchanged. Builder qa/draft-companion-20261025/build.py replaces script13,17andCSS from versioned756baseline/modulecopies.
+
+Fresh finalhash evidence:64browser stage/viewport/text cases (Chromium48,Firefox8,WebKit8);30logic+actual saved-career annualdraft checks. Suggestions legal, matchingneed andcurrentavailability; advisory read-only; empty/partial/full andnormal completion covered. Desktop/mobile screenshots inspected internally andnot uploaded. Independent review no blockers. See qa/draft-companion-20261025. Earlier test reports below retain their original hashes and are historical, not newly rerun by this UI patch.
+
+---
+
 # CURRENT draft-card release — two headline abilities,25October2026
 
 PlayableLibraryversion60, filefile_000000006d2481fabcb3258eeb85276e; SHA2567568403962160d660198867d75f6de487512817de0a339220264e7cf783eae45, Gitblob8f98f4dca5b2f70401fb03a572dc78af6343a958. All roles use TWO headline abilities:BAT Batting/Fielding;BOWL Bowling/Fielding;AR Batting/Bowling;WK-BAT Batting/Keeping. Equal columns and central divider remain at narrow widths. User rejected rushed keeperPower placeholder; that v59 file is superseded and was never pushed toGit. Overall, best phase, scouting details, simulation and saves unchanged.
