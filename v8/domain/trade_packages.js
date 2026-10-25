@@ -5,6 +5,7 @@
     return '';
   }
   function packageProblem(deal){
+    if(state.year<=2008)return 'Trading opens after the first season, from 2009.';
     if(!deal||typeof deal!=='object'||typeof deal.mid!=='boolean')return 'Build a trade package first.';
     const {club,give,take,givePicks,takePicks,mid}=deal,own=state.userClub?.abbr,o=state.dynasty?.offseason;
     if(!own||!state.teams[club]||club===own)return 'Choose another club.';
