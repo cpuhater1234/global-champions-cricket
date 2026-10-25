@@ -1,0 +1,9 @@
+{
+  "hash": "1d9b2843171ce0f543bb8d030aa64d53d6ee8e3c1ffeb8b9a9ac82b5e081dea5",
+  "baselineHash": "3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf",
+  "checks": 18082,
+  "newWorlds": 3,
+  "actualCompleteDrafts": 2,
+  "olderCheckpoints": 6,
+  "scope": "Exact full runtime state equivalence plus every saved future year and public scouting/CPU value in3 worlds; actual same-seed complete drafts; six representative old save cold restores. Cosmetic migration transaction IDs use fixed Math.random in both hosts; cricket RNG remains saved-state seeded. Prior75-suite evidence applies to previous build; this proves narrow metadata/live-text delta preserves core facts."
+}

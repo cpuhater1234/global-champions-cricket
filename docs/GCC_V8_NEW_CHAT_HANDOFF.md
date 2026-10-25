@@ -1,3 +1,9 @@
+# Active continuation — 25 October 2026
+
+Read `docs/GCC_V8_CONTINUATION_RECONCILIATION_20261025.md` first. Outside-session commits through05cbc0b preserved. Exact frozen database recovered from this original environment and preregistered evaluation re-executed with unchanged hashes: BOTH promotion gates FALSE. `heldout-report.json` now contains actual results; older unopened/blocked statements below are historical. No empirical bulk rerating. Recovery archive now durable: Library libfile_44cbb9e6ef248191925722dc20472cc2 version0. Candidate1d9b284 remains staged, canonical3dd348d unchanged pending release verification. Biography audit and browser review continue. Do not overwrite outside work or repeat model tuning against observed test years.
+
+---
+
 # Precision continuation checkpoint — 24 October 2026, current session
 
 Authoritative playable is still v57 / SHA-256 `3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf`. No production playable or player rating was changed.
