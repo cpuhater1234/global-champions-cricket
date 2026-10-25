@@ -1,3 +1,11 @@
+## Current checkpoint · aligned analysis and team-selection polish · 25 October 2026
+
+Candidate SHA256 `2010a5e1868a13138644d2d33d922ceba839889888e391ea78cbd048f122a661`. Three equal desktop analysis columns/tiles. Draft pool and picked list show batting jobs. Removed numbered XI role guide at user request: strategy remains contextual to squad/ground. Team page has unclipped title, framed bench/order, rating badges and actual home-ground context. Compact final-XI popup from version64 retained. QA: qa/selection-polish-20261025 (27 cases each Chromium/Firefox/WebKit). No rating/model/save changes. Prior notes below historical.
+
+## Current checkpoint · compact final-XI prompt · 25 October 2026
+
+Only draftComplete CSS changed: 32rem maximum, content-sized header/body, no tall header gap, responsive wrapping actions and 44px controls. QA: qa/compact-xi-prompt-20261025. Candidate SHA256 8e9ee1612466304c087776bcf97c22c3db581dec0aff870bba9759e9b5e7720d. Prior notes below historical.
+
 ## Current checkpoint · analysis tiles and selected-XI coverage · 25 October 2026
 
 Current candidate SHA256: `22960c8b1ac875d7e905177072fd7319cbf5d2bd1093e453af682a2bb2d625b7`.

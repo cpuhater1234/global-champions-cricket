@@ -1087,3 +1087,42 @@ html,body,#g8app,#g8app:has(.g8draftsplit){background:#191c19;background-image:n
 
 .g8coverageitem:last-child{grid-column:span 2}
 @media(min-width:761px){.g8coveragegrid{grid-template-columns:repeat(6,minmax(0,1fr))}.g8coverageitem{grid-column:span 2}.g8coverageitem:nth-child(-n+2){grid-column:span 3}}
+
+/* Draft completion is a small decision prompt, sized to its content. */
+#g8dialog[data-prompt="draftComplete"]{width:min(32rem,calc(100vw - 2rem));max-width:calc(100vw - 2rem);min-height:0;height:fit-content;padding:0;box-sizing:border-box}
+#g8dialog[data-prompt="draftComplete"] .g8modalhead{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;align-items:center;gap:.4rem;padding:.75rem;text-align:center}
+#g8dialog[data-prompt="draftComplete"] .g8modalhead::before{content:"";width:44px}
+#g8dialog[data-prompt="draftComplete"] .g8modalhead>div{grid-column:2}
+#g8dialog[data-prompt="draftComplete"] .g8modalhead h2{font-size:1.3rem;line-height:1.3;margin:0}
+#g8dialog[data-prompt="draftComplete"] .g8modalhead .g8eyebrow{display:none}
+#g8dialog[data-prompt="draftComplete"] .g8dialogclose{position:static;grid-column:3;width:44px;height:44px}
+#g8dialog[data-prompt="draftComplete"] .g8modalbody{padding:.9rem 1rem 1rem}
+#g8dialog[data-prompt="draftComplete"] .g8modalbody>p{margin:0;line-height:1.5;font-size:1rem}
+#g8dialog[data-prompt="draftComplete"] .g8actions{display:flex;flex-wrap:wrap;align-items:stretch;justify-content:center;gap:.6rem;margin:.9rem 0 0;padding:0}
+#g8dialog[data-prompt="draftComplete"] .g8actions>.g8button{flex:1 1 11rem;min-width:0;min-height:44px;margin:0;justify-content:center}
+
+/* Equal analysis columns, legible draft jobs and a framed selection workspace. */
+.g8analysissection,.g8analysissection:last-child{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto 1fr;align-content:stretch}
+.g8analysistiles{grid-template-rows:repeat(2,minmax(0,1fr));height:100%}
+.g8analysisrow>span{display:flex;align-items:center;justify-content:center;min-height:2.7em}
+.g8directpick.g8recruitcard .g8candidatecontext{padding:.3rem .5rem;margin:.25rem 0 0;border:1px solid #858d7e;border-radius:4px;background:#e0e3d5;color:#303a2c;font-size:.85rem;font-weight:700;line-height:1.4;justify-self:start}
+.g8draftaside .g8pickedjob{color:#e4e6db;font-size:.75rem;line-height:1.4;margin-top:.2rem}
+#g8stage[data-view="team"]>.g8heading{overflow:visible;padding:1rem 1.25rem;min-height:0}
+#g8stage[data-view="team"]>.g8heading h1{line-height:1.3;padding:.08em 0 .14em;margin:0;font-size:clamp(1.8rem,3.5vw,3rem)}
+#g8stage[data-view="team"]>.g8heading>.g8panelart{display:none}
+#g8stage[data-view="team"]>.g8heading>.g8actions:empty{display:none}
+.g8selectionground{display:flex;align-items:center;gap:.8rem;padding:.8rem 1rem;margin:0 0 1rem;border:1px solid #777e70;border-radius:8px;background:linear-gradient(120deg,#373b32,#2c302a);color:#eeecdf}
+.g8selectionground>.g8icon,.g8selectionground>span{flex:none}.g8selectionground>div{min-width:0}
+.g8selectionground .g8eyebrow{font-size:.7rem;margin:0 0 .15rem;color:#c3c9b7;letter-spacing:.08em}
+.g8selectionground strong{font-size:1rem;line-height:1.4;overflow-wrap:anywhere}.g8selectionground p{font-size:.85rem;line-height:1.45;margin:.15rem 0 0;color:#d8ddce}
+.g8teamworkspace.g8compactwork>.g8sheet{padding:.85rem;background:#292d28;border:1px solid #737c6b;border-radius:10px;border-top:3px solid #8d9780;box-shadow:0 4px 0 #11130f}
+.g8teamworkspace.g8compactwork .g8sectionhead{padding:.6rem .7rem;border:1px solid #777f6d;border-radius:6px;background:#42483a;color:#f2efdf;gap:.65rem}
+.g8teamworkspace.g8compactwork .g8sectionhead h2,.g8teamworkspace.g8compactwork .g8sectionhead>span{color:#f2efdf}
+.g8teamworkspace.g8compactwork .g8startingxi>.g8sectionhead{background:#424d38;border-color:#8f9c7e}
+.g8compactwork .g8order{display:grid;gap:.35rem}
+.g8teamworkspace.g8compactwork .g8slot,.g8teamworkspace.g8compactwork .g8squadrow{background:#343931;border:1px solid #616b57;border-radius:6px;padding:.3rem .45rem;margin:0;min-height:54px}
+.g8teamworkspace.g8compactwork .g8squadrow+.g8squadrow{margin-top:.35rem}
+.g8compactwork .g8slotnumber{background:#24291f;border:1px solid #66735a;border-radius:4px;min-width:1.6rem;padding:.2rem;color:#e2e7d7}
+.g8compactwork .g8compactscout .g8rowrating{border:1px solid #77836b;border-radius:5px;padding:.25rem .4rem;background:#24291f;font-size:1.2rem;min-width:2.5rem}
+.g8compactcommand{border:1px solid #7c866f;border-radius:8px;background:#30362b;padding:.75rem .9rem;margin-bottom:1rem}
+@media(max-width:760px){#g8stage[data-view="team"]>.g8heading{padding:.8rem 1rem}.g8selectionground{padding:.7rem .8rem}.g8teamworkspace.g8compactwork>.g8sheet{padding:.65rem}}
