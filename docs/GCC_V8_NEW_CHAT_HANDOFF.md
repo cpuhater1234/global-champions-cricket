@@ -1,3 +1,19 @@
+# CURRENT draft-card release — two headline abilities,25October2026
+
+PlayableLibraryversion60, filefile_000000006d2481fabcb3258eeb85276e; SHA2567568403962160d660198867d75f6de487512817de0a339220264e7cf783eae45, Gitblob8f98f4dca5b2f70401fb03a572dc78af6343a958. All roles use TWO headline abilities:BAT Batting/Fielding;BOWL Bowling/Fielding;AR Batting/Bowling;WK-BAT Batting/Keeping. Equal columns and central divider remain at narrow widths. User rejected rushed keeperPower placeholder; that v59 file is superseded and was never pushed toGit. Overall, best phase, scouting details, simulation and saves unchanged.
+
+Authoritative sources: v8/ui/components.js andv8/ui/workspace.css. Builder qa/card-clarity-20261025/build.py uses immutable728baseline qa/calibration-20261024/candidate.html, replacing only components script11 andworkspace stylesheet. Fresh36 actual Chromium role×viewport×text cases at1280/390/320px and16/24/32px root text; all8sort phasealignment/contrast checks passed. Desktop/mobile screenshots visually inspected internally, NOT uploaded. Independentreview no blockers. Earlier broad regression evidence below retains its original tested hash; do not claim it freshly reran for this presentation-only patch.
+
+Everything below is historical where superseded.
+
+---
+
+# Latest UI patch — wicketkeeper draft cards,25October2026
+
+Current playableLibraryversion59; HTML SHA25669fae33c5fde2c984acd110eb3e72fb964f5b30a25d36429e492ec5301844060, Gitblobf4ab2a64469c1a5d1635bce445513308185907ee. WK-BAT draft cards now show Batting,Power,Keeping. Underlying fielding data,overall formula,match simulation andsave format unchanged. Sourcechange is one cardStats branch in v8/ui/components.js, embedded byte-for-byte in both canonical HTML files. Tested12keeper cards at1280/390/320px andall8draftsort phasealignment/contrast checks. See qa/keeper-card-20261025. Earlier broad verification below belongs to its original728build; do not relabel that evidence as freshly rerun for69faUIpatch. Execution briefly disconnected before mutation, then recovered andbrowserchecks completed. The calibration builder produces728baseline; to reproduce latestUIpatch additionally replace its embedded components module with current v8/ui/components.js.
+
+---
+
 # CURRENT RELEASE — 25 October 2026
 
 Read `docs/GCC_V8_CALIBRATION_RELEASE_20261025.md` and `qa/calibration-20261024/release-verification.json` first. All outside-session commits through05cbc0b are preserved; continuation reconciliation committed5f95258 on top. Current branch remains `work/v8-game-first-rebuild` (query its latest head before writing; never use old head leases).
