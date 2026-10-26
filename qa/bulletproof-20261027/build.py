@@ -32,8 +32,10 @@ def build(promote=False,update_sources=False):
   assert html.count(old)==1,source+' HTML anchor'
   html=html.replace(old,new)
   if update_sources:
-   p=ROOT/source;s=p.read_text();assert s.count(old)==1 or s.count(new)==1,source+' source anchor'
-   if new not in s:p.write_text(s.replace(old,new))
+   targets=[source]+(['v8/engine/dynasty.js'] if source=='v8/domain/save_validation.js' else [])
+   for target in targets:
+    p=ROOT/target;s=p.read_text();assert s.count(old)==1 or s.count(new)==1,target+' source anchor'
+    if new not in s:p.write_text(s.replace(old,new))
  after=re.findall(r'<script\b[^>]*>(.*?)</script>',html,re.S)
  edited=[i for i,(a,b) in enumerate(zip(before,after)) if a!=b]
  assert edited==[10,19],edited
