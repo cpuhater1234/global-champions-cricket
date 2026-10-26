@@ -1,0 +1,132 @@
+{
+  "sha256": "e28ccd173f92069cb690d27f6b64224c072f4b56bb061d00428edadc5a5e7af0",
+  "scripts": 20,
+  "numericOccurrences": 19952,
+  "numericLiterals": 19524,
+  "numericStrings": 428,
+  "distinctValues": 1298,
+  "functions": 561,
+  "byBlock": [
+    {
+      "block": 0,
+      "bytes": 2568,
+      "numbers": 0,
+      "opening": "(()=>{const choices=[{\"abbr\": \"CSK\", \"src\": \"https://commons.wikimedia.org/wiki/Special:FilePath/Chi"
+    },
+    {
+      "block": 1,
+      "bytes": 310652,
+      "numbers": 40,
+      "opening": "window.GCC8_MEDIA={\"stadium\": \"data:image/jpeg;base64,/9j/4QCCRXhpZgAATU0AKgAAAAgABQEOAAIAAAAgAAAASg"
+    },
+    {
+      "block": 2,
+      "bytes": 521488,
+      "numbers": 4460,
+      "opening": "/* MIT License Copyright (c) 2013 pieroxy Permission is hereby granted, free of charge, to any per"
+    },
+    {
+      "block": 3,
+      "bytes": 1663,
+      "numbers": 10,
+      "opening": "window.GCC8_ENGINE_SCROLL=()=>{};/* One native runner owns domain timers. Legacy presentation observ"
+    },
+    {
+      "block": 4,
+      "bytes": 291039,
+      "numbers": 9404,
+      "opening": "(()=>{const {setTimeout,clearTimeout,setInterval,clearInterval,requestAnimationFrame,cancelAnimation"
+    },
+    {
+      "block": 5,
+      "bytes": 4293,
+      "numbers": 64,
+      "opening": "(()=>{const {setTimeout,clearTimeout,setInterval,clearInterval,requestAnimationFrame,cancelAnimation"
+    },
+    {
+      "block": 6,
+      "bytes": 18029,
+      "numbers": 412,
+      "opening": "(()=>{const {setTimeout,clearTimeout,setInterval,clearInterval,requestAnimationFrame,cancelAnimation"
+    },
+    {
+      "block": 7,
+      "bytes": 14490,
+      "numbers": 538,
+      "opening": "(()=>{const {setTimeout,clearTimeout,setInterval,clearInterval,requestAnimationFrame,cancelAnimation"
+    },
+    {
+      "block": 8,
+      "bytes": 10414,
+      "numbers": 345,
+      "opening": "(()=>{const {setTimeout,clearTimeout,setInterval,clearInterval,requestAnimationFrame,cancelAnimation"
+    },
+    {
+      "block": 9,
+      "bytes": 236931,
+      "numbers": 1960,
+      "opening": "(()=>{const {setTimeout,clearTimeout,setInterval,clearInterval,requestAnimationFrame,cancelAnimation"
+    },
+    {
+      "block": 10,
+      "bytes": 175080,
+      "numbers": 1959,
+      "opening": "(()=>{const {setTimeout,clearTimeout,setInterval,clearInterval,requestAnimationFrame,cancelAnimation"
+    },
+    {
+      "block": 11,
+      "bytes": 15688,
+      "numbers": 76,
+      "opening": "window.GCC8 = (()=>{ const G=window.GCC,D=window.Dynasty,R=window.GCC_RATINGS,read=window.GCC8_ENGI"
+    },
+    {
+      "block": 12,
+      "bytes": 32887,
+      "numbers": 190,
+      "opening": "/* Cricket reads derive from the existing model; hidden CPU career truth is not shown. */ (() => { "
+    },
+    {
+      "block": 13,
+      "bytes": 11199,
+      "numbers": 40,
+      "opening": "/* Translate the existing cricket model into jobs, without guessing handedness or a spin subtype. */"
+    },
+    {
+      "block": 14,
+      "bytes": 2789,
+      "numbers": 0,
+      "opening": "/* Venue selection is presentation-only: never consume the cricket RNG. */ (()=>{ const X=window.GC"
+    },
+    {
+      "block": 15,
+      "bytes": 12350,
+      "numbers": 148,
+      "opening": "/* Highlights use completed scorecard facts. No invented deliveries or intermediate wickets. */ (() "
+    },
+    {
+      "block": 16,
+      "bytes": 14339,
+      "numbers": 44,
+      "opening": "/* Read-only list planning: no guessed retirements, expiry dates or forced transactions. */ (()=>{ "
+    },
+    {
+      "block": 17,
+      "bytes": 33640,
+      "numbers": 112,
+      "opening": "(() => { const X=window.GCC8,{G,D,R,read,ui,esc,btn,badge,roster,pitch,heading,playerCard,table,poo"
+    },
+    {
+      "block": 18,
+      "bytes": 3947,
+      "numbers": 7,
+      "opening": "/* Keep live controls, cards and scroll containers mounted when their values change. */ (() => { co"
+    },
+    {
+      "block": 19,
+      "bytes": 66064,
+      "numbers": 143,
+      "opening": "(() => { const X=window.GCC8,{G,D,R,read,ui,views,esc,btn,badge,roster,playerCard,profile,phases,in"
+    }
+  ],
+  "scope": "All executable embedded JavaScript literals and numeric strings. CSS dimensions and digits inside prose are excluded. Inventory is coverage/navigation, not semantic or empirical certification."
+}

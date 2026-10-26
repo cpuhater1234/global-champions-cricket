@@ -1,0 +1,28 @@
+{
+  "artifactSha256": "e28ccd173f92069cb690d27f6b64224c072f4b56bb061d00428edadc5a5e7af0",
+  "matchPairs": 3000,
+  "innings": 6000,
+  "checks": 4388607,
+  "coverage": {
+    "wide": 15389,
+    "noBall": 3753,
+    "freeHit": 3833,
+    "runOut": 1886,
+    "allOut": 1022,
+    "chase": 1886,
+    "firstBallWin": 338,
+    "surge": 5069,
+    "noLegalBallWin": 19,
+    "clubs": [
+      "SUR",
+      "NOT",
+      "KKR",
+      "HEA",
+      "HUR",
+      "DC",
+      "STA",
+      "RCB"
+    ]
+  },
+  "scope": "Actual delivery engine with eight existing club rosters, deterministic varied estimates and RNG seeds, independent per-delivery arithmetic and endpoints. Unit stress, not UI careers or empirical game-balance certification."
+}

@@ -1,0 +1,53 @@
+{
+  "rows": [
+    {
+      "kind": "batting",
+      "pairedInnings": 500,
+      "lowMean": 169.948,
+      "highMean": 165.288,
+      "runDifference": -4.66,
+      "pairedNormal95CI": [
+        -5.370221914344545,
+        -3.9497780856554554
+      ],
+      "wicketDifference": 0.216
+    },
+    {
+      "kind": "bowling",
+      "pairedInnings": 500,
+      "lowMean": 143.65,
+      "highMean": 142.76,
+      "runDifference": -0.89,
+      "pairedNormal95CI": [
+        -2.837900009284959,
+        1.0579000092849586
+      ],
+      "wicketDifference": 0.076
+    },
+    {
+      "kind": "fielding",
+      "pairedInnings": 500,
+      "lowMean": 145.942,
+      "highMean": 145.942,
+      "runDifference": 0,
+      "pairedNormal95CI": [
+        0,
+        0
+      ],
+      "wicketDifference": 0
+    },
+    {
+      "kind": "keeping",
+      "pairedInnings": 500,
+      "lowMean": 145.942,
+      "highMean": 145.942,
+      "runDifference": 0,
+      "pairedNormal95CI": [
+        0,
+        0
+      ],
+      "wicketDifference": 0
+    }
+  ],
+  "scope": "Paired deterministic RNG; isolated ability interventions in actual delivery engine. Directional diagnostic only, not real-world effect-size calibration. Normal intervals are descriptive, not preregistered promotion gates."
+}

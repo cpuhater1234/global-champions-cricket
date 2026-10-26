@@ -1,0 +1,103 @@
+{
+  "hash": "e28ccd173f92069cb690d27f6b64224c072f4b56bb061d00428edadc5a5e7af0",
+  "rows": [
+    {
+      "test": "qa/v8_chase_logic_test.mjs",
+      "exit": 0,
+      "seconds": 0.14,
+      "log": "qa/numbers-20261026/qa-v8_chase_logic_test.log",
+      "tail": "{\n  scope: 'Exact injected chase helpers: legal winning-score excess, the observed 91/92-ball ledger defects and 1820 generated phase/target budgets. These aggregate phases do not invent a final delivery.',\n  checks: 6478,\n  winningExcessValues: [ 0, 1, 2, 3, 4, 5 ],\n  errors: []\n}\n"
+    },
+    {
+      "test": "qa/v8_brutal_delivery_test.mjs",
+      "exit": 0,
+      "seconds": 9.66,
+      "log": "qa/numbers-20261026/qa-v8_brutal_delivery_test.log",
+      "tail": "Completed 500 match pairs\nCompleted 1000 match pairs\nCompleted 1500 match pairs\nCompleted 2000 match pairs\nCompleted 2500 match pairs\nCompleted 3000 match pairs\n{\n  artifactSha256: 'e28ccd173f92069cb690d27f6b64224c072f4b56bb061d00428edadc5a5e7af0',\n  matchPairs: 3000,\n  innings: 6000,\n  checks: 4388607,\n  coverage: {\n    wide: 15389,\n    noBall: 3753,\n    freeHit: 3833,\n    runOut: 1886,\n    allOut: 1022,\n    chase: 1886,\n    firstBallWin: 338,\n    surge: 5069,\n    noLegalBallWin: 19,\n    clubs: [\n      'SUR', 'NOT',\n      'KKR', 'HEA',\n      'HUR', 'DC',\n      'STA', 'RCB'\n    ]\n  },\n  scope: 'Actual delivery engine with eight existing club rosters, deterministic varied estimates and RNG seeds, independent per-delivery arithmetic and endpoints. Unit stress, not UI careers or empirical game-balance certification.'\n}\n"
+    },
+    {
+      "test": "qa/v8_delivery_engine_test.mjs",
+      "exit": 0,
+      "seconds": 2.56,
+      "log": "qa/numbers-20261026/qa-v8_delivery_engine_test.log",
+      "tail": "{\n  checks: 9112,\n  innings: 500,\n  baselineMean: 161.528,\n  scope: 'Seeded genuine delivery outcomes, arithmetic, legal endpoints and surge rules; plausibility envelope is not empirical calibration'\n}\n"
+    },
+    {
+      "test": "qa/v8_delivery_boundary_regression.mjs",
+      "exit": 1,
+      "seconds": 0.07,
+      "log": "qa/numbers-20261026/qa-v8_delivery_boundary_regression.log",
+      "tail": "node:fs:483\n    return binding.readFileUtf8(path, stringToFlags(options.flag));\n                   ^\n\nError: ENOENT: no such file or directory, open 'v8/domain/delivery_engine.js'\n    at Object.readFileSync (node:fs:483:20)\n    at file:///workspace/scratch/bed56f4334a5/gcc/qa/v8_delivery_boundary_regression.mjs:4:39\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  errno: -2,\n  code: 'ENOENT',\n  syscall: 'open',\n  path: 'v8/domain/delivery_engine.js'\n}\n\nNode.js v24.22.1\n"
+    },
+    {
+      "test": "qa/v8_career_distribution_test.mjs",
+      "exit": 0,
+      "seconds": 15.83,
+      "log": "qa/numbers-20261026/qa-v8_career_distribution_test.log",
+      "tail": "{\n  artifactSha256: 'e28ccd173f92069cb690d27f6b64224c072f4b56bb061d00428edadc5a5e7af0',\n  scope: '10,000 world draws using the shipped new-world overall method for Maxwell and a lower-rated long-run fixture; every shipped player/year checked in one actual world. Not 10,000 complete careers or historical calibration.',\n  worlds: 10000,\n  players: 412,\n  activePlayerYears: 5149,\n  counts: { typical: 9437, moderate: 186, severe: 97, breakout: 280 },\n  maxwell: { expectedPeak: 88, withinSixPoints: 9719, majorDisappointments: 97 },\n  lowerRatedBreakouts: 302,\n  repeatChecks: 10000,\n  errors: []\n}\n"
+    },
+    {
+      "test": "qa/v8_career_outcomes_test.mjs",
+      "exit": 1,
+      "seconds": 0.05,
+      "log": "qa/numbers-20261026/qa-v8_career_outcomes_test.log",
+      "tail": "node:fs:483\n    return binding.readFileUtf8(path, stringToFlags(options.flag));\n                   ^\n\nError: ENOENT: no such file or directory, open 'v8/engine/ratings.js'\n    at Object.readFileSync (node:fs:483:20)\n    at file:///workspace/scratch/bed56f4334a5/gcc/qa/v8_career_outcomes_test.mjs:2:79\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  errno: -2,\n  code: 'ENOENT',\n  syscall: 'open',\n  path: 'v8/engine/ratings.js'\n}\n\nNode.js v24.22.1\n"
+    },
+    {
+      "test": "qa/v8_logic_test.mjs",
+      "exit": 1,
+      "seconds": 2.15,
+      "log": "qa/numbers-20261026/qa-v8_logic_test.log",
+      "tail": "node:fs:621\n  return binding.open(\n                 ^\n\nError: ENOENT: no such file or directory, open 'v8/domain/player_identity.json'\n    at Object.openSync (node:fs:621:18)\n    at Object.readFileSync (node:fs:487:35)\n    at file:///workspace/scratch/bed56f4334a5/gcc/qa/v8_logic_test.mjs:4:242\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  errno: -2,\n  code: 'ENOENT',\n  syscall: 'open',\n  path: 'v8/domain/player_identity.json'\n}\n\nNode.js v24.22.1\n"
+    },
+    {
+      "test": "qa/v8_career_strategy_test.mjs",
+      "exit": 0,
+      "seconds": 2.86,
+      "log": "qa/numbers-20261026/qa-v8_career_strategy_test.log",
+      "tail": "6\n    },\n    {\n      name: 'Virat Kohli',\n      current: 85,\n      careerPeak: 72,\n      publicHiddenBoard: 96.24872566217053,\n      annualValue: 97,\n      roleNeed: 5,\n      actualCareerPeakYear: 2016,\n      exitYear: 2026\n    },\n    {\n      name: 'AB de Villiers',\n      current: 97,\n      careerPeak: 88,\n      publicHiddenBoard: 99,\n      annualValue: 106,\n      roleNeed: 5,\n      actualCareerPeakYear: 2012,\n      exitYear: 2021\n    }\n  ],\n  chosen: [\n    'David Warner',\n    'Dwayne Bravo',\n    'Lasith Malinga',\n    'AB de Villiers',\n    'Dale Steyn',\n    'Andre Russell',\n    'Virat Kohli',\n    'Jasprit Bumrah',\n    'Mitchell Starc',\n    'Shane Watson',\n    'Sunil Narine',\n    'Shahid Afridi'\n  ],\n  peakSensitivity: {\n    originalPeak: 99,\n    changedPeak: 60,\n    valueBefore: 92,\n    valueAfter: 92,\n    cpuBefore: 95.24047297806457,\n    cpuAfter: 95.24047297806457\n  },\n  errors: []\n}\n"
+    },
+    {
+      "test": "qa/v8_cpu_market_test.mjs",
+      "exit": 0,
+      "seconds": 20.28,
+      "log": "qa/numbers-20261026/qa-v8_cpu_market_test.log",
+      "tail": "{\n  artifactSha256: 'e28ccd173f92069cb690d27f6b64224c072f4b56bb061d00428edadc5a5e7af0',\n  scope: 'Three real CPU market windows from a completed-season fixture. Temporary copies count unchanged tradeValue calls; uncached copy restores original direct lookups. Equal market truth and rosters required, not timing thresholds. VM timings are diagnostic, not native responsiveness evidence.',\n  rows: [\n    {\n      seed: 3803,\n      identical: true,\n      uncached: [Object],\n      cached: [Object]\n    },\n    {\n      seed: 4409,\n      identical: true,\n      uncached: [Object],\n      cached: [Object]\n    },\n    {\n      seed: 4513,\n      identical: true,\n      uncached: [Object],\n      cached: [Object]\n    }\n  ],\n  errors: []\n}\n"
+    },
+    {
+      "test": "qa/v8_player_profiles_test.mjs",
+      "exit": 1,
+      "seconds": 0.07,
+      "log": "qa/numbers-20261026/qa-v8_player_profiles_test.log",
+      "tail": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: reviewed player catalog must exist\n    at file:///workspace/scratch/bed56f4334a5/gcc/qa/v8_player_profiles_test.mjs:2:59\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.22.1\n"
+    },
+    {
+      "test": "qa/v8_development_feedback_test.mjs",
+      "exit": 1,
+      "seconds": 0.06,
+      "log": "qa/numbers-20261026/qa-v8_development_feedback_test.log",
+      "tail": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: observed development domain exists\n    at file:///workspace/scratch/bed56f4334a5/gcc/qa/v8_development_feedback_test.mjs:1:142\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.22.1\n"
+    },
+    {
+      "test": "qa/departure-rules/rules.mjs",
+      "exit": 0,
+      "seconds": 2.77,
+      "log": "qa/numbers-20261026/departure-rules-rules.log",
+      "tail": "Departure and supplementary rules passed 2928\n"
+    },
+    {
+      "test": "qa/departure-rules/package-test.mjs",
+      "exit": 1,
+      "seconds": 9.21,
+      "log": "qa/numbers-20261026/departure-rules-package-test.log",
+      "tail": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: season screen exposes cutoff\n    at ck (file:///workspace/scratch/bed56f4334a5/gcc/qa/departure-rules/package-test.mjs:2:158)\n    at file:///workspace/scratch/bed56f4334a5/gcc/qa/departure-rules/package-test.mjs:32:152\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.22.1\n"
+    },
+    {
+      "test": "qa/departure-rules/transactions.mjs",
+      "exit": 1,
+      "seconds": 3.24,
+      "log": "qa/numbers-20261026/departure-rules-transactions.log",
+      "tail": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: generous legal same-role deal exists\n    at ck (file:///workspace/scratch/bed56f4334a5/gcc/qa/departure-rules/transactions.mjs:2:205)\n    at bestDeal (file:///workspace/scratch/bed56f4334a5/gcc/qa/departure-rules/transactions.mjs:6:455)\n    at file:///workspace/scratch/bed56f4334a5/gcc/qa/departure-rules/transactions.mjs:9:333\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.22.1\n"
+    }
+  ]
+}

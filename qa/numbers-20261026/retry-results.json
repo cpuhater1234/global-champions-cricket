@@ -1,0 +1,32 @@
+[
+  {
+    "test": "qa/v8_delivery_boundary_regression.mjs",
+    "exit": 0,
+    "log": "qa/numbers-20261026/retry-v8_delivery_boundary_regression.log",
+    "tail": "PASS delivery extras, striker accounting, legal balls and terminal state\nPASS two-innings ledger, historic no-ball compatibility and tamper rejection: 100 seeds\n"
+  },
+  {
+    "test": "qa/v8_career_outcomes_test.mjs",
+    "exit": 0,
+    "log": "qa/numbers-20261026/retry-v8_career_outcomes_test.log",
+    "tail": "Career outcome pure checks passed\n"
+  },
+  {
+    "test": "qa/v8_logic_test.mjs",
+    "exit": 0,
+    "log": "qa/numbers-20261026/retry-v8_logic_test.log",
+    "tail": "{\n  artifactSha256: 'e28ccd173f92069cb690d27f6b64224c072f4b56bb061d00428edadc5a5e7af0',\n  scope: 'Private-function exports only in a temporary copy; full-universe year/attribute checks, counterfactual decision effects, actual innings challenge and explicit boundary fixtures. No native rendered geometry, subjective enjoyment, historical rating calibration or full factual certification.',\n  checks: 16156,\n  fixtures: {\n    universe: { players: 412, playerYears: 5149, lowKeeperQualityYears: 15 },\n    injury: { user: 0.0175, cpu: 0.0175 },\n    battingOpportunity: { buried: 68, promoted: 70, roleFit: 91 },\n    fitness: { healthy: 72, managing: 70 },\n    cpuDraft: {\n      legalListUnchanged: true,\n      lastPickKeeper: true,\n      lastPickBowling: true\n    },\n    cpuReleases: { count: 4, budgetShared: true, coldResume: true },\n    challenge: {\n      samples: 500,\n      strongWins: 374,\n      strongWinPct: 74.8,\n      averageFor: 150.75,\n      averageAgainst: 134.536,\n      scope: 'Controlled synthetic 85-v-65 cricket skills, identical overall 75; not typical league balance or player enjoyment.'\n    }\n  },\n  errors: []\n}\n"
+  },
+  {
+    "test": "qa/v8_player_profiles_test.mjs",
+    "exit": 1,
+    "log": "qa/numbers-20261026/retry-v8_player_profiles_test.log",
+    "tail": "<anonymous_script>:8057\n      \"roleLine\": \"Top order \u00b7 Bat\n                                  ^\n\nSyntaxError: Unterminated string in JSON at position 225000 (line 8057 column 35)\n    at JSON.parse (<anonymous>)\n    at file:///workspace/scratch/bed56f4334a5/gcc/qa/v8_player_profiles_test.mjs:5:22\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\n\nNode.js v24.22.1\n"
+  },
+  {
+    "test": "qa/v8_development_feedback_test.mjs",
+    "exit": 0,
+    "log": "qa/numbers-20261026/retry-v8_development_feedback_test.log",
+    "tail": "Observed annual development checks passed\nReturning-core development UI checks passed\n"
+  }
+]
