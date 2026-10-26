@@ -40,7 +40,7 @@ function validSave(save){
  if(!Array.isArray(s.fullSchedule)||![0,14].includes(s.fullSchedule.length)||s.fullSchedule.some(round=>!Array.isArray(round)||round.length!==4||round.some(f=>!match(f))))return false;
  if(!Array.isArray(s.results)||s.results.some(r=>!match(r)||!club(r.winner)||!record(r.homeInnings)||!record(r.awayInnings)||!record(r.scorecard)||!Array.isArray(r.scorecard.innings)||!superOverValid(r)))return false;
  if(s.finals&&[...(s.finals.semis||[]),s.finals.gf].filter(Boolean).some(r=>!superOverValid(r)))return false;
- if(s.fullSchedule.length&&clubs.some(c=>!record(s.table[c])||['p','w','l','pts','nrr','runsFor','runsAgainst','ballsFor','ballsAgainst'].some(k=>!Number.isFinite(s.table[c][k]))))return false;
+ if(s.fullSchedule.length&&clubs.some(c=>{const t=s.table[c];return !record(t)||!Number.isFinite(t.nrr)||['p','w','l','pts','runsFor','runsAgainst','ballsFor','ballsAgainst'].some(k=>!Number.isInteger(t[k])||t[k]<0)||t.p>14||t.w>14||t.l>14||t.pts>28||t.p!==t.w+t.l||t.pts!==2*t.w;}))return false;
  if(s.dynasty){
   const d=s.dynasty;if(!record(d)||!Array.isArray(d.history)||!Array.isArray(d.transactions)||!record(d.manager)||!record(d.injuries)||!record(d.replacementFor)||!record(d.replacementOf))return false;
   if(d.developmentByYear!=null){if(!record(d.developmentByYear))return false;for(const [year,rows]of Object.entries(d.developmentByYear)){if(!Number.isInteger(Number(year))||Number(year)<2009||Number(year)>2026||!Array.isArray(rows)||rows.some(r=>!record(r)||r.year!==Number(year)||!ids.has(r.playerId)||typeof r.name!=='string'||!Number.isFinite(r.fromOverall)||!Number.isFinite(r.toOverall)||r.delta!==r.toOverall-r.fromOverall||Math.abs(r.delta)>98)||!unique(rows.map(r=>r.playerId)))return false;}}
@@ -83,4 +83,5 @@ function validSave(save){
  }
  return true;
 }
+
 

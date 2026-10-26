@@ -1,0 +1,28 @@
+[
+  {
+    "warningVisible": false,
+    "announcement": "Career restored from your backup.",
+    "liveRestored": true,
+    "oldStoragePreserved": false,
+    "mode": "healthy",
+    "assertions": {
+      "liveRestored": true,
+      "storage": true,
+      "warning": true,
+      "accurateFeedback": true
+    }
+  },
+  {
+    "warningVisible": true,
+    "announcement": "Career restored from your backup.",
+    "liveRestored": true,
+    "oldStoragePreserved": true,
+    "mode": "quota",
+    "assertions": {
+      "liveRestored": true,
+      "storage": true,
+      "warning": true,
+      "accurateFeedback": false
+    }
+  }
+]
