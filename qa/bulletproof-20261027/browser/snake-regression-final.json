@@ -1,0 +1,26 @@
+{
+  "sha": "e45574a61ae8840f154ccaa156762b0b4e05625e08cde8aa3b79145f5dd72c69",
+  "checks": [
+    {
+      "before": {
+        "pick": 7,
+        "n": 0
+      },
+      "after": {
+        "pick": 8,
+        "n": 1
+      },
+      "events": [
+        {
+          "detail": 1,
+          "args": "[104]"
+        },
+        {
+          "detail": 2,
+          "args": "[14]"
+        }
+      ]
+    }
+  ],
+  "pass": true
+}
