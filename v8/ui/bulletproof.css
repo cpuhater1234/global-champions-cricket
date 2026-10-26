@@ -1,0 +1,54 @@
+/* Keep the career context readable when small screens use enlarged text. */
+@media (max-width: 960px) {
+  #g8hud { flex-wrap: wrap; }
+  #g8hud > .g8hudclub { flex: 1 0 100%; }
+  #g8hud > nav[aria-label="Game menu"] { margin-left: auto; }
+  #g8hud > .g8headerslogan { order: 3; flex: 1 0 100%; }
+  #g8hud > .g8careernav {
+    order: 4;
+    width: 100%;
+    min-width: 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  #g8hud > .g8careernav > .g8button {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    overflow-wrap: normal;
+  }
+}
+@media (max-width: 480px) {
+  #g8dialog .g8modalhead {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 12px;
+  }
+  #g8dialog .g8modalhead .g8eyebrow { padding-right: 56px; }
+  #g8dialog .g8dialogclose { position: absolute; top: 12px; right: 12px; }
+  #g8dialog .g8modalbody { padding: 12px; }
+  #g8stage .g8fixturehero { padding: 12px; }
+  #g8stage .g8fixture > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  #g8stage .g8fixture h2 { width: 100%; }
+  #g8stage .g8fixture .g8badge {
+    width: max-content;
+    min-width: 64px;
+    max-width: 100%;
+    height: auto;
+    min-height: 60px;
+    padding: .35em .45em;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+  #g8stage .g8matchfooter { padding: 12px; }
+  #g8stage .g8matchfooter .g8button { padding-inline: 12px; gap: 8px; }
+  #g8stage .g8matchfooter .g8button > span { overflow-wrap: normal; word-break: normal; }
+}
+@media (max-width: 360px) {
+  #g8hud > .g8headerslogan { display: none; }
+}

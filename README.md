@@ -1,6 +1,6 @@
 # Global Champions Cricket
 
-The current working game is GCC v8. Build the standalone with `python3 v8/build.py --freeze --output game/gcc_v8_stabilised.html` after reconstructing the v7.9.3 reference as described in [the stabilisation notes](docs/GCC_V8_STABILISATION.md). Those notes describe the corrected draft rules, saved-draft compatibility, fixture generation and verification limits.
+The current release is GCC v80: `game/gcc_v8_product_candidate.html` (also `game/gcc_v8_quiet_arcade.html`). It includes the 36-club pool, portable career backups and offline venue photos. Reproduce this tested standalone with `python qa/bulletproof-20261027/build.py --promote`; see [the audit and regression instructions](qa/bulletproof-20261027/README.md). The older freeze builder reproduces an earlier engine snapshot and is not the current release path.
 
 The following section records the original protected baseline.
 
@@ -28,3 +28,4 @@ For every candidate:
 6. only then promote the candidate.
 
 See `docs/WORKFLOW.md` for the operating rules and `qa/GCC_v7014_checkpoint.md` for the recovered v7.0.14 evidence.
+
