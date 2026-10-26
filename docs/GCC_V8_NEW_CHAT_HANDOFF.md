@@ -1,3 +1,9 @@
+## Latest checkpoint — shared visual system, 26 October 2026
+
+CSS-only pass with shared solid surfaces, alignment/hierarchy and 207 final Chromium cases (126 journey incl sampled contrast + 81 career fixtures). All scripts unchanged. See qa/visual-system-20261026/README.md and build.json. Baseline = 7bcf86b60cb3a3b0f5258220fc87b5c7e7d0fcf4. Preserve full club fills, rating scales and photo sources. Independent review no blockers. No new cross-browser/human/physical-device evidence.
+
+SHA256: dcce5b348f2817468e67a4ed1e5ec2ffe6f3661d5f0a524cd1480be18d4c7959
+
 ## Latest checkpoint — career understanding, 26 October 2026
 
 UI-only contextual rules pass. See qa/career-understanding-20261026/README.md and docs/superpowers/plans/2026-10-26-career-understanding.md. New v8/ui/career.js is the exact pre-existing script16 extracted then edited; preserve it in future builders. Personal departure guidance uses engine budgets; annual pick schedule uses read.pickSlots, gated until all eight draw positions revealed; legacy schedules preserved. Engine unchanged. 81 Chromium cases plus rule fixtures and actual seed101 before/after match parity. Independent review no blockers. Human comprehension remains unobserved.
