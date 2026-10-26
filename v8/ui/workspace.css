@@ -1269,3 +1269,11 @@ html,body{background:#191c1a}
 @media(max-width:400px){.g8duelbars>.g8previewrating{grid-template-columns:3.2rem minmax(0,1fr) 2rem;gap:.35rem}.g8overrow>header{grid-template-columns:1fr auto}.g8overrow>header>span{grid-column:1/-1;grid-row:2;text-align:left}.g8overrow>header>strong{grid-column:2;grid-row:1}}
 
 .g8ballarena{align-items:start}.g8livefixture{align-items:stretch}.g8livefixture>span{align-self:stretch}.g8overfeed>h2{display:flex;align-items:baseline;justify-content:space-between;gap:.5rem;flex-wrap:wrap}.g8overfeed>h2>small{font-size:.8rem;line-height:1.4;color:#d5ddc9}.g8earlierovers{margin-top:.65rem}
+
+/* Home format is one solid, balanced panel, never highlighted words. */
+.g8welcomepanel>.g8leagueformat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin:1.4rem 0;padding:.8rem 0;border:1px solid #84947d;border-radius:8px;background:#20382b;text-align:center}
+.g8leagueformat>div{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.25rem;padding:.25rem .5rem;min-width:0}
+.g8leagueformat>div+div{border-left:1px solid #697c63}
+.g8leagueformat strong{font-size:1.8rem;line-height:1.15;font-weight:800;color:#f5ecd9;font-variant-numeric:tabular-nums}
+.g8leagueformat span{font-size:.9rem;line-height:1.4;font-weight:600;color:#e1e4d2;background:none;border:0;padding:0}
+@container(max-width:20rem){.g8welcomepanel>.g8leagueformat{grid-template-columns:minmax(0,1fr);padding:0}.g8leagueformat>div{flex-direction:row;justify-content:center;gap:.75rem;padding:.6rem}.g8leagueformat>div+div{border-left:0;border-top:1px solid #697c63}.g8leagueformat strong{font-size:1.5rem;min-width:2ch;text-align:right}.g8leagueformat span{min-width:7ch;text-align:left}}

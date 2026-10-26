@@ -1,3 +1,7 @@
+## Current checkpoint · home-format panel · 26 October2026
+
+Candidate SHA256 `13da26e2ff1104b6299d026a5f271c2fc9bdad20ecb1febd2ba1ce8574debb70`. Replaced highlighted8clubs/15playerdraft/19seasons words with one solid inset panel and three equal number/label cells, scoped new .g8leagueformat class. Responsive container fallback. Nine Chromium viewport/text cases passed, screenshots inspected. QA qa/home-format-20261026. No gameplay changes. Prior notes below historical.
+
 ## Current checkpoint · over-by-over feed and no foundation trades · 26 October 2026
 
 Candidate SHA256 `5485f41aa66a95d04e79c69ed41e76bc08277968e5681c7bde2f3de869b443e3`. Trades blocked throughout2008 in UI/commands/legacy/package/CPU paths;2009+two-deal limit and Round3close unchanged. Existing saved transactions preserved. Live feed groups actual revealed deliveries by over, latest first; exact runs/wickets/legal counts, extras and partialovers; earlier overs optional. Commentary only significant moments. No RNG/numerical rating changes. Club labels/accents on both sides through live/preview/results/fixtures/ladder/finals and result phases. Preview scale fixed: positional blue nth-child rule overridden, both bars/numbers use existing higher-is-better red/yellow/green. QA qa/match-flow-20261026:1111logic groups at208actual frames + synthetic extras/repeated SO; exact first-round ledger/RNG equality at seeds101/809;54rendered cases per Chromium/Firefox/WebKit. Raw reports retained. Independent review found no blockers. Prior notes below historical.
