@@ -1,3 +1,9 @@
+## Latest checkpoint — previews, hover, bowling feedback
+
+26 October2026: centred player preview summary; 412 profiles/493 layout cases; equal-height full-width picked-player rows; 19 grey hover fills replaced;126 journey cases incl sampled hover and contrast. New v8/ui/roles.js extracted from UI block13; preserve source in future builds. User explicitly rejects20-over-based bowling verdict. Analysis now says XI selected/incomplete; draft bowling count neutral; threshold warnings removed from draft/trade/release/offseason help. Engine/rating/simulation unchanged. QA:qa/player-preview-hover-20261026.
+
+SHA256: 439affc3439fa6953a2c897698ea8eceb347882d0c411c619edc9ec3caf000f9
+
 ## Latest checkpoint — shared visual system, 26 October 2026
 
 CSS-only pass with shared solid surfaces, alignment/hierarchy and 207 final Chromium cases (126 journey incl sampled contrast + 81 career fixtures). All scripts unchanged. See qa/visual-system-20261026/README.md and build.json. Baseline = 7bcf86b60cb3a3b0f5258220fc87b5c7e7d0fcf4. Preserve full club fills, rating scales and photo sources. Independent review no blockers. No new cross-browser/human/physical-device evidence.

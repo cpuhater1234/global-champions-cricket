@@ -71,7 +71,7 @@
  };
  X.draftAdvice=()=>{
   const ps=roster(),p=X.squadProfile();
-  const note=!ps.length?'Start with a player you can build around. Then balance your batting and bowling.':!ps.some(R.isKeeper)?'You still need a recognised wicketkeeper.':(p.oversCapacity<20||p.trustedOversCapacity<18)?'Your attack needs another dependable bowling option.':p.death<70?'Look for someone who can bowl the closing overs.':'Your squad has the key roles covered. Pick the player who improves your side.';
+  const note=!ps.length?'Start with a player you can build around. Then balance your batting and bowling.':!ps.some(R.isKeeper)?'You still need a recognised wicketkeeper.':p.death<70?'Look for someone who can bowl the closing overs.':'Your squad has the key roles covered. Pick the player who improves your side.';
   return X.squadCoverage(ps,'Your squad · '+ps.length+'/15')+`<p class="g8draftadvice">${esc(note)}</p>`;
  };
  X.seasonProgress=()=>{
