@@ -1,0 +1,7 @@
+# Finished game guides · 26 October2026
+
+Three distinct pages: How to play gives six numbered steps with optional detailed rules; How it works gives six concise cricket-decision cards; The breakaway story gives the established alternate-history premise and three short chapters. Existing bat/ball/stumps SVGs, solid cream/forest/bronze panels, readable text and shared navigation. Detailed rules checked against current engine: uncapped retirements and remaining voluntary allowance (3retirements=>1departure), max2releases, no2008trading, max2deals and2players/2ownedR1/R2picks per side, after-draw pick trading/noinseasonpicks, Round3close, supplementary snake and SuperOvers. No gameplay/engine changes.
+
+Fixed guide-footer navigation retaining old scroll position: each guide now opens at the top, with Close/Escape and Back to game retained. Full existing command set preserved. State-invariance test opens all3guides during an active career. Build script asserts only controller script19 changes; CSS scoped to guide UI.
+
+browser.cjs checks36states per engine: three pages with collapsed rules, How to play also expanded, viewport1280/390/320 × root text16/24/32; no horizontal dialog overflow, body font at least root size, paragraph contrast>=4.5:1, controls>=44px, footer navigation/current-page state, scroll reset, Escape close and unchanged game state. Screenshots inspected internally. Browser reports record exact final HTML hash. No physical-device or human-comprehension claim.

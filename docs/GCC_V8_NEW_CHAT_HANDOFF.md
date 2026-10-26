@@ -1,3 +1,7 @@
+## Current checkpoint · finished game guides · 26 October2026
+
+Candidate SHA256 `7ea66a5ad716f944fd14f7b805ad18d44bcf6c5aacb700e376ff04b8292e304f`. Only controller script19 and scoped CSS changed. How to play: six numbered steps and optional grouped rules. How it works: six concise decision cards. Breakaway: established alternate-history premise with three chapters. Cream/forest/bronze surfaces and supplied icons, readable text, shared navigation and back-to-game. Guide navigation resets to top. All original commands and active career state preserved; no engine/rating/save changes. QA qa/guides-20261026. Prior notes below historical.
+
 ## Current checkpoint · home-format panel · 26 October2026
 
 Candidate SHA256 `13da26e2ff1104b6299d026a5f271c2fc9bdad20ecb1febd2ba1ce8574debb70`. Replaced highlighted8clubs/15playerdraft/19seasons words with one solid inset panel and three equal number/label cells, scoped new .g8leagueformat class. Responsive container fallback. Nine Chromium viewport/text cases passed, screenshots inspected. QA qa/home-format-20261026. No gameplay changes. Prior notes below historical.
