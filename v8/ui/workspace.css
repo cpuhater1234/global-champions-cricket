@@ -1471,3 +1471,72 @@ html,body{background:#191c1a}
 .g8draftpickedlist{grid-template-columns:minmax(0,1fr)}
 .g8draftaside .g8draftpicked{min-height:4.2rem}
 .g8draftaside .g8draftpicked b{overflow-wrap:break-word;word-break:normal}
+/* Recruitment panels share equal rails; heading rules establish a consistent rhythm. */
+.g8signing{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:1.25rem}
+.g8signing>.g8windowpanel,.g8signing>.g8wirepanel{box-sizing:border-box;width:100%;min-width:0;margin:0;padding:1.1rem;border-radius:10px;align-self:stretch}
+.g8wirepanel{display:flex;flex-direction:column;gap:.85rem}
+.g8wirepanel .g8wirehead{box-sizing:border-box;width:100%;margin:0;gap:.5rem;padding:.85rem 1rem}
+.g8wirepanel .g8wire{box-sizing:border-box;width:100%;margin:0;padding:0;flex:1;min-height:12rem}
+.g8wirepanel .g8wireline,.g8wirepanel .g8wireline:first-child,.g8wirepanel .g8empty{box-sizing:border-box;width:100%;margin:.65rem 0 0;padding:1rem}
+.g8wirepanel .g8wireline:first-child,.g8wirepanel .g8empty{margin-top:0}
+.g8wirepanel .g8empty{display:grid;place-items:center;min-height:12rem;text-align:center;background:#eee3cf;color:#25382d;border:1px solid #beb296;border-radius:7px;font-size:1rem;line-height:1.6}
+.g8heading>div:first-of-type{padding-left:1rem;border-left:1px solid #9caa8b}
+.g8heading .g8eyebrow{padding:0 0 .6rem;border-bottom:1px solid #b8b69e;display:flex;gap:.5rem;align-items:center}
+.g8heading h1{margin:.6rem 0 0}.g8heading p{margin:.6rem 0 0;padding-top:.6rem;border-top:1px solid #c6bda6}
+#g8stage:has(.g8draftsplit)>.g8disclosure{margin:0 0 1rem}
+/* Hover stays within real controls; plain headings and rows never acquire a box. */
+#g8app details>summary:hover{background:transparent;color:inherit;text-decoration:underline;text-underline-offset:.22em}
+#g8app .g8namescout:hover,#g8app .g8squadscout:hover{background:transparent;color:inherit}
+#g8app .g8namescout:hover .g8nameandrating>b,#g8app .g8squadscout:hover .g8selectedname{text-decoration:underline;text-underline-offset:.22em}
+#g8app .g8candidate:hover{background:transparent}
+#g8app details>summary:focus-visible{outline:2px solid #e0c17e;outline-offset:3px}
+/* XI rows carry their own swap control; counts are framed rather than floating. */
+.g8teamworkspace.g8compactwork .g8slot{grid-template-columns:1.5rem minmax(0,1fr) max-content;gap:.5rem;padding:.45rem .6rem}
+.g8teamworkspace.g8compactwork .g8slot>.g8button{margin:0;min-height:44px;padding:.5rem .7rem}
+.g8teamworkspace.g8compactwork .g8countbadge{display:block;padding:.35rem .6rem;background:#244d36;border:1px solid #799371;border-radius:5px;color:#f6edda;font-size:.9rem;text-align:center;line-height:1.4}
+.g8swapchoices{display:grid;gap:.65rem;margin:1rem 0}
+.g8swapchoices>.g8swapchoice{display:grid;grid-template-columns:minmax(0,1fr) 3rem;align-items:center;gap:1rem;padding:.85rem 1rem;background:#1c4a34;border:1px solid #90a77e;text-align:left}
+.g8swapchoice>span{min-width:0}.g8swapchoice b,.g8swapchoice small{display:block;line-height:1.5;overflow-wrap:anywhere}.g8swapchoice b{font-size:1rem;color:#f8efdc}.g8swapchoice small{font-size:.9rem;color:#e0e5d1;margin-top:.3rem}
+.g8swapchoice>strong{font-size:1.4rem;text-align:center;color:var(--rating-color);font-variant-numeric:tabular-nums}
+/* Match preview is a composed matchup, venue and decision, then optional detail. */
+#g8dialog[data-prompt="prepare"]{width:min(56rem,calc(100vw - 1.5rem))}
+#g8dialog .g8preflight{padding:0;margin:0 0 1rem;background:none;border:0}
+.g8previewround{display:block;text-align:center;padding:.6rem;margin-bottom:1rem;border-top:1px solid #829676;border-bottom:1px solid #829676;font-size:.9rem;font-weight:700;color:#eee5d0;letter-spacing:.05em}
+.g8previewteams{display:grid;grid-template-columns:minmax(0,1fr) 1.5rem minmax(0,1fr);gap:.8rem;align-items:stretch;margin-bottom:1rem}
+.g8previewside{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:.65rem;background:var(--preview-club);color:var(--preview-ink);padding:1.1rem .8rem;border:1px solid var(--preview-ink);border-radius:8px;text-align:center;min-width:0}
+#g8dialog .g8previewside h3{color:var(--preview-ink);font-size:1.1rem;line-height:1.4;margin:0;overflow-wrap:anywhere}
+.g8previewside>span:last-child{color:var(--preview-ink);font-size:.8rem;font-weight:700;line-height:1.5}
+.g8previewside>.g8badge{width:48px;height:56px;margin:0}.g8previewversus{display:grid;place-items:center;font-size:1.1rem;font-weight:700;color:#f0e5d1}
+.g8previewvenue{box-sizing:border-box;background:#eee3cf;color:#25382d;padding:1rem;text-align:center;border:1px solid #bcb094;border-radius:8px}
+.g8previewvenue .g8eyebrow{display:flex;justify-content:center;align-items:center;gap:.5rem;margin:0 0 .5rem;color:#43583c;font-size:.85rem}
+#g8dialog .g8previewvenue h3{color:#25382d;font-size:1.2rem;line-height:1.4;margin:0}
+#g8dialog .g8previewvenue p{color:#384c34;margin:.6rem 0;font-size:1rem;line-height:1.5}
+.g8previewvenue>span:last-child{display:block;padding-top:.6rem;border-top:1px solid #b8b59c;font-size:.95rem;font-weight:600;color:#25382d}
+#g8dialog .g8preflightactions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;margin:1rem 0 0;padding:0}
+.g8preflightactions>.g8button{width:100%;min-height:48px;justify-content:center;margin:0}
+.g8previewxi{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem}
+#g8dialog .g8previewxi li{display:grid;grid-template-columns:1.6rem minmax(0,1fr);align-items:center;gap:.65rem;padding:.7rem;background:#1b452f;border:1px solid #829876;border-radius:6px;margin:0}
+.g8previewxi li>span{text-align:center;font-variant-numeric:tabular-nums;font-weight:700}.g8previewxi li b,.g8previewxi li small{display:block;text-align:left;line-height:1.4;overflow-wrap:anywhere}.g8previewxi li small{margin-top:.3rem;color:#dfe4d0;font-size:.9rem}
+.g8conditioncards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem}
+.g8pitchread .g8conditionread{display:flex;flex-direction:column;justify-content:space-between;min-width:0;padding:.9rem;background:#1c462f;border:1px solid #8ba17e;border-radius:7px;margin:0;gap:.7rem}
+.g8conditionread>div:first-child{display:flex;flex-direction:column;align-items:center;gap:.5rem;text-align:center}
+.g8conditionread>div:first-child>b{font-size:1rem;line-height:1.4;color:#f4ead3}.g8conditionread>div:first-child>strong{display:block;padding:.35rem .5rem;background:#eee3cf;color:#26382a;border:1px solid #b6ad90;border-radius:5px;font-size:.95rem;line-height:1.4;max-width:100%;overflow-wrap:anywhere}
+.g8conditionread .g8conditiongauge{width:100%;margin:0;flex:none}.g8conditionends{display:flex;justify-content:space-between;gap:.3rem;font-size:.75rem;line-height:1.4;color:#dbe2cb}
+.g8groundinterpretation,.g8weatherread{padding:1rem;margin-top:.8rem;background:#63472f;border:1px solid #ac926e;border-radius:7px}
+#g8dialog .g8groundinterpretation h3,#g8dialog .g8weatherread h3,.g8groundinterpretation h3,.g8weatherread h3{display:flex;align-items:center;gap:.5rem;color:#fff0d8;font-size:1rem;line-height:1.5;margin:0}
+#g8dialog .g8groundinterpretation p,#g8dialog .g8weatherread p,.g8groundinterpretation p,.g8weatherread p{color:#f4e7ce;font-size:1rem;line-height:1.6;margin:.5rem 0 0}
+@media(max-width:760px){.g8signing{grid-template-columns:minmax(0,1fr)}.g8signing>.g8wirepanel{min-height:16rem}.g8heading>div:first-of-type{padding-left:.75rem}.g8conditioncards{grid-template-columns:minmax(0,1fr)}.g8previewxi{grid-template-columns:minmax(0,1fr)}.g8previewteams{gap:.4rem;grid-template-columns:minmax(0,1fr) 1rem minmax(0,1fr)}.g8previewside{padding:.85rem .5rem}}
+@media(max-width:400px){.g8teamworkspace.g8compactwork .g8slot{grid-template-columns:1.2rem minmax(0,1fr);gap:.4rem}.g8teamworkspace.g8compactwork .g8slot>.g8button{grid-column:2;justify-self:end}.g8preflightactions{grid-template-columns:minmax(0,1fr)!important}}
+.g8teamworkspace.g8compactwork .g8sectionhead>.g8countbadge{color:#f6edda;background:#244d36}
+#g8dialog .g8previewvenue .g8eyebrow{color:#43583c}
+.g8previewside>.g8badge{width:auto;min-width:4rem;padding-inline:.4rem;white-space:nowrap;word-break:normal;overflow-wrap:normal;flex:none}
+#g8stage>.g8heading>div:first-of-type{text-align:left;flex:1 1 20rem}
+#g8stage[data-view="team"]>.g8heading .g8eyebrow{display:flex}
+.g8teamworkspace.g8compactwork .g8slot{grid-template-columns:1.5rem minmax(0,1fr) max-content}
+.g8teamworkspace.g8compactwork .g8slot>.g8button{grid-column:auto;justify-self:end}
+@container(max-width:14rem){.g8teamworkspace.g8compactwork .g8slot{grid-template-columns:1.2rem minmax(0,1fr)}.g8teamworkspace.g8compactwork .g8slot>.g8button{grid-column:2}}
+#g8stage>.g8heading{flex-direction:row;flex-wrap:wrap}
+#g8app .g8teampanes{gap:.6rem;padding:0;border:0;margin:0 0 1rem}
+#g8app .g8teampanes>.g8button{padding:.7rem;min-height:48px;background:#244732;border:1px solid #829a78;border-radius:7px;color:#eee6d1;font-weight:700;text-align:center;justify-content:center}
+#g8app .g8teampanes>.g8button.selected{background:#eee3cf;border-color:#bcb195;color:#25382d}
+#g8app .g8teampanes>.g8button:hover:enabled{border-color:#e4cca0;text-decoration:underline;text-underline-offset:.2em}

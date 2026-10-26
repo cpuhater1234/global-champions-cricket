@@ -1,3 +1,9 @@
+## Latest checkpoint — recruitment/XI/preview/conditions refinement
+
+26 October2026. See qa/screen-refinement-20261026/README.md and ratings-audit.json/RATINGS_REVIEW.md. Equal signing panels; heading rules; no unframed hover fill; Before your first pick help with gap; team role dropdown removed; framed counts/tabs. Selected XI Swap opens bench choices and uses existing engine; shown/guarded only at11 (partial beginSwap auto-adds, so do not expose it there). Preview and ground conditions structured into separate aligned cards.135 final Chromium cases plus actual swap/cancel/position/reverse/injury/stalefilter/partialguards. Engine unchanged. Independent review findings fixed. Ratings provenance/range audit all412/7828values;95 high peripheral values need evidence review, no rerating and no full empirical claim.
+
+SHA256: e28ccd173f92069cb690d27f6b64224c072f4b56bb061d00428edadc5a5e7af0
+
 ## Latest checkpoint — previews, hover, bowling feedback
 
 26 October2026: centred player preview summary; 412 profiles/493 layout cases; equal-height full-width picked-player rows; 19 grey hover fills replaced;126 journey cases incl sampled hover and contrast. New v8/ui/roles.js extracted from UI block13; preserve source in future builds. User explicitly rejects20-over-based bowling verdict. Analysis now says XI selected/incomplete; draft bowling count neutral; threshold warnings removed from draft/trade/release/offseason help. Engine/rating/simulation unchanged. QA:qa/player-preview-hover-20261026.

@@ -37,7 +37,7 @@
  X.conditionRead=(label,key,value=0)=>{const band=F.groundBand(value,key),ends=key==='boundary'?['Large','Short']:key==='spin'?['Skids on','Grips']:['Less help','More help'];return `<div class="g8conditionread"><div><b>${esc(label)}</b><strong>${esc(band.label)}</strong></div><div class="g8conditiongauge" role="img" aria-label="${esc(label)}: ${esc(band.label)}"><span style="--position:${Math.max(5,Math.min(95,50+Number(value||0)*10))}%"></span></div><div class="g8conditionends"><span>${ends[0]}</span><span>${key==='boundary'?'Balanced':'Neutral'}</span><span>${ends[1]}</span></div></div>`;};
  X.groundDetail=c=>{
   if(!c)return '';const w=c.weather,conditions=c.conditions||{};
-  return `<div class="g8pitchread">${[['Pace & carry','pace'],['Spin & grip','spin'],['Boundary','boundary']].map(([label,k])=>X.conditionRead(label,k,conditions[k]||0)).join('')}<p>${esc(F.groundStory(c))}</p>${w?`<p><b>${esc(w.label)}.</b> ${esc(w.read)}</p>`:''}</div>`;
+  return `<div class="g8pitchread"><div class="g8conditioncards">${[['Pace & carry','pace'],['Spin & grip','spin'],['Boundary','boundary']].map(([label,k])=>X.conditionRead(label,k,conditions[k]||0)).join('')}</div><section class="g8groundinterpretation"><h3>How the ground plays</h3><p>${esc(F.groundStory(c))}</p></section>${w?`<section class="g8weatherread"><h3>${X.icon('cricket-ball')}${esc(w.label)}</h3><p>${esc(w.read)}</p></section>`:''}</div>`;
  };
  X.matchRead=fx=>{
   if(!fx)return '';const home=G.matchGroundForFixture(fx),op=fx.home.abbr===s.userClub.abbr?fx.away:fx.home,mine=read.matchProfile(s.userClub),theirs=read.matchProfile(op);

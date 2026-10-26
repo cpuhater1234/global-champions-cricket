@@ -201,10 +201,20 @@
  bind('select',['team'],id=>{assert(roster().some(p=>p.id===Number(id)),'Choose a player from your squad.');assert(s.xi.length<11&&!s.xi.includes(Number(id)),'The XI is already full.');assert(injury(G.byId(Number(id)))?.status!=='OUT','That player is unavailable.');closeDialog();G.toggleXI(Number(id));ui.teamPane=s.xi.length===11?'xi':'squad';});
  bind('remove',['team'],id=>{assert(s.xi.includes(Number(id)),'That player is not in the XI.');closeDialog();G.removeXI(Number(id));ui.teamPane='squad';pendingFocus='#g8select-'+id;});
  bind('move',['team'],(id,dir)=>{assert(s.xi.includes(Number(id))&&[-1,1].includes(Number(dir)),'Choose a valid place in the batting order.');G.moveBattingPlayer(Number(id),Number(dir));if(ui.modal==='player'){inspect(Number(id));content.querySelector('[data-action=\"move\"]:not(:disabled)')?.focus({preventScroll:true});}});
+ bind('swapSelected',['team'],id=>{
+  id=Number(id);assert(s.xi.length===11&&!s.pendingSwapIn&&s.xi.includes(id),'Select eleven players before swapping.');
+  const options=roster().filter(p=>!s.xi.includes(p.id));ui.swapSelectedId=id;
+  modal(`Replace ${G.byId(id).name}`,`<p class="g8swapcontext">Choose an available player from your bench. The replacement takes this batting position.</p><div class="g8swapchoices">${options.map(p=>`<button type="button" class="g8button g8swapchoice" data-action="swapSelectedWith" data-args="[${id},${p.id}]" ${injury(p)?.status==='OUT'?'disabled':''}><span><b>${esc(p.name)}</b><small>${esc(X.roleLine(p))}${injury(p)?' · '+esc(injury(p).status):''}</small></span><strong style="--rating-color:${X.ratingTone(p.overall)}">${p.overall}</strong></button>`).join('')}</div><div class="g8actions">${btn('Keep my XI','close',[],'g8ghost')}</div>`,'swapSelected');
+ });
+ bind('swapSelectedWith',['team'],(outId,inId)=>{
+  outId=Number(outId);inId=Number(inId);assert(s.xi.length===11&&ui.modal==='swapSelected'&&ui.swapSelectedId===outId&&!s.pendingSwapIn&&s.xi.includes(outId),'Open this player’s swap choice first.');
+  assert(roster().some(p=>p.id===inId)&&!s.xi.includes(inId)&&injury(G.byId(inId))?.status!=='OUT','Choose an available bench player.');
+  G.beginSwap(inId);G.replaceXI(outId);ui.swapSelectedId=null;closeDialog();ui.teamPane='xi';pendingFocus='#g8xi-'+inId;
+ });
  bind('swapIn',['team'],id=>{assert(roster().some(p=>p.id===Number(id))&&!s.xi.includes(Number(id))&&injury(G.byId(Number(id)))?.status!=='OUT','Choose an available player from the bench.');closeDialog();ui.teamPane='xi';G.beginSwap(Number(id));pendingFocus='[data-action="swapOut"]';});
  bind('swapOut',['team'],id=>{assert(s.pendingSwapIn&&s.xi.includes(Number(id)),'Choose a player to replace.');const incoming=s.pendingSwapIn;G.replaceXI(Number(id));pendingFocus='#g8xi-'+incoming;});
  bind('cancelSwap',['team'],()=>{const incoming=s.pendingSwapIn;ui.teamPane='squad';G.cancelSwap();pendingFocus='#g8select-'+incoming;});
- bind('clearXI',['team'],()=>{G.clearXI();ui.teamPane='squad';pendingFocus='#g8squadrole';});
+ bind('clearXI',['team'],()=>{G.clearXI();ui.teamPane='squad';pendingFocus='.g8bench .g8namescout';});
  bind('naturalOrder',['team'],()=>G.autoOrderXI());
  bind('draftDetail',['draft','dynasty'],kind=>{
   assert(ui.view==='draft'||annual(),'The draft room is closed.');
@@ -223,7 +233,8 @@
  bind('matchday',['result'],()=>{ui.seasonTab='matchday';G.go('season');setView('season');});
  bind('prepare',['season'],()=>{
   const fx=G.nextUserFixture();assert(fx,'The regular season is finished.');const problem=read.xiProblem();assert(!problem,problem);const c=G.matchGroundForFixture(fx),weather=G.matchWeather?.(fx.home,fx.round),op=fx.home.abbr===own()?fx.away:fx.home;
-  modal(`Round ${s.round+1}`,`<div class="g8preflight"><div class="g8preflightfixture">${badge(fx.home)}<div><h3>${esc(fx.home.name)} v ${esc(fx.away.name)}</h3><p>${esc(fx.home.ground)}</p><span>${esc(weather?.label||weather?.name||'')} · ${esc(c?.trait||fx.home.trait)}</span></div>${badge(fx.away)}</div><div class="g8actions g8preflightactions">${btn('Play the match','playMatch',[s.round+1],'g8primary')}${btn('Change XI','editXI',[],'g8ghost')}</div></div>${X.disclosure('Your starting XI',`<ol class="g8roster g8previewxi">${s.battingOrder.map((id,i)=>`<li><b>${i+1}. ${esc(G.byId(id)?.name)}</b><small>${esc(X.battingJob(G.byId(id)))}</small></li>`).join('')}</ol>`)}${X.disclosure('Ground & conditions',X.groundDetail(c))}${X.disclosure('Compare the two XIs',X.matchRead(fx))}`,'prepare');
+  const previewClub=c=>`<section class="g8previewside" style="--preview-club:${esc(c.c)};--preview-ink:${esc(X.clubInk(c))}">${badge(c)}<h3>${esc(c.name)}</h3><span>${c.abbr===s.userClub.abbr?'YOUR CLUB':'OPPONENT'} · ${c.abbr===fx.home.abbr?'HOME':'AWAY'}</span></section>`;
+  modal('Match preview',`<div class="g8preflight"><span class="g8previewround">${s.year} · ROUND ${s.round+1}</span><div class="g8previewteams">${previewClub(fx.home)}<span class="g8previewversus">v</span>${previewClub(fx.away)}</div><section class="g8previewvenue"><span class="g8eyebrow">${X.icon('building-stadium')} MATCH VENUE</span><h3>${esc(fx.home.ground)}</h3><p>${esc(c?.trait||fx.home.trait)}</p><span>${esc(weather?.label||weather?.name||'')}</span></section><div class="g8actions g8preflightactions">${btn('Play the match','playMatch',[s.round+1],'g8primary')}${btn('Change XI','editXI',[],'g8ghost')}</div></div>${X.disclosure('Your starting XI',`<ol class="g8roster g8previewxi">${s.battingOrder.map((id,i)=>`<li><span>${i+1}</span><div><b>${esc(G.byId(id)?.name)}</b><small>${esc(X.battingJob(G.byId(id)))}</small></div></li>`).join('')}</ol>`)}${X.disclosure('Ground & conditions',X.groundDetail(c))}${X.disclosure('Compare the two XIs',X.matchRead(fx))}`,'prepare');
  });
  function playRound(round){assert(!read.xiProblem(),read.xiProblem());closeDialog();G.playNextRound();assert(s.round===round,'The match could not be played.');ui.result=s.results.at(-1);beginMatch(ui.result);}
  bind('watchNext',['season'],()=>{assert(!ui.modal,'Close the current decision first.');assert(G.nextUserFixture(),'The regular season is finished.');playRound(s.round+1);});
