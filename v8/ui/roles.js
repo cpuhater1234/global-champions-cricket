@@ -21,7 +21,7 @@
  const chip=p=>btn(p.name,'inspect',[p.id],'g8rolechip'+(injury(p)?.status==='OUT'?' g8unavailable':''));
  X.teamRead=(squad=false)=>{
   const ps=squad?roster():G.state.xi.map(G.byId).filter(Boolean),fit=ps.filter(p=>injury(p)?.status!=='OUT'),profile=squad?X.squadProfile():X.profile();
-  const cover=fit.length<11?'XI incomplete':'XI selected';
+  const cover=fit.length<11?(squad?'Projection incomplete':'XI incomplete'):(squad?'Projected XI ready':'XI selected');
   const row=(key,label)=>{const value=Math.round(profile[key]||0);return `<div class="g8analysisrow" data-matchup="${key}"><span>${esc(label)}</span><strong style="--rating-color:${X.ratingTone(value)}">${value}</strong></div>`;};
   const section=(label,keys)=>`<section class="g8analysissection"><h3>${X.icon(label==='Batting'?'cricket':label==='Bowling'?'cricket-ball':'stumps')}${label}</h3><div class="g8analysistiles">${X.phases.filter(([key])=>keys.includes(key)).map(([k,l])=>row(k,l)).join('')}</div></section>`;
   return `<section class="g8teamread g8roleboard g8simpleanalysis"><div class="g8roleboardhead"><span class="g8eyebrow">${squad?'PROJECTED XI · FROM YOUR SQUAD':'YOUR XI'}</span><div class="g8teamrating" style="--rating-color:${fit.length?X.ratingTone(profile.overall):'#c4d7e5'}"><strong>${fit.length?Math.round(profile.overall):'—'}</strong><span>Overall</span></div><b class="g8coverread">${cover}</b></div><div class="g8analysisgrid">${section('Batting',['powerplayBat','middleBat','finishing','battingResources'])}${section('Bowling',['newBall','middleBowl','death','bowlingResources'])}${section('Team balance',['keeping','fielding','roleFit','chemistry'])}</div></section>`;
@@ -34,7 +34,10 @@
   const verdict=!n?'Your squad starts here':n<11?'Building your XI':!keepers?'No recognised keeper':'Review your squad balance';
   return {ps,n,slots,profile,keepers,batters,top,legal,trusted,bowling,options:fit.filter(p=>R.bowlingWorkload(p)>0).length,verdict,gaps};
  };
- X.draftSquadSummary=(d=X.draftRead())=>`<section class="g8draftsummary g8draftscore" aria-label="Projected XI rating"><div class="g8draftscorevalue" style="--rating-color:${d.n?X.ratingTone(d.profile.overall):'#c5d9e8'}"><strong>${d.n?Math.round(d.profile.overall):'—'}</strong></div><div><h3>Projected XI</h3><p>${d.n<11?`Provisional · ${d.n}/11 selected`:'Best available XI from your squad'}</p></div></section>`;
+ X.draftSquadSummary=(d=X.draftRead())=>{
+  const available=d.ps.filter(p=>injury(p)?.status!=='OUT').length;
+  return `<section class="g8draftsummary g8draftscore" aria-label="Projected XI rating"><div class="g8draftscorevalue" style="--rating-color:${available?X.ratingTone(d.profile.overall):'#c5d9e8'}"><strong>${available?Math.round(d.profile.overall):'—'}</strong></div><div><h3>Projected XI</h3><p>${available<11?`Projection from ${available} player${available===1?'':'s'}`:'Best available XI from your squad'}</p></div></section>`;
+ };
  X.draftCompanion=()=>{
   const d=X.draftRead(),role={'BAT':'Batter','BOWL':'Bowler','AR':'All-rounder','WK-BAT':'Keeper'};
   const coverage=[[d.keepers>0,`${d.keepers} keeper${d.keepers===1?'':'s'}`],[d.batters>=6,`${Math.min(6,d.batters)}/6 batters`],[null,`${d.options} bowling option${d.options===1?'':'s'}`]];

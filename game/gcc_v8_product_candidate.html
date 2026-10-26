@@ -8967,7 +8967,7 @@ function validSave(save){
  const chip=p=>btn(p.name,'inspect',[p.id],'g8rolechip'+(injury(p)?.status==='OUT'?' g8unavailable':''));
  X.teamRead=(squad=false)=>{
   const ps=squad?roster():G.state.xi.map(G.byId).filter(Boolean),fit=ps.filter(p=>injury(p)?.status!=='OUT'),profile=squad?X.squadProfile():X.profile();
-  const cover=fit.length<11?'XI incomplete':'XI selected';
+  const cover=fit.length<11?(squad?'Projection incomplete':'XI incomplete'):(squad?'Projected XI ready':'XI selected');
   const row=(key,label)=>{const value=Math.round(profile[key]||0);return `<div class="g8analysisrow" data-matchup="${key}"><span>${esc(label)}</span><strong style="--rating-color:${X.ratingTone(value)}">${value}</strong></div>`;};
   const section=(label,keys)=>`<section class="g8analysissection"><h3>${X.icon(label==='Batting'?'cricket':label==='Bowling'?'cricket-ball':'stumps')}${label}</h3><div class="g8analysistiles">${X.phases.filter(([key])=>keys.includes(key)).map(([k,l])=>row(k,l)).join('')}</div></section>`;
   return `<section class="g8teamread g8roleboard g8simpleanalysis"><div class="g8roleboardhead"><span class="g8eyebrow">${squad?'PROJECTED XI · FROM YOUR SQUAD':'YOUR XI'}</span><div class="g8teamrating" style="--rating-color:${fit.length?X.ratingTone(profile.overall):'#c4d7e5'}"><strong>${fit.length?Math.round(profile.overall):'—'}</strong><span>Overall</span></div><b class="g8coverread">${cover}</b></div><div class="g8analysisgrid">${section('Batting',['powerplayBat','middleBat','finishing','battingResources'])}${section('Bowling',['newBall','middleBowl','death','bowlingResources'])}${section('Team balance',['keeping','fielding','roleFit','chemistry'])}</div></section>`;
@@ -8980,7 +8980,10 @@ function validSave(save){
   const verdict=!n?'Your squad starts here':n<11?'Building your XI':!keepers?'No recognised keeper':'Review your squad balance';
   return {ps,n,slots,profile,keepers,batters,top,legal,trusted,bowling,options:fit.filter(p=>R.bowlingWorkload(p)>0).length,verdict,gaps};
  };
- X.draftSquadSummary=(d=X.draftRead())=>`<section class="g8draftsummary g8draftscore" aria-label="Projected XI rating"><div class="g8draftscorevalue" style="--rating-color:${d.n?X.ratingTone(d.profile.overall):'#c5d9e8'}"><strong>${d.n?Math.round(d.profile.overall):'—'}</strong></div><div><h3>Projected XI</h3><p>${d.n<11?`Provisional · ${d.n}/11 selected`:'Best available XI from your squad'}</p></div></section>`;
+ X.draftSquadSummary=(d=X.draftRead())=>{
+  const available=d.ps.filter(p=>injury(p)?.status!=='OUT').length;
+  return `<section class="g8draftsummary g8draftscore" aria-label="Projected XI rating"><div class="g8draftscorevalue" style="--rating-color:${available?X.ratingTone(d.profile.overall):'#c5d9e8'}"><strong>${available?Math.round(d.profile.overall):'—'}</strong></div><div><h3>Projected XI</h3><p>${available<11?`Projection from ${available} player${available===1?'':'s'}`:'Best available XI from your squad'}</p></div></section>`;
+ };
  X.draftCompanion=()=>{
   const d=X.draftRead(),role={'BAT':'Batter','BOWL':'Bowler','AR':'All-rounder','WK-BAT':'Keeper'};
   const coverage=[[d.keepers>0,`${d.keepers} keeper${d.keepers===1?'':'s'}`],[d.batters>=6,`${Math.min(6,d.batters)}/6 batters`],[null,`${d.options} bowling option${d.options===1?'':'s'}`]];
@@ -9338,10 +9341,10 @@ function validSave(save){
  const assert=(condition,text)=>{if(!condition)throw new Error(text);};
  function closeDialog(){if(ui.modal==='club'&&!s.userClub)s.selectedClub=null;if(dialog.open)dialog.close();ui.modal=null;document.getElementById('g8feedback').hidden=false;const opener=dialogOpener;dialogOpener=null;opener?.focus?.({preventScroll:true});if(!document.hidden&&!['home','story'].includes(ui.view))clock.resume();}
  function modal(title,body,key='info'){
-  const replacing=dialog.open;if(!replacing)dialogOpener=document.activeElement;
+  const replacing=dialog.open,previousKey=ui.modal,previousTitle=document.getElementById('g8dialogTitle')?.textContent;if(!replacing)dialogOpener=document.activeElement;
   clock.pause();ui.modal=key;dialog.dataset.prompt=key;dialog.dataset.layout=['fresh','draftComplete','listReview','release','finalCut','tradeReview'].includes(key)?'prompt':'detail';
   content.innerHTML=`<header class="g8modalhead"><div><span class="g8eyebrow">GLOBAL CHAMPIONS CRICKET</span><h2 id="g8dialogTitle">${esc(title)}</h2></div><button type="button" class="g8dialogclose" data-action="close" data-args="[]" aria-label="${esc('Close '+title)}">×</button></header><div class="g8modalbody"><div id="g8dialogFeedback" class="g8notice" role="status" hidden></div>${body}</div>`;
-  document.getElementById('g8feedback').hidden=true;if(!dialog.open)dialog.showModal();X.accessibleTables(content);if(replacing)content.querySelector('button:not(:disabled),input:not(:disabled),select:not(:disabled)')?.focus({preventScroll:true});if(['how','howItWorks','breakawayStory'].includes(key))dialog.scrollTop=0;
+  document.getElementById('g8feedback').hidden=true;if(!dialog.open)dialog.showModal();X.accessibleTables(content);if(replacing)content.querySelector('button:not(:disabled),input:not(:disabled),select:not(:disabled)')?.focus({preventScroll:true});if(!replacing||previousKey!==key||previousTitle!==title||['how','howItWorks','breakawayStory'].includes(key))dialog.scrollTop=0;
  }
  function closeUtilityMenu(focus=false){const menu=hud.querySelector('.g8utilitymenu');if(menu?.open){menu.open=false;if(focus)menu.querySelector('summary')?.focus();}}
  function setView(view){assert(typeof view==='string'&&typeof views[view]==='function',`Unknown screen: ${view}`);closeUtilityMenu();ui.view=view;ui.modal=null;if(dialog.open)dialog.close();if(document.hidden||view==='home'||view==='story')clock.pause();else clock.resume();render(true);if(view==='matchReveal')scheduleMatch();}
@@ -9379,7 +9382,7 @@ function validSave(save){
    const o=s.dynasty.offseason;if(o.phase==='draft')D.runCpuDraftUntilUser();if(!o.draftComplete)return false;
    if(o.phase==='cuts')D.finishOffseason();if(o.phase!=='ready')return false;D.enterTeamRoom();
   }else return false;
-  ui.teamReturn='season';setView('team');if(s.year>2008){announce('Squad confirmed. Review your opening XI.',true,true);return true;}modal('Pick your final XI.',`<p>Your squad is complete. Choose who walks out, arrange the batting order and decide who takes the gloves.</p><div class="g8actions">${btn('Pick final XI','close',[],'g8primary')}${btn('View undrafted players','undrafted',[],'g8ghost')}</div>`,'draftComplete');return true;
+  ui.teamReturn='season';setView('team');if(s.year>2008){announce('Squad confirmed. Review your opening XI.',true,true);return true;}modal('Pick your final XI.',`<p>Your squad is complete. Choose your eleven and set their batting order.</p><div class="g8actions">${btn('Pick final XI','close',[],'g8primary')}${btn('View undrafted players','undrafted',[],'g8ghost')}</div>`,'draftComplete');return true;
  }
  bind('undrafted',['team'],showUndrafted);
  function signature(){return JSON.stringify([X.screen(),s.year,s.recruit?.day,s.recruit?.running,s.recruit?.complete,s.recruit?.feedSeq,s.pickIndex,s.dynasty?.offseason?.phase,s.dynasty?.offseason?.pickCursor,s.round,s.finals?.stage,s.dynasty?.transactions?.[0]?.seq]);}
@@ -9412,7 +9415,7 @@ function validSave(save){
  function resetFilters(){ui.offseasonPane='overview';ui.teamPane=null;ui.squadFilter='ALL';ui.search='';ui.filter='ALL';ui.draftShown=X.draftPageSize();}
  function draftable(id){return (annual()?read.freeAgents():s.pool.filter(p=>p.available===true&&!p.draftedBy&&!p.dynastyRetired).map(p=>p.id)).includes(Number(id));}
  function inspect(id){
-  ui.scoutReturn=['trade','undrafted','tradeReview'].includes(ui.modal)?ui.modal:null;const p=G.byId(Number(id));assert(p,'That player is no longer available.');ui.selectedPlayer=p.id;
+  ui.scoutReturn=['trade','undrafted','tradeReview'].includes(ui.modal)?ui.modal:null;ui.scoutReturnScroll=ui.scoutReturn?dialog.scrollTop:null;const p=G.byId(Number(id));assert(p,'That player is no longer available.');ui.selectedPlayer=p.id;
   const batting=[['Powerplay',R.batPhaseScore(p,'powerplay')],['Middle overs',R.batPhaseScore(p,'middle')],['Death overs',R.batPhaseScore(p,'death')]];
   const bowling=[['New ball',R.bowlPhaseScore(p,'newBall')],['Middle overs',R.bowlPhaseScore(p,'middle')],['Death overs',R.bowlPhaseScore(p,'death')]];
   const current=X.draftCurrent(annual()),canDraft=['draft','dynasty'].includes(ui.view)&&current?.club.abbr===own()&&draftable(p.id);
@@ -9492,7 +9495,7 @@ function validSave(save){
  ['cricket','Build an eleven worth watching','Fifteen places in your squad. Seven rivals reading the same board. The opener, the death bowler, the keeper: every pick shapes the side. A famous name is only a start. Your ground, your balance and your XI decide what follows.'],
  ['stumps','Make the years count','Fourteen league matches lead to the finals. Beyond them, players develop, veterans retire and the next draft brings another judgement call. From 2008 to the final season in 2026, the challenge is to build a club that lasts.']
  ].map(([icon,title,copy])=>guideCard(icon,title,copy)).join('')}</div><p class="g8guideclosing">The league has made its break. What will your club make of it?</p></article>${guideFooter('breakawayStory')}`,'breakawayStory'));
- bind('close','*',()=>{const back=ui.modal==='player'?ui.scoutReturn:null;ui.scoutReturn=null;closeDialog();if(back==='trade')tradeDialog();else if(back==='undrafted')showUndrafted();else if(back==='tradeReview'){ui.modal='trade';commands.propose();}});
+ bind('close','*',()=>{const back=ui.modal==='player'?ui.scoutReturn:null,scroll=ui.scoutReturnScroll;ui.scoutReturn=null;ui.scoutReturnScroll=null;closeDialog();if(back==='trade')tradeDialog();else if(back==='undrafted')showUndrafted();else if(back==='tradeReview'){ui.modal='trade';commands.propose();}if(back&&ui.modal&&Number.isFinite(scroll))dialog.scrollTop=scroll;});
  bind('signingRun',['recruit'],()=>G.runRecruitment());
  bind('signingSpeed',['recruit'],()=>{G.cycleRecruitSpeed();announce(['Signing speed 1×','Signing speed 2×','Signing speed 4×'][s.recruit.speedIndex],true);});
  bind('signingSkip',['recruit'],()=>G.skipRecruitment());

@@ -14,10 +14,10 @@
  const assert=(condition,text)=>{if(!condition)throw new Error(text);};
  function closeDialog(){if(ui.modal==='club'&&!s.userClub)s.selectedClub=null;if(dialog.open)dialog.close();ui.modal=null;document.getElementById('g8feedback').hidden=false;const opener=dialogOpener;dialogOpener=null;opener?.focus?.({preventScroll:true});if(!document.hidden&&!['home','story'].includes(ui.view))clock.resume();}
  function modal(title,body,key='info'){
-  const replacing=dialog.open;if(!replacing)dialogOpener=document.activeElement;
+  const replacing=dialog.open,previousKey=ui.modal,previousTitle=document.getElementById('g8dialogTitle')?.textContent;if(!replacing)dialogOpener=document.activeElement;
   clock.pause();ui.modal=key;dialog.dataset.prompt=key;dialog.dataset.layout=['fresh','draftComplete','listReview','release','finalCut','tradeReview'].includes(key)?'prompt':'detail';
   content.innerHTML=`<header class="g8modalhead"><div><span class="g8eyebrow">GLOBAL CHAMPIONS CRICKET</span><h2 id="g8dialogTitle">${esc(title)}</h2></div><button type="button" class="g8dialogclose" data-action="close" data-args="[]" aria-label="${esc('Close '+title)}">×</button></header><div class="g8modalbody"><div id="g8dialogFeedback" class="g8notice" role="status" hidden></div>${body}</div>`;
-  document.getElementById('g8feedback').hidden=true;if(!dialog.open)dialog.showModal();X.accessibleTables(content);if(replacing)content.querySelector('button:not(:disabled),input:not(:disabled),select:not(:disabled)')?.focus({preventScroll:true});if(['how','howItWorks','breakawayStory'].includes(key))dialog.scrollTop=0;
+  document.getElementById('g8feedback').hidden=true;if(!dialog.open)dialog.showModal();X.accessibleTables(content);if(replacing)content.querySelector('button:not(:disabled),input:not(:disabled),select:not(:disabled)')?.focus({preventScroll:true});if(!replacing||previousKey!==key||previousTitle!==title||['how','howItWorks','breakawayStory'].includes(key))dialog.scrollTop=0;
  }
  function closeUtilityMenu(focus=false){const menu=hud.querySelector('.g8utilitymenu');if(menu?.open){menu.open=false;if(focus)menu.querySelector('summary')?.focus();}}
  function setView(view){assert(typeof view==='string'&&typeof views[view]==='function',`Unknown screen: ${view}`);closeUtilityMenu();ui.view=view;ui.modal=null;if(dialog.open)dialog.close();if(document.hidden||view==='home'||view==='story')clock.pause();else clock.resume();render(true);if(view==='matchReveal')scheduleMatch();}
@@ -55,7 +55,7 @@
    const o=s.dynasty.offseason;if(o.phase==='draft')D.runCpuDraftUntilUser();if(!o.draftComplete)return false;
    if(o.phase==='cuts')D.finishOffseason();if(o.phase!=='ready')return false;D.enterTeamRoom();
   }else return false;
-  ui.teamReturn='season';setView('team');if(s.year>2008){announce('Squad confirmed. Review your opening XI.',true,true);return true;}modal('Pick your final XI.',`<p>Your squad is complete. Choose who walks out, arrange the batting order and decide who takes the gloves.</p><div class="g8actions">${btn('Pick final XI','close',[],'g8primary')}${btn('View undrafted players','undrafted',[],'g8ghost')}</div>`,'draftComplete');return true;
+  ui.teamReturn='season';setView('team');if(s.year>2008){announce('Squad confirmed. Review your opening XI.',true,true);return true;}modal('Pick your final XI.',`<p>Your squad is complete. Choose your eleven and set their batting order.</p><div class="g8actions">${btn('Pick final XI','close',[],'g8primary')}${btn('View undrafted players','undrafted',[],'g8ghost')}</div>`,'draftComplete');return true;
  }
  bind('undrafted',['team'],showUndrafted);
  function signature(){return JSON.stringify([X.screen(),s.year,s.recruit?.day,s.recruit?.running,s.recruit?.complete,s.recruit?.feedSeq,s.pickIndex,s.dynasty?.offseason?.phase,s.dynasty?.offseason?.pickCursor,s.round,s.finals?.stage,s.dynasty?.transactions?.[0]?.seq]);}
@@ -88,7 +88,7 @@
  function resetFilters(){ui.offseasonPane='overview';ui.teamPane=null;ui.squadFilter='ALL';ui.search='';ui.filter='ALL';ui.draftShown=X.draftPageSize();}
  function draftable(id){return (annual()?read.freeAgents():s.pool.filter(p=>p.available===true&&!p.draftedBy&&!p.dynastyRetired).map(p=>p.id)).includes(Number(id));}
  function inspect(id){
-  ui.scoutReturn=['trade','undrafted','tradeReview'].includes(ui.modal)?ui.modal:null;const p=G.byId(Number(id));assert(p,'That player is no longer available.');ui.selectedPlayer=p.id;
+  ui.scoutReturn=['trade','undrafted','tradeReview'].includes(ui.modal)?ui.modal:null;ui.scoutReturnScroll=ui.scoutReturn?dialog.scrollTop:null;const p=G.byId(Number(id));assert(p,'That player is no longer available.');ui.selectedPlayer=p.id;
   const batting=[['Powerplay',R.batPhaseScore(p,'powerplay')],['Middle overs',R.batPhaseScore(p,'middle')],['Death overs',R.batPhaseScore(p,'death')]];
   const bowling=[['New ball',R.bowlPhaseScore(p,'newBall')],['Middle overs',R.bowlPhaseScore(p,'middle')],['Death overs',R.bowlPhaseScore(p,'death')]];
   const current=X.draftCurrent(annual()),canDraft=['draft','dynasty'].includes(ui.view)&&current?.club.abbr===own()&&draftable(p.id);
@@ -168,7 +168,7 @@
  ['cricket','Build an eleven worth watching','Fifteen places in your squad. Seven rivals reading the same board. The opener, the death bowler, the keeper: every pick shapes the side. A famous name is only a start. Your ground, your balance and your XI decide what follows.'],
  ['stumps','Make the years count','Fourteen league matches lead to the finals. Beyond them, players develop, veterans retire and the next draft brings another judgement call. From 2008 to the final season in 2026, the challenge is to build a club that lasts.']
  ].map(([icon,title,copy])=>guideCard(icon,title,copy)).join('')}</div><p class="g8guideclosing">The league has made its break. What will your club make of it?</p></article>${guideFooter('breakawayStory')}`,'breakawayStory'));
- bind('close','*',()=>{const back=ui.modal==='player'?ui.scoutReturn:null;ui.scoutReturn=null;closeDialog();if(back==='trade')tradeDialog();else if(back==='undrafted')showUndrafted();else if(back==='tradeReview'){ui.modal='trade';commands.propose();}});
+ bind('close','*',()=>{const back=ui.modal==='player'?ui.scoutReturn:null,scroll=ui.scoutReturnScroll;ui.scoutReturn=null;ui.scoutReturnScroll=null;closeDialog();if(back==='trade')tradeDialog();else if(back==='undrafted')showUndrafted();else if(back==='tradeReview'){ui.modal='trade';commands.propose();}if(back&&ui.modal&&Number.isFinite(scroll))dialog.scrollTop=scroll;});
  bind('signingRun',['recruit'],()=>G.runRecruitment());
  bind('signingSpeed',['recruit'],()=>{G.cycleRecruitSpeed();announce(['Signing speed 1×','Signing speed 2×','Signing speed 4×'][s.recruit.speedIndex],true);});
  bind('signingSkip',['recruit'],()=>G.skipRecruitment());

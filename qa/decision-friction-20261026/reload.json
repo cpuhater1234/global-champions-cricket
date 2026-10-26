@@ -1,0 +1,24 @@
+{
+  "reports": [
+    {
+      "action": "reviewList",
+      "unchanged": true
+    },
+    {
+      "action": "trade",
+      "unchanged": true
+    },
+    {
+      "action": "releaseReview",
+      "unchanged": true
+    },
+    {
+      "action": "selectedSwapReview",
+      "unchanged": true
+    },
+    {
+      "action": "pendingBenchSwap",
+      "preservedAndCancellable": true
+    }
+  ]
+}

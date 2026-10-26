@@ -1,3 +1,9 @@
+## Latest checkpoint — decision friction fixes, 26 October2026
+
+PlayableUI update: projected vs selected XI wording corrected; draft available-player count excludes OUT; finaldraft copy removes nonexistent keeperassignment promise. New/reopened/different modal starts at top; samekey/title updates preserve scroll; player scouting returns to prior undrafted/trade scroll.14labelcases,9browserlayouts plus actualback/reopen/Escape,5unconfirmeddecisioncoldreloadcases; independentreview no blockers. See qa/decision-friction-20261026. OnlyUI blocks13/19changed, engine identical to version75 used by full numericalaudit. Do not recast prior19season results as a fresh run of thisUIhash.
+
+SHA256: ceee19d9e874468fa72be41845a98ecdf8230ade58cd5763e64aafe0eb1f797f
+
 ## Latest checkpoint — every-number audit, 26 October2026
 
 Playable remains version75 / hash e28ccd173f92069cb690d27f6b64224c072f4b56bb061d00428edadc5a5e7af0. No engine/rating modifications. See docs/GCC_V8_EVERY_NUMBER_AUDIT_20261026.md,qa/numbers-20261026/summary.json. Eight-world41,192player-season passes,10,001overallmonotonicity,6,000delivery stressinnings/4,388,607assertions,19yearcareer/266managedleaguegames/39reloads,306scorebookPythoncrosschecks,118allleague/finalsinnings exactstatledger,14focusedsuites+77corruptsavechecks. Test invariant ballsfaced=legalballs corrected: deliveredno-balls countasfaced;76explaineddifference. Zero-ballNRR minimumoneball declaredgameconvention. All7,828skills authored/derived inexistingledger; empiricalskill/modelvalidationOPEN,failedgatesremainfalse. Initialsource/fixtureissues resolved explicitly; invaliddownstreamfixed-estimate sensitivity excluded in favour of upstreamfullmatchpair test.
