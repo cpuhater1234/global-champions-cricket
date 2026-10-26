@@ -1323,3 +1323,20 @@ html,body{background:#191c1a}
 .g8draftaside .g8draftcoverage{display:flex;flex-wrap:wrap;gap:.5rem;margin:0}
 .g8draftaside .g8draftcoverage>span{box-sizing:border-box;flex:1 1 7rem;display:flex;justify-content:center;gap:.5rem;padding:.65rem .75rem;background:#f1e5cf;color:#30291e;border:1px solid #cbb995;border-radius:6px;font-size:1rem;font-weight:600;line-height:1.5;overflow-wrap:normal}
 .g8draftaside .g8draftcoverage>span b{color:inherit;flex-shrink:0}
+
+/* Rules appear at the decision, with further detail kept optional. */
+.g8snakeintro p{flex-basis:100%;margin:0;font-size:1rem;line-height:1.5;color:#25382d}
+.g8rulenote,.g8departureguide,.g8pickguide{box-sizing:border-box;min-width:0;padding:1rem 1.2rem;margin:1rem 0;background:#eee3cf;color:#25382d;border:1px solid #c1b396;border-radius:10px}
+.g8rulenote strong,.g8departureguide h3{display:block;margin:0;font-size:1.05rem;line-height:1.5;color:#25382d}
+.g8rulenote p,.g8departureguide p,.g8pickguide p{margin:.5rem 0 0;font-size:1rem;font-weight:500;line-height:1.6;color:#25382d}
+.g8rulefacts,.g8rulesgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem;margin-top:1rem}
+.g8rulefacts>span{padding:.8rem;background:#193f32;border-radius:7px;color:#fff4de;min-width:0}
+.g8rulefacts strong,.g8rulefacts small{display:block;font-size:1rem;line-height:1.5;overflow-wrap:anywhere}.g8rulefacts small{margin-top:.3rem;color:#eee3cf}
+.g8rulesgrid .g8rulenote{margin:0}.g8rulesgrid .g8rulenote:last-child:nth-child(odd){grid-column:1/-1}
+.g8pickguide summary{cursor:pointer;min-height:44px;display:flex;align-items:center;line-height:1.5;font-weight:700;font-size:1rem}
+.g8pickguide summary::before{content:'+';margin-right:.65rem}.g8pickguide[open] summary::before{content:'−'}
+.g8pickguide ol{list-style:none;margin:1rem 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.6rem}
+.g8pickguide li{display:flex;flex-direction:column;gap:.3rem;padding:.75rem;background:#193f32;color:#fff4de;border-radius:6px;font-size:1rem;line-height:1.5;overflow-wrap:anywhere}
+.g8modalbody .g8rulenote p{color:#25382d}
+@media(max-width:650px){.g8rulefacts,.g8rulesgrid,.g8pickguide ol{grid-template-columns:1fr}}
+.g8rulenote,.g8departureguide,.g8pickguide{overflow-wrap:anywhere}

@@ -1,3 +1,9 @@
+## Latest checkpoint — career understanding, 26 October 2026
+
+UI-only contextual rules pass. See qa/career-understanding-20261026/README.md and docs/superpowers/plans/2026-10-26-career-understanding.md. New v8/ui/career.js is the exact pre-existing script16 extracted then edited; preserve it in future builders. Personal departure guidance uses engine budgets; annual pick schedule uses read.pickSlots, gated until all eight draw positions revealed; legacy schedules preserved. Engine unchanged. 81 Chromium cases plus rule fixtures and actual seed101 before/after match parity. Independent review no blockers. Human comprehension remains unobserved.
+
+SHA256: 8ca41c3da5c2c711b888d3dafb868ee57323682ae233dacedc5e30d316bc0eea
+
 ## Current checkpoint · finished game guides · 26 October2026
 
 Candidate SHA256 `7ea66a5ad716f944fd14f7b805ad18d44bcf6c5aacb700e376ff04b8292e304f`. Only controller script19 and scoped CSS changed. How to play: six numbered steps and optional grouped rules. How it works: six concise decision cards. Breakaway: established alternate-history premise with three chapters. Cream/forest/bronze surfaces and supplied icons, readable text, shared navigation and back-to-game. Guide navigation resets to top. All original commands and active career state preserved; no engine/rating/save changes. QA qa/guides-20261026. Prior notes below historical.
