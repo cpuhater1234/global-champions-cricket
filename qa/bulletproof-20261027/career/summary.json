@@ -1,0 +1,46 @@
+{
+  "lifecycleBuildSha256": "696bdfea1a5d177d144a652316c0d39e1d34a1522df990ef32852e45e84d9097",
+  "finalRestoreBuildSha256": "c7ba52edcbee16d66b8651362a61939cd6c0507382b6bea49f81b51869b1bafb",
+  "cases": [
+    {
+      "club": "PBKS",
+      "seasons": 19,
+      "managedRegularMatches": 266,
+      "coldCheckpoints": 4,
+      "userReleases": 9,
+      "userRetirements": 18,
+      "acceptedCareerTrades": 1,
+      "closed": true
+    },
+    {
+      "club": "GT",
+      "seasons": 19,
+      "managedRegularMatches": 266,
+      "coldCheckpoints": 4,
+      "userReleases": 9,
+      "userRetirements": 28,
+      "acceptedCareerTrades": 5,
+      "closed": true
+    },
+    {
+      "club": "GLA",
+      "seasons": 19,
+      "managedRegularMatches": 266,
+      "coldCheckpoints": 4,
+      "userReleases": 8,
+      "userRetirements": 30,
+      "acceptedCareerTrades": 5,
+      "closed": true
+    }
+  ],
+  "seasons": 57,
+  "managedRegularMatches": 798,
+  "worldRegularMatches": 3192,
+  "worldFinalsFromRecordedAppearances": 171,
+  "finalCandidateCheckpointRestores": 13,
+  "closedColdRestores": 3,
+  "archivedPlayerSeasonRows": 5721,
+  "currentStatsRows": 309,
+  "failures": [],
+  "scope": "Actual VM careers using real engine and actual manager APIs. Harness omitted required injury cover initially; checkpoints replayed with cover, no skipped seasons. Injury observations were repeated state reads, not distinct injury counts. Final candidate has identical simulation code; final checkpoint/closed restores validate tightened saves."
+}
