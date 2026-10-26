@@ -1540,3 +1540,15 @@ html,body{background:#191c1a}
 #g8app .g8teampanes>.g8button{padding:.7rem;min-height:48px;background:#244732;border:1px solid #829a78;border-radius:7px;color:#eee6d1;font-weight:700;text-align:center;justify-content:center}
 #g8app .g8teampanes>.g8button.selected{background:#eee3cf;border-color:#bcb195;color:#25382d}
 #g8app .g8teampanes>.g8button:hover:enabled{border-color:#e4cca0;text-decoration:underline;text-underline-offset:.2em}
+
+/* Portable career recovery uses the same framed controls as other decisions. */
+#g8app .g8backupfile{display:grid;gap:.75rem;padding:1rem;border:1px solid #a6b39e;border-radius:.6rem;background:#203c2e;color:#fff4df;font-weight:750}
+#g8app .g8backupfile input{width:100%;min-width:0;max-width:100%;font:inherit;color:inherit;white-space:normal}
+#g8app .g8backupfile input::file-selector-button{margin-right:.6rem;padding:.65rem .85rem;border:1px solid #abc7ab;border-radius:.35rem;background:#19513e;color:#fff4df;font:inherit;cursor:pointer}
+#g8app .g8backuppreview{padding:1rem;border:1px solid #baa17b;border-radius:.6rem;background:#62482f;text-align:center;color:#fff4df}
+#g8app .g8backuppreview h3{margin:0 0 .5rem;font-size:1.25rem;line-height:1.25}
+#g8app .g8backuppreview p{margin:.4rem 0;overflow-wrap:anywhere}
+#g8app .g8venuecaption{min-width:0;overflow-wrap:anywhere}
+#g8app .g8photocredit{display:block;margin-top:.4rem;font-size:.75rem;line-height:1.5;color:#e9dfcb}
+#g8app .g8photocredit a{color:inherit;text-decoration:underline;text-underline-offset:.15em}
+#g8app .g8photocredit a:focus-visible{outline:2px solid #fff4df;outline-offset:3px}
