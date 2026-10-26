@@ -1427,3 +1427,15 @@ html,body{background:#191c1a}
 .g8liveaction{background:#243b2c;border-color:#829a76}
 .g8playbackcontrols{background:#284b35;border-color:#8aa17c;border-radius:7px}
 .g8ballmoment:not(:has(>h2)){background:none;border:0;padding:0;margin:0;min-height:0}
+/* Guide interactions use solid bronze, cream and forest, including hover. */
+#g8dialog .g8modalbody:has(>.g8guide){background:#193c2b}
+#g8dialog .g8guiderules>.g8disclosure{padding:0;background:#63472f;border-color:#b69b73;overflow:hidden}
+#g8dialog .g8guiderules>.g8disclosure>summary{padding:.9rem 1rem;margin:0;background:#63472f;color:#fff0d8;border-radius:6px;min-height:52px}
+#g8dialog .g8guiderules>.g8disclosure>summary>span{color:inherit}
+#g8dialog .g8guiderules>.g8disclosure>summary:hover,#g8dialog .g8guiderules>.g8disclosure>summary:focus-visible,#g8dialog .g8guiderules>.g8disclosure[open]>summary{background:#eee3cf;color:#25382d}
+#g8dialog .g8guiderules>.g8disclosure>summary:focus-visible{outline:3px solid #f5cf7e;outline-offset:-4px}
+#g8dialog .g8guiderules .g8disclosurebody{padding:.8rem}
+#g8dialog .g8guiderules .g8rulegrid{padding:0}
+#g8dialog .g8guidefooter .g8button.g8ghost{background:#63472f;color:#fff0d8;border-color:#b69b73}
+#g8dialog .g8guidefooter .g8button.g8ghost:hover:enabled,#g8dialog .g8guidefooter .g8button.g8ghost:focus-visible{background:#eee3cf;color:#25382d;border-color:#d0bd96;box-shadow:none}
+#g8dialog .g8guidefooter .g8guidecurrent:disabled{background:#eee3cf;color:#25382d;border-color:#d0bd96;opacity:1}
