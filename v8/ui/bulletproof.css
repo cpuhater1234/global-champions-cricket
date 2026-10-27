@@ -57,12 +57,12 @@
 }
 @media (max-width: 480px) {
   #g8dialog .g8modalhead {
-    grid-template-columns: 1fr;
-    gap: 0;
+    grid-template-columns: minmax(0, 1fr) 44px;
+    gap: 12px;
     padding: 12px;
   }
   #g8dialog .g8modalhead .g8eyebrow { padding-right: 56px; }
-  #g8dialog .g8dialogclose { position: absolute; top: 12px; right: 12px; }
+  #g8dialog .g8dialogclose { position: static; }
   #g8dialog .g8modalbody { padding: 12px; }
   #g8stage .g8fixturehero { padding: 12px; }
   #g8stage .g8fixture > div {

@@ -1,0 +1,21 @@
+# Nested dialogs and secondary states — frozen v83
+
+Read-only QA against `../baseline.html`. Run from repository root with `NODE_PATH=$CODEX_PRIMARY_RUNTIME_NODE_MODULES node qa/visual-deep-20261028/dialogs/run.cjs`. `ONLY=narrow` limits capture; metrics.json currently records last narrow rerun. Screenshots retain all six viewport passes: desktop1440×1000, tablet768×1024, phone390×844, narrow320×740, landscape740×360, large390×844 with html root font-size20.8px (130%). No product code writes.
+
+## Findings
+
+1. **P1, enlarged text title overlaps close.** `large-backup-review.png`: “Restore this career?” continues under the close button, visually losing its end. Exact selectors `#g8dialogTitle` and `#g8dialog .g8dialogclose`. At max-width480 the late CSS rule (~2017) switches `.g8modalhead` to one full-width column and absolutely positions the close button; padding-right56px is applied only to hidden `.g8eyebrow`, leaving the title unreserved. Same structural risk applies to other long dialog titles. Preserve room for close in actual title grid or title container.
+
+2. **P2, record label breaks midword.** `narrow-player-bottom.png`: Matches wraps as “Matche” / “s” inside its cream metric. Exact selector `.g8gccrecord .g8recordstats>div:first-child>span`. `.g8recordstats` uses three minmax(0,1fr) columns within narrow nested padding; label uses .9rem600, yielding insufficient width. Prefer narrower padding/gap or responsive rearrangement while preserving readable labels.
+
+3. **P2, scrolled sticky header has visible content above it in landscape.** `landscape-analysis-bottom.png`: cream header starts around y31 while dialog top is y12; underlying batting content is visible in the strip above, and header overlays it. `#g8dialog .g8modalhead` sticky top0 inside padded dialog creates exposed top padding region. Ensure sticky surface covers the scrollport top edge. Desktop/tablet/phone main text and bottom actions were reachable; this is visual obstruction during scroll.
+
+## Coverage and evidence
+
+Actually inspected screenshots: tablet-compare; narrow-player-bottom; narrow-compare-bottom; narrow-howItWorks-bottom; landscape-analysis-bottom; large-backup-review; large-compare-expanded-bottom; phone-trade-review; narrow-trade-picks-bottom; narrow-cover-bottom. Comparison ability/innings details are expanded programmatically through native details.open, all footer controls remain reachable. Focus indication on close is clearly visible throughout screenshots. No text overlap found in inspected comparison cards, trade review/footer, guide footer or cover cards apart from issues above.
+
+Supported fixture positioning: PBKS-latest career backup restored via production read.restoreBackup for 2026 team inspection, team analysis, XI swap options, comparisons, guides and backup review/error. Backup restore uses actual file input; malformed JSON exercises in-dialog error. 2026 final career cannot enter trade period: first attempted screenshot correctly reports window closed. Final harness restores PBKS-review foundation fixture and invokes supported beginOffseason→2009 market, then actual trade input change events to choose Nathan Bracken/Rohit Sharma, review and confirm (offer declined). Draw order opens draft pick controls, startAnnualDraft positions annual workspace. PBKS-keeper-cover-before restore opens actual MS Dhoni injury replacement picker; bottom shows available Brendan Taylor card and reachable Sign as cover.
+
+Limitations: injury picker captured at320 only in final bounded rerun. Trade result captured declined offer; accepted-result visual not independently exercised. Annual workspace screenshots captured but detailed annual management release dialogs not fully inspected. No synthetic injuries, budgets or player skills injected. No confirmation of backup restore performed, since review/error was the requested visual scope.
+
+Regression: `GCC_FILE=/absolute/path/candidate.html NODE_PATH=$CODEX_PRIMARY_RUNTIME_NODE_MODULES node qa/visual-deep-20261028/dialogs/regression.cjs` checks title/close rectangles at390 enlarged text, Matches single line at320, and sticky header top coverage in landscape. Expected baseline failures are evidence, not fixed claims.

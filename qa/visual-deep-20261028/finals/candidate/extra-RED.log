@@ -1,0 +1,72 @@
+{
+  "file": "/workspace/scratch/f98cc1f6c0bf/gcc/qa/visual-deep-20261028/baseline.html",
+  "contrast": [
+    {
+      "label": "Mumbai Indians",
+      "ratio": 1.008400746304538
+    },
+    {
+      "label": "5/2 · 5 balls",
+      "ratio": 1.4647091561010035
+    },
+    {
+      "label": "Melbourne Stars",
+      "ratio": 1.008400746304538
+    },
+    {
+      "label": "9/1 · 4 balls",
+      "ratio": 1.4647091561010035
+    }
+  ],
+  "labels": [
+    {
+      "label": "Scored",
+      "lines": 1
+    },
+    {
+      "label": "Conceded",
+      "lines": 2
+    },
+    {
+      "label": "Scored",
+      "lines": 1
+    },
+    {
+      "label": "Conceded",
+      "lines": 2
+    },
+    {
+      "label": "Scored",
+      "lines": 1
+    },
+    {
+      "label": "Conceded",
+      "lines": 2
+    },
+    {
+      "label": "Scored",
+      "lines": 1
+    },
+    {
+      "label": "Conceded",
+      "lines": 2
+    },
+    {
+      "label": "Scored",
+      "lines": 1
+    },
+    {
+      "label": "Conceded",
+      "lines": 2
+    }
+  ]
+}
+AssertionError [ERR_ASSERTION]: Superover contrast below4.5
+    at /workspace/scratch/f98cc1f6c0bf/gcc/qa/visual-deep-20261028/finals/candidate/extra-regression.cjs:1:1955 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}

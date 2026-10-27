@@ -1,0 +1,53 @@
+{
+  sha: '9a253947041974e26a91729e06a9a93e1812d518b04519a6f533e9793a7cc5ca',
+  checks: [
+    {
+      name: 'draft-hit-area-within-card',
+      pass: true,
+      evidence: [Object]
+    },
+    {
+      name: 'draft-board-no-local-overflow',
+      pass: true,
+      evidence: [Object]
+    },
+    {
+      name: '2026-review-no-next-season-promise',
+      pass: true,
+      evidence: 'an\n' +
+        '\n' +
+        'Brisbane Heat are champions.\n' +
+        '\n' +
+        '7 of 8\n' +
+        'Finished\n' +
+        '4\n' +
+        'Wins\n' +
+        '10\n' +
+        'Losses\n' +
+        '\n' +
+        '2 more league wins than 2025. 2 then · 4 now. League matches only.\n' +
+        '\n' +
+        'YOUR LEADING PLAYERS\n' +
+        'WITH THE BAT\n' +
+        'Rohit Sharma\n' +
+        '334 runs · SR 135.2\n' +
+        'Jonny Bairstow\n' +
+        '332 runs · SR 131.2\n' +
+        'Daryl Mitchell\n' +
+        '242 runs · SR 131.5\n' +
+        'WITH THE BALL\n' +
+        'Mohammed Shami\n' +
+        '19 wickets · Econ 7.39\n' +
+        'Sikandar Raza\n' +
+        '15 wickets · Econ 9.05\n' +
+        'Chris Woakes\n' +
+        '12 wickets · Econ 7.26\n' +
+        'Full player stats\n' +
+        'Reflect on your final season\n' +
+        '+\n' +
+        'Your nineteen-season career is complete.\n' +
+        'Club archive'
+    }
+  ],
+  pass: true
+}

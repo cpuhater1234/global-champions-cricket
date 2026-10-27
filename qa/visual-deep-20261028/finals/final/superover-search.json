@@ -1,0 +1,64 @@
+{
+  "auditedSha256": "9a253947041974e26a91729e06a9a93e1812d518b04519a6f533e9793a7cc5ca",
+  "data": {
+    "checked": [
+      {
+        "file": "qa/club-expansion-20261027/fixtures/DER-completed.gcc.json",
+        "found": false,
+        "year": 2008
+      },
+      {
+        "file": "qa/club-expansion-20261027/fixtures/DER-review.gcc.json",
+        "found": false,
+        "year": 2008
+      },
+      {
+        "file": "qa/club-expansion-20261027/fixtures/DUR-completed.gcc.json",
+        "found": false,
+        "year": 2008
+      },
+      {
+        "file": "qa/club-expansion-20261027/fixtures/DUR-review.gcc.json",
+        "found": false,
+        "year": 2008
+      },
+      {
+        "file": "qa/club-expansion-20261027/fixtures/ESS-completed.gcc.json",
+        "found": false,
+        "year": 2008
+      },
+      {
+        "file": "qa/club-expansion-20261027/fixtures/ESS-review.gcc.json",
+        "found": false,
+        "year": 2008
+      },
+      {
+        "file": "qa/club-expansion-20261027/fixtures/GLA-completed.gcc.json",
+        "found": false,
+        "year": 2008
+      },
+      {
+        "file": "qa/club-expansion-20261027/fixtures/GLA-review.gcc.json",
+        "found": false,
+        "year": 2008
+      },
+      {
+        "file": "qa/club-expansion-20261027/fixtures/GLO-completed.gcc.json",
+        "found": false,
+        "year": 2008
+      },
+      {
+        "file": "qa/club-expansion-20261027/fixtures/GLO-review.gcc.json",
+        "found": true,
+        "year": 2008
+      }
+    ],
+    "found": [
+      {
+        "file": "qa/club-expansion-20261027/fixtures/GLO-review.gcc.json",
+        "found": true,
+        "year": 2008
+      }
+    ]
+  }
+}

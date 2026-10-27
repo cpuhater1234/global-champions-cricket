@@ -1,8 +1,8 @@
 # Global Champions Cricket
 
-The current release is GCC v83: `game/gcc_v8_product_candidate.html` (also `game/gcc_v8_quiet_arcade.html`). The start screen now offers game actions only; career backups are available through Menu. Mobile headers keep GCC and Menu aligned, with room for long club names; all five career tabs fit at normal mobile text sizes. Offseason skill changes use aligned label/change/rating rows.
+The current release is GCC v84: `game/gcc_v8_product_candidate.html` (also `game/gcc_v8_quiet_arcade.html`). The whole-game visual pass fixes 11 confirmed layout, contrast and final-year copy defects across drafts, dialogs, player records, finals, super-overs, annual confirmations and the career ending. The title screen keeps game actions only; backups remain under Menu.
 
-The visual pass covers 21 screens at four widths, 360 header/name/text-size cases, 324 club-guide cases and 13 actual WebKit lifecycle checks. All 19 unaffected inline script bodies, including the cricket engine and v82 recovery implementation, remain byte-identical. See [the visual audit](qa/visual-20261028/README.md) and [the v82 recovery audit](qa/limits-20261027/README.md). Reproduce with `python qa/visual-20261028/build.py --promote` and validate with `python qa/visual-20261028/check_release.py`. Keep downloaded career backups and close older game copies.
+See [the whole-game visual audit](qa/visual-deep-20261028/README.md) for rendered-state coverage, RED/GREEN evidence and independent reviews. Actual WebKit passes 13 lifecycle plus 4 targeted visual cases. All 18 unaffected inline script bodies—including simulation, persistence and controller—remain byte-identical. Reproduce with `python qa/visual-deep-20261028/build.py --promote` and validate with `python qa/visual-deep-20261028/check_release.py`. Earlier [v83 visual](qa/visual-20261028/README.md) and [v82 recovery](qa/limits-20261027/README.md) evidence retain their original scope.
 
 The following section records the original protected baseline.
 

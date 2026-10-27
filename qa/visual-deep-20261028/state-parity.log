@@ -1,0 +1,17 @@
+{
+  sha: '9a253947041974e26a91729e06a9a93e1812d518b04519a6f533e9793a7cc5ca',
+  cases: [
+    {
+      year: 2008,
+      careerStateExact: true,
+      phaseValuesExact: true,
+      earlierSeasonCopyUnchanged: true
+    },
+    {
+      year: 2026,
+      careerStateExact: true,
+      phaseValuesExact: true,
+      earlierSeasonCopyUnchanged: undefined
+    }
+  ]
+}
