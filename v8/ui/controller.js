@@ -6,8 +6,22 @@
  let busy=false,lastSignature='',archiveReturn='season',dialogOpener=null,pendingFocus=null;
  X.hasStoredSave=()=>{try{return !!localStorage.getItem('gcc_dynasty_v8')||!!localStorage.getItem('gcc_dynasty_v7_2');}catch{return false;}};
  X.hasSave=()=>!!s.dynasty?.started||X.hasStoredSave();
- let feedbackTimer=null,saveWarning='';
- const saveStatus=()=>saveWarning?`<div class="g8savewarning" role="status"><strong>Progress not saved</strong><span>${esc(saveWarning)}</span></div>`:'';
+ let feedbackTimer=null,saveWarning='',pendingRestoreFeedback=null,exitGuardAttached=false;
+ const saveStatusInner=()=>read.savePending?.()?'<div class="g8savepending" role="status">Saving progress…</div>':saveWarning?`<div class="g8savewarning" role="status"><strong>Progress not saved</strong><span>${esc(saveWarning)}</span></div>`:'';
+ const saveStatus=()=>`<div id="g8saveStatus" class="g8savestatus" ${!read.savePending?.()&&!saveWarning?'hidden':''}>${saveStatusInner()}</div>`;
+ function warnUnsavedExit(event){event.preventDefault();event.returnValue='';}
+ function refreshSaveStatus(ok=read.saveSucceeded?.()){
+  saveWarning=read.saveSuspended?.()||read.savePending?.()||ok?'':read.saveConflict?.()?'Another open game saved newer progress. Return home and choose Continue to load it.':'This browser could not save your progress. Keep this game open to continue playing.';
+  const box=document.getElementById('g8saveStatus');if(box){box.hidden=!read.savePending?.()&&!saveWarning;X.patch(box,saveStatusInner());}
+  const needsGuard=!!s.dynasty&&!read.saveSuspended?.()&&(!!read.savePending?.()||!!saveWarning);
+  if(window.removeEventListener&&needsGuard!==exitGuardAttached){window[needsGuard?'addEventListener':'removeEventListener']('beforeunload',warnUnsavedExit);exitGuardAttached=needsGuard;}
+  if(saveWarning&&ui.modal)announce(saveWarning);
+ }
+ window.addEventListener('gcc-save-status',()=>{
+  refreshSaveStatus();
+  if(pendingRestoreFeedback!=null&&pendingRestoreFeedback!==read.saveGeneration?.())pendingRestoreFeedback=null;
+  if(pendingRestoreFeedback!=null&&!read.savePending?.()){pendingRestoreFeedback=null;announce(saveWarning?'Career opened from backup for this session. Progress is not saved. Keep this game open and download a backup before closing.':'Career restored from your backup.');}
+ });
  const clearFeedback=()=>{if(feedbackTimer!==null)clock.clearTimeout(feedbackTimer);feedbackTimer=null;const feedback=document.getElementById('g8feedback');feedback.classList.remove('g8toast','g8fading','g8quiet');feedback.textContent='';};
  const announce=(t,brief=false,quiet=false)=>{clearFeedback();const feedback=document.getElementById('g8feedback'),inside=document.getElementById('g8dialogFeedback');feedback.textContent=t;feedback.hidden=!!ui.modal;if(quiet)feedback.classList.add('g8quiet');if(inside){inside.textContent=ui.modal?t:'';inside.hidden=!ui.modal||!t;}if(brief&&!ui.modal){feedback.classList.add('g8toast');feedbackTimer=clock.setTimeout(()=>{feedback.classList.add('g8fading');feedbackTimer=clock.setTimeout(clearFeedback,250);},1000);}};
  const bind=(name,where,fn)=>{commands[name]=fn;allow[name]=where;};
@@ -70,7 +84,7 @@
    if(action)el.querySelector(`[data-action="${action}"]`)?.focus({preventScroll:true});lastSignature=key;
   }else render(false);
  };
- function save(){if(s.dynasty){s.dynasty.v8UI={view:ui.view==='home'?ui.resumeView:ui.view,teamReturn:ui.teamReturn,seasonTab:ui.seasonTab,archiveReturn,resultRound:ui.result?.round,resultFinal:ui.result?.final};s.dynasty.v8Match=ui.match?{...ui.match}:null;s.dynasty.v8Reveal=ui.reveal?{...ui.reveal,timer:undefined,year:s.year}:null;}if(s.dynasty){const previous=saveWarning;saveWarning=read.save()?'':read.saveConflict?.()?'Another open game saved newer progress. Return home and choose Continue to load it.':'This browser could not save your progress. Keep this game open to continue playing.';if(saveWarning&&ui.modal)announce(saveWarning);if(previous!==saveWarning)render(false);}}
+ function save(){if(s.dynasty){s.dynasty.v8UI={view:ui.view==='home'?ui.resumeView:ui.view,teamReturn:ui.teamReturn,seasonTab:ui.seasonTab,archiveReturn,resultRound:ui.result?.round,resultFinal:ui.result?.final};s.dynasty.v8Match=ui.match?{...ui.match}:null;s.dynasty.v8Reveal=ui.reveal?{...ui.reveal,timer:undefined,year:s.year}:null;}if(s.dynasty)refreshSaveStatus(read.save());}
  let matchTimer=null;
  const matchReference=r=>s.results.includes(r)?{type:'regular',round:r.round}:s.finals?.gf===r?{type:'gf'}:{type:'semis',index:s.finals?.semis?.indexOf(r)};
  const matchFromReference=ref=>ref?.type==='regular'?s.results.find(r=>r.round===ref.round):ref?.type==='gf'?s.finals?.gf:ref?.type==='semis'?s.finals?.semis?.[ref.index]:null;
@@ -126,7 +140,7 @@
  bind('careerBackup','*',()=>{G.pauseSeason();save();modal('Career backup',`<p>Keep a copy you can restore in another browser or game file.</p><div class="g8actions">${btn('Download backup','downloadBackup',[],'g8primary',!s.dynasty||s.league.length!==8)}${btn('Restore backup','loadBackup',[],'g8ghost')}</div>`,'backup');});
  bind('downloadBackup','*',()=>{assert(ui.modal==='backup','Open Career backup first.');const raw=read.backupRaw(),info=read.backupInfo(raw),url=URL.createObjectURL(new Blob([raw],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download=`GCC-${(s.userClub?.abbr||'World').replace(/[^a-z0-9]/gi,'')}-${info.year}-R${info.round}.gcc.json`;document.body.append(a);a.click();a.remove();window.setTimeout(()=>URL.revokeObjectURL(url),60000);announce('Backup download started. Keep the file to restore this career.');});
  bind('loadBackup','*',()=>{pendingBackup=null;backupReadId++;modal('Restore a career',`<p>Choose a GCC backup. You can review it before replacing this career.</p><label class="g8backupfile">Career backup file<input type="file" accept=".json,.gcc,application/json" data-input="careerBackup"></label>`,'backupFile');});
- bind('confirmBackup','*',()=>{assert(ui.modal==='backupReview'&&pendingBackup,'Choose and review a backup first.');const selected=pendingBackup;assert(read.restoreBackup(selected.raw,selected.expected),read.saveConflict()?'Another tab saved newer progress. Choose the backup again to review this change.':'The backup could not be restored. Your current career has been kept.');pendingBackup=null;closeDialog();restorePresentation();save();announce(saveWarning?'Career opened from backup for this session. Progress is not saved. Keep this game open and download a backup before closing.':'Career restored from your backup.');});
+ bind('confirmBackup','*',()=>{assert(ui.modal==='backupReview'&&pendingBackup,'Choose and review a backup first.');const selected=pendingBackup;assert(read.restoreBackup(selected.raw,selected.expected),read.saveConflict()?'Another tab saved newer progress. Choose the backup again to review this change.':'The backup could not be restored. Your current career has been kept.');pendingBackup=null;closeDialog();restorePresentation();save();pendingRestoreFeedback=read.saveGeneration?.()??0;announce(read.savePending?.()?'Career opened from your backup. Saving progress…':saveWarning?'Career opened from backup for this session. Progress is not saved. Keep this game open and download a backup before closing.':'Career restored from your backup.');if(!read.savePending?.())pendingRestoreFeedback=null;});
  function readBackupFile(file){const ticket=++backupReadId;pendingBackup=null;if(!file)return;if(file.size>20*1024*1024){announce('Choose a GCC career backup smaller than 20 MB.');return;}const expected=read.storedToken();file.text().then(raw=>{if(ticket!==backupReadId||ui.modal!=='backupFile')return;const info=read.backupInfo(raw);pendingBackup={raw,expected};modal('Restore this career?',`<section class="g8backuppreview"><h3>${esc(info.club)}</h3><p>${info.year} · ${info.closed?'Career complete':info.round?'After Round '+info.round:'Preseason'}</p><p>${esc(file.name)}</p></section><p>This replaces the career currently open in this browser.</p><div class="g8actions">${btn('Restore career','confirmBackup',[],'g8primary')}${btn('Keep current career','close',[],'g8ghost')}</div>`,'backupReview');}).catch(()=>{if(ticket===backupReadId&&ui.modal==='backupFile')announce('This file could not be read as a GCC career backup. Your current career has been kept.');});}
  bind('home','*',()=>{if(ui.view==='home')return;X.rollHomeVenue();G.pauseSeason();ui.resumeView=ui.view;save();setView('home');});
  bind('play',['home'],()=>{if(X.hasSave())modal('Start again?','<p>Starting again replaces your saved dynasty.</p><div class="g8actions">'+btn('Keep career','close',[],'g8ghost')+btn('Start again','fresh',[],'g8primary')+'</div>','fresh');else setView('story');});
@@ -295,7 +309,7 @@
   const fn=commands[action];if(!fn){announce('That control is unavailable.');return false;}
   const where=allow[action];if(where!=='*'&&!where.includes(ui.view)){announce('That action belongs to a different stage of the career.');return false;}
   closeUtilityMenu();busy=true;const view=ui.view,x=window.scrollX,y=window.scrollY;
-  try{clearFeedback();fn(...args);completeDraft();save();if(ui.view===view&&!ui.modal)render(false);return true;}
+  try{if(action!=='confirmBackup')pendingRestoreFeedback=null;clearFeedback();fn(...args);completeDraft();save();if(ui.view===view&&!ui.modal)render(false);return true;}
   catch(e){announce(e.message||'The action could not be completed.');return false;}
   finally{G.closeModal();busy=false;if(pendingFocus){const target=document.querySelector(pendingFocus);pendingFocus=null;target?.focus?.({preventScroll:true});target?.scrollIntoView?.({block:'center',behavior:'instant'});}else if(ui.view===view)window.scrollTo({left:x,top:y,behavior:'instant'});}
  };
