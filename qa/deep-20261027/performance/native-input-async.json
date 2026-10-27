@@ -1,0 +1,727 @@
+[
+  {
+    "name": "2026",
+    "loadWallMs": 577,
+    "restore": {
+      "ok": true,
+      "ms": 857.8000000002794,
+      "year": 2026
+    },
+    "resume": {
+      "ok": true,
+      "ms": 406.6999999997206,
+      "view": "team"
+    },
+    "operations": [
+      {
+        "action": "careerSection",
+        "args": [
+          "squad"
+        ],
+        "ok": true,
+        "ms": 4.100000000093132,
+        "view": "team",
+        "modal": null
+      },
+      {
+        "action": "teamPane",
+        "args": [
+          "squad"
+        ],
+        "ok": true,
+        "ms": 3.8999999999068677,
+        "view": "team",
+        "modal": null
+      },
+      {
+        "action": "inspect",
+        "args": [
+          44
+        ],
+        "ok": true,
+        "ms": 16.200000000186265,
+        "view": "team",
+        "modal": "player"
+      },
+      {
+        "action": "comparePlayers",
+        "args": [
+          44
+        ],
+        "ok": true,
+        "ms": 8,
+        "view": "team",
+        "modal": "compare"
+      },
+      {
+        "action": "close",
+        "args": [],
+        "ok": true,
+        "ms": 6.399999999906868,
+        "view": "team",
+        "modal": null
+      }
+    ],
+    "before": {
+      "documents": 2,
+      "nodes": 5499,
+      "jsEventListeners": 122
+    },
+    "beforePerf": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 3344.718867
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 2
+        },
+        {
+          "name": "Frames",
+          "value": 1
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 122
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 861
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 5499
+        },
+        {
+          "name": "Resources",
+          "value": 1
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 26
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 0
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 2
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 2
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 0
+        },
+        {
+          "name": "LayoutCount",
+          "value": 24
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 42
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 0.066319
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 0.029651
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 1.39057
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 0.631557
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0.065072
+        },
+        {
+          "name": "TaskDuration",
+          "value": 2.685245
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 0.502076
+        },
+        {
+          "name": "ThreadTime",
+          "value": 2.564654
+        },
+        {
+          "name": "ProcessTime",
+          "value": 0
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 97507428
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 156246016
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 0
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 3342.059801
+        },
+        {
+          "name": "NavigationStart",
+          "value": 3341.525968
+        }
+      ]
+    },
+    "coldRestores": [
+      {
+        "ok": true,
+        "view": "team",
+        "screen": "team",
+        "round": 14
+      },
+      {
+        "ok": true,
+        "view": "season",
+        "screen": "season",
+        "round": 14
+      }
+    ],
+    "input": [
+      {
+        "rate": 1,
+        "action": "careerSection",
+        "wallMs": 230,
+        "before": {
+          "codec": 0,
+          "saves": 0,
+          "profiles": 0,
+          "timers": 0
+        },
+        "after": {
+          "codec": 1,
+          "saves": 1,
+          "profiles": 2,
+          "timers": 0
+        }
+      },
+      {
+        "rate": 1,
+        "action": "careerSection",
+        "wallMs": 209,
+        "before": {
+          "codec": 1,
+          "saves": 1,
+          "profiles": 2,
+          "timers": 0
+        },
+        "after": {
+          "codec": 2,
+          "saves": 2,
+          "profiles": 2,
+          "timers": 0
+        }
+      },
+      {
+        "rate": 1,
+        "action": "careerSection",
+        "wallMs": 205,
+        "before": {
+          "codec": 2,
+          "saves": 2,
+          "profiles": 2,
+          "timers": 0
+        },
+        "after": {
+          "codec": 3,
+          "saves": 3,
+          "profiles": 3,
+          "timers": 0
+        }
+      },
+      {
+        "rate": 1,
+        "action": "careerSection",
+        "wallMs": 179,
+        "before": {
+          "codec": 3,
+          "saves": 3,
+          "profiles": 3,
+          "timers": 0
+        },
+        "after": {
+          "codec": 4,
+          "saves": 4,
+          "profiles": 3,
+          "timers": 0
+        }
+      },
+      {
+        "rate": 4,
+        "action": "careerSection",
+        "wallMs": 533,
+        "before": {
+          "codec": 4,
+          "saves": 4,
+          "profiles": 3,
+          "timers": 0
+        },
+        "after": {
+          "codec": 5,
+          "saves": 5,
+          "profiles": 4,
+          "timers": 0
+        }
+      },
+      {
+        "rate": 4,
+        "action": "careerSection",
+        "wallMs": 495,
+        "before": {
+          "codec": 5,
+          "saves": 5,
+          "profiles": 4,
+          "timers": 0
+        },
+        "after": {
+          "codec": 6,
+          "saves": 6,
+          "profiles": 4,
+          "timers": 0
+        }
+      },
+      {
+        "rate": 4,
+        "action": "careerSection",
+        "wallMs": 606,
+        "before": {
+          "codec": 6,
+          "saves": 6,
+          "profiles": 4,
+          "timers": 0
+        },
+        "after": {
+          "codec": 7,
+          "saves": 7,
+          "profiles": 5,
+          "timers": 0
+        }
+      },
+      {
+        "rate": 4,
+        "action": "careerSection",
+        "wallMs": 557,
+        "before": {
+          "codec": 7,
+          "saves": 7,
+          "profiles": 5,
+          "timers": 0
+        },
+        "after": {
+          "codec": 8,
+          "saves": 8,
+          "profiles": 5,
+          "timers": 0
+        }
+      }
+    ],
+    "gameplayUnchanged": true,
+    "directGo": {
+      "writes": 1,
+      "screen": "season"
+    },
+    "codec": [
+      {
+        "ms": 43.60000000009313,
+        "chars": 1339367
+      },
+      {
+        "ms": 51.5,
+        "chars": 1339373
+      },
+      {
+        "ms": 41.89999999990687,
+        "chars": 1339367
+      },
+      {
+        "ms": 39.90000000037253,
+        "chars": 1339373
+      },
+      {
+        "ms": 202.8000000002794,
+        "chars": 1339367
+      },
+      {
+        "ms": 178.60000000009313,
+        "chars": 1339373
+      },
+      {
+        "ms": 216.60000000009313,
+        "chars": 1339367
+      },
+      {
+        "ms": 213.60000000009313,
+        "chars": 1339373
+      },
+      {
+        "ms": 216.59999999962747,
+        "chars": 1339373
+      }
+    ],
+    "after": {
+      "documents": 2,
+      "nodes": 2385,
+      "jsEventListeners": 89
+    },
+    "afterPerf": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 3351.527664
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 2
+        },
+        {
+          "name": "Frames",
+          "value": 1
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 89
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 228
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 2385
+        },
+        {
+          "name": "Resources",
+          "value": 1
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 17
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 0
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 2
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 0
+        },
+        {
+          "name": "LayoutCount",
+          "value": 65
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 149
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 0.112385
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 0.105125
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 1.929632
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 2.61057
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0.065072
+        },
+        {
+          "name": "TaskDuration",
+          "value": 5.895399
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 1.072615
+        },
+        {
+          "name": "ThreadTime",
+          "value": 6.064902
+        },
+        {
+          "name": "ProcessTime",
+          "value": 0
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 27617936
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 28409856
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 3343.726702
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 3342.059801
+        },
+        {
+          "name": "NavigationStart",
+          "value": 3341.525968
+        }
+      ]
+    },
+    "longTasks": [
+      {
+        "start": 3353.5,
+        "duration": 70
+      },
+      {
+        "start": 4810.800000000279,
+        "duration": 77
+      },
+      {
+        "start": 6677.899999999907,
+        "duration": 63
+      },
+      {
+        "start": 6891.800000000279,
+        "duration": 59
+      },
+      {
+        "start": 7080.600000000093,
+        "duration": 56
+      },
+      {
+        "start": 7147.300000000279,
+        "duration": 300
+      },
+      {
+        "start": 7688,
+        "duration": 281
+      },
+      {
+        "start": 8135.200000000186,
+        "duration": 59
+      },
+      {
+        "start": 8236.399999999907,
+        "duration": 327
+      },
+      {
+        "start": 8817.80000000028,
+        "duration": 331
+      },
+      {
+        "start": 9556.899999999907,
+        "duration": 338
+      }
+    ],
+    "saves": [
+      {
+        "ms": 14.5,
+        "chars": 1339367,
+        "stack": "Error\n    at Storage.setItem (<anonymous>:2:425)\n    at commitSave (http://127.0.0.1:8769/qa/deep-20261027/candidate.html:8731:414)\n    at http://127.0.0.1:8769/qa/deep-20261027/candidate.html:8716:30",
+        "screen": "team",
+        "ui": {
+          "view": "team",
+          "teamReturn": "season",
+          "seasonTab": "matchday",
+          "archiveReturn": "season"
+        }
+      },
+      {
+        "ms": 12.600000000093132,
+        "chars": 1339373,
+        "stack": "Error\n    at Storage.setItem (<anonymous>:2:425)\n    at commitSave (http://127.0.0.1:8769/qa/deep-20261027/candidate.html:8731:414)\n    at http://127.0.0.1:8769/qa/deep-20261027/candidate.html:8716:30",
+        "screen": "season",
+        "ui": {
+          "view": "season",
+          "teamReturn": "season",
+          "seasonTab": "matchday",
+          "archiveReturn": "season"
+        }
+      },
+      {
+        "ms": 12.300000000279397,
+        "chars": 1339367,
+        "stack": "Error\n    at Storage.setItem (<anonymous>:2:425)\n    at commitSave (http://127.0.0.1:8769/qa/deep-20261027/candidate.html:8731:414)\n    at http://127.0.0.1:8769/qa/deep-20261027/candidate.html:8716:30",
+        "screen": "team",
+        "ui": {
+          "view": "team",
+          "teamReturn": "season",
+          "seasonTab": "matchday",
+          "archiveReturn": "season"
+        }
+      },
+      {
+        "ms": 11.799999999813735,
+        "chars": 1339373,
+        "stack": "Error\n    at Storage.setItem (<anonymous>:2:425)\n    at commitSave (http://127.0.0.1:8769/qa/deep-20261027/candidate.html:8731:414)\n    at http://127.0.0.1:8769/qa/deep-20261027/candidate.html:8716:30",
+        "screen": "season",
+        "ui": {
+          "view": "season",
+          "teamReturn": "season",
+          "seasonTab": "matchday",
+          "archiveReturn": "season"
+        }
+      },
+      {
+        "ms": 53.39999999990687,
+        "chars": 1339367,
+        "stack": "Error\n    at Storage.setItem (<anonymous>:2:425)\n    at commitSave (http://127.0.0.1:8769/qa/deep-20261027/candidate.html:8731:414)\n    at http://127.0.0.1:8769/qa/deep-20261027/candidate.html:8716:30",
+        "screen": "team",
+        "ui": {
+          "view": "team",
+          "teamReturn": "season",
+          "seasonTab": "matchday",
+          "archiveReturn": "season"
+        }
+      },
+      {
+        "ms": 51.60000000009313,
+        "chars": 1339373,
+        "stack": "Error\n    at Storage.setItem (<anonymous>:2:425)\n    at commitSave (http://127.0.0.1:8769/qa/deep-20261027/candidate.html:8731:414)\n    at http://127.0.0.1:8769/qa/deep-20261027/candidate.html:8716:30",
+        "screen": "season",
+        "ui": {
+          "view": "season",
+          "teamReturn": "season",
+          "seasonTab": "matchday",
+          "archiveReturn": "season"
+        }
+      },
+      {
+        "ms": 64.3000000002794,
+        "chars": 1339367,
+        "stack": "Error\n    at Storage.setItem (<anonymous>:2:425)\n    at commitSave (http://127.0.0.1:8769/qa/deep-20261027/candidate.html:8731:414)\n    at http://127.0.0.1:8769/qa/deep-20261027/candidate.html:8716:30",
+        "screen": "team",
+        "ui": {
+          "view": "team",
+          "teamReturn": "season",
+          "seasonTab": "matchday",
+          "archiveReturn": "season"
+        }
+      },
+      {
+        "ms": 59.5,
+        "chars": 1339373,
+        "stack": "Error\n    at Storage.setItem (<anonymous>:2:425)\n    at commitSave (http://127.0.0.1:8769/qa/deep-20261027/candidate.html:8731:414)\n    at http://127.0.0.1:8769/qa/deep-20261027/candidate.html:8716:30",
+        "screen": "season",
+        "ui": {
+          "view": "season",
+          "teamReturn": "season",
+          "seasonTab": "matchday",
+          "archiveReturn": "season"
+        }
+      },
+      {
+        "ms": 74.20000000018626,
+        "chars": 1339373,
+        "stack": "Error\n    at Storage.setItem (<anonymous>:2:425)\n    at commitSave (http://127.0.0.1:8769/qa/deep-20261027/candidate.html:8731:414)\n    at http://127.0.0.1:8769/qa/deep-20261027/candidate.html:8716:30",
+        "screen": "season",
+        "ui": {
+          "view": "season",
+          "teamReturn": "season",
+          "seasonTab": "matchday",
+          "archiveReturn": "season"
+        }
+      }
+    ],
+    "memory": {
+      "used": 28904906,
+      "total": 29746950
+    }
+  }
+]

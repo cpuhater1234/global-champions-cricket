@@ -1,0 +1,598 @@
+{
+  "environment": {
+    "browsers": [
+      {
+        "name": "firefox",
+        "path": "/root/.cache/ms-playwright/firefox-1538/firefox/firefox",
+        "installed": false
+      },
+      {
+        "name": "webkit",
+        "path": "/root/.cache/ms-playwright/webkit-2336/pw_run.sh",
+        "installed": false
+      }
+    ],
+    "chromium": "/tmp/gcc-chromium-complete"
+  },
+  "checks": [
+    {
+      "name": "native-modal-pauses-reveal",
+      "pass": true,
+      "evidence": {
+        "before": {
+          "view": "leagueDraw",
+          "modal": "how",
+          "match": null,
+          "reveal": {
+            "count": 0,
+            "running": true
+          }
+        },
+        "after": {
+          "view": "leagueDraw",
+          "modal": "how",
+          "match": null,
+          "reveal": {
+            "count": 0,
+            "running": true
+          }
+        }
+      }
+    },
+    {
+      "name": "native-modal-close-resumes-reveal",
+      "pass": true,
+      "evidence": {
+        "before": {
+          "view": "leagueDraw",
+          "modal": "how",
+          "match": null,
+          "reveal": {
+            "count": 0,
+            "running": true
+          }
+        },
+        "after": {
+          "view": "leagueDraw",
+          "modal": null,
+          "match": null,
+          "reveal": {
+            "count": 2,
+            "running": true
+          }
+        }
+      }
+    },
+    {
+      "name": "actual-navigation-pagehide",
+      "pass": true,
+      "evidence": {
+        "events": [
+          {
+            "event": "pagehide",
+            "persisted": false
+          },
+          {
+            "event": "visibilitychange",
+            "hidden": true
+          }
+        ],
+        "navigation": [
+          "back_forward"
+        ]
+      }
+    },
+    {
+      "name": "reveal-restored-after-navigation",
+      "pass": true,
+      "evidence": {
+        "view": "leagueDraw",
+        "modal": null,
+        "match": null,
+        "reveal": {
+          "count": 2,
+          "running": true
+        }
+      }
+    },
+    {
+      "name": "native-modal-no-background-control-focus",
+      "pass": true,
+      "evidence": [
+        {
+          "inside": true,
+          "tag": "DIALOG",
+          "html": "<dialog id=\"g8dialog\" aria-labelledby=\"g8dialogTitle\" data-prompt=\"player\" data-layout=\"detail\" open"
+        },
+        {
+          "inside": true,
+          "tag": "BUTTON",
+          "action": "close",
+          "html": "<button type=\"button\" class=\"g8dialogclose\" data-action=\"close\" data-args=\"[]\" aria-label=\"Close Phi"
+        },
+        {
+          "inside": true,
+          "tag": "BUTTON",
+          "action": "comparePlayers",
+          "html": "<button type=\"button\" class=\"g8button g8ghost\" data-action=\"comparePlayers\" data-args=\"[183]\"><span>"
+        },
+        {
+          "inside": true,
+          "tag": "BUTTON",
+          "action": "close",
+          "html": "<button type=\"button\" class=\"g8dialogclose\" data-action=\"close\" data-args=\"[]\" aria-label=\"Close Phi"
+        },
+        {
+          "inside": true,
+          "tag": "BUTTON",
+          "action": "comparePlayers",
+          "html": "<button type=\"button\" class=\"g8button g8ghost\" data-action=\"comparePlayers\" data-args=\"[183]\"><span>"
+        },
+        {
+          "inside": true,
+          "tag": "BUTTON",
+          "action": "move",
+          "html": "<button type=\"button\" aria-label=\"Move batter down\" class=\"g8button g8small\" data-action=\"move\" data"
+        },
+        {
+          "inside": true,
+          "tag": "BUTTON",
+          "action": "comparePlayers",
+          "html": "<button type=\"button\" class=\"g8button g8ghost\" data-action=\"comparePlayers\" data-args=\"[183]\"><span>"
+        },
+        {
+          "inside": true,
+          "tag": "BUTTON",
+          "action": "move",
+          "html": "<button type=\"button\" aria-label=\"Move batter down\" class=\"g8button g8small\" data-action=\"move\" data"
+        },
+        {
+          "inside": true,
+          "tag": "BUTTON",
+          "action": "remove",
+          "html": "<button type=\"button\" class=\"g8button g8small\" data-action=\"remove\" data-args=\"[183]\"><span>Move to "
+        },
+        {
+          "inside": true,
+          "tag": "BUTTON",
+          "action": "move",
+          "html": "<button type=\"button\" aria-label=\"Move batter down\" class=\"g8button g8small\" data-action=\"move\" data"
+        },
+        {
+          "inside": true,
+          "tag": "BUTTON",
+          "action": "remove",
+          "html": "<button type=\"button\" class=\"g8button g8small\" data-action=\"remove\" data-args=\"[183]\"><span>Move to "
+        },
+        {
+          "inside": true,
+          "tag": "SUMMARY",
+          "html": "<summary>Detailed skills</summary>"
+        },
+        {
+          "inside": true,
+          "tag": "BUTTON",
+          "action": "remove",
+          "html": "<button type=\"button\" class=\"g8button g8small\" data-action=\"remove\" data-args=\"[183]\"><span>Move to "
+        },
+        {
+          "inside": true,
+          "tag": "SUMMARY",
+          "html": "<summary>Detailed skills</summary>"
+        },
+        {
+          "inside": true,
+          "tag": "SUMMARY",
+          "html": "<summary>Innings phases<span aria-hidden=\"true\">+</span></summary>"
+        },
+        {
+          "inside": true,
+          "tag": "SUMMARY",
+          "html": "<summary>Detailed skills</summary>"
+        },
+        {
+          "inside": true,
+          "tag": "SUMMARY",
+          "html": "<summary>Innings phases<span aria-hidden=\"true\">+</span></summary>"
+        },
+        {
+          "inside": false,
+          "tag": "BODY",
+          "html": "<body>\n<!-- Photo source and licence notices (unmodified photos): {\"CSK\": {\"title\": \"Chidambaram sta"
+        },
+        {
+          "inside": true,
+          "tag": "SUMMARY",
+          "html": "<summary>Innings phases<span aria-hidden=\"true\">+</span></summary>"
+        },
+        {
+          "inside": false,
+          "tag": "BODY",
+          "html": "<body>\n<!-- Photo source and licence notices (unmodified photos): {\"CSK\": {\"title\": \"Chidambaram sta"
+        },
+        {
+          "inside": true,
+          "tag": "DIALOG",
+          "html": "<dialog id=\"g8dialog\" aria-labelledby=\"g8dialogTitle\" data-prompt=\"player\" data-layout=\"detail\" open"
+        },
+        {
+          "inside": false,
+          "tag": "BODY",
+          "html": "<body>\n<!-- Photo source and licence notices (unmodified photos): {\"CSK\": {\"title\": \"Chidambaram sta"
+        },
+        {
+          "inside": true,
+          "tag": "DIALOG",
+          "html": "<dialog id=\"g8dialog\" aria-labelledby=\"g8dialogTitle\" data-prompt=\"player\" data-layout=\"detail\" open"
+        },
+        {
+          "inside": true,
+          "tag": "BUTTON",
+          "action": "close",
+          "html": "<button type=\"button\" class=\"g8dialogclose\" data-action=\"close\" data-args=\"[]\" aria-label=\"Close Phi"
+        },
+        {
+          "inside": true,
+          "tag": "DIALOG",
+          "html": "<dialog id=\"g8dialog\" aria-labelledby=\"g8dialogTitle\" data-prompt=\"player\" data-layout=\"detail\" open"
+        },
+        {
+          "inside": true,
+          "tag": "BUTTON",
+          "action": "close",
+          "html": "<button type=\"button\" class=\"g8dialogclose\" data-action=\"close\" data-args=\"[]\" aria-label=\"Close Phi"
+        },
+        {
+          "inside": true,
+          "tag": "BUTTON",
+          "action": "comparePlayers",
+          "html": "<button type=\"button\" class=\"g8button g8ghost\" data-action=\"comparePlayers\" data-args=\"[183]\"><span>"
+        },
+        {
+          "inside": true,
+          "tag": "BUTTON",
+          "action": "close",
+          "html": "<button type=\"button\" class=\"g8dialogclose\" data-action=\"close\" data-args=\"[]\" aria-label=\"Close Phi"
+        },
+        {
+          "inside": true,
+          "tag": "BUTTON",
+          "action": "comparePlayers",
+          "html": "<button type=\"button\" class=\"g8button g8ghost\" data-action=\"comparePlayers\" data-args=\"[183]\"><span>"
+        },
+        {
+          "inside": true,
+          "tag": "BUTTON",
+          "action": "move",
+          "html": "<button type=\"button\" aria-label=\"Move batter down\" class=\"g8button g8small\" data-action=\"move\" data"
+        }
+      ]
+    },
+    {
+      "name": "native-accessibility-dialog-name",
+      "pass": true,
+      "evidence": [
+        {
+          "nodeId": "1050",
+          "ignored": false,
+          "role": {
+            "type": "role",
+            "value": "dialog"
+          },
+          "chromeRole": {
+            "type": "internalRole",
+            "value": 35
+          },
+          "name": {
+            "type": "computedString",
+            "value": "Phil Mustard",
+            "sources": [
+              {
+                "type": "relatedElement",
+                "value": {
+                  "type": "computedString",
+                  "value": "Phil Mustard"
+                },
+                "attribute": "aria-labelledby",
+                "attributeValue": {
+                  "type": "idrefList",
+                  "value": "g8dialogTitle",
+                  "relatedNodes": [
+                    {
+                      "backendDOMNodeId": 1055,
+                      "idref": "g8dialogTitle",
+                      "text": "Phil Mustard"
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "attribute",
+                "attribute": "aria-label",
+                "superseded": true
+              },
+              {
+                "type": "attribute",
+                "attribute": "title",
+                "superseded": true
+              }
+            ]
+          },
+          "properties": [
+            {
+              "name": "focusable",
+              "value": {
+                "type": "booleanOrUndefined",
+                "value": true
+              }
+            },
+            {
+              "name": "modal",
+              "value": {
+                "type": "boolean",
+                "value": true
+              }
+            },
+            {
+              "name": "labelledby",
+              "value": {
+                "type": "nodeList",
+                "relatedNodes": [
+                  {
+                    "backendDOMNodeId": 1055,
+                    "idref": "g8dialogTitle",
+                    "text": "Phil Mustard"
+                  }
+                ]
+              }
+            }
+          ],
+          "parentId": "61",
+          "childIds": [
+            "1051"
+          ],
+          "backendDOMNodeId": 1050
+        }
+      ]
+    },
+    {
+      "name": "native-accessibility-background-inert",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "name": "nested-scout-compare-modal-labelled",
+      "pass": true,
+      "evidence": {
+        "view": "team",
+        "modal": "compare",
+        "match": null,
+        "reveal": null
+      }
+    },
+    {
+      "name": "nested-modal-return-original-opener",
+      "pass": true,
+      "evidence": {
+        "opener": {
+          "action": "inspect",
+          "args": "[183]"
+        },
+        "returned": {
+          "action": "inspect",
+          "args": "[183]"
+        }
+      }
+    },
+    {
+      "name": "paused-match-navigation-persistence",
+      "pass": true,
+      "evidence": {
+        "before": {
+          "view": "matchReveal",
+          "modal": null,
+          "match": {
+            "count": 0,
+            "presentationVersion": 3,
+            "speedIndex": 0,
+            "running": false,
+            "year": 2008,
+            "reference": {
+              "type": "regular",
+              "round": 2
+            },
+            "returnView": "result"
+          },
+          "reveal": null
+        },
+        "after": {
+          "view": "matchReveal",
+          "modal": null,
+          "match": {
+            "count": 0,
+            "presentationVersion": 3,
+            "speedIndex": 0,
+            "running": false,
+            "year": 2008,
+            "reference": {
+              "type": "regular",
+              "round": 2
+            },
+            "returnView": "result"
+          },
+          "reveal": null
+        }
+      }
+    },
+    {
+      "name": "paused-match-remains-paused",
+      "pass": true,
+      "evidence": {
+        "view": "matchReveal",
+        "modal": null,
+        "match": {
+          "count": 0,
+          "presentationVersion": 3,
+          "speedIndex": 0,
+          "running": false,
+          "year": 2008,
+          "reference": {
+            "type": "regular",
+            "round": 2
+          },
+          "returnView": "result"
+        },
+        "reveal": null
+      }
+    },
+    {
+      "name": "resumed-match-progress",
+      "pass": true,
+      "evidence": {
+        "view": "matchReveal",
+        "modal": null,
+        "match": {
+          "count": 3,
+          "presentationVersion": 3,
+          "speedIndex": 0,
+          "running": true,
+          "year": 2008,
+          "reference": {
+            "type": "regular",
+            "round": 2
+          },
+          "returnView": "result"
+        },
+        "reveal": null
+      }
+    },
+    {
+      "name": "match-live-region-populated",
+      "pass": true,
+      "evidence": "Perth Scorchers: 2 for 0 after 0.2 overs. Setting the target.\nMATCH MOMENT\nPerth Scorchers begin their innings. Four overs of opening powerplay."
+    }
+  ],
+  "errors": [],
+  "navigation": {
+    "events": [
+      {
+        "event": "pagehide",
+        "persisted": false
+      },
+      {
+        "event": "visibilitychange",
+        "hidden": true
+      }
+    ],
+    "navigation": [
+      "back_forward"
+    ]
+  },
+  "accessibility": {
+    "snapshot": "- banner:\n  - button \"Global Champions Cricket home\": GCC\n  - strong: Lancashire\n  - text: 2008 \u00b7 Round 2\n  - paragraph: BUILD YOUR XI. LEAVE A LEGACY.\n  - navigation \"Game menu\":\n    - group: Menu\n  - navigation \"Season navigation\":\n    - button \"Matchday\"\n    - button \"My XI\"\n    - button \"Ladder\"\n    - button \"Fixtures\"\n    - button \"Stats\"\n- main:\n  - text: 2008 \u00b7 TEAM SELECTION\n  - heading \"Starting XI\" [level=1]\n  - region \"Home ground\":\n    - text: HOME GROUND\n    - strong: Old Trafford\n    - paragraph: Seam and spin\n  - strong: 11 / 11\n  - text: Selected\n  - strong: \"84\"\n  - text: XI rating\n  - button \"Team analysis for selected XI\": View analysis\n  - button \"Return to matchday\"\n  - group \"Selection view\":\n    - button \"Squad \u00b7 4\"\n    - button \"Starting XI \u00b7 11\"\n  - heading \"Starting XI\" [level=2]\n  - text: Batting order\n  - paragraph: Select a name to edit batting order.\n  - list:\n    - listitem:\n      - text: \"1\"\n      - button \"Edit Phil Mustard\": Phil Mustard 79 Opener \u00b7 Keeper\n      - button \"Replace Phil Mustard in the XI\": Swap\n    - listitem:\n      - text: \"2\"\n      - button \"Edit William Porterfield\": William Porterfield 76 Opener\n      - button \"Replace William Porterfield in the XI\": Swap\n    - listitem:\n      - text: \"3\"\n      - button \"Edit Jesse Ryder\": Jesse Ryder 76 Opener\n      - button \"Replace Jesse Ryder in the XI\": Swap\n    - listitem:\n      - text: \"4\"\n      - button \"Edit Mohammad Hafeez\": Mohammad Hafeez 76 Opener\n      - button \"Replace Mohammad Hafeez in the XI\": Swap\n    - listitem:\n      - text: \"5\"\n      - button \"Edit Michael Clarke\": Michael Clarke 89 Top order\n      - button \"Replace Michael Clarke in the XI\": Swap\n    - listitem:\n      - text: \"6\"\n      - button \"Edit Andrew Symonds\": Andrew Symonds 84 Middle order\n      - button \"Replace Andrew Symonds in the XI\": Swap\n    - listitem:\n      - text: \"7\"\n      - button \"Edit Jacob Oram\": Jacob Oram 78 Middle order\n      - button \"Replace Jacob Oram in the XI\": Swap\n    - listitem:\n      - text: \"8\"\n      - button \"Edit Dinesh Karthik\": Dinesh Karthik 77 Middle order \u00b7 Keeper\n      - button \"Replace Dinesh Karthik in the XI\": Swap\n    - listitem:\n      - text: \"9\"\n      - button \"Edit Shane Warne\": Shane Warne 88 Tail end\n      - button \"Replace Shane Warne in the XI\": Swap\n    - listitem:\n      - text: \"10\"\n      - button \"Edit Dirk Nannes\": Dirk Nannes 83 Tail end\n      - button \"Replace Dirk Nannes in the XI\": Swap\n    - listitem:\n      - text: \"11\"\n      - button \"Edit Umar Gul\": Umar Gul 89 Tail end\n      - button \"Replace Umar Gul in the XI\": Swap\n  - group: Order & selection tools\n  - group: Selection essentials\n- dialog \"Phil Mustard\":\n  - banner:\n    - heading \"Phil Mustard\" [level=2]\n    - button \"Close Phil Mustard\": \u00d7\n  - heading \"Opener \u00b7 Wicketkeeper\" [level=3]\n  - paragraph: ENG Age 26 Steady\n  - strong: \"79\"\n  - button \"Compare\"\n  - text: Batting position 1\n  - button \"Move batter up\" [disabled]\n  - button \"Move batter down\"\n  - button \"Move to bench\"\n  - heading \"Core abilities\" [level=3]\n  - text: Batting\n  - img \"Batting 78 out of 99\"\n  - text: 78 Bowling\n  - img \"Bowling 13 out of 99\"\n  - text: 13 Fielding\n  - img \"Fielding 75 out of 99\"\n  - text: 75 Wicketkeeping\n  - img \"Wicketkeeping 91 out of 99\"\n  - text: 91 CAREER OUTLOOK\n  - heading \"Developing \u00b7 earning his place\" [level=3]\n  - heading \"GCC record\" [level=3]\n  - text: 2008 season\n  - strong: \"1\"\n  - text: Matches\n  - strong: \"6\"\n  - text: Runs\n  - strong: \"0\"\n  - text: Wickets\n  - group: Detailed skills\n  - group: Innings phases",
+    "landmarks": [
+      {
+        "tag": "HEADER",
+        "label": null,
+        "labelledby": null
+      },
+      {
+        "tag": "NAV",
+        "label": null,
+        "labelledby": null
+      },
+      {
+        "tag": "MAIN",
+        "label": null,
+        "labelledby": null
+      },
+      {
+        "tag": "HEADER",
+        "label": null,
+        "labelledby": null
+      },
+      {
+        "tag": "HEADER",
+        "label": null,
+        "labelledby": null
+      },
+      {
+        "tag": "MAIN",
+        "label": null,
+        "labelledby": null
+      },
+      {
+        "tag": "HEADER",
+        "label": null,
+        "labelledby": null
+      },
+      {
+        "tag": "HEADER",
+        "label": null,
+        "labelledby": null
+      },
+      {
+        "tag": "HEADER",
+        "label": null,
+        "labelledby": null
+      },
+      {
+        "tag": "NAV",
+        "label": "Season views",
+        "labelledby": null
+      },
+      {
+        "tag": "HEADER",
+        "label": null,
+        "labelledby": null
+      },
+      {
+        "tag": "MAIN",
+        "label": null,
+        "labelledby": null
+      },
+      {
+        "tag": "HEADER",
+        "label": null,
+        "labelledby": null
+      },
+      {
+        "tag": "HEADER",
+        "label": null,
+        "labelledby": null
+      },
+      {
+        "tag": "NAV",
+        "label": "Game menu",
+        "labelledby": null
+      },
+      {
+        "tag": "NAV",
+        "label": "Season navigation",
+        "labelledby": null
+      },
+      {
+        "tag": "MAIN",
+        "label": null,
+        "labelledby": null
+      },
+      {
+        "tag": "DIALOG",
+        "label": null,
+        "labelledby": "g8dialogTitle"
+      },
+      {
+        "tag": "HEADER",
+        "label": null,
+        "labelledby": null
+      }
+    ]
+  },
+  "touch": {
+    "maxTouchPoints": 1,
+    "coarse": true,
+    "viewport": 390
+  },
+  "candidateSha256": "4622c2f16881972869a2f861995d9b1f8a95cee2b9fe0cee62149d6352d261f9",
+  "scope": "Final UI/coordinator before isolated trade guard; full native AX tree retained in evidence bundle."
+}

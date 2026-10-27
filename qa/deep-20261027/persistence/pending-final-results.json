@@ -1,0 +1,62 @@
+{
+  "checks": [
+    {
+      "name": "native-file-WebLocks-supported",
+      "pass": true
+    },
+    {
+      "name": "held-lock-reports-pending",
+      "pass": true
+    },
+    {
+      "name": "restore-invalidates-old-waiter",
+      "pass": true
+    },
+    {
+      "name": "restore-no-old-late-write",
+      "pass": true
+    },
+    {
+      "name": "fresh-invalidates-old-waiter",
+      "pass": true
+    },
+    {
+      "name": "fresh-no-old-late-write",
+      "pass": true
+    },
+    {
+      "name": "clear-reload-no-late-recreation",
+      "pass": true
+    },
+    {
+      "name": "quota-failure-settles-unsaved",
+      "pass": true,
+      "detail": {
+        "failed": false,
+        "pending": false,
+        "success": false,
+        "recovery": true
+      }
+    },
+    {
+      "name": "quota-healthy-recovery",
+      "pass": true
+    },
+    {
+      "name": "lock-rejection-settles-unsaved",
+      "pass": true,
+      "detail": {
+        "failed": false,
+        "pending": false,
+        "success": false,
+        "recovered": true
+      }
+    },
+    {
+      "name": "lock-rejection-recovers",
+      "pass": true
+    }
+  ],
+  "total": 11,
+  "passed": 11
+}

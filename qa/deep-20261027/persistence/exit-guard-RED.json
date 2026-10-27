@@ -1,0 +1,8 @@
+{
+  "checks": [
+    "clean-exit"
+  ],
+  "sha": "e4d2216be021ab9ce6d51e3291747c34f66aa4c76fd2eaceffe760cba1eb0b8f",
+  "pass": false,
+  "failure": "Queued background save must guard exiting before it commits\n\nfalse !== true\n"
+}

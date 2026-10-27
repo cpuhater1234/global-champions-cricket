@@ -1,0 +1,843 @@
+[
+  {
+    "name": "2026",
+    "loadWallMs": 427,
+    "restore": {
+      "ok": true,
+      "ms": 859.6000000000931,
+      "year": 2026
+    },
+    "resume": {
+      "ok": true,
+      "ms": 1070.3999999999069,
+      "view": "team"
+    },
+    "operations": [
+      {
+        "action": "careerSection",
+        "args": [
+          "squad"
+        ],
+        "ok": true,
+        "ms": 191.39999999990687,
+        "view": "team",
+        "modal": null
+      },
+      {
+        "action": "teamPane",
+        "args": [
+          "squad"
+        ],
+        "ok": true,
+        "ms": 66.29999999981374,
+        "view": "team",
+        "modal": null
+      },
+      {
+        "action": "inspect",
+        "args": [
+          44
+        ],
+        "ok": true,
+        "ms": 77.6999999997206,
+        "view": "team",
+        "modal": "player"
+      },
+      {
+        "action": "comparePlayers",
+        "args": [
+          44
+        ],
+        "ok": true,
+        "ms": 72.70000000018626,
+        "view": "team",
+        "modal": "compare"
+      },
+      {
+        "action": "close",
+        "args": [],
+        "ok": true,
+        "ms": 71.6999999997206,
+        "view": "team",
+        "modal": null
+      }
+    ],
+    "before": {
+      "documents": 2,
+      "nodes": 2872,
+      "jsEventListeners": 74
+    },
+    "beforePerf": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 2237.857085
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 2
+        },
+        {
+          "name": "Frames",
+          "value": 1
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 74
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 644
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 2872
+        },
+        {
+          "name": "Resources",
+          "value": 1
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 20
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 0
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 2
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 0
+        },
+        {
+          "name": "LayoutCount",
+          "value": 10
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 35
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 0.158136
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 0.032353
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 2.431621
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 0.017228
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0.050696
+        },
+        {
+          "name": "TaskDuration",
+          "value": 3.205748
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 0.515714
+        },
+        {
+          "name": "ThreadTime",
+          "value": 2.853952
+        },
+        {
+          "name": "ProcessTime",
+          "value": 0
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 43259288
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 121208832
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 2236.979777
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 2234.441721
+        },
+        {
+          "name": "NavigationStart",
+          "value": 2234.081422
+        }
+      ]
+    },
+    "coldRestores": [
+      {
+        "ok": true,
+        "view": "team",
+        "screen": "team",
+        "round": 14
+      },
+      {
+        "ok": true,
+        "view": "season",
+        "screen": "season",
+        "round": 14
+      }
+    ],
+    "input": [
+      {
+        "rate": 1,
+        "action": "careerSection",
+        "wallMs": 296,
+        "before": {
+          "codec": 0,
+          "saves": 0,
+          "profiles": 0,
+          "timers": 0
+        },
+        "after": {
+          "codec": 2,
+          "saves": 2,
+          "profiles": 2,
+          "timers": 0
+        }
+      },
+      {
+        "rate": 1,
+        "action": "careerSection",
+        "wallMs": 363,
+        "before": {
+          "codec": 2,
+          "saves": 2,
+          "profiles": 2,
+          "timers": 0
+        },
+        "after": {
+          "codec": 4,
+          "saves": 4,
+          "profiles": 2,
+          "timers": 0
+        }
+      },
+      {
+        "rate": 1,
+        "action": "careerSection",
+        "wallMs": 283,
+        "before": {
+          "codec": 4,
+          "saves": 4,
+          "profiles": 2,
+          "timers": 0
+        },
+        "after": {
+          "codec": 6,
+          "saves": 6,
+          "profiles": 3,
+          "timers": 0
+        }
+      },
+      {
+        "rate": 1,
+        "action": "careerSection",
+        "wallMs": 290,
+        "before": {
+          "codec": 6,
+          "saves": 6,
+          "profiles": 3,
+          "timers": 0
+        },
+        "after": {
+          "codec": 8,
+          "saves": 8,
+          "profiles": 3,
+          "timers": 0
+        }
+      },
+      {
+        "rate": 4,
+        "action": "careerSection",
+        "wallMs": 1038,
+        "before": {
+          "codec": 8,
+          "saves": 8,
+          "profiles": 3,
+          "timers": 0
+        },
+        "after": {
+          "codec": 10,
+          "saves": 10,
+          "profiles": 4,
+          "timers": 0
+        }
+      },
+      {
+        "rate": 4,
+        "action": "careerSection",
+        "wallMs": 845,
+        "before": {
+          "codec": 10,
+          "saves": 10,
+          "profiles": 4,
+          "timers": 0
+        },
+        "after": {
+          "codec": 12,
+          "saves": 12,
+          "profiles": 4,
+          "timers": 0
+        }
+      },
+      {
+        "rate": 4,
+        "action": "careerSection",
+        "wallMs": 931,
+        "before": {
+          "codec": 12,
+          "saves": 12,
+          "profiles": 4,
+          "timers": 0
+        },
+        "after": {
+          "codec": 14,
+          "saves": 14,
+          "profiles": 5,
+          "timers": 0
+        }
+      },
+      {
+        "rate": 4,
+        "action": "careerSection",
+        "wallMs": 947,
+        "before": {
+          "codec": 14,
+          "saves": 14,
+          "profiles": 5,
+          "timers": 0
+        },
+        "after": {
+          "codec": 16,
+          "saves": 16,
+          "profiles": 5,
+          "timers": 0
+        }
+      }
+    ],
+    "gameplayUnchanged": true,
+    "directGo": {
+      "writes": 1,
+      "screen": "season"
+    },
+    "codec": [
+      {
+        "ms": 94.5,
+        "chars": 1339367
+      },
+      {
+        "ms": 39,
+        "chars": 1339367
+      },
+      {
+        "ms": 43.39999999990687,
+        "chars": 1339371
+      },
+      {
+        "ms": 40.6999999997206,
+        "chars": 1339373
+      },
+      {
+        "ms": 41.5,
+        "chars": 1339369
+      },
+      {
+        "ms": 41.89999999990687,
+        "chars": 1339367
+      },
+      {
+        "ms": 48.700000000186265,
+        "chars": 1339371
+      },
+      {
+        "ms": 43.3000000002794,
+        "chars": 1339373
+      },
+      {
+        "ms": 220.10000000009313,
+        "chars": 1339369
+      },
+      {
+        "ms": 243.5,
+        "chars": 1339367
+      },
+      {
+        "ms": 219,
+        "chars": 1339371
+      },
+      {
+        "ms": 187.90000000037253,
+        "chars": 1339373
+      },
+      {
+        "ms": 230.5,
+        "chars": 1339369
+      },
+      {
+        "ms": 208.39999999990687,
+        "chars": 1339367
+      },
+      {
+        "ms": 192.79999999981374,
+        "chars": 1339371
+      },
+      {
+        "ms": 240.39999999990687,
+        "chars": 1339373
+      },
+      {
+        "ms": 211.39999999990687,
+        "chars": 1339373
+      }
+    ],
+    "after": {
+      "documents": 2,
+      "nodes": 2379,
+      "jsEventListeners": 88
+    },
+    "afterPerf": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 2247.963944
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 2
+        },
+        {
+          "name": "Frames",
+          "value": 1
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 88
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 228
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 2379
+        },
+        {
+          "name": "Resources",
+          "value": 1
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 17
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 0
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 2
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 0
+        },
+        {
+          "name": "LayoutCount",
+          "value": 33
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 154
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 0.276544
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 0.132338
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 3.287361
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 3.326016
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0.050696
+        },
+        {
+          "name": "TaskDuration",
+          "value": 8.415101
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 1.342146
+        },
+        {
+          "name": "ThreadTime",
+          "value": 8.340663
+        },
+        {
+          "name": "ProcessTime",
+          "value": 0
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 27572768
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 28409856
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 2236.979777
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 2234.441721
+        },
+        {
+          "name": "NavigationStart",
+          "value": 2234.081422
+        }
+      ]
+    },
+    "longTasks": [
+      {
+        "start": 3902.399999999907,
+        "duration": 183
+      },
+      {
+        "start": 6823.100000000093,
+        "duration": 208
+      },
+      {
+        "start": 8653.399999999907,
+        "duration": 142
+      },
+      {
+        "start": 8953.80000000028,
+        "duration": 138
+      },
+      {
+        "start": 9286.100000000093,
+        "duration": 759
+      },
+      {
+        "start": 10304.30000000028,
+        "duration": 631
+      },
+      {
+        "start": 11167.30000000028,
+        "duration": 714
+      },
+      {
+        "start": 12120.700000000186,
+        "duration": 722
+      }
+    ],
+    "saves": [
+      {
+        "ms": 12.200000000186265,
+        "chars": 1339367,
+        "stack": "Error\n    at Storage.setItem (<anonymous>:2:425)\n    at autoSave (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8695:412)\n    at Object.specialGo [as go] (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8176:1193)\n    at http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9679:71\n    at X.dispatch (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9741:23)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9747:439)",
+        "screen": "team",
+        "ui": {
+          "view": "team",
+          "teamReturn": "season",
+          "seasonTab": "matchday",
+          "archiveReturn": "season"
+        }
+      },
+      {
+        "ms": 11.600000000093132,
+        "chars": 1339367,
+        "stack": "Error\n    at Storage.setItem (<anonymous>:2:425)\n    at autoSave (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8695:412)\n    at Object.save (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8811:1005)\n    at save (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9516:395)\n    at X.dispatch (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9741:51)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9747:439)",
+        "screen": "team",
+        "ui": {
+          "view": "team",
+          "teamReturn": "season",
+          "seasonTab": "matchday",
+          "archiveReturn": "season"
+        }
+      },
+      {
+        "ms": 13.299999999813735,
+        "chars": 1339371,
+        "stack": "Error\n    at Storage.setItem (<anonymous>:2:425)\n    at autoSave (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8695:412)\n    at Object.specialGo [as go] (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8176:1193)\n    at http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9680:59\n    at X.dispatch (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9741:23)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9747:439)",
+        "screen": "season",
+        "ui": {
+          "view": "team",
+          "teamReturn": "season",
+          "seasonTab": "matchday",
+          "archiveReturn": "season"
+        }
+      },
+      {
+        "ms": 10.899999999906868,
+        "chars": 1339373,
+        "stack": "Error\n    at Storage.setItem (<anonymous>:2:425)\n    at autoSave (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8695:412)\n    at Object.save (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8811:1005)\n    at save (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9516:395)\n    at X.dispatch (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9741:51)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9747:439)",
+        "screen": "season",
+        "ui": {
+          "view": "season",
+          "teamReturn": "season",
+          "seasonTab": "matchday",
+          "archiveReturn": "season"
+        }
+      },
+      {
+        "ms": 12.600000000093132,
+        "chars": 1339369,
+        "stack": "Error\n    at Storage.setItem (<anonymous>:2:425)\n    at autoSave (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8695:412)\n    at Object.specialGo [as go] (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8176:1193)\n    at http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9679:71\n    at X.dispatch (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9741:23)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9747:439)",
+        "screen": "team",
+        "ui": {
+          "view": "season",
+          "teamReturn": "season",
+          "seasonTab": "matchday",
+          "archiveReturn": "season"
+        }
+      },
+      {
+        "ms": 10.799999999813735,
+        "chars": 1339367,
+        "stack": "Error\n    at Storage.setItem (<anonymous>:2:425)\n    at autoSave (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8695:412)\n    at Object.save (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8811:1005)\n    at save (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9516:395)\n    at X.dispatch (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9741:51)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9747:439)",
+        "screen": "team",
+        "ui": {
+          "view": "team",
+          "teamReturn": "season",
+          "seasonTab": "matchday",
+          "archiveReturn": "season"
+        }
+      },
+      {
+        "ms": 11,
+        "chars": 1339371,
+        "stack": "Error\n    at Storage.setItem (<anonymous>:2:425)\n    at autoSave (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8695:412)\n    at Object.specialGo [as go] (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8176:1193)\n    at http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9680:59\n    at X.dispatch (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9741:23)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9747:439)",
+        "screen": "season",
+        "ui": {
+          "view": "team",
+          "teamReturn": "season",
+          "seasonTab": "matchday",
+          "archiveReturn": "season"
+        }
+      },
+      {
+        "ms": 11.199999999720603,
+        "chars": 1339373,
+        "stack": "Error\n    at Storage.setItem (<anonymous>:2:425)\n    at autoSave (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8695:412)\n    at Object.save (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8811:1005)\n    at save (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9516:395)\n    at X.dispatch (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9741:51)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9747:439)",
+        "screen": "season",
+        "ui": {
+          "view": "season",
+          "teamReturn": "season",
+          "seasonTab": "matchday",
+          "archiveReturn": "season"
+        }
+      },
+      {
+        "ms": 67.79999999981374,
+        "chars": 1339369,
+        "stack": "Error\n    at Storage.setItem (<anonymous>:2:425)\n    at autoSave (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8695:412)\n    at Object.specialGo [as go] (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8176:1193)\n    at http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9679:71\n    at X.dispatch (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9741:23)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9747:439)",
+        "screen": "team",
+        "ui": {
+          "view": "season",
+          "teamReturn": "season",
+          "seasonTab": "matchday",
+          "archiveReturn": "season"
+        }
+      },
+      {
+        "ms": 69.10000000009313,
+        "chars": 1339367,
+        "stack": "Error\n    at Storage.setItem (<anonymous>:2:425)\n    at autoSave (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8695:412)\n    at Object.save (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8811:1005)\n    at save (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9516:395)\n    at X.dispatch (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9741:51)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9747:439)",
+        "screen": "team",
+        "ui": {
+          "view": "team",
+          "teamReturn": "season",
+          "seasonTab": "matchday",
+          "archiveReturn": "season"
+        }
+      },
+      {
+        "ms": 62.10000000009313,
+        "chars": 1339371,
+        "stack": "Error\n    at Storage.setItem (<anonymous>:2:425)\n    at autoSave (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8695:412)\n    at Object.specialGo [as go] (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8176:1193)\n    at http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9680:59\n    at X.dispatch (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9741:23)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9747:439)",
+        "screen": "season",
+        "ui": {
+          "view": "team",
+          "teamReturn": "season",
+          "seasonTab": "matchday",
+          "archiveReturn": "season"
+        }
+      },
+      {
+        "ms": 56.59999999962747,
+        "chars": 1339373,
+        "stack": "Error\n    at Storage.setItem (<anonymous>:2:425)\n    at autoSave (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8695:412)\n    at Object.save (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8811:1005)\n    at save (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9516:395)\n    at X.dispatch (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9741:51)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9747:439)",
+        "screen": "season",
+        "ui": {
+          "view": "season",
+          "teamReturn": "season",
+          "seasonTab": "matchday",
+          "archiveReturn": "season"
+        }
+      },
+      {
+        "ms": 56.5,
+        "chars": 1339369,
+        "stack": "Error\n    at Storage.setItem (<anonymous>:2:425)\n    at autoSave (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8695:412)\n    at Object.specialGo [as go] (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8176:1193)\n    at http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9679:71\n    at X.dispatch (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9741:23)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9747:439)",
+        "screen": "team",
+        "ui": {
+          "view": "season",
+          "teamReturn": "season",
+          "seasonTab": "matchday",
+          "archiveReturn": "season"
+        }
+      },
+      {
+        "ms": 62.700000000186265,
+        "chars": 1339367,
+        "stack": "Error\n    at Storage.setItem (<anonymous>:2:425)\n    at autoSave (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8695:412)\n    at Object.save (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8811:1005)\n    at save (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9516:395)\n    at X.dispatch (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9741:51)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9747:439)",
+        "screen": "team",
+        "ui": {
+          "view": "team",
+          "teamReturn": "season",
+          "seasonTab": "matchday",
+          "archiveReturn": "season"
+        }
+      },
+      {
+        "ms": 65.60000000009313,
+        "chars": 1339371,
+        "stack": "Error\n    at Storage.setItem (<anonymous>:2:425)\n    at autoSave (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8695:412)\n    at Object.specialGo [as go] (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8176:1193)\n    at http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9680:59\n    at X.dispatch (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9741:23)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9747:439)",
+        "screen": "season",
+        "ui": {
+          "view": "team",
+          "teamReturn": "season",
+          "seasonTab": "matchday",
+          "archiveReturn": "season"
+        }
+      },
+      {
+        "ms": 60.799999999813735,
+        "chars": 1339373,
+        "stack": "Error\n    at Storage.setItem (<anonymous>:2:425)\n    at autoSave (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8695:412)\n    at Object.save (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8811:1005)\n    at save (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9516:395)\n    at X.dispatch (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9741:51)\n    at HTMLDivElement.<anonymous> (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:9747:439)",
+        "screen": "season",
+        "ui": {
+          "view": "season",
+          "teamReturn": "season",
+          "seasonTab": "matchday",
+          "archiveReturn": "season"
+        }
+      },
+      {
+        "ms": 73.6999999997206,
+        "chars": 1339373,
+        "stack": "Error\n    at Storage.setItem (<anonymous>:2:425)\n    at autoSave (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8695:412)\n    at Object.specialGo [as go] (http://127.0.0.1:8769/game/gcc_v8_product_candidate.html:8176:1193)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:36)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+        "screen": "season",
+        "ui": {
+          "view": "season",
+          "teamReturn": "season",
+          "seasonTab": "matchday",
+          "archiveReturn": "season"
+        }
+      }
+    ],
+    "memory": {
+      "used": 28904533,
+      "total": 29616009
+    }
+  }
+]

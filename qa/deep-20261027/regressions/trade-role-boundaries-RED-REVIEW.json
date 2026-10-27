@@ -1,0 +1,33 @@
+{
+  "file": "qa/deep-20261027/baseline.html",
+  "sha": "c7ba52edcbee16d66b8651362a61939cd6c0507382b6bea49f81b51869b1bafb",
+  "checks": [
+    {
+      "name": "16 overs refused without mutation",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\ntrue !== false\n\n    at blocked (file:///workspace/scratch/f98cc1f6c0bf/gcc/qa/deep-20261027/regressions/trade-role-boundaries-review.mjs:4:115)\n    at file:///workspace/scratch/f98cc1f6c0bf/gcc/qa/deep-20261027/regressions/trade-role-boundaries-review.mjs:6:60\n    at scenario (file:///workspace/scratch/f98cc1f6c0bf/gcc/qa/deep-20261027/regressions/trade-role-boundaries-review.mjs:3:818)\n    at file:///workspace/scratch/f98cc1f6c0bf/gcc/qa/deep-20261027/regressions/trade-role-boundaries-review.mjs:6:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)"
+    },
+    {
+      "name": "exact 20 overs with five bowlers passes user guard",
+      "pass": true
+    },
+    {
+      "name": "keeper-for-keeper passes full roster guard",
+      "pass": true
+    },
+    {
+      "name": "bowling deficiency permitted with genuine vacancy",
+      "pass": true
+    },
+    {
+      "name": "temporary keeper cannot repair full permanent roster",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\ntrue !== false\n\n    at blocked (file:///workspace/scratch/f98cc1f6c0bf/gcc/qa/deep-20261027/regressions/trade-role-boundaries-review.mjs:4:115)\n    at file:///workspace/scratch/f98cc1f6c0bf/gcc/qa/deep-20261027/regressions/trade-role-boundaries-review.mjs:10:263\n    at scenario (file:///workspace/scratch/f98cc1f6c0bf/gcc/qa/deep-20261027/regressions/trade-role-boundaries-review.mjs:3:818)\n    at file:///workspace/scratch/f98cc1f6c0bf/gcc/qa/deep-20261027/regressions/trade-role-boundaries-review.mjs:10:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)"
+    },
+    {
+      "name": "temporary player does not consume genuine draft vacancy",
+      "pass": true
+    }
+  ],
+  "pass": false
+}
