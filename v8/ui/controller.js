@@ -5,20 +5,23 @@
  const commands=Object.create(null),allow=Object.create(null),own=()=>s.userClub?.abbr,annual=()=>ui.view==='dynasty'&&s.dynasty?.offseason?.phase==='draft';
  let busy=false,lastSignature='',archiveReturn='season',dialogOpener=null,pendingFocus=null;
  X.hasStoredSave=()=>{try{return !!localStorage.getItem('gcc_dynasty_v8')||!!localStorage.getItem('gcc_dynasty_v7_2');}catch{return false;}};
- X.hasSave=()=>!!s.dynasty?.started||X.hasStoredSave();
- let feedbackTimer=null,saveWarning='',pendingRestoreFeedback=null,exitGuardAttached=false;
- const saveStatusInner=()=>read.savePending?.()?'<div class="g8savepending" role="status">Saving progress…</div>':saveWarning?`<div class="g8savewarning" role="status"><strong>Progress not saved</strong><span>${esc(saveWarning)}</span></div>`:'';
- const saveStatus=()=>`<div id="g8saveStatus" class="g8savestatus" ${!read.savePending?.()&&!saveWarning?'hidden':''}>${saveStatusInner()}</div>`;
+ X.hasSave=()=>!!s.dynasty?.started||X.hasStoredSave()||!!read.recoveryInfo?.();
+ let feedbackTimer=null,saveWarning='',pendingRestoreFeedback=null,pendingRecoveryFeedback=null,exitGuardAttached=false;
+ const recoveryNotice=()=>read.saveSucceeded?.()&&read.checkpointMode?.()!=='strict'?'Progress saved in this browser. Download a backup for extra crash protection.':'';
+ const saveStatusInner=()=>read.savePending?.()?`<div class="g8savepending" role="status">${read.saveSlow?.()?'Saving is taking longer. Keep the game open or download a backup.':'Saving progress…'}</div>`:saveWarning?`<div class="g8savewarning" role="status"><strong>Progress not saved</strong><span>${esc(saveWarning)}</span></div>`:recoveryNotice()?`<div class="g8savepending" role="status">${esc(recoveryNotice())}</div>`:'';
+ const saveStatus=()=>`<div id="g8saveStatus" class="g8savestatus" ${!read.savePending?.()&&!saveWarning&&!recoveryNotice()?'hidden':''}>${saveStatusInner()}</div>`;
  function warnUnsavedExit(event){event.preventDefault();event.returnValue='';}
  function refreshSaveStatus(ok=read.saveSucceeded?.()){
-  saveWarning=read.saveSuspended?.()||read.savePending?.()||ok?'':read.saveConflict?.()?'Another open game saved newer progress. Return home and choose Continue to load it.':'This browser could not save your progress. Keep this game open to continue playing.';
-  const box=document.getElementById('g8saveStatus');if(box){box.hidden=!read.savePending?.()&&!saveWarning;X.patch(box,saveStatusInner());}
+  saveWarning=!s.dynasty||read.saveSuspended?.()||read.savePending?.()||ok?'':read.saveConflict?.()?'Another open game saved newer progress. Return home and choose Continue to load it.':read.saveError?.()||'This browser could not save your progress. Keep this game open to continue playing.';
+  const box=document.getElementById('g8saveStatus');if(box){box.hidden=!read.savePending?.()&&!saveWarning&&!recoveryNotice();X.patch(box,saveStatusInner());}
   const needsGuard=!!s.dynasty&&!read.saveSuspended?.()&&(!!read.savePending?.()||!!saveWarning);
   if(window.removeEventListener&&needsGuard!==exitGuardAttached){window[needsGuard?'addEventListener':'removeEventListener']('beforeunload',warnUnsavedExit);exitGuardAttached=needsGuard;}
   if(saveWarning&&ui.modal)announce(saveWarning);
  }
  window.addEventListener('gcc-save-status',()=>{
   refreshSaveStatus();
+  if(pendingRecoveryFeedback&&pendingRecoveryFeedback.generation!==read.saveGeneration?.())pendingRecoveryFeedback=null;
+  if(pendingRecoveryFeedback&&!read.savePending?.()){const label=pendingRecoveryFeedback.label;pendingRecoveryFeedback=null;announce(saveWarning?label+' opened for this session. Progress is not saved. Keep this game open and download a backup before closing.':label+' opened and saved.');}
   if(pendingRestoreFeedback!=null&&pendingRestoreFeedback!==read.saveGeneration?.())pendingRestoreFeedback=null;
   if(pendingRestoreFeedback!=null&&!read.savePending?.()){pendingRestoreFeedback=null;announce(saveWarning?'Career opened from backup for this session. Progress is not saved. Keep this game open and download a backup before closing.':'Career restored from your backup.');}
  });
@@ -136,6 +139,15 @@
   const canPicks=!ui.tradeMid&&s.dynasty.offseason?.lottery?.length;
   modal('Build a trade',`<p class="g8dialogcontext">${ui.tradeMid?'Trade window · closes after Round 3':'Offseason · closes when the draft begins'} · ${read.tradeAllowance()} of 2 trades left · ${read.departureBudget().remaining} voluntary departures left</p><p class="g8fine">${ui.tradeMid?'Equal numbers of players must move each way, up to two per club. Draft picks cannot be included.':'Up to two players and two owned Round 1 / Round 2 picks per club. Picks become available after the draw.'} Each outgoing player uses one departure; incoming players do not refund it.</p><div class="g8trade g8tradepackage"><section class="g8give"><h3>${X.icon('arrow-up')}You give</h3>${players(true)}${canPicks?pickSelect('tradePick',own(),ui.tradePick2)+pickSelect('tradePick2',own(),ui.tradePick):!ui.tradeMid?'<p class="g8fine">You can include draft picks after the order draw.</p>':''}</section><section class="g8receive"><h3>${X.icon('arrow-down')}You receive</h3><label>Other club<select data-input="tradeClub">${s.league.filter(c=>c.abbr!==own()).map(c=>`<option value="${c.abbr}" ${ui.tradeClub===c.abbr?'selected':''}>${esc(c.name)}</option>`).join('')}</select></label>${players(false)}${canPicks?pickSelect('tradeReceivePick',ui.tradeClub,ui.tradeReceivePick2)+pickSelect('tradeReceivePick2',ui.tradeClub,ui.tradeReceivePick):''}</section></div>${tradeImpact()}<div class="g8actions">${btn('Review trade','propose',[],'g8primary',!tradeValid()||!tradeFitsBudget())}${btn('Keep my squad','close',[],'g8ghost')}</div>`,'trade');
  }
+ function showRecovery(){
+  const choice=read.recoveryInfo?.();if(!choice)return;
+  const detail=info=>`<b>${esc(info.club)}</b><p>${info.year} · ${info.closed?'Career complete':info.round?'After Round '+info.round:'Preseason'}</p>${info.savedAt?`<small>Saved ${esc(new Date(info.savedAt).toLocaleString())}</small>`:''}`;
+  modal('Review saved progress',`<p>The browser save differs from the recovery checkpoint. Choose the career to open. Both copies are kept until you choose.</p><section class="g8backuppreview"><h3>Recovery checkpoint</h3>${detail(choice.checkpoint)}</section>${choice.browser?`<section class="g8backuppreview"><h3>Browser save</h3>${detail(choice.browser)}</section>`:'<p>The browser save is missing or could not be validated.</p>'}<div class="g8actions">${btn('Use recovery checkpoint','recoverCheckpoint',[],'g8primary')}${choice.browser?btn('Use browser save','keepBrowserSave',[],'g8ghost'):''}${btn('Start a new career','clearCheckpoint',[],'g8ghost')}</div>`,'saveRecovery');
+ }
+ bind('recoverCheckpoint','*',()=>{assert(read.resolveRecovery(true),'The saved progress changed. Reload to review it.');closeDialog();restorePresentation();pendingRecoveryFeedback={generation:read.saveGeneration?.(),label:'Recovery checkpoint'};announce('Recovery checkpoint opened. Saving progress…');});
+ bind('keepBrowserSave','*',()=>{assert(read.resolveRecovery(false),'The saved progress changed. Reload to review it.');closeDialog();restorePresentation();pendingRecoveryFeedback={generation:read.saveGeneration?.(),label:'Browser save'};announce('Browser save opened. Saving progress…');});
+ bind('clearCheckpoint','*',()=>{assert(ui.modal==='saveRecovery','Review saved progress first.');closeDialog();D.clearSaveAndRestart();});
+ read.checkpointReady?.().then(()=>{if(ui.view==='home'){render(false);if(read.recoveryInfo?.())showRecovery();}});
  let pendingBackup=null,backupReadId=0;
  bind('careerBackup','*',()=>{G.pauseSeason();save();modal('Career backup',`<p>Keep a copy you can restore in another browser or game file.</p><div class="g8actions">${btn('Download backup','downloadBackup',[],'g8primary',!s.dynasty||s.league.length!==8)}${btn('Restore backup','loadBackup',[],'g8ghost')}</div>`,'backup');});
  bind('downloadBackup','*',()=>{assert(ui.modal==='backup','Open Career backup first.');const raw=read.backupRaw(),info=read.backupInfo(raw),url=URL.createObjectURL(new Blob([raw],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download=`GCC-${(s.userClub?.abbr||'World').replace(/[^a-z0-9]/gi,'')}-${info.year}-R${info.round}.gcc.json`;document.body.append(a);a.click();a.remove();window.setTimeout(()=>URL.revokeObjectURL(url),60000);announce('Backup download started. Keep the file to restore this career.');});
@@ -305,11 +317,13 @@
  bind('archiveBack',['archive'],()=>{D.backFromArchive();setView(views[archiveReturn]?archiveReturn:X.screen());});
  bind('archiveSeason',['archive'],year=>{const h=s.dynasty.history.find(h=>h.year===Number(year));assert(h,'That season is not in the archive.');const stats=Object.entries(h.userPlayerStats||{}).sort((a,b)=>b[1].runs-a[1].runs);modal(`${year} · The club scorebook`,`<p>${h.wins} wins · ${h.losses} losses · Finished ${h.userPosition}</p><div class="g8tablewrap"><table class="g8table"><thead><tr><th>Player</th><th>Matches</th><th>Runs</th><th>Wickets</th></tr></thead><tbody>${stats.map(([id,t])=>`<tr><td>${esc(G.byId(Number(id))?.name||id)}</td><td>${t.matches||0}</td><td>${t.runs||0}</td><td>${t.wickets||0}</td></tr>`).join('')}</tbody></table></div>`);});
  X.dispatch=(action,args=[])=>{
+  if(read.storageReady?.()===false){announce('Checking saved progress…');return false;}
+  if(read.recoveryInfo?.()&&!['recoverCheckpoint','keepBrowserSave','clearCheckpoint','close'].includes(action)){showRecovery();return false;}
   if(busy)return false;if(!Array.isArray(args)){announce('Invalid command arguments.');return false;}
   const fn=commands[action];if(!fn){announce('That control is unavailable.');return false;}
   const where=allow[action];if(where!=='*'&&!where.includes(ui.view)){announce('That action belongs to a different stage of the career.');return false;}
   closeUtilityMenu();busy=true;const view=ui.view,x=window.scrollX,y=window.scrollY;
-  try{if(action!=='confirmBackup')pendingRestoreFeedback=null;clearFeedback();fn(...args);completeDraft();save();if(ui.view===view&&!ui.modal)render(false);return true;}
+  try{if(action!=='confirmBackup')pendingRestoreFeedback=null;if(!['recoverCheckpoint','keepBrowserSave'].includes(action))pendingRecoveryFeedback=null;clearFeedback();fn(...args);completeDraft();save();if(ui.view===view&&!ui.modal)render(false);return true;}
   catch(e){announce(e.message||'The action could not be completed.');return false;}
   finally{G.closeModal();busy=false;if(pendingFocus){const target=document.querySelector(pendingFocus);pendingFocus=null;target?.focus?.({preventScroll:true});target?.scrollIntoView?.({block:'center',behavior:'instant'});}else if(ui.view===view)window.scrollTo({left:x,top:y,behavior:'instant'});}
  };
