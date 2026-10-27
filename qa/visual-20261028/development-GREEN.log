@@ -1,0 +1,10 @@
+{
+  sha: '12d12fa15b442f6b27725fbecefe9216d721bf336c1da125af926768cec17486',
+  checks: [
+    { width: 1440, pass: true, rows: [Array] },
+    { width: 768, pass: true, rows: [Array] },
+    { width: 390, pass: true, rows: [Array] },
+    { width: 320, pass: true, rows: [Array] }
+  ],
+  pass: true
+}

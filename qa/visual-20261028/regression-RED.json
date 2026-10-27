@@ -1,0 +1,44 @@
+{
+  "sha": "4a3d4d919d2fdd35d490f5e2f57359bb5fe65d209873a2f89353ee9735aa2453",
+  "checks": [
+    {
+      "name": "start-screen-only-game-actions",
+      "pass": false
+    },
+    {
+      "name": "mobile-header-one-row",
+      "pass": false,
+      "evidence": {
+        "brandCenter": 44.390625,
+        "menuCenter": 106.78125,
+        "font": 0,
+        "height": 207.75
+      }
+    },
+    {
+      "name": "mobile-brand-readable",
+      "pass": false,
+      "evidence": {
+        "brandCenter": 44.390625,
+        "menuCenter": 106.78125,
+        "font": 0,
+        "height": 207.75
+      }
+    },
+    {
+      "name": "mobile-header-compact",
+      "pass": false,
+      "evidence": {
+        "brandCenter": 44.390625,
+        "menuCenter": 106.78125,
+        "font": 0,
+        "height": 207.75
+      }
+    },
+    {
+      "name": "backup-remains-in-menu",
+      "pass": true
+    }
+  ],
+  "pass": false
+}

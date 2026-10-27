@@ -1,8 +1,8 @@
 # Global Champions Cricket
 
-The current release is GCC v82: `game/gcc_v8_product_candidate.html` (also `game/gcc_v8_quiet_arcade.html`). It preserves the 36-club pool, portable backups, offline venue photographs and cricket simulation. A transactional recovery checkpoint now protects acknowledged saves in tested browser-crash cases, coordinates updated tabs when Web Locks are absent, and offers an explicit choice when saved copies differ. Queued waits are bounded and recovery feedback reports the final save outcome.
+The current release is GCC v83: `game/gcc_v8_product_candidate.html` (also `game/gcc_v8_quiet_arcade.html`). The start screen now offers game actions only; career backups are available through Menu. Mobile headers keep GCC and Menu aligned, with room for long club names, and offseason skill changes use aligned label/change/rating rows.
 
-Reproduce the tested standalone with `python qa/limits-20261027/build.py --promote`; validate recorded evidence with `python qa/limits-20261027/check_release.py`. See [the recovery audit](qa/limits-20261027/README.md). Final bytes passed10 forced crash/recovery cycles,14 no-Web-Locks writer races and13 WebKit lifecycle checks in each of two modes. Keep downloaded backups and close older game copies. This is measured browser recovery, not a guarantee against OS power loss or every device.
+The visual pass covers 21 screens at four widths, 360 header/name/text-size cases, 324 club-guide cases and 13 actual WebKit lifecycle checks. All 19 unaffected inline script bodies, including the cricket engine and v82 recovery implementation, remain byte-identical. See [the visual audit](qa/visual-20261028/README.md) and [the v82 recovery audit](qa/limits-20261027/README.md). Reproduce with `python qa/visual-20261028/build.py --promote` and validate with `python qa/visual-20261028/check_release.py`. Keep downloaded career backups and close older game copies.
 
 The following section records the original protected baseline.
 

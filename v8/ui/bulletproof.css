@@ -1,11 +1,39 @@
 /* Keep the career context readable when small screens use enlarged text. */
 @media (max-width: 960px) {
-  #g8hud { flex-wrap: wrap; }
-  #g8hud > .g8hudclub { flex: 1 0 100%; }
-  #g8hud > nav[aria-label="Game menu"] { margin-left: auto; }
-  #g8hud > .g8headerslogan { order: 3; flex: 1 0 100%; }
+  #g8hud {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: .65rem 1rem;
+  }
+  #g8hud > .g8hudclub { display: contents; }
+  #g8hud > .g8hudclub > .g8badge { display: none; }
+  #g8hud > .g8hudclub > div {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: .25rem .75rem;
+    min-width: 0;
+  }
+  #g8hud .g8hudclub strong {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+  #g8hud .g8brand {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    font-size: 1.15rem;
+    padding: .5rem;
+  }
+  #g8hud > nav[aria-label="Game menu"] { grid-column: 2; grid-row: 1; margin-left: 0; }
+  #g8hud > .g8headerslogan { grid-column: 1 / -1; margin: 0; }
+  #g8hud > .g8savestatus { grid-column: 1 / -1; }
   #g8hud > .g8careernav {
-    order: 4;
+    grid-column: 1 / -1;
     width: 100%;
     min-width: 0;
     flex-wrap: nowrap;
@@ -16,6 +44,9 @@
     white-space: nowrap;
     overflow-wrap: normal;
   }
+}
+@media (max-width: 760px) {
+  #g8hud > .g8headerslogan { display: none; }
 }
 @media (max-width: 480px) {
   #g8dialog .g8modalhead {
