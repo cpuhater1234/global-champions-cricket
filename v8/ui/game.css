@@ -292,7 +292,7 @@ small,.g8fine,p,td,option{font-weight:600}
 #g8dialog *{min-width:0}
 #g8dialog .g8actions{flex-wrap:wrap}
 #g8dialog .g8button{max-width:100%;white-space:normal}
-@media(max-width:760px){.g8revealgrid.g8ordergrid{grid-auto-rows:minmax(310px,auto)}#g8dialog{padding:1rem}}
+@media(max-width:760px){.g8revealgrid.g8ordergrid{grid-auto-rows:minmax(310px,auto)}#g8dialog{padding:0}}
 
 /* Home is a stable photographic scene on first paint, not a pitch-to-photo reveal. */
 .g8heroart .g8homestadium .g8stadiumphoto{display:block;opacity:1!important;transition:none!important;animation:none!important;object-fit:cover;background:#061827;aspect-ratio:4/3}
@@ -317,7 +317,9 @@ small,.g8fine,p,td,option{font-weight:600}
 .g8phasecards,.g8overplan{grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr))}
 .g8abilitybar{grid-template-columns:minmax(0,5.1rem) minmax(0,1fr) 2rem}
 .g8tradeplayer .g8abilitybar{grid-template-columns:minmax(0,5.1rem) minmax(0,1fr) 2rem}
-.g8comparebars>div{grid-template-columns:minmax(0,5rem) minmax(0,1fr) auto}
+.g8comparebars>div{grid-template-columns:minmax(0,6rem) minmax(0,1fr) auto}
+.g8compare{container-type:inline-size}
+@container(max-width:14rem){.g8comparebars>div{grid-template-columns:minmax(0,1fr) max-content}.g8comparebars>div>span{grid-column:1/-1}}
 .g8matchuprow>summary{align-items:center;line-height:1.45}
 .g8matchuprow>summary>strong{justify-self:end}
 .g8matchuprow>summary>.g8strengthtrack{grid-column:1/-1;width:100%;margin:.2rem 0}

@@ -292,7 +292,7 @@ small,.g8fine,p,td,option{font-weight:600}
 #g8dialog *{min-width:0}
 #g8dialog .g8actions{flex-wrap:wrap}
 #g8dialog .g8button{max-width:100%;white-space:normal}
-@media(max-width:760px){.g8revealgrid.g8ordergrid{grid-auto-rows:minmax(310px,auto)}#g8dialog{padding:1rem}}
+@media(max-width:760px){.g8revealgrid.g8ordergrid{grid-auto-rows:minmax(310px,auto)}#g8dialog{padding:0}}
 
 /* Home is a stable photographic scene on first paint, not a pitch-to-photo reveal. */
 .g8heroart .g8homestadium .g8stadiumphoto{display:block;opacity:1!important;transition:none!important;animation:none!important;object-fit:cover;background:#061827;aspect-ratio:4/3}
@@ -317,7 +317,9 @@ small,.g8fine,p,td,option{font-weight:600}
 .g8phasecards,.g8overplan{grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr))}
 .g8abilitybar{grid-template-columns:minmax(0,5.1rem) minmax(0,1fr) 2rem}
 .g8tradeplayer .g8abilitybar{grid-template-columns:minmax(0,5.1rem) minmax(0,1fr) 2rem}
-.g8comparebars>div{grid-template-columns:minmax(0,5rem) minmax(0,1fr) auto}
+.g8comparebars>div{grid-template-columns:minmax(0,6rem) minmax(0,1fr) auto}
+.g8compare{container-type:inline-size}
+@container(max-width:14rem){.g8comparebars>div{grid-template-columns:minmax(0,1fr) max-content}.g8comparebars>div>span{grid-column:1/-1}}
 .g8matchuprow>summary{align-items:center;line-height:1.45}
 .g8matchuprow>summary>strong{justify-self:end}
 .g8matchuprow>summary>.g8strengthtrack{grid-column:1/-1;width:100%;margin:.2rem 0}
@@ -494,7 +496,7 @@ p,small,.g8fine{font-weight:400;line-height:1.5}small,.g8fine{font-size:1rem;col
 /* Keep both innings together when their names fit; enlarged text can stack. */
 .g8seasonprogress{padding:1rem 0;color:#cacec6;line-height:1.5}.g8seasonprogress strong{color:#f3f7ee}
 @media(max-width:760px){.g8result{padding:16px}.g8result h3,.g8result>h2{overflow-wrap:break-word}.g8drafttip{margin:.4rem 0 1rem;line-height:1.5;color:#cdd1c9}
- @container(min-width:18rem){.g8result .g8score{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1rem;align-items:start;margin:1rem 0}.g8result .g8score>span{display:none}.g8result .g8score>div:last-child{text-align:right}.g8result .g8score h3{font-size:1rem;line-height:1.35;min-height:4.05em}.g8result .g8score .g8badge{width:48px;height:54px;font-size:1rem}.g8result .g8score strong{font-size:2rem;padding:.3rem .45rem}.g8result .g8inningsdetail{display:block;font-size:1rem;line-height:1.5}}
+ @container(min-width:24rem){.g8result .g8score{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1rem;align-items:start;margin:1rem 0}.g8result .g8score>span{display:none}.g8result .g8score>div:last-child{text-align:right}.g8result .g8score h3{font-size:1rem;line-height:1.35;min-height:4.05em}.g8result .g8score .g8badge{width:48px;height:54px;font-size:1rem}.g8result .g8score strong{font-size:2rem;padding:.3rem .45rem}.g8result .g8inningsdetail{display:block;font-size:1rem;line-height:1.5}}
 }
 
 @media(max-width:760px){.g8hudclub strong{overflow-wrap:break-word}.g8matchsummary{padding:16px}.g8matchsummary h2,.g8button>span{overflow-wrap:break-word;min-width:0}}
@@ -717,7 +719,7 @@ p,small,.g8fine{font-weight:400;line-height:1.5}small,.g8fine{font-size:1rem;col
 .g8utilitymenu>summary:active{background:#4f534e;border-color:#e7ffad}
 @media(prefers-reduced-motion:reduce){.g8utilitymenu>summary{transition:none}}
 
-#g8dialog[data-layout="prompt"] .g8modalhead{position:relative;justify-content:center;text-align:center;padding-inline:4rem}
+#g8dialog[data-layout="prompt"] .g8modalhead{position:sticky;top:0;justify-content:center;text-align:center;padding-inline:4rem}
 #g8dialog[data-layout="prompt"] .g8modalhead>div{width:100%;min-width:0}
 #g8dialog[data-layout="prompt"] .g8modalhead .g8eyebrow{display:block}
 #g8dialog[data-layout="prompt"] .g8dialogclose{position:absolute;right:1rem;top:1rem}
@@ -730,7 +732,10 @@ p,small,.g8fine{font-weight:400;line-height:1.5}small,.g8fine{font-size:1rem;col
 #g8hud>nav[aria-label="Game menu"] .g8utilitymenu .g8button:focus-visible{outline:3px solid #b6cda0;outline-offset:2px;background:#286347;color:#f1f7fc}
 #g8hud>nav[aria-label="Game menu"] .g8utilitymenu .g8button:not(:disabled):active{background:#4f534e;border-color:#e7ffad}
 @media(prefers-reduced-motion:reduce){#g8hud>nav[aria-label="Game menu"] .g8utilitymenu .g8button{transition:none}}
-#g8dialog[data-layout="prompt"] .g8modalhead{display:block;padding:4.25rem 1.5rem 1.25rem}
+#g8dialog[data-layout="prompt"] .g8modalhead{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;gap:.5rem;align-items:start;padding:1rem}
+#g8dialog[data-layout="prompt"] .g8modalhead::before{content:"";width:44px}
+#g8dialog[data-layout="prompt"] .g8modalhead>div{grid-column:2}
+#g8dialog[data-layout="prompt"] .g8dialogclose{position:static;grid-column:3}
 #g8dialog[data-layout="prompt"] .g8modalhead .g8eyebrow{display:none}
 #g8dialog[data-layout="prompt"] .g8modalhead h2{margin:0;line-height:1.35}
 #g8dialog[data-layout="prompt"] .g8dialogclose{position:absolute;top:.75rem;right:.75rem;width:44px;height:44px}
@@ -839,7 +844,7 @@ p,small,.g8fine{font-weight:400;line-height:1.5}small,.g8fine{font-size:1rem;col
 @media(prefers-reduced-motion:reduce){.g8draftplayer.g8directpick{transition:none}}
 .g8skillcategory{container-type:inline-size}
 @container(max-width:12rem){.g8skillcategory .g8abilitybar>span{grid-column:1/-1}.g8skillcategory .g8abilitybar>b{grid-row:2}.g8skillcategory .g8abilitytrack{grid-column:1;grid-row:2}}
-.g8directpick .g8candidate::after{inset:-4px}
+.g8directpick .g8candidate::after{inset:0}
 .g8clublocation{min-width:0;max-width:100%;overflow-wrap:anywhere}
 
 /* Recruitment palette: disciplines distinguish players; lime marks decisions. */
@@ -1386,6 +1391,7 @@ html,body,#g8app,#g8app:has(.g8draftsplit){background:#191c19;background-image:n
 #g8dialog{background:#2b302c;border-color:#818d7d;border-top-color:var(--club-accent)}
 .g8modalhead{background:#3a423b;border-bottom-color:#818d7d}.g8modalbody{background:#2b302c}
 #g8stage[data-view="legacy"] .g8hero>div:first-child{background:#2d3d30;border-color:#7b9275}
+#g8stage[data-view="legacy"] .g8hero>.g8heroart{align-self:start;min-height:0;height:auto}
 
 .g8directpick.g8recruitcard .g8cardbio .g8draftcountry{color:#414b3e}
 .g8draftaside>.g8sectionhead,.g8teamworkspace .g8startingxi>.g8sectionhead{background:var(--club-accent);color:var(--club-ink);border-color:#8d9887}
@@ -1580,7 +1586,7 @@ html,body{background:#191c1a}
 .g8gccrecord h3{color:#2e352b;font-size:1.05rem;margin:0}
 .g8gccrecord p.g8recordempty{color:#46503d;margin:.6rem 0 0;line-height:1.5;font-size:.95rem}
 .g8recordyear{display:block;margin-top:.3rem;font-size:.85rem;color:#4b543e}
-.g8recordstats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.5rem;margin-top:.65rem}
+.g8recordstats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,5.25rem),1fr));gap:.5rem;margin-top:.65rem}
 .g8recordstats>div{display:flex;flex-direction:column;align-items:center;gap:.2rem;padding:.55rem .25rem;background:#d7caaa;border:1px solid #aaa183;border-radius:5px}
 .g8recordstats strong{font-size:1.5rem;line-height:1.2;font-variant-numeric:tabular-nums}.g8recordstats span{font-size:.8rem}
 .g8playerphases{display:grid;gap:.7rem;margin-top:.7rem}.g8playerphases h3{font-size:.95rem;margin:0 0 .45rem;color:#eee6d7}
@@ -1727,7 +1733,7 @@ html,body{background:#191c1a}
 .g8pickguide summary::before{content:'+';margin-right:.65rem}.g8pickguide[open] summary::before{content:'−'}
 .g8pickguide ol{list-style:none;margin:1rem 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.6rem}
 .g8pickguide li{display:flex;flex-direction:column;gap:.3rem;padding:.75rem;background:#193f32;color:#fff4de;border-radius:6px;font-size:1rem;line-height:1.5;overflow-wrap:anywhere}
-.g8modalbody .g8rulenote p{color:#25382d}
+#g8dialog .g8modalbody .g8rulenote p{color:#25382d}
 @media(max-width:650px){.g8rulefacts,.g8rulesgrid,.g8pickguide ol{grid-template-columns:1fr}}
 .g8rulenote,.g8departureguide,.g8pickguide{overflow-wrap:anywhere}
 /* Shared visual system: solid surfaces, measured spacing, restrained hierarchy. */
@@ -1800,6 +1806,8 @@ html,body{background:#191c1a}
 @media(max-width:760px){.g8heading,#g8stage:has(.g8draftsplit)>.g8heading,#g8stage[data-view="team"]>.g8heading{padding:.9rem 1rem;flex-wrap:wrap;gap:.85rem}.g8heading>.g8actions{width:100%;justify-content:flex-start}.g8heading .g8eyebrow{font-size:.85rem}.g8sectionhead>span{max-width:100%;text-align:left}.g8sheet>.g8sectionhead{padding:.7rem}.g8metrics{gap:.65rem}.g8metrics strong{font-size:1.5rem}.g8metrics span{font-size:.9rem}.g8modalhead,.g8modalbody{padding:1rem}}
 @media(prefers-reduced-motion:no-preference){.g8button{transition:background-color 140ms ease,border-color 140ms ease,box-shadow 140ms ease}}
 .g8sheet .g8rulenote p,.g8sheet .g8departureguide p,.g8sheet .g8pickguide p{color:var(--g8-paper-ink)}
+.g8superover{background:var(--g8-paper);color:var(--g8-paper-ink)}
+.g8superover .g8statrow b,.g8superover .g8statrow span,.g8superover h3,.g8superover p,#g8dialog .g8superover h3,#g8dialog .g8superover p{color:var(--g8-paper-ink)}
 /* Replace legacy high-specificity draft and recruitment greys. */
 #g8stage:has(.g8draftsplit)>.g8clock{background:#294b35;border:1px solid #8ca17d;border-left:4px solid #c7b690;border-radius:8px}
 #g8stage:has(.g8draftsplit)>.g8clockmine{background:#18513d;border-color:#a0b892;border-left-color:#eee3cf}
@@ -2015,12 +2023,12 @@ html,body{background:#191c1a}
 }
 @media (max-width: 480px) {
   #g8dialog .g8modalhead {
-    grid-template-columns: 1fr;
-    gap: 0;
+    grid-template-columns: minmax(0, 1fr) 44px;
+    gap: 12px;
     padding: 12px;
   }
   #g8dialog .g8modalhead .g8eyebrow { padding-right: 56px; }
-  #g8dialog .g8dialogclose { position: absolute; top: 12px; right: 12px; }
+  #g8dialog .g8dialogclose { position: static; }
   #g8dialog .g8modalbody { padding: 12px; }
   #g8stage .g8fixturehero { padding: 12px; }
   #g8stage .g8fixture > div {
@@ -9170,8 +9178,8 @@ function validSave(save){
   for(const r of s.results){const mine=r.home.abbr===s.userClub.abbr?r.homeInnings:r.awayInnings,theirs=r.home.abbr===s.userClub.abbr?r.awayInnings:r.homeInnings;for(const k of Object.keys(totals)){const t=totals[k];t[0]+=mine[k];t[1]+=X.phaseBalls(mine,k);t[2]+=theirs[k];t[3]+=X.phaseBalls(theirs,k);}}
   const labels={pp:'field-restriction overs',mid:'middle overs',death:'death overs'},reads=Object.entries(totals).filter(([,t])=>t[1]>=36&&t[3]>=36).map(([k,t])=>({k,for:t[0]*6/t[1],against:t[2]*6/t[3]})).sort((a,b)=>(a.for-a.against)-(b.for-b.against));
   if(!reads.length)return '';
-  const w=reads[0],note=w.for<w.against?`Start with the ${labels[w.k]}. This was your largest scoring-rate deficit. Scout the batting and bowling options before making changes.`:`You matched or outscored opponents in every sampled phase. Preserve that balance while planning for departures.`;
-  return `<section class="g8seasonplan"><span class="g8eyebrow">BEFORE YOU BUILD AGAIN</span><p>${esc(note)}</p><div class="g8seasoncomparison">${reads.map(v=>X.compareRead(labels[v.k],v.for.toFixed(2),v.against.toFixed(2),'Scored','Conceded',0)).join('')}</div><details class="g8moredata"><summary>How to read these rates</summary><p>Runs per over across your regular-season scorebooks. Different chase lengths and wickets affect these rates; use them as a starting point for scouting.</p></details></section>`;
+  const w=reads[0],note=s.year===2026?(w.for<w.against?`The ${labels[w.k]} produced your largest scoring-rate deficit in the final season.`:'You matched or outscored opponents in every sampled phase in the final season.'):w.for<w.against?`Start with the ${labels[w.k]}. This was your largest scoring-rate deficit. Scout the batting and bowling options before making changes.`:`You matched or outscored opponents in every sampled phase. Preserve that balance while planning for departures.`;
+  return `<section class="g8seasonplan"><span class="g8eyebrow">${s.year===2026?'FINAL-SEASON PHASES':'BEFORE YOU BUILD AGAIN'}</span><p>${esc(note)}</p><div class="g8seasoncomparison">${reads.map(v=>X.compareRead(labels[v.k],v.for.toFixed(2),v.against.toFixed(2),'Scored','Conceded',0)).join('')}</div><details class="g8moredata"><summary>How to read these rates</summary><p>Runs per over across your regular-season scorebooks. Different chase lengths and wickets affect these rates; ${s.year===2026?'they describe the final season, with no further season to prepare for.':'use them as a starting point for scouting.'}</p></details></section>`;
  };
  X.seasonRead=()=>{
   const a=F.teamAverages(),l=F.leagueAverages();if(!a?.matches)return '<p class="g8fine">The first matches will start to show how this XI plays.</p>';
@@ -9573,7 +9581,7 @@ function validSave(save){
  };
  v.review=()=>{
   const t=s.table[own()]||{},champ=s.champion,won=champ?.abbr===own(),title=won?'Champions.':s.regularSeasonPosition<=4?'A finals campaign.':'The season closes.';
-  return heading(`${s.year} · SEASON REVIEW`,title,'',btn(s.year===2026?'Finish your tenure':`Build your ${s.year+1} squad`,s.year===2026?'finishCareer':'offseason',[],'g8primary'))+`<section class="g8reviewsummary ${won?'g8titlewon':''}">${badge(s.userClub)}<div><h2>${esc(s.userClub.name)}</h2><p>${won?'The title is yours.':`${esc(champ?.name||'The league winners')} are champions.`}</p></div>${X.metrics([['Finished',`${s.regularSeasonPosition} of 8`],['Wins',t.w||0],['Losses',t.l||0]])}</section>${X.seasonProgress()}<section class="g8sheet g8seasonstars"><span class="g8eyebrow">YOUR LEADING PLAYERS</span>${X.seasonContributors()}${btn('Full player stats','averages',[],'g8ghost')}</section>`+X.disclosure('What to take into next season',X.seasonRead()+X.seasonPlan())+`<div class="g8reviewfoot"><span>${s.year===2026?'Your nineteen-season career is complete.':'Next: your squad carries over, with retirements and development. A fresh draft order is drawn regardless of your finish.'}</span>${btn('Club archive','archive',[],'g8ghost')}</div>`;
+  return heading(`${s.year} · SEASON REVIEW`,title,'',btn(s.year===2026?'Finish your tenure':`Build your ${s.year+1} squad`,s.year===2026?'finishCareer':'offseason',[],'g8primary'))+`<section class="g8reviewsummary ${won?'g8titlewon':''}">${badge(s.userClub)}<div><h2>${esc(s.userClub.name)}</h2><p>${won?'The title is yours.':`${esc(champ?.name||'The league winners')} are champions.`}</p></div>${X.metrics([['Finished',`${s.regularSeasonPosition} of 8`],['Wins',t.w||0],['Losses',t.l||0]])}</section>${X.seasonProgress()}<section class="g8sheet g8seasonstars"><span class="g8eyebrow">YOUR LEADING PLAYERS</span>${X.seasonContributors()}${btn('Full player stats','averages',[],'g8ghost')}</section>`+X.disclosure(s.year===2026?'Reflect on your final season':'What to take into next season',X.seasonRead()+X.seasonPlan())+`<div class="g8reviewfoot"><span>${s.year===2026?'Your nineteen-season career is complete.':'Next: your squad carries over, with retirements and development. A fresh draft order is drawn regardless of your finish.'}</span>${btn('Club archive','archive',[],'g8ghost')}</div>`;
  };
 
  v.dynasty=()=>{
