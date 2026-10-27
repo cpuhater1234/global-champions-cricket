@@ -1,0 +1,45 @@
+{
+  "sha256": "0f643bb049f277dd57550ad9fb8d6134c51ed102d3ffa00a53d20f68e10876e4",
+  "clicks": 8,
+  "saveCounts": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "serializationCounts": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "coldRestores": [
+    [
+      {
+        "ok": true,
+        "view": "team",
+        "screen": "team",
+        "round": 14
+      },
+      {
+        "ok": true,
+        "view": "season",
+        "screen": "season",
+        "round": 14
+      }
+    ]
+  ],
+  "gameplayUnchanged": true,
+  "directNavigationWrites": [
+    1
+  ],
+  "scope": "Native Chromium real controls; shared CPU wall times are diagnostic, not device benchmarks."
+}

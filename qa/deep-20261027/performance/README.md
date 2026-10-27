@@ -1,5 +1,7 @@
 # Native performance deep audit
 
+Final implementation note: the shared coordinator was selected because the independently reproduced overlapping-writer race requires atomic compare/serialize/commit. Its coalescing also resolves the duplicate navigation writes. The final candidate repeats all eight clicks at one serialization/write each, two exact cold destination restores and one direct-navigation save. Earlier proposed specialGo-only changes below are historical recommendations, not shipped changes. Shared-CPU timings remain diagnostic.
+
 Baseline product SHA256: c7ba52edcbee16d66b8651362a61939cd6c0507382b6bea49f81b51869b1bafb. No product edits made. Playwright launches /tmp/gcc-chromium-complete against a script-local HTTP server. All timings are this shared host's native Chromium measurements, not physical hardware FPS or Node VM estimates.
 
 ## Confirmed defect: duplicate full saves on navigation

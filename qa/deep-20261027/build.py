@@ -6,6 +6,7 @@ BASE='afe67378cf3e415683af2ff43ecd24e5a3638319';SHA='c7ba52edcbee16d66b8651362a6
 def build(promote=False,update_sources=False):
  p=QA/'baseline.html';data=p.read_bytes() if p.exists() else subprocess.check_output(['git','show',BASE+':game/gcc_v8_product_candidate.html'],cwd=ROOT)
  assert hashlib.sha256(data).hexdigest()==SHA
+ if not p.exists():p.write_bytes(data)
  html=data.decode();before=re.findall(r'<script\b[^>]*>(.*?)</script>',html,re.S)
  for source,old,new in json.loads((QA/'patches.json').read_text()):
   new=new.replace('@@COORDINATOR@@',(ROOT/'v8/domain/save_coordinator.js').read_text().rstrip())

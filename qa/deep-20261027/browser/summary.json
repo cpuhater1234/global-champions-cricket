@@ -57,7 +57,7 @@
           "modal": null,
           "match": null,
           "reveal": {
-            "count": 2,
+            "count": 1,
             "running": true
           }
         }
@@ -90,7 +90,7 @@
         "modal": null,
         "match": null,
         "reveal": {
-          "count": 2,
+          "count": 1,
           "running": true
         }
       }
@@ -452,7 +452,7 @@
         "view": "matchReveal",
         "modal": null,
         "match": {
-          "count": 3,
+          "count": 2,
           "presentationVersion": 3,
           "speedIndex": 0,
           "running": true,
@@ -469,7 +469,7 @@
     {
       "name": "match-live-region-populated",
       "pass": true,
-      "evidence": "Perth Scorchers: 2 for 0 after 0.2 overs. Setting the target.\nMATCH MOMENT\nPerth Scorchers begin their innings. Four overs of opening powerplay."
+      "evidence": "Perth Scorchers: 2 for 0 after 0.1 overs. Setting the target.\nMATCH MOMENT\nPerth Scorchers begin their innings. Four overs of opening powerplay."
     }
   ],
   "errors": [],
@@ -593,6 +593,6 @@
     "coarse": true,
     "viewport": 390
   },
-  "candidateSha256": "4622c2f16881972869a2f861995d9b1f8a95cee2b9fe0cee62149d6352d261f9",
-  "scope": "Final UI/coordinator before isolated trade guard; full native AX tree retained in evidence bundle."
+  "candidateSha256": "0f643bb049f277dd57550ad9fb8d6134c51ed102d3ffa00a53d20f68e10876e4",
+  "scope": "Final exact candidate native lifecycle; full AX tree in evidence bundle."
 }

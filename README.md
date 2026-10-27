@@ -1,6 +1,6 @@
 # Global Champions Cricket
 
-The current release is GCC v80: `game/gcc_v8_product_candidate.html` (also `game/gcc_v8_quiet_arcade.html`). It includes the 36-club pool, portable career backups and offline venue photos. Reproduce this tested standalone with `python qa/bulletproof-20261027/build.py --promote`; see [the audit and regression instructions](qa/bulletproof-20261027/README.md). The older freeze builder reproduces an earlier engine snapshot and is not the current release path.
+The current release is GCC v81: `game/gcc_v8_product_candidate.html` (also `game/gcc_v8_quiet_arcade.html`). It preserves the 36-club pool, portable backups and offline venue photographs, and adds coordinated saves, accurate pending/failure feedback, ordinary exit protection and a full-roster trade guard. Reproduce the tested standalone with `python qa/deep-20261027/build.py --promote`; see [the deep audit and regression instructions](qa/deep-20261027/README.md). The older freeze builder is not the current release path. Close older game copies when using this release, and keep downloaded backups: abrupt browser-crash durability is not guaranteed.
 
 The following section records the original protected baseline.
 
