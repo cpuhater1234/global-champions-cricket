@@ -14,4 +14,4 @@ Review focus: newer legacy-tab primary data; restore while clear is queued/in fl
 - [x] Create checkpoint service, coordinator and minimal recovery/status UI. Build candidate deterministically from immutable v81. Run native RED/GREEN tests.
 - [x] Exercise abort/denied/blocked/late generations/clear/mixed-primary conflicts. Run existing integrity and native browser regressions; update harness assumptions explicitly when unsafe legacy saving is intentionally refused.
 - [x] Independent review, source parity, appropriate career continuity validation and release gate.
-- [ ] Publish byte-verified source/aliases and save playable/evidence. Record environmental and physical certification limits honestly.
+- [x] Publish byte-verified source/aliases and save playable/evidence. Record environmental and physical certification limits honestly.
