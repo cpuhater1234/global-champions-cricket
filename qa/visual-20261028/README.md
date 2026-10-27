@@ -1,18 +1,19 @@
 # GCC v83 visual corrections — 28 October 2026
 
-Baseline v82: `5f8b35d4bf3de95853175f53136c552f8d6de8be`. Final SHA256: `12d12fa15b442f6b27725fbecefe9216d721bf336c1da125af926768cec17486`, 8,065,524 bytes.
+Baseline v82: `5f8b35d4bf3de95853175f53136c552f8d6de8be`. Final SHA256: `aa2e3e187efc0b31366ee29b255c1ed1fa236e4c1fb98ece83d9c99c935fb7aa`, 8,065,598 bytes.
 
 ## Reproduced problems and corrections
 
 - Home exposed a prominent Restore backup action beside Play/Continue. It is removed from the start panel; Menu → Career backup still offers restore and download with the existing validation/review flow.
 - A broad responsive hardening rule forced the club group to occupy a full flex row. Menu fell onto a separate row, leaving a large blank header area. An older mobile rule also set the GCC brand font to zero. The header now uses a shared first row for the wordmark and Menu; selected-club details occupy a full-width second row on smaller screens. The redundant mobile header slogan is hidden. Long names and enlarged text retain room without menu collisions.
+- At normal mobile text size the five career tabs overflowed, leaving Stats partially cut off. Reduced horizontal tab padding and a readable compact label size now fit all five at320/390/768, retaining at least44px touch height and horizontal scrolling for enlarged text.
 - Broad skill-grid rules forced each offseason development label onto its own row, separating it from its change and rating values. The three intended columns now align with flexible label wrapping. No rating value or development calculation changed.
 
 Only inline script17 (the home view) and the two affected CSS assets changed. The other19 inline script bodies, including the full engine, save coordinator and recovery controller, are byte-identical to v82. Single-file offline use and the random stadium homepage are preserved.
 
 ## Validation
 
-- `regression-{RED,GREEN}.json`: removed start-panel file action, compact aligned mobile header, visible GCC brand, and backup still reachable through Menu. Four baseline failures became green; existing menu access stayed green.
+- `regression-{RED,GREEN}.json`: removed start-panel file action, compact aligned mobile header, visible GCC brand, and backup still reachable through Menu. Four baseline failures became green; existing menu access stayed green. `regression-NAV-RED.json` reproduces the clipped Stats tab on the initial candidate; the sixth final check confirms all five tabs fit with full-height touch targets.
 - `header-{RED,GREEN}.json`:360 cases covering all36 club names, widths320/390/768/960/1024 and root fonts16/32px. The first compact-header candidate exposed some long-name collisions; the final layout fixes them. RED records that intermediate candidate, not an alleged v82 long-name failure.
 - `development-{RED,GREEN}.json`: skill label/change/range share a row without overlaps at320/390/768/1440.
 - `after/metrics.json`:84 native captures,21 screens at320/390/768/1440; zero page errors and no document-width overflow. Screens: home, story, league reveal, club selection, club guide, signings, draft, matchday, ladder, fixtures, league leaders, XI, player profile, match preview, live match, result, scorecard, season review, archive, offseason and trade. Saved review fixtures are positioned on their review view for presentation inspection; fixtures are not claims of newly simulated full careers.

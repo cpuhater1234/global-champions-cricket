@@ -47,6 +47,13 @@
 }
 @media (max-width: 760px) {
   #g8hud > .g8headerslogan { display: none; }
+  #g8hud .g8careernav > .g8button {
+    flex: 1 0 auto;
+    padding-inline: 0;
+    min-width: 44px;
+    font-size: .85rem;
+    letter-spacing: 0;
+  }
 }
 @media (max-width: 480px) {
   #g8dialog .g8modalhead {
@@ -79,7 +86,4 @@
   #g8stage .g8matchfooter { padding: 12px; }
   #g8stage .g8matchfooter .g8button { padding-inline: 12px; gap: 8px; }
   #g8stage .g8matchfooter .g8button > span { overflow-wrap: normal; word-break: normal; }
-}
-@media (max-width: 360px) {
-  #g8hud > .g8headerslogan { display: none; }
 }
