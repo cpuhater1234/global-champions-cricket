@@ -398,14 +398,14 @@ p,small,.g8fine{font-weight:400;line-height:1.5}small,.g8fine{font-size:1rem;col
 .g8developmentidentity{flex:1 1 14rem;min-width:0}
 .g8developmentoverall{flex:0 0 auto}
 .g8developmentrow>:is(.g8skillchanges,.g8skillrest,.g8fine){flex:1 0 100%;min-width:0}
-.g8skillchanges li{grid-template-columns:max-content max-content;justify-content:start;row-gap:.35rem}
-.g8skillchanges li>span{grid-column:1/-1;min-width:0}
+.g8skillchanges li{grid-template-columns:minmax(0,1fr) max-content max-content;row-gap:.35rem}
+.g8skillchanges li>span{grid-column:auto;min-width:0}
 .g8manageworkspace>p{max-width:100%;white-space:normal}
 
 .g8candidateidentity strong{min-width:0;max-width:100%;overflow-wrap:anywhere}
 .g8clubchooser .g8clubticket{min-width:0;max-width:100%;flex:1 1 8rem}
 .g8clubchooser .g8clubticket>span{min-width:0;max-width:100%;white-space:normal;overflow-wrap:anywhere}
-.g8skillchanges li{grid-template-columns:minmax(0,1fr) max-content}
+.g8skillchanges li{grid-template-columns:minmax(0,1fr) max-content max-content}
 
 /* Draft cards: one scouting surface with an independent pick action. */
 .g8board{align-items:stretch}
@@ -1552,3 +1552,4 @@ html,body{background:#191c1a}
 #g8app .g8photocredit{display:block;margin-top:.4rem;font-size:.75rem;line-height:1.5;color:#e9dfcb}
 #g8app .g8photocredit a{color:inherit;text-decoration:underline;text-underline-offset:.15em}
 #g8app .g8photocredit a:focus-visible{outline:2px solid #fff4df;outline-offset:3px}
+
