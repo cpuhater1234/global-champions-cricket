@@ -1,0 +1,22 @@
+{
+  blocked: {
+    warning: true,
+    announcement: 'Career opened from backup for this session. Progress is not saved. Keep this game open and download a backup before closing.',
+    year: 2008,
+    backupAvailable: true
+  },
+  recovered: {
+    warning: false,
+    announcement: 'Career restored from your backup.',
+    year: 2008,
+    backupAvailable: true
+  },
+  assertions: {
+    blockedPlayable: true,
+    blockedBackupExportable: true,
+    blockedWarning: true,
+    blockedAccurateFeedback: true,
+    healthyRecoveryClearsWarning: true,
+    healthyRecoveryFeedback: true
+  }
+}

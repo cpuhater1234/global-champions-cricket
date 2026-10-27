@@ -1,0 +1,97 @@
+[
+  [
+    "v8/engine/dynasty.js",
+    "  // Keep the compare/serialize/write sequence exclusive across actual tabs.\n  let savePending=false,saveAgain=false,saveSucceeded=false,saveGeneration=0,saveSuspended=false;\n  let savePromise=Promise.resolve(false);\n  function notifySaveStatus(){if(typeof Event==='function'&&window.dispatchEvent)window.dispatchEvent(new Event('gcc-save-status'));}\n  function invalidatePendingSaves(){saveGeneration++;savePending=false;saveAgain=false;saveSucceeded=false;}\n  async function flushSave(generation=saveGeneration){\n    while(generation===saveGeneration&&savePending)await savePromise;\n    return generation===saveGeneration&&saveSucceeded;\n  }\n  function autoSave(){\n    if(saveSuspended||!state.dynasty)return false;\n    if(!navigator.locks?.request){saveSucceeded=commitSave();return saveSucceeded;}\n    if(savePending){saveAgain=true;return false;}\n    const generation=saveGeneration;savePending=true;saveSucceeded=false;notifySaveStatus();\n    savePromise=Promise.resolve().then(()=>navigator.locks.request('gcc-career-save:'+SAVE_KEY,()=>{\n      if(generation!==saveGeneration||saveSuspended)return false;\n      // Requests made before acquiring the lock are represented by this snapshot.\n      saveAgain=false;return commitSave();\n    })).catch(error=>{\n      if(generation!==saveGeneration)return false;\n      console.error('GCC coordinated save failed',error);\n      if(!saveFailureShown){saveFailureShown=true;base.toast('This browser could not save your progress. Keep this game open to continue playing.');}\n      return false;\n    }).then(ok=>{\n      if(generation!==saveGeneration)return false;\n      savePending=false;saveSucceeded=ok;\n      if(saveAgain){saveAgain=false;autoSave();}\n      notifySaveStatus();\n      return ok;\n    });\n    return false;\n  }",
+    "@@STORE@@\n@@COORDINATOR@@"
+  ],
+  [
+    "v8/engine/dynasty.js",
+    "  function clearSaveAndRestart(){\n    invalidatePendingSaves();const generation=saveGeneration;saveSuspended=true;notifySaveStatus();\n    const reset=()=>{if(generation!==saveGeneration||!saveSuspended)return false;let ok=true;for(const key of [SAVE_KEY,LEGACY_SAVE_KEY,META_KEY])if(!safeStorageRemove(key))ok=false;if(!ok)throw new Error('Career storage could not be cleared');location.reload();return true;};\n    if(!navigator.locks?.request){try{return reset()}catch(error){saveSuspended=false;saveSucceeded=false;notifySaveStatus();base.toast('Could not clear this career. Keep the game open and download a backup.');return false;}}\n    return Promise.resolve().then(()=>navigator.locks.request('gcc-career-save:'+SAVE_KEY,reset)).catch(error=>{if(generation!==saveGeneration)return false;saveSuspended=false;saveSucceeded=false;console.error('GCC career clear failed',error);notifySaveStatus();base.toast('Could not clear this career. Keep the game open and download a backup.');return false;});\n  }\n",
+    "  function clearSaveAndRestart(){\n    invalidatePendingSaves();const generation=saveGeneration;saveSuspended=true;checkpointRecovery=null;notifySaveStatus();\n    const active=()=>generation===saveGeneration&&saveSuspended;\n    const remove=()=>{if(!active())return false;let ok=true;for(const key of [SAVE_KEY,LEGACY_SAVE_KEY,META_KEY])if(!safeStorageRemove(key))ok=false;if(!ok)throw new Error('Career storage could not be cleared');return true;};\n    return checkpointReadyPromise.then(()=>withStorageLock(async()=>{\n      if(!active())return false;\n      if(checkpointStore.available()){\n        const result=await checkpointStore.run(()=>remove()?{value:true,record:{version:1,cleared:true,raw:null,previous:null,updatedAt:Date.now()}}:{value:false});\n        if(result.value&&active()){checkpointRecord=null;location.reload();}return result.value;\n      }\n      if(!navigator.locks?.request)throw new Error('Career clearing is unavailable here');\n      if(remove()&&active()){location.reload();return true;}return false;\n    })).catch(error=>{if(generation!==saveGeneration)return false;saveSuspended=false;saveSucceeded=false;saveError='Could not clear this career. Keep the game open and download a backup.';console.error(error);notifySaveStatus();base.toast(saveError);return false;});\n  }\n"
+  ],
+  [
+    "v8/engine/dynasty.js",
+    "function startFreshWorld(args=[]){invalidatePendingSaves();",
+    "function startFreshWorld(args=[]){checkpointRecovery=null;invalidatePendingSaves();"
+  ],
+  [
+    "v8/engine/dynasty.js",
+    "function resumeSave(imported=null){const previousEnded=",
+    "function resumeSave(imported=null){if(checkpointRecovery&&!imported)return false;const previousRecovery=checkpointRecovery;const previousEnded="
+  ],
+  [
+    "v8/engine/dynasty.js",
+    "save=migrateLoadedSave(save);invalidatePendingSaves();",
+    "save=migrateLoadedSave(save);checkpointRecovery=null;invalidatePendingSaves();"
+  ],
+  [
+    "v8/engine/dynasty.js",
+    "lastStoredSave=previousStoredSave;saveConflict=previousSaveConflict;currentScreen=previousScreen;",
+    "lastStoredSave=previousStoredSave;saveConflict=previousSaveConflict;checkpointRecovery=previousRecovery;currentScreen=previousScreen;"
+  ],
+  [
+    "v8/engine/dynasty.js",
+    "saveCoordinated:()=>!!navigator.locks?.request,",
+    "saveCoordinated:()=>checkpointStore.available()||!!(navigator.locks?.request&&typeof AbortController==='function'),checkpointReady:()=>checkpointReadyPromise,storageReady:()=>checkpointBooted,checkpointMode:()=>checkpointStore.mode(),recoveryInfo,resolveRecovery,saveSlow:()=>saveSlow,saveError:()=>saveError,"
+  ],
+  [
+    "v8/ui/controller.js",
+    "X.hasSave=()=>!!s.dynasty?.started||X.hasStoredSave();",
+    "X.hasSave=()=>!!s.dynasty?.started||X.hasStoredSave()||!!read.recoveryInfo?.();"
+  ],
+  [
+    "v8/ui/controller.js",
+    "const saveStatusInner=()=>read.savePending?.()?'<div class=\"g8savepending\" role=\"status\">Saving progress\u2026</div>':saveWarning?`<div class=\"g8savewarning\" role=\"status\"><strong>Progress not saved</strong><span>${esc(saveWarning)}</span></div>`:'';",
+    "const recoveryNotice=()=>read.saveSucceeded?.()&&read.checkpointMode?.()!=='strict'?'Progress saved in this browser. Download a backup for extra crash protection.':'';\n const saveStatusInner=()=>read.savePending?.()?`<div class=\"g8savepending\" role=\"status\">${read.saveSlow?.()?'Saving is taking longer. Keep the game open or download a backup.':'Saving progress\u2026'}</div>`:saveWarning?`<div class=\"g8savewarning\" role=\"status\"><strong>Progress not saved</strong><span>${esc(saveWarning)}</span></div>`:recoveryNotice()?`<div class=\"g8savepending\" role=\"status\">${esc(recoveryNotice())}</div>`:'';"
+  ],
+  [
+    "v8/ui/controller.js",
+    "${!read.savePending?.()&&!saveWarning?'hidden':''}",
+    "${!read.savePending?.()&&!saveWarning&&!recoveryNotice()?'hidden':''}"
+  ],
+  [
+    "v8/ui/controller.js",
+    "box.hidden=!read.savePending?.()&&!saveWarning;",
+    "box.hidden=!read.savePending?.()&&!saveWarning&&!recoveryNotice();"
+  ],
+  [
+    "v8/ui/controller.js",
+    "':'This browser could not save your progress. Keep this game open to continue playing.';",
+    "':read.saveError?.()||'This browser could not save your progress. Keep this game open to continue playing.';"
+  ],
+  [
+    "v8/ui/controller.js",
+    " let pendingBackup=null,backupReadId=0;",
+    " function showRecovery(){\n  const choice=read.recoveryInfo?.();if(!choice)return;\n  const detail=info=>`<b>${esc(info.club)}</b><p>${info.year} \u00b7 ${info.closed?'Career complete':info.round?'After Round '+info.round:'Preseason'}</p>${info.savedAt?`<small>Saved ${esc(new Date(info.savedAt).toLocaleString())}</small>`:''}`;\n  modal('Review saved progress',`<p>The browser save differs from the recovery checkpoint. Choose the career to open. Both copies are kept until you choose.</p><section class=\"g8backuppreview\"><h3>Recovery checkpoint</h3>${detail(choice.checkpoint)}</section>${choice.browser?`<section class=\"g8backuppreview\"><h3>Browser save</h3>${detail(choice.browser)}</section>`:'<p>The browser save is missing or could not be validated.</p>'}<div class=\"g8actions\">${btn('Use recovery checkpoint','recoverCheckpoint',[],'g8primary')}${choice.browser?btn('Use browser save','keepBrowserSave',[],'g8ghost'):''}${btn('Start a new career','clearCheckpoint',[],'g8ghost')}</div>`,'saveRecovery');\n }\n bind('recoverCheckpoint','*',()=>{assert(read.resolveRecovery(true),'The saved progress changed. Reload to review it.');closeDialog();restorePresentation();pendingRecoveryFeedback={generation:read.saveGeneration?.(),label:'Recovery checkpoint'};announce('Recovery checkpoint opened. Saving progress\u2026');});\n bind('keepBrowserSave','*',()=>{assert(read.resolveRecovery(false),'The saved progress changed. Reload to review it.');closeDialog();restorePresentation();pendingRecoveryFeedback={generation:read.saveGeneration?.(),label:'Browser save'};announce('Browser save opened. Saving progress\u2026');});\n bind('clearCheckpoint','*',()=>{assert(ui.modal==='saveRecovery','Review saved progress first.');closeDialog();D.clearSaveAndRestart();});\n read.checkpointReady?.().then(()=>{if(ui.view==='home'){render(false);if(read.recoveryInfo?.())showRecovery();}});\n let pendingBackup=null,backupReadId=0;"
+  ],
+  [
+    "v8/ui/controller.js",
+    "X.dispatch=(action,args=[])=>{",
+    "X.dispatch=(action,args=[])=>{\n  if(read.storageReady?.()===false){announce('Checking saved progress\u2026');return false;}\n  if(read.recoveryInfo?.()&&!['recoverCheckpoint','keepBrowserSave','clearCheckpoint','close'].includes(action)){showRecovery();return false;}"
+  ],
+  [
+    "v8/ui/controller.js",
+    "saveWarning=read.saveSuspended?.()||",
+    "saveWarning=!s.dynasty||read.saveSuspended?.()||"
+  ],
+  [
+    "v8/engine/dynasty.js",
+    "return {club:st.userClub?.name||'Club not chosen',year:st.year,round:st.round,closed:!!st.dynasty?.careerClosed};",
+    "return {club:st.userClub?.name||'Club not chosen',year:st.year,round:st.round,closed:!!st.dynasty?.careerClosed,savedAt:Number.isFinite(st.dynasty?.saveStamp)&&Math.abs(st.dynasty.saveStamp)<=8640000000000000?st.dynasty.saveStamp:null};"
+  ],
+  [
+    "v8/ui/controller.js",
+    "pendingRestoreFeedback=null,exitGuardAttached=false;",
+    "pendingRestoreFeedback=null,pendingRecoveryFeedback=null,exitGuardAttached=false;"
+  ],
+  [
+    "v8/ui/controller.js",
+    "  refreshSaveStatus();\n  if(pendingRestoreFeedback",
+    "  refreshSaveStatus();\n  if(pendingRecoveryFeedback&&pendingRecoveryFeedback.generation!==read.saveGeneration?.())pendingRecoveryFeedback=null;\n  if(pendingRecoveryFeedback&&!read.savePending?.()){const label=pendingRecoveryFeedback.label;pendingRecoveryFeedback=null;announce(saveWarning?label+' opened for this session. Progress is not saved. Keep this game open and download a backup before closing.':label+' opened and saved.');}\n  if(pendingRestoreFeedback"
+  ],
+  [
+    "v8/ui/controller.js",
+    "try{if(action!=='confirmBackup')pendingRestoreFeedback=null;clearFeedback();",
+    "try{if(action!=='confirmBackup')pendingRestoreFeedback=null;if(!['recoverCheckpoint','keepBrowserSave'].includes(action))pendingRecoveryFeedback=null;clearFeedback();"
+  ]
+]

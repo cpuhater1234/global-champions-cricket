@@ -1,0 +1,140 @@
+{
+  "environment": {
+    "browsers": [
+      {
+        "name": "firefox",
+        "path": "/root/.cache/ms-playwright/firefox-1538/firefox/firefox",
+        "installed": true
+      },
+      {
+        "name": "webkit",
+        "path": "/root/.cache/ms-playwright/webkit-2336/pw_run.sh",
+        "installed": true
+      }
+    ],
+    "chromium": "/tmp/gcc-chromium-complete"
+  },
+  "checks": [
+    {
+      "name": "native-modal-pauses-reveal",
+      "pass": true,
+      "evidence": {
+        "before": {
+          "view": "leagueDraw",
+          "modal": "how",
+          "match": null,
+          "reveal": {
+            "count": 0,
+            "running": true
+          }
+        },
+        "after": {
+          "view": "leagueDraw",
+          "modal": "how",
+          "match": null,
+          "reveal": {
+            "count": 0,
+            "running": true
+          }
+        }
+      }
+    },
+    {
+      "name": "native-modal-close-resumes-reveal",
+      "pass": true,
+      "evidence": {
+        "before": {
+          "view": "leagueDraw",
+          "modal": "how",
+          "match": null,
+          "reveal": {
+            "count": 0,
+            "running": true
+          }
+        },
+        "after": {
+          "view": "leagueDraw",
+          "modal": null,
+          "match": null,
+          "reveal": {
+            "count": 2,
+            "running": true
+          }
+        }
+      }
+    },
+    {
+      "name": "actual-navigation-pagehide",
+      "pass": true,
+      "evidence": {
+        "events": [
+          {
+            "event": "pagehide",
+            "persisted": false
+          },
+          {
+            "event": "visibilitychange",
+            "hidden": true
+          }
+        ],
+        "navigation": [
+          "back_forward"
+        ]
+      }
+    },
+    {
+      "name": "reveal-restored-after-navigation",
+      "pass": true,
+      "evidence": {
+        "view": "leagueDraw",
+        "modal": null,
+        "match": null,
+        "reveal": {
+          "count": 1,
+          "running": true
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "engine": "webkit",
+  "browserVersion": "26.5",
+  "runtime": {
+    "executable": "/workspace/scratch/f98cc1f6c0bf/gcc/qa/limits-20261027/browsers/webkit-prefix-launcher.sh",
+    "build": "qa/limits-20261027/candidate.html",
+    "buildSha256": "c3d1693bd008571eae71c6cfdad4ba6807fe16756ac1606a0569ca4c924cfd60"
+  },
+  "persistenceRuntime": {
+    "checkpointMode": "strict",
+    "saveCoordinated": true,
+    "webLocks": true,
+    "indexedDB": true
+  },
+  "navigation": {
+    "events": [
+      {
+        "event": "pagehide",
+        "persisted": false
+      },
+      {
+        "event": "visibilitychange",
+        "hidden": true
+      }
+    ],
+    "navigation": [
+      "back_forward"
+    ]
+  },
+  "failure": {
+    "message": "locator.click: Timeout 4000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-action=\"editXI\"]:visible').first()\u001b[22m\n\n    at click (/workspace/scratch/f98cc1f6c0bf/gcc/qa/limits-20261027/browsers/lifecycle.cjs:2:1782)\n    at /workspace/scratch/f98cc1f6c0bf/gcc/qa/limits-20261027/browsers/lifecycle.cjs:6:466",
+    "state": {
+      "view": "leagueDraw",
+      "modal": null,
+      "match": null,
+      "reveal": {
+        "count": 4,
+        "running": true
+      }
+    }
+  }
+}

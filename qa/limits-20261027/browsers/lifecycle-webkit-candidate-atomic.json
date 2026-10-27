@@ -1,0 +1,137 @@
+{
+  "environment": {
+    "browsers": [
+      {
+        "name": "firefox",
+        "path": "/root/.cache/ms-playwright/firefox-1538/firefox/firefox",
+        "installed": true
+      },
+      {
+        "name": "webkit",
+        "path": "/root/.cache/ms-playwright/webkit-2336/pw_run.sh",
+        "installed": true
+      }
+    ],
+    "chromium": "/tmp/gcc-chromium-complete"
+  },
+  "checks": [
+    {
+      "name": "native-modal-pauses-reveal",
+      "pass": true,
+      "evidence": {
+        "before": {
+          "view": "leagueDraw",
+          "modal": "how",
+          "match": null,
+          "reveal": {
+            "count": 0,
+            "running": true
+          }
+        },
+        "after": {
+          "view": "leagueDraw",
+          "modal": "how",
+          "match": null,
+          "reveal": {
+            "count": 0,
+            "running": true
+          }
+        }
+      }
+    },
+    {
+      "name": "native-modal-close-resumes-reveal",
+      "pass": true,
+      "evidence": {
+        "before": {
+          "view": "leagueDraw",
+          "modal": "how",
+          "match": null,
+          "reveal": {
+            "count": 0,
+            "running": true
+          }
+        },
+        "after": {
+          "view": "leagueDraw",
+          "modal": null,
+          "match": null,
+          "reveal": {
+            "count": 2,
+            "running": true
+          }
+        }
+      }
+    },
+    {
+      "name": "actual-navigation-pagehide",
+      "pass": true,
+      "evidence": {
+        "events": [
+          {
+            "event": "pagehide",
+            "persisted": false
+          },
+          {
+            "event": "visibilitychange",
+            "hidden": true
+          }
+        ],
+        "navigation": [
+          "back_forward"
+        ]
+      }
+    },
+    {
+      "name": "reveal-restored-after-navigation",
+      "pass": true,
+      "evidence": {
+        "view": "leagueDraw",
+        "modal": null,
+        "match": null,
+        "reveal": {
+          "count": 2,
+          "running": true
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "engine": "webkit",
+  "browserVersion": "26.5",
+  "runtime": {
+    "executable": "/workspace/scratch/f98cc1f6c0bf/gcc/qa/limits-20261027/browsers/webkit-prefix-launcher.sh",
+    "build": "qa/limits-20261027/candidate.html",
+    "buildSha256": "c3d1693bd008571eae71c6cfdad4ba6807fe16756ac1606a0569ca4c924cfd60"
+  },
+  "persistenceRuntime": {
+    "checkpointMode": "strict",
+    "saveCoordinated": true,
+    "webLocks": true,
+    "indexedDB": true
+  },
+  "navigation": {
+    "events": [
+      {
+        "event": "pagehide",
+        "persisted": false
+      },
+      {
+        "event": "visibilitychange",
+        "hidden": true
+      }
+    ],
+    "navigation": [
+      "back_forward"
+    ]
+  },
+  "failure": {
+    "message": "locator.click: Timeout 4000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-action=\"continue\"]:visible').first()\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" data-action=\"continue\" class=\"g8button g8continueclub\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <dialog open=\"\" id=\"g8dialog\" data-layout=\"detail\" data-prompt=\"saveRecovery\" aria-labelledby=\"g8dialogTitle\">…</dialog> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div class=\"g8modalbody\">…</div> from <dialog open=\"\" id=\"g8dialog\" data-layout=\"detail\" data-prompt=\"saveRecovery\" aria-labelledby=\"g8dialogTitle\">…</dialog> subtree intercepts pointer events\u001b[22m\n\u001b[2m  2 × retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <h2 id=\"g8dialogTitle\">Review saved progress</h2> from <dialog open=\"\" id=\"g8dialog\" data-layout=\"detail\" data-prompt=\"saveRecovery\" aria-labelledby=\"g8dialogTitle\">…</dialog> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <dialog open=\"\" id=\"g8dialog\" data-layout=\"detail\" data-prompt=\"saveRecovery\" aria-labelledby=\"g8dialogTitle\">…</dialog> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div class=\"g8modalbody\">…</div> from <dialog open=\"\" id=\"g8dialog\" data-layout=\"detail\" data-prompt=\"saveRecovery\" aria-labelledby=\"g8dialogTitle\">…</dialog> subtree intercepts pointer events\u001b[22m\n\u001b[2m  2 × retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <h2 id=\"g8dialogTitle\">Review saved progress</h2> from <dialog open=\"\" id=\"g8dialog\" data-layout=\"detail\" data-prompt=\"saveRecovery\" aria-labelledby=\"g8dialogTitle\">…</dialog> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <dialog open=\"\" id=\"g8dialog\" data-layout=\"detail\" data-prompt=\"saveRecovery\" aria-labelledby=\"g8dialogTitle\">…</dialog> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\n    at click (/workspace/scratch/f98cc1f6c0bf/gcc/qa/limits-20261027/browsers/lifecycle.cjs:2:1782)\n    at /workspace/scratch/f98cc1f6c0bf/gcc/qa/limits-20261027/browsers/lifecycle.cjs:6:317",
+    "state": {
+      "view": "home",
+      "modal": "saveRecovery",
+      "match": null,
+      "reveal": null
+    }
+  }
+}

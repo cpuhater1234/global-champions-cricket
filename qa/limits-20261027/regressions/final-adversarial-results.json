@@ -1,0 +1,376 @@
+{
+  "sha256": "4a3d4d919d2fdd35d490f5e2f57359bb5fe65d209873a2f89353ee9735aa2453",
+  "checks": 83,
+  "passed": 83,
+  "failed": 0,
+  "packedFields": [
+    "results",
+    "finals"
+  ],
+  "results": [
+    {
+      "name": "nullState",
+      "pass": true
+    },
+    {
+      "name": "arrayState",
+      "pass": true
+    },
+    {
+      "name": "wrongVersion",
+      "pass": true
+    },
+    {
+      "name": "missingVersion",
+      "pass": true
+    },
+    {
+      "name": "negativeYear",
+      "pass": true
+    },
+    {
+      "name": "stringYear",
+      "pass": true
+    },
+    {
+      "name": "nullPool",
+      "pass": true
+    },
+    {
+      "name": "duplicatePlayer",
+      "pass": true
+    },
+    {
+      "name": "unknownRoster",
+      "pass": true
+    },
+    {
+      "name": "duplicateRoster",
+      "pass": true
+    },
+    {
+      "name": "badHistory",
+      "pass": true
+    },
+    {
+      "name": "badManager",
+      "pass": true
+    },
+    {
+      "name": "badInjuries",
+      "pass": true
+    },
+    {
+      "name": "badRound",
+      "pass": true
+    },
+    {
+      "name": "badReveal",
+      "pass": true
+    },
+    {
+      "name": "badMatch",
+      "pass": true
+    },
+    {
+      "name": "badOffseason",
+      "pass": true
+    },
+    {
+      "name": "protoKey",
+      "pass": true
+    },
+    {
+      "name": "constructorKey",
+      "pass": true
+    },
+    {
+      "name": "prototypeKey",
+      "pass": true
+    },
+    {
+      "name": "negativeTable",
+      "pass": true
+    },
+    {
+      "name": "badScreen-accepted-normalization-control",
+      "pass": true,
+      "detail": {
+        "backupInfo": {
+          "club": "Lancashire",
+          "year": 2008,
+          "round": 14,
+          "closed": false,
+          "savedAt": 8602
+        },
+        "note": "Unknown view normalizes on resume to existing valid season/team screen."
+      }
+    },
+    {
+      "name": "badPickIndex-accepted-normalization-control",
+      "pass": true,
+      "detail": {
+        "backupInfo": {
+          "club": "Lancashire",
+          "year": 2008,
+          "round": 14,
+          "closed": false,
+          "savedAt": 8602
+        },
+        "note": "Negative pickIndex is dormant after completed foundation draft; not classified a defect."
+      }
+    },
+    {
+      "name": "syntax-empty",
+      "pass": true
+    },
+    {
+      "name": "syntax-null",
+      "pass": true
+    },
+    {
+      "name": "syntax-array",
+      "pass": true
+    },
+    {
+      "name": "syntax-truncated",
+      "pass": true
+    },
+    {
+      "name": "syntax-trailing",
+      "pass": true
+    },
+    {
+      "name": "syntax-primitive",
+      "pass": true
+    },
+    {
+      "name": "syntax-html",
+      "pass": true
+    },
+    {
+      "name": "packed-results-truncated",
+      "pass": true
+    },
+    {
+      "name": "packed-results-checksum",
+      "pass": true
+    },
+    {
+      "name": "packed-results-length",
+      "pass": true
+    },
+    {
+      "name": "packed-results-version",
+      "pass": true
+    },
+    {
+      "name": "packed-results-negativeLength",
+      "pass": true
+    },
+    {
+      "name": "packed-results-nullData",
+      "pass": true
+    },
+    {
+      "name": "packed-results-emptyData",
+      "pass": true
+    },
+    {
+      "name": "packed-finals-truncated",
+      "pass": true
+    },
+    {
+      "name": "packed-finals-checksum",
+      "pass": true
+    },
+    {
+      "name": "packed-finals-length",
+      "pass": true
+    },
+    {
+      "name": "packed-finals-version",
+      "pass": true
+    },
+    {
+      "name": "packed-finals-negativeLength",
+      "pass": true
+    },
+    {
+      "name": "packed-finals-nullData",
+      "pass": true
+    },
+    {
+      "name": "packed-finals-emptyData",
+      "pass": true
+    },
+    {
+      "name": "roundtrip",
+      "pass": true
+    },
+    {
+      "name": "review-token-conflict",
+      "pass": true
+    },
+    {
+      "name": "shared-tab-save-conflict",
+      "pass": true
+    },
+    {
+      "name": "restore-quota-failure",
+      "pass": true,
+      "detail": {
+        "restoreReturned": true,
+        "storagePreserved": true,
+        "liveYear": 2008,
+        "errors": 0
+      }
+    },
+    {
+      "name": "restore-blocked-failure",
+      "pass": true,
+      "detail": {
+        "restoreReturned": true,
+        "storagePreserved": true,
+        "liveYear": 2008,
+        "errors": 0
+      }
+    },
+    {
+      "name": "fixture-backup-DER-completed.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-DER-review.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-DUR-completed.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-DUR-review.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-ESS-completed.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-ESS-review.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-GLA-completed.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-GLA-review.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-GLO-completed.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-GLO-review.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-GT-completed.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-GT-review.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-KEN-completed.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-KEN-review.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-LEI-completed.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-LEI-review.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-LSG-completed.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-LSG-review.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-MID-completed.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-MID-review.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-NOR-completed.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-NOR-review.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-PBKS-completed.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-PBKS-review.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-SRH-completed.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-SRH-review.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-SUS-completed.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-SUS-review.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-WAR-completed.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-WAR-review.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-WOR-completed.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-WOR-review.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-legacy-completed.gcc.json",
+      "pass": true
+    },
+    {
+      "name": "fixture-backup-legacy-round1.gcc.json",
+      "pass": true
+    }
+  ]
+}

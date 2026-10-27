@@ -1,0 +1,95 @@
+2026-10-27T05:14:50.841Z pw:browser <launching> /root/.cache/ms-playwright/firefox-1538/firefox/firefox -no-remote -headless -profile /tmp/playwright_firefoxdev_profile-LF36ts -juggler-pipe -silent
+2026-10-27T05:14:50.849Z pw:browser <launched> pid=18
+2026-10-27T05:14:50.914Z pw:browser [pid=18][err] *** You are running in headless mode.
+2026-10-27T05:14:50.998Z pw:browser [pid=18][err] JavaScript warning: resource://services-settings/Utils.sys.mjs, line 119: unreachable code after return statement
+2026-10-27T05:14:51.412Z pw:browser [pid=18][out] 
+2026-10-27T05:14:51.412Z pw:browser [pid=18][out] Juggler listening to the pipe
+2026-10-27T05:14:51.624Z pw:browser [pid=18][err] [92] Sandbox: writing /proc/self/uid_map: EPERM
+LAUNCHED 153.0
+2026-10-27T05:14:51.749Z pw:browser [pid=18][err] [WARN  rkv::backend::impl_safe::environment] `load_ratio()` is irrelevant for this storage backend.
+2026-10-27T05:14:51.839Z pw:browser [pid=18][err] [94] Sandbox: writing /proc/self/uid_map: EPERM
+2026-10-27T05:14:51.852Z pw:browser [pid=18][err] [98] Sandbox: writing /proc/self/uid_map: EPERM
+2026-10-27T05:14:51.882Z pw:browser [pid=18][err] [Parent 18, IPC I/O Parent] WARNING: process 94 exited on signal 11: file ipc/chromium/src/chrome/common/process_watcher_posix_sigchld.cc:161
+2026-10-27T05:14:52.131Z pw:browser [pid=18][err] [100] Sandbox: writing /proc/self/uid_map: EPERM
+2026-10-27T05:14:52.182Z pw:browser [pid=18][err] [Parent 18, IPC I/O Parent] WARNING: process 100 exited on signal 11: file ipc/chromium/src/chrome/common/process_watcher_posix_sigchld.cc:161
+2026-10-27T05:14:52.307Z pw:browser [pid=18][err] [120] Sandbox: writing /proc/self/uid_map: EPERM
+2026-10-27T05:14:52.333Z pw:browser [pid=18][err] [Parent 18, IPC I/O Parent] WARNING: process 120 exited on signal 11: file ipc/chromium/src/chrome/common/process_watcher_posix_sigchld.cc:161
+2026-10-27T05:14:52.579Z pw:browser [pid=18][err] [123] Sandbox: writing /proc/self/uid_map: EPERM
+2026-10-27T05:14:52.695Z pw:browser [pid=18][err] [130] Sandbox: writing /proc/self/uid_map: EPERM
+2026-10-27T05:14:52.721Z pw:browser [pid=18][out] 
+2026-10-27T05:14:52.721Z pw:browser [pid=18][out]         ERROR: ERROR: cannot find session with id "dad6ae90-a8e4-4c11-b562-4dd67ea55ebd" _dispatch@chrome://juggler/content/protocol/Dispatcher.js:54:15
+2026-10-27T05:14:52.721Z pw:browser [pid=18][out] receiveMessage@chrome://juggler/content/components/Juggler.js:121:20
+2026-10-27T05:14:52.721Z pw:browser [pid=18][out] 
+2026-10-27T05:14:52.743Z pw:browser [pid=18][err] [Parent 18, IPC I/O Parent] WARNING: process 123 exited on signal 11: file ipc/chromium/src/chrome/common/process_watcher_posix_sigchld.cc:161
+2026-10-27T05:14:52.757Z pw:browser [pid=18][err] [Parent 18, IPC I/O Parent] WARNING: process 130 exited on signal 11: file ipc/chromium/src/chrome/common/process_watcher_posix_sigchld.cc:161
+2026-10-27T05:14:52.835Z pw:browser [pid=18][err] [132] Sandbox: writing /proc/self/uid_map: EPERM
+2026-10-27T05:14:52.854Z pw:browser [pid=18][err] [Parent 18, IPC I/O Parent] WARNING: process 132 exited on signal 11: file ipc/chromium/src/chrome/common/process_watcher_posix_sigchld.cc:161
+2026-10-27T05:14:52.861Z pw:browser [pid=18][out]       console.error: (new TypeError("can't access property \"maybeCancelContentJSExecution\", this._browser.frameLoader.remoteTab is null", "resource://gre/modules/RemoteWebNavigation.sys.mjs", 41))
+2026-10-27T05:14:53.116Z pw:browser [pid=18][err] [137] Sandbox: writing /proc/self/uid_map: EPERM
+2026-10-27T05:14:53.154Z pw:browser [pid=18][err] [Parent 18, IPC I/O Parent] WARNING: process 137 exited on signal 11: file ipc/chromium/src/chrome/common/process_watcher_posix_sigchld.cc:161
+2026-10-27T05:14:53.694Z pw:browser [pid=18][out] console.error: "Error fetching remote settings base url from CDN. Falling back to https://firefox-settings-attachments.cdn.mozilla.net/" (new SyntaxError("XMLHttpRequest.open: '/' is not a valid URL.", (void 0), 126))
+2026-10-27T05:14:53.730Z pw:browser [pid=18][out] console.error: services.settings: 
+2026-10-27T05:14:53.730Z pw:browser [pid=18][out]   Message: EmptyDatabaseError: "main/nimbus-desktop-experiments" has not been synced yet
+2026-10-27T05:14:53.730Z pw:browser [pid=18][out]   Stack:
+2026-10-27T05:14:53.730Z pw:browser [pid=18][out]     EmptyDatabaseError@resource://services-settings/Database.sys.mjs:19:5
+2026-10-27T05:14:53.730Z pw:browser [pid=18][out] list@resource://services-settings/Database.sys.mjs:96:13
+2026-10-27T05:14:53.730Z pw:browser [pid=18][out] 
+2026-10-27T05:14:54.019Z pw:browser [pid=18][err] [151] Sandbox: writing /proc/self/uid_map: EPERM
+2026-10-27T05:15:06.577Z pw:browser [pid=18][out] console.warn: BackupService: "There was an error while trying to get the Document's directory" [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIProperties.get]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource:///modules/backup/BackupService.sys.mjs :: get docsDirFolderPath :: line 1299"  data: no]
+2026-10-27T05:15:06.578Z pw:browser [pid=18][err] JavaScript error: resource:///modules/backup/BackupService.sys.mjs, line 4380: NotAllowedError: PathUtils.join: PathUtils does not support empty paths
+2026-10-27T05:15:09.984Z pw:browser [pid=18] <gracefully close start>
+2026-10-27T05:15:10.027Z pw:browser [pid=18] <kill>
+2026-10-27T05:15:10.027Z pw:browser [pid=18] <will force kill>
+2026-10-27T05:15:10.029Z pw:browser [pid=18] starting temporary directories cleanup
+2026-10-27T05:15:10.041Z pw:browser [pid=18] finished temporary directories cleanup
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+browser.newPage: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /root/.cache/ms-playwright/firefox-1538/firefox/firefox -no-remote -headless -profile /tmp/playwright_firefoxdev_profile-LF36ts -juggler-pipe -silent
+<launched> pid=18
+[pid=18][err] *** You are running in headless mode.
+[pid=18][err] JavaScript warning: resource://services-settings/Utils.sys.mjs, line 119: unreachable code after return statement
+[pid=18][out] 
+[pid=18][out] Juggler listening to the pipe
+[pid=18][err] [92] Sandbox: writing /proc/self/uid_map: EPERM
+[pid=18][err] [WARN  rkv::backend::impl_safe::environment] `load_ratio()` is irrelevant for this storage backend.
+[pid=18][err] [94] Sandbox: writing /proc/self/uid_map: EPERM
+[pid=18][err] [98] Sandbox: writing /proc/self/uid_map: EPERM
+[pid=18][err] [Parent 18, IPC I/O Parent] WARNING: process 94 exited on signal 11: file ipc/chromium/src/chrome/common/process_watcher_posix_sigchld.cc:161
+[pid=18][err] [100] Sandbox: writing /proc/self/uid_map: EPERM
+[pid=18][err] [Parent 18, IPC I/O Parent] WARNING: process 100 exited on signal 11: file ipc/chromium/src/chrome/common/process_watcher_posix_sigchld.cc:161
+[pid=18][err] [120] Sandbox: writing /proc/self/uid_map: EPERM
+[pid=18][err] [Parent 18, IPC I/O Parent] WARNING: process 120 exited on signal 11: file ipc/chromium/src/chrome/common/process_watcher_posix_sigchld.cc:161
+[pid=18][err] [123] Sandbox: writing /proc/self/uid_map: EPERM
+[pid=18][err] [130] Sandbox: writing /proc/self/uid_map: EPERM
+[pid=18][out] 
+[pid=18][out]         ERROR: ERROR: cannot find session with id "dad6ae90-a8e4-4c11-b562-4dd67ea55ebd" _dispatch@chrome://juggler/content/protocol/Dispatcher.js:54:15
+[pid=18][out] receiveMessage@chrome://juggler/content/components/Juggler.js:121:20
+[pid=18][out] 
+[pid=18][err] [Parent 18, IPC I/O Parent] WARNING: process 123 exited on signal 11: file ipc/chromium/src/chrome/common/process_watcher_posix_sigchld.cc:161
+[pid=18][err] [Parent 18, IPC I/O Parent] WARNING: process 130 exited on signal 11: file ipc/chromium/src/chrome/common/process_watcher_posix_sigchld.cc:161
+[pid=18][err] [132] Sandbox: writing /proc/self/uid_map: EPERM
+[pid=18][err] [Parent 18, IPC I/O Parent] WARNING: process 132 exited on signal 11: file ipc/chromium/src/chrome/common/process_watcher_posix_sigchld.cc:161
+[pid=18][out]       console.error: (new TypeError("can't access property \"maybeCancelContentJSExecution\", this._browser.frameLoader.remoteTab is null", "resource://gre/modules/RemoteWebNavigation.sys.mjs", 41))
+[pid=18][err] [137] Sandbox: writing /proc/self/uid_map: EPERM
+[pid=18][err] [Parent 18, IPC I/O Parent] WARNING: process 137 exited on signal 11: file ipc/chromium/src/chrome/common/process_watcher_posix_sigchld.cc:161
+[pid=18][out] console.error: "Error fetching remote settings base url from CDN. Falling back to https://firefox-settings-attachments.cdn.mozilla.net/" (new SyntaxError("XMLHttpRequest.open: '/' is not a valid URL.", (void 0), 126))
+[pid=18][out] console.error: services.settings: 
+[pid=18][out]   Message: EmptyDatabaseError: "main/nimbus-desktop-experiments" has not been synced yet
+[pid=18][out]   Stack:
+[pid=18][out]     EmptyDatabaseError@resource://services-settings/Database.sys.mjs:19:5
+[pid=18][out] list@resource://services-settings/Database.sys.mjs:96:13
+[pid=18][out] 
+[pid=18][err] [151] Sandbox: writing /proc/self/uid_map: EPERM
+[pid=18][out] console.warn: BackupService: "There was an error while trying to get the Document's directory" [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIProperties.get]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource:///modules/backup/BackupService.sys.mjs :: get docsDirFolderPath :: line 1299"  data: no]
+[pid=18][err] JavaScript error: resource:///modules/backup/BackupService.sys.mjs, line 4380: NotAllowedError: PathUtils.join: PathUtils does not support empty paths
+[pid=18] <gracefully close start>
+    at [stdin]:1:148 {
+  log: []
+}
+
+Node.js v24.22.1

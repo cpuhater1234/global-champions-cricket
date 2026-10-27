@@ -1,6 +1,8 @@
 # Global Champions Cricket
 
-The current release is GCC v81: `game/gcc_v8_product_candidate.html` (also `game/gcc_v8_quiet_arcade.html`). It preserves the 36-club pool, portable backups and offline venue photographs, and adds coordinated saves, accurate pending/failure feedback, ordinary exit protection and a full-roster trade guard. Reproduce the tested standalone with `python qa/deep-20261027/build.py --promote`; see [the deep audit and regression instructions](qa/deep-20261027/README.md). The older freeze builder is not the current release path. Close older game copies when using this release, and keep downloaded backups: abrupt browser-crash durability is not guaranteed.
+The current release is GCC v82: `game/gcc_v8_product_candidate.html` (also `game/gcc_v8_quiet_arcade.html`). It preserves the 36-club pool, portable backups, offline venue photographs and cricket simulation. A transactional recovery checkpoint now protects acknowledged saves in tested browser-crash cases, coordinates updated tabs when Web Locks are absent, and offers an explicit choice when saved copies differ. Queued waits are bounded and recovery feedback reports the final save outcome.
+
+Reproduce the tested standalone with `python qa/limits-20261027/build.py --promote`; validate recorded evidence with `python qa/limits-20261027/check_release.py`. See [the recovery audit](qa/limits-20261027/README.md). Final bytes passed10 forced crash/recovery cycles,14 no-Web-Locks writer races and13 WebKit lifecycle checks in each of two modes. Keep downloaded backups and close older game copies. This is measured browser recovery, not a guarantee against OS power loss or every device.
 
 The following section records the original protected baseline.
 

@@ -1,0 +1,10 @@
+{
+  sha: '74af13d0af6e754949b2555990d87bfd8938b71d320bc5ef7f840cbb87bfe681',
+  checks: [
+    'strict-checkpoint-ready',
+    'complete-acknowledges-exact-checkpoint'
+  ],
+  pass: false,
+  failure: 'AssertionError [ERR_ASSERTION]: Recovery completion must replace queued feedback\n' +
+    '    at /workspace/scratch/f98cc1f6c0bf/gcc/qa/limits-20261027/integration.cjs:5:761'
+}

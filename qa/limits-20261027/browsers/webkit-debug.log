@@ -1,0 +1,466 @@
+2026-10-27T05:20:17.559Z pw:api => browserType.launch started
+2026-10-27T05:20:17.578Z pw:browser <launching> /workspace/scratch/f98cc1f6c0bf/gcc/qa/limits-20261027/browsers/webkit-prefix-launcher.sh --inspector-pipe --headless --no-startup-window
+2026-10-27T05:20:17.594Z pw:browser <launched> pid=18
+2026-10-27T05:20:17.774Z pw:api <= browserType.launch succeeded
+2026-10-27T05:20:17.776Z pw:api => browser.newContext started
+2026-10-27T05:20:17.798Z pw:api <= browser.newContext succeeded
+2026-10-27T05:20:17.799Z pw:api => browserContext.newPage started
+2026-10-27T05:20:17.817Z pw:browser [pid=18][err] 
+2026-10-27T05:20:17.824Z pw:browser [pid=18][err] ** (MiniBrowser:18): CRITICAL **: 13:20:17.814: WebKitWebView is-controlled-by-automation set but automation is not allowed in the context, falling back to default session.
+2026-10-27T05:20:18.148Z pw:browser [pid=18][err] libEGL warning: failed to get driver name for fd -1
+2026-10-27T05:20:18.149Z pw:browser [pid=18][err] 
+2026-10-27T05:20:18.158Z pw:browser [pid=18][err] libEGL warning: MESA-LOADER: failed to retrieve device information
+2026-10-27T05:20:18.159Z pw:browser [pid=18][err] 
+2026-10-27T05:20:18.159Z pw:browser [pid=18][err] libEGL warning: failed to get driver name for fd -1
+2026-10-27T05:20:18.159Z pw:browser [pid=18][err] 
+2026-10-27T05:20:18.174Z pw:browser [pid=18][err] MESA: error: ZINK: vkCreateInstance failed (VK_ERROR_INCOMPATIBLE_DRIVER)
+2026-10-27T05:20:18.175Z pw:browser [pid=18][err] libEGL warning: egl: failed to create dri2 screen
+2026-10-27T05:20:18.621Z pw:api <= browserContext.newPage succeeded
+2026-10-27T05:20:18.622Z pw:api => page.goto started
+2026-10-27T05:20:18.627Z pw:api navigating to "http://127.0.0.1:36355/game/gcc_v8_product_candidate.html", waiting until "load"
+2026-10-27T05:20:18.777Z pw:api   "commit" event fired
+2026-10-27T05:20:18.778Z pw:api   navigated to "http://127.0.0.1:36355/game/gcc_v8_product_candidate.html"
+2026-10-27T05:20:19.877Z pw:api   "domcontentloaded" event fired
+2026-10-27T05:20:20.085Z pw:api   "load" event fired
+2026-10-27T05:20:20.085Z pw:api <= page.goto succeeded
+2026-10-27T05:20:20.088Z pw:api => page.evaluate started
+2026-10-27T05:20:20.106Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:20.108Z pw:api => locator.click started
+2026-10-27T05:20:20.115Z pw:api waiting for locator('[data-action="play"]:visible').first()
+2026-10-27T05:20:20.252Z pw:api   locator resolved to <button type="button" data-args="[]" data-action="play" class="g8button g8primary">…</button>
+2026-10-27T05:20:20.261Z pw:api attempting click action
+2026-10-27T05:20:20.262Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-27T05:20:20.560Z pw:api   "networkidle" event fired
+2026-10-27T05:20:20.628Z pw:api   element is visible, enabled and stable
+2026-10-27T05:20:20.628Z pw:api   scrolling into view if needed
+2026-10-27T05:20:20.631Z pw:api   done scrolling
+2026-10-27T05:20:20.659Z pw:api   performing click action
+2026-10-27T05:20:20.784Z pw:api   click action done
+2026-10-27T05:20:20.784Z pw:api   waiting for scheduled navigations to finish
+2026-10-27T05:20:20.785Z pw:api   navigations have finished
+2026-10-27T05:20:20.786Z pw:api <= locator.click succeeded
+2026-10-27T05:20:20.786Z pw:api => page.evaluate started
+2026-10-27T05:20:20.797Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:20.797Z pw:api => locator.click started
+2026-10-27T05:20:20.797Z pw:api waiting for locator('[data-action="world"]:visible').first()
+2026-10-27T05:20:20.849Z pw:api   locator resolved to <button type="button" data-args="[]" data-action="world" class="g8button g8primary">…</button>
+2026-10-27T05:20:20.859Z pw:api attempting click action
+2026-10-27T05:20:20.859Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-27T05:20:21.019Z pw:api   element is visible, enabled and stable
+2026-10-27T05:20:21.019Z pw:api   scrolling into view if needed
+2026-10-27T05:20:21.045Z pw:api   done scrolling
+2026-10-27T05:20:21.065Z pw:api   performing click action
+2026-10-27T05:20:22.197Z pw:api   click action done
+2026-10-27T05:20:22.198Z pw:api   waiting for scheduled navigations to finish
+2026-10-27T05:20:22.200Z pw:api   navigations have finished
+2026-10-27T05:20:22.200Z pw:api <= locator.click succeeded
+2026-10-27T05:20:22.201Z pw:api => page.evaluate started
+2026-10-27T05:20:22.580Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:22.581Z pw:api => page.waitForTimeout started
+2026-10-27T05:20:22.736Z pw:api <= page.waitForTimeout succeeded
+2026-10-27T05:20:22.736Z pw:api => locator.click started
+2026-10-27T05:20:22.738Z pw:api waiting for locator('.g8utilitymenu>summary')
+2026-10-27T05:20:22.761Z pw:api   locator resolved to <summary>Menu</summary>
+2026-10-27T05:20:22.765Z pw:api attempting click action
+2026-10-27T05:20:22.766Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-27T05:20:23.237Z pw:api   element is visible, enabled and stable
+2026-10-27T05:20:23.237Z pw:api   scrolling into view if needed
+2026-10-27T05:20:23.250Z pw:api   done scrolling
+2026-10-27T05:20:23.278Z pw:api   performing click action
+2026-10-27T05:20:23.321Z pw:api   click action done
+2026-10-27T05:20:23.321Z pw:api   waiting for scheduled navigations to finish
+2026-10-27T05:20:23.322Z pw:api   navigations have finished
+2026-10-27T05:20:23.323Z pw:api <= locator.click succeeded
+2026-10-27T05:20:23.324Z pw:api => locator.click started
+2026-10-27T05:20:23.324Z pw:api waiting for locator('[data-action="how"]:visible').first()
+2026-10-27T05:20:23.349Z pw:api   locator resolved to <button type="button" data-args="[]" data-action="how" class="g8button g8ghost g8small">…</button>
+2026-10-27T05:20:23.356Z pw:api attempting click action
+2026-10-27T05:20:23.356Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-27T05:20:23.990Z pw:api   element is visible, enabled and stable
+2026-10-27T05:20:23.990Z pw:api   scrolling into view if needed
+2026-10-27T05:20:24.009Z pw:api   done scrolling
+2026-10-27T05:20:24.025Z pw:api   performing click action
+2026-10-27T05:20:24.223Z pw:api   click action done
+2026-10-27T05:20:24.223Z pw:api   waiting for scheduled navigations to finish
+2026-10-27T05:20:24.223Z pw:api   navigations have finished
+2026-10-27T05:20:24.224Z pw:api <= locator.click succeeded
+2026-10-27T05:20:24.225Z pw:api => page.evaluate started
+2026-10-27T05:20:24.249Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:24.251Z pw:api => page.evaluate started
+2026-10-27T05:20:24.262Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:24.263Z pw:api => page.waitForTimeout started
+2026-10-27T05:20:26.465Z pw:api <= page.waitForTimeout succeeded
+2026-10-27T05:20:26.467Z pw:api => page.evaluate started
+2026-10-27T05:20:26.473Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:26.474Z pw:api => keyboard.press started
+2026-10-27T05:20:26.503Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:26.504Z pw:api => page.waitForTimeout started
+2026-10-27T05:20:28.761Z pw:api <= page.waitForTimeout succeeded
+2026-10-27T05:20:28.764Z pw:api => page.evaluate started
+2026-10-27T05:20:28.867Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:28.868Z pw:api => page.goto started
+2026-10-27T05:20:28.869Z pw:api navigating to "about:blank", waiting until "load"
+2026-10-27T05:20:28.902Z pw:api   navigated to "about:blank"
+2026-10-27T05:20:28.903Z pw:api <= page.goto succeeded
+2026-10-27T05:20:28.904Z pw:api => page.goBack started
+2026-10-27T05:20:28.904Z pw:api waiting for navigation until "load"
+2026-10-27T05:20:28.960Z pw:api   "commit" event fired
+2026-10-27T05:20:28.960Z pw:api   navigated to "http://127.0.0.1:36355/game/gcc_v8_product_candidate.html"
+2026-10-27T05:20:28.960Z pw:api   navigated to "http://127.0.0.1:36355/game/gcc_v8_product_candidate.html"
+2026-10-27T05:20:29.390Z pw:api   "domcontentloaded" event fired
+2026-10-27T05:20:29.511Z pw:api   "load" event fired
+2026-10-27T05:20:29.512Z pw:api <= page.goBack succeeded
+2026-10-27T05:20:29.512Z pw:api => page.evaluate started
+2026-10-27T05:20:29.523Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:29.523Z pw:api => locator.click started
+2026-10-27T05:20:29.524Z pw:api waiting for locator('[data-action="continue"]:visible').first()
+2026-10-27T05:20:29.610Z pw:api   locator resolved to <button type="button" data-action="continue" class="g8button g8continueclub">…</button>
+2026-10-27T05:20:29.621Z pw:api attempting click action
+2026-10-27T05:20:29.621Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-27T05:20:29.691Z pw:api   element is visible, enabled and stable
+2026-10-27T05:20:29.691Z pw:api   scrolling into view if needed
+2026-10-27T05:20:29.702Z pw:api   done scrolling
+2026-10-27T05:20:29.710Z pw:api   performing click action
+2026-10-27T05:20:29.980Z pw:api   "networkidle" event fired
+2026-10-27T05:20:30.051Z pw:api   click action done
+2026-10-27T05:20:30.051Z pw:api   waiting for scheduled navigations to finish
+2026-10-27T05:20:30.052Z pw:api   navigations have finished
+2026-10-27T05:20:30.052Z pw:api <= locator.click succeeded
+2026-10-27T05:20:30.052Z pw:api => page.evaluate started
+2026-10-27T05:20:30.073Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:30.074Z pw:api => page.evaluate started
+2026-10-27T05:20:30.094Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:30.107Z pw:api => page.evaluate started
+2026-10-27T05:20:30.182Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:31.001Z pw:api => page.evaluate started
+2026-10-27T05:20:31.690Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:31.691Z pw:api => page.reload started
+2026-10-27T05:20:31.691Z pw:api waiting for navigation until "load"
+2026-10-27T05:20:31.752Z pw:api   "commit" event fired
+2026-10-27T05:20:31.752Z pw:api   navigated to "http://127.0.0.1:36355/game/gcc_v8_product_candidate.html"
+2026-10-27T05:20:31.752Z pw:api   navigated to "http://127.0.0.1:36355/game/gcc_v8_product_candidate.html"
+2026-10-27T05:20:32.038Z pw:api   "domcontentloaded" event fired
+2026-10-27T05:20:32.151Z pw:api   "load" event fired
+2026-10-27T05:20:32.151Z pw:api <= page.reload succeeded
+2026-10-27T05:20:32.152Z pw:api => locator.click started
+2026-10-27T05:20:32.156Z pw:api waiting for locator('[data-action="continue"]:visible').first()
+2026-10-27T05:20:32.234Z pw:api   locator resolved to <button type="button" data-action="continue" class="g8button g8continueclub">…</button>
+2026-10-27T05:20:32.239Z pw:api attempting click action
+2026-10-27T05:20:32.239Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-27T05:20:32.310Z pw:api   element is visible, enabled and stable
+2026-10-27T05:20:32.310Z pw:api   scrolling into view if needed
+2026-10-27T05:20:32.311Z pw:api   done scrolling
+2026-10-27T05:20:32.318Z pw:api   performing click action
+2026-10-27T05:20:32.650Z pw:api   "networkidle" event fired
+2026-10-27T05:20:32.981Z pw:api   click action done
+2026-10-27T05:20:32.981Z pw:api   waiting for scheduled navigations to finish
+2026-10-27T05:20:32.982Z pw:api   navigations have finished
+2026-10-27T05:20:32.982Z pw:api <= locator.click succeeded
+2026-10-27T05:20:32.982Z pw:api => page.evaluate started
+2026-10-27T05:20:33.026Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:33.027Z pw:api => locator.click started
+2026-10-27T05:20:33.030Z pw:api waiting for locator('[data-action="editXI"]:visible').first()
+2026-10-27T05:20:33.039Z pw:api   locator resolved to <button type="button" data-args="[]" data-action="editXI" class="g8button g8ghost">…</button>
+2026-10-27T05:20:33.042Z pw:api attempting click action
+2026-10-27T05:20:33.042Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-27T05:20:33.228Z pw:api   element is visible, enabled and stable
+2026-10-27T05:20:33.228Z pw:api   scrolling into view if needed
+2026-10-27T05:20:33.231Z pw:api   done scrolling
+2026-10-27T05:20:33.238Z pw:api   performing click action
+2026-10-27T05:20:33.450Z pw:api   click action done
+2026-10-27T05:20:33.450Z pw:api   waiting for scheduled navigations to finish
+2026-10-27T05:20:33.451Z pw:api   navigations have finished
+2026-10-27T05:20:33.451Z pw:api <= locator.click succeeded
+2026-10-27T05:20:33.452Z pw:api => page.evaluate started
+2026-10-27T05:20:33.527Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:33.528Z pw:api => locator.focus started
+2026-10-27T05:20:33.529Z pw:api waiting for locator('[data-action=inspect]:visible').first()
+2026-10-27T05:20:33.545Z pw:api   locator resolved to <button type="button" id="g8xi-183" data-args="[183]" data-action="inspect" aria-label="Edit Phil Mustard" class="g8namescout g8compactscout ">…</button>
+2026-10-27T05:20:33.553Z pw:api <= locator.focus succeeded
+2026-10-27T05:20:33.553Z pw:api => page.evaluate started
+2026-10-27T05:20:33.561Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:33.561Z pw:api => keyboard.press started
+2026-10-27T05:20:33.746Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:33.746Z pw:api => keyboard.press started
+2026-10-27T05:20:33.812Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:33.812Z pw:api => page.evaluate started
+2026-10-27T05:20:33.821Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:33.822Z pw:api => keyboard.press started
+2026-10-27T05:20:33.827Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:33.828Z pw:api => page.evaluate started
+2026-10-27T05:20:33.830Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:33.830Z pw:api => keyboard.press started
+2026-10-27T05:20:33.836Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:33.836Z pw:api => page.evaluate started
+2026-10-27T05:20:33.840Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:33.841Z pw:api => keyboard.press started
+2026-10-27T05:20:33.855Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:33.856Z pw:api => page.evaluate started
+2026-10-27T05:20:33.859Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:33.860Z pw:api => keyboard.press started
+2026-10-27T05:20:33.872Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:33.872Z pw:api => page.evaluate started
+2026-10-27T05:20:33.891Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:33.892Z pw:api => keyboard.press started
+2026-10-27T05:20:33.900Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:33.900Z pw:api => page.evaluate started
+2026-10-27T05:20:33.908Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:33.909Z pw:api => keyboard.press started
+2026-10-27T05:20:33.924Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:33.924Z pw:api => page.evaluate started
+2026-10-27T05:20:33.928Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:33.928Z pw:api => keyboard.press started
+2026-10-27T05:20:33.935Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:33.935Z pw:api => page.evaluate started
+2026-10-27T05:20:33.938Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:33.939Z pw:api => keyboard.press started
+2026-10-27T05:20:33.950Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:33.951Z pw:api => page.evaluate started
+2026-10-27T05:20:33.957Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:33.958Z pw:api => keyboard.press started
+2026-10-27T05:20:33.979Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:33.980Z pw:api => page.evaluate started
+2026-10-27T05:20:33.992Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:33.993Z pw:api => keyboard.press started
+2026-10-27T05:20:34.007Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:34.007Z pw:api => page.evaluate started
+2026-10-27T05:20:34.010Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:34.010Z pw:api => keyboard.press started
+2026-10-27T05:20:34.016Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:34.016Z pw:api => page.evaluate started
+2026-10-27T05:20:34.019Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:34.019Z pw:api => keyboard.press started
+2026-10-27T05:20:34.029Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:34.029Z pw:api => page.evaluate started
+2026-10-27T05:20:34.032Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:34.032Z pw:api => keyboard.press started
+2026-10-27T05:20:34.044Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:34.044Z pw:api => page.evaluate started
+2026-10-27T05:20:34.046Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:34.047Z pw:api => keyboard.press started
+2026-10-27T05:20:34.053Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:34.053Z pw:api => page.evaluate started
+2026-10-27T05:20:34.058Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:34.059Z pw:api => keyboard.press started
+2026-10-27T05:20:34.067Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:34.067Z pw:api => page.evaluate started
+2026-10-27T05:20:34.069Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:34.069Z pw:api => keyboard.press started
+2026-10-27T05:20:34.074Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:34.074Z pw:api => page.evaluate started
+2026-10-27T05:20:34.078Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:34.078Z pw:api => keyboard.press started
+2026-10-27T05:20:34.085Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:34.085Z pw:api => page.evaluate started
+2026-10-27T05:20:34.172Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:34.173Z pw:api => keyboard.press started
+2026-10-27T05:20:34.194Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:34.194Z pw:api => page.evaluate started
+2026-10-27T05:20:34.198Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:34.198Z pw:api => keyboard.press started
+2026-10-27T05:20:34.204Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:34.205Z pw:api => page.evaluate started
+2026-10-27T05:20:34.290Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:34.290Z pw:api => keyboard.press started
+2026-10-27T05:20:34.363Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:34.364Z pw:api => page.evaluate started
+2026-10-27T05:20:34.367Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:34.367Z pw:api => keyboard.press started
+2026-10-27T05:20:34.379Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:34.380Z pw:api => page.evaluate started
+2026-10-27T05:20:34.464Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:34.464Z pw:api => keyboard.press started
+2026-10-27T05:20:34.477Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:34.478Z pw:api => page.evaluate started
+2026-10-27T05:20:34.485Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:34.486Z pw:api => keyboard.press started
+2026-10-27T05:20:34.491Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:34.491Z pw:api => page.evaluate started
+2026-10-27T05:20:34.494Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:34.494Z pw:api => keyboard.press started
+2026-10-27T05:20:34.505Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:34.505Z pw:api => page.evaluate started
+2026-10-27T05:20:34.514Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:34.514Z pw:api => keyboard.press started
+2026-10-27T05:20:34.519Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:34.519Z pw:api => page.evaluate started
+2026-10-27T05:20:34.521Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:34.521Z pw:api => keyboard.press started
+2026-10-27T05:20:34.525Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:34.526Z pw:api => page.evaluate started
+2026-10-27T05:20:34.534Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:34.535Z pw:api => keyboard.press started
+2026-10-27T05:20:34.545Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:34.545Z pw:api => page.evaluate started
+2026-10-27T05:20:34.547Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:34.547Z pw:api => keyboard.press started
+2026-10-27T05:20:34.556Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:34.557Z pw:api => page.evaluate started
+2026-10-27T05:20:34.560Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:34.561Z pw:api => keyboard.press started
+2026-10-27T05:20:34.564Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:34.564Z pw:api => page.evaluate started
+2026-10-27T05:20:34.572Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:34.594Z pw:api => locator.ariaSnapshot started
+2026-10-27T05:20:34.599Z pw:api waiting for locator('body')
+2026-10-27T05:20:34.608Z pw:api   locator resolved to <body>…</body>
+2026-10-27T05:20:34.929Z pw:api <= locator.ariaSnapshot succeeded
+2026-10-27T05:20:34.930Z pw:api => locator.evaluateAll started
+2026-10-27T05:20:35.140Z pw:api <= locator.evaluateAll succeeded
+2026-10-27T05:20:35.142Z pw:api => locator.count started
+2026-10-27T05:20:35.153Z pw:api <= locator.count succeeded
+2026-10-27T05:20:35.154Z pw:api => locator.click started
+2026-10-27T05:20:35.156Z pw:api waiting for locator('[data-action="comparePlayers"]:visible').first()
+2026-10-27T05:20:35.169Z pw:api   locator resolved to <button type="button" data-args="[183]" class="g8button g8ghost" data-action="comparePlayers">…</button>
+2026-10-27T05:20:35.173Z pw:api attempting click action
+2026-10-27T05:20:35.173Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-27T05:20:35.326Z pw:api   element is visible, enabled and stable
+2026-10-27T05:20:35.326Z pw:api   scrolling into view if needed
+2026-10-27T05:20:35.328Z pw:api   done scrolling
+2026-10-27T05:20:35.333Z pw:api   performing click action
+2026-10-27T05:20:35.358Z pw:api   click action done
+2026-10-27T05:20:35.358Z pw:api   waiting for scheduled navigations to finish
+2026-10-27T05:20:35.359Z pw:api   navigations have finished
+2026-10-27T05:20:35.359Z pw:api <= locator.click succeeded
+2026-10-27T05:20:35.360Z pw:api => page.evaluate started
+2026-10-27T05:20:35.409Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:35.409Z pw:api => locator.innerText started
+2026-10-27T05:20:35.410Z pw:api waiting for locator('dialog[open] #g8dialogTitle')
+2026-10-27T05:20:35.422Z pw:api   locator resolved to <h2 id="g8dialogTitle">Compare your options</h2>
+2026-10-27T05:20:35.423Z pw:api <= locator.innerText succeeded
+2026-10-27T05:20:35.423Z pw:api => page.evaluate started
+2026-10-27T05:20:35.432Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:35.433Z pw:api => keyboard.press started
+2026-10-27T05:20:35.516Z pw:api <= keyboard.press succeeded
+2026-10-27T05:20:35.517Z pw:api => page.evaluate started
+2026-10-27T05:20:35.521Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:35.521Z pw:api => locator.click started
+2026-10-27T05:20:35.522Z pw:api waiting for locator('[data-action="lodge"]:visible').first()
+2026-10-27T05:20:35.534Z pw:api   locator resolved to <button type="button" data-args="[]" data-action="lodge" class="g8button g8primary">…</button>
+2026-10-27T05:20:35.539Z pw:api attempting click action
+2026-10-27T05:20:35.539Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-27T05:20:35.627Z pw:api   element is visible, enabled and stable
+2026-10-27T05:20:35.628Z pw:api   scrolling into view if needed
+2026-10-27T05:20:35.630Z pw:api   done scrolling
+2026-10-27T05:20:35.638Z pw:api   performing click action
+2026-10-27T05:20:35.840Z pw:api   click action done
+2026-10-27T05:20:35.840Z pw:api   waiting for scheduled navigations to finish
+2026-10-27T05:20:35.841Z pw:api   navigations have finished
+2026-10-27T05:20:35.842Z pw:api <= locator.click succeeded
+2026-10-27T05:20:35.843Z pw:api => page.evaluate started
+2026-10-27T05:20:35.848Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:35.848Z pw:api => locator.click started
+2026-10-27T05:20:35.849Z pw:api waiting for locator('[data-action="prepare"]:visible').first()
+2026-10-27T05:20:35.861Z pw:api   locator resolved to <button type="button" data-args="[]" data-action="prepare" class="g8button g8ghost">…</button>
+2026-10-27T05:20:35.863Z pw:api attempting click action
+2026-10-27T05:20:35.864Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-27T05:20:35.902Z pw:api   element is visible, enabled and stable
+2026-10-27T05:20:35.903Z pw:api   scrolling into view if needed
+2026-10-27T05:20:35.905Z pw:api   done scrolling
+2026-10-27T05:20:35.910Z pw:api   performing click action
+2026-10-27T05:20:36.049Z pw:api   click action done
+2026-10-27T05:20:36.049Z pw:api   waiting for scheduled navigations to finish
+2026-10-27T05:20:36.049Z pw:api   navigations have finished
+2026-10-27T05:20:36.050Z pw:api <= locator.click succeeded
+2026-10-27T05:20:36.050Z pw:api => page.evaluate started
+2026-10-27T05:20:36.113Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:36.114Z pw:api => locator.click started
+2026-10-27T05:20:36.114Z pw:api waiting for locator('[data-action="playMatch"]:visible').first()
+2026-10-27T05:20:36.126Z pw:api   locator resolved to <button type="button" data-args="[2]" data-action="playMatch" class="g8button g8primary">…</button>
+2026-10-27T05:20:36.129Z pw:api attempting click action
+2026-10-27T05:20:36.129Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-27T05:20:36.407Z pw:api   element is visible, enabled and stable
+2026-10-27T05:20:36.409Z pw:api   scrolling into view if needed
+2026-10-27T05:20:36.422Z pw:api   done scrolling
+2026-10-27T05:20:36.456Z pw:api   performing click action
+2026-10-27T05:20:37.186Z pw:api   click action done
+2026-10-27T05:20:37.187Z pw:api   waiting for scheduled navigations to finish
+2026-10-27T05:20:37.187Z pw:api   navigations have finished
+2026-10-27T05:20:37.188Z pw:api <= locator.click succeeded
+2026-10-27T05:20:37.189Z pw:api => page.evaluate started
+2026-10-27T05:20:37.962Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:37.964Z pw:api => locator.click started
+2026-10-27T05:20:37.965Z pw:api waiting for locator('[data-action="matchRun"]:visible').first()
+2026-10-27T05:20:37.982Z pw:api   locator resolved to <button type="button" data-args="[]" data-action="matchRun" class="g8button g8primary">…</button>
+2026-10-27T05:20:37.985Z pw:api attempting click action
+2026-10-27T05:20:37.985Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-27T05:20:38.141Z pw:api   element is visible, enabled and stable
+2026-10-27T05:20:38.141Z pw:api   scrolling into view if needed
+2026-10-27T05:20:38.143Z pw:api   done scrolling
+2026-10-27T05:20:38.147Z pw:api   performing click action
+2026-10-27T05:20:38.297Z pw:api   click action done
+2026-10-27T05:20:38.297Z pw:api   waiting for scheduled navigations to finish
+2026-10-27T05:20:38.297Z pw:api   navigations have finished
+2026-10-27T05:20:38.302Z pw:api <= locator.click succeeded
+2026-10-27T05:20:38.304Z pw:api => page.evaluate started
+2026-10-27T05:20:38.308Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:38.309Z pw:api => page.evaluate started
+2026-10-27T05:20:38.314Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:38.315Z pw:api => page.goto started
+2026-10-27T05:20:38.315Z pw:api navigating to "about:blank", waiting until "load"
+2026-10-27T05:20:38.361Z pw:api   navigated to "about:blank"
+2026-10-27T05:20:38.362Z pw:api <= page.goto succeeded
+2026-10-27T05:20:38.362Z pw:api => page.goBack started
+2026-10-27T05:20:38.363Z pw:api waiting for navigation until "load"
+2026-10-27T05:20:38.502Z pw:api   "commit" event fired
+2026-10-27T05:20:38.502Z pw:api   navigated to "http://127.0.0.1:36355/game/gcc_v8_product_candidate.html"
+2026-10-27T05:20:38.502Z pw:api   navigated to "http://127.0.0.1:36355/game/gcc_v8_product_candidate.html"
+2026-10-27T05:20:39.361Z pw:api   "domcontentloaded" event fired
+2026-10-27T05:20:39.647Z pw:api   "load" event fired
+2026-10-27T05:20:39.648Z pw:api <= page.goBack succeeded
+2026-10-27T05:20:39.649Z pw:api => locator.click started
+2026-10-27T05:20:39.649Z pw:api waiting for locator('[data-action="continue"]:visible').first()
+2026-10-27T05:20:39.962Z pw:api   locator resolved to <button type="button" data-action="continue" class="g8button g8continueclub">…</button>
+2026-10-27T05:20:39.966Z pw:api attempting click action
+2026-10-27T05:20:39.966Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-27T05:20:39.992Z pw:api   element is visible, enabled and stable
+2026-10-27T05:20:39.992Z pw:api   scrolling into view if needed
+2026-10-27T05:20:39.996Z pw:api   done scrolling
+2026-10-27T05:20:40.001Z pw:api   performing click action
+2026-10-27T05:20:40.024Z pw:api   "networkidle" event fired
+2026-10-27T05:20:40.766Z pw:api   click action done
+2026-10-27T05:20:40.766Z pw:api   waiting for scheduled navigations to finish
+2026-10-27T05:20:40.767Z pw:api   navigations have finished
+2026-10-27T05:20:40.768Z pw:api <= locator.click succeeded
+2026-10-27T05:20:40.769Z pw:api => page.evaluate started
+2026-10-27T05:20:40.774Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:40.774Z pw:api => page.evaluate started
+2026-10-27T05:20:40.779Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:40.779Z pw:api => page.waitForTimeout started
+2026-10-27T05:20:42.784Z pw:api <= page.waitForTimeout succeeded
+2026-10-27T05:20:42.785Z pw:api => page.evaluate started
+2026-10-27T05:20:42.794Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:42.794Z pw:api => page.evaluate started
+2026-10-27T05:20:42.796Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:42.797Z pw:api => locator.click started
+2026-10-27T05:20:42.797Z pw:api waiting for locator('[data-action="matchRun"]:visible').first()
+2026-10-27T05:20:42.839Z pw:api   locator resolved to <button type="button" data-args="[]" data-action="matchRun" class="g8button g8primary">…</button>
+2026-10-27T05:20:42.843Z pw:api attempting click action
+2026-10-27T05:20:42.843Z pw:api   waiting for element to be visible, enabled and stable
+2026-10-27T05:20:42.893Z pw:api   element is visible, enabled and stable
+2026-10-27T05:20:42.893Z pw:api   scrolling into view if needed
+2026-10-27T05:20:42.911Z pw:api   done scrolling
+2026-10-27T05:20:42.966Z pw:api   performing click action
+2026-10-27T05:20:43.358Z pw:api   click action done
+2026-10-27T05:20:43.359Z pw:api   waiting for scheduled navigations to finish
+2026-10-27T05:20:43.361Z pw:api   navigations have finished
+2026-10-27T05:20:43.363Z pw:api <= locator.click succeeded
+2026-10-27T05:20:43.363Z pw:api => page.evaluate started
+2026-10-27T05:20:43.366Z pw:api <= page.evaluate succeeded
+2026-10-27T05:20:43.367Z pw:api => page.waitForTimeout started
+2026-10-27T05:20:46.102Z pw:api <= page.waitForTimeout succeeded
+2026-10-27T05:20:46.601Z pw:api => page.evaluate started
+2026-10-27T05:20:46.636Z pw:browser [pid=18] <gracefully close start>
+2026-10-27T05:20:46.647Z pw:api <= page.evaluate failed
+2026-10-27T05:20:46.649Z pw:api => page.evaluate started
+2026-10-27T05:20:46.660Z pw:api <= page.evaluate failed
+{"checks":[{"name":"native-modal-pauses-reveal","pass":true},{"name":"native-modal-close-resumes-reveal","pass":true},{"name":"actual-navigation-pagehide","pass":true},{"name":"reveal-restored-after-navigation","pass":true},{"name":"native-modal-no-background-control-focus","pass":true},{"name":"nested-scout-compare-modal-labelled","pass":true},{"name":"nested-modal-return-original-opener","pass":true},{"name":"paused-match-navigation-persistence","pass":true},{"name":"paused-match-remains-paused","pass":true}],"failure":{"message":"page.evaluate: Target page, context or browser has been closed\n    at state (/workspace/scratch/f98cc1f6c0bf/gcc/qa/limits-20261027/browsers/lifecycle.cjs:2:1498)\n    at /workspace/scratch/f98cc1f6c0bf/gcc/qa/limits-20261027/browsers/lifecycle.cjs:7:542","state":null},"environment":{"browsers":[{"name":"firefox","path":"/root/.cache/ms-playwright/firefox-1538/firefox/firefox","installed":true},{"name":"webkit","path":"/root/.cache/ms-playwright/webkit-2336/pw_run.sh","installed":true}],"chromium":"/tmp/gcc-chromium-complete"}}
+2026-10-27T05:20:46.670Z pw:api => browser.close started
+2026-10-27T05:20:46.672Z pw:browser [pid=18] <forcefully close>
+2026-10-27T05:20:46.675Z pw:browser [pid=18] <kill>
+2026-10-27T05:20:46.675Z pw:browser [pid=18] <will force kill>
+2026-10-27T05:20:46.798Z pw:browser [pid=18] <process did exit: exitCode=0, signal=null>
+2026-10-27T05:20:46.799Z pw:browser [pid=18] starting temporary directories cleanup
+2026-10-27T05:20:46.806Z pw:browser [pid=18] finished temporary directories cleanup
+2026-10-27T05:20:46.806Z pw:browser [pid=18] <gracefully close end>
+2026-10-27T05:20:46.806Z pw:api <= browser.close succeeded

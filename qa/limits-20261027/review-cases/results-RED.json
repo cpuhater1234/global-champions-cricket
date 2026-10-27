@@ -1,0 +1,20 @@
+{
+  "sha": "c3d1693bd008571eae71c6cfdad4ba6807fe16756ac1606a0569ca4c924cfd60",
+  "cases": [
+    {
+      "name": "invalid-current-valid-previous-missing-primary",
+      "pass": false,
+      "observed": null
+    },
+    {
+      "name": "no-abortcontroller-denied-idb-held-web-lock",
+      "pass": false,
+      "observed": {
+        "pending": true,
+        "error": "",
+        "mode": "unavailable"
+      }
+    }
+  ],
+  "pass": false
+}
