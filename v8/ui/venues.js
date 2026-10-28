@@ -17,10 +17,11 @@
   const src=venueSource(c);
   // Never render an illustrated pitch behind the actual ground. The photograph is
   // the sole visual; the neutral reserved frame is only a loading/error state.
-  return `<figure class="g8stadium" data-venue="${X.esc(c.abbr)}"><div class="g8venueframe"><img class="g8stadiumphoto${loaded.has(src)?' g8photoready':''}" ${failed.has(src)?'hidden':''} src="${X.esc(src)}" width="${photo.width}" height="${photo.height}" alt="${X.esc(c.ground)} · ${X.esc(c.name)} home ground" decoding="sync" loading="eager" fetchpriority="high" referrerpolicy="no-referrer"><span class="g8venuefallback">${X.esc(c.ground)}</span></div><figcaption>${X.icon('building-stadium')}<span class="g8venuecaption">${X.esc(c.ground)} · Home of ${X.esc(c.name)}<small class="g8photocredit"><a href="${X.esc(photo.source)}" target="_blank" rel="noopener noreferrer">Photo: ${X.esc(photo.author)}</a> · <a href="${X.esc(photo.licenceUrl)}" target="_blank" rel="noopener noreferrer">${X.esc(photo.licence==='PD'?'Public domain':photo.licence==='CC0'?'CC0':'CC '+photo.licence.toUpperCase().replace('/',' '))}</a></small></span></figcaption></figure>`;
+  return `<figure class="g8stadium" data-venue="${X.esc(c.abbr)}"><div class="g8venueframe"><img class="g8stadiumphoto${loaded.has(src)?' g8photoready':''}" ${failed.has(src)?'hidden':''} src="${X.esc(src)}" width="${photo.width}" height="${photo.height}" alt="${X.esc(c.ground)} · ${X.esc(c.name)} home ground" decoding="sync" loading="eager" fetchpriority="high" referrerpolicy="no-referrer"><span class="g8venuefallback">${X.esc(c.ground)}</span></div><figcaption><span class="g8venuecaption">${X.esc(c.ground)} · Home of ${X.esc(c.name)}<small class="g8photocredit"><a href="${X.esc(photo.source)}" target="_blank" rel="noopener noreferrer">Photo: ${X.esc(photo.author)}</a> · <a href="${X.esc(photo.licenceUrl)}" target="_blank" rel="noopener noreferrer">${X.esc(photo.licence==='PD'?'Public domain':photo.licence==='CC0'?'CC0':'CC '+photo.licence.toUpperCase().replace('/',' '))}</a></small></span></figcaption></figure>`;
  };
  // Failed images retain a correctly named neutral frame across every view.
  document.addEventListener('error',event=>{const img=event.target;if(img?.classList?.contains('g8stadiumphoto')){failed.add(img.getAttribute('src'));img.hidden=true;}},true);
  document.addEventListener('load',event=>{const img=event.target;if(img?.classList?.contains('g8stadiumphoto')){loaded.add(img.getAttribute('src'));img.classList.add('g8photoready');}},true);
 })();
+
 

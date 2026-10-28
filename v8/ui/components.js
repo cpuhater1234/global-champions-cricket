@@ -8,7 +8,7 @@ window.GCC8 = (()=>{
   const glyph=action==='move'?(args[1]===-1?'arrow-up':'arrow-down'):action==='seasonTab'?({matchday:'cricket',ladder:'trophy',fixtures:'calendar-event',players:'chart-bar',leaguePlayers:'chart-bar'}[args[0]]):action==='rating'?(String(args[0]).includes('Bat')||['finishing','newBall','middleBowl','death','battingResources','bowlingResources'].includes(args[0])?'cricket':args[0]==='keeping'?'shield-check':'users-group'):actionIcons[action];
   const arrow=action==='move';return `<button type="button" ${id?`id="${esc(id)}"`:''} ${action==='seasonTab'?`aria-pressed="${ui.seasonTab===args[0]}"`:''} ${arrow?`aria-label="Move batter ${args[1]===-1?'up':'down'}"`:''} class="g8button ${kind}" data-action="${esc(action)}" data-args="${esc(JSON.stringify(args))}" ${disabled?'disabled':''}>${glyph?icon(glyph):''}${arrow?'':`<span>${esc(label)}</span>`}</button>`;
  };
- const stadium=()=>`<figure class="g8stadium"><img class="g8stadiumphoto" src="${window.GCC8_MEDIA.stadium}" width="1280" height="960" alt="A cricket match at the Melbourne Cricket Ground under floodlights, with the pitch and players visible" decoding="async"><figcaption>${icon('building-stadium')}<span>Cricket under lights · Melbourne Cricket Ground</span></figcaption></figure>`;
+ const stadium=()=>`<figure class="g8stadium"><img class="g8stadiumphoto" src="${window.GCC8_MEDIA.stadium}" width="1280" height="960" alt="A cricket match at the Melbourne Cricket Ground under floodlights, with the pitch and players visible" decoding="async"><figcaption><span>Cricket under lights · Melbourne Cricket Ground</span></figcaption></figure>`;
  // Club colour belongs to the mark alone. Player names always use a fixed ink colour.
  const clubInk=c=>{
   const luminance=hex=>{if(!/^#[0-9a-f]{6}$/i.test(hex||''))return null;const values=[1,3,5].map(i=>{const v=parseInt(hex.slice(i,i+2),16)/255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4;});return values[0]*.2126+values[1]*.7152+values[2]*.0722;};
@@ -69,3 +69,4 @@ window.GCC8 = (()=>{
  };
 
 })();
+
