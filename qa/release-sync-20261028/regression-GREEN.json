@@ -1,0 +1,29 @@
+{
+  "sha": "8b0519d4fef0e10a0a05356387788e346c9a36487ca500eb755055aae36a147a",
+  "checks": [
+    {
+      "name": "draft-hit-area-within-card",
+      "pass": true,
+      "evidence": {
+        "outsideHit": false,
+        "client": 890,
+        "scroll": 890
+      }
+    },
+    {
+      "name": "draft-board-no-local-overflow",
+      "pass": true,
+      "evidence": {
+        "outsideHit": false,
+        "client": 890,
+        "scroll": 890
+      }
+    },
+    {
+      "name": "2026-review-no-next-season-promise",
+      "pass": true,
+      "evidence": "an\n\nBrisbane Heat are champions.\n\n7 of 8\nFinished\n4\nWins\n10\nLosses\n\n2 more league wins than 2025. 2 then · 4 now. League matches only.\n\nYOUR LEADING PLAYERS\nWITH THE BAT\nRohit Sharma\n334 runs · SR 135.2\nJonny Bairstow\n332 runs · SR 131.2\nDaryl Mitchell\n242 runs · SR 131.5\nWITH THE BALL\nMohammed Shami\n19 wickets · Econ 7.39\nSikandar Raza\n15 wickets · Econ 9.05\nChris Woakes\n12 wickets · Econ 7.26\nFull player stats\nReflect on your final season\n+\nYour nineteen-season career is complete.\nClub archive"
+    }
+  ],
+  "pass": true
+}

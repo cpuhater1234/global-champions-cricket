@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/f98cc1f6c0bf/gcc/qa/release-sync-20261028/check_sync.py", line 18, in <module>
+    p=argparse.ArgumentParser();p.add_argument('--file',type=Path,default=Q/'candidate.html');p.add_argument('--source',type=Path,default=R/'v8/ui/workspace.css');a=p.parse_args();check(a.file,a.source)
+                                                                                                                                                                                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/f98cc1f6c0bf/gcc/qa/release-sync-20261028/check_sync.py", line 6, in check
+    assert source.read_text().strip() in h,'Source workspace CSS does not match playable'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Source workspace CSS does not match playable

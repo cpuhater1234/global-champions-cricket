@@ -1,0 +1,16 @@
+{
+  sha: '8b0519d4fef0e10a0a05356387788e346c9a36487ca500eb755055aae36a147a',
+  checks: [
+    {
+      name: 'start-screen-only-game-actions',
+      pass: true,
+      evidence: undefined
+    },
+    { name: 'mobile-header-one-row', pass: true, evidence: [Object] },
+    { name: 'mobile-brand-readable', pass: true, evidence: [Object] },
+    { name: 'mobile-header-compact', pass: true, evidence: [Object] },
+    { name: 'backup-remains-in-menu', pass: true, evidence: undefined },
+    { name: 'all-five-career-tabs-fit', pass: true, evidence: [Array] }
+  ],
+  pass: true
+}

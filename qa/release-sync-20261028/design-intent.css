@@ -1,0 +1,6 @@
+/* Preserve the external precision pass's removal of floating decorative art.
+   Venue photographs and their separate licence credits remain visible. */
+.g8panelart,.g8introbrief>.g8introart,.g8referencearena,.g8heroart .g8arenaheader{display:none!important}
+.g8introbrief{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.g8introcopy{flex:1 1 300px;min-width:0;padding-right:0}
+.g8introcopy>h1{margin-top:0;line-height:1.2;overflow-wrap:normal;word-break:normal}

@@ -1950,6 +1950,88 @@ html,body{background:#191c1a}
 #g8app .g8photocredit{display:block;margin-top:.4rem;font-size:.75rem;line-height:1.5;color:#e9dfcb}
 #g8app .g8photocredit a{color:inherit;text-decoration:underline;text-underline-offset:.15em}
 #g8app .g8photocredit a:focus-visible{outline:2px solid #fff4df;outline-offset:3px}
+
+/* Club-guide ground conditions: a compact, legible scouting strip. */
+#g8dialog .g8clubbrief>.g8sheet:first-child{container-type:inline-size}
+#g8dialog .g8clubbrief .g8groundbands{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.55rem;align-items:stretch;margin-top:1.2rem}
+#g8dialog .g8clubbrief .g8groundbands>.g8conditionread{display:flex;flex-direction:column;align-items:stretch;justify-content:space-between;gap:.75rem;min-width:0;padding:.8rem .7rem;background:#303a32;border:1px solid #728570;border-top:3px solid #abc49a;border-radius:6px}
+#g8dialog .g8clubbrief .g8groundbands .g8conditionread>div:first-child{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:.4rem;min-width:0;line-height:1.35;text-align:left}
+#g8dialog .g8clubbrief .g8groundbands .g8conditionread b{display:block;margin:0;color:#bfcbbd;font-size:.82rem;font-weight:700;line-height:1.35;overflow-wrap:normal;word-break:normal}
+#g8dialog .g8clubbrief .g8groundbands .g8conditionread strong{display:block;margin:0;padding:0;background:transparent;border:0;border-radius:0;color:#fff3da;font-size:1rem;font-weight:800;line-height:1.35;overflow-wrap:normal;word-break:normal;text-align:left}
+#g8dialog .g8clubbrief .g8groundbands .g8conditiongauge{flex:none;width:100%;height:9px;margin:0;border-color:#789781}
+#g8dialog .g8clubbrief .g8groundbands .g8conditionends{display:none}
+@container(max-width:22rem){
+ #g8dialog .g8clubbrief .g8groundbands{grid-template-columns:minmax(0,1fr);gap:.45rem}
+ #g8dialog .g8clubbrief .g8groundbands>.g8conditionread{padding:.7rem .8rem;gap:.55rem}
+ #g8dialog .g8clubbrief .g8groundbands .g8conditionread>div:first-child{display:flex;flex-direction:row;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.35rem .7rem}
+ #g8dialog .g8clubbrief .g8groundbands .g8conditiongauge{height:8px}
+}
+
+/* Preserve the external precision pass's removal of floating decorative art.
+   Venue photographs and their separate licence credits remain visible. */
+.g8panelart,.g8introbrief>.g8introart,.g8referencearena,.g8heroart .g8arenaheader{display:none!important}
+.g8introbrief{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.g8introcopy{flex:1 1 300px;min-width:0;padding-right:0}
+.g8introcopy>h1{margin-top:0;line-height:1.2;overflow-wrap:normal;word-break:normal}
+
+/* Precision pass: flatten all nested club surfaces, reduce visual stacking, and keep the premium dark system readable. */
+
+/* Club surfaces: one all-in-one card, no internal nested boxes competing for attention. */
+.g8club.g8franchise,
+.g8club.g8franchise .g8clubbody,
+.g8club.g8franchise .g8clubground,
+.g8club.g8franchise .g8clubticket,
+.g8club.g8franchise .g8groundbands,
+.g8club.g8franchise .g8clubbrief,
+.g8club.g8franchise .g8sheet,
+.g8club.g8franchise .g8clubplan,
+.g8club.g8franchise .g8clubpriorities,
+.g8club.g8franchise > *{min-width:0}
+.g8club.g8franchise .g8sheet{background:transparent;border:0;padding:0;box-shadow:none;border-radius:0}
+.g8club.g8franchise .g8clubbody{display:flex;flex-direction:column;gap:.75rem}
+.g8club.g8franchise .g8clubground{display:flex;flex-direction:column;gap:.55rem}
+.g8club.g8franchise .g8groundbands{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem;margin-top:.1rem}
+.g8club.g8franchise .g8groundbands>div{padding:.7rem .8rem;border:1px solid #4d514c;border-radius:8px;background:#1d1f1d;min-width:0}
+.g8club.g8franchise .g8groundbands strong,
+.g8club.g8franchise .g8groundbands b{display:block;overflow-wrap:anywhere}
+.g8club.g8franchise .g8groundbands small{display:block;line-height:1.45}
+.g8club.g8franchise .g8clubpriorities{display:grid;gap:.55rem;padding:0;margin:0;list-style:none}
+.g8club.g8franchise .g8clubpriorities li{padding:.7rem .8rem;border:1px solid #4d514c;border-radius:8px;background:#1d1f1d;min-width:0;display:flex;align-items:flex-start;gap:.6rem}
+.g8club.g8franchise .g8prioritynumber{display:inline-grid;place-items:center;min-width:1.8rem;height:1.8rem;border-radius:999px;background:#2d5a46;color:#edf7f2;font-size:.75rem;font-weight:800}
+.g8club.g8franchise .g8prioritylabel{color:#d9dfd5;font-size:.95rem;line-height:1.4}
+
+/* Tighten all reveal-grid and choice surfaces so they remain one coherent decision, not a stack of little panels. */
+.g8revealgrid,
+.g8clubgrid,
+.g8ordergrid,
+.g8matchgrid,
+.g8teamworkspace,
+.g8annualworkspace{gap:1rem}
+.g8revealgrid > .g8club,
+.g8revealgrid > .g8sealed,
+.g8ordergrid > .g8club,
+.g8ordergrid > .g8sealed{min-height:0;padding:1rem}
+.g8revealgrid > .g8club .g8clubbody,
+.g8ordergrid > .g8club .g8clubbody{gap:.55rem}
+
+/* Prevent duplicate surfaces from appearing inside HUD and top menu. */
+#g8hud .g8hudclub>div,
+#g8hud .g8button,
+#g8hud .g8navitem{max-width:100%}
+#g8hud .g8careernav{padding-top:.55rem}
+
+/* Final mobile compactness: keep each card readable without internal overlap. */
+@media(max-width:760px){
+  .g8club.g8franchise .g8groundbands{grid-template-columns:1fr}
+  .g8club.g8franchise .g8clubpriorities li{padding:.65rem .7rem}
+  .g8club.g8franchise .g8clubticket h3,.g8club.g8franchise .g8clubticket b,.g8club.g8franchise .g8clubticket span{overflow-wrap:anywhere}
+}
+
+@media(max-width:480px){
+  .g8club.g8franchise{padding:.8rem}
+  .g8club.g8franchise .g8clubcover{display:grid;grid-template-columns:52px 1fr;align-items:start;gap:.65rem}
+  .g8club.g8franchise .g8badge{justify-self:start}
+}
 </style><style id="gcc-club-catalogue-styles">
 /* Keep club abbreviations atomic when readers enlarge text. */
 .g8clubidentitypanel .g8badge {
