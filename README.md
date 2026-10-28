@@ -1,8 +1,8 @@
 # Global Champions Cricket
 
-The current release is **GCC v93**. Four supplied cricket figures appear individually as faint watermarks in selected introduction, signing, squad-update and season-review panels. Other surfaces remain plain. The original artwork is embedded unchanged, works offline and is smaller and quieter on phones. v92 heading hierarchy, colourful clubs, framed guides and stacked ground scales are preserved.
+The current release is **GCC v94**. Matte scorebug-style panels use deep green, charcoal and slate with restrained cream title bars. A static worn scoreboard/stadium texture adds character to the main canvas; content panels remain clear and club colours are preserved. Club-guide trait labels now fit their text. The v92 heading hierarchy and v93 cricket figures remain.
 
-Rebuild with `python qa/cricket-watermarks-20261028/build.py --promote`. See [watermark QA](qa/cricket-watermarks-20261028/README.md). All252 screen/width/font checks pass, including unchanged heading/control geometry, all four figures and zero page errors. All20 inline scripts remain byte-identical to v92. Historical builders reproduce historical releases and must not promote the current release.
+Rebuild with `python qa/scorebug-palette-20261028/build.py --promote`. See [palette QA](qa/scorebug-palette-20261028/README.md).252 screen/layout cases,432 club-guide cases and21 targeted contrast states pass. All20 scripts remain byte-identical to v93. Historical builders reproduce historical releases and must not promote the current release.
 
 The following section records the original protected baseline.
 
