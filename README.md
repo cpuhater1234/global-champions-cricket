@@ -1,8 +1,8 @@
 # Global Champions Cricket
 
-The current release is **GCC v94**. Matte scorebug-style panels use deep green, charcoal and slate with restrained cream title bars. A static worn scoreboard/stadium texture adds character to the main canvas; content panels remain clear and club colours are preserved. Club-guide trait labels now fit their text. The v92 heading hierarchy and v93 cricket figures remain.
+The current release is **GCC v95**. Signing decisions use compact dark scorebug cards with explicit SIGNED/DECLINED/UPDATE strips and clear player details. Matching player cards throughout drafting and squad planning replace the old cream identity blocks. Club cards, heading hierarchy, subtle cricket art and textured canvas retain their identity.
 
-Rebuild with `python qa/scorebug-palette-20261028/build.py --promote`. See [palette QA](qa/scorebug-palette-20261028/README.md).252 screen/layout cases,432 club-guide cases and21 targeted contrast states pass. All20 scripts remain byte-identical to v93. Historical builders reproduce historical releases and must not promote the current release.
+Rebuild with `python qa/player-tiles-20261028/build.py --promote`. See [player-card QA](qa/player-tiles-20261028/README.md).264 layout cases,12 feed cases and22 targeted contrast states pass.19 inline scripts including simulation and saving remain byte-identical to v94; only the signing-feed presentation script changes. Historical builders reproduce historical releases and must not promote the current release.
 
 The following section records the original protected baseline.
 
