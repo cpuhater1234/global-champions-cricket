@@ -20,3 +20,9 @@ Precision recovery update: canonical product blobs were rechecked unchanged. Act
 
 
 Exact continuation package added at branch commit following the precision recovery review: `qa/calibration-20261024/run_exact_holdout.sh` and `EXACT_HOLDOUT_UNLOCK.md`. The launcher is fail-closed and non-promoting. It requires exact model/identity/game/source/dataset hashes and recorded totals before opening the frozen 2023–2026 evaluation. Native Library and mounted Google Drive were both checked; neither contains the expanded ten-source bundle or `deliveries.sqlite`. Container direct network access also fails, and no GitHub binary-to-container handoff tool is exposed. Holdout therefore remains genuinely unopened.
+
+
+25 October continuation: outside commits through05cbc0b retained. Exact original database SHA60d38 verified; unchanged preregistered model re-executed successfully with both promotion gates FALSE. Actual metrics now persisted; prior infrastructure-blocked status superseded. Recovery archive libfile_44cbb9e6ef248191925722dc20472cc2 version0 retains exact DB and14archives. Fresh6 parser+4 model tests and18,082 candidate compatibility comparisons pass. Candidate remains staged pending independent review/browser checks; real humans/hardware remain open. See continuation reconciliation document.
+
+
+25 October release: final728f4afa has410 undisputed dates/74year corrections;12 API failures reviewed through officialfallbacks,2primary date conflicts preserved. Existing saves/numeric futures retained; new-age-sensitive behaviour explicit. Fresh18,099compat+2,478bio+600CPU+845persistence+162browser pass. Final3season8802 passes2,804checks/42managed league matches; pre-fallbackd647 full19season8801 passes15,284checks/266matches, correctly attributed. StableLibraryv58 saved, exactinput andsyntheticQA recovery archives durable. No modelratingpromotion; realhuman/hardware observations remainopen. See release report/currenthandoff.

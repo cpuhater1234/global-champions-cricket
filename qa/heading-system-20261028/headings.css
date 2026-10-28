@@ -1,0 +1,31 @@
+/* GCC v92: extend the breakaway title's sporting typography through the hierarchy. */
+#g8stage .g8heading h1,#g8stage .g8signingtitle,#g8dialog .g8modalhead h2{
+ font-family:var(--display);font-weight:900;font-style:italic;text-transform:uppercase;
+ letter-spacing:-.045em;line-height:1.2;overflow-wrap:anywhere;word-break:normal;
+ max-width:100%;min-width:0;padding-right:.18em;text-shadow:none;
+}
+#g8stage .g8heading h1{font-size:clamp(1.7rem,2.6vw,2.4rem)}
+#g8stage .g8signingtitle{font-size:clamp(1.5rem,2.2vw,2rem)}
+#g8dialog .g8modalhead h2{font-size:clamp(1.3rem,2vw,1.7rem)}
+#g8stage :is(.g8careersteps,.g8sectionhead,.g8wirehead,.g8clock,.g8annualhero,.g8matchsummary) h2,
+#g8stage .g8result>h2,
+#g8stage :is(.g8analysissection,.g8coveragehead,.g8draftsubhead,.g8draftverdict,.g8scoutability,.g8gccrecord,.g8playerphases,.g8departureguide,.g8draftscore,.g8development,.g8listdepartures,.g8nextchapter,.g8compare,.g8groundinterpretation,.g8weatherread) h3,
+#g8dialog :is(.g8briefhead,.g8guideintro,.g8guidecardhead,.g8analysissection,.g8coveragehead,.g8scoutability,.g8gccrecord,.g8playerphases,.g8groundinterpretation,.g8weatherread,.g8skillcategory,.g8scoutoutlook,.g8compare) h3,
+#g8stage .g8overfeed>h2{
+ font-family:var(--display);font-style:italic;font-weight:800;text-transform:uppercase;
+ letter-spacing:-.02em;line-height:1.4;overflow-wrap:anywhere;word-break:normal;
+ min-width:0;padding-right:.18em;text-shadow:none;
+}
+#g8stage .g8heading>div:first-of-type{flex:1 1 22rem;min-width:0}
+#g8stage .g8heading{flex-wrap:wrap}
+#g8dialog .g8modalhead>div{min-width:0;flex:1}
+@media(max-width:760px){#g8stage .g8heading h1{font-size:1.7rem}#g8stage .g8heading>div:first-of-type{flex-basis:100%}}
+/* Prevent icons creating an unshrinkable flex column beside enlarged headings. */
+#g8stage .g8sectionhead h2{display:block}
+#g8stage .g8sectionhead h2>.g8icon{display:inline-block;vertical-align:-.15em;margin-right:.35em}
+#g8stage :is(.g8disclosure,.g8moredata)>summary,#g8dialog :is(.g8disclosure,.g8moredata)>summary{font-style:italic;font-weight:800;letter-spacing:-.015em;line-height:1.4}
+/* Keep expanded player cards readable when text is enlarged. */
+#g8stage :is(.g8moredata,.g8disclosure) .g8board{grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr))}
+#g8stage :is(.g8moredata,.g8disclosure) .g8playerhead{flex-wrap:wrap}
+#g8stage :is(.g8moredata,.g8disclosure) .g8playerhead>div{flex:1 1 9rem;min-width:0}
+#g8stage :is(.g8moredata,.g8disclosure) .g8playerhead h3{overflow-wrap:anywhere}

@@ -1,0 +1,54 @@
+{
+  "release": "v82",
+  "sha256": "4a3d4d919d2fdd35d490f5e2f57359bb5fe65d209873a2f89353ee9735aa2453",
+  "bytes": 8064829,
+  "baselineCommit": "b065bd8c2384f138fc6b05d817271fb040d34d5b",
+  "sameSimulationScriptBodies": 18,
+  "nativeCrashes": 10,
+  "corruptPrimaryRecoveryCases": 3,
+  "noWebLocksRaces": 14,
+  "webKitLifecycleChecksPerMode": 13,
+  "modes": 2,
+  "queuedTimeoutClearAndCapabilityCases": 6,
+  "reviewRegressions": 2,
+  "recoveryUiLayoutAndFeedbackCases": 8,
+  "integrityChecks": 77,
+  "adversarialChecks": 83,
+  "tableValidationCases": 24,
+  "careerContinuity": [
+    {
+      "club": "GLA",
+      "pass": true,
+      "stages": [
+        "cold restore",
+        "annual market draft and next season",
+        "round 1",
+        "round 2",
+        "round 3"
+      ],
+      "coldRound3Exact": true,
+      "year": 2009
+    },
+    {
+      "club": "GT",
+      "pass": true,
+      "stages": [
+        "cold restore",
+        "annual market draft and next season",
+        "round 1",
+        "round 2",
+        "round 3"
+      ],
+      "coldRound3Exact": true,
+      "year": 2009
+    }
+  ],
+  "scope": "Final-byte recovery/persistence, Chromium, actual WebKit, deterministic v81-versus-v82 career transitions. Earlier full 19-season career evidence remains v81, not a v82 rerun.",
+  "limits": [
+    "No OS power-loss or physical-device certification.",
+    "Firefox content sandbox unavailable in this environment; no assertions completed.",
+    "No human spoken screen-reader or installed Safari certification.",
+    "Keep downloaded backups and close older game builds. Strict IndexedDB is measured browser behavior, not an absolute disk guarantee.",
+    "When neither usable Web Locks nor IndexedDB exists, autosave is refused and a live-session export remains available."
+  ]
+}

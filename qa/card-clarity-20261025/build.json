@@ -1,0 +1,28 @@
+{
+  "hash": "7568403962160d660198867d75f6de487512817de0a339220264e7cf783eae45",
+  "baselineHash": "728f4afac83aa6290a5c9241d2f0ee8885b6b363f1af6dd78736986a12ee9fc4",
+  "gitBlob": "8f98f4dca5b2f70401fb03a572dc78af6343a958",
+  "changedScriptBlocks": [
+    11
+  ],
+  "source": "v8/ui/components.js + v8/ui/workspace.css",
+  "simulationAndSaveCodeChanged": false,
+  "cardAbilities": {
+    "BAT": [
+      "Batting",
+      "Fielding"
+    ],
+    "BOWL": [
+      "Bowling",
+      "Fielding"
+    ],
+    "AR": [
+      "Batting",
+      "Bowling"
+    ],
+    "WK-BAT": [
+      "Batting",
+      "Keeping"
+    ]
+  }
+}

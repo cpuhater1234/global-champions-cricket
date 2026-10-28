@@ -35,6 +35,15 @@ window.GCC8_CAREER_STATE=(()=>{
    if(!O.validate(p.careerOutcome))throw Error('Invalid initial career: '+p.name);
    const record={outcome:p.careerOutcome,expected:p.careerExpected};d.careerStore[p.careerKey]=record;attach(p,record);
   }
+  // Sourced biography changes apply only to newly created careers, after the
+  // alternate-history skill templates and absolute career dates are frozen.
+  // Loaded careers keep their saved biography as well as their stored futures.
+  if(mode==='new')for(const p of state.pool){
+   const bio=P.lookup(p.name)?.verifiedBiography;
+   if(bio?.birthDate&&/^\d{4}-\d{2}-\d{2}$/.test(bio.birthDate)){
+    p.birthDate=bio.birthDate;p.birthYear=Number(bio.birthDate.slice(0,4));
+   }
+  }
  }
  function applyYear(p,year){if(!p.careerOutcome)return;Object.assign(p,O.skillsAt(p.careerOutcome,year));p.careerAnchor=p.overall;}
  function validRecord(record,p){return O.validate(record)&&record.careerKey===p.careerKey&&P.lookup(p.name)?.careerKey===record.careerKey;}

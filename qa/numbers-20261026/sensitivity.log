@@ -1,0 +1,59 @@
+[
+  {
+    kind: 'batting',
+    pairedInnings: 500,
+    lowMean: 169.948,
+    highMean: 165.288,
+    runDifference: -4.66,
+    pairedNormal95CI: [ -5.370221914344545, -3.9497780856554554 ],
+    wicketDifference: 0.216
+  },
+  {
+    kind: 'bowling',
+    pairedInnings: 500,
+    lowMean: 143.65,
+    highMean: 142.76,
+    runDifference: -0.89,
+    pairedNormal95CI: [ -2.837900009284959, 1.0579000092849586 ],
+    wicketDifference: 0.076
+  },
+  {
+    kind: 'fielding',
+    pairedInnings: 500,
+    lowMean: 145.942,
+    highMean: 145.942,
+    runDifference: 0,
+    pairedNormal95CI: [ 0, 0 ],
+    wicketDifference: 0
+  },
+  {
+    kind: 'keeping',
+    pairedInnings: 500,
+    lowMean: 145.942,
+    highMean: 145.942,
+    runDifference: 0,
+    pairedNormal95CI: [ 0, 0 ],
+    wicketDifference: 0
+  }
+]
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert(rows.find(r=>r.kind==='batting').runDifference>0)
+
+    at file:///workspace/scratch/bed56f4334a5/gcc/qa/numbers-20261026/sensitivity.mjs:4:336
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.22.1

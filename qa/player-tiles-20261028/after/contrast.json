@@ -1,0 +1,2222 @@
+{
+  "sha": "518ba3baf5a98f8f96d7d2c543c1c89544f89fd8a2cff686688af70a6a5abb5e",
+  "screens": [
+    {
+      "name": "home",
+      "checks": [],
+      "surfaces": [],
+      "canvas": "radial-gradient(at 100% 0px, rgba(0, 0, 0, 0) 45%, rgba(156, 169, 155, 0.04) 45.2%, rgba(0, 0, 0, 0) 45.6%), repeating-linear-gradient(0deg, rgba(232, 225, 210, 0.02) 0px, rgba(232, 225, 210, 0.02) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 4px), url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjcyIiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgb3BhY2l0eT0iLjA0NSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+\")"
+    },
+    {
+      "name": "story",
+      "checks": [],
+      "surfaces": [],
+      "canvas": "radial-gradient(at 100% 0px, rgba(0, 0, 0, 0) 45%, rgba(156, 169, 155, 0.04) 45.2%, rgba(0, 0, 0, 0) 45.6%), repeating-linear-gradient(0deg, rgba(232, 225, 210, 0.02) 0px, rgba(232, 225, 210, 0.02) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 4px), url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjcyIiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgb3BhY2l0eT0iLjA0NSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+\")"
+    },
+    {
+      "name": "league",
+      "checks": [],
+      "surfaces": [],
+      "canvas": "radial-gradient(at 100% 0px, rgba(0, 0, 0, 0) 45%, rgba(156, 169, 155, 0.04) 45.2%, rgba(0, 0, 0, 0) 45.6%), repeating-linear-gradient(0deg, rgba(232, 225, 210, 0.02) 0px, rgba(232, 225, 210, 0.02) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 4px), url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjcyIiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgb3BhY2l0eT0iLjA0NSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+\")"
+    },
+    {
+      "name": "clubs",
+      "checks": [],
+      "surfaces": [],
+      "canvas": "radial-gradient(at 100% 0px, rgba(0, 0, 0, 0) 45%, rgba(156, 169, 155, 0.04) 45.2%, rgba(0, 0, 0, 0) 45.6%), repeating-linear-gradient(0deg, rgba(232, 225, 210, 0.02) 0px, rgba(232, 225, 210, 0.02) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 4px), url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjcyIiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgb3BhY2l0eT0iLjA0NSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+\")"
+    },
+    {
+      "name": "club-guide",
+      "checks": [],
+      "surfaces": [],
+      "canvas": "radial-gradient(at 100% 0px, rgba(0, 0, 0, 0) 45%, rgba(156, 169, 155, 0.04) 45.2%, rgba(0, 0, 0, 0) 45.6%), repeating-linear-gradient(0deg, rgba(232, 225, 210, 0.02) 0px, rgba(232, 225, 210, 0.02) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 4px), url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjcyIiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgb3BhY2l0eT0iLjA0NSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+\")"
+    },
+    {
+      "name": "signings",
+      "checks": [],
+      "surfaces": [],
+      "canvas": "radial-gradient(at 100% 0px, rgba(0, 0, 0, 0) 45%, rgba(156, 169, 155, 0.04) 45.2%, rgba(0, 0, 0, 0) 45.6%), repeating-linear-gradient(0deg, rgba(232, 225, 210, 0.02) 0px, rgba(232, 225, 210, 0.02) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 4px), url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjcyIiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgb3BhY2l0eT0iLjA0NSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+\")"
+    },
+    {
+      "name": "signings-closed",
+      "checks": [
+        {
+          "text": "LEAGUE UPDATE",
+          "ratio": 9.053351757935452
+        },
+        {
+          "text": "UPDATE",
+          "ratio": 9.184836613358403
+        },
+        {
+          "text": "Signing window closed",
+          "ratio": 12.541502620322866
+        },
+        {
+          "text": "167 players entered the GCC draft pool. 103 declined.",
+          "ratio": 10.13931895799611
+        },
+        {
+          "text": "LEAGUE UPDATE",
+          "ratio": 9.053351757935452
+        },
+        {
+          "text": "UPDATE",
+          "ratio": 9.184836613358403
+        },
+        {
+          "text": "Day 5 complete",
+          "ratio": 12.541502620322866
+        },
+        {
+          "text": "Last calls. 36 players enter before the deadline and 20 stay outside GCC.",
+          "ratio": 10.13931895799611
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "Upul Tharanga",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "SL · OPENER",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Irfan Pathan",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "IND · PACE",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Dale Steyn",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "SA · PACE · DEATH · NEW BALL",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Fawad Alam",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "PAK · SPIN",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "Simon Katich",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "AUS · OPENER",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "Ravi Bopara",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "ENG · TOP ORDER · PACE",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "Hashim Amla",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "SA · OPENER",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Luke Pomersbach",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "AUS · TOP ORDER",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Wavell Hinds",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "WI · TOP ORDER",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Aftab Ahmed",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "BAN · TOP ORDER",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Craig McMillan",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "NZ · TOP ORDER · FINISHER",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "Paul Collingwood",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "ENG · MIDDLE ORDER",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "Suresh Raina",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "IND · TOP ORDER",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "Kieron Pollard",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "WI · PACE",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "Muttiah Muralitharan",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "SL · SPIN · MIDDLE OVERS · DEATH",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Inzamam-ul-Haq",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "PAK · TOP ORDER",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Andrew Flintoff",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "ENG · PACE · NEW BALL · MIDDLE OVERS",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Imran Nazir",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "PAK · OPENER",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Misbah-ul-Haq",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "PAK · MIDDLE ORDER",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "George Bailey",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "AUS · MIDDLE ORDER",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "Johan van der Wath",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "SA · PACE",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "Tillakaratne Dilshan",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "SL · OPENER",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Luke Wright",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "ENG · OPENER · PACE",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "Andrew McDonald",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "AUS · PACE",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Marcus North",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "AUS · MIDDLE ORDER",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "Tim Southee",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "NZ · PACE",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Nathan McCullum",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "NZ · SPIN",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Glenn McGrath",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "AUS · PACE · NEW BALL · MIDDLE OVERS",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Tim Bresnan",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "ENG · PACE",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "Ricky Ponting",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "AUS · TOP ORDER",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "Younis Khan",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "PAK · TOP ORDER",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Xavier Doherty",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "AUS · SPIN",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Kabir Ali",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "ENG · PACE",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Murray Goodwin",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "ZIM · TOP ORDER",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Abdul Razzaq",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "PAK · PACE · NEW BALL",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Niall O'Brien",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "IRE · TOP ORDER",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Pragyan Ojha",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "IND · SPIN",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "Virender Sehwag",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "IND · OPENER",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "VVS Laxman",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "IND · TOP ORDER",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Chris Harris",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "NZ · PACE",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Michael Kasprowicz",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "AUS · PACE",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "James Franklin",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "NZ · PACE · NEW BALL",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Kevin O'Brien",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "IRE · PACE",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Peter Trego",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "ENG · FINISHER · PACE",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Andrew Symonds",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "AUS · PACE · NEW BALL",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "Sachin Tendulkar",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "IND · OPENER",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "Graeme Swann",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "ENG · SPIN · MIDDLE OVERS",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Michael Klinger",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "AUS · OPENER",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "Mohammad Yousuf",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "PAK · TOP ORDER · FINISHER",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Martin Guptill",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "NZ · OPENER",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Andre Nel",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "SA · PACE · NEW BALL",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Michael Clarke",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "AUS · TOP ORDER",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Mike Hussey",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "AUS · MIDDLE ORDER · FINISHER",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Nicky Boje",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "SA · SPIN",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Daren Sammy",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "WI · PACE · NEW BALL",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Mohammad Sami",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "PAK · PACE · NEW BALL",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "LEAGUE UPDATE",
+          "ratio": 9.053351757935452
+        },
+        {
+          "text": "UPDATE",
+          "ratio": 9.184836613358403
+        },
+        {
+          "text": "Day 4 complete",
+          "ratio": 12.541502620322866
+        },
+        {
+          "text": "One day left. 35 players enter today and 18 decline.",
+          "ratio": 10.13931895799611
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "Anil Kumble",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "IND · SPIN · MIDDLE OVERS",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Ravi Rampaul",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "WI · PACE",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Craig Kieswetter",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "ENG · OPENER",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "Kyle Mills",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "NZ · PACE",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Wayne Parnell",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "SA · PACE",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "Chamara Kapugedera",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "SL · MIDDLE ORDER",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "Nantie Hayward",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "SA · PACE",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Manpreet Gony",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "IND · PACE",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Mushtaq Ahmed",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "PAK · SPIN · MIDDLE OVERS",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "Chris Jordan",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "ENG · PACE",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "Ross Taylor",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "NZ · TOP ORDER",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Ashish Nehra",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "IND · PACE",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "MS Dhoni",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "IND · MIDDLE ORDER",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "Yuvraj Singh",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "IND · MIDDLE ORDER · FINISHER",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "Adam Voges",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "AUS · TOP ORDER",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Subramaniam Badrinath",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "IND · TOP ORDER",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Sanath Jayasuriya",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "SL · OPENER",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 9.131193321488025
+        },
+        {
+          "text": "DECLINED",
+          "ratio": 10.158757189680944
+        },
+        {
+          "text": "Steve Smith",
+          "ratio": 12.649335630612002
+        },
+        {
+          "text": "AUS · SPIN",
+          "ratio": 10.226497768910736
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Sreesanth",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "IND · PACE",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Mitchell McClenaghan",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "NZ · PACE",
+          "ratio": 9.931970866280674
+        },
+        {
+          "text": "PLAYER DECISION",
+          "ratio": 8.868211590394308
+        },
+        {
+          "text": "SIGNED",
+          "ratio": 9.256963335596044
+        },
+        {
+          "text": "Imran Farhat",
+          "ratio": 12.285030105123283
+        },
+        {
+          "text": "PAK · OPENER",
+          "ratio": 9.931970866280674
+        }
+      ],
+      "surfaces": [
+        {
+          "cls": "g8wireline g8wireupdate",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireupdate",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireupdate",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wireout",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        },
+        {
+          "cls": "g8wireline g8wirein",
+          "image": "none"
+        }
+      ],
+      "canvas": "radial-gradient(at 100% 0px, rgba(0, 0, 0, 0) 45%, rgba(156, 169, 155, 0.04) 45.2%, rgba(0, 0, 0, 0) 45.6%), repeating-linear-gradient(0deg, rgba(232, 225, 210, 0.02) 0px, rgba(232, 225, 210, 0.02) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 4px), url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjcyIiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgb3BhY2l0eT0iLjA0NSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+\")"
+    },
+    {
+      "name": "draft",
+      "checks": [
+        {
+          "text": "92",
+          "ratio": 10.080182036536405
+        },
+        {
+          "text": "OVR",
+          "ratio": 10.862354667655305
+        },
+        {
+          "text": "Kevin Pietersen",
+          "ratio": 11.041995391128319
+        },
+        {
+          "text": "ENG",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Age 28",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Batter",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Bats · Top order",
+          "ratio": 12.694401168993448
+        },
+        {
+          "text": "Bats · Top order",
+          "ratio": 12.694401168993448
+        },
+        {
+          "text": "92",
+          "ratio": 10.080182036536405
+        },
+        {
+          "text": "OVR",
+          "ratio": 10.862354667655305
+        },
+        {
+          "text": "Dale Steyn",
+          "ratio": 11.041995391128319
+        },
+        {
+          "text": "SA",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Age 25",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Bowler",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Pace bowler",
+          "ratio": 12.694401168993448
+        },
+        {
+          "text": "Pace bowler",
+          "ratio": 12.694401168993448
+        },
+        {
+          "text": "92",
+          "ratio": 10.080182036536405
+        },
+        {
+          "text": "OVR",
+          "ratio": 10.862354667655305
+        },
+        {
+          "text": "Nathan Bracken",
+          "ratio": 11.041995391128319
+        },
+        {
+          "text": "AUS",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Age 31",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Bowler",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Pace bowler",
+          "ratio": 12.694401168993448
+        },
+        {
+          "text": "Pace bowler",
+          "ratio": 12.694401168993448
+        },
+        {
+          "text": "91",
+          "ratio": 10.080182036536405
+        },
+        {
+          "text": "OVR",
+          "ratio": 10.862354667655305
+        },
+        {
+          "text": "Mike Hussey",
+          "ratio": 11.041995391128319
+        },
+        {
+          "text": "AUS",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Age 33",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Batter",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Bats · Middle order",
+          "ratio": 12.694401168993448
+        },
+        {
+          "text": "Bats · Middle order",
+          "ratio": 12.694401168993448
+        },
+        {
+          "text": "90",
+          "ratio": 10.080182036536405
+        },
+        {
+          "text": "OVR",
+          "ratio": 10.862354667655305
+        },
+        {
+          "text": "Daniel Vettori",
+          "ratio": 11.041995391128319
+        },
+        {
+          "text": "NZ",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Age 29",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "All-rounder",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Bats · Lower order",
+          "ratio": 12.694401168993448
+        },
+        {
+          "text": "Bats · Lower order",
+          "ratio": 12.694401168993448
+        },
+        {
+          "text": "90",
+          "ratio": 10.080182036536405
+        },
+        {
+          "text": "OVR",
+          "ratio": 10.862354667655305
+        },
+        {
+          "text": "Brett Lee",
+          "ratio": 11.041995391128319
+        },
+        {
+          "text": "AUS",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Age 32",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Bowler",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Pace bowler",
+          "ratio": 12.694401168993448
+        },
+        {
+          "text": "Pace bowler",
+          "ratio": 12.694401168993448
+        },
+        {
+          "text": "89",
+          "ratio": 10.080182036536405
+        },
+        {
+          "text": "OVR",
+          "ratio": 10.862354667655305
+        },
+        {
+          "text": "MS Dhoni",
+          "ratio": 11.041995391128319
+        },
+        {
+          "text": "IND",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Age 27",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Wicketkeeper",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Bats · Middle order",
+          "ratio": 12.694401168993448
+        },
+        {
+          "text": "Bats · Middle order",
+          "ratio": 12.694401168993448
+        },
+        {
+          "text": "89",
+          "ratio": 10.080182036536405
+        },
+        {
+          "text": "OVR",
+          "ratio": 10.862354667655305
+        },
+        {
+          "text": "Brendon McCullum",
+          "ratio": 11.041995391128319
+        },
+        {
+          "text": "NZ",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Age 27",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Wicketkeeper",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Bats · Opener",
+          "ratio": 12.694401168993448
+        },
+        {
+          "text": "Bats · Opener",
+          "ratio": 12.694401168993448
+        },
+        {
+          "text": "89",
+          "ratio": 10.080182036536405
+        },
+        {
+          "text": "OVR",
+          "ratio": 10.862354667655305
+        },
+        {
+          "text": "Michael Clarke",
+          "ratio": 11.041995391128319
+        },
+        {
+          "text": "AUS",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Age 27",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Batter",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Bats · Top order",
+          "ratio": 12.694401168993448
+        },
+        {
+          "text": "Bats · Top order",
+          "ratio": 12.694401168993448
+        },
+        {
+          "text": "89",
+          "ratio": 10.080182036536405
+        },
+        {
+          "text": "OVR",
+          "ratio": 10.862354667655305
+        },
+        {
+          "text": "Jacques Kallis",
+          "ratio": 11.041995391128319
+        },
+        {
+          "text": "SA",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Age 33",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "All-rounder",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Bats · Top order",
+          "ratio": 12.694401168993448
+        },
+        {
+          "text": "Bats · Top order",
+          "ratio": 12.694401168993448
+        },
+        {
+          "text": "89",
+          "ratio": 10.080182036536405
+        },
+        {
+          "text": "OVR",
+          "ratio": 10.862354667655305
+        },
+        {
+          "text": "Morne Morkel",
+          "ratio": 11.041995391128319
+        },
+        {
+          "text": "SA",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Age 24",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Bowler",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Pace bowler",
+          "ratio": 12.694401168993448
+        },
+        {
+          "text": "Pace bowler",
+          "ratio": 12.694401168993448
+        },
+        {
+          "text": "89",
+          "ratio": 10.080182036536405
+        },
+        {
+          "text": "OVR",
+          "ratio": 10.862354667655305
+        },
+        {
+          "text": "Shane Bond",
+          "ratio": 11.041995391128319
+        },
+        {
+          "text": "NZ",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Age 33",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Bowler",
+          "ratio": 8.966224986333911
+        },
+        {
+          "text": "Pace bowler",
+          "ratio": 12.694401168993448
+        },
+        {
+          "text": "Pace bowler",
+          "ratio": 12.694401168993448
+        }
+      ],
+      "surfaces": [
+        {
+          "cls": "g8cardheader",
+          "image": "none"
+        },
+        {
+          "cls": "g8candidatecontext",
+          "image": "none"
+        },
+        {
+          "cls": "g8cardheader",
+          "image": "none"
+        },
+        {
+          "cls": "g8candidatecontext",
+          "image": "none"
+        },
+        {
+          "cls": "g8cardheader",
+          "image": "none"
+        },
+        {
+          "cls": "g8candidatecontext",
+          "image": "none"
+        },
+        {
+          "cls": "g8cardheader",
+          "image": "none"
+        },
+        {
+          "cls": "g8candidatecontext",
+          "image": "none"
+        },
+        {
+          "cls": "g8cardheader",
+          "image": "none"
+        },
+        {
+          "cls": "g8candidatecontext",
+          "image": "none"
+        },
+        {
+          "cls": "g8cardheader",
+          "image": "none"
+        },
+        {
+          "cls": "g8candidatecontext",
+          "image": "none"
+        },
+        {
+          "cls": "g8cardheader",
+          "image": "none"
+        },
+        {
+          "cls": "g8candidatecontext",
+          "image": "none"
+        },
+        {
+          "cls": "g8cardheader",
+          "image": "none"
+        },
+        {
+          "cls": "g8candidatecontext",
+          "image": "none"
+        },
+        {
+          "cls": "g8cardheader",
+          "image": "none"
+        },
+        {
+          "cls": "g8candidatecontext",
+          "image": "none"
+        },
+        {
+          "cls": "g8cardheader",
+          "image": "none"
+        },
+        {
+          "cls": "g8candidatecontext",
+          "image": "none"
+        },
+        {
+          "cls": "g8cardheader",
+          "image": "none"
+        },
+        {
+          "cls": "g8candidatecontext",
+          "image": "none"
+        },
+        {
+          "cls": "g8cardheader",
+          "image": "none"
+        },
+        {
+          "cls": "g8candidatecontext",
+          "image": "none"
+        }
+      ],
+      "canvas": "radial-gradient(at 100% 0px, rgba(0, 0, 0, 0) 45%, rgba(156, 169, 155, 0.04) 45.2%, rgba(0, 0, 0, 0) 45.6%), repeating-linear-gradient(0deg, rgba(232, 225, 210, 0.02) 0px, rgba(232, 225, 210, 0.02) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 4px), url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjcyIiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgb3BhY2l0eT0iLjA0NSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+\")"
+    },
+    {
+      "name": "season",
+      "checks": [],
+      "surfaces": [],
+      "canvas": "radial-gradient(at 100% 0px, rgba(0, 0, 0, 0) 45%, rgba(156, 169, 155, 0.04) 45.2%, rgba(0, 0, 0, 0) 45.6%), repeating-linear-gradient(0deg, rgba(232, 225, 210, 0.02) 0px, rgba(232, 225, 210, 0.02) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 4px), url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjcyIiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgb3BhY2l0eT0iLjA0NSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+\")"
+    },
+    {
+      "name": "season-ladder",
+      "checks": [],
+      "surfaces": [],
+      "canvas": "radial-gradient(at 100% 0px, rgba(0, 0, 0, 0) 45%, rgba(156, 169, 155, 0.04) 45.2%, rgba(0, 0, 0, 0) 45.6%), repeating-linear-gradient(0deg, rgba(232, 225, 210, 0.02) 0px, rgba(232, 225, 210, 0.02) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 4px), url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjcyIiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgb3BhY2l0eT0iLjA0NSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+\")"
+    },
+    {
+      "name": "season-fixtures",
+      "checks": [],
+      "surfaces": [],
+      "canvas": "radial-gradient(at 100% 0px, rgba(0, 0, 0, 0) 45%, rgba(156, 169, 155, 0.04) 45.2%, rgba(0, 0, 0, 0) 45.6%), repeating-linear-gradient(0deg, rgba(232, 225, 210, 0.02) 0px, rgba(232, 225, 210, 0.02) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 4px), url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjcyIiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgb3BhY2l0eT0iLjA0NSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+\")"
+    },
+    {
+      "name": "season-leaguePlayers",
+      "checks": [],
+      "surfaces": [],
+      "canvas": "radial-gradient(at 100% 0px, rgba(0, 0, 0, 0) 45%, rgba(156, 169, 155, 0.04) 45.2%, rgba(0, 0, 0, 0) 45.6%), repeating-linear-gradient(0deg, rgba(232, 225, 210, 0.02) 0px, rgba(232, 225, 210, 0.02) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 4px), url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjcyIiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgb3BhY2l0eT0iLjA0NSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+\")"
+    },
+    {
+      "name": "team",
+      "checks": [],
+      "surfaces": [],
+      "canvas": "radial-gradient(at 100% 0px, rgba(0, 0, 0, 0) 45%, rgba(156, 169, 155, 0.04) 45.2%, rgba(0, 0, 0, 0) 45.6%), repeating-linear-gradient(0deg, rgba(232, 225, 210, 0.02) 0px, rgba(232, 225, 210, 0.02) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 4px), url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjcyIiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgb3BhY2l0eT0iLjA0NSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+\")"
+    },
+    {
+      "name": "player",
+      "checks": [],
+      "surfaces": [],
+      "canvas": "radial-gradient(at 100% 0px, rgba(0, 0, 0, 0) 45%, rgba(156, 169, 155, 0.04) 45.2%, rgba(0, 0, 0, 0) 45.6%), repeating-linear-gradient(0deg, rgba(232, 225, 210, 0.02) 0px, rgba(232, 225, 210, 0.02) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 4px), url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjcyIiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgb3BhY2l0eT0iLjA0NSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+\")"
+    },
+    {
+      "name": "prepare",
+      "checks": [],
+      "surfaces": [],
+      "canvas": "radial-gradient(at 100% 0px, rgba(0, 0, 0, 0) 45%, rgba(156, 169, 155, 0.04) 45.2%, rgba(0, 0, 0, 0) 45.6%), repeating-linear-gradient(0deg, rgba(232, 225, 210, 0.02) 0px, rgba(232, 225, 210, 0.02) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 4px), url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjcyIiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgb3BhY2l0eT0iLjA0NSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+\")"
+    },
+    {
+      "name": "match",
+      "checks": [],
+      "surfaces": [],
+      "canvas": "radial-gradient(at 100% 0px, rgba(0, 0, 0, 0) 45%, rgba(156, 169, 155, 0.04) 45.2%, rgba(0, 0, 0, 0) 45.6%), repeating-linear-gradient(0deg, rgba(232, 225, 210, 0.02) 0px, rgba(232, 225, 210, 0.02) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 4px), url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjcyIiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgb3BhY2l0eT0iLjA0NSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+\")"
+    },
+    {
+      "name": "result",
+      "checks": [],
+      "surfaces": [],
+      "canvas": "radial-gradient(at 100% 0px, rgba(0, 0, 0, 0) 45%, rgba(156, 169, 155, 0.04) 45.2%, rgba(0, 0, 0, 0) 45.6%), repeating-linear-gradient(0deg, rgba(232, 225, 210, 0.02) 0px, rgba(232, 225, 210, 0.02) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 4px), url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjcyIiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgb3BhY2l0eT0iLjA0NSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+\")"
+    },
+    {
+      "name": "scorecard",
+      "checks": [],
+      "surfaces": [],
+      "canvas": "radial-gradient(at 100% 0px, rgba(0, 0, 0, 0) 45%, rgba(156, 169, 155, 0.04) 45.2%, rgba(0, 0, 0, 0) 45.6%), repeating-linear-gradient(0deg, rgba(232, 225, 210, 0.02) 0px, rgba(232, 225, 210, 0.02) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 4px), url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjcyIiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgb3BhY2l0eT0iLjA0NSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+\")"
+    },
+    {
+      "name": "review",
+      "checks": [],
+      "surfaces": [],
+      "canvas": "radial-gradient(at 100% 0px, rgba(0, 0, 0, 0) 45%, rgba(156, 169, 155, 0.04) 45.2%, rgba(0, 0, 0, 0) 45.6%), repeating-linear-gradient(0deg, rgba(232, 225, 210, 0.02) 0px, rgba(232, 225, 210, 0.02) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 4px), url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjcyIiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgb3BhY2l0eT0iLjA0NSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+\")"
+    },
+    {
+      "name": "archive",
+      "checks": [],
+      "surfaces": [],
+      "canvas": "radial-gradient(at 100% 0px, rgba(0, 0, 0, 0) 45%, rgba(156, 169, 155, 0.04) 45.2%, rgba(0, 0, 0, 0) 45.6%), repeating-linear-gradient(0deg, rgba(232, 225, 210, 0.02) 0px, rgba(232, 225, 210, 0.02) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 4px), url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjcyIiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgb3BhY2l0eT0iLjA0NSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+\")"
+    },
+    {
+      "name": "offseason",
+      "checks": [],
+      "surfaces": [],
+      "canvas": "radial-gradient(at 100% 0px, rgba(0, 0, 0, 0) 45%, rgba(156, 169, 155, 0.04) 45.2%, rgba(0, 0, 0, 0) 45.6%), repeating-linear-gradient(0deg, rgba(232, 225, 210, 0.02) 0px, rgba(232, 225, 210, 0.02) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 4px), url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjcyIiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgb3BhY2l0eT0iLjA0NSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+\")"
+    },
+    {
+      "name": "trade",
+      "checks": [],
+      "surfaces": [],
+      "canvas": "radial-gradient(at 100% 0px, rgba(0, 0, 0, 0) 45%, rgba(156, 169, 155, 0.04) 45.2%, rgba(0, 0, 0, 0) 45.6%), repeating-linear-gradient(0deg, rgba(232, 225, 210, 0.02) 0px, rgba(232, 225, 210, 0.02) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 4px), url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjcyIiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgb3BhY2l0eT0iLjA0NSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+\")"
+    }
+  ],
+  "errors": []
+}

@@ -1,3 +1,5 @@
+> Historical checkpoint, superseded on25October2026. Exact inputs recovered and frozen evaluation completed (both gatesfail); biography/accessibility release and actual evidence are in `GCC_V8_CALIBRATION_RELEASE_20261025.md`. Original observations below remain as session history.
+
 # GCC final completion checkpoint — 24 October 2026
 
 ## Release decision

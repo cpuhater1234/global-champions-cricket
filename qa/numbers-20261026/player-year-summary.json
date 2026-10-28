@@ -1,0 +1,1321 @@
+{
+  "hash": "e28ccd173f92069cb690d27f6b64224c072f4b56bb061d00428edadc5a5e7af0",
+  "scope": "Eight generated worlds, all active player-years; provenance tags are audited claims, not independently verified numeric evidence. Raw AR role composite differs intentionally from the new specialist-floor overall. skillOverall is the new overall contract; raw roleComposite gaps are diagnostic only.",
+  "summary": {
+    "uniquePlayers": 412,
+    "playerSeasons": 5149,
+    "foundation": 269,
+    "arrival": 143,
+    "explicitNumericSourceLinks": 83,
+    "identitySourceLinks": 412,
+    "provisional": 143,
+    "largestOverallCompositeGaps": [
+      {
+        "name": "Adil Rashid",
+        "year": 2023,
+        "overall": 88,
+        "composite": 67.07
+      },
+      {
+        "name": "Adil Rashid",
+        "year": 2017,
+        "overall": 90,
+        "composite": 69.12
+      },
+      {
+        "name": "Adil Rashid",
+        "year": 2018,
+        "overall": 90,
+        "composite": 69.12
+      },
+      {
+        "name": "Adil Rashid",
+        "year": 2019,
+        "overall": 90,
+        "composite": 69.12
+      },
+      {
+        "name": "Adil Rashid",
+        "year": 2021,
+        "overall": 89,
+        "composite": 68.29
+      },
+      {
+        "name": "Adil Rashid",
+        "year": 2025,
+        "overall": 85,
+        "composite": 64.49
+      },
+      {
+        "name": "Adil Rashid",
+        "year": 2022,
+        "overall": 88,
+        "composite": 67.65
+      },
+      {
+        "name": "Adil Rashid",
+        "year": 2024,
+        "overall": 86,
+        "composite": 65.75
+      },
+      {
+        "name": "Adil Rashid",
+        "year": 2020,
+        "overall": 89,
+        "composite": 68.92
+      },
+      {
+        "name": "Adil Rashid",
+        "year": 2026,
+        "overall": 82,
+        "composite": 62.09
+      },
+      {
+        "name": "Adil Rashid",
+        "year": 2016,
+        "overall": 90,
+        "composite": 70.92
+      },
+      {
+        "name": "Ravichandran Ashwin",
+        "year": 2025,
+        "overall": 82,
+        "composite": 64.1
+      },
+      {
+        "name": "Ravichandran Ashwin",
+        "year": 2022,
+        "overall": 87,
+        "composite": 69.4
+      },
+      {
+        "name": "Ravichandran Ashwin",
+        "year": 2023,
+        "overall": 85,
+        "composite": 67.51
+      },
+      {
+        "name": "Ravichandran Ashwin",
+        "year": 2021,
+        "overall": 88,
+        "composite": 70.64
+      },
+      {
+        "name": "Ravichandran Ashwin",
+        "year": 2024,
+        "overall": 83,
+        "composite": 65.84
+      },
+      {
+        "name": "Ravichandran Ashwin",
+        "year": 2020,
+        "overall": 88,
+        "composite": 71.21
+      },
+      {
+        "name": "Ravichandran Ashwin",
+        "year": 2026,
+        "overall": 78,
+        "composite": 61.55
+      },
+      {
+        "name": "Adil Rashid",
+        "year": 2015,
+        "overall": 89,
+        "composite": 72.61
+      },
+      {
+        "name": "Ravichandran Ashwin",
+        "year": 2018,
+        "overall": 89,
+        "composite": 72.82
+      }
+    ]
+  },
+  "worlds": [
+    {
+      "seed": 8301,
+      "clubs": [
+        "SUR",
+        "SIX",
+        "CSK",
+        "KKR",
+        "RCB",
+        "HEA",
+        "YOR",
+        "STR"
+      ],
+      "annual": [
+        {
+          "year": 2008,
+          "count": 270,
+          "meanOverall": 77.28518518518518,
+          "elite": 10,
+          "meanComposite": 76.68403703703702
+        },
+        {
+          "year": 2009,
+          "count": 281,
+          "meanOverall": 77.38790035587189,
+          "elite": 9,
+          "meanComposite": 76.61829323843419
+        },
+        {
+          "year": 2010,
+          "count": 288,
+          "meanOverall": 77.39930555555556,
+          "elite": 11,
+          "meanComposite": 76.5445888888889
+        },
+        {
+          "year": 2011,
+          "count": 296,
+          "meanOverall": 77.17229729729729,
+          "elite": 18,
+          "meanComposite": 76.20506351351355
+        },
+        {
+          "year": 2012,
+          "count": 299,
+          "meanOverall": 76.93979933110369,
+          "elite": 22,
+          "meanComposite": 75.91161404682278
+        },
+        {
+          "year": 2013,
+          "count": 306,
+          "meanOverall": 76.55882352941177,
+          "elite": 24,
+          "meanComposite": 75.4942640522876
+        },
+        {
+          "year": 2014,
+          "count": 308,
+          "meanOverall": 76.08766233766234,
+          "elite": 21,
+          "meanComposite": 75.0379298701299
+        },
+        {
+          "year": 2015,
+          "count": 309,
+          "meanOverall": 75.74757281553399,
+          "elite": 25,
+          "meanComposite": 74.59460129449842
+        },
+        {
+          "year": 2016,
+          "count": 300,
+          "meanOverall": 75.45333333333333,
+          "elite": 23,
+          "meanComposite": 74.22600933333338
+        },
+        {
+          "year": 2017,
+          "count": 301,
+          "meanOverall": 75.2890365448505,
+          "elite": 23,
+          "meanComposite": 74.0290584717607
+        },
+        {
+          "year": 2018,
+          "count": 301,
+          "meanOverall": 75.12956810631229,
+          "elite": 22,
+          "meanComposite": 73.82154152823921
+        },
+        {
+          "year": 2019,
+          "count": 295,
+          "meanOverall": 74.83050847457628,
+          "elite": 17,
+          "meanComposite": 73.49565762711858
+        },
+        {
+          "year": 2020,
+          "count": 280,
+          "meanOverall": 75.37857142857143,
+          "elite": 14,
+          "meanComposite": 73.99873857142853
+        },
+        {
+          "year": 2021,
+          "count": 263,
+          "meanOverall": 76.07604562737643,
+          "elite": 11,
+          "meanComposite": 74.63041216730038
+        },
+        {
+          "year": 2022,
+          "count": 246,
+          "meanOverall": 76.78455284552845,
+          "elite": 12,
+          "meanComposite": 75.20126422764234
+        },
+        {
+          "year": 2023,
+          "count": 226,
+          "meanOverall": 77.46460176991151,
+          "elite": 12,
+          "meanComposite": 75.903203539823
+        },
+        {
+          "year": 2024,
+          "count": 217,
+          "meanOverall": 77.63133640552995,
+          "elite": 13,
+          "meanComposite": 76.11328847926266
+        },
+        {
+          "year": 2025,
+          "count": 194,
+          "meanOverall": 78.77835051546391,
+          "elite": 15,
+          "meanComposite": 77.18895463917524
+        },
+        {
+          "year": 2026,
+          "count": 169,
+          "meanOverall": 80.15976331360947,
+          "elite": 14,
+          "meanComposite": 78.36450532544377
+        }
+      ]
+    },
+    {
+      "seed": 8302,
+      "clubs": [
+        "HEA",
+        "LAN",
+        "DC",
+        "KKR",
+        "THU",
+        "HAM",
+        "CSK",
+        "HUR"
+      ],
+      "annual": [
+        {
+          "year": 2008,
+          "count": 270,
+          "meanOverall": 77.28518518518518,
+          "elite": 10,
+          "meanComposite": 76.68403703703702
+        },
+        {
+          "year": 2009,
+          "count": 281,
+          "meanOverall": 77.44128113879003,
+          "elite": 13,
+          "meanComposite": 76.6360462633452
+        },
+        {
+          "year": 2010,
+          "count": 288,
+          "meanOverall": 77.54861111111111,
+          "elite": 13,
+          "meanComposite": 76.63748333333332
+        },
+        {
+          "year": 2011,
+          "count": 296,
+          "meanOverall": 77.56756756756756,
+          "elite": 14,
+          "meanComposite": 76.512629054054
+        },
+        {
+          "year": 2012,
+          "count": 299,
+          "meanOverall": 77.38127090301003,
+          "elite": 17,
+          "meanComposite": 76.25687892976592
+        },
+        {
+          "year": 2013,
+          "count": 306,
+          "meanOverall": 77.02287581699346,
+          "elite": 18,
+          "meanComposite": 75.87646078431376
+        },
+        {
+          "year": 2014,
+          "count": 308,
+          "meanOverall": 76.6038961038961,
+          "elite": 20,
+          "meanComposite": 75.46250909090914
+        },
+        {
+          "year": 2015,
+          "count": 309,
+          "meanOverall": 76.23300970873787,
+          "elite": 25,
+          "meanComposite": 75.00098381877035
+        },
+        {
+          "year": 2016,
+          "count": 300,
+          "meanOverall": 75.98666666666666,
+          "elite": 28,
+          "meanComposite": 74.712472
+        },
+        {
+          "year": 2017,
+          "count": 301,
+          "meanOverall": 75.7109634551495,
+          "elite": 27,
+          "meanComposite": 74.39033156146184
+        },
+        {
+          "year": 2018,
+          "count": 301,
+          "meanOverall": 75.51827242524917,
+          "elite": 24,
+          "meanComposite": 74.15682591362135
+        },
+        {
+          "year": 2019,
+          "count": 295,
+          "meanOverall": 75.23728813559322,
+          "elite": 19,
+          "meanComposite": 73.86199050847455
+        },
+        {
+          "year": 2020,
+          "count": 280,
+          "meanOverall": 75.90357142857142,
+          "elite": 15,
+          "meanComposite": 74.43410714285717
+        },
+        {
+          "year": 2021,
+          "count": 263,
+          "meanOverall": 76.52851711026616,
+          "elite": 17,
+          "meanComposite": 75.00930874524713
+        },
+        {
+          "year": 2022,
+          "count": 246,
+          "meanOverall": 77.23577235772358,
+          "elite": 17,
+          "meanComposite": 75.57957073170732
+        },
+        {
+          "year": 2023,
+          "count": 226,
+          "meanOverall": 77.89380530973452,
+          "elite": 16,
+          "meanComposite": 76.22627876106198
+        },
+        {
+          "year": 2024,
+          "count": 217,
+          "meanOverall": 78.06912442396313,
+          "elite": 19,
+          "meanComposite": 76.45014377880184
+        },
+        {
+          "year": 2025,
+          "count": 194,
+          "meanOverall": 79.15463917525773,
+          "elite": 24,
+          "meanComposite": 77.50790206185569
+        },
+        {
+          "year": 2026,
+          "count": 169,
+          "meanOverall": 80.83431952662721,
+          "elite": 24,
+          "meanComposite": 78.95230887573969
+        }
+      ]
+    },
+    {
+      "seed": 8303,
+      "clubs": [
+        "RCB",
+        "SUR",
+        "DC",
+        "CSK",
+        "SIX",
+        "HAM",
+        "REN",
+        "SCO"
+      ],
+      "annual": [
+        {
+          "year": 2008,
+          "count": 270,
+          "meanOverall": 77.28518518518518,
+          "elite": 10,
+          "meanComposite": 76.68403703703702
+        },
+        {
+          "year": 2009,
+          "count": 281,
+          "meanOverall": 77.40925266903915,
+          "elite": 11,
+          "meanComposite": 76.6121537366548
+        },
+        {
+          "year": 2010,
+          "count": 288,
+          "meanOverall": 77.53125,
+          "elite": 15,
+          "meanComposite": 76.61625625000005
+        },
+        {
+          "year": 2011,
+          "count": 296,
+          "meanOverall": 77.37162162162163,
+          "elite": 16,
+          "meanComposite": 76.34950270270271
+        },
+        {
+          "year": 2012,
+          "count": 299,
+          "meanOverall": 77.09698996655518,
+          "elite": 22,
+          "meanComposite": 76.01950100334454
+        },
+        {
+          "year": 2013,
+          "count": 306,
+          "meanOverall": 76.73529411764706,
+          "elite": 21,
+          "meanComposite": 75.66381111111106
+        },
+        {
+          "year": 2014,
+          "count": 308,
+          "meanOverall": 76.28896103896103,
+          "elite": 25,
+          "meanComposite": 75.17057727272731
+        },
+        {
+          "year": 2015,
+          "count": 309,
+          "meanOverall": 75.83818770226537,
+          "elite": 25,
+          "meanComposite": 74.63911909385114
+        },
+        {
+          "year": 2016,
+          "count": 300,
+          "meanOverall": 75.55,
+          "elite": 23,
+          "meanComposite": 74.2882026666666
+        },
+        {
+          "year": 2017,
+          "count": 301,
+          "meanOverall": 75.27906976744185,
+          "elite": 21,
+          "meanComposite": 74.01763986710957
+        },
+        {
+          "year": 2018,
+          "count": 301,
+          "meanOverall": 75.11960132890366,
+          "elite": 18,
+          "meanComposite": 73.80418471760791
+        },
+        {
+          "year": 2019,
+          "count": 295,
+          "meanOverall": 74.84406779661018,
+          "elite": 16,
+          "meanComposite": 73.482660338983
+        },
+        {
+          "year": 2020,
+          "count": 280,
+          "meanOverall": 75.40714285714286,
+          "elite": 17,
+          "meanComposite": 73.99303142857138
+        },
+        {
+          "year": 2021,
+          "count": 263,
+          "meanOverall": 76.33840304182509,
+          "elite": 14,
+          "meanComposite": 74.84531330798481
+        },
+        {
+          "year": 2022,
+          "count": 246,
+          "meanOverall": 77.13414634146342,
+          "elite": 15,
+          "meanComposite": 75.47553658536583
+        },
+        {
+          "year": 2023,
+          "count": 226,
+          "meanOverall": 77.96460176991151,
+          "elite": 16,
+          "meanComposite": 76.28475929203539
+        },
+        {
+          "year": 2024,
+          "count": 217,
+          "meanOverall": 78.13364055299539,
+          "elite": 20,
+          "meanComposite": 76.49295207373271
+        },
+        {
+          "year": 2025,
+          "count": 194,
+          "meanOverall": 79.08247422680412,
+          "elite": 18,
+          "meanComposite": 77.42205257731958
+        },
+        {
+          "year": 2026,
+          "count": 169,
+          "meanOverall": 80.66863905325444,
+          "elite": 16,
+          "meanComposite": 78.82910532544376
+        }
+      ]
+    },
+    {
+      "seed": 8304,
+      "clubs": [
+        "SOM",
+        "REN",
+        "KKR",
+        "LAN",
+        "MI",
+        "CSK",
+        "THU",
+        "SIX"
+      ],
+      "annual": [
+        {
+          "year": 2008,
+          "count": 270,
+          "meanOverall": 77.28518518518518,
+          "elite": 10,
+          "meanComposite": 76.68403703703702
+        },
+        {
+          "year": 2009,
+          "count": 281,
+          "meanOverall": 77.45551601423487,
+          "elite": 13,
+          "meanComposite": 76.65559999999999
+        },
+        {
+          "year": 2010,
+          "count": 288,
+          "meanOverall": 77.47569444444444,
+          "elite": 14,
+          "meanComposite": 76.59658055555559
+        },
+        {
+          "year": 2011,
+          "count": 296,
+          "meanOverall": 77.33108108108108,
+          "elite": 19,
+          "meanComposite": 76.34675878378374
+        },
+        {
+          "year": 2012,
+          "count": 299,
+          "meanOverall": 77.10033444816054,
+          "elite": 22,
+          "meanComposite": 76.0125511705686
+        },
+        {
+          "year": 2013,
+          "count": 306,
+          "meanOverall": 76.640522875817,
+          "elite": 23,
+          "meanComposite": 75.57946732026143
+        },
+        {
+          "year": 2014,
+          "count": 308,
+          "meanOverall": 76.1948051948052,
+          "elite": 27,
+          "meanComposite": 75.10854675324673
+        },
+        {
+          "year": 2015,
+          "count": 309,
+          "meanOverall": 75.76699029126213,
+          "elite": 28,
+          "meanComposite": 74.59565631067959
+        },
+        {
+          "year": 2016,
+          "count": 300,
+          "meanOverall": 75.44,
+          "elite": 27,
+          "meanComposite": 74.23925799999991
+        },
+        {
+          "year": 2017,
+          "count": 301,
+          "meanOverall": 75.19933554817275,
+          "elite": 23,
+          "meanComposite": 73.9825681063123
+        },
+        {
+          "year": 2018,
+          "count": 301,
+          "meanOverall": 75.09302325581395,
+          "elite": 19,
+          "meanComposite": 73.80018073089697
+        },
+        {
+          "year": 2019,
+          "count": 295,
+          "meanOverall": 74.80338983050848,
+          "elite": 20,
+          "meanComposite": 73.49534033898306
+        },
+        {
+          "year": 2020,
+          "count": 280,
+          "meanOverall": 75.27142857142857,
+          "elite": 16,
+          "meanComposite": 73.90304642857143
+        },
+        {
+          "year": 2021,
+          "count": 263,
+          "meanOverall": 75.96958174904942,
+          "elite": 12,
+          "meanComposite": 74.5224182509506
+        },
+        {
+          "year": 2022,
+          "count": 246,
+          "meanOverall": 76.6951219512195,
+          "elite": 14,
+          "meanComposite": 75.13929105691058
+        },
+        {
+          "year": 2023,
+          "count": 226,
+          "meanOverall": 77.36725663716814,
+          "elite": 15,
+          "meanComposite": 75.79937256637167
+        },
+        {
+          "year": 2024,
+          "count": 217,
+          "meanOverall": 77.47926267281106,
+          "elite": 14,
+          "meanComposite": 75.98044884792631
+        },
+        {
+          "year": 2025,
+          "count": 194,
+          "meanOverall": 78.51546391752578,
+          "elite": 13,
+          "meanComposite": 76.93606597938148
+        },
+        {
+          "year": 2026,
+          "count": 169,
+          "meanOverall": 79.9585798816568,
+          "elite": 13,
+          "meanComposite": 78.18081301775146
+        }
+      ]
+    },
+    {
+      "seed": 8305,
+      "clubs": [
+        "HAM",
+        "RCB",
+        "REN",
+        "SCO",
+        "SUR",
+        "CSK",
+        "KKR",
+        "HEA"
+      ],
+      "annual": [
+        {
+          "year": 2008,
+          "count": 270,
+          "meanOverall": 77.28518518518518,
+          "elite": 10,
+          "meanComposite": 76.68403703703702
+        },
+        {
+          "year": 2009,
+          "count": 281,
+          "meanOverall": 77.33807829181495,
+          "elite": 10,
+          "meanComposite": 76.54821067615656
+        },
+        {
+          "year": 2010,
+          "count": 288,
+          "meanOverall": 77.29861111111111,
+          "elite": 14,
+          "meanComposite": 76.42532083333337
+        },
+        {
+          "year": 2011,
+          "count": 296,
+          "meanOverall": 77.0304054054054,
+          "elite": 14,
+          "meanComposite": 76.07119459459457
+        },
+        {
+          "year": 2012,
+          "count": 299,
+          "meanOverall": 76.80602006688963,
+          "elite": 16,
+          "meanComposite": 75.75288494983282
+        },
+        {
+          "year": 2013,
+          "count": 306,
+          "meanOverall": 76.43137254901961,
+          "elite": 21,
+          "meanComposite": 75.33433202614385
+        },
+        {
+          "year": 2014,
+          "count": 308,
+          "meanOverall": 76.00324675324676,
+          "elite": 19,
+          "meanComposite": 74.90326818181813
+        },
+        {
+          "year": 2015,
+          "count": 309,
+          "meanOverall": 75.55663430420712,
+          "elite": 21,
+          "meanComposite": 74.39458122977346
+        },
+        {
+          "year": 2016,
+          "count": 300,
+          "meanOverall": 75.26666666666667,
+          "elite": 20,
+          "meanComposite": 73.99971066666666
+        },
+        {
+          "year": 2017,
+          "count": 301,
+          "meanOverall": 75.06312292358804,
+          "elite": 21,
+          "meanComposite": 73.78495946843856
+        },
+        {
+          "year": 2018,
+          "count": 301,
+          "meanOverall": 74.9734219269103,
+          "elite": 19,
+          "meanComposite": 73.6612598006645
+        },
+        {
+          "year": 2019,
+          "count": 295,
+          "meanOverall": 74.8271186440678,
+          "elite": 18,
+          "meanComposite": 73.46960949152539
+        },
+        {
+          "year": 2020,
+          "count": 280,
+          "meanOverall": 75.33214285714286,
+          "elite": 15,
+          "meanComposite": 73.92565214285717
+        },
+        {
+          "year": 2021,
+          "count": 263,
+          "meanOverall": 76.13307984790875,
+          "elite": 16,
+          "meanComposite": 74.67334296577944
+        },
+        {
+          "year": 2022,
+          "count": 246,
+          "meanOverall": 76.85772357723577,
+          "elite": 15,
+          "meanComposite": 75.23091463414636
+        },
+        {
+          "year": 2023,
+          "count": 226,
+          "meanOverall": 77.68141592920354,
+          "elite": 20,
+          "meanComposite": 76.05123008849561
+        },
+        {
+          "year": 2024,
+          "count": 217,
+          "meanOverall": 77.6958525345622,
+          "elite": 19,
+          "meanComposite": 76.0938414746544
+        },
+        {
+          "year": 2025,
+          "count": 194,
+          "meanOverall": 78.81958762886597,
+          "elite": 18,
+          "meanComposite": 77.15697525773199
+        },
+        {
+          "year": 2026,
+          "count": 169,
+          "meanOverall": 80.35502958579882,
+          "elite": 17,
+          "meanComposite": 78.50538934911246
+        }
+      ]
+    },
+    {
+      "seed": 8306,
+      "clubs": [
+        "MI",
+        "SUR",
+        "SOM",
+        "STR",
+        "HUR",
+        "DC",
+        "RCB",
+        "HEA"
+      ],
+      "annual": [
+        {
+          "year": 2008,
+          "count": 270,
+          "meanOverall": 77.28518518518518,
+          "elite": 10,
+          "meanComposite": 76.68403703703702
+        },
+        {
+          "year": 2009,
+          "count": 281,
+          "meanOverall": 77.38078291814946,
+          "elite": 11,
+          "meanComposite": 76.58877864768685
+        },
+        {
+          "year": 2010,
+          "count": 288,
+          "meanOverall": 77.4375,
+          "elite": 12,
+          "meanComposite": 76.55010000000001
+        },
+        {
+          "year": 2011,
+          "count": 296,
+          "meanOverall": 77.36486486486487,
+          "elite": 14,
+          "meanComposite": 76.38528783783775
+        },
+        {
+          "year": 2012,
+          "count": 299,
+          "meanOverall": 77.21070234113712,
+          "elite": 18,
+          "meanComposite": 76.13779331103683
+        },
+        {
+          "year": 2013,
+          "count": 306,
+          "meanOverall": 76.84640522875817,
+          "elite": 22,
+          "meanComposite": 75.74790065359477
+        },
+        {
+          "year": 2014,
+          "count": 308,
+          "meanOverall": 76.43506493506493,
+          "elite": 23,
+          "meanComposite": 75.34360064935058
+        },
+        {
+          "year": 2015,
+          "count": 309,
+          "meanOverall": 76.11974110032362,
+          "elite": 27,
+          "meanComposite": 74.90622330097086
+        },
+        {
+          "year": 2016,
+          "count": 300,
+          "meanOverall": 75.76666666666667,
+          "elite": 25,
+          "meanComposite": 74.50091599999995
+        },
+        {
+          "year": 2017,
+          "count": 301,
+          "meanOverall": 75.52159468438538,
+          "elite": 22,
+          "meanComposite": 74.26362458471759
+        },
+        {
+          "year": 2018,
+          "count": 301,
+          "meanOverall": 75.4186046511628,
+          "elite": 18,
+          "meanComposite": 74.09884850498335
+        },
+        {
+          "year": 2019,
+          "count": 295,
+          "meanOverall": 75.19661016949152,
+          "elite": 13,
+          "meanComposite": 73.82407661016944
+        },
+        {
+          "year": 2020,
+          "count": 280,
+          "meanOverall": 75.66071428571429,
+          "elite": 15,
+          "meanComposite": 74.23300785714278
+        },
+        {
+          "year": 2021,
+          "count": 263,
+          "meanOverall": 76.44106463878327,
+          "elite": 16,
+          "meanComposite": 74.95086844106464
+        },
+        {
+          "year": 2022,
+          "count": 246,
+          "meanOverall": 77.1910569105691,
+          "elite": 16,
+          "meanComposite": 75.56698780487807
+        },
+        {
+          "year": 2023,
+          "count": 226,
+          "meanOverall": 77.9424778761062,
+          "elite": 15,
+          "meanComposite": 76.30887079646021
+        },
+        {
+          "year": 2024,
+          "count": 217,
+          "meanOverall": 77.92165898617512,
+          "elite": 17,
+          "meanComposite": 76.33208571428572
+        },
+        {
+          "year": 2025,
+          "count": 194,
+          "meanOverall": 78.98453608247422,
+          "elite": 15,
+          "meanComposite": 77.35894226804129
+        },
+        {
+          "year": 2026,
+          "count": 169,
+          "meanOverall": 80.6508875739645,
+          "elite": 16,
+          "meanComposite": 78.8272485207101
+        }
+      ]
+    },
+    {
+      "seed": 8307,
+      "clubs": [
+        "CSK",
+        "SOM",
+        "SUR",
+        "THU",
+        "MI",
+        "RCB",
+        "SCO",
+        "STR"
+      ],
+      "annual": [
+        {
+          "year": 2008,
+          "count": 270,
+          "meanOverall": 77.28518518518518,
+          "elite": 10,
+          "meanComposite": 76.68403703703702
+        },
+        {
+          "year": 2009,
+          "count": 281,
+          "meanOverall": 77.33451957295374,
+          "elite": 10,
+          "meanComposite": 76.55817722419926
+        },
+        {
+          "year": 2010,
+          "count": 288,
+          "meanOverall": 77.30555555555556,
+          "elite": 13,
+          "meanComposite": 76.39243263888888
+        },
+        {
+          "year": 2011,
+          "count": 296,
+          "meanOverall": 77.0641891891892,
+          "elite": 19,
+          "meanComposite": 76.0805608108108
+        },
+        {
+          "year": 2012,
+          "count": 299,
+          "meanOverall": 76.76254180602007,
+          "elite": 22,
+          "meanComposite": 75.69201939799335
+        },
+        {
+          "year": 2013,
+          "count": 306,
+          "meanOverall": 76.4281045751634,
+          "elite": 28,
+          "meanComposite": 75.33780457516342
+        },
+        {
+          "year": 2014,
+          "count": 308,
+          "meanOverall": 76.02597402597402,
+          "elite": 27,
+          "meanComposite": 74.94220909090906
+        },
+        {
+          "year": 2015,
+          "count": 309,
+          "meanOverall": 75.62135922330097,
+          "elite": 29,
+          "meanComposite": 74.47144142394818
+        },
+        {
+          "year": 2016,
+          "count": 300,
+          "meanOverall": 75.34,
+          "elite": 31,
+          "meanComposite": 74.11627333333327
+        },
+        {
+          "year": 2017,
+          "count": 301,
+          "meanOverall": 75.04318936877077,
+          "elite": 25,
+          "meanComposite": 73.786322923588
+        },
+        {
+          "year": 2018,
+          "count": 301,
+          "meanOverall": 74.88372093023256,
+          "elite": 21,
+          "meanComposite": 73.5883362126245
+        },
+        {
+          "year": 2019,
+          "count": 295,
+          "meanOverall": 74.64067796610169,
+          "elite": 16,
+          "meanComposite": 73.31247186440669
+        },
+        {
+          "year": 2020,
+          "count": 280,
+          "meanOverall": 75.18214285714286,
+          "elite": 15,
+          "meanComposite": 73.78999285714286
+        },
+        {
+          "year": 2021,
+          "count": 263,
+          "meanOverall": 76.00380228136882,
+          "elite": 17,
+          "meanComposite": 74.55288060836499
+        },
+        {
+          "year": 2022,
+          "count": 246,
+          "meanOverall": 76.91056910569105,
+          "elite": 18,
+          "meanComposite": 75.3232617886178
+        },
+        {
+          "year": 2023,
+          "count": 226,
+          "meanOverall": 77.55309734513274,
+          "elite": 19,
+          "meanComposite": 75.92718141592916
+        },
+        {
+          "year": 2024,
+          "count": 217,
+          "meanOverall": 77.64516129032258,
+          "elite": 17,
+          "meanComposite": 76.06923225806453
+        },
+        {
+          "year": 2025,
+          "count": 194,
+          "meanOverall": 78.73711340206185,
+          "elite": 14,
+          "meanComposite": 77.08193711340208
+        },
+        {
+          "year": 2026,
+          "count": 169,
+          "meanOverall": 80.1775147928994,
+          "elite": 16,
+          "meanComposite": 78.32739171597635
+        }
+      ]
+    },
+    {
+      "seed": 8308,
+      "clubs": [
+        "DC",
+        "SUR",
+        "HEA",
+        "CSK",
+        "THU",
+        "LAN",
+        "KKR",
+        "STR"
+      ],
+      "annual": [
+        {
+          "year": 2008,
+          "count": 270,
+          "meanOverall": 77.28518518518518,
+          "elite": 10,
+          "meanComposite": 76.68403703703702
+        },
+        {
+          "year": 2009,
+          "count": 281,
+          "meanOverall": 77.45195729537366,
+          "elite": 10,
+          "meanComposite": 76.64918291814948
+        },
+        {
+          "year": 2010,
+          "count": 288,
+          "meanOverall": 77.59027777777777,
+          "elite": 15,
+          "meanComposite": 76.6718993055556
+        },
+        {
+          "year": 2011,
+          "count": 296,
+          "meanOverall": 77.53378378378379,
+          "elite": 16,
+          "meanComposite": 76.49222499999999
+        },
+        {
+          "year": 2012,
+          "count": 299,
+          "meanOverall": 77.20401337792642,
+          "elite": 21,
+          "meanComposite": 76.13895919732444
+        },
+        {
+          "year": 2013,
+          "count": 306,
+          "meanOverall": 76.8202614379085,
+          "elite": 25,
+          "meanComposite": 75.72582875816998
+        },
+        {
+          "year": 2014,
+          "count": 308,
+          "meanOverall": 76.3961038961039,
+          "elite": 27,
+          "meanComposite": 75.29687792207794
+        },
+        {
+          "year": 2015,
+          "count": 309,
+          "meanOverall": 76.03559870550161,
+          "elite": 28,
+          "meanComposite": 74.83761359223304
+        },
+        {
+          "year": 2016,
+          "count": 300,
+          "meanOverall": 75.74333333333334,
+          "elite": 26,
+          "meanComposite": 74.48729866666662
+        },
+        {
+          "year": 2017,
+          "count": 301,
+          "meanOverall": 75.54485049833887,
+          "elite": 26,
+          "meanComposite": 74.2376930232558
+        },
+        {
+          "year": 2018,
+          "count": 301,
+          "meanOverall": 75.3687707641196,
+          "elite": 21,
+          "meanComposite": 74.00942990033221
+        },
+        {
+          "year": 2019,
+          "count": 295,
+          "meanOverall": 75.16271186440677,
+          "elite": 20,
+          "meanComposite": 73.78454033898299
+        },
+        {
+          "year": 2020,
+          "count": 280,
+          "meanOverall": 75.72142857142858,
+          "elite": 20,
+          "meanComposite": 74.26663214285713
+        },
+        {
+          "year": 2021,
+          "count": 263,
+          "meanOverall": 76.53992395437263,
+          "elite": 18,
+          "meanComposite": 75.0156015209125
+        },
+        {
+          "year": 2022,
+          "count": 246,
+          "meanOverall": 77.3089430894309,
+          "elite": 17,
+          "meanComposite": 75.68855040650405
+        },
+        {
+          "year": 2023,
+          "count": 226,
+          "meanOverall": 78.070796460177,
+          "elite": 21,
+          "meanComposite": 76.42078761061951
+        },
+        {
+          "year": 2024,
+          "count": 217,
+          "meanOverall": 78.11981566820276,
+          "elite": 21,
+          "meanComposite": 76.58931520737323
+        },
+        {
+          "year": 2025,
+          "count": 194,
+          "meanOverall": 79.18556701030928,
+          "elite": 16,
+          "meanComposite": 77.5349381443299
+        },
+        {
+          "year": 2026,
+          "count": 169,
+          "meanOverall": 80.59763313609467,
+          "elite": 14,
+          "meanComposite": 78.77470414201183
+        }
+      ]
+    }
+  ]
+}

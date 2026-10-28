@@ -1,0 +1,72 @@
+{
+  "sha256": "c7ba52edcbee16d66b8651362a61939cd6c0507382b6bea49f81b51869b1bafb",
+  "scope": "Synthetic retirement boundaries on real saved squads; real offseason/draft/trade APIs. Not observed natural retirement frequencies.",
+  "cases": [
+    {
+      "forcedRetirements": 0,
+      "actualRetirements": 0,
+      "releases": 2,
+      "ordinary": 0,
+      "supplementary": 2,
+      "tradedPick": false,
+      "midDraftColdRestore": true,
+      "totalDraftSelections": 14,
+      "allEightSquadsLegal": true
+    },
+    {
+      "forcedRetirements": 3,
+      "actualRetirements": 3,
+      "releases": 1,
+      "ordinary": 3,
+      "supplementary": 1,
+      "tradedPick": false,
+      "midDraftColdRestore": true,
+      "totalDraftSelections": 16,
+      "allEightSquadsLegal": true
+    },
+    {
+      "forcedRetirements": 4,
+      "actualRetirements": 4,
+      "releases": 0,
+      "ordinary": 4,
+      "supplementary": 0,
+      "tradedPick": false,
+      "midDraftColdRestore": true,
+      "totalDraftSelections": 16,
+      "allEightSquadsLegal": true
+    },
+    {
+      "forcedRetirements": 5,
+      "actualRetirements": 5,
+      "releases": 0,
+      "ordinary": 4,
+      "supplementary": 1,
+      "tradedPick": false,
+      "midDraftColdRestore": true,
+      "totalDraftSelections": 17,
+      "allEightSquadsLegal": true
+    },
+    {
+      "forcedRetirements": 8,
+      "actualRetirements": 8,
+      "releases": 0,
+      "ordinary": 4,
+      "supplementary": 4,
+      "tradedPick": false,
+      "midDraftColdRestore": true,
+      "totalDraftSelections": 20,
+      "allEightSquadsLegal": true
+    },
+    {
+      "forcedRetirements": 12,
+      "actualRetirements": 12,
+      "releases": 0,
+      "ordinary": 4,
+      "supplementary": 8,
+      "tradedPick": false,
+      "midDraftColdRestore": true,
+      "totalDraftSelections": 24,
+      "allEightSquadsLegal": true
+    }
+  ]
+}

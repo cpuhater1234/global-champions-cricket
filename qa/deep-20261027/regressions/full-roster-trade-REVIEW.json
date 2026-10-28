@@ -1,0 +1,12 @@
+{
+  "sha": "0f643bb049f277dd57550ad9fb8d6134c51ed102d3ffa00a53d20f68e10876e4",
+  "checks": [
+    "sole-keeper-rejected-without-mutation",
+    "vacancy-trade-not-blocked-by-full-roster-rule"
+  ],
+  "result": {
+    "accepted": false,
+    "message": "Your full squad must retain a recognised wicketkeeper. Include a keeper in the exchange or create a draft vacancy first."
+  },
+  "pass": true
+}

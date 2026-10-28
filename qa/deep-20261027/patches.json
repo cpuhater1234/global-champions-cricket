@@ -1,0 +1,67 @@
+[
+  [
+    "v8/engine/dynasty.js",
+    "  function autoSave(){",
+    "@@COORDINATOR@@\n  function commitSave(){"
+  ],
+  [
+    "v8/engine/dynasty.js",
+    "function startFreshWorld(args=[]){lastStoredSave=",
+    "function startFreshWorld(args=[]){invalidatePendingSaves();saveSuspended=false;lastStoredSave="
+  ],
+  [
+    "v8/engine/dynasty.js",
+    "previousSaveConflict=saveConflict;const status=",
+    "previousSaveConflict=saveConflict,previousSavePending=savePending,previousSaveSuspended=saveSuspended;const status="
+  ],
+  [
+    "v8/engine/dynasty.js",
+    "save=migrateLoadedSave(save);lastStoredSave=",
+    "save=migrateLoadedSave(save);invalidatePendingSaves();saveSuspended=false;lastStoredSave="
+  ],
+  [
+    "v8/engine/dynasty.js",
+    "currentScreen=previousScreen;base.go(previousScreen);console.error(e);",
+    "currentScreen=previousScreen;saveSuspended=previousSaveSuspended;if(previousSavePending)autoSave();base.go(previousScreen);console.error(e);"
+  ],
+  [
+    "v8/engine/dynasty.js",
+    "function clearSaveAndRestart(){safeStorageRemove(SAVE_KEY);safeStorageRemove(LEGACY_SAVE_KEY);safeStorageRemove(META_KEY);location.reload()}",
+    "function clearSaveAndRestart(){\n    invalidatePendingSaves();const generation=saveGeneration;saveSuspended=true;notifySaveStatus();\n    const reset=()=>{if(generation!==saveGeneration||!saveSuspended)return false;let ok=true;for(const key of [SAVE_KEY,LEGACY_SAVE_KEY,META_KEY])if(!safeStorageRemove(key))ok=false;if(!ok)throw new Error('Career storage could not be cleared');location.reload();return true;};\n    if(!navigator.locks?.request){try{return reset()}catch(error){saveSuspended=false;saveSucceeded=false;notifySaveStatus();base.toast('Could not clear this career. Keep the game open and download a backup.');return false;}}\n    return Promise.resolve().then(()=>navigator.locks.request('gcc-career-save:'+SAVE_KEY,reset)).catch(error=>{if(generation!==saveGeneration)return false;saveSuspended=false;saveSucceeded=false;console.error('GCC career clear failed',error);notifySaveStatus();base.toast('Could not clear this career. Keep the game open and download a backup.');return false;});\n  }"
+  ],
+  [
+    "v8/engine/dynasty.js",
+    "save:()=>autoSave(),saveConflict:",
+    "save:()=>autoSave(),saveAsync:()=>{autoSave();return flushSave();},flushSave,savePending:()=>savePending,saveSucceeded:()=>saveSucceeded,saveSuspended:()=>saveSuspended,saveGeneration:()=>saveGeneration,saveCoordinated:()=>!!navigator.locks?.request,saveConflict:"
+  ],
+  [
+    "v8/ui/controller.js",
+    "let feedbackTimer=null,saveWarning='';",
+    "let feedbackTimer=null,saveWarning='',pendingRestoreFeedback=null,exitGuardAttached=false;"
+  ],
+  [
+    "v8/ui/controller.js",
+    " const saveStatus=()=>saveWarning?`<div class=\"g8savewarning\" role=\"status\"><strong>Progress not saved</strong><span>${esc(saveWarning)}</span></div>`:'';",
+    " const saveStatusInner=()=>read.savePending?.()?'<div class=\"g8savepending\" role=\"status\">Saving progress\u2026</div>':saveWarning?`<div class=\"g8savewarning\" role=\"status\"><strong>Progress not saved</strong><span>${esc(saveWarning)}</span></div>`:'';\n const saveStatus=()=>`<div id=\"g8saveStatus\" class=\"g8savestatus\" ${!read.savePending?.()&&!saveWarning?'hidden':''}>${saveStatusInner()}</div>`;\n function warnUnsavedExit(event){event.preventDefault();event.returnValue='';}\n function refreshSaveStatus(ok=read.saveSucceeded?.()){\n  saveWarning=read.saveSuspended?.()||read.savePending?.()||ok?'':read.saveConflict?.()?'Another open game saved newer progress. Return home and choose Continue to load it.':'This browser could not save your progress. Keep this game open to continue playing.';\n  const box=document.getElementById('g8saveStatus');if(box){box.hidden=!read.savePending?.()&&!saveWarning;X.patch(box,saveStatusInner());}\n  const needsGuard=!!s.dynasty&&!read.saveSuspended?.()&&(!!read.savePending?.()||!!saveWarning);\n  if(window.removeEventListener&&needsGuard!==exitGuardAttached){window[needsGuard?'addEventListener':'removeEventListener']('beforeunload',warnUnsavedExit);exitGuardAttached=needsGuard;}\n  if(saveWarning&&ui.modal)announce(saveWarning);\n }\n window.addEventListener('gcc-save-status',()=>{\n  refreshSaveStatus();\n  if(pendingRestoreFeedback!=null&&pendingRestoreFeedback!==read.saveGeneration?.())pendingRestoreFeedback=null;\n  if(pendingRestoreFeedback!=null&&!read.savePending?.()){pendingRestoreFeedback=null;announce(saveWarning?'Career opened from backup for this session. Progress is not saved. Keep this game open and download a backup before closing.':'Career restored from your backup.');}\n });"
+  ],
+  [
+    "v8/ui/controller.js",
+    "if(s.dynasty){const previous=saveWarning;saveWarning=read.save()?'':read.saveConflict?.()?'Another open game saved newer progress. Return home and choose Continue to load it.':'This browser could not save your progress. Keep this game open to continue playing.';if(saveWarning&&ui.modal)announce(saveWarning);if(previous!==saveWarning)render(false);}}",
+    "if(s.dynasty)refreshSaveStatus(read.save());}"
+  ],
+  [
+    "v8/ui/controller.js",
+    "restorePresentation();save();announce(saveWarning?'Career opened from backup for this session. Progress is not saved. Keep this game open and download a backup before closing.':'Career restored from your backup.');",
+    "restorePresentation();save();pendingRestoreFeedback=read.saveGeneration?.()??0;announce(read.savePending?.()?'Career opened from your backup. Saving progress\u2026':saveWarning?'Career opened from backup for this session. Progress is not saved. Keep this game open and download a backup before closing.':'Career restored from your backup.');if(!read.savePending?.())pendingRestoreFeedback=null;"
+  ],
+  [
+    "v8/ui/controller.js",
+    "try{clearFeedback();fn(...args);",
+    "try{if(action!=='confirmBackup')pendingRestoreFeedback=null;clearFeedback();fn(...args);"
+  ],
+  [
+    "v8/engine/dynasty.js",
+    "    if(mid&&give.length!==take.length)return 'Midseason exchanges must leave both squads at fifteen players.';\n    return packageShapeBlock(club,take,give);",
+    "    if(mid&&give.length!==take.length)return 'Midseason exchanges must leave both squads at fifteen players.';\n    const ownAfter=roster(own).filter(p=>!p.dynastyReplacement&&!give.includes(p.id)).concat(take.map(pById));\n    if(ownAfter.length===15){\n      if(!ownAfter.some(isKeeper))return 'Your full squad must retain a recognised wicketkeeper. Include a keeper in the exchange or create a draft vacancy first.';\n      if(R.oversCapacity(ownAfter)<20)return 'Your full squad must retain twenty overs of bowling capacity. Balance the exchange or create a draft vacancy first.';\n    }\n    return packageShapeBlock(club,take,give);"
+  ]
+]

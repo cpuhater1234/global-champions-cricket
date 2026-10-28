@@ -1,0 +1,12 @@
+AssertionError [ERR_ASSERTION]: Scouted player opens at start
+
+71 !== 0
+
+    at /workspace/scratch/bed56f4334a5/gcc/qa/decision-friction-20261026/browser.cjs:1:1382 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 71,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}

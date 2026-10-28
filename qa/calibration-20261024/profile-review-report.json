@@ -1,0 +1,30 @@
+{
+  "players": 412,
+  "identityUnresolved": 0,
+  "withListedMatchEvidence": 403,
+  "withBattingDeliveries": 398,
+  "withBowlingDeliveries": 305,
+  "priorProvisionalProfilesReviewed": 143,
+  "sampleTiers": {
+    "substantial-observations": 311,
+    "limited-observations": 92,
+    "no-direct-delivery-observations": 9
+  },
+  "roleReviewFlags": [
+    {
+      "name": "Adil Rashid",
+      "meanObservedBattingSlot": 8.55992141453831,
+      "bowlingOversPerListedMatch": 3.6430615164520748,
+      "action": "T20 role classification review; not automatically reclassified"
+    },
+    {
+      "name": "Yasir Arafat",
+      "meanObservedBattingSlot": 8.082051282051282,
+      "bowlingOversPerListedMatch": 3.507936507936508,
+      "action": "T20 role classification review; not automatically reclassified"
+    }
+  ],
+  "candidateRejected": true,
+  "numericPriorsCertified": false,
+  "scope": "Every catalog identity and numeric attribute classified. Activity/proxies are distinguished from measured ability. Original provisional status not cosmetically relabelled as validated."
+}

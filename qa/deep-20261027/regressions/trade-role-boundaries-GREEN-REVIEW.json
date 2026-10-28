@@ -1,0 +1,31 @@
+{
+  "file": "qa/deep-20261027/candidate.html",
+  "sha": "0f643bb049f277dd57550ad9fb8d6134c51ed102d3ffa00a53d20f68e10876e4",
+  "checks": [
+    {
+      "name": "16 overs refused without mutation",
+      "pass": true
+    },
+    {
+      "name": "exact 20 overs with five bowlers passes user guard",
+      "pass": true
+    },
+    {
+      "name": "keeper-for-keeper passes full roster guard",
+      "pass": true
+    },
+    {
+      "name": "bowling deficiency permitted with genuine vacancy",
+      "pass": true
+    },
+    {
+      "name": "temporary keeper cannot repair full permanent roster",
+      "pass": true
+    },
+    {
+      "name": "temporary player does not consume genuine draft vacancy",
+      "pass": true
+    }
+  ],
+  "pass": true
+}

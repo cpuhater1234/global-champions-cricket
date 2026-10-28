@@ -1,0 +1,198 @@
+validation {'alpha': 60.0, 'context_bat': np.float64(3.8039243433440695), 'context_bowl': np.float64(3.872106505745988), 'bat': np.float64(3.8235129676648136), 'bowl': np.float64(3.890651174662313)}
+validation {'alpha': 180.0, 'context_bat': np.float64(3.798960170328656), 'context_bowl': np.float64(3.8670797174550966), 'bat': np.float64(3.7969480608924533), 'bowl': np.float64(3.864323716207555)}
+validation {'alpha': 480.0, 'context_bat': np.float64(3.79595228848872), 'context_bowl': np.float64(3.8640937681237864), 'bat': np.float64(3.788805141556753), 'bowl': np.float64(3.8561666745633656)}
+validation {'alpha': 1200.0, 'context_bat': np.float64(3.794818606217895), 'context_bowl': np.float64(3.8628694809045983), 'bat': np.float64(3.788496265218783), 'bowl': np.float64(3.856093169303988)}
+test year 2023
+test year 2024
+test year 2025
+test year 2026
+{
+  "baselineArtifactSha256": "3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf",
+  "chosen": {
+    "bat": 1200.0,
+    "bowl": 1200.0,
+    "context_bat": 1200.0,
+    "context_bowl": 1200.0
+  },
+  "validation": [
+    {
+      "alpha": 60.0,
+      "context_bat": 3.8039243433440695,
+      "context_bowl": 3.872106505745988,
+      "bat": 3.8235129676648136,
+      "bowl": 3.890651174662313
+    },
+    {
+      "alpha": 180.0,
+      "context_bat": 3.798960170328656,
+      "context_bowl": 3.8670797174550966,
+      "bat": 3.7969480608924533,
+      "bowl": 3.864323716207555
+    },
+    {
+      "alpha": 480.0,
+      "context_bat": 3.79595228848872,
+      "context_bowl": 3.8640937681237864,
+      "bat": 3.788805141556753,
+      "bowl": 3.8561666745633656
+    },
+    {
+      "alpha": 1200.0,
+      "context_bat": 3.794818606217895,
+      "context_bowl": 3.8628694809045983,
+      "bat": 3.788496265218783,
+      "bowl": 3.856093169303988
+    }
+  ],
+  "walkForwardHeldOut": {
+    "bat": {
+      "playerClusters": 113,
+      "rows": 533,
+      "modelSpearman": 0.25057801237288047,
+      "legacySpearman": 0.2728677476953231,
+      "gainInterval975": [
+        -0.13852682919804424,
+        0.0998430257032697
+      ],
+      "design": "Seeded player-cluster bootstrap,97.5% intervals per family for two predeclared promotion gates; repeated years stay in each player cluster."
+    },
+    "bowl": {
+      "playerClusters": 94,
+      "rows": 468,
+      "modelSpearman": 0.2028637792236926,
+      "legacySpearman": 0.16350013000700292,
+      "gainInterval975": [
+        -0.08088347139763465,
+        0.16599132545175735
+      ],
+      "design": "Seeded player-cluster bootstrap,97.5% intervals per family for two predeclared promotion gates; repeated years stay in each player cluster."
+    }
+  },
+  "locked2022HeldOut": {
+    "bat": {
+      "playerClusters": 113,
+      "rows": 533,
+      "modelSpearman": 0.18826262669668004,
+      "legacySpearman": 0.2899116199341472,
+      "gainInterval975": [
+        -0.224807874405643,
+        0.026681708110885
+      ],
+      "design": "Seeded player-cluster bootstrap,97.5% intervals per family for two predeclared promotion gates; repeated years stay in each player cluster."
+    },
+    "bowl": {
+      "playerClusters": 94,
+      "rows": 468,
+      "modelSpearman": 0.1427366123721733,
+      "legacySpearman": 0.15567286908997224,
+      "gainInterval975": [
+        -0.1433288994666931,
+        0.11431121537914485
+      ],
+      "design": "Seeded player-cluster bootstrap,97.5% intervals per family for two predeclared promotion gates; repeated years stay in each player cluster."
+    }
+  },
+  "errors": [
+    {
+      "year": 2023,
+      "family": "bat",
+      "model": {
+        "weightedMSE": 4.010993144183897,
+        "balls": 189536.0
+      },
+      "contextOnly": {
+        "weightedMSE": 4.0192470185177,
+        "balls": 189536.0
+      }
+    },
+    {
+      "year": 2023,
+      "family": "bowl",
+      "model": {
+        "weightedMSE": 4.089486850314251,
+        "balls": 188635.0
+      },
+      "contextOnly": {
+        "weightedMSE": 4.098397267150561,
+        "balls": 188635.0
+      }
+    },
+    {
+      "year": 2024,
+      "family": "bat",
+      "model": {
+        "weightedMSE": 4.076511336354678,
+        "balls": 237894.0
+      },
+      "contextOnly": {
+        "weightedMSE": 4.085583196753246,
+        "balls": 237894.0
+      }
+    },
+    {
+      "year": 2024,
+      "family": "bowl",
+      "model": {
+        "weightedMSE": 4.1517092985938655,
+        "balls": 236836.0
+      },
+      "contextOnly": {
+        "weightedMSE": 4.161508397646181,
+        "balls": 236836.0
+      }
+    },
+    {
+      "year": 2025,
+      "family": "bat",
+      "model": {
+        "weightedMSE": 4.080475008149543,
+        "balls": 220698.0
+      },
+      "contextOnly": {
+        "weightedMSE": 4.086800915150869,
+        "balls": 220698.0
+      }
+    },
+    {
+      "year": 2025,
+      "family": "bowl",
+      "model": {
+        "weightedMSE": 4.159412980303357,
+        "balls": 219726.0
+      },
+      "contextOnly": {
+        "weightedMSE": 4.166473191058272,
+        "balls": 219726.0
+      }
+    },
+    {
+      "year": 2026,
+      "family": "bat",
+      "model": {
+        "weightedMSE": 4.220661492568683,
+        "balls": 196817.0
+      },
+      "contextOnly": {
+        "weightedMSE": 4.231046442696074,
+        "balls": 196817.0
+      }
+    },
+    {
+      "year": 2026,
+      "family": "bowl",
+      "model": {
+        "weightedMSE": 4.3007568342015094,
+        "balls": 195918.0
+      },
+      "contextOnly": {
+        "weightedMSE": 4.3117965582143185,
+        "balls": 195918.0
+      }
+    }
+  ],
+  "promotionGates": {
+    "bat": false,
+    "bowl": false
+  },
+  "scope": "Strict chronological forecasts to2023\u20132026, last year partial through2026-10-24. Player-cluster uncertainty; observational estimates, not causal skill measurements. These gates do not certify leadership, keeping, fielding or technique."
+}

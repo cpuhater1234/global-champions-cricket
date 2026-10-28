@@ -1,0 +1,61 @@
+{
+  "buildSha256": "e28ccd173f92069cb690d27f6b64224c072f4b56bb061d00428edadc5a5e7af0",
+  "files": [
+    {
+      "path": "career-10001/checkpoint-2009.json",
+      "bytes": 1755951,
+      "sha256": "c43eefb40661e9995039d32d807fd58ce3a9a102a1548229aacd37297c2fe5ec"
+    },
+    {
+      "path": "career-10001/checkpoint-2017.json",
+      "bytes": 2153125,
+      "sha256": "1b69e27609618e863b0a5f399b633cffe36bc9ec5c1b7385c2b9455c90f5d95c"
+    },
+    {
+      "path": "career-10001/checkpoint-2026.json",
+      "bytes": 2503355,
+      "sha256": "b164e6b1bc9c3f21626ed94749d6748024839ae072b872ddddc8208e6b8a6a9c"
+    },
+    {
+      "path": "career-10001/v8_game_results.json",
+      "bytes": 3370,
+      "sha256": "048c1140fdab2d22faf3b94e365c1f9320aa1834f0b7ce282ae71b6368943d32"
+    },
+    {
+      "path": "career-10001/v8_scorebooks.json",
+      "bytes": 1126596,
+      "sha256": "5ee15c82b227bba011ec230d43314820d9ce41b05ea22abd513882a68f843b18"
+    },
+    {
+      "path": "season-10002/v8_smoke_save.json",
+      "bytes": 1666983,
+      "sha256": "660739240b9175425919729795997f97694bb26a450f4e67b99cc3f8dbdfb972"
+    },
+    {
+      "path": "season-10002/v8_smoke_results.json",
+      "bytes": 816,
+      "sha256": "66996a2fd836c9178365b7dbbce2b66d5f3046cddcfa5382061980782420825d"
+    },
+    {
+      "path": "season-10002/v8_scorebooks.json",
+      "bytes": 64915,
+      "sha256": "9d12c1ddacbc6a039a012c202c0a9ca4947208a7b094d93a3c0a614b6fd59173"
+    },
+    {
+      "path": "season-10003/v8_smoke_save.json",
+      "bytes": 1677781,
+      "sha256": "13f8ac0b53abdc6f52630df856f171ff6d0dd00355c3826af7533345f00eb376"
+    },
+    {
+      "path": "season-10003/v8_smoke_results.json",
+      "bytes": 816,
+      "sha256": "ff288cd1d4435627b2b1079e533f7109df86c8bb55dab409f76a21d82a93ae98"
+    },
+    {
+      "path": "season-10003/v8_scorebooks.json",
+      "bytes": 65959,
+      "sha256": "92a0fde963ba21835dab9ac224dad6d6edc771e1f67a292cd3d6a77c5a287afa"
+    }
+  ],
+  "scope": "Fresh actual current-build saves, early/middle/final career snapshots and every managed scorebook. Synthetic targeted fixtures are separate test code."
+}

@@ -1,0 +1,13 @@
+{
+  "sha": "4622c2f16881972869a2f861995d9b1f8a95cee2b9fe0cee62149d6352d261f9",
+  "cases": [],
+  "failures": [
+    {
+      "club": "PBKS",
+      "year": 2010,
+      "round": 15,
+      "error": "AssertionError [ERR_ASSERTION]: PBKS keeper\n    at rosterCheck (file:///workspace/scratch/f98cc1f6c0bf/gcc/qa/deep-20261027/regressions/full-career.mjs:6:229)\n    at file:///workspace/scratch/f98cc1f6c0bf/gcc/qa/deep-20261027/regressions/full-career.mjs:7:129\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)",
+      "errors": []
+    }
+  ]
+}

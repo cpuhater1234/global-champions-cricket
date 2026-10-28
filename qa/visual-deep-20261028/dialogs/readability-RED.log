@@ -1,0 +1,12 @@
+{
+  sha: 'aa2e3e187efc0b31366ee29b255c1ed1fa236e4c1fb98ece83d9c99c935fb7aa',
+  checks: [
+    { name: 'rule-note-contrast', pass: false, evidence: [Object] },
+    {
+      name: 'prompt-header-stays-complete',
+      pass: false,
+      evidence: [Object]
+    }
+  ],
+  pass: false
+}

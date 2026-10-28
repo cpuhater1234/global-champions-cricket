@@ -1,0 +1,1475 @@
+{
+  "buildSha256": "e28ccd173f92069cb690d27f6b64224c072f4b56bb061d00428edadc5a5e7af0",
+  "inventory": {
+    "sha256": "e28ccd173f92069cb690d27f6b64224c072f4b56bb061d00428edadc5a5e7af0",
+    "scripts": 20,
+    "numericOccurrences": 19952,
+    "numericLiterals": 19524,
+    "numericStrings": 428,
+    "distinctValues": 1298,
+    "functions": 561,
+    "byBlock": [
+      {
+        "block": 0,
+        "bytes": 2568,
+        "numbers": 0,
+        "opening": "(()=>{const choices=[{\"abbr\": \"CSK\", \"src\": \"https://commons.wikimedia.org/wiki/Special:FilePath/Chi"
+      },
+      {
+        "block": 1,
+        "bytes": 310652,
+        "numbers": 40,
+        "opening": "window.GCC8_MEDIA={\"stadium\": \"data:image/jpeg;base64,/9j/4QCCRXhpZgAATU0AKgAAAAgABQEOAAIAAAAgAAAASg"
+      },
+      {
+        "block": 2,
+        "bytes": 521488,
+        "numbers": 4460,
+        "opening": "/* MIT License Copyright (c) 2013 pieroxy Permission is hereby granted, free of charge, to any per"
+      },
+      {
+        "block": 3,
+        "bytes": 1663,
+        "numbers": 10,
+        "opening": "window.GCC8_ENGINE_SCROLL=()=>{};/* One native runner owns domain timers. Legacy presentation observ"
+      },
+      {
+        "block": 4,
+        "bytes": 291039,
+        "numbers": 9404,
+        "opening": "(()=>{const {setTimeout,clearTimeout,setInterval,clearInterval,requestAnimationFrame,cancelAnimation"
+      },
+      {
+        "block": 5,
+        "bytes": 4293,
+        "numbers": 64,
+        "opening": "(()=>{const {setTimeout,clearTimeout,setInterval,clearInterval,requestAnimationFrame,cancelAnimation"
+      },
+      {
+        "block": 6,
+        "bytes": 18029,
+        "numbers": 412,
+        "opening": "(()=>{const {setTimeout,clearTimeout,setInterval,clearInterval,requestAnimationFrame,cancelAnimation"
+      },
+      {
+        "block": 7,
+        "bytes": 14490,
+        "numbers": 538,
+        "opening": "(()=>{const {setTimeout,clearTimeout,setInterval,clearInterval,requestAnimationFrame,cancelAnimation"
+      },
+      {
+        "block": 8,
+        "bytes": 10414,
+        "numbers": 345,
+        "opening": "(()=>{const {setTimeout,clearTimeout,setInterval,clearInterval,requestAnimationFrame,cancelAnimation"
+      },
+      {
+        "block": 9,
+        "bytes": 236931,
+        "numbers": 1960,
+        "opening": "(()=>{const {setTimeout,clearTimeout,setInterval,clearInterval,requestAnimationFrame,cancelAnimation"
+      },
+      {
+        "block": 10,
+        "bytes": 175080,
+        "numbers": 1959,
+        "opening": "(()=>{const {setTimeout,clearTimeout,setInterval,clearInterval,requestAnimationFrame,cancelAnimation"
+      },
+      {
+        "block": 11,
+        "bytes": 15688,
+        "numbers": 76,
+        "opening": "window.GCC8 = (()=>{ const G=window.GCC,D=window.Dynasty,R=window.GCC_RATINGS,read=window.GCC8_ENGI"
+      },
+      {
+        "block": 12,
+        "bytes": 32887,
+        "numbers": 190,
+        "opening": "/* Cricket reads derive from the existing model; hidden CPU career truth is not shown. */ (() => { "
+      },
+      {
+        "block": 13,
+        "bytes": 11199,
+        "numbers": 40,
+        "opening": "/* Translate the existing cricket model into jobs, without guessing handedness or a spin subtype. */"
+      },
+      {
+        "block": 14,
+        "bytes": 2789,
+        "numbers": 0,
+        "opening": "/* Venue selection is presentation-only: never consume the cricket RNG. */ (()=>{ const X=window.GC"
+      },
+      {
+        "block": 15,
+        "bytes": 12350,
+        "numbers": 148,
+        "opening": "/* Highlights use completed scorecard facts. No invented deliveries or intermediate wickets. */ (() "
+      },
+      {
+        "block": 16,
+        "bytes": 14339,
+        "numbers": 44,
+        "opening": "/* Read-only list planning: no guessed retirements, expiry dates or forced transactions. */ (()=>{ "
+      },
+      {
+        "block": 17,
+        "bytes": 33640,
+        "numbers": 112,
+        "opening": "(() => { const X=window.GCC8,{G,D,R,read,ui,esc,btn,badge,roster,pitch,heading,playerCard,table,poo"
+      },
+      {
+        "block": 18,
+        "bytes": 3947,
+        "numbers": 7,
+        "opening": "/* Keep live controls, cards and scroll containers mounted when their values change. */ (() => { co"
+      },
+      {
+        "block": 19,
+        "bytes": 66064,
+        "numbers": 143,
+        "opening": "(() => { const X=window.GCC8,{G,D,R,read,ui,views,esc,btn,badge,roster,playerCard,profile,phases,in"
+      }
+    ],
+    "scope": "All executable embedded JavaScript literals and numeric strings. CSS dimensions and digits inside prose are excluded. Inventory is coverage/navigation, not semantic or empirical certification."
+  },
+  "playerYears": {
+    "worlds": 8,
+    "uniquePlayers": 412,
+    "recordedPlayerSeasonsOneWorld": 5149,
+    "playerSeasonChecksAcrossAllWorlds": 41192
+  },
+  "fullCareer": {
+    "scope": "Real cricket engine + new UI dispatch in a VM DOM stub. No browser, visual, geometry, focus or latency certification.",
+    "seed": 10001,
+    "club": "HEA",
+    "coverage": {
+      "reloads": [
+        {
+          "year": 2008,
+          "label": "foundation-user-pick"
+        },
+        {
+          "year": 2008,
+          "label": "manual-XI"
+        },
+        {
+          "year": 2008,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2008,
+          "label": "grand-final-ready"
+        },
+        {
+          "year": 2009,
+          "label": "annual-order"
+        },
+        {
+          "year": 2009,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2009,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2009,
+          "label": "grand-final-ready"
+        },
+        {
+          "year": 2010,
+          "label": "annual-order"
+        },
+        {
+          "year": 2011,
+          "label": "annual-order"
+        },
+        {
+          "year": 2012,
+          "label": "annual-order"
+        },
+        {
+          "year": 2013,
+          "label": "annual-order"
+        },
+        {
+          "year": 2013,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2014,
+          "label": "annual-order"
+        },
+        {
+          "year": 2014,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2015,
+          "label": "annual-order"
+        },
+        {
+          "year": 2015,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2016,
+          "label": "annual-order"
+        },
+        {
+          "year": 2016,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2017,
+          "label": "annual-order"
+        },
+        {
+          "year": 2017,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2017,
+          "label": "finals-ready"
+        },
+        {
+          "year": 2017,
+          "label": "grand-final-ready"
+        },
+        {
+          "year": 2018,
+          "label": "annual-order"
+        },
+        {
+          "year": 2018,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2019,
+          "label": "annual-order"
+        },
+        {
+          "year": 2020,
+          "label": "annual-order"
+        },
+        {
+          "year": 2020,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2021,
+          "label": "annual-order"
+        },
+        {
+          "year": 2021,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2022,
+          "label": "annual-order"
+        },
+        {
+          "year": 2022,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2023,
+          "label": "annual-order"
+        },
+        {
+          "year": 2023,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2024,
+          "label": "annual-order"
+        },
+        {
+          "year": 2024,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2025,
+          "label": "annual-order"
+        },
+        {
+          "year": 2025,
+          "label": "annual-user-pick"
+        },
+        {
+          "year": 2026,
+          "label": "annual-order"
+        }
+      ],
+      "finals": 3,
+      "injurySelections": 31,
+      "injuryCovers": 0,
+      "superOvers": 3,
+      "clubs": []
+    },
+    "checks": 15272,
+    "seasons": 19,
+    "regularSeasonMatches": 266,
+    "storageStats": {
+      "writes": 11316,
+      "maxCodeUnits": 1341141,
+      "maxUtf16Bytes": 2682282,
+      "quotaFailures": 0
+    },
+    "errors": []
+  },
+  "deliveryStress": {
+    "artifactSha256": "e28ccd173f92069cb690d27f6b64224c072f4b56bb061d00428edadc5a5e7af0",
+    "matchPairs": 3000,
+    "innings": 6000,
+    "checks": 4388607,
+    "coverage": {
+      "wide": 15389,
+      "noBall": 3753,
+      "freeHit": 3833,
+      "runOut": 1886,
+      "allOut": 1022,
+      "chase": 1886,
+      "firstBallWin": 338,
+      "surge": 5069,
+      "noLegalBallWin": 19,
+      "clubs": [
+        "SUR",
+        "NOT",
+        "KKR",
+        "HEA",
+        "HUR",
+        "DC",
+        "STA",
+        "RCB"
+      ]
+    },
+    "scope": "Actual delivery engine with eight existing club rosters, deterministic varied estimates and RNG seeds, independent per-delivery arithmetic and endpoints. Unit stress, not UI careers or empirical game-balance certification."
+  },
+  "independentStatLedger": {
+    "hash": "e28ccd173f92069cb690d27f6b64224c072f4b56bb061d00428edadc5a5e7af0",
+    "innings": 118,
+    "playerTotals": {
+      "3": {
+        "matches": 14,
+        "innings": 14,
+        "runs": 298,
+        "balls": 198,
+        "outs": 13,
+        "fours": 42,
+        "sixes": 7,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "4": {
+        "matches": 14,
+        "innings": 14,
+        "runs": 271,
+        "balls": 234,
+        "outs": 13,
+        "fours": 25,
+        "sixes": 10,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "8": {
+        "matches": 14,
+        "innings": 13,
+        "runs": 331,
+        "balls": 190,
+        "outs": 8,
+        "fours": 43,
+        "sixes": 8,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "16": {
+        "matches": 16,
+        "innings": 16,
+        "runs": 253,
+        "balls": 195,
+        "outs": 15,
+        "fours": 30,
+        "sixes": 6,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "24": {
+        "matches": 15,
+        "innings": 15,
+        "runs": 486,
+        "balls": 354,
+        "outs": 14,
+        "fours": 57,
+        "sixes": 13,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "25": {
+        "matches": 15,
+        "innings": 15,
+        "runs": 201,
+        "balls": 180,
+        "outs": 12,
+        "fours": 22,
+        "sixes": 4,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "26": {
+        "matches": 15,
+        "innings": 15,
+        "runs": 274,
+        "balls": 188,
+        "outs": 13,
+        "fours": 31,
+        "sixes": 8,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "30": {
+        "matches": 14,
+        "innings": 14,
+        "runs": 272,
+        "balls": 215,
+        "outs": 11,
+        "fours": 34,
+        "sixes": 7,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "35": {
+        "matches": 15,
+        "innings": 15,
+        "runs": 206,
+        "balls": 186,
+        "outs": 15,
+        "fours": 25,
+        "sixes": 5,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "38": {
+        "matches": 16,
+        "innings": 14,
+        "runs": 160,
+        "balls": 118,
+        "outs": 10,
+        "fours": 22,
+        "sixes": 4,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "41": {
+        "matches": 14,
+        "innings": 14,
+        "runs": 381,
+        "balls": 285,
+        "outs": 12,
+        "fours": 44,
+        "sixes": 12,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "43": {
+        "matches": 14,
+        "innings": 14,
+        "runs": 250,
+        "balls": 202,
+        "outs": 14,
+        "fours": 26,
+        "sixes": 8,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "46": {
+        "matches": 14,
+        "innings": 13,
+        "runs": 185,
+        "balls": 152,
+        "outs": 12,
+        "fours": 24,
+        "sixes": 4,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "48": {
+        "matches": 16,
+        "innings": 16,
+        "runs": 328,
+        "balls": 254,
+        "outs": 14,
+        "fours": 48,
+        "sixes": 4,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "49": {
+        "matches": 15,
+        "innings": 13,
+        "runs": 252,
+        "balls": 148,
+        "outs": 7,
+        "fours": 42,
+        "sixes": 3,
+        "wickets": 0,
+        "bowlBalls": 24,
+        "runsConceded": 52
+      },
+      "52": {
+        "matches": 14,
+        "innings": 11,
+        "runs": 245,
+        "balls": 182,
+        "outs": 9,
+        "fours": 29,
+        "sixes": 7,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "57": {
+        "matches": 15,
+        "innings": 14,
+        "runs": 316,
+        "balls": 240,
+        "outs": 12,
+        "fours": 45,
+        "sixes": 6,
+        "wickets": 21,
+        "bowlBalls": 360,
+        "runsConceded": 440
+      },
+      "58": {
+        "matches": 15,
+        "innings": 12,
+        "runs": 282,
+        "balls": 169,
+        "outs": 8,
+        "fours": 35,
+        "sixes": 12,
+        "wickets": 23,
+        "bowlBalls": 354,
+        "runsConceded": 423
+      },
+      "59": {
+        "matches": 15,
+        "innings": 15,
+        "runs": 257,
+        "balls": 228,
+        "outs": 15,
+        "fours": 31,
+        "sixes": 5,
+        "wickets": 7,
+        "bowlBalls": 122,
+        "runsConceded": 195
+      },
+      "60": {
+        "matches": 16,
+        "innings": 15,
+        "runs": 340,
+        "balls": 236,
+        "outs": 10,
+        "fours": 41,
+        "sixes": 12,
+        "wickets": 19,
+        "bowlBalls": 378,
+        "runsConceded": 451
+      },
+      "61": {
+        "matches": 14,
+        "innings": 11,
+        "runs": 257,
+        "balls": 157,
+        "outs": 7,
+        "fours": 35,
+        "sixes": 6,
+        "wickets": 24,
+        "bowlBalls": 336,
+        "runsConceded": 417
+      },
+      "62": {
+        "matches": 14,
+        "innings": 12,
+        "runs": 162,
+        "balls": 140,
+        "outs": 9,
+        "fours": 20,
+        "sixes": 2,
+        "wickets": 21,
+        "bowlBalls": 336,
+        "runsConceded": 407
+      },
+      "63": {
+        "matches": 15,
+        "innings": 13,
+        "runs": 172,
+        "balls": 146,
+        "outs": 12,
+        "fours": 22,
+        "sixes": 3,
+        "wickets": 5,
+        "bowlBalls": 80,
+        "runsConceded": 128
+      },
+      "64": {
+        "matches": 14,
+        "innings": 10,
+        "runs": 213,
+        "balls": 114,
+        "outs": 7,
+        "fours": 31,
+        "sixes": 9,
+        "wickets": 15,
+        "bowlBalls": 234,
+        "runsConceded": 386
+      },
+      "68": {
+        "matches": 16,
+        "innings": 11,
+        "runs": 136,
+        "balls": 79,
+        "outs": 7,
+        "fours": 18,
+        "sixes": 4,
+        "wickets": 6,
+        "bowlBalls": 157,
+        "runsConceded": 231
+      },
+      "69": {
+        "matches": 16,
+        "innings": 16,
+        "runs": 282,
+        "balls": 205,
+        "outs": 14,
+        "fours": 37,
+        "sixes": 6,
+        "wickets": 5,
+        "bowlBalls": 102,
+        "runsConceded": 174
+      },
+      "70": {
+        "matches": 14,
+        "innings": 9,
+        "runs": 110,
+        "balls": 83,
+        "outs": 5,
+        "fours": 11,
+        "sixes": 5,
+        "wickets": 2,
+        "bowlBalls": 57,
+        "runsConceded": 102
+      },
+      "72": {
+        "matches": 14,
+        "innings": 8,
+        "runs": 155,
+        "balls": 86,
+        "outs": 5,
+        "fours": 23,
+        "sixes": 5,
+        "wickets": 3,
+        "bowlBalls": 72,
+        "runsConceded": 152
+      },
+      "73": {
+        "matches": 14,
+        "innings": 6,
+        "runs": 62,
+        "balls": 48,
+        "outs": 4,
+        "fours": 9,
+        "sixes": 0,
+        "wickets": 4,
+        "bowlBalls": 153,
+        "runsConceded": 265
+      },
+      "76": {
+        "matches": 14,
+        "innings": 11,
+        "runs": 134,
+        "balls": 80,
+        "outs": 8,
+        "fours": 14,
+        "sixes": 9,
+        "wickets": 8,
+        "bowlBalls": 236,
+        "runsConceded": 438
+      },
+      "77": {
+        "matches": 15,
+        "innings": 11,
+        "runs": 152,
+        "balls": 93,
+        "outs": 8,
+        "fours": 23,
+        "sixes": 5,
+        "wickets": 2,
+        "bowlBalls": 72,
+        "runsConceded": 136
+      },
+      "83": {
+        "matches": 14,
+        "innings": 4,
+        "runs": 39,
+        "balls": 23,
+        "outs": 3,
+        "fours": 8,
+        "sixes": 0,
+        "wickets": 18,
+        "bowlBalls": 336,
+        "runsConceded": 375
+      },
+      "84": {
+        "matches": 16,
+        "innings": 3,
+        "runs": 5,
+        "balls": 8,
+        "outs": 1,
+        "fours": 1,
+        "sixes": 0,
+        "wickets": 16,
+        "bowlBalls": 384,
+        "runsConceded": 400
+      },
+      "85": {
+        "matches": 15,
+        "innings": 7,
+        "runs": 35,
+        "balls": 41,
+        "outs": 5,
+        "fours": 4,
+        "sixes": 1,
+        "wickets": 20,
+        "bowlBalls": 360,
+        "runsConceded": 408
+      },
+      "89": {
+        "matches": 16,
+        "innings": 9,
+        "runs": 74,
+        "balls": 67,
+        "outs": 7,
+        "fours": 13,
+        "sixes": 1,
+        "wickets": 16,
+        "bowlBalls": 384,
+        "runsConceded": 421
+      },
+      "90": {
+        "matches": 15,
+        "innings": 9,
+        "runs": 82,
+        "balls": 60,
+        "outs": 7,
+        "fours": 13,
+        "sixes": 0,
+        "wickets": 13,
+        "bowlBalls": 348,
+        "runsConceded": 375
+      },
+      "92": {
+        "matches": 14,
+        "innings": 9,
+        "runs": 98,
+        "balls": 73,
+        "outs": 6,
+        "fours": 13,
+        "sixes": 1,
+        "wickets": 13,
+        "bowlBalls": 336,
+        "runsConceded": 496
+      },
+      "95": {
+        "matches": 14,
+        "innings": 2,
+        "runs": 1,
+        "balls": 4,
+        "outs": 1,
+        "fours": 0,
+        "sixes": 0,
+        "wickets": 15,
+        "bowlBalls": 336,
+        "runsConceded": 398
+      },
+      "98": {
+        "matches": 15,
+        "innings": 2,
+        "runs": 1,
+        "balls": 3,
+        "outs": 1,
+        "fours": 0,
+        "sixes": 0,
+        "wickets": 19,
+        "bowlBalls": 252,
+        "runsConceded": 404
+      },
+      "103": {
+        "matches": 14,
+        "innings": 5,
+        "runs": 72,
+        "balls": 82,
+        "outs": 3,
+        "fours": 6,
+        "sixes": 1,
+        "wickets": 16,
+        "bowlBalls": 324,
+        "runsConceded": 380
+      },
+      "106": {
+        "matches": 14,
+        "innings": 8,
+        "runs": 54,
+        "balls": 35,
+        "outs": 4,
+        "fours": 10,
+        "sixes": 0,
+        "wickets": 9,
+        "bowlBalls": 147,
+        "runsConceded": 266
+      },
+      "113": {
+        "matches": 16,
+        "innings": 8,
+        "runs": 60,
+        "balls": 50,
+        "outs": 4,
+        "fours": 8,
+        "sixes": 0,
+        "wickets": 25,
+        "bowlBalls": 382,
+        "runsConceded": 413
+      },
+      "117": {
+        "matches": 14,
+        "innings": 4,
+        "runs": 68,
+        "balls": 50,
+        "outs": 3,
+        "fours": 10,
+        "sixes": 0,
+        "wickets": 18,
+        "bowlBalls": 286,
+        "runsConceded": 395
+      },
+      "121": {
+        "matches": 14,
+        "innings": 3,
+        "runs": 48,
+        "balls": 24,
+        "outs": 2,
+        "fours": 10,
+        "sixes": 0,
+        "wickets": 16,
+        "bowlBalls": 320,
+        "runsConceded": 445
+      },
+      "122": {
+        "matches": 16,
+        "innings": 5,
+        "runs": 42,
+        "balls": 37,
+        "outs": 3,
+        "fours": 7,
+        "sixes": 0,
+        "wickets": 24,
+        "bowlBalls": 378,
+        "runsConceded": 455
+      },
+      "125": {
+        "matches": 15,
+        "innings": 4,
+        "runs": 18,
+        "balls": 18,
+        "outs": 1,
+        "fours": 3,
+        "sixes": 0,
+        "wickets": 17,
+        "bowlBalls": 324,
+        "runsConceded": 468
+      },
+      "126": {
+        "matches": 14,
+        "innings": 6,
+        "runs": 38,
+        "balls": 18,
+        "outs": 4,
+        "fours": 8,
+        "sixes": 0,
+        "wickets": 21,
+        "bowlBalls": 330,
+        "runsConceded": 403
+      },
+      "129": {
+        "matches": 14,
+        "innings": 9,
+        "runs": 122,
+        "balls": 70,
+        "outs": 9,
+        "fours": 19,
+        "sixes": 4,
+        "wickets": 10,
+        "bowlBalls": 252,
+        "runsConceded": 412
+      },
+      "130": {
+        "matches": 14,
+        "innings": 3,
+        "runs": 24,
+        "balls": 22,
+        "outs": 2,
+        "fours": 3,
+        "sixes": 0,
+        "wickets": 11,
+        "bowlBalls": 258,
+        "runsConceded": 356
+      },
+      "135": {
+        "matches": 14,
+        "innings": 7,
+        "runs": 63,
+        "balls": 54,
+        "outs": 2,
+        "fours": 8,
+        "sixes": 1,
+        "wickets": 23,
+        "bowlBalls": 286,
+        "runsConceded": 365
+      },
+      "136": {
+        "matches": 14,
+        "innings": 3,
+        "runs": 11,
+        "balls": 9,
+        "outs": 1,
+        "fours": 2,
+        "sixes": 0,
+        "wickets": 18,
+        "bowlBalls": 336,
+        "runsConceded": 439
+      },
+      "138": {
+        "matches": 15,
+        "innings": 8,
+        "runs": 48,
+        "balls": 43,
+        "outs": 6,
+        "fours": 5,
+        "sixes": 1,
+        "wickets": 21,
+        "bowlBalls": 348,
+        "runsConceded": 443
+      },
+      "141": {
+        "matches": 15,
+        "innings": 8,
+        "runs": 121,
+        "balls": 79,
+        "outs": 4,
+        "fours": 22,
+        "sixes": 0,
+        "wickets": 32,
+        "bowlBalls": 360,
+        "runsConceded": 463
+      },
+      "144": {
+        "matches": 14,
+        "innings": 10,
+        "runs": 177,
+        "balls": 111,
+        "outs": 7,
+        "fours": 23,
+        "sixes": 6,
+        "wickets": 21,
+        "bowlBalls": 336,
+        "runsConceded": 427
+      },
+      "151": {
+        "matches": 16,
+        "innings": 16,
+        "runs": 169,
+        "balls": 148,
+        "outs": 16,
+        "fours": 23,
+        "sixes": 2,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "152": {
+        "matches": 14,
+        "innings": 14,
+        "runs": 167,
+        "balls": 164,
+        "outs": 13,
+        "fours": 21,
+        "sixes": 0,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "156": {
+        "matches": 14,
+        "innings": 8,
+        "runs": 96,
+        "balls": 65,
+        "outs": 2,
+        "fours": 14,
+        "sixes": 1,
+        "wickets": 15,
+        "bowlBalls": 288,
+        "runsConceded": 409
+      },
+      "164": {
+        "matches": 15,
+        "innings": 4,
+        "runs": 26,
+        "balls": 25,
+        "outs": 3,
+        "fours": 5,
+        "sixes": 0,
+        "wickets": 19,
+        "bowlBalls": 221,
+        "runsConceded": 362
+      },
+      "165": {
+        "matches": 15,
+        "innings": 14,
+        "runs": 223,
+        "balls": 177,
+        "outs": 12,
+        "fours": 21,
+        "sixes": 8,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "166": {
+        "matches": 16,
+        "innings": 15,
+        "runs": 436,
+        "balls": 293,
+        "outs": 13,
+        "fours": 64,
+        "sixes": 9,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "167": {
+        "matches": 14,
+        "innings": 14,
+        "runs": 196,
+        "balls": 156,
+        "outs": 13,
+        "fours": 23,
+        "sixes": 6,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "168": {
+        "matches": 14,
+        "innings": 9,
+        "runs": 142,
+        "balls": 108,
+        "outs": 5,
+        "fours": 25,
+        "sixes": 1,
+        "wickets": 3,
+        "bowlBalls": 21,
+        "runsConceded": 39
+      },
+      "180": {
+        "matches": 14,
+        "innings": 14,
+        "runs": 325,
+        "balls": 249,
+        "outs": 13,
+        "fours": 44,
+        "sixes": 4,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "181": {
+        "matches": 14,
+        "innings": 14,
+        "runs": 278,
+        "balls": 211,
+        "outs": 13,
+        "fours": 24,
+        "sixes": 11,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "182": {
+        "matches": 15,
+        "innings": 15,
+        "runs": 269,
+        "balls": 300,
+        "outs": 14,
+        "fours": 27,
+        "sixes": 4,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "183": {
+        "matches": 16,
+        "innings": 16,
+        "runs": 347,
+        "balls": 341,
+        "outs": 15,
+        "fours": 33,
+        "sixes": 9,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "184": {
+        "matches": 15,
+        "innings": 11,
+        "runs": 168,
+        "balls": 101,
+        "outs": 5,
+        "fours": 25,
+        "sixes": 2,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "186": {
+        "matches": 14,
+        "innings": 13,
+        "runs": 277,
+        "balls": 179,
+        "outs": 10,
+        "fours": 33,
+        "sixes": 14,
+        "wickets": 20,
+        "bowlBalls": 271,
+        "runsConceded": 507
+      },
+      "193": {
+        "matches": 16,
+        "innings": 6,
+        "runs": 34,
+        "balls": 27,
+        "outs": 2,
+        "fours": 7,
+        "sixes": 0,
+        "wickets": 9,
+        "bowlBalls": 138,
+        "runsConceded": 227
+      },
+      "196": {
+        "matches": 16,
+        "innings": 15,
+        "runs": 335,
+        "balls": 222,
+        "outs": 11,
+        "fours": 38,
+        "sixes": 15,
+        "wickets": 1,
+        "bowlBalls": 9,
+        "runsConceded": 12
+      },
+      "199": {
+        "matches": 14,
+        "innings": 13,
+        "runs": 290,
+        "balls": 214,
+        "outs": 9,
+        "fours": 38,
+        "sixes": 6,
+        "wickets": 0,
+        "bowlBalls": 34,
+        "runsConceded": 82
+      },
+      "205": {
+        "matches": 16,
+        "innings": 16,
+        "runs": 288,
+        "balls": 245,
+        "outs": 14,
+        "fours": 37,
+        "sixes": 6,
+        "wickets": 10,
+        "bowlBalls": 199,
+        "runsConceded": 305
+      },
+      "208": {
+        "matches": 14,
+        "innings": 14,
+        "runs": 413,
+        "balls": 310,
+        "outs": 11,
+        "fours": 50,
+        "sixes": 11,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "210": {
+        "matches": 16,
+        "innings": 6,
+        "runs": 86,
+        "balls": 62,
+        "outs": 3,
+        "fours": 13,
+        "sixes": 1,
+        "wickets": 19,
+        "bowlBalls": 378,
+        "runsConceded": 472
+      },
+      "211": {
+        "matches": 16,
+        "innings": 10,
+        "runs": 156,
+        "balls": 117,
+        "outs": 8,
+        "fours": 24,
+        "sixes": 1,
+        "wickets": 14,
+        "bowlBalls": 321,
+        "runsConceded": 506
+      },
+      "220": {
+        "matches": 14,
+        "innings": 14,
+        "runs": 387,
+        "balls": 318,
+        "outs": 13,
+        "fours": 38,
+        "sixes": 11,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "222": {
+        "matches": 14,
+        "innings": 14,
+        "runs": 257,
+        "balls": 221,
+        "outs": 14,
+        "fours": 30,
+        "sixes": 4,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "223": {
+        "matches": 16,
+        "innings": 8,
+        "runs": 146,
+        "balls": 106,
+        "outs": 6,
+        "fours": 22,
+        "sixes": 2,
+        "wickets": 21,
+        "bowlBalls": 313,
+        "runsConceded": 502
+      },
+      "229": {
+        "matches": 16,
+        "innings": 15,
+        "runs": 252,
+        "balls": 147,
+        "outs": 9,
+        "fours": 30,
+        "sixes": 11,
+        "wickets": 1,
+        "bowlBalls": 24,
+        "runsConceded": 60
+      },
+      "234": {
+        "matches": 14,
+        "innings": 14,
+        "runs": 304,
+        "balls": 245,
+        "outs": 14,
+        "fours": 42,
+        "sixes": 4,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "242": {
+        "matches": 14,
+        "innings": 13,
+        "runs": 249,
+        "balls": 176,
+        "outs": 12,
+        "fours": 31,
+        "sixes": 9,
+        "wickets": 4,
+        "bowlBalls": 132,
+        "runsConceded": 265
+      },
+      "243": {
+        "matches": 14,
+        "innings": 14,
+        "runs": 348,
+        "balls": 307,
+        "outs": 13,
+        "fours": 40,
+        "sixes": 7,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "249": {
+        "matches": 16,
+        "innings": 15,
+        "runs": 216,
+        "balls": 165,
+        "outs": 14,
+        "fours": 32,
+        "sixes": 5,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "251": {
+        "matches": 15,
+        "innings": 13,
+        "runs": 425,
+        "balls": 259,
+        "outs": 11,
+        "fours": 60,
+        "sixes": 14,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "254": {
+        "matches": 14,
+        "innings": 14,
+        "runs": 324,
+        "balls": 221,
+        "outs": 10,
+        "fours": 42,
+        "sixes": 8,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "256": {
+        "matches": 14,
+        "innings": 10,
+        "runs": 239,
+        "balls": 183,
+        "outs": 8,
+        "fours": 35,
+        "sixes": 3,
+        "wickets": 4,
+        "bowlBalls": 48,
+        "runsConceded": 117
+      },
+      "257": {
+        "matches": 16,
+        "innings": 16,
+        "runs": 322,
+        "balls": 277,
+        "outs": 16,
+        "fours": 38,
+        "sixes": 8,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      },
+      "263": {
+        "matches": 15,
+        "innings": 15,
+        "runs": 336,
+        "balls": 244,
+        "outs": 11,
+        "fours": 42,
+        "sixes": 9,
+        "wickets": 0,
+        "bowlBalls": 0,
+        "runsConceded": 0
+      }
+    },
+    "players": 88,
+    "independentChecks": 880,
+    "noBallDeliveries": 76,
+    "ballsFaced": 12949,
+    "legalBowlingBalls": 12873,
+    "scope": "Every actual league/finals delivery innings captured via an unchanged E.play wrapper; Super Over figures remain excluded from season totals."
+  },
+  "frontendStatistics": {
+    "artifactSha256": "e28ccd173f92069cb690d27f6b64224c072f4b56bb061d00428edadc5a5e7af0",
+    "scope": "Read-only VM checks of 1 completed 2008 saved games. Actual scorebook data independently summed and compared with frontend averages; scorebook strings checked against arithmetic and legal-ball overs. Parsed strings, not rendered presentation.",
+    "checks": 369,
+    "scorecards": 15,
+    "averageRows": 15,
+    "runs": [
+      {
+        "club": "THU",
+        "matches": 15,
+        "players": 15
+      }
+    ],
+    "findings": [],
+    "errors": []
+  },
+  "independentCrosscheck": {
+    "scope": "Secondary cross-row identity/wicket/dismissal audit of existing captured scorebooks, additional to phase/extras/balls/NRR checks. No new matches or empirical calibration.",
+    "matches": 306,
+    "checks": 15929,
+    "errors": [],
+    "warnings": []
+  },
+  "attributeBasisCounts": {
+    "Authored estimate with related scoring/dismissal/activity proxies; replacement model failed predeclared promotion gate": 3708,
+    "Authored technique/style estimate; delivered ball-type or technique measurement incomplete": 2060,
+    "Authored model prior; fielding activity available, opportunity-adjusted skill unidentified": 824,
+    "Authored model prior; no direct delivery measurement": 824,
+    "Derived ordinal game composite; skill-overall-v1 preserves role equivalence; legacy methods frozen": 412
+  },
+  "independentlyMeasuredAttributesInFrozenLedger": 0,
+  "frozenModelPromotionGates": {
+    "bat": false,
+    "bowl": false
+  },
+  "ratingsChanged": 0,
+  "gameEngineChanged": false,
+  "openItems": [
+    "All player skill estimates are authored/derived game estimates, even when informed by observations. No empirical challenger was promoted.",
+    "Phase/technique/mental/leadership/fielding/keeping estimates lack independently measured opportunity-adjusted skill labels.",
+    "Game probability coefficients and manager-score weights remain design choices; sensitivity and plausibility are not real-world calibration.",
+    "The minimum one-ball NRR denominator for a zero-legal-ball innings is a finite-game convention.",
+    "Two known conflicting DOBs and legacy-save provenance remain governed by earlier identity audit; no new source-certification claim."
+  ],
+  "additionalChecks": {
+    "overallMonotonicity": 10001,
+    "injuryCareerScoreBoundaries": 25945,
+    "chaseHelperChecks": 6478,
+    "tradePackages": 63,
+    "controlledTransactions": 127,
+    "corruptSaveRejections": 77
+  },
+  "rawArchive": {
+    "libraryFileId": "libfile_7131dd905ab081919f9eaabc72b060f7",
+    "version": 0,
+    "fileName": "GCC_Numerical_Audit_Evidence_20261026.zip",
+    "bytes": 25363599
+  }
+}

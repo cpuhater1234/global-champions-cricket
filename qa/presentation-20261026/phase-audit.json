@@ -1,0 +1,18 @@
+{
+  "players": 412,
+  "fixture": "qa/stabilisation/fixtures/foundation.json",
+  "auditScope": "Presentation utility, not empirical validation of ratings",
+  "bat": {
+    "n": 272,
+    "medianSpread": 3,
+    "spreadAtMost3": 187,
+    "spreadAtLeast8": 23
+  },
+  "bowl": {
+    "n": 245,
+    "medianSpread": 4,
+    "spreadAtMost3": 112,
+    "spreadAtLeast8": 27
+  },
+  "recoveryNote": "Aggregate results reconstructed from successful phase-audit output; raw per-player rows were lost in workspace reset."
+}

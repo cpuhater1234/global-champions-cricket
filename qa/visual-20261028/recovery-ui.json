@@ -1,0 +1,42 @@
+{
+  "sha": "aa2e3e187efc0b31366ee29b255c1ed1fa236e4c1fb98ece83d9c99c935fb7aa",
+  "checks": [
+    {
+      "name": "recovery-layout-320",
+      "pass": true
+    },
+    {
+      "name": "recovery-layout-360",
+      "pass": true
+    },
+    {
+      "name": "recovery-layout-390",
+      "pass": true
+    },
+    {
+      "name": "recovery-layout-768",
+      "pass": true
+    },
+    {
+      "name": "recoverCheckpoint-saved",
+      "pass": true,
+      "text": "Recovery checkpoint opened and saved."
+    },
+    {
+      "name": "recoverCheckpoint-quota",
+      "pass": true,
+      "text": "Recovery checkpoint opened for this session. Progress is not saved. Keep this game open and download a backup before closing."
+    },
+    {
+      "name": "keepBrowserSave-saved",
+      "pass": true,
+      "text": "Browser save opened and saved."
+    },
+    {
+      "name": "keepBrowserSave-quota",
+      "pass": true,
+      "text": "Browser save opened for this session. Progress is not saved. Keep this game open and download a backup before closing."
+    }
+  ],
+  "pass": true
+}

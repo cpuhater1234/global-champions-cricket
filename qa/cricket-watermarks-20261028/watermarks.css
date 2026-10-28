@@ -1,0 +1,17 @@
+/* GCC v93: one quiet cricket figure per selected narrative panel.
+   Original four-figure artwork is used unchanged as a CSS sprite. */
+#g8stage :is(.g8introbrief,.g8windowpanel,.g8annualhero,.g8reviewsummary){position:relative;isolation:isolate}
+#g8stage :is(.g8introbrief,.g8windowpanel,.g8annualhero,.g8reviewsummary)::after{
+ content:"";position:absolute;z-index:-1;pointer-events:none;
+ right:.75rem;top:50%;transform:translateY(-50%);
+ width:min(10rem,42%);aspect-ratio:264/306;
+ background-image:var(--g8-cricket-art);background-repeat:no-repeat;background-size:200% 200%;
+ background-position:0 0;filter:invert(1);mix-blend-mode:screen;opacity:.075;
+ mask-image:linear-gradient(to right,transparent,#000 35%);border-radius:inherit;
+}
+#g8stage .g8introbrief::after{background-position:0 0}
+#g8stage .g8annualhero::after{background-position:100% 0}
+#g8stage .g8windowpanel::after{background-position:0 100%}
+#g8stage .g8reviewsummary::after{background-position:100% 100%;width:min(5rem,25%)}
+@media(max-width:760px){#g8stage :is(.g8introbrief,.g8windowpanel,.g8annualhero,.g8reviewsummary)::after{width:min(7rem,32%);right:.5rem;opacity:.045}}
+@media(forced-colors:active){#g8stage :is(.g8introbrief,.g8windowpanel,.g8annualhero,.g8reviewsummary)::after{display:none}}

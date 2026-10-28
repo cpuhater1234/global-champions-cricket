@@ -1,0 +1,40 @@
+{
+  "baselineSha256": "696bdfea1a5d177d144a652316c0d39e1d34a1522df990ef32852e45e84d9097",
+  "releaseSha256": "c7ba52edcbee16d66b8651362a61939cd6c0507382b6bea49f81b51869b1bafb",
+  "fullCareerSeasons": 57,
+  "managedLeagueMatches": 798,
+  "worldLeagueMatches": 3192,
+  "worldFinals": 171,
+  "cricketSweep": {
+    "pairs": 1440,
+    "innings": 2880,
+    "deliveries": 314820,
+    "checks": 8804235
+  },
+  "playerLogicChecks": 16156,
+  "players": 412,
+  "activePlayerYears": 5149,
+  "baselineBrowserGeometryCases": 432,
+  "saveIntegrityChecks": 77,
+  "adversarialSaveScenarios": 83,
+  "tableValidationCases": 24,
+  "nativeStorageRecoveryAssertions": 6,
+  "staticScripts": 20,
+  "staticIds": 192,
+  "protectedScriptsUnchanged": 18,
+  "fixes": [
+    "Reject malformed league-table counters",
+    "Distinguish session-only backup restore from a successful browser save",
+    "Restore Scout comparison entry",
+    "Ignore second native double-click draft pick while keeping keyboard/separate clicks",
+    "Reflow career header and horizontally scroll whole navigation labels",
+    "Keep fixture badges, team words and match buttons readable with enlarged text",
+    "Give narrow dialog titles full width with reachable corner close"
+  ],
+  "remainingLimits": [
+    "Physical devices, other native browser engines and screen-reader users were not certified in this pass",
+    "Original intermittent browser save disappearance remains unreproduced",
+    "Statistics and historical ratings are not newly empirically certified; no universal bug-free claim"
+  ],
+  "repeatableRegressionSuitesPassed": 11
+}

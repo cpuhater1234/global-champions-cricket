@@ -15,6 +15,8 @@ jobs:
     timeout-minutes: 55
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Record runtime
         run: |
@@ -102,7 +104,9 @@ jobs:
 
       - name: Reproduce exact game numeric baseline
         run: |
-          GCC8_TEST_BUILD=game/gcc_v8_product_candidate.html node qa/finish-pass/numeric-audit.mjs | tee qa/calibration-20261024/actions-numeric-audit.log
+          git show 397311626bf1fb7c30b58a223c81063cac17e279:game/gcc_v8_product_candidate.html > qa/calibration-20261024/published-baseline.html
+          echo '3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf  qa/calibration-20261024/published-baseline.html' | sha256sum -c -
+          GCC8_TEST_BUILD=qa/calibration-20261024/published-baseline.html node qa/finish-pass/numeric-audit.mjs | tee qa/calibration-20261024/actions-numeric-audit.log
           python - <<'PY'
           import json
           d=json.load(open('qa/finish-pass/numeric-audit.json'))

@@ -1,3 +1,17 @@
+# Current status — 25 October 2026
+
+The exact database was recovered in the original environment and the frozen evaluation completed and reproduced. Both promotion gates fail; no ratings are promoted. The material below is retained as recovery history and the launchers remain useful for exact reproduction. They now use the immutable pre-evaluation baseline rather than whichever game is currently released.
+
+Before either launcher, restore the pinned baseline:
+
+```sh
+git show 397311626bf1fb7c30b58a223c81063cac17e279:game/gcc_v8_product_candidate.html > qa/calibration-20261024/published-baseline.html
+```
+
+Recovery package `libfile_44cbb9e6ef248191925722dc20472cc2` contains the exact database and all fourteen archives. See the continuation reconciliation and calibration release report for observed results. The preregistration remains an immutable pre-evaluation record, not a current claim that the test is unopened.
+
+---
+
 # Exact numerical unlock
 
 The final player-rating holdout must not be improvised.

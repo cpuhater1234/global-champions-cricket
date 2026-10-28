@@ -1,0 +1,891 @@
+{
+  "reviewDate": "2026-10-24",
+  "reviewedProfiles": 13,
+  "scope": "All13 prior bowling-family AR flags plus the2 remaining current flags (both are contained in the13). Factual description review only; no production changes.",
+  "priorityFindings": {
+    "Adil Rashid": "Current ECB/Yorkshire/ICC Bowler supports contemporary T20 BOWL correction; conflicting CA Allrounder and temporal scope explicitly retained.",
+    "Yasir Arafat": "Allrounder descriptions verified in CA/Sussex primary sources; retain AR. Low batting slot does not prove mislabel."
+  },
+  "unambiguouslyFalseAcrossAllPrimaryDescriptions": [],
+  "strongContemporaryCorrectionCandidates": [
+    "Adil Rashid"
+  ],
+  "retainARAsFactuallyDefensible": [
+    "Daniel Vettori",
+    "Ravichandran Ashwin",
+    "Chris Woakes",
+    "Yasir Arafat",
+    "Ryan McLaren",
+    "Nathan McCullum",
+    "David Willey",
+    "Tom Curran",
+    "Rashid Khan",
+    "Marco Jansen",
+    "Rehan Ahmed",
+    "Michael Neser"
+  ],
+  "allFormatVersusT20Rule": "Never copy Test batting reputation into measured T20 batting. Conversely, late T20 batting entry does not erase a legitimate bowling-allrounder designation. Prefer explicit T20 team descriptions; record conflicts and temporal coverage.",
+  "productionPolicy": "If a factual role edit is implemented, scope to newly generated careers with role/overall/save-regression checks. Do not mutate existing saved IDs, roles, future anchors or ratings; this review itself edits no product files.",
+  "sourceDatabaseSha256": "60d38fb30ff38f72a7d344437ed881b2ba93731a739dd35fdd556a82386c3ce9",
+  "limitations": [
+    "Direct Cricinfo page opens returned403; primary indexed profile/header retrievals and directly opened official team/board pages supplied evidence.",
+    "The Hundred labels are format100 and were not used as standalone T20 evidence.",
+    "Source batting slots are observed entry positions and cannot establish allrounder ability.",
+    "A current profile does not establish every historic game-year role; year-specific labels remain a calibration choice."
+  ],
+  "players": [
+    {
+      "name": "Daniel Vettori",
+      "identifier": "d7c6af50",
+      "registerName": "DL Vettori",
+      "key_cricinfo": "38710",
+      "canonicalGameCareerKey": "daniel-vettori",
+      "currentRoleWindows": [
+        {
+          "from": 2008,
+          "to": 2026,
+          "role": "AR",
+          "preferredSlot": 7
+        }
+      ],
+      "currentPrimaryFamily": "bowling",
+      "priorFlag": {
+        "name": "Daniel Vettori",
+        "primaryFamily": "bowling",
+        "battingPeak": 58,
+        "roleWindows": [
+          {
+            "from": 2008,
+            "to": 2026,
+            "role": "AR",
+            "preferredSlot": 7
+          }
+        ],
+        "status": "Review role identity against T20 evidence; heuristic flag, not automatic reclassification"
+      },
+      "currentDiagnosticFlag": null,
+      "cleanSourceT20Observations": {
+        "listedMatches": 98,
+        "faced": 393,
+        "batRuns": 412,
+        "batDismissals": 36,
+        "bowlingLegalBalls": 2253,
+        "bowlingWickets": 81,
+        "oversPerListedMatch": 3.8316326530612246,
+        "meanBattingEntrySlotWhenFaced": 7.584905660377358,
+        "scope": "Observed cleaned source subset only, not complete career. Entry slots omit players who did not face; not ability or role ground truth."
+      },
+      "primaryEvidence": [
+        {
+          "url": "https://www.icc-cricket.com/hall-of-fame/hall-of-famers/hall-of-famer-daniel-vettori",
+          "verifiedRoleDescription": "All-rounder",
+          "formatScope": "Whole-career honour; all formats",
+          "retrievalReference": "turn38search0",
+          "retrievedDate": "2026-10-24",
+          "note": ""
+        },
+        {
+          "url": "https://www.cricket.com.au/players/CA%3A1726/daniel-vettori",
+          "verifiedRoleDescription": "Allrounder",
+          "formatScope": "General international/BBL profile",
+          "retrievalReference": "turn38search7",
+          "retrievedDate": "2026-10-24",
+          "note": ""
+        },
+        {
+          "url": "https://www.windiescricket.com/players/daniel-vettori-4637/",
+          "verifiedRoleDescription": "Bowling allrounder",
+          "formatScope": "Board-hosted player profile across competitions",
+          "retrievalReference": "turn38search5",
+          "retrievedDate": "2026-10-24",
+          "note": ""
+        }
+      ],
+      "classification": "retain-AR-no-demonstrated-factual-error",
+      "recommendation": "Retain AR. Primary descriptions support all-rounder/bowling-allrounder; lower batting slot alone is not a factual contradiction.",
+      "certaintyScope": "Verified publisher/team role words as retrieved; mapping into GCC BAT/BOWL/AR is a game taxonomy decision, not numerical-ability certification."
+    },
+    {
+      "name": "Ravichandran Ashwin",
+      "identifier": "495d42a5",
+      "registerName": "R Ashwin",
+      "key_cricinfo": "26421",
+      "canonicalGameCareerKey": "ravichandran-ashwin",
+      "currentRoleWindows": [
+        {
+          "from": 2008,
+          "to": 2026,
+          "role": "AR",
+          "preferredSlot": 8
+        }
+      ],
+      "currentPrimaryFamily": "bowling",
+      "priorFlag": {
+        "name": "Ravichandran Ashwin",
+        "primaryFamily": "bowling",
+        "battingPeak": 48,
+        "roleWindows": [
+          {
+            "from": 2008,
+            "to": 2026,
+            "role": "AR",
+            "preferredSlot": 8
+          }
+        ],
+        "status": "Review role identity against T20 evidence; heuristic flag, not automatic reclassification"
+      },
+      "currentDiagnosticFlag": null,
+      "cleanSourceT20Observations": {
+        "listedMatches": 276,
+        "faced": 902,
+        "batRuns": 1058,
+        "batDismissals": 76,
+        "bowlingLegalBalls": 6018,
+        "bowlingWickets": 250,
+        "oversPerListedMatch": 3.6340579710144927,
+        "meanBattingEntrySlotWhenFaced": 7.278260869565218,
+        "scope": "Observed cleaned source subset only, not complete career. Entry slots omit players who did not face; not ability or role ground truth."
+      },
+      "primaryEvidence": [
+        {
+          "url": "https://www.cricinfo.com/cricketers/ravichandran-ashwin-26421/bowling-batting-stats",
+          "verifiedRoleDescription": "Bowling Allrounder",
+          "formatScope": "General profile header; displayed table in retrieval is Tests",
+          "retrievalReference": "turn33search5",
+          "retrievedDate": "2026-10-24",
+          "note": ""
+        },
+        {
+          "url": "https://www.punjabkingsipl.in/players/4555-ravichandran-ashwin-profile",
+          "verifiedRoleDescription": "All-Rounder",
+          "formatScope": "Official IPL franchise player bio, explicitly T20 context",
+          "retrievalReference": "turn39view0",
+          "retrievedDate": "2026-10-24",
+          "note": "Bio skill field explicitly All-Rounder; do not infer Bowler from prose about spin alone."
+        }
+      ],
+      "classification": "retain-AR-no-demonstrated-factual-error",
+      "recommendation": "Retain AR pending any deliberately chosen T20 taxonomy. Both all-format primary profile and official IPL team say allrounder. His stronger Test batting and bowling-dominant T20 usage should not be conflated, but do not establish the existing AR label as false.",
+      "certaintyScope": "Verified publisher/team role words as retrieved; mapping into GCC BAT/BOWL/AR is a game taxonomy decision, not numerical-ability certification."
+    },
+    {
+      "name": "Chris Woakes",
+      "identifier": "4c5d73db",
+      "registerName": "CR Woakes",
+      "key_cricinfo": "247235",
+      "canonicalGameCareerKey": "chris-woakes",
+      "currentRoleWindows": [
+        {
+          "from": 2008,
+          "to": 2026,
+          "role": "AR",
+          "preferredSlot": 8
+        }
+      ],
+      "currentPrimaryFamily": "bowling",
+      "priorFlag": {
+        "name": "Chris Woakes",
+        "primaryFamily": "bowling",
+        "battingPeak": 57,
+        "roleWindows": [
+          {
+            "from": 2008,
+            "to": 2026,
+            "role": "AR",
+            "preferredSlot": 8
+          }
+        ],
+        "status": "Review role identity against T20 evidence; heuristic flag, not automatic reclassification"
+      },
+      "currentDiagnosticFlag": null,
+      "cleanSourceT20Observations": {
+        "listedMatches": 115,
+        "faced": 524,
+        "batRuns": 655,
+        "batDismissals": 40,
+        "bowlingLegalBalls": 2375,
+        "bowlingWickets": 121,
+        "oversPerListedMatch": 3.442028985507246,
+        "meanBattingEntrySlotWhenFaced": 7.625,
+        "scope": "Observed cleaned source subset only, not complete career. Entry slots omit players who did not face; not ability or role ground truth."
+      },
+      "primaryEvidence": [
+        {
+          "url": "https://www.ecb.co.uk/england/men/players/967/chris-woakes",
+          "verifiedRoleDescription": "All Rounder",
+          "formatScope": "National-team profile; all formats",
+          "retrievalReference": "turn38search1",
+          "retrievedDate": "2026-10-24",
+          "note": ""
+        },
+        {
+          "url": "https://www.durbanssupergiants.com/players/chris-woakes-4321-profile",
+          "verifiedRoleDescription": "All-Rounder",
+          "formatScope": "Official SA20 franchise profile; explicitly T20",
+          "retrievalReference": "turn38search15",
+          "retrievedDate": "2026-10-24",
+          "note": ""
+        }
+      ],
+      "classification": "retain-AR-no-demonstrated-factual-error",
+      "recommendation": "Retain AR. Primary descriptions support all-rounder/bowling-allrounder; lower batting slot alone is not a factual contradiction.",
+      "certaintyScope": "Verified publisher/team role words as retrieved; mapping into GCC BAT/BOWL/AR is a game taxonomy decision, not numerical-ability certification."
+    },
+    {
+      "name": "Adil Rashid",
+      "identifier": "249d60c9",
+      "registerName": "AU Rashid",
+      "key_cricinfo": "244497",
+      "canonicalGameCareerKey": "adil-rashid",
+      "currentRoleWindows": [
+        {
+          "from": 2008,
+          "to": 2026,
+          "role": "AR",
+          "preferredSlot": 8
+        }
+      ],
+      "currentPrimaryFamily": "bowling",
+      "priorFlag": {
+        "name": "Adil Rashid",
+        "primaryFamily": "bowling",
+        "battingPeak": 38,
+        "roleWindows": [
+          {
+            "from": 2008,
+            "to": 2026,
+            "role": "AR",
+            "preferredSlot": 8
+          }
+        ],
+        "status": "Review role identity against T20 evidence; heuristic flag, not automatic reclassification"
+      },
+      "currentDiagnosticFlag": {
+        "name": "Adil Rashid",
+        "meanObservedBattingSlot": 8.55992141453831,
+        "bowlingOversPerListedMatch": 3.6430615164520748,
+        "action": "T20 role classification review; not automatically reclassified"
+      },
+      "cleanSourceT20Observations": {
+        "listedMatches": 233,
+        "faced": 509,
+        "batRuns": 583,
+        "batDismissals": 46,
+        "bowlingLegalBalls": 5093,
+        "bowlingWickets": 277,
+        "oversPerListedMatch": 3.6430615164520748,
+        "meanBattingEntrySlotWhenFaced": 8.876404494382022,
+        "scope": "Observed cleaned source subset only, not complete career. Entry slots omit players who did not face; not ability or role ground truth."
+      },
+      "primaryEvidence": [
+        {
+          "url": "https://www.ecb.co.uk/england/men/players/75129/adil-rashid",
+          "verifiedRoleDescription": "Bowler",
+          "formatScope": "England national-team profile; contemporary white-ball role",
+          "retrievalReference": "turn37search4",
+          "retrievedDate": "2026-10-24",
+          "note": ""
+        },
+        {
+          "url": "https://yorkshireccc.com/players/adil-rashid/",
+          "verifiedRoleDescription": "Bowler",
+          "formatScope": "Current county profile explicitly discussing T20/limited overs",
+          "retrievalReference": "turn39view2",
+          "retrievedDate": "2026-10-24",
+          "note": ""
+        },
+        {
+          "url": "https://www.icc-cricket.com/rankings/4661/adil-rashid",
+          "verifiedRoleDescription": "Bowler",
+          "formatScope": "Current international profile; general format label",
+          "retrievalReference": "turn37search3",
+          "retrievedDate": "2026-10-24",
+          "note": ""
+        },
+        {
+          "url": "https://www.cricket.com.au/players/CA%3A200",
+          "verifiedRoleDescription": "Allrounder",
+          "formatScope": "General international/BBL profile, with historical BBL05 narrative",
+          "retrievalReference": "turn39view3",
+          "retrievedDate": "2026-10-24",
+          "note": "Conflicting official metadata is retained. This page also labels bowling style off-spin while its prose identifies leg-spin; do not promote its metadata uncritically."
+        }
+      ],
+      "classification": "strong-current-T20-BOWL-correction-with-historical-label-caveat",
+      "recommendation": "BOWL is the strongly supported contemporary T20 label (ECB, own county, ICC). A new-career T20 taxonomy correction is defensible. Retain explicit note that Cricket Australia calls him Allrounder; current labels do not prove one role for every year2008\u20132026. No automatic rerating or saved-role rewrite.",
+      "certaintyScope": "Verified publisher/team role words as retrieved; mapping into GCC BAT/BOWL/AR is a game taxonomy decision, not numerical-ability certification."
+    },
+    {
+      "name": "Yasir Arafat",
+      "identifier": "3cf5ae43",
+      "registerName": "Yasir Arafat",
+      "key_cricinfo": "43654",
+      "canonicalGameCareerKey": "yasir-arafat",
+      "currentRoleWindows": [
+        {
+          "from": 2008,
+          "to": 2026,
+          "role": "AR",
+          "preferredSlot": 7
+        }
+      ],
+      "currentPrimaryFamily": "bowling",
+      "priorFlag": {
+        "name": "Yasir Arafat",
+        "primaryFamily": "bowling",
+        "battingPeak": 55,
+        "roleWindows": [
+          {
+            "from": 2008,
+            "to": 2026,
+            "role": "AR",
+            "preferredSlot": 7
+          }
+        ],
+        "status": "Review role identity against T20 evidence; heuristic flag, not automatic reclassification"
+      },
+      "currentDiagnosticFlag": {
+        "name": "Yasir Arafat",
+        "meanObservedBattingSlot": 8.082051282051282,
+        "bowlingOversPerListedMatch": 3.507936507936508,
+        "action": "T20 role classification review; not automatically reclassified"
+      },
+      "cleanSourceT20Observations": {
+        "listedMatches": 63,
+        "faced": 195,
+        "batRuns": 222,
+        "batDismissals": 20,
+        "bowlingLegalBalls": 1326,
+        "bowlingWickets": 77,
+        "oversPerListedMatch": 3.507936507936508,
+        "meanBattingEntrySlotWhenFaced": 8.181818181818182,
+        "scope": "Observed cleaned source subset only, not complete career. Entry slots omit players who did not face; not ability or role ground truth."
+      },
+      "primaryEvidence": [
+        {
+          "url": "https://www.cricket.com.au/players/CA%3A7650/yasir-arafat",
+          "verifiedRoleDescription": "Allrounder",
+          "formatScope": "General international/Big Bash profile",
+          "retrievalReference": "turn39view1",
+          "retrievedDate": "2026-10-24",
+          "note": ""
+        },
+        {
+          "url": "https://sussexcricket.co.uk/news/yasir-arafat-spends-winter-coaching-future-cricketers-baca",
+          "verifiedRoleDescription": "Allrounder",
+          "formatScope": "Former county/player description, not an exclusively Test classification",
+          "retrievalReference": "turn35search15",
+          "retrievedDate": "2026-10-24",
+          "note": ""
+        }
+      ],
+      "classification": "retain-AR-no-demonstrated-factual-error",
+      "recommendation": "Retain AR. Official CA and his own former county explicitly call him an allrounder. Observed late batting supports bowling emphasis, not factual misclassification.",
+      "certaintyScope": "Verified publisher/team role words as retrieved; mapping into GCC BAT/BOWL/AR is a game taxonomy decision, not numerical-ability certification."
+    },
+    {
+      "name": "Ryan McLaren",
+      "identifier": "c654af19",
+      "registerName": "R McLaren",
+      "key_cricinfo": "46393",
+      "canonicalGameCareerKey": "ryan-mclaren",
+      "currentRoleWindows": [
+        {
+          "from": 2008,
+          "to": 2026,
+          "role": "AR",
+          "preferredSlot": 7
+        }
+      ],
+      "currentPrimaryFamily": "bowling",
+      "priorFlag": {
+        "name": "Ryan McLaren",
+        "primaryFamily": "bowling",
+        "battingPeak": 57,
+        "roleWindows": [
+          {
+            "from": 2008,
+            "to": 2026,
+            "role": "AR",
+            "preferredSlot": 7
+          }
+        ],
+        "status": "Review role identity against T20 evidence; heuristic flag, not automatic reclassification"
+      },
+      "currentDiagnosticFlag": null,
+      "cleanSourceT20Observations": {
+        "listedMatches": 68,
+        "faced": 622,
+        "batRuns": 715,
+        "batDismissals": 30,
+        "bowlingLegalBalls": 1392,
+        "bowlingWickets": 63,
+        "oversPerListedMatch": 3.411764705882353,
+        "meanBattingEntrySlotWhenFaced": 6.46,
+        "scope": "Observed cleaned source subset only, not complete career. Entry slots omit players who did not face; not ability or role ground truth."
+      },
+      "primaryEvidence": [
+        {
+          "url": "https://www.cricket.com.au/players/CA%3A1282/ryan-mclaren",
+          "verifiedRoleDescription": "Allrounder",
+          "formatScope": "General international profile, narrative primarily ODI",
+          "retrievalReference": "turn38search4",
+          "retrievedDate": "2026-10-24",
+          "note": ""
+        },
+        {
+          "url": "https://www.cricinfo.com/cricketers/ryan-mclaren-46393/news",
+          "verifiedRoleDescription": "Allrounder",
+          "formatScope": "Primary publisher profile header; all formats",
+          "retrievalReference": "turn33search7",
+          "retrievedDate": "2026-10-24",
+          "note": ""
+        }
+      ],
+      "classification": "retain-AR-no-demonstrated-factual-error",
+      "recommendation": "Retain AR. Primary descriptions support all-rounder/bowling-allrounder; lower batting slot alone is not a factual contradiction.",
+      "certaintyScope": "Verified publisher/team role words as retrieved; mapping into GCC BAT/BOWL/AR is a game taxonomy decision, not numerical-ability certification."
+    },
+    {
+      "name": "Nathan McCullum",
+      "identifier": "5673a3fc",
+      "registerName": "NL McCullum",
+      "key_cricinfo": "37749",
+      "canonicalGameCareerKey": "nathan-mccullum",
+      "currentRoleWindows": [
+        {
+          "from": 2008,
+          "to": 2026,
+          "role": "AR",
+          "preferredSlot": 8
+        }
+      ],
+      "currentPrimaryFamily": "bowling",
+      "priorFlag": {
+        "name": "Nathan McCullum",
+        "primaryFamily": "bowling",
+        "battingPeak": 57,
+        "roleWindows": [
+          {
+            "from": 2008,
+            "to": 2026,
+            "role": "AR",
+            "preferredSlot": 8
+          }
+        ],
+        "status": "Review role identity against T20 evidence; heuristic flag, not automatic reclassification"
+      },
+      "currentDiagnosticFlag": null,
+      "cleanSourceT20Observations": {
+        "listedMatches": 68,
+        "faced": 360,
+        "batRuns": 353,
+        "batDismissals": 33,
+        "bowlingLegalBalls": 1219,
+        "bowlingWickets": 60,
+        "oversPerListedMatch": 2.9877450980392157,
+        "meanBattingEntrySlotWhenFaced": 7.531914893617022,
+        "scope": "Observed cleaned source subset only, not complete career. Entry slots omit players who did not face; not ability or role ground truth."
+      },
+      "primaryEvidence": [
+        {
+          "url": "https://www.windiescricket.com/players/nathan-mccullum-3812/",
+          "verifiedRoleDescription": "Bowling allrounder",
+          "formatScope": "Board-hosted player profile across competitions",
+          "retrievalReference": "turn35search2",
+          "retrievedDate": "2026-10-24",
+          "note": ""
+        },
+        {
+          "url": "https://www.cricket.com.au/players/CA%3A1131/nathan-mccullum",
+          "verifiedRoleDescription": "Could be considered an all-rounder",
+          "formatScope": "General profile explicitly grounds batting claim in ODIs",
+          "retrievalReference": "turn35search1",
+          "retrievedDate": "2026-10-24",
+          "note": "ODI batting support is not T20 batting proof; preserve that distinction."
+        }
+      ],
+      "classification": "retain-AR-no-demonstrated-factual-error",
+      "recommendation": "Retain AR. Primary descriptions support all-rounder/bowling-allrounder; lower batting slot alone is not a factual contradiction.",
+      "certaintyScope": "Verified publisher/team role words as retrieved; mapping into GCC BAT/BOWL/AR is a game taxonomy decision, not numerical-ability certification."
+    },
+    {
+      "name": "David Willey",
+      "identifier": "7f048519",
+      "registerName": "DJ Willey",
+      "key_cricinfo": "308251",
+      "canonicalGameCareerKey": "david-willey",
+      "currentRoleWindows": [
+        {
+          "from": 2008,
+          "to": 2026,
+          "role": "AR",
+          "preferredSlot": 8
+        }
+      ],
+      "currentPrimaryFamily": "bowling",
+      "priorFlag": {
+        "name": "David Willey",
+        "primaryFamily": "bowling",
+        "battingPeak": 58,
+        "roleWindows": [
+          {
+            "from": 2008,
+            "to": 2026,
+            "role": "AR",
+            "preferredSlot": 8
+          }
+        ],
+        "status": "Review role identity against T20 evidence; heuristic flag, not automatic reclassification"
+      },
+      "currentDiagnosticFlag": null,
+      "cleanSourceT20Observations": {
+        "listedMatches": 264,
+        "faced": 3000,
+        "batRuns": 4113,
+        "batDismissals": 172,
+        "bowlingLegalBalls": 5342,
+        "bowlingWickets": 279,
+        "oversPerListedMatch": 3.3724747474747474,
+        "meanBattingEntrySlotWhenFaced": 4.562814070351759,
+        "scope": "Observed cleaned source subset only, not complete career. Entry slots omit players who did not face; not ability or role ground truth."
+      },
+      "primaryEvidence": [
+        {
+          "url": "https://nccc.co.uk/news/david-willey-extends-northamptonshire-contract/",
+          "verifiedRoleDescription": "All-rounder",
+          "formatScope": "Official county contract announcement explicitly describes T20 career",
+          "retrievalReference": "turn35search4",
+          "retrievedDate": "2026-10-24",
+          "note": ""
+        },
+        {
+          "url": "https://nccc.co.uk/news/david-willey-to-return-to-northamptonshire/",
+          "verifiedRoleDescription": "All-rounder",
+          "formatScope": "Official county announcement describes T20 batting and wickets",
+          "retrievalReference": "turn35search22",
+          "retrievedDate": "2026-10-24",
+          "note": ""
+        }
+      ],
+      "classification": "retain-AR-no-demonstrated-factual-error",
+      "recommendation": "Retain AR. Primary descriptions support all-rounder/bowling-allrounder; lower batting slot alone is not a factual contradiction.",
+      "certaintyScope": "Verified publisher/team role words as retrieved; mapping into GCC BAT/BOWL/AR is a game taxonomy decision, not numerical-ability certification."
+    },
+    {
+      "name": "Tom Curran",
+      "identifier": "e86754b2",
+      "registerName": "TK Curran",
+      "key_cricinfo": "550235",
+      "canonicalGameCareerKey": "tom-curran",
+      "currentRoleWindows": [
+        {
+          "from": 2008,
+          "to": 2026,
+          "role": "AR",
+          "preferredSlot": 8
+        }
+      ],
+      "currentPrimaryFamily": "bowling",
+      "priorFlag": {
+        "name": "Tom Curran",
+        "primaryFamily": "bowling",
+        "battingPeak": 57,
+        "roleWindows": [
+          {
+            "from": 2008,
+            "to": 2026,
+            "role": "AR",
+            "preferredSlot": 8
+          }
+        ],
+        "status": "Review role identity against T20 evidence; heuristic flag, not automatic reclassification"
+      },
+      "currentDiagnosticFlag": null,
+      "cleanSourceT20Observations": {
+        "listedMatches": 218,
+        "faced": 1592,
+        "batRuns": 2263,
+        "batDismissals": 106,
+        "bowlingLegalBalls": 4034,
+        "bowlingWickets": 222,
+        "oversPerListedMatch": 3.0840978593272173,
+        "meanBattingEntrySlotWhenFaced": 6.574324324324325,
+        "scope": "Observed cleaned source subset only, not complete career. Entry slots omit players who did not face; not ability or role ground truth."
+      },
+      "primaryEvidence": [
+        {
+          "url": "https://www.brisbaneheat.com.au/news/4573607/tom-curran-set-for-heat-allrounder-joins-for-bbl",
+          "verifiedRoleDescription": "Allrounder",
+          "formatScope": "Official BBL recruitment announcement; explicitly T20",
+          "retrievalReference": "turn35search5",
+          "retrievedDate": "2026-10-24",
+          "note": ""
+        },
+        {
+          "url": "https://www.melbournestars.com.au/news/4431328/bbl-squad-stars-name-all-rounder-for-derby",
+          "verifiedRoleDescription": "All-rounder",
+          "formatScope": "Official BBL match squad announcement; explicitly T20",
+          "retrievalReference": "turn35search33",
+          "retrievedDate": "2026-10-24",
+          "note": ""
+        }
+      ],
+      "classification": "retain-AR-no-demonstrated-factual-error",
+      "recommendation": "Retain AR. Primary descriptions support all-rounder/bowling-allrounder; lower batting slot alone is not a factual contradiction.",
+      "certaintyScope": "Verified publisher/team role words as retrieved; mapping into GCC BAT/BOWL/AR is a game taxonomy decision, not numerical-ability certification."
+    },
+    {
+      "name": "Rashid Khan",
+      "identifier": "5f547c8b",
+      "registerName": "Rashid Khan",
+      "key_cricinfo": "793463",
+      "canonicalGameCareerKey": "rashid-khan",
+      "currentRoleWindows": [
+        {
+          "from": 2008,
+          "to": 2026,
+          "role": "AR",
+          "preferredSlot": 8
+        }
+      ],
+      "currentPrimaryFamily": "bowling",
+      "priorFlag": {
+        "name": "Rashid Khan",
+        "primaryFamily": "bowling",
+        "battingPeak": 59,
+        "roleWindows": [
+          {
+            "from": 2008,
+            "to": 2026,
+            "role": "AR",
+            "preferredSlot": 8
+          }
+        ],
+        "status": "Review role identity against T20 evidence; heuristic flag, not automatic reclassification"
+      },
+      "currentDiagnosticFlag": null,
+      "cleanSourceT20Observations": {
+        "listedMatches": 355,
+        "faced": 1196,
+        "batRuns": 1778,
+        "batDismissals": 132,
+        "bowlingLegalBalls": 8294,
+        "bowlingWickets": 447,
+        "oversPerListedMatch": 3.8938967136150233,
+        "meanBattingEntrySlotWhenFaced": 7.582474226804123,
+        "scope": "Observed cleaned source subset only, not complete career. Entry slots omit players who did not face; not ability or role ground truth."
+      },
+      "primaryEvidence": [
+        {
+          "url": "https://www.miemirates.com/Squad/Rashid-Khan",
+          "verifiedRoleDescription": "Bowling all-rounder",
+          "formatScope": "Official ILT20 franchise profile; explicitly T20",
+          "retrievalReference": "turn36search18",
+          "retrievedDate": "2026-10-24",
+          "note": ""
+        },
+        {
+          "url": "https://www.adelaidestrikers.com.au/players/CA%3A272/rashid-khan",
+          "verifiedRoleDescription": "Bowler",
+          "formatScope": "Official BBL franchise profile; explicitly T20",
+          "retrievalReference": "turn36search2",
+          "retrievedDate": "2026-10-24",
+          "note": "Role labels vary even among official T20 teams. The metadata also says off-spin while prose says leg-spinner, so do not infer a bowling-style change."
+        }
+      ],
+      "classification": "retain-AR-no-demonstrated-factual-error",
+      "recommendation": "Retain AR as defensible T20 game choice. Official ILT20 team says bowling all-rounder, BBL team says bowler; no universal factual role label exists across those primary sources.",
+      "certaintyScope": "Verified publisher/team role words as retrieved; mapping into GCC BAT/BOWL/AR is a game taxonomy decision, not numerical-ability certification."
+    },
+    {
+      "name": "Marco Jansen",
+      "identifier": "81c36ee9",
+      "registerName": "M Jansen",
+      "key_cricinfo": "696401",
+      "canonicalGameCareerKey": "marco-jansen",
+      "currentRoleWindows": [
+        {
+          "from": 2008,
+          "to": 2026,
+          "role": "AR",
+          "preferredSlot": 8
+        }
+      ],
+      "currentPrimaryFamily": "bowling",
+      "priorFlag": {
+        "name": "Marco Jansen",
+        "primaryFamily": "bowling",
+        "battingPeak": 59,
+        "roleWindows": [
+          {
+            "from": 2008,
+            "to": 2026,
+            "role": "AR",
+            "preferredSlot": 8
+          }
+        ],
+        "status": "Review role identity against T20 evidence; heuristic flag, not automatic reclassification"
+      },
+      "currentDiagnosticFlag": null,
+      "cleanSourceT20Observations": {
+        "listedMatches": 142,
+        "faced": 884,
+        "batRuns": 1208,
+        "batDismissals": 62,
+        "bowlingLegalBalls": 3142,
+        "bowlingWickets": 162,
+        "oversPerListedMatch": 3.6877934272300466,
+        "meanBattingEntrySlotWhenFaced": 7.153846153846154,
+        "scope": "Observed cleaned source subset only, not complete career. Entry slots omit players who did not face; not ability or role ground truth."
+      },
+      "primaryEvidence": [
+        {
+          "url": "https://cricket.co.za/player/marco-jansen/",
+          "verifiedRoleDescription": "Bowling All-rounder",
+          "formatScope": "National-board profile covering all formats including Twenty20 debut",
+          "retrievalReference": "turn36search10",
+          "retrievedDate": "2026-10-24",
+          "note": ""
+        },
+        {
+          "url": "https://www.icc-cricket.com/tournaments/t20cricketworldcup/teams/7/players/69409/marco-jansen",
+          "verifiedRoleDescription": "All Rounder",
+          "formatScope": "Official T20 World Cup team profile",
+          "retrievalReference": "turn36search12",
+          "retrievedDate": "2026-10-24",
+          "note": ""
+        }
+      ],
+      "classification": "retain-AR-no-demonstrated-factual-error",
+      "recommendation": "Retain AR. Primary descriptions support all-rounder/bowling-allrounder; lower batting slot alone is not a factual contradiction.",
+      "certaintyScope": "Verified publisher/team role words as retrieved; mapping into GCC BAT/BOWL/AR is a game taxonomy decision, not numerical-ability certification."
+    },
+    {
+      "name": "Rehan Ahmed",
+      "identifier": "0ecb4de6",
+      "registerName": "Rehan Ahmed",
+      "key_cricinfo": "1263691",
+      "canonicalGameCareerKey": "rehan-ahmed",
+      "currentRoleWindows": [
+        {
+          "from": 2008,
+          "to": 2026,
+          "role": "AR",
+          "preferredSlot": 8
+        }
+      ],
+      "currentPrimaryFamily": "bowling",
+      "priorFlag": {
+        "name": "Rehan Ahmed",
+        "primaryFamily": "bowling",
+        "battingPeak": 54,
+        "roleWindows": [
+          {
+            "from": 2008,
+            "to": 2026,
+            "role": "AR",
+            "preferredSlot": 8
+          }
+        ],
+        "status": "Review role identity against T20 evidence; heuristic flag, not automatic reclassification"
+      },
+      "currentDiagnosticFlag": null,
+      "cleanSourceT20Observations": {
+        "listedMatches": 80,
+        "faced": 763,
+        "batRuns": 966,
+        "batDismissals": 57,
+        "bowlingLegalBalls": 1602,
+        "bowlingWickets": 79,
+        "oversPerListedMatch": 3.3375,
+        "meanBattingEntrySlotWhenFaced": 5.492753623188406,
+        "scope": "Observed cleaned source subset only, not complete career. Entry slots omit players who did not face; not ability or role ground truth."
+      },
+      "primaryEvidence": [
+        {
+          "url": "https://leicestershireccc.co.uk/people/rehan-ahmed",
+          "verifiedRoleDescription": "All Rounder",
+          "formatScope": "Official county profile; batting narrative includes 50-over cricket",
+          "retrievalReference": "turn36search0",
+          "retrievedDate": "2026-10-24",
+          "note": ""
+        },
+        {
+          "url": "https://leicestershireccc.co.uk/news/rehan-drafted-for-defending-bbl-champions",
+          "verifiedRoleDescription": "All-rounder",
+          "formatScope": "Official county BBL draft announcement, includes T20 activity",
+          "retrievalReference": "turn36search31",
+          "retrievedDate": "2026-10-24",
+          "note": ""
+        }
+      ],
+      "classification": "retain-AR-no-demonstrated-factual-error",
+      "recommendation": "Retain AR. Primary descriptions support all-rounder/bowling-allrounder; lower batting slot alone is not a factual contradiction.",
+      "certaintyScope": "Verified publisher/team role words as retrieved; mapping into GCC BAT/BOWL/AR is a game taxonomy decision, not numerical-ability certification."
+    },
+    {
+      "name": "Michael Neser",
+      "identifier": "0164b064",
+      "registerName": "MG Neser",
+      "key_cricinfo": "376169",
+      "canonicalGameCareerKey": "michael-neser",
+      "currentRoleWindows": [
+        {
+          "from": 2008,
+          "to": 2026,
+          "role": "AR",
+          "preferredSlot": 8
+        }
+      ],
+      "currentPrimaryFamily": "bowling",
+      "priorFlag": {
+        "name": "Michael Neser",
+        "primaryFamily": "bowling",
+        "battingPeak": 57,
+        "roleWindows": [
+          {
+            "from": 2008,
+            "to": 2026,
+            "role": "AR",
+            "preferredSlot": 8
+          }
+        ],
+        "status": "Review role identity against T20 evidence; heuristic flag, not automatic reclassification"
+      },
+      "currentDiagnosticFlag": null,
+      "cleanSourceT20Observations": {
+        "listedMatches": 109,
+        "faced": 548,
+        "batRuns": 707,
+        "batDismissals": 48,
+        "bowlingLegalBalls": 2217,
+        "bowlingWickets": 129,
+        "oversPerListedMatch": 3.389908256880734,
+        "meanBattingEntrySlotWhenFaced": 7.328767123287672,
+        "scope": "Observed cleaned source subset only, not complete career. Entry slots omit players who did not face; not ability or role ground truth."
+      },
+      "primaryEvidence": [
+        {
+          "url": "https://www.brisbaneheat.com.au/players/CA%3A293/michael-neser",
+          "verifiedRoleDescription": "All-rounder",
+          "formatScope": "Official BBL franchise profile; explicitly T20",
+          "retrievalReference": "turn36search1",
+          "retrievedDate": "2026-10-24",
+          "note": ""
+        },
+        {
+          "url": "https://www.brisbaneheat.com.au/news/3853201/nesers-all-round-masterclass-lifts-heat-to-big-win",
+          "verifiedRoleDescription": "Allrounder",
+          "formatScope": "Official BBL match report evidencing both batting and bowling contributions",
+          "retrievalReference": "turn36search41",
+          "retrievedDate": "2026-10-24",
+          "note": ""
+        }
+      ],
+      "classification": "retain-AR-no-demonstrated-factual-error",
+      "recommendation": "Retain AR. Primary descriptions support all-rounder/bowling-allrounder; lower batting slot alone is not a factual contradiction.",
+      "certaintyScope": "Verified publisher/team role words as retrieved; mapping into GCC BAT/BOWL/AR is a game taxonomy decision, not numerical-ability certification."
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+import assert from'node:assert/strict';import{loadGame}from'../offline_game_host.mjs';
+const a=loadGame('qa/guide-panels-20261028/baseline.html',701),b=loadGame('qa/guide-panels-20261028/candidate.html',701),text=s=>s.replace(/<[^>]*>/g,'');for(const c of a.context.GCC_DATA.clubs){const d=b.context.GCC_DATA.clubs.find(x=>x.abbr===c.abbr);assert.equal(text(a.context.GCC8.clubBrief(c)),text(b.context.GCC8.clubBrief(d)),c.abbr+' wording/rating changed');}console.log('All36 club guides retain exact wording and scale data; only structural wrappers differ');

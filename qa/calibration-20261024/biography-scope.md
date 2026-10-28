@@ -1,0 +1,7 @@
+# Sourced biography correction scope
+
+Implement explicit publisher DOB facts in new careers only after their private career templates have been constructed. Preserve absolute model debut/peak/exit years and every stored skill outcome; these are alternate-history game decisions, not facts derived from present-day age. Existing careers retain their saved biography and progression on load. Do not broaden the old global identity mutation hook, which also runs during save restoration.
+
+Keep the exact date, official register/profile identifier and source URL together in profile metadata. Correct catalog birth years only where an explicit, safely parsed full date was retrieved for the matched identifier and there is no known primary-source conflict. Preserve Umar Gul's catalog value because PCB and ESPN disagree. Missing/transient source responses are not guessed. Current national representation and all-format roles do not automatically rewrite historical country or T20 role windows.
+
+Regression requirements: observed failing new-world dates before implementation; corrected representative years after; every stored career outcome and dynasty career date identical to baseline; old save year retained; known conflict unchanged; cold reload of a corrected new save retains its correction. Re-run exact-state comparison with only those explicitly sourced new-world biography fields normalised, never numeric skills or career futures.

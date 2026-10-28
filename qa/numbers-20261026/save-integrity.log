@@ -1,0 +1,19 @@
+{
+  scope: 'VM corrupt-state fixtures must fail before mutating a previously valid career or overwriting saved data.',
+  checks: 77,
+  cases: [
+    'table',
+    'statValue',
+    'negativeStat',
+    'selfFixture',
+    'team',
+    'order',
+    'xi',
+    'results',
+    'schedule',
+    'stats',
+    'club',
+    'reveal',
+    'post-validation render failure'
+  ]
+}

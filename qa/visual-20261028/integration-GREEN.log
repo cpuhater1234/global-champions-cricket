@@ -1,0 +1,9 @@
+{
+  sha: 'aa2e3e187efc0b31366ee29b255c1ed1fa236e4c1fb98ece83d9c99c935fb7aa',
+  checks: [
+    'strict-checkpoint-ready',
+    'complete-acknowledges-exact-checkpoint',
+    'rollback-review-recovers-confirmed-career'
+  ],
+  pass: true
+}

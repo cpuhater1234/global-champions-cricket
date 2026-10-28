@@ -1,0 +1,252 @@
+{
+  "source": "https://cricsheet.org/downloads/ntb_json.zip",
+  "sourceSha256": "a9461d44a3209ce29ed7012cb3e2046725633e37fa7016d82f58c57ad8df307a",
+  "licence": "Open Data Commons Attribution License1.0",
+  "licenceUrl": "https://opendatacommons.org/licenses/by/1-0/",
+  "matchesRead": 1570,
+  "dateMin": "2014-05-16",
+  "dateMax": "2026-07-18",
+  "excluded": {
+    "unmapped_or_outground": 83,
+    "reduced_or_adjusted_match": 69,
+    "incomplete_first_innings": 61
+  },
+  "scope": "Descriptive complete non-adjusted20over firstinnings only. Observational totals combine teams,eras,weather and preparation. NOT measurements of rope distances,pace orspin assistance; no causal ground rating claim. Existing20gameclubs remain unchanged.",
+  "grounds": {
+    "DER": {
+      "firstInnings": 56,
+      "dateMin": "2014-06-06",
+      "dateMax": "2026-07-12",
+      "meanFirstInningsScore": 171.88,
+      "pooledRunsPerOver": 8.613,
+      "boundaryDeliveryPercent": 16.026,
+      "meanWickets": 6.79,
+      "venueAliases": [
+        "County Ground",
+        "County Ground, Derby"
+      ]
+    },
+    "DUR": {
+      "firstInnings": 79,
+      "dateMin": "2014-05-16",
+      "dateMax": "2026-07-10",
+      "meanFirstInningsScore": 164.33,
+      "pooledRunsPerOver": 8.245,
+      "boundaryDeliveryPercent": 14.152,
+      "meanWickets": 6.35,
+      "venueAliases": [
+        "Riverside Ground",
+        "Riverside Ground, Chester-le-Street"
+      ]
+    },
+    "ESS": {
+      "firstInnings": 78,
+      "dateMin": "2014-05-23",
+      "dateMax": "2026-07-10",
+      "meanFirstInningsScore": 179.46,
+      "pooledRunsPerOver": 9.056,
+      "boundaryDeliveryPercent": 18.473,
+      "meanWickets": 6.83,
+      "venueAliases": [
+        "County Ground",
+        "County Ground, Chelmsford"
+      ]
+    },
+    "GLA": {
+      "firstInnings": 72,
+      "dateMin": "2014-05-30",
+      "dateMax": "2026-07-08",
+      "meanFirstInningsScore": 165.01,
+      "pooledRunsPerOver": 8.291,
+      "boundaryDeliveryPercent": 15.659,
+      "meanWickets": 7.0,
+      "venueAliases": [
+        "Sophia Gardens",
+        "Sophia Gardens, Cardiff"
+      ]
+    },
+    "GLO": {
+      "firstInnings": 62,
+      "dateMin": "2014-05-23",
+      "dateMax": "2026-07-12",
+      "meanFirstInningsScore": 165.94,
+      "pooledRunsPerOver": 8.35,
+      "boundaryDeliveryPercent": 15.475,
+      "meanWickets": 6.5,
+      "venueAliases": [
+        "County Ground",
+        "County Ground, Bristol"
+      ]
+    },
+    "HAM": {
+      "firstInnings": 79,
+      "dateMin": "2014-05-16",
+      "dateMax": "2026-07-15",
+      "meanFirstInningsScore": 165.03,
+      "pooledRunsPerOver": 8.276,
+      "boundaryDeliveryPercent": 15.389,
+      "meanWickets": 6.38,
+      "venueAliases": [
+        "The Rose Bowl",
+        "The Rose Bowl, Southampton"
+      ]
+    },
+    "KEN": {
+      "firstInnings": 72,
+      "dateMin": "2014-05-30",
+      "dateMax": "2026-07-12",
+      "meanFirstInningsScore": 173.71,
+      "pooledRunsPerOver": 8.726,
+      "boundaryDeliveryPercent": 16.367,
+      "meanWickets": 6.46,
+      "venueAliases": [
+        "St Lawrence Ground",
+        "St Lawrence Ground, Canterbury"
+      ]
+    },
+    "LAN": {
+      "firstInnings": 70,
+      "dateMin": "2014-05-17",
+      "dateMax": "2026-07-12",
+      "meanFirstInningsScore": 166.26,
+      "pooledRunsPerOver": 8.356,
+      "boundaryDeliveryPercent": 14.453,
+      "meanWickets": 6.53,
+      "venueAliases": [
+        "Old Trafford",
+        "Old Trafford, Manchester"
+      ]
+    },
+    "LEI": {
+      "firstInnings": 78,
+      "dateMin": "2014-05-16",
+      "dateMax": "2026-07-08",
+      "meanFirstInningsScore": 166.44,
+      "pooledRunsPerOver": 8.39,
+      "boundaryDeliveryPercent": 16.039,
+      "meanWickets": 7.29,
+      "venueAliases": [
+        "Grace Road",
+        "Grace Road, Leicester"
+      ]
+    },
+    "MID": {
+      "firstInnings": 47,
+      "dateMin": "2014-05-17",
+      "dateMax": "2026-05-24",
+      "meanFirstInningsScore": 172.62,
+      "pooledRunsPerOver": 8.679,
+      "boundaryDeliveryPercent": 15.918,
+      "meanWickets": 6.81,
+      "venueAliases": [
+        "Lord's",
+        "Lord's, London"
+      ]
+    },
+    "NOR": {
+      "firstInnings": 79,
+      "dateMin": "2014-06-13",
+      "dateMax": "2026-07-15",
+      "meanFirstInningsScore": 177.32,
+      "pooledRunsPerOver": 8.875,
+      "boundaryDeliveryPercent": 17.724,
+      "meanWickets": 6.42,
+      "venueAliases": [
+        "County Ground",
+        "County Ground, Northampton"
+      ]
+    },
+    "NOT": {
+      "firstInnings": 84,
+      "dateMin": "2014-05-16",
+      "dateMax": "2026-07-15",
+      "meanFirstInningsScore": 170.88,
+      "pooledRunsPerOver": 8.574,
+      "boundaryDeliveryPercent": 16.819,
+      "meanWickets": 6.74,
+      "venueAliases": [
+        "Trent Bridge",
+        "Trent Bridge, Nottingham"
+      ]
+    },
+    "SOM": {
+      "firstInnings": 77,
+      "dateMin": "2014-05-18",
+      "dateMax": "2026-07-12",
+      "meanFirstInningsScore": 183.04,
+      "pooledRunsPerOver": 9.206,
+      "boundaryDeliveryPercent": 18.671,
+      "meanWickets": 6.82,
+      "venueAliases": [
+        "County Ground",
+        "The Cooper Associates County Ground",
+        "The Cooper Associates County Ground, Taunton"
+      ]
+    },
+    "SUR": {
+      "firstInnings": 83,
+      "dateMin": "2014-05-30",
+      "dateMax": "2026-07-12",
+      "meanFirstInningsScore": 169.58,
+      "pooledRunsPerOver": 8.551,
+      "boundaryDeliveryPercent": 15.924,
+      "meanWickets": 6.69,
+      "venueAliases": [
+        "Kennington Oval",
+        "Kennington Oval, London"
+      ]
+    },
+    "SUS": {
+      "firstInnings": 77,
+      "dateMin": "2014-05-23",
+      "dateMax": "2026-07-12",
+      "meanFirstInningsScore": 171.77,
+      "pooledRunsPerOver": 8.677,
+      "boundaryDeliveryPercent": 17.171,
+      "meanWickets": 6.82,
+      "venueAliases": [
+        "County Ground",
+        "County Ground, Hove"
+      ]
+    },
+    "WAR": {
+      "firstInnings": 113,
+      "dateMin": "2014-06-19",
+      "dateMax": "2026-07-18",
+      "meanFirstInningsScore": 171.14,
+      "pooledRunsPerOver": 8.636,
+      "boundaryDeliveryPercent": 16.514,
+      "meanWickets": 6.91,
+      "venueAliases": [
+        "Edgbaston",
+        "Edgbaston, Birmingham"
+      ]
+    },
+    "WOR": {
+      "firstInnings": 73,
+      "dateMin": "2014-05-30",
+      "dateMax": "2026-07-10",
+      "meanFirstInningsScore": 171.44,
+      "pooledRunsPerOver": 8.587,
+      "boundaryDeliveryPercent": 16.521,
+      "meanWickets": 6.64,
+      "venueAliases": [
+        "County Ground, New Road",
+        "County Ground, New Road, Worcester"
+      ]
+    },
+    "YOR": {
+      "firstInnings": 78,
+      "dateMin": "2014-05-16",
+      "dateMax": "2026-07-15",
+      "meanFirstInningsScore": 185.27,
+      "pooledRunsPerOver": 9.333,
+      "boundaryDeliveryPercent": 18.611,
+      "meanWickets": 6.51,
+      "venueAliases": [
+        "Headingley",
+        "Headingley, Leeds"
+      ]
+    }
+  }
+}

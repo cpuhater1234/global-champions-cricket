@@ -1,0 +1,11 @@
+/* Keep club abbreviations atomic when readers enlarge text. */
+.g8clubidentitypanel .g8badge {
+  width: max-content;
+  min-width: 64px;
+  max-width: 100%;
+  padding-inline: .45em;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: normal;
+}

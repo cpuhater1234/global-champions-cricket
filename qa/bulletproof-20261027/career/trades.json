@@ -1,0 +1,91 @@
+{
+  "year": 2014,
+  "accepted": [
+    {
+      "deal": {
+        "club": "MI",
+        "give": [
+          43
+        ],
+        "take": [
+          8
+        ],
+        "givePicks": [],
+        "takePicks": [],
+        "mid": false
+      },
+      "result": {
+        "accepted": true,
+        "message": "MI accept. The players and picks have changed clubs.",
+        "give": [
+          43
+        ],
+        "take": [
+          8
+        ]
+      }
+    },
+    {
+      "deal": {
+        "club": "STA",
+        "give": [
+          207
+        ],
+        "take": [
+          175
+        ],
+        "givePicks": [],
+        "takePicks": [],
+        "mid": false
+      },
+      "result": {
+        "accepted": true,
+        "message": "STA accept. The players and picks have changed clubs.",
+        "give": [
+          207
+        ],
+        "take": [
+          175
+        ]
+      }
+    }
+  ],
+  "rejected": [
+    "MI reject it. They value their side of the package more highly.",
+    "MI reject it. They value their side of the package more highly.",
+    "MI reject it. They value their side of the package more highly.",
+    "They will not weaken their viable bowling group.",
+    "They will not weaken their viable bowling group.",
+    "MI reject it. They value their side of the package more highly.",
+    "They will not weaken their viable bowling group.",
+    "MI reject it. They value their side of the package more highly.",
+    "They will not weaken their viable bowling group.",
+    "MI reject it. They value their side of the package more highly.",
+    "MI reject it. They value their side of the package more highly.",
+    "They will not weaken their viable bowling group.",
+    "They will not weaken their viable bowling group.",
+    "MI reject it. They value their side of the package more highly.",
+    "MI reject it. They value their side of the package more highly.",
+    "STA reject it. They value their side of the package more highly.",
+    "STA reject it. They value their side of the package more highly.",
+    "STA reject it. They value their side of the package more highly.",
+    "STA reject it. They value their side of the package more highly.",
+    "STA reject it. They value their side of the package more highly.",
+    "STA reject it. They value their side of the package more highly.",
+    "STA reject it. They value their side of the package more highly.",
+    "STA reject it. They value their side of the package more highly.",
+    "STA reject it. They value their side of the package more highly.",
+    "STA reject it. They value their side of the package more highly.",
+    "STA reject it. They value their side of the package more highly.",
+    "STA reject it. They value their side of the package more highly.",
+    "STA reject it. They value their side of the package more highly.",
+    "STA reject it. They value their side of the package more highly.",
+    "STA reject it. They value their side of the package more highly."
+  ],
+  "invalid": [
+    "Choose another club.",
+    "Each club can include at most two different players and two different picks."
+  ],
+  "thirdTradeRejection": "Your club has already completed two trades this season.",
+  "errors": []
+}

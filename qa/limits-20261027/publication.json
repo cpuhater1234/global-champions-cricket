@@ -1,0 +1,26 @@
+{
+  "releaseCommit": "b460a68b448b2858dfb24fd0f8f433563bb8fb5b",
+  "releaseTree": "1a690732b35a5bcae521f989b8d034140ad6cb10",
+  "branch": "work/v8-game-first-rebuild",
+  "verifiedFiles": 100,
+  "baselineOriginalFiles": 2046,
+  "unrelatedOriginalFilesUnchanged": 2040,
+  "changedOriginalPaths": [
+    "README.md",
+    "game/gcc_v8_product_candidate.html",
+    "game/gcc_v8_quiet_arcade.html",
+    "v8/domain/save_coordinator.js",
+    "v8/engine/dynasty.js",
+    "v8/ui/controller.js"
+  ],
+  "mismatches": [],
+  "sha256": "4a3d4d919d2fdd35d490f5e2f57359bb5fe65d209873a2f89353ee9735aa2453",
+  "savedPlayableVersion": 82,
+  "evidenceArchive": {
+    "filename": "GCC_v82_Recovery_Audit_20261027.zip",
+    "bytes": 84453,
+    "sha256": "5253bae2ef17ff0faccdec62bc00bcfdd1b4eea3314042bfad57456e384c209d",
+    "saved": true
+  },
+  "administrativeCheckpoint": "This final checklist postdates the evidence archive; releaseCommit identifies the byte-verified product/source/QA checkpoint."
+}

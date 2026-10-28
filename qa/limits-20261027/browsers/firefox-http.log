@@ -1,0 +1,53 @@
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+browserContext.newPage: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /root/.cache/ms-playwright/firefox-1538/firefox/firefox -no-remote -headless -profile /tmp/playwright_firefoxdev_profile-y5T1BX -juggler-pipe -silent
+<launched> pid=19
+[pid=19][err] *** You are running in headless mode.
+[pid=19][err] JavaScript warning: resource://services-settings/Utils.sys.mjs, line 119: unreachable code after return statement
+[pid=19][out] 
+[pid=19][out] Juggler listening to the pipe
+[pid=19][err] [100] Sandbox: writing /proc/self/uid_map: EPERM
+[pid=19][err] [WARN  rkv::backend::impl_safe::environment] `load_ratio()` is irrelevant for this storage backend.
+[pid=19][err] [113] Sandbox: writing /proc/self/uid_map: EPERM
+[pid=19][err] [118] Sandbox: writing /proc/self/uid_map: EPERM
+[pid=19][err] [Parent 19, IPC I/O Parent] WARNING: process 113 exited on signal 11: file ipc/chromium/src/chrome/common/process_watcher_posix_sigchld.cc:161
+[pid=19][err] [119] Sandbox: writing /proc/self/uid_map: EPERM
+[pid=19][err] [Parent 19, IPC I/O Parent] WARNING: process 119 exited on signal 11: file ipc/chromium/src/chrome/common/process_watcher_posix_sigchld.cc:161
+[pid=19][err] [134] Sandbox: writing /proc/self/uid_map: EPERM
+[pid=19][err] [Parent 19, IPC I/O Parent] WARNING: process 134 exited on signal 11: file ipc/chromium/src/chrome/common/process_watcher_posix_sigchld.cc:161
+[pid=19][err] [137] Sandbox: writing /proc/self/uid_map: EPERM
+[pid=19][err] [140] Sandbox: writing /proc/self/uid_map: EPERM
+[pid=19][err] [Parent 19, IPC I/O Parent] WARNING: process 137 exited on signal 11: file ipc/chromium/src/chrome/common/process_watcher_posix_sigchld.cc:161
+[pid=19][out] 
+[pid=19][out]         ERROR: ERROR: cannot find session with id "8f341d72-1b51-429d-8e70-0967425e6f66" _dispatch@chrome://juggler/content/protocol/Dispatcher.js:54:15
+[pid=19][out] receiveMessage@chrome://juggler/content/components/Juggler.js:121:20
+[pid=19][out] 
+[pid=19][err] [Parent 19, IPC I/O Parent] WARNING: process 140 exited on signal 11: file ipc/chromium/src/chrome/common/process_watcher_posix_sigchld.cc:161
+[pid=19][err] [147] Sandbox: writing /proc/self/uid_map: EPERM
+[pid=19][out]       console.error: (new TypeError("can't access property \"maybeCancelContentJSExecution\", this._browser.frameLoader.remoteTab is null", "resource://gre/modules/RemoteWebNavigation.sys.mjs", 41))
+[pid=19][err] [Parent 19, IPC I/O Parent] WARNING: process 147 exited on signal 11: file ipc/chromium/src/chrome/common/process_watcher_posix_sigchld.cc:161
+[pid=19][err] [156] Sandbox: writing /proc/self/uid_map: EPERM
+[pid=19][err] [Parent 19, IPC I/O Parent] WARNING: process 156 exited on signal 11: file ipc/chromium/src/chrome/common/process_watcher_posix_sigchld.cc:161
+[pid=19][out] console.error: "Error fetching remote settings base url from CDN. Falling back to https://firefox-settings-attachments.cdn.mozilla.net/" (new SyntaxError("XMLHttpRequest.open: '/' is not a valid URL.", (void 0), 126))
+[pid=19][out] console.error: services.settings: 
+[pid=19][out]   Message: EmptyDatabaseError: "main/nimbus-desktop-experiments" has not been synced yet
+[pid=19][out]   Stack:
+[pid=19][out]     EmptyDatabaseError@resource://services-settings/Database.sys.mjs:19:5
+[pid=19][out] list@resource://services-settings/Database.sys.mjs:96:13
+[pid=19][out] 
+[pid=19][err] [167] Sandbox: writing /proc/self/uid_map: EPERM
+[pid=19][out] console.warn: BackupService: "There was an error while trying to get the Document's directory" [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIProperties.get]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource:///modules/backup/BackupService.sys.mjs :: get docsDirFolderPath :: line 1299"  data: no]
+[pid=19][err] JavaScript error: resource:///modules/backup/BackupService.sys.mjs, line 4380: NotAllowedError: PathUtils.join: PathUtils does not support empty paths
+[pid=19][err] JavaScript warning: resource://gre/modules/UpdateService.sys.mjs, line 4029: unreachable code after return statement
+[pid=19][out] 1793078086369	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, channelStatus: 2153390067, errorCode: 2, reason: error
+[pid=19] <gracefully close start>
+    at /workspace/scratch/f98cc1f6c0bf/gcc/qa/limits-20261027/browsers/lifecycle.cjs:2:854 {
+  log: []
+}
+
+Node.js v24.22.1

@@ -1,0 +1,25 @@
+{
+  "finalSha256": "696bdfea1a5d177d144a652316c0d39e1d34a1522df990ef32852e45e84d9097",
+  "baselineCommit": "203753ab590c826f1c81469a3c95e459dbd6e560",
+  "catalogue": {
+    "IPL": 10,
+    "BBL": 8,
+    "counties": 18,
+    "total": 36,
+    "leaguePerCareer": 8
+  },
+  "newClubs": 16,
+  "offlinePhotos": 36,
+  "seededDraws": 512,
+  "managedMatchesNewClubs": 224,
+  "leagueMatchesNewClubs": 896,
+  "newClubPortableRestores": 48,
+  "newClubFinalsReviewTransitions": 16,
+  "legacyExactManagedMatchComparisons": 13,
+  "legacyGuidesIdentical": 20,
+  "browserVisibleGuideCases": 216,
+  "browserErrors": [],
+  "corruptSaveChecks": 77,
+  "simulationScriptsChanged": false,
+  "evidenceScope": "Lifecycle,legacyparityandstockengine suites used60c03a75... candidate; final696bdfea... differs by scopedbadgeCSSonly, all20scriptbodiesidentical. Finalcatalogueand216visiblebrowser/badgecases rerun on finalhash. No physicaldevice,humantesting,causalgroundratingsor19yearnewclubcareerclaim."
+}

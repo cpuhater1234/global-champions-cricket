@@ -1,0 +1,801 @@
+{
+  "version": 1,
+  "researchedAt": "2026-10-27",
+  "scope": "Complete current10IPL+18English/Welshcounties+8existingBBL catalogue for alternate-history2008–2026; original20records unchanged. Principal home grounds, no secondary-venue rotation or historical founding gates.",
+  "records": [
+    {
+      "club": {
+        "name": "Punjab Kings",
+        "abbr": "PBKS",
+        "region": "India",
+        "league": "IPL",
+        "ground": "Maharaja Yadavindra Singh International Cricket Stadium",
+        "trait": "Carry and strokeplay",
+        "c": "#d71920",
+        "a": "#17479e",
+        "t": "#ffffff",
+        "conditions": {
+          "pace": 2,
+          "spin": 0,
+          "boundary": 1
+        }
+      },
+      "story": [
+        "New Chandigarh",
+        "New Chandigarh offers useful carry and room for positive batting. Preparation and the new ball can change the contest, so back fluent scoring with disciplined bowling.",
+        "Combine batters comfortable with carry, a varied attack and bowlers who can protect the closing overs."
+      ],
+      "groundRead": "New Chandigarh offers useful carry and room for positive batting. Preparation and the new ball can change the contest, so back fluent scoring with disciplined bowling.",
+      "t20Identity": "Punjab Kings",
+      "provenance": {
+        "identitySources": [
+          "https://www.iplt20.com/venues",
+          "https://www.iplt20.com/teams/punjab-kings"
+        ],
+        "conditionSources": [
+          "https://indiatimes.com/sports/cricket/pbks-vs-rcb-dream11-prediction-ipl-2025-qualifier-1-fantasy-tips-playing-xi-pitch-report-for-match-71-punjab-kings-vs-royal-challengers-bengaluru-659874.html"
+        ],
+        "qualitativeObservation": "Balanced surface with useful carry; prepared strips can support fluent strokeplay. Avoid a fixed low-score or spin-only identity.",
+        "conditionStatus": "Authored conservative signed game-model priors informed by qualitative reports and descriptive Cricsheet venue evidence; not empirical estimates of causal pitch effects or physical boundary lengths.",
+        "colourStatus": "Authored visual approximations, not official brand hex values",
+        "descriptiveData": "qa/club-expansion-20261027/ipl-ground-evidence.json"
+      },
+      "photo": {
+        "file": "PBKS.jpg",
+        "sha256": "b9ee956d9372f79c5fb18d09e6d72d9660ae01193188c73fb7cb297ed61ef159",
+        "source": "https://commons.wikimedia.org/wiki/File:Maharaja_Yadavindra_Singh_International_Cricket_Stadium.png",
+        "author": "Drtyuo",
+        "licence": "by-sa/4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 836,
+        "height": 960,
+        "changes": "Full source photograph resized to at most960px and JPEG-compressed for offline use. Display may crop responsively; no implication that the photograph depicts the simulated year or current match."
+      }
+    },
+    {
+      "club": {
+        "name": "Sunrisers Hyderabad",
+        "abbr": "SRH",
+        "region": "India",
+        "league": "IPL",
+        "ground": "Rajiv Gandhi International Cricket Stadium",
+        "trait": "Strokeplay and scoring pressure",
+        "c": "#f26522",
+        "a": "#151515",
+        "t": "#111111",
+        "conditions": {
+          "pace": 1,
+          "spin": 0,
+          "boundary": 4
+        }
+      },
+      "story": [
+        "Hyderabad",
+        "Hyderabad gives attacking batters opportunities to change a match quickly. Runs are there to be made, but the same scoring freedom makes control and variation valuable when defending.",
+        "Build batting depth and protect it with reliable death bowling and a fielding side that limits easy boundaries."
+      ],
+      "groundRead": "Hyderabad gives attacking batters opportunities to change a match quickly. Runs are there to be made, but the same scoring freedom makes control and variation valuable when defending.",
+      "t20Identity": "Sunrisers Hyderabad",
+      "provenance": {
+        "identitySources": [
+          "https://www.iplt20.com/venues",
+          "https://www.iplt20.com/teams/sunrisers-hyderabad"
+        ],
+        "conditionSources": [
+          "https://timesofindia.indiatimes.com/sports/cricket/ipl/ipl-2026/ipl-match-today-srh-vs-pbks-predicted-playing-xi-head-to-head-pitch-report-hyderabad-weather-update/articleshow/130844347.cms"
+        ],
+        "qualitativeObservation": "Modern T20 strips can be flat and strongly reward aggressive batting. Treat this as a tendency, not guaranteed behaviour on every strip.",
+        "conditionStatus": "Authored conservative signed game-model priors informed by qualitative reports and descriptive Cricsheet venue evidence; not empirical estimates of causal pitch effects or physical boundary lengths.",
+        "colourStatus": "Authored visual approximations, not official brand hex values",
+        "descriptiveData": "qa/club-expansion-20261027/ipl-ground-evidence.json"
+      },
+      "photo": {
+        "file": "SRH.jpg",
+        "sha256": "496f8c90a9bd6ad7d3e357adbbfe12396e545eb21fe5a8739eca3d30333de53f",
+        "source": "https://commons.wikimedia.org/wiki/File:Rajiv_Gandhi_International_Cricket_Stadium_Hyderabad.jpg",
+        "author": "Phanidharvaranasi",
+        "licence": "by-sa/4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 960,
+        "height": 720,
+        "changes": "Full source photograph resized to at most960px and JPEG-compressed for offline use. Display may crop responsively; no implication that the photograph depicts the simulated year or current match."
+      }
+    },
+    {
+      "club": {
+        "name": "Gujarat Titans",
+        "abbr": "GT",
+        "region": "India",
+        "league": "IPL",
+        "ground": "Narendra Modi Stadium",
+        "trait": "Variable strips and larger pockets",
+        "c": "#13294b",
+        "a": "#c6a667",
+        "t": "#ffffff",
+        "conditions": {
+          "pace": 2,
+          "spin": 1,
+          "boundary": -1
+        }
+      },
+      "story": [
+        "Ahmedabad",
+        "Ahmedabad can offer different contests on different strips. True bounce can reward timing, while a slower surface asks for adjustment. Use the larger pockets for running and boundary protection.",
+        "Keep both pace and spin available, with adaptable batters and fielders who can cover the ground."
+      ],
+      "groundRead": "Ahmedabad can offer different contests on different strips. True bounce can reward timing, while a slower surface asks for adjustment. Use the larger pockets for running and boundary protection.",
+      "t20Identity": "Gujarat Titans",
+      "provenance": {
+        "identitySources": [
+          "https://www.iplt20.com/venues",
+          "https://www.iplt20.com/teams/gujarat-titans"
+        ],
+        "conditionSources": [
+          "https://www.theguardian.com/sport/2026/mar/07/if-theres-no-pressure-theres-no-fun-india-look-to-slay-ghosts-of-2023-in-t20-world-cup-final"
+        ],
+        "qualitativeObservation": "Surface selection matters: red-soil strips tend to offer truer bounce; black-soil strips can be slower and help spin. Use a variable character, not a permanent road.",
+        "conditionStatus": "Authored conservative signed game-model priors informed by qualitative reports and descriptive Cricsheet venue evidence; not empirical estimates of causal pitch effects or physical boundary lengths.",
+        "colourStatus": "Authored visual approximations, not official brand hex values",
+        "descriptiveData": "qa/club-expansion-20261027/ipl-ground-evidence.json"
+      },
+      "photo": {
+        "file": "GT.jpg",
+        "sha256": "58395b98051857e0b6349c71b42d7a0293293b7592f7015324a01340454b6b1d",
+        "source": "https://commons.wikimedia.org/wiki/File:Narendra_Modi_Stadium_view_from_the_gallery.jpg",
+        "author": "A Cricket Premi",
+        "licence": "by-sa/4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 960,
+        "height": 535,
+        "changes": "Full source photograph resized to at most960px and JPEG-compressed for offline use. Display may crop responsively; no implication that the photograph depicts the simulated year or current match."
+      }
+    },
+    {
+      "club": {
+        "name": "Lucknow Super Giants",
+        "abbr": "LSG",
+        "region": "India",
+        "league": "IPL",
+        "ground": "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium",
+        "trait": "Bounce, grip and adaptation",
+        "c": "#17468b",
+        "a": "#f58220",
+        "t": "#ffffff",
+        "conditions": {
+          "pace": 2,
+          "spin": 2,
+          "boundary": -1
+        }
+      },
+      "story": [
+        "Lucknow",
+        "Lucknow has offered both slower contests and quicker, bouncier strips. Adapt to the match conditions rather than relying on one reputation, and make running and placement count.",
+        "Balance batters who handle pace and spin with a varied attack and dependable running between wickets."
+      ],
+      "groundRead": "Lucknow has offered both slower contests and quicker, bouncier strips. Adapt to the match conditions rather than relying on one reputation, and make running and placement count.",
+      "t20Identity": "Lucknow Super Giants",
+      "provenance": {
+        "identitySources": [
+          "https://www.iplt20.com/venues",
+          "https://www.iplt20.com/teams/lucknow-super-giants"
+        ],
+        "conditionSources": [
+          "https://timesofindia.indiatimes.com/sports/cricket/ipl/ipl-2026/ipl-2026-team-hasnt-adapted-to-ekana-pitch-justin-langer-on-lsg-struggles/articleshow/130486823.cms"
+        ],
+        "qualitativeObservation": "Bounce and turn can both feature, but surface pace varies with preparation; 2026 coach comments describe unusually quick, bouncy conditions. Do not hardcode the older slow-pitch reputation.",
+        "conditionStatus": "Authored conservative signed game-model priors informed by qualitative reports and descriptive Cricsheet venue evidence; not empirical estimates of causal pitch effects or physical boundary lengths.",
+        "colourStatus": "Authored visual approximations, not official brand hex values",
+        "descriptiveData": "qa/club-expansion-20261027/ipl-ground-evidence.json"
+      },
+      "photo": {
+        "file": "LSG.jpg",
+        "sha256": "34cf43b6a7056ee1df3072037136f1ed95ad70ea5d89f65850fe13415db30b5a",
+        "source": "https://commons.wikimedia.org/wiki/File:Ekana_cricket_stadium_.jpg",
+        "author": "Escpl",
+        "licence": "by-sa/4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 960,
+        "height": 720,
+        "changes": "Full source photograph resized to at most960px and JPEG-compressed for offline use. Display may crop responsively; no implication that the photograph depicts the simulated year or current match."
+      }
+    },
+    {
+      "club": {
+        "name": "Derbyshire",
+        "abbr": "DER",
+        "region": "England",
+        "league": "Vitality Blast",
+        "ground": "County Ground, Derby",
+        "trait": "Timing and controlled aggression",
+        "c": "#5db4e5",
+        "a": "#152b4b",
+        "t": "#111111",
+        "conditions": {
+          "pace": 2,
+          "spin": 1,
+          "boundary": 2
+        }
+      },
+      "story": [
+        "Derby",
+        "Derby offers opportunities to build a brisk innings through timing and positive scoring. Keep new-ball discipline and changes of pace available as the surface and weather vary.",
+        "Combine an assertive top order with control at the death and useful variation through the middle overs."
+      ],
+      "groundRead": "Derby offers opportunities to build a brisk innings through timing and positive scoring. Keep new-ball discipline and changes of pace available as the surface and weather vary.",
+      "t20Identity": "Derbyshire Falcons",
+      "provenance": {
+        "identitySources": [
+          "https://derbyshireccc.com/",
+          "https://derbyshireccc.com/shop/"
+        ],
+        "conditionSources": [
+          "https://derbyshireccc.com/",
+          "https://derbyshireccc.com/shop/"
+        ],
+        "qualitativeObservation": "Balanced default; do not encode an asserted permanent pace/spin bias without stronger venue-specific evidence. Match-day preparation, used strip and weather vary.",
+        "conditionStatus": "Authored conservative signed game-model priors informed by qualitative reports and descriptive Cricsheet venue evidence; not empirical estimates of causal pitch effects or physical boundary lengths.",
+        "colourStatus": "Authored approximate visual palette, not official brand hex specifications; kits change by season.",
+        "descriptiveData": "qa/club-expansion-20261027/county-ground-evidence.json"
+      },
+      "photo": {
+        "file": "DER.jpg",
+        "sha256": "25db9a189c15ba2a3c16de4a5247b949ddf71a3ed7e6cfa47e45e59a233c0228",
+        "source": "https://commons.wikimedia.org/wiki/File:Derby%2C_a_changed_view_at_the_3aaa_County_Ground_-_geograph.org.uk_-_5117071.jpg",
+        "author": "John Sutton",
+        "licence": "by-sa/2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "width": 960,
+        "height": 720,
+        "changes": "Full source photograph resized to at most960px and JPEG-compressed for offline use. Display may crop responsively; no implication that the photograph depicts the simulated year or current match."
+      }
+    },
+    {
+      "club": {
+        "name": "Durham",
+        "abbr": "DUR",
+        "region": "England",
+        "league": "Vitality Blast",
+        "ground": "Riverside Ground",
+        "trait": "Control and changing surfaces",
+        "c": "#173b80",
+        "a": "#f4ce24",
+        "t": "#ffffff",
+        "conditions": {
+          "pace": 2,
+          "spin": 2,
+          "boundary": -1
+        }
+      },
+      "story": [
+        "Chester-le-Street",
+        "The Riverside can ask for patience and control. Some used surfaces bring slower bowling into play, while preparation and weather can still help the new ball. Use placement and the larger pockets.",
+        "Pick a resilient top order and an attack with both seam and spin options rather than relying only on pace."
+      ],
+      "groundRead": "The Riverside can ask for patience and control. Some used surfaces bring slower bowling into play, while preparation and weather can still help the new ball. Use placement and the larger pockets.",
+      "t20Identity": "Durham",
+      "provenance": {
+        "identitySources": [
+          "https://www.durhamcricket.co.uk/t20-blast/",
+          "https://shopdurhamcricket.co.uk/"
+        ],
+        "conditionSources": [
+          "https://www.durhamcricket.co.uk/news-and-media/durham-fall-to-opening-blast-defeat-as-yorkshire-claim-59-run-victory-at-banks-homes-riverside/"
+        ],
+        "qualitativeObservation": "A used Riverside surface can play slow and low, bringing spin into the chase; do not assume permanent seam dominance.",
+        "conditionStatus": "Authored conservative signed game-model priors informed by qualitative reports and descriptive Cricsheet venue evidence; not empirical estimates of causal pitch effects or physical boundary lengths.",
+        "colourStatus": "Authored approximate visual palette, not official brand hex specifications; kits change by season.",
+        "descriptiveData": "qa/club-expansion-20261027/county-ground-evidence.json"
+      },
+      "photo": {
+        "file": "DUR.jpg",
+        "sha256": "2dc263b114f98336245e8450745a7e4216261df7b63fd438444c0d7f8359febc",
+        "source": "https://commons.wikimedia.org/wiki/File:Riverside-ground.jpg",
+        "author": "Nick Boalch (Ngb)",
+        "licence": "by-sa/1.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/1.0/",
+        "width": 723,
+        "height": 480,
+        "changes": "Full source photograph resized to at most960px and JPEG-compressed for offline use. Display may crop responsively; no implication that the photograph depicts the simulated year or current match."
+      }
+    },
+    {
+      "club": {
+        "name": "Essex",
+        "abbr": "ESS",
+        "region": "England",
+        "league": "Vitality Blast",
+        "ground": "County Ground, Chelmsford",
+        "trait": "Compact ground and quick scoring",
+        "c": "#d5212a",
+        "a": "#172441",
+        "t": "#ffffff",
+        "conditions": {
+          "pace": 1,
+          "spin": 1,
+          "boundary": 4
+        }
+      },
+      "story": [
+        "Chelmsford",
+        "Chelmsford can turn a few loose balls into a costly over. Clean hitting gives you a route to big totals, but accurate bowling and defending the boundary matter just as much.",
+        "Value power throughout the order, variation and reliable death bowling when there is little room for error."
+      ],
+      "groundRead": "Chelmsford can turn a few loose balls into a costly over. Clean hitting gives you a route to big totals, but accurate bowling and defending the boundary matter just as much.",
+      "t20Identity": "Essex Eagles",
+      "provenance": {
+        "identitySources": [
+          "https://essexcricket.org.uk/",
+          "https://essexcricket.org.uk/2025/03/21/introducing-the-new-vitality-blast-t20-shirt/"
+        ],
+        "conditionSources": [
+          "https://essexcricket.org.uk/",
+          "https://essexcricket.org.uk/2025/03/21/introducing-the-new-vitality-blast-t20-shirt/"
+        ],
+        "qualitativeObservation": "Balanced default; do not encode an asserted permanent pace/spin bias without stronger venue-specific evidence. Match-day preparation, used strip and weather vary.",
+        "conditionStatus": "Authored conservative signed game-model priors informed by qualitative reports and descriptive Cricsheet venue evidence; not empirical estimates of causal pitch effects or physical boundary lengths.",
+        "colourStatus": "Authored approximate visual palette, not official brand hex specifications; kits change by season.",
+        "descriptiveData": "qa/club-expansion-20261027/county-ground-evidence.json"
+      },
+      "photo": {
+        "file": "ESS.jpg",
+        "sha256": "1b1ac70ed9022c25897eebb6e5ced4154f97f439e955b3490023c1a3768574e7",
+        "source": "https://commons.wikimedia.org/wiki/File:County_Ground_Chelmsford_River_End.jpg",
+        "author": "Marplesmustgo",
+        "licence": "by-sa/4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 960,
+        "height": 351,
+        "changes": "Full source photograph resized to at most960px and JPEG-compressed for offline use. Display may crop responsively; no implication that the photograph depicts the simulated year or current match."
+      }
+    },
+    {
+      "club": {
+        "name": "Glamorgan",
+        "abbr": "GLA",
+        "region": "England",
+        "league": "Vitality Blast",
+        "ground": "Sophia Gardens",
+        "trait": "Short straights and square pockets",
+        "c": "#153e72",
+        "a": "#f4d442",
+        "t": "#ffffff",
+        "conditions": {
+          "pace": 2,
+          "spin": 1,
+          "boundary": 0
+        },
+        "displayRegion": "Wales"
+      },
+      "story": [
+        "Cardiff",
+        "Sophia Gardens rewards straight hitting, while the square pockets create a different challenge. Balance the angles, use the gaps and adjust your pace-and-spin mix to the match conditions.",
+        "Combine straight-hitting range and running with bowlers who can vary their line, length and pace."
+      ],
+      "groundRead": "Sophia Gardens rewards straight hitting, while the square pockets create a different challenge. Balance the angles, use the gaps and adjust your pace-and-spin mix to the match conditions.",
+      "t20Identity": "Glamorgan",
+      "provenance": {
+        "identitySources": [
+          "https://www.glamorgancricket.com/",
+          "https://www.glamorgancricket.com/"
+        ],
+        "conditionSources": [
+          "https://www.bbc.co.uk/sport/cricket/articles/cx275k958xqo"
+        ],
+        "qualitativeObservation": "Short straight boundaries reward straight hitting and make defending with spin tactically demanding.",
+        "conditionStatus": "Authored conservative signed game-model priors informed by qualitative reports and descriptive Cricsheet venue evidence; not empirical estimates of causal pitch effects or physical boundary lengths.",
+        "colourStatus": "Authored approximate visual palette, not official brand hex specifications; kits change by season.",
+        "descriptiveData": "qa/club-expansion-20261027/county-ground-evidence.json"
+      },
+      "photo": {
+        "file": "GLA.jpg",
+        "sha256": "ee8af8fd751e234762d167bcecde2aacd8a5e4734a5d5065009b3f7b3e2f1fd1",
+        "source": "https://commons.wikimedia.org/wiki/File:Cardiff%2C_County_Cricket_at_Sophia_Gardens_-_geograph.org.uk_-_7229076.jpg",
+        "author": "John Sutton",
+        "licence": "by-sa/2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "width": 960,
+        "height": 720,
+        "changes": "Full source photograph resized to at most960px and JPEG-compressed for offline use. Display may crop responsively; no implication that the photograph depicts the simulated year or current match."
+      }
+    },
+    {
+      "club": {
+        "name": "Gloucestershire",
+        "abbr": "GLO",
+        "region": "England",
+        "league": "Vitality Blast",
+        "ground": "Bristol County Ground",
+        "trait": "Timing and variation",
+        "c": "#f2ce22",
+        "a": "#141c23",
+        "t": "#111111",
+        "conditions": {
+          "pace": 1,
+          "spin": 1,
+          "boundary": 1
+        }
+      },
+      "story": [
+        "Bristol",
+        "Bristol offers a contest for timing, placement and a bowling group with several answers. Read the match conditions before deciding which strength should lead the side.",
+        "Build a flexible batting order and an attack able to change pace and protect the boundary."
+      ],
+      "groundRead": "Bristol offers a contest for timing, placement and a bowling group with several answers. Read the match conditions before deciding which strength should lead the side.",
+      "t20Identity": "Gloucestershire",
+      "provenance": {
+        "identitySources": [
+          "https://www.gloscricket.co.uk/",
+          "https://www.gloscricket.co.uk/"
+        ],
+        "conditionSources": [
+          "https://www.gloscricket.co.uk/",
+          "https://www.gloscricket.co.uk/"
+        ],
+        "qualitativeObservation": "Balanced default; do not encode an asserted permanent pace/spin bias without stronger venue-specific evidence. Match-day preparation, used strip and weather vary.",
+        "conditionStatus": "Authored conservative signed game-model priors informed by qualitative reports and descriptive Cricsheet venue evidence; not empirical estimates of causal pitch effects or physical boundary lengths.",
+        "colourStatus": "Authored approximate visual palette, not official brand hex specifications; kits change by season.",
+        "descriptiveData": "qa/club-expansion-20261027/county-ground-evidence.json"
+      },
+      "photo": {
+        "file": "GLO.jpg",
+        "sha256": "3e21f9cea8d01cfd1c97171f31f9b28ebfd5de1e0c93230595d29831ccf0f074",
+        "source": "https://commons.wikimedia.org/wiki/File:Looking_across_the_%22Seat_Unique_Stadium%22_-_the_County_Ground%2C_Bristol_-_geograph.org.uk_-_7291419.jpg",
+        "author": "Ruth Sharville",
+        "licence": "by-sa/2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "width": 960,
+        "height": 720,
+        "changes": "Full source photograph resized to at most960px and JPEG-compressed for offline use. Display may crop responsively; no implication that the photograph depicts the simulated year or current match."
+      }
+    },
+    {
+      "club": {
+        "name": "Kent",
+        "abbr": "KEN",
+        "region": "England",
+        "league": "Vitality Blast",
+        "ground": "St Lawrence Ground",
+        "trait": "Strokeplay and new-ball discipline",
+        "c": "#a51d42",
+        "a": "#16294b",
+        "t": "#ffffff",
+        "conditions": {
+          "pace": 2,
+          "spin": 1,
+          "boundary": 2
+        }
+      },
+      "story": [
+        "Canterbury",
+        "Canterbury gives fluent batting a chance to set the tempo. Disciplined seam early and controlled variation later help keep the scoring opportunities in check.",
+        "Pair positive top-order batting with new-ball control and clear options for the closing overs."
+      ],
+      "groundRead": "Canterbury gives fluent batting a chance to set the tempo. Disciplined seam early and controlled variation later help keep the scoring opportunities in check.",
+      "t20Identity": "Kent Spitfires",
+      "provenance": {
+        "identitySources": [
+          "https://www.kentcricket.co.uk/grounds/the-spitfire-ground-access-information/",
+          "https://castore.com/products/red-kent-spitfires-t20-shirt"
+        ],
+        "conditionSources": [
+          "https://www.kentcricket.co.uk/grounds/the-spitfire-ground-access-information/",
+          "https://castore.com/products/red-kent-spitfires-t20-shirt"
+        ],
+        "qualitativeObservation": "Balanced default; do not encode an asserted permanent pace/spin bias without stronger venue-specific evidence. Match-day preparation, used strip and weather vary.",
+        "conditionStatus": "Authored conservative signed game-model priors informed by qualitative reports and descriptive Cricsheet venue evidence; not empirical estimates of causal pitch effects or physical boundary lengths.",
+        "colourStatus": "Authored approximate visual palette, not official brand hex specifications; kits change by season.",
+        "descriptiveData": "qa/club-expansion-20261027/county-ground-evidence.json"
+      },
+      "photo": {
+        "file": "KEN.jpg",
+        "sha256": "8f747c4a91becb6519b81283ac5ca8403fc4d8bc57e865c190ff1e9e696d5f7c",
+        "source": "https://commons.wikimedia.org/wiki/File:St_Lawrence_Ground.JPG",
+        "author": "AMBerry",
+        "licence": "by-sa/3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "width": 960,
+        "height": 503,
+        "changes": "Full source photograph resized to at most960px and JPEG-compressed for offline use. Display may crop responsively; no implication that the photograph depicts the simulated year or current match."
+      }
+    },
+    {
+      "club": {
+        "name": "Leicestershire",
+        "abbr": "LEI",
+        "region": "England",
+        "league": "Vitality Blast",
+        "ground": "Grace Road",
+        "trait": "Placement and a varied attack",
+        "c": "#166641",
+        "a": "#d92335",
+        "t": "#ffffff",
+        "conditions": {
+          "pace": 1,
+          "spin": 1,
+          "boundary": 1
+        }
+      },
+      "story": [
+        "Leicester",
+        "Grace Road gives you several ways to compete. Build an innings through timing and placement, then use accuracy and variation to make the opposition work for their runs.",
+        "Cover the batting phases and keep both seam and spin available for changing match conditions."
+      ],
+      "groundRead": "Grace Road gives you several ways to compete. Build an innings through timing and placement, then use accuracy and variation to make the opposition work for their runs.",
+      "t20Identity": "Leicestershire Foxes",
+      "provenance": {
+        "identitySources": [
+          "https://leicestershireccc.co.uk/",
+          "https://leicestershireccc.co.uk/"
+        ],
+        "conditionSources": [
+          "https://leicestershireccc.co.uk/",
+          "https://leicestershireccc.co.uk/"
+        ],
+        "qualitativeObservation": "Balanced default; do not encode an asserted permanent pace/spin bias without stronger venue-specific evidence. Match-day preparation, used strip and weather vary.",
+        "conditionStatus": "Authored conservative signed game-model priors informed by qualitative reports and descriptive Cricsheet venue evidence; not empirical estimates of causal pitch effects or physical boundary lengths.",
+        "colourStatus": "Authored approximate visual palette, not official brand hex specifications; kits change by season.",
+        "descriptiveData": "qa/club-expansion-20261027/county-ground-evidence.json"
+      },
+      "photo": {
+        "file": "LEI.jpg",
+        "sha256": "87d3a9e19bd2fd30af31214c2806562c4c4c3c2d07ca0ac970d59d35d11ef34f",
+        "source": "https://commons.wikimedia.org/wiki/File:Grace_Road.jpg",
+        "author": "Kev747",
+        "licence": "by-sa/3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "width": 800,
+        "height": 600,
+        "changes": "Full source photograph resized to at most960px and JPEG-compressed for offline use. Display may crop responsively; no implication that the photograph depicts the simulated year or current match."
+      }
+    },
+    {
+      "club": {
+        "name": "Middlesex",
+        "abbr": "MID",
+        "region": "England",
+        "league": "Vitality Blast",
+        "ground": "Lord's",
+        "trait": "Slope and changing angles",
+        "c": "#e86ca9",
+        "a": "#1d3159",
+        "t": "#111111",
+        "conditions": {
+          "pace": 2,
+          "spin": 1,
+          "boundary": 0
+        }
+      },
+      "story": [
+        "London",
+        "The slope makes Lord's distinctive, but the match-day strip and weather still shape the contest. Build around adaptable batting and a disciplined attack, rather than one assumed pitch advantage.",
+        "Value new-ball control, batting that can adjust and a balanced attack for the middle and closing overs."
+      ],
+      "groundRead": "The slope makes Lord's distinctive, but the match-day strip and weather still shape the contest. Build around adaptable batting and a disciplined attack, rather than one assumed pitch advantage.",
+      "t20Identity": "Middlesex",
+      "provenance": {
+        "identitySources": [
+          "https://www.middlesexccc.com/page/faqs",
+          "https://www.middlesexccc.com/news/2023/04/new-2023-vitality-blast-shirt-and-express-items-available-now"
+        ],
+        "conditionSources": [
+          "https://www.olympics.com/en/news/lords-cricket-ground-slope-batting-bowling-impact-explained"
+        ],
+        "qualitativeObservation": "The pronounced cross-field slope changes bowling angles and requires adjustment from both batters and bowlers.",
+        "conditionStatus": "Authored conservative signed game-model priors informed by qualitative reports and descriptive Cricsheet venue evidence; not empirical estimates of causal pitch effects or physical boundary lengths.",
+        "colourStatus": "Authored approximate visual palette, not official brand hex specifications; kits change by season.",
+        "descriptiveData": "qa/club-expansion-20261027/county-ground-evidence.json"
+      },
+      "photo": {
+        "file": "MID.jpg",
+        "sha256": "e4ea09a3a9a6ebf7b6f08061017cf026c552f7c156f3bf378758714802f8b7bd",
+        "source": "https://commons.wikimedia.org/wiki/File:Lords_Nursery_End_Oct_202.jpg",
+        "author": "Spike 'em",
+        "licence": "by-sa/4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "width": 960,
+        "height": 314,
+        "changes": "Full source photograph resized to at most960px and JPEG-compressed for offline use. Display may crop responsively; no implication that the photograph depicts the simulated year or current match."
+      }
+    },
+    {
+      "club": {
+        "name": "Northamptonshire",
+        "abbr": "NOR",
+        "region": "England",
+        "league": "Vitality Blast",
+        "ground": "County Ground, Northampton",
+        "trait": "Boundary hitting and execution",
+        "c": "#731c36",
+        "a": "#e7be61",
+        "t": "#ffffff",
+        "conditions": {
+          "pace": 1,
+          "spin": 1,
+          "boundary": 4
+        }
+      },
+      "story": [
+        "Northampton",
+        "Northampton can reward a batting side that keeps finding the rope. Those scoring opportunities give bowlers little room for a missed plan, especially late in the innings.",
+        "Pick hitting range and batting depth, backed by accurate variation and dependable death bowling."
+      ],
+      "groundRead": "Northampton can reward a batting side that keeps finding the rope. Those scoring opportunities give bowlers little room for a missed plan, especially late in the innings.",
+      "t20Identity": "Northamptonshire Steelbacks",
+      "provenance": {
+        "identitySources": [
+          "https://nccc.co.uk/",
+          "https://nccc.co.uk/news/northamptonshire-unveil-major-steelbacks-rebrand/"
+        ],
+        "conditionSources": [
+          "https://nccc.co.uk/",
+          "https://nccc.co.uk/news/northamptonshire-unveil-major-steelbacks-rebrand/"
+        ],
+        "qualitativeObservation": "Balanced default; do not encode an asserted permanent pace/spin bias without stronger venue-specific evidence. Match-day preparation, used strip and weather vary.",
+        "conditionStatus": "Authored conservative signed game-model priors informed by qualitative reports and descriptive Cricsheet venue evidence; not empirical estimates of causal pitch effects or physical boundary lengths.",
+        "colourStatus": "Authored approximate visual palette, not official brand hex specifications; kits change by season.",
+        "descriptiveData": "qa/club-expansion-20261027/county-ground-evidence.json"
+      },
+      "photo": {
+        "file": "NOR.jpg",
+        "sha256": "35ee1c7f7b09b3c2866ed17b65929d8efec6b13ee7f78cb97fe7dc8e8cdf7412",
+        "source": "https://commons.wikimedia.org/wiki/File:Northants_780.JPG",
+        "author": "Whohe!",
+        "licence": "PD",
+        "licenceUrl": "https://commons.wikimedia.org/wiki/File:Northants_780.JPG",
+        "width": 635,
+        "height": 398,
+        "changes": "Full source photograph resized to at most960px and JPEG-compressed for offline use. Display may crop responsively; no implication that the photograph depicts the simulated year or current match."
+      }
+    },
+    {
+      "club": {
+        "name": "Sussex",
+        "abbr": "SUS",
+        "region": "England",
+        "league": "Vitality Blast",
+        "ground": "County Ground, Hove",
+        "trait": "Coastal conditions and positive batting",
+        "c": "#133e70",
+        "a": "#32b9df",
+        "t": "#ffffff",
+        "conditions": {
+          "pace": 1,
+          "spin": 1,
+          "boundary": 3
+        }
+      },
+      "story": [
+        "Hove",
+        "At Hove, positive batting and changes of pace can both shape an innings. Keep the boundary in mind and adapt to the conditions rather than relying on a fixed bowling style.",
+        "Combine fluent scoring with bowling variation and a fielding unit that can prevent easy runs."
+      ],
+      "groundRead": "At Hove, positive batting and changes of pace can both shape an innings. Keep the boundary in mind and adapt to the conditions rather than relying on a fixed bowling style.",
+      "t20Identity": "Sussex Sharks",
+      "provenance": {
+        "identitySources": [
+          "https://sussexcricket.co.uk/-county-ground-hove",
+          "https://sussexcricket.co.uk/news/new-t20-and-one-day-shirts-revealed-dafabet-announced-major-sponsor"
+        ],
+        "conditionSources": [
+          "https://sussexcricket.co.uk/-county-ground-hove",
+          "https://sussexcricket.co.uk/news/new-t20-and-one-day-shirts-revealed-dafabet-announced-major-sponsor"
+        ],
+        "qualitativeObservation": "Balanced default; do not encode an asserted permanent pace/spin bias without stronger venue-specific evidence. Match-day preparation, used strip and weather vary.",
+        "conditionStatus": "Authored conservative signed game-model priors informed by qualitative reports and descriptive Cricsheet venue evidence; not empirical estimates of causal pitch effects or physical boundary lengths.",
+        "colourStatus": "Authored approximate visual palette, not official brand hex specifications; kits change by season.",
+        "descriptiveData": "qa/club-expansion-20261027/county-ground-evidence.json"
+      },
+      "photo": {
+        "file": "SUS.jpg",
+        "sha256": "25244702d99edd9efd8f01d4622a9504904529dcfa184886b32c162a26a0120b",
+        "source": "https://commons.wikimedia.org/wiki/File:The_County_Ground%2C_Hove_-_geograph.org.uk_-_2406336.jpg",
+        "author": "John Sutton",
+        "licence": "by-sa/2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "width": 800,
+        "height": 594,
+        "changes": "Full source photograph resized to at most960px and JPEG-compressed for offline use. Display may crop responsively; no implication that the photograph depicts the simulated year or current match."
+      }
+    },
+    {
+      "club": {
+        "name": "Warwickshire",
+        "abbr": "WAR",
+        "region": "England",
+        "league": "Vitality Blast",
+        "ground": "Edgbaston",
+        "trait": "Balanced attack and scoring options",
+        "c": "#171c25",
+        "a": "#d4ae57",
+        "t": "#ffffff",
+        "conditions": {
+          "pace": 2,
+          "spin": 1,
+          "boundary": 2
+        }
+      },
+      "story": [
+        "Birmingham",
+        "Edgbaston offers room for a complete side to compete. New-ball discipline, batting timing and changes of pace all have a place as the innings develops.",
+        "Cover the powerplay and death with reliable bowling, while keeping batting options through the order."
+      ],
+      "groundRead": "Edgbaston offers room for a complete side to compete. New-ball discipline, batting timing and changes of pace all have a place as the innings develops.",
+      "t20Identity": "Warwickshire Bears",
+      "provenance": {
+        "identitySources": [
+          "https://edgbaston.com/bears/home",
+          "https://shop.edgbaston.com/BIRMINGHAM-BEARS-PL-MENS-T20-BLAST-SHIRT-24-25"
+        ],
+        "conditionSources": [
+          "https://edgbaston.com/bears/home",
+          "https://shop.edgbaston.com/BIRMINGHAM-BEARS-PL-MENS-T20-BLAST-SHIRT-24-25"
+        ],
+        "qualitativeObservation": "Balanced default; do not encode an asserted permanent pace/spin bias without stronger venue-specific evidence. Match-day preparation, used strip and weather vary.",
+        "conditionStatus": "Authored conservative signed game-model priors informed by qualitative reports and descriptive Cricsheet venue evidence; not empirical estimates of causal pitch effects or physical boundary lengths.",
+        "colourStatus": "Authored approximate visual palette, not official brand hex specifications; kits change by season.",
+        "descriptiveData": "qa/club-expansion-20261027/county-ground-evidence.json"
+      },
+      "photo": {
+        "file": "WAR.jpg",
+        "sha256": "a1c3c68cec82d1ca79f5e476c2f5de34b6bb8837a7a874258e9312cddbdeb19a",
+        "source": "https://commons.wikimedia.org/wiki/File:Edgbaston.jpg",
+        "author": "PaddyBriggs",
+        "licence": "PD",
+        "licenceUrl": "https://commons.wikimedia.org/wiki/File:Edgbaston.jpg",
+        "width": 960,
+        "height": 376,
+        "changes": "Full source photograph resized to at most960px and JPEG-compressed for offline use. Display may crop responsively; no implication that the photograph depicts the simulated year or current match."
+      }
+    },
+    {
+      "club": {
+        "name": "Worcestershire",
+        "abbr": "WOR",
+        "region": "England",
+        "league": "Vitality Blast",
+        "ground": "New Road",
+        "trait": "Timing beside the river",
+        "c": "#288fc3",
+        "a": "#ffffff",
+        "t": "#111111",
+        "conditions": {
+          "pace": 2,
+          "spin": 1,
+          "boundary": 2
+        }
+      },
+      "story": [
+        "Worcester",
+        "New Road rewards a side that can build scoring pressure through timing, then control the reply. Keep a balance of new-ball skill and variation as match conditions change.",
+        "Choose adaptable batters and an accurate attack with more than one way to defend a total."
+      ],
+      "groundRead": "New Road rewards a side that can build scoring pressure through timing, then control the reply. Keep a balance of new-ball skill and variation as match conditions change.",
+      "t20Identity": "Worcestershire Rapids",
+      "provenance": {
+        "identitySources": [
+          "https://wccc.co.uk/visitor-info/",
+          "https://wccc.co.uk/shop/"
+        ],
+        "conditionSources": [
+          "https://wccc.co.uk/visitor-info/",
+          "https://wccc.co.uk/shop/"
+        ],
+        "qualitativeObservation": "Balanced default; do not encode an asserted permanent pace/spin bias without stronger venue-specific evidence. Match-day preparation, used strip and weather vary.",
+        "conditionStatus": "Authored conservative signed game-model priors informed by qualitative reports and descriptive Cricsheet venue evidence; not empirical estimates of causal pitch effects or physical boundary lengths.",
+        "colourStatus": "Authored approximate visual palette, not official brand hex specifications; kits change by season.",
+        "descriptiveData": "qa/club-expansion-20261027/county-ground-evidence.json"
+      },
+      "photo": {
+        "file": "WOR.jpg",
+        "sha256": "919984ad125ba5d62267dae7ce33fb916c296aa11b02c26957d9ca8f2a86902b",
+        "source": "https://commons.wikimedia.org/wiki/File:New_Road_Worcester_-_3_-_geograph-891443.jpg",
+        "author": "Stephen McKay",
+        "licence": "by-sa/2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "width": 640,
+        "height": 428,
+        "changes": "Full source photograph resized to at most960px and JPEG-compressed for offline use. Display may crop responsively; no implication that the photograph depicts the simulated year or current match."
+      }
+    }
+  ]
+}

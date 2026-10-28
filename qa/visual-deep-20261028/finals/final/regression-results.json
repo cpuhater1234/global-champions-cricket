@@ -1,0 +1,20 @@
+{
+  "auditedSha256": "9a253947041974e26a91729e06a9a93e1812d518b04519a6f533e9793a7cc5ca",
+  "data": {
+    "file": "/workspace/scratch/f98cc1f6c0bf/gcc/qa/visual-deep-20261028/candidate.html",
+    "results": [
+      {
+        "check": "Nottinghamshire no lone-character line at390",
+        "lineCounts": [
+          15
+        ],
+        "pass": true
+      },
+      {
+        "check": "Legacy tablet stadium trailing gap below100px",
+        "gap": 14,
+        "pass": true
+      }
+    ]
+  }
+}

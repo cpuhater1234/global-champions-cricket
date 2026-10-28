@@ -1,0 +1,21 @@
+{
+  "release": "v83",
+  "releaseCommit": "e67f0e660c969fb4db72d0cfb4406e3bfece1356",
+  "tree": "b3791ea768f5514d8c5890a58da3321a24c902be",
+  "sha256": "aa2e3e187efc0b31366ee29b255c1ed1fa236e4c1fb98ece83d9c99c935fb7aa",
+  "verifiedFiles": 46,
+  "mismatches": [],
+  "changedOriginalPaths": [
+    "README.md",
+    "game/gcc_v8_product_candidate.html",
+    "game/gcc_v8_quiet_arcade.html",
+    "v8/ui/bulletproof.css",
+    "v8/ui/screens.js",
+    "v8/ui/workspace.css"
+  ],
+  "unrelatedOriginalFilesUnchanged": 2135,
+  "savedPlayableVersion": 84,
+  "evidenceArchiveVersion": 1,
+  "evidenceArchive": "GCC_v83_Visual_Audit_20261028.zip",
+  "note": "Library revision numbers are file-history versions. Final v83 was revised to include the clipped-tab correction before completion. This publication checkpoint postdates the evidence archive."
+}

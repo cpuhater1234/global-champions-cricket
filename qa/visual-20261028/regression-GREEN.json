@@ -1,0 +1,176 @@
+{
+  "sha": "aa2e3e187efc0b31366ee29b255c1ed1fa236e4c1fb98ece83d9c99c935fb7aa",
+  "checks": [
+    {
+      "name": "start-screen-only-game-actions",
+      "pass": true
+    },
+    {
+      "name": "mobile-header-one-row",
+      "pass": true,
+      "evidence": {
+        "brandCenter": 32.390625,
+        "menuCenter": 32.390625,
+        "font": 18.4,
+        "height": 66.78125
+      }
+    },
+    {
+      "name": "mobile-brand-readable",
+      "pass": true,
+      "evidence": {
+        "brandCenter": 32.390625,
+        "menuCenter": 32.390625,
+        "font": 18.4,
+        "height": 66.78125
+      }
+    },
+    {
+      "name": "mobile-header-compact",
+      "pass": true,
+      "evidence": {
+        "brandCenter": 32.390625,
+        "menuCenter": 32.390625,
+        "font": 18.4,
+        "height": 66.78125
+      }
+    },
+    {
+      "name": "backup-remains-in-menu",
+      "pass": true
+    },
+    {
+      "name": "all-five-career-tabs-fit",
+      "pass": true,
+      "evidence": [
+        {
+          "width": 320,
+          "client": 288,
+          "scroll": 288,
+          "buttons": [
+            {
+              "text": "Matchday",
+              "left": 16,
+              "right": 93,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "text": "My XI",
+              "left": 93,
+              "right": 138.40625,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "text": "Ladder",
+              "left": 138.40625,
+              "right": 194.359375,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "text": "Fixtures",
+              "left": 194.359375,
+              "right": 260,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "text": "Stats",
+              "left": 260,
+              "right": 304,
+              "height": 44,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "client": 358,
+          "scroll": 358,
+          "buttons": [
+            {
+              "text": "Matchday",
+              "left": 16,
+              "right": 107.25,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "text": "My XI",
+              "left": 107.25,
+              "right": 166.890625,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "text": "Ladder",
+              "left": 166.890625,
+              "right": 237.09375,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "text": "Fixtures",
+              "left": 237.09375,
+              "right": 316.96875,
+              "height": 44,
+              "visible": true
+            },
+            {
+              "text": "Stats",
+              "left": 316.96875,
+              "right": 374,
+              "height": 44,
+              "visible": true
+            }
+          ]
+        },
+        {
+          "width": 768,
+          "client": 722,
+          "scroll": 722,
+          "buttons": [
+            {
+              "text": "Matchday",
+              "left": 23.03125,
+              "right": 142.84375,
+              "height": 45.171875,
+              "visible": true
+            },
+            {
+              "text": "My XI",
+              "left": 152.4375,
+              "right": 235.03125,
+              "height": 45.171875,
+              "visible": true
+            },
+            {
+              "text": "Ladder",
+              "left": 244.625,
+              "right": 339.640625,
+              "height": 45.171875,
+              "visible": true
+            },
+            {
+              "text": "Fixtures",
+              "left": 349.234375,
+              "right": 455.65625,
+              "height": 45.171875,
+              "visible": true
+            },
+            {
+              "text": "Stats",
+              "left": 465.25,
+              "right": 544.765625,
+              "height": 45.171875,
+              "visible": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pass": true
+}

@@ -1,0 +1,155 @@
+{
+  "profile": "/tmp/gcc-idb-probe-hZhl9y",
+  "url": "file:///workspace/scratch/f98cc1f6c0bf/gcc/qa/limits-20261027/probe/idb-origin.html",
+  "rounds": [
+    {
+      "i": 0,
+      "before": null,
+      "accepted": {
+        "marker": "round-0-1793078023078",
+        "durability": "strict"
+      },
+      "priorMarkerMatches": true
+    },
+    {
+      "i": 1,
+      "before": "round-0-1793078023078",
+      "accepted": {
+        "marker": "round-1-1793078023873",
+        "durability": "strict"
+      },
+      "priorMarkerMatches": true
+    },
+    {
+      "i": 2,
+      "before": "round-1-1793078023873",
+      "accepted": {
+        "marker": "round-2-1793078024584",
+        "durability": "strict"
+      },
+      "priorMarkerMatches": true
+    },
+    {
+      "i": 3,
+      "before": "round-2-1793078024584",
+      "accepted": {
+        "marker": "round-3-1793078025341",
+        "durability": "strict"
+      },
+      "priorMarkerMatches": true
+    },
+    {
+      "i": 4,
+      "before": "round-3-1793078025341",
+      "accepted": {
+        "marker": "round-4-1793078026025",
+        "durability": "strict"
+      },
+      "priorMarkerMatches": true
+    },
+    {
+      "i": 5,
+      "before": "round-4-1793078026025",
+      "accepted": {
+        "marker": "round-5-1793078026740",
+        "durability": "strict"
+      },
+      "priorMarkerMatches": true
+    },
+    {
+      "i": 6,
+      "before": "round-5-1793078026740",
+      "accepted": {
+        "marker": "round-6-1793078027490",
+        "durability": "strict"
+      },
+      "priorMarkerMatches": true
+    },
+    {
+      "i": 7,
+      "before": "round-6-1793078027490",
+      "accepted": {
+        "marker": "round-7-1793078028174",
+        "durability": "strict"
+      },
+      "priorMarkerMatches": true
+    },
+    {
+      "i": 8,
+      "before": "round-7-1793078028174",
+      "accepted": {
+        "marker": "round-8-1793078028854",
+        "durability": "strict"
+      },
+      "priorMarkerMatches": true
+    },
+    {
+      "i": 9,
+      "before": "round-8-1793078028854",
+      "accepted": {
+        "marker": "round-9-1793078029580",
+        "durability": "strict"
+      },
+      "priorMarkerMatches": true
+    },
+    {
+      "i": 10,
+      "before": "round-9-1793078029580",
+      "accepted": {
+        "marker": "round-10-1793078030250",
+        "durability": "strict"
+      },
+      "priorMarkerMatches": true
+    },
+    {
+      "i": 11,
+      "before": "round-10-1793078030250",
+      "accepted": {
+        "marker": "round-11-1793078031032",
+        "durability": "strict"
+      },
+      "priorMarkerMatches": true
+    }
+  ],
+  "limitations": [
+    "Browser process crash only; no OS/power-loss certification.",
+    "Synthetic IndexedDB probe; not product integration."
+  ],
+  "browser": "153.0.8010.0",
+  "support": {
+    "reportedDurability": "strict",
+    "invalidError": {
+      "name": "TypeError",
+      "message": "Failed to execute 'transaction' on 'IDBDatabase': Failed to read the 'durability' property from 'IDBTransactionOptions': The provided value 'invalid' is not a valid enum value of type IDBTransactionDurability."
+    },
+    "defaultDurability": "default"
+  },
+  "finalRecovered": "round-11-1793078031032",
+  "finalMatches": true,
+  "concurrency": {
+    "tabs": 2,
+    "writers": [
+      100,
+      100
+    ],
+    "webLocksUsed": false,
+    "counter": 200
+  },
+  "pendingTransaction": {
+    "elapsedMs": 200,
+    "completed": false,
+    "requestCount": 772,
+    "event": "abort",
+    "error": null
+  },
+  "blockedOpen": {
+    "elapsedMs": 250,
+    "blocked": true,
+    "readyState": "pending"
+  },
+  "deniedOrigin": {
+    "name": "SecurityError",
+    "message": "Failed to execute 'open' on 'IDBFactory': access to the Indexed Database API is denied in this context."
+  },
+  "ok": true
+}

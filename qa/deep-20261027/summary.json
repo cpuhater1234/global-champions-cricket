@@ -1,0 +1,75 @@
+{
+  "release": "v81",
+  "sha256": "0f643bb049f277dd57550ad9fb8d6134c51ed102d3ffa00a53d20f68e10876e4",
+  "bytes": 8053567,
+  "baselineCommit": "afe67378cf3e415683af2ff43ecd24e5a3638319",
+  "protection": {
+    "baselineCommit": "afe67378cf3e415683af2ff43ecd24e5a3638319",
+    "baselineSha256": "c7ba52edcbee16d66b8651362a61939cd6c0507382b6bea49f81b51869b1bafb",
+    "sha256": "0f643bb049f277dd57550ad9fb8d6134c51ed102d3ffa00a53d20f68e10876e4",
+    "bytes": 8053567,
+    "editedScriptIndexes": [
+      10,
+      19
+    ],
+    "protectedScriptBodiesUnchanged": 18
+  },
+  "finalCandidate": {
+    "concurrentTabRaces": 20,
+    "silentOverwrites": 0,
+    "acceptedWritersPerRace": 1,
+    "pendingSaveChecks": 11,
+    "exitGuardChecks": 6,
+    "clearChecks": 4,
+    "integrityChecks": 77,
+    "adversarialChecks": 83,
+    "tableValidationCases": 24,
+    "restoreFeedbackModes": 2,
+    "storageRecoveryChecks": 6,
+    "nativeLifecycleAccessibilityChecks": 13,
+    "saveStatusViewportCases": 8,
+    "tradeGuardCases": 8,
+    "singleSaveNavigationClicks": 8,
+    "career": {
+      "club": "PBKS",
+      "seasons": 19,
+      "years": [
+        2008,
+        2026
+      ],
+      "managedLeagueMatches": 266,
+      "worldLeagueMatches": 1064,
+      "worldFinals": 57,
+      "coldRestores": 4,
+      "acceptedTrades": 5,
+      "releases": 8,
+      "injuryObservations": 787
+    }
+  },
+  "earlierUnchangedGameplayEvidence": {
+    "draftSlotCombinations": 4096,
+    "draftSlotChecks": 771430,
+    "retirementBoundaries": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      8,
+      12
+    ],
+    "scope": "v80 unchanged domain/gameplay; synthetic retirement boundaries, not natural frequencies"
+  },
+  "knownDurabilityFailure": {
+    "baselineChecksPassed": 24,
+    "baselineChecksTotal": 25,
+    "failedCheck": "crash-relaunch-career-content-identical",
+    "status": "Browser.crash can roll back accepted localStorage writes; not fixed and not attributed as the original intermittent-loss cause."
+  },
+  "limits": [
+    "Web Locks required for overlapping-writer guarantee; close older GCC builds.",
+    "Abrupt whole-browser crash disk durability not guaranteed; keep portable downloaded backups.",
+    "Indefinite lock holder remains visibly pending; beforeunload prompts are platform-dependent.",
+    "No physical-device, installed Firefox/WebKit, spoken screen-reader, human first-use or historical calibration certification."
+  ]
+}

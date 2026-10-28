@@ -1,0 +1,6 @@
+{
+  "sha": "0f643bb049f277dd57550ad9fb8d6134c51ed102d3ffa00a53d20f68e10876e4",
+  "checks": [],
+  "pass": false,
+  "failure": "AssertionError [ERR_ASSERTION]: Game must expose recovery-checkpoint readiness\n    at /workspace/scratch/f98cc1f6c0bf/gcc/qa/limits-20261027/integration.cjs:3:97"
+}

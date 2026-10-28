@@ -101,7 +101,7 @@
   function detectLegacySaveAfterPaint(){const run=()=>{const legacy=!safeStorageGet(META_KEY)&&!storageHasKey(SAVE_KEY)&&storageHasKey(LEGACY_SAVE_KEY);if(legacy)renderLauncher({legacyDetected:true})};if('requestIdleCallback' in window)requestIdleCallback(run,{timeout:350});else setTimeout(run,0)}
   function showFoundationIntro(){const e=launcherEls(),nav=$('nav'),stamp=$('seasonStamp');if(e.launcher)e.launcher.hidden=true;if(e.hero)e.hero.hidden=false;if(nav)nav.hidden=false;if(stamp)stamp.textContent='2008';renderLauncher();window.GCC8_ENGINE_SCROLL({top:0,behavior:'auto'})}
   function openLauncher(){base.go('world');for(const id of ['dynasty','archive','legacy'])$(id)?.classList.remove('active');currentScreen='world';renderLauncher({legacyDetected:storageHasKey(LEGACY_SAVE_KEY)});const stamp=$('seasonStamp');if(stamp)stamp.textContent='2008';window.GCC8_ENGINE_SCROLL({top:0,behavior:'auto'})}
-  function startFreshWorld(args=[]){lastStoredSave=safeStorageGet(SAVE_KEY);saveConflict=false;const e=launcherEls(),nav=$('nav'),stamp=$('seasonStamp');if(e.launcher)e.launcher.hidden=true;if(e.hero)e.hero.hidden=true;if(nav)nav.hidden=false;if(stamp)stamp.textContent='2008';const r=base.newWorld(...args);state.dynasty=freshDynasty();initDynastyData('new');saveFoundation('clubs');return r}
+  function startFreshWorld(args=[]){checkpointRecovery=null;invalidatePendingSaves();saveSuspended=false;lastStoredSave=safeStorageGet(SAVE_KEY);saveConflict=false;const e=launcherEls(),nav=$('nav'),stamp=$('seasonStamp');if(e.launcher)e.launcher.hidden=true;if(e.hero)e.hero.hidden=true;if(nav)nav.hidden=false;if(stamp)stamp.textContent='2008';const r=base.newWorld(...args);state.dynasty=freshDynasty();initDynastyData('new');saveFoundation('clubs');return r}
   function requestNewDynasty(){if(careerInMemory())return openExistingSaveGuard();if(storedSaveExists())return openExistingSaveGuard();return startFreshWorld()}
   function confirmFreshCareer(){G.closeModal();return clearSaveAndRestart()}
   function openExistingSaveGuard(){const body=$('modalBody'),modal=$('modal');if(!body||!modal)return base.toast('A dynasty save already exists. Continue it before starting again.');body.innerHTML=`<div class="save-guard"><span class="kicker">DYNASTY SAVE FOUND</span><h2>Start a different dynasty?</h2><p>Your saved career will be replaced only if you choose to start again.</p><div class="actions"><button class="button primary" onclick="GCC.closeModal();Dynasty.resumeSave()">CONTINUE DYNASTY</button><button class="button" onclick="Dynasty.confirmFreshCareer()">NEW DYNASTY · REPLACE SAVE</button></div></div>`;modal.classList.add('open')}
@@ -201,6 +201,7 @@
     d.midseasonDone[state.year]=(d.tradeDealsByYear[state.year][state.userClub.abbr]||0)>=2;
   }
   function offseasonTradeBlock(a,b){
+    if(state.year<=2008)return 'Trading opens after the first season, from 2009.';
     for(const club of [a,b])if(seasonTradeAllowance(club)===0)return `${club===state.userClub.abbr?'Your club':clubByAbbr(club)?.name||club} has already completed two trades this season.`;
     for(const club of [a,b])if(clubDepartureBudget(club).remaining===0)return `${club===state.userClub.abbr?'Your club':clubByAbbr(club)?.name||club} has no voluntary departures left. Retirements, releases and outgoing trades use the four-departure allowance.`;
     return '';
@@ -212,7 +213,7 @@
     const counts={};for(const t of d.transactions||[]){if(t.year!==state.year||t.type!=='TRADE')continue;const pair=/^(\S+) and (\S+) make a deal$/.exec(t.title||''),one=/^(\S+) acquire /.exec(t.title||''),other=/ → ([^ ·]+)(?: ·|$)/.exec(t.detail||'');for(const a of pair?[pair[1],pair[2]]:one&&other?[one[1],other[1]]:[])if(state.teams[a])counts[a]=(counts[a]||0)+1;}
     if(d.midseasonDone?.[state.year])counts[state.userClub.abbr]=Math.max(1,counts[state.userClub.abbr]||0);return counts;
   }
-  function seasonTradeAllowance(abbr){return Math.max(0,2-(seasonTradeCounts()[abbr]||0))}
+  function seasonTradeAllowance(abbr){if(state.year<=2008)return 0;return Math.max(0,2-(seasonTradeCounts()[abbr]||0))}
   function snapshotDepartureBudgets(){const d=ensureDynasty();d.departureBudgetsByYear??={};d.departureBudgetsByYear[state.year]=Object.fromEntries(state.league.map(c=>{const b=clubDepartureBudget(c.abbr);return [c.abbr,{retired:b.retired,cuts:b.cuts,traded:b.traded}]}));}
 
   function lockDraftEntitlements(){const o=state.dynasty.offseason;if(!o||o.ordinaryPickCounts)return;const slots=draftSlots();o.ordinaryPickCounts=Object.fromEntries(o.lottery.map(a=>[a,slots.filter(p=>p.original===a).length]));}
@@ -235,10 +236,11 @@
   function cpuTradeBlockReason(abbr,outgoing,incoming){const before=roster(abbr),after=before.filter(p=>p.id!==outgoing?.id);if(incoming&&!after.some(p=>p.id===incoming.id))after.push(incoming);const bk=before.filter(isKeeper).length,ak=after.filter(isKeeper).length,bb=before.filter(isBowler).length,ab=after.filter(isBowler).length,bt=before.filter(isBattingOption).length,at=after.filter(isBattingOption).length;if(bk>0&&ak<1)return 'They will not move their only recognised wicketkeeper without receiving another.';if(bb>=6&&ab<6)return 'They will not leave themselves short of a viable bowling group.';if(bb<6&&ab<bb)return 'They will not weaken an already thin bowling group.';if(bt>=7&&at<7)return 'They will not leave themselves short of viable batting depth.';if(bt<7&&at<bt)return 'They will not weaken an already thin batting group.';return ''}
   function cpuTradeKeepsShape(abbr,outgoing,incoming){return !cpuTradeBlockReason(abbr,outgoing,incoming)}
   function runCpuMarket(){
+    if(state.year<=2008)return;
     // A club leaves this market after trading, so its scored roster never changes while reused.
     const values=new Map(),marketValue=(p,club)=>{const key=p.id+':'+(club||'');if(!values.has(key))values.set(key,tradeValue(p,club));return values.get(key);};
 const o=state.dynasty.offseason;if(o.cpuMarketRun)return;o.cpuMarketRun=true;const clubs=state.league.filter(c=>c.abbr!==state.userClub.abbr),used=new Set();let deals=0;const target=Math.min(3,Math.floor(clubs.length/2),1+Math.floor(prand(`${state.seed}|${state.year}|deals`)*3));for(let tries=0;tries<90&&deals<target;tries++){const a=clubs[Math.floor(prand(`${state.seed}|${state.year}|a|${tries}`)*clubs.length)],b=clubs[Math.floor(prand(`${state.seed}|${state.year}|b|${tries}`)*clubs.length)];if(!a||!b||a.abbr===b.abbr||used.has(a.abbr)||used.has(b.abbr)||offseasonTradeBlock(a.abbr,b.abbr))continue;const aa=roster(a.abbr).filter(p=>!p.dynastyReplacement),bb=roster(b.abbr).filter(p=>!p.dynastyReplacement);let best=null;for(const pa of aa){for(const pb of bb){if(!cpuTradeKeepsShape(a.abbr,pa,pb)||!cpuTradeKeepsShape(b.abbr,pb,pa))continue;const outA=marketValue(pa,a.abbr),inA=marketValue(pb,a.abbr),outB=marketValue(pb,b.abbr),inB=marketValue(pa,b.abbr),dA=inA-outA,dB=inB-outB;const intrinsicGap=Math.abs(marketValue(pa)-marketValue(pb));if(intrinsicGap>10||dA<0||dB<0||dA+dB<3)continue;const score=dA+dB+prand(`${state.seed}|${state.year}|market|${a.abbr}|${b.abbr}|${pa.id}|${pb.id}`)*1.5;if(!best||score>best.score)best={pa,pb,score}}}if(!best)continue;const {pa,pb}=best;state.teams[a.abbr]=rosterIds(a.abbr).filter(id=>id!==pa.id).concat(pb.id);state.teams[b.abbr]=rosterIds(b.abbr).filter(id=>id!==pb.id).concat(pa.id);pa.draftedBy=b.abbr;pb.draftedBy=a.abbr;used.add(a.abbr);used.add(b.abbr);recordOffseasonTrade(a.abbr,b.abbr);log('TRADE',`${a.abbr} and ${b.abbr} make a deal`,`${pa.name} → ${b.abbr} · ${pb.name} → ${a.abbr}`);deals++}if(!deals)log('TRADE PERIOD','No league deal was completed','Clubs held their squads rather than force a move.');renderOffseason();autoSave()}
-  function openTradeCentre(midseason=false){G.pauseSeason();const clubs=state.league.filter(c=>c.abbr!==state.userClub.abbr);const my=roster(state.userClub.abbr).filter(p=>!p.dynastyReplacement).sort((a,b)=>tradeValue(b)-tradeValue(a));const firstClub=clubs[0];const html=`<div class="trade-centre-shell"><div class="trade-room-head"><div><span class="kicker">${midseason?'MID-SEASON':'OFF-SEASON'} TRADE CENTRE</span><h2>Work the phones.</h2><p>Find the player your side needs. Choose your offer, hear the other club’s position, and decide whether the deal is worth making.</p></div><div class="trade-room-stamp">${state.year}<span>TRADE WINDOW</span></div></div><div class="trade-builder trade-builder-sport"><div class="trade-side"><span class="trade-side-kicker">THEIR LIST</span><label for="tradeClub">Club</label><select id="tradeClub" onchange="Dynasty.refreshTradeTarget()">${clubs.map(c=>`<option value="${c.abbr}">${esc(c.name)}</option>`).join('')}</select><label for="tradeTarget" style="margin-top:9px">Target</label><select id="tradeTarget" onchange="Dynasty.refreshTradeRead()"></select></div><div class="trade-arrow"><span>TRADE</span>⇄</div><div class="trade-side"><span class="trade-side-kicker">YOUR LIST</span><label for="tradeOffer">Player offered</label><select id="tradeOffer" onchange="Dynasty.refreshTradeRead()">${my.map(p=>`<option value="${p.id}">${scoutingOption(p,firstClub?.abbr)}</option>`).join('')}</select>${!midseason&&state.dynasty.offseason?.lottery?.length&&(userOwnsPick('R1')||userOwnsPick('R2'))?`<label for="tradePick" style="margin-top:9px">Draft capital</label><select id="tradePick" onchange="Dynasty.refreshTradeRead()"><option value="">No pick</option>${userOwnsPick('R1')?'<option value="R1">Your Round 1 pick</option>':''}${userOwnsPick('R2')?'<option value="R2">Your Round 2 pick</option>':''}</select>`:''}</div></div><div id="tradeRead" class="trade-read trade-scout-read"></div><div class="close-row"><button class="button" onclick="GCC.closeModal()">LEAVE TRADE ROOM</button><button class="button primary" onclick="Dynasty.proposeTrade(${midseason?'true':'false'})">PUT OFFER TO CLUB</button></div></div>`;document.getElementById('modalBody').innerHTML=html;document.getElementById('modal').classList.add('open');refreshTradeTarget()}
+  function openTradeCentre(midseason=false){if(state.year<=2008){base.toast('Trading opens from 2009.');return false;}G.pauseSeason();const clubs=state.league.filter(c=>c.abbr!==state.userClub.abbr);const my=roster(state.userClub.abbr).filter(p=>!p.dynastyReplacement).sort((a,b)=>tradeValue(b)-tradeValue(a));const firstClub=clubs[0];const html=`<div class="trade-centre-shell"><div class="trade-room-head"><div><span class="kicker">${midseason?'MID-SEASON':'OFF-SEASON'} TRADE CENTRE</span><h2>Work the phones.</h2><p>Find the player your side needs. Choose your offer, hear the other club’s position, and decide whether the deal is worth making.</p></div><div class="trade-room-stamp">${state.year}<span>TRADE WINDOW</span></div></div><div class="trade-builder trade-builder-sport"><div class="trade-side"><span class="trade-side-kicker">THEIR LIST</span><label for="tradeClub">Club</label><select id="tradeClub" onchange="Dynasty.refreshTradeTarget()">${clubs.map(c=>`<option value="${c.abbr}">${esc(c.name)}</option>`).join('')}</select><label for="tradeTarget" style="margin-top:9px">Target</label><select id="tradeTarget" onchange="Dynasty.refreshTradeRead()"></select></div><div class="trade-arrow"><span>TRADE</span>⇄</div><div class="trade-side"><span class="trade-side-kicker">YOUR LIST</span><label for="tradeOffer">Player offered</label><select id="tradeOffer" onchange="Dynasty.refreshTradeRead()">${my.map(p=>`<option value="${p.id}">${scoutingOption(p,firstClub?.abbr)}</option>`).join('')}</select>${!midseason&&state.dynasty.offseason?.lottery?.length&&(userOwnsPick('R1')||userOwnsPick('R2'))?`<label for="tradePick" style="margin-top:9px">Draft capital</label><select id="tradePick" onchange="Dynasty.refreshTradeRead()"><option value="">No pick</option>${userOwnsPick('R1')?'<option value="R1">Your Round 1 pick</option>':''}${userOwnsPick('R2')?'<option value="R2">Your Round 2 pick</option>':''}</select>`:''}</div></div><div id="tradeRead" class="trade-read trade-scout-read"></div><div class="close-row"><button class="button" onclick="GCC.closeModal()">LEAVE TRADE ROOM</button><button class="button primary" onclick="Dynasty.proposeTrade(${midseason?'true':'false'})">PUT OFFER TO CLUB</button></div></div>`;document.getElementById('modalBody').innerHTML=html;document.getElementById('modal').classList.add('open');refreshTradeTarget()}
   function refreshTradeTarget(){const c=$('tradeClub')?.value;if(!c)return;const ps=roster(c).filter(p=>!p.dynastyReplacement).sort((a,b)=>tradeValue(b,state.userClub.abbr)-tradeValue(a,state.userClub.abbr));$('tradeTarget').innerHTML=ps.map(p=>`<option value="${p.id}">${scoutingOption(p,state.userClub.abbr)}</option>`).join('');const offer=$('tradeOffer');if(offer){const mine=roster(state.userClub.abbr).filter(p=>!p.dynastyReplacement).sort((a,b)=>tradeValue(b)-tradeValue(a));offer.innerHTML=mine.map(p=>`<option value="${p.id}">${scoutingOption(p,c)}</option>`).join('')}refreshTradeRead()}
   /* A pick adds an opportunity to improve a fifteen-player list, not a second star's full value. */
 function pickAssetValue(round,toClub){
@@ -262,6 +264,7 @@ function pickAssetValue(round,toClub){
     return '';
   }
   function packageProblem(deal){
+    if(state.year<=2008)return 'Trading opens after the first season, from 2009.';
     if(!deal||typeof deal!=='object'||typeof deal.mid!=='boolean')return 'Build a trade package first.';
     const {club,give,take,givePicks,takePicks,mid}=deal,own=state.userClub?.abbr,o=state.dynasty?.offseason;
     if(!own||!state.teams[club]||club===own)return 'Choose another club.';
@@ -278,6 +281,11 @@ function pickAssetValue(round,toClub){
     const permanentCount=abbr=>roster(abbr).filter(p=>!p.dynastyReplacement).length;
     if(permanentCount(own)-give.length+take.length>15||permanentCount(club)-take.length+give.length>15)return 'This package would leave a club with more than fifteen players. Balance the players or create a vacancy first.';
     if(mid&&give.length!==take.length)return 'Midseason exchanges must leave both squads at fifteen players.';
+    const ownAfter=roster(own).filter(p=>!p.dynastyReplacement&&!give.includes(p.id)).concat(take.map(pById));
+    if(ownAfter.length===15){
+      if(!ownAfter.some(isKeeper))return 'Your full squad must retain a recognised wicketkeeper. Include a keeper in the exchange or create a draft vacancy first.';
+      if(R.oversCapacity(ownAfter)<20)return 'Your full squad must retain twenty overs of bowling capacity. Balance the exchange or create a draft vacancy first.';
+    }
     return packageShapeBlock(club,take,give);
   }
   function packagePickValue(round,from,to){
@@ -580,7 +588,7 @@ function pickAssetValue(round,toClub){
   G.enterFinalsFromModal=(...args)=>{if(blockInvalidFinalsXI())return;const r=base.enterFinalsFromModal(...args);currentScreen='finals';state.dynasty.lastScreen='finals';updateYearCopy();patchYearLanguage();autoSave();return r};
   G.advanceFinals=(...args)=>{const r=withFitnessContext(()=>base.advanceFinals(...args));currentScreen='finals';state.dynasty.lastScreen='finals';updateYearCopy();patchYearLanguage();setTimeout(patchYearLanguage,0);autoSave();return r};
   G.simulateFinals=(...args)=>{if(blockInvalidFinalsXI())return;const r=withFitnessContext(()=>base.simulateFinals(...args));currentScreen='finals';state.dynasty.lastScreen='finals';updateYearCopy();patchYearLanguage();setTimeout(patchYearLanguage,160);autoSave();return r};
-  function renderSeasonLayer(){if(state.year<=2008||!$('seasonKpis'))return;let strip=$('dynastySeasonStrip');if(!strip){strip=document.createElement('div');strip.id='dynastySeasonStrip';strip.className='dynasty-season-strip';$('seasonKpis').insertAdjacentElement('afterend',strip)}const form=seasonForm(state.userClub.abbr),injured=roster(state.userClub.abbr).filter(p=>injury(p.id)?.status==='OUT'),managing=roster(state.userClub.abbr).filter(p=>injury(p.id)?.status==='MANAGING');const mid=state.round<3&&seasonTradeAllowance(state.userClub.abbr)>0;strip.innerHTML=`<div class="dynasty-season-stat"><span>Last five</span><b>${form.length?form.map(x=>`<i class="form-chip ${x.toLowerCase()}">${x}</i>`).join(''):'Season yet to start'}</b></div><div class="dynasty-season-stat"><span>Unavailable</span><b class="${injured.length?'negative':''}">${injured.length?`${injured.length} player${injured.length===1?'':'s'} out`:'Full squad available'}</b>${injured.find(p=>(injury(p.id)?.roundsLeft||0)>=4&&!state.dynasty.replacementFor[p.id])?`<button onclick="Dynasty.openReplacementMarket(${injured.find(p=>(injury(p.id)?.roundsLeft||0)>=4&&!state.dynasty.replacementFor[p.id]).id})">SIGN COVER</button>`:''}</div><div class="dynasty-season-stat"><span>Fitness</span><b class="${managing.length?'warning':''}">${managing.length?managing.map(p=>p.name).join(', '):'No restrictions'}</b></div><div class="dynasty-season-stat"><span>${mid?'Mid-season window':'Club record'}</span><b>${mid?'Trade window open':`${state.year} · ${state.dynasty.manager.titles} title${state.dynasty.manager.titles===1?'':'s'}`}</b>${mid?'<button onclick="Dynasty.openMidseasonMarket()">OPEN TRADE WINDOW</button>':'<button onclick="Dynasty.openArchive()">VIEW ARCHIVE</button>'}</div>`;decorateTeam()}
+  function renderSeasonLayer(){if(state.year<=2008||!$('seasonKpis'))return;let strip=$('dynastySeasonStrip');if(!strip){strip=document.createElement('div');strip.id='dynastySeasonStrip';strip.className='dynasty-season-strip';$('seasonKpis').insertAdjacentElement('afterend',strip)}const form=seasonForm(state.userClub.abbr),injured=roster(state.userClub.abbr).filter(p=>injury(p.id)?.status==='OUT'),managing=roster(state.userClub.abbr).filter(p=>injury(p.id)?.status==='MANAGING');const mid=state.year>2008&&state.round<3&&seasonTradeAllowance(state.userClub.abbr)>0;strip.innerHTML=`<div class="dynasty-season-stat"><span>Last five</span><b>${form.length?form.map(x=>`<i class="form-chip ${x.toLowerCase()}">${x}</i>`).join(''):'Season yet to start'}</b></div><div class="dynasty-season-stat"><span>Unavailable</span><b class="${injured.length?'negative':''}">${injured.length?`${injured.length} player${injured.length===1?'':'s'} out`:'Full squad available'}</b>${injured.find(p=>(injury(p.id)?.roundsLeft||0)>=4&&!state.dynasty.replacementFor[p.id])?`<button onclick="Dynasty.openReplacementMarket(${injured.find(p=>(injury(p.id)?.roundsLeft||0)>=4&&!state.dynasty.replacementFor[p.id]).id})">SIGN COVER</button>`:''}</div><div class="dynasty-season-stat"><span>Fitness</span><b class="${managing.length?'warning':''}">${managing.length?managing.map(p=>p.name).join(', '):'No restrictions'}</b></div><div class="dynasty-season-stat"><span>${mid?'Mid-season window':'Club record'}</span><b>${mid?'Trade window open':`${state.year} · ${state.dynasty.manager.titles} title${state.dynasty.manager.titles===1?'':'s'}`}</b>${mid?'<button onclick="Dynasty.openMidseasonMarket()">OPEN TRADE WINDOW</button>':'<button onclick="Dynasty.openArchive()">VIEW ARCHIVE</button>'}</div>`;decorateTeam()}
   function openMidseasonMarket(){openTradeCentre(true)}
   function openArchive(){if(currentScreen!=='archive')state.dynasty.archiveReturnScreen=currentScreen;renderArchive();specialGo('archive')}
   function backFromArchive(){if(document.body.classList.contains('gcc-dynasty-ended'))return specialGo('legacy');const origin=state.dynasty?.archiveReturnScreen,target=state.dynasty?.offseason?'dynasty':['team','season','finals','review'].includes(origin)?origin:state.round>0?'season':'team';if(target==='finals')base.renderFinals();if(target==='review')base.renderSeasonReview();specialGo(target)}
@@ -599,7 +607,143 @@ function pickAssetValue(round,toClub){
   function serialisable(){return {version:SAVE_VERSION,state,currentScreen}}
   let saveFailureShown=false;
   let lastStoredSave=safeStorageGet(SAVE_KEY),saveConflict=false;
-  function autoSave(){if(!state.dynasty)return false;try{if(localStorage.getItem(SAVE_KEY)!==lastStoredSave){saveConflict=true;base.toast('Another open game saved newer progress. Return home and choose Continue before playing on.');return false}saveConflict=false;state.dynasty.saveStamp=Date.now();state.dynasty.version=SAVE_VERSION;const nextSave=window.GCC8_SAVE_CODEC.stringify(serialisable());localStorage.setItem(SAVE_KEY,nextSave);lastStoredSave=nextSave;writeSaveMeta();saveFailureShown=false;return true}catch(e){console.error('GCC autosave failed',e);if(!saveFailureShown){saveFailureShown=true;base.toast('This browser could not save your progress. Keep this game open to continue playing.')}return false}}
+/* One transaction is the unit of checkpoint coordination and acknowledgement. */
+function createCheckpointStore({name='gcc-career-recovery-v1',timeout=4000,onSlow=()=>{}}={}) {
+ let db=null, durability='unavailable', message='';
+ const failure=e=>e&&e.message?e.message:String(e||'Checkpoint storage unavailable');
+ const unavailable=e=>{durability='unavailable';message=failure(e);};
+ const slow=()=>{try{onSlow();}catch(e){/* Notification must not affect a commit. */}};
+ const ready=new Promise(resolve=>{
+  let finished=false,request;
+  const finish=(record,error)=>{if(finished)return;finished=true;window.clearTimeout(timer);if(error){unavailable(error);if(db){db.close();db=null;}}resolve(record==null?null:record);};
+  const timer=window.setTimeout(()=>finish(null,new Error('Checkpoint storage open timed out')),timeout);
+  try{
+   request=window.indexedDB.open(name,1);
+   request.onupgradeneeded=()=>{if(!request.result.objectStoreNames.contains('checkpoints'))request.result.createObjectStore('checkpoints');};
+   request.onerror=()=>finish(null,request.error||new Error('Checkpoint storage open failed'));
+   request.onblocked=()=>finish(null,new Error('Checkpoint storage open blocked'));
+   request.onsuccess=()=>{
+    if(finished){request.result.close();return;}
+    db=request.result;
+    db.onversionchange=()=>{db.close();db=null;unavailable(new Error('Checkpoint storage version changed'));};
+    let probe;
+    try{probe=db.transaction('checkpoints','readwrite',{durability:'strict'});durability=probe.durability==='strict'?'strict':'transaction';}
+    catch(e){try{probe=db.transaction('checkpoints','readwrite');durability='transaction';}catch(err){finish(null,err);return;}}
+    let record=null;
+    probe.onabort=()=>finish(null,probe.error||new Error('Checkpoint storage initialization aborted'));
+    probe.onerror=()=>{};
+    probe.oncomplete=()=>finish(record);
+    try{const get=probe.objectStore('checkpoints').get('career');get.onsuccess=()=>{record=get.result==null?null:get.result;};}catch(e){try{probe.abort();}catch(ignore){}finish(null,e);}
+   };
+  }catch(e){finish(null,e);}
+ });
+ async function run(mutator){
+  await ready;
+  if(!db||durability==='unavailable')throw new Error(message||'Checkpoint storage unavailable');
+  return new Promise((resolve,reject)=>{
+   let tx, value,reason=null,done=false;
+   const mode=durability;
+   const finish=(error)=>{if(done)return;done=true;window.clearTimeout(timer);if(error){message=failure(error);reject(error);}else{message='';resolve({value,mode});}};
+   const timer=window.setTimeout(()=>{
+    if(done)return;
+    reason=new Error('Checkpoint transaction timed out');
+    try{tx.abort();}catch(e){if(e.name==='InvalidStateError'){reason=null;slow();}else{reason=null;slow();}}
+   },timeout);
+   try{
+    tx=mode==='strict'?db.transaction('checkpoints','readwrite',{durability:'strict'}):db.transaction('checkpoints','readwrite');
+    tx.oncomplete=()=>finish(null);
+    tx.onabort=()=>finish(reason||tx.error||new Error('Checkpoint transaction aborted'));
+    tx.onerror=()=>{};
+    const objectStore=tx.objectStore('checkpoints');
+    const request=objectStore.get('career');
+    request.onsuccess=()=>{
+     try{
+      const outcome=mutator(request.result==null?null:request.result);
+      if(!outcome||typeof outcome!=='object'||typeof outcome.then==='function')throw new TypeError('Checkpoint mutator must return a synchronous result');
+      value=outcome.value;
+      if(Object.prototype.hasOwnProperty.call(outcome,'record'))objectStore.put(outcome.record,'career');
+     }catch(e){reason=e;try{tx.abort();}catch(ignore){/* Terminal event still owns acknowledgement. */}}
+    };
+   }catch(e){finish(e);}
+  });
+ }
+ return {ready,available:()=>!!db&&durability!=='unavailable',mode:()=>durability,error:()=>message,run};
+}
+  let savePending=false,saveAgain=false,saveSucceeded=false,saveGeneration=0,saveSuspended=false;
+  let savePromise=Promise.resolve(false),saveSlow=false,saveError='',checkpointRecord=null,checkpointValidRaw=null,checkpointRecovery=null;
+  let checkpointBooted=!('indexedDB' in window);
+  function notifySaveStatus(){try{if(typeof Event==='function'&&window.dispatchEvent)window.dispatchEvent(new Event('gcc-save-status'));}catch(error){console.error(error);}}
+  const checkpointStore=createCheckpointStore({onSlow:()=>{saveSlow=true;notifySaveStatus();}});
+  const checkpointReadyPromise=checkpointStore.ready.then(record=>{
+    checkpointRecord=record;
+    if(record?.version===1&&!record.cleared){
+      for(const raw of [record.raw,record.previous]){
+        if(typeof raw!=='string')continue;
+        try{
+          const info=backupInfo(raw);checkpointValidRaw=raw;
+          if(saveGeneration===0&&!state.dynasty?.started){const expected=safeStorageGet(SAVE_KEY);if(expected!==raw){let browserInfo=null;try{browserInfo=backupInfo(expected);}catch{}checkpointRecovery={raw,expected,info,browserInfo};}}
+          break;
+        }catch(error){console.warn('GCC recovery checkpoint rejected',error);}
+      }
+    }
+    checkpointBooted=true;notifySaveStatus();
+    return checkpointStore.mode();
+  });
+  function invalidatePendingSaves(){saveGeneration++;savePending=false;saveAgain=false;saveSucceeded=false;saveSlow=false;}
+  async function flushSave(generation=saveGeneration){while(generation===saveGeneration&&savePending)await savePromise;return generation===saveGeneration&&saveSucceeded;}
+  async function withStorageLock(work){
+    if(!navigator.locks?.request)return work();
+    if(typeof AbortController!=='function'){if(checkpointStore.available())return work();throw new Error('This browser cannot safely coordinate automatic saving. Download a career backup.');}
+    const controller=new AbortController();let acquired=false;
+    const timer=window.setTimeout(()=>{if(!acquired)controller.abort();},4000);
+    try{return await navigator.locks.request('gcc-career-save:'+SAVE_KEY,{signal:controller.signal},()=>{acquired=true;window.clearTimeout(timer);return work();});}
+    finally{window.clearTimeout(timer);}
+  }
+  function recoveryInfo(){return checkpointRecovery?{checkpoint:checkpointRecovery.info,browser:checkpointRecovery.browserInfo}:null;}
+  function resolveRecovery(useCheckpoint){
+    const choice=checkpointRecovery;if(!choice)return false;
+    if(safeStorageGet(SAVE_KEY)!==choice.expected){saveConflict=true;base.toast('Another open game changed this save. Reload to review the latest saved progress.');return false;}
+    return restoreBackup(useCheckpoint?choice.raw:choice.expected,choice.expected);
+  }
+  function autoSave(){
+    if(saveSuspended||!state.dynasty)return false;
+    if(checkpointRecovery){saveError='Review the recovery checkpoint before saving this career.';saveSucceeded=false;notifySaveStatus();return false;}
+    // Without either exclusion mechanism, keep the exportable live career instead of silently racing another tab.
+    if(checkpointBooted&&!checkpointStore.available()&&!navigator.locks?.request){
+      try{saveConflict=localStorage.getItem(SAVE_KEY)!==lastStoredSave;}catch{saveConflict=false;}
+      saveError='Automatic saving is unavailable here. Keep this game open and download a career backup.';saveSucceeded=false;notifySaveStatus();return false;
+    }
+    if(savePending){saveAgain=true;return false;}
+    const generation=saveGeneration;savePending=true;saveSucceeded=false;saveSlow=false;saveError='';notifySaveStatus();
+    savePromise=checkpointReadyPromise.then(()=>withStorageLock(()=>{
+      if(generation!==saveGeneration||saveSuspended)return false;
+      if(!checkpointStore.available()){
+        if(!navigator.locks?.request)throw new Error('Automatic saving is unavailable here. Download a career backup.');
+        saveAgain=false;return commitSave();
+      }
+      let nextRecord=null;
+      return checkpointStore.run(record=>{
+        if(generation!==saveGeneration||saveSuspended)return {value:false};
+        saveAgain=false;
+        if(!commitSave())return {value:false};
+        nextRecord={version:1,cleared:false,raw:lastStoredSave,previous:record?.raw===checkpointRecord?.raw?checkpointValidRaw:record?.raw||null,updatedAt:Date.now(),strict:checkpointStore.mode()==='strict'};
+        return {value:true,record:nextRecord};
+      }).then(result=>{if(result.value&&generation===saveGeneration){checkpointRecord=nextRecord;checkpointValidRaw=nextRecord.raw;}return result.value;});
+    })).catch(error=>{
+      if(generation!==saveGeneration)return false;
+      saveError=error?.name==='AbortError'?'Another game held the save lock too long. Keep this game open and retry or download a backup.':'The recovery checkpoint could not be completed. Keep this game open and download a backup.';
+      console.error('GCC coordinated save failed',error);
+      if(!saveFailureShown){saveFailureShown=true;try{base.toast(saveError);}catch{}}
+      return false;
+    }).then(ok=>{
+      if(generation!==saveGeneration)return false;
+      savePending=false;saveSucceeded=!!ok;saveSlow=false;
+      if(saveAgain){saveAgain=false;autoSave();}
+      notifySaveStatus();return !!ok;
+    });
+    return false;
+  }
+  function commitSave(){if(!state.dynasty)return false;try{if(localStorage.getItem(SAVE_KEY)!==lastStoredSave){saveConflict=true;base.toast('Another open game saved newer progress. Return home and choose Continue before playing on.');return false}saveConflict=false;state.dynasty.saveStamp=Date.now();state.dynasty.version=SAVE_VERSION;const nextSave=window.GCC8_SAVE_CODEC.stringify(serialisable());localStorage.setItem(SAVE_KEY,nextSave);lastStoredSave=nextSave;writeSaveMeta();saveFailureShown=false;return true}catch(e){console.error('GCC autosave failed',e);if(!saveFailureShown){saveFailureShown=true;base.toast('This browser could not save your progress. Keep this game open to continue playing.')}return false}}
   function restoreObject(target,src){for(const [k,v] of Object.entries(src||{}))target[k]=v}
 // Validate persisted career structure before touching live state. Optional dynasty
 // additions can still be initialised by the legacy migration after this check.
@@ -643,7 +787,7 @@ function validSave(save){
  if(!Array.isArray(s.fullSchedule)||![0,14].includes(s.fullSchedule.length)||s.fullSchedule.some(round=>!Array.isArray(round)||round.length!==4||round.some(f=>!match(f))))return false;
  if(!Array.isArray(s.results)||s.results.some(r=>!match(r)||!club(r.winner)||!record(r.homeInnings)||!record(r.awayInnings)||!record(r.scorecard)||!Array.isArray(r.scorecard.innings)||!superOverValid(r)||!window.GCC8_DELIVERY.validResult(r,ids)))return false;
  if(s.finals&&[...(s.finals.semis||[]),s.finals.gf].filter(Boolean).some(r=>!superOverValid(r)||!window.GCC8_DELIVERY.validResult(r,ids)))return false;
- if(s.fullSchedule.length&&clubs.some(c=>!record(s.table[c])||['p','w','l','pts','nrr','runsFor','runsAgainst','ballsFor','ballsAgainst'].some(k=>!Number.isFinite(s.table[c][k]))))return false;
+ if(s.fullSchedule.length&&clubs.some(c=>{const t=s.table[c];return !record(t)||!Number.isFinite(t.nrr)||['p','w','l','pts','runsFor','runsAgainst','ballsFor','ballsAgainst'].some(k=>!Number.isInteger(t[k])||t[k]<0)||t.p>14||t.w>14||t.l>14||t.pts>28||t.p!==t.w+t.l||t.pts!==2*t.w;}))return false;
  if(s.dynasty){
   const d=s.dynasty;if(!record(d)||!Array.isArray(d.history)||!Array.isArray(d.transactions)||!record(d.manager)||!record(d.injuries)||!record(d.replacementFor)||!record(d.replacementOf))return false;
   if(d.developmentByYear!=null){if(!record(d.developmentByYear))return false;for(const [year,rows]of Object.entries(d.developmentByYear)){if(!Number.isInteger(Number(year))||Number(year)<2009||Number(year)>2026||!Array.isArray(rows)||rows.some(r=>!record(r)||r.year!==Number(year)||!ids.has(r.playerId)||typeof r.name!=='string'||!Number.isFinite(r.fromOverall)||!Number.isFinite(r.toOverall)||r.delta!==r.toOverall-r.fromOverall||Math.abs(r.delta)>98)||!unique(rows.map(r=>r.playerId)))return false;}}
@@ -693,18 +837,43 @@ function validSave(save){
   function repairCpuOwnership(){
     if(!state.fullSchedule?.length||!state.userClub||!state.cpuXIs)return;
     const stale=state.league.some(c=>{if(c.abbr===state.userClub.abbr)return false;const ids=state.cpuXIs[c.abbr];return ids!=null&&(!Array.isArray(ids)||new Set(ids).size!==ids.length||ids.some(id=>!rosterIds(c.abbr).includes(id)));});
-    if(stale){state.cpuXIs={};refreshCpuXIs();}
+    if(stale){state.cpuXIs={};if(!state.dynasty?.archivedYears?.[state.year]){refreshCpuXIs();return;}for(const c of state.league){if(c.abbr===state.userClub.abbr)continue;state.cpuXIs[c.abbr]=cpuBalancedXI(roster(c.abbr).filter(healthyForSelection),nextVenueFor(c)).map(p=>p.id);}}
   }
-  function resumeSave(){const previous=JSON.stringify(state),previousScreen=currentScreen,previousStoredSave=lastStoredSave,previousSaveConflict=saveConflict;const status=$('launcherStatus'),nav=$('nav');if(status)status.textContent='Opening dynasty…';try{const stored=rawStoredSave();if(!stored){if(status)status.textContent='';base.toast('No dynasty save found');return false}let save=window.GCC8_SAVE_CODEC.parse(stored.raw);if(!validSave(save))throw new Error('Invalid GCC save');save=migrateLoadedSave(save);lastStoredSave=localStorage.getItem(SAVE_KEY);saveConflict=false;G.closeModal();window.GCC_UI?.dismissMoment?.();if(state.seasonRunning)base.simulateSeason();clearTimeout(autoTimer);autoTimer=null;restoreObject(state,save.state);state.seasonRunning=false;document.body.classList.toggle('gcc-dynasty-ended',!!(state.dynasty?.careerClosed||save.currentScreen==='legacy'||(save.currentScreen==='archive'&&state.year>=END_YEAR&&state.dynasty?.archivedYears?.[END_YEAR])));if(nav)nav.hidden=false;initDynastyData();stopFoundationWatch();if(state.recruit){state.recruit.running=false;state.recruit.timer=null}repairCpuOwnership();currentScreen=save.currentScreen||state.dynasty?.lastScreen||'team';if(state.dynasty?.offseason)currentScreen='dynasty';else if(state.fullSchedule?.length){if(!['finals','review','legacy','archive'].includes(currentScreen))currentScreen='season'}else if(state.pickIndex>=120||state.draftFinished)currentScreen='team';else if(state.draftOrder?.length)currentScreen='draft';else if(state.userClub)currentScreen='recruit';else if(state.league?.length===8)currentScreen='clubs';markFoundationScreen(currentScreen);updateYearCopy();if(currentScreen==='dynasty'){renderOffseason();specialGo('dynasty')}else if(currentScreen==='archive')openArchive();else if(currentScreen==='legacy')finishCareer();else if(currentScreen==='clubs'){base.finishLeagueReveal();markFoundationScreen('clubs')}else if(currentScreen==='recruit'){specialGo('recruit');base.toggleRecruitWire();base.toggleRecruitWire();markFoundationScreen('recruit')}else if(currentScreen==='draft'){base.beginDraft();markFoundationScreen('draft');watchFoundation('draft')}else if(currentScreen==='team'){base.renderTeam();specialGo('team')}else if(currentScreen==='season'){base.renderSeason();specialGo('season')}else if(currentScreen==='finals'){base.renderFinals();specialGo('finals')}else if(currentScreen==='review'){base.renderSeasonReview();specialGo('review')}else specialGo(currentScreen);decorateSoon();autoSave();if(stored.key===LEGACY_SAVE_KEY)base.toast(`Dynasty upgraded · ${state.year}`);else base.toast(`Dynasty restored · ${state.year}`);return true}catch(e){for(const k of Object.keys(state))delete state[k];restoreObject(state,JSON.parse(previous));if(state.dynasty?.careerStore)window.GCC8_CAREER_STATE.initialise(state,'loaded',applyExpectedCareerYear);lastStoredSave=previousStoredSave;saveConflict=previousSaveConflict;currentScreen=previousScreen;base.go(previousScreen);console.error(e);if(status)status.textContent='This save could not be opened.';base.toast('Could not restore this save');return false}}
+  function resumeSave(imported=null){if(checkpointRecovery&&!imported)return false;const previousRecovery=checkpointRecovery;const previousEnded=document.body.classList.contains('gcc-dynasty-ended'),previous=JSON.stringify(state),previousScreen=currentScreen,previousStoredSave=lastStoredSave,previousSaveConflict=saveConflict,previousSavePending=savePending,previousSaveSuspended=saveSuspended;const status=$('launcherStatus'),nav=$('nav');if(status)status.textContent='Opening dynasty…';try{const stored=imported||rawStoredSave();if(!stored){if(status)status.textContent='';base.toast('No dynasty save found');return false}let save=window.GCC8_SAVE_CODEC.parse(stored.raw);if(!validSave(save))throw new Error('Invalid GCC save');save=migrateLoadedSave(save);checkpointRecovery=null;invalidatePendingSaves();saveSuspended=false;lastStoredSave=safeStorageGet(SAVE_KEY);saveConflict=false;G.closeModal();window.GCC_UI?.dismissMoment?.();if(state.seasonRunning)base.simulateSeason();clearTimeout(autoTimer);autoTimer=null;restoreObject(state,save.state);state.seasonRunning=false;document.body.classList.toggle('gcc-dynasty-ended',!!(state.dynasty?.careerClosed||save.currentScreen==='legacy'||(save.currentScreen==='archive'&&state.year>=END_YEAR&&state.dynasty?.archivedYears?.[END_YEAR])));if(nav)nav.hidden=false;initDynastyData();stopFoundationWatch();if(state.recruit){state.recruit.running=false;state.recruit.timer=null}repairCpuOwnership();currentScreen=save.currentScreen||state.dynasty?.lastScreen||'team';if(state.dynasty?.offseason)currentScreen='dynasty';else if(state.fullSchedule?.length){if(!['finals','review','legacy','archive'].includes(currentScreen))currentScreen='season'}else if(state.pickIndex>=120||state.draftFinished)currentScreen='team';else if(state.draftOrder?.length)currentScreen='draft';else if(state.userClub)currentScreen='recruit';else if(state.league?.length===8)currentScreen='clubs';markFoundationScreen(currentScreen);updateYearCopy();if(currentScreen==='dynasty'){renderOffseason();specialGo('dynasty')}else if(currentScreen==='archive')openArchive();else if(currentScreen==='legacy')finishCareer();else if(currentScreen==='clubs'){base.finishLeagueReveal();markFoundationScreen('clubs')}else if(currentScreen==='recruit'){specialGo('recruit');base.toggleRecruitWire();base.toggleRecruitWire();markFoundationScreen('recruit')}else if(currentScreen==='draft'){base.beginDraft();markFoundationScreen('draft');watchFoundation('draft')}else if(currentScreen==='team'){base.renderTeam();specialGo('team')}else if(currentScreen==='season'){base.renderSeason();specialGo('season')}else if(currentScreen==='finals'){base.renderFinals();specialGo('finals')}else if(currentScreen==='review'){base.renderSeasonReview();specialGo('review')}else specialGo(currentScreen);decorateSoon();const restoredSaved=autoSave();if(restoredSaved){if(stored.key===LEGACY_SAVE_KEY)base.toast(`Dynasty upgraded · ${state.year}`);else base.toast(`Dynasty restored · ${state.year}`);}return true}catch(e){document.body.classList.toggle('gcc-dynasty-ended',previousEnded);for(const k of Object.keys(state))delete state[k];restoreObject(state,JSON.parse(previous));if(state.dynasty?.careerStore)window.GCC8_CAREER_STATE.initialise(state,'loaded',applyExpectedCareerYear);lastStoredSave=previousStoredSave;saveConflict=previousSaveConflict;checkpointRecovery=previousRecovery;currentScreen=previousScreen;saveSuspended=previousSaveSuspended;if(previousSavePending)autoSave();base.go(previousScreen);console.error(e);if(status)status.textContent='This save could not be opened.';base.toast('Could not restore this save');return false}}
+  // Portable backups are validated before storage or live career state is touched.
+  function backupInfo(raw){
+    if(typeof raw!=='string'||raw.length>20*1024*1024)throw new Error('Choose a GCC career backup smaller than 20 MB.');
+    const save=window.GCC8_SAVE_CODEC.parse(raw);
+    if(save?.version!==SAVE_VERSION)throw new Error('This backup uses an unsupported GCC save version.');
+    if(!validSave(save))throw new Error('This file is not a valid GCC career backup.');
+    const stack=[save];while(stack.length){const value=stack.pop();if(!value||typeof value!=='object')continue;for(const key of Object.keys(value)){if(['__proto__','prototype','constructor'].includes(key))throw new Error('This file is not a valid GCC career backup.');if(value[key]&&typeof value[key]==='object')stack.push(value[key]);}}
+    const st=save.state;return {club:st.userClub?.name||'Club not chosen',year:st.year,round:st.round,closed:!!st.dynasty?.careerClosed,savedAt:Number.isFinite(st.dynasty?.saveStamp)&&Math.abs(st.dynasty.saveStamp)<=8640000000000000?st.dynasty.saveStamp:null};
+  }
+  function backupRaw(){const raw=window.GCC8_SAVE_CODEC.stringify(serialisable());backupInfo(raw);return raw;}
+  function restoreBackup(raw,expected){try{backupInfo(raw);if(expected!==undefined&&safeStorageGet(SAVE_KEY)!==expected){saveConflict=true;return false;}return resumeSave({key:SAVE_KEY,raw});}catch{return false;}}
   function continueFromLauncher(){return resumeSave()}
-  function clearSaveAndRestart(){safeStorageRemove(SAVE_KEY);safeStorageRemove(LEGACY_SAVE_KEY);safeStorageRemove(META_KEY);location.reload()}
+  function clearSaveAndRestart(){
+    invalidatePendingSaves();const generation=saveGeneration;saveSuspended=true;checkpointRecovery=null;notifySaveStatus();
+    const active=()=>generation===saveGeneration&&saveSuspended;
+    const remove=()=>{if(!active())return false;let ok=true;for(const key of [SAVE_KEY,LEGACY_SAVE_KEY,META_KEY])if(!safeStorageRemove(key))ok=false;if(!ok)throw new Error('Career storage could not be cleared');return true;};
+    return checkpointReadyPromise.then(()=>withStorageLock(async()=>{
+      if(!active())return false;
+      if(checkpointStore.available()){
+        const result=await checkpointStore.run(()=>remove()?{value:true,record:{version:1,cleared:true,raw:null,previous:null,updatedAt:Date.now()}}:{value:false});
+        if(result.value&&active()){checkpointRecord=null;location.reload();}return result.value;
+      }
+      if(!navigator.locks?.request)throw new Error('Career clearing is unavailable here');
+      if(remove()&&active()){location.reload();return true;}return false;
+    })).catch(error=>{if(generation!==saveGeneration)return false;saveSuspended=false;saveSucceeded=false;saveError='Could not clear this career. Keep the game open and download a backup.';console.error(error);notifySaveStatus();base.toast(saveError);return false;});
+  }
   // Era scoring environment: this is deliberately modest. Player skills still drive outcomes.
   const originalPhase=window.GCC_RATINGS?.__dynastyEraApplied?null:null;
   function seasonEnvironment(){const t=clamp((state.year-2008)/18,0,1);return {runRate:+(t*.68).toFixed(2),sixRate:+(t*.18).toFixed(2)}}
   function showEnvironment(){return seasonEnvironment()}
   // Boot stays intentionally light. Dynasty hydration happens only after New or Continue.
   function init(){renderLauncher();detectLegacySaveAfterPaint()}
-  window.GCC8_ENGINE_READ={coverStatus,fitPlayer:id=>withFitnessContext(()=>({...pById(id)})),squadProfile:ps=>withFitnessContext(()=>window.GCC8_FOUNDATION_READ.projectedDraftProfile(ps)),matchProfile:c=>withFitnessContext(()=>window.GCC8_FOUNDATION_READ.effectiveProfile(c)),tradeBlock:(abbr,target,offer)=>offseasonTradeBlock(state.userClub.abbr,abbr)||cpuTradeBlockReason(abbr,pById(target),pById(offer)),departureBudget:abbr=>clubDepartureBudget(abbr||state.userClub.abbr),tradeAllowance:abbr=>seasonTradeAllowance(abbr||state.userClub.abbr),packageProblem,clubOwnsPick,pickValue:(r,c)=>pickAssetValue(r,c),contractCandidates:()=>contractDecisionPlayers().map(p=>p.id),pickSlots:()=>slotsWithSupplement().map(x=>({...x})),cutBudget:()=>({...clubDepartureBudget(state.userClub.abbr),limit:voluntaryCutLimit()}),freeAgents:()=>freeAgentPool().map(p=>p.id),replacements:id=>replacementPoolFor(pById(id)).map(p=>p.id),save:()=>autoSave(),saveConflict:()=>saveConflict,xiProblem:()=>userXIProblem(),fresh:()=>{stopFoundationWatch();return startFreshWorld()},archive:()=>archiveSeason(),ownsPick:r=>userOwnsPick(r),scout:id=>{const p=pById(id);return p?{outlook:developmentRead(p),standing:scoutingLevel(p,state.userClub?.abbr),fit:scoutingFit(p,state.userClub?.abbr),recent:recentSeasonRead(p),contractDue:contractDue(p)}:null},records:()=>archiveRecords(),honours:()=>archiveClubHonours(),legends:()=>archiveUserLegends(),legacyRating:()=>managerScore()};
+  window.GCC8_ENGINE_READ={coverStatus,fitPlayer:id=>withFitnessContext(()=>({...pById(id)})),squadProfile:ps=>withFitnessContext(()=>window.GCC8_FOUNDATION_READ.projectedDraftProfile(ps)),matchProfile:c=>withFitnessContext(()=>window.GCC8_FOUNDATION_READ.effectiveProfile(c)),tradeBlock:(abbr,target,offer)=>offseasonTradeBlock(state.userClub.abbr,abbr)||cpuTradeBlockReason(abbr,pById(target),pById(offer)),departureBudget:abbr=>clubDepartureBudget(abbr||state.userClub.abbr),tradeAllowance:abbr=>seasonTradeAllowance(abbr||state.userClub.abbr),packageProblem,clubOwnsPick,pickValue:(r,c)=>pickAssetValue(r,c),contractCandidates:()=>contractDecisionPlayers().map(p=>p.id),pickSlots:()=>slotsWithSupplement().map(x=>({...x})),cutBudget:()=>({...clubDepartureBudget(state.userClub.abbr),limit:voluntaryCutLimit()}),freeAgents:()=>freeAgentPool().map(p=>p.id),replacements:id=>replacementPoolFor(pById(id)).map(p=>p.id),backupRaw,backupInfo,restoreBackup,storedToken:()=>safeStorageGet(SAVE_KEY),save:()=>autoSave(),saveAsync:()=>{autoSave();return flushSave();},flushSave,savePending:()=>savePending,saveSucceeded:()=>saveSucceeded,saveSuspended:()=>saveSuspended,saveGeneration:()=>saveGeneration,saveCoordinated:()=>checkpointStore.available()||!!(navigator.locks?.request&&typeof AbortController==='function'),checkpointReady:()=>checkpointReadyPromise,storageReady:()=>checkpointBooted,checkpointMode:()=>checkpointStore.mode(),recoveryInfo,resolveRecovery,saveSlow:()=>saveSlow,saveError:()=>saveError,saveConflict:()=>saveConflict,xiProblem:()=>userXIProblem(),fresh:()=>{stopFoundationWatch();return startFreshWorld()},archive:()=>archiveSeason(),ownsPick:r=>userOwnsPick(r),scout:id=>{const p=pById(id);return p?{outlook:developmentRead(p),standing:scoutingLevel(p,state.userClub?.abbr),fit:scoutingFit(p,state.userClub?.abbr),recent:recentSeasonRead(p),contractDue:contractDue(p)}:null},records:()=>archiveRecords(),honours:()=>archiveClubHonours(),legends:()=>archiveUserLegends(),legacyRating:()=>managerScore()};
   window.Dynasty={beginOffseason,renderOffseason,runCpuMarket,openTradeCentre,refreshTradeTarget,refreshTradeRead,proposeTrade,drawDraftOrder,startAnnualDraft,userAnnualDraft,runCpuDraftUntilUser,setAnnualDraftSearch,setAnnualDraftFilter,showMoreAnnualDraftPlayers,toggleAnnualDraftBoard,releaseContractPlayer,cutPlayer,finishOffseason,enterTeamRoom,openReplacementMarket,signReplacement,openMidseasonMarket,openArchive,openArchiveSeason,backFromArchive,finishCareer,resumeSave,continueFromLauncher,requestNewDynasty,showFoundationIntro,openLauncher,clearSaveAndRestart,confirmFreshCareer,showEnvironment,tradeValue,marketBand,proposePackage};
   init();
 })();
+

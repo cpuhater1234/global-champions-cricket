@@ -1,0 +1,7 @@
+# Final dialog verification
+
+SHA256 `9a253947041974e26a91729e06a9a93e1812d518b04519a6f533e9793a7cc5ca` verified from candidate.html. No product edits. Refreshed run.cjs across1440,768,390,320,740×360 and390 with130% root text; refreshed extra.cjs accepted trade, release/list review and annual completion across1440,390,320. Final metrics.json and extra.json are isolated here; baseline/e3 evidence retained in parent/candidate.
+
+All three native regressions GREEN, final-regression.log: titleRight309 vs closeLeft321, Matches1line, sticky headerTop15 vs dialogTop12. Actually viewed final large-backup-review, narrow-player-bottom, landscape-analysis-bottom: correct title wrapping, readable labels, full sticky surface. Viewed desktop-release-bottom/list-review-bottom and390 release,320 release-bottom/list-review-bottom/accepted-result. Prompt titles now remain complete and separated from close while scrolling; footer actions remain reachable. Fresh annual draw paragraph is now dark and readable on cream. No remaining blocking finding in this bounded scope.
+
+Actual legal package still accepts Nathan Bracken→MI, Craig McMillan→PBKS via production select/review/confirm UI. Steve Smith release confirmed15→14, annual draft fills14→15 and automatically transitions to team. Later annualList attempt is an intentional stage rejection after completion, documented in extra.json, not a failed completion. No persistence/simulation algorithms changed by QA. Scope unchanged from prior report.

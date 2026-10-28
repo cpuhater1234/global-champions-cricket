@@ -1,0 +1,12 @@
+{
+  "checks": 25945,
+  "injuryRiskRange": [
+    0.007,
+    0.032
+  ],
+  "managerScoreRange": [
+    0,
+    1000
+  ],
+  "scope": "Reachable player-age bounds and ordinal career-score monotonicity. Design weights/probabilities are not empirically certified."
+}

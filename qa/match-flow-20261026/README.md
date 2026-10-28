@@ -1,0 +1,13 @@
+# Foundation trade lock, over feed and club identity · 26 October 2026
+
+Candidate SHA256 5485f41aa66a95d04e79c69ed41e76bc08277968e5681c7bde2f3de869b443e3.
+
+Trades are unavailable in2008 at UI entry, command, allowance, legacy trade centre, package execution and CPU market layers. Trading still opens from2009, allows two deals with two players/two picks per side, and closes after completed Round3. Previously saved transactions are not undone. Departure/retirement rules are unchanged.
+
+Live feed groups only revealed actual ledger events by over, preserving extra deliveries and incomplete overs. Shows exact over runs/wickets, running score and legal-ball count. Four latest overs appear newest first; earlier revealed overs remain accessible. Routine balls update deliveries and scoreboard without generated prose. Significant commentary persists until the next wicket, boundary, no-ball/free hit or major innings/phase notice. Over-end summaries remain in the over cards. Live announcer, chase terminal context, timing, regulation and repeated Super Over presentation remain.
+
+Team-colour chips/accents are explicit in live home/away/batting identity, matchday fixtures, results, ladder, finals, fixture list and result phase comparisons. Preview rows pair each home/away club with its correct score. Ability bar/number colours use existing ratingTone red/yellow/green, separately from club identity. Removed effective positional blue override from the second preview bar with a higher-specificity quality rule.
+
+Tests: trades.test first fails on baseline2008entry then passes. logic.test.mjs verifies year/round guards, mutation-free rejection, preview home/away ownership, all208 frames of a real match, revealed-only over accounting, quiet-ball commentary persistence, wides/no-balls/partialovers and synthetic repeated Super Overs. Reports1111check groups. simulation.test.mjs compares exact full first-round results and RNG seed for two real seeded new careers against version66; both identical. browser.cjs checks9preview viewport/text states and45live-feed states per browser, including actual computed bar/number equality, no2008trade entry, mobile overflow and result team labels. Chromium/Firefox/WebKit final reports carry exact tested HTML hash. Internal screenshots inspected, not deliverables. Browser images deliberately blocked in offline testing; no physical-device or human-playtest claim.
+
+Rebuild with build.py; all baseline source files are included. dynasty.js retains its existing HTML clock wrapper. trade_packages.js must exactly match its injected engine source. Existing save schema, attributes, phase ratings, delivery simulation and cricket RNG are unchanged.

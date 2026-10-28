@@ -1,0 +1,231 @@
+{
+  "sha256": "0f643bb049f277dd57550ad9fb8d6134c51ed102d3ffa00a53d20f68e10876e4",
+  "fixture": "stock-fixtures/foundation.json",
+  "originalRow": {
+    "club": {
+      "name": "Lancashire",
+      "abbr": "LAN",
+      "region": "England",
+      "league": "Vitality Blast",
+      "ground": "Old Trafford",
+      "trait": "Seam and spin",
+      "c": "#c8102e",
+      "a": "#0b6b50",
+      "t": "#ffffff",
+      "conditions": {
+        "pace": 2,
+        "spin": 3,
+        "boundary": -1
+      }
+    },
+    "p": 14,
+    "w": 7,
+    "l": 7,
+    "pts": 14,
+    "nrr": 0.06759117579729867,
+    "runsFor": 1731,
+    "runsAgainst": 1728,
+    "ballsFor": 1491,
+    "ballsAgainst": 1503
+  },
+  "results": [
+    {
+      "name": "negative-p",
+      "expectedReject": true,
+      "rejected": true,
+      "pass": true,
+      "liveUntouched": true,
+      "storageUntouched": true
+    },
+    {
+      "name": "fractional-p",
+      "expectedReject": true,
+      "rejected": true,
+      "pass": true,
+      "liveUntouched": true,
+      "storageUntouched": true
+    },
+    {
+      "name": "negative-w",
+      "expectedReject": true,
+      "rejected": true,
+      "pass": true,
+      "liveUntouched": true,
+      "storageUntouched": true
+    },
+    {
+      "name": "fractional-w",
+      "expectedReject": true,
+      "rejected": true,
+      "pass": true,
+      "liveUntouched": true,
+      "storageUntouched": true
+    },
+    {
+      "name": "negative-l",
+      "expectedReject": true,
+      "rejected": true,
+      "pass": true,
+      "liveUntouched": true,
+      "storageUntouched": true
+    },
+    {
+      "name": "fractional-l",
+      "expectedReject": true,
+      "rejected": true,
+      "pass": true,
+      "liveUntouched": true,
+      "storageUntouched": true
+    },
+    {
+      "name": "negative-pts",
+      "expectedReject": true,
+      "rejected": true,
+      "pass": true,
+      "liveUntouched": true,
+      "storageUntouched": true
+    },
+    {
+      "name": "fractional-pts",
+      "expectedReject": true,
+      "rejected": true,
+      "pass": true,
+      "liveUntouched": true,
+      "storageUntouched": true
+    },
+    {
+      "name": "negative-runsFor",
+      "expectedReject": true,
+      "rejected": true,
+      "pass": true,
+      "liveUntouched": true,
+      "storageUntouched": true
+    },
+    {
+      "name": "fractional-runsFor",
+      "expectedReject": true,
+      "rejected": true,
+      "pass": true,
+      "liveUntouched": true,
+      "storageUntouched": true
+    },
+    {
+      "name": "negative-runsAgainst",
+      "expectedReject": true,
+      "rejected": true,
+      "pass": true,
+      "liveUntouched": true,
+      "storageUntouched": true
+    },
+    {
+      "name": "fractional-runsAgainst",
+      "expectedReject": true,
+      "rejected": true,
+      "pass": true,
+      "liveUntouched": true,
+      "storageUntouched": true
+    },
+    {
+      "name": "negative-ballsFor",
+      "expectedReject": true,
+      "rejected": true,
+      "pass": true,
+      "liveUntouched": true,
+      "storageUntouched": true
+    },
+    {
+      "name": "fractional-ballsFor",
+      "expectedReject": true,
+      "rejected": true,
+      "pass": true,
+      "liveUntouched": true,
+      "storageUntouched": true
+    },
+    {
+      "name": "negative-ballsAgainst",
+      "expectedReject": true,
+      "rejected": true,
+      "pass": true,
+      "liveUntouched": true,
+      "storageUntouched": true
+    },
+    {
+      "name": "fractional-ballsAgainst",
+      "expectedReject": true,
+      "rejected": true,
+      "pass": true,
+      "liveUntouched": true,
+      "storageUntouched": true
+    },
+    {
+      "name": "played-over-14",
+      "expectedReject": true,
+      "rejected": true,
+      "pass": true,
+      "liveUntouched": true,
+      "storageUntouched": true
+    },
+    {
+      "name": "wins-over-14",
+      "expectedReject": true,
+      "rejected": true,
+      "pass": true,
+      "liveUntouched": true,
+      "storageUntouched": true
+    },
+    {
+      "name": "losses-over-14",
+      "expectedReject": true,
+      "rejected": true,
+      "pass": true,
+      "liveUntouched": true,
+      "storageUntouched": true
+    },
+    {
+      "name": "points-over-28",
+      "expectedReject": true,
+      "rejected": true,
+      "pass": true,
+      "liveUntouched": true,
+      "storageUntouched": true
+    },
+    {
+      "name": "inconsistent-played-wins-losses",
+      "expectedReject": true,
+      "rejected": true,
+      "pass": true,
+      "liveUntouched": true,
+      "storageUntouched": true
+    },
+    {
+      "name": "inconsistent-points-wins",
+      "expectedReject": true,
+      "rejected": true,
+      "pass": true,
+      "liveUntouched": true,
+      "storageUntouched": true
+    },
+    {
+      "name": "negative-nrr-is-legal",
+      "expectedReject": false,
+      "rejected": false,
+      "pass": true,
+      "liveUntouched": true,
+      "storageUntouched": true
+    },
+    {
+      "name": "unaltered-genuine-row",
+      "expectedReject": false,
+      "rejected": false,
+      "pass": true,
+      "liveUntouched": true,
+      "storageUntouched": true
+    }
+  ],
+  "damage": {
+    "accepted": false,
+    "abbr": "LAN",
+    "actualPlayed": 14,
+    "negativePlayedRendered": false
+  }
+}

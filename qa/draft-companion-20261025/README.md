@@ -1,0 +1,9 @@
+# Open draft companion
+
+The draft now shows one open, boxed overview: projectedXI rating, explicit provisional label before11picks, balance verdict, keeper/batting/bowling coverage, the next needed role, up totwo legal currently available players to scout, and everyselected player in compact rows. Detailed analysis and leaguehistory remain optional dialogs. Duplicated latest-signing/summary blocks and roster accordion are removed. At narrow widths the panel appears before availableplayers, ratherthan below the wholepool. It uses normal page scrolling, no nested scrollbar.
+
+Guidance consumes current public abilities, existing rolebands and existing bowling capacity; it does not create a numerical draftgrade, access privatefuture outcomes or consume RNG. Available suggestions pass the production draftguard and switch to actual annual freeagents in offseason drafts. At15players no recommendation is offered. Normal completed foundation draft still enters teamselection automatically.
+
+Finalhash39ec4a2e... is verified by64 actual browser stage/viewport/text cases (Chromium48,Firefox8,WebKit8) and30 logic/annualdraft checks. Actualscout and analysis buttons work; all selectedplayers remain open; values and labels stay within the panel at1440/1024/390/320px and enlargedtext. Desktop/mobile screenshots were visually inspected internally and are not deliverables. Independent review found no blockers. Initial missingclosure and a testharness that forced an unreachable completed draftscreen were corrected before release; the latter now checks the real teamroom handoff.
+
+Rebuild with `python qa/draft-companion-20261025/build.py` using the versioned756baseline HTML and baseline module copies. Only role/screen UI scripts13and17 plusworkspaceCSS differ; gameengine andsave code are unchanged. The pairedability candidate cards fromv60 remain.

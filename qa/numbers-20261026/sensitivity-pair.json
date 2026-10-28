@@ -1,0 +1,53 @@
+{
+  "rows": [
+    {
+      "kind": "batting",
+      "pairedMatches": 500,
+      "lowMean": 133.67,
+      "highMean": 152.288,
+      "runDifference": 18.618,
+      "normal95CI": [
+        14.818897917508718,
+        22.41710208249128
+      ],
+      "wicketDifference": -0.448
+    },
+    {
+      "kind": "bowling",
+      "pairedMatches": 500,
+      "lowMean": 155.062,
+      "highMean": 138.998,
+      "runDifference": -16.064,
+      "normal95CI": [
+        -20.070779793980158,
+        -12.057220206019842
+      ],
+      "wicketDifference": 0.636
+    },
+    {
+      "kind": "fielding",
+      "pairedMatches": 500,
+      "lowMean": 146.556,
+      "highMean": 142.882,
+      "runDifference": -3.674,
+      "normal95CI": [
+        -4.729731965321692,
+        -2.6182680346783083
+      ],
+      "wicketDifference": 0.276
+    },
+    {
+      "kind": "keeping",
+      "pairedMatches": 500,
+      "lowMean": 145.928,
+      "highMean": 143.544,
+      "runDifference": -2.384,
+      "normal95CI": [
+        -3.4037397257522883,
+        -1.3642602742477115
+      ],
+      "wicketDifference": 0.226
+    }
+  ],
+  "scope": "Actual full simulateInningsPair with common seeds and fixed XI. Synthetic interventions; diagnostic direction/effect sizes, not empirical calibration. Replaces invalid fixed-estimate downstream experiment."
+}

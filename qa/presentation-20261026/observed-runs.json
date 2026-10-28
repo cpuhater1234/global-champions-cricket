@@ -1,0 +1,34 @@
+{
+  "hash": "fbab71f7fc017e7ca41568a2c4d1e0473f460e12816222c63b7963b4705da1e3",
+  "evidence": "Successful terminal outputs observed before execution workspace reset. Detailed per-case JSON reports and internal screenshots were lost; this is a reconstructed run summary, not those raw reports.",
+  "ui": {
+    "chromium": 64,
+    "firefox": 64,
+    "webkit": 64,
+    "scope": "18 draft-analysis + 9 team selection +36 expanded scouts +1 real first-round check per browser"
+  },
+  "career": {
+    "chromium": 84,
+    "scope": "2008,2019,2025 fixture review/offseason/trade at3viewport widths ×3root-font sizes;3records",
+    "storage": "in-memory fixture adapter; not a native storage test"
+  },
+  "signing": {
+    "chromium": 2,
+    "populatedWire": true,
+    "actualComputedNameColour": "rgb(48, 56, 45)"
+  },
+  "logic": {
+    "scenarioGroups": 420,
+    "players": 412,
+    "errors": []
+  },
+  "saveIntegrity": {
+    "checks": 77,
+    "scope": "corrupt payloads and rollback after rendering failure"
+  },
+  "scoutHierarchy": "passed",
+  "sourceRecovery": {
+    "sourceRebuildExactlyMatchesTestedHTML": true,
+    "engineScriptBlocks0To10ByteIdentical": true
+  }
+}

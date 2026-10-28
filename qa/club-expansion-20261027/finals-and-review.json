@@ -1,0 +1,143 @@
+{
+  "cases": [
+    {
+      "club": "PBKS",
+      "champion": "DC",
+      "historyYears": 1,
+      "finalsComplete": true,
+      "errors": [],
+      "coldRestoreGameplayTruth": true
+    },
+    {
+      "club": "SRH",
+      "champion": "THU",
+      "historyYears": 1,
+      "finalsComplete": true,
+      "errors": [],
+      "coldRestoreGameplayTruth": true
+    },
+    {
+      "club": "GT",
+      "champion": "CSK",
+      "historyYears": 1,
+      "finalsComplete": true,
+      "errors": [],
+      "coldRestoreGameplayTruth": true
+    },
+    {
+      "club": "LSG",
+      "champion": "THU",
+      "historyYears": 1,
+      "finalsComplete": true,
+      "errors": [],
+      "coldRestoreGameplayTruth": true
+    },
+    {
+      "club": "DER",
+      "champion": "MI",
+      "historyYears": 1,
+      "finalsComplete": true,
+      "errors": [],
+      "coldRestoreGameplayTruth": true
+    },
+    {
+      "club": "DUR",
+      "champion": "GT",
+      "historyYears": 1,
+      "finalsComplete": true,
+      "errors": [],
+      "coldRestoreGameplayTruth": true
+    },
+    {
+      "club": "ESS",
+      "champion": "CSK",
+      "historyYears": 1,
+      "finalsComplete": true,
+      "errors": [],
+      "coldRestoreGameplayTruth": true
+    },
+    {
+      "club": "GLA",
+      "champion": "SCO",
+      "historyYears": 1,
+      "finalsComplete": true,
+      "errors": [],
+      "coldRestoreGameplayTruth": true
+    },
+    {
+      "club": "GLO",
+      "champion": "STA",
+      "historyYears": 1,
+      "finalsComplete": true,
+      "errors": [],
+      "coldRestoreGameplayTruth": true
+    },
+    {
+      "club": "KEN",
+      "champion": "THU",
+      "historyYears": 1,
+      "finalsComplete": true,
+      "errors": [],
+      "coldRestoreGameplayTruth": true
+    },
+    {
+      "club": "LEI",
+      "champion": "SCO",
+      "historyYears": 1,
+      "finalsComplete": true,
+      "errors": [],
+      "coldRestoreGameplayTruth": true
+    },
+    {
+      "club": "MID",
+      "champion": "STA",
+      "historyYears": 1,
+      "finalsComplete": true,
+      "errors": [],
+      "coldRestoreGameplayTruth": true
+    },
+    {
+      "club": "NOR",
+      "champion": "HUR",
+      "historyYears": 1,
+      "finalsComplete": true,
+      "errors": [],
+      "coldRestoreGameplayTruth": true
+    },
+    {
+      "club": "SUS",
+      "champion": "SUS",
+      "historyYears": 1,
+      "finalsComplete": true,
+      "errors": [],
+      "coldRestoreGameplayTruth": true
+    },
+    {
+      "club": "WAR",
+      "champion": "KKR",
+      "historyYears": 1,
+      "finalsComplete": true,
+      "errors": [],
+      "coldRestoreGameplayTruth": true
+    },
+    {
+      "club": "WOR",
+      "champion": "SUS",
+      "historyYears": 1,
+      "finalsComplete": true,
+      "errors": [],
+      "coldRestoreGameplayTruth": true
+    }
+  ],
+  "complete": true,
+  "volatileRestoreMetadataExcluded": [
+    "dynasty.saveStamp",
+    "dynasty.lastScreen"
+  ],
+  "scope": "Sixteen VM finals/review/archive transitions and restored gameplay-state comparisons. Volatile saveStamp/lastScreen excluded; not browser UI-position certification. Run crossed the isolated CSS update; JavaScript bodies are byte-identical in both builds. Not labelled a fresh exact-final-HTML run.",
+  "finalBuildSha256": "696bdfea1a5d177d144a652316c0d39e1d34a1522df990ef32852e45e84d9097",
+  "inputBuilds": [
+    "60c03a75d7670cb5c49b71e34b71c0d9a56777a4e320d272d53e0d466248fdab",
+    "696bdfea1a5d177d144a652316c0d39e1d34a1522df990ef32852e45e84d9097"
+  ]
+}

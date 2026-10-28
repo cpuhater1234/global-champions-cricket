@@ -1,0 +1,28 @@
+{
+  "sha": "aa2e3e187efc0b31366ee29b255c1ed1fa236e4c1fb98ece83d9c99c935fb7aa",
+  "checks": [
+    {
+      "name": "rule-note-contrast",
+      "pass": false,
+      "evidence": {
+        "contrast": 1.5666765526262434,
+        "headerTop": -100,
+        "dialogTop": 12,
+        "headerBottom": 49.46875,
+        "dialogBottom": 728
+      }
+    },
+    {
+      "name": "prompt-header-stays-complete",
+      "pass": false,
+      "evidence": {
+        "contrast": 1.5666765526262434,
+        "headerTop": -100,
+        "dialogTop": 12,
+        "headerBottom": 49.46875,
+        "dialogBottom": 728
+      }
+    }
+  ],
+  "pass": false
+}

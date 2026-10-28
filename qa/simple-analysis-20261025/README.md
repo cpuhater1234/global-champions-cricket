@@ -1,0 +1,5 @@
+# Simple squad analysis
+
+User-directed cleanup: remove all next-pick suggestions and guidance from the draft; remove visible rating scales in draftsummary andanalysis; centre the analysis source label, overallbox and completeness status. Analysis now consists only of twelve static label/value ratings under plain Batting,Bowling andTeam balance headings. No disclosures, rolelists, strengthtracks or verbose breakdowns. Existing rating calculations and saved game are unchanged. Main draft retains visible roster, boxedrating andbalance coverage.
+
+Finalbuild is recorded in build.json. Only roleUI script13 and workspaceCSS change from39ecbaseline. Reproduce with build.py and versioned baseline/modulecopies. Actual54browser checks (18each Chromium,Firefox,WebKit) cover empty/partial draft, all12numbers matchingthe currentprofile, centring at1280/390/320px and16/24/32px roottext, no suggestions/details/denominators andread-only state. Screenshots inspected internally; no screenshots uploaded. Independent review found no blockers. Temporary missing browser executables were recovered before successful runs.

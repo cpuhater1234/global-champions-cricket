@@ -1,0 +1,82 @@
+[
+  [
+    "v8/ui/workspace.css",
+    ".g8directpick .g8candidate::after{inset:-4px}",
+    ".g8directpick .g8candidate::after{inset:0}"
+  ],
+  [
+    "v8/ui/workspace.css",
+    "@container(min-width:18rem){.g8result .g8score",
+    "@container(min-width:24rem){.g8result .g8score"
+  ],
+  [
+    "v8/ui/workspace.css",
+    ".g8recordstats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.5rem;margin-top:.65rem}",
+    ".g8recordstats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,5.25rem),1fr));gap:.5rem;margin-top:.65rem}"
+  ],
+  [
+    "v8/ui/workspace.css",
+    "#g8stage[data-view=\"legacy\"] .g8hero>div:first-child{background:#2d3d30;border-color:#7b9275}",
+    "#g8stage[data-view=\"legacy\"] .g8hero>div:first-child{background:#2d3d30;border-color:#7b9275}\n#g8stage[data-view=\"legacy\"] .g8hero>.g8heroart{align-self:start;min-height:0;height:auto}"
+  ],
+  [
+    "v8/ui/game.css",
+    "@media(max-width:760px){.g8revealgrid.g8ordergrid{grid-auto-rows:minmax(310px,auto)}#g8dialog{padding:1rem}}",
+    "@media(max-width:760px){.g8revealgrid.g8ordergrid{grid-auto-rows:minmax(310px,auto)}#g8dialog{padding:0}}"
+  ],
+  [
+    "v8/ui/bulletproof.css",
+    "    grid-template-columns: 1fr;\n    gap: 0;\n    padding: 12px;",
+    "    grid-template-columns: minmax(0, 1fr) 44px;\n    gap: 12px;\n    padding: 12px;"
+  ],
+  [
+    "v8/ui/bulletproof.css",
+    "  #g8dialog .g8dialogclose { position: absolute; top: 12px; right: 12px; }",
+    "  #g8dialog .g8dialogclose { position: static; }"
+  ],
+  [
+    "v8/ui/screens.js",
+    "X.disclosure('What to take into next season',X.seasonRead()+X.seasonPlan())",
+    "X.disclosure(s.year===2026?'Reflect on your final season':'What to take into next season',X.seasonRead()+X.seasonPlan())"
+  ],
+  [
+    "v8/ui/data.js",
+    "const w=reads[0],note=w.for<w.against?",
+    "const w=reads[0],note=s.year===2026?(w.for<w.against?`The ${labels[w.k]} produced your largest scoring-rate deficit in the final season.`:'You matched or outscored opponents in every sampled phase in the final season.'):w.for<w.against?"
+  ],
+  [
+    "v8/ui/data.js",
+    "<span class=\"g8eyebrow\">BEFORE YOU BUILD AGAIN</span>",
+    "<span class=\"g8eyebrow\">${s.year===2026?'FINAL-SEASON PHASES':'BEFORE YOU BUILD AGAIN'}</span>"
+  ],
+  [
+    "v8/ui/data.js",
+    "use them as a starting point for scouting.",
+    "${s.year===2026?'they describe the final season, with no further season to prepare for.':'use them as a starting point for scouting.'}"
+  ],
+  [
+    "v8/ui/workspace.css",
+    ".g8modalbody .g8rulenote p{color:#25382d}",
+    "#g8dialog .g8modalbody .g8rulenote p{color:#25382d}"
+  ],
+  [
+    "v8/ui/workspace.css",
+    ".g8sheet .g8rulenote p,.g8sheet .g8departureguide p,.g8sheet .g8pickguide p{color:var(--g8-paper-ink)}",
+    ".g8sheet .g8rulenote p,.g8sheet .g8departureguide p,.g8sheet .g8pickguide p{color:var(--g8-paper-ink)}\n.g8superover{background:var(--g8-paper);color:var(--g8-paper-ink)}\n.g8superover .g8statrow b,.g8superover .g8statrow span,.g8superover h3,.g8superover p,#g8dialog .g8superover h3,#g8dialog .g8superover p{color:var(--g8-paper-ink)}"
+  ],
+  [
+    "v8/ui/game.css",
+    ".g8comparebars>div{grid-template-columns:minmax(0,5rem) minmax(0,1fr) auto}",
+    ".g8comparebars>div{grid-template-columns:minmax(0,6rem) minmax(0,1fr) auto}\n.g8compare{container-type:inline-size}\n@container(max-width:14rem){.g8comparebars>div{grid-template-columns:minmax(0,1fr) max-content}.g8comparebars>div>span{grid-column:1/-1}}"
+  ],
+  [
+    "v8/ui/workspace.css",
+    "#g8dialog[data-layout=\"prompt\"] .g8modalhead{position:relative;justify-content:center;text-align:center;padding-inline:4rem}",
+    "#g8dialog[data-layout=\"prompt\"] .g8modalhead{position:sticky;top:0;justify-content:center;text-align:center;padding-inline:4rem}"
+  ],
+  [
+    "v8/ui/workspace.css",
+    "#g8dialog[data-layout=\"prompt\"] .g8modalhead{display:block;padding:4.25rem 1.5rem 1.25rem}",
+    "#g8dialog[data-layout=\"prompt\"] .g8modalhead{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;gap:.5rem;align-items:start;padding:1rem}\n#g8dialog[data-layout=\"prompt\"] .g8modalhead::before{content:\"\";width:44px}\n#g8dialog[data-layout=\"prompt\"] .g8modalhead>div{grid-column:2}\n#g8dialog[data-layout=\"prompt\"] .g8dialogclose{position:static;grid-column:3}"
+  ]
+]

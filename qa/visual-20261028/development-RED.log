@@ -1,0 +1,9 @@
+{
+  checks: [
+    { width: 1440, pass: false, rows: [Array] },
+    { width: 768, pass: false, rows: [Array] },
+    { width: 390, pass: false, rows: [Array] },
+    { width: 320, pass: false, rows: [Array] }
+  ],
+  pass: false
+}

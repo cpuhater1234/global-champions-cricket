@@ -1,0 +1,14 @@
+[
+  [
+    ".g8skillchanges li{grid-template-columns:max-content max-content;justify-content:start;row-gap:.35rem}",
+    ".g8skillchanges li{grid-template-columns:minmax(0,1fr) max-content max-content;row-gap:.35rem}"
+  ],
+  [
+    ".g8skillchanges li>span{grid-column:1/-1;min-width:0}",
+    ".g8skillchanges li>span{grid-column:auto;min-width:0}"
+  ],
+  [
+    ".g8skillchanges li{grid-template-columns:minmax(0,1fr) max-content}",
+    ".g8skillchanges li{grid-template-columns:minmax(0,1fr) max-content max-content}"
+  ]
+]

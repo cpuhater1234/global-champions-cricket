@@ -1,0 +1,46 @@
+/* GCC v94: matte broadcast panels, with a lightly worn T20 scoreboard canvas. */
+:root{--g8-canvas:#111a1b;--g8-panel:#222d2e;--g8-inset:#182324;--g8-paper:#e8e1d2;--g8-paper-ink:#20312f;--g8-forest:#143b33;--g8-bronze:#303b3d;--g8-border:#667774;--g8-cream:#f2ecdf;--g8-secondary:#d2dcda}
+#g8app,#g8app:has(.g8draftsplit){background-color:var(--g8-canvas);background-image:radial-gradient(ellipse at 100% 0,transparent 45%,#9ca99b0a 45.2%,transparent 45.6%),repeating-linear-gradient(0deg,#e8e1d205 0 1px,transparent 1px 4px),var(--g8-canvas-grain);background-size:1100px 760px,auto,180px 180px;background-repeat:no-repeat,repeat,repeat}
+#g8hud,#g8app:has(.g8draftsplit) #g8hud{background:#102e29}
+#g8stage :is(.g8welcomepanel,.g8introbrief,.g8careerlaunch){background:#15372f;border-color:#617b71}
+#g8stage :is(.g8windowpanel,.g8wirepanel),#g8stage .g8signing>section:first-child{background:#222d2e;border-color:#667774}
+#g8stage :is(.g8windowhead,.g8signingfocus){background:#303b3d;border-color:#74817f}
+#g8stage .g8signingcounts>div{background:#153b32;border-color:#6b8177}
+#g8stage .g8signingcounts>div:nth-child(2){background:#303b3d;border-color:#74817f}
+#g8stage :is(.g8windowstatus,.g8windowclosed .g8windowstatus){background:#192627;color:#f2ecdf;border-color:#6d7e79}
+#g8stage :is(.g8annualhero,.g8reviewsummary,.g8nextchapter){background:#303b3d;border-color:#74817f}
+#g8stage .g8annualbrief{border-color:#788681}
+#g8stage :is(.g8fixturehero,.g8matcharena,.g8ballarena,.g8liveboard){background:#13372f;border-color:#627c70}
+#g8stage :is(.g8livebatter,.g8livebowler,.g8overplan>div,.g8phasecontest,.g8spotlight,.g8overfeed,.g8overrow,.g8liveaction,.g8playbackcontrols){background:#233532;border-color:#667c71}
+#g8stage :is(.g8selectionground,.g8compactcommand,.g8analysissection,.g8analysissection:last-child,.g8analysisrow){background:#223632;border-color:#687b72}
+#g8stage .g8teamworkspace.g8compactwork :is(.g8slot,.g8squadrow){background:#23312e;border-color:#63766b}
+#g8stage .g8teamworkspace.g8compactwork :is(.g8slot,.g8squadrow):nth-child(even){background:#2c3935}
+#g8stage .g8table td{background:#24332f;border-color:#62746b}
+#g8stage .g8table tbody tr:nth-child(even) td{background:#2b3934}
+#g8stage .g8table tbody tr.mine td{background:#34483b;border-color:#87977d}
+#g8stage:has(.g8draftsplit)>.g8clock{background:#263a35;border-color:#75877b}
+#g8stage:has(.g8draftsplit)>.g8clockmine{background:#143b33;border-color:#899b86}
+#g8stage .g8draftboard>.g8search,#g8stage .g8draftaside .g8draftscore{background:#1d3830;border-color:#667f70}
+#g8stage .g8disclosure,#g8dialog .g8disclosure{background:#22322e;border-color:#657970}
+#g8app .g8button.g8ghost,#g8app .g8button.g8small:not(.g8primary):not(.g8danger){background:#303e3a;border-color:#7f8e82;color:#f2ecdf}
+#g8app .g8button.g8primary{background:#143b33;border-color:#7d9586;color:#f7f0e2}
+#g8app .g8button.g8primary:hover:enabled{background:#214c40;color:#fff6e6}
+#g8app .g8button.g8ghost:hover:enabled{background:#3a4a43;color:#fff6e6}
+#g8app .g8careernav .g8navitem{background:#21372f;border-color:#6a7d6d}
+#g8app .g8careernav .g8navitem.selected{background:var(--g8-paper);color:var(--g8-paper-ink)}
+#g8dialog,#g8dialog .g8modalbody{background:#202e2b;border-color:#758778}
+#g8dialog .g8modalbody:has(>.g8guide){background:#1d322a}
+#g8dialog .g8guiderules>.g8disclosure,#g8dialog .g8guiderules>.g8disclosure>summary,#g8dialog .g8guidefooter .g8button.g8ghost{background:#303b3d;border-color:#75817e;color:#f2ecdf}
+#g8dialog .g8guiderules>.g8disclosure>summary:hover,#g8dialog .g8guiderules>.g8disclosure[open]>summary{background:var(--g8-paper);color:var(--g8-paper-ink)}
+#g8dialog .g8clubbrief>.g8sheet{background:#22322c;border-color:#71816e}
+#g8dialog .g8briefhead{background:#2c3e32;border-color:#71816e}
+#g8dialog .g8clubpriorities>li{background:#29382e;border-color:#6c7c67}
+/* Traits are labels, not full-width section bars. Long labels still wrap safely. */
+#g8dialog .g8briefbody>.g8groundtrait,#g8app .g8clubground>.g8groundtrait{display:inline-block;align-self:flex-start;width:fit-content;max-width:100%;background:#2d3a31;border-color:#71816b;color:#e7eadc}
+@media(forced-colors:active){#g8app,#g8app:has(.g8draftsplit){background-image:none}}
+#g8stage .g8draftaside .g8draftverdict,#g8dialog .g8scoutoutlook,#g8app .g8windowbanner,#g8app .g8ballmoment:has(>h2),#g8app .g8groundinterpretation,#g8app .g8weatherread{background:#303b3d;border-color:#74817f}
+#g8dialog .g8tradepackage>.g8receive,#g8dialog .g8rulegrid>.g8guidecard,#g8dialog p.g8guidenote,#g8dialog .g8storychapters>.g8guidecard:nth-child(2){background:#303b3d;border-color:#74817f}
+#g8dialog .g8guidecard{background:#233b32;border-color:#6d8171}
+#g8stage .g8careersteps li{background:#293530;border-color:#6d7d70}
+#g8stage .g8careersteps li:nth-child(2){background:#153b32;border-color:#7b927c}
+#g8stage .g8careersteps li:nth-child(3){background:#303b3d;border-color:#74817f}

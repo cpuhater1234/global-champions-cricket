@@ -1,0 +1,14 @@
+const{chromium}=require('playwright'),fs=require('fs'),path=require('path'),assert=require('assert/strict');
+(async()=>{const b=await chromium.launch({executablePath:process.env.GCC8_CHROMIUM||'/tmp/gcc-chromium-complete',args:['--no-sandbox']});const p=await b.newPage();const file=process.env.GCC8_TEST_BUILD||'qa/deep-20261027/candidate.html',out={checks:[],sha:require('crypto').createHash('sha256').update(fs.readFileSync(file)).digest('hex')};
+try{await p.goto('file://'+path.resolve(file));await p.evaluate(raw=>{localStorage.setItem('gcc_dynasty_v8',raw);GCC8.render()},fs.readFileSync('qa/bulletproof-20261027/career/GT-latest.gcc.json','utf8'));await p.locator('[data-action="continue"]').click();await p.evaluate(()=>GCC8.read.flushSave());
+ const cancelled=()=>p.evaluate(()=>{const event=new Event('beforeunload',{cancelable:true});window.dispatchEvent(event);return event.defaultPrevented});
+ assert.equal(await cancelled(),false,'Clean saved state needs no exit warning');out.checks.push('clean-exit');
+ await p.evaluate(()=>{navigator.locks.request('gcc-career-save:gcc_dynasty_v8',async()=>{window.qaHeld=true;await new Promise(r=>window.qaRelease=r)});});await p.waitForFunction(()=>window.qaHeld);
+ await p.evaluate(()=>{GCC8.G.state.seed++;GCC8.read.save()});
+ assert.equal(await cancelled(),true,'Queued background save must guard exiting before it commits');out.checks.push('pending-exit');
+ let promptType=null;p.once('dialog',async dialog=>{promptType=dialog.type();await dialog.dismiss()});
+ await p.reload({timeout:4000}).catch(()=>{});assert.equal(promptType,'beforeunload','Actual native reload must warn while queued');out.checks.push('native-reload-prompt');
+ await p.evaluate(()=>window.qaRelease());await p.evaluate(()=>GCC8.read.flushSave());assert.equal(await cancelled(),false,'Committed save removes exit warning');out.checks.push('settled-exit');
+ await p.evaluate(()=>{window.qaSet=Storage.prototype.setItem;Storage.prototype.setItem=function(k,v){if(k==='gcc_dynasty_v8')throw new DOMException('Quota fixture','QuotaExceededError');return qaSet.call(this,k,v)};GCC8.G.state.seed++;GCC8.read.save()});await p.evaluate(()=>GCC8.read.flushSave());assert.equal(await cancelled(),true,'Failed save guards exiting');assert(await p.locator('.g8savewarning').isVisible());out.checks.push('failed-exit');
+ await p.evaluate(()=>{Storage.prototype.setItem=qaSet;GCC8.read.save()});await p.evaluate(()=>GCC8.read.flushSave());assert.equal(await cancelled(),false);out.checks.push('recovered-exit');out.pass=true;
+}catch(e){out.pass=false;out.failure=e.message;process.exitCode=1}finally{fs.writeFileSync('qa/deep-20261027/persistence/exit-guard-'+(process.env.GCC_PHASE||'red')+'.json',JSON.stringify(out,null,2));console.log(out);await b.close()}})();

@@ -1,0 +1,9 @@
+{
+  "sha": "c3d1693bd008571eae71c6cfdad4ba6807fe16756ac1606a0569ca4c924cfd60",
+  "checks": [
+    "strict-checkpoint-ready",
+    "complete-acknowledges-exact-checkpoint"
+  ],
+  "pass": false,
+  "failure": "AssertionError [ERR_ASSERTION]: Recovery choices must show save times\n    at /workspace/scratch/f98cc1f6c0bf/gcc/qa/limits-20261027/integration.cjs:5:356"
+}

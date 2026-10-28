@@ -1,0 +1,30 @@
+{
+  "scope": "Synthetic storage disruptions using actual 2013 browser-career archive save",
+  "cases": [
+    {
+      "kind": "QuotaExceededError",
+      "saved": false,
+      "preserved": true,
+      "conflict": false,
+      "year": 2013,
+      "history": 6
+    },
+    {
+      "kind": "SecurityError",
+      "saved": false,
+      "preserved": true,
+      "conflict": false,
+      "year": 2013,
+      "history": 6
+    },
+    {
+      "kind": "newer-tab",
+      "saved": false,
+      "preserved": true,
+      "conflict": true,
+      "year": 2013,
+      "history": 6
+    }
+  ],
+  "complete": true
+}

@@ -1,0 +1,30 @@
+{
+  "sha": "4a3d4d919d2fdd35d490f5e2f57359bb5fe65d209873a2f89353ee9735aa2453",
+  "cases": [
+    {
+      "name": "lock-timeout-no-late-write-and-retry",
+      "pass": true
+    },
+    {
+      "name": "transaction-timeout-no-late-write-and-retry",
+      "pass": true
+    },
+    {
+      "name": "clear-superseded-by-restore-keeps-replacement",
+      "pass": true
+    },
+    {
+      "name": "confirmed-clear-tombstone-no-recovery-resurrection",
+      "pass": true
+    },
+    {
+      "name": "denied-IDB-retains-coordinated-browser-save",
+      "pass": true
+    },
+    {
+      "name": "no-coordinator-refuses-unsafe-write-and-keeps-export",
+      "pass": true
+    }
+  ],
+  "pass": true
+}

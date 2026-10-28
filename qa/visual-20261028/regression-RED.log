@@ -1,0 +1,15 @@
+{
+  sha: '4a3d4d919d2fdd35d490f5e2f57359bb5fe65d209873a2f89353ee9735aa2453',
+  checks: [
+    {
+      name: 'start-screen-only-game-actions',
+      pass: false,
+      evidence: undefined
+    },
+    { name: 'mobile-header-one-row', pass: false, evidence: [Object] },
+    { name: 'mobile-brand-readable', pass: false, evidence: [Object] },
+    { name: 'mobile-header-compact', pass: false, evidence: [Object] },
+    { name: 'backup-remains-in-menu', pass: true, evidence: undefined }
+  ],
+  pass: false
+}

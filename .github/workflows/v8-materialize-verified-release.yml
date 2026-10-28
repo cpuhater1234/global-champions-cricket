@@ -1,0 +1,30 @@
+name: GCC v8 materialize verified release
+on:
+  push:
+    branches: [work/v8-game-first-rebuild]
+    paths: [.github/workflows/v8-materialize-verified-release.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  materialize:
+    if: github.ref == 'refs/heads/work/v8-game-first-rebuild'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Reproduce exact tested release
+        run: |
+          python qa/persistence-20261026/build.py --promote
+          echo '4397ee6b8dc82cff83af86be14b790b8c0cb8997629e014979000a02e48df1ff  game/gcc_v8_product_candidate.html' | sha256sum -c -
+          cmp game/gcc_v8_product_candidate.html game/gcc_v8_quiet_arcade.html
+      - name: Commit generated playable files
+        run: |
+          git add -- game/gcc_v8_product_candidate.html game/gcc_v8_quiet_arcade.html
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Publish verified v78 career recovery and offline stadium playable'
+          git push origin HEAD:work/v8-game-first-rebuild

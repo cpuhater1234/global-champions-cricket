@@ -1,0 +1,121 @@
+{
+  "checks": [
+    {
+      "name": "fixture-loaded",
+      "pass": true
+    },
+    {
+      "name": "close-relaunch-raw-identical",
+      "pass": true
+    },
+    {
+      "name": "close-relaunch-continue",
+      "pass": true
+    },
+    {
+      "name": "stale-tab-save-refused",
+      "pass": true
+    },
+    {
+      "name": "stale-tab-preserves-newer",
+      "pass": true
+    },
+    {
+      "name": "reverse-tab-save-refused",
+      "pass": true
+    },
+    {
+      "name": "reverse-tab-preserves-newer",
+      "pass": true
+    },
+    {
+      "name": "stale-backup-refused",
+      "pass": true
+    },
+    {
+      "name": "intentional-backup-restored",
+      "pass": true
+    },
+    {
+      "name": "old-tab-after-backup-refused",
+      "pass": true
+    },
+    {
+      "name": "backup-preserved",
+      "pass": true
+    },
+    {
+      "name": "explicit-new-career-replaces-save",
+      "pass": true
+    },
+    {
+      "name": "stale-tab-cannot-rollback-new-career",
+      "pass": true
+    },
+    {
+      "name": "external-clear-stale-save-refused",
+      "pass": true
+    },
+    {
+      "name": "external-clear-remains-empty",
+      "pass": true
+    },
+    {
+      "name": "in-memory-export-after-clear",
+      "pass": true
+    },
+    {
+      "name": "initial-write-failure-no-save",
+      "pass": true
+    },
+    {
+      "name": "initial-write-failure-exportable",
+      "pass": true
+    },
+    {
+      "name": "metadata-failure-career-committed",
+      "pass": true
+    },
+    {
+      "name": "read-failure-save-refused",
+      "pass": true
+    },
+    {
+      "name": "renamed-file-bucket-observed",
+      "pass": true,
+      "detail": {
+        "sameOrigin": "file://",
+        "originalOrigin": "file://"
+      }
+    },
+    {
+      "name": "renamed-file-portable-backup-restores",
+      "pass": true
+    },
+    {
+      "name": "renamed-copy-shares-storage-observed",
+      "pass": true,
+      "detail": {
+        "note": "Both file URLs share this Chromium storage origin; backup restore refreshes saveStamp."
+      }
+    },
+    {
+      "name": "crash-relaunch-career-content-identical",
+      "pass": false,
+      "detail": {
+        "rawIdentical": false,
+        "reopenedStorageEmpty": false,
+        "stamps": {
+          "before": 1793057667322,
+          "after": 1793057663441
+        }
+      }
+    },
+    {
+      "name": "crash-relaunch-continue",
+      "pass": true
+    }
+  ],
+  "passed": 24,
+  "total": 25
+}

@@ -1,0 +1,3 @@
+# Solid surfaces and concise scouting
+Authorised by Tom's requests on25–26October. Preserve game flow, detailed skills, manual selection, club colours, numerical ratings, engine, RNG and save format.
+Hide non-keeper keeping ratings; align rating/Swap and selection count; separate career outlook from actual GCC record; use current record before archive. Audit phase spread and simplify repeated bars without rerating. Use distinct cream/forest/bronze surfaces, restrained background light and supplied bat/ball/stumps icons with faint home GCC mark. Remove Compare players from scout popup, repeated roles/routine retained status, lengthy caveat. Keep meaningful context and player actions. No new selection targets or dictated XI recipe.

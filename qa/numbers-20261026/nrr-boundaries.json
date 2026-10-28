@@ -1,0 +1,50 @@
+{
+  "rows": [
+    {
+      "hi": {
+        "total": 149,
+        "wickets": 10,
+        "balls": 90
+      },
+      "ai": {
+        "total": 150,
+        "wickets": 4,
+        "balls": 94
+      },
+      "homeNrr": -2.1244680851063835,
+      "ballsFor": 120,
+      "ballsAgainst": 94
+    },
+    {
+      "hi": {
+        "total": 180,
+        "wickets": 4,
+        "balls": 120
+      },
+      "ai": {
+        "total": 175,
+        "wickets": 10,
+        "balls": 114
+      },
+      "homeNrr": 0.25,
+      "ballsFor": 120,
+      "ballsAgainst": 120
+    },
+    {
+      "hi": {
+        "total": 0,
+        "wickets": 10,
+        "balls": 10
+      },
+      "ai": {
+        "total": 1,
+        "wickets": 0,
+        "balls": 0
+      },
+      "homeNrr": -6,
+      "ballsFor": 120,
+      "ballsAgainst": 1
+    }
+  ],
+  "zeroBallPolicy": "GCC uses a minimum one-ball denominator for an innings with zero legal deliveries. This is an explicit finite-game convention, not a verified official tournament rule. All-out innings use120 balls."
+}

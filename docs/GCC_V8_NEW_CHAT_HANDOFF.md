@@ -1,3 +1,154 @@
+## Latest checkpoint — decision friction fixes, 26 October2026
+
+PlayableUI update: projected vs selected XI wording corrected; draft available-player count excludes OUT; finaldraft copy removes nonexistent keeperassignment promise. New/reopened/different modal starts at top; samekey/title updates preserve scroll; player scouting returns to prior undrafted/trade scroll.14labelcases,9browserlayouts plus actualback/reopen/Escape,5unconfirmeddecisioncoldreloadcases; independentreview no blockers. See qa/decision-friction-20261026. OnlyUI blocks13/19changed, engine identical to version75 used by full numericalaudit. Do not recast prior19season results as a fresh run of thisUIhash.
+
+SHA256: ceee19d9e874468fa72be41845a98ecdf8230ade58cd5763e64aafe0eb1f797f
+
+## Latest checkpoint — every-number audit, 26 October2026
+
+Playable remains version75 / hash e28ccd173f92069cb690d27f6b64224c072f4b56bb061d00428edadc5a5e7af0. No engine/rating modifications. See docs/GCC_V8_EVERY_NUMBER_AUDIT_20261026.md,qa/numbers-20261026/summary.json. Eight-world41,192player-season passes,10,001overallmonotonicity,6,000delivery stressinnings/4,388,607assertions,19yearcareer/266managedleaguegames/39reloads,306scorebookPythoncrosschecks,118allleague/finalsinnings exactstatledger,14focusedsuites+77corruptsavechecks. Test invariant ballsfaced=legalballs corrected: deliveredno-balls countasfaced;76explaineddifference. Zero-ballNRR minimumoneball declaredgameconvention. All7,828skills authored/derived inexistingledger; empiricalskill/modelvalidationOPEN,failedgatesremainfalse. Initialsource/fixtureissues resolved explicitly; invaliddownstreamfixed-estimate sensitivity excluded in favour of upstreamfullmatchpair test.
+
+Raw audit archive: libfile_7131dd905ab081919f9eaabc72b060f7 version0, GCC_Numerical_Audit_Evidence_20261026.zip. Manifest inqa/numbers-20261026/raw-evidence-manifest.json. Rawfixtures/tracesare not duplicatedinGit. Extractedv8/engine/ratings.js is an audittemporarysource fromcurrentinline assignment; helpers/documentation indicate reproduction. Do not call anyattribute empiricallycertified or promote failed challenger.
+
+## Latest checkpoint — recruitment/XI/preview/conditions refinement
+
+26 October2026. See qa/screen-refinement-20261026/README.md and ratings-audit.json/RATINGS_REVIEW.md. Equal signing panels; heading rules; no unframed hover fill; Before your first pick help with gap; team role dropdown removed; framed counts/tabs. Selected XI Swap opens bench choices and uses existing engine; shown/guarded only at11 (partial beginSwap auto-adds, so do not expose it there). Preview and ground conditions structured into separate aligned cards.135 final Chromium cases plus actual swap/cancel/position/reverse/injury/stalefilter/partialguards. Engine unchanged. Independent review findings fixed. Ratings provenance/range audit all412/7828values;95 high peripheral values need evidence review, no rerating and no full empirical claim.
+
+SHA256: e28ccd173f92069cb690d27f6b64224c072f4b56bb061d00428edadc5a5e7af0
+
+## Latest checkpoint — previews, hover, bowling feedback
+
+26 October2026: centred player preview summary; 412 profiles/493 layout cases; equal-height full-width picked-player rows; 19 grey hover fills replaced;126 journey cases incl sampled hover and contrast. New v8/ui/roles.js extracted from UI block13; preserve source in future builds. User explicitly rejects20-over-based bowling verdict. Analysis now says XI selected/incomplete; draft bowling count neutral; threshold warnings removed from draft/trade/release/offseason help. Engine/rating/simulation unchanged. QA:qa/player-preview-hover-20261026.
+
+SHA256: 439affc3439fa6953a2c897698ea8eceb347882d0c411c619edc9ec3caf000f9
+
+## Latest checkpoint — shared visual system, 26 October 2026
+
+CSS-only pass with shared solid surfaces, alignment/hierarchy and 207 final Chromium cases (126 journey incl sampled contrast + 81 career fixtures). All scripts unchanged. See qa/visual-system-20261026/README.md and build.json. Baseline = 7bcf86b60cb3a3b0f5258220fc87b5c7e7d0fcf4. Preserve full club fills, rating scales and photo sources. Independent review no blockers. No new cross-browser/human/physical-device evidence.
+
+SHA256: dcce5b348f2817468e67a4ed1e5ec2ffe6f3661d5f0a524cd1480be18d4c7959
+
+## Latest checkpoint — career understanding, 26 October 2026
+
+UI-only contextual rules pass. See qa/career-understanding-20261026/README.md and docs/superpowers/plans/2026-10-26-career-understanding.md. New v8/ui/career.js is the exact pre-existing script16 extracted then edited; preserve it in future builders. Personal departure guidance uses engine budgets; annual pick schedule uses read.pickSlots, gated until all eight draw positions revealed; legacy schedules preserved. Engine unchanged. 81 Chromium cases plus rule fixtures and actual seed101 before/after match parity. Independent review no blockers. Human comprehension remains unobserved.
+
+SHA256: 8ca41c3da5c2c711b888d3dafb868ee57323682ae233dacedc5e30d316bc0eea
+
+## Current checkpoint · finished game guides · 26 October2026
+
+Candidate SHA256 `7ea66a5ad716f944fd14f7b805ad18d44bcf6c5aacb700e376ff04b8292e304f`. Only controller script19 and scoped CSS changed. How to play: six numbered steps and optional grouped rules. How it works: six concise decision cards. Breakaway: established alternate-history premise with three chapters. Cream/forest/bronze surfaces and supplied icons, readable text, shared navigation and back-to-game. Guide navigation resets to top. All original commands and active career state preserved; no engine/rating/save changes. QA qa/guides-20261026. Prior notes below historical.
+
+## Current checkpoint · home-format panel · 26 October2026
+
+Candidate SHA256 `13da26e2ff1104b6299d026a5f271c2fc9bdad20ecb1febd2ba1ce8574debb70`. Replaced highlighted8clubs/15playerdraft/19seasons words with one solid inset panel and three equal number/label cells, scoped new .g8leagueformat class. Responsive container fallback. Nine Chromium viewport/text cases passed, screenshots inspected. QA qa/home-format-20261026. No gameplay changes. Prior notes below historical.
+
+## Current checkpoint · over-by-over feed and no foundation trades · 26 October 2026
+
+Candidate SHA256 `5485f41aa66a95d04e79c69ed41e76bc08277968e5681c7bde2f3de869b443e3`. Trades blocked throughout2008 in UI/commands/legacy/package/CPU paths;2009+two-deal limit and Round3close unchanged. Existing saved transactions preserved. Live feed groups actual revealed deliveries by over, latest first; exact runs/wickets/legal counts, extras and partialovers; earlier overs optional. Commentary only significant moments. No RNG/numerical rating changes. Club labels/accents on both sides through live/preview/results/fixtures/ladder/finals and result phases. Preview scale fixed: positional blue nth-child rule overridden, both bars/numbers use existing higher-is-better red/yellow/green. QA qa/match-flow-20261026:1111logic groups at208actual frames + synthetic extras/repeated SO; exact first-round ledger/RNG equality at seeds101/809;54rendered cases per Chromium/Firefox/WebKit. Raw reports retained. Independent review found no blockers. Prior notes below historical.
+
+## Current checkpoint · solid surfaces and concise scouting · 26 October 2026
+
+Candidate SHA256 `fbab71f7fc017e7ca41568a2c4d1e0473f460e12816222c63b7963b4705da1e3`. Stable playable version66, libfile_ebabb63004ac81919b41b246675c703d.
+UI modules components/roles/data/controller/screens/workspace.css. Distinct cream/forest/bronze, subtle background lighting and supplied icons; club/rating colours and authentic venue assets preserved. Keeper-only keeping ability, aligned bench rating/Swap, consistent Selected count. Concise centred scout summary: no Compare players action, repeated tags/note, routine retained line or lengthy caveat. GCC record prioritises current season then latest archived appearance season. Exact optional phase tiles replace repeated bars; detailed skills retained. No engine, RNG, numerical ratings or save changes.
+
+Validation observed:64 UI cases each Chromium/Firefox/WebKit;84 Chromium later-career fixture checks;2signing-wire viewport checks;412player popup logic and record/comparison/state cases;77save-integrity checks; existing scouting hierarchy passed. Independent reviewer found bronze secondary-text contrast; repaired to light cream and checked computed styles. Transient execution workspace reset after checks. Tested HTML recovered from already-created Git blob41189ff002b6a1200498a6565eb052149e62250f; hash and complete UI-source roundtrip match exactly. Raw per-case logs/screenshots were lost; reconstructed run summary explicitly says so. See qa/presentation-20261026/README.md and observed-runs.json. Human playtests, physical devices and assistive-speech pacing remain unobserved. Prior sections below historical.
+
+## Current checkpoint · aligned analysis and team-selection polish · 25 October 2026
+
+Candidate SHA256 `2010a5e1868a13138644d2d33d922ceba839889888e391ea78cbd048f122a661`. Three equal desktop analysis columns/tiles. Draft pool and picked list show batting jobs. Removed numbered XI role guide at user request: strategy remains contextual to squad/ground. Team page has unclipped title, framed bench/order, rating badges and actual home-ground context. Compact final-XI popup from version64 retained. QA: qa/selection-polish-20261025 (27 cases each Chromium/Firefox/WebKit). No rating/model/save changes. Prior notes below historical.
+
+## Current checkpoint · compact final-XI prompt · 25 October 2026
+
+Only draftComplete CSS changed: 32rem maximum, content-sized header/body, no tall header gap, responsive wrapping actions and 44px controls. QA: qa/compact-xi-prompt-20261025. Candidate SHA256 8e9ee1612466304c087776bcf97c22c3db581dec0aff870bba9759e9b5e7720d. Prior notes below historical.
+
+## Current checkpoint · analysis tiles and selected-XI coverage · 25 October 2026
+
+Current candidate SHA256: `22960c8b1ac875d7e905177072fd7319cbf5d2bd1093e453af682a2bb2d625b7`.
+Source: roles.js, screens.js, components.js, workspace.css. QA: qa/analysis-coverage-20261025. Analysis is now compact grouped tiles. XI role counts use fitness-adjusted players: keeper, opening batters, bowling options, new-ball options, death options. Guide targets, no added penalties. User rejected bowling cover: removed that metric and overs capacity from selection UI. Suggestions remain removed. Prior notes below historical.
+
+# Current release: simplified squad analysis — 25 October 2026
+
+Stable playable v62, file_000000006ccc81fa923562d5aaaf6c98, existing Library identity libfile_ebabb63004ac81919b41b246675c703d. HTML SHA256 8ba0fc8ba43e944efdf8de025f251aa59be073d21ff67ca590cd4c59f013301d; Git blob 6e2b7ff597fb17eccd964c007a4c58ae429eb3c5.
+
+User explicitly removed ALL draft pick suggestions/guidance and visible rating denominators. Draft keeps boxed rating, balance and open selected roster. Squad/XI analysis now centres source label, overall box and completeness status, with twelve static label-number rows under plain Batting, Bowling and Team balance headings. No expandable details, role lists, phase breakdowns, strength bars or verbose explanations. All values still use existing profile fields. Model, simulation, RNG and saves unchanged.
+
+Authoritative changes: v8/ui/roles.js and workspace.css. qa/simple-analysis-20261025/build.py rebuilds from versioned39ec baseline and module copies; only script13 plusCSS changes. Fresh54 browser cases (18each Chromium,Firefox,WebKit) verify empty/partial squads, all12values, centring, desktop/mobile/enlarged text, no suggestions/details/denominators and read-only state. Screenshots inspected internally, not uploaded. Independent review found no blockers. Prior v61 suggestion/target tests describe a feature intentionally removed; run against that versioned candidate rather than treating them as requirements for current UI.
+
+Everything below is historical where superseded.
+
+---
+
+# Current release: open draft companion — 25 October 2026
+
+Stable playable version61, file_00000000b284820bb546fa903c8697d9, sameLibrary identity libfile_ebabb63004ac81919b41b246675c703d. HTML SHA25639ec4a2e9fafcfc15e4ac11f9fbc59bbc9756cde40b22f3d28873071a15ee2df; Gitblob149afa09a489cc1822738462647ae0760f954e78. Both canonical HTML aliases match.
+
+Draft sidebar now has a boxed projectedXI rating, provisional label before11players, balance verdict and compact coverage, next-needed role plus two legal available scouting suggestions, and everypicked player always visible in compact two-column rows. Detailed analysis/history are optional secondary dialogs. Removed duplicated latest-signing and roster accordion; mobilepanel precedes playerpool. No nested panel scroll. Full foundation draft still automatically enters teamroom. Existing two-ability playercards retained.
+
+Guidance uses currentpublic ratings/rolebands and existingguard/freeagent rules, not hiddencareer truth. No new numerical draftgrade. UI-only changes: v8/ui/roles.js, screens.js, workspace.css. Engine/RNG/ratings/save code unchanged. Builder qa/draft-companion-20261025/build.py replaces script13,17andCSS from versioned756baseline/modulecopies.
+
+Fresh finalhash evidence:64browser stage/viewport/text cases (Chromium48,Firefox8,WebKit8);30logic+actual saved-career annualdraft checks. Suggestions legal, matchingneed andcurrentavailability; advisory read-only; empty/partial/full andnormal completion covered. Desktop/mobile screenshots inspected internally andnot uploaded. Independent review no blockers. See qa/draft-companion-20261025. Earlier test reports below retain their original hashes and are historical, not newly rerun by this UI patch.
+
+---
+
+# CURRENT draft-card release — two headline abilities,25October2026
+
+PlayableLibraryversion60, filefile_000000006d2481fabcb3258eeb85276e; SHA2567568403962160d660198867d75f6de487512817de0a339220264e7cf783eae45, Gitblob8f98f4dca5b2f70401fb03a572dc78af6343a958. All roles use TWO headline abilities:BAT Batting/Fielding;BOWL Bowling/Fielding;AR Batting/Bowling;WK-BAT Batting/Keeping. Equal columns and central divider remain at narrow widths. User rejected rushed keeperPower placeholder; that v59 file is superseded and was never pushed toGit. Overall, best phase, scouting details, simulation and saves unchanged.
+
+Authoritative sources: v8/ui/components.js andv8/ui/workspace.css. Builder qa/card-clarity-20261025/build.py uses immutable728baseline qa/calibration-20261024/candidate.html, replacing only components script11 andworkspace stylesheet. Fresh36 actual Chromium role×viewport×text cases at1280/390/320px and16/24/32px root text; all8sort phasealignment/contrast checks passed. Desktop/mobile screenshots visually inspected internally, NOT uploaded. Independentreview no blockers. Earlier broad regression evidence below retains its original tested hash; do not claim it freshly reran for this presentation-only patch.
+
+Everything below is historical where superseded.
+
+---
+
+# Latest UI patch — wicketkeeper draft cards,25October2026
+
+Current playableLibraryversion59; HTML SHA25669fae33c5fde2c984acd110eb3e72fb964f5b30a25d36429e492ec5301844060, Gitblobf4ab2a64469c1a5d1635bce445513308185907ee. WK-BAT draft cards now show Batting,Power,Keeping. Underlying fielding data,overall formula,match simulation andsave format unchanged. Sourcechange is one cardStats branch in v8/ui/components.js, embedded byte-for-byte in both canonical HTML files. Tested12keeper cards at1280/390/320px andall8draftsort phasealignment/contrast checks. See qa/keeper-card-20261025. Earlier broad verification below belongs to its original728build; do not relabel that evidence as freshly rerun for69faUIpatch. Execution briefly disconnected before mutation, then recovered andbrowserchecks completed. The calibration builder produces728baseline; to reproduce latestUIpatch additionally replace its embedded components module with current v8/ui/components.js.
+
+---
+
+# CURRENT RELEASE — 25 October 2026
+
+Read `docs/GCC_V8_CALIBRATION_RELEASE_20261025.md` and `qa/calibration-20261024/release-verification.json` first. All outside-session commits through05cbc0b are preserved; continuation reconciliation committed5f95258 on top. Current branch remains `work/v8-game-first-rebuild` (query its latest head before writing; never use old head leases).
+
+Released HTML SHA256 **728f4afac83aa6290a5c9241d2f0ee8885b6b363f1af6dd78736986a12ee9fc4**, Git blob **d18cda795beee7eb63e3065d5c087840801a3c03**. Canonical two game paths and stable playable are byte-identical. Library playable **libfile_ebabb63004ac81919b41b246675c703d version58**, filefile_00000000832481f6bab4a6ec2eb6bdd8.
+
+Changes:412 verified distinct identity metadata records;410 undisputed full DOBs;74 birth-year corrections for NEW careers only, AFTER stored templates. Same absolute alternate-history career windows and numeric skill futures. Existing saves retain saved DOB/ages and full state. Corrected new ages intentionally change age-sensitive scouting/recruitment, outlook, trade and injury behaviour. Do not assert identical new-world outcomes. Country/role/style rules unchanged. Umar Gul and Angkrish Raghuvanshi are source-conflicted; retain original years and no invented full date. Twelve ESPN API errors were resolved using official board/league/club fallback review; distinguish manual profile matching from exact ESPN response-ID matching.
+
+Live status now exposes cumulative score, overs and same visible chase/terminal context, atomic region. Accepted visible palette/layout unchanged. Only script blocks2and15 changed from3ddbaseline; authoritative modules/candidate builder in release report.
+
+Fresh final-hash evidence:18,099 compatibility,2,478 biography,600 CPU draft/eight club positions,845 persistence/fairness,162 browser cases/all three engines;292 recorded match frames plusfour named landmarks andsix synthetic terminal/Super Over render cases. Final8802 three-season career:2,804checks/42managed league matches, zero runtime/quota errors. Pre-fallbackd647 full19season8801:15,284checks/266managed league matches,43reload checkpoints,30injury selections,four actual Super Overs; its original hash is retained, NOT silently attributed to728final. Independent review acceptable/no blocking issue after scope resolution.
+
+Frozen statistical evaluation completed and reproduced with unchanged preregistered inputs. BOTH promotion gates FAIL. No empirical rerating. Priors are not certified just because challenger failed. Do not retune on observed2023–2026 tests. Immutable preregistration heldOutMetricsObserved=false describes registration time; heldout-report is actual result. Recovery scripts now use pinned3973116baseline, not current released HTML.
+
+Durable recovery: exact DB+14source archives **libfile_44cbb9e6ef248191925722dc20472cc2 version0**, ZIP SHAe45153104241086da60901125adebba8c0705a2006d7688d833aaf7e60193097. New synthetic QA saves/observations **libfile_303e62aac70c8191bc008a0eae1abb0e version0**, ZIP SHA54522142a685e48176fed918d854f2f8d2765a859fb2e415a620f8ebfd6d77f1.
+
+OPEN, cannot fabricate: actual novice/returning-player playtests, physical phone behaviour and regular screen-reader-user speech pacing. Recorder/session kit is ready, no actual human/device sessions observed. Some precise technique/mental/leadership/keeping/fielding numbers remain unidentifiable model priors. Extreme320px+400%root-text overflow remains separately documented; ordinary reflow cases pass. Do not say all six priorities fully proven or every rating perfected.
+
+Everything below is historical and superseded where inconsistent.
+
+---
+
+# Active continuation — 25 October 2026
+
+Read `docs/GCC_V8_CONTINUATION_RECONCILIATION_20261025.md` first. Outside-session commits through05cbc0b preserved. Exact frozen database recovered from this original environment and preregistered evaluation re-executed with unchanged hashes: BOTH promotion gates FALSE. `heldout-report.json` now contains actual results; older unopened/blocked statements below are historical. No empirical bulk rerating. Recovery archive now durable: Library libfile_44cbb9e6ef248191925722dc20472cc2 version0. Candidate1d9b284 remains staged, canonical3dd348d unchanged pending release verification. Biography audit and browser review continue. Do not overwrite outside work or repeat model tuning against observed test years.
+
+---
+
+# Precision continuation checkpoint — 24 October 2026, current session
+
+Authoritative playable is still v57 / SHA-256 `3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf`. No production playable or player rating was changed.
+
+Numerical calibration remains scientifically unopened. Exact frozen dataset SHA is `60d38fb30ff38f72a7d344437ed881b2ba93731a739dd35fdd556a82386c3ce9`; 412/412 identities remain verified; preregistered 2023–2026 holdout has not been observed. Recovery surfaces checked in this session: native Library, conversation files, mounted Drive from prior checkpoint, Git history, current Cricsheet URLs, public release mirrors and local outbound transport. No exact ten-archive bundle or SQLite was recovered. Do not substitute a mirror/current dataset unless the rebuilt SQLite hashes exactly to the frozen SHA.
+
+Two fail-closed numerical launchers now exist:
+- `qa/calibration-20261024/run_exact_holdout.sh`: recover/verify all 14 frozen archives, rebuild and verify the exact SQLite, reproduce the v57 numeric baseline, then open the frozen holdout.
+- `qa/calibration-20261024/run_exact_holdout_from_db.sh`: accept a recovered `deliveries.sqlite` only if SHA-256 is exactly `60d38fb...`, SQLite integrity/schema and 9,422-match count pass, then reproduce the v57 numeric baseline and open the same frozen holdout.
+Neither launcher promotes production automatically.
+
+Accessibility work is isolated on branch `work/v8-a11y-live-score-candidate`, based on the protected checkpoint. Source patch commit `da03259d600d61875986b199651b1354f679fddd` changes only `v8/ui/match_story.js` to add cumulative score/overs/chase context to the existing live status region and `aria-atomic=true`. Fresh actual Chromium execution against the exact v57 and retained foundation save reproduced the omission in the original and passed ordinary-ball, wicket, chase and innings-end assertions in the isolated candidate. Evidence commits: `99bd8166f25c4b19a2dc5c5f2b8e8d9e47da83bd` (semantic live-region evidence) and `feb7d37aba967dcf32533ffe823958d4ae8f9ae3` (four-state pixel comparison). The four tested `.g8ballarena` screenshots were pixel-identical original vs candidate. Canonical v57 remains untouched; do not merge/promote until an authoritative source rebuild and affected exact-build regression are available. Human screen-reader timing/comprehension remains an external gate.
+
+---
+
 # Exact-holdout continuation package — latest checkpoint
 
 Branch head now includes `qa/calibration-20261024/run_exact_holdout.sh` and `EXACT_HOLDOUT_UNLOCK.md`. In an environment with outbound Cricsheet access, run the launcher from repository root. It verifies model, identity, all fourteen archive hashes, exact dataset hash, v57 hash and numeric baseline before it is permitted to open 2023–2026. It never promotes production automatically.
@@ -99,3 +250,10 @@ Natural retirements are uncapped. Shared four-departure allowance limits further
 Scratch repo is a partial checkout without `.git`; use the GitHub connector and expected-head lease for writes. Fetch current branch head before advancing it. Browser runtimes persist under `/workspace/scratch/bed56f4334a5/browser-runtime/playwright`; recreate `/root/.cache/ms-playwright` and `/tmp/gcc-chromium` symlinks if a runtime reset removed them. Local WebKit libraries link inside minibrowser sys/lib. The managed browser harness uses PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=1 and MOZ_DISABLE_CONTENT_SANDBOX=1; these are test-environment settings, not product instructions.
 
 No long final-verification job remains pending. Do not restart the broad finishing audit from old chat history. Start from the open numerical/human gates above, or the user's new concrete direction.
+
+
+## Current-session precision addendum
+
+Main work branch source isolation is restored at commit `30c483d33732f76ec05a699f89f11f7f10df9b55`: `v8/ui/match_story.js` is back to its protected unpatched blob, and canonical v57 remains Git blob `f5059bb1890951b9816c8cdf57670d6b21e0d0f2` / SHA-256 `3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf`.
+
+Accessibility candidate branch `work/v8-a11y-live-score-candidate` now has an additional full-playback regression at commit `ee7caf81a869f1d3196b4c3d2361e4aec3568e14`. Actual Chromium rendered all 292 delivery frames from the retained foundation fixture with deterministic time/RNG. Original and candidate had identical delivery-frame data, identical pre/post game state, no render-time state mutation, and identical visible per-frame score/overs/phase/commentary/trail/fixture/control output. This supplements the existing four-state pixel-identical and accessibility-tree evidence. Canonical v57 is still not promoted; human screen-reader timing/comprehension remains external.

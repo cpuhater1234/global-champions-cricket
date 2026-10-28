@@ -1,0 +1,3 @@
+# Home league-format panel · 26 October2026
+
+Replaced highlighted inline words with one solid forest inset panel, three equal statistic cells, cream numbers and simple labels. Uses a new scoped class so legacy .g8heroformat rules cannot reapply word highlights. Container fallback keeps enlarged text readable. Preserves home content, stadium selection and actions. Nine Chromium viewport/root-text cases at1280/390/320 and16/24/32 pass: equal widths, transparent label backgrounds, no old strips, no page overflow, no page errors. Desktop/mobile screenshots inspected internally. No gameplay changes.

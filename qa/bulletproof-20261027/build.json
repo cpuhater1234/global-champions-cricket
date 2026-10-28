@@ -1,0 +1,18 @@
+{
+  "baselineCommit": "4ee466683f822a6e942d63c99ea55406a87f6f90",
+  "baselineSha256": "696bdfea1a5d177d144a652316c0d39e1d34a1522df990ef32852e45e84d9097",
+  "sha256": "c7ba52edcbee16d66b8651362a61939cd6c0507382b6bea49f81b51869b1bafb",
+  "bytes": 8048239,
+  "editedScriptIndexes": [
+    10,
+    19
+  ],
+  "unchangedScripts": 18,
+  "patches": [
+    "v8/ui/controller.js",
+    "v8/ui/controller.js",
+    "v8/domain/save_validation.js",
+    "v8/engine/dynasty.js",
+    "v8/ui/controller.js"
+  ]
+}
