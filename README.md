@@ -1,8 +1,8 @@
 # Global Champions Cricket
 
-The current release is **GCC v86**: `game/gcc_v8_product_candidate.html` (identical to `game/gcc_v8_quiet_arcade.html`). This reconciles v84’s tested visual corrections, v85’s ground-condition fix and the later club-surface design edits. Source CSS and both standalone playables are synchronised. The title screen offers game actions only; backups remain under Menu.
+The current release is **GCC v87**: `game/gcc_v8_product_candidate.html` (identical to `game/gcc_v8_quiet_arcade.html`). Career backup has been removed from the game menu, and stadium photo captions no longer show a stadium icon. Normal automatic saving and Continue are preserved.
 
-Rebuild with `python qa/release-sync-20261028/build.py --promote` and validate with `python qa/release-sync-20261028/check_sync.py`. See [the release reconciliation](qa/release-sync-20261028/README.md) for exact hashes and native Chromium evidence. All 20 inline scripts are unchanged from v84, including simulation and persistence. Earlier audit builders reproduce historical releases and must not be used to promote the current release.
+Rebuild with `python qa/menu-cleanup-20261028/build.py --promote`. See [the targeted cleanup checks](qa/menu-cleanup-20261028/README.md). This is three exact presentation replacements on v86; cricket simulation and automatic persistence remain unchanged. The [v86 reconciliation](qa/release-sync-20261028/README.md) retains its original scope. Historical builders reproduce historical releases and must not promote the current release.
 
 The following section records the original protected baseline.
 
