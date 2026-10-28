@@ -1,8 +1,8 @@
 # Global Champions Cricket
 
-The current release is **GCC v89**: `game/gcc_v8_product_candidate.html` (identical to `game/gcc_v8_quiet_arcade.html`). Ten county teams now use their official2026 Vitality Blast identities across new and resumed careers. Club IDs, colours, grounds and cricket conditions are unchanged. The earlier colourful Breakaway Eight cards remain restored.
+The current release is **GCC v90**: `game/gcc_v8_product_candidate.html` (identical to `game/gcc_v8_quiet_arcade.html`). Home-ground conditions use three equal stacked rectangles with larger values, readable scale labels and clearer markers. Actual ground ratings are unchanged. The colourful club reveal and official Blast names remain.
 
-Rebuild with `python qa/blast-names-20261028/build.py --promote`. See [the identity checks and official sources](qa/blast-names-20261028/README.md).144county-guide cases and13paired seeded rounds pass with exact non-name career/score parity. Career backup remains absent from Menu; stadium photo captions remain icon-free. Historical builders reproduce historical releases and must not promote the current release.
+Rebuild with `python qa/ground-readability-20261028/build.py --promote`. See [the ground-readability checks](qa/ground-readability-20261028/README.md). All 20 inline scripts remain byte-identical to v89. All 432 ground/width/font cases pass. Historical builders reproduce historical releases and must not promote the current release.
 
 The following section records the original protected baseline.
 

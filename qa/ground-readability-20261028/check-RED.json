@@ -1,0 +1,40 @@
+{
+  "checks": [
+    {
+      "width": 320,
+      "font": 16,
+      "abbr": "CSK",
+      "rows": [
+        {
+          "x": 42,
+          "y": 788.375,
+          "w": 236,
+          "h": 64.765625
+        },
+        {
+          "x": 42,
+          "y": 860.328125,
+          "w": 236,
+          "h": 64.765625
+        },
+        {
+          "x": 42,
+          "y": 932.28125,
+          "w": 236,
+          "h": 88.078125
+        }
+      ],
+      "legend": false,
+      "marker": [
+        5,
+        5,
+        5
+      ],
+      "overflow": false,
+      "collision": false
+    }
+  ],
+  "errors": [],
+  "pass": false,
+  "failure": "Readings must be three equal stacked rectangles"
+}
