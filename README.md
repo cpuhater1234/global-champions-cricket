@@ -14,6 +14,8 @@ v99 rebuilds live playback around the score, chase equation, latest delivery and
 
 Validation: all 20 inline scripts pass syntax checks; 17 non-presentation scripts remain byte-identical to the saved v99 input. Native Chromium checks covered 84 screen/viewport cases, all 165 frames of an actual match, 12 enlarged-text live layouts, a complete foundation draft, quiet reload, Swap consistency and reduced motion. See the checkpoint for scope, limitations and the deterministic award formula.
 
+The v99 draft/selection patch fixes the dark guidance text, labels coverage as overlapping skills, displays both all-rounder jobs and exposes saved batting-order arrows. See [patch checks and matchday assessment](qa/draft-contrast-20261029/README.md). Matchday needs a structural redesign; the assessment records the regression rather than claiming its current appearance is finished.
+
 The following section records the original protected baseline.
 
 This repository starts from the protected **v7.0.14** GCC build and exists to make aggressive QA safer, not to redesign the game.

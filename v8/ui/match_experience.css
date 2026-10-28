@@ -43,3 +43,33 @@
 .gcc-broadcast .g8eyebrow{font-size:.72rem!important;letter-spacing:.07em!important;color:#e5e9ed!important}
 #g8stage .g8heading{background:#303945!important;border:2px solid #080c10!important;border-left:6px solid #b52336!important;color:#fff!important}
 .gcc-worm svg text{font-size:11px!important}
+
+
+/* Dark rule-note panels own their text colours, including nested headings. */
+#g8stage .g8rulenote,#g8stage .g8rulenote strong,#g8stage .g8rulenote p{color:#f4f6fa}
+#g8stage .g8pickedroles{display:grid;grid-template-columns:1fr;gap:7px;margin:16px 0;padding:12px;background:#1c232c;border:2px solid #080c10;border-radius:5px}
+#g8stage .g8coveragecaption{margin:0 0 4px;color:#d9e0e8;font-size:.75rem;line-height:1.5}
+#g8stage .g8pickedrole{display:grid;grid-template-columns:24px minmax(0,1fr) auto;align-items:center;gap:8px;min-height:42px;margin:0;padding:9px 11px;border:2px solid #080c10;border-radius:3px;background:#244c77;color:#fff;box-shadow:none;transform:none;min-width:0}
+#g8stage .g8pickedrole:before,#g8stage .g8pickedrole:after{display:none}
+#g8stage .g8pickedrole :is(span,strong){color:#fff;opacity:1;font-size:.78rem;line-height:1.35;letter-spacing:0;text-transform:none}
+#g8stage .g8pickedrole strong{white-space:nowrap;font-weight:600;font-size:.7rem}
+#g8stage .g8pickedrole .g8coveragetick{display:grid;place-items:center;width:22px;height:22px;background:#fff;color:#173e2d;border:1px solid #080c10;border-radius:50%;font-weight:900;font-size:.85rem}
+#g8stage .g8pickedrole-finisher{background:#8c3249}
+#g8stage .g8pickedrole-keeper{background:#146047}
+#g8stage .g8pickedrole-allrounder{background:#854016}
+#g8stage .g8pickedrole-pace,#g8stage .g8pickedrole-spin{background:#56367d}
+#g8stage .g8xiactions{display:flex;flex-direction:column;gap:5px;align-items:stretch;width:4.8rem}
+#g8stage .g8orderarrows{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+#g8stage .g8orderarrows button.g8button{min-width:0;width:100%;min-height:36px;padding:4px!important;line-height:1;font-size:1.1rem;background:#303945;border:2px solid #080c10;color:#fff;box-shadow:none}
+#g8stage .g8orderarrows button:disabled{opacity:.35}
+#g8stage .g8pickedrole{grid-template-columns:24px minmax(0,1fr);row-gap:1px}
+#g8stage .g8pickedrole .g8coveragetick{grid-row:1/3}
+#g8stage .g8pickedrole strong{grid-column:2;white-space:normal}
+#g8stage .g8pickedrole span:not(.g8coveragetick){overflow-wrap:anywhere;min-width:0}
+#g8stage .g8compactwork .g8slot{grid-template-columns:1.5rem minmax(0,1fr) 4.8rem;gap:.5rem}
+#g8stage .g8compactwork .g8slot .g8namescout{min-width:0;width:100%;overflow-wrap:anywhere}
+@media(max-width:480px){#g8stage .g8compactwork .g8slot{grid-template-columns:1.3rem minmax(0,1fr)}#g8stage .g8xiactions{grid-column:2;flex-direction:row;align-items:center;justify-content:space-between;width:100%;flex-wrap:wrap}#g8stage .g8orderarrows{width:4.8rem}}
+#g8stage .g8pickedrole span:not(.g8coveragetick){white-space:normal}
+#g8stage .g8pickedrole .g8coveragetick{font-size:14px;line-height:1}
+#g8stage .g8pickedrole span:not(.g8coveragetick){white-space:normal}
+#g8stage .g8pickedrole .g8coveragetick{font-size:14px;line-height:1}
