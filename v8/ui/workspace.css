@@ -1,148 +1,58 @@
-/* Modern arcade: quiet field, single decision, premium legibility */
-:root{
-  --navy:#10100f;
-  --forest:#191b19;
-  --paper:#202220;
-  --ink:#f1f5fa;
-  --muted:#b5b9b2;
-  --line:#41433f;
-  --gold:#b6cda0;
-  --cyan:#b7bbb3;
-  --green:#7ed4ad;
-  --red:#ffaaa8;
-  --orange:#efbd77;
-  --panel:#232523;
-  --panel-2:#1d1f1d;
-  --panel-3:#2a2c29;
-  --display:"Georgia","Times New Roman",serif;
-  --sans:Inter,"Segoe UI",system-ui,-apple-system,BlinkMacSystemFont,"Arial",sans-serif;
-  --shadow:0 12px 30px rgba(7,10,8,.18);
-  --radius:12px;
-}
+/* Precision pass: flatten all nested club surfaces, reduce visual stacking, and keep the premium dark system readable. */
 
-#g8app,
-#g8app *{box-sizing:border-box;font-family:var(--sans)}
-#g8app h1,#g8app h2,#g8app h3,#g8app h4,#g8app .g8eyebrow,#g8app .g8brand,#g8app .g8badge,#g8app .g8score strong{font-family:var(--display)}
-#g8app h1,#g8app h2,#g8app h3,#g8app h4{letter-spacing:-.04em;line-height:1.08;margin:0}
-#g8app p,#g8app small,#g8app label,#g8app summary,#g8app span,#g8app button,#g8app input,#g8app select{line-height:1.45}
-#g8app{background:radial-gradient(ellipse at 90% 0,#2d2f2c66,transparent 48%),var(--navy);color:var(--ink)}
+/* Club surfaces: one all-in-one card, no internal nested boxes competing for attention. */
+.g8club.g8franchise,
+.g8club.g8franchise .g8clubbody,
+.g8club.g8franchise .g8clubground,
+.g8club.g8franchise .g8clubticket,
+.g8club.g8franchise .g8groundbands,
+.g8club.g8franchise .g8clubbrief,
+.g8club.g8franchise .g8sheet,
+.g8club.g8franchise .g8clubplan,
+.g8club.g8franchise .g8clubpriorities,
+.g8club.g8franchise > *{min-width:0}
+.g8club.g8franchise .g8sheet{background:transparent;border:0;padding:0;box-shadow:none;border-radius:0}
+.g8club.g8franchise .g8clubbody{display:flex;flex-direction:column;gap:.75rem}
+.g8club.g8franchise .g8clubground{display:flex;flex-direction:column;gap:.55rem}
+.g8club.g8franchise .g8groundbands{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem;margin-top:.1rem}
+.g8club.g8franchise .g8groundbands>div{padding:.7rem .8rem;border:1px solid #4d514c;border-radius:8px;background:#1d1f1d;min-width:0}
+.g8club.g8franchise .g8groundbands strong,
+.g8club.g8franchise .g8groundbands b{display:block;overflow-wrap:anywhere}
+.g8club.g8franchise .g8groundbands small{display:block;line-height:1.45}
+.g8club.g8franchise .g8clubpriorities{display:grid;gap:.55rem;padding:0;margin:0;list-style:none}
+.g8club.g8franchise .g8clubpriorities li{padding:.7rem .8rem;border:1px solid #4d514c;border-radius:8px;background:#1d1f1d;min-width:0;display:flex;align-items:flex-start;gap:.6rem}
+.g8club.g8franchise .g8prioritynumber{display:inline-grid;place-items:center;min-width:1.8rem;height:1.8rem;border-radius:999px;background:#2d5a46;color:#edf7f2;font-size:.75rem;font-weight:800}
+.g8club.g8franchise .g8prioritylabel{color:#d9dfd5;font-size:.95rem;line-height:1.4}
 
-#g8stage{max-width:1360px;padding:2rem 3vw 4rem;min-height:calc(100vh - 96px)}
-#g8hud{background:linear-gradient(110deg,#262825f5,#191b19f5 65%,#2b2d2af5);border-bottom:1px solid #61655f;box-shadow:0 3px 0 rgba(200,250,73,.05),0 10px 30px rgba(6,6,6,.4);min-height:80px;padding:1rem 3vw;gap:1rem 2rem;flex-wrap:wrap}
-#g8hud .g8brand{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;width:max-content;min-width:max-content;height:auto;min-height:44px;padding:.5rem .65rem;white-space:nowrap;border:1px solid #b6cda0;background:var(--gold);color:#111;border-radius:6px;box-shadow:none}
-#g8hud>.g8headerslogan{margin:0;padding:.35rem 1rem;border-left:2px solid #b6cda0;color:#dbdfd6;font-size:1rem;font-weight:700;line-height:1.6;letter-spacing:.07em;flex:0 1 290px;text-align:left;min-width:0;overflow-wrap:normal}
-#g8hud>.g8headerslogan>span{display:block;color:#b6cda0;white-space:normal}
-#g8hud .g8careernav{display:flex;flex:1 0 100%;gap:.6rem;flex-wrap:wrap;width:100%;border-top:1px solid #323431;margin:0;padding:.5rem 0 0}
-#g8hud .g8hudclub{flex:1 1 260px;gap:.85rem;min-width:0}
-#g8hud .g8hudclub>div{min-width:0}
-#g8hud .g8hudclub strong{display:block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-#g8hud .g8hudclub small{color:#a4a8a1}
+/* Tighten all reveal-grid and choice surfaces so they remain one coherent decision, not a stack of little panels. */
+.g8revealgrid,
+.g8clubgrid,
+.g8ordergrid,
+.g8matchgrid,
+.g8teamworkspace,
+.g8annualworkspace{gap:1rem}
+.g8revealgrid > .g8club,
+.g8revealgrid > .g8sealed,
+.g8ordergrid > .g8club,
+.g8ordergrid > .g8sealed{min-height:0;padding:1rem}
+.g8revealgrid > .g8club .g8clubbody,
+.g8ordergrid > .g8club .g8clubbody{gap:.55rem}
 
-.g8button{border:1px solid #4f534e;border-radius:7px;background:#313330;color:#eff5fb;box-shadow:none;letter-spacing:0;min-height:44px;padding:.7rem 1rem;font-size:1rem;font-weight:700;line-height:1.3;max-width:100%;white-space:normal}
-.g8button:hover:enabled{background:#286347;border-color:#92948f;box-shadow:none;transform:none}
-.g8button:active:enabled{transform:none;background:#4b4f4a}
-.g8button:disabled{opacity:.4;box-shadow:none}
-.g8primary{background:#2d5a46;border-color:#83a793;color:#f0f7f2;min-height:48px;box-shadow:0 3px 0 #071610}
-.g8ghost{background:transparent;border-color:#4e524d;color:#ebefe6;box-shadow:none}
-.g8button:focus-visible,summary:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
-.g8button>span{min-width:0;white-space:normal;overflow-wrap:anywhere}
+/* Prevent duplicate surfaces from appearing inside HUD and top menu. */
+#g8hud .g8hudclub>div,
+#g8hud .g8button,
+#g8hud .g8navitem{max-width:100%}
+#g8hud .g8careernav{padding-top:.55rem}
 
-.g8eyebrow{font-size:.9rem;color:#c4c8c0;letter-spacing:.08em;font-weight:700;margin:0 0 .75rem;line-height:1.4;text-transform:uppercase}
-.g8sheet,.g8player,.g8club,.g8welcomepanel,.g8introbrief,.g8careerlaunch,.g8heading{background:var(--panel);color:var(--ink);border:1px solid #383a37;border-radius:var(--radius);border-top-width:1px;box-shadow:none;padding:1.25rem;min-width:0;color-scheme:dark}
-.g8sheet h2{font-size:1.25rem;font-style:normal;letter-spacing:-.02em;text-transform:none;font-weight:700}
-.g8sheet p{color:var(--muted)}
-.g8heading{padding:1.25rem 1.5rem;border-left:4px solid #b7bbb3;align-items:center;background:#232523;border-color:#4d514c;border-radius:12px;box-shadow:var(--shadow)}
-.g8heading>div:first-child{min-width:0;max-width:100%}
-.g8heading h1{margin-top:0;line-height:1.15;overflow-wrap:anywhere}
-.g8heading p{margin-bottom:0;max-width:65ch;line-height:1.5;color:#cacec6}
-
-.g8badge{border-width:2px;border-color:#e0e4db;border-radius:7px 7px 17px 17px;box-shadow:none;font-weight:900;font-size:1.15rem;width:64px;height:72px;display:grid;place-items:center}
-.g8rowrating,.g8rating{color:#f4f8fc;background:#383a37;border:0;border-radius:5px;box-shadow:none;font-family:Arial,Helvetica,sans-serif;font-style:normal;font-weight:700;line-height:1.2;font-size:1rem;padding:.25rem .45rem}
-
-/* Remove floating artwork from intro/hero surfaces. */
-.g8panelart,.g8introbrief>.g8introart,.g8heading>.g8panelart,.g8referencearena,.g8heroart .g8arenaheader,.g8heroart .g8homestadium>figcaption,.g8introbrief>.g8introart>.g8icon,.g8welcomepanel>.g8panelart{display:none!important}
-.g8welcomepanel,.g8introbrief,.g8careerlaunch,.g8heading{position:relative;isolation:isolate;overflow:hidden;box-shadow:var(--shadow)}
-.g8welcomepanel>*,.g8introbrief>*,.g8heading>*{position:relative;z-index:1}
-.g8welcomepanel>.g8heroformat{justify-content:center;text-align:center}
-.g8introbrief{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}.g8introcopy{flex:1 1 300px;min-width:0;padding-right:0}.g8introcopy>h1{margin-top:0;line-height:1.2;overflow-wrap:normal;word-break:normal}
-
-/* Club selection: one clean card body, no stacked padding boxes */
-.g8clubgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
-.g8clubchooser .g8franchise,
-.g8clubbrief,
-.g8clubplan{display:flex;flex-direction:column;gap:.9rem;min-width:0}
-.g8clubchooser .g8franchise{
-  position:relative;display:grid;grid-template-columns:56px minmax(0,1fr);align-items:start;gap:.8rem;padding:1rem;border:1px solid #4c504b;border-radius:12px;background:#1f211f;box-shadow:none;overflow:hidden
-}
-.g8clubchooser .g8franchise.selected{box-shadow:0 0 0 1px rgba(182,205,160,.8),0 10px 24px rgba(0,0,0,.14);border-color:#b6cda0}
-.g8clubchooser .g8clubcover,.g8clubbrief .g8clubcover{display:flex;align-items:flex-start;gap:.7rem;min-width:0}
-.g8clubchooser .g8badge,.g8clubbrief .g8badge{width:52px;min-width:52px;height:58px;font-size:1rem;border-width:2px;border-radius:7px 7px 15px 15px}
-.g8clubchooser .g8clubbody,.g8clubbrief .g8clubbody,.g8clubbrief>.g8sheet{display:flex;flex-direction:column;gap:.75rem;min-width:0}
-.g8clubchooser .g8clubticket,.g8clubbrief .g8clubticket{display:flex;flex-direction:column;gap:.45rem;min-width:0;flex:1 1 auto}
-.g8clubchooser .g8clubticket>span,
-.g8clubbrief .g8clubticket>span,
-.g8clubchooser .g8clubticket>small,
-.g8clubbrief .g8clubticket>small,
-.g8clubchooser .g8clublocation,
-.g8clubbrief .g8clublocation,
-.g8clubchooser .g8clubground p,
-.g8clubbrief .g8clubground p{overflow-wrap:anywhere;white-space:normal}
-.g8clubchooser .g8groundbands,
-.g8clubbrief .g8groundbands,
-.g8clubplan .g8groundbands{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem;align-items:stretch;margin-top:.1rem}
-.g8clubchooser .g8groundbands>.g8conditionread,
-.g8clubbrief .g8groundbands>.g8conditionread,
-.g8clubplan .g8groundbands>.g8conditionread{display:flex;flex-direction:column;gap:.4rem;padding:.7rem .8rem;border:1px solid #4d514c;border-radius:8px;background:#1d1f1d;min-width:0}
-.g8clubchooser .g8conditionread b,
-.g8clubbrief .g8conditionread b,
-.g8clubplan .g8conditionread b,
-.g8clubchooser .g8conditionread strong,
-.g8clubbrief .g8conditionread strong,
-.g8clubplan .g8conditionread strong{display:block;overflow-wrap:anywhere;word-break:normal}
-.g8clubchooser .g8conditionread small,
-.g8clubbrief .g8conditionread small,
-.g8clubplan .g8conditionread small{display:block;line-height:1.45}
-.g8clubchooser .g8clubcardaction,.g8clubbrief .g8clubcardaction{margin-left:auto;align-self:flex-start}
-.g8clubbrief>.g8sheet{margin:0;padding:1rem;background:#232523;border:1px solid #4d514c;border-radius:10px}
-.g8clubbrief .g8sheet h3{margin:0}
-.g8club.g8franchise,.g8clubbody h3{color:#f0f6fb;line-height:1.3}
-.g8club p,.g8clublocation,.g8clubground p{color:#c9cdc5}
-
-/* Prevent overlap on narrow screens */
+/* Final mobile compactness: keep each card readable without internal overlap. */
 @media(max-width:760px){
-  #g8stage{padding:1.3rem 1rem 2.5rem}
-  #g8hud{padding:.8rem 1rem;gap:.65rem}
-  #g8hud>.g8hudclub{flex:1 1 0;gap:.5rem}
-  #g8hud>.g8headerslogan{order:3;flex:1 0 100%;padding:.5rem 0 0;border-left:0;border-top:1px solid #50544f;font-size:1rem;text-align:center;letter-spacing:.04em}
-  .g8clubchooser .g8franchise{grid-template-columns:max-content minmax(0,1fr);position:relative;gap:.7rem}
-  .g8clubchooser .g8clubbody{padding-right:42px}
-  .g8clubchooser .g8clubcardaction{position:absolute;right:.6rem;top:.6rem;margin:0}
-  .g8clubchooser .g8groundbands,.g8clubbrief .g8groundbands,.g8clubplan .g8groundbands{grid-template-columns:1fr}
+  .g8club.g8franchise .g8groundbands{grid-template-columns:1fr}
+  .g8club.g8franchise .g8clubpriorities li{padding:.65rem .7rem}
+  .g8club.g8franchise .g8clubticket h3,.g8club.g8franchise .g8clubticket b,.g8club.g8franchise .g8clubticket span{overflow-wrap:anywhere}
 }
-
-/* Premium readability for the main content surfaces */
-#g8app :is(p,small,label,summary,h1,h2,h3,h4,.g8eyebrow){min-width:0;overflow-wrap:anywhere}
-#g8app .g8story p,#g8app .g8careerintro>p,#g8app .g8featurestory>p,#g8app .g8featurestory section>p{max-width:65ch}
-.g8hero{gap:3rem;min-height:65vh}
-.g8hero>div:first-child{container-type:inline-size;min-width:0}
-.g8hero h1{font-weight:900;font-style:italic;font-size:min(13cqi,5.8rem);letter-spacing:-.055em;line-height:1}
-.g8story{border:0;background:none;box-shadow:none;border-radius:0;max-width:760px;padding:2rem 0}.g8story h1{font-style:italic}.g8story p{color:#c1c5bd;margin:1.2rem 0;max-width:65ch}
-
-/* Final visual cleanup: keep the UI purposeful, not decorative */
-.g8heroart .g8homestadium>.g8venueframe,.g8heroart .g8homestadium .g8stadiumphoto{position:relative!important;inset:auto!important;width:100%;height:auto;aspect-ratio:16/10}
-.g8heroart .g8homestadium>figcaption{display:none!important}
-.g8club.g8franchise,.g8sheet,.g8player{box-shadow:none}
-.g8club.g8franchise{background:#202220;border:1px solid #474945;border-radius:12px;min-height:0}
-
-/* Make the recruitment/draft surfaces feel premium and controlled */
-.g8draftboard>.g8search{padding:.85rem;margin:.75rem 0 1rem;background:#292b28;border:1px solid #747871;border-top:3px solid #cbcfc7;border-radius:8px;gap:.75rem}
-.g8draftboard>.g8search label{color:#e3e7de;font-weight:600}
-.g8draftboard>.g8search :is(input,select){background:#191b19;border-color:#7b8179;color:#eef5fa}
-.g8clock{background:#302d24;border:1px solid #9b8759;border-left:3px solid #f1d27e;border-radius:10px;box-shadow:none;padding:1rem 1.3rem;min-height:0;gap:1rem;margin-bottom:1.5rem}
-.g8clock .g8eyebrow{color:#f1d27e}.g8clock h2{color:#fff5d9}
 
 @media(max-width:480px){
-  .g8clubgrid{grid-template-columns:1fr}
-  .g8clubchooser .g8franchise{grid-template-columns:1fr;gap:.6rem}
-  .g8clubchooser .g8clubcardaction{position:static;margin:0;justify-self:start}
+  .g8club.g8franchise{padding:.8rem}
+  .g8club.g8franchise .g8clubcover{display:grid;grid-template-columns:52px 1fr;align-items:start;gap:.65rem}
+  .g8club.g8franchise .g8badge{justify-self:start}
 }
