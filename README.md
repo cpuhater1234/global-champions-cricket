@@ -1,8 +1,18 @@
 # Global Champions Cricket
 
-This repository starts from the protected **v7.0.14** GCC build and exists to make aggressive QA safer, not to redesign the game.
+## Current game — start here
 
-## Protected baseline
+- **Current active branch:** [`work/v8-game-first-rebuild`](https://github.com/cpuhater1234/global-champions-cricket/tree/work/v8-game-first-rebuild)
+- **Current playable version:** **GCC v97**
+- **Current playable build:** [`game/gcc_v8_product_candidate.html`](https://github.com/cpuhater1234/global-champions-cricket/blob/work/v8-game-first-rebuild/game/gcc_v8_product_candidate.html)
+- **Current release notes and QA:** [v97 checkpoint](https://github.com/cpuhater1234/global-champions-cricket/blob/work/v8-game-first-rebuild/qa/draft-refinement-20261028/README.md)
+- **Protected historical baseline:** **v7.0.14 — frozen, read-only reference**
+
+**Do not use the protected v7.0.14 baseline as the source of truth for current work.** Start from the active branch above. The default branch's historical game files do not represent the current playable; documentation updates here do not promote or revert game code.
+
+The sections below document the original protected **v7.0.14** checkpoint. They are historical reference and preservation instructions, not the current game specification.
+
+## Protected historical baseline
 
 - File: `game/global_champions_cricket_v7_0_14_mobile_interaction_hardened.html`
 - Canonical local SHA-256: `04072e8bb361cf3fc7259f058ab22ced7b6da6aa9ec8bf28f457e003e6cf0ac4`
