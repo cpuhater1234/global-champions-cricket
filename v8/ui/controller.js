@@ -43,13 +43,13 @@
   window.GCC8_applyClubNames(s);
   const active=document.activeElement,id=active?.id,within=stage.contains(active),focusAction=active?.dataset?.action,focusArgs=active?.dataset?.args,focusInHud=hud.contains(active),start=active?.selectionStart,end=active?.selectionEnd,x=window.scrollX,y=window.scrollY;
   const wire=document.getElementById('g8wire'),wireScroll=wire?.scrollTop||0,wireAnchor=X.scrollAnchor(wire);
-  const sealedKeys=new Set([...stage.querySelectorAll('.g8revealgrid>.g8sealed[data-key]')].map(e=>e.dataset.key));
+  const sealedKeys=new Set([...stage.querySelectorAll('.g8revealgrid>.g8sealed[data-key],.g8revealgrid>.g8orderhidden[data-key]')].map(e=>e.dataset.key));
   const body=views[ui.view]();
   document.documentElement.style.setProperty('--club-accent',s.userClub?.c||'#91aa82');
   document.documentElement.style.setProperty('--club-ink',X.clubInk(s.userClub));
   stage.dataset.view=ui.view;
   X.patch(stage,body);X.accessibleTables(stage);
-  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches)for(const card of stage.querySelectorAll('.g8revealgrid>[data-key]:not(.g8sealed)'))if(sealedKeys.has(card.dataset.key))card.animate([{opacity:0,transform:'translateY(6px)'},{opacity:1,transform:'translateY(0)'}],{duration:260,easing:'cubic-bezier(.2,.7,.3,1)'});
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches)for(const card of stage.querySelectorAll('.g8revealgrid>[data-key]:not(.g8sealed):not(.g8orderhidden)'))if(sealedKeys.has(card.dataset.key))card.classList.contains('g8ordercard')?card.animate([{opacity:.15,clipPath:'inset(0 100% 0 0)'},{opacity:1,clipPath:'inset(0 0 0 0)'}],{duration:480,easing:'cubic-bezier(.2,.7,.3,1)'}):card.animate([{opacity:0,transform:'translateY(6px)'},{opacity:1,transform:'translateY(0)'}],{duration:260,easing:'cubic-bezier(.2,.7,.3,1)'});
   X.patch(hud,`<div class="g8hudclub"><button type="button" class="g8brand" data-action="home" data-args="[]" aria-label="Global Champions Cricket home">${X.icon('cricket')}GCC</button>${s.userClub?`${badge(s.userClub)}<div><strong>${esc(s.userClub.name)}</strong><small>${s.year} · ${['matchReveal','result'].includes(ui.view)?(ui.result?.round?'Round '+ui.result.round:'Finals'):s.dynasty?.offseason?'Offseason':s.finals&&s.finals.stage!=='done'?'Finals':s.fullSchedule.length?(s.round===14?'Season complete':'Round '+(s.round+1)):s.year===2008?'Foundation':'Preseason'}</small></div>`:''}</div><p class="g8headerslogan">BUILD YOUR XI. <span>LEAVE A LEGACY.</span></p><nav aria-label="Game menu"><details class="g8utilitymenu"><summary>Menu</summary><div>${s.userClub?btn('Club archive','archive',[],'g8ghost g8small',!s.dynasty?.history?.length):''}${btn('How to play','how',[],'g8ghost g8small')}${btn('How it works','howItWorks',[],'g8ghost g8small')}${btn('The breakaway story','breakawayStory',[],'g8ghost g8small')}</div></details></nav>${X.careerNavigation()}${saveStatus()}`);
   if(changed){stage.focus({preventScroll:true});window.scrollTo({top:0,left:0,behavior:'instant'});}
   else{

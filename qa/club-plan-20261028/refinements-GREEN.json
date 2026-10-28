@@ -1,0 +1,116 @@
+{
+  "checks": [
+    {
+      "semantic": {
+        "signed": [
+          19,
+          112,
+          63
+        ],
+        "declined": [
+          152,
+          40,
+          71
+        ]
+      }
+    },
+    {
+      "reveal": {
+        "count": 1,
+        "duration": 480,
+        "before": [
+          83.1875,
+          522.109375,
+          630.40625,
+          112
+        ],
+        "after": [
+          83.1875,
+          522.109375,
+          630.40625,
+          112
+        ],
+        "same": true,
+        "snake": "grid",
+        "gap": 16
+      }
+    },
+    {
+      "width": 320,
+      "font": 16,
+      "cards": 12,
+      "maxAlignmentOffset": 0
+    },
+    {
+      "width": 320,
+      "font": 24,
+      "cards": 12,
+      "maxAlignmentOffset": 0
+    },
+    {
+      "width": 320,
+      "font": 32,
+      "cards": 12,
+      "maxAlignmentOffset": 0
+    },
+    {
+      "width": 390,
+      "font": 16,
+      "cards": 12,
+      "maxAlignmentOffset": 0
+    },
+    {
+      "width": 390,
+      "font": 24,
+      "cards": 12,
+      "maxAlignmentOffset": 0
+    },
+    {
+      "width": 390,
+      "font": 32,
+      "cards": 12,
+      "maxAlignmentOffset": 0
+    },
+    {
+      "width": 768,
+      "font": 16,
+      "cards": 12,
+      "maxAlignmentOffset": 0
+    },
+    {
+      "width": 768,
+      "font": 24,
+      "cards": 12,
+      "maxAlignmentOffset": 0
+    },
+    {
+      "width": 768,
+      "font": 32,
+      "cards": 12,
+      "maxAlignmentOffset": 0
+    },
+    {
+      "width": 1440,
+      "font": 16,
+      "cards": 12,
+      "maxAlignmentOffset": 0
+    },
+    {
+      "width": 1440,
+      "font": 24,
+      "cards": 12,
+      "maxAlignmentOffset": 0
+    },
+    {
+      "width": 1440,
+      "font": 32,
+      "cards": 12,
+      "maxAlignmentOffset": 0
+    },
+    {
+      "pointerPick": true
+    }
+  ],
+  "errors": [],
+  "pass": true
+}

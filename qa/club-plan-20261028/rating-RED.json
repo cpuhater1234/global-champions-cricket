@@ -1,0 +1,42 @@
+{
+  "checks": [
+    {
+      "semantic": {
+        "signed": [
+          19,
+          112,
+          63
+        ],
+        "declined": [
+          152,
+          40,
+          71
+        ]
+      }
+    },
+    {
+      "reveal": {
+        "count": 1,
+        "duration": 480,
+        "before": [
+          83.1875,
+          522.109375,
+          630.40625,
+          112
+        ],
+        "after": [
+          83.1875,
+          522.109375,
+          630.40625,
+          112
+        ],
+        "same": true,
+        "snake": "grid",
+        "gap": 16
+      }
+    }
+  ],
+  "errors": [],
+  "pass": false,
+  "failure": "AssertionError [ERR_ASSERTION]: Overall rating wraps\n    at /workspace/scratch/f98cc1f6c0bf/gcc/qa/club-plan-20261028/refinements.cjs:1:3879"
+}

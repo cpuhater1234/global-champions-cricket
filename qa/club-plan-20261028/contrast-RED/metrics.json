@@ -1,0 +1,1554 @@
+{
+  "sha": "caa5f46cdd1ddb438a4864a59a43ec964eaf0564dc55034afa1e2c1042cc9b46",
+  "screens": [
+    {
+      "name": "home",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 103,
+      "overflow": [],
+      "contrast": {
+        "samples": 24,
+        "failures": []
+      }
+    },
+    {
+      "name": "home",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 151.765625,
+      "overflow": [],
+      "contrast": {
+        "samples": 24,
+        "failures": []
+      }
+    },
+    {
+      "name": "home",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 67.78125,
+      "overflow": [],
+      "contrast": {
+        "samples": 22,
+        "failures": []
+      }
+    },
+    {
+      "name": "home",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 67.78125,
+      "overflow": [],
+      "contrast": {
+        "samples": 22,
+        "failures": []
+      }
+    },
+    {
+      "name": "story",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 103,
+      "overflow": [],
+      "contrast": {
+        "samples": 24,
+        "failures": []
+      }
+    },
+    {
+      "name": "story",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 151.765625,
+      "overflow": [],
+      "contrast": {
+        "samples": 24,
+        "failures": []
+      }
+    },
+    {
+      "name": "story",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 67.78125,
+      "overflow": [],
+      "contrast": {
+        "samples": 22,
+        "failures": []
+      }
+    },
+    {
+      "name": "story",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 67.78125,
+      "overflow": [],
+      "contrast": {
+        "samples": 22,
+        "failures": []
+      }
+    },
+    {
+      "name": "league",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 103,
+      "overflow": [],
+      "contrast": {
+        "samples": 76,
+        "failures": []
+      }
+    },
+    {
+      "name": "league",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 151.765625,
+      "overflow": [],
+      "contrast": {
+        "samples": 76,
+        "failures": []
+      }
+    },
+    {
+      "name": "league",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 67.78125,
+      "overflow": [],
+      "contrast": {
+        "samples": 74,
+        "failures": []
+      }
+    },
+    {
+      "name": "league",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 67.78125,
+      "overflow": [],
+      "contrast": {
+        "samples": 74,
+        "failures": []
+      }
+    },
+    {
+      "name": "clubs",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 103,
+      "overflow": [],
+      "contrast": {
+        "samples": 74,
+        "failures": [
+          {
+            "tag": "P",
+            "cls": "",
+            "text": "Open a club to see its ground and take over.",
+            "color": "rgb(41, 54, 92)",
+            "bg": [
+              23,
+              55,
+              120
+            ],
+            "ratio": 1.04,
+            "minimum": 4.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "clubs",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 151.765625,
+      "overflow": [],
+      "contrast": {
+        "samples": 74,
+        "failures": [
+          {
+            "tag": "P",
+            "cls": "",
+            "text": "Open a club to see its ground and take over.",
+            "color": "rgb(41, 54, 92)",
+            "bg": [
+              23,
+              55,
+              120
+            ],
+            "ratio": 1.04,
+            "minimum": 4.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "clubs",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 67.78125,
+      "overflow": [],
+      "contrast": {
+        "samples": 40,
+        "failures": [
+          {
+            "tag": "P",
+            "cls": "",
+            "text": "Open a club to see its ground and take over.",
+            "color": "rgb(41, 54, 92)",
+            "bg": [
+              23,
+              55,
+              120
+            ],
+            "ratio": 1.04,
+            "minimum": 4.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "clubs",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 67.78125,
+      "overflow": [],
+      "contrast": {
+        "samples": 40,
+        "failures": [
+          {
+            "tag": "P",
+            "cls": "",
+            "text": "Open a club to see its ground and take over.",
+            "color": "rgb(41, 54, 92)",
+            "bg": [
+              23,
+              55,
+              120
+            ],
+            "ratio": 1.04,
+            "minimum": 4.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "club-guide",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 103,
+      "overflow": [],
+      "contrast": {
+        "samples": 109,
+        "failures": [
+          {
+            "tag": "P",
+            "cls": "",
+            "text": "Open a club to see its ground and take over.",
+            "color": "rgb(41, 54, 92)",
+            "bg": [
+              23,
+              55,
+              120
+            ],
+            "ratio": 1.04,
+            "minimum": 4.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "club-guide",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 151.765625,
+      "overflow": [],
+      "contrast": {
+        "samples": 109,
+        "failures": [
+          {
+            "tag": "P",
+            "cls": "",
+            "text": "Open a club to see its ground and take over.",
+            "color": "rgb(41, 54, 92)",
+            "bg": [
+              23,
+              55,
+              120
+            ],
+            "ratio": 1.04,
+            "minimum": 4.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "club-guide",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 67.78125,
+      "overflow": [],
+      "contrast": {
+        "samples": 75,
+        "failures": [
+          {
+            "tag": "P",
+            "cls": "",
+            "text": "Open a club to see its ground and take over.",
+            "color": "rgb(41, 54, 92)",
+            "bg": [
+              23,
+              55,
+              120
+            ],
+            "ratio": 1.04,
+            "minimum": 4.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "club-guide",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 67.78125,
+      "overflow": [],
+      "contrast": {
+        "samples": 75,
+        "failures": [
+          {
+            "tag": "P",
+            "cls": "",
+            "text": "Open a club to see its ground and take over.",
+            "color": "rgb(41, 54, 92)",
+            "bg": [
+              23,
+              55,
+              120
+            ],
+            "ratio": 1.04,
+            "minimum": 4.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "signings",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 103,
+      "overflow": [],
+      "contrast": {
+        "samples": 34,
+        "failures": [
+          {
+            "tag": "P",
+            "cls": "",
+            "text": "Five days to shape the player pool",
+            "color": "rgb(41, 54, 92)",
+            "bg": [
+              23,
+              55,
+              120
+            ],
+            "ratio": 1.04,
+            "minimum": 4.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "signings",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 186.15625,
+      "overflow": [],
+      "contrast": {
+        "samples": 33,
+        "failures": [
+          {
+            "tag": "P",
+            "cls": "",
+            "text": "Five days to shape the player pool",
+            "color": "rgb(41, 54, 92)",
+            "bg": [
+              23,
+              55,
+              120
+            ],
+            "ratio": 1.04,
+            "minimum": 4.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "signings",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 102.171875,
+      "overflow": [],
+      "contrast": {
+        "samples": 31,
+        "failures": [
+          {
+            "tag": "P",
+            "cls": "",
+            "text": "Five days to shape the player pool",
+            "color": "rgb(41, 54, 92)",
+            "bg": [
+              23,
+              55,
+              120
+            ],
+            "ratio": 1.04,
+            "minimum": 4.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "signings",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 126.171875,
+      "overflow": [],
+      "contrast": {
+        "samples": 31,
+        "failures": [
+          {
+            "tag": "P",
+            "cls": "",
+            "text": "Five days to shape the player pool",
+            "color": "rgb(41, 54, 92)",
+            "bg": [
+              23,
+              55,
+              120
+            ],
+            "ratio": 1.04,
+            "minimum": 4.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "draft",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 103,
+      "overflow": [],
+      "contrast": {
+        "samples": 207,
+        "failures": []
+      }
+    },
+    {
+      "name": "draft",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 186.15625,
+      "overflow": [],
+      "contrast": {
+        "samples": 207,
+        "failures": []
+      }
+    },
+    {
+      "name": "draft",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 102.171875,
+      "overflow": [],
+      "contrast": {
+        "samples": 215,
+        "failures": []
+      }
+    },
+    {
+      "name": "draft",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 126.171875,
+      "overflow": [],
+      "contrast": {
+        "samples": 215,
+        "failures": []
+      }
+    },
+    {
+      "name": "season",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 173.96875,
+      "overflow": [],
+      "contrast": {
+        "samples": 76,
+        "failures": []
+      }
+    },
+    {
+      "name": "season",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 251.515625,
+      "overflow": [],
+      "contrast": {
+        "samples": 75,
+        "failures": []
+      }
+    },
+    {
+      "name": "season",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 166.359375,
+      "overflow": [],
+      "contrast": {
+        "samples": 73,
+        "failures": []
+      }
+    },
+    {
+      "name": "season",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 190.359375,
+      "overflow": [],
+      "contrast": {
+        "samples": 73,
+        "failures": []
+      }
+    },
+    {
+      "name": "season-ladder",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 173.96875,
+      "overflow": [],
+      "contrast": {
+        "samples": 81,
+        "failures": []
+      }
+    },
+    {
+      "name": "season-ladder",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 251.515625,
+      "overflow": [],
+      "contrast": {
+        "samples": 80,
+        "failures": []
+      }
+    },
+    {
+      "name": "season-ladder",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 166.359375,
+      "overflow": [],
+      "contrast": {
+        "samples": 78,
+        "failures": []
+      }
+    },
+    {
+      "name": "season-ladder",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 190.359375,
+      "overflow": [],
+      "contrast": {
+        "samples": 78,
+        "failures": []
+      }
+    },
+    {
+      "name": "season-fixtures",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 173.96875,
+      "overflow": [],
+      "contrast": {
+        "samples": 88,
+        "failures": []
+      }
+    },
+    {
+      "name": "season-fixtures",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 251.515625,
+      "overflow": [],
+      "contrast": {
+        "samples": 87,
+        "failures": []
+      }
+    },
+    {
+      "name": "season-fixtures",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 166.359375,
+      "overflow": [],
+      "contrast": {
+        "samples": 85,
+        "failures": []
+      }
+    },
+    {
+      "name": "season-fixtures",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 190.359375,
+      "overflow": [],
+      "contrast": {
+        "samples": 85,
+        "failures": []
+      }
+    },
+    {
+      "name": "season-leaguePlayers",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 173.96875,
+      "overflow": [],
+      "contrast": {
+        "samples": 109,
+        "failures": []
+      }
+    },
+    {
+      "name": "season-leaguePlayers",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 251.515625,
+      "overflow": [],
+      "contrast": {
+        "samples": 108,
+        "failures": []
+      }
+    },
+    {
+      "name": "season-leaguePlayers",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 166.359375,
+      "overflow": [],
+      "contrast": {
+        "samples": 106,
+        "failures": []
+      }
+    },
+    {
+      "name": "season-leaguePlayers",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 190.359375,
+      "overflow": [],
+      "contrast": {
+        "samples": 106,
+        "failures": []
+      }
+    },
+    {
+      "name": "team",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 173.96875,
+      "overflow": [],
+      "contrast": {
+        "samples": 113,
+        "failures": []
+      }
+    },
+    {
+      "name": "team",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 251.515625,
+      "overflow": [],
+      "contrast": {
+        "samples": 112,
+        "failures": []
+      }
+    },
+    {
+      "name": "team",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 166.359375,
+      "overflow": [],
+      "contrast": {
+        "samples": 94,
+        "failures": []
+      }
+    },
+    {
+      "name": "team",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 190.359375,
+      "overflow": [],
+      "contrast": {
+        "samples": 94,
+        "failures": []
+      }
+    },
+    {
+      "name": "player",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 173.96875,
+      "overflow": [],
+      "contrast": {
+        "samples": 181,
+        "failures": []
+      }
+    },
+    {
+      "name": "player",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 251.515625,
+      "overflow": [],
+      "contrast": {
+        "samples": 180,
+        "failures": []
+      }
+    },
+    {
+      "name": "player",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 166.359375,
+      "overflow": [],
+      "contrast": {
+        "samples": 162,
+        "failures": []
+      }
+    },
+    {
+      "name": "player",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 190.359375,
+      "overflow": [],
+      "contrast": {
+        "samples": 162,
+        "failures": []
+      }
+    },
+    {
+      "name": "prepare",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 173.96875,
+      "overflow": [],
+      "contrast": {
+        "samples": 185,
+        "failures": []
+      }
+    },
+    {
+      "name": "prepare",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 251.515625,
+      "overflow": [],
+      "contrast": {
+        "samples": 184,
+        "failures": []
+      }
+    },
+    {
+      "name": "prepare",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 166.359375,
+      "overflow": [],
+      "contrast": {
+        "samples": 182,
+        "failures": []
+      }
+    },
+    {
+      "name": "prepare",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 190.359375,
+      "overflow": [],
+      "contrast": {
+        "samples": 182,
+        "failures": []
+      }
+    },
+    {
+      "name": "match",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 103,
+      "overflow": [],
+      "contrast": {
+        "samples": 48,
+        "failures": []
+      }
+    },
+    {
+      "name": "match",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 186.15625,
+      "overflow": [],
+      "contrast": {
+        "samples": 47,
+        "failures": []
+      }
+    },
+    {
+      "name": "match",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 102.171875,
+      "overflow": [],
+      "contrast": {
+        "samples": 40,
+        "failures": []
+      }
+    },
+    {
+      "name": "match",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 126.171875,
+      "overflow": [],
+      "contrast": {
+        "samples": 40,
+        "failures": []
+      }
+    },
+    {
+      "name": "result",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 173.96875,
+      "overflow": [],
+      "contrast": {
+        "samples": 73,
+        "failures": []
+      }
+    },
+    {
+      "name": "result",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 251.515625,
+      "overflow": [],
+      "contrast": {
+        "samples": 72,
+        "failures": []
+      }
+    },
+    {
+      "name": "result",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 166.359375,
+      "overflow": [],
+      "contrast": {
+        "samples": 70,
+        "failures": []
+      }
+    },
+    {
+      "name": "result",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 190.359375,
+      "overflow": [],
+      "contrast": {
+        "samples": 70,
+        "failures": []
+      }
+    },
+    {
+      "name": "scorecard",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 173.96875,
+      "overflow": [],
+      "contrast": {
+        "samples": 351,
+        "failures": []
+      }
+    },
+    {
+      "name": "scorecard",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 251.515625,
+      "overflow": [],
+      "contrast": {
+        "samples": 350,
+        "failures": []
+      }
+    },
+    {
+      "name": "scorecard",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 166.359375,
+      "overflow": [],
+      "contrast": {
+        "samples": 348,
+        "failures": []
+      }
+    },
+    {
+      "name": "scorecard",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 190.359375,
+      "overflow": [],
+      "contrast": {
+        "samples": 348,
+        "failures": []
+      }
+    },
+    {
+      "name": "review",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 103,
+      "overflow": [],
+      "contrast": {
+        "samples": 89,
+        "failures": []
+      }
+    },
+    {
+      "name": "review",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 186.15625,
+      "overflow": [],
+      "contrast": {
+        "samples": 88,
+        "failures": []
+      }
+    },
+    {
+      "name": "review",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 102.171875,
+      "overflow": [],
+      "contrast": {
+        "samples": 86,
+        "failures": []
+      }
+    },
+    {
+      "name": "review",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 126.171875,
+      "overflow": [],
+      "contrast": {
+        "samples": 86,
+        "failures": []
+      }
+    },
+    {
+      "name": "archive",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 103,
+      "overflow": [],
+      "contrast": {
+        "samples": 79,
+        "failures": []
+      }
+    },
+    {
+      "name": "archive",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 186.15625,
+      "overflow": [],
+      "contrast": {
+        "samples": 78,
+        "failures": []
+      }
+    },
+    {
+      "name": "archive",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 102.171875,
+      "overflow": [],
+      "contrast": {
+        "samples": 76,
+        "failures": []
+      }
+    },
+    {
+      "name": "archive",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 126.171875,
+      "overflow": [],
+      "contrast": {
+        "samples": 76,
+        "failures": []
+      }
+    },
+    {
+      "name": "offseason",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 103,
+      "overflow": [],
+      "contrast": {
+        "samples": 683,
+        "failures": [
+          {
+            "tag": "P",
+            "cls": "",
+            "text": "Players stay automatically. Make changes only where you want them.",
+            "color": "rgb(41, 54, 92)",
+            "bg": [
+              23,
+              55,
+              120
+            ],
+            "ratio": 1.04,
+            "minimum": 4.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "offseason",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 186.15625,
+      "overflow": [],
+      "contrast": {
+        "samples": 682,
+        "failures": [
+          {
+            "tag": "P",
+            "cls": "",
+            "text": "Players stay automatically. Make changes only where you want them.",
+            "color": "rgb(41, 54, 92)",
+            "bg": [
+              23,
+              55,
+              120
+            ],
+            "ratio": 1.04,
+            "minimum": 4.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "offseason",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 102.171875,
+      "overflow": [],
+      "contrast": {
+        "samples": 678,
+        "failures": [
+          {
+            "tag": "P",
+            "cls": "",
+            "text": "Players stay automatically. Make changes only where you want them.",
+            "color": "rgb(41, 54, 92)",
+            "bg": [
+              23,
+              55,
+              120
+            ],
+            "ratio": 1.04,
+            "minimum": 4.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "offseason",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 102.171875,
+      "overflow": [],
+      "contrast": {
+        "samples": 678,
+        "failures": [
+          {
+            "tag": "P",
+            "cls": "",
+            "text": "Players stay automatically. Make changes only where you want them.",
+            "color": "rgb(41, 54, 92)",
+            "bg": [
+              23,
+              55,
+              120
+            ],
+            "ratio": 1.04,
+            "minimum": 4.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "trade",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 103,
+      "overflow": [],
+      "contrast": {
+        "samples": 704,
+        "failures": [
+          {
+            "tag": "P",
+            "cls": "",
+            "text": "Players stay automatically. Make changes only where you want them.",
+            "color": "rgb(41, 54, 92)",
+            "bg": [
+              23,
+              55,
+              120
+            ],
+            "ratio": 1.04,
+            "minimum": 4.5
+          },
+          {
+            "tag": "SELECT",
+            "cls": "",
+            "text": "Choose playerYuvraj Singh · Middle order · 90Brendon McCullum · Keeper · 89Shane Bond · Bowler · 89Shane Warne",
+            "color": "rgb(255, 255, 255)",
+            "bg": [
+              241,
+              245,
+              255
+            ],
+            "ratio": 1.09,
+            "minimum": 4.5
+          },
+          {
+            "tag": "SELECT",
+            "cls": "",
+            "text": "Choose playerYuvraj Singh · Middle order · 90Brendon McCullum · Keeper · 89Shane Bond · Bowler · 89Shane Warne",
+            "color": "rgb(255, 255, 255)",
+            "bg": [
+              241,
+              245,
+              255
+            ],
+            "ratio": 1.09,
+            "minimum": 4.5
+          },
+          {
+            "tag": "SELECT",
+            "cls": "",
+            "text": "Gujarat TitansRajasthan RoyalsBrisbane HeatNotts OutlawsMelbourne StarsChennai Super KingsPerth Scorchers",
+            "color": "rgb(255, 255, 255)",
+            "bg": [
+              241,
+              245,
+              255
+            ],
+            "ratio": 1.09,
+            "minimum": 4.5
+          },
+          {
+            "tag": "SELECT",
+            "cls": "",
+            "text": "Choose playerMitchell Johnson · Bowler · 89MS Dhoni · Keeper · 89Monty Panesar · Bowler · 80Samit Patel · All-",
+            "color": "rgb(255, 255, 255)",
+            "bg": [
+              241,
+              245,
+              255
+            ],
+            "ratio": 1.09,
+            "minimum": 4.5
+          },
+          {
+            "tag": "SELECT",
+            "cls": "",
+            "text": "Choose playerMitchell Johnson · Bowler · 89MS Dhoni · Keeper · 89Monty Panesar · Bowler · 80Samit Patel · All-",
+            "color": "rgb(255, 255, 255)",
+            "bg": [
+              241,
+              245,
+              255
+            ],
+            "ratio": 1.09,
+            "minimum": 4.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "trade",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 186.15625,
+      "overflow": [],
+      "contrast": {
+        "samples": 703,
+        "failures": [
+          {
+            "tag": "P",
+            "cls": "",
+            "text": "Players stay automatically. Make changes only where you want them.",
+            "color": "rgb(41, 54, 92)",
+            "bg": [
+              23,
+              55,
+              120
+            ],
+            "ratio": 1.04,
+            "minimum": 4.5
+          },
+          {
+            "tag": "SELECT",
+            "cls": "",
+            "text": "Choose playerYuvraj Singh · Middle order · 90Brendon McCullum · Keeper · 89Shane Bond · Bowler · 89Shane Warne",
+            "color": "rgb(255, 255, 255)",
+            "bg": [
+              241,
+              245,
+              255
+            ],
+            "ratio": 1.09,
+            "minimum": 4.5
+          },
+          {
+            "tag": "SELECT",
+            "cls": "",
+            "text": "Choose playerYuvraj Singh · Middle order · 90Brendon McCullum · Keeper · 89Shane Bond · Bowler · 89Shane Warne",
+            "color": "rgb(255, 255, 255)",
+            "bg": [
+              241,
+              245,
+              255
+            ],
+            "ratio": 1.09,
+            "minimum": 4.5
+          },
+          {
+            "tag": "SELECT",
+            "cls": "",
+            "text": "Gujarat TitansRajasthan RoyalsBrisbane HeatNotts OutlawsMelbourne StarsChennai Super KingsPerth Scorchers",
+            "color": "rgb(255, 255, 255)",
+            "bg": [
+              241,
+              245,
+              255
+            ],
+            "ratio": 1.09,
+            "minimum": 4.5
+          },
+          {
+            "tag": "SELECT",
+            "cls": "",
+            "text": "Choose playerMitchell Johnson · Bowler · 89MS Dhoni · Keeper · 89Monty Panesar · Bowler · 80Samit Patel · All-",
+            "color": "rgb(255, 255, 255)",
+            "bg": [
+              241,
+              245,
+              255
+            ],
+            "ratio": 1.09,
+            "minimum": 4.5
+          },
+          {
+            "tag": "SELECT",
+            "cls": "",
+            "text": "Choose playerMitchell Johnson · Bowler · 89MS Dhoni · Keeper · 89Monty Panesar · Bowler · 80Samit Patel · All-",
+            "color": "rgb(255, 255, 255)",
+            "bg": [
+              241,
+              245,
+              255
+            ],
+            "ratio": 1.09,
+            "minimum": 4.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "trade",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 102.171875,
+      "overflow": [],
+      "contrast": {
+        "samples": 699,
+        "failures": [
+          {
+            "tag": "P",
+            "cls": "",
+            "text": "Players stay automatically. Make changes only where you want them.",
+            "color": "rgb(41, 54, 92)",
+            "bg": [
+              23,
+              55,
+              120
+            ],
+            "ratio": 1.04,
+            "minimum": 4.5
+          },
+          {
+            "tag": "SELECT",
+            "cls": "",
+            "text": "Choose playerYuvraj Singh · Middle order · 90Brendon McCullum · Keeper · 89Shane Bond · Bowler · 89Shane Warne",
+            "color": "rgb(255, 255, 255)",
+            "bg": [
+              241,
+              245,
+              255
+            ],
+            "ratio": 1.09,
+            "minimum": 4.5
+          },
+          {
+            "tag": "SELECT",
+            "cls": "",
+            "text": "Choose playerYuvraj Singh · Middle order · 90Brendon McCullum · Keeper · 89Shane Bond · Bowler · 89Shane Warne",
+            "color": "rgb(255, 255, 255)",
+            "bg": [
+              241,
+              245,
+              255
+            ],
+            "ratio": 1.09,
+            "minimum": 4.5
+          },
+          {
+            "tag": "SELECT",
+            "cls": "",
+            "text": "Gujarat TitansRajasthan RoyalsBrisbane HeatNotts OutlawsMelbourne StarsChennai Super KingsPerth Scorchers",
+            "color": "rgb(255, 255, 255)",
+            "bg": [
+              241,
+              245,
+              255
+            ],
+            "ratio": 1.09,
+            "minimum": 4.5
+          },
+          {
+            "tag": "SELECT",
+            "cls": "",
+            "text": "Choose playerMitchell Johnson · Bowler · 89MS Dhoni · Keeper · 89Monty Panesar · Bowler · 80Samit Patel · All-",
+            "color": "rgb(255, 255, 255)",
+            "bg": [
+              241,
+              245,
+              255
+            ],
+            "ratio": 1.09,
+            "minimum": 4.5
+          },
+          {
+            "tag": "SELECT",
+            "cls": "",
+            "text": "Choose playerMitchell Johnson · Bowler · 89MS Dhoni · Keeper · 89Monty Panesar · Bowler · 80Samit Patel · All-",
+            "color": "rgb(255, 255, 255)",
+            "bg": [
+              241,
+              245,
+              255
+            ],
+            "ratio": 1.09,
+            "minimum": 4.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "trade",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 102.171875,
+      "overflow": [],
+      "contrast": {
+        "samples": 699,
+        "failures": [
+          {
+            "tag": "P",
+            "cls": "",
+            "text": "Players stay automatically. Make changes only where you want them.",
+            "color": "rgb(41, 54, 92)",
+            "bg": [
+              23,
+              55,
+              120
+            ],
+            "ratio": 1.04,
+            "minimum": 4.5
+          },
+          {
+            "tag": "SELECT",
+            "cls": "",
+            "text": "Choose playerYuvraj Singh · Middle order · 90Brendon McCullum · Keeper · 89Shane Bond · Bowler · 89Shane Warne",
+            "color": "rgb(255, 255, 255)",
+            "bg": [
+              241,
+              245,
+              255
+            ],
+            "ratio": 1.09,
+            "minimum": 4.5
+          },
+          {
+            "tag": "SELECT",
+            "cls": "",
+            "text": "Choose playerYuvraj Singh · Middle order · 90Brendon McCullum · Keeper · 89Shane Bond · Bowler · 89Shane Warne",
+            "color": "rgb(255, 255, 255)",
+            "bg": [
+              241,
+              245,
+              255
+            ],
+            "ratio": 1.09,
+            "minimum": 4.5
+          },
+          {
+            "tag": "SELECT",
+            "cls": "",
+            "text": "Gujarat TitansRajasthan RoyalsBrisbane HeatNotts OutlawsMelbourne StarsChennai Super KingsPerth Scorchers",
+            "color": "rgb(255, 255, 255)",
+            "bg": [
+              241,
+              245,
+              255
+            ],
+            "ratio": 1.09,
+            "minimum": 4.5
+          },
+          {
+            "tag": "SELECT",
+            "cls": "",
+            "text": "Choose playerMitchell Johnson · Bowler · 89MS Dhoni · Keeper · 89Monty Panesar · Bowler · 80Samit Patel · All-",
+            "color": "rgb(255, 255, 255)",
+            "bg": [
+              241,
+              245,
+              255
+            ],
+            "ratio": 1.09,
+            "minimum": 4.5
+          },
+          {
+            "tag": "SELECT",
+            "cls": "",
+            "text": "Choose playerMitchell Johnson · Bowler · 89MS Dhoni · Keeper · 89Monty Panesar · Bowler · 80Samit Patel · All-",
+            "color": "rgb(255, 255, 255)",
+            "bg": [
+              241,
+              245,
+              255
+            ],
+            "ratio": 1.09,
+            "minimum": 4.5
+          }
+        ]
+      }
+    }
+  ],
+  "errors": []
+}

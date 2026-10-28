@@ -1,0 +1,45 @@
+/* GCC v98: open scouting notes, readable ink and solid semantic surfaces. */
+#g8dialog .g8clubpriorities>li:last-child{border-bottom:0}
+#g8dialog .g8clubplan>.g8briefbody{min-height:0}
+#g8stage .g8result.g8win,#g8stage .g8reviewsummary.g8titlewon{background:#124d35;background-image:none;border-color:#4c9a72;color:#fff}
+#g8stage .g8result.g8loss{background:#6e2039;background-image:none;border-color:#bb6b82;color:#fff}
+#g8dialog[data-prompt="tradeComplete"] #g8tradeReply{background:#135138;border-color:#4a9770;color:#fff}
+#g8dialog[data-prompt="tradeResult"] #g8tradeReply{background:#6e2039;border-color:#bb6b82;color:#fff}
+#g8stage .g8windowclosed .g8windowstatus{background:#135138;border-color:#4a9770;color:#fff}
+/* Illustration sits in the colour field; header text owns the layer above it. */
+#g8app .g8recruitcard .g8candidateidentity{position:relative;isolation:isolate;overflow:hidden;box-shadow:inset 0 1px 0 #ffffff24}
+#g8app .g8recruitcard .g8candidateidentity::after{content:"";position:absolute;z-index:-1;pointer-events:none;right:.3rem;bottom:-.5rem;width:6rem;aspect-ratio:264/306;background-image:var(--g8-cricket-art);background-size:200% 200%;background-position:0 0;background-repeat:no-repeat;filter:invert(1);mix-blend-mode:screen;opacity:.09}
+#g8app .g8recruitcard.g8role-BOWL .g8candidateidentity::after{background-position:100% 100%}
+#g8app .g8recruitcard.g8role-AR .g8candidateidentity::after{background-position:100% 0}
+#g8app .g8recruitcard.g8role-WK-BAT .g8candidateidentity::after{background-position:0 100%}
+#g8app .g8directpick.g8recruitcard{border-top:3px solid var(--g8-role);box-shadow:0 3px 0 #030815}
+#g8app .g8directpick.g8recruitcard .g8candidateidentity{background-color:var(--g8-role);background-image:none}
+#g8app .g8directpick.g8recruitcard .g8cardoverall{border-radius:3px;border-width:1px;box-shadow:0 2px 0 #040a18}
+#g8app .g8directpick.g8recruitcard .g8candidatecontext{border-radius:2px}
+#g8app .g8directpick.g8recruitcard .g8candidatechoice{border-top:1px solid #4d668b}
+#g8stage .g8wirepanel .g8wireline{box-shadow:0 3px 0 #050b18}
+@media(max-width:760px){#g8dialog .g8briefbody>.g8clubpriorities{flex:0;grid-template-rows:none}#g8dialog .g8clubpriorities>li{padding:1rem 0}#g8stage .g8snakeintro{grid-template-columns:minmax(0,1fr)}#g8stage .g8snakeintro p{grid-column:auto}}
+@media(forced-colors:active){#g8app .g8recruitcard .g8candidateidentity::after{display:none}}
+/* Dark controls own both their fill and ink, including trade selectors. */
+#g8app :is(input,select,textarea),#g8dialog :is(input,select,textarea){background:#183b81;color:#fff;color-scheme:dark;border-color:#7696cf}
+#g8app :is(input,select,textarea)::placeholder,#g8dialog :is(input,select,textarea)::placeholder{color:#d3def2;opacity:1}
+/* Compact player typography shares one left edge, with no indented discipline box. */
+#g8app .g8recruitcard .g8cardheader{grid-template-columns:3.1rem minmax(0,1fr);padding:.65rem;gap:.15rem .65rem;border-top:0}
+#g8app .g8directpick.g8recruitcard .g8candidateheadline>strong{font-size:1.05rem;line-height:1.3}
+#g8app .g8directpick.g8recruitcard .g8cardbio{font-size:.8rem;gap:.2rem .4rem}
+#g8app .g8directpick.g8recruitcard .g8candidatecontext{display:block;grid-column:2;grid-row:3;justify-self:start;align-self:start;width:fit-content;max-width:100%;margin:0;padding:0;background:none;border:0;border-radius:0;box-shadow:none;text-align:left;font-size:.75rem;line-height:1.4;font-weight:650;letter-spacing:.01em;color:#fff}
+#g8app .g8recruitcard .g8cardattributes{padding:.5rem .6rem}
+#g8app .g8directpick.g8recruitcard .g8candidatestrength{padding:.5rem .45rem .5rem .65rem}
+#g8app .g8directpick.g8recruitcard .g8candidatechoice{padding:.45rem .65rem .45rem .4rem}
+#g8app .g8directpick.g8recruitcard .g8skillcaption{font-size:.75rem;line-height:1.4}
+#g8app .g8directpick.g8recruitcard .g8phasevalue .g8skillname{font-size:.9rem}
+@container(max-width:18rem){#g8app .g8recruitcard .g8cardheader{grid-template-columns:minmax(0,1fr)}#g8app .g8directpick.g8recruitcard .g8candidatecontext{grid-column:1;grid-row:4}}
+
+#g8app .g8directpick.g8recruitcard .g8cardoverall{min-width:0;padding:.3rem .25rem;box-sizing:border-box}
+#g8app .g8directpick.g8recruitcard .g8cardoverall b{font-size:1.6rem;line-height:1.1;white-space:nowrap;word-break:normal;overflow-wrap:normal;min-width:2ch;text-align:center}
+#g8app .g8directpick.g8recruitcard .g8cardoverall small{font-size:.7rem;line-height:1.4;white-space:nowrap}
+#g8stage .g8pickedrole-allrounder{background:#852744;border-color:#e36a8e}
+#g8stage .g8pickedrole-finisher{background:#812554;border-color:#cc6c9b}
+/* Ground scales use opaque printed colour bands, retaining a clear neutral midpoint. */
+#g8app .g8conditiongauge,#g8dialog .g8conditiongauge{background:linear-gradient(90deg,#164e63 0 20%,#0f6a78 20% 40%,#344b68 40% 60%,#147d53 60% 80%,#0d5c3d 80% 100%)}
+#g8dialog .g8clubbrief .g8conditiongauge::before{border-left-color:#fff}

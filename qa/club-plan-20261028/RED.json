@@ -1,0 +1,76 @@
+{
+  "cases": [
+    {
+      "width": 320,
+      "font": 16,
+      "i": 0,
+      "body": {
+        "x": 26,
+        "y": 1351.890625,
+        "w": 268,
+        "h": 586.46875,
+        "b": 1938.359375,
+        "right": 294
+      },
+      "list": {
+        "x": 42,
+        "y": 1367.890625,
+        "w": 236,
+        "h": 554.46875,
+        "b": 1922.359375,
+        "right": 278
+      },
+      "rows": [
+        {
+          "rect": {
+            "x": 42,
+            "y": 1367.890625,
+            "w": 236,
+            "h": 161.359375,
+            "b": 1529.25,
+            "right": 278
+          },
+          "bg": "rgb(30, 39, 67)",
+          "border": "1px",
+          "text": "1\nA varied attack\n\nMix pace and spin so you have options when conditions change."
+        },
+        {
+          "rect": {
+            "x": 42,
+            "y": 1541.25,
+            "w": 236,
+            "h": 161.359375,
+            "b": 1702.609375,
+            "right": 278
+          },
+          "bg": "rgb(30, 39, 67)",
+          "border": "1px",
+          "text": "2\nBoundary hitters\n\nLook for finishing strength to take advantage of easier boundaries."
+        },
+        {
+          "rect": {
+            "x": 42,
+            "y": 1714.609375,
+            "w": 236,
+            "h": 207.75,
+            "b": 1922.359375,
+            "right": 278
+          },
+          "bg": "rgb(30, 39, 67)",
+          "border": "1px",
+          "text": "3\nReliable death bowling\n\nShorter boundaries punish loose closing overs. Check death bowling when scouting."
+        }
+      ],
+      "overflow": false,
+      "local": [],
+      "text": [
+        "A varied attack|Mix pace and spin so you have options when conditions change.",
+        "Boundary hitters|Look for finishing strength to take advantage of easier boundaries.",
+        "Reliable death bowling|Shorter boundaries punish loose closing overs. Check death bowling when scouting."
+      ]
+    }
+  ],
+  "errors": [],
+  "pass": false,
+  "failure": "AssertionError [ERR_ASSERTION]: Priority still boxed\n    at /workspace/scratch/f98cc1f6c0bf/gcc/qa/club-plan-20261028/check.cjs:1:1715"
+}

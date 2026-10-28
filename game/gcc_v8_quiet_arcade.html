@@ -1712,8 +1712,8 @@ html,body{background:#191c1a}
 .g8ordergrid .g8club.g8ordercard .g8orderrank,.g8ordergrid .g8club.g8ordercard .g8orderidentity h3,.g8ordergrid .g8club.g8ordercard .g8orderstatus{color:var(--order-ink)}
 .g8ordergrid .g8ordermine{outline:3px solid #f1f5ff;outline-offset:3px}
 .g8ordercard>.g8badge{border:1px solid currentColor;box-shadow:none}
-.g8snakeintro{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem 1rem;margin:0 0 1.25rem;padding:1rem 1.2rem;background:#f1f5ff;color:#1d2640;border:1px solid #f1f5ff;border-radius:10px;line-height:1.5}
-.g8snakeintro strong{font-size:1.1rem}.g8snakeintro span{font-size:1rem}
+.g8snakeintro{display:grid;grid-template-columns:max-content minmax(0,1fr);align-items:center;gap:.7rem 1rem;margin:0 0 1.25rem;padding:1rem 1.2rem;background:#14274c;color:#fff;border:1px solid #5477ad;border-left:4px solid #345fd0;border-radius:8px;line-height:1.5}
+.g8snakeintro strong{display:block;width:fit-content;padding:.35rem .6rem;background:#214caf;color:#fff;border:1px solid #7a9bdd;border-radius:3px;font-size:.8rem;line-height:1.4;letter-spacing:.09em;text-transform:uppercase}.g8snakeintro span{display:block;color:#fff;font-size:1rem;line-height:1.5;font-weight:700}
 .g8draftaside .g8draftverdict{display:block;box-sizing:border-box;min-width:0;background:#5b4731;border:1px solid #ab916d;border-radius:10px;padding:1rem;margin:1rem 0}
 .g8draftaside .g8draftverdict h3{font-size:1rem;line-height:1.5;text-align:center;margin:0 0 .85rem;color:#f1f5ff;overflow-wrap:anywhere}
 .g8draftaside .g8draftcoverage{display:flex;flex-wrap:wrap;gap:.5rem;margin:0}
@@ -1721,7 +1721,7 @@ html,body{background:#191c1a}
 .g8draftaside .g8draftcoverage>span b{color:inherit;flex-shrink:0}
 
 /* Rules appear at the decision, with further detail kept optional. */
-.g8snakeintro p{flex-basis:100%;margin:0;font-size:1rem;line-height:1.5;color:#1d2640}
+.g8snakeintro p{grid-column:1/-1;flex-basis:auto;margin:0;padding-top:.65rem;border-top:1px solid #506a97;font-size:.95rem;line-height:1.55;color:#dce6fa}
 .g8rulenote,.g8departureguide,.g8pickguide{box-sizing:border-box;min-width:0;padding:1rem 1.2rem;margin:1rem 0;background:#f1f5ff;color:#1d2640;border:1px solid #f1f5ff;border-radius:10px}
 .g8rulenote strong,.g8departureguide h3{display:block;margin:0;font-size:1.05rem;line-height:1.5;color:#1d2640}
 .g8rulenote p,.g8departureguide p,.g8pickguide p{margin:.5rem 0 0;font-size:1rem;font-weight:500;line-height:1.6;color:#1d2640}
@@ -1745,7 +1745,7 @@ html,body{background:#191c1a}
 .g8heading,#g8stage:has(.g8draftsplit)>.g8heading,#g8stage[data-view="team"]>.g8heading{display:flex;align-items:center;justify-content:space-between;gap:1rem 1.5rem;padding:1.1rem 1.3rem;margin-bottom:1.25rem;border:1px solid #f1f5ff;border-left:5px solid var(--club-accent,#eaf1ff);border-radius:var(--g8-radius);background:var(--g8-paper);box-shadow:0 3px 0 #0a0d15;color:var(--g8-paper-ink)}
 .g8heading>div:first-of-type{min-width:0}.g8heading h1{font-size:clamp(1.6rem,2.6vw,2.3rem);line-height:1.2;letter-spacing:-.025em;margin:.25rem 0 0;padding:0;overflow:visible;color:var(--g8-paper-ink)}
 .g8heading .g8eyebrow{font-size:.85rem;line-height:1.5;letter-spacing:.055em;margin:0;color:#2f3d68}
-.g8heading p{font-size:1rem;line-height:1.55;margin:.5rem 0 0;max-width:65ch;color:#29365c}
+.g8heading p{font-size:1rem;line-height:1.55;margin:.5rem 0 0;max-width:65ch;color:#e5edff}
 .g8heading>.g8actions{justify-content:flex-end;align-items:center;margin:0;flex-wrap:wrap}
 .g8sheet,#g8dialog .g8sheet,.g8teamworkspace.g8compactwork>.g8sheet{background:var(--g8-panel);border:1px solid var(--g8-border);border-radius:var(--g8-radius);box-shadow:0 3px 0 #0c101c}
 .g8sheet p,.g8sheet .g8fine{color:var(--g8-secondary)}
@@ -2043,12 +2043,12 @@ html,body{background:#191c1a}
 #g8dialog .g8briefbody>.g8groundtrait{display:block;align-self:stretch;margin:0;padding:.6rem .75rem;background:#242f51;border:1px solid #4960a4;border-radius:4px;color:#eaf1ff;font-size:.95rem;line-height:1.45;font-weight:600}
 #g8dialog .g8briefbody>p{margin:0;padding:0;color:#eaf1ff;line-height:1.55}
 #g8dialog .g8briefbody>.g8groundbands{margin:0}
-#g8dialog .g8briefbody>.g8clubpriorities{display:grid;gap:.75rem;list-style:none;margin:0;padding:0;flex:0;grid-auto-rows:max-content;align-content:start}
-#g8dialog .g8clubpriorities>li{display:grid;grid-template-columns:1.8rem minmax(0,1fr);align-items:start;gap:.75rem;padding:.85rem;background:#222d4c;border:1px solid #4960a4;border-radius:5px;box-shadow:none;min-width:0}
-#g8dialog .g8clubpriorities .g8prioritynumber{display:grid;place-items:center;width:1.8rem;height:1.8rem;min-width:0;margin:0;border:1px solid #eaf1ff;border-radius:4px;box-shadow:none}
+#g8dialog .g8briefbody>.g8clubpriorities{display:grid;gap:0;list-style:none;margin:0;padding:0;flex:1;grid-template-rows:repeat(3,minmax(min-content,1fr));align-content:stretch}
+#g8dialog .g8clubpriorities>li{display:grid;grid-template-columns:2rem minmax(0,1fr);align-items:start;align-content:center;gap:1rem;padding:1rem 0;background:transparent;border:0;border-bottom:1px solid #536b96;border-radius:0;box-shadow:none;min-width:0}
+#g8dialog .g8clubpriorities .g8prioritynumber{display:block;align-self:start;place-items:initial;width:auto;height:auto;min-width:0;margin:.05rem 0 0;padding:0;background:transparent;border:0;border-radius:0;box-shadow:none;color:#fff;font-size:1.4rem;line-height:1.2;font-weight:900;font-variant-numeric:tabular-nums}
 #g8dialog .g8clubpriorities li>div{min-width:0}
-#g8dialog .g8clubpriorities strong{margin:0;padding:0 0 .4rem;border-bottom:1px solid #415592;color:#f1f5ff;font-size:1rem;line-height:1.4}
-#g8dialog .g8clubpriorities p{margin:.4rem 0 0;padding:0;color:#eaf1ff;font-size:1rem;line-height:1.5}
+#g8dialog .g8clubpriorities strong{display:block;margin:0;padding:0;border:0;color:#fff;font-size:1.05rem;line-height:1.4}
+#g8dialog .g8clubpriorities p{margin:.4rem 0 0;padding:0;color:#dce6fa;font-size:.95rem;line-height:1.55}
 @supports(grid-template-rows:subgrid){
  #g8dialog .g8clubbrief{grid-template-rows:auto auto 1fr}
  #g8dialog .g8clubbrief>.g8sheet{grid-row:1/span 3;grid-template-rows:subgrid;row-gap:0}
@@ -2123,7 +2123,7 @@ html,body{background:#191c1a}
 #g8stage :is(.g8welcomepanel,.g8introbrief,.g8careerlaunch){background:#151d37;border-color:#445998}
 #g8stage :is(.g8windowpanel,.g8wirepanel),#g8stage .g8signing>section:first-child{background:#192037;border-color:#667774}
 #g8stage :is(.g8windowhead,.g8signingfocus){background:#303b3d;border-color:#74817f}
-#g8stage .g8signingcounts>div{background:#151e3b;border-color:#4960a3}
+#g8stage .g8signingcounts>div{background:#135138;border-color:#4a9770}
 #g8stage .g8signingcounts>div:nth-child(2){background:#303b3d;border-color:#74817f}
 #g8stage :is(.g8windowstatus,.g8windowclosed .g8windowstatus){background:#141a2c;color:#f1f5ff;border-color:#6d7e79}
 #g8stage :is(.g8annualhero,.g8reviewsummary,.g8nextchapter){background:#303b3d;border-color:#74817f}
@@ -2152,7 +2152,7 @@ html,body{background:#191c1a}
 #g8dialog .g8guiderules>.g8disclosure>summary:hover,#g8dialog .g8guiderules>.g8disclosure[open]>summary{background:var(--g8-paper);color:var(--g8-paper-ink)}
 #g8dialog .g8clubbrief>.g8sheet{background:#1a223a;border-color:#71816e}
 #g8dialog .g8briefhead{background:#212b49;border-color:#71816e}
-#g8dialog .g8clubpriorities>li{background:#1e2743;border-color:#465c9d}
+
 /* Traits are labels, not full-width section bars. Long labels still wrap safely. */
 #g8dialog .g8briefbody>.g8groundtrait,#g8app .g8clubground>.g8groundtrait{display:inline-block;align-self:flex-start;width:fit-content;max-width:100%;background:#202a47;border-color:#4960a3;color:#eaf1ff}
 @media(forced-colors:active){#g8app,#g8app:has(.g8draftsplit){background-image:none}}
@@ -2166,7 +2166,7 @@ html,body{background:#191c1a}
 /* GCC v95: compact player identities and explicit decision strips. */
 #g8stage .g8wirepanel .g8wireline{display:grid;grid-template-columns:minmax(0,1fr);gap:.6rem;min-height:0;margin:.6rem 0 0;padding:.85rem;background:#182036;border:1px solid #445998;border-left:4px solid #87958a;border-radius:6px;box-shadow:none;color:#f1f5ff}
 #g8stage .g8wirepanel .g8wireline:first-child{margin-top:0}
-#g8stage .g8wirepanel .g8wirein{border-left-color:#eaf1ff;background:#181f34}
+#g8stage .g8wirepanel .g8wirein{background:#123f30;border-left-color:#168451}
 #g8stage .g8wirepanel .g8wireout{border-left-color:#c08c89;background:#2d292b}
 #g8stage .g8wirepanel .g8wiretop{display:flex;grid-column:1;grid-row:1;align-items:center;justify-content:space-between;gap:.5rem;flex-wrap:wrap;min-width:0;padding-bottom:.55rem;border-bottom:1px solid #63716c}
 #g8stage .g8wirekind{font-size:.72rem;line-height:1.4;font-weight:700;letter-spacing:.07em;color:#eaf1ff}
@@ -2174,7 +2174,7 @@ html,body{background:#191c1a}
 #g8stage .g8wirepanel b.g8signedname{display:block;grid-area:auto;color:#f1f5ff!important;font-size:1.05rem;line-height:1.4;font-weight:800;overflow-wrap:anywhere}
 #g8stage .g8wirepanel .g8wireidentity p{grid-area:auto;margin:.3rem 0 0;padding:0;border:0;color:#eaf1ff;font-size:.9rem;line-height:1.5;overflow-wrap:anywhere}
 #g8stage .g8wirepanel .g8stamp{display:inline-block;min-width:0;padding:.3rem .55rem;background:#253051;border:1px solid #89988b;border-radius:3px;color:#f1f5ff;font-size:.75rem;line-height:1.4;font-weight:800;letter-spacing:.04em;white-space:normal;text-align:left}
-#g8stage .g8wirepanel .g8wirein .g8stamp{background:#202a48;border-color:#eaf1ff;color:#eaf1ff}
+#g8stage .g8wirepanel .g8wirein .g8stamp{background:#13703f;border-color:#47a476;color:#fff}
 #g8stage .g8wirepanel .g8wireout .g8stamp{background:#4b3338;border-color:#bf9496;color:#ffeded}
 #g8stage .g8wirepanel .g8empty{background:#161c30;border:1px dashed #71817a;color:#eaf1ff;min-height:7rem;box-shadow:none;border-radius:6px}
 /* Matching player cards across the draft, arrivals, scouting and squad planning. */
@@ -2240,11 +2240,11 @@ html,body{background:#191c1a}
 #g8stage .g8windowhead .g8eyebrow{color:#fff}
 #g8stage .g8windowstatus{background:#10275b;border-color:#7d9bdb;color:#fff}
 #g8stage .g8signingfocus{background:#222f52;border-color:#5f7298}
-#g8stage .g8signingcounts>div{background:#184184;border-color:#658ac7}
+
 #g8stage .g8signingcounts>div:nth-child(2){background:#742839;border-color:#b76d7d}
-#g8stage .g8wirepanel .g8wirein{background:#142e57;border-left-color:#3d7de8}
+
 #g8stage .g8wirepanel .g8wireout{background:#3c2035;border-left-color:#dc3b62}
-#g8stage .g8wirepanel .g8wirein .g8stamp{background:#204fa6;border-color:#82a9ec;color:#fff}
+
 #g8stage .g8wirepanel .g8wireout .g8stamp{background:#982847;border-color:#e6809d;color:#fff}
 #g8stage .g8wirepanel .g8wireupdate{background:#29254a;border-left-color:#9462c9}
 #g8stage .g8wirepanel .g8wireline:hover{border-color:#a2b9e4}
@@ -2309,6 +2309,52 @@ html,body{background:#191c1a}
 #g8stage .g8runlabel{display:grid;min-width:0}
 #g8stage .g8runlabel>span{grid-area:1/1}
 #g8stage .g8runreserve{visibility:hidden;pointer-events:none;user-select:none}
+/* GCC v98: open scouting notes, readable ink and solid semantic surfaces. */
+#g8dialog .g8clubpriorities>li:last-child{border-bottom:0}
+#g8dialog .g8clubplan>.g8briefbody{min-height:0}
+#g8stage .g8result.g8win,#g8stage .g8reviewsummary.g8titlewon{background:#124d35;background-image:none;border-color:#4c9a72;color:#fff}
+#g8stage .g8result.g8loss{background:#6e2039;background-image:none;border-color:#bb6b82;color:#fff}
+#g8dialog[data-prompt="tradeComplete"] #g8tradeReply{background:#135138;border-color:#4a9770;color:#fff}
+#g8dialog[data-prompt="tradeResult"] #g8tradeReply{background:#6e2039;border-color:#bb6b82;color:#fff}
+#g8stage .g8windowclosed .g8windowstatus{background:#135138;border-color:#4a9770;color:#fff}
+/* Illustration sits in the colour field; header text owns the layer above it. */
+#g8app .g8recruitcard .g8candidateidentity{position:relative;isolation:isolate;overflow:hidden;box-shadow:inset 0 1px 0 #ffffff24}
+#g8app .g8recruitcard .g8candidateidentity::after{content:"";position:absolute;z-index:-1;pointer-events:none;right:.3rem;bottom:-.5rem;width:6rem;aspect-ratio:264/306;background-image:var(--g8-cricket-art);background-size:200% 200%;background-position:0 0;background-repeat:no-repeat;filter:invert(1);mix-blend-mode:screen;opacity:.09}
+#g8app .g8recruitcard.g8role-BOWL .g8candidateidentity::after{background-position:100% 100%}
+#g8app .g8recruitcard.g8role-AR .g8candidateidentity::after{background-position:100% 0}
+#g8app .g8recruitcard.g8role-WK-BAT .g8candidateidentity::after{background-position:0 100%}
+#g8app .g8directpick.g8recruitcard{border-top:3px solid var(--g8-role);box-shadow:0 3px 0 #030815}
+#g8app .g8directpick.g8recruitcard .g8candidateidentity{background-color:var(--g8-role);background-image:none}
+#g8app .g8directpick.g8recruitcard .g8cardoverall{border-radius:3px;border-width:1px;box-shadow:0 2px 0 #040a18}
+#g8app .g8directpick.g8recruitcard .g8candidatecontext{border-radius:2px}
+#g8app .g8directpick.g8recruitcard .g8candidatechoice{border-top:1px solid #4d668b}
+#g8stage .g8wirepanel .g8wireline{box-shadow:0 3px 0 #050b18}
+@media(max-width:760px){#g8dialog .g8briefbody>.g8clubpriorities{flex:0;grid-template-rows:none}#g8dialog .g8clubpriorities>li{padding:1rem 0}#g8stage .g8snakeintro{grid-template-columns:minmax(0,1fr)}#g8stage .g8snakeintro p{grid-column:auto}}
+@media(forced-colors:active){#g8app .g8recruitcard .g8candidateidentity::after{display:none}}
+/* Dark controls own both their fill and ink, including trade selectors. */
+#g8app :is(input,select,textarea),#g8dialog :is(input,select,textarea){background:#183b81;color:#fff;color-scheme:dark;border-color:#7696cf}
+#g8app :is(input,select,textarea)::placeholder,#g8dialog :is(input,select,textarea)::placeholder{color:#d3def2;opacity:1}
+/* Compact player typography shares one left edge, with no indented discipline box. */
+#g8app .g8recruitcard .g8cardheader{grid-template-columns:3.1rem minmax(0,1fr);padding:.65rem;gap:.15rem .65rem;border-top:0}
+#g8app .g8directpick.g8recruitcard .g8candidateheadline>strong{font-size:1.05rem;line-height:1.3}
+#g8app .g8directpick.g8recruitcard .g8cardbio{font-size:.8rem;gap:.2rem .4rem}
+#g8app .g8directpick.g8recruitcard .g8candidatecontext{display:block;grid-column:2;grid-row:3;justify-self:start;align-self:start;width:fit-content;max-width:100%;margin:0;padding:0;background:none;border:0;border-radius:0;box-shadow:none;text-align:left;font-size:.75rem;line-height:1.4;font-weight:650;letter-spacing:.01em;color:#fff}
+#g8app .g8recruitcard .g8cardattributes{padding:.5rem .6rem}
+#g8app .g8directpick.g8recruitcard .g8candidatestrength{padding:.5rem .45rem .5rem .65rem}
+#g8app .g8directpick.g8recruitcard .g8candidatechoice{padding:.45rem .65rem .45rem .4rem}
+#g8app .g8directpick.g8recruitcard .g8skillcaption{font-size:.75rem;line-height:1.4}
+#g8app .g8directpick.g8recruitcard .g8phasevalue .g8skillname{font-size:.9rem}
+@container(max-width:18rem){#g8app .g8recruitcard .g8cardheader{grid-template-columns:minmax(0,1fr)}#g8app .g8directpick.g8recruitcard .g8candidatecontext{grid-column:1;grid-row:4}}
+
+#g8app .g8directpick.g8recruitcard .g8cardoverall{min-width:0;padding:.3rem .25rem;box-sizing:border-box}
+#g8app .g8directpick.g8recruitcard .g8cardoverall b{font-size:1.6rem;line-height:1.1;white-space:nowrap;word-break:normal;overflow-wrap:normal;min-width:2ch;text-align:center}
+#g8app .g8directpick.g8recruitcard .g8cardoverall small{font-size:.7rem;line-height:1.4;white-space:nowrap}
+#g8stage .g8pickedrole-allrounder{background:#852744;border-color:#e36a8e}
+#g8stage .g8pickedrole-finisher{background:#812554;border-color:#cc6c9b}
+/* Ground scales use opaque printed colour bands, retaining a clear neutral midpoint. */
+#g8app .g8conditiongauge,#g8dialog .g8conditiongauge{background:linear-gradient(90deg,#164e63 0 20%,#0f6a78 20% 40%,#344b68 40% 60%,#147d53 60% 80%,#0d5c3d 80% 100%)}
+#g8dialog .g8clubbrief .g8conditiongauge::before{border-left-color:#fff}
+
 
 
 
@@ -9679,9 +9725,9 @@ function validSave(save){
  };
  X.draftCompanion=()=>{
   const d=X.draftRead(),role={'BAT':'Batter','BOWL':'Bowler','AR':'All-rounder','WK-BAT':'Keeper'};
-  const picked=d.ps;
-  const coverage=[['Top-order batters',picked.filter(p=>p.role==='BAT'&&['OPEN','TOP'].includes(R.battingRoleBand(p))),'top'],['Middle-order batters',picked.filter(p=>p.role==='BAT'&&!['OPEN','TOP'].includes(R.battingRoleBand(p))),'middle'],['Keepers',picked.filter(p=>p.role==='WK-BAT'),'keeper'],['Batting all-rounders',picked.filter(p=>p.role==='AR'&&p.bat>=p.bowl),'bat-ar'],['Bowling all-rounders',picked.filter(p=>p.role==='AR'&&p.bat<p.bowl),'bowl-ar'],['Pace bowlers',picked.filter(p=>p.role==='BOWL'&&R.bowlingStyle(p)!=='SPIN'),'pace'],['Spin bowlers',picked.filter(p=>p.role==='BOWL'&&R.bowlingStyle(p)==='SPIN'),'spin']];
-  return `<div class="g8sectionhead"><h2>Your draft</h2><span>${d.n}/15 selected</span></div>${X.draftSquadSummary(d)}${coverage.some(([,ps])=>ps.length)?`<div class="g8pickedroles" aria-label="Picked roles">${coverage.filter(([,ps])=>ps.length).map(([label,ps,key])=>`<div class="g8pickedrole g8pickedrole-${key}" data-key="picked-role-${key}"><span>${esc(label)}</span><strong>${ps.length}</strong></div>`).join('')}</div>`:''}<section class="g8draftselected" aria-label="Selected players"><div class="g8draftsubhead"><h3>Selected players</h3><span>${d.n}/15</span></div>${d.n?`<div class="g8draftpickedlist">${d.ps.map(p=>`<button type="button" class="g8button g8draftpicked" data-action="inspect" data-args="[${p.id}]" aria-label="Scout selected ${esc(p.name)}, ${esc(role[p.role])}, overall ${p.overall}"><span><b>${esc(p.name)}</b><small class="g8pickedjob">${esc(p.role==='BOWL'?X.bowlingType(p):X.battingJob(p))}</small></span><span class="g8draftpickedmeta"><small>${esc(p.role==='WK-BAT'?'WK':p.role)}</small><strong style="--rating-color:${X.ratingTone(p.overall)}">${p.overall}</strong></span></button>`).join('')}</div>`:'<p class="g8draftempty">Your selections will appear here as you pick.</p>'}</section><div class="g8draftsecondary">${btn('Analysis','draftDetail',['analysis'],'g8ghost g8small')}${btn('League picks','draftDetail',['picks'],'g8ghost g8small')}</div>`;
+  const picked=d.ps,batters=picked.filter(p=>p.role==='BAT'||p.role==='WK-BAT'||p.role==='AR'&&p.bat>=50),regular=picked.filter(p=>R.bowlingWorkload(p)>=4&&R.bowlingUsagePrior(p)>=1.5);
+  const coverage=[['Openers',batters.filter(p=>R.battingRoleBand(p)==='OPEN'),'opener'],['Top order',batters.filter(p=>R.battingRoleBand(p)==='TOP'),'top'],['Middle order',batters.filter(p=>['MIDDLE','LOWER'].includes(R.battingRoleBand(p))),'middle'],['Finishers',batters.filter(X.isFinisher),'finisher'],['Keepers',picked.filter(R.isKeeper),'keeper'],['All-rounders',picked.filter(p=>p.role==='AR'),'allrounder'],['Pace bowlers',regular.filter(p=>['PACE','DUAL'].includes(R.bowlingStyle(p))),'pace'],['Spin bowlers',regular.filter(p=>['SPIN','DUAL'].includes(R.bowlingStyle(p))),'spin']];
+  return `<div class="g8sectionhead"><h2>Your draft</h2><span>${d.n}/15 selected</span></div>${X.draftSquadSummary(d)}${coverage.some(([,ps])=>ps.length)?`<div class="g8pickedroles" aria-label="Picked squad options. Players can cover more than one role.">${coverage.filter(([,ps])=>ps.length).map(([label,ps,key])=>`<div class="g8pickedrole g8pickedrole-${key}" data-key="picked-role-${key}"><span>${esc(label)}</span><strong>${ps.length}</strong></div>`).join('')}</div>`:''}<section class="g8draftselected" aria-label="Selected players"><div class="g8draftsubhead"><h3>Selected players</h3><span>${d.n}/15</span></div>${d.n?`<div class="g8draftpickedlist">${d.ps.map(p=>`<button type="button" class="g8button g8draftpicked" data-action="inspect" data-args="[${p.id}]" aria-label="Scout selected ${esc(p.name)}, ${esc(role[p.role])}, overall ${p.overall}"><span><b>${esc(p.name)}</b><small class="g8pickedjob">${esc(p.role==='BOWL'?X.bowlingType(p):X.battingJob(p))}</small></span><span class="g8draftpickedmeta"><small>${esc(p.role==='WK-BAT'?'WK':p.role)}</small><strong style="--rating-color:${X.ratingTone(p.overall)}">${p.overall}</strong></span></button>`).join('')}</div>`:'<p class="g8draftempty">Your selections will appear here as you pick.</p>'}</section><div class="g8draftsecondary">${btn('Analysis','draftDetail',['analysis'],'g8ghost g8small')}${btn('League picks','draftDetail',['picks'],'g8ghost g8small')}</div>`;
  };
  X.squadRoster=()=>{
   const groups=[['BAT','Batters'],['BOWL','Bowlers'],['AR','All-rounders'],['WK-BAT','Wicketkeepers']];
@@ -10066,13 +10112,13 @@ function validSave(save){
   window.GCC8_applyClubNames(s);
   const active=document.activeElement,id=active?.id,within=stage.contains(active),focusAction=active?.dataset?.action,focusArgs=active?.dataset?.args,focusInHud=hud.contains(active),start=active?.selectionStart,end=active?.selectionEnd,x=window.scrollX,y=window.scrollY;
   const wire=document.getElementById('g8wire'),wireScroll=wire?.scrollTop||0,wireAnchor=X.scrollAnchor(wire);
-  const sealedKeys=new Set([...stage.querySelectorAll('.g8revealgrid>.g8sealed[data-key]')].map(e=>e.dataset.key));
+  const sealedKeys=new Set([...stage.querySelectorAll('.g8revealgrid>.g8sealed[data-key],.g8revealgrid>.g8orderhidden[data-key]')].map(e=>e.dataset.key));
   const body=views[ui.view]();
   document.documentElement.style.setProperty('--club-accent',s.userClub?.c||'#91aa82');
   document.documentElement.style.setProperty('--club-ink',X.clubInk(s.userClub));
   stage.dataset.view=ui.view;
   X.patch(stage,body);X.accessibleTables(stage);
-  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches)for(const card of stage.querySelectorAll('.g8revealgrid>[data-key]:not(.g8sealed)'))if(sealedKeys.has(card.dataset.key))card.animate([{opacity:0,transform:'translateY(6px)'},{opacity:1,transform:'translateY(0)'}],{duration:260,easing:'cubic-bezier(.2,.7,.3,1)'});
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches)for(const card of stage.querySelectorAll('.g8revealgrid>[data-key]:not(.g8sealed):not(.g8orderhidden)'))if(sealedKeys.has(card.dataset.key))card.classList.contains('g8ordercard')?card.animate([{opacity:.15,clipPath:'inset(0 100% 0 0)'},{opacity:1,clipPath:'inset(0 0 0 0)'}],{duration:480,easing:'cubic-bezier(.2,.7,.3,1)'}):card.animate([{opacity:0,transform:'translateY(6px)'},{opacity:1,transform:'translateY(0)'}],{duration:260,easing:'cubic-bezier(.2,.7,.3,1)'});
   X.patch(hud,`<div class="g8hudclub"><button type="button" class="g8brand" data-action="home" data-args="[]" aria-label="Global Champions Cricket home">${X.icon('cricket')}GCC</button>${s.userClub?`${badge(s.userClub)}<div><strong>${esc(s.userClub.name)}</strong><small>${s.year} · ${['matchReveal','result'].includes(ui.view)?(ui.result?.round?'Round '+ui.result.round:'Finals'):s.dynasty?.offseason?'Offseason':s.finals&&s.finals.stage!=='done'?'Finals':s.fullSchedule.length?(s.round===14?'Season complete':'Round '+(s.round+1)):s.year===2008?'Foundation':'Preseason'}</small></div>`:''}</div><p class="g8headerslogan">BUILD YOUR XI. <span>LEAVE A LEGACY.</span></p><nav aria-label="Game menu"><details class="g8utilitymenu"><summary>Menu</summary><div>${s.userClub?btn('Club archive','archive',[],'g8ghost g8small',!s.dynasty?.history?.length):''}${btn('How to play','how',[],'g8ghost g8small')}${btn('How it works','howItWorks',[],'g8ghost g8small')}${btn('The breakaway story','breakawayStory',[],'g8ghost g8small')}</div></details></nav>${X.careerNavigation()}${saveStatus()}`);
   if(changed){stage.focus({preventScroll:true});window.scrollTo({top:0,left:0,behavior:'instant'});}
   else{

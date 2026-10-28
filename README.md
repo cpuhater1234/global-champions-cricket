@@ -3,16 +3,16 @@
 ## Current game — start here
 
 - **Current active branch:** [`work/v8-game-first-rebuild`](https://github.com/cpuhater1234/global-champions-cricket/tree/work/v8-game-first-rebuild)
-- **Current playable version:** **GCC v97**
+- **Current playable version:** **GCC v98**
 - **Current playable build:** [`game/gcc_v8_product_candidate.html`](https://github.com/cpuhater1234/global-champions-cricket/blob/work/v8-game-first-rebuild/game/gcc_v8_product_candidate.html)
-- **Current release notes and QA:** [v97 checkpoint](https://github.com/cpuhater1234/global-champions-cricket/blob/work/v8-game-first-rebuild/qa/draft-refinement-20261028/README.md)
+- **Current release notes and QA:** [v98 checkpoint](https://github.com/cpuhater1234/global-champions-cricket/blob/work/v8-game-first-rebuild/qa/club-plan-20261028/README.md)
 - **Protected historical baseline:** **v7.0.14 — frozen, read-only reference**
 
 **Do not use the protected v7.0.14 baseline as the source of truth for current work.** Start from the active branch above. The default branch's historical game files do not represent the current playable; documentation updates here do not promote or revert game code.
 
-The current release is **GCC v97**. Solid navy, cobalt, red and purple replace the pale mint/cream theme. Player cards use saturated role colours and white rating ink, with subtle cricket artwork across the textured canvas. Your draft uses compact count bars only for roles already picked, with simplified batter/all-rounder/pace/spin categories and no quotas. Own turns clearly say **YOUR PICK**. Draw rectangles and controls retain their geometry through paused and automatic reveals. The signing panel fits its content and the action reads **Skip to end**.
+The current release is **GCC v98**. The club guide uses open, ordered scouting notes. Page subtitles and dark controls have readable ink; positive outcomes use solid green. Draft-order animation is restored within fixed card bounds, and the snake-format strip has clear hierarchy. Player cards are smaller, preserve every field, align discipline labels with names and use subtle cricket illustrations. Draft bars distinguish openers, top order, middle order, finishers, keepers, all-rounders, regular pace and spin; options can overlap and no quotas apply.
 
-Rebuild with `python qa/draft-refinement-20261028/build.py`. See [v97 QA](qa/draft-refinement-20261028/README.md). Four full foundation drafts, two annual drafts,116 scroll checks,84 main-screen/viewport smoke cases,216 reveal states and36 own/CPU turn states pass.16 inline scripts including simulation and persistence remain byte-identical to v96. Historical builders reproduce historical releases and must not promote the current release.
+Rebuild with `python qa/club-plan-20261028/build.py`. See [v98 QA](qa/club-plan-20261028/README.md). The final run covers 108 main-screen/menu/dialog cases, 15,888 computed contrast samples with no failures, 240 club-guide layouts, 216 reveal states, 36 turn states and two complete foundation drafts. Eighteen non-presentation scripts remain byte-identical to v97. Historical builders must not promote the current release.
 
 The following section records the original protected baseline.
 

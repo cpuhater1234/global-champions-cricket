@@ -1,0 +1,60 @@
+{
+  "release": "v98",
+  "sha256": "47cc968e54aaf6e87b87150639bd5c36ac158e20e0c83d8c824544e5baca53a4",
+  "clubLayoutCases": 240,
+  "mainScreenCases": 108,
+  "contrastSamples": 15888,
+  "contrastFailures": 0,
+  "drawStates": 216,
+  "turnStates": 36,
+  "foundationDrafts": 2,
+  "scrollChecks": 58,
+  "roleCases": [
+    {
+      "key": "keeper-opener",
+      "name": "Adam Gilchrist",
+      "bars": {
+        "Openers": 1,
+        "Keepers": 1
+      }
+    },
+    {
+      "key": "spin-allrounder",
+      "name": "Shahid Afridi",
+      "bars": {
+        "Middle order": 1,
+        "Finishers": 1,
+        "All-rounders": 1,
+        "Spin bowlers": 1
+      }
+    },
+    {
+      "key": "part-timer",
+      "name": "Virender Sehwag",
+      "bars": {
+        "Openers": 1
+      }
+    },
+    {
+      "key": "top-order",
+      "name": "Ricky Ponting",
+      "bars": {
+        "Top order": 1
+      }
+    },
+    {
+      "key": "finisher",
+      "name": "Kevin Pietersen",
+      "bars": {
+        "Top order": 1,
+        "Finishers": 1
+      }
+    }
+  ],
+  "unchangedScripts": 18,
+  "changedPresentationScripts": [
+    13,
+    19
+  ],
+  "pageErrors": []
+}

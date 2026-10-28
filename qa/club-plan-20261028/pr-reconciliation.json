@@ -1,0 +1,23 @@
+{
+  "pullRequest": 1,
+  "mergeCommit": "a2cb9bfa012b6c7e9f498de793a505e195aefe4a",
+  "uploadParentIncludesMerge": true,
+  "mergedSourceSyntaxFailure": "v8/ui/match_story.js:5 SyntaxError: Unexpected token 'if'",
+  "resolution": "Restore match_story.js from the exact validated v98 standalone script15. Cumulative score, overs and innings/chase context with aria-atomic=true are already present in this working module. No runtime HTML change was needed. Retain all4 merged QA evidence files.",
+  "liveScoreRegression": {
+    "frames": 165,
+    "kinds": [
+      "inningsStart",
+      "delivery",
+      "overEnd",
+      "powerplayEnd",
+      "surgeStart",
+      "inningsEnd"
+    ],
+    "scoreAndOversAgree": true,
+    "chaseAndInningsContext": true,
+    "renderStateUnchanged": true
+  },
+  "runtimeSha256": "47cc968e54aaf6e87b87150639bd5c36ac158e20e0c83d8c824544e5baca53a4",
+  "sourceMatchesRuntime": true
+}
