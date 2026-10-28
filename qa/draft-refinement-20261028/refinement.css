@@ -1,0 +1,91 @@
+/* GCC v97: saturated cricket broadcast identity, white ink and solid colour. */
+:root{--g8-canvas:#080f20;--g8-panel:#17243c;--g8-inset:#101b30;--g8-paper:#183b81;--g8-paper-ink:#fff;--g8-forest:#214caf;--g8-bronze:#652947;--g8-border:#526984;--g8-cream:#f5f8ff;--g8-secondary:#d3def2;--g8-scarlet:#b92540;--g8-cobalt:#214caf;--g8-violet:#65349a}
+#g8app,#g8app:has(.g8draftsplit){position:relative;isolation:isolate;background-color:var(--g8-canvas);background-image:repeating-linear-gradient(0deg,#e8efff04 0 1px,transparent 1px 4px),var(--g8-canvas-grain);background-size:auto,180px 180px;background-repeat:repeat}
+#g8app::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:var(--g8-cricket-art);background-size:440px 510px;background-position:36px 110px;background-repeat:repeat;filter:invert(1);mix-blend-mode:screen;opacity:.027}
+#g8hud,#g8app:has(.g8draftsplit) #g8hud{background:#111e43;border-bottom:3px solid #bf2947;box-shadow:0 3px 0 #050b18}
+#g8stage>.g8heading{background:#173778;border-color:#486fc2;color:#fff;box-shadow:0 4px 0 #050a17}
+#g8stage>.g8heading :is(h1,h2,.g8eyebrow){color:#fff}
+#g8stage>.g8heading>div:first-of-type{border-color:#6a8acb}
+#g8app .g8button.g8primary{background:#b92540;border-color:#ec7586;color:#fff;box-shadow:0 3px 0 #5c1222}
+#g8app .g8button.g8primary:hover:enabled{background:#d32d4d;border-color:#ffb4c0;color:#fff;box-shadow:0 3px 0 #5c1222,0 0 0 2px #df466533}
+#g8app .g8button.g8ghost,#g8app .g8button.g8small:not(.g8primary):not(.g8danger){background:#223b70;border-color:#6c8dc9;color:#fff}
+#g8app .g8button.g8ghost:hover:enabled{background:#2d4e91;color:#fff}
+#g8app .g8button:active:enabled{transform:translateY(2px);box-shadow:none}
+#g8app .g8button:focus-visible{outline:3px solid #ffbd4a;outline-offset:3px}
+#g8stage :is(.g8sheet,.g8draftaside){background:#17243c;border-color:#536987}
+#g8stage :is(.g8windowpanel,.g8wirepanel),#g8stage .g8signing>section:first-child{background:#17243c;border-color:#536987}
+#g8stage .g8signing>.g8windowpanel{align-self:start;min-height:0}
+#g8stage .g8signingactions{margin-bottom:0}
+#g8stage .g8windowhead{background:#214caf;border-color:#6789cf;color:#fff}
+#g8stage .g8windowhead .g8eyebrow{color:#fff}
+#g8stage .g8windowstatus{background:#10275b;border-color:#7d9bdb;color:#fff}
+#g8stage .g8signingfocus{background:#222f52;border-color:#5f7298}
+#g8stage .g8signingcounts>div{background:#184184;border-color:#658ac7}
+#g8stage .g8signingcounts>div:nth-child(2){background:#742839;border-color:#b76d7d}
+#g8stage .g8wirepanel .g8wirein{background:#142e57;border-left-color:#3d7de8}
+#g8stage .g8wirepanel .g8wireout{background:#3c2035;border-left-color:#dc3b62}
+#g8stage .g8wirepanel .g8wirein .g8stamp{background:#204fa6;border-color:#82a9ec;color:#fff}
+#g8stage .g8wirepanel .g8wireout .g8stamp{background:#982847;border-color:#e6809d;color:#fff}
+#g8stage .g8wirepanel .g8wireupdate{background:#29254a;border-left-color:#9462c9}
+#g8stage .g8wirepanel .g8wireline:hover{border-color:#a2b9e4}
+/* Draw actions occupy a shared reserved cell; hidden ticket identities keep geometry. */
+#g8stage .g8drawcontrols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:#182c53;border-color:#607ba8}
+#g8stage .g8drawstable{display:grid;min-width:0}
+#g8stage .g8drawstable>div{grid-area:1/1;min-width:0;display:flex;align-items:stretch;flex-wrap:wrap;gap:.6rem}
+#g8stage .g8drawstable>div[aria-hidden="true"]{visibility:hidden;pointer-events:none}
+#g8stage .g8drawnext>.g8button{width:100%;min-height:44px}
+#g8stage .g8ordergrid{grid-auto-rows:1fr;padding:0;align-items:stretch}
+#g8stage .g8ordergrid>.g8ordercard{position:relative;box-sizing:border-box;min-height:7rem;height:100%;margin:0;padding:1rem;transition:none;animation:none}
+#g8stage .g8ordergrid>.g8orderhidden{background:#192947;color:#fff;border-color:#5a7499;outline-color:transparent}
+#g8stage .g8orderhidden>:not(.g8ordercover){visibility:hidden}
+#g8stage .g8ordercover{position:absolute;inset:0;display:grid;grid-template-columns:max-content max-content;align-content:center;justify-content:start;align-items:baseline;gap:.3rem .7rem;padding:1rem;color:#eaf1ff;border-radius:inherit}
+#g8stage .g8ordercover>b{font-size:1.8rem;line-height:1.1}
+#g8stage .g8ordercover>small{grid-column:1/-1;font-size:.95rem}
+#g8stage:has(.g8draftsplit)>.g8clock{background:#1a2b4c;border:2px solid #59759e;border-left:6px solid #456aaa}
+#g8stage:has(.g8draftsplit)>.g8clockmine{background:#94223d;border-color:#ee8396;border-left:6px solid #fff}
+#g8stage .g8clockmine .g8clocklabel{color:#fff;font-weight:950;letter-spacing:.04em}
+#g8stage .g8clock .g8pickread{display:grid;font-weight:650;margin:.45rem 0 0;color:#e7edff;line-height:1.4;min-height:2.8em;max-width:48ch}
+#g8stage .g8clockmine .g8pickread{color:#fff;font-weight:650}
+#g8stage .g8clock h2>.g8clockreserve{display:block}
+#g8stage .g8draftcontrols>[data-action="skipPick"]:disabled{background:#3e2945;border-color:#b17a8d;color:#e2cfda}
+/* Primary role determines the card header. Rating ink is white, never pale mint. */
+#g8app .g8recruitcard{--g8-role:#214caf;background:#14223a;border-color:#526b94;border-top-color:var(--g8-role);overflow:hidden}
+#g8app .g8recruitcard.g8role-BOWL{--g8-role:#633593}
+#g8app .g8recruitcard.g8role-AR{--g8-role:#9d2949}
+#g8app .g8recruitcard.g8role-WK-BAT{--g8-role:#075f84}
+#g8app .g8recruitcard .g8candidateidentity{background:var(--g8-role);border-color:#ffffff40}
+#g8app .g8recruitcard .g8cardheader{background:transparent}
+#g8app .g8directpick.g8recruitcard .g8cardoverall{background:#08162c;border-color:#a3b8df;color:#fff}
+#g8app .g8directpick.g8recruitcard .g8cardoverall b{color:#fff}
+#g8app .g8directpick.g8recruitcard .g8candidatecontext{background:#0b1939;border-color:#8aa6d3;color:#fff}
+#g8app .g8directpick.g8recruitcard .g8cardbio,#g8app .g8directpick.g8recruitcard .g8cardbio>span:last-child,#g8app .g8directpick.g8recruitcard .g8cardbio .g8draftcountry{color:#fff}
+#g8app .g8recruitcard .g8cardattributes{background:#152c50;border-color:#6d85a7}
+#g8app .g8recruitcard .g8cardattributes b{color:#fff}
+#g8app .g8recruitcard .g8candidatestrength{background:#101c32}
+#g8app .g8recruitcard:hover{border-color:#bdd3ff;box-shadow:0 4px 0 #050b18,0 0 0 1px #83a8ec55;transform:none}
+#g8stage .g8draftscore{background:#213b75;border-color:#6f8dc7}
+#g8stage .g8draftpicked{background:#203356;border-color:#566f99}
+#g8stage .g8draftpicked:hover{background:#2b4b82;border-color:#a6c3f3}
+#g8stage .g8pickedroles{display:grid;gap:.35rem;margin:.8rem 0;padding:0;min-width:0}
+#g8stage .g8pickedrole{display:flex;justify-content:space-between;align-items:center;gap:.6rem;padding:.45rem .65rem;background:#204c9a;border-left:4px solid #719ff0;color:#fff;font-size:.85rem;line-height:1.4;min-width:0;animation:g8-role-in 180ms ease-out}
+#g8stage .g8pickedrole>span{min-width:0;overflow-wrap:anywhere}
+#g8stage .g8pickedrole>strong{font-variant-numeric:tabular-nums;flex:none;color:#fff}
+#g8stage .g8pickedrole-middle{background:#25417c;border-color:#6e91de}
+#g8stage .g8pickedrole-keeper{background:#075b7e;border-color:#49a4c6}
+#g8stage .g8pickedrole-bat-ar,#g8stage .g8pickedrole-bowl-ar{background:#852744;border-color:#e36a8e}
+#g8stage .g8pickedrole-pace,#g8stage .g8pickedrole-spin{background:#542b80;border-color:#ac7bdf}
+@keyframes g8-role-in{from{opacity:0}to{opacity:1}}
+@media(max-width:760px){#g8stage .g8clock .g8pickread{max-width:none}#g8app::before{background-size:330px 382px;opacity:.02}}
+@media(prefers-reduced-motion:reduce){#g8app .g8button,#g8app .g8recruitcard,#g8stage .g8pickedrole{transition:none;animation:none}}
+@media(forced-colors:active){#g8app::before{display:none}}
+
+#g8stage .g8drawcontrols>div:first-child p{display:grid}
+#g8stage .g8drawcontrols>div:first-child p>span,#g8stage .g8clock .g8pickread>span{grid-area:1/1}
+#g8stage .g8drawstatusreserve,#g8stage .g8pickreserve{visibility:hidden;pointer-events:none;user-select:none}
+@media(max-width:1000px){#g8stage .g8drawcontrols{grid-template-columns:minmax(0,1fr)}}
+#g8app :is(input,select,textarea){color-scheme:dark;color:#fff}
+#g8app input::placeholder,#g8dialog input::placeholder{color:#d3def2;opacity:1}
+
+#g8stage .g8runlabel{display:grid;min-width:0}
+#g8stage .g8runlabel>span{grid-area:1/1}
+#g8stage .g8runreserve{visibility:hidden;pointer-events:none;user-select:none}

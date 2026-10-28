@@ -1,8 +1,8 @@
 # Global Champions Cricket
 
-The current release is **GCC v96**. Your Draft has a live role tracker with counts and expandable player names, with no quotas or forced picks. Skip/Speed controls and draft headings stay stable between turns; menu items are separated and the recruitment label is centred. Supporting headings use less italics, Compare is removed, and the annual draw message adds “No point tanking in the GCC.”
+The current release is **GCC v97**. Solid navy, cobalt, red and purple replace the pale mint/cream theme. Player cards use saturated role colours and white rating ink, with subtle cricket artwork across the textured canvas. Your draft uses compact count bars only for roles already picked, with simplified batter/all-rounder/pace/spin categories and no quotas. Own turns clearly say **YOUR PICK**. Draw rectangles and controls retain their geometry through paused and automatic reveals. The signing panel fits its content and the action reads **Skip to end**.
 
-Rebuild with `python qa/draft-polish-20261028/build.py --promote`. See [draft/UI QA](qa/draft-polish-20261028/README.md). Four full foundation drafts, two annual drafts,116 scroll checks,84 screen/viewport smoke cases and targeted enlarged-text layouts pass.16 inline scripts including simulation and persistence remain byte-identical to v95. Historical builders reproduce historical releases and must not promote the current release.
+Rebuild with `python qa/draft-refinement-20261028/build.py`. See [v97 QA](qa/draft-refinement-20261028/README.md). Four full foundation drafts, two annual drafts,116 scroll checks,84 main-screen/viewport smoke cases,216 reveal states and36 own/CPU turn states pass.16 inline scripts including simulation and persistence remain byte-identical to v96. Historical builders reproduce historical releases and must not promote the current release.
 
 The following section records the original protected baseline.
 
