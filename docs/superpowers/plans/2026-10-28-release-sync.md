@@ -12,9 +12,9 @@ Constraints: preserve all 20 inline scripts from v84; preserve engine/domain/con
 
 Review focus: narrow long club names; enlarged dialog text; pale surface contrast; source embedded exact; pinned release rebuild avoids silently downgrading newer fixes.
 
-- [ ] Reconstruct v84 and verify its pinned SHA; retain latest CSS unchanged as reviewed override input.
-- [ ] Add a failing source/embedded parity and script integrity check against current split state.
-- [ ] Build v86 by combining v84 workspace, v85 condition strip and latest club override; add guarded reproducible builder.
-- [ ] Run parity/syntax/IDs, prior visual regressions and club guides across desktop/mobile/enlarged fonts; inspect screenshots.
-- [ ] Publish source, builder, QA and identical HTML aliases on current branch with expected-head checks; verify remote Git blob hashes.
-- [ ] Save exact tested download and report release identity.
+- [x] Reconstruct v84 and verify its pinned SHA; retain latest CSS unchanged as reviewed override input.
+- [x] Add a failing source/embedded parity and script integrity check against current split state.
+- [x] Build v86 by combining v84 workspace, v85 condition strip and latest club override; add guarded reproducible builder.
+- [x] Run parity/syntax/IDs, prior visual regressions and club guides across desktop/mobile/enlarged fonts; inspect screenshots.
+- [x] Publish source, builder, QA and identical HTML aliases on current branch with expected-head checks; verify remote Git blob hashes.
+- [x] Save exact tested download and report release identity.
