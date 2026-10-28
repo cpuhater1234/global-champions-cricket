@@ -1,0 +1,47 @@
+{
+  "engine": "Chromium via Python Playwright",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "originalPlayableSha256": "3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf",
+  "candidateSha256": "4984ca07411b3583d6585d8fd831e89f4144584109f5f8527d91650844726aac",
+  "fixture": "qa/stabilisation/fixtures/foundation.json from retained QA fixture archive",
+  "comparisonSurface": ".g8ballarena",
+  "externalNetwork": "aborted for deterministic comparison",
+  "results": [
+    {
+      "stage": "ball",
+      "size": [
+        1274,
+        602
+      ],
+      "pixelIdentical": true
+    },
+    {
+      "stage": "wicket",
+      "size": [
+        1274,
+        602
+      ],
+      "pixelIdentical": true
+    },
+    {
+      "stage": "chase",
+      "size": [
+        1274,
+        602
+      ],
+      "pixelIdentical": true
+    },
+    {
+      "stage": "inningsEnd",
+      "size": [
+        1274,
+        602
+      ],
+      "pixelIdentical": true
+    }
+  ],
+  "conclusion": "The isolated live-region change produces no pixel-level visual change in the four exercised match states."
+}

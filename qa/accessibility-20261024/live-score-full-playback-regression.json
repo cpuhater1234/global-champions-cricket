@@ -1,0 +1,22 @@
+{
+  "executedAt": "2026-10-24",
+  "engine": "Chromium via Python Playwright",
+  "originalPlayableSha256": "3dd348dd956017563dc006d64a2364a15a0b2d7a3d97bb9d92e3fae3399fcbdf",
+  "isolatedCandidateSha256": "4984ca07411b3583d6585d8fd831e89f4144584109f5f8527d91650844726aac",
+  "fixture": "retained qa/stabilisation/fixtures/foundation.json from GCC_QA_Save_Fixtures_20261024.tar.xz",
+  "determinism": "Math.random and Date.now fixed identically in both pages; external network aborted; in-memory localStorage shim used because runtime blocks navigated origins",
+  "scope": "Every one of the 292 delivery frames in the retained foundation match was rendered in original v57 and isolated live-score candidate. Hidden live-region text was intentionally excluded from visible-output comparison.",
+  "results": {
+    "frameCount": 292,
+    "deliveryFramesIdentical": true,
+    "preRenderGameStateIdentical": true,
+    "postAllFrameRenderGameStateIdentical": true,
+    "renderingDidNotMutateGameState": true,
+    "visiblePerFrameOutputsIdentical": true,
+    "frameDataSha256": "c639249d0960e711eecdb3d28d3c021b027fd8e511608041a0110ffc65c2e629",
+    "gameStateSha256": "0eac415325e3db936e14d387074d70ba6ad02d40940f80f773c7ecf55c8f4c6c",
+    "visibleFramesSha256": "b3d0069e0b15789a96b0a5595b0f798afb45ece4bc30b503ac418aca79a22576"
+  },
+  "visualAndARIA": "Separate four-state actual-Chromium evidence already proves pixel-identical rendering and cumulative score/overs/chase context in the accessibility tree.",
+  "releaseStatus": "isolated candidate only; canonical v57 remains untouched; human screen-reader timing/comprehension remains external"
+}
