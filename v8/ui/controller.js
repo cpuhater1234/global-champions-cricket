@@ -39,6 +39,7 @@
  function closeUtilityMenu(focus=false){const menu=hud.querySelector('.g8utilitymenu');if(menu?.open){menu.open=false;if(focus)menu.querySelector('summary')?.focus();}}
  function setView(view){assert(typeof view==='string'&&typeof views[view]==='function',`Unknown screen: ${view}`);closeUtilityMenu();ui.view=view;ui.modal=null;if(dialog.open)dialog.close();if(document.hidden||view==='home'||view==='story')clock.pause();else clock.resume();render(true);if(view==='matchReveal')scheduleMatch();}
  function render(changed=false){
+  window.GCC8_applyClubNames(s);
   const active=document.activeElement,id=active?.id,within=stage.contains(active),focusAction=active?.dataset?.action,focusArgs=active?.dataset?.args,focusInHud=hud.contains(active),start=active?.selectionStart,end=active?.selectionEnd,x=window.scrollX,y=window.scrollY;
   const wire=document.getElementById('g8wire'),wireScroll=wire?.scrollTop||0,wireAnchor=X.scrollAnchor(wire);
   const sealedKeys=new Set([...stage.querySelectorAll('.g8revealgrid>.g8sealed[data-key]')].map(e=>e.dataset.key));
