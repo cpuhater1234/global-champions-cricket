@@ -1,0 +1,62 @@
+{
+  "checks": [
+    {
+      "width": 320,
+      "font": 16,
+      "abbr": "CSK",
+      "panels": 2,
+      "heads": [],
+      "body": [],
+      "overflow": false,
+      "priorities": [
+        {
+          "display": "flex",
+          "numberTop": 1335.921875,
+          "titleTop": 1335.921875,
+          "clear": true,
+          "border": 0
+        },
+        {
+          "display": "flex",
+          "numberTop": 1532.21875,
+          "titleTop": 1532.21875,
+          "clear": true,
+          "border": 0
+        },
+        {
+          "display": "flex",
+          "numberTop": 1726.125,
+          "titleTop": 1726.125,
+          "clear": true,
+          "border": 0
+        }
+      ],
+      "scales": [
+        {
+          "x": 42,
+          "y": 785.1875,
+          "w": 236,
+          "h": 126.59375,
+          "b": 911.78125
+        },
+        {
+          "x": 42,
+          "y": 922.171875,
+          "w": 236,
+          "h": 126.59375,
+          "b": 1048.765625
+        },
+        {
+          "x": 42,
+          "y": 1059.15625,
+          "w": 236,
+          "h": 126.59375,
+          "b": 1185.75
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "pass": false,
+  "failure": "Headings need structured title bars\n\n0 !== 2\n"
+}
