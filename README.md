@@ -1,8 +1,10 @@
 # Global Champions Cricket
 
-The current release is **GCC v91**: `game/gcc_v8_product_candidate.html` (identical to `game/gcc_v8_quiet_arcade.html`). Home Ground and Build Your Side have aligned bordered title bars, consistent spacing and structured priority rows. The three equal stacked ground scales, colourful club reveal and official Blast names remain.
+The current release is **GCC v92**, built from published v91 (`7a5ed5a4c07cb19af85828f9e18d8742af74b7f5`). It extends the bold italic breakaway heading style across screen titles and structural panel headings, with quieter section labels. Club colours, player names and score data retain their existing identity and readability. Enlarged-text icon and expanded player-card layout issues are corrected.
 
-Rebuild with `python qa/guide-panels-20261028/build.py --promote`. See [the guide-panel checks](qa/guide-panels-20261028/README.md). All 432 club/width/font cases pass; guide wording and ratings are unchanged. Only HTML wrappers and scoped CSS change; 19 inline scripts including simulation and saving remain byte-identical. Historical builders reproduce historical releases and must not promote the current release.
+Rebuild with `python qa/heading-system-20261028/build.py --promote`. All20 inline scripts remain byte-identical to v91. Native Chromium checks cover300 screen/width/font cases and432 club-guide cases. See [heading QA](qa/heading-system-20261028/README.md).
+
+The GitHub playable aliases and saved download contain the same verified v92 build. Historical builders reproduce historical releases and must not promote the current release.
 
 The following section records the original protected baseline.
 
