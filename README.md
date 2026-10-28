@@ -1,10 +1,8 @@
 # Global Champions Cricket
 
-The current release is **GCC v92**, built from published v91 (`7a5ed5a4c07cb19af85828f9e18d8742af74b7f5`). It extends the bold italic breakaway heading style across screen titles and structural panel headings, with quieter section labels. Club colours, player names and score data retain their existing identity and readability. Enlarged-text icon and expanded player-card layout issues are corrected.
+The current release is **GCC v93**. Four supplied cricket figures appear individually as faint watermarks in selected introduction, signing, squad-update and season-review panels. Other surfaces remain plain. The original artwork is embedded unchanged, works offline and is smaller and quieter on phones. v92 heading hierarchy, colourful clubs, framed guides and stacked ground scales are preserved.
 
-Rebuild with `python qa/heading-system-20261028/build.py --promote`. All20 inline scripts remain byte-identical to v91. Native Chromium checks cover300 screen/width/font cases and432 club-guide cases. See [heading QA](qa/heading-system-20261028/README.md).
-
-The GitHub playable aliases and saved download contain the same verified v92 build. Historical builders reproduce historical releases and must not promote the current release.
+Rebuild with `python qa/cricket-watermarks-20261028/build.py --promote`. See [watermark QA](qa/cricket-watermarks-20261028/README.md). All252 screen/width/font checks pass, including unchanged heading/control geometry, all four figures and zero page errors. All20 inline scripts remain byte-identical to v92. Historical builders reproduce historical releases and must not promote the current release.
 
 The following section records the original protected baseline.
 
