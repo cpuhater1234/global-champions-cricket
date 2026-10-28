@@ -3,9 +3,9 @@
 ## Current game — start here
 
 - **Current active branch:** [`work/v8-game-first-rebuild`](https://github.com/cpuhater1234/global-champions-cricket/tree/work/v8-game-first-rebuild)
-- **Current playable version:** **GCC v97**
+- **Current playable version:** **GCC v98**
 - **Current playable build:** [`game/gcc_v8_product_candidate.html`](https://github.com/cpuhater1234/global-champions-cricket/blob/work/v8-game-first-rebuild/game/gcc_v8_product_candidate.html)
-- **Current release notes and QA:** [v97 checkpoint](https://github.com/cpuhater1234/global-champions-cricket/blob/work/v8-game-first-rebuild/qa/draft-refinement-20261028/README.md)
+- **Current release notes and QA:** [v98 checkpoint](https://github.com/cpuhater1234/global-champions-cricket/blob/work/v8-game-first-rebuild/qa/club-plan-20261028/README.md)
 - **Protected historical baseline:** **v7.0.14 — frozen, read-only reference**
 
 **Do not use the protected v7.0.14 baseline as the source of truth for current work.** Start from the active branch above. The default branch's historical game files do not represent the current playable; documentation updates here do not promote or revert game code.
