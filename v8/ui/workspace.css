@@ -1559,21 +1559,20 @@ html,body{background:#191c1a}
 #g8app .g8photocredit a{color:inherit;text-decoration:underline;text-underline-offset:.15em}
 #g8app .g8photocredit a:focus-visible{outline:2px solid #fff4df;outline-offset:3px}
 
-/* Club-guide ground conditions: a compact, legible scouting strip. */
+/* Home ground: three equal stacked readings, with a labelled full-width scale. */
 #g8dialog .g8clubbrief>.g8sheet:first-child{container-type:inline-size}
-#g8dialog .g8clubbrief .g8groundbands{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.55rem;align-items:stretch;margin-top:1.2rem}
-#g8dialog .g8clubbrief .g8groundbands>.g8conditionread{display:flex;flex-direction:column;align-items:stretch;justify-content:space-between;gap:.75rem;min-width:0;padding:.8rem .7rem;background:#303a32;border:1px solid #728570;border-top:3px solid #abc49a;border-radius:6px}
-#g8dialog .g8clubbrief .g8groundbands .g8conditionread>div:first-child{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:.4rem;min-width:0;line-height:1.35;text-align:left}
-#g8dialog .g8clubbrief .g8groundbands .g8conditionread b{display:block;margin:0;color:#bfcbbd;font-size:.82rem;font-weight:700;line-height:1.35;overflow-wrap:normal;word-break:normal}
-#g8dialog .g8clubbrief .g8groundbands .g8conditionread strong{display:block;margin:0;padding:0;background:transparent;border:0;border-radius:0;color:#fff3da;font-size:1rem;font-weight:800;line-height:1.35;overflow-wrap:normal;word-break:normal;text-align:left}
-#g8dialog .g8clubbrief .g8groundbands .g8conditiongauge{flex:none;width:100%;height:9px;margin:0;border-color:#789781}
-#g8dialog .g8clubbrief .g8groundbands .g8conditionends{display:none}
-@container(max-width:22rem){
- #g8dialog .g8clubbrief .g8groundbands{grid-template-columns:minmax(0,1fr);gap:.45rem}
- #g8dialog .g8clubbrief .g8groundbands>.g8conditionread{padding:.7rem .8rem;gap:.55rem}
- #g8dialog .g8clubbrief .g8groundbands .g8conditionread>div:first-child{display:flex;flex-direction:row;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.35rem .7rem}
- #g8dialog .g8clubbrief .g8groundbands .g8conditiongauge{height:8px}
-}
+#g8dialog .g8clubbrief .g8groundbands{display:grid;grid-template-columns:minmax(0,1fr);grid-auto-rows:1fr;gap:.65rem;align-items:stretch;margin-top:1rem}
+#g8dialog .g8clubbrief .g8groundbands>.g8conditionread{display:flex;flex-direction:column;align-items:stretch;justify-content:space-between;gap:.5rem;min-width:0;padding:.8rem .9rem;background:#303a32;border:1px solid #8b9f83;border-left:3px solid #abc49a;border-radius:6px}
+#g8dialog .g8clubbrief .g8conditionread>div:first-child{display:flex;flex-direction:row;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.3rem .8rem;min-width:0;text-align:left;line-height:1.4}
+#g8dialog .g8clubbrief .g8conditionread b{display:block;margin:0;font-size:1rem;font-weight:700;color:#edf1e5;line-height:1.4;text-align:left;overflow-wrap:anywhere}
+#g8dialog .g8clubbrief .g8conditionread strong{display:block;margin:0;padding:0;background:none;border:0;border-radius:0;color:#fff3da;font-size:1rem;font-weight:800;line-height:1.4;text-align:left;overflow-wrap:anywhere}
+#g8dialog .g8clubbrief .g8conditiongauge{position:relative;flex:none;width:100%;height:12px;margin:.15rem 0 0;border:1px solid #a2b89b;border-radius:3px}
+#g8dialog .g8clubbrief .g8conditiongauge::before{content:"";position:absolute;left:50%;top:0;bottom:0;border-left:1px solid #21392b}
+#g8dialog .g8clubbrief .g8conditiongauge>span{top:-4px;width:6px;height:20px;background:#102c40;border:2px solid #fff8e7;border-radius:2px;box-shadow:0 0 0 1px #183427}
+#g8dialog .g8clubbrief .g8conditionends{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.25rem;font-size:.85rem;font-weight:500;line-height:1.4;color:#dce5d3}
+#g8dialog .g8clubbrief .g8conditionends>span{min-width:0;white-space:normal;overflow-wrap:anywhere;text-align:left}
+#g8dialog .g8clubbrief .g8conditionends>span:nth-child(2){text-align:center}
+#g8dialog .g8clubbrief .g8conditionends>span:last-child{text-align:right}
 
 /* Preserve the external precision pass's removal of floating decorative art.
    Venue photographs and their separate licence credits remain visible. */
