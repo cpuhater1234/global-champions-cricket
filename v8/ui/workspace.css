@@ -1802,3 +1802,37 @@ html,body{background:#191c1a}
 #g8stage .g8wirepanel .g8wireline{min-height:min-content}
 #g8app .g8directpick.g8recruitcard .g8cardbio .g8draftcountry{color:#d2ddd4}
 
+/* GCC v96: stable draft controls, spaced menus and quieter supporting headings. */
+#g8stage .g8windowhead{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,max-content);align-items:center;gap:.7rem}
+#g8stage .g8windowhead>.g8eyebrow{margin:0;align-self:center;line-height:1.45;min-width:0}
+#g8stage .g8windowhead>.g8windowstatus{margin:0;max-width:10rem;min-width:0;overflow-wrap:anywhere;align-self:center}
+#g8hud .g8utilitymenu>div{display:grid;grid-template-columns:minmax(0,1fr);grid-auto-rows:max-content;gap:.6rem;padding:.65rem;width:min(18rem,calc(100vw - 2rem));min-width:0;max-height:70vh;overflow:auto;box-sizing:border-box;z-index:50}
+#g8hud .g8utilitymenu>div>.g8button{width:100%;margin:0;min-height:44px;box-shadow:none;white-space:normal;overflow-wrap:anywhere}
+#g8stage .g8clock{align-items:start;overflow-anchor:none}
+#g8stage .g8clock>div:first-child{min-width:0;flex:1 1 18rem}
+#g8stage .g8clock h2{display:grid;grid-template-columns:minmax(0,1fr);font-style:normal;text-transform:none;line-height:1.35;overflow-wrap:anywhere}
+#g8stage .g8clock h2>span{grid-area:1/1;min-width:0}
+#g8stage .g8clock h2>.g8clockreserve{visibility:hidden;pointer-events:none;user-select:none}
+#g8stage .g8clock>.g8draftcontrols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:.65rem;background:none;border:0;box-shadow:none;padding:0;margin:0 0 0 auto;width:24rem;max-width:100%;flex:0 1 24rem}
+#g8stage .g8draftcontrols>[data-action]{display:inline-flex;position:static;min-width:0;width:100%;margin:0;padding:.65rem;min-height:48px;height:auto;white-space:normal;overflow-wrap:anywhere;align-self:stretch;transform:none}
+#g8stage .g8draftcontrols>[data-action="skipPick"]{grid-area:1/1}
+#g8stage .g8draftcontrols>[data-action="draftSpeed"]{grid-area:1/2}
+#g8stage .g8draftcontrols>[data-action="skipPick"]:disabled{display:inline-flex;opacity:1;background:#2c3733;border-color:#68796e;color:#bfc9be;box-shadow:none;cursor:default}
+#g8app #g8stage h3,#g8app #g8dialog h3,#g8stage :is(.g8sectionhead,.g8wirehead,.g8careersteps,.g8overfeed) h2,#g8stage :is(.g8disclosure,.g8moredata)>summary,#g8dialog :is(.g8disclosure,.g8moredata)>summary{font-style:normal}
+#g8stage .g8draftcoverage{display:grid;grid-template-columns:minmax(0,1fr);gap:.45rem}
+#g8stage .g8coveragenote{font-size:.85rem;line-height:1.5;margin:0 0 .7rem;color:#d2dcd2}
+#g8stage .g8draftrole{display:block;text-align:left;grid-column:auto; margin:0;padding:0 .65rem;background:#1d2c27;border:1px solid #71806e;border-radius:4px;min-width:0}
+#g8stage .g8draftrole>summary{display:flex;justify-content:space-between;align-items:center;gap:.65rem;list-style:none;padding:.6rem 0;cursor:pointer;font-size:.9rem;line-height:1.4;color:#eceee2;min-height:44px}
+#g8stage .g8draftrole>summary::-webkit-details-marker{display:none}
+#g8stage .g8draftrole>summary>strong{white-space:nowrap;font-size:1rem;color:#eceee2}
+#g8stage .g8draftrole>summary>span{min-width:0;overflow-wrap:anywhere}
+#g8stage .g8draftrole p{padding:.6rem 0;margin:0;border-top:1px solid #687867;font-size:.85rem;line-height:1.5;overflow-wrap:anywhere;color:#d4dfd1}
+#g8stage .g8draftrole>summary:focus-visible{outline:2px solid #f5d58a;outline-offset:3px}
+@media(max-width:760px){#g8stage .g8clock>.g8draftcontrols{width:100%;margin:.8rem 0 0;flex-basis:100%}#g8stage .g8windowhead{grid-template-columns:minmax(0,1fr) minmax(0,45%)}}
+/* Fast autosaves must not add/remove a HUD row on every draft pick.
+   Slow saves and failure warnings retain their visible status. */
+#g8hud>#g8saveStatus:has(.g8savepending:not(.g8saveslow)){position:absolute;width:1px;height:1px;min-height:0;margin:0;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+#g8stage .g8draftverdict .g8bowlingrisk{margin:.7rem 0;padding:.7rem;background:#3c342b;border:1px solid #a18e70;border-radius:4px;color:#f0e4cc;font-size:.85rem;line-height:1.5}
+#g8stage .g8draftverdict .g8draftfreedom{margin:.7rem 0 0;font-size:.8rem}
+#g8hud .g8careernav{gap:.4rem}
+
