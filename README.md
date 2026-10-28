@@ -3,14 +3,16 @@
 ## Current game — start here
 
 - **Current active branch:** [`work/v8-game-first-rebuild`](https://github.com/cpuhater1234/global-champions-cricket/tree/work/v8-game-first-rebuild)
-- **Current playable version:** **GCC v98**
-- **Current playable build:** [`game/gcc_v8_product_candidate.html`](https://github.com/cpuhater1234/global-champions-cricket/blob/work/v8-game-first-rebuild/game/gcc_v8_product_candidate.html)
-- **Current release notes and QA:** [v98 checkpoint](https://github.com/cpuhater1234/global-champions-cricket/blob/work/v8-game-first-rebuild/qa/club-plan-20261028/README.md)
+- **Current playable version:** **GCC v99**
+- **Current playable:** [`game/gcc_v8_product_candidate.html`](https://github.com/cpuhater1234/global-champions-cricket/blob/work/v8-game-first-rebuild/game/gcc_v8_product_candidate.html)
+- **Release notes and validation:** [v99 match experience checkpoint](https://github.com/cpuhater1234/global-champions-cricket/blob/work/v8-game-first-rebuild/qa/match-experience-20261029/README.md)
 - **Protected historical baseline:** **v7.0.14 — frozen, read-only reference**
 
-**Do not use the protected v7.0.14 baseline as the source of truth for current work.** Start from the active branch above. The default branch's historical game files do not represent the current playable; documentation updates here do not promote or revert game code.
+**Do not use v7.0.14 as the source of truth for current development.** The active game lives on the work branch above. Default-branch game files remain historical.
 
-The sections below document the original protected **v7.0.14** checkpoint. They are historical reference and preservation instructions, not the current game specification.
+v99 rebuilds live playback around the score, chase equation, latest delivery and players in the middle. Results have Man of the Match, best batting, best bowling and a two-team worm. Scorecards include fall of wickets and omit bowling changes. Opaque colour blocks and strong frames carry through matchday and match reporting. The undrafted-player popup and recurring no-trades reminder are removed; Swap buttons match and career Continue is quiet.
+
+Validation: all 20 inline scripts pass syntax checks; 17 non-presentation scripts remain byte-identical to the saved v99 input. Native Chromium checks covered 84 screen/viewport cases, all 165 frames of an actual match, 12 enlarged-text live layouts, a complete foundation draft, quiet reload, Swap consistency and reduced motion. See the checkpoint for scope, limitations and the deterministic award formula.
 
 ## Protected historical baseline
 
