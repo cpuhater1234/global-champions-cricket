@@ -1,0 +1,63 @@
+/* QA candidate: club selection polish
+   Removes the stacked/overlapping pitch-condition boxes from the club picker
+   without altering any cricket logic or protected simulation code.
+*/
+
+#clubs .club-card {
+  overflow: visible;
+}
+
+#clubs .club-card .ground-snapshot {
+  margin-top: 0;
+  padding-top: 8px;
+  border-top: 1px solid rgba(201, 191, 173, 0.82);
+  gap: 6px;
+  background: transparent;
+}
+
+#clubs .ground-snapshot-head {
+  align-items: flex-start;
+  min-height: 0;
+}
+
+#clubs .ground-snapshot-head > div {
+  min-width: 0;
+}
+
+#clubs .ground-snapshot-trait {
+  max-width: none;
+  white-space: nowrap;
+}
+
+#clubs .ground-snapshot-body {
+  grid-template-columns: 24px minmax(0, 1fr);
+  gap: 7px;
+  align-items: flex-start;
+  min-height: 0;
+}
+
+#clubs .ground-snapshot-pitch {
+  width: 22px;
+  height: 48px;
+  border-radius: 3px;
+}
+
+#clubs .ground-snapshot-lines {
+  padding-top: 6px;
+  border-top: 1px solid rgba(201, 191, 173, 0.72);
+  gap: 4px;
+}
+
+#clubs .ground-snapshot-line {
+  grid-template-columns: 58px minmax(0, 1fr) 56px;
+  gap: 5px;
+}
+
+#clubs .ground-snapshot-line strong {
+  font-size: 8.5px;
+  line-height: 1.2;
+}
+
+#clubs .club-card h3 {
+  min-height: 0;
+}
