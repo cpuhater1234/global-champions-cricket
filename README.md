@@ -1,8 +1,8 @@
 # Global Champions Cricket
 
-The current release is **GCC v87**: `game/gcc_v8_product_candidate.html` (identical to `game/gcc_v8_quiet_arcade.html`). Career backup has been removed from the game menu, and stadium photo captions no longer show a stadium icon. Normal automatic saving and Continue are preserved.
+The current release is **GCC v88**: `game/gcc_v8_product_candidate.html` (identical to `game/gcc_v8_quiet_arcade.html`). The Breakaway Eight page restores the earlier full-colour club cards and layout. Career backup remains absent from Menu; stadium photo captions remain icon-free.
 
-Rebuild with `python qa/menu-cleanup-20261028/build.py --promote`. See [the targeted cleanup checks](qa/menu-cleanup-20261028/README.md). This is three exact presentation replacements on v86; cricket simulation and automatic persistence remain unchanged. The [v86 reconciliation](qa/release-sync-20261028/README.md) retains its original scope. Historical builders reproduce historical releases and must not promote the current release.
+Rebuild with `python qa/breakaway-restore-20261028/build.py --promote`. See [the restoration checks](qa/breakaway-restore-20261028/README.md). All20 inline scripts remain unchanged from v87. This presentation rollback is restricted to the club reveal page; other screens retain their current layout. Historical builders reproduce historical releases and must not promote the current release.
 
 The following section records the original protected baseline.
 
