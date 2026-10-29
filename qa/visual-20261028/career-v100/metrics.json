@@ -1,0 +1,746 @@
+{
+  "sha": "e698a73cc9eb4d5e8ab42fe2786004ae56e2523187d3bff003d361ee425b1a35",
+  "screens": [
+    {
+      "name": "home",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 103,
+      "overflow": []
+    },
+    {
+      "name": "home",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 151.765625,
+      "overflow": []
+    },
+    {
+      "name": "home",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 67.78125,
+      "overflow": []
+    },
+    {
+      "name": "home",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 67.78125,
+      "overflow": []
+    },
+    {
+      "name": "story",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 103,
+      "overflow": []
+    },
+    {
+      "name": "story",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 151.765625,
+      "overflow": []
+    },
+    {
+      "name": "story",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 67.78125,
+      "overflow": []
+    },
+    {
+      "name": "story",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 67.78125,
+      "overflow": []
+    },
+    {
+      "name": "league",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 103,
+      "overflow": []
+    },
+    {
+      "name": "league",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 151.765625,
+      "overflow": []
+    },
+    {
+      "name": "league",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 67.78125,
+      "overflow": []
+    },
+    {
+      "name": "league",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 67.78125,
+      "overflow": []
+    },
+    {
+      "name": "clubs",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 103,
+      "overflow": []
+    },
+    {
+      "name": "clubs",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 151.765625,
+      "overflow": []
+    },
+    {
+      "name": "clubs",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 67.78125,
+      "overflow": []
+    },
+    {
+      "name": "clubs",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 67.78125,
+      "overflow": []
+    },
+    {
+      "name": "club-guide",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 103,
+      "overflow": []
+    },
+    {
+      "name": "club-guide",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 151.765625,
+      "overflow": []
+    },
+    {
+      "name": "club-guide",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 67.78125,
+      "overflow": []
+    },
+    {
+      "name": "club-guide",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 67.78125,
+      "overflow": []
+    },
+    {
+      "name": "signings",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 103,
+      "overflow": []
+    },
+    {
+      "name": "signings",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 186.15625,
+      "overflow": []
+    },
+    {
+      "name": "signings",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 102.171875,
+      "overflow": []
+    },
+    {
+      "name": "signings",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 102.171875,
+      "overflow": []
+    },
+    {
+      "name": "draft",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 103,
+      "overflow": [
+        {
+          "tag": "DIV",
+          "cls": "g8savepending ",
+          "text": "Saving progress…",
+          "scroll": 174,
+          "client": 24
+        }
+      ]
+    },
+    {
+      "name": "draft",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 186.15625,
+      "overflow": []
+    },
+    {
+      "name": "draft",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 102.171875,
+      "overflow": []
+    },
+    {
+      "name": "draft",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 102.171875,
+      "overflow": []
+    },
+    {
+      "name": "season",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 173.96875,
+      "overflow": []
+    },
+    {
+      "name": "season",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 251.515625,
+      "overflow": []
+    },
+    {
+      "name": "season",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 166.359375,
+      "overflow": [
+        {
+          "tag": "SPAN",
+          "cls": "g8badge",
+          "text": "SCO",
+          "scroll": 40,
+          "client": 37
+        },
+        {
+          "tag": "SPAN",
+          "cls": "g8badge",
+          "text": "LAN",
+          "scroll": 40,
+          "client": 37
+        }
+      ]
+    },
+    {
+      "name": "season",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 190.359375,
+      "overflow": [
+        {
+          "tag": "SPAN",
+          "cls": "g8badge",
+          "text": "SCO",
+          "scroll": 40,
+          "client": 37
+        },
+        {
+          "tag": "SPAN",
+          "cls": "g8badge",
+          "text": "LAN",
+          "scroll": 40,
+          "client": 37
+        }
+      ]
+    },
+    {
+      "name": "season-ladder",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 173.96875,
+      "overflow": []
+    },
+    {
+      "name": "season-ladder",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 251.515625,
+      "overflow": []
+    },
+    {
+      "name": "season-ladder",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 166.359375,
+      "overflow": []
+    },
+    {
+      "name": "season-ladder",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 190.359375,
+      "overflow": []
+    },
+    {
+      "name": "season-fixtures",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 173.96875,
+      "overflow": []
+    },
+    {
+      "name": "season-fixtures",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 251.515625,
+      "overflow": []
+    },
+    {
+      "name": "season-fixtures",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 166.359375,
+      "overflow": []
+    },
+    {
+      "name": "season-fixtures",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 190.359375,
+      "overflow": []
+    },
+    {
+      "name": "season-leaguePlayers",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 173.96875,
+      "overflow": []
+    },
+    {
+      "name": "season-leaguePlayers",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 251.515625,
+      "overflow": []
+    },
+    {
+      "name": "season-leaguePlayers",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 166.359375,
+      "overflow": []
+    },
+    {
+      "name": "season-leaguePlayers",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 190.359375,
+      "overflow": []
+    },
+    {
+      "name": "team",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 173.96875,
+      "overflow": []
+    },
+    {
+      "name": "team",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 251.515625,
+      "overflow": []
+    },
+    {
+      "name": "team",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 166.359375,
+      "overflow": []
+    },
+    {
+      "name": "team",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 190.359375,
+      "overflow": []
+    },
+    {
+      "name": "player",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 173.96875,
+      "overflow": []
+    },
+    {
+      "name": "player",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 251.515625,
+      "overflow": []
+    },
+    {
+      "name": "player",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 166.359375,
+      "overflow": []
+    },
+    {
+      "name": "player",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 190.359375,
+      "overflow": []
+    },
+    {
+      "name": "prepare",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 173.96875,
+      "overflow": []
+    },
+    {
+      "name": "prepare",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 251.515625,
+      "overflow": []
+    },
+    {
+      "name": "prepare",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 166.359375,
+      "overflow": [
+        {
+          "tag": "SPAN",
+          "cls": "g8badge",
+          "text": "SCO",
+          "scroll": 40,
+          "client": 37
+        },
+        {
+          "tag": "SPAN",
+          "cls": "g8badge",
+          "text": "LAN",
+          "scroll": 40,
+          "client": 37
+        }
+      ]
+    },
+    {
+      "name": "prepare",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 190.359375,
+      "overflow": [
+        {
+          "tag": "SPAN",
+          "cls": "g8badge",
+          "text": "SCO",
+          "scroll": 40,
+          "client": 37
+        },
+        {
+          "tag": "SPAN",
+          "cls": "g8badge",
+          "text": "LAN",
+          "scroll": 40,
+          "client": 37
+        }
+      ]
+    },
+    {
+      "name": "match",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 103,
+      "overflow": []
+    },
+    {
+      "name": "match",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 186.15625,
+      "overflow": []
+    },
+    {
+      "name": "match",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 102.171875,
+      "overflow": []
+    },
+    {
+      "name": "match",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 126.171875,
+      "overflow": []
+    },
+    {
+      "name": "result",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 173.96875,
+      "overflow": []
+    },
+    {
+      "name": "result",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 251.515625,
+      "overflow": []
+    },
+    {
+      "name": "result",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 166.359375,
+      "overflow": []
+    },
+    {
+      "name": "result",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 190.359375,
+      "overflow": []
+    },
+    {
+      "name": "scorecard",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 173.96875,
+      "overflow": []
+    },
+    {
+      "name": "scorecard",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 251.515625,
+      "overflow": []
+    },
+    {
+      "name": "scorecard",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 166.359375,
+      "overflow": []
+    },
+    {
+      "name": "scorecard",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 190.359375,
+      "overflow": []
+    },
+    {
+      "name": "review",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 103,
+      "overflow": []
+    },
+    {
+      "name": "review",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 186.15625,
+      "overflow": []
+    },
+    {
+      "name": "review",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 102.171875,
+      "overflow": []
+    },
+    {
+      "name": "review",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 126.171875,
+      "overflow": []
+    },
+    {
+      "name": "archive",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 103,
+      "overflow": []
+    },
+    {
+      "name": "archive",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 186.15625,
+      "overflow": []
+    },
+    {
+      "name": "archive",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 102.171875,
+      "overflow": []
+    },
+    {
+      "name": "archive",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 126.171875,
+      "overflow": []
+    },
+    {
+      "name": "offseason",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 103,
+      "overflow": []
+    },
+    {
+      "name": "offseason",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 186.15625,
+      "overflow": []
+    },
+    {
+      "name": "offseason",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 102.171875,
+      "overflow": []
+    },
+    {
+      "name": "offseason",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 102.171875,
+      "overflow": []
+    },
+    {
+      "name": "trade",
+      "width": 1440,
+      "body": 1440,
+      "viewport": 1440,
+      "hudHeight": 103,
+      "overflow": []
+    },
+    {
+      "name": "trade",
+      "width": 768,
+      "body": 768,
+      "viewport": 768,
+      "hudHeight": 186.15625,
+      "overflow": []
+    },
+    {
+      "name": "trade",
+      "width": 390,
+      "body": 390,
+      "viewport": 390,
+      "hudHeight": 102.171875,
+      "overflow": []
+    },
+    {
+      "name": "trade",
+      "width": 320,
+      "body": 320,
+      "viewport": 320,
+      "hudHeight": 102.171875,
+      "overflow": []
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,302 @@
+{
+  "checks": [
+    "12 compact fixture layouts",
+    {
+      "naturalArc": {
+        "id": "2008:LAN:75:3",
+        "year": 2008,
+        "club": "LAN",
+        "incumbent": {
+          "id": 75,
+          "name": "Mohammad Hafeez",
+          "bat": 73,
+          "band": "OPEN",
+          "keeper": false,
+          "form": -1
+        },
+        "challenger": {
+          "id": 82,
+          "name": "Jesse Ryder",
+          "bat": 76,
+          "band": "OPEN",
+          "keeper": false,
+          "form": 0
+        },
+        "returns": [
+          {
+            "id": 75,
+            "runs": 1,
+            "balls": 7,
+            "dismissal": "lbw b Andrew Flintoff",
+            "dnb": false,
+            "round": 1
+          },
+          {
+            "id": 75,
+            "runs": 3,
+            "balls": 8,
+            "dismissal": "lbw b Nathan Bracken",
+            "dnb": false,
+            "round": 2
+          },
+          {
+            "id": 75,
+            "runs": 8,
+            "balls": 8,
+            "dismissal": "lbw b James Anderson",
+            "dnb": false,
+            "round": 3
+          }
+        ]
+      }
+    },
+    "actual challenger choice, fact-based aftermath, deduplication, save/reload",
+    "replay creates no events",
+    "three-fixture arc resolution",
+    "malformed active journal renders safely"
+  ],
+  "errors": [],
+  "layouts": [
+    {
+      "width": 320,
+      "font": 16,
+      "height": 405.359375,
+      "overflow": false,
+      "buttons": [
+        {
+          "text": "Review XI",
+          "width": 129,
+          "scroll": 125,
+          "client": 125
+        },
+        {
+          "text": "Watch match",
+          "width": 129,
+          "scroll": 125,
+          "client": 125
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "font": 24,
+      "height": 678.859375,
+      "overflow": false,
+      "buttons": [
+        {
+          "text": "Review XI",
+          "width": 129,
+          "scroll": 125,
+          "client": 125
+        },
+        {
+          "text": "Watch match",
+          "width": 129,
+          "scroll": 125,
+          "client": 125
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "font": 32,
+      "height": 990.21875,
+      "overflow": false,
+      "buttons": [
+        {
+          "text": "Review XI",
+          "width": 129,
+          "scroll": 125,
+          "client": 125
+        },
+        {
+          "text": "Watch match",
+          "width": 129,
+          "scroll": 125,
+          "client": 125
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "font": 16,
+      "height": 392.375,
+      "overflow": false,
+      "buttons": [
+        {
+          "text": "Review XI",
+          "width": 164,
+          "scroll": 160,
+          "client": 160
+        },
+        {
+          "text": "Watch match",
+          "width": 164,
+          "scroll": 160,
+          "client": 160
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "font": 24,
+      "height": 571.703125,
+      "overflow": false,
+      "buttons": [
+        {
+          "text": "Review XI",
+          "width": 164,
+          "scroll": 160,
+          "client": 160
+        },
+        {
+          "text": "Watch match",
+          "width": 164,
+          "scroll": 160,
+          "client": 160
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "font": 32,
+      "height": 845.5,
+      "overflow": false,
+      "buttons": [
+        {
+          "text": "Review XI",
+          "width": 164,
+          "scroll": 160,
+          "client": 160
+        },
+        {
+          "text": "Watch match",
+          "width": 164,
+          "scroll": 160,
+          "client": 160
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "font": 16,
+      "height": 361.21875,
+      "overflow": false,
+      "buttons": [
+        {
+          "text": "Review XI",
+          "width": 141.0625,
+          "scroll": 137,
+          "client": 137
+        },
+        {
+          "text": "Watch match",
+          "width": 142.109375,
+          "scroll": 138,
+          "client": 138
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "font": 24,
+      "height": 452.3125,
+      "overflow": false,
+      "buttons": [
+        {
+          "text": "Review XI",
+          "width": 184.140625,
+          "scroll": 180,
+          "client": 180
+        },
+        {
+          "text": "Watch match",
+          "width": 195.203125,
+          "scroll": 191,
+          "client": 191
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "font": 32,
+      "height": 710.90625,
+      "overflow": false,
+      "buttons": [
+        {
+          "text": "Review XI",
+          "width": 227.234375,
+          "scroll": 223,
+          "client": 223
+        },
+        {
+          "text": "Watch match",
+          "width": 248.3125,
+          "scroll": 244,
+          "client": 244
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "font": 16,
+      "height": 361.21875,
+      "overflow": false,
+      "buttons": [
+        {
+          "text": "Review XI",
+          "width": 141.0625,
+          "scroll": 137,
+          "client": 137
+        },
+        {
+          "text": "Watch match",
+          "width": 142.109375,
+          "scroll": 138,
+          "client": 138
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "font": 24,
+      "height": 428.375,
+      "overflow": false,
+      "buttons": [
+        {
+          "text": "Review XI",
+          "width": 184.140625,
+          "scroll": 180,
+          "client": 180
+        },
+        {
+          "text": "Watch match",
+          "width": 195.203125,
+          "scroll": 191,
+          "client": 191
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "font": 32,
+      "height": 504.359375,
+      "overflow": false,
+      "buttons": [
+        {
+          "text": "Review XI",
+          "width": 227.234375,
+          "scroll": 223,
+          "client": 223
+        },
+        {
+          "text": "Watch match",
+          "width": 248.3125,
+          "scroll": 244,
+          "client": 244
+        }
+      ]
+    }
+  ],
+  "pass": true
+}
