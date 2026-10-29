@@ -390,3 +390,23 @@ small,.g8fine,p,td,option{font-weight:600}
 #g8dialog .g8modalhead h2{font-size:clamp(1rem,5cqi,2rem);overflow-wrap:normal;word-break:normal}
 .g8roster li>small{white-space:nowrap;flex-shrink:0}
 
+
+/* Solid clubroom colour, structured reading order, no translucent highlights. */
+.g8dressingroom,.g8relationship{background:#181d27;color:#f4f6fa;border:2px solid #566579;border-left:7px solid #ce3f32;border-radius:5px;padding:clamp(12px,2vw,22px);margin:16px 0;min-width:0}
+.g8dressingroom header,.g8relationship header{border-bottom:2px solid #566579;padding-bottom:10px;margin-bottom:10px}
+.g8dressingroom h2,.g8relationship h3{color:#fff;margin:5px 0;font-style:normal;line-height:1.2}
+.g8dressingroom .g8eyebrow,.g8relationship .g8eyebrow{color:#ffc857;opacity:1}
+.g8dressingroom p,.g8relationship p{color:#e1e7f0;line-height:1.55;margin:10px 0}
+.g8decisionline{display:flex;gap:14px;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid #566579}
+.g8decisionline>div{min-width:0}.g8decisionline strong,.g8decisionline span{display:block}.g8decisionline span{color:#dde4ef;margin-top:3px;line-height:1.4}
+.g8conditionbrief{border-top:2px solid #566579;padding-top:12px}
+.g8playercontext{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0}.g8playercontext>div{border-top:4px solid #ce3f32;padding-top:8px;min-width:0}.g8playercontext dt{color:#bdc9d9;font-size:.85em}.g8playercontext dd{color:#fff;margin:4px 0 0;font-weight:800;overflow-wrap:anywhere}
+.g8managementactions{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}.g8relationship .g8managementnote{color:#bdc9d9;font-size:.85em;border-top:1px solid #566579;padding-top:12px}
+.g8commitment{background:#314779;border:2px solid #7394cf;border-left:6px solid #ffc857;padding:12px;margin:14px 0}.g8commitment b,.g8commitment span{display:block;color:#fff;line-height:1.5}.g8commitment.broken{background:#702d35;border-color:#d16d70}.g8commitment.kept{background:#155442;border-color:#63b69b}
+.g8squadpulse{display:flex;gap:5px;flex-wrap:wrap;margin-top:7px;font-size:.72rem;line-height:1.35;font-weight:700}.g8squadpulse>span{background:#304054;color:#fff;border:1px solid #74869d;border-radius:3px;padding:3px 6px;white-space:normal}.g8squadpulse>.g8pulsealert{background:#803423;border-color:#e5966f}.g8squadpulse>.g8pulsepromise{background:#314779;border-color:#97b0ec}
+@media(max-width:600px){.g8decisionline{align-items:flex-start;flex-direction:column;gap:8px}.g8playercontext{grid-template-columns:1fr}.g8managementactions>.g8button{flex:1 1 100%;white-space:normal;text-align:left}.g8squadpulse{font-size:.76rem}}
+/* Keep player names and status readable when text grows inside a split squad. */
+@media(max-width:60rem){#g8stage .g8teamworkspace.g8compactwork .g8slot{grid-template-columns:1.3rem minmax(0,1fr)}#g8stage .g8teamworkspace.g8compactwork .g8xiactions{grid-column:2;flex-direction:row;align-items:center;justify-content:space-between;width:100%;flex-wrap:wrap}#g8stage .g8teamworkspace.g8compactwork .g8orderarrows{width:4.8rem}}
+.g8squadpulse>span{min-width:0;max-width:100%;box-sizing:border-box;overflow-wrap:anywhere}
+#g8stage .g8hubteams .g8badge,#g8dialog .g8previewside>.g8badge{min-width:max-content;width:auto;flex-shrink:0}
+#g8stage .g8startingxi .g8namescout>.g8squadpulse{grid-column:1/-1}
