@@ -3,16 +3,18 @@
 ## Current game — start here
 
 - **Current active branch:** [`work/v8-game-first-rebuild`](https://github.com/cpuhater1234/global-champions-cricket/tree/work/v8-game-first-rebuild)
-- **Current playable version:** **GCC v99**
+- **Current playable version:** **GCC v100**
 - **Current playable:** [`game/gcc_v8_product_candidate.html`](https://github.com/cpuhater1234/global-champions-cricket/blob/work/v8-game-first-rebuild/game/gcc_v8_product_candidate.html)
-- **Release notes and validation:** [v99 match experience checkpoint](https://github.com/cpuhater1234/global-champions-cricket/blob/work/v8-game-first-rebuild/qa/match-experience-20261029/README.md)
+- **Release notes and QA:** [v100 first career story](https://github.com/cpuhater1234/global-champions-cricket/blob/work/v8-game-first-rebuild/qa/career-story-20261029/README.md)
 - **Protected historical baseline:** **v7.0.14 — frozen, read-only reference**
 
-**Do not use v7.0.14 as the source of truth for current development.** The active game lives on the work branch above. Default-branch game files remain historical.
+**Do not use v7.0.14 as the source of truth for current development.** Current code is on the work branch. Default-branch game files remain historical.
 
-v99 rebuilds live playback around the score, chase equation, latest delivery and players in the middle. Results have Man of the Match, best batting, best bowling and a two-team worm. Scorecards include fall of wickets and omit bowling changes. Opaque colour blocks and strong frames carry through matchday and match reporting. The undrafted-player popup and recurring no-trades reminder are removed; Swap buttons match and career Continue is quiet.
+v100 adds the first connected selection-pressure story: real low innings, a credible bench alternative, your actual XI decision and a three-fixture aftermath saved with the career. It connects matchday, XI review, opening playback and results. Matchday now has compact opaque club colours, strong frames and a bounded ground photograph; its mobile fixture is 392px high versus 647px previously.
 
-Validation: all 20 inline scripts pass syntax checks; 17 non-presentation scripts remain byte-identical to the saved v99 input. Native Chromium checks covered 84 screen/viewport cases, all 165 frames of an actual match, 12 enlarged-text live layouts, a complete foundation draft, quiet reload, Swap consistency and reduced motion. See the checkpoint for scope, limitations and the deterministic award formula.
+This is the first complete arc, not the entire proposed relationship/promise system. Form, fitness, conditions and role fit retain their existing cricket effects. No new morale performance penalties or fabricated player quotes are added. Prior v99 draft readability, coverage labels and batting-order controls remain.
+
+Validation includes pure story tests, real match/selection/save/reload/replay checks, three-fixture closure, malformed optional data, 12 enlarged-text fixture layouts and 84 existing screen/viewport cases. All 20 scripts pass syntax checks; 17 non-presentation scripts remain byte-identical to the preceding release. See the checkpoint for review findings, exact scope and browser limitations.
 
 ## Protected historical baseline
 
