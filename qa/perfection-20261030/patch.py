@@ -56,10 +56,13 @@ rep(19,trade_rules,'${X.disclosure("Trade rules",`'+trade_rules+'`)}')
 trade_partner='<label>Other club<select data-input="tradeClub">${s.league.filter(c=>c.abbr!==own()).map(c=>`<option value="${c.abbr}" ${ui.tradeClub===c.abbr?\'selected\':\'\'}>${esc(c.name)}</option>`).join(\'\')}</select></label>'
 rep(19,trade_partner,'')
 rep(19,'<div class="g8trade g8tradepackage">','<div class="gccTradePartner">'+trade_partner+'</div><div class="g8trade g8tradepackage">')
+rep(15,'<header class="gcc-scorebug"><div><span class="g8eyebrow">${phase}</span><h2>${badge(batClub)}${esc(batClub.name)}</h2><span class="gcc-opposition">v ${esc(opposition.name)} · ${fixtureScore(opposition)}</span></div><div class="gcc-total"><strong>${total}/${wickets}</strong><span>${overText} overs · CRR ${balls?(total*6/balls).toFixed(2):\'0.00\'}</span></div><p class="gcc-equation">${esc(scoreContext)}</p></header>','${X.liveScoreboard(r,batClub,fixtureScore,phase,overText,balls,total,scoreContext)}')
 # Shared knockout fixture keeps ready semi-finals and the Grand Final aligned.
 fixture='<div class="g8fixture"><div>${badge(a)}<h2>${X.teamLabel(a)}</h2></div><span>v</span><div>${badge(b)}<h2>${X.teamLabel(b)}</h2></div></div>'
 assert parts[17].count(fixture)==2
 parts[17]=parts[17].replace(fixture,'${X.knockoutFixture(a,b)}')
+rep(15,"${d.runs} runs${extra?","${d.runs} ${d.runs===1?'run':'runs'}${extra?")
+rep(15,"last.runs+' runs'","last.runs+(last.runs===1?' run':' runs')")
 rep(11,"${glyph?icon(glyph):''}","${glyph?(window.GCC8?.designIcon?window.GCC8.designIcon(glyph):icon(glyph)):''}")
 rep(11,'const icon=name=>`<svg', 'const icon=name=>window.GCC8?.approvedIcon?.(name)||`<svg')
 rep(11,' const resultCard=r=>{',' const resultCard=r=>window.GCC8?.designResultCard?window.GCC8.designResultCard(r):legacyResultCard(r);\n const legacyResultCard=r=>{')
