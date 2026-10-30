@@ -42,6 +42,8 @@ rep(9,'${state.pool.length} eligible players across the 2008 cricket world. Five
 rep(9,'${state.pool.length} eligible players across the 2008 cricket world. You jump','${state.pool.filter(p=>(p.dynastyCareer?.debutYear??2008)<=2008).length} eligible players across the 2008 cricket world. You jump')
 rep(17,'</section>${X.seasonProgress()}<section class="g8sheet g8seasonstars">',"""</section>${s.finals?.gf?X.disclosure('How the title was decided',`<div class="g8finalsrecap">${(s.finals.semis||[]).map((r,i)=>`<p><b>Semi-final ${i+1}</b> ${esc(r.winner.name)} won ${esc(r.marginText)} ${btn('Open scorebook','finalScorecard',['semis',i],'g8ghost g8small')}</p>`).join('')}${resultCard(s.finals.gf)}${btn('Grand Final scorebook','finalScorecard',['gf',0],'g8ghost')}</div>`):''}${X.seasonProgress()}<section class="g8sheet g8seasonstars">""")
 rep(19,"bind('finalScorecard',['finals']", "bind('finalScorecard',['finals','review']")
+rep(16,"+X.offseasonSteps()+X.departureGuide()+(managing?", "+X.offseasonSteps()+(managing?X.departureGuide():'')+(managing?")
+rep(16,'</aside></div><div class="g8annualdetails">', '</aside></div>${X.disclosure("Squad rules & departure allowance",X.departureGuide())}<div class="g8annualdetails">')
 for i in (9,10,11,16,17,19):
  path=root/('v8/engine/'+('foundation.js' if i==9 else 'dynasty.js')) if i in (9,10) else root/('v8/ui/'+{11:'components.js',16:'career.js',17:'screens.js',19:'controller.js'}[i]);path.write_text(parts[i])
 domain=parts[2][parts[2].index('/* Causal T20 delivery simulation.'):];domain=domain[:domain.index('})();')+5];(root/'v8/domain/delivery_engine.js').write_text(domain)

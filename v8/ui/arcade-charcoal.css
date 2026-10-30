@@ -91,3 +91,129 @@ html body,#g8app{background-color:var(--gcc-ground)!important;color:var(--gcc-te
 /* Draft card numbers share the same value-driven scale as scouting. */
 #g8app .g8directpick.g8recruitcard .g8cardoverall,#g8app .g8recruitcard .g8cardattributes{background:#242424!important;border-color:#818181!important}
 #g8app .g8directpick.g8recruitcard .g8cardoverall b,#g8app .g8recruitcard .g8cardattributes b{color:var(--rating-color,#f6f4ec)!important}
+
+/* Visual hierarchy: one outer frame, quieter inner divisions, purposeful colour. */
+:root{--gcc-line:#666666;--gcc-text:#f1f1f1;--gcc-muted:#c6c6c6;--gcc-space:20px}
+#g8app .g8heading{padding:20px 24px!important;margin-bottom:20px!important;border-left-color:var(--club-accent,#ed7547)!important;background:linear-gradient(110deg,#353535,#242424)!important;box-shadow:0 3px 0 #090909!important;gap:16px}
+#g8app .g8heading h1{font-size:clamp(26px,3vw,38px)!important;line-height:1.12!important;margin:8px 0 0!important;letter-spacing:-.025em}
+#g8app .g8heading p{border:0!important;padding:0!important;margin:10px 0 0!important;max-width:70ch;line-height:1.5}
+#g8app .g8heading>div{border:0!important;padding-left:0!important}
+#g8app .g8heading .g8eyebrow{border:0!important;padding:0!important;font-size:12px!important;letter-spacing:.1em}
+#g8app .g8sectionhead{padding:12px 16px!important;background:#313131!important;border:0!important;border-bottom:2px solid #727272!important;min-height:48px;gap:12px}
+#g8app .g8sectionhead :is(h2,h3,span,strong){color:#f1f1f1!important}
+#g8app .g8sectionhead h2{font-size:17px!important;line-height:1.3!important;margin:0!important}
+#g8app .g8sectionhead>span{font-size:13px!important;font-weight:700}
+#g8app .g8button,#g8dialog .g8button{min-height:44px;line-height:1.25;border-radius:5px!important;font-size:15px;letter-spacing:.01em;padding:11px 16px;border-color:#797979!important;box-shadow:0 2px 0 #0a0a0a!important}
+#g8app .g8button.g8primary,#g8dialog .g8button.g8primary{border-color:#ffb681!important}
+#g8app .g8button:hover:not(:disabled),#g8dialog .g8button:hover:not(:disabled){outline:0;filter:brightness(1.1);border-color:#d4d4d4!important}
+#g8app .g8welcomeactions{display:grid!important;grid-template-columns:1fr!important;gap:12px!important}
+#g8app .g8welcomeactions>.g8button{width:100%;min-height:72px!important;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+#g8app .g8welcomeactions .g8resumemeta{font-size:13px;line-height:1.3;font-weight:600}
+#g8app :is(.g8disclosure,.g8pickguide){border:1px solid #696969!important;border-left:3px solid #787878!important;background:#252525!important;box-shadow:none!important;border-radius:6px!important}
+#g8app :is(.g8disclosure,.g8pickguide)>summary{color:#f1f1f1!important;padding:14px 16px!important;min-height:48px;font-size:15px;font-weight:800}
+#g8app .g8disclosure[open],#g8app .g8pickguide[open]{border-left-color:var(--club-accent,#ed7547)!important}
+#g8app .g8pickguide :is(p,li){color:#d4d4d4!important;line-height:1.55}
+#g8app .g8offseasonsteps{display:flex!important;gap:0!important;padding:0!important;margin:0 0 20px!important;list-style:none;counter-reset:none;border-bottom:2px solid #505050}
+#g8app .g8offseasonsteps li{flex:1;display:flex;align-items:center;gap:10px;padding:12px 16px!important;background:transparent!important;border:0!important;border-bottom:3px solid transparent!important;opacity:1!important;color:#b8b8b8!important}
+#g8app .g8offseasonsteps li.active{border-bottom-color:var(--club-accent,#ed7547)!important;color:#f1f1f1!important;background:#2c2c2c!important}
+#g8app .g8offseasonsteps li b{display:grid;place-items:center;width:28px;height:28px;flex:0 0 28px;background:#3e3e3e;border:1px solid #747474;border-radius:4px;color:#f1f1f1}
+#g8app .g8offseasonsteps li.active b{background:var(--club-accent,#ed7547);color:var(--club-ink,#151515);border-color:var(--club-accent,#ed7547)}
+#g8app .g8offseasonsteps li strong{font-size:14px;line-height:1.3}
+#g8app .g8annualworkspace{gap:20px!important;align-items:start!important;margin-bottom:20px}
+#g8app .g8annualhero{background:linear-gradient(130deg,#323232,#222222)!important;border:2px solid #747474!important;border-top:5px solid var(--club-accent,#ed7547)!important;padding:26px!important;border-radius:8px!important;box-shadow:0 3px 0 #090909}
+#g8app .g8annualhero h2{font-size:clamp(26px,3vw,36px)!important;line-height:1.15!important;max-width:20ch;margin:14px 0 20px!important;color:#f1f1f1!important}
+#g8app .g8annualhero p{line-height:1.55;color:#d0d0d0!important;max-width:58ch}
+#g8app .g8annualbrief{border:0!important;border-top:1px solid #686868!important;border-bottom:1px solid #686868!important;padding:18px 0!important;margin:0 0 20px!important}
+#g8app .g8annualbrief :is(.g8metrics,.g8metrics>div){background:transparent!important;border:0!important;box-shadow:none!important}
+#g8app .g8annualbrief strong{font-size:34px!important;color:#f1f1f1!important}
+#g8app .g8annualhero .g8actions{margin-top:24px!important;gap:12px}
+#g8app .g8annualdevelopment{background:#262626!important;border:1px solid #636363!important;border-radius:8px;padding:20px!important;box-shadow:none!important}
+#g8app .g8annualdevelopment .g8development{padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important}
+#g8app .g8development>.g8eyebrow{background:transparent!important;color:#d1bc8e!important;border:0!important;border-bottom:1px solid #676767!important;padding:0 0 12px!important;letter-spacing:.08em}
+#g8app .g8development h2{font-size:21px!important;line-height:1.3!important;margin:14px 0 8px!important;color:#f1f1f1!important}
+#g8app .g8development p{font-size:14px;line-height:1.5;color:#c5c5c5!important}
+#g8app .g8departureguide{background:#2a2a2a!important;color:#f1f1f1!important;border:0!important;border-top:1px solid #656565!important;box-shadow:none!important;margin:0!important;padding:20px!important}
+#g8app .g8departureguide :is(h3,p,small){color:#d7d7d7!important;line-height:1.5}
+#g8app .g8rulefacts{gap:12px!important}
+#g8app .g8rulefacts>span{background:#363636!important;border:1px solid #696969!important;padding:14px!important;border-radius:5px}
+#g8app .g8rulefacts strong{color:#f1f1f1!important}
+/* Draft: role colour on the edge, ratings and names carry the card. */
+#g8app .g8role-BAT{--gcc-role:#e2b368}#g8app :is(.g8role-WK-BAT,.g8role-WK){--gcc-role:#6fc0d6}#g8app .g8role-AR{--gcc-role:#e2927d}#g8app .g8role-BOWL{--gcc-role:#ad9ad5}
+#g8app .g8recruitcard{border:2px solid #737373!important;border-top:5px solid var(--gcc-role,#929292)!important;border-radius:8px!important;background:#262626!important;overflow:hidden;box-shadow:0 3px 0 #0d0d0d!important}
+#g8app .g8recruitcard .g8candidate{background:#2a2a2a!important;padding:0!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+#g8app .g8recruitcard .g8cardheader{background:linear-gradient(115deg,#383838,#2a2a2a)!important;border:0!important;padding:18px 16px!important;min-height:128px!important;column-gap:14px!important;grid-template-columns:62px minmax(0,1fr)!important}
+#g8app .g8recruitcard .g8candidateheadline strong{font-size:20px!important;line-height:1.2!important;font-weight:900!important;color:#f1f1f1!important;overflow-wrap:anywhere}
+#g8app .g8recruitcard .g8cardoverall{min-width:62px!important;background:#202020!important;border:1px solid #7e7e7e!important;border-radius:5px!important;padding:10px 7px!important;display:flex;flex-direction:column;align-items:center;justify-content:center}
+#g8app .g8recruitcard .g8cardoverall b{font-size:34px!important;line-height:1!important}
+#g8app .g8recruitcard .g8cardoverall small{font-size:11px!important;color:#c5c5c5!important;margin-top:6px;letter-spacing:.08em}
+#g8app .g8recruitcard .g8cardbio{gap:5px 10px!important;line-height:1.4!important;color:#d0d0d0!important;font-size:13px!important;flex-wrap:wrap!important}
+#g8app .g8recruitcard .g8candidatecontext{font-size:14px!important;line-height:1.45!important;color:#e1e1e1!important;margin-top:6px}
+#g8app .g8recruitcard .g8cardattributes{background:#212121!important;border:0!important;border-top:1px solid #5a5a5a!important;padding:14px 8px!important;gap:0!important}
+#g8app .g8recruitcard .g8cardattributes>span{border-color:#5a5a5a!important;min-width:0!important}
+#g8app .g8recruitcard .g8cardattributes b{font-size:26px!important;line-height:1.1!important}
+#g8app .g8recruitcard .g8cardattributes small{font-size:12px!important;color:#d0d0d0!important;margin-top:5px!important}
+#g8app .g8recruitcard .g8candidatestrength{background:#2a2a2a!important;border:0!important;padding:10px 16px!important;font-size:13px!important;color:#b9b9b9!important}
+#g8app .g8recruitcard .g8candidatechoice{background:#2a2a2a!important;border:0!important;padding:0 14px 14px!important}
+#g8app .g8recruitcard .g8candidatechoice .g8button{width:100%;min-height:44px!important}
+#g8app .g8search{padding:14px 16px!important;border:1px solid #6e6e6e!important;background:#272727!important;gap:14px!important}
+#g8app .g8search label{font-size:13px!important;font-weight:800!important;gap:8px!important;color:#dbdbdb!important}
+#g8app .g8draftaside{padding:16px!important;border:2px solid #6c6c6c!important;border-top:5px solid var(--club-accent,#ed7547)!important;background:#232323!important}
+#g8app .g8draftscore{display:flex!important;align-items:center;gap:16px;background:#313131!important;color:#f1f1f1!important;border:1px solid #787878!important;border-left:5px solid var(--club-accent,#ed7547)!important;padding:18px!important;border-radius:6px!important}
+#g8app .g8draftscore h3{font-size:17px!important;color:#f1f1f1!important;margin:0 0 5px!important}
+#g8app .g8draftscore p{font-size:12px!important;line-height:1.4;color:#c8c8c8!important;margin:0!important}
+#g8app .g8draftscorevalue{border:0!important;padding:0!important}
+#g8app .g8draftscorevalue strong{font-size:40px!important;line-height:1!important}
+#g8app .g8pickedroles{padding:12px 0!important;background:transparent!important;border:0!important;display:grid!important;grid-template-columns:1fr!important;gap:0!important}
+#g8app .g8pickedrole{display:grid!important;grid-template-columns:22px minmax(0,1fr) auto!important;align-items:center;gap:8px!important;min-height:38px!important;background:transparent!important;border:0!important;border-bottom:1px solid #4f4f4f!important;border-radius:0!important;padding:8px 4px!important;color:#ececec!important}
+#g8app .g8pickedrole strong{font-size:12px!important;color:#c9c9c9!important;grid-column:auto!important}
+#g8app .g8coveragetick{color:#a9cd90!important;background:transparent!important;border:0!important;font-size:15px!important;grid-row:auto!important}
+#g8app .g8coveragecaption{grid-column:1/-1;color:#bebebe!important;font-size:12px!important;line-height:1.45!important;margin:0 0 8px!important}
+#g8app .g8draftsubhead{border-bottom:1px solid #636363!important;padding:12px 0!important;color:#e4e4e4!important}
+#g8app .g8draftsubhead h3{color:#e4e4e4!important;font-size:15px!important}
+#g8app .g8button.g8draftpicked{background:#2d2d2d!important;border:0!important;border-bottom:1px solid #545454!important;border-radius:0!important;box-shadow:none!important;padding:12px 8px!important;min-height:62px;gap:12px}
+#g8app .g8draftpicked b{font-size:14px!important;line-height:1.3!important;white-space:normal!important;color:#f0f0f0!important}
+#g8app .g8draftpicked small{font-size:12px!important;color:#c7c7c7!important;line-height:1.4!important}
+/* Career and match screens: team identity and less competing chrome. */
+#g8app .g8fixturehero{border-top:5px solid var(--club-accent,#ed7547)!important;border-radius:8px!important;overflow:hidden}
+#g8app .g8dressingroom{border-top-color:var(--club-accent,#ed7547)!important;padding:20px!important}
+#g8app .g8decisionline{padding:14px 0!important;border-width:0 0 1px!important;box-shadow:none!important;background:transparent!important}
+#g8app .g8decisionline strong{font-size:16px!important;line-height:1.35}
+#g8app .g8decisionline span{font-size:13px!important;line-height:1.5;margin-top:4px}
+#g8app .g8result{border-radius:8px!important;padding:24px!important}
+#g8app .g8resultbanner{font-size:12px!important;letter-spacing:.1em;padding:7px 12px!important}
+#g8app .g8result h2{font-size:clamp(23px,2.5vw,32px)!important;line-height:1.2!important}
+#g8app .g8finals .g8fixture>div{background:#292929!important;border:0!important;border-left:4px solid #676767!important;padding:20px!important;min-height:140px!important}
+#g8app .g8finals .g8sheet{padding:22px!important}
+#g8app .g8finals .g8fixture h2{font-size:22px!important;line-height:1.25!important;margin:14px 0 0!important}
+#g8app .g8nextstep{border-left:5px solid var(--club-accent,#ed7547)!important;padding:20px 24px!important}
+#g8dialog .g8modalhead{padding:18px 22px!important;background:#303030!important;border-bottom:2px solid #727272!important}
+#g8dialog .g8modalhead h2{font-size:24px!important;line-height:1.2!important}
+#g8dialog .g8modalbody{padding:22px!important}
+#g8dialog .g8analysissection{border:0!important;border-top:3px solid #7b7b7b!important;background:#272727!important;padding:14px!important}
+#g8dialog .g8analysissection h3{font-size:15px!important;line-height:1.3!important;border-bottom:1px solid #636363!important;padding-bottom:12px!important}
+#g8dialog .g8analysisrow{border:0!important;border-bottom:2px solid #636363!important;background:#343434!important;border-radius:4px!important;padding:14px 8px!important}
+#g8dialog .g8teamrating{background:#313131!important;border:1px solid #7d7d7d!important}
+@media(max-width:760px){
+ #g8app .g8heading{padding:18px!important;gap:14px!important}
+ #g8app .g8heading h1{font-size:28px!important}
+ #g8app .g8offseasonsteps li{padding:10px 6px!important;gap:6px!important}
+ #g8app .g8offseasonsteps li strong{font-size:12px!important}
+ #g8app .g8annualhero{padding:20px!important}
+ #g8app .g8annualhero .g8actions{display:grid!important;grid-template-columns:1fr!important}
+ #g8app .g8annualhero .g8button{width:100%}
+ #g8app .g8recruitcard .g8candidateheadline strong{font-size:19px!important}
+ #g8app .g8recruitcard .g8cardheader{padding:16px 12px!important;grid-template-columns:56px minmax(0,1fr)!important}
+ #g8app .g8recruitcard .g8cardoverall{min-width:56px!important}
+ #g8app .g8result{padding:18px!important}
+ #g8dialog .g8modalhead{padding:16px!important}
+ #g8dialog .g8modalhead h2{font-size:22px!important}
+ #g8dialog .g8modalbody{padding:16px!important}
+}
+/* Match the existing narrow-card child placement rather than leaving a 56px name column. */
+@container(max-width:18rem){
+ #g8app .g8recruitcard .g8cardheader{grid-template-columns:minmax(0,1fr)!important;min-height:0!important;gap:10px!important}
+ #g8app .g8directpick.g8recruitcard .g8cardoverall{grid-column:1!important;grid-row:1!important;justify-self:start;width:68px!important;min-width:0!important}
+ #g8app .g8directpick.g8recruitcard .g8candidateheadline{grid-column:1!important;grid-row:2!important}
+ #g8app .g8directpick.g8recruitcard .g8cardbio{grid-column:1!important;grid-row:3!important}
+ #g8app .g8directpick.g8recruitcard .g8candidatecontext{grid-column:1!important;grid-row:4!important}
+}
