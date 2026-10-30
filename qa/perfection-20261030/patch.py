@@ -31,6 +31,7 @@ s=s[:start]+''' X.managementBrief=(selection=false)=>{const state=X.managementSt
 assert old.strip() in parts[16];parts[16]=parts[16].replace(old.strip(),s.strip());p.write_text(s)
 rep(16,'${remaining} optional releases left',"${remaining} optional release${remaining===1?'':'s'} left")
 rep(16,'${all.length-3} more squad decisions',"${all.length-3} more squad decision${all.length-3===1?'':'s'}")
+rep(17,"['Wins',s.dynasty.manager.wins]","['League wins',s.dynasty.manager.wins]")
 rep(17,'${t.w} wins · ${t.l} losses',"${t.w} win${t.w===1?'':'s'} · ${t.l} loss${t.l===1?'':'es'}")
 rep(17,"[['Finished',`${s.regularSeasonPosition} of 8`]", "[['League position',`${s.regularSeasonPosition} of 8`]")
 rep(19,'${m.released.length} were released',"${m.released.length} ${m.released.length===1?'was':'were'} released")

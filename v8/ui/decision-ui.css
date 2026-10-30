@@ -408,3 +408,12 @@
 #g8app .gccuiCompanion .g8draftscore h3{font-size:16px!important;white-space:nowrap!important;text-align:center!important}
 #g8app .gccuiCompanion .g8draftscore p{font-size:12px!important;line-height:1.4!important;text-align:center!important;margin-top:4px!important}
 #g8app .gccuiCompanion .g8draftscorevalue strong{font-size:38px!important;line-height:1.1!important}
+#g8app .gccuiMatchDecisions .g8decisionline{flex-direction:row!important;text-align:left!important}
+#g8app .gccuiMatchDecisions .g8decisionline>div{flex:1 1 auto!important;text-align:left!important;align-items:flex-start!important}
+@media(max-width:480px){#g8app .gccui .gccuiVenue{grid-template-columns:80px minmax(0,1fr)!important;gap:12px!important;padding:14px!important}#g8app .gccui .gccuiVenuePhoto{height:88px!important}#g8app .gccui .gccuiVenue h1{font-size:20px!important;line-height:1.25!important}#g8app .gccui .gccuiVenue .gccuiKicker{font-size:10px!important}}
+#g8app .gccuiArchive .g8careerrecord{padding:16px!important}
+#g8app .gccuiArchive .g8careerrecord>.g8eyebrow{font-size:13px!important;margin-bottom:12px!important}
+#g8app .gccuiArchive .g8archiveyears{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px!important;padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important}
+#g8app .gccuiArchive .g8seasonbook{margin:0!important;padding:16px!important;border:1px solid var(--ui-line)!important;border-radius:6px!important;background:var(--ui-panel)!important}
+#g8app .gccuiArchive .g8seasonbook p{font-size:14px!important;line-height:1.5!important}
+@media(max-width:760px){#g8app .gccuiArchive .g8archiveyears{grid-template-columns:1fr!important}}
