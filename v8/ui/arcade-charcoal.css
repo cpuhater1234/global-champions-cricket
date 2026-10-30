@@ -215,10 +215,27 @@ html body,#g8app{background-color:var(--gcc-ground)!important;color:var(--gcc-te
 #g8app .g8matchhub>header{background:linear-gradient(110deg,#343434,#242424)!important;border-bottom:1px solid #717171!important}
 #g8app .g8matchhub>footer{background:#303030!important;border-top:1px solid #717171!important}
 @media(max-width:420px){
- #g8app .g8search{grid-template-columns:1fr!important}
+ #g8app .g8search{display:grid!important;grid-template-columns:minmax(0,1fr)!important}
  #g8app .g8search>label{grid-column:1/-1!important;min-width:0!important}
  #g8app .g8search select{width:100%!important;min-width:0!important}
 }
+/* Foundation screens use the same neutral framing as the career. */
+#g8dialog .g8clubidentitypanel{background:#292929!important;border-color:#757575!important;border-top:4px solid var(--club-accent,#ed7547)!important}
+#g8dialog .g8clubmetastrip{background:#383838!important;color:#f3f3ed!important;border-color:#737373!important}
+#g8dialog .g8clubmetastrip span{color:#f3f3ed!important;border-color:#737373!important}
+#g8dialog .g8clubbrief .g8briefhead{background:#343434!important;border-bottom:2px solid #777!important;padding:16px!important}
+#g8dialog .g8clubbrief .g8briefhead :is(h3,.g8eyebrow){color:#f3f3ed!important}
+#g8dialog .g8clubbrief .g8groundtrait{background:#3c3c3c!important;border-color:#858585!important;color:#f3f3ed!important}
+#g8dialog .g8clubpriorities li{border-color:#727272!important}
+#g8app .g8windowpanel{background:#262626!important;border:2px solid #747474!important;border-top:5px solid var(--club-accent,#ed7547)!important}
+#g8app :is(.g8windowhead,.g8wirehead){background:#373737!important;color:#f3f3ed!important;border:0!important;border-bottom:2px solid #737373!important}
+#g8app :is(.g8windowhead,.g8wirehead) :is(h2,span){color:#f3f3ed!important}
+#g8app .g8windowstatus{background:#242424!important;border-color:#888!important}
+#g8app .g8signingfocus{background:#323232!important;border:1px solid #737373!important;border-left:4px solid #edb65b!important}
+#g8app .g8wireline.g8wireupdate{background:#303030!important;border-color:#797979!important;border-left-color:#edb65b!important}
+#g8app .g8wireline.g8wireout{background:#392727!important;border-color:#af7772!important}
+#g8app .g8wireline.g8wirein{background:#173e2c!important;border-color:#5d9a74!important}
+#g8app .g8signingactions{border-color:#777!important}
 @container(max-width:18rem){
  #g8app .g8recruitcard .g8cardheader{grid-template-columns:minmax(0,1fr)!important;min-height:0!important;gap:10px!important}
  #g8app .g8directpick.g8recruitcard .g8cardoverall{grid-column:1!important;grid-row:1!important;justify-self:start;width:68px!important;min-width:0!important}
