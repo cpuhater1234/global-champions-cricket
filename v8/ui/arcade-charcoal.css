@@ -48,7 +48,9 @@ html body,#g8app{background-color:var(--gcc-ground)!important;color:var(--gcc-te
 #g8app .g8heroart>p{background:#2d2d2d!important;color:#e8e5dc!important}
 #g8app .g8button[aria-current=page]{background:#e3ae59!important;color:#181a12!important;border-color:#f9d28e!important;box-shadow:0 3px 0 #6c481d!important}
 #g8dialog .g8modalbody{background:#202020!important;color:#f6f4ec!important}
-#g8dialog .g8modalclose{background:#353535!important;color:#f6f4ec!important;border:2px solid #868686!important}
+#g8dialog :is(.g8modalclose,.g8dialogclose){background:#353535!important;color:#f6f4ec!important;border:2px solid #868686!important}
+#g8dialog .g8teamrating{background:#343434!important;border-color:#818181!important}
+#g8app .g8seasoncomplete{background:#292929!important;border:2px solid #818181!important;border-top:4px solid #e3ae59!important}
 #g8app :is(.g8sectionhead,.g8xicommand,.g8selectioncount,.g8xirating),#g8dialog :is(.g8analysisoverall,.g8developmentbadge){background:#343434!important;color:#f6f4ec!important;border-color:#777!important}
 #g8app .g8sectionhead{background:linear-gradient(100deg,#424242,#303030)!important;border-bottom:2px solid #d77c46!important}
 #g8app :is(.g8disclosure,.g8rulenote,.g8conditionread,.g8groundinterpretation,.g8weatherread,.g8scoutsummary,.g8scoutability,.g8scoutoutlook,.g8analysissection),#g8dialog :is(.g8disclosure,.g8rulenote,.g8conditionread,.g8groundinterpretation,.g8weatherread,.g8scoutsummary,.g8scoutability,.g8scoutoutlook,.g8analysissection){background:#292929!important;color:#f6f4ec!important;border-color:#777!important}
