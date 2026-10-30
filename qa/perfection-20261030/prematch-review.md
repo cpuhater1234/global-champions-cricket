@@ -1,0 +1,7 @@
+# Pre-match acknowledgement review
+
+New matches use the existing shared beginMatch path for league, finals and replay. Fresh playback stores preMatch=true, count=0, running=false. The normal saved UI snapshot retains this flag; restored snapshots without it continue as before. The new start action clears the flag and schedules the existing delivery timer. MatchSkip uses the existing return-view handling. No second simulation or engine RNG draw is introduced.
+
+The coin animation is decorative, lasts one second, never gates controls and is disabled for prefers-reduced-motion. Its outcome text is available immediately. Home/away panels keep the established order and club colours; first batting club is derived from battingFirst or the saved scorecard first innings. No toss winner, heads/tails result or captain's choice is invented. The live header keeps a concise batting-order note.
+
+Tests were written and observed failing on the missing preMatch flag before implementation. Updated contracts verify fresh match, stopped delivery clock, truthful order, Start match, older snapshot, skip and replay. Existing decision UI contracts pass. All twenty inline scripts parse. Delivery, foundation and dynasty scripts are byte-identical to version 17. Actual animation/layout and keyboard focus in Chrome remain pending the user opening the updated HTML; the connected browser still has candidate (13).

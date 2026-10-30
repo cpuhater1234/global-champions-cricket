@@ -71,6 +71,10 @@ rep(19,"pendingFocus='.g8bench .g8namescout'", "pendingFocus='.gccuiBench .gccui
 # Approved GCC crest, embedded once so the game remains completely offline.
 rep(17,'<h1><span>Global</span><br><span class="g8titleaccent">Champions</span><br><span>Cricket</span></h1>', '<h1 class="gccBrandTitle"><button type="button" class="gccBrandStart" data-action="play" data-args="[]" aria-label="Start a Global Champions Cricket career"><svg class="gccBrandHero" viewBox="0 0 1222 1287" role="img" aria-label="Global Champions Cricket"><use href="#gcc-brand-crest"></use></svg></button></h1>')
 rep(19,"${X.icon('cricket')}GCC</button>", '<svg class="gccBrandMini" viewBox="0 0 1222 1287" aria-hidden="true"><use href="#gcc-brand-crest"></use></svg></button>')
+# Fresh playback waits at a truthful batting-order acknowledgement. Existing saved
+# snapshots keep their count and running status, without a retroactive interruption.
+rep(19,"{count:0,presentationVersion:version,speedIndex:0,running:true,year:s.year", "{count:0,preMatch:true,presentationVersion:version,speedIndex:0,running:false,year:s.year")
+rep(19," bind('matchRun',['matchReveal']", " bind('startPlayback',['matchReveal'],()=>{assert(ui.match?.preMatch,'The match has already started.');ui.match.preMatch=false;ui.match.running=true;scheduleMatch();});\n bind('matchRun',['matchReveal']")
 parts[18]+='\n'+(root/'v8/ui/decision-ui.js').read_text()
 for i in (9,10,11,16,17,19):
  path=root/('v8/engine/'+('foundation.js' if i==9 else 'dynasty.js')) if i in (9,10) else root/('v8/ui/'+{11:'components.js',16:'career.js',17:'screens.js',19:'controller.js'}[i]);path.write_text(parts[i])

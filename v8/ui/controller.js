@@ -93,7 +93,8 @@
   cancelMatchTimer();const m=ui.match;if(!m||!m.running||ui.view!=='matchReveal')return;
   matchTimer=clock.setTimeout(()=>{matchTimer=null;if(ui.view!=='matchReveal'||!ui.match?.running)return;if(ui.match.count>=X.matchBeatCount(ui.result))finishMatch();else{ui.match.count++;render(false);scheduleMatch();}save();},X.matchDelay(m,ui.result));
  }
- function beginMatch(r,returnView='result',snapshot=null){assert(r?.scorecard,'That match has no scorebook.');ui.result=r;const version=X.hasBallLog(r)?3:2;ui.match=snapshot?{...snapshot,count:Math.min(X.matchBeatCount(r),X.matchProgress(snapshot)),presentationVersion:version}:{count:0,presentationVersion:version,speedIndex:0,running:true,year:s.year,reference:matchReference(r),returnView};setView('matchReveal');}
+ function beginMatch(r,returnView='result',snapshot=null){assert(r?.scorecard,'That match has no scorebook.');ui.result=r;const version=X.hasBallLog(r)?3:2;ui.match=snapshot?{...snapshot,count:Math.min(X.matchBeatCount(r),X.matchProgress(snapshot)),presentationVersion:version}:{count:0,preMatch:true,presentationVersion:version,speedIndex:0,running:false,year:s.year,reference:matchReference(r),returnView};setView('matchReveal');}
+ bind('startPlayback',['matchReveal'],()=>{assert(ui.match?.preMatch,'The match has already started.');ui.match.preMatch=false;ui.match.running=true;scheduleMatch();});
  bind('matchRun',['matchReveal'],()=>{assert(ui.match,'The match playback has ended.');ui.match.running=!ui.match.running;scheduleMatch();});
  bind('matchSpeed',['matchReveal'],()=>{assert(ui.match,'The match playback has ended.');ui.match.speedIndex=(ui.match.speedIndex+1)%(ui.match.presentationVersion===3?4:3);scheduleMatch();});
  bind('matchSkip',['matchReveal'],finishMatch);
