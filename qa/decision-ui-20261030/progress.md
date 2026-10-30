@@ -13,3 +13,11 @@ Ruling: keep legacy semantic styles for secondary screens while three refactored
 Engine scripts identical to last playable. Changed inline scripts11(icon delegation),18(presentation module),19(focus selector). New-build rendered verification pending download.
 
 Final checks: all renderer contracts pass; six integrity checks pass;100rating colour checks pass;20inline scripts parse. No rendered claim.
+
+## Browser assessment of first coordinated build
+
+Actual desktop at1150px: draft heading111.8px and turn114.8px consumed excessive space; fullcards aligned but repetitive scout footer; projectedXI57 shown for one player. Scout dialog had a tall centred identity/action block. Completed remaining foundation draft through UI, selected eleven manually and lodged successfully. Desktop XI columns/controls align. At390px XI rows154.4px, routineSteadychips add noise. Matchday had twoH1s and a redundant large banner, duplicate divider in preparation panel; mobile club panels split Gloucestershire awkwardly mid-name. No horizontal document overflow observed.
+
+Corrections: compact draft title/turn; actualScoutfooterbutton; suppress projectedXI until11players; compact left-aligned scout identity/action; suppress routineSteadychip in roster only; remove redundant matchday banner with exact-prefix guard; one preparation divider; stack mobile fixture club rows below480px. These corrections are source-checked and require rendered follow-through.
+
+Ruling: no10/10claim. Three-screen structure improved, but latest screenshots establish specific defects and not approval. Secondary screens remain outside this coordinated layout. Browser left Gloucestershire2008Round1, XI84, no matches played.
