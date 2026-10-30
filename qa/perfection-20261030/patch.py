@@ -49,6 +49,13 @@ rep(19,"bind('finalScorecard',['finals']", "bind('finalScorecard',['finals','rev
 rep(16,"+X.offseasonSteps()+X.departureGuide()+(managing?", "+X.offseasonSteps()+(managing?X.departureGuide():'')+(managing?")
 rep(16,'</aside></div><div class="g8annualdetails">', '</aside></div>${X.disclosure("Squad rules & departure allowance",X.departureGuide())}<div class="g8annualdetails">')
 rep(17,'content=resultCard(f.gf)+(', 'content=resultCard(f.gf)+X.matchAwards(f.gf)+X.matchWorm(f.gf)+(')
+rep(19,'${esc(result.message)}',"${esc(result.message.replace(`${deal.club} reject it.`,`${s.league.find(c=>c.abbr===deal.club)?.name||deal.club} declined this offer.`))}")
+trade_rules='<p class="g8fine">${ui.tradeMid?\'Equal numbers of players must move each way, up to two per club. Draft picks cannot be included.\':\'Up to two players and two owned Round 1 / Round 2 picks per club. Picks become available after the draw.\'} Each outgoing player uses one departure; incoming players do not refund it.</p>'
+rep(19,trade_rules,'${X.disclosure("Trade rules",`'+trade_rules+'`)}')
+# The partner applies to both sides; keep corresponding package fields aligned.
+trade_partner='<label>Other club<select data-input="tradeClub">${s.league.filter(c=>c.abbr!==own()).map(c=>`<option value="${c.abbr}" ${ui.tradeClub===c.abbr?\'selected\':\'\'}>${esc(c.name)}</option>`).join(\'\')}</select></label>'
+rep(19,trade_partner,'')
+rep(19,'<div class="g8trade g8tradepackage">','<div class="gccTradePartner">'+trade_partner+'</div><div class="g8trade g8tradepackage">')
 # Shared knockout fixture keeps ready semi-finals and the Grand Final aligned.
 fixture='<div class="g8fixture"><div>${badge(a)}<h2>${X.teamLabel(a)}</h2></div><span>v</span><div>${badge(b)}<h2>${X.teamLabel(b)}</h2></div></div>'
 assert parts[17].count(fixture)==2

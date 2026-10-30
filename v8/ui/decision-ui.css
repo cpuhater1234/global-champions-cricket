@@ -427,3 +427,13 @@
 #g8app .gccuiFinals .g8finals .gccuiScoreSide>div{grid-template-columns:minmax(0,1fr)!important}
 #g8app .gccuiFinals .g8finals .gccuiScoreSide>div>span{grid-column:1!important}
 @media(max-width:1400px){#g8app .gccuiFinals .g8finals{grid-template-columns:1fr!important}}
+/* Trading: the shared club choice sits above two aligned package columns. */
+#g8dialog[data-prompt=trade] .gccTradePartner{padding:12px 14px;margin:12px 0;background:#292c2e;border:1px solid #62696d;border-radius:6px}
+#g8dialog[data-prompt=trade] .gccTradePartner>label{display:grid;grid-template-columns:110px minmax(0,1fr);align-items:center;gap:12px;font-size:14px;font-weight:750}
+#g8dialog[data-prompt=trade] .g8tradepackage{gap:14px!important;align-items:stretch!important}
+#g8dialog[data-prompt=trade] :is(.g8give,.g8receive){padding:14px!important}
+#g8dialog[data-prompt=trade] :is(.g8give,.g8receive)>h3{padding-bottom:10px!important;border-bottom:1px solid #62696d;margin-bottom:12px!important;font-size:17px!important}
+#g8dialog[data-prompt=trade] .g8tradepackage label{font-size:13px!important;line-height:1.4!important}
+#g8dialog[data-prompt=trade] .g8tradepackage select{margin-top:5px!important;font-size:14px!important}
+#g8dialog[data-prompt=trade] .g8dialogcontext{font-size:13px!important;line-height:1.5!important}
+@media(max-width:600px){#g8dialog[data-prompt=trade] .gccTradePartner>label{grid-template-columns:1fr;gap:6px}}
