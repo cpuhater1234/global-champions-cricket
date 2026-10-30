@@ -49,6 +49,9 @@ rep(11,'const icon=name=>`<svg', 'const icon=name=>window.GCC8?.approvedIcon?.(n
 rep(11,' const resultCard=r=>{',' const resultCard=r=>window.GCC8?.designResultCard?window.GCC8.designResultCard(r):legacyResultCard(r);\n const legacyResultCard=r=>{')
 rep(11,"finishCareer:'trophy'}", "finishCareer:'trophy',swapSelected:'arrows-sort',cancelSwap:'arrows-sort',naturalOrder:'arrows-sort',clearXI:'users-group',teamAnalysis:'chart-bar',watchNext:'player-play',retainXI:'shirt-sport'}")
 rep(19,"pendingFocus='.g8bench .g8namescout'", "pendingFocus='.gccuiBench .gccuiRosterName, .g8bench .g8namescout'")
+# Approved GCC crest, embedded once so the game remains completely offline.
+rep(17,'<h1><span>Global</span><br><span class="g8titleaccent">Champions</span><br><span>Cricket</span></h1>', '<h1 class="gccBrandTitle"><button type="button" class="gccBrandStart" data-action="play" data-args="[]" aria-label="Start a Global Champions Cricket career"><svg class="gccBrandHero" viewBox="0 0 1222 1287" role="img" aria-label="Global Champions Cricket"><use href="#gcc-brand-crest"></use></svg></button></h1>')
+rep(19,"${X.icon('cricket')}GCC</button>", '<svg class="gccBrandMini" viewBox="0 0 1222 1287" aria-hidden="true"><use href="#gcc-brand-crest"></use></svg></button>')
 parts[18]+='\n'+(root/'v8/ui/decision-ui.js').read_text()
 for i in (9,10,11,16,17,19):
  path=root/('v8/engine/'+('foundation.js' if i==9 else 'dynasty.js')) if i in (9,10) else root/('v8/ui/'+{11:'components.js',16:'career.js',17:'screens.js',19:'controller.js'}[i]);path.write_text(parts[i])
@@ -64,6 +67,15 @@ for asset in json.loads((root/'v8/ui/assets/approved-icons.json').read_text()):
  view=f'{x0-pad} {y0-pad} {x1-x0+pad*2} {y1-y0+pad*2}';data=base64.b64encode((root/asset['path']).read_bytes()).decode()
  symbols.append(f'<symbol id="gcc-approved-{name}" viewBox="{view}"><defs><filter id="gcc-invert-{name}" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0"/></filter><mask id="gcc-mask-{name}" maskUnits="userSpaceOnUse" x="0" y="0" width="{w}" height="{h}" style="mask-type:luminance"><image width="{w}" height="{h}" href="data:image/png;base64,{data}" filter="url(#gcc-invert-{name})"/></mask></defs><rect width="{w}" height="{h}" fill="currentColor" stroke="none" mask="url(#gcc-mask-{name})"/></symbol>')
 raw=raw.replace('</body>','<svg id="gcc-approved-icons" width="0" height="0" aria-hidden="true" style="position:absolute;overflow:hidden;pointer-events:none">'+''.join(symbols)+'</svg></body>')
+crest=base64.b64encode((root/'v8/ui/assets/gcc-crest.png').read_bytes()).decode()
+raw=raw.replace('</body>',f'<svg width="0" height="0" aria-hidden="true" style="position:absolute;overflow:hidden;pointer-events:none"><symbol id="gcc-brand-crest" viewBox="0 0 1222 1287"><image width="1222" height="1287" href="data:image/png;base64,{crest}"/></symbol></svg></body>')
+# The approved traced originals contain subpixel contours at UI sizes. A small
+# same-colour contour reinforces the existing artwork without replacing it.
+for glyph in ('cricket','cricket-ball','stumps'):
+ pattern=r'(<symbol id="g8icon-'+glyph+r'"[\s\S]*?</symbol>)'
+ match=re.search(pattern,raw);assert match
+ weighted=match[0].replace('stroke="none" style="stroke:none"','stroke="currentColor" stroke-width="10" stroke-linejoin="round"')
+ raw=raw[:match.start()]+weighted+raw[match.end():]
 out=root/'qa/perfection-20261030/candidate.html';out.write_text(raw)
 for i,part in enumerate(parts):
  tmp=root/f'qa/perfection-20261030/check-{i}.js';tmp.write_text(part);subprocess.run(['node','--check',str(tmp)],check=True,capture_output=True)

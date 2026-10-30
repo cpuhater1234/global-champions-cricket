@@ -272,3 +272,14 @@
  #g8app .gccui .gccuiVenuePhoto .g8stadium{height:140px!important}
 }
 @media(prefers-reduced-motion:reduce){#g8app .gccui *{animation:none!important;transition:none!important}}
+/* Approved crest: the full mark on the menu, with a compact header treatment. */
+#g8app .g8welcomepanel .g8gccsignature,#g8app .g8welcomepanel .g8panelart{display:none!important}
+#g8app .g8welcomepanel .gccBrandTitle{margin:8px 0 16px!important;line-height:1!important}
+#g8app .gccBrandStart{display:block;margin:0 auto;width:min(100%,300px);padding:0;border:0;background:transparent;cursor:pointer;transition:transform .15s ease}
+#g8app .gccBrandStart:hover{transform:scale(1.025)}
+#g8app .gccBrandStart:focus-visible{outline:3px solid #edb65b;outline-offset:5px;border-radius:8px}
+#g8app .gccBrandHero{display:block;width:100%;height:auto;aspect-ratio:1222/1287}
+#g8app .g8brand{width:76px!important;min-width:76px!important;height:76px!important;padding:3px!important;background:#1e2021!important}
+#g8app .gccBrandMini{display:block;width:66px;height:66px;flex:0 0 66px}
+@media(max-width:600px){#g8app .gccBrandStart{width:220px}#g8app .g8brand{width:58px!important;min-width:58px!important;height:58px!important}#g8app .gccBrandMini{width:48px;height:48px;flex-basis:48px}}
+@media(prefers-reduced-motion:reduce){#g8app .gccBrandStart{transition:none}}
