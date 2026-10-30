@@ -21,3 +21,11 @@ Actual desktop at1150px: draft heading111.8px and turn114.8px consumed excessive
 Corrections: compact draft title/turn; actualScoutfooterbutton; suppress projectedXI until11players; compact left-aligned scout identity/action; suppress routineSteadychip in roster only; remove redundant matchday banner with exact-prefix guard; one preparation divider; stack mobile fixture club rows below480px. These corrections are source-checked and require rendered follow-through.
 
 Ruling: no10/10claim. Three-screen structure improved, but latest screenshots establish specific defects and not approval. Secondary screens remain outside this coordinated layout. Browser left Gloucestershire2008Round1, XI84, no matches played.
+
+## Approved icons and broader visual audit
+
+User explicitly rejected invented icon paths and supplied keeper/all-rounder/stadium PNGs. Original bat/ball/stumps restored; all invented paths removed. Three images preserved byte-for-byte; SVG luminance masks remove white paper visually and viewBoxes normalise surrounding padding. Functional symbols fall back to original bank. All-rounder role now uses its own supplied artwork.
+
+Browser inspected preview, paused live play, result, scorebook and stats. Played Round1: Gloucestershire175/2 chased Rajasthan173/5 in16.1 overs. Preview oversized central venue block, live status too prominent, result sparse edge-aligned scores, scorebook row headers styled as table headers, stats still navy and large captions. Corrective source adds compact preview alignment, neutral inline live equation, team-themed result panels, one-row table styling and compact table-page heading. Icons are one part of this wider pass. Latest corrections not rendered yet.
+
+Review outcome: supplied SVG mask structure and icon delegation reviewed, no static blocker. Found regulation chase mislabeled after tied scores/Super Over; new failing renderer test reproduced, corrected Scores tied label, contracts now pass. No scoring-engine change. All20scripts parse. New icons/layout still await actual browser rendering.

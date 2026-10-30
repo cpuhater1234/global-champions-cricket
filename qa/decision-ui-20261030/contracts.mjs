@@ -25,4 +25,12 @@ html=X.storyFixture(fx,null,'Select a recognised wicketkeeper before the next ma
 html=X.storyFixture(fx,null,'');assert.match(html,/data-action="watchNext"/);assert(html.indexOf(fx.home.name)<html.indexOf(fx.away.name),'home club first');
 h.G.startSeason();html=X.views.season();assert.equal([...html.matchAll(/<h1[ >]/g)].length,1,'matchday has one primary heading');
 assert.match(X.designIcon('cricket'),/viewBox="0 0 24 24"/);assert.deepEqual(h.errors,[]);
-const result={pass:true,checks:['read-only render','CPU picks locked','empty XI locked','11 batting rows','pending swap locked','OUT bench disabled','match readiness routing','home-first clubs','native icon markup']};fs.writeFileSync('qa/decision-ui-20261030/contracts.json',JSON.stringify(result,null,2));console.log(result);
+assert.match(X.designIcon('cricket'),/#g8icon-cricket"/,'original bat symbol retained');
+assert.match(X.designIcon('cricket-ball'),/#g8icon-cricket-ball"/,'original ball retained');
+assert.match(X.designIcon('stumps'),/#g8icon-stumps"/,'original stumps retained');
+assert.match(X.designIcon('gloves'),/#gcc-approved-keeper"/);assert.match(X.designIcon('all-rounder'),/#gcc-approved-allrounder"/);assert.match(X.icon('building-stadium'),/#gcc-approved-stadium"/);
+const result={home:fx.home,away:fx.away,homeInnings:{total:123,wickets:4,balls:117},awayInnings:{total:122,wickets:9,balls:120},battingFirst:fx.away,winner:fx.home,marginText:'by six wickets',round:1};
+html=X.resultCard(result);assert.match(html,/gccuiScoreTeams/);assert.match(html,/Target reached/);assert.match(html,/19\.3 overs/);
+result.homeInnings.total=122;html=X.resultCard(result);assert.match(html,/Scores tied/,'tied regulation chase is not called target reached');assert.doesNotMatch(html,/Target reached/);
+X.ui.seasonTab='players';html=X.views.season();assert.match(html,/gccuiTableView/);assert.equal([...html.matchAll(/<h1[ >]/g)].length,1);X.ui.seasonTab='matchday';
+const checks={pass:true,checks:['read-only render','CPU picks locked','empty XI locked','11 batting rows','pending swap locked','OUT bench disabled','match readiness routing','home-first clubs','approved original and supplied icons','team themed result score','single table-page heading']};fs.writeFileSync('qa/decision-ui-20261030/contracts.json',JSON.stringify(checks,null,2));console.log(checks);

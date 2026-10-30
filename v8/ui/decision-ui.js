@@ -1,32 +1,12 @@
 /* Presentation only. Existing commands own every state change. */
 (()=>{
  const X=window.GCC8,{G,ui,esc,btn,badge,R}=X,s=G.state;
- const oldIcon=X.icon;
- const paths={
-  cricket:'<path d="m15 3 3 3-4 4-3-3zM10 7l4 4-6 10-5-5z"/>',
-  'cricket-ball':'<circle cx="12" cy="12" r="9"/><path d="M6 5c7 2 5 12 12 14M9 3c7 3 5 12 12 14"/>',
-  stumps:'<path d="M7 21V6m5 15V6m5 15V6M5 4h6m2 0h6M5 21h14"/>',
-  gloves:'<path d="M4 12V7a1 1 0 0 1 2 0v4-7a1 1 0 0 1 2 0v7-8a1 1 0 0 1 2 0v8-7a1 1 0 0 1 2 0v10l2-3c1-1 3 0 2 2l-3 7H7zM18 5h3v13l-2 3h-3"/>',
-  'shirt-sport':'<path d="m8 3-5 3 3 5 2-1v11h8V10l2 1 3-5-5-3c-1 4-7 4-8 0Z"/>',
-  'users-group':'<circle cx="9" cy="7" r="3"/><path d="M3 21v-4a6 6 0 0 1 12 0v4M16 4a3 3 0 0 1 0 6m2 4c3 1 3 4 3 7"/>',
-  'calendar-event':'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 10h18m-13 5h3v3H8z"/>',
-  'chart-bar':'<path d="M3 21h18M6 17v-5m6 5V4m6 13V8"/>',
-  'clipboard-list':'<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 3h6v4H9zM9 12h6m-6 4h6"/>',
-  'building-stadium':'<ellipse cx="12" cy="14" rx="9" ry="4"/><path d="M3 14v5c4 4 14 4 18 0v-5M5 9V3m14 6V3M3 3h4m10 0h4M7 14h10"/>',
-  'arrows-sort':'<path d="M7 3v18m-4-4 4 4 4-4M17 21V3m-4 4 4-4 4 4"/>',
-  'arrow-up':'<path d="M12 21V3m-7 7 7-7 7 7"/>',
-  'arrow-down':'<path d="M12 3v18m-7-7 7 7 7-7"/>',
-  'player-play':'<path d="m8 4 12 8-12 8z"/>',
-  'player-track-next':'<path d="m3 5 9 7-9 7zm9 0 9 7-9 7z"/>',
-  trophy:'<path d="M7 3h10v6a5 5 0 0 1-10 0zM7 5H3v3c0 3 2 4 5 4m9-7h4v3c0 3-2 4-5 4M12 14v7m-5 0h10"/>',
-  search:'<circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/>',
-  book:'<path d="M12 6C8 3 5 3 2 4v16c4-1 7-1 10 1 3-2 6-2 10-1V4c-3-1-6-1-10 2Zm0 0v15"/>',
-  'shield-check':'<path d="M12 3 3 6c0 8 3 12 9 15 6-3 9-7 9-15zM8 12l3 3 5-6"/>'
- };
- X.designIcon=name=>paths[name]?`<svg class="g8icon gccuiIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${paths[name]}</svg>`:oldIcon(name);
+ const assetNames={gloves:'keeper',keeper:'keeper','all-rounder':'allrounder','building-stadium':'stadium'};
+ X.approvedIcon=name=>assetNames[name]?`<svg class="g8icon gccuiIcon gccuiApprovedIcon" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true" focusable="false"><use href="#gcc-approved-${assetNames[name]}"></use></svg>`:null;
+ X.designIcon=name=>X.icon(name).replace('class="g8icon"','class="g8icon gccuiIcon"');
  const icon=X.designIcon;
  const title=(kicker,name,detail='',glyph='cricket')=>`<header class="gccuiHeading"><div class="gccuiHeadingIcon">${icon(glyph)}</div><div><span class="gccuiKicker">${esc(kicker)}</span><h1>${esc(name)}</h1>${detail?`<p>${esc(detail)}</p>`:''}</div></header>`;
- const roleGlyph=p=>R.isKeeper(p)?'gloves':p.role==='BOWL'?'cricket-ball':p.role==='AR'?'stumps':'cricket';
+ const roleGlyph=p=>R.isKeeper(p)?'gloves':p.role==='BOWL'?'cricket-ball':p.role==='AR'?'all-rounder':'cricket';
  const roleName=p=>p.role==='BOWL'?X.bowlingType(p):p.role==='AR'?X.allRounderJobs(p):X.battingJob(p)+(R.isKeeper(p)?' · Keeper':'');
  const rosterStatus=p=>{const tag=X.managementTag(p).replace('<span>Steady</span>','');return /<span[^>]*>\s*<\/span>/.test(tag)?'':tag;};
  const rate=(n,kind='')=>`<strong class="gccuiRating ${kind}" style="--rating-color:${X.ratingTone(n)}">${esc(n)}</strong>`;
@@ -52,7 +32,14 @@
  };
  X.views.draft=()=>X.decisionDraft(false);
  const dynasty=X.views.dynasty;X.views.dynasty=()=>s.dynasty?.offseason?.phase==='draft'?X.offseasonSteps()+X.decisionDraft(true):dynasty();
- const season=X.views.season;X.views.season=()=>{const html=season();if((ui.seasonTab||'matchday')!=='matchday'||!G.nextUserFixture())return html;const redundant=X.heading(`${s.year} · ${s.userClub.name}`,'Matchday','');return html.startsWith(redundant)?html.slice(redundant.length):html;};
+ const season=X.views.season;X.views.season=()=>{const html=season(),tab=ui.seasonTab||'matchday';if(tab!=='matchday'){const name={ladder:'The ladder',fixtures:'Your fixtures',players:'Player stats',leaguePlayers:'League leaders'}[tab];if(!name)return html;const prefix=X.heading(`${s.year} · ${s.userClub.name}`,name,'');return `<div class="gccui gccuiTableView">${html.startsWith(prefix)?title(`${s.year} · ${s.userClub.name}`,name,'',tab==='fixtures'?'calendar-event':tab==='ladder'?'trophy':'chart-bar')+html.slice(prefix.length):html}</div>`;}if(!G.nextUserFixture())return html;const redundant=X.heading(`${s.year} · ${s.userClub.name}`,'Matchday','');return html.startsWith(redundant)?html.slice(redundant.length):html;};
+ X.designResultCard=r=>{
+  if(!r)return '';
+  const involved=[r.home.abbr,r.away.abbr].includes(s.userClub?.abbr),won=r.winner.abbr===s.userClub?.abbr,status=involved?(won?'Match won':'Match lost'):'Final score';
+  const side=(club,inn)=>`<article class="gccuiScoreSide"><header style="--side:${esc(club.c)};--side-ink:${esc(X.clubInk(club))}">${badge(club)}<h3>${esc(club.name)}</h3></header><div><strong>${inn.total}<small>/${inn.wickets}</small></strong><span>${r.battingFirst?.abbr===club.abbr?'Batted first':r.homeInnings.total===r.awayInnings.total?'Scores tied':r.winner.abbr===club.abbr?'Target reached':'Chase fell short'}</span><span>${Math.floor(inn.balls/6)}.${inn.balls%6} overs</span></div></article>`;
+  return `<section class="gccui gccuiScorecard ${involved?(won?'gccuiWon':'gccuiLost'):''}"><div class="gccuiScoreContext"><strong>${icon(involved&&won?'trophy':'cricket-ball')}${status}</strong><span>${r.round?'Round '+r.round:'Finals'} · ${esc(r.home.ground)}</span></div><div class="gccuiScoreTeams">${side(r.home,r.homeInnings)}<span class="gccuiVersus">v</span>${side(r.away,r.awayInnings)}</div><h2>${esc(r.winner.name)} won ${esc(r.marginText||'the match')}</h2>${X.superOverRead(r)}</section>`;
+ };
+ const result=X.views.result;X.views.result=()=>{const html=result(),r=ui.result,prefix=X.heading(`${s.year} · ${r.round?'ROUND '+r.round:'FINALS'}`,'Match result','');return `<div class="gccui gccuiResult">${html.startsWith(prefix)?title(`${s.year} · ${r.round?'Round '+r.round:'Finals'}`,'Match result','','trophy')+html.slice(prefix.length):html}</div>`;};
  X.views.team=()=>{
   const roster=X.roster(),swap=!!s.pendingSwapIn,pane=swap?'xi':ui.teamPane||(s.xi.length?'xi':'squad'),bench=roster.filter(p=>!s.xi.includes(p.id)),returnLabel=s.fullSchedule.length?(ui.teamReturn==='finals'?'Return to finals':'Return to matchday'):'Lodge XI';
   const rows=s.battingOrder.map((id,i)=>{const p=G.byId(id);return `<li class="gccuiOrderRow g8role-${esc(p.role)}"><span class="gccuiOrderNumber">${i+1}</span><button type="button" id="g8xi-${id}" class="gccuiRosterName" data-action="${swap?'swapOut':'inspect'}" data-args="[${id}]" aria-label="${esc((swap?'Replace ':'Edit ')+p.name)}"><b>${esc(p.name)}</b><small>${esc(roleName(p))}${R.battingPositionFit(p,i+1)<88?' · Out of role':''}${X.injury(p)?' · '+esc(X.injury(p).status):''}</small>${rosterStatus(p)}</button>${rate(p.overall)}<div class="gccuiRosterActions">${!swap?`<div class="gccuiArrows">${btn('↑','move',[id,-1],'g8ghost',i===0).replace('aria-label="Move batter up"',`aria-label="Move ${esc(p.name)} up the batting order"`)}${btn('↓','move',[id,1],'g8ghost',i===s.battingOrder.length-1).replace('aria-label="Move batter down"',`aria-label="Move ${esc(p.name)} down the batting order"`)}</div>${s.xi.length===11?btn('Swap','swapSelected',[id],'g8ghost',!bench.some(q=>X.injury(q)?.status!=='OUT')).replace('type="button"',`type="button" aria-label="Replace ${esc(p.name)} in the XI"`):''}`:''}</div></li>`;}).join('');

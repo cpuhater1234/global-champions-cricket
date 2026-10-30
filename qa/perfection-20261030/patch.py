@@ -1,5 +1,5 @@
 from pathlib import Path
-import re,json,hashlib,subprocess
+import re,json,hashlib,subprocess,base64
 root=Path.cwd();base=root/'baseline/GCC_v8_Career_Clarity.html';
 if not base.exists():
  base.parent.mkdir(parents=True,exist_ok=True);base.write_bytes(subprocess.check_output(['git','show','52a93845d91f0f22352969d58144da678130212b:game/gcc_v8_product_candidate.html']))
@@ -37,7 +37,7 @@ rep(19,'Choose the players and picks on each side. Each club can include up to t
 # Dynamic template requires a backtick rather than the old single-quoted static string.
 parts[19]=parts[19].replace("return '<p class=\"g8tradeguide\">${ui.tradeMid?", "return `<p class=\"g8tradeguide\">${ui.tradeMid?").replace("Nothing changes until you review and confirm.</p>';", "Nothing changes until you review and confirm.</p>`;")
 rep(11,"const ratingTone=value=>Number(value)>=80?'#f5f8ff':Number(value)>=65?'#ffc45b':'#ff9ba8';", "const ratingTone=value=>{const n=Number.isFinite(Number(value))?Math.max(0,Math.min(99,Number(value))):0,a=n<=65?[238,139,130]:[234,182,95],b=n<=65?[234,182,95]:[126,201,142],t=n<=65?n/65:(n-65)/34;return '#'+a.map((v,i)=>Math.round(v+(b[i]-v)*t).toString(16).padStart(2,'0')).join('');};")
-rep(11,"?'BATTED FIRST':'CHASED'", "?'BATTED FIRST':r.winner.abbr===club.abbr?'TARGET REACHED':'CHASE FELL SHORT'")
+rep(11,"?'BATTED FIRST':'CHASED'", "?'BATTED FIRST':r.homeInnings.total===r.awayInnings.total?'SCORES TIED':r.winner.abbr===club.abbr?'TARGET REACHED':'CHASE FELL SHORT'")
 rep(9,'${state.pool.length} eligible players across the 2008 cricket world. Five days','${state.pool.filter(p=>(p.dynastyCareer?.debutYear??2008)<=2008).length} eligible players across the 2008 cricket world. Five days')
 rep(9,'${state.pool.length} eligible players across the 2008 cricket world. You jump','${state.pool.filter(p=>(p.dynastyCareer?.debutYear??2008)<=2008).length} eligible players across the 2008 cricket world. You jump')
 rep(17,'</section>${X.seasonProgress()}<section class="g8sheet g8seasonstars">',"""</section>${s.finals?.gf?X.disclosure('How the title was decided',`<div class="g8finalsrecap">${(s.finals.semis||[]).map((r,i)=>`<p><b>Semi-final ${i+1}</b> ${esc(r.winner.name)} won ${esc(r.marginText)} ${btn('Open scorebook','finalScorecard',['semis',i],'g8ghost g8small')}</p>`).join('')}${resultCard(s.finals.gf)}${btn('Grand Final scorebook','finalScorecard',['gf',0],'g8ghost')}</div>`):''}${X.seasonProgress()}<section class="g8sheet g8seasonstars">""")
@@ -45,6 +45,8 @@ rep(19,"bind('finalScorecard',['finals']", "bind('finalScorecard',['finals','rev
 rep(16,"+X.offseasonSteps()+X.departureGuide()+(managing?", "+X.offseasonSteps()+(managing?X.departureGuide():'')+(managing?")
 rep(16,'</aside></div><div class="g8annualdetails">', '</aside></div>${X.disclosure("Squad rules & departure allowance",X.departureGuide())}<div class="g8annualdetails">')
 rep(11,"${glyph?icon(glyph):''}","${glyph?(window.GCC8?.designIcon?window.GCC8.designIcon(glyph):icon(glyph)):''}")
+rep(11,'const icon=name=>`<svg', 'const icon=name=>window.GCC8?.approvedIcon?.(name)||`<svg')
+rep(11,' const resultCard=r=>{',' const resultCard=r=>window.GCC8?.designResultCard?window.GCC8.designResultCard(r):legacyResultCard(r);\n const legacyResultCard=r=>{')
 rep(11,"finishCareer:'trophy'}", "finishCareer:'trophy',swapSelected:'arrows-sort',cancelSwap:'arrows-sort',naturalOrder:'arrows-sort',clearXI:'users-group',teamAnalysis:'chart-bar',watchNext:'player-play',retainXI:'shirt-sport'}")
 rep(19,"pendingFocus='.g8bench .g8namescout'", "pendingFocus='.gccuiBench .gccuiRosterName, .g8bench .g8namescout'")
 parts[18]+='\n'+(root/'v8/ui/decision-ui.js').read_text()
@@ -55,6 +57,13 @@ for i in reversed(range(len(matches))):
  m=matches[i];raw=raw[:m.start(1)]+parts[i]+raw[m.end(1):]
 css=(root/'v8/ui/arcade-charcoal.css').read_text();raw=raw.replace('</head>','<style id="gcc-charcoal-20261030">\n'+css+'\n</style></head>')
 raw=raw.replace('</head>','<style id="gcc-decision-ui-20261030">\n'+(root/'v8/ui/decision-ui.css').read_text()+'\n</style></head>')
+# Preserve the supplied PNG bytes; SVG masks make the white paper transparent at render time.
+symbols=[]
+for asset in json.loads((root/'v8/ui/assets/approved-icons.json').read_text()):
+ name=asset['name'];w,h=asset['size'];x0,y0,x1,y1=asset['inkBounds'];pad=max(x1-x0,y1-y0)*.035
+ view=f'{x0-pad} {y0-pad} {x1-x0+pad*2} {y1-y0+pad*2}';data=base64.b64encode((root/asset['path']).read_bytes()).decode()
+ symbols.append(f'<symbol id="gcc-approved-{name}" viewBox="{view}"><defs><filter id="gcc-invert-{name}" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0"/></filter><mask id="gcc-mask-{name}" maskUnits="userSpaceOnUse" x="0" y="0" width="{w}" height="{h}" style="mask-type:luminance"><image width="{w}" height="{h}" href="data:image/png;base64,{data}" filter="url(#gcc-invert-{name})"/></mask></defs><rect width="{w}" height="{h}" fill="currentColor" stroke="none" mask="url(#gcc-mask-{name})"/></symbol>')
+raw=raw.replace('</body>','<svg id="gcc-approved-icons" width="0" height="0" aria-hidden="true" style="position:absolute;overflow:hidden;pointer-events:none">'+''.join(symbols)+'</svg></body>')
 out=root/'qa/perfection-20261030/candidate.html';out.write_text(raw)
 for i,part in enumerate(parts):
  tmp=root/f'qa/perfection-20261030/check-{i}.js';tmp.write_text(part);subprocess.run(['node','--check',str(tmp)],check=True,capture_output=True)

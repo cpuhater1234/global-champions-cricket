@@ -132,6 +132,60 @@
 #g8app .gccui .gccuiFixtureActions>p{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:800}
 #g8app .gccui .gccuiFixtureActions>div{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap}
 #g8app .gccui .gccuiBlocked{color:#f2b2a9}
+/* Results preserve home/away identity and keep scores on a shared baseline. */
+#g8app .gccuiScorecard{padding:20px;border:2px solid #737d82;border-top:5px solid #a5afb4;border-radius:8px;background:#272e32;margin-bottom:20px}
+#g8app .gccuiScorecard.gccuiWon{border-top-color:#7ec98e}
+#g8app .gccuiScorecard.gccuiLost{border-top-color:#ee8b82}
+#g8app .gccui .gccuiScoreContext{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:16px;font-size:12px;color:var(--ui-muted)}
+#g8app .gccui .gccuiScoreContext>strong{display:flex;align-items:center;gap:8px;font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--ui-text)}
+#g8app .gccui .gccuiScoreTeams{display:grid;grid-template-columns:1fr 20px 1fr;gap:14px;align-items:stretch}
+#g8app .gccui .gccuiScoreSide{border:1px solid #78848a;border-radius:6px;overflow:hidden;background:#1d2529;min-width:0}
+#g8app .gccui .gccuiScoreSide>header{display:flex;align-items:center;gap:12px;min-height:76px;padding:14px 16px;background:var(--side);color:var(--side-ink)}
+#g8app .gccui .gccuiScoreSide h3{color:inherit;font-size:21px;line-height:1.2;overflow-wrap:anywhere}
+#g8app .gccui .gccuiScoreSide>header>.g8badge{width:42px;height:42px;min-width:42px;font-size:12px}
+#g8app .gccui .gccuiScoreSide>div{display:grid;grid-template-columns:1fr auto;align-items:end;gap:6px 12px;padding:18px}
+#g8app .gccui .gccuiScoreSide strong{grid-column:1;font-size:52px;font-weight:900;line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+#g8app .gccui .gccuiScoreSide strong small{font-size:.62em;letter-spacing:-.02em}
+#g8app .gccui .gccuiScoreSide>div>span{grid-column:2;font-size:12px;color:var(--ui-muted);font-weight:750}
+#g8app .gccui .gccuiScoreSide>div>span:last-child{grid-column:1/-1;font-size:13px}
+#g8app .gccuiScorecard>h2{font-size:24px!important;line-height:1.3!important;margin:18px 0 0!important;padding:16px 0 0!important;border-top:1px solid #59666c}
+#g8app .gccuiResult .gccuiHeading{padding-bottom:12px;margin-bottom:16px}
+#g8app .gccuiResult .gccuiHeading h1{font-size:28px}
+#g8app .gccuiResult .gccuiHeadingIcon{flex-basis:44px;height:44px}
+#g8app .gccuiTableView .gccuiHeading{padding-bottom:12px;margin-bottom:16px}
+#g8app .gccuiTableView .gccuiHeading h1{font-size:28px}
+#g8app .gccuiTableView .gccuiHeadingIcon{flex-basis:44px;height:44px}
+#g8app .gccuiTableView .g8table caption{font-size:14px!important;text-transform:uppercase!important;letter-spacing:.08em!important;padding:14px 0!important;color:#d7e1e6!important}
+#g8app .gccuiTableView .g8table tbody :is(th,td){background:transparent!important;border-color:#56646c!important;padding:13px 12px!important;color:#f1f4f5!important;font-size:14px!important}
+#g8app .gccuiTableView .g8table tbody tr:nth-child(odd){background:#252e34!important}
+#g8app .gccuiTableView .g8table tbody tr:nth-child(even){background:#303a40!important}
+#g8app .gccuiTableView .g8table tbody tr.mine{background:#35434a!important;box-shadow:none!important}
+#g8app .gccuiTableView .g8table tbody tr.mine>:first-child{box-shadow:inset 4px 0 var(--club-accent,#ed7547)}
+#g8app .gccuiTableView .g8table :is(th,td):not(:first-child){text-align:center;font-variant-numeric:tabular-nums}
+#g8app .gccuiTableView .g8table thead th{background:#404c54!important;font-size:12px!important;color:#f1f4f5!important;padding:12px!important}
+/* Preview and scorebook share the same readable panel rhythm. */
+#g8dialog[data-prompt=prepare] .g8previewround{text-align:left!important;padding:0 0 12px!important;border:0!important;border-bottom:1px solid #68747a!important;font-size:12px!important}
+#g8dialog[data-prompt=prepare] .g8previewside{display:grid!important;grid-template-columns:48px minmax(0,1fr)!important;grid-template-rows:auto auto!important;gap:6px 12px!important;align-items:center;text-align:left!important;padding:16px!important;min-height:104px!important}
+#g8dialog[data-prompt=prepare] .g8previewside>.g8badge{grid-row:1/3!important;width:46px!important;height:46px!important;min-width:46px!important;margin:0!important;font-size:13px!important}
+#g8dialog[data-prompt=prepare] .g8previewside h3{font-size:19px!important;line-height:1.25!important;margin:0!important}
+#g8dialog[data-prompt=prepare] .g8previewside>span:last-child{grid-column:2!important;font-size:11px!important;margin:0!important}
+#g8dialog[data-prompt=prepare] .g8previewvenue{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;text-align:left!important;gap:8px 16px;padding:16px!important}
+#g8dialog[data-prompt=prepare] .g8previewvenue>.g8eyebrow{grid-column:1/-1!important;display:flex;align-items:center;gap:8px;font-size:11px!important}
+#g8dialog[data-prompt=prepare] .g8previewvenue h3{grid-column:1;font-size:21px!important;margin:0!important}
+#g8dialog[data-prompt=prepare] .g8previewvenue p{grid-column:1;margin:0!important;font-size:13px!important}
+#g8dialog[data-prompt=prepare] .g8previewvenue>span:last-child{grid-column:2;grid-row:2/4;align-self:center;border:1px solid #7c888d!important;background:#3b454b;padding:10px 14px!important;border-radius:4px;font-size:13px!important}
+#g8dialog .gcc-scoreinnings{background:#252d31!important;border:1px solid #75838a!important;border-radius:6px;overflow:hidden;margin-bottom:20px}
+#g8dialog .gcc-scoreinnings>header{background:#343e44!important;padding:16px 18px!important;border:0!important;border-bottom:1px solid #78868d!important;align-items:center;gap:16px}
+#g8dialog .gcc-scoreinnings>header h2{font-size:21px!important;line-height:1.25!important}
+#g8dialog .gcc-scoreinnings caption{background:#2b3439!important;color:#f1f4f5!important;font-size:14px!important;letter-spacing:.08em!important;padding:12px 16px!important;text-align:left!important;border-bottom:1px solid #68777e!important}
+#g8dialog .gcc-scoreinnings .g8table tbody :is(th,td){background:transparent!important;color:#f1f4f5!important;font-size:14px!important;padding:12px 10px!important;border-color:#56646c!important;vertical-align:middle}
+#g8dialog .gcc-scoreinnings .g8table tbody tr:nth-child(even){background:#303a40!important}
+#g8dialog .gcc-scoreinnings .g8table tbody tr:nth-child(odd){background:#252e34!important}
+#g8dialog .gcc-scoreinnings .g8table thead th{background:#404c54!important;color:#f1f4f5!important;font-size:12px!important;padding:11px 10px!important}
+#g8dialog .gcc-scoreinnings .g8table tbody th small,#g8dialog .gcc-scoreinnings .g8table tbody th span{color:#c4cfd5!important;font-size:12px!important}
+#g8app .gcc-scorebug{padding:20px!important}
+#g8app .gcc-equation{background:#30383c!important;border:0!important;border-left:4px solid var(--club-accent,#ed7547)!important;color:#f1f4f5!important;padding:10px 14px!important;margin-top:16px!important;font-size:14px!important}
+#g8app .g8playbackcontrols{padding:12px 18px!important;gap:12px!important}
 #g8dialog[data-prompt=player] .g8scoutsummary{padding:16px 20px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:20px!important;text-align:left!important}
 #g8dialog[data-prompt=player] .g8scoutsummary>.g8nameandrating{display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:space-between!important;gap:20px!important;flex:1;min-width:0}
 #g8dialog[data-prompt=player] .g8scoutsummary h3{font-size:18px!important;text-align:left!important;line-height:1.3!important}
@@ -198,6 +252,14 @@
  #g8app .gccui .gccuiFixtureClub{flex-direction:row;align-items:center;gap:12px;padding:12px 14px}
  #g8app .gccui .gccuiFixtureClub h2{font-size:19px;overflow-wrap:normal;word-break:normal}
  #g8app .gccui .gccuiVersus{font-size:11px;line-height:1}
+ #g8app .gccuiScorecard{padding:16px}
+ #g8app .gccui .gccuiScoreTeams{grid-template-columns:minmax(0,1fr);gap:10px}
+ #g8app .gccui .gccuiScoreContext{align-items:flex-start;flex-direction:column;gap:8px}
+ #g8app .gccui .gccuiScoreSide>div{padding:14px 16px}
+ #g8app .gccui .gccuiScoreSide strong{font-size:42px}
+ #g8dialog[data-prompt=prepare] .g8previewteams{grid-template-columns:minmax(0,1fr)!important;gap:10px!important}
+ #g8dialog[data-prompt=prepare] .g8previewvenue{grid-template-columns:minmax(0,1fr)!important}
+ #g8dialog[data-prompt=prepare] .g8previewvenue>span:last-child{grid-column:1;grid-row:auto;justify-self:start}
 }
 @media(max-width:360px){
  #g8app .gccui .gccuiPlayerScout{grid-template-columns:50px minmax(0,1fr);gap:10px;padding:14px 10px}
