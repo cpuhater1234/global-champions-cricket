@@ -417,3 +417,13 @@
 #g8app .gccuiArchive .g8seasonbook{margin:0!important;padding:16px!important;border:1px solid var(--ui-line)!important;border-radius:6px!important;background:var(--ui-panel)!important}
 #g8app .gccuiArchive .g8seasonbook p{font-size:14px!important;line-height:1.5!important}
 @media(max-width:760px){#g8app .gccuiArchive .g8archiveyears{grid-template-columns:1fr!important}}
+#g8app .gccuiFinals .gccuiKnockoutSide small{color:var(--side-ink)!important}
+#g8app .gccuiFinalActions{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+#g8app .gccuiCampaign .g8decisionline{display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:space-between!important;gap:14px!important;text-align:left!important}
+#g8app .gccuiCampaign .g8decisionline>div{flex:1 1 auto!important;text-align:left!important}
+@media(max-width:600px){#g8app .gccuiFinalActions{display:grid;grid-template-columns:1fr;width:100%}}
+/* Nested semi-final scores must not split the total from its wickets. */
+#g8app .gccui .gccuiScoreSide strong{white-space:nowrap!important}
+#g8app .gccuiFinals .g8finals .gccuiScoreSide>div{grid-template-columns:minmax(0,1fr)!important}
+#g8app .gccuiFinals .g8finals .gccuiScoreSide>div>span{grid-column:1!important}
+@media(max-width:1400px){#g8app .gccuiFinals .g8finals{grid-template-columns:1fr!important}}
