@@ -283,3 +283,79 @@
 #g8app .gccBrandMini{display:block;width:66px;height:66px;flex:0 0 66px}
 @media(max-width:600px){#g8app .gccBrandStart{width:220px}#g8app .g8brand{width:58px!important;min-width:58px!important;height:58px!important}#g8app .gccBrandMini{width:48px;height:48px;flex-basis:48px}}
 @media(prefers-reduced-motion:reduce){#g8app .gccBrandStart{transition:none}}
+/* Home: keep the career actions visible and preserve the whole ground photo. */
+#g8app .g8hero{min-height:0!important;align-items:stretch!important;gap:24px!important}
+#g8app .g8welcomepanel{display:flex!important;justify-content:flex-start!important;gap:12px!important;padding:20px!important}
+#g8app .g8welcomepanel>.g8eyebrow{font-size:12px!important;line-height:1.4!important;margin:0!important;letter-spacing:.08em!important}
+#g8app .g8welcomepanel .gccBrandTitle{margin:0!important}
+#g8app .gccBrandStart{width:190px}
+#g8app .g8welcomepanel>p{font-size:15px!important;line-height:1.45!important;margin:0!important}
+#g8app .g8welcomepanel>.g8leagueformat{margin:0!important;padding:8px 0!important}
+#g8app .g8leagueformat>div{padding:0 5px!important;gap:2px!important}
+#g8app .g8leagueformat strong{font-size:25px!important;line-height:1.1!important}
+#g8app .g8leagueformat span{font-size:12px!important;line-height:1.3!important}
+#g8app .g8welcomeactions{margin:0!important;padding:0!important;gap:8px!important}
+#g8app .g8welcomeactions>.g8button{min-height:56px!important;gap:4px!important;padding:8px 12px!important}
+#g8app .g8welcomeactions>.g8primary{flex-direction:row!important;gap:8px!important}
+#g8app .g8heroart .g8homestadium .g8stadiumphoto{object-fit:contain!important;background:#17191a!important}
+#g8app .g8heroart .g8homestadium>figcaption{padding:10px 12px!important;font-size:13px!important;min-height:62px!important}
+@media(min-width:761px) and (max-height:800px){#g8app .gccBrandStart{width:144px}#g8app .g8welcomepanel{gap:10px!important}#g8app .g8welcomeactions>.g8button{min-height:52px!important}}
+@media(max-width:760px){#g8app .g8hero{gap:18px!important}#g8app .gccBrandStart{width:170px}#g8app .g8heroart .g8homestadium>.g8venueframe{min-height:0!important;flex:none!important;aspect-ratio:4/3}#g8app .g8leagueformat>div{flex-direction:column!important}#g8app .g8leagueformat strong,#g8app .g8leagueformat span{min-width:0!important;text-align:center!important}#g8app .g8leagueformat>div+div{border-top:0!important;border-left:1px solid #62696d!important}}
+/* Player popup: grouped identity and compact ability comparisons. */
+#g8dialog[data-prompt=player]{width:min(840px,calc(100vw - 24px))!important}
+#g8dialog[data-prompt=player] .g8modalhead{padding:12px 18px!important}
+#g8dialog[data-prompt=player] .g8modalhead h2{font-size:24px!important;line-height:1.25!important}
+#g8dialog[data-prompt=player] .g8modalbody{padding:16px!important}
+#g8dialog[data-prompt=player] .g8scoutsummary{padding:12px 16px!important}
+#g8dialog[data-prompt=player] .g8scoutsummary .g8rowrating{font-size:30px!important;padding:8px!important;min-width:56px!important}
+#g8dialog[data-prompt=player] .g8ordereditor{margin:12px 0!important;padding:10px 0!important;gap:10px!important}
+#g8dialog[data-prompt=player] .g8ordereditor>span{font-weight:700;color:#e4e8ea!important}
+#g8dialog[data-prompt=player] .g8scoutability{padding:12px 14px!important;margin:12px 0!important}
+#g8dialog[data-prompt=player] .g8scoutability>h3{justify-content:flex-start!important;font-size:15px!important;font-style:normal!important;padding:0 0 10px!important;border-bottom:1px solid #62696d}
+#g8dialog[data-prompt=player] .g8scoutability .g8skillgrid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:0 24px!important}
+#g8dialog[data-prompt=player] .g8scoutability .g8abilitybar{padding:10px 0!important;border-top:0!important}
+#g8dialog[data-prompt=player] .g8scoutability .g8abilitybar>span{font-size:14px!important;font-weight:700!important}
+#g8dialog[data-prompt=player] .g8scoutability .g8abilitybar>b{font-size:20px!important;line-height:1.2!important}
+#g8dialog[data-prompt=player] .g8scoutability .g8abilitytrack{height:6px!important}
+@media(max-width:600px){#g8dialog[data-prompt=player] .g8scoutsummary>.g8nameandrating{flex-direction:row!important;align-items:center!important;gap:12px!important}#g8dialog[data-prompt=player] .g8scoutsummary h3{font-size:16px!important}#g8dialog[data-prompt=player] .g8scoutsummary .g8scoutmeta{gap:4px!important;margin-top:6px!important;flex-wrap:wrap!important}#g8dialog[data-prompt=player] .g8scoutsummary .g8scoutmeta>span{font-size:12px!important;padding:4px 6px!important}#g8dialog[data-prompt=player] .g8scoutability .g8skillgrid{gap:0 16px!important}#g8dialog[data-prompt=player] .g8modalbody{padding:12px!important}#g8dialog[data-prompt=player] .g8ordereditor .g8actions{width:auto!important}}
+/* Team analysis: one summary strip above three comparable disciplines. */
+#g8dialog[data-prompt=teamAnalysis] .g8modalhead{padding:12px 18px!important}
+#g8dialog[data-prompt=teamAnalysis] .g8modalhead h2{font-size:24px!important}
+#g8dialog[data-prompt=teamAnalysis] .g8teamread{padding:14px!important}
+#g8dialog[data-prompt=teamAnalysis] .g8roleboardhead{display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:space-between!important;gap:16px!important;padding:0 0 14px!important;margin:0!important;text-align:left!important}
+#g8dialog[data-prompt=teamAnalysis] .g8roleboardhead>.g8eyebrow{margin:0!important;font-size:14px!important}
+#g8dialog[data-prompt=teamAnalysis] .g8teamrating{display:flex!important;flex-direction:row!important;align-items:center!important;gap:10px!important;width:auto!important;min-width:0!important;padding:8px 14px!important;margin:0!important}
+#g8dialog[data-prompt=teamAnalysis] .g8teamrating strong{font-size:38px!important;line-height:1.1!important}
+#g8dialog[data-prompt=teamAnalysis] .g8coverread{font-size:13px!important}
+#g8dialog[data-prompt=teamAnalysis] .g8analysisgrid{gap:12px!important}
+#g8dialog[data-prompt=teamAnalysis] .g8analysissection{padding:12px!important}
+#g8dialog[data-prompt=teamAnalysis] .g8analysissection h3{font-size:15px!important;justify-content:flex-start!important;font-style:normal!important}
+#g8dialog[data-prompt=teamAnalysis] .g8analysisrow{min-height:88px!important;padding:10px 8px!important}
+#g8dialog[data-prompt=teamAnalysis] .g8analysisrow>span{font-size:13px!important;line-height:1.35!important}
+#g8dialog[data-prompt=teamAnalysis] .g8analysisrow>strong{font-size:28px!important}
+@media(max-width:600px){#g8dialog[data-prompt=teamAnalysis] .g8roleboardhead{flex-wrap:wrap!important;gap:8px!important}#g8dialog[data-prompt=teamAnalysis] .g8coverread{flex-basis:100%;text-align:left!important}}
+/* Tables and schedule: visible selection, complete columns, aligned club rows. */
+#g8app .gccuiTableView .g8tabs .g8button.selected{background:#edb65b!important;color:#171a1b!important;border-color:#ffe0a7!important}
+#g8app .gccuiTableView .g8finals .g8table{min-width:0!important;width:100%!important}
+#g8app .gccuiTableView .g8finals .g8table :is(th,td){padding:11px 6px!important;font-size:13px!important}
+#g8app .gccuiTableView .g8finals .g8table th{font-size:11px!important}
+#g8app .gccuiTableView .g8finals .g8table :is(th,td):first-child{width:38%;min-width:130px}
+#g8app .gccui .gccuiSchedule{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+#g8app .gccui .gccuiScheduleCard{background:var(--ui-panel);border:1px solid var(--ui-line);border-radius:6px;overflow:hidden;box-shadow:0 3px 0 #101213}
+#g8app .gccui .gccuiScheduleCard.is-next{border-top:3px solid var(--ui-team)}
+#g8app .gccui .gccuiScheduleCard>header{display:flex;justify-content:space-between;gap:12px;padding:10px 14px;border-bottom:1px solid var(--ui-rule);background:var(--ui-inset);font-size:12px;color:var(--ui-muted)}
+#g8app .gccui .gccuiScheduleCard>header>b{white-space:nowrap;color:var(--ui-text)}
+#g8app .gccui .gccuiScheduleCard>header>span{text-align:right}
+#g8app .gccui .gccuiScheduleSide{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:12px 14px;padding-left:10px;border-left:5px solid var(--schedule-club)}
+#g8app .gccui .gccuiScheduleSide>span{min-width:0;display:flex;flex-direction:column}
+#g8app .gccui .gccuiScheduleSide b{font-size:16px;line-height:1.3}
+#g8app .gccui .gccuiScheduleSide small{font-size:11px;color:var(--ui-muted);font-weight:600}
+#g8app .gccui .gccuiScheduleSide>strong{font-size:24px;font-variant-numeric:tabular-nums;white-space:nowrap}
+#g8app .gccui .gccuiScheduleSide>strong>small{font-size:16px}
+#g8app .gccui .gccuiScheduleCard>footer{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:58px;padding:10px 14px;border-top:1px solid var(--ui-rule);font-size:13px;font-weight:700;color:var(--ui-muted)}
+#g8app .gccui .gccuiScheduleCard>footer .won{color:#98d6a5}
+#g8app .gccui .gccuiScheduleCard>footer .lost{color:#efaaa3}
+@media(max-width:760px){#g8app .gccui .gccuiSchedule{grid-template-columns:1fr}#g8app .gccuiTableView .g8finals{grid-template-columns:1fr!important}#g8app .gccuiTableView .g8finals .g8table{min-width:440px!important}}
+/* Guide steps retain readable numbers after the dark-palette overrides. */
+#g8dialog .g8guidecard .g8guidenumber{display:grid!important;place-items:center!important;width:28px!important;min-width:28px!important;height:28px!important;flex:0 0 28px!important;padding:0!important;background:#edb65b!important;color:#171a1b!important;border:1px solid #ffe0a7!important;border-radius:4px!important;font-size:15px!important;line-height:1!important;font-weight:850!important}
+@media(max-width:760px){#g8app .g8welcomepanel>.g8leagueformat{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
