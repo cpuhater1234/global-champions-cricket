@@ -4,7 +4,8 @@ import {loadGame} from '../offline_game_host.mjs';
 import {startDraft,finishDraft,selectManualXI,scorebook} from '../club-expansion-20261027/helpers.mjs';
 const seed=Number(process.env.SEED||101),h=loadGame('qa/perfection-20261030/candidate.html',seed,new Map(),{strictIds:true});
 const X=h.context.GCC8,G=h.G,D=h.context.Dynasty,s=G.state,report={seed,seasons:[],complete:false};
-const checkpoint=()=>fs.writeFileSync('qa/perfection-20261030/career-smoke.json',JSON.stringify(report,null,2));
+const reportPath=process.env.REPORT_PATH||'qa/perfection-20261030/career-smoke.json';
+const checkpoint=()=>fs.writeFileSync(reportPath,JSON.stringify(report,null,2));
 function rosterCheck(){const used=new Set();for(const c of s.league){const ids=s.teams[c.abbr];assert.equal(ids.length,15,c.abbr+' roster size');assert(ids.some(id=>X.R.isKeeper(G.byId(id))),c.abbr+' keeper');for(const id of ids){assert(!used.has(id),'duplicate ownership '+id);used.add(id);assert(G.byId(id),'known player');}}}
 try{
  startDraft(h);finishDraft(h);

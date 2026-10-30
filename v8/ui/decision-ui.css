@@ -495,3 +495,31 @@
 #g8app .gccuiLiveOrder{font-size:12px;color:var(--ui-muted);line-height:1.4;margin:12px 0 0!important}
 @media(prefers-reduced-motion:reduce){#g8app .gccuiCoin{animation:none}}
 @media(max-width:600px){#g8app .gccuiPreMatchPanel{padding:16px}#g8app .gccuiPreMatchPanel>h2{font-size:24px!important}#g8app .gccuiPreMatchPanel .gccuiFixtureClub{padding:12px;min-width:0}#g8app .gccuiPreMatchPanel .gccuiFixtureClub h2{font-size:16px!important}#g8app .gccuiPreMatchPanel .gccuiFixtureClub>.g8badge{display:none}#g8app .gccuiPreMatchActions{display:grid;grid-template-columns:1fr;width:100%}#g8app .gccuiCoinStage{height:94px}}
+/* Playtest follow-through: club identity and mobile information visibility. */
+#g8dialog .gcc-scoreinnings{background:#232323!important;border-color:#696969!important}
+#g8dialog .gcc-scoreinnings>header{background:var(--innings-club,#333)!important;color:var(--innings-ink,#f4f1e9)!important;border-bottom:2px solid #ffffff66!important}
+#g8dialog .gcc-scoreinnings>header :is(h2,strong,small){color:inherit!important}
+#g8dialog .gcc-scoreinnings caption{background:#2d2d2d!important;border-color:#626262!important}
+#g8dialog .gcc-scoreinnings .g8table thead th{background:#3b3b3b!important}
+#g8dialog .gcc-scoreinnings .g8table tbody tr:nth-child(odd){background:#242424!important}
+#g8dialog .gcc-scoreinnings .g8table tbody tr:nth-child(even){background:#2c2c2c!important}
+#g8dialog .gcc-scoreinnings .g8table tbody :is(th,td){border-color:#555!important}
+#g8dialog .gcc-scoreinnings .g8table tbody th :is(small,span){color:#d0cec8!important}
+@media(max-width:760px){
+ #g8app .gccuiTableView .g8finals .g8sheet{padding:12px!important}
+ #g8app .gccuiTableView .g8finals .g8table{min-width:0!important;table-layout:fixed}
+ #g8app .gccuiTableView .g8finals .g8table :is(th,td){padding:11px 4px!important;font-size:12px!important;white-space:normal!important;overflow-wrap:normal}
+ #g8app .gccuiTableView .g8finals .g8table :is(th,td):first-child{width:48%;min-width:0!important}
+ #g8app .gccuiTableView .g8finals .g8table :is(th,td):nth-child(2){width:10%}
+ #g8app .gccuiTableView .g8finals .g8table :is(th,td):nth-child(3){width:18%}
+ #g8app .gccuiTableView .g8finals .g8table :is(th,td):nth-child(4){width:24%}
+ #g8app .g8tablewrap[data-scrollable-table=true]::before{content:'More columns → Swipe or use arrow keys';display:block;font-size:11px;line-height:1.4;color:#d0cec8;padding:8px 0;text-align:left}
+ #g8app .gccuiSelection>.gccuiHeading{padding-bottom:12px;margin-bottom:12px}
+ #g8app .gccuiSelection .gccuiSelectionStatus{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:12px;margin-bottom:12px}
+ #g8app .gccuiSelection .gccuiSelectionStatus>div:not(.gccuiSelectionActions){display:flex;gap:8px;align-items:baseline;justify-content:center}
+ #g8app .gccuiSelection .gccuiSelectionStatus span{margin:0;font-size:11px}
+ #g8app .gccuiSelection .gccuiSelectionActions{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+ #g8app .gccuiSelection .gccuiSelectionActions .g8button{min-height:44px;padding:8px!important}
+ #g8app .gccuiSelection .gccuiSelectionActions .g8button span{font-size:12px}
+ #g8app .gccuiSelection .gccuiPaneTabs{margin-bottom:12px}
+}

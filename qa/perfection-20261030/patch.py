@@ -61,6 +61,7 @@ rep(15,'<header class="gcc-scorebug"><div><span class="g8eyebrow">${phase}</span
 fixture='<div class="g8fixture"><div>${badge(a)}<h2>${X.teamLabel(a)}</h2></div><span>v</span><div>${badge(b)}<h2>${X.teamLabel(b)}</h2></div></div>'
 assert parts[17].count(fixture)==2
 parts[17]=parts[17].replace(fixture,'${X.knockoutFixture(a,b)}')
+rep(15,'<section class="gcc-scoreinnings"><header>', '<section class="gcc-scoreinnings" style="--innings-club:${esc(i.club.c)};--innings-ink:${esc(X.clubInk(i.club))}"><header>')
 rep(15,"${d.runs} runs${extra?","${d.runs} ${d.runs===1?'run':'runs'}${extra?")
 rep(15,"last.runs+' runs'","last.runs+(last.runs===1?' run':' runs')")
 rep(11,"${glyph?icon(glyph):''}","${glyph?(window.GCC8?.designIcon?window.GCC8.designIcon(glyph):icon(glyph)):''}")
@@ -75,6 +76,10 @@ rep(19,"${X.icon('cricket')}GCC</button>", '<svg class="gccBrandMini" viewBox="0
 # snapshots keep their count and running status, without a retroactive interruption.
 rep(19,"{count:0,presentationVersion:version,speedIndex:0,running:true,year:s.year", "{count:0,preMatch:true,presentationVersion:version,speedIndex:0,running:false,year:s.year")
 rep(19," bind('matchRun',['matchReveal']", " bind('startPlayback',['matchReveal'],()=>{assert(ui.match?.preMatch,'The match has already started.');ui.match.preMatch=false;ui.match.running=true;scheduleMatch();});\n bind('matchRun',['matchReveal']")
+rep(17,'${position} on the ladder','Ladder position ${position}')
+rep(17,'Now ${r.ladderAfter} on the ladder','Ladder position ${r.ladderAfter}')
+rep(17,'Finished ${h.userPosition}','League position ${h.userPosition}')
+rep(19,'Finished ${h.userPosition}','League position ${h.userPosition}')
 parts[18]+='\n'+(root/'v8/ui/decision-ui.js').read_text()
 for i in (9,10,11,16,17,19):
  path=root/('v8/engine/'+('foundation.js' if i==9 else 'dynasty.js')) if i in (9,10) else root/('v8/ui/'+{11:'components.js',16:'career.js',17:'screens.js',19:'controller.js'}[i]);path.write_text(parts[i])
