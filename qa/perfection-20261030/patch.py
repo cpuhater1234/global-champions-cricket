@@ -29,8 +29,11 @@ start=s.index(' X.managementBrief=');end=s.index(' X.managementResult=',start)
 s=s[:start]+''' X.managementBrief=(selection=false)=>{const state=X.managementState(),all=roster().flatMap((p,index)=>{const q=state.players[p.id],injury=X.injury(p),c=concern(q),selected=s.xi.includes(p.id);return injury||c||q.promise?.status==='active'?[{p,index,priority:injury&&selected?0:injury?1:q.promise?.status==='active'?2:q.requested?3:4,text:injury?`${medical(injury)}${selected?' · Currently selected':''}`:c||promise(q)}]:[]}).sort((a,b)=>a.priority-b.priority||a.index-b.index),rows=all.slice(0,3),conditions=!selection?X.managementConditions():null;if(!rows.length&&!conditions)return '';const line=({p,text})=>`<div class="g8decisionline"><div><strong>${esc(p.name)}</strong><span>${esc(text)}</span></div>${btn('Review player','manageInspect',[p.id],'g8ghost g8small')}</div>`;return `<section class="g8dressingroom" aria-label="Selection decisions"><header><span class="g8eyebrow">IN THE DRESSING ROOM</span><h2>${rows.length?'Decisions before the toss':'Read the contest'}</h2></header>${rows.map(line).join('')}${all.length>3?X.disclosure(`${all.length-3} more squad decisions`,all.slice(3).map(line).join('')):''}${conditions?`<p class="g8conditionbrief">${esc(conditions.text)}</p>`:''}</section>`;};
 ''' +s[end:]
 assert old.strip() in parts[16];parts[16]=parts[16].replace(old.strip(),s.strip());p.write_text(s)
+rep(16,'${remaining} optional releases left',"${remaining} optional release${remaining===1?'':'s'} left")
+rep(16,'${all.length-3} more squad decisions',"${all.length-3} more squad decision${all.length-3===1?'':'s'}")
 rep(17,'${t.w} wins · ${t.l} losses',"${t.w} win${t.w===1?'':'s'} · ${t.l} loss${t.l===1?'':'es'}")
 rep(17,"[['Finished',`${s.regularSeasonPosition} of 8`]", "[['League position',`${s.regularSeasonPosition} of 8`]")
+rep(19,'${m.released.length} were released',"${m.released.length} ${m.released.length===1?'was':'were'} released")
 rep(19,'${read.tradeAllowance()} trades and ${read.departureBudget().remaining} voluntary departures left this season.', "${read.tradeAllowance()} trade${read.tradeAllowance()===1?'':'s'} and ${read.departureBudget().remaining} voluntary departure${read.departureBudget().remaining===1?'':'s'} left this season.")
 rep(19,"'Offseason · closes when the draft begins'","'Preseason window · closes at draft entry; reopens until Round 3'")
 rep(19,'Choose the players and picks on each side. Each club can include up to two players and two picks. Nothing changes until you review and confirm.',"${ui.tradeMid?'Choose up to two players on each side. Equal numbers must move; draft picks are unavailable.':'Choose up to two players and two owned picks on each side.'} Nothing changes until you review and confirm.")
@@ -44,6 +47,11 @@ rep(17,'</section>${X.seasonProgress()}<section class="g8sheet g8seasonstars">',
 rep(19,"bind('finalScorecard',['finals']", "bind('finalScorecard',['finals','review']")
 rep(16,"+X.offseasonSteps()+X.departureGuide()+(managing?", "+X.offseasonSteps()+(managing?X.departureGuide():'')+(managing?")
 rep(16,'</aside></div><div class="g8annualdetails">', '</aside></div>${X.disclosure("Squad rules & departure allowance",X.departureGuide())}<div class="g8annualdetails">')
+rep(17,'content=resultCard(f.gf)+(', 'content=resultCard(f.gf)+X.matchAwards(f.gf)+X.matchWorm(f.gf)+(')
+# Shared knockout fixture keeps ready semi-finals and the Grand Final aligned.
+fixture='<div class="g8fixture"><div>${badge(a)}<h2>${X.teamLabel(a)}</h2></div><span>v</span><div>${badge(b)}<h2>${X.teamLabel(b)}</h2></div></div>'
+assert parts[17].count(fixture)==2
+parts[17]=parts[17].replace(fixture,'${X.knockoutFixture(a,b)}')
 rep(11,"${glyph?icon(glyph):''}","${glyph?(window.GCC8?.designIcon?window.GCC8.designIcon(glyph):icon(glyph)):''}")
 rep(11,'const icon=name=>`<svg', 'const icon=name=>window.GCC8?.approvedIcon?.(name)||`<svg')
 rep(11,' const resultCard=r=>{',' const resultCard=r=>window.GCC8?.designResultCard?window.GCC8.designResultCard(r):legacyResultCard(r);\n const legacyResultCard=r=>{')
