@@ -222,7 +222,7 @@
  bind('swapIn',['team'],id=>{assert(roster().some(p=>p.id===Number(id))&&!s.xi.includes(Number(id))&&injury(G.byId(Number(id)))?.status!=='OUT','Choose an available player from the bench.');closeDialog();ui.teamPane='xi';G.beginSwap(Number(id));pendingFocus='[data-action="swapOut"]';});
  bind('swapOut',['team'],id=>{assert(s.pendingSwapIn&&s.xi.includes(Number(id)),'Choose a player to replace.');const incoming=s.pendingSwapIn;G.replaceXI(Number(id));pendingFocus='#g8xi-'+incoming;});
  bind('cancelSwap',['team'],()=>{const incoming=s.pendingSwapIn;ui.teamPane='squad';G.cancelSwap();pendingFocus='#g8select-'+incoming;});
- bind('clearXI',['team'],()=>{G.clearXI();ui.teamPane='squad';pendingFocus='.g8bench .g8namescout';});
+ bind('clearXI',['team'],()=>{G.clearXI();ui.teamPane='squad';pendingFocus='.gccuiBench .gccuiRosterName, .g8bench .g8namescout';});
  bind('naturalOrder',['team'],()=>G.autoOrderXI());
  bind('draftDetail',['draft','dynasty'],kind=>{
   assert(ui.view==='draft'||annual(),'The draft room is closed.');

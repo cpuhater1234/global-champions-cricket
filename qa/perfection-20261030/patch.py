@@ -44,12 +44,17 @@ rep(17,'</section>${X.seasonProgress()}<section class="g8sheet g8seasonstars">',
 rep(19,"bind('finalScorecard',['finals']", "bind('finalScorecard',['finals','review']")
 rep(16,"+X.offseasonSteps()+X.departureGuide()+(managing?", "+X.offseasonSteps()+(managing?X.departureGuide():'')+(managing?")
 rep(16,'</aside></div><div class="g8annualdetails">', '</aside></div>${X.disclosure("Squad rules & departure allowance",X.departureGuide())}<div class="g8annualdetails">')
+rep(11,"${glyph?icon(glyph):''}","${glyph?(window.GCC8?.designIcon?window.GCC8.designIcon(glyph):icon(glyph)):''}")
+rep(11,"finishCareer:'trophy'}", "finishCareer:'trophy',swapSelected:'arrows-sort',cancelSwap:'arrows-sort',naturalOrder:'arrows-sort',clearXI:'users-group',teamAnalysis:'chart-bar',watchNext:'player-play',retainXI:'shirt-sport'}")
+rep(19,"pendingFocus='.g8bench .g8namescout'", "pendingFocus='.gccuiBench .gccuiRosterName, .g8bench .g8namescout'")
+parts[18]+='\n'+(root/'v8/ui/decision-ui.js').read_text()
 for i in (9,10,11,16,17,19):
  path=root/('v8/engine/'+('foundation.js' if i==9 else 'dynasty.js')) if i in (9,10) else root/('v8/ui/'+{11:'components.js',16:'career.js',17:'screens.js',19:'controller.js'}[i]);path.write_text(parts[i])
 domain=parts[2][parts[2].index('/* Causal T20 delivery simulation.'):];domain=domain[:domain.index('})();')+5];(root/'v8/domain/delivery_engine.js').write_text(domain)
 for i in reversed(range(len(matches))):
  m=matches[i];raw=raw[:m.start(1)]+parts[i]+raw[m.end(1):]
 css=(root/'v8/ui/arcade-charcoal.css').read_text();raw=raw.replace('</head>','<style id="gcc-charcoal-20261030">\n'+css+'\n</style></head>')
+raw=raw.replace('</head>','<style id="gcc-decision-ui-20261030">\n'+(root/'v8/ui/decision-ui.css').read_text()+'\n</style></head>')
 out=root/'qa/perfection-20261030/candidate.html';out.write_text(raw)
 for i,part in enumerate(parts):
  tmp=root/f'qa/perfection-20261030/check-{i}.js';tmp.write_text(part);subprocess.run(['node','--check',str(tmp)],check=True,capture_output=True)

@@ -1,0 +1,185 @@
+/* Authoritative layout for draft, XI and match preparation. */
+#g8app .gccui{--ui-bg:#202223;--ui-panel:#292c2e;--ui-inset:#1c1f20;--ui-line:#62696d;--ui-rule:#454c50;--ui-text:#f3f5f5;--ui-muted:#c2c9cc;--ui-team:var(--club-accent,#ed7547);color:var(--ui-text);font-size:15px;line-height:1.5;min-width:0}
+#g8app .gccui *{box-sizing:border-box}
+#g8app .gccui :is(h1,h2,h3,p,dl,dd,ol){margin:0}
+#g8app .gccui :is(h1,h2,h3){font-weight:850;letter-spacing:-.02em;line-height:1.2;text-transform:none;font-style:normal;color:var(--ui-text)}
+#g8app .gccui h1{font-size:clamp(28px,3vw,40px)}
+#g8app .gccui h2{font-size:20px}
+#g8app .gccui h3{font-size:17px}
+#g8app .gccui .g8icon,#g8app .gccuiIcon,#g8dialog .gccuiIcon{display:inline-block!important;width:22px!important;height:22px!important;min-width:22px;flex:0 0 22px;opacity:1!important;filter:none!important;vertical-align:middle;color:inherit}
+#g8app .gccui .gccuiHeadingIcon .g8icon{width:30px!important;height:30px!important}
+#g8app .gccui .gccuiHeading{display:flex;align-items:center;gap:16px;padding:0 0 20px;margin:0 0 20px;border-bottom:2px solid var(--ui-rule)}
+#g8app .gccui .gccuiHeadingIcon{display:grid;place-items:center;flex:0 0 56px;height:56px;border:2px solid var(--ui-team);border-radius:8px;background:var(--ui-inset);color:var(--ui-text)}
+#g8app .gccui .gccuiKicker{display:block;font-size:12px;line-height:1.4;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--ui-muted);margin-bottom:5px}
+#g8app .gccui .gccuiHeading p{color:var(--ui-muted);margin-top:6px;font-size:14px}
+#g8app .gccui .gccuiPanel{min-width:0;border:2px solid var(--ui-line);border-radius:8px;background:var(--ui-panel);overflow:hidden;box-shadow:0 3px 0 #0c0e0f}
+#g8app .gccui .gccuiPanelHead{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding:16px 20px;background:#303638;border-bottom:1px solid var(--ui-line)}
+#g8app .gccui .gccuiPanelHead h2{display:flex;align-items:center;gap:10px;font-size:18px}
+#g8app .gccui .gccuiPanelHead>span{font-size:12px;color:var(--ui-muted);font-weight:700}
+#g8app .gccui .g8button{display:inline-flex!important;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 14px!important;border:1px solid #8a969b!important;border-radius:5px!important;background:#363d40!important;color:var(--ui-text)!important;box-shadow:0 2px 0 #111!important;font-size:14px!important;font-weight:800;line-height:1.3;white-space:normal;text-align:center}
+#g8app .gccui .g8button.g8primary{background:linear-gradient(#f58c54,#e66a3c)!important;color:#171b1d!important;border:2px solid #ffb67e!important}
+#g8app .gccui .g8button:disabled{opacity:.45!important;cursor:not-allowed}
+#g8app .gccui .g8button:hover:not(:disabled){transform:none!important;filter:brightness(1.12);border-color:#e2ebee!important;outline:0!important}
+#g8app .gccui :is(button,input,select,summary):focus-visible{outline:3px solid #f1c06b!important;outline-offset:3px}
+#g8app .gccui .gccuiRating{display:block;font-size:27px;font-weight:900;font-variant-numeric:tabular-nums;line-height:1.1;color:var(--rating-color,#f3f5f5)!important;text-align:center}
+#g8app .gccui .gccuiTurn{display:grid;grid-template-columns:56px minmax(0,1fr) auto;align-items:center;gap:16px;background:var(--ui-panel);border:2px solid var(--ui-line);border-left:6px solid var(--ui-team);border-radius:8px;padding:18px 20px;margin-bottom:20px}
+#g8app .gccui .gccuiTurnMark .g8badge{width:52px;height:52px;min-width:52px;font-size:15px}
+#g8app .gccui .gccuiTurn h2{font-size:24px;margin:0 0 4px}
+#g8app .gccui .gccuiTurn p{font-size:14px;color:var(--ui-muted)}
+#g8app .gccui .gccuiTurnActions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+#g8app .gccui .gccuiDraftGrid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:20px;align-items:start}
+#g8app .gccui .gccuiFilters{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1.1fr);gap:12px;padding:16px 20px;border-bottom:1px solid var(--ui-rule);background:#24292b}
+#g8app .gccui .gccuiFilters label{display:flex;flex-direction:column;gap:7px;font-size:12px;line-height:1.4;font-weight:800;color:var(--ui-muted);min-width:0}
+#g8app .gccui .gccuiFilters :is(input,select){width:100%;min-width:0;min-height:44px;margin:0;padding:10px 12px!important;background:#171c1f!important;border:1px solid #859298!important;border-radius:4px!important;color:var(--ui-text)!important;font-size:14px}
+#g8app .gccui .gccuiPlayers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;padding:20px;min-width:0}
+#g8app .gccui .gccuiPlayer{--role-edge:#e2b368;min-width:0;background:var(--ui-inset);border:2px solid #727c82;border-top:4px solid var(--role-edge);border-radius:7px;overflow:hidden;display:flex;flex-direction:column}
+#g8app .gccui .gccuiPlayer.g8role-BOWL{--role-edge:#ad9ad5}
+#g8app .gccui .gccuiPlayer.g8role-AR{--role-edge:#e2927d}
+#g8app .gccui .gccuiPlayer.g8role-WK-BAT{--role-edge:#6fc0d6}
+#g8app .gccui .gccuiPlayerScout{display:grid;grid-template-columns:58px minmax(0,1fr);gap:14px;align-items:start;border:0;padding:18px 16px;background:linear-gradient(120deg,#343c40,#252b2e);color:var(--ui-text);text-align:left;cursor:pointer;flex:1;min-width:0;width:100%}
+#g8app .gccui .gccuiPlayerScout:hover{background:linear-gradient(120deg,#3b464b,#2c3438)}
+#g8app .gccui .gccuiPlayerOverall{padding:10px 4px;border:1px solid #7f8c92;background:#1a2023;border-radius:5px;text-align:center}
+#g8app .gccui .gccuiPlayerOverall .gccuiRating{font-size:32px}
+#g8app .gccui .gccuiPlayerOverall small{font-size:10px;font-weight:800;letter-spacing:.1em;color:var(--ui-muted);display:block;margin-top:7px}
+#g8app .gccui .gccuiPlayerIdentity{display:flex;flex-direction:column;gap:9px;min-width:0}
+#g8app .gccui .gccuiPlayerIdentity>b{font-size:19px;line-height:1.2;overflow-wrap:anywhere;font-weight:850}
+#g8app .gccui .gccuiPlayerBio{display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--ui-muted);font-weight:700}
+#g8app .gccui .gccuiPlayerRole{display:flex;align-items:center;gap:7px;font-size:12px;line-height:1.5;color:#e4ecef}
+#g8app .gccui .gccuiPlayerRole .g8icon{color:var(--role-edge)}
+#g8app .gccui .gccuiPlayerSkills{display:grid;grid-template-columns:1fr 1fr;background:#202629;border-top:1px solid #566168;padding:14px 0}
+#g8app .gccui .gccuiPlayerSkills>div{text-align:center;padding:0 8px}
+#g8app .gccui .gccuiPlayerSkills>div+div{border-left:1px solid #566168}
+#g8app .gccui .gccuiPlayerSkills dt{font-size:12px;font-weight:700;color:var(--ui-muted);margin-bottom:6px}
+#g8app .gccui .gccuiPlayerSkills dd .gccuiRating{font-size:25px}
+#g8app .gccui .gccuiSortRead{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;border-top:1px solid #566168;background:#252d31;font-size:12px;color:var(--ui-muted)}
+#g8app .gccui .gccuiSortRead .gccuiRating{font-size:22px}
+#g8app .gccui .gccuiPlayer>footer{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border-top:1px solid #414c52;background:#252d31}
+#g8app .gccui .gccuiPlayer>footer>span{display:flex;align-items:center;gap:7px;font-size:11px;line-height:1.4;color:var(--ui-muted);max-width:115px}
+#g8app .gccui .gccuiPoolFooter{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-top:1px solid var(--ui-rule);font-size:13px;color:var(--ui-muted)}
+#g8app .gccui .gccuiClubHead{display:flex;align-items:center;gap:14px;padding:20px;background:var(--ui-team);color:var(--club-ink,#fff);border-bottom:2px solid #121719}
+#g8app .gccui .gccuiClubHead :is(h2,p,.gccuiKicker){color:inherit!important}
+#g8app .gccui .gccuiClubHead h2{font-size:22px}
+#g8app .gccui .gccuiClubHead p{font-size:13px;font-weight:800;margin-top:7px}
+#g8app .gccui .gccuiClubHead>.g8badge{width:50px;height:50px;min-width:50px;border-color:currentColor}
+#g8app .gccui .gccuiCompanion>.g8sectionhead{display:none!important}
+#g8app .gccui .gccuiCompanion>:not(.gccuiClubHead){margin:16px!important;max-width:calc(100% - 32px)}
+#g8app .gccui .gccuiCompanion .g8draftscore{border-left-color:var(--ui-team)!important}
+#g8app .gccui .gccuiCompanion .g8draftpicked{width:100%;justify-content:space-between!important}
+#g8app .gccui .gccuiCompanion .g8actions{display:flex;gap:10px;flex-wrap:wrap}
+#g8app .gccui .gccuiHelp{margin-top:20px}
+#g8app .gccui .gccuiEmpty{grid-column:1/-1;color:var(--ui-muted);padding:28px 20px;text-align:center}
+#g8app .gccui .gccuiSelectionTop{display:grid;grid-template-columns:minmax(0,1fr) minmax(400px,1.1fr);gap:20px;margin-bottom:20px;align-items:stretch}
+#g8app .gccui .gccuiSelectionTop .g8selectionground{margin:0!important;border:2px solid var(--ui-line)!important;border-radius:8px!important;background:var(--ui-panel)!important;padding:18px!important;display:flex;gap:14px;align-items:center;box-shadow:none!important}
+#g8app .gccui .gccuiSelectionStatus{display:flex;align-items:center;gap:20px;padding:18px 20px;border:2px solid var(--ui-line);border-top:4px solid var(--ui-team);background:var(--ui-panel);border-radius:8px}
+#g8app .gccui .gccuiSelectionStatus>div:not(.gccuiSelectionActions){text-align:center;min-width:64px}
+#g8app .gccui .gccuiSelectionStatus strong{display:block;font-size:28px;line-height:1.1;font-weight:900;white-space:nowrap}
+#g8app .gccui .gccuiSelectionStatus strong small{font-size:17px;color:var(--ui-muted)}
+#g8app .gccui .gccuiSelectionStatus span{display:block;font-size:11px;color:var(--ui-muted);font-weight:800;margin-top:6px}
+#g8app .gccui .gccuiSelectionActions{display:flex;flex-direction:column;gap:8px;flex:1}
+#g8app .gccui .gccuiSelectionActions .g8button span{font-size:14px;color:inherit;margin:0}
+#g8app .gccui .gccuiSelectionGrid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:20px;align-items:start}
+#g8app .gccui .gccuiOrder{list-style:none;padding:0!important;display:block}
+#g8app .gccui .gccuiOrderRow{display:grid;grid-template-columns:28px minmax(0,1fr) 36px auto;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--ui-rule);background:#272e32;min-height:90px}
+#g8app .gccui .gccuiOrderRow:nth-child(even),#g8app .gccui .gccuiBenchRow:nth-child(even){background:#2d3438}
+#g8app .gccui .gccuiOrderNumber{font-size:15px;font-weight:900;text-align:center;color:var(--ui-muted);font-variant-numeric:tabular-nums}
+#g8app .gccui .gccuiRosterName{display:flex;flex-direction:column;gap:6px;text-align:left;color:var(--ui-text);background:transparent;border:0;padding:0;min-width:0;cursor:pointer;width:100%}
+#g8app .gccui .gccuiRosterName b{font-size:15px;line-height:1.25;overflow-wrap:anywhere;font-weight:850}
+#g8app .gccui .gccuiRosterName small{font-size:12px;line-height:1.4;color:var(--ui-muted)}
+#g8app .gccui .gccuiRosterName .g8squadpulse{margin:0;padding:0;display:flex;gap:4px;flex-wrap:wrap}
+#g8app .gccui .gccuiRosterActions{display:flex;align-items:center;gap:8px}
+#g8app .gccui .gccuiArrows{display:flex;gap:5px}
+#g8app .gccui .gccuiArrows .g8button{padding:8px!important;min-width:36px;width:36px;min-height:40px}
+#g8app .gccui .gccuiOrderRow>.gccuiRating,#g8app .gccui .gccuiBenchRow>.gccuiRating{font-size:22px}
+#g8app .gccui .gccuiBenchRow{display:grid;grid-template-columns:24px minmax(0,1fr) 36px auto;gap:12px;align-items:center;min-height:90px;padding:14px 16px;border-bottom:1px solid var(--ui-rule);background:#272e32}
+#g8app .gccui .gccuiRoleIcon{color:var(--ui-muted)}
+#g8app .gccui .gccuiOrderHint{padding:14px 20px;border-bottom:1px solid var(--ui-rule);font-size:12px;color:var(--ui-muted)}
+#g8app .gccui .gccuiOrderTools{padding:16px}
+#g8app .gccui .gccuiOrderTools .g8button{margin:8px 8px 0 0}
+#g8app .gccui .gccuiSwapPrompt{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;padding:16px;background:#493d26;border-bottom:2px solid #c8a46b}
+#g8app .gccui .gccuiSwapPrompt>span{grid-column:1;font-size:13px}
+#g8app .gccui .gccuiSwapPrompt>.g8button{grid-column:2;grid-row:1/3}
+#g8app .gccui .gccuiReturning{display:flex;gap:20px;justify-content:space-between;align-items:center;padding:16px 20px;margin-bottom:20px;border:1px solid var(--ui-line);border-radius:6px;background:#293238}
+#g8app .gccui .gccuiReturning p{font-size:14px}
+#g8app .gccui .gccuiPaneTabs{display:none}
+#g8app .gccui .gccuiTeamDetails{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px;align-items:start}
+#g8app .gccui .gccuiTeamDetails .g8dressingroom{margin:0!important}
+#g8app .gccui .gccuiMatchGrid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(280px,1fr);gap:20px;align-items:start}
+#g8app .gccui .gccuiFixture{border-top:5px solid var(--ui-team)}
+#g8app .gccui .gccuiVenue{display:grid;grid-template-columns:210px minmax(0,1fr);gap:22px;align-items:center;padding:20px;background:linear-gradient(120deg,#353d41,#232a2d);border-bottom:1px solid var(--ui-line)}
+#g8app .gccui .gccuiVenue h1{font-size:clamp(23px,2.5vw,32px);overflow-wrap:anywhere}
+#g8app .gccui .gccuiVenue p{font-size:13px;color:var(--ui-muted);margin-top:8px}
+#g8app .gccui .gccuiVenuePhoto .g8stadium{margin:0!important;width:100%!important;height:132px!important;border:1px solid #8c9ba2!important;border-radius:5px!important;overflow:hidden}
+#g8app .gccui .gccuiVenuePhoto :is(.g8venueframe,.g8stadiumphoto){width:100%!important;height:100%!important;object-fit:cover;display:block}
+#g8app .gccui .gccuiVenuePhoto figcaption{display:none!important}
+#g8app .gccui .gccuiFixtureTeams{display:grid;grid-template-columns:1fr 20px 1fr;gap:10px;align-items:stretch;padding:20px}
+#g8app .gccui .gccuiFixtureClub{display:flex;align-items:center;gap:12px;min-width:0;padding:18px 14px;border:2px solid #ffffff65;border-radius:6px;background:var(--side);color:var(--side-ink);box-shadow:0 3px 0 #111}
+#g8app .gccui .gccuiFixtureClub h2{color:inherit;font-size:21px;line-height:1.2;overflow-wrap:anywhere}
+#g8app .gccui .gccuiFixtureClub>div>span{font-size:10px;letter-spacing:.06em;text-transform:uppercase;font-weight:850;display:block;margin-bottom:7px}
+#g8app .gccui .gccuiFixtureClub>.g8badge{width:42px;height:42px;min-width:42px;font-size:12px}
+#g8app .gccui .gccuiVersus{align-self:center;text-align:center;font-weight:900;color:var(--ui-muted)}
+#g8app .gccui .gccuiMatchConditions{display:flex;align-items:center;gap:10px;padding:0 20px 20px;font-size:14px;color:var(--ui-muted)}
+#g8app .gccui .gccuiFixtureActions{padding:18px 20px;background:#30383c;border-top:1px solid var(--ui-line);display:flex;flex-direction:column;gap:16px}
+#g8app .gccui .gccuiFixtureActions>p{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:800}
+#g8app .gccui .gccuiFixtureActions>div{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap}
+#g8app .gccui .gccuiBlocked{color:#f2b2a9}
+#g8app .gccui .gccuiMatchDecisions .g8dressingroom{margin:0!important;padding:20px!important;border:2px solid var(--ui-line)!important;border-top:5px solid var(--ui-team)!important}
+#g8app .gccui .gccuiMatchDecisions .g8dressingroom h2{font-size:21px!important;line-height:1.25!important;border:0!important;padding:0!important;margin:8px 0 16px!important}
+#g8app .gccui .gccuiMatchDecisions .g8decisionline{display:flex;flex-direction:column;align-items:stretch;gap:10px!important}
+#g8app .gccui .gccuiMatchDecisions .g8decisionline>.g8button{align-self:start}
+#g8app .gccui .gccuiMatchDecisions .g8eyebrow{font-size:11px!important;letter-spacing:.08em}
+@media(max-width:1100px){
+ #g8app .gccui .gccuiDraftGrid{grid-template-columns:minmax(0,1fr) 290px}
+ #g8app .gccui .gccuiPlayers{grid-template-columns:1fr}
+ #g8app .gccui .gccuiSelectionGrid{grid-template-columns:1fr 1.2fr}
+ #g8app .gccui .gccuiOrderRow{grid-template-columns:24px minmax(0,1fr) 32px;gap:10px}
+ #g8app .gccui .gccuiRosterActions{grid-column:2/-1;justify-content:flex-end}
+ #g8app .gccui .gccuiVenue{grid-template-columns:150px minmax(0,1fr);gap:16px}
+ #g8app .gccui .gccuiFixtureClub{flex-direction:column;align-items:flex-start}
+ #g8app .gccui .gccuiSelectionTop{grid-template-columns:1fr 1.1fr}
+}
+@media(max-width:760px){
+ #g8app .gccui .gccuiHeading{gap:12px;padding-bottom:16px;margin-bottom:16px}
+ #g8app .gccui .gccuiHeadingIcon{flex-basis:46px;height:46px}
+ #g8app .gccui h1{font-size:28px}
+ #g8app .gccui .gccuiHeading p{font-size:12px}
+ #g8app .gccui .gccuiTurn{grid-template-columns:44px minmax(0,1fr);padding:16px;gap:12px;margin-bottom:16px}
+ #g8app .gccui .gccuiTurnMark .g8badge{width:44px;height:44px;min-width:44px;font-size:12px}
+ #g8app .gccui .gccuiTurnActions{grid-column:1/-1;justify-content:stretch}
+ #g8app .gccui .gccuiTurnActions>.g8button{flex:1}
+ #g8app .gccui .gccuiDraftGrid,#g8app .gccui .gccuiSelectionTop,#g8app .gccui .gccuiMatchGrid,#g8app .gccui .gccuiTeamDetails{grid-template-columns:minmax(0,1fr);gap:16px}
+ #g8app .gccui .gccuiCompanion{order:2}
+ #g8app .gccui .gccuiFilters{grid-template-columns:1fr;padding:16px}
+ #g8app .gccui .gccuiPlayers{padding:16px;gap:16px}
+ #g8app .gccui .gccuiPanelHead{padding:14px 16px;min-height:56px}
+ #g8app .gccui .gccuiPlayerScout{grid-template-columns:58px minmax(0,1fr);padding:16px 14px;gap:12px}
+ #g8app .gccui .gccuiPlayerIdentity>b{font-size:19px}
+ #g8app .gccui .gccuiPaneTabs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
+ #g8app .gccui .gccuiPaneTabs .selected{background:var(--ui-team)!important;color:var(--club-ink,#fff)!important;border-color:var(--ui-team)!important}
+ #g8app .gccui .gccuiSelectionGrid{display:block}
+ #g8app .gccui .gccuiSelectionGrid[data-pane=xi]>.gccuiBench,#g8app .gccui .gccuiSelectionGrid[data-pane=squad]>.gccuiXI{display:none}
+ #g8app .gccui .gccuiSelectionStatus{gap:16px;padding:16px}
+ #g8app .gccui .gccuiBenchRow{grid-template-columns:minmax(0,1fr) 30px auto;gap:10px;padding:14px}
+ #g8app .gccui .gccuiBenchRow>.gccuiRoleIcon{display:none}
+ #g8app .gccui .gccuiOrderRow{padding:14px;gap:10px}
+ #g8app .gccui .gccuiReturning{flex-direction:column;align-items:stretch;gap:12px}
+ #g8app .gccui .gccuiFixtureClub{padding:14px 10px;gap:10px}
+ #g8app .gccui .gccuiFixtureClub h2{font-size:19px}
+ #g8app .gccui .gccuiFixtureTeams{padding:16px;gap:7px;grid-template-columns:1fr 14px 1fr}
+ #g8app .gccui .gccuiVenue{grid-template-columns:110px minmax(0,1fr);padding:16px;gap:14px}
+ #g8app .gccui .gccuiVenuePhoto .g8stadium{height:110px!important}
+ #g8app .gccui .gccuiVenue h1{font-size:23px}
+ #g8app .gccui .gccuiFixtureActions>div{display:grid;grid-template-columns:1fr 1fr}
+ #g8app .gccui .gccuiMatchDecisions .g8decisionline{flex-direction:row;align-items:center}
+ #g8app .gccui .gccuiMatchDecisions .g8decisionline>.g8button{align-self:center}
+}
+@media(max-width:360px){
+ #g8app .gccui .gccuiPlayerScout{grid-template-columns:50px minmax(0,1fr);gap:10px;padding:14px 10px}
+ #g8app .gccui .gccuiPlayerIdentity>b{font-size:17px}
+ #g8app .gccui .gccuiPlayerRole{font-size:11px}
+ #g8app .gccui .gccuiSelectionStatus{flex-wrap:wrap}
+ #g8app .gccui .gccuiSelectionActions{flex-basis:100%;flex-direction:row}
+ #g8app .gccui .gccuiSelectionActions>.g8button{flex:1}
+ #g8app .gccui .gccuiVenue{grid-template-columns:1fr}
+ #g8app .gccui .gccuiVenuePhoto .g8stadium{height:140px!important}
+}
+@media(prefers-reduced-motion:reduce){#g8app .gccui *{animation:none!important;transition:none!important}}
