@@ -7,3 +7,9 @@ Implemented shared presentation layer: club accents, consistent spacing/actions,
 Source review caught and fixed narrow-card container grid conflict and inherited two-row coverage tick. No engine/RNG/schema edits. Script16 change is only market-view presentation order. All20scripts parse, six integrity cases and100rating checks pass. CSS braces balanced; no CSS parser installed.
 
 Limit: this new design has not yet been rendered in the user browser. Existing screenshots diagnose the old file only. Rendered desktop/mobile signoff is pending download.
+
+## Rendered follow-through
+
+Loaded downloaded v5 through localhost. Both title actions measured72px. Desktop draft sidebar title now light text on rgb49/49/49; card names20px, names have324px at436px card width. At390px cards351px with253px name track; at320px cards281px use one-column253px header. No horizontal document overflow (375/390 and305/320). Scout opens/closes; picked Narine, completed annual draft, retained available XI and lodged2011side. Analysis screenshot confirms neutral overall box and close button, readable graded numbers and quieter divisions.
+
+Found and corrected in source: legacy higher-specificity card border suppressed role accents; mobile two-column filters truncated selected values; matchhub child header/footer still navy because earlier selectors targeted nonexistent classes. These three CSS corrections await rendered recheck. Offseason overview reorder was not revisited because saved career resumed inside draft.
