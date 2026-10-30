@@ -1,0 +1,45 @@
+{
+  "semanticPairs": [
+    {
+      "name": "panel",
+      "ratio": 13.92,
+      "passes": true
+    },
+    {
+      "name": "raised",
+      "ratio": 11.31,
+      "passes": true
+    },
+    {
+      "name": "muted",
+      "ratio": 9.23,
+      "passes": true
+    },
+    {
+      "name": "button",
+      "ratio": 10.49,
+      "passes": true
+    },
+    {
+      "name": "primary",
+      "ratio": 5.16,
+      "passes": true
+    },
+    {
+      "name": "mine",
+      "ratio": 9.96,
+      "passes": true
+    },
+    {
+      "name": "feedback",
+      "ratio": 11.71,
+      "passes": true
+    },
+    {
+      "name": "alert",
+      "ratio": 8.45,
+      "passes": true
+    }
+  ],
+  "limit": "Source-level semantic pairs only. Computed-style and browser layout inspection pending."
+}

@@ -1,0 +1,50 @@
+from pathlib import Path
+import re,json,hashlib,subprocess
+root=Path.cwd();base=root/'baseline/GCC_v8_Career_Clarity.html';
+if not base.exists():
+ base.parent.mkdir(parents=True,exist_ok=True);base.write_bytes(subprocess.check_output(['git','show','52a93845d91f0f22352969d58144da678130212b:game/gcc_v8_product_candidate.html']))
+assert hashlib.sha1(b'blob '+str(len(base.read_bytes())).encode()+b'\0'+base.read_bytes()).hexdigest()=='69a3d1666f9300af5a739bd32872fb4633f210c7'
+raw=base.read_text();matches=list(re.finditer(r'<script\b[^>]*>([\s\S]*?)</script>',raw,re.I));parts=[m[1] for m in matches]
+def rep(i,a,b):
+ assert parts[i].count(a)==1,(i,a[:70],parts[i].count(a));parts[i]=parts[i].replace(a,b)
+rep(10,"if(bad.length)return `${bad[0].name} is out. Name a replacement before the next match.`;return ''}","if(bad.length)return `${bad[0].name} is out. Name a replacement before the next match.`;if(!xi.some(id=>isKeeper(pById(id))))return 'Select a recognised wicketkeeper before the next match.';return ''}")
+rep(10,"if(state.xi.length!==11)return base.startSeason(...args);if(state.year>2008)","if(state.xi.length!==11)return base.startSeason(...args);const selectionIssue=userXIProblem();if(selectionIssue)return base.toast(selectionIssue);if(state.year>2008)")
+# Keep the established ranking and RNG consumption, then honour actual promises among legal candidates.
+rep(9,'const pick=ranked[0];',"const priority=bowlClub.abbr===state.userClub?.abbr?window.GCC8_MANAGEMENT?.bowlingPriority(state.dynasty?.v8Management,candidates,assigned)||[]:[];\n      const pick=ranked.find(row=>priority.includes(row.p.id))||ranked[0];")
+rep(9,'context,estimate,order:matchBattingOrder(batClub).map(fit)',"context:{...context,bowlingCommitments:bowlClub.abbr===state.userClub?.abbr?Object.entries(state.dynasty?.v8Management?.players||{}).filter(([,p])=>p.promise?.kind==='bowling'&&p.promise.status==='active').map(([id])=>Number(id)):[]},estimate,order:matchBattingOrder(batClub).map(fit)")
+rep(2,"if(!choices.length)throw Error('No eligible bowler for the next over.');", "if(!choices.length)throw Error('No eligible bowler for the next over.');\n   const promised=choices.filter(p=>context.bowlingCommitments?.includes(p.id)&&bowling.get(p.id).balls<12);\n   if(promised.length)return promised.sort((a,b)=>bowling.get(a.id).balls-bowling.get(b.id).balls||a.id-b.id)[0];")
+p=Path('v8/ui/management.js');old=parts[16][parts[16].index('/* Persistent squad expectations.'):].strip();s=old
+s=s.replace(' concern(p){'," bowlingPriority(state,candidates,assigned){return candidates.filter(p=>{const z=state?.players?.[p.id]?.promise;return z?.kind==='bowling'&&z.status==='active'&&(assigned.get(p.id)||0)<2;}).map(p=>p.id);},\n concern(p){",1)
+anchor=' X.managementPlayer=p=>'
+pos=s.index(anchor)
+s=s[:pos]+''' const medical=i=>!i?'Fully available':`${i.status} · ${i.type}${Number.isFinite(i.roundsLeft)?` · about ${i.roundsLeft} round${i.roundsLeft===1?'':'s'} remaining`:''}`;
+ const reasons=q=>{const lines=[];if(q.omitted>=(q.regular?3:5))lines.push(`${q.omitted} fully fit matches without selection.`);if(q.mismatch>=3)lines.push(`${q.mismatch} selections outside the preferred batting role.`);if(q.underused>=3)lines.push(`${q.underused} full innings without meaningful bowling opportunities.`);if(q.broken)lines.push(`${q.broken} commitment${q.broken===1?' was':'s were'} not met.`);if(q.requested&&!lines.length)lines.push('An unresolved request from earlier in this career. Consistent opportunities can rebuild trust.');return lines.length?`<p class="g8concernreason"><b>Why this matters</b> ${esc(lines.join(' '))}</p>`:'';};
+''' + s[pos:]
+s=s.replace("injury?injury.status+' · '+injury.type:'Fully available'","medical(injury)")
+s=s.replace('<dl class="g8playercontext">','${reasons(q)}<dl class="g8playercontext">')
+s=s.replace("Give two overs in each of the next two fit, full-length bowling innings.","The automatic bowling plan prioritises two legal overs in each of the next two fit, full-length bowling innings. Short innings may end before the spell is completed.")
+s=s.replace("action('Commit to bowling role','bowling',active)","action('Guarantee a two-over role','bowling',active)")
+start=s.index(' X.managementBrief=');end=s.index(' X.managementResult=',start)
+s=s[:start]+''' X.managementBrief=(selection=false)=>{const state=X.managementState(),all=roster().flatMap((p,index)=>{const q=state.players[p.id],injury=X.injury(p),c=concern(q),selected=s.xi.includes(p.id);return injury||c||q.promise?.status==='active'?[{p,index,priority:injury&&selected?0:injury?1:q.promise?.status==='active'?2:q.requested?3:4,text:injury?`${medical(injury)}${selected?' · Currently selected':''}`:c||promise(q)}]:[]}).sort((a,b)=>a.priority-b.priority||a.index-b.index),rows=all.slice(0,3),conditions=!selection?X.managementConditions():null;if(!rows.length&&!conditions)return '';const line=({p,text})=>`<div class="g8decisionline"><div><strong>${esc(p.name)}</strong><span>${esc(text)}</span></div>${btn('Review player','manageInspect',[p.id],'g8ghost g8small')}</div>`;return `<section class="g8dressingroom" aria-label="Selection decisions"><header><span class="g8eyebrow">IN THE DRESSING ROOM</span><h2>${rows.length?'Decisions before the toss':'Read the contest'}</h2></header>${rows.map(line).join('')}${all.length>3?X.disclosure(`${all.length-3} more squad decisions`,all.slice(3).map(line).join('')):''}${conditions?`<p class="g8conditionbrief">${esc(conditions.text)}</p>`:''}</section>`;};
+''' +s[end:]
+assert old.strip() in parts[16];parts[16]=parts[16].replace(old.strip(),s.strip());p.write_text(s)
+rep(17,'${t.w} wins · ${t.l} losses',"${t.w} win${t.w===1?'':'s'} · ${t.l} loss${t.l===1?'':'es'}")
+rep(19,"'Offseason · closes when the draft begins'","'Preseason window · closes at draft entry; reopens until Round 3'")
+rep(19,'Choose the players and picks on each side. Each club can include up to two players and two picks. Nothing changes until you review and confirm.',"${ui.tradeMid?'Choose up to two players on each side. Equal numbers must move; draft picks are unavailable.':'Choose up to two players and two owned picks on each side.'} Nothing changes until you review and confirm.")
+# Dynamic template requires a backtick rather than the old single-quoted static string.
+parts[19]=parts[19].replace("return '<p class=\"g8tradeguide\">${ui.tradeMid?", "return `<p class=\"g8tradeguide\">${ui.tradeMid?").replace("Nothing changes until you review and confirm.</p>';", "Nothing changes until you review and confirm.</p>`;")
+rep(11,"?'BATTED FIRST':'CHASED'", "?'BATTED FIRST':r.winner.abbr===club.abbr?'TARGET REACHED':'CHASE FELL SHORT'")
+rep(9,'${state.pool.length} eligible players across the 2008 cricket world. Five days','${state.pool.filter(p=>(p.dynastyCareer?.debutYear??2008)<=2008).length} eligible players across the 2008 cricket world. Five days')
+rep(9,'${state.pool.length} eligible players across the 2008 cricket world. You jump','${state.pool.filter(p=>(p.dynastyCareer?.debutYear??2008)<=2008).length} eligible players across the 2008 cricket world. You jump')
+rep(17,'</section>${X.seasonProgress()}<section class="g8sheet g8seasonstars">',"""</section>${s.finals?.gf?X.disclosure('How the title was decided',`<div class="g8finalsrecap">${(s.finals.semis||[]).map((r,i)=>`<p><b>Semi-final ${i+1}</b> ${esc(r.winner.name)} won ${esc(r.marginText)} ${btn('Open scorebook','finalScorecard',['semis',i],'g8ghost g8small')}</p>`).join('')}${resultCard(s.finals.gf)}${btn('Grand Final scorebook','finalScorecard',['gf',0],'g8ghost')}</div>`):''}${X.seasonProgress()}<section class="g8sheet g8seasonstars">""")
+rep(19,"bind('finalScorecard',['finals']", "bind('finalScorecard',['finals','review']")
+for i in (9,10,11,16,17,19):
+ path=root/('v8/engine/'+('foundation.js' if i==9 else 'dynasty.js')) if i in (9,10) else root/('v8/ui/'+{11:'components.js',16:'career.js',17:'screens.js',19:'controller.js'}[i]);path.write_text(parts[i])
+domain=parts[2][parts[2].index('/* Causal T20 delivery simulation.'):];domain=domain[:domain.index('})();')+5];(root/'v8/domain/delivery_engine.js').write_text(domain)
+for i in reversed(range(len(matches))):
+ m=matches[i];raw=raw[:m.start(1)]+parts[i]+raw[m.end(1):]
+css=(root/'v8/ui/arcade-charcoal.css').read_text();raw=raw.replace('</head>','<style id="gcc-charcoal-20261030">\n'+css+'\n</style></head>')
+out=root/'qa/perfection-20261030/candidate.html';out.write_text(raw)
+for i,part in enumerate(parts):
+ tmp=root/f'qa/perfection-20261030/check-{i}.js';tmp.write_text(part);subprocess.run(['node','--check',str(tmp)],check=True,capture_output=True)
+(root/'qa/perfection-20261030/build.json').write_text(json.dumps({'baseBlob':'69a3d1666f9300af5a739bd32872fb4633f210c7','baseCommit':'52a93845d91f0f22352969d58144da678130212b','sha256':hashlib.sha256(out.read_bytes()).hexdigest(),'changedScripts':[i for i,p in enumerate(parts) if p!=matches[i][1]],'syntaxChecked':len(parts)},indent=2))

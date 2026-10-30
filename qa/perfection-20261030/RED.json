@@ -1,0 +1,31 @@
+[
+  {
+    "name": "keeper absence is explicit and blocks season start",
+    "pass": false,
+    "error": "The input did not match the regular expression /wicketkeeper/i. Input:\n\n''\n"
+  },
+  {
+    "name": "selected medical blockers lead the dressing room",
+    "pass": false,
+    "error": "selected injury must be visible"
+  },
+  {
+    "name": "medical report shows estimated unavailable rounds",
+    "pass": false,
+    "error": "The input did not match the regular expression /3 rounds/. Input:\n\n'<section class=\"g8relationship\" aria-label=\"Player management\"><header><span class=\"g8eyebrow\">YOUR RELATIONSHIP</span><h3>Know your player</h3></header><p>Expects a regular place when fit. Preferred role: Middle order. </p><dl class=\"g8playercontext\"><div><dt>Form</dt><dd>Steady</dd></div><div><dt>Fitness</dt><dd>OUT · finger injury</dd></div><div><dt>Trust</dt><dd>Stable</dd></div></dl><p class=\"g8recentform\">No performances recorded this season yet.</p><div class=\"g8managementactions\"><button type=\"button\"    class=\"g8button g8ghost\" data-action=\"managePlayer\" data-args=\"[8,&quot;run&quot;]\" ><span>Commit to a three-match run</span></button><button type=\"button\"    class=\"g8button g8ghost\" data-action=\"managePlayer\" data-args=\"[8,&quot;batting&quot;]\" ><span>Back preferred batting role</span></button><button type=\"button\"    class=\"g8button g8ghost\" data-action=\"managePlayer\" data-args=\"[8,&quot;rotation&quot;]\" ><span>Explain squad rotation</span></button><button type=\"button\"    class=\"g8button g8ghost\" data-action=\"manageRest\" data-args=\"[8]\" ><span>Rest and choose replacement</span></button></div><p class=\"g8managementnote\">Use these commitments when they matter. Broken commitments damage trust; unresolved concerns can lead to a transfer request.</p></section>'\n"
+  },
+  {
+    "name": "transfer report explains its underlying cause",
+    "pass": false,
+    "error": "The input did not match the regular expression /bowling opportunities|bowling role/i. Input:\n\n'<section class=\"g8relationship\" aria-label=\"Player management\"><header><span class=\"g8eyebrow\">YOUR RELATIONSHIP</span><h3>Wants a move</h3></header><p>Expects a regular place when fit. Preferred role: Middle order. </p><dl class=\"g8playercontext\"><div><dt>Form</dt><dd>Steady</dd></div><div><dt>Fitness</dt><dd>Fully available</dd></div><div><dt>Trust</dt><dd>Stable</dd></div></dl><p class=\"g8recentform\">No performances recorded this season yet.</p><div class=\"g8managementactions\"><button type=\"button\"    class=\"g8button g8ghost\" data-action=\"managePlayer\" data-args=\"[38,&quot;run&quot;]\" ><span>Commit to a three-match run</span></button><button type=\"button\"    class=\"g8button g8ghost\" data-action=\"managePlayer\" data-args=\"[38,&quot;batting&quot;]\" ><span>Back preferred batting role</span></button><button type=\"button\"    class=\"g8button g8ghost\" data-action=\"managePlayer\" data-args=\"[38,&quot;rotation&quot;]\" ><span>Explain squad rotation</span></button><button type=\"button\"    class=\"g8button g8ghost\" data-action=\"managePlayer\" data-args=\"[38,&quot;move&quot;]\" ><span>Agree to seek a move</span></button></div><p class=\"g8managementnote\">Use these commitments when they matter. Broken commitments damage trust; unresolved concerns can lead to a transfer request.</p></section>'\n"
+  },
+  {
+    "name": "bowling promises produce legal allocation priority",
+    "pass": false,
+    "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'undefined'\n- 'function'\n"
+  },
+  {
+    "name": "ordinary match retains valid ledger and legal workloads",
+    "pass": true
+  }
+]

@@ -1,0 +1,42 @@
+/* One final semantic palette. Club fills and numerical rating scales remain authored. */
+:root{--gcc-ground:#151515;--gcc-panel:#252525;--gcc-raised:#343434;--gcc-line:#707070;--gcc-text:#f6f4ec;--gcc-muted:#c9c9c5;--gcc-accent:#ed7547;--ink:#f6f4ec;--paper:#f6f4ec;--forest:#252525;--navy:#151515;--muted:#c9c9c5;--gold:#edb65b;--cyan:#f1c571;--orange:#ed7547;color-scheme:dark}
+html body,#g8app{background-color:var(--gcc-ground)!important;color:var(--gcc-text)!important}
+#g8app{background-image:radial-gradient(ellipse at 88% 0%,#68453028,transparent 48%),repeating-linear-gradient(135deg,transparent 0 90px,#ffffff03 90px 91px)!important}
+#g8hud{background:linear-gradient(110deg,#292929,#181818)!important;border-bottom:3px solid var(--gcc-accent)!important;box-shadow:0 4px 0 #090a08!important}
+#g8hud .g8headerslogan{color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
+#g8app .g8brand{background:#2c2c2c!important;color:var(--gcc-text)!important;border:2px solid #949494!important;box-shadow:0 3px 0 #090a08!important}
+#g8app .g8heading{background:linear-gradient(100deg,#383838,#272727)!important;border:2px solid var(--gcc-line)!important;border-left:7px solid var(--gcc-accent)!important;box-shadow:0 4px 0 #090a08!important}
+#g8app .g8heading h1,#g8app .g8heading p{color:var(--gcc-text)!important}
+#g8app :is(.g8sheet,.g8draftaside,.g8decisionbar,.g8selectionground,.g8teamworkspace,.g8signingpanel,.g8liveboard,.g8matcharena,.g8seasonbook,.g8reviewsummary,.g8careerrecord,.g8playerdetail,.g8dressingroom,.g8relationship),#g8dialog{background:var(--gcc-panel)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important;box-shadow:0 4px 0 #090a08!important}
+#g8app :is(.g8draftaside,.g8dressingroom,.g8relationship){border-top:4px solid var(--gcc-accent)!important;border-left-width:2px!important}
+#g8app :is(.g8startingxi,.g8bench,.g8slot,.g8squadrow,.g8decisionbar,.g8clock,.g8drawcontrols,.g8matchcontrols,.g8moredata,.g8read,.g8summarytiles>div),#g8dialog :is(.g8read,.g8statrow,.g8playercontext>div){background:var(--gcc-raised)!important;border-color:var(--gcc-line)!important;color:var(--gcc-text)!important}
+#g8app :is(.g8startingxi,.g8bench)>header,#g8app :is(.g8startingxi,.g8bench)>h2,#g8dialog .g8modalhead{background:linear-gradient(100deg,#454545,#303030)!important;color:var(--gcc-text)!important;border-color:#969696!important}
+#g8app :is(.g8startingxi,.g8bench)>header h2,#g8dialog .g8modalhead h2{color:var(--gcc-text)!important}
+#g8app :is(.g8sheet,.g8draftaside,.g8relationship,.g8dressingroom) :is(p,small,dt,.g8fine,.g8eyebrow),#g8dialog :is(p,small,dt,.g8fine,.g8eyebrow){color:var(--gcc-muted)!important}
+#g8app :is(.g8relationship,.g8dressingroom) :is(h2,h3,strong,b,dd),#g8dialog :is(h2,h3,dd){color:var(--gcc-text)!important}
+#g8app .g8button,#g8dialog .g8button,#g8app .g8utilitymenu summary{background:#393939!important;color:#f6f4ec!important;border:2px solid #858585!important;border-radius:4px;box-shadow:0 3px 0 #0b0d09!important;font-weight:800}
+#g8app .g8button.g8primary,#g8dialog .g8button.g8primary{background:linear-gradient(#f28a52,#df6337)!important;color:#17160e!important;border-color:#ffba7b!important}
+#g8app .g8button[aria-pressed=true],#g8app .g8careernav .active{background:#e3ae59!important;color:#181a12!important;border-color:#f9d28e!important}
+#g8app .g8button:hover:not(:disabled),#g8dialog .g8button:hover:not(:disabled){filter:brightness(1.12);transform:translateY(-1px);outline:1px solid #d7ddc6;outline-offset:1px}
+#g8app .g8button:disabled,#g8dialog .g8button:disabled{opacity:.5;filter:none;transform:none}
+#g8app :is(button,input,select,summary):focus-visible,#g8dialog :is(button,input,select,summary):focus-visible{outline:3px solid #ffd27b!important;outline-offset:3px}
+#g8app :is(input,select),#g8dialog :is(input,select){background:#1c1c1c!important;color:#f6f4ec!important;border:2px solid #878787!important}
+#g8app .g8utilitymenu>div{background:#272727!important;border-color:#878787!important}
+#g8app .g8table th,#g8dialog .g8table th{background:#404040!important;color:#f6f4ec!important;border-color:#878787!important}
+#g8app .g8table td,#g8dialog .g8table td{color:#f6f4ec!important;border-color:#696969!important}
+#g8app .g8table tbody tr:nth-child(even),#g8dialog .g8table tbody tr:nth-child(even){background:#303030!important}
+#g8app .g8squadpulse>span{background:#414141!important;border-color:#999999!important;color:#f6f4ec!important}
+#g8app .g8squadpulse>.g8pulsealert{background:#78311f!important;border-color:#df9a77!important}
+#g8app .g8squadpulse>.g8pulsepromise{background:#53451f!important;border-color:#d4b66c!important}
+#g8dialog .g8commitment{background:#514321!important;border-color:#bfa36a!important}
+#g8dialog .g8commitment.kept{background:#214a34!important;border-color:#7cae87!important}
+#g8dialog .g8commitment.broken{background:#6a2927!important;border-color:#d48880!important}
+.g8concernreason{padding:12px 14px;border-left:4px solid var(--gcc-accent);background:#39342d;line-height:1.55}.g8concernreason b{display:block;margin-bottom:4px}
+#g8app .g8decisionline{border-color:#707070!important;gap:16px}#g8app .g8decisionline span{color:#deded8!important}
+#g8app .g8dressingroom details{margin-top:12px;border:1px solid #808080;padding:10px}#g8app .g8dressingroom summary{min-height:44px;cursor:pointer;color:#f1cf8d;font-weight:800}
+@media(prefers-reduced-motion:reduce){#g8app .g8button:hover,#g8dialog .g8button:hover{transform:none}}
+/* Explicit treatment for legacy light cards, active rows and feedback. */
+#g8app .g8fixturecard,#g8app .g8fixturecard :is(h3,p,strong,small){background-color:#292929!important;color:#f6f4ec!important;border-color:#777!important}
+#g8app .g8table tbody tr.mine,#g8dialog .g8table tbody tr.mine{background:#4a3a28!important;color:#fff4d8!important;box-shadow:inset 4px 0 #edb65b}
+#g8app .g8table tbody tr.mine td,#g8dialog .g8table tbody tr.mine td{color:#fff4d8!important}
+#g8feedback{background:#ead0a0!important;color:#20180e!important;border:2px solid #ad7f42!important}

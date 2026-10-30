@@ -1,0 +1,52 @@
+{
+  "parity": [
+    {
+      "seed": 101,
+      "matches": 14,
+      "exactResultParity": true
+    },
+    {
+      "seed": 809,
+      "matches": 14,
+      "exactResultParity": true
+    }
+  ],
+  "promises": [
+    {
+      "seed": 101,
+      "players": [
+        "Harbhajan Singh",
+        "Shaun Pollock",
+        "Fawad Alam",
+        "Rana Naved-ul-Hasan",
+        "Wayne Parnell",
+        "Elton Chigumbura"
+      ],
+      "legal": true
+    },
+    {
+      "seed": 809,
+      "players": [
+        "Shane Watson",
+        "Daniel Vettori",
+        "Samit Patel",
+        "Shaun Tait",
+        "Shoaib Akhtar",
+        "Chris Woakes"
+      ],
+      "legal": true
+    }
+  ],
+  "finals": [
+    {
+      "seed": 101,
+      "champion": "HEA",
+      "stage": "done"
+    },
+    {
+      "seed": 809,
+      "champion": "THU",
+      "stage": "done"
+    }
+  ]
+}

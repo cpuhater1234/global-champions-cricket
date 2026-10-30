@@ -1,0 +1,20 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {loadGame} from '../offline_game_host.mjs';
+import {startDraft,finishDraft,selectManualXI,scorebook} from '../club-expansion-20261027/helpers.mjs';
+const file=process.env.GCC_FILE||'baseline/GCC_v8_Career_Clarity.html';
+const h=loadGame(file,101,new Map(),{strictIds:true});startDraft(h);finishDraft(h);selectManualXI(h);
+const X=h.context.GCC8,s=h.G.state,results=[];
+function test(name,fn){try{fn();results.push({name,pass:true});}catch(e){results.push({name,pass:false,error:e.message});}}
+const original=[...s.xi],order=[...s.battingOrder],keeper=original.find(id=>X.R.isKeeper(h.G.byId(id))),replacement=X.roster().find(p=>!original.includes(p.id)&&!X.R.isKeeper(p));
+test('keeper absence is explicit and blocks season start',()=>{s.xi=original.map(id=>id===keeper?replacement.id:id);s.battingOrder=[...s.xi];assert.match(X.read.xiProblem(),/wicketkeeper/i);h.G.startSeason();assert.equal(s.fullSchedule?.length||0,0);});
+s.xi=original;s.battingOrder=order;
+const roster=X.roster(),injured=roster[4];s.dynasty.v8Management=X.managementState();for(const p of roster.slice(0,3))s.dynasty.v8Management.players[p.id].requested=true;
+s.dynasty.injuries[injured.id]={status:'OUT',type:'finger injury',roundsLeft:3};if(!s.xi.includes(injured.id))s.xi[10]=injured.id;
+test('selected medical blockers lead the dressing room',()=>{const html=X.managementBrief();assert(html.includes(injured.name),"selected injury must be visible");assert(html.indexOf(injured.name)<html.indexOf(roster[0].name));});
+test('medical report shows estimated unavailable rounds',()=>{X.ui.view='team';assert.match(X.managementPlayer(injured),/3 rounds/);});
+test('transfer report explains its underlying cause',()=>{const q=s.dynasty.v8Management.players[roster[0].id];q.requested=true;q.underused=5;assert.match(X.managementPlayer(roster[0]),/bowling opportunities|bowling role/i);});
+test('bowling promises produce legal allocation priority',()=>{const E=h.context.GCC8_MANAGEMENT;assert.equal(typeof E.bowlingPriority,'function');const ps=[{id:1},{id:2},{id:3}],state={players:{1:{promise:{kind:'bowling',status:'active'}},2:{promise:{kind:'run',status:'active'}}}};assert.deepEqual(Array.from(E.bowlingPriority(state,ps,new Map([[1,1]]))),[1]);assert.equal(E.bowlingPriority(state,ps,new Map([[1,2]])).length,0);});
+delete s.dynasty.injuries[injured.id];s.xi=original;s.battingOrder=order;
+test('ordinary match retains valid ledger and legal workloads',()=>{h.G.startSeason();h.G.playNextRound();assert.equal(s.round,1);scorebook(s.results[0]);assert.deepEqual(h.errors,[]);});
+fs.writeFileSync('qa/perfection-20261030/'+(process.env.PHASE||'RED')+'.json',JSON.stringify(results,null,2));console.log(results);if(results.some(t=>!t.pass))process.exitCode=1;

@@ -17,6 +17,8 @@ window.GCC8_DELIVERY=(()=>{
    const eligible=bowlers.filter(p=>p.id!==lastBowler&&bowling.get(p.id).balls<24),primary=eligible.filter(p=>R.bowlingWorkload(p)>0&&bowling.get(p.id).balls<R.bowlingWorkload(p)*6);
    const options=primary.length?primary:eligible.filter(p=>!R.isKeeper(p));const choices=options.length?options:eligible;
    if(!choices.length)throw Error('No eligible bowler for the next over.');
+   const promised=choices.filter(p=>context.bowlingCommitments?.includes(p.id)&&bowling.get(p.id).balls<12);
+   if(promised.length)return promised.sort((a,b)=>bowling.get(a.id).balls-bowling.get(b.id).balls||a.id-b.id)[0];
    const planned=estimate.bowlingPlan?.[over-1],plannedPlayer=choices.find(p=>p.id===planned);
    // Preserve the model's captaincy plan except that the surge gets its own selection.
    if(plannedPlayer&&!restricted)return plannedPlayer;

@@ -1,4 +1,4 @@
-
+(()=>{const {setTimeout,clearTimeout,setInterval,clearInterval,requestAnimationFrame,cancelAnimationFrame}=window.GCC8_CLOCK;const MutationObserver=class{observe(){}disconnect(){}};
 window.GCC = (() => {
   const D = window.GCC_DATA;
   const R = window.GCC_RATINGS;
@@ -461,7 +461,7 @@ function installModalInteraction() {
     if (!state.recruit.started) {
       state.recruit.started = true;
       state.recruit.running = true;
-      pushRecruitFeed('League window opens', `GCC begins contacting ${state.pool.length} eligible players across the 2008 cricket world. Five days from now, only the players who commit will be on the foundation draft board.`, 'day');
+      pushRecruitFeed('League window opens', `GCC begins contacting ${state.pool.filter(p=>(p.dynastyCareer?.debutYear??2008)<=2008).length} eligible players across the 2008 cricket world. Five days from now, only the players who commit will be on the foundation draft board.`, 'day');
       startRecruitDay(1, 180);
       return;
     }
@@ -478,7 +478,7 @@ function installModalInteraction() {
     if (!state.recruit.started) {
       state.recruit.started = true;
       state.recruit.day = 1;
-      pushRecruitFeed('League window opens', `GCC begins contacting ${state.pool.length} eligible players across the 2008 cricket world. You jump ahead to the close of the five-day window.`, 'day');
+      pushRecruitFeed('League window opens', `GCC begins contacting ${state.pool.filter(p=>(p.dynastyCareer?.debutYear??2008)<=2008).length} eligible players across the 2008 cricket world. You jump ahead to the close of the five-day window.`, 'day');
       prepareRecruitmentDay(1);
     }
 
@@ -2124,7 +2124,8 @@ function installModalInteraction() {
       }
       ranked.sort((a,b)=>b.score-a.score);
 
-      const pick=ranked[0];
+      const priority=bowlClub.abbr===state.userClub?.abbr?window.GCC8_MANAGEMENT?.bowlingPriority(state.dynasty?.v8Management,candidates,assigned)||[]:[];
+      const pick=ranked.find(row=>priority.includes(row.p.id))||ranked[0];
       if(!pick) break;
       assigned.set(pick.p.id,(assigned.get(pick.p.id)||0)+1);
       const expected=baseRuns(phase)+(phaseBat(phase)-pick.effective)*.052+(conditions.boundary||0)*.055;
@@ -2160,7 +2161,7 @@ function installModalInteraction() {
     const estimate=estimateInnings(batClub,bowlClub,ground,context);
     // Dynasty already applies fitness around the complete simulation. Snapshot it once.
     const fit=p=>({...p});
-    return window.GCC8_DELIVERY.play({batClub,bowlClub,ground,context,estimate,order:matchBattingOrder(batClub).map(fit),bowlers:clubXI(bowlClub).map(fit),batProfile:effectiveProfile(batClub),bowlProfile:effectiveProfile(bowlClub),random:rng,R});
+    return window.GCC8_DELIVERY.play({batClub,bowlClub,ground,context:{...context,bowlingCommitments:bowlClub.abbr===state.userClub?.abbr?Object.entries(state.dynasty?.v8Management?.players||{}).filter(([,p])=>p.promise?.kind==='bowling'&&p.promise.status==='active').map(([id])=>Number(id)):[]},estimate,order:matchBattingOrder(batClub).map(fit),bowlers:clubXI(bowlClub).map(fit),batProfile:effectiveProfile(batClub),bowlProfile:effectiveProfile(bowlClub),random:rng,R});
   }
   function estimateInnings(batClub, bowlClub, ground, context = {}) {
     const bat = effectiveProfile(batClub);
@@ -3949,3 +3950,4 @@ function installModalInteraction() {
   };
 })();
 
+})();
