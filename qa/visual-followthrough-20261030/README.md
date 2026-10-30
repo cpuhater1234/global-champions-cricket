@@ -1,0 +1,11 @@
+# Browser visual follow-through, 30 October 2026
+
+The user opened GCC_v8_Charcoal_Candidate.html through localhost. Initial candidate identity510aa3a0423b5095cc6aa0560704061f9fa43f033e13505dcc0c10852def342e. Actual browser inspection covered title, restored2010preseason, XI/bench, player report, team analysis, match preview, matchday, live match, result, fixtures, ladder, stats, trade dialog, guides and archive. Team analysis and matchday were also inspected at390px; no page-width overflow in those cases. Browser viewport restored afterwards. One2010league match was played; career left at2010Round2.
+
+Observed problems: residual navy on title/format, modal bodies, scout and analysis inner cards, disclosures and conditions; near-invisible light venue text on pale preview panel; pale guide introductions; active season navigation selected border without filled treatment; live generic purple bowler panel and broad green result surface. Fixture cards and highlighted ladder row corrections from the first review were visible and readable.
+
+Corrective source: explicit surface coverage in v8/ui/arcade-charcoal.css, preserving dynamic club fills; selected aria-current navigation; club-aware preview heading ink; charcoal result and award bodies with small status/colour rules; neutral live-match cards; stationary hover. RatingTone in components.js was white at80+: replaced with continuous restrained red→amber→green interpolation across0..99. Ratings themselves are unchanged.
+
+RED: ratings-RED.log reproduces the white-high-rating issue. GREEN: ratings.mjs checks all100integers, bounds/nonfinite inputs and contrast against the raised surface; minimum5.1285:1. The six existing integrity checks were rerun and passed. All20inline scripts parse. Only script11 differs from the prior tested candidate; engine/save scripts are byte-identical. See review.json and build.json in ../perfection-20261030.
+
+Limit: corrected build has not yet been reloaded into the user's Chrome. Initial candidate screenshots/computed colours are evidence of the defects, not proof that the correction rendered successfully. Physical devices, full computed contrast sweep and every career stage are not certified.

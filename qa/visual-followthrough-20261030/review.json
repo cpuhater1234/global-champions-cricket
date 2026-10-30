@@ -1,0 +1,33 @@
+{
+  "previousCandidateSha256": "510aa3a0423b5095cc6aa0560704061f9fa43f033e13505dcc0c10852def342e",
+  "changedScripts": [
+    11
+  ],
+  "unchangedEngineAndSaveScripts": true,
+  "observedBrowserIssues": [
+    "home/league-format retained navy",
+    "player/analysis/modal retained navy",
+    "venue preview pale text on pale background",
+    "selected navigation lacked clear fill",
+    "live bowler purple and broad green result panel",
+    "guide introductory cards retained pale backgrounds",
+    "high ratings explicitly white"
+  ],
+  "newBuild": {
+    "baseBlob": "69a3d1666f9300af5a739bd32872fb4633f210c7",
+    "baseCommit": "52a93845d91f0f22352969d58144da678130212b",
+    "sha256": "864e93d8f144a1be05ca14f311cd9b8cbdc99ad33dfb9d40f0f11588749d26d6",
+    "changedScripts": [
+      2,
+      9,
+      10,
+      11,
+      16,
+      17,
+      19
+    ],
+    "syntaxChecked": 20
+  },
+  "visualStatus": "Initial candidate inspected in Chrome at normal width and390px. Corrective build awaiting download and reload. No claim that corrected computed styles were inspected.",
+  "independentReview": "Draft inner card backgrounds and rating numbers also needed explicit overrides; added after review. Corrected rendering still awaits reload."
+}

@@ -40,3 +40,52 @@ html body,#g8app{background-color:var(--gcc-ground)!important;color:var(--gcc-te
 #g8app .g8table tbody tr.mine,#g8dialog .g8table tbody tr.mine{background:#4a3a28!important;color:#fff4d8!important;box-shadow:inset 4px 0 #edb65b}
 #g8app .g8table tbody tr.mine td,#g8dialog .g8table tbody tr.mine td{color:#fff4d8!important}
 #g8feedback{background:#ead0a0!important;color:#20180e!important;border:2px solid #ad7f42!important}
+/* Browser follow-through: paint every shared surface, including legacy inner cards. */
+#g8app .g8welcomepanel{background:linear-gradient(140deg,#303030,#1d1d1d)!important;border-color:#777!important;border-top:4px solid #ed7547!important}
+#g8app .g8leagueformat{background:#323232!important;border-color:#777!important}
+#g8app .g8leagueformat>div{border-color:#727272!important}
+#g8app .g8heroart,#g8app .g8arenaheader{background:#222!important;border-color:#727272!important}
+#g8app .g8heroart>p{background:#2d2d2d!important;color:#e8e5dc!important}
+#g8app .g8button[aria-current=page]{background:#e3ae59!important;color:#181a12!important;border-color:#f9d28e!important;box-shadow:0 3px 0 #6c481d!important}
+#g8dialog .g8modalbody{background:#202020!important;color:#f6f4ec!important}
+#g8dialog .g8modalclose{background:#353535!important;color:#f6f4ec!important;border:2px solid #868686!important}
+#g8app :is(.g8sectionhead,.g8xicommand,.g8selectioncount,.g8xirating),#g8dialog :is(.g8analysisoverall,.g8developmentbadge){background:#343434!important;color:#f6f4ec!important;border-color:#777!important}
+#g8app .g8sectionhead{background:linear-gradient(100deg,#424242,#303030)!important;border-bottom:2px solid #d77c46!important}
+#g8app :is(.g8disclosure,.g8rulenote,.g8conditionread,.g8groundinterpretation,.g8weatherread,.g8scoutsummary,.g8scoutability,.g8scoutoutlook,.g8analysissection),#g8dialog :is(.g8disclosure,.g8rulenote,.g8conditionread,.g8groundinterpretation,.g8weatherread,.g8scoutsummary,.g8scoutability,.g8scoutoutlook,.g8analysissection){background:#292929!important;color:#f6f4ec!important;border-color:#777!important}
+#g8app .g8analysisrow,#g8dialog .g8analysisrow{background:#353535!important;color:#f6f4ec!important;border-color:#737373!important}
+#g8dialog .g8scoutsummary .g8scoutmeta>span{background:#363636!important;color:#f6f4ec!important;border-color:#777!important}
+#g8dialog .g8development>.g8eyebrow{background:#343434!important;color:#eacb93!important;border-left:4px solid #ed7547;padding:8px 12px}
+#g8dialog .g8previewvenue{background:#303030!important;border:2px solid #777!important;color:#f6f4ec!important}
+#g8dialog .g8previewvenue :is(h3,p,span,.g8eyebrow){color:#f6f4ec!important}
+#g8dialog .g8previewvenue .g8weatherchip{background:#464646!important;color:#f6f4ec!important;border-color:#999!important}
+#g8app .g8matchhub,#g8app .g8hubvenue,#g8app .g8hubground,#g8app .g8hubactions{background:#262626!important;color:#f6f4ec!important;border-color:#747474!important}
+#g8app .g8ballarena{background:#1e1e1e!important;border-color:#696969!important}
+#g8app .gcc-scorebug,#g8app .gcc-crease,#g8app .gcc-worm{background:#292929!important;border-color:#707070!important}
+#g8app .g8playbackcontrols{background:#3a3a3a!important;border-color:#828282!important}
+#g8app .gcc-equation{background:#3c3323!important;color:#f6e8c7!important;border:2px solid #ac8e57!important}
+#g8app .gcc-moment{background:#343434!important;color:#f6f4ec!important;border:2px solid #777!important}
+#g8app .gcc-moment.gcc-wicket{border-left:6px solid #ed8170!important;background:#412823!important}
+#g8app .gcc-bowler{background:#353535!important;color:#f6f4ec!important;border:2px solid #888!important;border-top:4px solid #e0b568!important}
+#g8app .g8result{background:#282828!important;color:#f6f4ec!important;border:2px solid #777!important}
+#g8app .g8result.g8win{border-top:5px solid #7ec98e!important}
+#g8app .g8result.g8loss{border-top:5px solid #ee8b82!important}
+#g8app .g8resultbanner{background:#424242!important;color:#f6f4ec!important;border:1px solid #999!important;border-radius:3px}
+#g8app .g8win .g8resultbanner{background:#264b32!important;border-color:#7ec98e!important}
+#g8app .g8loss .g8resultbanner{background:#602e28!important;border-color:#ee8b82!important}
+#g8app .gcc-award{background:#303030!important;color:#f6f4ec!important;border:2px solid #777!important;border-top:4px solid #edb65b!important}
+#g8app .g8nextstep{background:#303030!important;color:#f6f4ec!important;border-color:#888!important}
+#g8dialog .g8rated b,#g8app .g8rated b,#g8dialog .g8analysisrow strong,#g8app .g8analysisrow strong{color:var(--rating-color,#f6f4ec)!important}
+#g8app .g8rated .g8abilitytrack>i,#g8dialog .g8rated .g8abilitytrack>i{background:var(--rating-color,#edb65b)!important}
+#g8app .g8button,#g8dialog .g8button{transition:border-color .12s ease,filter .12s ease!important}
+#g8app .g8button:hover:not(:disabled),#g8dialog .g8button:hover:not(:disabled){transform:none!important}
+#g8dialog .g8previewside h3{color:var(--preview-ink,#fff)!important}
+#g8dialog :is(.g8guideintro,.g8guidecard,.g8give,.g8receive,.g8guidenote){background:#2c2c2c!important;color:#f6f4ec!important;border-color:#777!important}
+#g8dialog :is(.g8guideintro,.g8guidecard,.g8give,.g8receive) :is(h2,h3,h4,p,span,b,strong,.g8eyebrow){color:#f6f4ec!important}
+#g8dialog .g8guidecard .g8icon{color:#edb65b!important}
+#g8app :is(.g8introbrief,.g8careerlaunch,.g8careersteps>li,.g8snakeintro,.g8sealed,.g8search,.g8player,.g8candidate){background:#2c2c2c!important;color:#f6f4ec!important;border-color:#777!important}
+#g8app .g8candidate{background:linear-gradient(135deg,#363636,#252525)!important}
+#g8app .g8player .g8cardheader{border-color:#777!important}
+#g8app .g8player :is(.g8playercountry,.g8playerage,.g8cardjob){color:#d4d4cd!important}
+/* Draft card numbers share the same value-driven scale as scouting. */
+#g8app .g8directpick.g8recruitcard .g8cardoverall,#g8app .g8recruitcard .g8cardattributes{background:#242424!important;border-color:#818181!important}
+#g8app .g8directpick.g8recruitcard .g8cardoverall b,#g8app .g8recruitcard .g8cardattributes b{color:var(--rating-color,#f6f4ec)!important}

@@ -15,3 +15,7 @@ Independent review caught fixture-card, highlighted-ladder and feedback contrast
 Limits: no browser visual sign-off. Chromium download produced an invalid archive in this environment. Navigation to the saved candidate in the user's Chrome was blocked by host policy; no alternate browser workaround attempted. Desktop/mobile visual appearance, computed selector effects and interactions must be inspected on the candidate. Full2008–2026 fresh regression, successful trade edge cases, extreme retirement cliff, human enjoyment and physical-device testing are not newly certified. Live field/bowler-by-bowler captaincy and a broader narrative redesign are not implemented by this patch. Estimates show model rounds, not real medical claims. Short innings may end before promised overs; existing commitment opportunities require90opposition balls.
 
 The user's local HTML and saved career were not overwritten. This branch is an isolated, reproducible candidate.
+
+## Corrective visual revision
+
+See ../visual-followthrough-20261030/README.md for actual Chrome observations and subsequent correction. The original candidate was inspected; the latest corrective build must be downloaded/refreshed before it receives visual sign-off. Engine/save parity evidence is retained because those scripts are byte-identical; latest script11 only changes UI rating colours. Current build identity is always build.json.

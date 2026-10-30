@@ -1,0 +1,5 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';import {loadGame}from'../offline_game_host.mjs';
+const h=loadGame(process.env.GCC_FILE||'qa/perfection-20261030/candidate.html',101),tone=h.context.GCC8.ratingTone;
+function rgb(hex){return [1,3,5].map(i=>parseInt(hex.slice(i,i+2),16));}
+function luminance(hex){return rgb(hex).map(v=>v/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4).reduce((n,v,i)=>n+v*[.2126,.7152,.0722][i],0)}
+const rows=[];let min=Infinity;for(let n=0;n<=99;n++){const t=tone(n),[r,g,b]=rgb(t);assert(/^#[0-9a-f]{6}$/i.test(t));if(n===0)assert(r>g&&r>b);if(n===65)assert(r>g&&g>b);if(n===99)assert(g>r&&g>b,'High ratings must be green, not white');let c=(luminance(t)+.05)/(luminance('#343434')+.05);assert(c>=4.5,'Readable rating '+n);min=Math.min(min,c);rows.push({n,t});}assert.equal(tone(-10),tone(0));assert.equal(tone(200),tone(99));assert.equal(tone(NaN),tone(0));console.log('PASS 100 rating colours; minimum contrast',min);fs.writeFileSync('qa/visual-followthrough-20261030/ratings.json',JSON.stringify({rows,minContrast:min},null,2));
