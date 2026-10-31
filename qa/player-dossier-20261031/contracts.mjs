@@ -1,0 +1,15 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {loadGame} from '../offline_game_host.mjs';import {startDraft,finishDraft,selectManualXI} from '../club-expansion-20261027/helpers.mjs';
+const h=loadGame('qa/perfection-20261030/candidate.html',101,new Map(),{strictIds:true}),X=h.context.GCC8,s=h.G.state;
+startDraft(h);finishDraft(h);selectManualXI(h);h.G.startSeason();X.ui.view='team';
+const p=X.roster().find(p=>s.xi.includes(p.id)&&X.R.bowlingWorkload(p)>=4&&X.R.bowlingUsagePrior(p)>=1.5);assert(p);
+assert(X.dispatch('inspect',[p.id]));let html=h.get('g8dialogContent').innerHTML;assert(html.includes('Player report views'),'player report has named view controls');
+assert.equal(X.ui.playerTab,'overview');assert(html.includes('Core abilities'));assert(html.includes('GCC record'));assert(!html.includes('aria-label="Player management"'));
+assert(X.dispatch('playerTab',['skills']));html=h.get('g8dialogContent').innerHTML;assert(html.includes('Detailed skills'));assert(!html.includes('Core abilities'));assert(!html.includes('<summary>Detailed skills</summary>'),'attribute view does not require another expansion');
+assert(X.dispatch('close'));assert(X.dispatch('manageInspect',[p.id]));assert.equal(X.ui.playerTab,'management');html=h.get('g8dialogContent').innerHTML;assert(html.includes('aria-label="Player management"'));assert(!html.includes('Core abilities'));
+assert(X.dispatch('managePlayer',[p.id,'bowling']));assert.equal(X.ui.playerTab,'management','decision stays in management view');html=h.get('g8dialogContent').innerHTML;assert(html.includes('full bowling opportunities remaining'));
+const before=JSON.stringify(s);X.playerDossier(p,{actions:'',selected:true,position:s.battingOrder.indexOf(p.id)});assert.equal(JSON.stringify(s),before,'read-only dossier rendering');
+assert(X.dispatch('close'));assert(X.dispatch('inspect',[p.id]));assert.equal(X.ui.playerTab,'overview','reopening normal scouting resets to overview');
+assert(X.dispatch('close'));const bench=X.roster().find(p=>!s.xi.includes(p.id));assert(X.dispatch('inspect',[bench.id]));assert(h.get('g8dialogContent').innerHTML.includes('data-action="swapIn"'),'bench swap remains available');
+assert(X.dispatch('close'));X.ui.view='season';s.year=2009;s.round=0;assert(X.dispatch('trade',[true]));assert(X.dispatch('inspect',[bench.id]));assert.equal(X.ui.scoutReturn,'trade');assert(X.dispatch('playerTab',['skills']));assert.equal(X.ui.scoutReturn,'trade','report view retains trade return');assert.equal(h.document.activeElement?.id,'gccuiProfileView-skills','selected view is the logical focus target');assert(X.dispatch('close'));assert.equal(X.ui.modal,'trade','closing report returns to trade');
+assert.deepEqual(h.errors,[]);
+const checks={pass:true,checks:['overview and attributes','management entry is direct','active view survives decisions','ordinary reopen resets','read-only rendering','bench swap preserved','trade scout return preserved','selected view logical focus target']};fs.writeFileSync('qa/player-dossier-20261031/contracts.json',JSON.stringify(checks,null,2));console.log(checks);

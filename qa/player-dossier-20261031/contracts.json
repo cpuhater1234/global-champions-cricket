@@ -1,0 +1,13 @@
+{
+  "pass": true,
+  "checks": [
+    "overview and attributes",
+    "management entry is direct",
+    "active view survives decisions",
+    "ordinary reopen resets",
+    "read-only rendering",
+    "bench swap preserved",
+    "trade scout return preserved",
+    "selected view logical focus target"
+  ]
+}

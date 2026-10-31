@@ -1,0 +1,11 @@
+{
+  pass: true,
+  checks: [
+    'default reads byte-identical for full roster',
+    'non-owned management hidden',
+    'select from attributes',
+    'swap from attributes',
+    'order change retains view',
+    'draft pick from attributes'
+  ]
+}

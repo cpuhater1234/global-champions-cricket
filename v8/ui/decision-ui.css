@@ -589,3 +589,41 @@
 #g8app .gccuiCommandCentre .gccuiMatchDecisions .g8dressingroom>.g8disclosure>summary{padding:10px 12px!important;font-size:13px!important;line-height:1.4;min-height:44px}
 #g8app .gccuiCommandCentre .gccuiMatchDecisions .g8dressingroom>.g8disclosure>div{padding:0 12px 12px!important}
 @media(max-width:600px){#g8app .gccuiCommandCentre .gccuiVenuePhoto{height:auto!important}#g8app .gccuiCommandCentre .gccuiVenuePhoto .g8stadium{height:80px!important}#g8app .gccuiCommandCentre .gccuiVenue h1{font-size:20px!important;line-height:1.25!important}#g8app .gccuiCommandCentre .gccuiVenue .gccuiKicker{font-size:10px!important}#g8app .gccuiNextOpponent{font-size:14px}}
+/* Focused player reports retain the existing dialog and action handlers. */
+#g8dialog[data-prompt=player]{width:min(1080px,96vw)!important;max-width:1080px!important}
+#g8dialog[data-prompt=player] .g8modalbody{padding:16px!important}
+#g8dialog[data-prompt=player] .g8scoutsummary{margin:0!important;padding:14px 16px!important}
+#g8dialog[data-prompt=player] .g8scoutsummary h3{font-size:18px!important;line-height:1.3!important}
+#g8dialog[data-prompt=player] .g8playerdecision:empty{display:none!important}
+#g8dialog[data-prompt=player] .gccuiDossierRating{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:68px}
+#g8dialog[data-prompt=player] .gccuiDossierRating>small{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:#d0cec8}
+#g8dialog[data-prompt=player] .gccuiDossierRating>strong{display:block;color:var(--rating-color,#eee);font-size:32px;line-height:1;font-weight:900;font-variant-numeric:tabular-nums}
+#g8dialog[data-prompt=player] .gccuiProfileViews{display:flex;flex-wrap:wrap;gap:8px;padding:12px 0;border-bottom:1px solid #626262;margin-bottom:12px}
+#g8dialog[data-prompt=player] .gccuiProfileViews .g8button{flex:0 1 170px;min-height:44px!important;padding:10px 14px!important;font-size:14px!important}
+#g8dialog[data-prompt=player] .gccuiProfileViews .g8button[aria-pressed=true]{background:var(--club-accent,#edb65b)!important;color:#171717!important;border-color:#f2d99d!important}
+#g8dialog[data-prompt=player] .g8ordereditor{display:flex!important;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px!important;margin:0 0 14px!important;background:#282828;border:1px solid #626262!important;border-radius:4px}
+#g8dialog[data-prompt=player] .g8ordereditor>span{font-size:13px;font-weight:800}
+#g8dialog[data-prompt=player] .g8ordereditor .g8actions{margin:0!important;gap:6px}
+#g8dialog[data-prompt=player] .g8ordereditor .g8button{min-height:44px!important;padding:8px 12px!important}
+#g8dialog[data-prompt=player] .gccuiProfilePanel{min-width:0}
+#g8dialog[data-prompt=player] .gccuiProfileOverview{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+#g8dialog[data-prompt=player] .gccuiProfileOverview>.g8playerdetail{display:contents!important}
+#g8dialog[data-prompt=player] .gccuiProfileOverview .g8scoutability{margin:0!important;min-width:0;padding:14px!important}
+#g8dialog[data-prompt=player] .gccuiProfileOverview .g8scoutoutlook{margin:0!important;min-width:0;padding:14px!important}
+#g8dialog[data-prompt=player] .gccuiProfileOverview .g8gccrecord{grid-column:1/-1;margin:0!important;padding:14px!important}
+#g8dialog[data-prompt=player] .gccuiProfileOverview .g8recordstats{margin-top:10px!important;gap:12px}
+#g8dialog[data-prompt=player] .gccuiProfileOverview .g8recordstats>div{padding:10px!important}
+#g8dialog[data-prompt=player] .gccuiProfileOverview .g8recordstats strong{font-size:28px!important;line-height:1.1!important}
+#g8dialog[data-prompt=player] .gccuiProfileOverview .g8recordstats span{font-size:12px!important}
+#g8dialog[data-prompt=player] .gccuiProfilePanel>.g8relationship{margin:0!important;padding:16px!important;background:#252525!important}
+#g8dialog[data-prompt=player] .gccuiProfilePanel>.g8relationship header{padding-bottom:10px!important;margin-bottom:10px!important}
+#g8dialog[data-prompt=player] .gccuiProfilePanel>.g8relationship p{font-size:14px!important;line-height:1.5!important;margin:8px 0!important}
+#g8dialog[data-prompt=player] .gccuiProfilePanel .g8playercontext{margin:12px 0!important}
+#g8dialog[data-prompt=player] .gccuiProfilePanel .g8managementactions{margin:12px 0!important;gap:8px}
+#g8dialog[data-prompt=player] .gccuiProfilePanel .g8managementactions .g8button{min-height:44px!important;padding:10px 12px!important;font-size:13px!important}
+#g8dialog[data-prompt=player] .gccuiFullSkills{padding:14px;border:1px solid #626262;background:#252525;border-radius:4px}
+#g8dialog[data-prompt=player] .gccuiFullSkills>h3{font-size:18px!important;margin:0 0 14px!important}
+#g8dialog[data-prompt=player] .gccuiFullSkills .g8scoutcategories{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+#g8dialog[data-prompt=player] .gccuiFullSkills .g8skillcategory{padding:14px!important;min-width:0}
+#g8dialog[data-prompt=player] .gccuiFullSkills>p{font-size:12px;color:#d0cec8;margin:12px 0 0!important}
+@media(max-width:760px){#g8dialog[data-prompt=player] .gccuiProfileOverview{grid-template-columns:1fr}#g8dialog[data-prompt=player] .gccuiFullSkills .g8scoutcategories{grid-template-columns:1fr}#g8dialog[data-prompt=player] .gccuiProfileViews .g8button{flex:1 1 96px;padding:8px!important;font-size:12px!important;white-space:normal}#g8dialog[data-prompt=player] .gccuiProfileViews .g8button span{font-size:12px!important}#g8dialog[data-prompt=player] .g8modalbody{padding:12px!important}#g8dialog[data-prompt=player] .g8ordereditor{flex-wrap:wrap}#g8dialog[data-prompt=player] .g8ordereditor .g8actions{flex-wrap:wrap}#g8dialog[data-prompt=player] .gccuiProfileOverview .g8recordstats{gap:8px}#g8dialog[data-prompt=player] .gccuiProfileOverview .g8recordstats strong{font-size:25px!important}}

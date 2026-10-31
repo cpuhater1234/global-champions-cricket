@@ -104,9 +104,25 @@ rep(19,"if(key==='careerBackup'){readBackupFile(el.files?.[0]);return;}",'')
 rep(10,'Keep this game open and retry or download a backup.','Keep this game open and retry.')
 rep(10,'The recovery checkpoint could not be completed. Keep this game open and download a backup.','The recovery checkpoint could not be completed. Keep this game open and retry.')
 rep(10,'Could not clear this career. Keep the game open and download a backup.','Could not clear this career. Keep the game open and retry.')
+# Player reports expose focused views while preserving all existing read data.
+a=parts[12].index(' X.playerRead=p=>{');b=parts[12].index(' X.conditionRead=',a);read_fn=parts[12][a:b]
+r=read_fn.index('  return `<div class="g8playerdetail">');o=read_fn.index('<section class="g8scoutoutlook">',r);e=read_fn.index('${X.playerRecord(p)}',o)
+outlook=read_fn[o:e]
+prefix=read_fn[:r].replace('X.playerRead=p=>{',"X.playerRead=(p,section='all')=>{")
+read_fn=prefix+'  const outlook=`'+outlook+'`;\n'+'''  const skillContent=`<div class="g8scoutcategories">${skills}</div><p>Scouting confidence · ${esc(conf)}</p>`;
+  return `<div class="g8playerdetail">${section==='skills'?`<section class="gccuiFullSkills"><h3>Detailed skills</h3>${skillContent}</section>`:outlook+X.playerRecord(p)+(section==='overview'?'':`<details class="g8moredata"><summary>Detailed skills</summary>${skillContent}</details>`)}</div>`;
+ };
+'''
+parts[12]=parts[12][:a]+read_fn+parts[12][b:]
+rep(19,'function inspect(id){',"function inspect(id,tab=null){const same=ui.modal==='player'&&ui.selectedPlayer===Number(id);ui.playerTab=tab||(same?ui.playerTab:'overview')||'overview';")
+rep(19,"ui.scoutReturn=['trade','undrafted','tradeReview'].includes(ui.modal)?ui.modal:null;ui.scoutReturnScroll=ui.scoutReturn?dialog.scrollTop:null;", "if(!same){ui.scoutReturn=['trade','undrafted','tradeReview'].includes(ui.modal)?ui.modal:null;ui.scoutReturnScroll=ui.scoutReturn?dialog.scrollTop:null;}")
+a=parts[19].index('  modal(p.name,`<section class="g8scoutsummary');b=parts[19].index(",'player');",a)+len(",'player');")
+parts[19]=parts[19][:a]+"  modal(p.name,X.playerDossier(p,{actions,selected,position}),'player');"+parts[19][b:]
+rep(19,"inspect(id);});\n bind('managePlayer'", "inspect(id,'management');});\n bind('managePlayer'")
+rep(19," bind('inspect','*',inspect);", " bind('playerTab','*',tab=>{assert(ui.modal==='player'&&['overview','skills','management'].includes(tab),'Open a player report first.');if(tab==='management')assert(!!X.managementPlayer(G.byId(ui.selectedPlayer)),'Management is available for your squad.');inspect(ui.selectedPlayer,tab);document.getElementById('gccuiProfileView-'+tab)?.focus({preventScroll:true});});\n bind('inspect','*',inspect);")
 parts[18]+='\n'+(root/'v8/ui/decision-ui.js').read_text()
-for i in (9,10,11,16,17,19):
- path=root/('v8/engine/'+('foundation.js' if i==9 else 'dynasty.js')) if i in (9,10) else root/('v8/ui/'+{11:'components.js',16:'career.js',17:'screens.js',19:'controller.js'}[i]);path.write_text(parts[i])
+for i in (9,10,11,12,16,17,19):
+ path=root/('v8/engine/'+('foundation.js' if i==9 else 'dynasty.js')) if i in (9,10) else root/('v8/ui/'+{11:'components.js',12:'cricket-reads.js',16:'career.js',17:'screens.js',19:'controller.js'}[i]);path.write_text(parts[i])
 domain=parts[2][parts[2].index('/* Causal T20 delivery simulation.'):];domain=domain[:domain.index('})();')+5];(root/'v8/domain/delivery_engine.js').write_text(domain)
 for i in reversed(range(len(matches))):
  m=matches[i];raw=raw[:m.start(1)]+parts[i]+raw[m.end(1):]
