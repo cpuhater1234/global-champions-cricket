@@ -1,0 +1,20 @@
+{
+  pass: true,
+  checks: [
+    'read-only render',
+    'CPU picks locked',
+    'empty XI locked',
+    '11 batting rows',
+    'pending swap locked',
+    'OUT bench disabled',
+    'match readiness routing',
+    'home-first clubs',
+    'approved original and supplied icons',
+    'team themed result score',
+    'single table-page heading',
+    '14 aligned fixture cards and scorebook routing',
+    'all knockout stages and final awards',
+    'draft roles, metadata and attribute counts',
+    'home-first live scores without future-score access'
+  ]
+}
