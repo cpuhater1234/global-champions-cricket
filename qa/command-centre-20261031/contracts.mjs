@@ -4,7 +4,7 @@ startDraft(h);finishDraft(h);selectManualXI(h);h.G.startSeason();X.ui.view='seas
 let html=X.views.season();assert.match(html,/aria-label="Campaign overview"/,'matchday exposes campaign context before fixture');
 assert(html.indexOf('Campaign overview')<html.indexOf('Next cricket match'));
 assert.match(html,/aria-label="Match controls"/);assert(html.indexOf('Match controls')<html.indexOf('gccuiVenuePhoto'),'match actions precede venue artwork');
-assert.match(html,/aria-label="Conditions and selection"/);
+assert.match(html,/aria-label="Conditions and selection"/);assert(html.indexOf('Conditions and selection')<html.indexOf('gccuiVenuePhoto'),'tactical guidance precedes stadium artwork');assert(html.includes('gccuiNextOpponent'),'opponent identified beside controls');
 assert.match(html,/aria-label="Matchday information"/);assert.doesNotMatch(html,/class="g8matchbelow"/,'old floating action rows removed');
 assert(html.includes('Ladder position does not determine next year’s draft draw'),'format retains annual draft clarification');assert.match(html,/No league matches played/);assert.doesNotMatch(html,/undefined|NaN/);
 for(let i=0;i<3;i++){selectManualXI(h);h.G.playNextRound();}

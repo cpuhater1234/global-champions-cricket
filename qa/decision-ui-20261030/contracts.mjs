@@ -23,7 +23,7 @@ s.dynasty.injuries[bench.id]={status:'OUT',type:'finger',roundsLeft:2};html=X.vi
 delete s.dynasty.injuries[bench.id];s.xi=xi;s.battingOrder=order;
 const fx={home:s.userClub,away:s.league.find(c=>c.abbr!==s.userClub.abbr),round:1};
 html=X.storyFixture(fx,null,'Select a recognised wicketkeeper before the next match.');assert.match(html,/gccuiMatchday/);assert.match(html,/Choose XI/);assert.doesNotMatch(html,/data-action="watchNext"/);
-html=X.storyFixture(fx,null,'');assert.match(html,/data-action="watchNext"/);assert(html.indexOf(fx.home.name)<html.indexOf(fx.away.name),'home club first');
+html=X.storyFixture(fx,null,'');assert.match(html,/data-action="watchNext"/);const teamCards=html.split('class="gccuiFixtureTeams"')[1];assert(teamCards&&teamCards.indexOf(fx.home.name)<teamCards.indexOf(fx.away.name),'home club card first');
 h.G.startSeason();html=X.views.season();assert.equal([...html.matchAll(/<h1[ >]/g)].length,1,'matchday has one primary heading');
 assert.match(X.designIcon('cricket'),/viewBox="0 0 24 24"/);assert.deepEqual(h.errors,[]);
 assert.match(X.designIcon('cricket'),/#g8icon-cricket"/,'original bat symbol retained');
