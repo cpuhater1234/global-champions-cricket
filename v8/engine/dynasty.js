@@ -731,7 +731,7 @@ function createCheckpointStore({name='gcc-career-recovery-v1',timeout=4000,onSlo
       }).then(result=>{if(result.value&&generation===saveGeneration){checkpointRecord=nextRecord;checkpointValidRaw=nextRecord.raw;}return result.value;});
     })).catch(error=>{
       if(generation!==saveGeneration)return false;
-      saveError=error?.name==='AbortError'?'Another game held the save lock too long. Keep this game open and retry or download a backup.':'The recovery checkpoint could not be completed. Keep this game open and download a backup.';
+      saveError=error?.name==='AbortError'?'Another game held the save lock too long. Keep this game open and retry.':'The recovery checkpoint could not be completed. Keep this game open and retry.';
       console.error('GCC coordinated save failed',error);
       if(!saveFailureShown){saveFailureShown=true;try{base.toast(saveError);}catch{}}
       return false;
@@ -864,7 +864,7 @@ function validSave(save){
       }
       if(!navigator.locks?.request)throw new Error('Career clearing is unavailable here');
       if(remove()&&active()){location.reload();return true;}return false;
-    })).catch(error=>{if(generation!==saveGeneration)return false;saveSuspended=false;saveSucceeded=false;saveError='Could not clear this career. Keep the game open and download a backup.';console.error(error);notifySaveStatus();base.toast(saveError);return false;});
+    })).catch(error=>{if(generation!==saveGeneration)return false;saveSuspended=false;saveSucceeded=false;saveError='Could not clear this career. Keep the game open and retry.';console.error(error);notifySaveStatus();base.toast(saveError);return false;});
   }
   // Era scoring environment: this is deliberately modest. Player skills still drive outcomes.
   const originalPhase=window.GCC_RATINGS?.__dynastyEraApplied?null:null;

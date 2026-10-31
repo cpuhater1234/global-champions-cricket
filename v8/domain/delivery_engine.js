@@ -91,6 +91,8 @@ window.GCC8_DELIVERY=(()=>{
  function frameCount(r){return 2+[r.homeInnings,r.awayInnings].reduce((n,i)=>n+(i?.deliveries?.length||0)+(i?.notices?.length||0),0)+(r.superOver?.rounds||[]).reduce((n,round)=>n+round.innings.reduce((a,i)=>a+1+i.deliveries.length,0),0);}
  function validResult(r,ids){
   try{
+   const first=r.battingFirst||r.scorecard?.innings?.[0]?.club;
+   if(r.toss!=null&&(typeof r.toss!=='object'||Array.isArray(r.toss)||![r.home.abbr,r.away.abbr].includes(r.toss.winner)||!['bat','bowl'].includes(r.toss.decision)||!first||(r.toss.winner===first.abbr)!==(r.toss.decision==='bat')))return false;
    const pair=[[r.homeInnings,r.home],[r.awayInnings,r.away]];
    if(pair.every(([i])=>i?.deliveryVersion==null))return true;
    if(pair.some(([i])=>i?.deliveryVersion!==1))return false;

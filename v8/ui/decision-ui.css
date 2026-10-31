@@ -523,3 +523,12 @@
  #g8app .gccuiSelection .gccuiSelectionActions .g8button span{font-size:12px}
  #g8app .gccuiSelection .gccuiPaneTabs{margin-bottom:12px}
 }
+/* A concise toss result, with both actions visible before the first ball. */
+#g8app .gccuiPreMatch{max-width:900px}
+#g8app .gccuiPreMatchPanel{padding:20px}
+#g8app .gccuiCoinStage{height:80px;margin-bottom:8px}
+#g8app .gccuiCoin{width:66px;height:66px;font-size:21px}
+#g8app .gccuiPreMatchPanel>h2{font-size:26px!important;max-width:720px;margin:8px auto!important;line-height:1.35}
+#g8app .gccuiPreMatchActions{padding-top:20px}
+#g8app .gccuiPreMatchActions button{min-height:48px!important}
+@media(max-width:600px){#g8app .gccuiPreMatchPanel>h2{font-size:22px!important}#g8app .gccuiPreMatchPanel{padding:16px}#g8app .gccuiPreMatchActions{padding-top:16px}}

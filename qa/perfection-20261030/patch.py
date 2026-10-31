@@ -80,6 +80,29 @@ rep(17,'${position} on the ladder','Ladder position ${position}')
 rep(17,'Now ${r.ladderAfter} on the ladder','Ladder position ${r.ladderAfter}')
 rep(17,'Finished ${h.userPosition}','League position ${h.userPosition}')
 rep(19,'Finished ${h.userPosition}','League position ${h.userPosition}')
+rep(2,'const pair=[[r.homeInnings,r.home],[r.awayInnings,r.away]];', "const first=r.battingFirst||r.scorecard?.innings?.[0]?.club;\n   if(r.toss!=null&&(typeof r.toss!=='object'||Array.isArray(r.toss)||![r.home.abbr,r.away.abbr].includes(r.toss.winner)||!['bat','bowl'].includes(r.toss.decision)||!first||(r.toss.winner===first.abbr)!==(r.toss.decision==='bat')))return false;\n   const pair=[[r.homeInnings,r.home],[r.awayInnings,r.away]];")
+# Record the joint toss winner/choice using the existing uniform draw. Four equal
+# intervals encode the four combinations; awayFirst and subsequent RNG are unchanged.
+rep(9,'// first gives the season a real chase/defence split without inventing a toss UI.','// first retains a real chase/defence split. The same draw records the toss.')
+rep(9,'const awayFirst = rng() < .5;', 'const tossDraw = rng();\n    const awayFirst = tossDraw < .5;')
+rep(9,'const secondClub = awayFirst ? home : away;', "const secondClub = awayFirst ? home : away;\n    const tossWinner = Math.floor(tossDraw * 4) % 2 === 0 ? home : away;\n    const toss = {winner:tossWinner.abbr,decision:tossWinner.abbr===firstClub.abbr?'bat':'bowl'};")
+rep(9,'return { hi, ai, winner, tieBreak, superOver, firstClub, secondClub, firstInnings, secondInnings, weather:matchGround.weather, matchGround };', 'return { hi, ai, winner, tieBreak, superOver, firstClub, secondClub, firstInnings, secondInnings, toss, weather:matchGround.weather, matchGround };')
+assert parts[9].count('battingFirst:pair.firstClub, battingSecond:pair.secondClub,')==2
+parts[9]=parts[9].replace('battingFirst:pair.firstClub, battingSecond:pair.secondClub,','battingFirst:pair.firstClub, battingSecond:pair.secondClub, toss:pair.toss,')
+# Remove optional file-management UI while preserving automatic save/recovery.
+rep(19,"pendingRestoreFeedback=null,",'')
+rep(19,"const recoveryNotice=()=>read.saveSucceeded?.()&&read.checkpointMode?.()!=='strict'?'Progress saved in this browser. Download a backup for extra crash protection.':'';", "const recoveryNotice=()=>'';")
+rep(19,'Saving is taking longer. Keep the game open or download a backup.','Saving is taking longer. Keep the game open.')
+assert parts[19].count('Progress is not saved. Keep this game open and download a backup before closing.')==3
+parts[19]=parts[19].replace('Progress is not saved. Keep this game open and download a backup before closing.','Progress is not saved. Keep this game open.')
+parts[19]='\n'.join(line for line in parts[19].split('\n') if not line.lstrip().startswith('if(pendingRestoreFeedback'))
+a=parts[19].index(' let pendingBackup=null,backupReadId=0;');b=parts[19].index(" bind('home','*'",a);parts[19]=parts[19][:a]+parts[19][b:]
+rep(19,'pendingBackup=null;backupReadId++;','')
+rep(19,"if(action!=='confirmBackup')pendingRestoreFeedback=null;",'')
+rep(19,"if(key==='careerBackup'){readBackupFile(el.files?.[0]);return;}",'')
+rep(10,'Keep this game open and retry or download a backup.','Keep this game open and retry.')
+rep(10,'The recovery checkpoint could not be completed. Keep this game open and download a backup.','The recovery checkpoint could not be completed. Keep this game open and retry.')
+rep(10,'Could not clear this career. Keep the game open and download a backup.','Could not clear this career. Keep the game open and retry.')
 parts[18]+='\n'+(root/'v8/ui/decision-ui.js').read_text()
 for i in (9,10,11,16,17,19):
  path=root/('v8/engine/'+('foundation.js' if i==9 else 'dynasty.js')) if i in (9,10) else root/('v8/ui/'+{11:'components.js',16:'career.js',17:'screens.js',19:'controller.js'}[i]);path.write_text(parts[i])

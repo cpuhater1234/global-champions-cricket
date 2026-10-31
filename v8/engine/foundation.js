@@ -2314,11 +2314,14 @@ function installModalInteraction() {
 
   function simulateInningsPair(home, away, round=Math.max(1,(state.round||0)+1)) {
     // Home/away is a venue concept, not a batting-order rule. Randomising who bats
-    // first gives the season a real chase/defence split without inventing a toss UI.
+    // first retains a real chase/defence split. The same draw records the toss.
     const matchGround=effectiveMatchGround(home,round,state.year||2008);
-    const awayFirst = rng() < .5;
+    const tossDraw = rng();
+    const awayFirst = tossDraw < .5;
     const firstClub = awayFirst ? away : home;
     const secondClub = awayFirst ? home : away;
+    const tossWinner = Math.floor(tossDraw * 4) % 2 === 0 ? home : away;
+    const toss = {winner:tossWinner.abbr,decision:tossWinner.abbr===firstClub.abbr?'bat':'bowl'};
     const firstInnings = innings(firstClub, secondClub, matchGround,{weather:matchGround.weather});
     const rawSecond = innings(secondClub, firstClub, matchGround, { chasing:true, target:firstInnings.total + 1, weather:matchGround.weather });
     const secondInnings = resolveChase(firstInnings, rawSecond);
@@ -2329,7 +2332,7 @@ function installModalInteraction() {
     else { tieBreak = true; superOver = simulateSuperOver(secondClub, firstClub, matchGround); winner = superOver.winner; }
     const hi = firstClub.abbr === home.abbr ? firstInnings : secondInnings;
     const ai = firstClub.abbr === away.abbr ? firstInnings : secondInnings;
-    return { hi, ai, winner, tieBreak, superOver, firstClub, secondClub, firstInnings, secondInnings, weather:matchGround.weather, matchGround };
+    return { hi, ai, winner, tieBreak, superOver, firstClub, secondClub, firstInnings, secondInnings, toss, weather:matchGround.weather, matchGround };
   }
 
   function emptyPlayerStat() {
@@ -2769,7 +2772,7 @@ function installModalInteraction() {
     recordMatchStats(away, awayCard.batting, homeCard.bowling);
     updateFormForMatch(home, away, scorecard);
     const marginText=resultMarginText(home,away,hi,ai,winner,pair.tieBreak,pair);
-    return { home, away, homeInnings: hi, awayInnings: ai, battingFirst:pair.firstClub, battingSecond:pair.secondClub, winner, tieBreak:pair.tieBreak, superOver:pair.superOver, margin:Math.abs(hi.total-ai.total), marginText, weather:pair.weather, scorecard, performance:{ homeRuns, awayRuns, homeWickets, awayWickets } };
+    return { home, away, homeInnings: hi, awayInnings: ai, battingFirst:pair.firstClub, battingSecond:pair.secondClub, toss:pair.toss, winner, tieBreak:pair.tieBreak, superOver:pair.superOver, margin:Math.abs(hi.total-ai.total), marginText, weather:pair.weather, scorecard, performance:{ homeRuns, awayRuns, homeWickets, awayWickets } };
   }
 
   function formNegRoll(playerId) {
@@ -3516,7 +3519,7 @@ function installModalInteraction() {
     recordMatchStats(away, awayCard.batting, homeCard.bowling);
     updateFormForMatch(home, away, scorecard);
     const marginText=resultMarginText(home,away,hi,ai,winner,pair.tieBreak,pair);
-    return { home, away, homeInnings: hi, awayInnings: ai, battingFirst:pair.firstClub, battingSecond:pair.secondClub, winner, tieBreak:pair.tieBreak, superOver:pair.superOver, marginText, weather:pair.weather, scorecard, performance:{homeRuns,awayRuns,homeWickets,awayWickets} };
+    return { home, away, homeInnings: hi, awayInnings: ai, battingFirst:pair.firstClub, battingSecond:pair.secondClub, toss:pair.toss, winner, tieBreak:pair.tieBreak, superOver:pair.superOver, marginText, weather:pair.weather, scorecard, performance:{homeRuns,awayRuns,homeWickets,awayWickets} };
   }
 
   function openSeasonReview() {
