@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {loadGame} from '../offline_game_host.mjs';
+import {startDraft,finishDraft,selectManualXI} from '../club-expansion-20261027/helpers.mjs';
+const h=loadGame('qa/perfection-20261030/candidate.html',101,new Map(),{strictIds:true});
+startDraft(h);finishDraft(h);selectManualXI(h);h.G.startSeason();
+const X=h.context.GCC8;
+assert.equal((X.leaders().match(/No league performances yet/g)||[]).length,2,'both empty leader tables explain their state');
+h.G.playNextRound();
+assert(!X.leaders().includes('No league performances yet'),'real performances replace empty explanation');
+assert.deepEqual(h.errors,[]);
+console.log('PASS: empty leader explanations appear before play and clear after a match');
