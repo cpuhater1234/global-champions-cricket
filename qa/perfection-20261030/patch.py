@@ -7,6 +7,18 @@ assert hashlib.sha1(b'blob '+str(len(base.read_bytes())).encode()+b'\0'+base.rea
 raw=base.read_text();matches=list(re.finditer(r'<script\b[^>]*>([\s\S]*?)</script>',raw,re.I));parts=[m[1] for m in matches]
 def rep(i,a,b):
  assert parts[i].count(a)==1,(i,a[:70],parts[i].count(a));parts[i]=parts[i].replace(a,b)
+# Finals share the same per-round medical boundary in visible and offscreen play.
+rep(9,'  function simulateFinals() {',"  function simulateFinalsRound(pairs,round){return window.GCC8_ENGINE_READ.finalsRound(()=>pairs.map(([home,away])=>simulateKnockout(home,away,round)),round)}\n  function simulateFinals() {")
+rep(9,'f.semis=[simulateKnockout(top[0],top[3],15),simulateKnockout(top[1],top[2],15)];','f.semis=simulateFinalsRound([[top[0],top[3]],[top[1],top[2]]],15);')
+rep(9,'f.gf=simulateKnockout(f.gfPair.home,f.gfPair.away,16);','[f.gf]=simulateFinalsRound([[f.gfPair.home,f.gfPair.away]],16);')
+rep(9,'const semis = [simulateKnockout(top[0], top[3], 15), simulateKnockout(top[1], top[2], 15)];','const semis = simulateFinalsRound([[top[0],top[3]],[top[1],top[2]]],15);')
+rep(9,'const gf = simulateKnockout(host, away, 16);','const [gf] = simulateFinalsRound([[host,away]],16);')
+a=parts[10].index('  function processInjuries(){');b=parts[10].index('  function cpuSelectionValue',a)
+medical=parts[10][a:b].replace('function processInjuries(){','function processInjuries(medicalRound=state.round,participants=null){').replace('const played=new Set([...(state.xi||[]),...Object.values(state.cpuXIs||{}).flat()]);','const played=participants||new Set([...(state.xi||[]),...Object.values(state.cpuXIs||{}).flat()]);')
+medical=medical.replace('${state.round}', '${medicalRound}').replace('if(existing.has(p.id)||d.injuries[p.id])continue;','if(!played.has(p.id)||existing.has(p.id)||d.injuries[p.id])continue;')
+parts[10]=parts[10][:a]+medical+parts[10][b:]
+rep(10,'const r=withFitnessContext(()=>base.simulateFinals(...args));','const r=base.simulateFinals(...args);')
+rep(10,'window.GCC8_ENGINE_READ={coverStatus,','window.GCC8_ENGINE_READ={finalsRound:(play,round)=>{const matches=withFitnessContext(play),played=new Set(matches.flatMap(m=>m.scorecard.innings.flatMap(i=>i.batting.map(b=>b.player.id))));processInjuries(round,played);return matches;},coverStatus,')
 rep(10,"if(bad.length)return `${bad[0].name} is out. Name a replacement before the next match.`;return ''}","if(bad.length)return `${bad[0].name} is out. Name a replacement before the next match.`;if(!xi.some(id=>isKeeper(pById(id))))return 'Select a recognised wicketkeeper before the next match.';return ''}")
 rep(10,"if(state.xi.length!==11)return base.startSeason(...args);if(state.year>2008)","if(state.xi.length!==11)return base.startSeason(...args);const selectionIssue=userXIProblem();if(selectionIssue)return base.toast(selectionIssue);if(state.year>2008)")
 # Keep the established ranking and RNG consumption, then honour actual promises among legal candidates.

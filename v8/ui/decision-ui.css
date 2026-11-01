@@ -600,7 +600,7 @@
 #g8dialog[data-prompt=player] .gccuiDossierRating>strong{display:block;color:var(--rating-color,#eee);font-size:32px;line-height:1;font-weight:900;font-variant-numeric:tabular-nums}
 #g8dialog[data-prompt=player] .gccuiProfileViews{display:flex;flex-wrap:wrap;gap:8px;padding:12px 0;border-bottom:1px solid #626262;margin-bottom:12px}
 #g8dialog[data-prompt=player] .gccuiProfileViews .g8button{flex:0 1 170px;min-height:44px!important;padding:10px 14px!important;font-size:14px!important}
-#g8dialog[data-prompt=player] .gccuiProfileViews .g8button[aria-pressed=true]{background:var(--club-accent,#edb65b)!important;color:#171717!important;border-color:#f2d99d!important}
+#g8dialog[data-prompt=player] .gccuiProfileViews .g8button[aria-pressed=true]{background:var(--club-accent,#edb65b)!important;color:var(--club-ink,#171717)!important;border-color:#f2d99d!important}
 #g8dialog[data-prompt=player] .g8ordereditor{display:flex!important;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px!important;margin:0 0 14px!important;background:#282828;border:1px solid #626262!important;border-radius:4px}
 #g8dialog[data-prompt=player] .g8ordereditor>span{font-size:13px;font-weight:800}
 #g8dialog[data-prompt=player] .g8ordereditor .g8actions{margin:0!important;gap:6px}
@@ -705,3 +705,13 @@
 #g8dialog[data-prompt=player] .g8gccrecord>.g8recordyear,#g8dialog[data-prompt=player] .gccuiCareerRates{text-align:left!important}
 @media(max-width:600px){#g8dialog[data-prompt=archiveSeason] .g8table :is(th,td){padding:11px 4px!important}#g8dialog[data-prompt=archiveSeason] .g8table thead th{font-size:11px!important;letter-spacing:0!important}#g8dialog[data-prompt=archiveSeason] .g8modalbody{padding:12px!important}}
 #g8dialog[data-prompt=archiveSeason] .g8table tbody th[scope=row]{text-transform:none!important;letter-spacing:normal!important}
+
+#g8app .gccuiSelectionStatus{flex-wrap:wrap}
+#g8app .gccuiSelectionBlocker{flex-basis:100%;margin:4px 0 0;color:#ffb5aa;font-size:13px;line-height:1.4;font-weight:600}
+/* Give selection names the full workspace before the two-column layout crowds them. */
+@media(min-width:761px) and (max-width:1000px){
+ #g8app .gccuiSelection .gccuiPaneTabs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
+ #g8app .gccuiSelection .gccuiPaneTabs .selected{background:var(--ui-team)!important;color:var(--club-ink,#fff)!important;border-color:var(--ui-team)!important}
+ #g8app .gccuiSelection .gccuiSelectionGrid{display:block}
+ #g8app .gccuiSelection .gccuiSelectionGrid[data-pane=xi]>.gccuiBench,#g8app .gccuiSelection .gccuiSelectionGrid[data-pane=squad]>.gccuiXI{display:none}
+}

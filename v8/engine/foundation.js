@@ -3472,18 +3472,19 @@ function installModalInteraction() {
     renderFinals();
   }
 
+  function simulateFinalsRound(pairs,round){return window.GCC8_ENGINE_READ.finalsRound(()=>pairs.map(([home,away])=>simulateKnockout(home,away,round)),round)}
   function simulateFinals() {
     if (!state.finals || state.finals.running) return;
     const f=state.finals;
     if(f.stage==='ready') {
       f.running=true;
       const top=f.top;
-      f.semis=[simulateKnockout(top[0],top[3],15),simulateKnockout(top[1],top[2],15)];
+      f.semis=simulateFinalsRound([[top[0],top[3]],[top[1],top[2]]],15);
       f.stage='semis'; f.running=false; renderFinals(); return;
     }
     if(f.stage==='gf-ready') {
       f.running=true;
-      f.gf=simulateKnockout(f.gfPair.home,f.gfPair.away,16);
+      [f.gf]=simulateFinalsRound([[f.gfPair.home,f.gfPair.away]],16);
       state.champion=f.gf.winner;
       f.stage='done'; f.running=false; renderFinals();
     }
@@ -3494,11 +3495,11 @@ function installModalInteraction() {
     if (state.champion) return state.champion;
     const top = standings().slice(0, 4).map(x => x.club);
     if (top.length !== 4) return null;
-    const semis = [simulateKnockout(top[0], top[3], 15), simulateKnockout(top[1], top[2], 15)];
+    const semis = simulateFinalsRound([[top[0],top[3]],[top[1],top[2]]],15);
     const seed = c => top.findIndex(x => x.abbr === c.abbr);
     const host = seed(semis[0].winner) < seed(semis[1].winner) ? semis[0].winner : semis[1].winner;
     const away = host.abbr === semis[0].winner.abbr ? semis[1].winner : semis[0].winner;
-    const gf = simulateKnockout(host, away, 16);
+    const [gf] = simulateFinalsRound([[host,away]],16);
     state.finals = { top, semis, gf, gfPair:{home:host,away}, stage:'done', running:false };
     state.champion = gf.winner;
     return state.champion;

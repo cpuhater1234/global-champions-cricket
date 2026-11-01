@@ -1,0 +1,58 @@
+{
+  "pass": true,
+  "file": "qa/perfection-20261030/candidate.html",
+  "fixture": {
+    "year": 2009,
+    "seed": 101,
+    "recovering": "Niall O'Brien",
+    "initialRounds": 2,
+    "finalists": [
+      "MI",
+      "STA",
+      "DC",
+      "HUR"
+    ]
+  },
+  "checkCount": 1324,
+  "checks": [
+    "semifinal round advances recovery exactly once",
+    "semifinal injury exposure is participants only",
+    "repeated semifinal simulation does not tick injuries",
+    "advancing the finals bracket does not tick injuries",
+    "repeated bracket advance does not tick injuries",
+    "grand final advances recovery once and clears injury",
+    "grand final injury exposure is participants only",
+    "repeated completed-finals actions do not tick injuries",
+    "offscreen finals also complete both recovery rounds",
+    "visible and offscreen finals have identical injury outcomes",
+    "visible and offscreen finals retain result parity",
+    "repeated offscreen resolution does not tick injuries",
+    "seed 1 semis: new injuries exclude nonparticipants"
+  ],
+  "exposure": {
+    "semiAdded": [],
+    "gfAdded": []
+  },
+  "sweep": {
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "semiNew": 1,
+    "gfNew": 1,
+    "aggravations": 33,
+    "managedRecoveries": 592
+  },
+  "failures": []
+}
