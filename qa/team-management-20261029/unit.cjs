@@ -1,4 +1,4 @@
-const fs=require('fs'),vm=require('vm'),a=require('assert/strict');const c={window:{}};const path=__dirname+'/management.js';if(fs.existsSync(path))vm.runInNewContext(fs.readFileSync(path,'utf8'),c);const E=c.window.GCC8_MANAGEMENT;a.ok(E,'persistent management engine must exist');
+const fs=require('fs'),vm=require('vm'),a=require('assert/strict');const c={window:{}};const path=__dirname+'/../../v8/ui/management.js';if(fs.existsSync(path))vm.runInNewContext(fs.readFileSync(path,'utf8'),c);const E=c.window.GCC8_MANAGEMENT;a.ok(E,'persistent management engine must exist');
 const roster=[{id:1,name:'Regular',regular:true,batting:true,bowling:false,band:'OPEN'},{id:2,name:'Depth',regular:false,batting:true,bowling:false,band:'MIDDLE'},{id:3,name:'Spinner',regular:true,batting:false,bowling:true,band:'TAIL'}];let seq=0;
 const fresh=()=>E.clean(null,'club:seed',roster,2008),match=(s,changes={},balls=120)=>E.applyMatch(s,{key:'R'+(++seq),year:2008,oppositionBalls:balls,players:roster.map(p=>({...p,selected:true,fit:100,injury:null,bowled:p.id===3?24:0,...changes[p.id]}))});
 let s=fresh();for(let i=0;i<3;i++)s=match(s,{1:{selected:false},2:{selected:false}});a.equal(E.concern(s.players[1]),'selection');a.equal(E.concern(s.players[2]),null);
@@ -11,9 +11,21 @@ s=E.decide(fresh(),1,'run');for(let i=0;i<3;i++)s=match(s,{1:{selected:false}});
 s=E.decide(fresh(),1,'batting');s=match(s,{1:{selected:false}});a.equal(s.players[1].promise.remaining,2);s=match(s);s=match(s,{1:{fit:60}});a.equal(s.players[1].promise.status,'broken');
 s=E.decide(fresh(),3,'bowling');s=match(s,{},40);a.equal(s.players[3].promise.remaining,2);s=match(s);s=match(s);a.equal(s.players[3].promise.status,'kept');
 s=fresh();for(let i=0;i<6;i++)s=match(s,{1:{selected:false}});a.equal(s.players[1].requested,true);s=E.decide(s,1,'move');a.equal(s.players[1].seekingMove,true);for(let i=0;i<10;i++)s=match(s);a.equal(s.players[1].requested,false);
-s=E.decide(fresh(),1,'rotation');a.throws(()=>E.decide(s,1,'rotation'));s=match(s,{1:{selected:false}});s=match(s,{1:{selected:false}});a.equal(s.players[1].omitted,0);s=match(s,{1:{selected:false}});a.equal(s.players[1].omitted,1);
+s=fresh();for(let i=0;i<3;i++)s=match(s,{1:{selected:false}});s=E.decide(s,1,'rotation');a.throws(()=>E.decide(s,1,'rotation'));s=match(s,{1:{selected:false}});s=match(s,{1:{selected:false}});a.equal(s.players[1].omitted,3);s=match(s,{1:{selected:false}});a.equal(s.players[1].omitted,4);
 let f={key:'unique',year:2008,oppositionBalls:120,players:roster.map(p=>({...p,selected:false}))};s=E.applyMatch(fresh(),f);a.equal(JSON.stringify(E.applyMatch(s,f)),JSON.stringify(s));
 s=E.decide(fresh(),1,'run');let n=E.clean(s,'club:seed',roster.slice(0,1),2009);a.equal(n.players[1].promise.status,'expired');a.equal(Object.keys(n.players).length,1);a.equal(n.players[1].trust,70);a.equal(E.clean(s,'different',roster,2008).players[1].promise,null);
 n=E.clean({version:1,identity:'club:seed',year:2008,players:{1:{trust:Infinity,omitted:-5,promise:{kind:'run',status:'active',remaining:0}}}},'club:seed',roster,2008);a.equal(n.players[1].omitted,0);a.ok(Number.isFinite(n.players[1].trust));a.equal(n.players[1].promise,null);
 s=fresh();for(let i=0;i<3;i++)s=match(s,{1:{selected:false}});s=E.decide(s,1,'rotation');const explainedTrust=s.players[1].trust;s=match(s,{1:{selected:false}});s=match(s,{1:{selected:false}});a.equal(s.players[1].trust,explainedTrust,'explained rotation pauses selection trust penalties');
 console.log('PASS management: selection, medical pauses, roles, short innings, promises, requests, recovery, cooldown, deduplication and migration');
+
+
+// A conversation responds to a real selection issue, once per omission spell.
+a.throws(()=>E.decide(fresh(),1,'rotation'),/selection concern/);
+s=fresh();for(let i=0;i<3;i++)s=match(s,{1:{selected:false}});const trustBefore=s.players[1].trust;s=E.decide(s,1,'rotation');a.equal(s.players[1].trust,trustBefore,'explanations do not grant free trust');
+for(let i=0;i<4;i++)s=match(s,{1:{selected:false}});a.throws(()=>E.decide(s,1,'rotation'),/already explained/);
+let saved=E.clean(JSON.parse(JSON.stringify(s)),'club:seed',roster,2008);a.throws(()=>E.decide(saved,1,'rotation'),/already explained/,'save restore cannot repeat explanation');
+s=match(s);for(let i=0;i<3;i++)s=match(s,{1:{selected:false}});a.doesNotThrow(()=>E.decide(s,1,'rotation'),'new omission spell can be explained');
+s=E.decide(s,1,'run');a.throws(()=>E.decide(s,1,'rotation'),/commitment/);
+console.log('PASS rotation concern gate, no trust farming, once per omission spell, persistence and active commitment guard');
+let legacy=fresh();legacy.players[1].omitted=3;legacy.players[1].lastTalk=0;legacy.players[1].available=5;legacy.players[1].grace=1;delete legacy.players[1].rotationExplained;
+legacy=E.clean(legacy,'club:seed',roster,2008);a.throws(()=>E.decide(legacy,1,'rotation'),/already explained/,'legacy saved explanation retains once-per-spell guard');

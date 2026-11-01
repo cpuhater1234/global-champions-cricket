@@ -1,0 +1,24 @@
+import assert from 'node:assert/strict';
+import {loadGame} from '../offline_game_host.mjs';
+import {startDraft,finishDraft,selectManualXI} from '../club-expansion-20261027/helpers.mjs';
+const h=loadGame('qa/perfection-20261030/candidate.html',101,new Map(),{strictIds:true}),X=h.context.GCC8,s=h.G.state;
+startDraft(h);finishDraft(h);selectManualXI(h);X.ui.view='team';
+const p=X.roster().find(p=>{const q=X.managementState().players[p.id];return q.batting&&q.bowling;});assert(p,'fixture has batting and bowling commitments');
+let before=JSON.stringify(s),html=X.managementPlayer(p);
+assert.equal(JSON.stringify(s),before,'view is read only');
+assert(html.includes('next three fully fit matches'),'run horizon shown before commitment');
+assert(html.includes('next two fit selections'),'batting horizon shown before commitment');
+assert(html.includes('at least 90 opposition balls'),'bowling opportunity shown before commitment');
+assert(html.includes('Medical absences pause'),'medical pause explained');
+for(const k of ['run','batting','bowling']){assert(html.includes(`aria-describedby="g8commitment-${p.id}-${k}"`));assert(html.includes(`id="g8commitment-${p.id}-${k}"`));}
+assert(!html.includes('Explain squad rotation'),'no irrelevant rotation action');
+let state=X.managementState(),q=state.players[p.id];q.omitted=q.regular?3:5;s.dynasty.v8Management=state;
+html=X.managementPlayer(p);assert(html.includes('Explain squad rotation'));
+const trust=q.trust;X.managementDecide(p.id,'rotation');
+html=X.managementPlayer(p);assert(html.includes('Rotation explained.'));assert(!html.includes('Explain squad rotation'));assert.equal(X.managementState().players[p.id].trust,trust);
+before=JSON.stringify(s);assert.throws(()=>X.managementDecide(p.id,'rotation'),/already explained/);assert.equal(JSON.stringify(s),before,'rejected action cannot mutate the career');
+X.managementDecide(p.id,'batting');html=X.managementPlayer(p);assert(!html.includes('aria-label="Make a commitment"'),'active promise replaces choices');assert(html.includes('next two fit selections'));
+s.dynasty.injuries[p.id]={status:'MANAGING',type:'calf tightness',roundsLeft:2};html=X.managementPlayer(p);assert(html.includes('Being managed medically pauses assessment'),'active promise explains medical pause');assert(X.managementBrief().includes('Paused during medical absence'),'selected managed player pause visible in squad summary');
+const saved=X.read.backupRaw(),copy=loadGame('qa/perfection-20261030/candidate.html',909,new Map(),{strictIds:true});assert(copy.context.GCC8.read.restoreBackup(saved));assert.equal(copy.context.GCC8.managementState().players[p.id].rotationExplained,true,'save retains conversation guard');
+assert.deepEqual(h.errors,[]);assert.deepEqual(copy.errors,[]);
+console.log('PASS visible commitment terms, described actions, relevant rotation, immutable rejection, active state and save restore');

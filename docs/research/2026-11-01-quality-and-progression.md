@@ -64,3 +64,33 @@ This is a useful completed step. The outstanding ratings work is real-life evide
 ## Recovered prior calibration work
 
 Repository review subsequently recovered `docs/GCC_V8_CALIBRATION_RELEASE_20261025.md`, `qa/calibration-20261024/model-contract.json`, `model.py` and `heldout-report.json`. They document the earlier9,422-match frozen dataset and a rejected context/opponent-adjusted replacement. Both recorded promotion gates are false. This is retrieved historical project evidence, not a fresh rerun. The small influence prototype in `qa/historical-blend-20261101` is a separately labelled guardrail experiment, not a promoted replacement and not included in GCC. Real evidence selection and double-count prevention remain prerequisites.
+
+
+## Second research pass: decision quality and sustained play
+
+Reviewed 1 November 2026. Primary sources, with GCC-specific interpretations kept separate from the source claims:
+
+| Resource | Source finding | GCC decision and check |
+| --- | --- | --- |
+| [Sports Interactive FM27 navigation notes](https://www.footballmanager.com/fm27/features/fm27-clearer-interface-smoother-navigation) | The developer describes reducing clicks, moving navigation to predictable menus, displaying reports directly and adapting layouts to screen size. These are developer intentions, not independent proof of player satisfaction. | Keep career navigation stable. Put actionable terms in the report itself. Test a complete return path, not an isolated card screenshot. Current 761px bench names are physically readable after the Build30 pane change. |
+| [Game Accessibility Guidelines: text formatting](https://gameaccessibilityguidelines.com/use-simple-clear-text-formatting/) | Clear fonts on unfussy backgrounds; for longer copy, mixed case, left alignment and generous line spacing. | Pending commitment terms use14px mixed-case text at1.5 line height on solid charcoal panels, with the related button in the same panel. Verify actual rendering and zoom before sign-off. |
+| [W3C action feedback pattern](https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p10-status-feedback/) | Actions should provide understandable, prompt status feedback; missing feedback leaves users unsure of the result. This is supplemental guidance, not a standalone conformance claim. | Existing command announcements remain. Active commitments explain why medical management pauses assessment. Conversations cannot silently reward repeated clicking. |
+| [Przybylski, Rigby and Ryan, 2010](https://selfdeterminationtheory.org/SDT/documents/2010_PrzybylskiRigbyRyan_ROGP.pdf) | Reviews a motivation model linking competence, autonomy and relatedness to engagement; usable controls support but do not alone establish enjoyable play. | Hypothesis: understandable, consequential squad choices support managerial agency better than routine trust farming. This is a design hypothesis requiring human playtesting, not a claim of validated GCC retention. |
+
+Do not treat a famous game's current UI as unquestionable. The FM27 notes describe changes to FM26's tile-heavy navigation, demonstrating why the underlying task flow matters more than copying a fashionable card system.
+
+### Pending implementation and boundaries
+
+Rotation explanations require an actual omission concern, give two omissions of breathing room once per continuous spell out of the XI, and grant no immediate trust. A healthy selection begins a new spell. Active commitments must be honoured first. Existing saved explanations are conservatively carried forward when the old omission/talk record indicates one; new saves store the explicit guard. Annual reset removes it.
+
+Commitment options describe the assessment horizon, nonselection consequence where relevant, medical pauses and bowling-innings threshold before choosing. Once active, the progress replaces further choices. Existing automatic bowling allocation is unchanged. Ordinary bowling tactics remain a separate unresolved design issue, not disguised as fixed.
+
+### Concrete quality gates for further passes
+
+1. Every important action can be found from its logical career screen. Record clicks, return context and keyboard focus.
+2. Every decision presents its scope, cost and consequence before committing. Rejected actions preserve state and explain the cause.
+3. Every reviewed screen is checked at desktop,761px and390px, plus zoom where relevant. No unreadable club colours, cut-off actions, floating labels or names broken into arbitrary fragments.
+4. Scores reconcile with deliveries, season records and career totals. Replay/refresh cannot apply a match twice. Injury recovery advances on each completed round and promises pause correctly.
+5. Progression and historical starting ratings have separate provenance and validation. No player becomes elite from one exceptional innings.
+6. Human tests must include a first-time draft, difficult selection decision, loss, injury, unmet promise, transfer, offseason and long-career return. Automated success is not evidence that these are enjoyable.
+7. Make ordinary events quieter than decisive events. Current mobile live dot-ball presentation merits a separate density/hierarchy review; this research pass does not change it.

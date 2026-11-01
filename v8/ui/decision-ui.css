@@ -715,3 +715,13 @@
  #g8app .gccuiSelection .gccuiSelectionGrid{display:block}
  #g8app .gccuiSelection .gccuiSelectionGrid[data-pane=xi]>.gccuiBench,#g8app .gccuiSelection .gccuiSelectionGrid[data-pane=squad]>.gccuiXI{display:none}
 }
+/* The decision and its terms stay together in the player conversation. */
+#g8dialog[data-prompt=player] .g8commitmentoptions,#g8dialog[data-prompt=player] .g8rotationconversation{margin:20px 0 0!important;padding-top:16px;border-top:1px solid #626262}
+#g8dialog[data-prompt=player] :is(.g8commitmentoptions,.g8rotationconversation) h4{margin:0 0 8px;font-size:16px;line-height:1.35;font-weight:800;color:#f2f0e9;text-transform:none;letter-spacing:normal}
+#g8dialog[data-prompt=player] :is(.g8commitmentoptions,.g8rotationconversation)>p{margin:0 0 12px!important;font-size:14px!important;line-height:1.5!important;color:#d0cec8}
+#g8dialog[data-prompt=player] .g8commitmentchoices{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px}
+#g8dialog[data-prompt=player] .g8commitmentchoice{min-width:0;background:#292929;border:1px solid #626262;border-radius:4px;padding:12px;display:flex;flex-direction:column;gap:10px}
+#g8dialog[data-prompt=player] .g8commitmentchoice>.g8button{width:100%;min-height:48px!important;padding:10px 12px!important;white-space:normal;font-size:14px!important;line-height:1.35!important}
+#g8dialog[data-prompt=player] .g8commitmentchoice>p{margin:0!important;font-size:14px!important;line-height:1.5!important;text-align:left;color:#e0ded7}
+#g8dialog[data-prompt=player] .g8commitmentpause{margin-top:12px!important}
+#g8dialog[data-prompt=player] .g8rotationconversation>.g8button{min-height:44px!important;margin:0 0 12px}
