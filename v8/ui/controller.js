@@ -33,6 +33,7 @@
   const replacing=dialog.open,previousKey=ui.modal,previousTitle=document.getElementById('g8dialogTitle')?.textContent;if(!replacing)dialogOpener=document.activeElement;
   clock.pause();ui.modal=key;dialog.dataset.prompt=key;dialog.dataset.layout=['fresh','draftComplete','listReview','release','finalCut','tradeReview'].includes(key)?'prompt':'detail';
   content.innerHTML=`<header class="g8modalhead"><div><span class="g8eyebrow">GLOBAL CHAMPIONS CRICKET</span><h2 id="g8dialogTitle">${esc(title)}</h2></div><button type="button" class="g8dialogclose" data-action="close" data-args="[]" aria-label="${esc('Close '+title)}">×</button></header><div class="g8modalbody"><div id="g8dialogFeedback" class="g8notice" role="status" hidden></div>${body}</div>`;
+  if(key==='player'){const reportViews=content.querySelector('.gccuiProfileViews'),reportHead=content.querySelector('.g8modalhead');if(reportViews&&reportHead){reportHead.classList.add('gccuiProfileHead');reportHead.append(reportViews);}}
   document.getElementById('g8feedback').hidden=true;if(!dialog.open)dialog.showModal();X.accessibleTables(content);if(replacing)content.querySelector('button:not(:disabled),input:not(:disabled),select:not(:disabled)')?.focus({preventScroll:true});if(!replacing||previousKey!==key||previousTitle!==title||['how','howItWorks','breakawayStory'].includes(key))dialog.scrollTop=0;
  }
  function closeUtilityMenu(focus=false){const menu=hud.querySelector('.g8utilitymenu');if(menu?.open){menu.open=false;if(focus)menu.querySelector('summary')?.focus();}}
