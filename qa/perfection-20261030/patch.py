@@ -129,6 +129,10 @@ rep(19," bind('inspect','*',inspect);", " bind('playerTab','*',tab=>{assert(ui.m
 # Keep report navigation with the existing sticky modal heading, avoiding a
 # hard-coded pixel offset for long player names or wrapped narrow view buttons.
 rep(19,"document.getElementById('g8feedback').hidden=true;if(!dialog.open)", "if(key==='player'){const reportViews=content.querySelector('.gccuiProfileViews'),reportHead=content.querySelector('.g8modalhead');if(reportViews&&reportHead){reportHead.classList.add('gccuiProfileHead');reportHead.append(reportViews);}}\n  document.getElementById('g8feedback').hidden=true;if(!dialog.open)")
+# Guide actions use the existing approved cricket glyphs and share an icon gutter.
+rep(11,"retainXI:'shirt-sport'};","retainXI:'shirt-sport',how:'stumps',howItWorks:'cricket-ball',breakawayStory:'book'};")
+rep(19,'They bring their colours, their grounds and their supporters.','They bring their colours and their grounds.')
+rep(19,'if(!replacing)dialogOpener=document.activeElement;',"if(!replacing)dialogOpener=document.activeElement?.closest?.('.g8utilitymenu')?.querySelector('summary')||document.activeElement;")
 parts[18]+='\n'+(root/'v8/ui/decision-ui.js').read_text()
 for i in (9,10,11,12,16,17,19):
  path=root/('v8/engine/'+('foundation.js' if i==9 else 'dynasty.js')) if i in (9,10) else root/('v8/ui/'+{11:'components.js',12:'cricket-reads.js',16:'career.js',17:'screens.js',19:'controller.js'}[i]);path.write_text(parts[i])

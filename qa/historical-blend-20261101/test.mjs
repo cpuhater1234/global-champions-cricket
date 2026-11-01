@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {blend} from './prototype.mjs';
+const prior={rating:70,age:19,careerBalls:0,evidenceIds:[]},hundred={id:'debut',matchId:'debut-match',date:'2007-12-01',balls:60,estimatedAbility:99,reliability:1,source:'verified-scorecard'};
+const rookie=blend(prior,[hundred],'2007-12-31');assert(rookie.rating<=70.5);assert(rookie.rating<99);
+const veteran=blend({...prior,rating:85,age:33,careerBalls:12000},[hundred],'2007-12-31');assert(veteran.adjustment<rookie.adjustment);assert(veteran.adjustment<0.1);
+const sustained=blend(prior,Array.from({length:20},(_,i)=>({...hundred,id:'match'+i,matchId:'match'+i,estimatedAbility:82})),'2007-12-31');assert(sustained.rating>rookie.rating);assert(sustained.adjustment<=3);
+assert.equal(blend(prior,[],'2007-12-31').rating,70);
+assert.throws(()=>blend(prior,[hundred,hundred],'2007-12-31'),/Duplicate/);
+assert.throws(()=>blend({...prior,evidenceIds:['debut']},[hundred],'2007-12-31'),/already/);
+assert.throws(()=>blend(prior,[{...hundred,date:'2008-01-01'}],'2007-12-31'),/cutoff/);
+assert.throws(()=>blend(prior,[{...hundred,estimatedAbility:NaN}],'2007-12-31'),/Invalid/);
+const low=blend(prior,[{...hundred,reliability:0}],'2007-12-31');assert.equal(low.rating,70);
+assert.throws(()=>blend(prior,[hundred,{...hundred,id:'other-phase'}],'2007-12-31'),/match/);
+assert.throws(()=>blend(prior,[{...hundred,date:'2007-02-31'}],'2007-12-31'),/Invalid/);
+assert.throws(()=>blend(prior,[hundred],'2007-02-31'),/Invalid/);
+console.log(JSON.stringify({status:'prototype only, not connected to game',rookie,veteran,sustained},null,2));

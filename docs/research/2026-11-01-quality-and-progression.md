@@ -60,3 +60,7 @@ No evidence after the chosen historical cutoff; correct player identities; expli
 Player reports now derive and display GCC career totals alongside the latest season, with optional career batting average, strike rate and economy. Aggregation deduplicates the live season if it has already been archived. It follows the player across clubs and uses GCC records only. It does not mutate statistics, ratings, RNG or saves.
 
 This is a useful completed step. The outstanding ratings work is real-life evidence calibration at the starting career stage. No simulated-performance permanent-development change is requested or planned on the basis of this investigation.
+
+## Recovered prior calibration work
+
+Repository review subsequently recovered `docs/GCC_V8_CALIBRATION_RELEASE_20261025.md`, `qa/calibration-20261024/model-contract.json`, `model.py` and `heldout-report.json`. They document the earlier9,422-match frozen dataset and a rejected context/opponent-adjusted replacement. Both recorded promotion gates are false. This is retrieved historical project evidence, not a fresh rerun. The small influence prototype in `qa/historical-blend-20261101` is a separately labelled guardrail experiment, not a promoted replacement and not included in GCC. Real evidence selection and double-count prevention remain prerequisites.

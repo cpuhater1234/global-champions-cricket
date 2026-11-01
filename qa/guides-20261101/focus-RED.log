@@ -1,0 +1,83 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: guide returns focus to visible menu summary
++ actual - expected
+... Skipped lines
+
+  Element {
+    _html: '',
+    attributes: {},
+    children: [],
+    classList: {
+...
+    className: '',
++   closest: [Function (anonymous)],
+    dataset: {},
+    disabled: false,
+    hidden: false,
++   id: 'fixture-guide-trigger',
+-   id: 'fixture-menu-summary',
+    style: {
+      removeProperty: [Function: removeProperty],
+      setProperty: [Function: setProperty]
+    },
+    textContent: '',
+
+    at file:///workspace/scratch/8b1dd7a852d5/qa/guides-20261101/contracts.mjs:4:222
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: Element {
+    id: 'fixture-guide-trigger',
+    dataset: {},
+    children: [],
+    attributes: {},
+    hidden: false,
+    disabled: false,
+    value: '',
+    _html: '',
+    textContent: '',
+    className: '',
+    style: {
+      setProperty: [Function: setProperty],
+      removeProperty: [Function: removeProperty]
+    },
+    classList: {
+      contains: [Function: contains],
+      add: [Function: add],
+      remove: [Function: remove],
+      toggle: [Function: toggle]
+    },
+    closest: [Function (anonymous)]
+  },
+  expected: Element {
+    id: 'fixture-menu-summary',
+    dataset: {},
+    children: [],
+    attributes: {},
+    hidden: false,
+    disabled: false,
+    value: '',
+    _html: '',
+    textContent: '',
+    className: '',
+    style: {
+      setProperty: [Function: setProperty],
+      removeProperty: [Function: removeProperty]
+    },
+    classList: {
+      contains: [Function: contains],
+      add: [Function: add],
+      remove: [Function: remove],
+      toggle: [Function: toggle]
+    }
+  },
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.22.1

@@ -1,0 +1,24 @@
+{
+  "status": "prototype only, not connected to game",
+  "rookie": {
+    "rating": 70.5,
+    "adjustment": 0.5,
+    "priorWeight": 600,
+    "effectiveNewBalls": 60,
+    "observationsUsed": 1
+  },
+  "veteran": {
+    "rating": 85.05970149253731,
+    "adjustment": 0.05970149253731449,
+    "priorWeight": 12000,
+    "effectiveNewBalls": 60,
+    "observationsUsed": 1
+  },
+  "sustained": {
+    "rating": 73,
+    "adjustment": 3,
+    "priorWeight": 600,
+    "effectiveNewBalls": 1200,
+    "observationsUsed": 20
+  }
+}
