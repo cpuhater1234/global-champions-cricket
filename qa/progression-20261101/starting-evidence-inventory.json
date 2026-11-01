@@ -1,0 +1,92 @@
+{
+  "scope": "269 authored foundation and expansion records before runtime biography/skill corrections; metadata is not proof of source calibration",
+  "players": 269,
+  "sources": {
+    "cricsheet-calibrated-v653": 186,
+    "historical-t20-scorecard-v655": 61,
+    "format-transfer-numeric-v655": 21,
+    "supported-prior-v655": 1
+  },
+  "confidenceBands": {
+    "MEDIUM": 59,
+    "LOW": 72,
+    "VERY_LOW": 137,
+    "SUPPORTED_PRIOR": 1
+  },
+  "auditStatuses": {
+    "evidence-backed-medium": 56,
+    "evidence-backed-low": 63,
+    "evidence-backed-very_low": 67,
+    "external-t20-scorecard-evidence": 61,
+    "external-format-transfer-support": 21,
+    "historically-supported-prior": 1
+  },
+  "evidenceYearsAfter2008": [],
+  "missingEvidenceYears": [],
+  "examples": [
+    {
+      "name": "MS Dhoni",
+      "entryYear": 2008,
+      "bat": 84,
+      "bowl": 13,
+      "overall": 89,
+      "ratingEvidenceYears": [
+        2008,
+        2007,
+        2006
+      ],
+      "ratingCoreConfidence": {
+        "bat": 0.404,
+        "bowl": 0.0
+      },
+      "ratingAuditStatus": "evidence-backed-medium"
+    },
+    {
+      "name": "Ricky Ponting",
+      "entryYear": 2008,
+      "bat": 85,
+      "bowl": 27,
+      "overall": 87,
+      "ratingEvidenceYears": [
+        2008,
+        2007,
+        2006
+      ],
+      "ratingCoreConfidence": {
+        "bat": 0.189,
+        "bowl": 0.0
+      },
+      "ratingAuditStatus": "evidence-backed-low"
+    },
+    {
+      "name": "Virat Kohli",
+      "entryYear": 2008,
+      "bat": 68,
+      "bowl": 28,
+      "overall": 72,
+      "ratingEvidenceYears": [
+        2008
+      ],
+      "ratingCoreConfidence": {
+        "bat": 0.207,
+        "bowl": 0.081
+      },
+      "ratingAuditStatus": "evidence-backed-low"
+    },
+    {
+      "name": "Shane Warne",
+      "entryYear": 2008,
+      "bat": 38,
+      "bowl": 89,
+      "overall": 88,
+      "ratingEvidenceYears": [
+        2008
+      ],
+      "ratingCoreConfidence": {
+        "bat": 0.09,
+        "bowl": 0.375
+      },
+      "ratingAuditStatus": "evidence-backed-medium"
+    }
+  ]
+}

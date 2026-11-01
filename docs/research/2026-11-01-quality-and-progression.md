@@ -1,4 +1,9 @@
-# GCC quality and player progression investigation
+# GCC quality and historical rating calibration investigation
+
+## Corrected scope, confirmed by Tom
+
+Real-life performances should modestly influence starting player ratings alongside the other inputs, interpreted against career stage. Simulated GCC performances driving permanent ability was a misunderstanding and is not the requested feature. The simulated career-record display remains a separate statistics improvement.
+
 
 ## What the source actually does
 
@@ -29,33 +34,29 @@ A consistent spacing and typography scale; aligned panel and table edges; club c
 
 The current cascade contains repeated overrides from earlier visual revisions. Continue moving each reviewed component toward an authoritative style block rather than layering unrelated fixes across the whole app. Refactor only with parity and render checks. A wholesale rewrite would put verified game behaviour at risk.
 
-## Required permanent-performance model
+## Historical evidence calibration specification
 
-This is the remaining implementation specification, not a claim of a shipped model.
+1. Identify each player's real-life record at the intended game-start reference period. Later-career reputation must not inflate the young starting version of a player. Record the exact cutoff, competition and match scope for reproducibility.
+2. Preserve authored career-stage ability as the prior. Blend a modest adjustment supported by real performances rather than replacing the rating with raw averages or all-time totals.
+3. Weight recent relevant T20 evidence more strongly while retaining broader career evidence. Where T20 samples are sparse, retain a conservative prior and clearly lower confidence. Other-format evidence needs separate, justified weighting.
+4. Adjust for opportunity, role, competition strength, match context and sample size. Separate batting and bowling evidence. Do not infer keeping or fielding ability from dismissals without opportunity data.
+5. Distinguish established players, emerging players and late-career players. Do not equate little evidence with poor ability or potential with already realised skill. Ageing effects must not be applied twice.
+6. Store provenance, sample sizes, evidence period, prior, proposed adjustment, final attribute and confidence. Identity sources alone do not support numeric ability claims.
+7. Review a representative calibration set across roles, ages, countries and evidence coverage before changing all players. Compare the existing and proposed ratings and simulated role outcomes. Keep the influence modest and test sensitivity to the evidence weights.
+8. Recompute overall from the resulting attributes. Apply changes to newly created careers under a versioned calibration, preserving existing saved current abilities and stored futures unless Tom requests a migration.
 
-1. Preserve distinct layers: historical/model prior, permanent learned ability, temporary form, fitness, and suitability for the selected role.
-2. Gather evidence from all clubs under the same rules. Use stable player identity, exact season, batting/bowling opportunity, innings phase, opponent ability, ground/conditions, and chase state where supported.
-3. Estimate separate batting scoring/survival and bowling wicket/control contributions. Bowling analysis must exclude run-outs from bowler wickets and use legal balls correctly. Do not infer wicketkeeping skill solely from catches or stumpings without opportunity information.
-4. Use priors and explicit uncertainty so short samples stay close to the prior. No innings, did not bat, injury absence and non-selection must not be treated as failed performance.
-5. Allow sustained evidence to change relevant attributes gradually, with age/development trajectory retained. Recompute overall from attributes. Bound changes and calibrate those bounds through simulations, rather than choosing attractive-looking numbers.
-6. Avoid circular reinforcement: results already depend on ability. Assess performance relative to an expectation that accounts for that ability and context. Merely rewarding top totals would compound initial advantages.
-7. Apply a completed-season update exactly once, deterministically. Store model version, consumed evidence year and adjustment separately from frozen baseline trajectories. Loading a career must not reroll or reapply development. Old saves need an explicit migration rule.
-8. Show the user the actual cause and time period of changes, including whether a change comes from ageing, established career development or sustained GCC performance. Do not promise a causal explanation the model cannot substantiate.
+## Existing evidence metadata audit
 
-## Tests required before integrating that model
+The 269 authored foundation/expansion records already include `ratingSource`, `ratingEvidenceYears`, core confidence and audit status fields. Several examples explicitly have low confidence. The inventory in `qa/progression-20261101/starting-evidence-inventory.json` records their distribution. These are metadata claims, not independent verification of the original underlying match statistics or weighting formula. The game also has subsequent profile and runtime corrections; the inventory is not a complete final-runtime rating audit.
 
-- Same opportunity/context with better performance moves the relevant estimate in the expected direction.
-- One exceptional innings cannot cause a large permanent jump; a sustained multi-season trend has more influence.
-- Finishers, openers, part-time bowlers and frontline bowlers are assessed against appropriate opportunities.
-- Injured, benched and did-not-bat players are not penalised as if they performed badly.
-- Stronger opposition and harder conditions do not create systematic punishment.
-- User and CPU receive identical calculations; no hidden future trajectory is exposed through scouting.
-- Replays, repeated review, reload and migration do not duplicate statistics or rating changes.
-- Multi-seed 2008–2026 distributions remain plausible by age and role, with no runaway 99-rating inflation or collapse.
-- Evaluate historical inputs against held-out real T20 data, separately from testing the internally consistent alternate-history simulation.
+The ICC's [rankings explanation](https://www.icc-cricket.com/rankings/faqs) supports considering career evidence with greater recent weight and opponent/context effects. Its ranking points should not be copied directly into GCC's attribute scale, and its keeper caveat is relevant: dismissals depend on chances created by others.
+
+## Required checks
+
+No evidence after the chosen historical cutoff; correct player identities; explicit missing-data handling; small-sample stability; separate batting/bowling contributions; career-stage plausibility; modest bounded influence; overall/attribute consistency; new-save versioning; existing-save preservation; sensitivity tests and multi-seed simulation comparisons.
 
 ## Changes prepared in this pass
 
 Player reports now derive and display GCC career totals alongside the latest season, with optional career batting average, strike rate and economy. Aggregation deduplicates the live season if it has already been archived. It follows the player across clubs and uses GCC records only. It does not mutate statistics, ratings, RNG or saves.
 
-This is a useful completed step. The permanent performance-to-ability link remains a substantive outstanding requirement. It has not been replaced by an uncalibrated bonus formula.
+This is a useful completed step. The outstanding ratings work is real-life evidence calibration at the starting career stage. No simulated-performance permanent-development change is requested or planned on the basis of this investigation.

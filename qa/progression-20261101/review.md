@@ -1,5 +1,8 @@
 # Progression and career-record audit
 
+Scope correction: Tom clarified that the requested rating influence is real-life performance evidence at the starting career stage. Simulated GCC performance driving permanent development was an assistant misunderstanding. The source finding below remains technically accurate but is not a defect against the clarified requirement. See the corrected research specification and starting-evidence inventory.
+
+
 Primary-source research and the outstanding performance-development specification are in docs/research/2026-11-01-quality-and-progression.md.
 
 Build 27 adds season and accumulated career records to player reports, plus batting average, strike rate and economy in an optional disclosure. These are league-wide GCC records across clubs, not real-world career statistics. Latest season remains labelled separately. No hidden career forecasts are read.
@@ -10,4 +13,4 @@ Only presentation script 18 differs from Build 26; all engine and save scripts a
 
 Build 26 was checked in Chrome: ladder club alignment is left and row fills are rgb40/rgb48 neutral charcoal; current player stats include the first 2012 fixture.
 
-Important outstanding requirement: permanent ability is not driven by performances in the save. Source tracing and independent review confirm that annual application uses stored outcome baselines/offsets, while results update temporary form. No new permanent-rating formula was shipped in this pass. Historical numeric calibration, performance model validation, complete frontend state coverage and remaining visual defects are still open.
+Superseded interpretation: permanent ability is not driven by performances in the save. Source tracing and independent review confirm that annual application uses stored outcome baselines/offsets, while results update temporary form. No new permanent-rating formula was shipped in this pass. Historical numeric calibration, performance model validation, complete frontend state coverage and remaining visual defects are still open.
