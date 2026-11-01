@@ -647,3 +647,7 @@
 #g8dialog[data-prompt=player] .gccuiProfilePanel .g8concernreason{background:#2d2d2d!important;border-left:3px solid #ed7547!important}
 #g8dialog[data-prompt=player] .gccuiProfilePanel .g8commitment.active{background:#292929!important;border-color:#6c6c6c!important;border-left:3px solid var(--club-accent,#cf9b54)!important;color:#f1eee6!important}
 @media(max-width:600px){#g8dialog[data-prompt=player] .gccuiProfileHead{padding:10px 12px!important;gap:10px 8px!important}#g8dialog[data-prompt=player] .gccuiProfileHead h2{font-size:20px!important}#g8dialog[data-prompt=player] .g8scoutsummary>.g8nameandrating{grid-template-columns:minmax(0,1fr) 58px!important;gap:10px!important}#g8dialog[data-prompt=player] .gccuiDossierRating{min-width:0}#g8dialog[data-prompt=player] .g8scoutsummary h3{font-size:16px!important}#g8dialog[data-prompt=player] .gccuiDossierRating>strong{font-size:30px}}
+/* Legacy record panels retain a pale fill unless both container and stat cells are themed. */
+#g8dialog[data-prompt=player] .g8gccrecord{background:#282828!important;color:#f1f1f1!important;border:1px solid #626262!important}
+#g8dialog[data-prompt=player] .g8recordstats>div{background:#333!important;color:#f1f1f1!important;border:1px solid #626262!important}
+#g8dialog[data-prompt=player] .g8gccrecord :is(h3,.g8recordyear,.g8recordempty,.g8recordstats span){color:#e2e2e2!important}
