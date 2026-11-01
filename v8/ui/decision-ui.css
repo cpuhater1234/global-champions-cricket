@@ -689,3 +689,19 @@
 #g8dialog .g8guidefooter nav .g8button,#g8hud .g8utilitymenu>div>.g8button{display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:10px!important;min-height:44px!important}
 #g8dialog[data-prompt=prepare] .g8previewvenue>.g8eyebrow{justify-content:flex-start!important;text-align:left!important}
 @media(max-width:600px){#g8dialog .g8guideintro>h3{font-size:21px!important}#g8dialog .g8guideintro,#g8dialog .g8guidecard{padding:14px!important}}
+/* Archive scorebooks: four readable columns, neutral rows and a stable name edge. */
+#g8dialog[data-prompt=archiveSeason] .gccuiArchiveSeasonSummary{margin:0 0 12px!important;line-height:1.5;font-size:15px}
+#g8dialog[data-prompt=archiveSeason] .gccuiArchiveTable{padding:0!important;border:1px solid #626262!important;border-radius:4px;background:#282828!important}
+#g8dialog[data-prompt=archiveSeason] .g8table{width:100%!important;min-width:0!important;table-layout:fixed!important;margin:0!important}
+#g8dialog[data-prompt=archiveSeason] .g8table caption{text-align:left!important;padding:12px!important;font-size:13px!important;line-height:1.5!important;font-weight:800!important;color:#eee!important}
+#g8dialog[data-prompt=archiveSeason] .g8table :is(th,td){padding:12px 10px!important;border-color:#555!important;color:#f1f1f1!important;white-space:normal!important;overflow-wrap:normal!important;font-size:14px!important;line-height:1.4!important;font-variant-numeric:tabular-nums}
+#g8dialog[data-prompt=archiveSeason] .g8table thead th{background:#3c3c3c!important;font-size:12px!important}
+#g8dialog[data-prompt=archiveSeason] .g8table tbody tr:nth-child(odd){background:#282828!important}
+#g8dialog[data-prompt=archiveSeason] .g8table tbody tr:nth-child(even){background:#303030!important}
+#g8dialog[data-prompt=archiveSeason] .g8table tbody :is(th,td){background:transparent!important}
+#g8dialog[data-prompt=archiveSeason] .g8table :is(th,td):first-child{width:46%!important;text-align:left!important;font-weight:700!important}
+#g8dialog[data-prompt=archiveSeason] .g8table :is(th,td):not(:first-child){width:18%!important;text-align:center!important}
+#g8dialog[data-prompt=player] .g8gccrecord>h3{justify-content:flex-start!important;text-align:left!important;font-size:17px!important;font-style:normal!important;text-transform:none!important}
+#g8dialog[data-prompt=player] .g8gccrecord>.g8recordyear,#g8dialog[data-prompt=player] .gccuiCareerRates{text-align:left!important}
+@media(max-width:600px){#g8dialog[data-prompt=archiveSeason] .g8table :is(th,td){padding:11px 4px!important}#g8dialog[data-prompt=archiveSeason] .g8table thead th{font-size:11px!important;letter-spacing:0!important}#g8dialog[data-prompt=archiveSeason] .g8modalbody{padding:12px!important}}
+#g8dialog[data-prompt=archiveSeason] .g8table tbody th[scope=row]{text-transform:none!important;letter-spacing:normal!important}

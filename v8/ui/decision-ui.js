@@ -109,3 +109,11 @@
   return `<section class="g8gccrecord"><h3>${X.icon('cricket-ball')}GCC record</h3><span class="g8recordyear">${latest.year} season${latest.year!==s.year?' · most recent':''}</span>${tiles([['Matches',st.matches||0],['Runs',st.runs||0],['Wickets',st.wickets||0]])}<span class="g8recordyear gccuiCareerLabel">GCC career · ${span}</span>${tiles([['Matches',t.matches],['Runs',t.runs],['Wickets',t.wickets]])}<details class="gccuiCareerRates"><summary>Career averages & scoring</summary>${tiles([['Batting average',t.outs?(t.runs/t.outs).toFixed(2):'–'],['Strike rate',t.balls?(100*t.runs/t.balls).toFixed(1):'–'],['Economy',t.bowlBalls?(6*t.runsConceded/t.bowlBalls).toFixed(2):'–']])}<p class="g8fine">GCC matches only. Batting average uses dismissals; economy uses legal bowling balls.</p></details></section>`;
  };
 })();
+/* Archived club records use the saved season ledger, never current roster totals. */
+(()=>{
+ const X=window.GCC8;
+ X.archiveSeasonBody=h=>{
+  const stats=Object.entries(h.userPlayerStats||{}).sort((a,b)=>Number(b[1].runs||0)-Number(a[1].runs||0));
+  return `<p class="gccuiArchiveSeasonSummary">${X.esc(h.wins)} wins · ${X.esc(h.losses)} losses · League position ${X.esc(h.userPosition)}</p><div class="g8tablewrap gccuiArchiveTable"><table class="g8table"><caption>${X.esc(h.year)} · Club player records</caption><thead><tr>${['Player','Matches','Runs','Wickets'].map(label=>`<th scope="col">${label}</th>`).join('')}</tr></thead><tbody>${stats.length?stats.map(([id,t])=>`<tr><th scope="row">${X.esc(X.G.byId(Number(id))?.name||id)}</th><td>${Number(t.matches||0)}</td><td>${Number(t.runs||0)}</td><td>${Number(t.wickets||0)}</td></tr>`).join(''):'<tr><td colspan="4">No player records were saved for this season.</td></tr>'}</tbody></table></div>`;
+ };
+})();
