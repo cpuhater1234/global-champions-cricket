@@ -1,0 +1,14 @@
+{
+  pass: true,
+  player: 'MS Dhoni',
+  archivedSeasonRuns: 347,
+  careerRunsWithCurrent: 347,
+  crossYearExample: { player: 'Matt Prior', previous: 236, current: 59, total: 295 },
+  checks: [
+    'live match totals',
+    'archive current-year deduplication',
+    'season boundary',
+    'current plus archived totals',
+    'save restore'
+  ]
+}

@@ -671,3 +671,7 @@
 #g8app .gccuiCareer .g8annualdevelopment .g8developmentrow .g8developmentidentity{min-width:0}
 #g8app .gccuiCareer .g8annualdevelopment .g8developmentoverall{font-size:20px!important;white-space:nowrap!important}
 @media(max-width:900px){#g8app .gccuiCareer .g8annualdevelopment .g8development{grid-template-columns:minmax(0,1fr)}#g8app .gccuiCareer .g8annualhero{padding:16px!important}#g8app .gccuiCareer .g8annualhero>h2{font-size:22px!important}}
+#g8dialog[data-prompt=player] .gccuiCareerLabel{margin-top:18px!important;padding-top:12px;border-top:1px solid #626262;font-weight:800}
+#g8dialog[data-prompt=player] .gccuiCareerRates{margin-top:12px;border-top:1px solid #626262;padding-top:12px}
+#g8dialog[data-prompt=player] .gccuiCareerRates>summary{min-height:44px;display:list-item;padding:10px 0;font-size:14px;line-height:1.5;font-weight:800;cursor:pointer}
+#g8dialog[data-prompt=player] .gccuiCareerRates .g8fine{margin:10px 0 0!important;font-size:13px!important;line-height:1.5!important;color:#ddd!important}

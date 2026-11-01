@@ -89,3 +89,23 @@
  };
 
 })();
+/* Career records are derived from completed seasons plus the live ledger.
+   A current season already archived is counted once. No rating or save mutation. */
+(()=>{
+ const X=window.GCC8,s=X.G.state;
+ X.playerCareerRecord=p=>{
+  const years=new Map();
+  for(const h of s.dynasty?.history||[])if(Number(h.playerStats?.[p.id]?.matches)>0)years.set(Number(h.year),h.playerStats[p.id]);
+  const live=s.playerSeasonStats?.[p.id];if(Number(live?.matches)>0)years.set(Number(s.year),live);
+  const totals=Object.fromEntries(['matches','innings','runs','balls','outs','fours','sixes','wickets','bowlBalls','runsConceded'].map(k=>[k,0]));
+  for(const st of years.values())for(const k of Object.keys(totals))totals[k]+=Number(st[k]||0);
+  const ordered=[...years.keys()].sort((a,b)=>a-b),last=ordered.at(-1);
+  return {totals,years:ordered,latest:last==null?null:{year:last,stats:years.get(last)}};
+ };
+ X.playerRecord=p=>{
+  const {totals:t,years,latest}=X.playerCareerRecord(p),tiles=rows=>`<div class="g8recordstats">${rows.map(([label,value])=>`<div><strong>${X.esc(value)}</strong><span>${X.esc(label)}</span></div>`).join('')}</div>`;
+  if(!latest)return `<section class="g8gccrecord"><h3>${X.icon('cricket-ball')}GCC record</h3><p class="g8recordempty">No GCC appearances recorded.</p></section>`;
+  const st=latest.stats,span=years.length===1?String(years[0]):`${years[0]}–${years.at(-1)}`;
+  return `<section class="g8gccrecord"><h3>${X.icon('cricket-ball')}GCC record</h3><span class="g8recordyear">${latest.year} season${latest.year!==s.year?' · most recent':''}</span>${tiles([['Matches',st.matches||0],['Runs',st.runs||0],['Wickets',st.wickets||0]])}<span class="g8recordyear gccuiCareerLabel">GCC career · ${span}</span>${tiles([['Matches',t.matches],['Runs',t.runs],['Wickets',t.wickets]])}<details class="gccuiCareerRates"><summary>Career averages & scoring</summary>${tiles([['Batting average',t.outs?(t.runs/t.outs).toFixed(2):'–'],['Strike rate',t.balls?(100*t.runs/t.balls).toFixed(1):'–'],['Economy',t.bowlBalls?(6*t.runsConceded/t.bowlBalls).toFixed(2):'–']])}<p class="g8fine">GCC matches only. Batting average uses dismissals; economy uses legal bowling balls.</p></details></section>`;
+ };
+})();
