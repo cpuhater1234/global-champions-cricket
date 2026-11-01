@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import {loadGame} from '../offline_game_host.mjs';
+import {startDraft,finishDraft,selectManualXI,closeSeason} from '../club-expansion-20261027/helpers.mjs';
+const h=loadGame('qa/perfection-20261030/candidate.html',101,new Map(),{strictIds:true}),X=h.context.GCC8,s=h.G.state;
+startDraft(h);finishDraft(h);selectManualXI(h);h.G.startSeason();
+for(let i=0;i<14;i++){selectManualXI(h);h.G.playNextRound();}closeSeason(h);h.context.Dynasty.beginOffseason();X.ui.view='dynasty';
+const ps=X.roster().filter(p=>!p.dynastyReplacement&&!p.dynastyRetired);assert(ps.length>=3);
+let q=X.managementState();for(const p of Object.values(q.players)){p.requested=false;p.omitted=0;p.mismatch=0;p.underused=0;p.promise=null;}
+q.players[ps[0].id].requested=true;q.players[ps[1].id].promise={kind:'run',status:'active',remaining:3,required:3,fulfilled:0};s.dynasty.v8Management=q;
+s.dynasty.injuries[ps[2].id]={status:'OUT',type:'calf tightness',roundsLeft:2};
+let before=JSON.stringify(s),html=X.offseasonMarket();assert.equal(JSON.stringify(s),before,'overview cannot mutate the squad');
+assert(html.includes('aria-label="Selection decisions"'),'offseason overview surfaces relationship decisions');
+assert(html.includes('Wants a move'));assert(html.includes('3 fit matches remaining'));assert(html.includes('OUT · calf tightness'));
+assert(!html.includes('Your core stays together.'),'avoid reassurance which ignores player concerns');
+assert(html.includes('Manage players'));assert(html.includes('Review player'),'concerns link directly to their report');
+q=X.managementState();for(const p of Object.values(q.players)){p.requested=false;p.promise=null;}s.dynasty.v8Management=q;s.dynasty.injuries={};
+html=X.offseasonMarket();assert(!html.includes('aria-label="Selection decisions"'),'quiet offseason needs no empty decision panel');
+assert.deepEqual(h.errors,[]);console.log('PASS offseason decisions, direct report actions, medical context, immutable rendering and quiet empty state');

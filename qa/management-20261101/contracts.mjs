@@ -10,7 +10,7 @@ assert(html.includes('next three fully fit matches'),'run horizon shown before c
 assert(html.includes('next two fit selections'),'batting horizon shown before commitment');
 assert(html.includes('at least 90 opposition balls'),'bowling opportunity shown before commitment');
 assert(html.includes('Medical absences pause'),'medical pause explained');
-for(const k of ['run','batting','bowling']){assert(html.includes(`aria-describedby="g8commitment-${p.id}-${k}"`));assert(html.includes(`id="g8commitment-${p.id}-${k}"`));}
+for(const k of ['run','batting','bowling']){assert(html.includes(`aria-describedby="g8commitment-${p.id}-${k}"`));assert(html.includes(`id="g8commitment-${p.id}-${k}"`));assert(html.indexOf(`id="g8commitment-${p.id}-${k}"`)<html.indexOf(`aria-describedby="g8commitment-${p.id}-${k}"`),'terms precede the action in reading order');}
 assert(!html.includes('Explain squad rotation'),'no irrelevant rotation action');
 let state=X.managementState(),q=state.players[p.id];q.omitted=q.regular?3:5;s.dynasty.v8Management=state;
 html=X.managementPlayer(p);assert(html.includes('Explain squad rotation'));
