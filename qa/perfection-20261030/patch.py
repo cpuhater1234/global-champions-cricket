@@ -158,7 +158,7 @@ rep(19,"inspect(id);});\n bind('managePlayer'", "inspect(id,'management');});\n 
 rep(19," bind('inspect','*',inspect);", " bind('playerTab','*',tab=>{assert(ui.modal==='player'&&['overview','skills','management'].includes(tab),'Open a player report first.');if(tab==='management')assert(!!X.managementPlayer(G.byId(ui.selectedPlayer)),'Management is available for your squad.');inspect(ui.selectedPlayer,tab);document.getElementById('gccuiProfileView-'+tab)?.focus({preventScroll:true});});\n bind('inspect','*',inspect);")
 # Keep report navigation with the existing sticky modal heading, avoiding a
 # hard-coded pixel offset for long player names or wrapped narrow view buttons.
-rep(19,"document.getElementById('g8feedback').hidden=true;if(!dialog.open)", "if(key==='player'){const reportViews=content.querySelector('.gccuiProfileViews'),reportHead=content.querySelector('.g8modalhead');if(reportViews&&reportHead){reportHead.classList.add('gccuiProfileHead');reportHead.append(reportViews);}}\n  document.getElementById('g8feedback').hidden=true;if(!dialog.open)")
+rep(19,"document.getElementById('g8feedback').hidden=true;if(!dialog.open)", "if(key==='player'){const reportViews=content.querySelector('.gccuiProfileViews'),reportHead=content.querySelector('.g8modalhead');if(reportViews&&reportHead){reportHead.classList.add('gccuiProfileHead');const identity=content.querySelector('.gccuiDossierIdentity'),title=reportHead.querySelector('#g8dialogTitle'),titleBox=title?.parentElement;if(identity&&title){identity.querySelector('.gccuiIdentityText')?.prepend(title);titleBox?.remove();reportHead.prepend(identity);}reportHead.append(reportViews);}}\n  document.getElementById('g8feedback').hidden=true;if(!dialog.open)")
 # Guide actions use the existing approved cricket glyphs and share an icon gutter.
 rep(11,"retainXI:'shirt-sport'};","retainXI:'shirt-sport',how:'stumps',howItWorks:'cricket-ball',breakawayStory:'book'};")
 rep(19,'They bring their colours, their grounds and their supporters.','They bring their colours and their grounds.')
@@ -167,6 +167,20 @@ rep(19,'if(!replacing)dialogOpener=document.activeElement;',"if(!replacing)dialo
 a=parts[19].index(" bind('archiveSeason'");b=parts[19].index(' X.dispatch=',a)
 parts[19]=parts[19][:a]+''' bind('archiveSeason',['archive'],year=>{const h=s.dynasty.history.find(h=>h.year===Number(year));assert(h,'That season is not in the archive.');modal(`${year} · The club scorebook`,X.archiveSeasonBody(h),'archiveSeason');});
 '''+parts[19][b:]
+rep(19,"setProperty('--club-accent',s.userClub?.c||'#91aa82')", "setProperty('--club-accent',s.userClub?.c||'#ed7547')")
+rep(19,"setProperty('--club-ink',X.clubInk(s.userClub))", "setProperty('--club-ink',X.clubInk(s.userClub||{c:'#ed7547',t:'#171717'}))")
+# Shared visual-system pass: keep commands and data intact, name layout regions.
+rep(19,' function setView(view){'," function sceneKey(){const phase=s.dynasty?.offseason?.phase||'';return ui.view==='dynasty'?`dynasty:${phase}:${phase==='market'?(ui.offseasonPane||'overview'):''}`:ui.view==='season'?`season:${ui.seasonTab||'matchday'}`:ui.view;}\n function setView(view){")
+rep(19,'closeUtilityMenu();busy=true;const view=ui.view,x=window.scrollX,y=window.scrollY;', 'closeUtilityMenu();busy=true;const view=ui.view,scene=sceneKey(),x=window.scrollX,y=window.scrollY;')
+rep(19,'if(ui.view===view&&!ui.modal)render(false);', 'if(ui.view===view&&!ui.modal)render(sceneKey()!==scene);')
+rep(19,'else if(ui.view===view)window.scrollTo({left:x,top:y,behavior:', 'else if(ui.view===view&&sceneKey()===scene)window.scrollTo({left:x,top:y,behavior:')
+rep(11,"${action==='seasonTab'?`aria-pressed=\"${ui.seasonTab===args[0]}\"`:''}","${action==='seasonTab'?`aria-pressed=\"${ui.seasonTab===args[0]}\"`:action==='teamPane'?`aria-pressed=\"${(G.state.pendingSwapIn?'xi':ui.teamPane||(G.state.xi.length?'xi':'squad'))===args[0]}\"`:''}")
+a=parts[17].index("${saved?btn('Start new career'");b=parts[17].index('}</div></div><div class="g8heroart">',a)+1
+parts[17]=parts[17][:a]+'''${saved?`<button type="button" class="g8button g8primary g8continueclub" data-action="continue" style="--resumeclub:${esc(resumeTeam?.c||'#ed7547')};--resumetext:${esc(X.clubInk(resumeTeam))};--gcc-accent:var(--resumeclub);--gcc-accent-ink:var(--resumetext);--club-ink:var(--resumetext)"><span class="g8continuelabel">Continue career</span><span class="g8resumemeta">${resumeNote}</span></button>`+btn('Start new career','play',[],'g8ghost'):btn('Start new career','play',[],'g8primary')}'''+parts[17][b:]
+rep(17,'</svg></button></h1><p>A Saudi-backed', '</svg></button><span class="gccBrandWordmark">Global Champions<br>Cricket</span></h1><p>A Saudi-backed')
+rep(16,'<section class="g8annualhero"><span', '<section class="g8annualhero"><div class="gccuiOffseasonSummary"><span')
+rep(16,'${X.managementBrief(true)}<div class="g8actions">${btn(vacancies?', '</div><div class="gccuiOffseasonIssues">${X.managementBrief(true)}</div><div class="gccuiOffseasonActions"><div class="g8actions">${btn(vacancies?')
+rep(16,'</span></section><aside class="g8annualdevelopment"', '</span></div></section><aside class="g8annualdevelopment"')
 parts[18]+='\n'+(root/'v8/ui/decision-ui.js').read_text()
 for i in (9,10,11,12,16,17,19):
  path=root/('v8/engine/'+('foundation.js' if i==9 else 'dynasty.js')) if i in (9,10) else root/('v8/ui/'+{11:'components.js',12:'cricket-reads.js',16:'career.js',17:'screens.js',19:'controller.js'}[i]);path.write_text(parts[i])

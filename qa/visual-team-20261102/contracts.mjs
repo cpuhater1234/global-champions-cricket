@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {loadGame} from '../offline_game_host.mjs';
+import {startDraft,finishDraft} from '../club-expansion-20261027/helpers.mjs';
+const h=loadGame(process.env.GCC_FILE||'qa/perfection-20261030/candidate.html',101,new Map(),{strictIds:true}),X=h.context.GCC8,s=h.G.state;
+let html=X.views.home();assert.match(html,/<button[^>]*class="[^"]*g8primary[^>]*data-action="play"|<button[^>]*class="[^"]*g8primary[^>]*data-action="play"/,'fresh career keeps a primary start');
+startDraft(h);finishDraft(h);html=X.views.home();
+const buttons=[...html.matchAll(/<button\b[^>]*>/g)].map(m=>m[0]);
+assert(buttons.find(x=>x.includes('data-action="continue"'))?.includes('g8primary'),'saved career has a primary Continue');
+assert(!buttons.find(x=>x.includes('data-action="play"')&&x.includes('g8primary')),'new-career action is secondary with a save');
+const p=X.roster()[0],before=JSON.stringify(s);html=X.playerDossier(p);
+assert(html.includes('gccuiDossierIdentity'),'identity is one named component');
+assert(html.includes('gccuiIdentityText'),'name and bio have an explicit text column');
+assert(html.includes('gccuiDossierRating'));assert(html.includes('Player report views'));
+assert.equal(JSON.stringify(s),before,'presentation cannot change the career');assert.deepEqual(h.errors,[]);
+console.log('PASS launcher priority, player identity structure and read-only rendering');

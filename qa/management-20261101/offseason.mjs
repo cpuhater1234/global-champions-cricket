@@ -17,4 +17,9 @@ assert(html.indexOf('aria-label="Selection decisions"')<html.indexOf('data-actio
 assert(X.managementRows().includes('Wants a move'),'manage squad rows retain relationship status');
 q=X.managementState();for(const p of Object.values(q.players)){p.requested=false;p.promise=null;}s.dynasty.v8Management=q;s.dynasty.injuries={};
 html=X.offseasonMarket();assert(!html.includes('aria-label="Selection decisions"'),'quiet offseason needs no empty decision panel');
+h.context.scrollX=0;h.context.scrollY=720;h.context.scrollTo=({left=0,top=0})=>{h.context.scrollX=left;h.context.scrollY=top;};
+assert(X.dispatch('offseasonPane',['players']));assert.equal(h.context.scrollY,0,'new offseason screen begins at the top');
+h.context.scrollY=720;assert(X.dispatch('offseasonPane',['players']));assert.equal(h.context.scrollY,720,'same-screen refresh preserves position');
+h.context.scrollY=720;assert(X.dispatch('annualDraw'));assert.equal(h.context.scrollY,0,'annual draw phase starts at the top');
+assert(X.dispatch('revealAll'));h.context.scrollY=720;assert(X.dispatch('annualDraft'));assert.equal(h.context.scrollY,0,'draft room opens at the top');h.timers.clear();
 assert.deepEqual(h.errors,[]);console.log('PASS offseason decisions, direct report actions, medical context, immutable rendering and quiet empty state');
