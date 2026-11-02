@@ -1,0 +1,37 @@
+{
+  "file": "/workspace/scratch/8b1dd7a852d5/qa/perfection-20261030/candidate.html",
+  "results": [
+    {
+      "name": "selection view squad exposes one pressed pane button",
+      "pass": true
+    },
+    {
+      "name": "selection view xi exposes one pressed pane button",
+      "pass": true
+    },
+    {
+      "name": "a pending swap announces the forced XI pane",
+      "pass": true
+    },
+    {
+      "name": "seasonTab matchday pressed semantics are preserved",
+      "pass": true
+    },
+    {
+      "name": "seasonTab ladder pressed semantics are preserved",
+      "pass": true
+    },
+    {
+      "name": "batting order arrow accessible names remain present",
+      "pass": true
+    },
+    {
+      "name": "ordinary action does not acquire toggle semantics",
+      "pass": true
+    },
+    {
+      "name": "offline host has no game errors",
+      "pass": true
+    }
+  ]
+}
