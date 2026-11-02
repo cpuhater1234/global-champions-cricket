@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {loadGame} from '../offline_game_host.mjs';
+import {startDraft} from '../club-expansion-20261027/helpers.mjs';
+const h=loadGame(process.env.GCC_FILE||'qa/perfection-20261030/candidate.html',101,new Map(),{strictIds:true}),X=h.context.GCC8,s=h.G.state;
+startDraft(h);s.year=2013;X.ui.view='home';const before=JSON.stringify({teams:s.teams,club:s.userClub,year:s.year});
+assert(X.dispatch('play'));assert(X.dispatch('fresh'));
+assert(!h.get('g8hud').innerHTML.includes(s.userClub.name),'fresh story does not show previous club');
+assert(!h.get('g8hud').innerHTML.includes('2013'),'fresh story does not show previous season');
+assert.equal(JSON.stringify({teams:s.teams,club:s.userClub,year:s.year}),before,'fresh story presentation does not erase career state');
+assert(X.dispatch('world'));assert(X.dispatch('revealAll'));assert.equal(h.document.activeElement?.id,'gccuiRevealNext','manual completion focuses continuation');assert(X.dispatch('clubs'));assert(X.dispatch('club',[0]));assert(h.get('g8dialogContent').innerHTML.includes('Select club'),'confirmation uses Select club');assert(X.dispatch('confirmClub'));
+const html=X.signingLive();assert(html.indexOf('g8signingactions')<html.indexOf('g8signingcounts'),'signing controls precede counters');assert(html.indexOf('g8signingactions')<html.indexOf('g8signingfocus'),'signing controls precede changing decision');const lsg=h.context.GCC8_CLUB_EXPANSION.clubs.find(c=>c.abbr==='LSG');assert(lsg);const brief=X.clubBrief(lsg);assert(!brief.includes('g8clubidentitytext'),'identical identity/ground copy appears only in ground section');assert(brief.includes(X.esc(h.context.GCC8_CLUB_EXPANSION.groundReads.LSG)));assert.deepEqual(h.errors,[]);
+console.log('PASS fresh header, preserved state, club confirmation and early signing controls');

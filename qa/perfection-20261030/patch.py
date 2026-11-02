@@ -201,6 +201,32 @@ rep(17,'</svg></button></h1><p>A Saudi-backed', '</svg></button><span class="gcc
 rep(16,'<section class="g8annualhero"><span', '<section class="g8annualhero"><div class="gccuiOffseasonSummary"><span')
 rep(16,'${X.managementBrief(true)}<div class="g8actions">${btn(vacancies?', '</div><div class="gccuiOffseasonIssues">${X.managementBrief(true)}</div><div class="gccuiOffseasonActions"><div class="g8actions">${btn(vacancies?')
 rep(16,'</span></section><aside class="g8annualdevelopment"', '</span></div></section><aside class="g8annualdevelopment"')
+# Setup and reveal returns share the same presentation lifecycle.
+rep(19,"if(view==='matchReveal')scheduleMatch();}","if(view==='matchReveal')scheduleMatch();if(revealActive())scheduleReveal();}")
+rep(19,'  const body=views[ui.view]();',"  const presentationClub=ui.view==='story'&&ui.newCareer?null:s.userClub;const body=views[ui.view]();")
+rep(19,"setProperty('--club-accent',s.userClub?.c||'#ed7547')","setProperty('--club-accent',presentationClub?.c||'#ed7547')")
+rep(19,"X.clubInk(s.userClub||{c:'#ed7547',t:'#171717'})","X.clubInk(presentationClub||{c:'#ed7547',t:'#171717'})")
+a=parts[19].index('  X.patch(hud,');b=parts[19].index('\n  if(changed)',a)
+hud=parts[19][a:b].replace('${s.userClub?','${presentationClub?').replace('badge(s.userClub)','badge(presentationClub)').replace('esc(s.userClub.name)','esc(presentationClub.name)')
+parts[19]=parts[19][:a]+hud+parts[19][b:]
+rep(19,"btn('Take over this club','confirmClub',[],'g8primary')","btn('Select club','confirmClub',[],'g8primary')")
+rep(12,'const p=X.clubStory(c),plan=X.clubPlan(c);return',"const p=X.clubStory(c),plan=X.clubPlan(c),groundRead=window.GCC8_CLUB_EXPANSION?.groundReads[c.abbr]||F.groundStory(c);return")
+rep(12,'<p class="g8clubidentitytext">${esc(p.identity)}</p>', '${String(p.identity||\'\').trim()!==String(groundRead||\'\').trim()?`<p class="g8clubidentitytext">${esc(p.identity)}</p>`:\'\'}')
+rep(12,'<span class="g8groundtrait">${esc(c.trait)}</span><p>${esc((window.GCC8_CLUB_EXPANSION?.groundReads[c.abbr]||F.groundStory(c)))}</p>','<span class="g8groundtrait">${esc(c.trait)}</span><p>${esc(groundRead)}</p>')
+# Stable signing controls precede counters and the changing decision readout.
+a=parts[17].index('<div class="g8actions g8signingactions">');b=parts[17].index('</div></section><section class="g8sheet g8wirepanel">',a)+len('</div>')
+actions=parts[17][a:b];parts[17]=parts[17][:a]+parts[17][b:]
+rep(17,'</h2><div class="g8signingcounts">','</h2>'+actions+'<div class="g8signingcounts">')
+
+# Completion keeps the next decision reachable by keyboard.
+rep(12,"${btn(label,action,[],'g8primary',count<8)}", "${btn(label,action,[],'g8primary',count<8).replace('type=\"button\"','type=\"button\" id=\"gccuiRevealNext\"')}")
+rep(12,'<span>${count} of 8 revealed ·','<span role="status" aria-live="polite" aria-atomic="true">${count} of 8 revealed ·')
+rep(17,'<span class="g8windowstatus">','<span class="g8windowstatus" role="status" aria-live="polite" aria-atomic="true">')
+rep(19,"ui.revealed=8;ui.reveal.running=false;});", "ui.revealed=8;ui.reveal.running=false;pendingFocus='#gccuiRevealNext';});")
+rep(19,"revealTimer=null;if(!revealActive()||!ui.reveal.running)return;ui.reveal.count=", "revealTimer=null;if(!revealActive()||!ui.reveal.running)return;const focusedReveal=!!document.activeElement?.closest?.('.g8drawcontrols');ui.reveal.count=")
+rep(19,"if(ui.reveal.count===8)ui.reveal.running=false;render(false);save();scheduleReveal();", "if(ui.reveal.count===8)ui.reveal.running=false;render(false);if(ui.reveal.count===8&&focusedReveal)document.getElementById('gccuiRevealNext')?.focus({preventScroll:true});save();scheduleReveal();")
+rep(19,'<div class="g8actions g8clubconfirm">','<div class="g8actions g8clubconfirm" style="--gcc-accent:${esc(c.c)};--gcc-accent-ink:${esc(X.clubInk(c))}">')
+
 parts[18]+='\n'+(root/'v8/ui/decision-ui.js').read_text()
 for i in (9,10,11,12,16,17,19):
  path=root/('v8/engine/'+('foundation.js' if i==9 else 'dynasty.js')) if i in (9,10) else root/('v8/ui/'+{11:'components.js',12:'cricket-reads.js',16:'career.js',17:'screens.js',19:'controller.js'}[i]);path.write_text(parts[i])

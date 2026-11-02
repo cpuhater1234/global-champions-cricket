@@ -1,0 +1,6 @@
+{"label":"draw","view":"dynasty","count":0,"running":true,"clockPending":9,"nativeTimers":1}
+{"label":"immediate return progressed","view":"dynasty","count":1,"running":true,"clockPending":1,"nativeTimers":1}
+{"label":"archive after timer","view":"archive","count":1,"running":true,"clockPending":0,"nativeTimers":0}
+{"label":"delayed return","view":"dynasty","count":1,"running":true,"clockPending":1,"nativeTimers":1}
+{"label":"delayed return after wait","view":"dynasty","count":6,"running":true,"clockPending":1,"nativeTimers":1}
+PASS: immediate and delayed archive returns preserve annual reveal progress

@@ -926,3 +926,50 @@ html:has(#g8dialog[open]){overflow:hidden}
  #g8dialog[data-prompt=player] .gccuiProfileViews:has(>button:nth-child(3)){grid-template-columns:repeat(2,minmax(0,1fr))}
  #g8dialog[data-prompt=player] .gccuiProfileViews:has(>button:nth-child(3))>.g8button:last-child{grid-column:1/-1}
 }
+/* Setup follows the same readable hierarchy as the career screens. */
+#g8app .g8careerintro{max-width:1050px!important;margin:0 auto!important;padding:0!important}
+#g8app:has(.g8careerintro) #g8stage{padding-top:24px!important}
+#g8app .g8careerintro .g8introbrief{padding:20px!important;gap:20px!important}
+#g8app .g8careerintro .g8introcopy>h1{font:700 32px/1.15 Arial,Helvetica,sans-serif!important;letter-spacing:-.025em!important;text-transform:none!important;margin:6px 0 10px!important;max-width:none}
+#g8app .g8careerintro .g8introcopy>p{font-size:15px!important;line-height:1.5!important;margin:0!important}
+#g8app .g8careerintro .g8introart{width:72px;height:72px;flex:0 0 72px;display:grid;place-items:center}
+#g8app .g8careerintro .g8introart .g8icon{width:56px!important;height:56px!important}
+#g8app .g8careerintro .g8careersteps{gap:14px!important;margin:16px 0!important}
+#g8app .g8careerintro .g8careersteps>li{padding:14px!important;min-height:0;gap:12px}
+#g8app .g8careerintro .g8careersteps h2{font:700 17px/1.3 Arial,Helvetica,sans-serif!important;text-transform:none!important;letter-spacing:-.02em!important;margin:0 0 6px!important}
+#g8app .g8careerintro .g8careersteps p{font-size:15px!important;line-height:1.45!important}
+#g8app .g8careerintro .g8careerlaunch{padding:14px 18px!important;margin:0!important}
+#g8app .g8careerintro .g8careerformat{font-size:13px!important;padding-bottom:10px!important}
+#g8app .g8careerintro .g8careerlaunch>.g8actions{margin-top:10px!important;gap:10px}
+#g8app .g8careerintro .g8careerlaunch .g8button{min-height:44px!important;font-size:14px!important;padding:10px 14px!important}
+#g8app :is(.g8invitationgrid,.g8clubchooser) .g8franchise,#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubbody{background:var(--gcc-panel)!important;border-color:var(--gcc-line)!important}
+#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground{background:var(--gcc-raised)!important;border-color:var(--gcc-line)!important;border-left-color:var(--accent)!important}
+#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground .g8icon{color:var(--gcc-muted)!important}
+#g8dialog[data-prompt=club] .g8briefhead h3{font-size:18px!important;line-height:1.35!important;letter-spacing:-.015em!important;text-transform:none!important;font-style:normal!important}
+#g8app .g8windowpanel .g8signingtitle{font:700 26px/1.2 Arial,Helvetica,sans-serif!important;text-transform:none!important;letter-spacing:-.02em!important;margin:12px 0!important;min-height:0!important}
+#g8app .g8windowpanel .g8signingactions{display:flex!important;gap:8px!important;flex-wrap:wrap!important;margin:0 0 16px!important;padding:0!important}
+#g8app .g8windowpanel .g8signingactions>.g8button{min-height:44px!important;padding:8px 12px!important;font-size:14px!important;flex:1 1 120px}
+#g8app .g8signingcounts{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important;margin:0 0 16px!important}
+#g8app .g8signingcounts>div{padding:12px!important;min-width:0}
+#g8app .g8signingcounts strong{font-size:28px!important;line-height:1.1!important}
+#g8app .g8signingcounts span{font-size:13px!important;line-height:1.4!important}
+#g8app .g8wirepanel{background:var(--gcc-panel)!important;border-color:var(--gcc-line)!important}
+#g8app .g8wirepanel .g8wireline{background:var(--gcc-raised)!important;border-color:var(--gcc-line)!important}
+#g8app .g8wirepanel .g8stamp{background:var(--gcc-inset)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important;font-size:12px!important}
+@media(max-width:760px){
+ #g8app .g8careerintro .g8introbrief{padding:16px!important}
+ #g8app .g8careerintro .g8introart{display:none}
+ #g8app .g8careerintro .g8introcopy>h1{font-size:28px!important}
+ #g8app .g8windowpanel .g8signingactions{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px!important}
+ #g8app .g8windowpanel .g8signingactions>.g8primary{grid-column:1/-1}
+ #g8app .g8windowpanel .g8signingactions>.g8button{width:100%;min-width:0}
+}
+
+#g8app .g8wirepanel .g8wireline.g8wirein{border-left:3px solid #69a88b!important}
+#g8app .g8wirepanel .g8wireline.g8wireout{border-left:3px solid #bd7780!important}
+#g8app .g8wirepanel .g8wireline.g8wireupdate{border-left-color:var(--gcc-accent)!important}
+#g8app .g8wirepanel .g8wirein .g8stamp{background:#164c39!important;color:#e9fff0!important;border-color:#5d9678!important}
+#g8app .g8wirepanel .g8wireout .g8stamp{background:#512b31!important;color:#ffe9ec!important;border-color:#a3636b!important}
+#g8app .g8ordergrid :is(.g8orderhidden,.g8ordercover){background:var(--gcc-raised)!important;border-color:var(--gcc-line)!important;color:var(--gcc-text)!important}
+#g8app .g8invitationgrid .g8sealedlabel{background:var(--gcc-raised)!important;color:var(--gcc-text)!important}
+#g8app .g8snakeintro>strong{background:var(--gcc-raised)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
