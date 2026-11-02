@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {loadGame} from '../offline_game_host.mjs';
+import {startDraft,finishDraft} from '../club-expansion-20261027/helpers.mjs';
+const h=loadGame('qa/perfection-20261030/candidate.html',101,new Map(),{strictIds:true}),X=h.context.GCC8,s=h.G.state;
+startDraft(h);assert(X.views.draft().includes('data-action="draftSquad"'),'draft exposes one-step squad access');
+const truth=()=>JSON.stringify({teams:s.teams,picks:s.picks,pickIndex:s.pickIndex});
+let before=truth();assert(X.dispatch('draftSquad'));assert.equal(X.ui.modal,'mobileSquad');let html=h.get('g8dialogContent').innerHTML;assert(html.includes('Squad skill coverage'));assert(!html.includes('data-action="draftDetail"'),'squad overlay omits nested tool routes');assert(X.dispatch('close'));assert.equal(truth(),before,'opening squad cannot advance draft');
+finishDraft(h);X.ui.view='draft';X.ui.search='Brett';X.ui.filter='BOWL';X.ui.sort='overall';before=truth();
+assert(X.dispatch('draftSquad'));h.get('g8dialog').scrollTop=240;const p=X.roster()[0];
+assert(X.dispatch('inspect',[p.id]));assert.equal(X.ui.scoutReturn,'mobileSquad');assert(!h.get('g8dialogContent').innerHTML.includes('data-action="draftPlayer"'),'selected player cannot be drafted again');
+assert(X.dispatch('playerTab',['skills']));assert.equal(X.ui.scoutReturn,'mobileSquad');assert(X.dispatch('close'));assert.equal(X.ui.modal,'mobileSquad');assert.equal(h.get('g8dialog').scrollTop,240,'return restores squad scroll');assert(X.dispatch('close'));assert.equal(X.ui.modal,null);
+assert.deepEqual([X.ui.search,X.ui.filter,X.ui.sort],['Brett','BOWL','overall']);assert.equal(truth(),before);
+X.ui.view='dynasty';assert(!X.dispatch('draftSquad'),'non-draft dynasty phase rejects route');
+assert(!X.read.backupRaw().includes('"mobileSquad"'),'modal state is transient');assert.deepEqual(h.errors,[]);
+console.log('PASS empty/full squad access, selected-player report return, scroll/filter preservation, phase guard and immutable draft state');

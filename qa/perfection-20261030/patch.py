@@ -169,6 +169,10 @@ parts[19]=parts[19][:a]+''' bind('archiveSeason',['archive'],year=>{const h=s.dy
 '''+parts[19][b:]
 rep(19,"setProperty('--club-accent',s.userClub?.c||'#91aa82')", "setProperty('--club-accent',s.userClub?.c||'#ed7547')")
 rep(19,"setProperty('--club-ink',X.clubInk(s.userClub))", "setProperty('--club-ink',X.clubInk(s.userClub||{c:'#ed7547',t:'#171717'}))")
+# Mobile draft squad uses the current dialog and preserves nested scouting context.
+rep(19," bind('draftDetail',['draft','dynasty'],kind=>{", " function draftSquadDialog(){assert(ui.view==='draft'||annual(),'The draft room is closed.');modal('Your squad · '+roster().length+'/15',`<div class=\"gccuiDraftSquadReport\">${X.draftCompanion(false)}</div>`,'mobileSquad');}\n bind('draftSquad',['draft','dynasty'],()=>{assert(!ui.modal,'Close the current report first.');draftSquadDialog();});\n bind('draftDetail',['draft','dynasty'],kind=>{")
+rep(19,"['trade','undrafted','tradeReview'].includes(ui.modal)","['trade','undrafted','tradeReview','mobileSquad'].includes(ui.modal)")
+rep(19,"ui.scoutReturn=null;ui.scoutReturnScroll=null;closeDialog();", "ui.scoutReturn=null;ui.scoutReturnScroll=null;if(back==='mobileSquad'){const id=Number(ui.selectedPlayer);draftSquadDialog();if(Number.isFinite(scroll))dialog.scrollTop=scroll;content.querySelector(`.gccuiPickedPlayer[data-args=\"[${id}]\"]`)?.focus({preventScroll:true});return;}closeDialog();")
 # Shared visual-system pass: keep commands and data intact, name layout regions.
 rep(19,' function setView(view){'," function sceneKey(){const phase=s.dynasty?.offseason?.phase||'';return ui.view==='dynasty'?`dynasty:${phase}:${phase==='market'?(ui.offseasonPane||'overview'):''}`:ui.view==='season'?`season:${ui.seasonTab||'matchday'}`:ui.view;}\n function setView(view){")
 rep(19,'closeUtilityMenu();busy=true;const view=ui.view,x=window.scrollX,y=window.scrollY;', 'closeUtilityMenu();busy=true;const view=ui.view,scene=sceneKey(),x=window.scrollX,y=window.scrollY;')
