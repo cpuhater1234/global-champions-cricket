@@ -1017,3 +1017,13 @@ html:has(#g8dialog[open]){overflow:hidden}
  #g8app .gccuiTableView>.g8tabs>.g8button{min-width:0;padding:8px!important;font-size:12px!important;gap:6px}
  #g8app .gccuiTableView>.g8tabs>.g8button .g8icon{width:16px!important;height:16px!important;min-width:16px!important;flex:0 0 16px!important}
 }
+
+/* Short-phone story: place progression before the supporting three-step guide. */
+@media(max-width:760px){
+ #g8app .g8careerintro{display:flex;flex-direction:column;gap:0}
+ #g8app .g8careerintro .g8introbrief{order:0}
+ #g8app .g8careerintro .g8careerlaunch{order:1;margin-top:14px!important}
+ #g8app .g8careerintro .g8careersteps{order:2}
+ #g8app .g8careerintro .g8careerformat{display:flex!important;flex-wrap:wrap;gap:6px 12px!important;justify-content:flex-start!important}
+ #g8app .g8careerintro .g8careerformat>span{padding:0!important;min-height:0!important;border:0!important;background:transparent!important;font-size:12px!important;line-height:1.5!important;text-align:left!important;font-weight:600!important}
+}
