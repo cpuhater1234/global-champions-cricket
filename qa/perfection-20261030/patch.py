@@ -247,6 +247,8 @@ launch=launch[:fmt_start]+launch[fmt_end:];end=launch.rindex('</div>');launch=la
 parts[17]=parts[17][:a]+launch+parts[17][b:]
 rep(17,'<span class="g8eyebrow">LEAGUE RECRUITMENT</span><span class="g8windowstatus"','<span class="g8windowstatus"')
 
+rep(19,'Open a selected player to move them up or down the batting order; use Swap to change the side.','Use the arrows beside selected players to set the batting order; use Swap to change the side.')
+
 parts[18]+='\n'+(root/'v8/ui/decision-ui.js').read_text()
 for i in (9,10,11,12,16,17,19):
  path=root/('v8/engine/'+('foundation.js' if i==9 else 'dynasty.js')) if i in (9,10) else root/('v8/ui/'+{11:'components.js',12:'cricket-reads.js',16:'career.js',17:'screens.js',19:'controller.js'}[i]);path.write_text(parts[i])
@@ -269,7 +271,7 @@ raw=raw.replace('</body>',f'<svg width="0" height="0" aria-hidden="true" style="
 for glyph in ('cricket','cricket-ball','stumps'):
  pattern=r'(<symbol id="g8icon-'+glyph+r'"[\s\S]*?</symbol>)'
  match=re.search(pattern,raw);assert match
- weighted=match[0].replace('stroke="none" style="stroke:none"','stroke="currentColor" stroke-width="10" stroke-linejoin="round"')
+ weighted=match[0].replace('stroke="none" style="stroke:none"',f'stroke="currentColor" stroke-width="{32 if glyph=="cricket" else 10}" stroke-linejoin="round"')
  raw=raw[:match.start()]+weighted+raw[match.end():]
 out=root/'qa/perfection-20261030/candidate.html';out.write_text(raw)
 for i,part in enumerate(parts):

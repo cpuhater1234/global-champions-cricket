@@ -1004,3 +1004,16 @@ html:has(#g8dialog[open]){overflow:hidden}
  #g8app .gccuiSelection .gccuiSelectionHeader{display:contents}
  #g8app .gccuiSelection .gccuiSelectionStatus{position:sticky;top:8px;z-index:6;box-shadow:0 4px 0 var(--gcc-inset)}
 }
+
+/* Inspection42: keep fixture action labels intact beside long match margins. */
+#g8app .gccui .gccuiScheduleCard>footer .g8button{flex:0 0 auto;white-space:nowrap}
+#g8app .gccui .gccuiScheduleCard>footer .g8button>span{white-space:nowrap;overflow-wrap:normal!important;word-break:normal}
+#g8app .gccui .gccuiScheduleCard>footer>span{min-width:0}
+#g8app .gccuiSelection .gccuiOverall{display:flex;flex-direction:column;align-items:center;gap:3px}
+#g8app .gccuiSelection .gccuiOverall>small{font-size:11px;line-height:1.2;font-weight:700;color:var(--gcc-muted);letter-spacing:.03em}
+#g8app .g8utilitymenu>summary:hover{background:var(--gcc-inset)!important;border-color:var(--gcc-text)!important;color:var(--gcc-text)!important}
+@media(max-width:380px){
+ #g8app .gccuiTableView>.g8tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+ #g8app .gccuiTableView>.g8tabs>.g8button{min-width:0;padding:8px!important;font-size:12px!important;gap:6px}
+ #g8app .gccuiTableView>.g8tabs>.g8button .g8icon{width:16px!important;height:16px!important;min-width:16px!important;flex:0 0 16px!important}
+}
