@@ -227,6 +227,21 @@ rep(19,"revealTimer=null;if(!revealActive()||!ui.reveal.running)return;ui.reveal
 rep(19,"if(ui.reveal.count===8)ui.reveal.running=false;render(false);save();scheduleReveal();", "if(ui.reveal.count===8)ui.reveal.running=false;render(false);if(ui.reveal.count===8&&focusedReveal)document.getElementById('gccuiRevealNext')?.focus({preventScroll:true});save();scheduleReveal();")
 rep(19,'<div class="g8actions g8clubconfirm">','<div class="g8actions g8clubconfirm" style="--gcc-accent:${esc(c.c)};--gcc-accent-ink:${esc(X.clubInk(c))}">')
 
+# New draft decisions reset the page, while browsing/scouting remains in place.
+rep(19,"dialogOpener=null,pendingFocus=null;","dialogOpener=null,pendingFocus=null,pendingScrollTop=false;")
+rep(19,"else G.userDraft(Number(id));announce(","else G.userDraft(Number(id));pendingScrollTop=true;announce(")
+rep(19,"finally{G.closeModal();busy=false;if(pendingFocus)","finally{G.closeModal();busy=false;const resetPosition=pendingScrollTop;pendingScrollTop=false;if(pendingFocus)")
+rep(19,"}else if(ui.view===view&&sceneKey()===scene)window.scrollTo", "}else if(resetPosition)window.scrollTo({left:0,top:0,behavior:'instant'});else if(ui.view===view&&sceneKey()===scene)window.scrollTo")
+# Retain club identity in compact chooser rows without duplicating desktop metadata.
+rep(17,'<h3>${esc(c.name)}</h3><div class="g8clubground">','<h3>${esc(c.name)}</h3><div class="gccuiClubMeta">${esc(c.league)} · ${esc(c.displayRegion||c.region)}</div><div class="g8clubground">')
+rep(17,":'Select '+c.name",":'Open club guide for '+c.name")
+# Put the launch action before secondary format metadata in the final story band.
+a=parts[17].index('<div class="g8careerlaunch">');b=parts[17].index('</section>`;',a)
+launch=parts[17][a:b];fmt_start=launch.index('<div class="g8careerformat">');fmt_end=launch.index('</div>',fmt_start)+len('</div>');fmt=launch[fmt_start:fmt_end]
+launch=launch[:fmt_start]+launch[fmt_end:];end=launch.rindex('</div>');launch=launch[:end]+fmt+launch[end:]
+parts[17]=parts[17][:a]+launch+parts[17][b:]
+rep(17,'<span class="g8eyebrow">LEAGUE RECRUITMENT</span><span class="g8windowstatus"','<span class="g8windowstatus"')
+
 parts[18]+='\n'+(root/'v8/ui/decision-ui.js').read_text()
 for i in (9,10,11,12,16,17,19):
  path=root/('v8/engine/'+('foundation.js' if i==9 else 'dynasty.js')) if i in (9,10) else root/('v8/ui/'+{11:'components.js',12:'cricket-reads.js',16:'career.js',17:'screens.js',19:'controller.js'}[i]);path.write_text(parts[i])

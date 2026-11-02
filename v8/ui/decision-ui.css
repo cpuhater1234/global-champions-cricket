@@ -973,3 +973,19 @@ html:has(#g8dialog[open]){overflow:hidden}
 #g8app .g8ordergrid :is(.g8orderhidden,.g8ordercover){background:var(--gcc-raised)!important;border-color:var(--gcc-line)!important;color:var(--gcc-text)!important}
 #g8app .g8invitationgrid .g8sealedlabel{background:var(--gcc-raised)!important;color:var(--gcc-text)!important}
 #g8app .g8snakeintro>strong{background:var(--gcc-raised)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
+
+/* Compact setup summaries retain identity and reachable, consistent controls. */
+#g8app .gccuiClubMeta{display:none}
+#g8app .g8careerintro .g8careerlaunch>.g8actions{margin-top:0!important}
+#g8app .g8careerintro .g8careerlaunch>.g8careerformat{margin-top:10px!important;padding:10px 0 0!important;border-bottom:0!important;border-top:1px solid var(--gcc-line)}
+#g8app .g8windowpanel .g8windowhead{padding:0!important;margin:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
+#g8app .g8windowpanel .g8windowstatus{padding:5px 8px!important;font-size:13px!important;line-height:1.4!important;min-height:0!important;background:var(--gcc-inset)!important;border:1px solid var(--gcc-line)!important}
+@media(hover:hover){#g8app .g8clubchooser .g8franchise:hover{border-color:var(--accent)!important;box-shadow:none!important;transform:none!important}}
+@media(max-width:760px){
+ #g8app .g8clubchooser .g8clubbody{padding-right:52px!important;gap:6px!important}
+ #g8app .g8clubchooser .g8clubbody h3{margin:0!important}
+ #g8app .g8clubchooser .gccuiClubMeta{display:block;font-size:13px;line-height:1.4;color:var(--gcc-muted);font-weight:400}
+ #g8app .g8clubchooser .g8clubcardaction{width:44px!important;right:12px!important;top:12px!important}
+ #g8app .g8clubchooser .g8clubcardaction .g8button{width:44px!important;min-width:44px!important;height:44px!important;min-height:44px!important;padding:0!important}
+ #g8app .g8clubchooser .g8clubcardaction .g8button>.g8icon,#g8app .g8clubchooser .g8clubcardaction .g8button>span{display:none!important}
+}

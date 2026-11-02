@@ -4,7 +4,7 @@
  const stage=document.getElementById('g8stage'),hud=document.getElementById('g8hud'),dialog=document.getElementById('g8dialog'),content=document.getElementById('g8dialogContent');
  X.installDetailedAverages();
  const commands=Object.create(null),allow=Object.create(null),own=()=>s.userClub?.abbr,annual=()=>ui.view==='dynasty'&&s.dynasty?.offseason?.phase==='draft';
- let busy=false,lastSignature='',archiveReturn='season',dialogOpener=null,pendingFocus=null;
+ let busy=false,lastSignature='',archiveReturn='season',dialogOpener=null,pendingFocus=null,pendingScrollTop=false;
  X.hasStoredSave=()=>{try{return !!localStorage.getItem('gcc_dynasty_v8')||!!localStorage.getItem('gcc_dynasty_v7_2');}catch{return false;}};
  X.hasSave=()=>!!s.dynasty?.started||X.hasStoredSave()||!!read.recoveryInfo?.();
  let feedbackTimer=null,saveWarning='',pendingRecoveryFeedback=null,exitGuardAttached=false;
@@ -199,7 +199,7 @@
  bind('teamPane',['team'],pane=>{assert(!ui.modal&&!s.pendingSwapIn,'Finish the current selection first.');assert(['xi','squad'].includes(pane),'Choose a selection view.');ui.teamPane=pane;});
  bind('offseasonPane',['dynasty'],pane=>{assert(!ui.modal&&s.dynasty?.offseason?.phase==='market','Return to the squad update first.');assert(['overview','players'].includes(pane),'Choose a squad view.');ui.offseasonPane=pane;});
  bind('squadFilter',['team','dynasty'],role=>{assert(!ui.modal&&!s.pendingSwapIn,'Finish the current decision first.');assert(ui.view==='team'||s.dynasty?.offseason?.phase==='market','The squad list is not open.');assert(['ALL','BAT','WK-BAT','AR','BOWL'].includes(role),'Choose a squad role.');ui.squadFilter=role;});
- bind('draftPlayer',['draft','dynasty'],id=>{assert(ui.view==='draft'||annual(),'The draft is not open.');assert(!ui.modal||ui.modal==='player'&&ui.selectedPlayer===Number(id)||ui.modal==='compare'&&[ui.comparePlayer,ui.compareTarget].includes(Number(id)),'Close the current prompt before picking.');const current=X.draftCurrent(annual());assert(current?.club.abbr===own(),'Another club is on the clock.');assert(draftable(id),'That player is no longer on the board.');closeDialog();if(annual())D.userAnnualDraft(Number(id));else G.userDraft(Number(id));announce(`${G.byId(Number(id)).name} joins your squad.`,false,true);});
+ bind('draftPlayer',['draft','dynasty'],id=>{assert(ui.view==='draft'||annual(),'The draft is not open.');assert(!ui.modal||ui.modal==='player'&&ui.selectedPlayer===Number(id)||ui.modal==='compare'&&[ui.comparePlayer,ui.compareTarget].includes(Number(id)),'Close the current prompt before picking.');const current=X.draftCurrent(annual());assert(current?.club.abbr===own(),'Another club is on the clock.');assert(draftable(id),'That player is no longer on the board.');closeDialog();if(annual())D.userAnnualDraft(Number(id));else G.userDraft(Number(id));pendingScrollTop=true;announce(`${G.byId(Number(id)).name} joins your squad.`,false,true);});
  bind('team',['draft','team'],()=>{if(ui.view==='team'){closeDialog();return;}assert(s.pickIndex>=120&&roster().length===15,'Finish the draft first.');G.enterTeamRoom();ui.teamReturn='season';setView('team');});
  bind('editXI',['season','finals'],from=>{ui.squadFilter='ALL';if(ui.view==='finals')assert(s.finals?.stage==='ready'&&s.finals.top.some(c=>c.abbr===own())||s.finals?.stage==='gf-ready'&&[s.finals.gfPair.home,s.finals.gfPair.away].some(c=>c.abbr===own()),'Your club has no pending finals match.');ui.teamReturn=from==='finals'?'finals':'season';G.go('team');setView('team');});
  bind('select',['team'],id=>{assert(roster().some(p=>p.id===Number(id)),'Choose a player from your squad.');assert(s.xi.length<11&&!s.xi.includes(Number(id)),'The XI is already full.');assert(injury(G.byId(Number(id)))?.status!=='OUT','That player is unavailable.');closeDialog();G.toggleXI(Number(id));ui.teamPane=s.xi.length===11?'xi':'squad';});
@@ -297,7 +297,7 @@
   closeUtilityMenu();busy=true;const view=ui.view,scene=sceneKey(),x=window.scrollX,y=window.scrollY;
   try{if(!['recoverCheckpoint','keepBrowserSave'].includes(action))pendingRecoveryFeedback=null;clearFeedback();fn(...args);completeDraft();save();if(ui.view===view&&!ui.modal)render(sceneKey()!==scene);return true;}
   catch(e){announce(e.message||'The action could not be completed.');return false;}
-  finally{G.closeModal();busy=false;if(pendingFocus){const target=document.querySelector(pendingFocus);pendingFocus=null;target?.focus?.({preventScroll:true});target?.scrollIntoView?.({block:'center',behavior:'instant'});}else if(ui.view===view&&sceneKey()===scene)window.scrollTo({left:x,top:y,behavior:'instant'});}
+  finally{G.closeModal();busy=false;const resetPosition=pendingScrollTop;pendingScrollTop=false;if(pendingFocus){const target=document.querySelector(pendingFocus);pendingFocus=null;target?.focus?.({preventScroll:true});target?.scrollIntoView?.({block:'center',behavior:'instant'});}else if(resetPosition)window.scrollTo({left:0,top:0,behavior:'instant'});else if(ui.view===view&&sceneKey()===scene)window.scrollTo({left:x,top:y,behavior:'instant'});}
  };
  document.addEventListener('click',event=>{if(!event.target.closest?.('.g8utilitymenu'))closeUtilityMenu();});
  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&hud.querySelector('.g8utilitymenu[open]')){closeUtilityMenu(true);event.preventDefault();}});

@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {loadGame} from '../offline_game_host.mjs';
+import {startDraft} from '../club-expansion-20261027/helpers.mjs';
+const h=loadGame(process.env.GCC_FILE||'qa/perfection-20261030/candidate.html',101,new Map(),{strictIds:true}),X=h.context.GCC8,s=h.G.state;
+startDraft(h);for(let i=0;i<10&&X.draftCurrent(false)?.club.abbr!==s.userClub.abbr;i++)assert(X.dispatch('skipPick'));assert.equal(X.draftCurrent(false).club.abbr,s.userClub.abbr);
+h.context.scrollX=0;h.context.scrollY=1600;h.context.scrollTo=({left=0,top=0})=>{h.context.scrollX=left;h.context.scrollY=top;};
+assert.equal(X.dispatch('draftPlayer',[-1]),false);assert.equal(h.context.scrollY,1600,'rejected pick preserves browsing position');
+X.ui.search='';X.ui.filter='ALL';X.ui.sort='overall';const player=X.pool(false)[0];assert(player);const count=X.roster().length;
+assert(X.dispatch('draftPlayer',[player.id]));assert.equal(X.roster().length,count+1);assert.equal(h.context.scrollY,0,'committed pick starts the next draft decision at the top');assert.deepEqual([X.ui.search,X.ui.filter,X.ui.sort],['','ALL','overall']);assert.deepEqual(h.errors,[]);
+console.log('PASS committed pick resets presentation position and preserves filters');
