@@ -41,7 +41,7 @@ html body,#g8app{background-color:var(--gcc-ground)!important;color:var(--gcc-te
 #g8app .g8fixturecard,#g8app .g8fixturecard :is(h3,p,strong,small){background-color:var(--gcc-panel)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
 #g8app .g8table tbody tr.mine,#g8dialog .g8table tbody tr.mine{background:var(--gcc-raised)!important;color:var(--gcc-text)!important;border-left:3px solid var(--gcc-accent)!important}
 #g8app .g8table tbody tr.mine td,#g8dialog .g8table tbody tr.mine td{color:var(--gcc-text)!important}
-#g8feedback{background:#ead0a0!important;color:#20180e!important;border:2px solid #ad7f42!important}
+#g8feedback{background:var(--gcc-panel,#282828)!important;color:var(--gcc-text,#f1f1f1)!important;border:2px solid var(--gcc-line,#666)!important;border-left:4px solid var(--gcc-accent,#ed7547)!important}
 /* Browser follow-through: paint every shared surface, including legacy inner cards. */
 #g8app .g8welcomepanel{background:var(--gcc-raised)!important;border-color:var(--gcc-line)!important;border-top:4px solid var(--gcc-accent)!important}
 #g8app .g8leagueformat{background:var(--gcc-raised)!important;border-color:var(--gcc-line)!important}
