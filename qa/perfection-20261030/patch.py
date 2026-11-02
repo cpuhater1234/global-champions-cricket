@@ -249,6 +249,8 @@ rep(17,'<span class="g8eyebrow">LEAGUE RECRUITMENT</span><span class="g8windowst
 
 rep(19,'Open a selected player to move them up or down the batting order; use Swap to change the side.','Use the arrows beside selected players to set the batting order; use Swap to change the side.')
 
+rep(19," bind('matchday',['result'],"," bind('fixtureNext',['season'],()=>{assert(ui.seasonTab==='fixtures'&&G.nextUserFixture(),'No upcoming fixture is available here.');pendingFocus='#gccuiNextFixture';});\n bind('matchday',['result'],")
+
 parts[18]+='\n'+(root/'v8/ui/decision-ui.js').read_text()
 for i in (9,10,11,12,16,17,19):
  path=root/('v8/engine/'+('foundation.js' if i==9 else 'dynasty.js')) if i in (9,10) else root/('v8/ui/'+{11:'components.js',12:'cricket-reads.js',16:'career.js',17:'screens.js',19:'controller.js'}[i]);path.write_text(parts[i])

@@ -1027,3 +1027,10 @@ html:has(#g8dialog[open]){overflow:hidden}
  #g8app .g8careerintro .g8careerformat{display:flex!important;flex-wrap:wrap;gap:6px 12px!important;justify-content:flex-start!important}
  #g8app .g8careerintro .g8careerformat>span{padding:0!important;min-height:0!important;border:0!important;background:transparent!important;font-size:12px!important;line-height:1.5!important;text-align:left!important;font-weight:600!important}
 }
+
+/* A midseason schedule keeps its chronological order and exposes the next match. */
+#g8app .gccuiFixtureHeading{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+#g8app .gccuiFixtureHeading>.gccuiHeading{flex:1 1 230px;margin-bottom:0}
+#g8app .gccuiFixtureHeading>.g8button{flex:0 0 auto}
+#g8app .gccui .gccuiScheduleCard:focus{outline:3px solid #f1c06b;outline-offset:3px}
+@media(max-width:600px){#g8app .gccuiFixtureHeading>.g8button{width:100%}}

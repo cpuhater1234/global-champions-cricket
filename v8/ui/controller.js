@@ -236,6 +236,7 @@
   else{ui.seasonTab=section==='stats'?'players':section;G.go('season');setView('season');}
  });
  bind('seasonTab',['season'],tab=>{assert(['matchday','ladder','fixtures','players','leaguePlayers'].includes(tab),'Unknown season view.');ui.seasonTab=tab;});
+ bind('fixtureNext',['season'],()=>{assert(ui.seasonTab==='fixtures'&&G.nextUserFixture(),'No upcoming fixture is available here.');pendingFocus='#gccuiNextFixture';});
  bind('matchday',['result'],()=>{ui.seasonTab='matchday';G.go('season');setView('season');});
  bind('prepare',['season'],()=>{
   const fx=G.nextUserFixture();assert(fx,'The regular season is finished.');const problem=read.xiProblem();assert(!problem,problem);const c=G.matchGroundForFixture(fx),weather=G.matchWeather?.(fx.home,fx.round),op=fx.home.abbr===own()?fx.away:fx.home;

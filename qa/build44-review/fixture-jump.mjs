@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {loadGame} from '../offline_game_host.mjs';
+import {startDraft,finishDraft,selectManualXI} from '../club-expansion-20261027/helpers.mjs';
+const file=process.env.GCC_FILE||'qa/perfection-20261030/candidate.html',h=loadGame(file,101,new Map(),{strictIds:true}),X=h.context.GCC8,s=h.G.state;
+startDraft(h);finishDraft(h);selectManualXI(h);h.G.startSeason();for(let i=0;i<7;i++)h.G.playNextRound();X.ui.view='season';X.ui.seasonTab='fixtures';X.render(true);
+const html=X.views.season(),snapshot=JSON.stringify({round:s.round,results:s.results,xi:s.xi,stats:s.playerSeasonStats});
+assert.match(html,/id="gccuiNextFixture" tabindex="-1"/);assert.match(html,/data-action="fixtureNext"/);assert.match(html,/Round 8/);
+assert(X.dispatch('fixtureNext'));assert.equal(h.document.activeElement?.id,'gccuiNextFixture');assert.equal(JSON.stringify({round:s.round,results:s.results,xi:s.xi,stats:s.playerSeasonStats}),snapshot);
+X.ui.seasonTab='players';assert.equal(X.dispatch('fixtureNext'),false);assert.deepEqual(h.errors,[]);
+console.log('PASS midseason next-fixture target, keyboard focus, wrong-tab guard and cricket-state immutability');
