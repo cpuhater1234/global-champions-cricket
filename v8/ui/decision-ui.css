@@ -119,7 +119,7 @@
 #g8app .gccui .gccuiSwapPrompt{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;padding:16px;background:#493d26;border-bottom:2px solid #c8a46b}
 #g8app .gccui .gccuiSwapPrompt>span{grid-column:1;font-size:13px}
 #g8app .gccui .gccuiSwapPrompt>.g8button{grid-column:2;grid-row:1/3}
-#g8app .gccui .gccuiReturning{display:flex;gap:20px;justify-content:space-between;align-items:center;padding:16px 20px;margin-bottom:20px;border:1px solid var(--ui-line);border-radius:6px;background:#293238}
+#g8app .gccui .gccuiReturning{display:flex;gap:20px;justify-content:space-between;align-items:center;padding:16px 20px;margin-bottom:20px;border:1px solid var(--ui-line);border-radius:6px;background:var(--gcc-raised)}
 #g8app .gccui .gccuiReturning p{font-size:14px}
 #g8app .gccui .gccuiPaneTabs{display:none}
 #g8app .gccui .gccuiTeamDetails{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px;align-items:start}
@@ -166,7 +166,7 @@
 #g8app .gccuiTableView .gccuiHeading{padding-bottom:12px;margin-bottom:16px}
 #g8app .gccuiTableView .gccuiHeading h1{font-size:28px}
 #g8app .gccuiTableView .gccuiHeadingIcon{flex-basis:44px;height:44px}
-#g8app .gccuiTableView .g8table caption{font-size:14px!important;text-transform:uppercase!important;letter-spacing:.08em!important;padding:14px 0!important;color:#d7e1e6!important}
+#g8app .gccuiTableView .g8table caption{font-size:13px!important;text-transform:none!important;letter-spacing:0!important;padding:0 0 12px!important;color:var(--gcc-muted)!important;text-align:left!important}
 #g8app .gccuiTableView .g8table tbody :is(th,td){background:transparent!important;border-color:#56646c!important;padding:13px 12px!important;color:#f1f4f5!important;font-size:14px!important}
 #g8app .gccuiTableView .g8table tbody tr:nth-child(odd){background:var(--gcc-panel)!important}
 #g8app .gccuiTableView .g8table tbody tr:nth-child(even){background:var(--gcc-raised)!important}
@@ -327,7 +327,7 @@
 #g8dialog[data-prompt=player] .g8ordereditor>span{font-weight:700;color:#e4e8ea!important}
 #g8dialog[data-prompt=player] .g8scoutability{padding:12px 14px!important;margin:12px 0!important}
 #g8dialog[data-prompt=player] .g8scoutability>h3{justify-content:flex-start!important;font-size:15px!important;font-style:normal!important;padding:0 0 10px!important;border-bottom:1px solid var(--gcc-line)}
-#g8dialog[data-prompt=player] .g8scoutability .g8skillgrid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:0 24px!important}
+#g8dialog[data-prompt=player] .g8scoutability .g8skillgrid{grid-template-columns:minmax(0,1fr)!important;gap:0!important}
 #g8dialog[data-prompt=player] .g8scoutability .g8abilitybar{padding:10px 0!important;border-top:0!important}
 #g8dialog[data-prompt=player] .g8scoutability .g8abilitybar>span{font-size:14px!important;font-weight:700!important}
 #g8dialog[data-prompt=player] .g8scoutability .g8abilitybar>b{font-size:20px!important;line-height:1.2!important}
@@ -474,7 +474,7 @@
 #g8app .gccui .gccuiPickedPlayer>span{min-width:0;display:flex;flex-direction:column;gap:3px}
 #g8app .gccui .gccuiPickedPlayer b{font-size:14px;line-height:1.3}
 #g8app .gccui .gccuiPickedPlayer small{font-size:12px;line-height:1.4;color:var(--ui-muted)}
-#g8app .gccui .gccuiPickedPlayer>.gccuiRating{font-size:23px;flex:0 0 auto}
+#g8app .gccui .gccuiPickedPlayer>.gccuiRating{font-size:23px;flex:0 0 36px;width:36px;text-align:center}
 #g8app .gccui .gccuiPickedPlayer:hover{box-shadow:inset 3px 0 var(--ui-team)}
 #g8app .gccui .gccuiPickedPlayer:focus-visible{outline:2px solid var(--ui-team);outline-offset:-3px}
 #g8app .gccui .gccuiDraftTools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
@@ -615,17 +615,17 @@
 #g8dialog[data-prompt=player] .gccuiDossierRating>strong{display:block;color:var(--rating-color,#eee);font-size:32px;line-height:1;font-weight:700;font-variant-numeric:tabular-nums}
 #g8dialog[data-prompt=player] .gccuiProfileViews{display:flex;flex-wrap:wrap;gap:8px;padding:12px 0;border-bottom:1px solid var(--gcc-line);margin-bottom:12px}
 #g8dialog[data-prompt=player] .gccuiProfileViews .g8button{flex:0 1 170px;min-height:44px!important;padding:10px 14px!important;font-size:14px!important}
-#g8dialog[data-prompt=player] .gccuiProfileViews .g8button[aria-pressed=true]{background:var(--club-accent,#edb65b)!important;color:var(--club-ink,#171717)!important;border-color:#f2d99d!important}
+#g8dialog[data-prompt=player] .gccuiProfileViews .g8button[aria-pressed=true]{background:var(--club-accent,#edb65b)!important;color:var(--club-ink,#171717)!important;border-color:var(--gcc-accent)!important}
 #g8dialog[data-prompt=player] .g8ordereditor{display:flex!important;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px!important;margin:0 0 14px!important;background:var(--gcc-panel);border:1px solid var(--gcc-line)!important;border-radius:4px}
 #g8dialog[data-prompt=player] .g8ordereditor>span{font-size:13px;font-weight:700}
 #g8dialog[data-prompt=player] .g8ordereditor .g8actions{margin:0!important;gap:6px}
 #g8dialog[data-prompt=player] .g8ordereditor .g8button{min-height:44px!important;padding:8px 12px!important}
 #g8dialog[data-prompt=player] .gccuiProfilePanel{min-width:0}
-#g8dialog[data-prompt=player] .gccuiProfileOverview{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+#g8dialog[data-prompt=player] .gccuiProfileOverview{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:20px 24px;align-items:start}
 #g8dialog[data-prompt=player] .gccuiProfileOverview>.g8playerdetail{display:contents!important}
-#g8dialog[data-prompt=player] .gccuiProfileOverview .g8scoutability{margin:0!important;min-width:0;padding:14px!important}
-#g8dialog[data-prompt=player] .gccuiProfileOverview .g8scoutoutlook{margin:0!important;min-width:0;padding:14px!important}
-#g8dialog[data-prompt=player] .gccuiProfileOverview .g8gccrecord{grid-column:1/-1;margin:0!important;padding:14px!important}
+#g8dialog[data-prompt=player] .gccuiProfileOverview .g8scoutability{margin:0!important;min-width:0;padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important}
+#g8dialog[data-prompt=player] .gccuiProfileOverview .g8scoutoutlook{margin:0!important;min-width:0;padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important}
+#g8dialog[data-prompt=player] .gccuiProfileOverview .g8gccrecord{grid-column:1/-1;margin:0!important;padding:16px 0 0!important;background:transparent!important;border:0!important;border-top:1px solid var(--gcc-line)!important;border-radius:0!important;box-shadow:none!important}
 #g8dialog[data-prompt=player] .gccuiProfileOverview .g8recordstats{margin-top:10px!important;gap:12px}
 #g8dialog[data-prompt=player] .gccuiProfileOverview .g8recordstats>div{padding:10px!important}
 #g8dialog[data-prompt=player] .gccuiProfileOverview .g8recordstats strong{font-size:28px!important;line-height:1.1!important}
@@ -646,17 +646,19 @@
 #g8dialog[data-prompt=player] .gccuiProfileHead{display:grid!important;grid-template-columns:minmax(0,1fr) 44px;align-items:start;gap:14px 16px!important;padding:16px!important;position:sticky!important;top:0;z-index:5;background:var(--gcc-panel)!important;border-bottom:1px solid var(--gcc-line)!important}
 #g8dialog[data-prompt=player] .gccuiProfileHead>.g8dialogclose{grid-column:2;grid-row:1;width:44px;height:44px;margin:0!important}
 #g8dialog[data-prompt=player] .gccuiProfileHead>.gccuiDossierIdentity{grid-column:1;grid-row:1;margin:0!important;padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important}
-#g8dialog[data-prompt=player] .gccuiDossierIdentity>.g8nameandrating{display:grid!important;grid-template-columns:minmax(0,1fr) 72px!important;gap:16px!important;align-items:center!important;width:100%!important}
-#g8dialog[data-prompt=player] .gccuiIdentityText{min-width:0!important;text-align:left!important}
+#g8dialog[data-prompt=player] .gccuiDossierIdentity>.g8nameandrating{display:grid!important;grid-template-columns:minmax(0,1fr) 72px!important;gap:16px!important;align-items:center!important;justify-items:stretch!important;width:100%!important}
+#g8dialog[data-prompt=player] .gccuiIdentityText{min-width:0!important;max-width:none!important;width:100%!important;justify-self:stretch!important;text-align:left!important}
 #g8dialog[data-prompt=player] .gccuiIdentityText #g8dialogTitle{margin:0 0 6px!important;font:700 26px/1.15 Arial,Helvetica,sans-serif!important;text-transform:none!important;font-style:normal!important;letter-spacing:-.02em!important;overflow-wrap:break-word;text-align:left!important}
 #g8dialog[data-prompt=player] .gccuiIdentityText h3{margin:0 0 8px!important;font-size:14px!important;line-height:1.4!important;text-align:left!important;font-style:normal!important;font-weight:400!important}
 #g8dialog[data-prompt=player] .gccuiIdentityText .g8scoutmeta{display:flex!important;justify-content:flex-start!important;flex-wrap:wrap;gap:4px 10px!important;margin:0!important}
 #g8dialog[data-prompt=player] .gccuiIdentityText .g8scoutmeta>span{background:transparent!important;border:0!important;padding:0!important;font-size:12px!important;line-height:1.4!important;color:var(--gcc-muted)!important}
-#g8dialog[data-prompt=player] .gccuiDossierRating{padding:10px 8px;background:var(--gcc-inset);border:1px solid var(--gcc-line);border-radius:4px}
+#g8dialog[data-prompt=player] .gccuiDossierRating{padding:6px 0;background:transparent;border:0;border-radius:0}
 #g8dialog[data-prompt=player] .gccuiDossierRating>small{font-size:12px;white-space:nowrap;letter-spacing:0;line-height:1.3}
-#g8dialog[data-prompt=player] .gccuiProfileHead>.gccuiProfileViews{grid-column:1/-1;grid-row:2;padding:0!important;margin:0!important;border:0!important}
+#g8dialog[data-prompt=player] .gccuiProfileHead>.gccuiDossierRail{grid-column:1/-1;grid-row:2;display:flex;align-items:center;justify-content:space-between;gap:16px;min-width:0}
+#g8dialog[data-prompt=player] .gccuiDossierRail>.gccuiProfileViews{padding:0!important;margin:0!important;border:0!important;flex:1;min-width:0}
+#g8dialog[data-prompt=player] .gccuiDossierRail>.gccuiDossierActions{margin:0;flex-shrink:0}
 #g8dialog[data-prompt=player] .gccuiDossierActions{margin:0 0 14px;display:flex;flex-wrap:wrap;gap:8px}
-#g8dialog[data-prompt=player] .gccuiProfileOverview .g8scoutoutlook{text-align:left!important;background:var(--gcc-panel)!important;border-color:var(--gcc-line)!important}
+#g8dialog[data-prompt=player] .gccuiProfileOverview .g8scoutoutlook{text-align:left!important}
 #g8dialog[data-prompt=player] .gccuiProfileOverview .g8scoutoutlook h3{font-size:18px!important;line-height:1.35!important;text-align:left!important;text-transform:none!important;font-style:normal!important;margin:6px 0 10px!important}
 #g8dialog[data-prompt=player] .gccuiFullSkills .g8skillcategory{background:var(--gcc-panel)!important;border:1px solid var(--gcc-line)!important;border-top:3px solid var(--gcc-accent)!important;box-shadow:none!important}
 #g8dialog[data-prompt=player] .gccuiFullSkills .g8skillcategory h3{font-size:16px!important;line-height:1.4!important;text-transform:none!important;text-align:left!important;font-style:normal!important;margin:0 0 10px!important;padding:0 0 8px!important;border-color:var(--gcc-line)!important}
@@ -819,3 +821,77 @@
 /* Scout is clipped by its card: keep the complete focus ring inside its bounds. */
 #g8app .gccui .gccuiPlayerScout:focus-visible{outline-offset:-4px}
 @media(max-width:380px){#g8dialog .gccuiDraftSquadReport .gccuiRoleCoverage>div{grid-template-columns:minmax(0,1fr)}}
+
+/* Macro/micro review: compact desktop context, atomic club identity. */
+#g8app #g8hud .g8hudclub>.g8badge{box-sizing:border-box!important;padding:0!important;white-space:nowrap!important;overflow-wrap:normal!important;word-break:normal!important;font-size:12px!important;line-height:1!important;flex-shrink:0!important;align-items:center;justify-content:center}
+#g8app .gccuiDraft .gccuiHeadingIcon .g8icon{width:24px!important;height:24px!important}
+@media(min-width:1001px){
+ #g8app .gccuiDraft{display:grid;grid-template-columns:minmax(250px,.7fr) minmax(0,1.3fr);column-gap:16px;align-items:center}
+ #g8app .gccuiDraft>.gccuiHeading{margin:0 0 12px;padding:0;border:0}
+ #g8app .gccuiDraft>.gccuiTurn{margin:0 0 12px;min-width:0}
+ #g8app .gccuiDraft>.gccuiDraftGrid,#g8app .gccuiDraft>.gccuiHelp{grid-column:1/-1}
+ #g8app .gccuiDraft .gccuiPanelHead{min-height:48px;padding:10px 16px}
+ #g8app .gccuiDraft .gccuiFilters{padding:10px 14px;gap:10px}
+ #g8app .gccuiDraft .gccuiFilters label{gap:4px}
+ #g8app:has(.gccuiDraft) #g8hud{padding:6px 16px!important}
+ #g8app:has(.gccuiDraft) #g8stage{padding-top:10px!important}
+ #g8app:has(.gccuiDraft) .g8offseasonsteps li{padding:4px 10px!important}
+ #g8app:has(.gccuiDraft) .g8offseasonsteps{margin-bottom:8px!important}
+}
+
+/* A single dossier rail and assessment band replace nested card framing. */
+html:has(#g8dialog[open]){overflow:hidden}
+#g8dialog[data-prompt=player] .gccuiProfileOverview .g8developmentbadge{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;background:transparent!important;border:0!important;padding:4px 0!important;margin:0 0 8px!important}
+#g8dialog[data-prompt=player] .gccuiProfileOverview .g8developmentbadge b{font-size:24px!important;line-height:1.2!important}
+#g8dialog[data-prompt=player] .gccuiProfileOverview .g8developmentbadge span{font-size:13px!important}
+#g8dialog[data-prompt=player] .gccuiProfileOverview .g8scoutoutlook .g8moredata{margin:8px 0!important;padding:0!important;border:0!important;background:transparent!important}
+#g8dialog[data-prompt=player] .gccuiProfileOverview .g8scoutoutlook .g8moredata summary{min-height:44px;padding:10px 0!important;font-size:14px!important}
+#g8dialog[data-prompt=player] .gccuiProfileOverview .g8scoutjob{background:transparent!important;border:0!important;padding:0!important;margin-top:8px!important;color:var(--gcc-muted)!important;font-size:13px!important}
+@media(max-width:760px){#g8dialog[data-prompt=player] .gccuiDossierRail{flex-direction:column;align-items:stretch;gap:10px}#g8dialog[data-prompt=player] .gccuiDossierRail>.gccuiProfileViews{width:100%}#g8dialog[data-prompt=player] .gccuiDossierRail>.gccuiDossierActions>.g8button{width:100%}#g8dialog[data-prompt=player] .gccuiProfileOverview{grid-template-columns:minmax(0,1fr);gap:20px}}
+
+/* Career framing leaves the roster and fixture as the primary surfaces. */
+#g8app #g8hud:has(.g8hudclub>.g8badge){padding:8px 16px!important;gap:10px!important}
+#g8app #g8hud:has(.g8hudclub>.g8badge) .g8brand{width:48px!important;min-width:48px!important;height:48px!important}
+#g8app #g8hud:has(.g8hudclub>.g8badge) .gccBrandMini{width:40px!important;height:40px!important;flex-basis:40px!important}
+#g8app .gccuiSelection>.gccuiHeading{padding-bottom:12px;margin-bottom:12px}
+#g8app .gccuiSelection>.gccuiHeading h1{font-size:28px}
+#g8app .gccuiSelection>.gccuiHeading .gccuiHeadingIcon{flex-basis:44px;height:44px}
+#g8app .gccuiSelection .gccuiSelectionTop{gap:12px;margin-bottom:12px}
+#g8app .gccuiSelection .g8selectionground{padding:12px!important;gap:12px}
+#g8app .gccuiSelection .gccuiSelectionStatus{display:grid;grid-template-columns:64px 64px minmax(0,1fr);gap:12px;padding:12px}
+#g8app .gccuiSelection .gccuiSelectionActions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+#g8app .gccuiSelection .gccuiSelectionBlocker{grid-column:1/-1;margin:0}
+#g8app .gccuiSelection .gccuiReturning{padding:10px 14px;margin-bottom:12px}
+#g8app .gccuiSelection .gccuiPanelHead{min-height:48px;padding:10px 14px}
+#g8app .gccuiSelection .gccuiOrderRow,#g8app .gccuiSelection .gccuiBenchRow{min-height:76px;padding:10px 12px}
+#g8app .gccuiSelection .gccuiOrderHint{padding:10px 14px}
+#g8app .gccuiResult>.g8nextstep{margin:16px 0!important}
+#g8app .gcc-worm .gccuiWormAxis{font-size:12px!important;line-height:1.4;text-align:right;margin:4px 0 0!important;color:var(--gcc-muted)}
+#g8app .gcc-worm svg text{font-size:15px!important;fill:var(--gcc-muted)!important}
+@media(min-width:1001px){
+ #g8app:has(.gccuiSelection,.gccuiCommandCentre) #g8stage{padding-top:20px!important}
+ #g8app .gccuiSelection .gccuiSelectionTop{grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr)}
+ #g8app .gccuiCommandCentre .gccuiCampaignRibbon>div{padding:10px 14px;gap:4px}
+ #g8app .gccuiCommandCentre .gccuiVenue{grid-template-columns:140px minmax(0,1fr);padding:12px;gap:14px}
+ #g8app .gccuiCommandCentre .gccuiVenuePhoto .g8stadium{height:80px!important}
+}
+@media(max-width:760px){
+ #g8app .gccuiSelection .gccuiSelectionStatus{grid-template-columns:1fr 1fr;gap:10px}
+ #g8app .gccuiSelection .gccuiSelectionActions{grid-column:1/-1}
+ #g8app .gcc-worm svg text{font-size:30px!important}
+}
+
+#g8app .gccuiResultTop{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:16px;border-bottom:1px solid var(--ui-rule);padding-bottom:12px}
+#g8app .gccuiResultTop>.gccuiHeading{margin:0;padding:0;border:0}
+#g8app .gccuiResultActions{display:flex;align-items:center;gap:8px;flex-shrink:0}
+#g8app .gccuiScorecard>h2{margin:0 0 16px!important;padding:0!important;border:0!important}
+#g8app .gccui .gccuiScoreSide{background:var(--gcc-inset);border-color:var(--gcc-line)}
+@media(max-width:760px){#g8app .gccuiResultTop{align-items:stretch;flex-direction:column;gap:12px}#g8app .gccuiResultActions{display:grid;grid-template-columns:1fr 1fr}#g8app .gccuiResultActions .g8button{width:100%}}
+
+/* Shared title names the ladder; its caption remains available to assistive tech. */
+#g8app .gccuiTableView .g8ladder caption{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+#g8app .gccuiTableView .g8tablewrap:has(>.g8ladder){padding:16px!important}
+#g8app .gccuiTableView .g8ladder :is(th,td){padding:10px 8px!important;font-size:14px!important;line-height:1.4!important}
+@media(min-width:761px) and (max-width:1000px){#g8app .gccuiSelection .gccuiSelectionTop{grid-template-columns:minmax(0,1fr)}}
+
+#g8app .gccuiTableView .g8tablewrap{padding:16px!important}

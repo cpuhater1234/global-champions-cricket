@@ -1,0 +1,33 @@
+{
+  "file": "qa/perfection-20261030/candidate.html",
+  "results": [
+    {
+      "name": "naturalOrder: rendered control disabled during swap",
+      "pass": true
+    },
+    {
+      "name": "naturalOrder: dispatch rejects during swap",
+      "pass": true
+    },
+    {
+      "name": "naturalOrder: pending selection is unchanged",
+      "pass": true
+    },
+    {
+      "name": "clearXI: rendered control disabled during swap",
+      "pass": true
+    },
+    {
+      "name": "clearXI: dispatch rejects during swap",
+      "pass": true
+    },
+    {
+      "name": "clearXI: pending selection is unchanged",
+      "pass": true
+    },
+    {
+      "name": "OUT temporary cover row exposes its medical status",
+      "pass": true
+    }
+  ]
+}

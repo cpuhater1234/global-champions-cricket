@@ -73,7 +73,7 @@
  v.result=()=>{
   const r=ui.result,regular=s.results.includes(r),next=regular?G.nextUserFixture():null,opponent=next?(next.home.abbr===own()?next.away:next.home):null,back=btn(regular?(next?'Next match':'League wrap-up'):'Back to finals',regular?'matchday':'finalsReturn',[],'g8primary');
   const continuation=`<section class="g8nextstep" aria-label="Continue your campaign"><div><span class="g8eyebrow">${regular?(next?'UP NEXT · ROUND '+(s.round+1):'LEAGUE COMPLETE'):'FINALS'}</span><h2>${next?`${esc(opponent.name)} · ${next.home.abbr===own()?'Home':'Away'}`:regular?'Fourteen matches played':'Return to the knockout bracket'}</h2></div>${back}</section>`;
-  return heading(`${s.year} · ${r.round?'ROUND '+r.round:'FINALS'}`,'Match result','')+resultCard(r)+X.storyResult(r)+X.matchAwards(r)+X.matchWorm(r)+continuation+`<div class="g8resulttools">${btn('Scorebook','resultScorecard',[],'g8ghost')}${btn('Replay match','watchMatch',[],'g8ghost')}${r?.ladderAfter?`<span>Ladder position ${r.ladderAfter}</span>`:''}</div>`;
+  return heading(`${s.year} · ${r.round?'ROUND '+r.round:'FINALS'}`,'Match result','')+resultCard(r)+continuation+`<div class="g8resulttools">${btn('Scorebook','resultScorecard',[],'g8ghost')}${btn('Replay match','watchMatch',[],'g8ghost')}${r?.ladderAfter?`<span>Ladder position ${r.ladderAfter}</span>`:''}</div>`+X.storyResult(r)+X.matchAwards(r)+X.matchWorm(r);
  };
 
  v.finals=()=>{

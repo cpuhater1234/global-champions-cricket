@@ -1,0 +1,40 @@
+{
+  "file": "qa/perfection-20261030/candidate.html",
+  "results": [
+    {
+      "name": "naturalOrder: rendered control disabled during swap",
+      "pass": false,
+      "error": "The input did not match the regular expression /\\sdisabled(?:\\s|>)/. Input:\n\n'<button type=\"button\"    class=\"g8button g8ghost\" data-action=\"naturalOrder\" data-args=\"[]\" >'\n"
+    },
+    {
+      "name": "naturalOrder: dispatch rejects during swap",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n\ntrue !== false\n"
+    },
+    {
+      "name": "naturalOrder: pending selection is unchanged",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '{\"xi\":[38,92,144,248,215,210,224,256,184,227,219],\"order\":[248,227,38,256,184,215,144,219,210,224,92],\"pending\":147}'\n- '{\"xi\":[38,92,144,248,215,210,224,256,184,227,219],\"order\":[92,224,210,219,144,215,184,256,38,227,248],\"pending\":147}'\n"
+    },
+    {
+      "name": "clearXI: rendered control disabled during swap",
+      "pass": false,
+      "error": "The input did not match the regular expression /\\sdisabled(?:\\s|>)/. Input:\n\n'<button type=\"button\"    class=\"g8button g8danger\" data-action=\"clearXI\" data-args=\"[]\" >'\n"
+    },
+    {
+      "name": "clearXI: dispatch rejects during swap",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n\ntrue !== false\n"
+    },
+    {
+      "name": "clearXI: pending selection is unchanged",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '{\"xi\":[],\"order\":[],\"pending\":null}'\n- '{\"xi\":[38,92,144,248,215,210,224,256,184,227,219],\"order\":[92,224,210,219,144,215,184,256,38,227,248],\"pending\":147}'\n"
+    },
+    {
+      "name": "OUT temporary cover row exposes its medical status",
+      "pass": false,
+      "error": "disabled selection explains medical status"
+    }
+  ]
+}
