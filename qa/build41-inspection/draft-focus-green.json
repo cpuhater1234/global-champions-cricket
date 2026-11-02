@@ -1,0 +1,46 @@
+{
+  "file": "qa/perfection-20261030/candidate.html",
+  "limits": "Offline focus-intent stub; no native keyboard or DOM certification.",
+  "results": [
+    {
+      "path": "pool",
+      "check": "stable programmatically focusable turn heading",
+      "pass": true
+    },
+    {
+      "path": "pool",
+      "check": "successful pick explicitly focuses current draft turn",
+      "pass": true
+    },
+    {
+      "path": "pool",
+      "check": "successful pick keeps exact top scroll",
+      "pass": true
+    },
+    {
+      "path": "pool",
+      "check": "CPU refresh preserves the turn target focus",
+      "pass": true
+    },
+    {
+      "path": "dossier",
+      "check": "stable programmatically focusable turn heading",
+      "pass": true
+    },
+    {
+      "path": "dossier",
+      "check": "successful pick explicitly focuses current draft turn",
+      "pass": true
+    },
+    {
+      "path": "dossier",
+      "check": "successful pick keeps exact top scroll",
+      "pass": true
+    },
+    {
+      "path": "dossier",
+      "check": "CPU refresh preserves the turn target focus",
+      "pass": true
+    }
+  ]
+}

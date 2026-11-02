@@ -989,3 +989,18 @@ html:has(#g8dialog[open]){overflow:hidden}
  #g8app .g8clubchooser .g8clubcardaction .g8button{width:44px!important;min-width:44px!important;height:44px!important;min-height:44px!important;padding:0!important}
  #g8app .g8clubchooser .g8clubcardaction .g8button>.g8icon,#g8app .g8clubchooser .g8clubcardaction .g8button>span{display:none!important}
 }
+
+/* Inspection41: fixed-size club marks keep abbreviations on one line. */
+#g8app .gccui .g8badge{box-sizing:border-box!important;padding:0!important;white-space:nowrap!important;overflow-wrap:normal!important;word-break:normal!important;line-height:1!important;letter-spacing:0!important}
+#g8app .gccui .gccuiTurnMark .g8badge{font-size:12px!important}
+#g8app .gccui .gccuiClubHead>.g8badge{font-size:14px!important}
+/* Group frames clip external outlines; retain the complete keyboard indicator. */
+#g8app .gccui .gccuiPickedPlayer:focus-visible{outline:3px solid #f1c06b!important;outline-offset:-4px!important}
+@media(max-width:600px){#g8app .gccuiCommandCentre .gccuiFixtureActions .g8button .g8icon{width:16px!important;height:16px!important;min-width:16px!important;flex:0 0 16px!important}}
+
+/* Keep the single XI confirmation visible while editing a long phone roster.
+   Short viewports retain normal flow so the panel cannot obscure the workspace. */
+@media(max-width:760px) and (min-height:640px){
+ #g8app .gccuiSelection .gccuiSelectionHeader{display:contents}
+ #g8app .gccuiSelection .gccuiSelectionStatus{position:sticky;top:8px;z-index:6;box-shadow:0 4px 0 var(--gcc-inset)}
+}

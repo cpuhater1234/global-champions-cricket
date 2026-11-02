@@ -232,6 +232,11 @@ rep(19,"dialogOpener=null,pendingFocus=null;","dialogOpener=null,pendingFocus=nu
 rep(19,"else G.userDraft(Number(id));announce(","else G.userDraft(Number(id));pendingScrollTop=true;announce(")
 rep(19,"finally{G.closeModal();busy=false;if(pendingFocus)","finally{G.closeModal();busy=false;const resetPosition=pendingScrollTop;pendingScrollTop=false;if(pendingFocus)")
 rep(19,"}else if(ui.view===view&&sceneKey()===scene)window.scrollTo", "}else if(resetPosition)window.scrollTo({left:0,top:0,behavior:'instant'});else if(ui.view===view&&sceneKey()===scene)window.scrollTo")
+# Focus the next draft decision after a committed pick; the final pick may already
+# have entered the team room, whose stage focus must remain intact.
+rep(19,"pendingScrollTop=false;if(pendingFocus)","pendingScrollTop=false;if(resetPosition&&(ui.view==='draft'||annual())&&X.draftCurrent(annual()))pendingFocus='#gccuiDraftTurnTitle';if(pendingFocus)")
+rep(19,"target?.scrollIntoView?.({block:'center',behavior:'instant'});", "if(resetPosition&&target?.id==='gccuiDraftTurnTitle')window.scrollTo({left:0,top:0,behavior:'instant'});else target?.scrollIntoView?.({block:'center',behavior:'instant'});")
+
 # Retain club identity in compact chooser rows without duplicating desktop metadata.
 rep(17,'<h3>${esc(c.name)}</h3><div class="g8clubground">','<h3>${esc(c.name)}</h3><div class="gccuiClubMeta">${esc(c.league)} · ${esc(c.displayRegion||c.region)}</div><div class="g8clubground">')
 rep(17,":'Select '+c.name",":'Open club guide for '+c.name")

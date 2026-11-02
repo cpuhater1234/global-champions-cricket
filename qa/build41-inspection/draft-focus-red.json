@@ -1,0 +1,50 @@
+{
+  "file": "deliver/GCC_v8_Playtest_41.html",
+  "limits": "Offline focus-intent stub; no native keyboard or DOM certification.",
+  "results": [
+    {
+      "path": "pool",
+      "check": "stable programmatically focusable turn heading",
+      "pass": false,
+      "error": "The input did not match the regular expression /<h2\\b(?=[^>]*\\bid=\"gccuiDraftTurnTitle\")(?=[^>]*\\btabindex=\"-1\")[^>]*>/. Input:"
+    },
+    {
+      "path": "pool",
+      "check": "successful pick explicitly focuses current draft turn",
+      "pass": false,
+      "error": "Expected \"actual\" to be reference-equal to \"expected\":"
+    },
+    {
+      "path": "pool",
+      "check": "successful pick keeps exact top scroll",
+      "pass": true
+    },
+    {
+      "path": "pool",
+      "check": "CPU refresh preserves the turn target focus",
+      "pass": true
+    },
+    {
+      "path": "dossier",
+      "check": "stable programmatically focusable turn heading",
+      "pass": false,
+      "error": "The input did not match the regular expression /<h2\\b(?=[^>]*\\bid=\"gccuiDraftTurnTitle\")(?=[^>]*\\btabindex=\"-1\")[^>]*>/. Input:"
+    },
+    {
+      "path": "dossier",
+      "check": "successful pick explicitly focuses current draft turn",
+      "pass": false,
+      "error": "Expected \"actual\" to be reference-equal to \"expected\":"
+    },
+    {
+      "path": "dossier",
+      "check": "successful pick keeps exact top scroll",
+      "pass": true
+    },
+    {
+      "path": "dossier",
+      "check": "CPU refresh preserves the turn target focus",
+      "pass": true
+    }
+  ]
+}
