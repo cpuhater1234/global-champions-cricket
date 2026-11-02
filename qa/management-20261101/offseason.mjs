@@ -13,6 +13,8 @@ assert(html.includes('aria-label="Selection decisions"'),'offseason overview sur
 assert(html.includes('Wants a move'));assert(html.includes('3 fit matches remaining'));assert(html.includes('OUT · calf tightness'));
 assert(!html.includes('Your core stays together.'),'avoid reassurance which ignores player concerns');
 assert(html.includes('Manage players'));assert(html.includes('Review player'),'concerns link directly to their report');
+assert(html.indexOf('aria-label="Selection decisions"')<html.indexOf('data-action="reviewList"'),'squad concerns precede the continuation action');
+assert(X.managementRows().includes('Wants a move'),'manage squad rows retain relationship status');
 q=X.managementState();for(const p of Object.values(q.players)){p.requested=false;p.promise=null;}s.dynasty.v8Management=q;s.dynasty.injuries={};
 html=X.offseasonMarket();assert(!html.includes('aria-label="Selection decisions"'),'quiet offseason needs no empty decision panel');
 assert.deepEqual(h.errors,[]);console.log('PASS offseason decisions, direct report actions, medical context, immutable rendering and quiet empty state');

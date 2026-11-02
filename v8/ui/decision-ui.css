@@ -727,3 +727,16 @@
 #g8dialog[data-prompt=player] .g8rotationconversation>.g8button{min-height:44px!important;margin:0 0 12px}
 
 #g8dialog[data-prompt=player] .g8commitmentchoice>.g8button{margin-top:auto}
+
+/* Squad issues must be read before the preseason continuation controls. */
+#g8app .gccuiCareer .g8annualhero>.g8dressingroom{margin:16px 0!important;padding:14px!important;background:#252525!important;border:1px solid #626262!important;border-top:3px solid var(--ui-team)!important}
+#g8app .gccuiCareer .g8annualhero>.g8dressingroom>header{margin:0 0 8px!important;padding-bottom:10px;border-bottom:1px solid #626262}
+#g8app .gccuiCareer .g8annualhero>.g8dressingroom h2{font-size:18px!important;line-height:1.35!important;margin:4px 0 0!important;padding:0!important;border:0!important}
+#g8app .gccuiCareer .g8annualhero>.g8dressingroom .g8eyebrow{font-size:11px!important;line-height:1.4!important;margin:0!important}
+#g8app .gccuiCareer .g8annualhero .g8decisionline{display:grid!important;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;padding:10px 0!important}
+#g8app .gccuiCareer .g8annualhero .g8decisionline>div{min-width:0}
+#g8app .gccuiCareer .g8annualhero .g8decisionline :is(strong,span,small){display:block;white-space:normal;text-align:left}
+#g8app .gccuiCareer .g8annualhero .g8decisionline strong{font-size:14px;line-height:1.4}
+#g8app .gccuiCareer .g8annualhero .g8decisionline :is(span,small){font-size:13px;line-height:1.5}
+#g8app .gccuiCareer .g8annualhero .g8decisionline>.g8button{min-height:44px!important;margin:0!important}
+#g8app .gccuiCareer .g8managerow .g8squadpulse{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
