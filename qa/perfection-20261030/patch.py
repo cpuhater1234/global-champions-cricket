@@ -269,6 +269,8 @@ rep(16,"+X.offseasonSteps()+X.previousSeasonBrief()+(managing?X.departureGuide()
 rep(16,'<div class="gccuiOffseasonIssues">${X.managementBrief(true)}</div>','<div class="gccuiOffseasonIssues">${X.managementBrief(true)?X.disclosure(\'Squad decisions to review\',X.managementBrief(true)):\'\'}</div>')
 rep(17,"['Wins',t.w||0],['Losses',t.l||0]","['League wins',t.w||0],['League losses',t.l||0]")
 
+parts[16]=runpy.run_path(str(root/'qa/native48/refinement-transform.py'))['transform'](parts[16])
+
 parts[18]+='\n'+(root/'v8/ui/decision-ui.js').read_text()
 for i in (9,10,11,12,16,17,19):
  path=root/('v8/engine/'+('foundation.js' if i==9 else 'dynasty.js')) if i in (9,10) else root/('v8/ui/'+{11:'components.js',12:'cricket-reads.js',16:'career.js',17:'screens.js',19:'controller.js'}[i]);path.write_text(parts[i])

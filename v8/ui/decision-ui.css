@@ -1145,3 +1145,27 @@ html:has(#g8dialog[open]){overflow:hidden}
  #g8app .gccuiFinals .gccuiFinalDecision>h2{font-size:19px!important}
  #g8app .gccuiReview .g8reviewsummary .g8metrics strong{font-size:23px!important}
 }
+
+/* Native Build48 inspection: place squad decisions ahead of supporting rules. */
+#g8app .gccuiCareer .g8annualhero{grid-template-columns:minmax(0,1fr)!important;gap:12px!important}
+#g8app .gccuiCareer :is(.gccuiOffseasonSummary,.gccuiOffseasonIssues,.gccuiOffseasonActions){grid-column:1/-1}
+#g8app .gccuiCareer .gccuiOffseasonIssues .gccuiSquadDecisions{margin:0!important}
+#g8app .gccuiCareer .gccuiSquadDecisions.has-alert{border-left:3px solid #d8af57!important}
+#g8app .gccuiCareer .gccuiSquadDecisions>summary{white-space:normal!important;line-height:1.45!important;padding:12px 16px!important}
+#g8app .gccuiBriefUnavailable{margin:0!important;padding:4px 2px!important;font-size:13px!important;line-height:1.45!important;color:var(--gcc-muted)!important}
+#g8app .gccuiAllowance{margin:12px 0!important;padding:12px 16px!important;border:1px solid var(--gcc-line);border-left:3px solid var(--ui-team);background:var(--gcc-panel)}
+#g8app .gccuiAllowance>strong{display:block;font-size:16px!important;line-height:1.4!important}
+#g8app .gccuiAllowance>span{display:block;font-size:13px!important;line-height:1.45!important;margin-top:3px}
+#g8app .gccuiAllowance>.g8disclosure{margin:8px 0 0!important;border:0!important;background:none!important}
+#g8app .gccuiAllowance>.g8disclosure>summary{padding:8px 0!important;min-height:44px;font-size:14px!important}
+#g8app .gccuiManageContinue{padding:16px 0;margin:12px 0;border-top:1px solid var(--gcc-line)}
+@media(max-width:760px){
+ #g8app .gccuiCareer:has(.g8manageworkspace)>.g8heading{padding:14px!important;gap:8px!important}
+ #g8app .gccuiCareer:has(.g8manageworkspace)>.g8heading h1{font-size:24px!important;line-height:1.2!important}
+ #g8app .gccuiCareer:has(.g8manageworkspace)>.g8heading p{font-size:14px!important;line-height:1.4!important;margin-top:6px!important}
+ #g8app .gccuiCareer:has(.g8manageworkspace)>.g8heading .g8actions{margin-top:4px!important}
+ #g8app .gccuiCareer .g8annualbrief{padding:8px 0!important;margin-bottom:8px!important}
+ #g8app .gccuiCareer .gccuiOffseasonSummary>h2{margin-bottom:8px!important}
+ #g8app .gccuiCareer .gccuiOffseasonActions .g8actions{display:grid!important;grid-template-columns:1fr 1fr!important;gap:8px!important}
+ #g8app .gccuiCareer .gccuiOffseasonActions .g8actions>.g8button{font-size:13px!important;line-height:1.4!important;white-space:normal!important;min-height:48px!important;padding:8px!important;width:100%!important}
+}
