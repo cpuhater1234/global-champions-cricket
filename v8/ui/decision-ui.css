@@ -1114,3 +1114,7 @@ html:has(#g8dialog[open]){overflow:hidden}
 
 #g8app .gccuiSelection.gccuiSwapping .gccuiOrderRow{grid-template-columns:18px minmax(0,1fr) 34px!important}
 #g8app .gccuiSelection.gccuiSwapping .gccuiRosterActions:empty{display:none}
+
+/* Promise rules remain complete, with prose weight rather than headline weight. */
+#g8dialog[data-prompt=player] .gccuiProfilePanel .gccuiManagementFocus>.g8commitment span{font-size:13px!important;line-height:1.5!important;font-weight:400!important}
+#g8app .gccuiConsequences:has(.gccuiConsequenceQuiet){border-top:0!important;min-height:0!important}

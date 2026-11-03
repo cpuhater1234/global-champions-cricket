@@ -251,6 +251,8 @@ rep(19,'Open a selected player to move them up or down the batting order; use Sw
 
 rep(19," bind('matchday',['result'],"," bind('fixtureNext',['season'],()=>{assert(ui.seasonTab==='fixtures'&&G.nextUserFixture(),'No upcoming fixture is available here.');pendingFocus='#gccuiNextFixture';});\n bind('matchday',['result'],")
 
+rep(16,'.map(e=>({key:txt(e.key),text:txt(e.text),year:num(e.year),playerId:num(e.playerId),kind:txt(e.kind)}))',".map(e=>{const encoded=Number(/^(\\d{4}):/.exec(e.key)?.[1]),eventYear=Number.isInteger(e.year)&&e.year>=2008&&e.year<=2026?e.year:encoded>=2008&&encoded<=2026?encoded:0,savedId=Number.isSafeInteger(e.playerId)&&e.playerId>0?e.playerId:0,matches=savedId===400?roster.filter(p=>typeof p.name==='string'&&p.name&&e.text.startsWith(p.name+':')):[],playerId=savedId===400?(matches.length===1&&Number.isSafeInteger(matches[0].id)&&matches[0].id>0?matches[0].id:0):savedId;return {key:txt(e.key),text:txt(e.text),year:eventYear,playerId,kind:txt(e.kind)};})")
+
 import runpy
 parts[16]=runpy.run_path(str(root/'qa/panel46/management-transform.py'))['transform'](parts[16])
 parts[16]=runpy.run_path(str(root/'qa/panel46/consequence-transform.py'))['transform'](parts[16])
