@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import vm from 'node:vm';
+import {execFileSync} from 'node:child_process';
+const source=fs.readFileSync('v8/ui/career.js','utf8');
+const transformed=execFileSync('python',['-c',"import importlib.util; p=importlib.util.spec_from_file_location('c','qa/panel46/consequence-transform.py'); m=importlib.util.module_from_spec(p); p.loader.exec_module(m); import sys; sys.stdout.write(m.transform(sys.stdin.read()))"],{input:source,encoding:'utf8'});
+const block=transformed.slice(transformed.indexOf('X.managementResult=r=>'),transformed.indexOf('\n X.storyPanel=X.managementBrief;'));
+let events=[];const r={round:4}; const ctx={X:{managementState:()=>({events})},s:{year:2008},results:()=>[r],keys:()=> '2008:R4',G:{byId:id=>({id,name:`Player ${id}`})},roster:()=>Array.from({length:6},(_,i)=>({id:i+1})),esc:x=>String(x).replaceAll('<','&lt;'),btn:(label,action,args)=>`<button data-action="${action}" data-args="[${args}]">${label}</button>`};
+vm.createContext(ctx);vm.runInContext(block,ctx);
+assert.match(ctx.X.managementResult(r),/No new management consequences/);
+assert.equal(ctx.X.managementResult({round:4}),'');
+const kinds=['broken','transfer','selection','kept','resolved','bowling'];events=kinds.map((kind,i)=>({kind,key:'2008:R4',year:2008,playerId:i+1,text:`Player ${i+1}: event ${i+1}`}));events.push({kind:'broken',key:'2008:R3',year:2008,playerId:99,text:'wrong match'},{kind:'broken',key:'2008:R4',year:2007,playerId:98,text:'wrong year'});
+const html=ctx.X.managementResult(r);assert.match(html,/6 management consequences/);assert.match(html,/2 urgent/);assert.match(html,/2 role or selection concerns/);assert.match(html,/2 positive/);assert.match(html,/<summary>Review all 6 consequences/);assert.equal((html.match(/data-action="manageInspect"/g)||[]).length,6);for(let i=1;i<=6;i++)assert.match(html,new RegExp(`Player ${i}: event ${i}`));assert.doesNotMatch(html,/wrong match|wrong year/);
+events=[{kind:'kept',key:'2008:R4',year:2008,playerId:1,text:'<b>trust</b>'}];const positive=ctx.X.managementResult(r);assert.match(positive,/1 management consequence<\/strong>/);assert.doesNotMatch(positive,/has-urgent|ConsequenceAlert/);assert.match(positive,/&lt;b>/);
+events=[{kind:'selection',key:'2008:R4',year:2008,playerId:99,text:'Former player: concern'}];assert.doesNotMatch(ctx.X.managementResult(r),/data-action="manageInspect"/,'former squad member has no dead management action');
+assert.equal(transformed.slice(0,transformed.indexOf('X.managementResult=r=>')),source.slice(0,source.indexOf('X.managementResult=r=>')));assert.ok(transformed.endsWith(source.slice(source.indexOf('\n X.storyPanel=X.managementBrief;'))));
+console.log('Result consequence contracts passed: quiet, complete six-event mixed severity, filters, management review routes, escaping, presentation-only scope.');

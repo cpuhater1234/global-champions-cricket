@@ -251,6 +251,16 @@ rep(19,'Open a selected player to move them up or down the batting order; use Sw
 
 rep(19," bind('matchday',['result'],"," bind('fixtureNext',['season'],()=>{assert(ui.seasonTab==='fixtures'&&G.nextUserFixture(),'No upcoming fixture is available here.');pendingFocus='#gccuiNextFixture';});\n bind('matchday',['result'],")
 
+import runpy
+parts[16]=runpy.run_path(str(root/'qa/panel46/management-transform.py'))['transform'](parts[16])
+parts[16]=runpy.run_path(str(root/'qa/panel46/consequence-transform.py'))['transform'](parts[16])
+
+# Match consequences open the same guarded management workflow before advancement.
+for key in ('manageInspect','managePlayer'):
+ rep(19,f"bind('{key}',['team','season','dynasty','finals']",f"bind('{key}',['team','season','dynasty','finals','result']")
+rep(19,"bind('manageTrade',['team','season','dynasty']","bind('manageTrade',['team','season','dynasty','result']")
+rep(19,"if(ui.view==='team')setView('season');trade(!s.dynasty?.offseason,id);","if(ui.view==='team'||ui.view==='result')setView('season');trade(!s.dynasty?.offseason,id);")
+
 parts[18]+='\n'+(root/'v8/ui/decision-ui.js').read_text()
 for i in (9,10,11,12,16,17,19):
  path=root/('v8/engine/'+('foundation.js' if i==9 else 'dynasty.js')) if i in (9,10) else root/('v8/ui/'+{11:'components.js',12:'cricket-reads.js',16:'career.js',17:'screens.js',19:'controller.js'}[i]);path.write_text(parts[i])

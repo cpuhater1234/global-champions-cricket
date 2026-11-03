@@ -15,7 +15,9 @@ assert.equal((html.match(/data-action="resultScorecard"/g)||[]).length,1,'one Sc
 assert.match(html,/Next match/);
 const score=html.indexOf('class="gccui gccuiScorecard');
 assert(score>0,'result scorecard exists');
-for(const action of ['matchday','resultScorecard'])assert(html.indexOf(`data-action="${action}"`)<score,`${action} precedes result scorecard`);
+assert(html.indexOf('data-action="resultScorecard"')<score,'Scorebook remains near the result title');
+const changes=html.indexOf('aria-label="Match management consequences"'),advance=html.indexOf('data-action="matchday"');
+assert(changes>score&&advance>changes,'management consequences precede advancement');
 const headline=html.indexOf(`${X.esc(s.results[0].winner.name)} won `),teams=html.indexOf('class="gccuiScoreTeams"');
 assert(headline>score&&headline<teams,'winner headline precedes team scores');
 assert(html.indexOf('class="g8nextstep"')<html.indexOf('class="gcc-awards"'),'campaign continuation precedes awards');
@@ -25,4 +27,4 @@ assert(X.dispatch('close'));assert.equal(X.ui.modal,null);assert.equal(X.ui.view
 assert(X.dispatch('matchday'));assert.equal(X.ui.view,'season');assert.equal(X.ui.seasonTab,'matchday');
 assert.equal(cricket(),before,'scorebook/close/continuation do not alter cricket state');
 assert.deepEqual(h.errors,[]);
-console.log(JSON.stringify({pass:true,file,checks:['single early actions','winner before scores','continuation before analysis','scorebook close returns to result','next match routes to matchday','cricket state immutable']}));
+console.log(JSON.stringify({pass:true,file,checks:['single continuation and early Scorebook','winner before scores','continuation before analysis','scorebook close returns to result','next match routes to matchday','cricket state immutable']}));

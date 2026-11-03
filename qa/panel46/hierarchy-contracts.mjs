@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {loadGame} from '../offline_game_host.mjs';
+import {startDraft,finishDraft,selectManualXI} from '../club-expansion-20261027/helpers.mjs';
+const h=loadGame('qa/perfection-20261030/candidate.html',101,new Map(),{strictIds:true}),X=h.context.GCC8,s=h.G.state;
+startDraft(h);finishDraft(h);selectManualXI(h);h.G.startSeason();h.G.playNextRound();
+X.ui.view='season';X.ui.seasonTab='matchday';const before=JSON.stringify({round:s.round,results:s.results,xi:s.xi,order:s.battingOrder,stats:s.playerSeasonStats});
+const hub=X.views.season();assert(hub.indexOf('class="gccuiFixtureTeams"')<hub.indexOf('class="gccuiVenue"'));assert.match(hub,/gccuiContestHeading/);assert(!/<h1[^>]*>[^<]*Stadium/.test(hub));
+X.ui.seasonTab='fixtures';const fixtures=X.views.season();assert.match(fixtures,/Prepare match/);assert.match(fixtures,/data-action="seasonTab" data-args="\[&quot;matchday&quot;\]"/);assert(X.dispatch('seasonTab',['matchday']));assert.equal(X.ui.seasonTab,'matchday');
+X.ui.view='team';const team=X.views.team();assert.match(team,/gccuiSelectionVenue"><summary>Venue &amp; conditions/);assert.match(team,/data-action="move"/);assert.match(team,/data-action="swapSelected"/);
+X.ui.result=s.results[0];X.ui.view='result';const result=X.views.result();assert.equal((result.match(/aria-label="Match management consequences"/g)||[]).length,1);assert(result.indexOf('aria-label="Match management consequences"')<result.indexOf('data-action="matchday"'));assert(result.indexOf('data-action="matchday"')<result.indexOf('class="gccuiScoreTeams"'));
+assert.equal(JSON.stringify({round:s.round,results:s.results,xi:s.xi,order:s.battingOrder,stats:s.playerSeasonStats}),before);assert.deepEqual(h.errors,[]);console.log('PASS matchup before venue, guarded fixture preparation, disclosed venue, retained XI controls, complete result decision ordering and cricket-state immutability');
