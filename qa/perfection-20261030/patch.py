@@ -275,6 +275,8 @@ parts[19]=runpy.run_path(str(root/'qa/native49/trade-transform.py'))['transform'
 
 parts[12],parts[17]=runpy.run_path(str(root/'qa/native50/stats-transform.py'))['transform'](parts[12],parts[17])
 
+parts[17]=runpy.run_path(str(root/'qa/native51/ladder-transform.py'))['transform'](parts[17])
+
 parts[18]+='\n'+(root/'v8/ui/decision-ui.js').read_text()
 for i in (9,10,11,12,16,17,19):
  path=root/('v8/engine/'+('foundation.js' if i==9 else 'dynasty.js')) if i in (9,10) else root/('v8/ui/'+{11:'components.js',12:'cricket-reads.js',16:'career.js',17:'screens.js',19:'controller.js'}[i]);path.write_text(parts[i])

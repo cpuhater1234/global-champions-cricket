@@ -1,0 +1,212 @@
+{
+  "input": "qa/perfection-20261030/candidate.html",
+  "inputSha256": "7b0f4b86ccab09227edeb47438f5b910d5d129ba21efe5ceec01df2384c11ca4",
+  "method": {
+    "years": [
+      2008,
+      2009
+    ],
+    "seeds": 20,
+    "pairs": 10,
+    "fixtures": 400,
+    "simulations": 800,
+    "weatherSeed": 606,
+    "actualCareerTransition": false,
+    "formFrozen": 0,
+    "injuriesFrozenEmpty": true,
+    "clubSelection": "rotating actual club/venue pairs from seed101 eight-club world",
+    "realPlayerPool": "seed101 2008 available foundation players",
+    "profileMismatch": 0,
+    "identityMismatch": 0,
+    "cpuSelectionComparison": "not run; fixed XI identity control only",
+    "limits": [
+      "Does not reproduce the native saved Punjab career.",
+      "Year changes weather context but does not age fixed player ratings.",
+      "Low-total rates are descriptive; no era-matched real-world benchmark loaded.",
+      "Private functions exposed in a temporary QA copy; function bodies and product sources unchanged."
+    ]
+  },
+  "summary": {
+    "fixtures": 400,
+    "innings": 800,
+    "firstInningsMean": 148.4475,
+    "firstInningsBelow80": 42,
+    "firstInningsBelow100": 69,
+    "firstInningsAllOut": 117,
+    "allInningsAllOut": 227,
+    "minFirstInnings": 40,
+    "maxFirstInnings": 261
+  },
+  "byYear": {
+    "2008": {
+      "fixtures": 200,
+      "innings": 400,
+      "firstInningsMean": 148.11,
+      "firstInningsBelow80": 21,
+      "firstInningsBelow100": 35,
+      "firstInningsAllOut": 58,
+      "allInningsAllOut": 113,
+      "minFirstInnings": 40,
+      "maxFirstInnings": 261
+    },
+    "2009": {
+      "fixtures": 200,
+      "innings": 400,
+      "firstInningsMean": 148.785,
+      "firstInningsBelow80": 21,
+      "firstInningsBelow100": 34,
+      "firstInningsAllOut": 59,
+      "allInningsAllOut": 114,
+      "minFirstInnings": 40,
+      "maxFirstInnings": 257
+    }
+  },
+  "byFirstInningsRatingEdge": {
+    "underdog": {
+      "fixtures": 214,
+      "innings": 428,
+      "firstInningsMean": 144.41121495327104,
+      "firstInningsBelow80": 21,
+      "firstInningsBelow100": 41,
+      "firstInningsAllOut": 64,
+      "allInningsAllOut": 117,
+      "minFirstInnings": 40,
+      "maxFirstInnings": 261
+    },
+    "similar": {
+      "fixtures": 146,
+      "innings": 292,
+      "firstInningsMean": 144.26712328767124,
+      "firstInningsBelow80": 19,
+      "firstInningsBelow100": 26,
+      "firstInningsAllOut": 45,
+      "allInningsAllOut": 82,
+      "minFirstInnings": 49,
+      "maxFirstInnings": 256
+    },
+    "favoured": {
+      "fixtures": 40,
+      "innings": 80,
+      "firstInningsMean": 185.3,
+      "firstInningsBelow80": 2,
+      "firstInningsBelow100": 2,
+      "firstInningsAllOut": 8,
+      "allInningsAllOut": 28,
+      "minFirstInnings": 63,
+      "maxFirstInnings": 255
+    }
+  },
+  "byPair": {
+    "1": {
+      "fixtures": 40,
+      "innings": 80,
+      "firstInningsMean": 131.1,
+      "firstInningsBelow80": 6,
+      "firstInningsBelow100": 10,
+      "firstInningsAllOut": 8,
+      "allInningsAllOut": 18,
+      "minFirstInnings": 57,
+      "maxFirstInnings": 206
+    },
+    "2": {
+      "fixtures": 40,
+      "innings": 80,
+      "firstInningsMean": 161.1,
+      "firstInningsBelow80": 2,
+      "firstInningsBelow100": 6,
+      "firstInningsAllOut": 8,
+      "allInningsAllOut": 20,
+      "minFirstInnings": 53,
+      "maxFirstInnings": 224
+    },
+    "3": {
+      "fixtures": 40,
+      "innings": 80,
+      "firstInningsMean": 146.5,
+      "firstInningsBelow80": 7,
+      "firstInningsBelow100": 10,
+      "firstInningsAllOut": 12,
+      "allInningsAllOut": 21,
+      "minFirstInnings": 40,
+      "maxFirstInnings": 261
+    },
+    "4": {
+      "fixtures": 40,
+      "innings": 80,
+      "firstInningsMean": 158.925,
+      "firstInningsBelow80": 0,
+      "firstInningsBelow100": 0,
+      "firstInningsAllOut": 9,
+      "allInningsAllOut": 19,
+      "minFirstInnings": 110,
+      "maxFirstInnings": 250
+    },
+    "5": {
+      "fixtures": 40,
+      "innings": 80,
+      "firstInningsMean": 132.35,
+      "firstInningsBelow80": 6,
+      "firstInningsBelow100": 6,
+      "firstInningsAllOut": 12,
+      "allInningsAllOut": 22,
+      "minFirstInnings": 49,
+      "maxFirstInnings": 188
+    },
+    "6": {
+      "fixtures": 40,
+      "innings": 80,
+      "firstInningsMean": 159.8,
+      "firstInningsBelow80": 4,
+      "firstInningsBelow100": 4,
+      "firstInningsAllOut": 6,
+      "allInningsAllOut": 16,
+      "minFirstInnings": 69,
+      "maxFirstInnings": 241
+    },
+    "7": {
+      "fixtures": 40,
+      "innings": 80,
+      "firstInningsMean": 145.675,
+      "firstInningsBelow80": 5,
+      "firstInningsBelow100": 5,
+      "firstInningsAllOut": 18,
+      "allInningsAllOut": 29,
+      "minFirstInnings": 48,
+      "maxFirstInnings": 256
+    },
+    "8": {
+      "fixtures": 40,
+      "innings": 80,
+      "firstInningsMean": 146.65,
+      "firstInningsBelow80": 4,
+      "firstInningsBelow100": 8,
+      "firstInningsAllOut": 18,
+      "allInningsAllOut": 30,
+      "minFirstInnings": 57,
+      "maxFirstInnings": 240
+    },
+    "9": {
+      "fixtures": 40,
+      "innings": 80,
+      "firstInningsMean": 155.6,
+      "firstInningsBelow80": 4,
+      "firstInningsBelow100": 10,
+      "firstInningsAllOut": 14,
+      "allInningsAllOut": 24,
+      "minFirstInnings": 49,
+      "maxFirstInnings": 255
+    },
+    "10": {
+      "fixtures": 40,
+      "innings": 80,
+      "firstInningsMean": 146.775,
+      "firstInningsBelow80": 4,
+      "firstInningsBelow100": 10,
+      "firstInningsAllOut": 12,
+      "allInningsAllOut": 28,
+      "minFirstInnings": 59,
+      "maxFirstInnings": 246
+    }
+  },
+  "mismatches": []
+}
