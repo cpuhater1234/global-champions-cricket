@@ -124,7 +124,8 @@
  };
  const simple=X.averages;
  // Installed after screens.js by controller boot: full batting/bowling records support the compact averages.
- X.installDetailedAverages=()=>{const compact=X.averages;X.averages=()=>compact()+`<section class="g8sheet g8seasonread g8tablewrap"><span class="g8eyebrow">THE FULL PLAYER RECORD</span><table class="g8table"><thead><tr><th>Player</th><th>High score</th><th>4s</th><th>6s</th><th>Bowling avg</th><th>Best bowling</th></tr></thead><tbody>${X.clubSeasonRecords().map(({p,t})=>{return `<tr><td>${esc(p.name)}</td><td>${t.bestRuns||0}</td><td>${t.fours||0}</td><td>${t.sixes||0}</td><td>${t.wickets?(t.runsConceded/t.wickets).toFixed(1):'–'}</td><td>${t.bowlBalls?`${t.bestWickets||0}/${t.bestBowlingRuns??'–'}`:'–'}</td></tr>`;}).join('')}</tbody></table></section>`;};
+ X.statsPlayer=p=>X.btn(p.name,'inspect',[p.id],'gccuiStatPlayer').replace('type="button"',`type="button" aria-label="View ${X.esc(p.name)} player report"`);
+ X.installDetailedAverages=()=>{const compact=X.averages;X.averages=()=>compact()+`<section class="g8sheet g8seasonread g8tablewrap gccuiPlayerStatsTable"><h2 class="gccuiStatsSubheading">Season detail</h2><table class="g8table"><caption>${s.year} · ${esc(s.userClub.name)} season detail, including finals</caption><thead><tr><th scope="col">Player</th><th scope="col">High score</th><th scope="col">4s</th><th scope="col">6s</th><th scope="col">Bowling avg</th><th scope="col">Best bowling</th></tr></thead><tbody>${X.clubSeasonRecords().map(({p,t})=>{return `<tr><th scope="row">${X.statsPlayer(p)}</th><td>${t.bestRuns||0}</td><td>${t.fours||0}</td><td>${t.sixes||0}</td><td>${t.wickets?(t.runsConceded/t.wickets).toFixed(1):'–'}</td><td>${t.bowlBalls?`${t.bestWickets||0}/${t.bestBowlingRuns??'–'}`:'–'}</td></tr>`;}).join('')}</tbody></table></section>`;};
 })();
 (() => {
  const X=window.GCC8,{G,R,read,esc}=X;
