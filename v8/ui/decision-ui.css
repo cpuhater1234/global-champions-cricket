@@ -1169,3 +1169,6 @@ html:has(#g8dialog[open]){overflow:hidden}
  #g8app .gccuiCareer .gccuiOffseasonActions .g8actions{display:grid!important;grid-template-columns:1fr 1fr!important;gap:8px!important}
  #g8app .gccuiCareer .gccuiOffseasonActions .g8actions>.g8button{font-size:13px!important;line-height:1.4!important;white-space:normal!important;min-height:48px!important;padding:8px!important;width:100%!important}
 }
+
+/* Context for assistive navigation without another visible trade panel. */
+.gccuiScreenReader{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip-path:inset(50%)!important;white-space:nowrap!important;border:0!important}

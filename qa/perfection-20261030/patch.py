@@ -271,6 +271,8 @@ rep(17,"['Wins',t.w||0],['Losses',t.l||0]","['League wins',t.w||0],['League loss
 
 parts[16]=runpy.run_path(str(root/'qa/native48/refinement-transform.py'))['transform'](parts[16])
 
+parts[19]=runpy.run_path(str(root/'qa/native49/trade-transform.py'))['transform'](parts[19])
+
 parts[18]+='\n'+(root/'v8/ui/decision-ui.js').read_text()
 for i in (9,10,11,12,16,17,19):
  path=root/('v8/engine/'+('foundation.js' if i==9 else 'dynasty.js')) if i in (9,10) else root/('v8/ui/'+{11:'components.js',12:'cricket-reads.js',16:'career.js',17:'screens.js',19:'controller.js'}[i]);path.write_text(parts[i])
