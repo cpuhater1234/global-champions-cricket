@@ -301,6 +301,12 @@ for glyph in ('cricket','cricket-ball','stumps'):
  match=re.search(pattern,raw);assert match
  weighted=match[0].replace('stroke="none" style="stroke:none"',f'stroke="currentColor" stroke-width="{32 if glyph=="cricket" else 10}" stroke-linejoin="round"')
  raw=raw[:match.start()]+weighted+raw[match.end():]
+# User-approved Floodlit Night Match presentation, carried onto current game scripts.
+font_faces=[]
+for face in json.loads((root/'v8/ui/assets/floodlit-fonts.json').read_text()):
+ font_faces.append('@font-face{font-family:'+json.dumps(face['family'])+';font-style:'+face['style']+';font-weight:'+str(face['weight'])+';font-display:swap;src:url(data:font/woff;base64,'+face['base64']+') format("woff")}')
+font_license='\n'.join((root/p).read_text() for p in ['v8/ui/assets/font-licenses/Barlow-OFL.txt','v8/ui/assets/font-licenses/Inter-OFL.txt'])
+raw=raw.replace('</body>','<!-- Embedded fonts: SIL Open Font License 1.1\n'+font_license+'\n--><style id="gcc-floodlit-fonts">'+''.join(font_faces)+'</style><style id="gcc-floodlit-visual">'+(root/'v8/ui/floodlit.css').read_text()+'\n'+(root/'v8/ui/floodlit-compat.css').read_text()+'</style></body>')
 out=root/'qa/perfection-20261030/candidate.html';out.write_text(raw)
 for i,part in enumerate(parts):
  tmp=root/f'qa/perfection-20261030/check-{i}.js';tmp.write_text(part);subprocess.run(['node','--check',str(tmp)],check=True,capture_output=True)

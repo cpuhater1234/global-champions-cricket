@@ -1,0 +1,50 @@
+/* Current game screens adopt the approved treatment at the same cascade strength. */
+#g8app#g8app#g8app,#g8hud#g8hud#g8hud,#g8dialog#g8dialog#g8dialog{--vx-glow:var(--gcc-accent,#ed7547);--vx-signal:color-mix(in srgb,var(--vx-glow) 48%,#fff);font-family:var(--vx-body)!important}
+#g8stage#g8stage#g8stage :is(.g8eyebrow,.gccuiKicker),#g8stage#g8stage#g8stage .gccuiHeadingIcon{color:var(--vx-signal)!important}
+#g8app#g8app#g8app .g8primary,#g8dialog#g8dialog#g8dialog .g8primary{background:linear-gradient(180deg,color-mix(in srgb,var(--vx-glow) 78%,#fff) 0%,var(--vx-glow) 18%,var(--vx-glow) 82%,color-mix(in srgb,var(--vx-glow) 94%,#000) 100%)!important;color:var(--gcc-accent-ink)!important}
+#g8app#g8app#g8app .g8button{max-width:100%;min-width:0;white-space:normal!important}
+#g8app#g8app#g8app .g8primary:focus-visible,#g8dialog#g8dialog#g8dialog .g8primary:focus-visible{clip-path:none!important;outline:3px solid #7fe0ee!important;outline-offset:3px}
+#g8stage#g8stage#g8stage :is(.g8heading,.gccuiTurn):focus-within{clip-path:none!important}
+/* Retain semantic success/medical/warning colours and the authored club fills. */
+#g8stage#g8stage#g8stage :is(.g8sheet,.g8annualhero,.g8annualdevelopment,.g8departureguide,.gccuiAllowance,.gccuiFixture,.gccuiMatchPreparation,.gccuiLatestResult,.gccuiMatchLinks,.gccuiSummary,.g8dressingroom,.g8reviewsummary,.g8development){background:linear-gradient(155deg,var(--gcc-raised),var(--gcc-panel) 60%)!important;border-color:var(--gcc-line)!important}
+#g8app#g8app#g8app .gccuiTableView .g8table thead th,#g8dialog#g8dialog#g8dialog .g8table thead th{background:var(--gcc-raised)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
+#g8app#g8app#g8app .gccuiTableView .g8table tbody tr:nth-child(odd),#g8dialog#g8dialog#g8dialog .g8table tbody tr:nth-child(odd){background:var(--gcc-panel)!important}
+#g8app#g8app#g8app .gccuiTableView .g8table tbody tr:nth-child(even),#g8dialog#g8dialog#g8dialog .g8table tbody tr:nth-child(even){background:var(--gcc-raised)!important}
+#g8app#g8app#g8app .gccuiTableView .g8table tbody tr.mine{background:color-mix(in srgb,var(--vx-glow) 18%,var(--gcc-panel))!important}
+#g8app#g8app#g8app .gccuiPlayerStatsTable .g8table tbody tr:nth-child(odd)>:first-child{background:var(--gcc-panel)!important}
+#g8app#g8app#g8app .gccuiPlayerStatsTable .g8table tbody tr:nth-child(even)>:first-child{background:var(--gcc-raised)!important}
+#g8app#g8app#g8app .gccuiPlayerStatsTable .g8table thead tr>:first-child{background:var(--gcc-raised)!important}
+#g8app#g8app#g8app .g8button.gccuiStatPlayer{background:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;transform:none!important;letter-spacing:normal!important;padding:8px 0!important;font-family:var(--vx-body)!important}
+#g8dialog#g8dialog#g8dialog{background:var(--gcc-inset)!important;border-color:var(--gcc-line)!important;color:var(--gcc-text)!important}
+#g8dialog#g8dialog#g8dialog :is(.g8modalhead,.gccuiDossierRail){background:var(--gcc-panel)!important;border-color:var(--gcc-line)!important}
+#g8dialog#g8dialog#g8dialog :is(h2,h3,.g8eyebrow){font-family:var(--vx-display)!important}
+#g8dialog#g8dialog#g8dialog .g8modalhead h2{font-size:30px!important;line-height:1.05!important;font-weight:800!important;text-transform:uppercase!important}
+#g8dialog#g8dialog#g8dialog :is(button,input,select){font-family:var(--vx-body)!important}
+#g8dialog#g8dialog#g8dialog .g8button:not(.g8primary){background:var(--gcc-raised)!important;border-color:var(--gcc-line)!important;color:var(--gcc-text)!important}
+#g8dialog#g8dialog#g8dialog :is(.g8tradeplayer,.g8tradeimpact,.g8recordstats>div,.g8tradeeffects>div>div,.gccuiProfilePanel,.g8give,.g8receive){background:var(--gcc-panel)!important;border-color:var(--gcc-line)!important}
+#g8dialog#g8dialog#g8dialog .g8modalbody>.g8actions:last-child{background:var(--gcc-inset)!important;border-color:var(--gcc-line)!important}
+#g8dialog#g8dialog#g8dialog :is(input,select){background:var(--gcc-inset)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
+@media(max-width:760px){
+ #g8app#g8app#g8app .g8primary{font-size:1.05rem!important;padding-inline:.85rem!important;line-height:1.3!important;min-height:44px}
+ #g8stage#g8stage#g8stage h1{font-size:clamp(1.8rem,8vw,2.5rem)!important;line-height:1.02!important}
+ #g8stage#g8stage#g8stage .gccuiOffseasonActions .g8primary{font-size:1rem!important}
+ #g8stage#g8stage#g8stage .gccBrandWordmark{font-size:clamp(2.4rem,10vw,3.5rem)!important}
+}
+@media(prefers-reduced-motion:reduce){
+ #g8app#g8app#g8app *,#g8app#g8app#g8app *::before,#g8app#g8app#g8app *::after,#g8dialog#g8dialog#g8dialog *,#g8dialog#g8dialog#g8dialog *::before,#g8dialog#g8dialog#g8dialog *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+/* Dialog confirmations use the same sports treatment as the main game. */
+#g8dialog#g8dialog#g8dialog .g8button.g8primary{font-family:var(--vx-display)!important;font-size:1.2rem!important;font-weight:800!important;letter-spacing:.06em!important;text-transform:uppercase!important;border:0!important;border-radius:8px!important;clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%);padding:12px 18px!important;box-shadow:0 10px 26px -10px var(--vx-glow)!important;min-width:0;max-width:100%;white-space:normal!important;line-height:1.25!important;transition:transform .18s var(--vx-ease),box-shadow .18s var(--vx-ease)}
+#g8dialog#g8dialog#g8dialog .g8button.g8primary:hover:enabled{transform:translateY(-2px)!important}
+#g8dialog#g8dialog#g8dialog .g8button.g8primary:focus-visible{clip-path:none!important;outline:3px solid #7fe0ee!important;outline-offset:3px}
+@media(max-width:760px){#g8dialog#g8dialog#g8dialog .g8button.g8primary{font-size:1.05rem!important;padding:10px 12px!important;min-height:44px}}
+#g8app#g8app#g8app .gccui{--ui-rule:var(--gcc-line)}
+#g8stage#g8stage#g8stage .g8arenaheader{color:var(--gcc-accent-ink)!important}
+#g8dialog#g8dialog#g8dialog .gcc-scoreinnings{background:var(--gcc-panel)!important;border-color:var(--gcc-line)!important}
+#g8dialog#g8dialog#g8dialog .gcc-scoreinnings>header{background:var(--gcc-raised)!important;border-color:var(--gcc-line)!important}
+#g8dialog#g8dialog#g8dialog .gcc-scoreinnings .g8table caption{background:var(--gcc-inset)!important;color:var(--gcc-text)!important}
+#g8dialog#g8dialog#g8dialog .g8modalbody>.g8actions:last-child{box-shadow:0 -10px 16px var(--gcc-inset)!important}
+::selection{background:var(--club-accent,#ed7547);color:var(--club-ink,#171717)}
+#g8app#g8app#g8app .g8button:is(.selected,[aria-pressed="true"],[aria-current="page"]),#g8hud#g8hud#g8hud .g8button:is(.selected,[aria-pressed="true"],[aria-current="page"]),#g8dialog#g8dialog#g8dialog .g8button:is(.selected,[aria-pressed="true"],[aria-current="page"]){background:var(--gcc-accent)!important;color:var(--gcc-accent-ink)!important;border-color:var(--vx-signal)!important;box-shadow:inset 0 -3px 0 var(--vx-signal)!important}
+#g8app#g8app#g8app .g8button.gccuiStatPlayer:hover:enabled{background:none!important;border:0!important;box-shadow:none!important;transform:none!important;text-decoration:underline;text-underline-offset:3px}
+#g8app#g8app#g8app .g8button.g8danger,#g8dialog#g8dialog#g8dialog .g8button.g8danger{background:linear-gradient(180deg,#a32635,#791c29)!important;color:#fff!important;border:1px solid #e98690!important}
