@@ -199,7 +199,7 @@ a=parts[17].index("${saved?btn('Start new career'");b=parts[17].index('}</div></
 parts[17]=parts[17][:a]+'''${saved?`<button type="button" class="g8button g8primary g8continueclub" data-action="continue" style="--resumeclub:${esc(resumeTeam?.c||'#ed7547')};--resumetext:${esc(X.clubInk(resumeTeam))};--gcc-accent:var(--resumeclub);--gcc-accent-ink:var(--resumetext);--club-ink:var(--resumetext)"><span class="g8continuelabel">Continue career</span><span class="g8resumemeta">${resumeNote}</span></button>`+btn('Start new career','play',[],'g8ghost'):btn('Start new career','play',[],'g8primary')}'''+parts[17][b:]
 rep(17,'</svg></button></h1><p>A Saudi-backed', '</svg></button><span class="gccBrandWordmark">Global Champions<br>Cricket</span></h1><p>A Saudi-backed')
 rep(16,'<section class="g8annualhero"><span', '<section class="g8annualhero"><div class="gccuiOffseasonSummary"><span')
-rep(16,'${X.managementBrief(true)}<div class="g8actions">${btn(vacancies?', '</div><div class="gccuiOffseasonIssues">${X.managementBrief(true)}</div><div class="gccuiOffseasonActions"><div class="g8actions">${btn(vacancies?')
+rep(16,'${X.managementBrief(true)}<div class="g8actions">','</div><div class="gccuiOffseasonIssues">${X.managementBrief(true)}</div><div class="gccuiOffseasonActions"><div class="g8actions">')
 rep(16,'</span></section><aside class="g8annualdevelopment"', '</span></div></section><aside class="g8annualdevelopment"')
 # Setup and reveal returns share the same presentation lifecycle.
 rep(19,"if(view==='matchReveal')scheduleMatch();}","if(view==='matchReveal')scheduleMatch();if(revealActive())scheduleReveal();}")
@@ -262,6 +262,12 @@ for key in ('manageInspect','managePlayer'):
  rep(19,f"bind('{key}',['team','season','dynasty','finals']",f"bind('{key}',['team','season','dynasty','finals','result']")
 rep(19,"bind('manageTrade',['team','season','dynasty']","bind('manageTrade',['team','season','dynasty','result']")
 rep(19,"if(ui.view==='team')setView('season');trade(!s.dynasty?.offseason,id);","if(ui.view==='team'||ui.view==='result')setView('season');trade(!s.dynasty?.offseason,id);")
+
+# Preserve last-season evidence in validated presentation metadata before the year reset.
+parts[12],parts[16],parts[19]=runpy.run_path(str(root/'qa/postseason48/planning-transform.py'))['transform'](parts[12],parts[16],parts[19])
+rep(16,"+X.offseasonSteps()+X.previousSeasonBrief()+(managing?X.departureGuide():'')", "+X.offseasonSteps()+X.disclosure(`${s.year-1} scouting brief`,X.previousSeasonBrief())+(managing?X.departureGuide():'')")
+rep(16,'<div class="gccuiOffseasonIssues">${X.managementBrief(true)}</div>','<div class="gccuiOffseasonIssues">${X.managementBrief(true)?X.disclosure(\'Squad decisions to review\',X.managementBrief(true)):\'\'}</div>')
+rep(17,"['Wins',t.w||0],['Losses',t.l||0]","['League wins',t.w||0],['League losses',t.l||0]")
 
 parts[18]+='\n'+(root/'v8/ui/decision-ui.js').read_text()
 for i in (9,10,11,12,16,17,19):

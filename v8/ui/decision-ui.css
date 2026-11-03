@@ -1118,3 +1118,30 @@ html:has(#g8dialog[open]){overflow:hidden}
 /* Promise rules remain complete, with prose weight rather than headline weight. */
 #g8dialog[data-prompt=player] .gccuiProfilePanel .gccuiManagementFocus>.g8commitment span{font-size:13px!important;line-height:1.5!important;font-weight:400!important}
 #g8app .gccuiConsequences:has(.gccuiConsequenceQuiet){border-top:0!important;min-height:0!important}
+
+/* Postseason hierarchy: retain the match and decisions before supporting imagery. */
+#g8app .gccuiFinals .gccuiCampaignTop:has(.gccuiFinalDecision){display:block}
+#g8app .gccuiFinals .gccuiFinalDecision{padding:0 0 12px;margin:10px 0 12px;border-bottom:1px solid var(--gcc-line)}
+#g8app .gccuiFinals .gccuiFinalDecision>h2{font-size:21px!important;line-height:1.3!important;margin:0 0 10px!important;text-transform:none!important}
+#g8app .gccuiFinals .g8matcharena>div{order:0}
+#g8app .gccuiFinals .g8matcharena>.g8stadium{order:1}
+#g8app .gccuiReview .g8reviewsummary .g8metrics{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important;width:100%;margin:12px 0 0!important}
+#g8app .gccuiReview .g8reviewsummary .g8metrics>div{min-width:0;padding:8px 4px!important;text-align:center}
+#g8app .gccuiReview .g8reviewsummary .g8metrics strong{font-size:26px!important;line-height:1.2!important}
+#g8app .gccuiReview .g8reviewsummary .g8metrics span{font-size:12px!important;line-height:1.4!important;display:block;min-height:2.8em}
+#g8app .gccuiReview .g8reviewsummary{gap:12px!important;padding:18px!important}
+#g8app .gccuiSeasonBrief{padding:8px 0!important;border:0!important;background:none!important;box-shadow:none!important}
+#g8app .gccuiSeasonBrief .g8eyebrow{font-size:12px!important}
+#g8app .gccuiSeasonBrief p{font-size:14px!important;line-height:1.5!important}
+#g8app .gccuiSeasonBrief>.g8button{margin-top:10px}
+#g8app .gccuiOffseasonIssues>.g8disclosure{margin:10px 0!important}
+#g8app .gccuiOffseasonIssues>.g8disclosure>summary{min-height:44px;padding:12px!important;font-size:14px!important}
+@media(max-width:760px){
+ #g8app .gccuiFinals .g8matcharena{display:flex!important;flex-direction:column!important;gap:16px!important;padding:16px!important}
+ #g8app .gccuiFinals .g8matcharena>.g8stadium{width:100%!important;height:auto!important;margin:0!important}
+ #g8app .gccuiFinals .g8matcharena>.g8stadium .g8venueframe{height:120px!important;min-height:0!important}
+ #g8app .gccuiFinals .g8matcharena>.g8stadium .g8stadiumphoto{height:120px!important;object-fit:cover!important}
+ #g8app .gccuiFinals .g8matcharena>.g8stadium figcaption{font-size:11px!important;line-height:1.4!important;padding:8px!important}
+ #g8app .gccuiFinals .gccuiFinalDecision>h2{font-size:19px!important}
+ #g8app .gccuiReview .g8reviewsummary .g8metrics strong{font-size:23px!important}
+}
