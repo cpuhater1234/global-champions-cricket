@@ -11,7 +11,7 @@
 #g8app#g8app#g8app .gccuiVenue .gccuiKicker{color:var(--vx-ink)!important}
 
 /* 13 ─ Badge fix: crest text sat in the top-left corner on the live scoreboard */
-#g8app#g8app#g8app .g8badge{display:inline-flex!important;align-items:center;justify-content:center;
+#g8stage#g8stage#g8stage .g8badge{display:inline-flex!important;align-items:center;justify-content:center;
   text-align:center;line-height:1!important;font-weight:800;letter-spacing:.02em}
 #g8app#g8app#g8app .gccuiLiveSide>header>.g8badge{padding-top:2px!important}
 
