@@ -1,0 +1,36 @@
+# GCC release gate
+
+## Maintained candidate
+Repository: cpuhater1234/global-champions-cricket.
+Branch: work/v8-integrity-charcoal-candidate.
+Canonical build entry: qa/perfection-20261030/patch.py.
+Frozen input: baseline/GCC_v8_Career_Clarity.html. Generated candidate: qa/perfection-20261030/candidate.html.
+Latest user-facing build at this checkpoint: Playtest63. New source changes after63 are not yet browser verified. Older work/v8-game-first-rebuild/v101 references are historical, not instructions to port or overwrite this candidate. Reconcile older README at branch integration; retain history.
+
+## Constraints
+Preserve approved Floodlit/broadcast direction, recognised keeper safeguards, manual XI selection, existing career rules and offline assets/fonts. No backup/export prompts. Separate presentation and simulation changes. No invented scorebook shot directions or uncalibrated win probabilities. Preserve font tnum features during asset optimisation.
+
+## Required evidence
+| Gate | Current status | Pass evidence |
+|---|---|---|
+| Canonical build and file hashes | Build pipeline established; release freeze pending | Record source commit and HTML SHA256 for frozen candidate |
+| One rating vocabulary | Candidate fixed; native pending | Elite90+, Strong82+, Sound73+, Thin64+, Weak below; boundary/render tests and native cards |
+| Core lifecycle | Partial native coverage | Full foundation draft, match, accepted/declined trade, releases, finals win/loss, offseason, annual draft, career end |
+| Visual regression | Manual evidence partial | Approved screenshots and checked layout at320/360/390/768/1024/1440/1920 plus landscape |
+| Keyboard/dialogs | Incomplete | Reach actions, focus trap/return, Escape, no focus loss on updates |
+| Accessibility | Open | Contrast, text resizing, reduced motion, forced colours, live announcements and serious/critical automated issues resolved |
+| Club colours | Open | Every club fill/ink/text pair and similar-colour opponents checked |
+| Performance | Asset inventory started | Real Android/iPhone measurements; agreed load/scroll/memory/save budgets |
+| Full-career integrity | Frozen-candidate run pending |2008–2026 regression and final career completion; no errors |
+| Save compatibility | Partial contracts only | Earlier-build saves load/play; current round-trip; full/conflicting/corrupt storage handled |
+| Simulation calibration | Open blocker | Era-matched real corpus; fixed-seed comparison; acceptable distributions documented |
+| First-time comprehension | Open | Five independent players; record completion/hesitation and resolve main confusions |
+
+## Order
+1. Finish core native coverage and regression-check pending candidate fixes.
+2. Unify component ownership incrementally; preserve approved screenshots while removing duplicate rules. Do not globally delete CSS or blanket-reset prose.
+3. Measure accessibility, asset costs and real-device behaviour; optimise with preserved features/licences.
+4. Calibrate simulation on its own branch/change set.
+5. Freeze, run full regression and user tests, then decide release.
+
+Audio and haptics are later scope until the above is measured. A6MB target or2second load budget is provisional, not a current pass claim. Single-file CSS packaging is not proof of a coherent cascade; components must have one owned rule and regression evidence.

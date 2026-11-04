@@ -261,7 +261,7 @@
 @keyframes vx-confetti{0%{opacity:0;transform:translateY(-105vh) rotate(0)}6%{opacity:1}80%{opacity:1}100%{opacity:0;transform:translateY(8vh) rotate(24deg)}}
 @keyframes vx-glowpulse{0%,100%{text-shadow:0 0 18px rgba(255,210,74,.35)}50%{text-shadow:0 0 34px rgba(255,210,74,.7)}}
 
-/* A ─ Rating tiers on player cards (elite 90+, star 85–89, strong 80–84) */
+/* A ─ Rating tiers on player cards (elite90+, strong82+, sound73+, thin64+, weak below) */
 #g8app#g8app#g8app .gccuiPlayer:has(:is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="elite"]){
   --tier:#f4cf6a;border-color:#b8923a!important;border-top:4px solid var(--tier)!important;
   background:linear-gradient(180deg,#4d3a12 0%,#1a2638 38%,#0a1826 100%)!important;
@@ -273,13 +273,13 @@
 #g8app#g8app#g8app .gccuiPlayer:has(:is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="elite"]) .gccuiPlayerOverall{
   background:linear-gradient(180deg,#6b4f14,#2a1d08)!important;border-color:var(--tier)!important}
 #g8app#g8app#g8app :is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="elite"]{color:#ffe08a!important;text-shadow:0 0 22px rgba(255,210,74,.55)}
-#g8app#g8app#g8app .gccuiPlayer:has(:is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="star"]){--tier:#9fd6ff;
+#g8app#g8app#g8app .gccuiPlayer:has(:is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="strong"]){--tier:#9fd6ff;
   border-color:#4f7ea3!important;box-shadow:0 0 0 1px rgba(159,214,255,.25),0 14px 30px -20px rgba(159,214,255,.5)}
-#g8app#g8app#g8app .gccuiPlayer:has(:is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="star"]) .gccuiPlayerOverall{
+#g8app#g8app#g8app .gccuiPlayer:has(:is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="strong"]) .gccuiPlayerOverall{
   background:linear-gradient(180deg,#1d4466,#0b1a2a)!important;border-color:var(--tier)!important}
-#g8app#g8app#g8app .gccuiPlayer:has(:is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="strong"]) .gccuiPlayerOverall{border-color:#4a6f55!important}
+#g8app#g8app#g8app .gccuiPlayer:has(:is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="sound"]) .gccuiPlayerOverall{border-color:#4a6f55!important}
 /* rows (XI, bench, roster) just colour the numeral, no foil */
-#g8app#g8app#g8app :is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="star"]{text-shadow:0 0 18px rgba(159,214,255,.4)}
+#g8app#g8app#g8app :is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="strong"]{text-shadow:0 0 18px rgba(159,214,255,.4)}
 #g8dialog#g8dialog#g8dialog :is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="elite"]{font-size:1.15em}
 
 /* B ─ Champions moment (finals + season review) */

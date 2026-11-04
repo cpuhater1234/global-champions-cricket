@@ -102,9 +102,6 @@
 
 /* Scouting cards: personal identity and restrained, explicit rating bands. */
 #g8app#g8app#g8app .gccuiPlayer{--card-tier:var(--gcc-line)}
-#g8app#g8app#g8app .gccuiPlayer[data-rating-tier="90"]{--card-tier:#d4b66d}
-#g8app#g8app#g8app .gccuiPlayer[data-rating-tier="80"]{--card-tier:#96b4cc}
-#g8app#g8app#g8app .gccuiPlayer[data-rating-tier="70"]{--card-tier:#a39788}
 #g8app#g8app#g8app .gccuiPlayerScout{grid-template-columns:60px minmax(0,1fr)!important;gap:12px!important;padding:16px!important}
 #g8app#g8app#g8app .gccuiPlayerOverall{min-width:0!important;width:60px;box-sizing:border-box;background:var(--gcc-inset)!important;border-color:var(--card-tier)!important;padding:8px 4px!important}
 #g8app#g8app#g8app .gccuiPlayerMonogram{display:grid;place-items:center;width:38px;height:38px;margin:0 auto 10px;border-radius:50%;border:1px solid var(--gcc-role,var(--gcc-line));background:var(--gcc-raised);font:700 15px/1 var(--vx-body);letter-spacing:normal;color:var(--gcc-text)}
