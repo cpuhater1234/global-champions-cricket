@@ -27,3 +27,7 @@ assert.equal(X.dispatch('managePlayer',[p.id,'keep']),false,'pending swap blocks
 s.pendingSwapIn=null;
 assert.deepEqual(h.errors,[]);
 console.log('PASS result consequence review reaches actionable Management without editing XI or match facts');
+const record=X.managementState();record.events.push({key:`${s.year}:R${s.results[0].round}`,year:s.year,playerId:p.id,kind:'resolved',text:`${p.name}: is settled again and has withdrawn the transfer request.`});s.dynasty.v8Management=record;
+const savedEvents=JSON.stringify(record.events),rendered=X.managementResult(s.results[0]);
+assert(rendered.includes(`${p.name} is settled again`),'resolved notices read as a complete sentence');
+assert.equal(JSON.stringify(s.dynasty.v8Management.events),savedEvents,'copy formatting preserves saved event history');
