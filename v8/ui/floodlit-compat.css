@@ -6,7 +6,7 @@
 #g8app#g8app#g8app .g8primary:focus-visible,#g8dialog#g8dialog#g8dialog .g8primary:focus-visible{clip-path:none!important;outline:3px solid #7fe0ee!important;outline-offset:3px}
 #g8stage#g8stage#g8stage :is(.g8heading,.gccuiTurn):focus-within{clip-path:none!important}
 /* Retain semantic success/medical/warning colours and the authored club fills. */
-#g8stage#g8stage#g8stage :is(.g8sheet,.g8annualhero,.g8annualdevelopment,.g8departureguide,.gccuiAllowance,.gccuiFixture,.gccuiMatchPreparation,.gccuiLatestResult,.gccuiMatchLinks,.gccuiSummary,.g8dressingroom,.g8reviewsummary,.g8development){background:linear-gradient(155deg,var(--gcc-raised),var(--gcc-panel) 60%)!important;border-color:var(--gcc-line)!important}
+#g8stage#g8stage#g8stage :is(.g8sheet,.g8annualhero,.g8annualdevelopment,.g8departureguide,.gccuiAllowance,.gccuiFixture,.gccuiMatchPreparation,.gccuiLatestResult,.gccuiMatchLinks,.gccuiSummary,.g8dressingroom,.g8reviewsummary,.g8development,.g8teamread){background:linear-gradient(155deg,var(--gcc-raised),var(--gcc-panel) 60%)!important;border-color:var(--gcc-line)!important}
 #g8app#g8app#g8app .gccuiTableView .g8table thead th,#g8dialog#g8dialog#g8dialog .g8table thead th{background:var(--gcc-raised)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
 #g8app#g8app#g8app .gccuiTableView .g8table tbody tr:nth-child(odd),#g8dialog#g8dialog#g8dialog .g8table tbody tr:nth-child(odd){background:var(--gcc-panel)!important}
 #g8app#g8app#g8app .gccuiTableView .g8table tbody tr:nth-child(even),#g8dialog#g8dialog#g8dialog .g8table tbody tr:nth-child(even){background:var(--gcc-raised)!important}
