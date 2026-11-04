@@ -55,3 +55,19 @@
 #g8app#g8app#g8app .g8button:is(.selected,[aria-pressed="true"],[aria-current="page"]):hover:enabled,#g8hud#g8hud#g8hud .g8button:is(.selected,[aria-pressed="true"],[aria-current="page"]):hover:enabled,#g8dialog#g8dialog#g8dialog .g8button:is(.selected,[aria-pressed="true"],[aria-current="page"]):hover:enabled{background:var(--gcc-accent)!important;color:var(--gcc-accent-ink)!important;border-color:var(--vx-signal)!important;box-shadow:inset 0 -3px 0 var(--vx-signal)!important}
 @media(max-width:600px){#g8app#g8app#g8app .gccuiLadderTable .g8ladder tr>:first-child{width:36px!important}}
 #g8app#g8app#g8app .g8button.g8danger:hover:enabled,#g8dialog#g8dialog#g8dialog .g8button.g8danger:hover:enabled{background:linear-gradient(180deg,#a32635,#791c29)!important;color:#fff!important;border-color:#e98690!important}
+
+/* Shared secondary surfaces complete the Floodlit palette without changing status colours. */
+#g8app#g8app#g8app .gccui,#g8dialog#g8dialog#g8dialog{--ui-panel:var(--gcc-panel);--ui-inset:var(--gcc-inset);--ui-line:var(--gcc-line);--ui-rule:var(--gcc-line);--ui-text:var(--gcc-text);--ui-muted:var(--gcc-muted)}
+#g8dialog#g8dialog#g8dialog :is(.g8concernreason,.g8commitmentchoice,.g8guidecard,.g8coverread){background:var(--gcc-raised)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
+#g8dialog#g8dialog#g8dialog .g8concernreason{border-left:3px solid var(--gcc-accent)!important;padding:12px 14px!important;margin:12px 0!important}
+#g8dialog#g8dialog#g8dialog .g8concernreason b{color:var(--gcc-text)!important;font-weight:700}
+#g8dialog#g8dialog#g8dialog :is(.g8commitmentchoice>p,.g8commitmentoptions>p,.g8rotationconversation>p){color:var(--gcc-muted)!important}
+#g8dialog#g8dialog#g8dialog :is(.g8commitmentoptions,.g8rotationconversation) h4{color:var(--gcc-text)!important}
+#g8dialog#g8dialog#g8dialog .gccuiManagementContext .g8playercontext{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important}
+#g8dialog#g8dialog#g8dialog .gccuiManagementContext .g8playercontext>div{background:var(--gcc-raised)!important;border:1px solid var(--gcc-line)!important;border-radius:6px;padding:10px 12px!important;min-width:0}
+#g8dialog#g8dialog#g8dialog .g8playercontext dt{color:var(--gcc-muted)!important}
+#g8dialog#g8dialog#g8dialog .g8playercontext dd{margin:4px 0 0!important;color:var(--gcc-text)!important}
+#g8app#g8app#g8app :is(button,summary,a,input,select):focus-visible,#g8dialog#g8dialog#g8dialog :is(button,summary,a,input,select):focus-visible{outline:3px solid #7fe0ee!important;outline-offset:3px}
+#g8app#g8app#g8app .gccuiPickedPlayer:focus-visible{outline-offset:-4px!important}
+#g8app#g8app#g8app .gccuiPlayerStatsTable .g8table tr>:first-child{box-shadow:2px 0 var(--gcc-line)!important}
+@media(max-width:400px){#g8dialog#g8dialog#g8dialog .gccuiManagementContext .g8playercontext{grid-template-columns:1fr!important}}
