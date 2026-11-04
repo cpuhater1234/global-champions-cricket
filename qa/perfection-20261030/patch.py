@@ -258,6 +258,9 @@ rep(16,'.map(e=>({key:txt(e.key),text:txt(e.text),year:num(e.year),playerId:num(
 
 import runpy
 parts[16]=runpy.run_path(str(root/'qa/panel46/management-transform.py'))['transform'](parts[16])
+rep(16,"injury&&s.xi.includes(p.id)&&X.ui.view==='team'?btn('Rest and choose replacement'", "injury&&s.xi.includes(p.id)&&['team','season'].includes(X.ui.view)?btn('Rest and choose replacement'")
+rep(19,"bind('manageRest',['team'],id=>", "bind('manageRest',['team','season'],id=>")
+rep(19,"G.removeXI(id);closeDialog();ui.teamPane='squad';});", "G.removeXI(id);closeDialog();ui.teamPane='squad';if(ui.view==='season'){ui.teamReturn='season';G.go('team');setView('team');}});")
 parts[16]=runpy.run_path(str(root/'qa/panel46/consequence-transform.py'))['transform'](parts[16])
 
 # Match consequences open the same guarded management workflow before advancement.
