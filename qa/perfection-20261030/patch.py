@@ -285,6 +285,8 @@ rep(15,'<table class="g8table"><caption>Bowling',"<table class=\"g8table gcc-bow
 rep(12,'${p.seasons} seasons ·',"${p.seasons} ${p.seasons===1?'season':'seasons'} ·")
 rep(12,'${c.titles} titles ·',"${c.titles} ${c.titles===1?'title':'titles'} ·")
 
+rep(19,'result.message.replace(`${deal.club} reject it.`,`${s.league.find(c=>c.abbr===deal.club)?.name||deal.club} declined this offer.`)','result.accepted?`${s.league.find(c=>c.abbr===deal.club)?.name||deal.club} accepted the trade.`:result.message.replace(`${deal.club} reject it.`,`${s.league.find(c=>c.abbr===deal.club)?.name||deal.club} declined this offer.`)')
+
 parts[18]+='\n'+(root/'v8/ui/decision-ui.js').read_text()
 for i in (9,10,11,12,16,17,19):
  path=root/('v8/engine/'+('foundation.js' if i==9 else 'dynasty.js')) if i in (9,10) else root/('v8/ui/'+{11:'components.js',12:'cricket-reads.js',16:'career.js',17:'screens.js',19:'controller.js'}[i]);path.write_text(parts[i])

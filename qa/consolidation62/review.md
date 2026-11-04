@@ -22,3 +22,8 @@ New visual findings: release consequence boxes grey and warning brown; broad [cl
 
 ## Native Build63 regression checks
 Opened2010career. Flintoff report skill labels computed box-shadow:none for Batting/Bowling/Fielding; desktop screenshot confirms plain labels. Started Round1 via toss, paused at0.0. Live batter names Salman Butt and Matthew Hayden computed14px, normal tracking, text-transform:none.390px screenshot shows readable names and stacked controls. Used Skip to result to check neutral management message: transparent background,0px border and0px padding. Viewport reset. This run does not verify63 finals preview or release surfaces because those states were not reached again. Test career now has2010Round1 completed.
+
+## Accepted in-season trade on native63
+2010Round2: Saqlain-for-Finn offer declined with no assets moved. Edited to Hussey-for-Sajid; Melbourne Stars accepted. Mobile390px completed-trade dialog lists Sajid joining and Hussey leaving, allowance1trade/2departures. Return to squad showed15players and10selected; Hussey absent, Sajid in available players. Selected Tendulkar and lodgedXI, returned ready to play. Viewport reset. Test package deliberately generous to exercise acceptance, not strategic advice.
+
+Completion copy defect confirmed: 'STA accept. The players and picks have changed clubs.' despite no picks. Candidate now renders full club name+' accepted the trade.' on success, retaining existing decline text. Only controller presentation changed; engine calculations untouched. Builder20syntaxchecks and qa/native49/trade-contracts.mjs pass. Native candidate copy check pending. No new downloadable build issued for this text correction.
