@@ -3,7 +3,7 @@
 ## Maintained candidate
 Repository: cpuhater1234/global-champions-cricket.
 Branch: work/v8-integrity-charcoal-candidate.
-Canonical build entry: qa/perfection-20261030/patch.py.
+Canonical build command: python3 v8/build.py. This delegates to qa/perfection-20261030/patch.py and copies its syntax-checked output to game/gcc_v8_product_candidate.html. The historical assembler requires --legacy-scaffold.
 Frozen input: baseline/GCC_v8_Career_Clarity.html. Generated candidate: qa/perfection-20261030/candidate.html.
 Latest user-facing build at this checkpoint: Playtest63. New source changes after63 are not yet browser verified. Older work/v8-game-first-rebuild/v101 references are historical, not instructions to port or overwrite this candidate. Reconcile older README at branch integration; retain history.
 
