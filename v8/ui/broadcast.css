@@ -351,3 +351,14 @@
 #g8app#g8app#g8app .g8days>span{background:var(--gcc-inset)!important;border-color:var(--gcc-line)!important;color:var(--gcc-muted)!important}
 #g8app#g8app#g8app .g8days>span.active{background:var(--gcc-raised)!important;border-color:var(--vx-ink)!important;color:var(--gcc-text)!important;box-shadow:inset 0 -3px var(--vx-ink)}
 #g8dialog#g8dialog#g8dialog .g8clubmark{background:var(--gcc-inset)!important;border-color:var(--gcc-line)!important}
+
+/* Tie-break result: keep the deciding scores aligned with the result panels. */
+#g8app#g8app#g8app .g8superover{background:var(--gcc-inset)!important;color:var(--gcc-text)!important;border:1px solid var(--gcc-line)!important;border-left:3px solid #f0c15a!important;border-radius:10px;padding:18px}
+#g8app#g8app#g8app .g8superover .g8eyebrow{color:#f6d98a!important;margin:0 0 12px}
+#g8app#g8app#g8app .g8superover .g8tieblock{padding:0 0 12px;margin:0 0 12px;border-bottom:1px solid var(--gcc-line)}
+#g8app#g8app#g8app .g8superover .g8tieblock h3{font-family:var(--vx-display);font-size:18px;margin:0 0 10px}
+#g8app#g8app#g8app .g8superover .g8statrow{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:4px 16px;padding:8px 0;border:0}
+#g8app#g8app#g8app .g8superover .g8statrow b{text-align:left;font-size:15px}
+#g8app#g8app#g8app .g8superover .g8statrow>span{text-align:right;font-size:16px;font-weight:700;font-variant-numeric:tabular-nums}
+#g8app#g8app#g8app .g8superover .g8fine{color:var(--gcc-muted)!important;font-size:13px;line-height:1.5;margin:0 0 10px}
+#g8app#g8app#g8app .g8superover>.g8fine:last-child{margin-bottom:0}
