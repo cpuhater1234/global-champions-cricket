@@ -1,0 +1,332 @@
+/* ==========================================================================
+   GCC VISUAL LAYER v9.1 patch — season hub, live match, result, tables, finals, dialogs
+   Additive: place AFTER the existing #gcc-floodlit-visual block. Presentation only.
+   ========================================================================== */
+/* 12 ─ Legibility: dark club colours (navy, crimson, purple) vanish as text on
+   the night backdrop, so text uses a lightened version of the same hue. */
+:root,#g8app#g8app#g8app{--vx-ink:color-mix(in oklab,var(--gcc-accent,#ed7547) 45%,#fff)}
+@supports (color:oklch(from red l c h)){
+  :root,#g8app#g8app#g8app{--vx-ink:oklch(from var(--gcc-accent,#ed7547) max(l,.8) min(c,.16) h)}}
+#g8app#g8app#g8app .g8eyebrow,#g8app#g8app#g8app .gccuiKicker,#g8hud#g8hud#g8hud .g8headerslogan span,
+#g8app#g8app#g8app .gccuiVenue .gccuiKicker{color:var(--vx-ink)!important}
+
+/* 13 ─ Badge fix: crest text sat in the top-left corner on the live scoreboard */
+#g8app#g8app#g8app .g8badge{display:inline-flex!important;align-items:center;justify-content:center;
+  text-align:center;line-height:1!important;font-weight:800;letter-spacing:.02em}
+#g8app#g8app#g8app .gccuiLiveSide>header>.g8badge{padding-top:2px!important}
+
+/* 15 ─ Season hub */
+#g8app#g8app #g8stage .gccuiCampaignRibbon{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;
+  background:linear-gradient(180deg,rgba(19,40,64,.8),rgba(9,20,32,.95))!important;
+  border:1px solid var(--gcc-line)!important;border-radius:12px!important;overflow:hidden;
+  box-shadow:0 18px 40px -28px #000}
+#g8app#g8app #g8stage .gccuiCampaignRibbon>div{padding:.9rem 1.1rem;border-right:1px solid var(--gcc-line)!important;
+  background:none!important;position:relative}
+#g8app#g8app #g8stage .gccuiCampaignRibbon>div:last-child{border-right:0!important}
+#g8app#g8app #g8stage .gccuiCampaignRibbon>div::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:var(--vx-glow);opacity:.0}
+#g8app#g8app #g8stage .gccuiCampaignRibbon>div:first-child::before{opacity:1}
+#g8app#g8app #g8stage .gccuiCampaignRibbon>div>span{font-size:.75rem!important;letter-spacing:.18em;text-transform:uppercase;
+  font-weight:700;color:var(--gcc-muted)!important}
+#g8app#g8app #g8stage .gccuiCampaignRibbon>div>strong{font-family:var(--vx-display)!important;font-size:2.4rem!important;
+  font-weight:800;line-height:1.05;color:#fff;letter-spacing:.01em}
+#g8app#g8app #g8stage .gccuiCampaignRibbon small{color:var(--gcc-muted)!important}
+
+#g8app#g8app #g8stage .gccuiFixture{overflow:hidden}
+#g8app#g8app #g8stage .gccuiFixtureTeams{display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;gap:.8rem}
+#g8app#g8app #g8stage .gccuiFixtureClub{
+  background:linear-gradient(120deg,var(--side),color-mix(in srgb,var(--side) 48%,#000))!important;
+  color:var(--side-ink,#fff)!important;border:0!important;border-radius:10px!important;padding:1rem 1.1rem!important;
+  position:relative;overflow:hidden;box-shadow:0 14px 30px -18px var(--side)}
+#g8app#g8app #g8stage .gccuiFixtureClub::after{content:"";position:absolute;right:-30px;top:-20px;bottom:-20px;width:90px;
+  background:rgba(255,255,255,.12);transform:skewX(-18deg);pointer-events:none}
+#g8app#g8app #g8stage .gccuiFixtureClub b{font-family:var(--vx-display)!important;font-size:1.9rem!important;font-weight:800;
+  text-transform:uppercase;letter-spacing:.02em;line-height:1}
+#g8app#g8app #g8stage .gccuiFixtureClub span:not(.g8badge){font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;opacity:.9}
+#g8app#g8app #g8stage .gccuiVersus{align-self:center;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;
+  background:#050d16;border:2px solid var(--vx-glow);font-family:var(--vx-display)!important;font-weight:800;
+  text-transform:uppercase;font-size:1.05rem;color:var(--vx-ink);box-shadow:0 0 22px -6px var(--vx-glow)}
+#g8app#g8app #g8stage .gccuiFixtureActions{background:rgba(0,0,0,.18)!important;border-bottom:1px solid var(--gcc-line)!important}
+#g8app#g8app #g8stage .gccuiNextOpponent{font-family:var(--vx-display)!important;font-size:1.3rem;text-transform:uppercase;letter-spacing:.04em}
+#g8app#g8app #g8stage .gccuiMatchConditions{background:rgba(0,0,0,.22)!important;border-top:1px solid var(--gcc-line)!important;
+  border-left:3px solid var(--vx-glow)!important}
+#g8app#g8app #g8stage .gccuiVenue{border-top:1px solid var(--gcc-line)!important}
+#g8app#g8app #g8stage .gccuiVenuePhoto img{border-radius:8px}
+#g8app#g8app #g8stage .gccuiVenueName{font-family:var(--vx-display)!important;font-size:1.4rem;font-weight:700;text-transform:uppercase}
+#g8app#g8app #g8stage .g8dressingroom,#g8app#g8app #g8stage .g8relationship{
+  background:linear-gradient(180deg,rgba(19,40,64,.7),rgba(9,20,32,.95))!important;
+  border:1px solid var(--gcc-line)!important;border-left:4px solid var(--vx-glow)!important;border-radius:10px!important}
+#g8app#g8app #g8stage .g8nextstep{background:linear-gradient(100deg,var(--gcc-raised),var(--gcc-panel))!important;
+  border:1px solid var(--gcc-line)!important;border-left:5px solid var(--vx-glow)!important;border-radius:6px}
+#g8app#g8app #g8stage .g8nextstep h2{font-size:1.6rem}
+#g8app#g8app #g8stage details.g8disclosure{background:rgba(0,0,0,.2)!important;border:1px solid var(--gcc-line)!important;border-radius:8px!important}
+#g8app#g8app #g8stage .g8disclosure summary{font-weight:700;letter-spacing:.04em}
+#g8app#g8app #g8stage .g8conditiongauge{background:linear-gradient(90deg,#1a4a63,#2b5f78 40%,#2a7a55 70%,#1f9060)!important;border-radius:99px!important}
+
+/* 16 ─ Live scoreboard */
+#g8app#g8app#g8app .g8ballarena{border:0!important;background:none!important;box-shadow:none!important}
+#g8app#g8app#g8app .gccuiLiveScoreboard{background:linear-gradient(180deg,rgba(19,40,64,.8),rgba(7,19,30,.96))!important;
+  border:1px solid var(--gcc-line)!important;border-radius:14px!important;padding:1rem!important;
+  box-shadow:0 24px 50px -30px #000}
+#g8app#g8app#g8app .gccuiLivePhase{white-space:nowrap;font-family:var(--vx-display)!important;font-size:1.05rem!important;font-weight:700!important;
+  letter-spacing:.28em!important;color:var(--vx-ink)!important;text-transform:uppercase}
+#g8app#g8app#g8app .gccuiLiveSide{border-radius:10px!important;overflow:hidden;border:1px solid var(--gcc-line)!important;
+  background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(0,0,0,.4))!important;
+  transition:box-shadow .3s,border-color .3s}
+#g8app#g8app#g8app .gccuiLiveSide>header{background:linear-gradient(110deg,var(--side),color-mix(in srgb,var(--side) 50%,#000))!important;
+  color:var(--side-ink,#fff)!important}
+#g8app#g8app#g8app .gccuiLiveSide>header h2{font-family:var(--vx-display)!important;font-size:1.6rem!important;font-weight:800;
+  text-transform:uppercase;letter-spacing:.03em;color:inherit!important}
+#g8app#g8app#g8app .gccuiLiveSide>header span:not(.g8badge){letter-spacing:.14em;text-transform:uppercase;font-size:.72rem;font-weight:700}
+#g8app#g8app#g8app .gccuiLiveSide.is-batting{border-color:var(--side)!important;
+  box-shadow:0 0 0 1px var(--side),0 0 46px -14px var(--side)}
+#g8app#g8app#g8app .gccuiLiveSide>div>strong{font-family:var(--vx-display)!important;font-size:3.6rem!important;font-weight:800;
+  line-height:1;letter-spacing:.01em;color:#fff}
+#g8app#g8app#g8app .gccuiLiveSide>div>strong.gccuiWaitingScore{font-size:1.9rem!important;color:var(--gcc-muted)}
+#g8app#g8app#g8app .gccuiLiveOrder{color:var(--gcc-muted)!important}
+#g8app#g8app#g8app .gccuiLiveEquation{background:rgba(255,255,255,.05)!important;border-left:4px solid var(--vx-glow)!important;
+  font-weight:700;border-radius:0 6px 6px 0}
+#g8app#g8app#g8app .g8playbackcontrols{background:rgba(7,19,30,.85)!important;border:1px solid var(--gcc-line)!important;
+  border-radius:10px!important;padding:.6rem .9rem!important;margin-block:.8rem}
+#g8app#g8app#g8app .g8playbackcontrols>span{font-family:var(--vx-display);letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#7ef0a8}
+#g8app#g8app#g8app .gcc-livegrid{border:1px solid var(--gcc-line);border-radius:12px;overflow:hidden;
+  background:rgba(7,19,30,.7)!important}
+#g8app#g8app#g8app .gcc-delivery,#g8app#g8app#g8app .gcc-crease{background:none!important;border-color:var(--gcc-line)!important}
+
+/* 17 ─ The ball-by-ball "moment": bigger, and it reacts to fours, sixes, wickets */
+@keyframes vx-pop{0%{transform:scale(.97);opacity:.4}60%{transform:scale(1.015)}100%{transform:none;opacity:1}}
+#g8app#g8app#g8app .gcc-moment{
+  background:linear-gradient(120deg,var(--gcc-raised),var(--gcc-panel))!important;
+  border:1px solid var(--gcc-line)!important;border-left:6px solid #3d5b78!important;border-radius:12px!important;
+  animation:vx-pop .38s var(--vx-ease) both!important}
+#g8app#g8app#g8app .gcc-moment .gcc-event{font-family:var(--vx-display)!important;font-size:5.4rem!important;font-weight:800;
+  background:none!important;line-height:.9;color:#fff!important}
+#g8app#g8app#g8app .gcc-moment h2{font-size:clamp(1.1rem,1.7vw,1.5rem)!important;font-weight:600}
+#g8app#g8app#g8app .gcc-moment.gcc-four{background:linear-gradient(120deg,#0f5a3a,#0a2a24)!important;border-left-color:#3ddc97!important;
+  box-shadow:0 0 56px -18px #1fcf80}
+#g8app#g8app#g8app .gcc-moment.gcc-four .gcc-event{color:#7dffc0!important}
+#g8app#g8app#g8app .gcc-moment.gcc-six{background:linear-gradient(120deg,#52289a,#1d1040)!important;border-left-color:#ffd24a!important;
+  box-shadow:0 0 70px -14px #a96bff}
+#g8app#g8app#g8app .gcc-moment.gcc-six .gcc-event{color:#ffd24a!important;text-shadow:0 0 26px rgba(255,210,74,.55)}
+#g8app#g8app#g8app .gcc-moment.gcc-wicket{background:linear-gradient(120deg,#6a1428,#240b14)!important;border-left-color:#ff5a76!important;
+  box-shadow:0 0 70px -14px #ff3d5e}
+#g8app#g8app#g8app .gcc-moment.gcc-wicket .gcc-event{color:#ff8da1!important;text-shadow:0 0 26px rgba(255,90,118,.5)}
+#g8app#g8app#g8app .gcc-currentover h3{font-family:var(--vx-display);letter-spacing:.16em;text-transform:uppercase;font-size:.95rem;color:var(--gcc-muted)}
+#g8app#g8app#g8app .gcc-currentover>div span,#g8app#g8app#g8app .gcc-history .g8overdeliveries span{
+  display:inline-grid;place-items:center;min-width:2.3rem;height:2.3rem;border-radius:50%!important;
+  background:#1b3249!important;border:1px solid #365675!important;font-weight:800;margin-right:.3rem}
+#g8app#g8app#g8app .gcc-currentover>div span.gcc-four,#g8app#g8app#g8app .gcc-history .g8ballboundary{background:#12683e!important;border-color:#3ddc97!important}
+#g8app#g8app#g8app .gcc-currentover>div span.gcc-six{background:#6734a2!important;border-color:#ffd24a!important}
+#g8app#g8app#g8app .gcc-currentover>div span.gcc-wicket,#g8app#g8app#g8app .gcc-history .g8ballwicket{background:#a5253d!important;border-color:#ff5a76!important}
+#g8app#g8app#g8app .gcc-crease h2,#g8app#g8app#g8app .gcc-history h2{font-size:1.15rem;letter-spacing:.14em}
+#g8app#g8app#g8app .gcc-crease table th{letter-spacing:.1em;text-transform:uppercase;font-size:.72rem;color:var(--gcc-muted)}
+#g8app#g8app#g8app .gcc-crease table td b{font-family:var(--vx-display);font-size:1.4rem}
+#g8app#g8app#g8app .gcc-bowler{background:linear-gradient(180deg,var(--gcc-raised),var(--gcc-panel))!important;
+  border:1px solid var(--gcc-line)!important;border-top:3px solid #f0c15a!important;border-radius:8px}
+#g8app#g8app#g8app .gcc-bowler strong{font-family:var(--vx-display);font-size:2rem}
+#g8app#g8app#g8app .gcc-history{background:rgba(7,19,30,.7)!important;border:1px solid var(--gcc-line)!important;border-radius:12px;overflow:hidden}
+#g8app#g8app#g8app .gcc-history>*{background-color:transparent!important}
+#g8app#g8app#g8app .gcc-history .g8overrow,#g8app#g8app#g8app .gcc-history article,#g8app#g8app#g8app .gcc-history li{background:rgba(255,255,255,.04)!important;
+  border:1px solid var(--gcc-line)!important;border-radius:8px}
+
+/* 18 ─ Result screen */
+#g8app#g8app#g8app .gccuiScorecard{background:linear-gradient(180deg,rgba(19,40,64,.75),rgba(7,19,30,.97))!important;
+  border:1px solid var(--gcc-line)!important;border-top:4px solid var(--vx-glow)!important;border-radius:14px!important;
+  box-shadow:0 30px 60px -36px #000}
+#g8app#g8app#g8app .gccuiScorecard.gccuiWon{border-top-color:#3ddc97!important;box-shadow:0 30px 60px -36px #000,0 0 90px -40px #1fcf80}
+#g8app#g8app#g8app .gccuiScorecard.gccuiLost{border-top-color:#ff5a76!important;box-shadow:0 30px 60px -36px #000,0 0 90px -44px #ff3d5e}
+#g8app#g8app#g8app .gccuiScoreContext strong{font-family:var(--vx-display)!important;font-size:1.15rem;font-weight:800;
+  letter-spacing:.22em;text-transform:uppercase;color:#7dffc0}
+#g8app#g8app#g8app .gccuiLost .gccuiScoreContext strong{color:#ff8da1}
+#g8app#g8app#g8app .gccuiScoreContext span{color:var(--gcc-muted)}
+#g8app#g8app#g8app .gccuiScorecard>h2{font-size:clamp(1.7rem,3vw,2.7rem)!important;font-weight:800!important;line-height:1.05;text-transform:uppercase}
+#g8app#g8app#g8app .gccuiScoreSide{border-radius:10px!important;overflow:hidden;border:1px solid var(--gcc-line)!important;
+  background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(0,0,0,.4))!important}
+#g8app#g8app#g8app .gccuiScoreSide>header{background:linear-gradient(110deg,var(--side),color-mix(in srgb,var(--side) 50%,#000))!important;
+  color:var(--side-ink,#fff)!important}
+#g8app#g8app#g8app .gccuiScoreSide>header h3{font-family:var(--vx-display)!important;font-size:1.5rem;font-weight:800;text-transform:uppercase;
+  letter-spacing:.03em;color:inherit}
+#g8app#g8app#g8app .gccuiScoreSide>div>strong{font-family:var(--vx-display)!important;font-size:4.2rem!important;font-weight:800;line-height:1}
+#g8app#g8app#g8app .gccuiScoreSide>div>strong small{font-size:2rem;color:var(--gcc-muted)}
+#g8app#g8app#g8app .gcc-award{background:linear-gradient(180deg,var(--gcc-raised),var(--gcc-panel))!important;
+  border:1px solid var(--gcc-line)!important;border-top:3px solid #f0c15a!important;border-radius:10px!important}
+#g8app#g8app#g8app .gcc-award h2{font-family:var(--vx-display)!important;font-size:1.7rem;font-weight:700;text-transform:uppercase}
+#g8app#g8app#g8app .gcc-award strong{font-family:var(--vx-display);font-size:1.6rem;color:#f6d98a}
+#g8app#g8app#g8app .gcc-award-0{background:linear-gradient(180deg,#4a3a14,#1b1a14 70%)!important;box-shadow:0 0 50px -24px #f0c15a}
+#g8app#g8app#g8app .gcc-worm{background:rgba(7,19,30,.75)!important;border:1px solid var(--gcc-line)!important;border-radius:12px!important}
+#g8app#g8app#g8app .gccuiResultTop .g8button{white-space:nowrap}
+
+/* 19 ─ Give the "v" medallion room (the base layout only reserves 20px) */
+@media (min-width:900px){
+  #g8app#g8app#g8app .gccui .gccuiFixtureTeams{grid-template-columns:minmax(0,1fr) 46px minmax(0,1fr)}
+  #g8app#g8app#g8app .gccuiScoreTeams{grid-template-columns:minmax(0,1fr) 46px minmax(0,1fr)}}
+
+/* 20 ─ Tables (ladder, stats): navy headers, own-club row lit, finals cut-line */
+#g8app#g8app#g8app .g8sheet,#g8app#g8app#g8app .g8tablewrap{background:linear-gradient(180deg,rgba(19,40,64,.55),rgba(9,20,32,.92))!important;
+  border:1px solid var(--gcc-line)!important;border-radius:12px!important;box-shadow:0 18px 40px -28px #000}
+#g8app#g8app#g8app .g8table{border-collapse:separate;border-spacing:0}
+#g8app#g8app#g8app .g8table caption{color:var(--gcc-muted)}
+#g8app#g8app#g8app .g8table thead th,#g8app#g8app#g8app .gccuiTableView .g8table thead th,#g8dialog#g8dialog#g8dialog .g8table thead th,
+#g8dialog#g8dialog#g8dialog .gcc-scoreinnings .g8table thead th{background:linear-gradient(180deg,#17344f,#0f2438)!important;color:#bcd0de!important;
+  font-family:var(--vx-display)!important;font-size:.95rem!important;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;border-bottom:2px solid var(--vx-glow)!important;padding:12px!important}
+#g8app#g8app#g8app .g8table tbody :is(td,th){border-bottom:1px solid rgba(80,120,160,.22)!important}
+#g8app#g8app#g8app .g8table tbody tr{transition:background .15s}
+#g8app#g8app#g8app .g8table tbody tr:hover td{background:rgba(255,255,255,.05)!important}
+#g8app#g8app#g8app .g8table tbody td:first-child{font-family:var(--vx-display);font-size:1.25rem;font-weight:700;color:var(--gcc-muted)}
+#g8app#g8app#g8app .g8table tr.mine :is(td,th){background:color-mix(in srgb,var(--vx-glow) 26%,#0c1a28)!important;font-weight:800;color:#fff}
+#g8app#g8app#g8app .g8table tr.mine>:first-child{box-shadow:inset 4px 0 var(--vx-glow);color:#fff}
+#g8app#g8app#g8app .g8ladder tbody tr:nth-child(4) :is(td,th){border-bottom:2px dashed #3ddc97!important}
+#g8app#g8app#g8app .g8teamlabel{border-radius:4px!important;font-family:var(--vx-display)!important;font-weight:800;font-size:1.05rem!important;
+  letter-spacing:.05em;text-transform:uppercase;padding:.2rem .65rem!important;
+  box-shadow:0 0 0 1px rgba(255,255,255,.18) inset}
+#g8app#g8app#g8app .g8tabs{gap:.4rem}
+#g8app#g8app#g8app .g8tabs .g8button{font-family:var(--vx-display)!important;letter-spacing:.1em;text-transform:uppercase;font-size:1.05rem}
+#g8app#g8app#g8app .g8seasonread{color:var(--gcc-muted)}
+
+/* 21 ─ Squad / XI rows */
+#g8app#g8app #g8stage .gccuiBenchRow,#g8app#g8app #g8stage .gccuiOrderRow{transition:background .15s,box-shadow .15s}
+#g8app#g8app #g8stage .gccuiBenchRow:hover,#g8app#g8app #g8stage .gccuiOrderRow:hover{background:rgba(255,255,255,.06)!important;
+  box-shadow:inset 3px 0 var(--vx-glow)}
+#g8app#g8app #g8stage .gccuiOverall strong,#g8app#g8app #g8stage .gccuiOrderRow .gccuiRating,#g8app#g8app #g8stage .gccuiBenchRow .gccuiRating{
+  font-family:var(--vx-display)!important;font-size:1.9rem!important;font-weight:800;line-height:1}
+#g8app#g8app #g8stage .gccuiOrderNumber{font-family:var(--vx-display)!important;font-size:1.5rem;font-weight:700;color:var(--vx-ink)}
+#g8app#g8app #g8stage .gccuiRosterName{font-weight:700;letter-spacing:.01em}
+#g8app#g8app #g8stage .gccuiSelectionStatus{background:linear-gradient(180deg,rgba(19,40,64,.85),rgba(9,20,32,.95))!important;
+  border:1px solid var(--gcc-line)!important;border-top:3px solid var(--vx-glow)!important;border-radius:12px!important}
+#g8app#g8app #g8stage .gccuiSelectionStatus .gccuiRating{font-size:2.4rem!important}
+#g8app#g8app #g8stage .gccuiPaneTabs button{font-family:var(--vx-display)!important;letter-spacing:.1em;text-transform:uppercase}
+
+
+/* 22 ─ Small screens */
+#g8hud#g8hud#g8hud .g8hudclub{min-width:0}
+#g8app#g8app#g8app .g8careernav{overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}
+#g8app#g8app#g8app .g8careernav::-webkit-scrollbar{display:none}
+#g8app#g8app#g8app .g8careernav .g8navitem{flex:0 0 auto}
+@media (max-width:700px){
+  #g8hud#g8hud#g8hud .g8headerslogan{font-size:.85rem}
+  #g8app#g8app#g8app .g8careernav{padding-inline:3vw;gap:.1rem}
+  #g8app#g8app#g8app .g8careernav .g8navitem{font-size:.95rem;padding:.5rem .7rem!important;letter-spacing:.06em}
+  #g8app#g8app #g8stage .gccBrandWordmark{font-size:clamp(1.7rem,8.4vw,2.5rem)!important;overflow-wrap:normal}
+  #g8app#g8app #g8stage .gccuiCampaignRibbon{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #g8app#g8app #g8stage .gccuiCampaignRibbon>div{border-bottom:1px solid var(--gcc-line)!important}
+  #g8app#g8app #g8stage .gccuiCampaignRibbon>div:nth-child(2n){border-right:0!important}
+  #g8app#g8app #g8stage .gccuiCampaignRibbon>div>strong{font-size:1.9rem!important}
+  #g8app#g8app #g8stage .gccuiFixtureClub b{font-size:1.45rem!important}
+  #g8app#g8app#g8app .gccui .gccuiContest .gccuiFixtureTeams,#g8app#g8app#g8app .gccui .gccuiFixtureTeams{grid-template-columns:minmax(0,1fr)!important;gap:.4rem}
+  #g8app#g8app#g8app .gccuiVersus{justify-self:center;width:38px;height:38px;margin-block:-.9rem;z-index:2;position:relative}
+  #g8app#g8app#g8app .gccuiLiveSide>header h2{font-size:1.1rem!important}
+  #g8app#g8app#g8app .gccuiLiveSide>div>strong{font-size:2.5rem!important}
+  #g8app#g8app#g8app .gccuiLiveSide>div>strong.gccuiWaitingScore{font-size:1.4rem!important}
+  #g8app#g8app#g8app .gcc-moment .gcc-event{font-size:3.8rem!important}
+  #g8app#g8app#g8app .gccuiScoreSide>div>strong{font-size:3.2rem!important}
+  #g8app#g8app #g8stage .gccuiOrderNumber{font-size:1.15rem;min-width:1.6ch;white-space:nowrap}
+  #g8app#g8app #g8stage .gccuiPlayerOverall strong{font-size:2.1rem!important}
+  #g8app#g8app #g8stage h1{font-size:clamp(2rem,9vw,2.6rem)!important}
+  #g8app#g8app #g8stage .g8leagueformat strong{font-size:2rem!important}
+  #g8app#g8app #g8stage .g8heading,#g8app#g8app #g8stage .gccuiTurn{clip-path:none}
+}
+
+/* 23 ─ Dialogs (scout report, club guide, how-to-play, scorebook) */
+#g8dialog#g8dialog#g8dialog{border:1px solid var(--gcc-line)!important;border-radius:16px!important;overflow:hidden;
+  box-shadow:0 50px 100px -20px #000,0 0 90px -40px var(--vx-glow)!important;animation:vx-rise .3s var(--vx-ease) both}
+#g8dialog#g8dialog#g8dialog::backdrop{background:rgba(2,7,12,.74);-webkit-backdrop-filter:blur(7px);backdrop-filter:blur(7px)}
+#g8dialog#g8dialog#g8dialog h2,#g8dialog#g8dialog#g8dialog h1{font-family:var(--vx-display)!important;font-weight:800!important;text-transform:uppercase;
+  letter-spacing:.03em;font-size:clamp(1.6rem,2.6vw,2.2rem)}
+#g8dialog#g8dialog#g8dialog h3{font-family:var(--vx-display)!important;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+#g8dialog#g8dialog#g8dialog .g8eyebrow,#g8dialog#g8dialog#g8dialog .gccuiKicker{color:var(--vx-ink)!important}
+#g8dialog#g8dialog#g8dialog .gccuiRating,#g8dialog#g8dialog#g8dialog [class*="overall"] strong{font-family:var(--vx-display)!important;font-weight:800}
+#g8dialog#g8dialog#g8dialog summary{background:linear-gradient(180deg,#143048,#0e2236)!important;color:var(--gcc-text)!important;
+  border:1px solid var(--gcc-line)!important;border-radius:8px;font-weight:700;letter-spacing:.03em}
+#g8dialog#g8dialog#g8dialog details[open]>summary{border-bottom-left-radius:0;border-bottom-right-radius:0;border-color:var(--vx-glow)!important}
+#g8dialog#g8dialog#g8dialog details{background:rgba(0,0,0,.18)!important;border:0!important}
+#g8dialog#g8dialog#g8dialog [class*="bar"] span,#g8dialog#g8dialog#g8dialog meter{box-shadow:0 0 12px -2px currentColor}
+#g8app#g8app#g8app .g8utilitymenu>div{background:linear-gradient(180deg,#143048,#0b1b2b)!important;border:1px solid var(--gcc-line)!important;
+  border-radius:12px!important;box-shadow:0 24px 50px -16px #000}
+
+/* 24 ─ Finals: no medallion in the cramped knockout fixtures; headlines scale with their card */
+#g8app#g8app #g8stage[data-view="finals"] .gccuiFixtureTeams{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}
+#g8app#g8app #g8stage[data-view="finals"] .gccuiFixtureTeams .gccuiVersus{display:none!important}
+#g8app#g8app#g8app .gccuiScorecard{container-type:inline-size}
+@container (max-width:760px){
+  .gccuiScorecard>h2{font-size:clamp(1.35rem,5.4cqw,2rem)!important}
+  .gccuiScoreSide>div>strong{font-size:clamp(2.4rem,9cqw,3.6rem)!important}}
+
+/* ==========================================================================
+   GCC VISUAL LAYER v9.2 — rating tiers, champions moment, home hero
+   Needs two tiny render hooks (see HOOKS.md): data-tier on .gccuiRating,
+   and gccuiTitleWon / gccuiTitleDone on the finals wrapper.
+   ========================================================================== */
+@keyframes vx-foil{0%,55%{transform:translateX(-130%)}100%{transform:translateX(130%)}}
+@keyframes vx-confetti{0%{opacity:0;transform:translateY(-105vh) rotate(0)}6%{opacity:1}80%{opacity:1}100%{opacity:0;transform:translateY(8vh) rotate(24deg)}}
+@keyframes vx-glowpulse{0%,100%{text-shadow:0 0 18px rgba(255,210,74,.35)}50%{text-shadow:0 0 34px rgba(255,210,74,.7)}}
+
+/* A ─ Rating tiers on player cards (elite 90+, star 85–89, strong 80–84) */
+#g8app#g8app#g8app .gccuiPlayer:has(:is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="elite"]){
+  --tier:#f4cf6a;border-color:#b8923a!important;border-top:4px solid var(--tier)!important;
+  background:linear-gradient(180deg,#4d3a12 0%,#1a2638 38%,#0a1826 100%)!important;
+  box-shadow:0 0 0 1px rgba(244,207,106,.35),0 16px 34px -18px rgba(244,207,106,.55)}
+#g8app#g8app#g8app .gccuiPlayer:has(:is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="elite"])::after{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  background:linear-gradient(115deg,transparent 38%,rgba(255,236,170,.20) 50%,transparent 62%);
+  animation:vx-foil 6s ease-in-out infinite}
+#g8app#g8app#g8app .gccuiPlayer:has(:is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="elite"]) .gccuiPlayerOverall{
+  background:linear-gradient(180deg,#6b4f14,#2a1d08)!important;border-color:var(--tier)!important}
+#g8app#g8app#g8app :is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="elite"]{color:#ffe08a!important;text-shadow:0 0 22px rgba(255,210,74,.55)}
+#g8app#g8app#g8app .gccuiPlayer:has(:is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="star"]){--tier:#9fd6ff;
+  border-color:#4f7ea3!important;box-shadow:0 0 0 1px rgba(159,214,255,.25),0 14px 30px -20px rgba(159,214,255,.5)}
+#g8app#g8app#g8app .gccuiPlayer:has(:is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="star"]) .gccuiPlayerOverall{
+  background:linear-gradient(180deg,#1d4466,#0b1a2a)!important;border-color:var(--tier)!important}
+#g8app#g8app#g8app .gccuiPlayer:has(:is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="strong"]) .gccuiPlayerOverall{border-color:#4a6f55!important}
+/* rows (XI, bench, roster) just colour the numeral, no foil */
+#g8app#g8app#g8app :is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="star"]{text-shadow:0 0 18px rgba(159,214,255,.4)}
+#g8dialog#g8dialog#g8dialog :is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="elite"]{font-size:1.15em}
+
+/* B ─ Champions moment (finals + season review) */
+#g8app#g8app#g8app .gccuiFinals.gccuiTitleWon{position:relative}
+#g8app#g8app#g8app .gccuiFinals.gccuiTitleWon::before{
+  content:"";position:fixed;left:0;top:0;width:7px;height:7px;border-radius:2px;pointer-events:none;z-index:60;
+  background:#ffd24a;box-shadow:32.4vw 15.1vh 0 1px #ffd24a,8.0vw 53.6vh 0 0px #9df0b0,6.6vw 50.7vh 0 0px #ffd24a,43.1vw 7.0vh 0 0px #9df0b0,42.2vw 82.7vh 0 0px #ff6f91,62.2vw 58.3vh 0 0px #9df0b0,57.8vw 5.0vh 0 0px #ffd24a,55.0vw 13.3vh 0 0px #ff6f91,53.4vw 57.1vh 0 1px #c79bff,18.5vw 58.2vh 0 1px #ff6f91,37.1vw 54.8vh 0 0px #9df0b0,6.8vw 20.6vh 0 1px #9df0b0,42.5vw 31.4vh 0 1px #ffffff,36.1vw 24.8vh 0 0px #c79bff,76.6vw 8.2vh 0 0px #9df0b0,49.0vw 34.3vh 0 0px #6fe3ff,60.1vw 7.3vh 0 1px #ffffff,17.0vw 34.2vh 0 0px #ffffff,4.8vw 66.8vh 0 1px #9df0b0,77.5vw 81.8vh 0 0px #c79bff,35.0vw 49.7vh 0 0px #ffd24a,82.5vw 94.5vh 0 0px #c79bff,65.4vw 6.1vh 0 1px #6fe3ff,63.8vw 99.3vh 0 0px #6fe3ff,70.5vw 88.7vh 0 0px #ffd24a,92.2vw 35.5vh 0 1px #ffd24a,48.9vw 21.8vh 0 0px #ff6f91,72.6vw 39.8vh 0 0px #ffd24a,17.1vw 40.2vh 0 0px #ff6f91,80.5vw 86.4vh 0 0px #c79bff,41.3vw 35.9vh 0 0px #ff6f91,15.6vw 17.6vh 0 0px #c79bff,23.6vw 48.5vh 0 1px #ff6f91,26.5vw 0.4vh 0 0px #9df0b0,36.8vw 56.6vh 0 0px #c79bff,84.3vw 95.0vh 0 1px #c79bff,72.8vw 45.7vh 0 1px #9df0b0,39.1vw 39.9vh 0 0px #ffffff,62.5vw 6.2vh 0 0px #ff6f91,43.7vw 11.0vh 0 1px #ffd24a,10.9vw 56.7vh 0 1px #ffd24a,93.0vw 61.4vh 0 0px #ff6f91,60.6vw 14.9vh 0 0px #6fe3ff,59.4vw 47.4vh 0 0px #ffffff,97.3vw 46.6vh 0 0px #6fe3ff,9.3vw 10.2vh 0 0px #c79bff,26.7vw 82.9vh 0 0px #9df0b0,3.2vw 95.1vh 0 1px #6fe3ff,15.2vw 54.3vh 0 0px #9df0b0,29.9vw 64.3vh 0 0px #c79bff,83.0vw 51.8vh 0 0px #6fe3ff,75.9vw 53.3vh 0 1px #6fe3ff,62.7vw 61.3vh 0 0px #ff6f91,80.4vw 74.0vh 0 0px #ff6f91,51.2vw 35.6vh 0 0px #ffd24a,77.6vw 47.2vh 0 0px #c79bff,59.7vw 34.4vh 0 1px #6fe3ff,93.6vw 36.5vh 0 0px #ffd24a,23.0vw 19.7vh 0 0px #ffffff,61.5vw 90.0vh 0 0px #ffffff,89.2vw 34.4vh 0 1px #ffd24a,82.0vw 12.0vh 0 0px #c79bff,73.8vw 47.8vh 0 0px #ffffff,77.5vw 33.3vh 0 1px #ffffff,45.9vw 74.3vh 0 0px #c79bff,16.4vw 99.3vh 0 0px #ff6f91,58.3vw 46.5vh 0 1px #ff6f91,60.3vw 59.6vh 0 0px #c79bff,91.9vw 15.6vh 0 1px #ff6f91,3.1vw 79.9vh 0 1px #c79bff,11.0vw 74.9vh 0 0px #ffffff,96.7vw 19.5vh 0 0px #ffd24a,25.4vw 29.3vh 0 0px #9df0b0,32.6vw 54.4vh 0 0px #ffd24a,89.3vw 35.4vh 0 0px #c79bff,57.6vw 90.4vh 0 0px #9df0b0,13.7vw 15.2vh 0 1px #ffd24a,85.7vw 77.7vh 0 1px #ffd24a,76.3vw 15.0vh 0 0px #ffffff,61.1vw 12.0vh 0 0px #6fe3ff,67.2vw 53.1vh 0 0px #ffd24a,86.7vw 5.7vh 0 0px #6fe3ff,5.1vw 9.8vh 0 0px #9df0b0,3.7vw 89.4vh 0 0px #ffffff,32.6vw 97.3vh 0 1px #9df0b0,20.3vw 27.7vh 0 1px #9df0b0,79.3vw 50.8vh 0 0px #c79bff,51.8vw 87.6vh 0 0px #9df0b0,87.6vw 20.3vh 0 0px #ff6f91,41.4vw 39.2vh 0 0px #ffd24a;
+  animation:vx-confetti 6.5s cubic-bezier(.3,.1,.5,1) .35s 1 both}
+#g8app#g8app#g8app .gccuiFinals.gccuiTitleWon::after{
+  content:"";position:absolute;left:-6%;right:-6%;top:-40px;height:380px;pointer-events:none;z-index:0;
+  background:radial-gradient(60% 100% at 50% 0%,rgba(255,210,74,.28),transparent 70%)}
+#g8app#g8app#g8app .gccuiFinals.gccuiTitleWon .gccuiCampaignTop,
+#g8app#g8app#g8app .gccuiFinals.gccuiTitleWon>*{position:relative;z-index:1}
+#g8app#g8app#g8app .gccuiTitleWon .gccuiCampaignTop h1,#g8app#g8app#g8app .gccuiTitleWon .gccuiHeading h1{
+  background:linear-gradient(180deg,#fff6cf 10%,#f4cf6a 55%,#b8862a 100%);-webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent!important;font-size:clamp(2.4rem,5.6vw,4.6rem)!important;
+  filter:drop-shadow(0 3px 0 rgba(0,0,0,.5));animation:vx-glowpulse 3s ease-in-out infinite}
+#g8app#g8app#g8app .gccuiTitleWon .gccuiHeadingIcon{color:#ffd24a!important;border-color:#ffd24a!important;
+  background:radial-gradient(circle,rgba(255,210,74,.25),transparent 70%)!important;box-shadow:0 0 30px -4px rgba(255,210,74,.7)}
+#g8app#g8app#g8app .gccuiTitleWon .gccuiKicker{color:#ffe08a!important}
+#g8app#g8app#g8app .gccuiTitleWon .gccuiScorecard{border-top-color:#ffd24a!important;
+  box-shadow:0 30px 60px -36px #000,0 0 110px -36px rgba(255,210,74,.65)!important}
+/* someone else won: quiet gold on the heading only */
+#g8app#g8app#g8app .gccuiTitleDone .gccuiCampaignTop h1{color:#f6dd9a!important}
+/* season review when the title is yours */
+#g8app#g8app#g8app .g8reviewsummary.g8titlewon{
+  background:linear-gradient(160deg,#4a3a12,#14243a 60%)!important;border:1px solid #b8923a!important;
+  border-top:4px solid #ffd24a!important;box-shadow:0 0 90px -30px rgba(255,210,74,.6)!important}
+#g8app#g8app#g8app .g8reviewsummary.g8titlewon h2{font-family:var(--vx-display)!important;font-size:2.4rem;text-transform:uppercase;color:#ffe08a}
+
+/* C ─ Home hero: spread the card's content so there is no dead space under the button */
+#g8app#g8app#g8app .g8welcomepanel{justify-content:space-evenly!important;gap:.4rem}
+#g8app#g8app#g8app .g8welcomepanel>.g8eyebrow{margin-bottom:0!important}
+#g8app#g8app#g8app .g8welcomepanel .g8primary{padding-block:1.1rem!important;font-size:1.5rem!important}
+@media (prefers-reduced-motion:reduce){
+  #g8app .gccuiPlayer::after,#g8app .gccuiTitleWon::before{animation:none!important;display:none}}
+
+/* Integration contracts: keep reading text, control states and reduced motion intact. */
+#g8dialog#g8dialog#g8dialog .gccuiIdentityText>h3{font:400 14px/1.4 var(--vx-body)!important;letter-spacing:normal!important;text-transform:none!important}
+#g8app#g8app#g8app .gccuiPlayerIdentity>b{font:700 17px/1.35 var(--vx-body)!important;letter-spacing:normal!important;text-transform:none!important}
+#g8app#g8app#g8app .g8table caption,#g8dialog#g8dialog#g8dialog .g8table caption{font-family:var(--vx-body)!important}
+#g8app#g8app#g8app .gccuiFinals.gccuiTitleWon::before{display:none!important}
+#g8app#g8app#g8app .gccuiTitleWon :is(.gccuiCampaignTop,.gccuiHeading) h1{animation:none!important}
+#g8app#g8app#g8app .gccuiPlayer::after{animation:none!important}
+#g8app#g8app#g8app .gcc-moment{animation:none!important}
+#g8app#g8app#g8app .g8table tbody td:first-child{font-family:var(--vx-body)!important;font-size:14px!important}
+@media(prefers-reduced-motion:reduce){#g8app#g8app#g8app *,#g8app#g8app#g8app *::before,#g8app#g8app#g8app *::after,#g8dialog#g8dialog#g8dialog{animation:none!important;transition:none!important}}
+@media(max-width:700px){#g8app#g8app#g8app .g8table thead th,#g8dialog#g8dialog#g8dialog .g8table thead th{font-family:var(--vx-body)!important;font-size:12px!important;letter-spacing:.04em!important;padding:10px 6px!important}#g8app#g8app#g8app .gccuiLivePhase{white-space:normal!important;letter-spacing:.12em!important}}
+/* Keep each authored club fill/ink pairing readable across the whole header. */
+#g8app#g8app#g8app .gccuiFixtureClub,#g8app#g8app#g8app .gccuiLiveSide>header,#g8app#g8app#g8app .gccuiScoreSide>header{background:linear-gradient(110deg,rgba(255,255,255,.10),transparent 65%),var(--side)!important;color:var(--side-ink,#fff)!important}
