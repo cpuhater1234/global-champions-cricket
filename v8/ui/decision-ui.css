@@ -574,6 +574,8 @@
 #g8app .gccuiCommandCentre .gccuiDecisionDetail{display:block;color:#d3cfc7;font-size:12px;line-height:1.45;margin:0}
 #g8app .gccuiCommandCentre .gccuiMatchDecisions .g8decisionline .g8button{min-height:44px!important;font-size:12px!important;padding:8px 10px!important;white-space:nowrap}
 #g8app .gccuiMatchdayLower{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:20px;margin-top:20px;align-items:start}
+/* Expanded reading panels need the full row rather than a tall narrow column. */
+#g8app .gccuiMatchdayLower:has(.gccuiMatchdayInfo details[open]){grid-template-columns:minmax(0,1fr)}
 #g8app .gccuiLatestMatch>div{padding:16px}
 #g8app .gccuiLatestMatch>div>strong{display:block;font-size:16px;line-height:1.4}
 #g8app .gccuiLatestMatch>div>p{font-size:13px;line-height:1.8;margin:10px 0 14px!important;color:var(--ui-muted)}
