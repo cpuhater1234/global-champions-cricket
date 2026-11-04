@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {loadGame} from '../offline_game_host.mjs';
+import {startDraft,finishDraft,selectManualXI} from '../club-expansion-20261027/helpers.mjs';
+const h=loadGame(process.argv[2]||'deliver/GCC_v8_Playtest_53.html',101,new Map(),{strictIds:true}),X=h.context.GCC8,s=h.G.state;
+startDraft(h);finishDraft(h);selectManualXI(h);h.G.startSeason();
+s.year=2009;s.round=3;X.ui.view='season';
+const out=X.roster().find(p=>s.xi.includes(p.id)&&!X.R.isKeeper(p)),incoming=X.roster().find(p=>!s.xi.includes(p.id));
+s.dynasty.injuries[out.id]={status:'OUT',type:'side strain',roundsLeft:5};
+console.log('before edit',{view:X.ui.view,screen:X.screen(),problem:X.read.xiProblem()});
+assert(X.dispatch('editXI'));
+assert(X.dispatch('swapSelected',[out.id]));
+assert(X.dispatch('swapSelectedWith',[out.id,incoming.id]));
+console.log('after swap',{view:X.ui.view,screen:X.screen(),problem:X.read.xiProblem(),pending:s.pendingSwapIn});
+const result=X.dispatch('lodge');console.log('after lodge',{result,view:X.ui.view,screen:X.screen(),feedback:h.get('g8feedback').textContent,problem:X.read.xiProblem()});
+assert.equal(X.ui.view,'season');assert.equal(X.ui.seasonTab,'matchday');assert.equal(s.round,3);assert.equal(s.fullSchedule.length,14);assert.deepEqual(h.errors,[]);
+console.log('PASS lodge returns valid replacement XI to matchday');
