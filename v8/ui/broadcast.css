@@ -330,3 +330,8 @@
 @media(max-width:700px){#g8app#g8app#g8app .g8table thead th,#g8dialog#g8dialog#g8dialog .g8table thead th{font-family:var(--vx-body)!important;font-size:12px!important;letter-spacing:.04em!important;padding:10px 6px!important}#g8app#g8app#g8app .gccuiLivePhase{white-space:normal!important;letter-spacing:.12em!important}}
 /* Keep each authored club fill/ink pairing readable across the whole header. */
 #g8app#g8app#g8app .gccuiFixtureClub,#g8app#g8app#g8app .gccuiLiveSide>header,#g8app#g8app#g8app .gccuiScoreSide>header{background:linear-gradient(110deg,rgba(255,255,255,.10),transparent 65%),var(--side)!important;color:var(--side-ink,#fff)!important}
+/* Live names are identities, not column labels. */
+#g8app#g8app#g8app .gcc-crease table tbody th{font-family:var(--vx-body)!important;font-size:14px!important;line-height:1.4!important;font-weight:700!important;letter-spacing:normal!important;text-transform:none!important;color:var(--gcc-text)!important}
+/* A quiet match needs no alert-sized management panel. */
+#g8app#g8app#g8app .gccuiConsequences:has(.gccuiConsequenceQuiet){background:none!important;border:0!important;box-shadow:none!important;padding:0!important;margin:8px 0!important;border-radius:0!important}
+#g8app#g8app#g8app .gccuiConsequenceQuiet{font:400 13px/1.45 var(--vx-body)!important;color:var(--gcc-muted)!important;margin:0!important}
