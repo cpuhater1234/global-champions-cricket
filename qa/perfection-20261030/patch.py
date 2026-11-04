@@ -277,6 +277,11 @@ parts[12],parts[17]=runpy.run_path(str(root/'qa/native50/stats-transform.py'))['
 
 parts[17]=runpy.run_path(str(root/'qa/native51/ladder-transform.py'))['transform'](parts[17])
 
+# Match scorebook table names preserve batting and defending club context.
+rep(15,'fow=X.fowData(r,i);return',"fow=X.fowData(r,i),bowlingClub=r.scorecard.innings.find(j=>j.club.abbr!==i.club.abbr)?.club;return")
+rep(15,'<table class="g8table gcc-batting"><caption>Batting','<table class="g8table gcc-batting" aria-label="${esc(i.club.name)} batting"><caption>Batting')
+rep(15,'<table class="g8table"><caption>Bowling',"<table class=\"g8table gcc-bowling\" aria-label=\"${esc(bowlingClub?.name||'Opposition')} bowling against ${esc(i.club.name)}\"><caption>Bowling")
+
 parts[18]+='\n'+(root/'v8/ui/decision-ui.js').read_text()
 for i in (9,10,11,12,16,17,19):
  path=root/('v8/engine/'+('foundation.js' if i==9 else 'dynasty.js')) if i in (9,10) else root/('v8/ui/'+{11:'components.js',12:'cricket-reads.js',16:'career.js',17:'screens.js',19:'controller.js'}[i]);path.write_text(parts[i])

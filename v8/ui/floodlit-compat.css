@@ -41,7 +41,7 @@
 #g8app#g8app#g8app .gccui{--ui-rule:var(--gcc-line)}
 #g8stage#g8stage#g8stage .g8arenaheader{color:var(--gcc-accent-ink)!important}
 #g8dialog#g8dialog#g8dialog .gcc-scoreinnings{background:var(--gcc-panel)!important;border-color:var(--gcc-line)!important}
-#g8dialog#g8dialog#g8dialog .gcc-scoreinnings>header{background:var(--gcc-raised)!important;border-color:var(--gcc-line)!important}
+#g8dialog#g8dialog#g8dialog .gcc-scoreinnings>header{background:var(--innings-club,var(--gcc-raised))!important;color:var(--innings-ink,var(--gcc-text))!important;border-color:var(--gcc-line)!important}
 #g8dialog#g8dialog#g8dialog .gcc-scoreinnings .g8table caption{background:var(--gcc-inset)!important;color:var(--gcc-text)!important}
 #g8dialog#g8dialog#g8dialog .g8modalbody>.g8actions:last-child{box-shadow:0 -10px 16px var(--gcc-inset)!important}
 ::selection{background:var(--club-accent,#ed7547);color:var(--club-ink,#171717)}
