@@ -9,3 +9,6 @@ for(let i=0;i<cards.length;i++){const c=cards[i],p=players[i];assert.equal(c.que
 assert.equal(JSON.stringify(h.G.state),before);assert.deepEqual(h.errors,[]);console.log('PASS card identities, rating bands, country/name/action preservation and read-only rendering',cards.length);
 
 for(const [n,band] of [[0,'weak'],[63,'weak'],[64,'thin'],[72,'thin'],[73,'sound'],[81,'sound'],[82,'strong'],[89,'strong'],[90,'elite'],[99,'elite']])assert.equal(X.ratingBand(n),band);
+assert.equal(typeof X.arrivalCard,'function','arrival previews share current player cards');
+for(const p of players){const d=parseHTML(X.arrivalCard(p)).document;assert(d.querySelector('.gccuiPlayer'));assert(!d.querySelector('[data-action="draftPlayer"]'),'arrival preview cannot draft a player');assert(d.querySelector('[data-action="inspect"]'));}
+assert.equal(JSON.stringify(h.G.state),before,'arrival previews cannot mutate cricket state');
