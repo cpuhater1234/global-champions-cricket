@@ -19,6 +19,6 @@ assert(html.includes('Being managed medically pauses assessment, including when 
 assert(html.includes('Short innings may end before the spell is completed.'));
 s.dynasty.injuries[p.id]={status:'MANAGING',type:'calf tightness',roundsLeft:2};if(!s.xi.includes(p.id))s.xi[0]=p.id;
 html=view();before(html,'Rest and choose replacement','Agree to seek a move');before(html,'Rest and choose replacement','gccuiManagementContext');assert(html.includes('Currently selected'));
-X.ui.view='season';assert(!view().includes('Rest and choose replacement'),'replacement remains guarded to XI view');X.ui.view='team';
+X.ui.view='season';assert(view().includes('Rest and choose replacement'),'matchday medical review offers replacement');X.ui.view='team';
 s.pendingSwapIn=999;html=view();assert.match(html,/<button[^>]*data-action="manageRest"[^>]*disabled|<button[^>]*disabled[^>]*data-action="manageRest"/,'pending swap guard preserved');
-assert.deepEqual(h.errors,[]);console.log('PASS management hierarchy, contextual action priority, disclosures, promise terms, guards and read-only render');
+s.pendingSwapIn=null;X.ui.view='season';assert(X.dispatch('manageInspect',[p.id]));const facts=JSON.stringify({results:s.results,stats:s.playerSeasonStats});assert(X.dispatch('manageRest',[p.id]),'matchday medical action opens selection');assert.equal(X.ui.view,'team');assert.equal(X.ui.teamReturn,'season');assert(!s.xi.includes(p.id));assert.equal(s.xi.length,10);assert.equal(JSON.stringify({results:s.results,stats:s.playerSeasonStats}),facts);assert.equal(X.ui.teamPane,'squad');assert.deepEqual(h.errors,[]);console.log('PASS management hierarchy, contextual action priority, disclosures, promise terms, guards and read-only render');
