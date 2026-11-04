@@ -7,3 +7,10 @@ Staged CSS fixes: crease row-header player names14px Inter, sentence case, norma
 Checks: builder validates20scripts; all20 unchanged from62; CSS parser passes; scorebook contract passes. Native candidate rendering pending. No new downloadable build issued: batch remains open for lifecycle coverage.
 
 Outstanding: draft/signings native62-direction review, trades/cover, finals/review/offseason and career completion. Preserve explicit gaps rather than universal pass.
+
+## Continued native lifecycle audit
+Completed rounds6–14 through native result controls. Nannes, Tendulkar and Price injuries correctly blocked progression; used native replacement dialogs to select Collingwood, Katich and Bond respectively and lodged XI. Round11 selection-concern disclosure identified Bond and exposed Review action. League completed10wins4losses, first place.
+
+Entered semifinals, lost to Rajasthan, advanced to spectator Grand Final, watched toss and used Show result. Rajasthan beat Gujarat by3runs. Other-club champion heading rendered gold. Closed season, opened2010 retained-squad overview and Manage players. Fifteen retained, no retirements, no vacancies, five move requests. Updated ages and ratings displayed. No squad changes made in offseason. Mobile390px overview width380/scrollWidth380. Viewport reset.
+
+Confirmed finals preview styling gap: gccuiKnockoutFixture differs from imported gccuiFixtureTeams selector; old hidden-v rule lost cascade. Staged true-component grid/hide-v/card rules. All20scripts remain identical to62; CSS parses. Native candidate verification pending. User-title victory, trade/release confirmation and annual draft still unverified natively.

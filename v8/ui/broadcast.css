@@ -335,3 +335,9 @@
 /* A quiet match needs no alert-sized management panel. */
 #g8app#g8app#g8app .gccuiConsequences:has(.gccuiConsequenceQuiet){background:none!important;border:0!important;box-shadow:none!important;padding:0!important;margin:8px 0!important;border-radius:0!important}
 #g8app#g8app#g8app .gccuiConsequenceQuiet{font:400 13px/1.45 var(--vx-body)!important;color:var(--gcc-muted)!important;margin:0!important}
+/* Knockout previews use their real component, not the league fixture selector. */
+#g8app#g8app#g8app .gccuiFinals .gccuiKnockoutFixture>.gccuiVersus{display:none!important}
+#g8app#g8app#g8app .gccuiFinals .gccuiKnockoutFixture{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
+#g8app#g8app#g8app .gccuiFinals .gccuiKnockoutSide{border:1px solid var(--gcc-line)!important;border-radius:10px!important;padding:16px!important;min-height:88px}
+#g8app#g8app#g8app .gccuiFinals .gccuiKnockoutSide h2{font:800 22px/1.15 var(--vx-display)!important;letter-spacing:.02em!important}
+@media(max-width:760px){#g8app#g8app#g8app .gccuiFinals .gccuiKnockoutFixture{grid-template-columns:1fr!important}}
