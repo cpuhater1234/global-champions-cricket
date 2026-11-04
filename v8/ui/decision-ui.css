@@ -184,7 +184,7 @@
 #g8dialog[data-prompt=prepare] .g8previewvenue p{grid-column:1;margin:0!important;font-size:13px!important}
 #g8dialog[data-prompt=prepare] .g8previewvenue>span:last-child{grid-column:2;grid-row:2/4;align-self:center;border:1px solid #7c888d!important;background:#3b454b;padding:10px 14px!important;border-radius:4px;font-size:13px!important}
 #g8dialog .gcc-scoreinnings{background:var(--gcc-raised)!important;border:1px solid #75838a!important;border-radius:6px;overflow:hidden;margin-bottom:20px}
-#g8dialog .gcc-scoreinnings>header{background:#343e44!important;padding:16px 18px!important;border:0!important;border-bottom:1px solid #78868d!important;align-items:center;gap:12px}
+#g8dialog .gcc-scoreinnings>header{background:#343e44!important;padding:16px 18px!important;border:0!important;border-bottom:1px solid #78868d!important;align-items:center;gap:8px}
 #g8dialog .gcc-scoreinnings>header h2{font-size:21px!important;line-height:1.25!important;margin:0!important}
 #g8dialog .g8modalbody>.gcc-scoreinnings:first-of-type{margin-top:0}
 #g8dialog .gcc-scoreinnings caption{background:#2b3439!important;color:#f1f4f5!important;font-size:14px!important;letter-spacing:.08em!important;padding:12px 16px!important;text-align:left!important;border-bottom:1px solid #68777e!important}
