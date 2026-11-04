@@ -92,3 +92,6 @@
 @media(max-width:600px){#g8dialog#g8dialog#g8dialog .gccuiIdentityText #g8dialogTitle{font-size:24px!important}}
 @media(max-width:480px){#g8app#g8app#g8app .gccuiSelection .gccuiOrderRow{grid-template-columns:18px minmax(0,1fr) 30px!important}#g8app#g8app#g8app .gccuiSelection .gccuiRosterActions{grid-column:2/-1!important;justify-content:flex-end!important}}
 @media(prefers-reduced-motion:reduce){#g8app#g8app#g8app .g8button:hover,#g8app#g8app#g8app .g8club:hover,#g8app#g8app#g8app .gccuiPlayer:hover,#g8dialog#g8dialog#g8dialog .g8button:hover{transform:none!important}}
+/* Narrow condition cards retain the same two-line header and readable endpoints. */
+#g8app#g8app#g8app .g8conditionread>div:first-child,#g8dialog#g8dialog#g8dialog .g8conditionread>div:first-child{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:5px!important;min-height:47px}
+#g8app#g8app#g8app .g8conditionends>span,#g8dialog#g8dialog#g8dialog .g8conditionends>span{min-width:0!important;white-space:normal!important;overflow-wrap:normal!important}
