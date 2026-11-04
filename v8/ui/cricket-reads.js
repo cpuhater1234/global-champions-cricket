@@ -29,7 +29,7 @@
   return X.disclosure('Innings phases',`<div class="g8playerphases">${group('Batting','cricket',batting)}${R.bowlingWorkload(p)>0?group('Bowling','cricket-ball',bowling):''}</div>`);
  };
  X.playerRead=(p,section='all')=>{
-  const scout=read.scout(p.id),tags=F.roleTags(p).filter(t=>!t.includes('LOWER MIDDLE')),conf=window.GCC8_SCOUTING.publicView(p,s.year).confidence.toLowerCase(),d=s.dynasty?.developmentByYear?.[s.year]?.find(r=>r.playerId===p.id);
+  const scout=read.scout(p.id),tags=F.roleTags(p).filter(t=>!t.includes('LOWER MIDDLE')),conf=window.GCC8_SCOUTING.publicView(p,s.year).confidence.toLowerCase(),d=(p.dynastyCareer?.debutYear??2008)<s.year?s.dynasty?.developmentByYear?.[s.year]?.find(r=>r.playerId===p.id):null;
   const groups=[['Batting technique',[['Against pace',p.pacePlay],['Against spin',p.spinPlay],['Shot control',p.control]]],['Strokeplay & running',[['Power hitting',p.power],['Running between wickets',p.running],['Finishing',p.finishing]]],...(R.bowlingWorkload(p)>0?[['Bowling skills',[['Bowling accuracy',p.bowlControl],['Variations',p.variation]]]]:[]),['Mental attributes',[['Temperament',p.temperament],['Leadership',p.leadership]]]];
   if(p.role==='BOWL'){const i=groups.findIndex(([title])=>title==='Bowling skills');if(i>=0)groups.unshift(groups.splice(i,1)[0]);}
   const skills=groups.map(([title,rows])=>`<section class="g8skillcategory g8skill-${title.startsWith('Bowling')?'bowling':title.startsWith('Mental')?'mental':'batting'}"><h3>${esc(title)}</h3>${rows.map(([label,value])=>X.abilityRead(label,value)).join('')}</section>`).join('');
