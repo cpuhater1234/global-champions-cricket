@@ -293,6 +293,11 @@ rep(12,'${c.titles} titles ·',"${c.titles} ${c.titles===1?'title':'titles'} ·"
 
 rep(19,'result.message.replace(`${deal.club} reject it.`,`${s.league.find(c=>c.abbr===deal.club)?.name||deal.club} declined this offer.`)','result.accepted?`${s.league.find(c=>c.abbr===deal.club)?.name||deal.club} accepted the trade.`:result.message.replace(`${deal.club} reject it.`,`${s.league.find(c=>c.abbr===deal.club)?.name||deal.club} declined this offer.`)')
 
+# Arrival previews reuse the current card without any draft command.
+assert parts[16].count("playerCard(p,'inspect','Scout')")==2
+parts[16]=parts[16].replace("playerCard(p,'inspect','Scout')", "X.arrivalCard(p)")
+assert parts[16].count('<div class="g8board">${m.o.arrivals')==2
+parts[16]=parts[16].replace('<div class="g8board">${m.o.arrivals', '<div class="gccui gccuiPlayers">${m.o.arrivals')
 parts[18]+='\n'+(root/'v8/ui/decision-ui.js').read_text()
 for i in (9,10,11,12,16,17,19):
  path=root/('v8/engine/'+('foundation.js' if i==9 else 'dynasty.js')) if i in (9,10) else root/('v8/ui/'+{11:'components.js',12:'cricket-reads.js',16:'career.js',17:'screens.js',19:'controller.js'}[i]);path.write_text(parts[i])
