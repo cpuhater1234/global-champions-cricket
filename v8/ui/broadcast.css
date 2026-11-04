@@ -240,7 +240,7 @@
   border:1px solid var(--gcc-line)!important;border-radius:8px;font-weight:700;letter-spacing:.03em}
 #g8dialog#g8dialog#g8dialog details[open]>summary{border-bottom-left-radius:0;border-bottom-right-radius:0;border-color:var(--vx-glow)!important}
 #g8dialog#g8dialog#g8dialog details{background:rgba(0,0,0,.18)!important;border:0!important}
-#g8dialog#g8dialog#g8dialog [class*="bar"] span,#g8dialog#g8dialog#g8dialog meter{box-shadow:0 0 12px -2px currentColor}
+/* Skill labels remain plain text; avoid wildcard bar-name glow. */
 #g8app#g8app#g8app .g8utilitymenu>div{background:linear-gradient(180deg,#143048,#0b1b2b)!important;border:1px solid var(--gcc-line)!important;
   border-radius:12px!important;box-shadow:0 24px 50px -16px #000}
 
@@ -341,3 +341,8 @@
 #g8app#g8app#g8app .gccuiFinals .gccuiKnockoutSide{border:1px solid var(--gcc-line)!important;border-radius:10px!important;padding:16px!important;min-height:88px}
 #g8app#g8app#g8app .gccuiFinals .gccuiKnockoutSide h2{font:800 22px/1.15 var(--vx-display)!important;letter-spacing:.02em!important}
 @media(max-width:760px){#g8app#g8app#g8app .gccuiFinals .gccuiKnockoutFixture{grid-template-columns:1fr!important}}
+/* Release/trade consequences share the current surface hierarchy. */
+#g8dialog#g8dialog#g8dialog .g8consequences>div{background:var(--gcc-raised)!important;border:1px solid var(--gcc-line)!important;border-radius:8px!important;color:var(--gcc-text)!important}
+#g8dialog#g8dialog#g8dialog .g8consequences>div>span{font:600 13px/1.4 var(--vx-body)!important;color:var(--gcc-muted)!important}
+#g8dialog#g8dialog#g8dialog .g8consequences>div>strong{font-family:var(--vx-display)!important;font-size:30px!important;line-height:1.15!important;color:var(--gcc-text)!important}
+#g8dialog#g8dialog#g8dialog .g8decisionwarning{background:var(--gcc-inset)!important;border:1px solid var(--gcc-line)!important;border-left:3px solid #d4b66d!important;color:var(--gcc-text)!important;font:600 14px/1.5 var(--vx-body)!important;text-align:left!important}
