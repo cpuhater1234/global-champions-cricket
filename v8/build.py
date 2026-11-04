@@ -1,15 +1,15 @@
 """Build the fresh UI with a frozen, DOM-backed cricket engine adapter."""
 from pathlib import Path
 import re,hashlib,json,argparse,base64
-from domain.career_adapter import adapt as adapt_careers
-from domain.storage_adapter import adapt as adapt_storage
-from domain.delivery_adapter import adapt as adapt_deliveries
-from domain.departure_adapter import adapt as adapt_departures
-from domain.hardening_adapter import adapt as adapt_hardening
 ROOT=Path(__file__).resolve().parent
 BASE=ROOT.parent/'game/global_champions_cricket_v7_9_3_layout_rebuild.html'
 EXPECTED='eddec7bc6d92eb494bef26384e0618ea63d5244c63c8a1c9d84b1f5e16e98926'
 def freeze():
+ from domain.career_adapter import adapt as adapt_careers
+ from domain.storage_adapter import adapt as adapt_storage
+ from domain.delivery_adapter import adapt as adapt_deliveries
+ from domain.departure_adapter import adapt as adapt_departures
+ from domain.hardening_adapter import adapt as adapt_hardening
  (ROOT/'engine').mkdir(parents=True,exist_ok=True)
  b=BASE.read_bytes();assert hashlib.sha256(b).hexdigest()==EXPECTED
  text=b.decode();scripts=re.findall(r'<script(?:\s[^>]*)?>(.*?)</script>',text,re.S);assert len(scripts)==10
@@ -206,7 +206,22 @@ def build(output):
  output.parent.mkdir(parents=True,exist_ok=True);output.write_text(result)
  print(output,len(result.encode()),hashlib.sha256(result.encode()).hexdigest())
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('--freeze',action='store_true');p.add_argument('--output',type=Path,default=ROOT.parent/'game/global_champions_cricket_v8_fresh_game.html');a=p.parse_args()
- if a.freeze:freeze()
- if all((ROOT/'ui'/f).exists() for f in ['shell.html','game.css','components.js','screens.js','controller.js']):build(a.output)
- else:print('Engine snapshot available; fresh UI scaffold is unfinished. No playable v8 build produced.')
+ p=argparse.ArgumentParser()
+ p.add_argument('--legacy-scaffold',action='store_true',help='Use the historical fresh-UI assembler instead of the maintained candidate pipeline.')
+ p.add_argument('--freeze',action='store_true',help='Refresh the historical engine snapshot; requires --legacy-scaffold.')
+ p.add_argument('--output',type=Path)
+ a=p.parse_args()
+ if a.freeze and not a.legacy_scaffold:p.error('--freeze requires --legacy-scaffold; it can overwrite generated engine files.')
+ if a.legacy_scaffold:
+  if a.freeze:freeze()
+  build(a.output or ROOT.parent/'game/global_champions_cricket_v8_fresh_game.html')
+ else:
+  import subprocess,sys,shutil
+  project=ROOT.parent
+  subprocess.run([sys.executable,str(project/'qa/perfection-20261030/patch.py')],cwd=project,check=True)
+  candidate=project/'qa/perfection-20261030/candidate.html'
+  output=(a.output.resolve() if a.output else project/'game/gcc_v8_product_candidate.html')
+  output.parent.mkdir(parents=True,exist_ok=True)
+  if output!=candidate:shutil.copyfile(candidate,output)
+  print(output,output.stat().st_size,hashlib.sha256(output.read_bytes()).hexdigest())
+
