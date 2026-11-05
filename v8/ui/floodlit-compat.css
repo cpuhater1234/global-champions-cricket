@@ -97,7 +97,7 @@
 #g8app#g8app#g8app .g8conditionends>span,#g8dialog#g8dialog#g8dialog .g8conditionends>span{min-width:0!important;white-space:normal!important;overflow-wrap:normal!important}
 
 /* Equal condition rows keep gauges level when endpoint text wraps. */
-#g8app#g8app#g8app .g8pitchread .g8conditionread,#g8dialog#g8dialog#g8dialog .g8pitchread .g8conditionread{display:grid!important;grid-template-rows:minmax(47px,auto) 12px minmax(34px,auto)!important;align-content:start!important;gap:12px!important}
+#g8app#g8app#g8app .g8pitchread .g8conditionread,#g8dialog#g8dialog#g8dialog .g8pitchread .g8conditionread{display:grid!important;grid-template-columns:minmax(0,1fr)!important;grid-template-rows:minmax(47px,auto) 12px minmax(34px,auto)!important;align-content:start!important;gap:12px!important}
 #g8app#g8app#g8app .gccuiArchive .g8archiveyears>.g8seasonbook:only-child{grid-column:1/-1}
 
 /* Scouting cards: personal identity and restrained, explicit rating bands. */
