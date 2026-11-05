@@ -6,3 +6,5 @@ const X=h.context.GCC8,s=h.G.state,p=s.pool.find(p=>p.name==='Ben Stokes');asser
 const before=JSON.stringify(s);assert(!X.playerRead(p).includes('Overall since last season'),'new arrival must not claim pre-entry development');assert.equal(JSON.stringify(s),before);
 s.year++;s.dynasty.developmentByYear={[s.year]:[{playerId:p.id,fromOverall:65,toOverall:67}]};assert(X.playerRead(p).includes('Overall since last season'),'returning players keep development evidence');
 console.log('PASS new-arrival comparison suppressed, returning comparison retained, render immutable');
+const elite=s.pool.find(p=>p.name==='Dale Steyn');elite.overall=96;s.year=2010;
+const eliteBefore=JSON.stringify(s),eliteReport=X.playerRead(elite);assert(eliteReport.includes('Elite quality · prime years'),'established elite report must recognise current ability');assert(!eliteReport.includes('Developing · earning his place'));assert.equal(JSON.stringify(s),eliteBefore);
