@@ -295,6 +295,7 @@ rep(19,'result.message.replace(`${deal.club} reject it.`,`${s.league.find(c=>c.a
 
 # A first-year arrival has no prior GCC season to compare with its source profile.
 rep(12,'d=s.dynasty?.developmentByYear?.[s.year]?.find(r=>r.playerId===p.id)', 'd=(p.dynastyCareer?.debutYear??2008)<s.year?s.dynasty?.developmentByYear?.[s.year]?.find(r=>r.playerId===p.id):null')
+rep(12,"esc(scout?.outlook||'Still being assessed')", "esc(p.overall>=90?(s.year-p.birthYear>=34?'Elite quality · shorter runway':s.year-p.birthYear<=25?'Elite quality · developing further':'Elite quality · prime years'):p.overall>=82&&s.year-p.birthYear<=28?'Established quality · developing further':scout?.outlook||'Still being assessed')")
 # Arrival previews reuse the current card without any draft command.
 assert parts[16].count("playerCard(p,'inspect','Scout')")==2
 parts[16]=parts[16].replace("playerCard(p,'inspect','Scout')", "X.arrivalCard(p)")
