@@ -229,6 +229,9 @@
   #g8app#g8app #g8stage .g8heading,#g8app#g8app #g8stage .gccuiTurn{clip-path:none}
 }
 
+/* Short viewports must be able to scroll the full header out of the way. */
+@media(max-height:500px){#g8hud#g8hud#g8hud{position:static}}
+
 /* 23 ─ Dialogs (scout report, club guide, how-to-play, scorebook) */
 #g8dialog#g8dialog#g8dialog{border:1px solid var(--gcc-line)!important;border-radius:16px!important;overflow-x:hidden;overflow-y:auto;
   box-shadow:0 50px 100px -20px #000,0 0 90px -40px var(--vx-glow)!important;animation:vx-rise .3s var(--vx-ease) both}
