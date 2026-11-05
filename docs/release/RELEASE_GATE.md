@@ -5,7 +5,7 @@ Repository: cpuhater1234/global-champions-cricket.
 Branch: work/v8-integrity-charcoal-candidate.
 Canonical build command: python3 v8/build.py. This delegates to qa/perfection-20261030/patch.py and copies its syntax-checked output to game/gcc_v8_product_candidate.html. The historical assembler requires --legacy-scaffold.
 Frozen input: baseline/GCC_v8_Career_Clarity.html. Generated candidate: qa/perfection-20261030/candidate.html.
-Latest user-facing build: Playtest68. Native inspection has reached the 2010 offseason. The next candidate includes an unverified elite-outlook wording correction. Detailed evidence and limitations: qa/consolidation62/review.md. Older work/v8-game-first-rebuild/v101 references are historical, not instructions to port or overwrite this candidate. Reconcile older README at branch integration; retain history.
+Latest user-facing build: Playtest69 (SHA256 c636d86490d2fedecfaf0f4b1852313179fd1c194d7f3db10a79499795c11ae1). Native69 inspection reached 2010 Round1 toss; Steyn elite-outlook wording, retained-XI lodging and match preview verified. Draft rank and rule-note contrast fixes still need native rechecking in those states. A condition-gauge grid-column correction is staged after69 and requires native verification. Detailed evidence and limitations: qa/consolidation62/review.md. Older work/v8-game-first-rebuild/v101 references are historical, not instructions to port or overwrite this candidate. Reconcile older README at branch integration; retain history.
 
 ## Constraints
 Preserve approved Floodlit/broadcast direction, recognised keeper safeguards, manual XI selection, existing career rules and offline assets/fonts. No backup/export prompts. Separate presentation and simulation changes. No invented scorebook shot directions or uncalibrated win probabilities. Preserve font tnum features during asset optimisation.
@@ -21,7 +21,7 @@ Preserve approved Floodlit/broadcast direction, recognised keeper safeguards, ma
 | Accessibility | Open | Contrast, text resizing, reduced motion, forced colours, live announcements and serious/critical automated issues resolved |
 | Club colours | Open | Every club fill/ink/text pair and similar-colour opponents checked |
 | Performance | Asset inventory started | Real Android/iPhone measurements; agreed load/scroll/memory/save budgets |
-| Full-career integrity | Seed101 completed 19 seasons and career closure; broader seeds/native end path open |2008–2026 regression and final career completion; no errors |
+| Full-career integrity | Seed101 pre69 and seed2026 exact69 completed 19 seasons and career closure; broader seeds/native end path open |2008–2026 regression and final career completion; no errors |
 | Save compatibility | Native test career continued across builds63–68; broader save fixtures open | Earlier-build saves load/play; current round-trip; full/conflicting/corrupt storage handled |
 | Simulation calibration | Open blocker | Era-matched real corpus; fixed-seed comparison; acceptable distributions documented |
 | First-time comprehension | Open | Five independent players; record completion/hesitation and resolve main confusions |
