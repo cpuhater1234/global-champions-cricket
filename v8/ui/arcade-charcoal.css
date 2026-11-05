@@ -56,6 +56,10 @@ html body,#g8app{background-color:var(--gcc-ground)!important;color:var(--gcc-te
 #g8app :is(.g8sectionhead,.g8xicommand,.g8selectioncount,.g8xirating),#g8dialog :is(.g8analysisoverall,.g8developmentbadge){background:var(--gcc-raised)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
 #g8app .g8sectionhead{background:var(--gcc-raised)!important;border-bottom:2px solid var(--gcc-accent)!important}
 #g8app :is(.g8disclosure,.g8rulenote,.g8conditionread,.g8groundinterpretation,.g8weatherread,.g8scoutsummary,.g8scoutability,.g8scoutoutlook,.g8analysissection),#g8dialog :is(.g8disclosure,.g8rulenote,.g8conditionread,.g8groundinterpretation,.g8weatherread,.g8scoutsummary,.g8scoutability,.g8scoutoutlook,.g8analysissection){background:var(--gcc-panel)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
+/* Pick labels sit on shared dark panels, not on club-coloured badges. */
+#g8app .g8orderrank{color:var(--gcc-text)}
+/* Rule-note titles must not retain the frozen light-theme ink. */
+#g8app .g8rulenote>strong,#g8dialog .g8rulenote>strong{color:var(--gcc-text)}
 #g8app .g8analysisrow,#g8dialog .g8analysisrow{background:var(--gcc-raised)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
 #g8dialog .g8scoutsummary .g8scoutmeta>span{background:var(--gcc-raised)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
 #g8dialog .g8development>.g8eyebrow{background:var(--gcc-raised)!important;color:#eacb93!important;border-left:4px solid var(--gcc-accent);padding:8px 12px}
