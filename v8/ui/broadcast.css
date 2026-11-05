@@ -124,6 +124,8 @@
 #g8app#g8app#g8app .gcc-bowler{background:linear-gradient(180deg,var(--gcc-raised),var(--gcc-panel))!important;
   border:1px solid var(--gcc-line)!important;border-top:3px solid #f0c15a!important;border-radius:8px}
 #g8app#g8app#g8app .gcc-bowler strong{font-family:var(--vx-display);font-size:2rem}
+/* Keep changing live statistics aligned across proportional and display faces. */
+#g8app#g8app#g8app .gcc-crease :is(td,td b),#g8app#g8app#g8app .gcc-bowler :is(strong,strong small){font-variant-numeric:tabular-nums}
 #g8app#g8app#g8app .gcc-history{background:rgba(7,19,30,.7)!important;border:1px solid var(--gcc-line)!important;border-radius:12px;overflow:hidden}
 #g8app#g8app#g8app .gcc-history>*{background-color:transparent!important}
 #g8app#g8app#g8app .gcc-history .g8overrow,#g8app#g8app#g8app .gcc-history article,#g8app#g8app#g8app .gcc-history li{background:rgba(255,255,255,.04)!important;
