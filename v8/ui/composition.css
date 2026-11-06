@@ -1,0 +1,82 @@
+/* Composition corrections for the locked v93 release.
+   Only the home, introduction, signing-day tiles and reveal controls are owned here. */
+
+/* Home: use the whole panel and give both career actions equal space. */
+#g8app#g8app#g8app .g8hero { align-items:stretch!important; }
+#g8app#g8app#g8app .g8hero>.g8welcomepanel {
+  justify-content:flex-start!important; gap:1rem!important;
+  height:auto!important; min-height:0!important; box-sizing:border-box;
+}
+#g8app#g8app#g8app .g8hero>.g8welcomepanel>h1,
+#g8app#g8app#g8app .g8hero>.g8welcomepanel>p { margin:0!important; }
+#g8app#g8app#g8app .g8hero>.g8welcomepanel>.g8eyebrow { margin:0!important; }
+#g8app#g8app#g8app .g8hero .g8welcomeactions {
+  margin-top:auto!important; padding-top:.25rem;
+  display:grid!important; grid-auto-rows:1fr; gap:.6rem!important; width:100%;
+}
+#g8app#g8app#g8app .g8hero .g8welcomeactions>.g8button {
+  width:100%; min-height:5rem!important; box-sizing:border-box;
+  padding:.85rem 1rem!important; justify-content:center!important;
+}
+
+/* Tiles retain their full frame, without the coloured bottom rule. */
+#g8app#g8app#g8app .g8hero .g8leagueformat {
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  width:100%; box-sizing:border-box;
+}
+#g8app#g8app#g8app .g8hero .g8leagueformat>div,
+#g8app#g8app#g8app .g8days>span {
+  min-width:0; border:1px solid var(--gcc-line)!important; box-shadow:none!important;
+}
+#g8app#g8app#g8app .g8days>span.active {
+  border-color:var(--vx-glow)!important;
+}
+
+/* Introduction: one numbered sequence instead of three disconnected columns. */
+#g8app#g8app#g8app .g8careerintro .g8careersteps {
+  display:grid!important; grid-template-columns:minmax(0,1fr)!important;
+  gap:0!important; padding:0!important; border:1px solid var(--gcc-line);
+  border-radius:8px; overflow:hidden;
+}
+#g8app#g8app#g8app .g8careerintro .g8careersteps>li {
+  display:flex!important; flex-wrap:nowrap!important; align-items:center;
+  gap:1rem!important; padding:1rem!important; min-width:0;
+  border:0!important; border-radius:0!important; box-shadow:none!important;
+}
+#g8app#g8app#g8app .g8careerintro .g8careersteps>li+li {
+  border-top:1px solid var(--gcc-line)!important;
+}
+#g8app#g8app#g8app .g8careerintro .g8careersteps>li>div {
+  flex:1 1 0; min-width:0;
+}
+#g8app#g8app#g8app .g8careerintro .g8careerlaunch>.g8actions {
+  justify-content:center!important;
+}
+#g8app#g8app#g8app .g8careerintro .g8careerformat {
+  justify-content:center!important; text-align:center!important;
+}
+
+/* Both draws: one centred status row and one centred control group.
+   Keep the original overlapping pace/next cells, inert states and reserved height. */
+#g8app#g8app#g8app .g8drawcontrols {
+  display:grid!important; grid-template-columns:minmax(0,1fr)!important;
+  align-items:center!important; gap:1rem!important; text-align:center;
+}
+#g8app#g8app#g8app .g8drawcontrols>div:first-child { min-width:0; text-align:center; }
+#g8app#g8app#g8app .g8drawcontrols>.g8drawstable {
+  display:grid!important; width:100%; min-width:0; margin:0!important;
+}
+#g8app#g8app#g8app .g8drawcontrols>.g8drawstable>.g8drawpace,
+#g8app#g8app#g8app .g8drawcontrols>.g8drawstable>.g8drawnext {
+  grid-area:1/1; justify-content:center!important; align-items:center!important;
+}
+#g8app#g8app#g8app .g8drawcontrols .g8drawnext>.g8button {
+  width:auto!important; min-width:min(100%,18rem); min-height:44px!important;
+}
+#g8app#g8app#g8app .g8drawcontrols .g8drawpace>.g8button {
+  flex:0 1 auto; min-height:44px!important; margin:0!important;
+}
+@media(max-width:760px) {
+  #g8app#g8app#g8app .g8hero .g8welcomeactions>.g8button { min-height:4.5rem!important; }
+  #g8app#g8app#g8app .g8drawcontrols .g8drawpace>.g8button { flex:1 1 8rem; }
+}
