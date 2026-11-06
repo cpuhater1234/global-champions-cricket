@@ -1,3 +1,7 @@
+# Historical handoff: current work moved
+
+As verified 7 November 2026, the maintained Floodlit candidate is on `work/v8-integrity-charcoal-candidate`. Read [CURRENT_CHECKPOINT.md](https://github.com/cpuhater1234/global-champions-cricket/blob/work/v8-integrity-charcoal-candidate/docs/release/CURRENT_CHECKPOINT.md) before continuing. v93 is the recovery anchor; v94 was rejected. Do not port this older branch over the later candidate. The following checkpoint is historical.
+
 ## Latest checkpoint — decision friction fixes, 26 October2026
 
 PlayableUI update: projected vs selected XI wording corrected; draft available-player count excludes OUT; finaldraft copy removes nonexistent keeperassignment promise. New/reopened/different modal starts at top; samekey/title updates preserve scroll; player scouting returns to prior undrafted/trade scroll.14labelcases,9browserlayouts plus actualback/reopen/Escape,5unconfirmeddecisioncoldreloadcases; independentreview no blockers. See qa/decision-friction-20261026. OnlyUI blocks13/19changed, engine identical to version75 used by full numericalaudit. Do not recast prior19season results as a fresh run of thisUIhash.
