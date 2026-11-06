@@ -1,3 +1,11 @@
+# Native v98 verification, 7 November 2026
+
+Inspected the downloaded v98 in local Chrome at its existing desktop viewport, 390px phone and 768px tablet. Confirmed: the home title group is centred on its panel; career action dimensions match (desktop 481.9 x 72.4px, phone 314.4 x 72.4px); home has no horizontal overflow or title overflow on phone. The saved Lucknow 2010 Round 3 career resumes. Phone XI actions align exactly with player names at x=48.8px and use flex-start. Tablet analysis sections are compact at 173.3px high with one 101.9px tile row; phone uses two columns/two rows, with no horizontal overflow. The guide renders transparent continuous reading rows. Viewport override was reset and browser returned to home.
+
+These specific v98 visual corrections have now been inspected. Broad game-wide review and a fresh complete-project rebuild remain outstanding. Do not claim complete-game acceptance. The playable file, version and hash are unchanged. Continue from the source checkpoint below without repeating the earlier recovery audit.
+
+---
+
 # Current candidate: v98 home composition, 7 November 2026
 
 Maintained branch: `work/v8-integrity-charcoal-candidate`.

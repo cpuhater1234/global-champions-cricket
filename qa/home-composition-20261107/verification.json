@@ -16,5 +16,44 @@
     "floodlit-compat.css",
     "broadcast.css"
   ],
-  "nativeVisualReview": "pending downloaded v98"
+  "nativeVisualReview": {
+    "status": "Checked specified v98 corrections in local Chrome",
+    "url": "http://127.0.0.1:8000/GCC_v98.html",
+    "homeDesktop": {
+      "titleCentredOnPanel": true,
+      "equalButtonWidth": 481.9,
+      "equalButtonHeight": 72.4,
+      "horizontalOverflow": false
+    },
+    "homePhone390": {
+      "equalButtonWidth": 314.4,
+      "equalButtonHeight": 72.4,
+      "titleOverflow": false,
+      "horizontalOverflow": false
+    },
+    "savedCareer": "Lucknow Super Giants, 2010 Round 3 resumed",
+    "phoneControls": {
+      "nameLeft": 48.8,
+      "controlsLeft": 48.8,
+      "justifyContent": "flex-start",
+      "horizontalOverflow": false
+    },
+    "analysisTablet768": {
+      "sectionHeight": 173.3,
+      "tileRowHeight": 101.9,
+      "tileRows": 1,
+      "horizontalOverflow": false
+    },
+    "analysisPhone390": {
+      "tileColumns": 2,
+      "tileRows": 2,
+      "horizontalOverflow": false
+    },
+    "guideDesktop": {
+      "layout": "Continuous reading rows",
+      "cardBackground": "transparent"
+    },
+    "viewportOverride": "reset",
+    "remaining": "Broader game-wide review and fresh full-project rebuild remain outstanding; this is not complete-game visual acceptance"
+  }
 }
