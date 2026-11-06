@@ -1,35 +1,60 @@
-/* Composition corrections for the locked v93 release.
+/* Maintained composition for home, introduction, signing tiles and draws.
    Only the home, introduction, signing-day tiles and reveal controls are owned here. */
 
-/* Home: use the whole panel and give both career actions equal space. */
+/* Home: a centred identity, one format line and two matching career actions. */
 #g8app#g8app#g8app .g8hero { align-items:stretch!important; }
 #g8app#g8app#g8app .g8hero>.g8welcomepanel {
-  justify-content:flex-start!important; gap:1rem!important;
+  justify-content:center!important; align-items:center!important; gap:12px!important;
   height:auto!important; min-height:0!important; box-sizing:border-box;
 }
-#g8app#g8app#g8app .g8hero>.g8welcomepanel>h1,
-#g8app#g8app#g8app .g8hero>.g8welcomepanel>p { margin:0!important; }
-#g8app#g8app#g8app .g8hero>.g8welcomepanel>.g8eyebrow { margin:0!important; }
+#g8app#g8app#g8app .g8hero>.g8welcomepanel>.g8eyebrow {
+  margin:0!important; width:100%; text-align:center;
+}
+#g8app#g8app#g8app .g8hero .gccBrandTitle {
+  width:min(100%,27rem); grid-template-columns:96px minmax(0,1fr)!important;
+  gap:16px!important; margin:0 auto!important; align-items:center;
+}
+#g8app#g8app#g8app .g8hero .gccBrandTitle>.gccBrandStart { width:96px!important; }
+#g8app#g8app#g8app .g8hero .gccBrandWordmark {
+  font-size:clamp(2rem,3.5vw,2.6rem)!important; white-space:nowrap!important;
+  text-align:left!important; line-height:1!important;
+}
+#g8app#g8app#g8app .g8hero>.g8welcomepanel>p:not(.g8leagueformat) {
+  max-width:45ch; text-align:center; margin:0 auto!important; line-height:1.5!important;
+}
+#g8app#g8app#g8app .g8hero .g8leagueformat {
+  display:block!important; width:100%; box-sizing:border-box; margin:0!important;
+  padding:10px 0!important; text-align:center!important; font-size:15px!important;
+  line-height:1.5!important; font-weight:700; letter-spacing:.02em;
+  border:0!important; border-block:1px solid var(--gcc-line)!important;
+  border-radius:0!important; background:none!important; box-shadow:none!important;
+}
 #g8app#g8app#g8app .g8hero .g8welcomeactions {
-  margin-top:auto!important; padding-top:.25rem;
-  display:grid!important; grid-auto-rows:1fr; gap:.6rem!important; width:100%;
+  margin:0!important; padding:0!important; display:grid!important;
+  grid-auto-rows:1fr; gap:10px!important; width:100%;
 }
 #g8app#g8app#g8app .g8hero .g8welcomeactions>.g8button {
-  width:100%; min-height:5rem!important; box-sizing:border-box;
-  padding:.85rem 1rem!important; justify-content:center!important;
+  display:flex!important; flex-direction:column!important; align-items:center!important;
+  justify-content:center!important; width:100%; min-height:68px!important; box-sizing:border-box;
+  padding:12px 16px!important; gap:6px!important; clip-path:none!important;
+  border:1px solid var(--gcc-line)!important; border-radius:8px!important; box-shadow:none!important;
+  font-family:var(--vx-display)!important; font-size:20px!important; font-weight:800!important;
+  line-height:1.2!important; text-transform:uppercase!important; letter-spacing:.06em!important;
 }
-
-/* Tiles retain their full frame, without the coloured bottom rule. */
-#g8app#g8app#g8app .g8hero .g8leagueformat {
-  grid-template-columns:repeat(3,minmax(0,1fr))!important;
-  width:100%; box-sizing:border-box;
+#g8app#g8app#g8app .g8hero .g8welcomeactions .g8continuelabel { font:inherit!important; }
+#g8app#g8app#g8app .g8hero .g8welcomeactions .g8resumemeta {
+  font:600 12px/1.4 var(--vx-body)!important; letter-spacing:.02em!important;
+  text-transform:none!important; text-align:center; opacity:.9;
 }
-#g8app#g8app#g8app .g8hero .g8leagueformat>div,
 #g8app#g8app#g8app .g8days>span {
   min-width:0; border:1px solid var(--gcc-line)!important; box-shadow:none!important;
 }
-#g8app#g8app#g8app .g8days>span.active {
-  border-color:var(--vx-glow)!important;
+#g8app#g8app#g8app .g8days>span.active { border-color:var(--vx-glow)!important; }
+@media(max-width:600px) {
+  #g8app#g8app#g8app .g8hero .gccBrandTitle { grid-template-columns:72px minmax(0,1fr)!important; gap:12px!important; }
+  #g8app#g8app#g8app .g8hero .gccBrandTitle>.gccBrandStart { width:72px!important; }
+  #g8app#g8app#g8app .g8hero .gccBrandWordmark { font-size:clamp(1.4rem,7vw,2.2rem)!important; }
+  #g8app#g8app#g8app .g8hero .g8leagueformat { font-size:14px!important; }
 }
 
 /* Introduction: one numbered sequence instead of three disconnected columns. */
@@ -77,7 +102,7 @@
   flex:0 1 auto; min-height:44px!important; margin:0!important;
 }
 @media(max-width:760px) {
-  #g8app#g8app#g8app .g8hero .g8welcomeactions>.g8button { min-height:4.5rem!important; }
+  #g8app#g8app#g8app .g8hero .g8welcomeactions>.g8button { min-height:68px!important; }
   #g8app#g8app#g8app .g8drawcontrols .g8drawpace>.g8button { flex:1 1 8rem; }
 }
 

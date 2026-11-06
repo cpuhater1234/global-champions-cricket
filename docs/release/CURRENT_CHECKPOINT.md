@@ -1,3 +1,22 @@
+# Current candidate: v98 home composition, 7 November 2026
+
+Maintained branch: `work/v8-integrity-charcoal-candidate`.
+Download: `GCC_v98.html`, Library `libfile_39e20af83ea881919f3f4465ce229bea`, version 0.
+SHA-256: `05b3a8110993879726ed27fa72b6737bd972f0d778a460bfa524a6a38f91686d`; 6,583,352 bytes.
+Normal source build: `python v8/build.py --output GCC_v98.html`.
+
+Tom rejected the inspected v97 home composition as left-heavy, poorly spaced and inconsistent between actions, and asked to continue checking all visuals. This candidate removes the home statistic cards, centres the identity/copy, and gives both career buttons identical structure and geometry. It also corrects the high-priority mobile action alignment rule and inherited analysis tile rows found during the native v97 review. Guides now use continuous reading rows instead of repeated feature cards. Existing source ownership is retained and obsolete home rules removed; no new stylesheet layer.
+
+See `qa/home-composition-20261107/README.md` and `verification.json` for scope and evidence. All 20 scripts pass syntax checking; only the home renderer in script 17 changes. Home rendering with/without a save preserves continue/play actions. Embedded assets and style IDs remain unchanged. No new full-project build ran in this refreshed environment; the canonical expected hash is updated but full rebuild validation remains to be rerun with a complete checkout.
+
+NATIVE V98 ACCEPTANCE IS PENDING. User downloads, then receives a fresh localhost link. Inspect the actual downloaded home at desktop, tablet and mobile: centred title group, equal action geometry with/without save, compact unboxed format line, no horizontal overflow, matched hero panel heights. Recheck mobile roster controls, compact analysis rows and guide reading flow. Never describe v98 as visually accepted before inspecting it. Saved 2010 Lucknow career remains available.
+
+Native v97 review confirmed metric baselines, sidebar structure and grouped Matchday control geometry. It did not establish v98 acceptance. Broad game-wide visual review remains ongoing. Do not claim every screen has been inspected.
+
+The large remote `game/gcc_v8_product_candidate.html` remains historical build input, not the current download. Do not substitute it for v98 or confuse its size/hash with the saved playable.
+
+---
+
 # Current candidate: v97 alignment pass, 7 November 2026
 
 Maintained branch: `work/v8-integrity-charcoal-candidate`. This pass follows Tom's explicit request to continue correcting the alignment audit findings in the existing game.

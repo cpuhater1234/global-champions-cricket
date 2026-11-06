@@ -60,7 +60,7 @@
 
 /* Shared secondary surfaces complete the Floodlit palette without changing status colours. */
 #g8app#g8app#g8app .gccui,#g8dialog#g8dialog#g8dialog{--ui-panel:var(--gcc-panel);--ui-inset:var(--gcc-inset);--ui-line:var(--gcc-line);--ui-rule:var(--gcc-line);--ui-text:var(--gcc-text);--ui-muted:var(--gcc-muted)}
-#g8dialog#g8dialog#g8dialog :is(.g8concernreason,.g8commitmentchoice,.g8guidecard,.g8coverread){background:var(--gcc-raised)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
+#g8dialog#g8dialog#g8dialog :is(.g8concernreason,.g8commitmentchoice,.g8coverread){background:var(--gcc-raised)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
 #g8dialog#g8dialog#g8dialog .g8concernreason{border-left:3px solid var(--gcc-accent)!important;padding:12px 14px!important;margin:12px 0!important}
 #g8dialog#g8dialog#g8dialog .g8concernreason b{color:var(--gcc-text)!important;font-weight:700}
 #g8dialog#g8dialog#g8dialog :is(.g8commitmentchoice>p,.g8commitmentoptions>p,.g8rotationconversation>p){color:var(--gcc-muted)!important}
@@ -92,7 +92,7 @@
 #g8dialog#g8dialog#g8dialog .g8previewvenue>span:last-child{background:var(--gcc-inset)!important;border-color:var(--gcc-line)!important;color:var(--gcc-muted)!important}
 #g8hud#g8hud#g8hud .g8headerslogan span{color:var(--vx-signal)!important}
 @media(max-width:600px){#g8dialog#g8dialog#g8dialog .gccuiIdentityText #g8dialogTitle{font-size:24px!important}}
-@media(max-width:480px){#g8app#g8app#g8app .gccuiSelection .gccuiOrderRow{grid-template-columns:18px minmax(0,1fr) 30px!important}#g8app#g8app#g8app .gccuiSelection .gccuiRosterActions{grid-column:2/-1!important;justify-content:flex-end!important}}
+@media(max-width:480px){#g8app#g8app#g8app .gccuiSelection .gccuiOrderRow{grid-template-columns:18px minmax(0,1fr) 30px!important}#g8app#g8app#g8app .gccuiSelection .gccuiRosterActions{grid-column:2/-1!important;justify-content:flex-start!important}}
 @media(prefers-reduced-motion:reduce){#g8app#g8app#g8app .g8button:hover,#g8app#g8app#g8app .g8club:hover,#g8app#g8app#g8app .gccuiPlayer:hover,#g8dialog#g8dialog#g8dialog .g8button:hover{transform:none!important}}
 /* Narrow condition cards retain the same two-line header and readable endpoints. */
 #g8app#g8app#g8app .g8conditionread>div:first-child,#g8dialog#g8dialog#g8dialog .g8conditionread>div:first-child{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:5px!important;min-height:47px}

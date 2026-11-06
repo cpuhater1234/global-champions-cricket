@@ -225,7 +225,6 @@
   #g8app#g8app #g8stage .gccuiOrderNumber{font-size:1.15rem;min-width:1.6ch;white-space:nowrap}
   #g8app#g8app #g8stage .gccuiPlayerOverall strong{font-size:2.1rem!important}
   #g8app#g8app #g8stage h1{font-size:clamp(2rem,9vw,2.6rem)!important}
-  #g8app#g8app #g8stage .g8leagueformat strong{font-size:2rem!important}
   #g8app#g8app #g8stage .g8heading,#g8app#g8app #g8stage .gccuiTurn{clip-path:none}
 }
 
@@ -315,10 +314,6 @@
   border-top:4px solid #ffd24a!important;box-shadow:0 0 90px -30px rgba(255,210,74,.6)!important}
 #g8app#g8app#g8app .g8reviewsummary.g8titlewon h2{font-family:var(--vx-display)!important;font-size:2.4rem;text-transform:uppercase;color:#ffe08a}
 
-/* C ─ Home hero: spread the card's content so there is no dead space under the button */
-#g8app#g8app#g8app .g8welcomepanel{justify-content:space-evenly!important;gap:.4rem}
-#g8app#g8app#g8app .g8welcomepanel>.g8eyebrow{margin-bottom:0!important}
-#g8app#g8app#g8app .g8welcomepanel .g8primary{padding-block:1.1rem!important;font-size:1.5rem!important}
 @media (prefers-reduced-motion:reduce){
   #g8app .gccuiPlayer::after,#g8app .gccuiTitleWon::before{animation:none!important;display:none}}
 
