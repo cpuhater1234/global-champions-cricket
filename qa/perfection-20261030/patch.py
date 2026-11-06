@@ -1,5 +1,5 @@
 from pathlib import Path
-import re,json,hashlib,subprocess,base64
+import re,json,hashlib,subprocess,base64,runpy
 root=Path.cwd();base=root/'baseline/GCC_v8_Career_Clarity.html';
 if not base.exists():
  base.parent.mkdir(parents=True,exist_ok=True);base.write_bytes(subprocess.check_output(['git','show','52a93845d91f0f22352969d58144da678130212b:game/gcc_v8_product_candidate.html']))
@@ -331,6 +331,14 @@ for face in json.loads((root/'v8/ui/assets/floodlit-fonts.json').read_text()):
  font_faces.append('@font-face{font-family:'+json.dumps(face['family'])+';font-style:'+face['style']+';font-weight:'+str(face['weight'])+';font-display:swap;src:url(data:font/woff;base64,'+face['base64']+') format("woff")}')
 font_license='\n'.join((root/p).read_text() for p in ['v8/ui/assets/font-licenses/Barlow-OFL.txt','v8/ui/assets/font-licenses/Inter-OFL.txt'])
 raw=raw.replace('</body>','<!-- Embedded fonts: SIL Open Font License 1.1\n'+font_license+'\n--><style id="gcc-floodlit-fonts">'+''.join(font_faces)+'</style><style id="gcc-floodlit-visual">'+(root/'v8/ui/floodlit.css').read_text()+'\n'+(root/'v8/ui/floodlit-compat.css').read_text()+'\n'+(root/'v8/ui/broadcast.css').read_text()+'</style></body>')
+# Reviewed assets are replaced by original-content hash; frozen inputs stay intact.
+raw=runpy.run_path(str(root/'v8/media.py'))['rewrite_images'](raw,root/'v8/ui/assets/webp-replacements-index.json')
+# Reproduce the accepted v93 presentation from owned source, then compose v95.
+# Anchor to the final document boundary: CSS comments also contain </body>.
+closing=re.search(r'</body>\s*</html>\s*\Z',raw,re.I)
+assert closing,'Missing final document boundary'
+raw=raw[:closing.start()]+'<style id="gcc-floodlit-v93">'+(root/'v8/ui/v93.css').read_text()+'</style>\n</body></html>\n'
+raw=runpy.run_path(str(root/'qa/composition-20261107/build.py'))['compose'](raw.encode(),(root/'v8/ui/composition.css').read_text()).decode()
 out=root/'qa/perfection-20261030/candidate.html';out.write_text(raw)
 for i,part in enumerate(parts):
  tmp=root/f'qa/perfection-20261030/check-{i}.js';tmp.write_text(part);subprocess.run(['node','--check',str(tmp)],check=True,capture_output=True)

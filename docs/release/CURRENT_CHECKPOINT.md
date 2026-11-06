@@ -1,3 +1,15 @@
+# Source reconciliation checkpoint, 7 November 2026
+
+The maintained default `python v8/build.py --output <file>` now reproduces v95 exactly: SHA-256 `0fdce9468a340681e392db75a3788f8299e7d10bfd1ada5689151c0725585fa8`, 6,580,544 bytes. The default pipeline regression passed locally. Source integration includes media.py, the reviewed v93 CSS, composition source and a ten-part image manifest. Each image part is below 450,000 bytes; the parts reconstruct the same 42 reviewed images. This avoids sending the 3.79 MB image manifest as one tool argument.
+
+The browser currently has downloaded v95 open, with a saved 2010 Lucknow career. Native inspection confirmed unequal selection command typography (14px vs 19.2px) and the counter mixing 28px and 17px text. These remain open defects. Source edits also reveal the composition helper is recovery-hash locked; separate the archive recovery check from the maintained editable pipeline before further source changes.
+
+The remote `game/gcc_v8_product_candidate.html` is still the historical 8,385,768-byte build input, not the v95 download. Do not claim that file matches the current playable. Use the default source build to reproduce v95. No full native visual acceptance is claimed.
+
+GitHub small reads and source uploads succeeded. Image upload initially failed automatic approval review; Tom explicitly approved uploading the existing image assets and reconciled build source to this branch, and the ten image blobs then uploaded successfully. Earlier reported maximum-length failures were not reproduced; oversized payloads remain a likely cause, not a confirmed diagnosis.
+
+---
+
 # Current continuation: v95 composition candidate, 7 November 2026
 
 The original four user complaints are now implemented in a candidate: home space, tile underlines, the introduction's three-column layout, and reveal-bar alignment.
