@@ -1,6 +1,14 @@
 # Global Champions Cricket
 
-## Current game — start here
+## Current work: read this first
+
+The maintained Floodlit candidate is on [work/v8-integrity-charcoal-candidate](https://github.com/cpuhater1234/global-champions-cricket/tree/work/v8-integrity-charcoal-candidate).
+
+**Start with [the current recovery checkpoint](docs/release/CURRENT_CHECKPOINT.md).** It records the accepted v93 recovery anchor, rejected v94, external polish, source differences and remaining reconciliation work. Do not choose a build from its version number alone.
+
+The v101 section below describes the previous branch. It is retained as history and must not override the current checkpoint.
+
+## Historical branch checkpoint
 
 - **Current active branch:** [`work/v8-game-first-rebuild`](https://github.com/cpuhater1234/global-champions-cricket/tree/work/v8-game-first-rebuild)
 - **Current playable version:** **GCC v101**
