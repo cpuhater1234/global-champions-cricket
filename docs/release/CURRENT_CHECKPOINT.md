@@ -1,3 +1,26 @@
+# Current candidate: v97 alignment pass, 7 November 2026
+
+Maintained branch: `work/v8-integrity-charcoal-candidate`. This pass follows Tom's explicit request to continue correcting the alignment audit findings in the existing game.
+
+Download: `GCC_v97.html`; Library `libfile_83a9a660e8d88191879133c5e2ca109a`, version 0. Expected SHA-256: `61b801cf8af2c913a46f9696d2645bb4d2b31a354ba15d522f05dd2a6ec39e93`; 6,582,458 bytes. The normal source-build command remains `python v8/build.py --output GCC_v97.html`. The canonical regression now records the v97 expected hash; a fresh full-project build was not run in this refreshed environment because the complete checkout is unavailable.
+
+Changes from inspected v96:
+- Selection details are inside the existing grid, below the bench and beside the XI. Mobile pane selectors still target the same direct bench/XI children; supporting information remains below the active pane.
+- Selection metrics share the same font, size and line height; desktop roster rows have a consistent minimum height.
+- Mobile roster actions sit beneath player identity and align left, with 44px controls.
+- Matchday and grouped campaign commands use the same shape and typography as selection controls.
+- Analysis and development panels use the existing dark dialog surfaces. At widths up to 1000px, analysis disciplines stack with four tiles per section; at 600px and below, tiles use two columns. Labels wrap at spaces, without splitting words.
+
+All edits belong to five existing source files: decision-ui.js, decision-ui.css, floodlit.css, floodlit-compat.css and broadcast.css. No new visual stylesheet or style block was added.
+
+Verification: generated the standalone candidate from the exact saved v96 by replacing the exact five owned source bodies. All 20 scripts pass syntax checks; only script 18 changes, solely by moving selection-details markup inside the grid. All embedded base64 assets and style-block IDs are unchanged. CSS delimiters are balanced and no nested style boundaries occur outside comments. See `qa/alignment-20261107/verification.json` and `PLAN.md`.
+
+Native v97 acceptance is PENDING. The user downloads, then receives a fresh local link. Do not assume the local file exists before download confirmation. Inspect desktop 1150px, tablet 768px and phone 390px, especially metric baselines, sidebar flow, mobile control attachment, analysis labels, and saved-career continuation. Reset temporary viewport overrides. The previous desktop/mobile/tablet observations were for v96 and do not establish v97 visual acceptance.
+
+The repository's large historical `game/gcc_v8_product_candidate.html` remains the build input; it is not the current downloadable candidate. Do not confuse it with v97 or claim it matches.
+
+---
+
 # Current candidate: v96 selection consistency, 7 November 2026
 
 Maintained branch: `work/v8-integrity-charcoal-candidate`. v95 source reconciliation is committed as `5510d3fe4608ac87aa2058aa2deb5f05d4d1ce56`.

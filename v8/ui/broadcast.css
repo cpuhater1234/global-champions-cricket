@@ -196,7 +196,7 @@
 #g8app#g8app #g8stage .gccuiRosterName{font-weight:700;letter-spacing:.01em}
 #g8app#g8app #g8stage .gccuiSelectionStatus{background:linear-gradient(180deg,rgba(19,40,64,.85),rgba(9,20,32,.95))!important;
   border:1px solid var(--gcc-line)!important;border-top:3px solid var(--vx-glow)!important;border-radius:12px!important}
-#g8app#g8app #g8stage .gccuiSelectionStatus .gccuiRating{font-size:2.4rem!important}
+#g8app#g8app #g8stage .gccuiSelectionStatus strong{font-family:var(--vx-display)!important;font-size:28px!important;font-weight:800!important;line-height:1.1!important}
 #g8app#g8app #g8stage .gccuiPaneTabs button{font-family:var(--vx-display)!important;letter-spacing:.1em;text-transform:uppercase}
 
 

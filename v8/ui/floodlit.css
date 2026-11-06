@@ -89,15 +89,15 @@
 #g8app#g8app#g8app .g8primary:active:enabled{transform:translateY(1px)}
 #g8app#g8app#g8app .g8primary:disabled{filter:grayscale(.8) brightness(.6)}
 
-/* Selection commands share one shape and type scale. Colour alone marks the primary action. */
-#g8app#g8app#g8app .gccuiSelectionActions>.g8button{
+/* Adjacent campaign commands share one shape and type scale. Colour marks the primary action. */
+#g8app#g8app#g8app :is(.gccuiSelectionActions,.gccuiFixtureActions>div,.gccuiFinalActions,.gccuiResultActions,.gccuiOffseasonActions)>.g8button{
   font-family:var(--vx-display)!important;font-size:1rem!important;font-weight:700!important;
   line-height:1.25!important;letter-spacing:.02em!important;text-transform:none!important;
   min-height:44px;padding:10px 14px!important;box-sizing:border-box;
   border:1px solid var(--gcc-line)!important;border-radius:8px!important;clip-path:none!important;
   box-shadow:none!important;white-space:normal!important;align-self:stretch;
 }
-#g8app#g8app#g8app .gccuiSelectionActions>.g8button:hover:enabled{transform:translateY(-2px)!important}
+#g8app#g8app#g8app :is(.gccuiSelectionActions,.gccuiFixtureActions>div,.gccuiFinalActions,.gccuiResultActions,.gccuiOffseasonActions)>.g8button:hover:enabled{transform:translateY(-2px)!important}
 
 #g8app#g8app#g8app :focus-visible{outline:3px solid #7fe0ee!important;outline-offset:3px}
 #g8stage#g8stage#g8stage:focus-visible,#g8stage#g8stage#g8stage:focus{outline:none!important}
