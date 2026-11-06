@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-07",
+  "recoveryAnchor": {
+    "file": "GCC_v8_Playtest_72_v93_lean.html",
+    "sha256": "3abf1f74a1ec77db5b3bd0322e3188015bca161853bdd3397bd116bcf1e5f026",
+    "bytes": 6576785
+  },
+  "checks": {
+    "v93Structure": true,
+    "polishStructure": true,
+    "v94Rejected": true,
+    "all20NormalisedScriptsMatch": true,
+    "nativeV93Home": {
+      "horizontalOverflow": false,
+      "capturedConsoleErrors": 0,
+      "stadiumImageLoaded": true,
+      "saveLabel": "Lucknow Super Giants · 2010 season"
+    }
+  },
+  "limitations": [
+    "No fresh full-career or whole-game visual test claimed.",
+    "Remote canonical contents response omitted bytes; blob recovery failed with transport closed.",
+    "Local source integration remains distinct from accepted v93 and is not promoted."
+  ]
+}
