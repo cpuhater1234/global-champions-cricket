@@ -1,3 +1,19 @@
+# Current continuation: v95 composition candidate, 7 November 2026
+
+The original four user complaints are now implemented in a candidate: home space, tile underlines, the introduction's three-column layout, and reveal-bar alignment.
+
+**Next action is native verification of the downloaded v95, not another recovery audit.**
+File: `GCC_v95.html`.
+SHA-256: `0fdce9468a340681e392db75a3788f8299e7d10bfd1ada5689151c0725585fa8`.
+Library: `libfile_a8e2d0a6c4108191aca07044b9e1218d`, version 0.
+Source and exact build command: [qa/composition-20261107/README.md](../../qa/composition-20261107/README.md).
+The user downloads, then receives a fresh localhost link; inspect that exact build in the existing Chrome tab. Chrome was deliberately left on v93 pending that transfer. All native candidate visual checks remain pending.
+The candidate preserves all original v93 bytes outside one appended stylesheet. Four regression tests, structural validation, 20 script syntax checks, 42 raster decodes, one SVG parse, and byte-identical rebuild pass.
+Do not regenerate it using the different historical `v8/build.py` output. Its separate source integration is still unreconciled.
+v93 stays the accepted recovery anchor until v95 passes the requested native review. v94 remains rejected.
+
+---
+
 # GCC continuation checkpoint, 7 November 2026
 
 ## Read this first
