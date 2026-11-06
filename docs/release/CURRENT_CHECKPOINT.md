@@ -1,3 +1,23 @@
+# Current candidate: v96 selection consistency, 7 November 2026
+
+Maintained branch: `work/v8-integrity-charcoal-candidate`. v95 source reconciliation is committed as `5510d3fe4608ac87aa2058aa2deb5f05d4d1ce56`.
+
+The default build creates v96: `python v8/build.py --output GCC_v96.html`. Expected SHA-256: `8c2f576ee975a9cacbf6d355c40586d07e3eca9579d2cfca462ae2872f5ce280`; size: 6,581,129 bytes. Saved download: Library `libfile_887b33cd3fb08191aabe0216b5f729a8`, version 0.
+
+Changes: the selection counter renders as one text run, removing the small denominator. Adjacent selection commands share typography, padding, border, shape and hover movement, retaining primary and secondary colours. Changes are in the existing decision-ui markup/CSS and Floodlit button stylesheet; no new style block.
+
+The archive `compose` entry point still enforces exact v93 bytes. The maintained pipeline calls `compose_source`, preserving CSS-boundary and final-document-boundary checks while permitting intentional source edits.
+
+Verification: earlier local default build and four recovery tests passed. After the execution environment refreshed, recovered the saved v96 and confirmed its exact hash, exact containment of all three modified visual source files, all 20 script syntax checks, recovery hash guard, editable source composition and CSS boundary guard. Current environment does not contain the full project checkout, so a new full build was not rerun here. `test_canonical.py` records the v96 hash.
+
+Native v96 visual review remains PENDING. The selected browser tab still identifies v95. The user downloads v96, then receives a fresh localhost link. Do not assume it has been downloaded or navigate to an unconfirmed local file. Review the selection counter, both buttons, mobile wrapping and saved-career continuation before visual acceptance. Broader visual consistency work remains open.
+
+The remote `game/gcc_v8_product_candidate.html` remains the historical build input; do not identify it as the v96 download. Use the source build command above.
+
+Tom explicitly approved syncing these v96 source changes after the prior automatic review requested separate authorization.
+
+---
+
 # Source reconciliation checkpoint, 7 November 2026
 
 The maintained default `python v8/build.py --output <file>` now reproduces v95 exactly: SHA-256 `0fdce9468a340681e392db75a3788f8299e7d10bfd1ada5689151c0725585fa8`, 6,580,544 bytes. The default pipeline regression passed locally. Source integration includes media.py, the reviewed v93 CSS, composition source and a ten-part image manifest. Each image part is below 450,000 bytes; the parts reconstruct the same 42 reviewed images. This avoids sending the 3.79 MB image manifest as one tool argument.

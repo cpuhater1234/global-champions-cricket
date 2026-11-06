@@ -10,6 +10,10 @@ STYLE_ID = 'gcc-composition-20261107'
 def compose(baseline: bytes, css: str) -> bytes:
     if hashlib.sha256(baseline).hexdigest() != BASELINE_SHA256:
         raise ValueError('baseline hash mismatch: use the locked v93 recovery anchor')
+    return compose_source(baseline, css)
+
+def compose_source(baseline: bytes, css: str) -> bytes:
+    """Compose maintained source; the archive entry point retains its exact hash guard."""
     if re.search(r'</?style\b', css, re.I):
         raise ValueError('CSS contains a style boundary')
     text = baseline.decode('utf-8')

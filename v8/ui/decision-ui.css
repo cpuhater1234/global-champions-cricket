@@ -92,7 +92,6 @@
 #g8app .gccui .gccuiSelectionStatus{display:flex;align-items:center;gap:20px;padding:18px 20px;border:2px solid var(--ui-line);border-top:4px solid var(--ui-team);background:var(--ui-panel);border-radius:8px}
 #g8app .gccui .gccuiSelectionStatus>div:not(.gccuiSelectionActions){text-align:center;min-width:64px}
 #g8app .gccui .gccuiSelectionStatus strong{display:block;font-size:28px;line-height:1.1;font-weight:700;white-space:nowrap}
-#g8app .gccui .gccuiSelectionStatus strong small{font-size:17px;color:var(--ui-muted)}
 #g8app .gccui .gccuiSelectionStatus span{display:block;font-size:12px;color:var(--ui-muted);font-weight:700;margin-top:6px}
 #g8app .gccui .gccuiSelectionActions{display:flex;flex-direction:column;gap:8px;flex:1}
 #g8app .gccui .gccuiSelectionActions .g8button span{font-size:14px;color:inherit;margin:0}

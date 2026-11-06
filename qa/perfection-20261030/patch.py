@@ -338,7 +338,7 @@ raw=runpy.run_path(str(root/'v8/media.py'))['rewrite_images'](raw,root/'v8/ui/as
 closing=re.search(r'</body>\s*</html>\s*\Z',raw,re.I)
 assert closing,'Missing final document boundary'
 raw=raw[:closing.start()]+'<style id="gcc-floodlit-v93">'+(root/'v8/ui/v93.css').read_text()+'</style>\n</body></html>\n'
-raw=runpy.run_path(str(root/'qa/composition-20261107/build.py'))['compose'](raw.encode(),(root/'v8/ui/composition.css').read_text()).decode()
+raw=runpy.run_path(str(root/'qa/composition-20261107/build.py'))['compose_source'](raw.encode(),(root/'v8/ui/composition.css').read_text()).decode()
 out=root/'qa/perfection-20261030/candidate.html';out.write_text(raw)
 for i,part in enumerate(parts):
  tmp=root/f'qa/perfection-20261030/check-{i}.js';tmp.write_text(part);subprocess.run(['node','--check',str(tmp)],check=True,capture_output=True)
