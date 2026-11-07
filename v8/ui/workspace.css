@@ -1319,8 +1319,8 @@ html,body{background:#191c1a}
 .g8rulegrid>.g8guidecard:last-child:nth-child(odd){grid-column:1/-1}
 
 /* Solid club identities and a contained, readable draft balance panel. */
-.g8ordergrid .g8club.g8ordercard{background:var(--accent);border:1px solid var(--order-ink);border-radius:12px;color:var(--order-ink);box-shadow:0 4px 0 #0b0f19}
-.g8ordergrid .g8club.g8ordercard .g8orderrank,.g8ordergrid .g8club.g8ordercard .g8orderidentity h3,.g8ordergrid .g8club.g8ordercard .g8orderstatus{color:var(--order-ink)}
+.g8ordergrid .g8club.g8ordercard{background:var(--accent);border:1px solid var(--order-ink);border-radius:12px;color:var(--gcc-text,#eef5fa);box-shadow:0 4px 0 #0b0f19}
+.g8ordergrid .g8club.g8ordercard .g8orderrank,.g8ordergrid .g8club.g8ordercard .g8orderidentity h3,.g8ordergrid .g8club.g8ordercard .g8orderstatus{color:var(--gcc-text,#eef5fa)}
 .g8ordergrid .g8ordermine{outline:3px solid #f1f5ff;outline-offset:3px}
 .g8ordercard>.g8badge{border:1px solid currentColor;box-shadow:none}
 .g8snakeintro{display:grid;grid-template-columns:max-content minmax(0,1fr);align-items:center;gap:.7rem 1rem;margin:0 0 1.25rem;padding:1rem 1.2rem;background:#14274c;color:#fff;border:1px solid #5477ad;border-left:4px solid #345fd0;border-radius:8px;line-height:1.5}

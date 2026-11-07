@@ -1,3 +1,13 @@
+# Current candidate: v112 draft-order text contrast, 8 November 2026
+
+Download GCC_v112.html; Library libfile_3eac8af43b20819187967241a79457c3, version0. SHA-256 e7e2c5fc4013cfd43f556145b0b35243130268a7329cb9dfba7011d2f727b2d3;6,589,191 bytes.
+
+Native v111 phone audit confirmed chooser/signing/draw/draft/squad dialog; see qa/order-contrast-20261108/native-v111.md. Found real defect: dark club-specific draft-order ink survives after floodlit replaces the coloured card background with navy. Brisbane Heat name was rgb(16,43,52), contrast1.00849 against raised navy. Candidate edits existing workspace.css parent and rank/name/status text colour to shared --gcc-text. Badge retains club-specific ink. No global layer/type/layout change.
+
+Contrast regression failed before and passes after. All20 scripts unchanged and syntax checked; markup/assets unchanged; same stylesheet blocks. Exact two source-rule substitutions into hash-verified111. Full source rebuild not run in partial checkout. Native112 visual acceptance pending download. Test dark-ink/light-club order labels desktop/390px. Main Lucknow career untouched during this audit. Remaining clean-storage/two-tab stress and broader trade/knockout acceptance are still open.
+
+---
+
 # Native v111 intro-back and confirmed-reveal verification, 8 November 2026
 
 Current downloadable remains GCC_v111.html, SHA-256 e81d5e081bc4b7e8a60b5472e34e10e43b22af56dc28c42a528961c5987c5703. No new product code.
