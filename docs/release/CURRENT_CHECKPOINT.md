@@ -1,3 +1,22 @@
+# Current candidate: v108 combines v107 and scoped cascade cleanup, 7 November 2026
+
+Maintained branch: `work/v8-integrity-charcoal-candidate`.
+Download GCC_v108.html; Library `libfile_3669d24b746081919f39ecd525a77236`,version0.
+SHA-256 `48b8896918a6a51b8604f82e1b293496a0455745066cbec5fa5415129d69bdfc`;6,588,163bytes.
+
+User explicitly requested v108 combining v107 improvements with work to avoid competing layers. The Bulletproof Handoff is the design reference: retain floodlit identity, Home/Intro composition and club colours; work one family at a time. No new palette or blanket visual layer.
+
+Base is exact v107. Audited command/trade family and consolidated14 source sections, removing44 redundant/obsolete declarations and1896 bytes. Retained current winning palette/geometry rather than inventing replacements. Geometry/palette ownership is documented in docs/visual/STYLE_OWNERSHIP.md. Changes carry individual reasons. Includes v107 aligned trade impact rows and stretched adjacent modal actions.
+
+Verification: all20 scripts byte-identical and syntax checked, all embedded assets and non-style markup unchanged. Same14 style blocks, no new layer. Home/Intro composition style remains byte-identical. Static checks confirm v107 trade-list and sticky-footer stretch rules retained. Full source rebuild not run in partial checkout; candidate derives by exact substitutions from hash-verified v107.
+
+Native baseline inspected on currently available v106: Home CTA20px type,24px line,12px16px padding,8px radius,72.4px height; main Manage commands16px/44px,10px14px padding,8px radius. Release controls16px/20px line,44px height,10px14px padding,8px radius. Current important baseline transition120ms confirmed. No release/trade committed. Test remains2010 Manage squad. One stale-tab/focus timeout recovered using a fresh tab in the same browser.
+
+NATIVE V108 ACCEPTANCE PENDING DOWNLOAD. Open fresh local108 only after user downloads. Verify Home baseline, main/secondary/danger/focus variants, trade impact rows and equal footer heights desktop/phone; retain and inspect active hover semantics. Candidate107 was not separately downloaded, so108 must cover its native trade checks too. Main127.0.0.1 save remains unchanged. Existing localhost test save can reopen Trade Adam Gilchrist -> Sydney Thunder -> Wriddhiman Saha77 -> Review trade, then cancel.
+Broader remaining exact case: native own-knockout transition after v104 duplicate headline removal. Do not claim whole-game cascade cleanup or19-season certification.
+
+---
+
 # Current candidate: v107 trade alignment, 7 November 2026
 
 Maintained branch: `work/v8-integrity-charcoal-candidate`.

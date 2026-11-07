@@ -77,14 +77,12 @@
   min-height:44px;padding:10px 14px!important;box-sizing:border-box;
   border:1px solid var(--gcc-line)!important;border-radius:8px!important;clip-path:none!important;
   box-shadow:none!important;white-space:normal!important;
-  transition:transform .18s var(--vx-ease),box-shadow .18s var(--vx-ease),border-color .18s,background .18s}
+}
 #g8app#g8app#g8app .g8button:not(.g8primary){
-  background:rgba(255,255,255,.045)!important;border:1px solid var(--gcc-line)!important;color:var(--gcc-text)!important}
+  background:rgba(255,255,255,.045)!important;color:var(--gcc-text)!important}
 #g8app#g8app#g8app .g8button:not(.g8primary):hover:enabled{
   background:rgba(255,255,255,.09)!important;border-color:var(--vx-glow)!important;transform:translateY(-2px)}
-#g8app#g8app#g8app .g8primary{
-  color:var(--gcc-accent-ink,#10161c)!important;
-  background:linear-gradient(180deg,color-mix(in srgb,var(--vx-glow) 78%,#fff),var(--vx-glow))!important}
+
 #g8app#g8app#g8app .g8primary:hover:enabled{transform:translateY(-2px);filter:brightness(1.08) saturate(1.1)}
 #g8app#g8app#g8app .g8primary:active:enabled{transform:translateY(1px)}
 #g8app#g8app#g8app .g8primary:disabled{filter:grayscale(.8) brightness(.6)}

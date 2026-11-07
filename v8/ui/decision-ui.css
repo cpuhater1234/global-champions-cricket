@@ -31,8 +31,8 @@
 #g8app .gccui .gccuiPanelHead{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding:16px 20px;background:var(--gcc-raised);border-bottom:1px solid var(--ui-line)}
 #g8app .gccui .gccuiPanelHead h2{display:flex;align-items:center;gap:10px;font-size:18px}
 #g8app .gccui .gccuiPanelHead>span{font-size:12px;color:var(--ui-muted);font-weight:700}
-#g8app .gccui .g8button{display:inline-flex!important;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 14px!important;border:1px solid var(--gcc-line)!important;border-radius:5px!important;background:var(--gcc-raised)!important;color:var(--ui-text)!important;box-shadow:none!important;font-size:14px!important;font-weight:700;line-height:1.3;white-space:normal;text-align:center}
-#g8app .gccui .g8button.g8primary{background:var(--ui-team)!important;color:var(--club-ink,#171717)!important;border:1px solid var(--ui-team)!important}
+#g8app .gccui .g8button{display:inline-flex!important;align-items:center;justify-content:center;gap:8px;text-align:center}
+
 #g8app .gccui .g8button:disabled{opacity:.45!important;cursor:not-allowed}
 #g8app .gccui .g8button:hover:not(:disabled){transform:none!important;filter:brightness(1.12);border-color:var(--gcc-text)!important}
 #g8app .gccui :is(button,input,select,summary):focus-visible{outline:3px solid #f1c06b!important;outline-offset:3px}
@@ -457,8 +457,8 @@
 #g8dialog[data-prompt=trade] .g8dialogcontext{font-size:13px!important;line-height:1.5!important}
 @media(max-width:600px){#g8dialog[data-prompt=trade] .gccTradePartner>label{grid-template-columns:1fr;gap:6px}}
 /* Keep the trade decision available while reviewing a long package. */
-#g8dialog:is([data-prompt=trade],[data-prompt=tradeReview]) .g8modalbody>.g8actions:last-child{position:sticky!important;bottom:0!important;z-index:3!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;align-items:stretch!important;padding:12px 0!important;margin:14px 0 0!important;background:#202020!important;border-top:1px solid var(--gcc-line)!important;box-shadow:0 -10px 16px #202020}
-#g8dialog:is([data-prompt=trade],[data-prompt=tradeReview]) .g8modalbody>.g8actions:last-child>.g8button{width:100%!important;min-height:46px!important;align-self:stretch!important;font-size:14px!important}
+#g8dialog:is([data-prompt=trade],[data-prompt=tradeReview]) .g8modalbody>.g8actions:last-child{position:sticky!important;bottom:0!important;z-index:3!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;align-items:stretch!important;padding:12px 0!important;margin:14px 0 0!important;border-top:1px solid var(--gcc-line)!important}
+#g8dialog:is([data-prompt=trade],[data-prompt=tradeReview]) .g8modalbody>.g8actions:last-child>.g8button{width:100%!important;min-height:46px!important;align-self:stretch!important}
 /* Restore the agreed card detail and grouped draft companion. */
 #g8app .gccui .gccuiPlayerSkills{grid-template-columns:repeat(var(--skill-count,2),minmax(0,1fr))}
 #g8app .gccui .gccuiRoleCoverage>header,#g8app .gccui .gccuiDraftSelected>header{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-bottom:10px;border-bottom:1px solid var(--ui-rule);margin-bottom:12px}
@@ -1134,7 +1134,7 @@ html:has(#g8dialog[open]){overflow:hidden}
 /* Postseason hierarchy: retain the match and decisions before supporting imagery. */
 #g8app .gccuiFinals .gccuiCampaignTop:has(.gccuiFinalDecision){display:block}
 #g8app .gccuiFinals .gccuiFinalDecision{padding:0 0 12px;margin:10px 0 12px;border-bottom:1px solid var(--gcc-line)}
-#g8app .gccuiFinals .gccuiFinalDecision>h2{font-size:21px!important;line-height:1.3!important;margin:0 0 10px!important;text-transform:none!important}
+
 #g8app .gccuiFinals .g8matcharena>div{order:0}
 #g8app .gccuiFinals .g8matcharena>.g8stadium{order:1}
 #g8app .gccuiReview .g8reviewsummary .g8metrics{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;width:100%;margin:12px 0 0!important}
@@ -1156,7 +1156,6 @@ html:has(#g8dialog[open]){overflow:hidden}
  #g8app .gccuiFinals .g8matcharena>.g8stadium .g8venueframe{height:120px!important;min-height:0!important}
  #g8app .gccuiFinals .g8matcharena>.g8stadium .g8stadiumphoto{height:120px!important;object-fit:cover!important}
  #g8app .gccuiFinals .g8matcharena>.g8stadium figcaption{font-size:11px!important;line-height:1.4!important;padding:8px!important}
- #g8app .gccuiFinals .gccuiFinalDecision>h2{font-size:19px!important}
  #g8app .gccuiReview .g8reviewsummary .g8metrics strong{font-size:23px!important}
 }
 

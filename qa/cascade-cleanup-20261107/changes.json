@@ -1,0 +1,86 @@
+[
+  {
+    "path": "v8/ui/floodlit.css",
+    "old": "#g8app#g8app#g8app .g8primary{\n  color:var(--gcc-accent-ink,#10161c)!important;\n  background:linear-gradient(180deg,color-mix(in srgb,var(--vx-glow) 78%,#fff),var(--vx-glow))!important}",
+    "new": "",
+    "reason": "Later compatibility primary owner already supplies the active gradient and ink for main and dialog buttons."
+  },
+  {
+    "path": "v8/ui/floodlit.css",
+    "old": "  transition:transform .18s var(--vx-ease),box-shadow .18s var(--vx-ease),border-color .18s,background .18s}",
+    "new": "}",
+    "reason": "Arcade button transition is important and wins over this normal declaration; preserve its existing120ms behavior."
+  },
+  {
+    "path": "v8/ui/floodlit.css",
+    "old": "background:rgba(255,255,255,.045)!important;border:1px solid var(--gcc-line)!important;color:var(--gcc-text)!important}",
+    "new": "background:rgba(255,255,255,.045)!important;color:var(--gcc-text)!important}",
+    "reason": "Secondary border duplicates the shared main-button border without changing it."
+  },
+  {
+    "path": "v8/ui/floodlit-compat.css",
+    "old": "#g8dialog#g8dialog#g8dialog .g8button.g8primary{font-family:var(--vx-display)!important;font-size:1rem!important;font-weight:700!important;letter-spacing:.02em!important;text-transform:none!important;border:1px solid var(--gcc-line)!important;border-radius:8px!important;clip-path:none!important;padding:10px 14px!important;box-shadow:none!important;min-height:44px;min-width:0;max-width:100%;white-space:normal!important;line-height:1.25!important;transition:transform .18s var(--vx-ease),border-color .18s var(--vx-ease)}",
+    "new": "#g8dialog#g8dialog#g8dialog .g8button.g8primary{min-width:0;max-width:100%;white-space:normal!important}",
+    "reason": "Retain primary bounds; geometry and typography belong to the preceding shared dialog-button rule. Its normal transition was already defeated by the important arcade transition."
+  },
+  {
+    "path": "v8/ui/floodlit-compat.css",
+    "old": "#g8dialog#g8dialog#g8dialog .g8button.g8primary:focus-visible{clip-path:none!important;outline:3px solid #7fe0ee!important;outline-offset:3px}",
+    "new": "",
+    "reason": "Exact duplicate of the earlier main/dialog primary focus-visible owner."
+  },
+  {
+    "path": "v8/ui/floodlit-compat.css",
+    "old": " #g8app#g8app#g8app .g8primary{font-size:1rem!important;padding-inline:14px!important;line-height:1.25!important;min-height:44px}\n",
+    "new": "",
+    "reason": "Phone primary typography equals the shared main-button owner; Home retains its more specific composition rules."
+  },
+  {
+    "path": "v8/ui/floodlit-compat.css",
+    "old": " #g8stage#g8stage#g8stage .gccuiOffseasonActions .g8primary{font-size:1rem!important}\n",
+    "new": "",
+    "reason": "Offseason primary size equals the shared command size."
+  },
+  {
+    "path": "v8/ui/floodlit-compat.css",
+    "old": "#g8dialog#g8dialog#g8dialog .g8button:not(.g8primary){background:var(--gcc-raised)!important;border-color:var(--gcc-line)!important;color:var(--gcc-text)!important}",
+    "new": "#g8dialog#g8dialog#g8dialog .g8button:not(.g8primary){background:var(--gcc-raised)!important;color:var(--gcc-text)!important}",
+    "reason": "Dialog secondary border colour duplicates the common dialog border."
+  },
+  {
+    "path": "v8/ui/decision-ui.css",
+    "old": "#g8app .gccui .g8button{display:inline-flex!important;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 14px!important;border:1px solid var(--gcc-line)!important;border-radius:5px!important;background:var(--gcc-raised)!important;color:var(--ui-text)!important;box-shadow:none!important;font-size:14px!important;font-weight:700;line-height:1.3;white-space:normal;text-align:center}",
+    "new": "#g8app .gccui .g8button{display:inline-flex!important;align-items:center;justify-content:center;gap:8px;text-align:center}",
+    "reason": "Keep active layout/gap; obsolete geometry, palette and14px type all lose to the existing higher-specificity floodlit command owners."
+  },
+  {
+    "path": "v8/ui/decision-ui.css",
+    "old": "#g8app .gccui .g8button.g8primary{background:var(--ui-team)!important;color:var(--club-ink,#171717)!important;border:1px solid var(--ui-team)!important}",
+    "new": "",
+    "reason": "All three properties lose to the existing floodlit primary palette/border owners."
+  },
+  {
+    "path": "v8/ui/decision-ui.css",
+    "old": "background:#202020!important;border-top:1px solid var(--gcc-line)!important;box-shadow:0 -10px 16px #202020}",
+    "new": "border-top:1px solid var(--gcc-line)!important}",
+    "reason": "Trade footer layout stays here; active footer background/shadow already belong to compatibility surface tokens."
+  },
+  {
+    "path": "v8/ui/decision-ui.css",
+    "old": ">.g8button{width:100%!important;min-height:46px!important;align-self:stretch!important;font-size:14px!important}",
+    "new": ">.g8button{width:100%!important;min-height:46px!important;align-self:stretch!important}",
+    "reason": "Trade action width/height/stretch are layout exceptions; shared dialog typography wins at16px."
+  },
+  {
+    "path": "v8/ui/decision-ui.css",
+    "old": "#g8app .gccuiFinals .gccuiFinalDecision>h2{font-size:21px!important;line-height:1.3!important;margin:0 0 10px!important;text-transform:none!important}",
+    "new": "",
+    "reason": "The renderer no longer emits this direct child after duplicate-headline removal."
+  },
+  {
+    "path": "v8/ui/decision-ui.css",
+    "old": " #g8app .gccuiFinals .gccuiFinalDecision>h2{font-size:19px!important}\n",
+    "new": "",
+    "reason": "Phone override targets the same removed direct-child headline."
+  }
+]
