@@ -6,9 +6,9 @@ import sys
 import tempfile
 import unittest
 ROOT = Path(__file__).resolve().parents[2]
-EXPECTED = '48b8896918a6a51b8604f82e1b293496a0455745066cbec5fa5415129d69bdfc'
+EXPECTED = 'eefe0d320e99053d8a31ba34d1ddf85ca7363c8564356539abec026a8c20079b'
 class CanonicalReleaseTests(unittest.TestCase):
-    def test_default_pipeline_reproduces_v108_without_external_release_file(self):
+    def test_default_pipeline_reproduces_v109_without_external_release_file(self):
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory)/'candidate.html'
             subprocess.run([sys.executable, str(ROOT/'v8/build.py'), '--output', str(output)],

@@ -35,3 +35,7 @@ Current handoff reference: user's GCC_BULLETPROOF_HANDOFF.pdf, build floor v106.
 Fourteen source sections consolidated; net44 declarations and1896 bytes removed. Scripts/assets unchanged. v107 trade rows and footer stretching retained. Home composition source remains exact. Removed redundant primary/dialog styles, shadowed main UI geometry/palette, obsolete trade-footer colour/type declarations and absent knockout-headline selectors. Exact changes and per-change reasons are in qa/cascade-cleanup-20261107/changes.json.
 
 This is a scoped audit, not certification that every historical stylesheet conflict is removed. The retained14 stylesheet blocks serve existing foundations, assets and component owners. Candidate native verification is pending download.
+
+## Squad-update surface ownership (v109)
+
+The existing floodlit-compat.css surface family owns annualhero, annualdevelopment and departureguide. These selectors are removed from the shared gradient group before receiving explicit primary/inset roles. Primary retains club identity; supporting information is inset. Scope changes colour and shadow only, with no new layer. Native candidate acceptance pending download.

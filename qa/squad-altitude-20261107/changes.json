@@ -1,0 +1,7 @@
+[
+  {
+    "path": "v8/ui/floodlit-compat.css",
+    "old": "#g8stage#g8stage#g8stage :is(.g8sheet,.g8annualhero,.g8annualdevelopment,.g8departureguide,.gccuiAllowance,.gccuiFixture,.gccuiMatchPreparation,.gccuiLatestResult,.gccuiMatchLinks,.gccuiSummary,.g8dressingroom,.g8reviewsummary,.g8development,.g8teamread){background:linear-gradient(155deg,var(--gcc-raised),var(--gcc-panel) 60%)!important;border-color:var(--gcc-line)!important}",
+    "new": "#g8stage#g8stage#g8stage :is(.g8sheet,.gccuiAllowance,.gccuiFixture,.gccuiMatchPreparation,.gccuiLatestResult,.gccuiMatchLinks,.gccuiSummary,.g8dressingroom,.g8reviewsummary,.g8development,.g8teamread){background:linear-gradient(155deg,var(--gcc-raised),var(--gcc-panel) 60%)!important;border-color:var(--gcc-line)!important}\n/* Squad update: the decision surface owns club identity; supporting detail is inset. */\n#g8stage#g8stage#g8stage .g8annualhero{background:linear-gradient(120deg,color-mix(in srgb,var(--gcc-accent) 16%,var(--gcc-raised)),var(--gcc-panel) 72%)!important;border-color:var(--gcc-line)!important;border-top-color:var(--vx-signal)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 18px 40px -26px #000!important}\n#g8stage#g8stage#g8stage :is(.g8annualdevelopment,.g8departureguide){background:var(--gcc-inset)!important;border-color:var(--gcc-line)!important}"
+  }
+]

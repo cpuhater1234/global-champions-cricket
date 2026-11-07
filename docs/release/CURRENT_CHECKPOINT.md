@@ -1,3 +1,17 @@
+# Current candidate: v109 squad-update altitude, 7 November 2026
+
+Maintained branch: work/v8-integrity-charcoal-candidate.
+Download GCC_v109.html; Library libfile_005d9e2dce9481918287d75e30035166, version0.
+SHA-256 eefe0d320e99053d8a31ba34d1ddf85ca7363c8564356539abec026a8c20079b; 6,588,674 bytes.
+
+User approved proceeding with Full Visual Vision Roadmap, preserving v108. Inspected exact v108 in Chrome on a separate localhost tab. Home screenshot inspected; Continue career opens Lucknow2010 offseason. Main127.0.0.1 user career untouched. DOM/computed-rule inspection confirms club tokens correct, HUD badge already has club fill/white edge. No HUD recolour needed. Primary annualhero and secondary annualdevelopment/departureguide currently share the same gradient in floodlit-compat.css.
+
+Scoped candidate edits that existing surface owner: remove three selectors from shared background group, give annualhero a16% club-tinted raised gradient, signal top edge and restrained depth, and annualdevelopment/departureguide an inset background. No type, dimensions, structure, animation or rules changes. No new style block; no duplicate old shared selector for these three surfaces. All20 scripts byte-identical and syntax checked; assets/markup/Home composition identical. Full build not run in partial checkout; exact CSS substitution into hash-verified v108.
+
+NATIVE V109 ACCEPTANCE PENDING DOWNLOAD. Verify Home plus squad-update main/supporting panels desktop and390px, different club colours when reachable. v108 trade native acceptance still outstanding: aligned impact rows/equal phone action heights, cancel without sending. Native own-knockout transition also remains outstanding. Do not claim full-game perfection or19-season certification.
+
+---
+
 # Current candidate: v108 combines v107 and scoped cascade cleanup, 7 November 2026
 
 Maintained branch: `work/v8-integrity-charcoal-candidate`.
