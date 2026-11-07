@@ -1,3 +1,20 @@
+# Current candidate: v106 anchors the review comparison, 7 November 2026
+
+Maintained branch: `work/v8-integrity-charcoal-candidate`.
+Download GCC_v106.html; Library `libfile_3b383d4f3ffc819186640b6120579e70`,version0.
+SHA-256 `0c98b814f74f1320974bf429a7fb9d7c3e54c6f7b772dcc8b34a382b12eb1546`;6,589,768bytes.
+
+v105 phone archive fixes are natively accepted. Another full2009 test season verified live league wrap, updated season review and two injury/selection interruptions. See qa/review-comparison-20261107/native-v105.md for evidence. User's main save untouched.
+
+Candidate change moves the existing season-to-season comparison into the review summary, below a divider. No additional card. Comparison is evaluated once, appears once, and adds no footer when unavailable. Only screens.js and its owning decision-ui.css change.
+
+All20 scripts pass syntax; only script17 changes. Assets, non-style/script markup, fourteen style identities and game rules unchanged. Renderer tests pass for conditional comparison placement plus existing wrap/review/archive/knockout contracts. Candidate derives from exact v105; full source rebuild not run in partial checkout.
+
+NATIVE V106 FOOTER ACCEPTANCE PENDING DOWNLOAD. Existing localhost test save is on2009 review and has a comparison with2008, so verify directly by Continue career. Check footer within summary at desktop/390px, correct text once, no overflow. Do not restart or advance the test season first.
+Broader remaining exact case: native own-knockout result transition after v104 duplicate-headline change; static renderer contract checks already pass. Do not claim nineteen-season/whole-game certification.
+
+---
+
 # Current candidate: v105 phone archive cleanup, 7 November 2026
 
 Maintained branch: `work/v8-integrity-charcoal-candidate`.

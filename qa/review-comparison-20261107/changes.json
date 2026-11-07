@@ -1,0 +1,22 @@
+[
+  {
+    "path": "v8/ui/screens.js",
+    "old": "title=won?'Champions.':s.regularSeasonPosition<=4?'A finals campaign.':'The season closes.';",
+    "new": "title=won?'Champions.':s.regularSeasonPosition<=4?'A finals campaign.':'The season closes.',progress=X.seasonProgress();"
+  },
+  {
+    "path": "v8/ui/screens.js",
+    "old": "['Season record',`${t.w||0}-${t.l||0}`]])}</section>",
+    "new": "['Season record',`${t.w||0}-${t.l||0}`]])}${progress?`<div class=\"gccuiReviewProgress\">${progress}</div>`:''}</section>"
+  },
+  {
+    "path": "v8/ui/screens.js",
+    "old": "${X.seasonProgress()}<section class=\"g8sheet g8seasonstars\">",
+    "new": "<section class=\"g8sheet g8seasonstars\">"
+  },
+  {
+    "path": "v8/ui/decision-ui.css",
+    "old": "#g8app .gccuiReview .g8reviewsummary{gap:12px!important;padding:18px!important}",
+    "new": "#g8app .gccuiReview .g8reviewsummary{gap:12px!important;padding:18px!important}\n#g8app .gccuiReview .g8reviewsummary>.gccuiReviewProgress{flex:0 0 100%;min-width:0;margin:0;padding-top:12px;border-top:1px solid var(--gcc-line)}\n#g8app .gccuiReview .gccuiReviewProgress>p{margin:0!important}"
+  }
+]
