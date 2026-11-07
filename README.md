@@ -18,6 +18,17 @@ This is the first playable relationship layer, not a complete personality, train
 
 Validation: pure management regressions, real six-match selection/save/reload tests, controlled medical and finals scenarios, replay immutability, text contrast, 36 enlarged-text management layouts and the existing 84 screen/viewport scan. Only inline scripts16,17,19 change; all20 pass syntax checks. Full evidence and limits are in the release checkpoint.
 
+## Parallel visual composition candidate (v112)
+
+A separate **front-door visual composition** stream exists alongside v101 management work:
+
+- **Checkpoint:** [`qa/GCC_v112_composition_checkpoint.md`](qa/GCC_v112_composition_checkpoint.md)
+- **Intended binary path:** `game/gcc_v112_composition.html` (upload when promoting the local GCC_v112 build)
+- **Scope:** Home / League intro / draw-control composition (`gcc-composition-20261107`); does **not** replace v101 as current playable until an explicit product decision
+- **Open before elevation:** concurrent-career cold-start lock; game-wide surfaces beyond the front door; navy-flat contrast pass still optional/roadmap
+
+Do not confuse the composition candidate with the v101 product candidate. Test management features on v101; test front-door composition against the v112 checkpoint and binary when present.
+
 The following section records the original protected baseline.
 
 This repository starts from the protected **v7.0.14** GCC build and exists to make aggressive QA safer, not to redesign the game.
@@ -44,4 +55,3 @@ For every candidate:
 6. only then promote the candidate.
 
 See `docs/WORKFLOW.md` for the operating rules and `qa/GCC_v7014_checkpoint.md` for the recovered v7.0.14 evidence.
-
