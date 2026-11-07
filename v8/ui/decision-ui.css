@@ -74,7 +74,7 @@
 #g8app .gccui .gccuiSortRead .gccuiRating{font-size:22px}
 #g8app .gccui .gccuiPlayer>footer{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 12px;border-top:1px solid #414c52;background:var(--gcc-raised)}
 #g8app .gccui .gccuiPlayer>footer>span{display:flex;align-items:center;gap:7px;font-size:12px;line-height:1.4;color:var(--ui-muted);max-width:115px}
-#g8app .gccui .gccuiPlayer>footer>.gccuiScoutAction{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;background:transparent;border:0;color:#dce6ea;font-size:13px;font-weight:700;cursor:pointer;padding:6px}
+#g8app .gccui .gccuiPlayer>footer>.gccuiScoutAction{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;background:transparent;border:0;color:#dce6ea;font-family:var(--vx-display);font-size:16px;font-weight:700;letter-spacing:.02em;line-height:1.25;cursor:pointer;padding:10px 14px}
 #g8app .gccui .gccuiPlayer>footer>.gccuiScoutAction:hover{color:#fff;text-decoration:underline}
 #g8app .gccui .gccuiPoolFooter{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-top:1px solid var(--ui-rule);font-size:13px;color:var(--ui-muted)}
 #g8app .gccui .gccuiClubHead{display:flex;align-items:center;gap:14px;padding:20px;background:var(--ui-team);color:var(--club-ink,#fff);border-bottom:2px solid #121719}

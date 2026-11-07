@@ -1,0 +1,77 @@
+[
+  {
+    "path": "v8/ui/game.css",
+    "old": ".g8clubgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.1rem}",
+    "new": ".g8clubgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:1fr;gap:1.1rem}"
+  },
+  {
+    "path": "v8/ui/game.css",
+    "old": "#g8dialog .g8clubidentity{padding:.5rem 0 .8rem;margin-bottom:.8rem}",
+    "new": "#g8dialog .g8clubidentity.g8clubidentitypanel{padding:0;margin-bottom:1rem}"
+  },
+  {
+    "path": "v8/ui/workspace.css",
+    "old": ".g8clubidentitypanel .g8clubmark{grid-column:1;grid-row:1/3;",
+    "new": ".g8clubidentitypanel .g8clubmark{grid-column:1;grid-row:1;"
+  },
+  {
+    "path": "v8/ui/workspace.css",
+    "old": ".g8clubidentitypanel .g8clubmetastrip{grid-column:2;grid-row:1;display:flex;align-items:center;flex-wrap:wrap;gap:.4rem 0;padding:.75rem 1rem;border-bottom:1px solid #858b83;",
+    "new": ".g8clubidentitypanel .g8clubmetastrip{grid-column:2;grid-row:1;display:flex;align-items:center;flex-wrap:wrap;gap:.4rem 0;padding:.75rem 1rem;border-bottom:0;"
+  },
+  {
+    "path": "v8/ui/workspace.css",
+    "old": "#g8dialog .g8briefbody>.g8clubpriorities{display:grid;gap:0;list-style:none;margin:0;padding:0;flex:1;grid-template-rows:repeat(3,minmax(min-content,1fr));align-content:stretch}",
+    "new": "#g8dialog .g8briefbody>.g8clubpriorities{display:grid;gap:0;list-style:none;margin:0;padding:0;flex:0;grid-template-rows:none;grid-auto-rows:max-content;align-content:start}"
+  },
+  {
+    "path": "v8/ui/workspace.css",
+    "old": "#g8dialog .g8clubpriorities>li{display:grid;grid-template-columns:2rem minmax(0,1fr);align-items:start;align-content:center;",
+    "new": "#g8dialog .g8clubpriorities>li{display:grid;grid-template-columns:2rem minmax(0,1fr);align-items:start;align-content:start;"
+  },
+  {
+    "path": "v8/ui/floodlit.css",
+    "old": "#g8app#g8app#g8app .g8button{\n  border-radius:8px!important;font-weight:700!important;letter-spacing:.04em;",
+    "new": "#g8app#g8app#g8app .g8button{\n  font-family:var(--vx-display)!important;font-size:1rem!important;font-weight:700!important;\n  line-height:1.25!important;letter-spacing:.02em!important;text-transform:none!important;\n  min-height:44px;padding:10px 14px!important;box-sizing:border-box;\n  border:1px solid var(--gcc-line)!important;border-radius:8px!important;clip-path:none!important;\n  box-shadow:none!important;white-space:normal!important;"
+  },
+  {
+    "path": "v8/ui/floodlit.css",
+    "old": "#g8app#g8app#g8app .g8primary{\n  font-family:var(--vx-display)!important;font-size:1.2rem!important;font-weight:800!important;\n  letter-spacing:.09em!important;text-transform:uppercase;\n  color:var(--gcc-accent-ink,#10161c)!important;border:0!important;\n  background:linear-gradient(180deg,color-mix(in srgb,var(--vx-glow) 78%,#fff),var(--vx-glow))!important;\n  clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%);padding-inline:1.7rem!important;\n  box-shadow:0 10px 26px -10px var(--vx-glow)}",
+    "new": "#g8app#g8app#g8app .g8primary{\n  color:var(--gcc-accent-ink,#10161c)!important;\n  background:linear-gradient(180deg,color-mix(in srgb,var(--vx-glow) 78%,#fff),var(--vx-glow))!important}"
+  },
+  {
+    "path": "v8/ui/floodlit.css",
+    "old": "#g8app#g8app#g8app .g8primary:hover:enabled{transform:translateY(-3px);",
+    "new": "#g8app#g8app#g8app .g8primary:hover:enabled{transform:translateY(-2px);"
+  },
+  {
+    "path": "v8/ui/floodlit.css",
+    "old": "/* Adjacent campaign commands share one shape and type scale. Colour marks the primary action. */\n#g8app#g8app#g8app :is(.gccuiSelectionActions,.gccuiFixtureActions>div,.gccuiFinalActions,.gccuiResultActions,.gccuiOffseasonActions,.gccuiPreMatchActions,.g8playbackcontrols>.g8actions)>.g8button{\n  font-family:var(--vx-display)!important;font-size:1rem!important;font-weight:700!important;\n  line-height:1.25!important;letter-spacing:.02em!important;text-transform:none!important;\n  min-height:44px;padding:10px 14px!important;box-sizing:border-box;\n  border:1px solid var(--gcc-line)!important;border-radius:8px!important;clip-path:none!important;\n  box-shadow:none!important;white-space:normal!important;align-self:stretch;\n}\n#g8app#g8app#g8app :is(.gccuiSelectionActions,.gccuiFixtureActions>div,.gccuiFinalActions,.gccuiResultActions,.gccuiOffseasonActions,.gccuiPreMatchActions,.g8playbackcontrols>.g8actions)>.g8button:hover:enabled{transform:translateY(-2px)!important}\n\n",
+    "new": "/* Adjacent campaign commands share one shape and type scale. Colour marks the primary action. */\n#g8app#g8app#g8app :is(.gccuiSelectionActions,.gccuiFixtureActions>div,.gccuiFinalActions,.gccuiResultActions,.gccuiOffseasonActions,.gccuiPreMatchActions,.g8playbackcontrols>.g8actions)>.g8button{align-self:stretch}\n\n"
+  },
+  {
+    "path": "v8/ui/floodlit-compat.css",
+    "old": "#g8app#g8app#g8app .g8primary{font-size:1.05rem!important;padding-inline:.85rem!important;line-height:1.3!important;min-height:44px}",
+    "new": "#g8app#g8app#g8app .g8primary{font-size:1rem!important;padding-inline:14px!important;line-height:1.25!important;min-height:44px}"
+  },
+  {
+    "path": "v8/ui/floodlit-compat.css",
+    "old": "#g8dialog#g8dialog#g8dialog .g8button.g8primary{font-family:var(--vx-display)!important;font-size:1.2rem!important;font-weight:800!important;letter-spacing:.06em!important;text-transform:uppercase!important;border:0!important;border-radius:8px!important;clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%);padding:12px 18px!important;box-shadow:0 10px 26px -10px var(--vx-glow)!important;min-width:0;max-width:100%;white-space:normal!important;line-height:1.25!important;transition:transform .18s var(--vx-ease),box-shadow .18s var(--vx-ease)}",
+    "new": "#g8dialog#g8dialog#g8dialog .g8button.g8primary{font-family:var(--vx-display)!important;font-size:1rem!important;font-weight:700!important;letter-spacing:.02em!important;text-transform:none!important;border:1px solid var(--gcc-line)!important;border-radius:8px!important;clip-path:none!important;padding:10px 14px!important;box-shadow:none!important;min-height:44px;min-width:0;max-width:100%;white-space:normal!important;line-height:1.25!important;transition:transform .18s var(--vx-ease),border-color .18s var(--vx-ease)}"
+  },
+  {
+    "path": "v8/ui/floodlit-compat.css",
+    "old": "@media(max-width:760px){#g8dialog#g8dialog#g8dialog .g8button.g8primary{font-size:1.05rem!important;padding:10px 12px!important;min-height:44px}}",
+    "new": ""
+  },
+  {
+    "path": "v8/ui/decision-ui.css",
+    "old": "color:#dce6ea;font-size:13px;font-weight:700;cursor:pointer;padding:6px}",
+    "new": "color:#dce6ea;font-family:var(--vx-display);font-size:16px;font-weight:700;letter-spacing:.02em;line-height:1.25;cursor:pointer;padding:10px 14px}"
+  },
+  {
+    "path": "v8/ui/floodlit-compat.css",
+    "old": "#g8dialog#g8dialog#g8dialog .g8button:not(.g8primary){background:var(--gcc-raised)!important;border-color:var(--gcc-line)!important;color:var(--gcc-text)!important}",
+    "new": "#g8dialog#g8dialog#g8dialog .g8button{font-family:var(--vx-display)!important;font-size:1rem!important;font-weight:700!important;line-height:1.25!important;letter-spacing:.02em!important;text-transform:none!important;min-height:44px;padding:10px 14px!important;border:1px solid var(--gcc-line)!important;border-radius:8px!important;clip-path:none!important;box-shadow:none!important}\n#g8dialog#g8dialog#g8dialog .g8button:not(.g8primary){background:var(--gcc-raised)!important;border-color:var(--gcc-line)!important;color:var(--gcc-text)!important}"
+  }
+]

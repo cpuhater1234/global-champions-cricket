@@ -1,0 +1,22 @@
+{
+  "parentSha256": "bab2533de6a744695b76b6430a776cbc4c09e0ab34831fdbce9f29f8ba30f0c3",
+  "sha256": "d499e159fb44e7ee91a726a9bc82da2bc5b4027e5b83423c2e4bc43ab7820f7c",
+  "bytes": 6584091,
+  "sourceFiles": [
+    "v8/ui/decision-ui.css",
+    "v8/ui/floodlit-compat.css",
+    "v8/ui/floodlit.css",
+    "v8/ui/game.css",
+    "v8/ui/workspace.css"
+  ],
+  "owningDeclarationsEdited": 15,
+  "scriptsSyntaxChecked": 20,
+  "allScriptsByteIdentical": true,
+  "allEmbeddedAssetsByteIdentical": true,
+  "styleBlocksBeforeAndAfter": 14,
+  "newStylesheetLayers": 0,
+  "markupOutsideStylesUnchanged": true,
+  "replayRemovalPreserved": true,
+  "nativeCandidateReview": "pending downloaded v101",
+  "fullSourceRebuild": "not run: partial checkout; candidate is exact CSS-only substitution into hash-verified v100"
+}

@@ -1,3 +1,23 @@
+# Current candidate: v101 recruitment and shared controls, 7 November 2026
+
+Maintained branch: `work/v8-integrity-charcoal-candidate`.
+Download: `GCC_v101.html`; Library `libfile_1ad016ab0a2081919d1c254b420f434b`, version 0.
+SHA-256: `d499e159fb44e7ee91a726a9bc82da2bc5b4027e5b83423c2e4bc43ab7820f7c`; 6,584,091 bytes.
+
+Tom requested the modern visual standard across the game. Native v100 review found chooser rows of 424px and 467px, caused by the long Ekana name. The club guide badge spanned an unused row, and advice stretched to 185px per entry. Signing paired a 64px/19.2px/slanted primary control with 44px/14px secondary controls. Draft paired 13px Scout with 19.2px Pick.
+
+Candidate changes edit five existing stylesheet owners: equal club-grid rows; remove unused identity row and padding; content-sized guide advice; shared 16px type, 44px minimum height, padding, 8px corners and unclipped command geometry across main game and dialogs; Scout follows the same scale. Primary colour and the sporting hierarchy remain. Redundant campaign-control properties were removed after promotion to the shared owner. No stylesheet layer added.
+
+Validation: five source baselines matched GitHub blobs at parent `346a192c80b9ade782aa972c0db5351df5ddb89e`. Candidate is 15 exact CSS substitutions into hash-verified v100. All 20 scripts are byte-identical and pass syntax checks. Embedded assets, non-style markup and all 14 stylesheet identities are unchanged. Replay removal retained. No full-project rebuild ran in this partial checkout.
+
+NATIVE V101 REVIEW PENDING DOWNLOAD. Check long club names, guide blank space, signing and draft controls, dialog confirmations, and shared-control regressions on home/XI/result/phone scorebook. Do not claim the entire visual audit is complete.
+
+Native v100 result verification is complete: zero replay buttons; Scorebook and Next match remain. Tom's 127.0.0.1 Lucknow 2010 save is separate from localhost QA. Isolated QA career reached Foundation draft Round 1 Pick 8 with 0/15 selected. Viewport reset. User workflow: download, then fresh local URL, then inspect.
+
+Historical large game/gcc_v8_product_candidate.html remains build input, not the current download. v101 is sequential from v100, unrelated to external v93_polish proposals.
+
+---
+
 # Current candidate: v100 removes completed-match replay, 7 November 2026
 
 Maintained branch: `work/v8-integrity-charcoal-candidate`.
