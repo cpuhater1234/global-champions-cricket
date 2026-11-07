@@ -1,6 +1,14 @@
 /* Keep live controls, cards and scroll containers mounted when their values change. */
 (() => {
  const X=window.GCC8;
+ // Layout clearance follows the real header, including wrapped navigation.
+ const hud=document.getElementById('g8hud');
+ if(hud){
+  const measureHeader=()=>document.documentElement.style.setProperty('--gcc-hud-height',Math.ceil(hud.getBoundingClientRect().height)+'px');
+  measureHeader();
+  if(typeof ResizeObserver!=='undefined')new ResizeObserver(measureHeader).observe(hud);
+  else window.addEventListener('resize',measureHeader,{passive:true});
+ }
  X.accessibleTables=root=>{for(const el of root.querySelectorAll('.g8tablewrap')){const scrolls=el.scrollWidth>el.clientWidth+1;if(scrolls){el.dataset.scrollableTable='true';el.setAttribute('tabindex','0');el.setAttribute('role','region');const title=el.closest('section')?.querySelector(':scope > h3,:scope > h2')?.textContent,caption=el.querySelector('caption')?.textContent;el.setAttribute('aria-label',[title,caption].filter(Boolean).join(' · ')||'Cricket statistics');}else if(el.dataset.scrollableTable){el.removeAttribute('tabindex');el.removeAttribute('role');el.removeAttribute('aria-label');delete el.dataset.scrollableTable;}}};
  X.layoutShifts=[];X.layoutShiftSupported=false;
  if(typeof PerformanceObserver!=='undefined'&&PerformanceObserver.supportedEntryTypes?.includes('layout-shift')){

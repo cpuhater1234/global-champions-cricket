@@ -75,7 +75,11 @@
   flex:1 1 0; min-width:0;
 }
 #g8app#g8app#g8app .g8careerintro .g8careerlaunch>.g8actions {
-  justify-content:center!important;
+  display:grid!important; grid-template-columns:minmax(0,1fr) auto;
+  gap:12px!important; align-items:stretch; justify-content:stretch!important;
+}
+#g8app#g8app#g8app .g8careerintro .g8careerlaunch>.g8actions>.g8primary {
+  width:100%; min-width:0;
 }
 #g8app#g8app#g8app .g8careerintro .g8careerformat {
   justify-content:center!important; text-align:center!important;

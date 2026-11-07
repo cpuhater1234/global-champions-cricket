@@ -1,3 +1,23 @@
+# Current candidate: v102 selectively integrates the external layout audit, 7 November 2026
+
+Maintained branch: `work/v8-integrity-charcoal-candidate`.
+Download: `GCC_v102.html`; Library `libfile_88b6b59704c881919e2704107d3ec76a`, version 0.
+SHA-256: `4bccd31501b20a453991b4c32ce4eeb4e8bf31e90ec250782e6fb30edf05ec11`; 6,585,628 bytes.
+
+Tom attached files(1).zip with GCC_v96_layout_v94.html and gcc_layout_patch_v94.css. Treat the old HTML as a reference only: its scripts differ from current at indexes 17, 18 and 19. Never replace current with it. v102 is derived from exact v101 and includes all v101 changes.
+
+Adopted into existing stylesheet owners: full-width Manage squad with two columns at >=1100px and one below; matched hub panel edges, including the actual nested dressing-room card; full-width introduction primary beside Back; 960px toss focus width and vertical centring on tall viewports; desktop draft sidebar follows scroll and has a bounded, independently scrollable area. Header clearance is measured by a small ResizeObserver in dom.js, with resize fallback. It adapts to navigation wrapping rather than assuming 170px.
+
+Deliberately not copied: whole reference HTML, extra final stylesheet, old primary typography (v101 supersedes it), universal 28px top/inset overrides, or sticky XI bench. Current XI has guidance directly below the bench in the same grid column, so the old sticky rule could overlap it.
+
+Native v100 evidence collected during comparison: header height 151.275px with sticky positioning; top fixture/dressing-room heights 402/410; lower cards 235/280. No new match played. Main user tab remains on the existing Lucknow 2010 career. The reference author's breakpoint and error-free claims are not candidate certification.
+
+Verification: exact substitutions into hash-verified v101; all 20 scripts pass Node syntax, with only script 18 changing for header measurement. Header-clearance VM tests cover initial height, wrapped-header resize, no-ResizeObserver fallback and absent header. Game rules and embedded assets are unchanged. All 14 style identities and non-style/script markup are preserved. No full source rebuild ran in the partial checkout.
+
+NATIVE V102 ACCEPTANCE PENDING DOWNLOAD. Use v102 instead of v101 for the next review. Check home/XI/result control regressions, club chooser and guide changes carried from v101, Matchday panel edges, Manage at 1100px breakpoint, intro, toss, draft sticky scrolling and reachability at desktop; then 1024/768/390px overflow and collapse. Do not claim game-wide visual acceptance.
+
+---
+
 # Current candidate: v101 recruitment and shared controls, 7 November 2026
 
 Maintained branch: `work/v8-integrity-charcoal-candidate`.

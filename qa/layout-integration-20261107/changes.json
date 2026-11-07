@@ -1,0 +1,42 @@
+[
+  {
+    "path": "v8/ui/workspace.css",
+    "old": ".g8manageworkspace{max-width:960px;margin:auto}",
+    "new": ".g8manageworkspace{max-width:none;width:100%;margin:0}"
+  },
+  {
+    "path": "v8/ui/workspace.css",
+    "old": ".g8manageworkspace{container-type:inline-size;padding:clamp(12px,2vw,20px);min-width:0}",
+    "new": ".g8manageworkspace{container-type:inline-size;padding:clamp(12px,2vw,20px);min-width:0}\n.g8manageworkspace .g8managementlist{display:grid;grid-template-columns:minmax(0,1fr);gap:0 24px}\n@media(min-width:1100px){.g8manageworkspace .g8managementlist{grid-template-columns:repeat(2,minmax(0,1fr))}}"
+  },
+  {
+    "path": "v8/ui/decision-ui.css",
+    "old": "#g8app .gccui .gccuiMatchGrid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(280px,1fr);gap:20px;align-items:start}",
+    "new": "#g8app .gccui .gccuiMatchGrid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(280px,1fr);gap:20px;align-items:stretch}\n#g8app .gccuiMatchDecisions{display:flex;flex-direction:column;min-width:0}\n#g8app .gccuiMatchDecisions>.g8dressingroom{flex:1 1 auto}"
+  },
+  {
+    "path": "v8/ui/decision-ui.css",
+    "old": "#g8app .gccuiMatchdayLower{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:20px;margin-top:20px;align-items:start}",
+    "new": "#g8app .gccuiMatchdayLower{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:20px;margin-top:20px;align-items:stretch}"
+  },
+  {
+    "path": "v8/ui/composition.css",
+    "old": "#g8app#g8app#g8app .g8careerintro .g8careerlaunch>.g8actions {\n  justify-content:center!important;\n}",
+    "new": "#g8app#g8app#g8app .g8careerintro .g8careerlaunch>.g8actions {\n  display:grid!important; grid-template-columns:minmax(0,1fr) auto;\n  gap:12px!important; align-items:stretch; justify-content:stretch!important;\n}\n#g8app#g8app#g8app .g8careerintro .g8careerlaunch>.g8actions>.g8primary {\n  width:100%; min-width:0;\n}"
+  },
+  {
+    "path": "v8/ui/decision-ui.css",
+    "old": "#g8app .gccui .gccuiDraftGrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,30%);gap:16px;align-items:start}",
+    "new": "#g8app .gccui .gccuiDraftGrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,30%);gap:16px;align-items:start}\n@media(min-width:1100px) and (min-height:700px){\n #g8app .gccuiDraftGrid>.gccuiCompanion{position:sticky;top:calc(var(--gcc-hud-height,170px) + 16px);align-self:start;max-height:calc(100dvh - var(--gcc-hud-height,170px) - 32px);overflow-y:auto;scrollbar-gutter:stable;overscroll-behavior:contain}\n}"
+  },
+  {
+    "path": "v8/ui/decision-ui.css",
+    "old": "#g8app .gccuiPreMatch{max-width:900px}",
+    "new": "#g8app .gccuiPreMatch{width:min(100%,960px);max-width:960px;margin-inline:auto}\n@media(min-height:700px){#g8app #g8stage:has(>.gccuiPreMatch){min-height:calc(100dvh - var(--gcc-hud-height,170px));display:flex;flex-direction:column;justify-content:center}}"
+  },
+  {
+    "path": "v8/ui/dom.js",
+    "old": " const X=window.GCC8;",
+    "new": " const X=window.GCC8;\n // Layout clearance follows the real header, including wrapped navigation.\n const hud=document.getElementById('g8hud');\n if(hud){\n  const measureHeader=()=>document.documentElement.style.setProperty('--gcc-hud-height',Math.ceil(hud.getBoundingClientRect().height)+'px');\n  measureHeader();\n  if(typeof ResizeObserver!=='undefined')new ResizeObserver(measureHeader).observe(hud);\n  else window.addEventListener('resize',measureHeader,{passive:true});\n }"
+  }
+]
