@@ -1,3 +1,22 @@
+# Current candidate: v99 reports and results, 7 November 2026
+
+Maintained branch: `work/v8-integrity-charcoal-candidate`.
+Download: `GCC_v99.html`; Library `libfile_a6a7d1b08e3481918720535fa8d3b222`, version 0.
+Expected SHA-256: `644c6921d91740597a4fb253ad70b0fd3e2edaca66f2d52d2ce88a9d015fbabe`; 6,584,564 bytes.
+Source build command: `python v8/build.py --output GCC_v99.html`.
+
+Tom asked to continue the visual review beyond home/XI/analysis. Native v98 review covered player Overview, Attributes and Management, match result, scorebook, league leaders, toss and replay at desktop/phone widths. The saved 2010 Lucknow career was used; only the existing Round 2 result was replayed, with no new match simulated.
+
+Candidate changes: fixed top anchoring for player dialogs to avoid tab-switch jumps; existing result navigation grouped with Scorebook in the header; one compact awards list instead of three cards; reduced phone scorebook cell padding; shared command geometry extended to toss and replay controls. No new style block or stylesheet layer.
+
+Verification: five source baselines match their GitHub blob hashes at parent `e0f4a0f3dfe2aae2aebf86a895e53467ac0bea30`. All 20 scripts pass syntax checks. Only the result wrapper in script 18 changes. Three real-wrapper fixture outcomes preserve navigation actions and existing score/consequence content. Assets and style IDs are unchanged; CSS delimiters balanced. See `qa/reports-results-20261107/README.md` and `verification.json`. No fresh full-project rebuild ran in the refreshed environment, which lacks a complete checkout. The canonical expected hash is updated for the maintained source build.
+
+NATIVE V99 ACCEPTANCE IS PENDING. User downloads, then gets the fresh localhost link. Check dialog y-position across tabs, mobile table scroll width and hint, result header controls, award rows and toss/replay geometry. Do not treat valid code as visual acceptance. Keep native v98 verification below as completed history and continue the broader game-wide audit after v99 checks. Viewport override was reset after replay review.
+
+The large remote `game/gcc_v8_product_candidate.html` remains historical build input, not the current download. Do not substitute it for v99.
+
+---
+
 # Native v98 verification, 7 November 2026
 
 Inspected the downloaded v98 in local Chrome at its existing desktop viewport, 390px phone and 768px tablet. Confirmed: the home title group is centred on its panel; career action dimensions match (desktop 481.9 x 72.4px, phone 314.4 x 72.4px); home has no horizontal overflow or title overflow on phone. The saved Lucknow 2010 Round 3 career resumes. Phone XI actions align exactly with player names at x=48.8px and use flex-start. Tablet analysis sections are compact at 173.3px high with one 101.9px tile row; phone uses two columns/two rows, with no horizontal overflow. The guide renders transparent continuous reading rows. Viewport override was reset and browser returned to home.

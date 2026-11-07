@@ -150,11 +150,13 @@
   letter-spacing:.03em;color:inherit}
 #g8app#g8app#g8app .gccuiScoreSide>div>strong{font-family:var(--vx-display)!important;font-size:4.2rem!important;font-weight:800;line-height:1}
 #g8app#g8app#g8app .gccuiScoreSide>div>strong small{font-size:2rem;color:var(--gcc-muted)}
-#g8app#g8app#g8app .gcc-award{background:linear-gradient(180deg,var(--gcc-raised),var(--gcc-panel))!important;
-  border:1px solid var(--gcc-line)!important;border-top:3px solid #f0c15a!important;border-radius:10px!important}
-#g8app#g8app#g8app .gcc-award h2{font-family:var(--vx-display)!important;font-size:1.7rem;font-weight:700;text-transform:uppercase}
-#g8app#g8app#g8app .gcc-award strong{font-family:var(--vx-display);font-size:1.6rem;color:#f6d98a}
-#g8app#g8app#g8app .gcc-award-0{background:linear-gradient(180deg,#4a3a14,#1b1a14 70%)!important;box-shadow:0 0 50px -24px #f0c15a}
+#g8app#g8app#g8app .gcc-awards{display:block!important;border:1px solid var(--gcc-line);border-radius:8px;overflow:hidden;background:var(--gcc-panel)}
+#g8app#g8app#g8app .gcc-award{display:grid!important;grid-template-columns:minmax(150px,.8fr) minmax(0,1.2fr) minmax(120px,auto);gap:16px;align-items:center;min-height:0!important;padding:14px 16px!important;margin:0!important;background:transparent!important;border:0!important;border-bottom:1px solid var(--gcc-line)!important;border-radius:0!important;box-shadow:none!important}
+#g8app#g8app#g8app .gcc-award:last-child{border-bottom:0!important}
+#g8app#g8app#g8app .gcc-award>.g8eyebrow{display:flex;align-items:center;gap:8px;margin:0!important;font-size:12px;line-height:1.4;letter-spacing:.08em}
+#g8app#g8app#g8app .gcc-award h2{margin:0!important;font-family:var(--vx-display)!important;font-size:22px!important;line-height:1.2;font-weight:700;text-transform:uppercase}
+#g8app#g8app#g8app .gcc-award strong{font-family:var(--vx-display);font-size:22px;color:#f6d98a;text-align:right;white-space:normal}
+@media(max-width:600px){#g8app#g8app#g8app .gcc-award{grid-template-columns:minmax(0,1fr) auto;gap:6px 12px;padding:12px!important}#g8app#g8app#g8app .gcc-award>.g8eyebrow{grid-column:1/-1}#g8app#g8app#g8app .gcc-award h2{font-size:20px!important}}
 #g8app#g8app#g8app .gcc-worm{background:rgba(7,19,30,.75)!important;border:1px solid var(--gcc-line)!important;border-radius:12px!important}
 #g8app#g8app#g8app .gccuiResultTop .g8button{white-space:nowrap}
 

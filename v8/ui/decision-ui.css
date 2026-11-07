@@ -606,7 +606,7 @@
 #g8app .gccuiCommandCentre .gccuiMatchDecisions .g8dressingroom>.g8disclosure>div{padding:0 12px 12px!important}
 @media(max-width:600px){#g8app .gccuiCommandCentre .gccuiVenuePhoto{height:auto!important}#g8app .gccuiCommandCentre .gccuiVenuePhoto .g8stadium{height:80px!important}#g8app .gccuiCommandCentre .gccuiVenue h1{font-size:20px!important;line-height:1.25!important}#g8app .gccuiCommandCentre .gccuiVenue .gccuiKicker{font-size:12px!important}#g8app .gccuiNextOpponent{font-size:14px}}
 /* Focused player reports retain the existing dialog and action handlers. */
-#g8dialog[data-prompt=player]{width:min(1080px,96vw)!important;max-width:1080px!important}
+#g8dialog[data-prompt=player]{position:fixed!important;inset:12px 0 auto 0!important;margin:0 auto!important;width:min(1080px,96vw)!important;max-width:1080px!important;max-height:calc(100dvh - 24px)!important;scrollbar-gutter:stable}
 #g8dialog[data-prompt=player] .g8modalbody{padding:16px!important}
 #g8dialog[data-prompt=player] .g8scoutsummary{margin:0!important;padding:14px 16px!important}
 #g8dialog[data-prompt=player] .g8scoutsummary h3{font-size:18px!important;line-height:1.3!important}
@@ -1116,8 +1116,6 @@ html:has(#g8dialog[open]){overflow:hidden}
 
 .gccuiConsequences{margin-block:12px;min-width:0}.gccuiConsequences.has-urgent{border-inline-start:4px solid #a83b2f}.gccuiConsequenceCount{line-height:1.5}.gccuiConsequenceAlert{font-weight:600}.gccuiConsequenceList summary{cursor:pointer;font-weight:700;padding:12px 0;min-height:44px}.gccuiConsequenceList summary:focus-visible{outline:3px solid currentColor;outline-offset:3px}.gccuiConsequenceList ol{padding:0;list-style:none;margin:0}.gccuiConsequenceList li{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-top:1px solid #b8b2a666}.gccuiConsequenceList li>div{min-width:0}.gccuiConsequenceList p{margin:4px 0;overflow-wrap:anywhere}.gccuiConsequenceList button{flex-shrink:0}.gccuiConsequenceQuiet{margin-bottom:0}@media(max-width:600px){.gccuiConsequenceList li{align-items:flex-start;flex-direction:column}.gccuiConsequenceList button{max-width:100%;white-space:normal;text-align:left}}
 
-#g8app .gccuiResultDecision{display:flex;justify-content:flex-end;padding:0 0 16px;margin-bottom:16px;border-bottom:1px solid var(--gcc-line)}
-@media(max-width:760px){#g8app .gccuiResultDecision>.g8button{width:100%}}
 
 #g8app .gccuiSelection.gccuiSwapping .gccuiOrderRow{grid-template-columns:18px minmax(0,1fr) 34px!important}
 #g8app .gccuiSelection.gccuiSwapping .gccuiRosterActions:empty{display:none}
