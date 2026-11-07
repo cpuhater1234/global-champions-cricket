@@ -1,3 +1,22 @@
+# Current candidate: v100 removes completed-match replay, 7 November 2026
+
+Maintained branch: `work/v8-integrity-charcoal-candidate`.
+Download: `GCC_v100.html`; Library `libfile_2eabedc74ec88191b30c2f2088b03e3e`, version 0.
+Expected SHA-256: `bab2533de6a744695b76b6430a776cbc4c09e0ab34831fdbce9f29f8ba30f0c3`; 6,584,458 bytes.
+Source build command: `python v8/build.py --output GCC_v100.html`.
+
+Latest user direction: remove the replay function for completed games; the scorecard is sufficient. The candidate deletes exactly the Replay match button in screens.js and the result-only watchMatch binding in controller.js. Total change is a 106-byte deletion from exact v99. Normal first viewing of a match and scorebook access are retained. All 20 scripts pass syntax checking; styles and embedded assets are byte-identical. No fresh full-project build ran in this partial checkout. See `qa/remove-replay-20261107/verification.json` and README.
+
+NATIVE V100 CHECK IS PENDING: after download, open the fresh local v100 URL and confirm completed results offer Scorebook and normal next-step navigation, with no Replay match entry. This v100 is a new sequential release from v99, not the earlier external v93_polish proposal that used v100 style IDs.
+
+Native v99 verification completed before the new user direction: player dialog remains at y=12 across Overview/Management on desktop and phone; tab-strip y remains stable (125.4 desktop, 114.8 phone). Result header controls are grouped and 44px high on phone. Awards form an aligned list without phone overflow. All four phone scorebook table wrappers measured 319px client and scroll width, with no scroll hint. Toss buttons share 16px type, no clip and 48px height; live controls share 16px type, no clip and 44px height. Viewport override reset. The saved 2010 Lucknow career remains intact; only its existing Round 2 was replayed before replay removal was requested.
+
+Broader visual audit remains ongoing. Began a fresh career on a separate `http://localhost:8000/GCC_v99.html` test origin because starting over on the main `127.0.0.1` origin would replace Tom's save. The isolated test reached the eight-club reveal. Do not replace the main save. Continue into club selection, signing and draft when appropriate. Do not assume every game screen is already accepted.
+
+Large remote canonical HTML remains historical build input, not the download. Use the maintained source build and named Library artifact.
+
+---
+
 # Current candidate: v99 reports and results, 7 November 2026
 
 Maintained branch: `work/v8-integrity-charcoal-candidate`.

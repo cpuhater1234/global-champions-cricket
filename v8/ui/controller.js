@@ -98,7 +98,6 @@
  bind('matchRun',['matchReveal'],()=>{assert(ui.match,'The match playback has ended.');ui.match.running=!ui.match.running;scheduleMatch();});
  bind('matchSpeed',['matchReveal'],()=>{assert(ui.match,'The match playback has ended.');ui.match.speedIndex=(ui.match.speedIndex+1)%(ui.match.presentationVersion===3?4:3);scheduleMatch();});
  bind('matchSkip',['matchReveal'],finishMatch);
- bind('watchMatch',['result'],()=>beginMatch(ui.result));
  function resetFilters(){ui.offseasonPane='overview';ui.teamPane=null;ui.squadFilter='ALL';ui.search='';ui.filter='ALL';ui.draftShown=X.draftPageSize();}
  function draftable(id){return (annual()?read.freeAgents():s.pool.filter(p=>p.available===true&&!p.draftedBy&&!p.dynastyRetired).map(p=>p.id)).includes(Number(id));}
  function inspect(id,tab=null){const same=ui.modal==='player'&&ui.selectedPlayer===Number(id);ui.playerTab=tab||(same?ui.playerTab:'overview')||'overview';
