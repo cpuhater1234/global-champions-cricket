@@ -1,3 +1,19 @@
+# Current candidate: v104 later-season consistency, 7 November 2026
+
+Maintained branch: `work/v8-integrity-charcoal-candidate`.
+Download: `GCC_v104.html`; Library `libfile_0d8b306899a881919ed330cb6c97205b`, version0.
+SHA-256: `198e6c3d1f1acc77fbe56776314e564f23518c8da4a7b90d25c320d6c20a17f0`; 6,589,438 bytes.
+
+Continued native v103 playtesting through a full test season, semi-final exit, CPU Grand Final, review, archive and 2009 Manage squad. See qa/postseason-polish-20261107/native-v103.md for measurements and findings. User's main save remains intact.
+
+Candidate changes: league wrap uses the shared season ribbon and a compact left-title/right-action panel, removing the old fixture-hero green overlay. Review shows ordinal league finish and a single W-L record. Archive rows and expanded summaries use the same notation; semi-finalists and runners-up are distinguished. Archive action sits beside row content on desktop and below on phone. Knockout headline duplication and empty management notices are removed while real consequences remain. Ordinal formatter is shared and handles teen suffixes.
+
+All twenty scripts pass syntax; only17/18 change. Game-rule scripts, embedded assets, all non-style/script markup and fourteen stylesheet identities remain unchanged. Existing600-case race suite still passes. New renderer checks verify wrap-up ribbon and finals action, review4th/8-6 and next-season action, correct archive outcome, ordinal suffixes, no duplicated knockout headline and preservation of genuine management consequences. No full source rebuild ran in the partial checkout; candidate is exact substitutions into hash-verified v103.
+
+NATIVE V104 ACCEPTANCE PENDING DOWNLOAD. Current localhost test save is at2009 Manage squad; use archive to inspect the saved2008 season summary. The old live2008 wrap and semi-final result require a test-season replay in a disposable origin if not reachable through ordinary UI. Do not mutate hidden state to make them reachable. Do not claim whole-game visual acceptance.
+
+---
+
 # Native v103 visual verification, 7 November 2026
 
 Current downloadable artifact remains GCC_v103.html, SHA-256 89fe0404d094ecfd996bf35c496c3c0afa63a61e1530c4f3da6d12d6db6b7fc9. This checkpoint records browser testing only; no new product build.

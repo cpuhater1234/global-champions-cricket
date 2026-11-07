@@ -1136,7 +1136,7 @@ html:has(#g8dialog[open]){overflow:hidden}
 #g8app .gccuiFinals .gccuiFinalDecision>h2{font-size:21px!important;line-height:1.3!important;margin:0 0 10px!important;text-transform:none!important}
 #g8app .gccuiFinals .g8matcharena>div{order:0}
 #g8app .gccuiFinals .g8matcharena>.g8stadium{order:1}
-#g8app .gccuiReview .g8reviewsummary .g8metrics{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important;width:100%;margin:12px 0 0!important}
+#g8app .gccuiReview .g8reviewsummary .g8metrics{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;width:100%;margin:12px 0 0!important}
 #g8app .gccuiReview .g8reviewsummary .g8metrics>div{min-width:0;padding:8px 4px!important;text-align:center}
 #g8app .gccuiReview .g8reviewsummary .g8metrics strong{font-size:26px!important;line-height:1.2!important}
 #g8app .gccuiReview .g8reviewsummary .g8metrics span{font-size:12px!important;line-height:1.4!important;display:block;min-height:2.8em}

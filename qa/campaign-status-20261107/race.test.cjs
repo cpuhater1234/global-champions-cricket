@@ -1,5 +1,5 @@
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
-const source=fs.readFileSync(process.argv[2],'utf8'),start=source.indexOf(' X.finalsRace='),end=source.indexOf(' X.campaignOverview=',start);assert.ok(start>=0&&end>start);
+const source=fs.readFileSync(process.argv[2],'utf8'),start=source.indexOf(' X.ordinal='),end=source.indexOf(' X.campaignOverview=',start);assert.ok(start>=0&&end>start);
 const X={};vm.runInNewContext(source.slice(start,end),{X});
 const clubs=Array.from({length:8},(_,i)=>({abbr:String(i)}));let seed=103;
 const rand=n=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed%n};

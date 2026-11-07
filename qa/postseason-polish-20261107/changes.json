@@ -1,0 +1,77 @@
+[
+  {
+    "path": "v8/ui/decision-ui.js",
+    "old": " // Qualification uses possible points; unresolved NRR ties remain live.",
+    "new": " X.ordinal=n=>{n=Number(n);if(!Number.isInteger(n)||n<1)return '\u2013';const last=n%100;return n+(last>=11&&last<=13?'th':({1:'st',2:'nd',3:'rd'}[n%10]||'th'));};\n // Qualification uses possible points; unresolved NRR ties remain live."
+  },
+  {
+    "path": "v8/ui/decision-ui.js",
+    "old": "ordinal=rank+(rank===1?'st':rank===2?'nd':rank===3?'rd':'th')",
+    "new": "ordinal=X.ordinal(rank)"
+  },
+  {
+    "path": "v8/ui/screens.js",
+    "old": "<section class=\"g8fixturehero g8seasoncomplete\"><span class=\"g8eyebrow\">FOURTEEN MATCHES PLAYED</span><h2>${s.regularSeasonPosition<=4?'Finals await.':'Your season is complete.'}</h2>",
+    "new": "<section class=\"g8sheet g8seasoncomplete\"><div><span class=\"g8eyebrow\">FOURTEEN MATCHES PLAYED</span><h2>${s.regularSeasonPosition<=4?'Finals await.':'Your season is complete.'}</h2></div>"
+  },
+  {
+    "path": "v8/ui/screens.js",
+    "old": "const after=`<div class=\"g8matchbelow\">${t.p?",
+    "new": "const after=(fx?'':X.campaignOverview())+`<div class=\"g8matchbelow\">${fx&&t.p?"
+  },
+  {
+    "path": "v8/ui/screens.js",
+    "old": "[['League position',`${s.regularSeasonPosition} of 8`],['League wins',t.w||0],['League losses',t.l||0]]",
+    "new": "[['League finish',X.ordinal(s.regularSeasonPosition)],['Season record',`${t.w||0}-${t.l||0}`]]"
+  },
+  {
+    "path": "v8/ui/screens.js",
+    "old": "h.grandFinal?'Grand Finalists':h.finals?'Finalists':`League position ${h.userPosition}`",
+    "new": "h.grandFinal?'Runners-up':h.finals?'Semi-finalists':`${X.ordinal(h.userPosition)} in the league`"
+  },
+  {
+    "path": "v8/ui/screens.js",
+    "old": "${h.wins} wins \u00b7 ${h.losses} losses \u00b7 ${esc(club(h.champion)?.name||h.champion)} champions",
+    "new": "${h.wins}-${h.losses} \u00b7 ${X.ordinal(h.userPosition)} \u00b7 ${esc(club(h.champion)?.name||h.champion)} champions"
+  },
+  {
+    "path": "v8/ui/decision-ui.js",
+    "old": "?f.gf:null,name=f.stage===",
+    "new": "?f.gf:null,ownConsequences=ownResult?X.storyResult(ownResult):'',name=f.stage==="
+  },
+  {
+    "path": "v8/ui/decision-ui.js",
+    "old": "${ownResult?`<section class=\"gccuiFinalDecision\" aria-label=\"Your knockout result and consequences\"><h2>${esc(ownResult.winner.name)} won ${esc(ownResult.marginText)}</h2>${X.storyResult(ownResult)}</section>`:''}",
+    "new": "${ownConsequences&&!ownConsequences.includes('gccuiConsequenceQuiet')?`<section class=\"gccuiFinalDecision\" aria-label=\"Knockout management consequences\">${ownConsequences}</section>`:''}"
+  },
+  {
+    "path": "v8/ui/workspace.css",
+    "old": ".g8seasoncomplete{padding:2rem}.g8seasoncomplete h2{font-size:2.4rem;font-style:italic;margin:1rem 0 2rem}",
+    "new": ".g8seasoncomplete{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px}.g8seasoncomplete>div{min-width:0}.g8seasoncomplete .g8eyebrow{margin:0 0 6px}.g8seasoncomplete h2{font-size:26px;font-style:normal;margin:0}\n@media(max-width:760px){.g8seasoncomplete{flex-direction:column;align-items:stretch;gap:16px}.g8seasoncomplete>.g8button{width:100%!important}}"
+  },
+  {
+    "path": "v8/ui/workspace.css",
+    "old": ".g8seasoncomplete{text-align:center}.g8seasoncomplete>.g8button{margin-inline:auto;display:flex;width:max-content}",
+    "new": ".g8seasoncomplete{text-align:left}.g8seasoncomplete>.g8button{margin:0;display:inline-flex;width:auto;flex:0 0 auto}"
+  },
+  {
+    "path": "v8/ui/workspace.css",
+    "old": "grid-template-columns:4rem minmax(0,1fr)}.g8archiveyears .g8seasonbook>.g8button{grid-column:2;justify-self:start}",
+    "new": "grid-template-columns:4rem minmax(0,1fr) auto}.g8archiveyears .g8seasonbook>.g8button{grid-column:3;justify-self:end;align-self:center}"
+  },
+  {
+    "path": "v8/ui/workspace.css",
+    "old": "@media(max-width:760px){.g8archiveyears .g8seasonbook{grid-template-columns:minmax(0,1fr);gap:.7rem}.g8archiveyears .g8seasonbook>.g8button{grid-column:1}}",
+    "new": "@media(max-width:760px){.g8archiveyears .g8seasonbook{grid-template-columns:minmax(0,1fr);gap:.7rem}.g8archiveyears .g8seasonbook>.g8button{grid-column:1;justify-self:start}}"
+  },
+  {
+    "path": "v8/ui/decision-ui.css",
+    "old": "#g8app .gccuiReview .g8reviewsummary .g8metrics{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;",
+    "new": "#g8app .gccuiReview .g8reviewsummary .g8metrics{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;"
+  },
+  {
+    "path": "v8/ui/decision-ui.js",
+    "old": "${X.esc(h.wins)} wins \u00b7 ${X.esc(h.losses)} losses \u00b7 League position ${X.esc(h.userPosition)}",
+    "new": "${X.esc(h.wins)}-${X.esc(h.losses)} \u00b7 ${X.ordinal(h.userPosition)} in the league"
+  }
+]
