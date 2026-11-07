@@ -1,0 +1,12 @@
+[
+  {
+    "path": "v8/ui/workspace.css",
+    "old": ".g8careerrecord .g8metrics{grid-template-columns:repeat(auto-fit,minmax(min(100%,7rem),1fr));gap:1rem;margin:1rem 0}",
+    "new": ".g8careerrecord .g8metrics{grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1rem 0}"
+  },
+  {
+    "path": "v8/ui/decision-ui.js",
+    "old": "${['Player','Matches','Runs','Wickets'].map(label=>`<th scope=\"col\">${label}</th>`).join('')}",
+    "new": "${[['Player','Player'],['M','Matches'],['Runs','Runs'],['Wkts','Wickets']].map(([label,name])=>`<th scope=\"col\" aria-label=\"${name}\">${label}</th>`).join('')}"
+  }
+]

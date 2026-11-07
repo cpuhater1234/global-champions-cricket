@@ -1,3 +1,19 @@
+# Current candidate: v105 phone archive cleanup, 7 November 2026
+
+Maintained branch: `work/v8-integrity-charcoal-candidate`.
+Download GCC_v105.html; Library `libfile_0007ed5d0c788191984830b6dcb6297a`, version0.
+SHA-256 `0f20a891e0803fb6faaf12aa965c07bffd21fae780d4de570328e38d43adfb5b`;6,589,483 bytes.
+
+Native v104 archive review: desktop row now correctly shows Semi-finalists,8-6,4th with action beside content. Expanded club scorebook correctly shows8-6 /4th. Phone archive row stacks and has no page overflow (scroll380 vs viewport390).
+Remaining observed phone defects: scorebook wrapper client329/scroll335 triggers unnecessary horizontal-scroll hint and clips the Wickets header; career totals auto-fit into an uneven2+1 arrangement.
+
+Candidate v105 fixes only those owners: archive scorebook columns display Player/M/Runs/Wkts with full accessible names Player/Matches/Runs/Wickets; career-record metrics use three equal columns instead of auto-fit. No record data changed. All20 scripts pass syntax; only script18's header markup changes. Assets, non-style/script markup and fourteen style identities unchanged. Exact substitutions from hash-verified v104; full-source rebuild unavailable in partial checkout.
+
+NATIVE V105 PHONE CHECK PENDING DOWNLOAD: verify the archive totals form one row; open2008 season in separate localhost test save and measure table scroll/client widths and scroll hint. Main127.0.0.1 career is still Lucknow2010, unchanged. Localhost test save is Lucknow2009 offseason;2008 archive available. Retained QA tab currently on v104 archive. Viewport reset.
+Other v104 changed screens (live league wrap, review summary, knockout-result transition) still require native verification when reachable through normal play. Renderer fixture checks passed; do not treat that as screenshot acceptance.
+
+---
+
 # Current candidate: v104 later-season consistency, 7 November 2026
 
 Maintained branch: `work/v8-integrity-charcoal-candidate`.
