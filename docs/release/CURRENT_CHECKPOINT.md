@@ -1,3 +1,15 @@
+# Current candidate: v111 closes intro-back save boundary, 8 November 2026
+
+Maintained branch: work/v8-integrity-charcoal-candidate. Download GCC_v111.html; Library libfile_21f7ef48dfa081919a2ed8561e1f35c2, version0. SHA-256 e81d5e081bc4b7e8a60b5472e34e10e43b22af56dc28c42a528961c5987c5703; 6,589,177 bytes.
+
+Native v110 verification: Home MENU opens. Main Lucknow2010 career continued at Round3,1-1,4th,NRR0.53; in-season MENU opens with Club archive and all guides. No match advanced. Separate localhost Sydney Thunder2008 draft resumed Round2Pick16. Picked Adam Gilchrist -> Round3Pick17, Mike Hussey -> CPU turns -> Round4Pick32, Jacques Kallis -> Round5Pick33. Scout/Pick desktop16px/44px. No captured console errors. Start again prompt -> story -> Back -> Continue resumes Round5Pick33 with142 available/four selected.
+
+Follow-up source tracing during native Back check found Home dispatch could still save the old career presentation as story after a tentative restart. Added failing Home-save/Continue-intent regressions. Candidate111 suppresses controller saves while ui.newCareer is pending as well as on story; Continue clears pending new-career intent. Existing world clears intent only when fresh world is actually created. All16 targeted controller tests pass (ten handler clean iterations plus six recovery/save-boundary cases). All20 scripts syntax checked; onlyscript19 changes. Styles, markup, assets unchanged. Exact substitution from hash-verified110; full project rebuild not run in partial checkout.
+
+NATIVE111 ACCEPTANCE PENDING DOWNLOAD. Repeat intro -> Back -> Continue, confirmed reveal, race recovery in actual two-tab play. Full clean-storage x10/two-tab stress remain unverified. The viewport override did not apply to the inspected QA tab (measured1536, not390), so no phone acceptance claimed; override reset. Extra127.0.0.2 test origin refused connection; no storage was cleared. Earlier live reveal baseline is v109, not candidate111. v109 squad-altitude visual acceptance, v108 trade rows/footer phone check and own-knockout transition remain open. No claim of game-wide perfection.
+
+---
+
 # Current candidate: v110 recoverable intro save conflict, 8 November 2026
 
 Maintained branch: work/v8-integrity-charcoal-candidate.
