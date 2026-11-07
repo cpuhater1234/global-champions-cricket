@@ -1,3 +1,13 @@
+# Native v111 intro-back and confirmed-reveal verification, 8 November 2026
+
+Current downloadable remains GCC_v111.html, SHA-256 e81d5e081bc4b7e8a60b5472e34e10e43b22af56dc28c42a528961c5987c5703. No new product code.
+
+Native localhost QA: Continue returned Sydney Thunder2008 Round5Pick33,142 available. Home -> Start again -> story -> Back -> reload -> Continue retained exactly that draft position and roster count. Second confirmed restart -> Reveal opened eight sealed invitation slots and live controls; automatic reveal finished8/8 with Choose your club visible, empty feedback and no captured console errors. Main user127.0.0.1 career not advanced/reset. See qa/intro-save-boundary-20261108/native-v111.md.
+
+Those two paths are accepted. Ten cleared-storage launches, true two-tab save-arrival recovery and phone acceptance remain open; do not mark whole cold-start matrix or whole-game visuals complete.
+
+---
+
 # Current candidate: v111 closes intro-back save boundary, 8 November 2026
 
 Maintained branch: work/v8-integrity-charcoal-candidate. Download GCC_v111.html; Library libfile_21f7ef48dfa081919a2ed8561e1f35c2, version0. SHA-256 e81d5e081bc4b7e8a60b5472e34e10e43b22af56dc28c42a528961c5987c5703; 6,589,177 bytes.
