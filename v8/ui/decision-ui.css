@@ -457,8 +457,8 @@
 #g8dialog[data-prompt=trade] .g8dialogcontext{font-size:13px!important;line-height:1.5!important}
 @media(max-width:600px){#g8dialog[data-prompt=trade] .gccTradePartner>label{grid-template-columns:1fr;gap:6px}}
 /* Keep the trade decision available while reviewing a long package. */
-#g8dialog:is([data-prompt=trade],[data-prompt=tradeReview]) .g8modalbody>.g8actions:last-child{position:sticky!important;bottom:0!important;z-index:3!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;padding:12px 0!important;margin:14px 0 0!important;background:#202020!important;border-top:1px solid var(--gcc-line)!important;box-shadow:0 -10px 16px #202020}
-#g8dialog:is([data-prompt=trade],[data-prompt=tradeReview]) .g8modalbody>.g8actions:last-child>.g8button{width:100%!important;min-height:46px!important;font-size:14px!important}
+#g8dialog:is([data-prompt=trade],[data-prompt=tradeReview]) .g8modalbody>.g8actions:last-child{position:sticky!important;bottom:0!important;z-index:3!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;align-items:stretch!important;padding:12px 0!important;margin:14px 0 0!important;background:#202020!important;border-top:1px solid var(--gcc-line)!important;box-shadow:0 -10px 16px #202020}
+#g8dialog:is([data-prompt=trade],[data-prompt=tradeReview]) .g8modalbody>.g8actions:last-child>.g8button{width:100%!important;min-height:46px!important;align-self:stretch!important;font-size:14px!important}
 /* Restore the agreed card detail and grouped draft companion. */
 #g8app .gccui .gccuiPlayerSkills{grid-template-columns:repeat(var(--skill-count,2),minmax(0,1fr))}
 #g8app .gccui .gccuiRoleCoverage>header,#g8app .gccui .gccuiDraftSelected>header{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-bottom:10px;border-bottom:1px solid var(--ui-rule);margin-bottom:12px}
@@ -922,10 +922,11 @@ html:has(#g8dialog[open]){overflow:hidden}
 #g8dialog[data-prompt=tradeReview] .g8exchangereview>span{display:grid;place-items:center;min-width:32px;color:var(--gcc-muted)}
 #g8dialog[data-prompt=tradeReview] .g8tradeimpact{padding:0!important;margin:16px 0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important}
 #g8dialog[data-prompt=tradeReview] .g8tradeimpact>.g8fine{font-size:14px!important;line-height:1.5!important}
-#g8dialog[data-prompt=tradeReview] .g8tradeeffects h3{font-size:16px!important;line-height:1.4!important;text-align:left!important}
-#g8dialog[data-prompt=tradeReview] .g8tradeeffects>div>div{display:grid;grid-template-columns:minmax(0,1fr) 40px auto;align-items:baseline;gap:8px;padding:10px 0!important;border:0!important;border-bottom:1px solid var(--gcc-line)!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;font-variant-numeric:tabular-nums}
-#g8dialog[data-prompt=tradeReview] .g8tradeeffects strong{text-align:center}
-#g8dialog[data-prompt=tradeReview] .g8tradeeffects small{font-size:13px!important;line-height:1.4!important;text-align:right;white-space:nowrap}
+#g8dialog:is([data-prompt=trade],[data-prompt=tradeReview]) .g8tradeeffects h3{font-size:16px!important;line-height:1.4!important;text-align:left!important}
+#g8dialog:is([data-prompt=trade],[data-prompt=tradeReview]) .g8tradeeffects>div{display:grid;grid-template-columns:minmax(0,1fr);gap:0}
+#g8dialog:is([data-prompt=trade],[data-prompt=tradeReview]) .g8tradeeffects>div>div{display:grid;grid-template-columns:minmax(0,1fr) 40px auto;align-items:baseline;gap:8px;padding:10px 0!important;border:0!important;border-bottom:1px solid var(--gcc-line)!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;font-variant-numeric:tabular-nums}
+#g8dialog:is([data-prompt=trade],[data-prompt=tradeReview]) .g8tradeeffects strong{text-align:center}
+#g8dialog:is([data-prompt=trade],[data-prompt=tradeReview]) .g8tradeeffects small{font-size:13px!important;line-height:1.4!important;text-align:right;white-space:nowrap}
 @media(max-width:760px){#g8dialog[data-prompt=tradeReview] .g8exchangereview>span{min-height:28px;border-block:1px solid var(--gcc-line)}}
 /* Report-view names stay atomic; narrow phones get an intentional second row. */
 #g8dialog[data-prompt=player] .gccuiProfileViews .g8button>span{white-space:nowrap!important;overflow-wrap:normal!important;word-break:normal!important}

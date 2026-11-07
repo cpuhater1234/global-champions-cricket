@@ -1,3 +1,18 @@
+# Current candidate: v107 trade alignment, 7 November 2026
+
+Maintained branch: `work/v8-integrity-charcoal-candidate`.
+Download GCC_v107.html; Library `libfile_43dba0c1be28819196fdb23e47b32795`,version0.
+SHA-256 `4a68be8610c6307c1e7d0041ab2e2ce43757e3bc2c85174042543c9d18f86e59`;6,590,059bytes.
+
+v106 review footer is natively accepted at desktop/phone. Release dialog is readable and consistent. Trade review exposed cramped desktop impact columns and unequal phone footer-button heights. See native-v106.md.
+
+Candidate changes only existing CSS owners: trade impact figures use one aligned list for builder and review; generic panel fill no longer overrides transparent list rows; dialog action groups stretch adjacent controls, including sticky trade footers. No new style block. All20 scripts byte-identical and syntax checked, all embedded assets and markup unchanged. Candidate exact substitutions into hash-verified v106. Full source rebuild not run in partial checkout.
+
+NATIVE V107 TRADE ACCEPTANCE PENDING DOWNLOAD. Localhost test save is Lucknow2010 Manage squad. Reopen Trade Adam Gilchrist, choose Sydney Thunder's Wriddhiman Saha77, Review trade. Check three aligned rows and phone footer buttons at equal heights; cancel using Edit trade /Keep my squad. No need to replay a season. Main127.0.0.1 Lucknow2010 save remains intact.
+Outstanding broader exact case: own-knockout result transition after v104 duplicate-headline change remains renderer-tested, not yet natively repeated. Do not claim full19-season or every-screen certification.
+
+---
+
 # Current candidate: v106 anchors the review comparison, 7 November 2026
 
 Maintained branch: `work/v8-integrity-charcoal-candidate`.

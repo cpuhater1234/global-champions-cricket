@@ -28,7 +28,7 @@
 }
 #g8dialog#g8dialog#g8dialog .g8button{font-family:var(--vx-display)!important;font-size:1rem!important;font-weight:700!important;line-height:1.25!important;letter-spacing:.02em!important;text-transform:none!important;min-height:44px;padding:10px 14px!important;border:1px solid var(--gcc-line)!important;border-radius:8px!important;clip-path:none!important;box-shadow:none!important}
 #g8dialog#g8dialog#g8dialog .g8button:not(.g8primary){background:var(--gcc-raised)!important;border-color:var(--gcc-line)!important;color:var(--gcc-text)!important}
-#g8dialog#g8dialog#g8dialog :is(.g8tradeplayer,.g8tradeimpact,.g8recordstats>div,.g8tradeeffects>div>div,.gccuiProfilePanel,.g8give,.g8receive,.g8teamread,.g8development,.g8developmentrow,.g8skillchanges>li){background:var(--gcc-panel)!important;border-color:var(--gcc-line)!important}
+#g8dialog#g8dialog#g8dialog :is(.g8tradeplayer,.g8tradeimpact,.g8recordstats>div,.gccuiProfilePanel,.g8give,.g8receive,.g8teamread,.g8development,.g8developmentrow,.g8skillchanges>li){background:var(--gcc-panel)!important;border-color:var(--gcc-line)!important}
 #g8dialog#g8dialog#g8dialog .g8modalbody>.g8actions:last-child{background:var(--gcc-inset)!important;border-color:var(--gcc-line)!important}
 #g8dialog#g8dialog#g8dialog :is(input,select){background:var(--gcc-inset)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
 @media(max-width:760px){

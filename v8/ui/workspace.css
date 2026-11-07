@@ -335,7 +335,7 @@ p,small,.g8fine{font-weight:400;line-height:1.5}small,.g8fine{font-size:1rem;col
 #g8dialog[data-layout="prompt"] .g8modalhead .g8eyebrow{display:block}
 #g8dialog[data-layout="prompt"] .g8dialogclose{position:absolute;right:1rem;top:1rem}
 #g8dialog[data-layout="prompt"] .g8modalbody>p{text-align:center;max-width:58ch;margin-inline:auto}
-#g8dialog .g8modalbody>.g8actions{justify-content:center;flex-wrap:wrap}
+#g8dialog .g8modalbody>.g8actions{justify-content:center;flex-wrap:wrap;align-items:stretch}
 #g8dialog[data-layout="prompt"] .g8consequences{text-align:center}
 @media(max-width:760px){#g8dialog[data-layout="prompt"] .g8modalhead{padding:1.25rem 3.5rem}#g8dialog[data-layout="prompt"] .g8dialogclose{right:.5rem;top:.75rem}}
 #g8hud>nav[aria-label="Game menu"] .g8utilitymenu .g8button:not(:disabled){cursor:pointer;transition:background-color .15s,color .15s,border-color .15s}
