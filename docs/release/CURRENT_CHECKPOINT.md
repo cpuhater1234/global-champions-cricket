@@ -1,3 +1,19 @@
+# Current candidate: v110 recoverable intro save conflict, 8 November 2026
+
+Maintained branch: work/v8-integrity-charcoal-candidate.
+Download GCC_v110.html; Library libfile_3d078061c7288191af16aed88d0d170f, version0.
+SHA-256 6cdff850bfeb0809cf8e74353b11db822765b12b12962e3b4563907186f5bfb2; 6,589,144 bytes.
+
+Structured v109 external review reports blocked cold start when a save appears during intro. Actual world guard throws on stored save without explicit restart consent. Clean handler path passes already; do not label every clean launch broken. Added regression harness against actual controller command bodies: four recovery/intro-save cases failed before, all14 now pass including10 clean handler iterations. Recovery modal offers Open saved career and Start again, retains story behind it and does not reset until confirmed. Existing fresh command accepts the story modal; saved-career recovery closes modal, returns Home and resumes. Controller save returns during story so old career presentation is not overwritten by intro commands. Engine save conflict protection remains intact.
+
+Only controller.js changes, exact remote parent baseline verified. All20 scripts syntax checked, onlyscript19 changes. Every CSS block, artwork and non-script markup remains byte-identical. Existing600-case qualification, postseason renderer and header-clearance suites pass. Full build not run in partial checkout.
+
+Native v109 baseline, separate localhost QA: confirmed restart -> intro -> live eight-club reveal -> chooser -> Sydney Thunder guide/select -> signing Skip to end (174 committed/96 declined) -> draft-order draw. Live reveal completed8/8 and Choose your club action centred at x426,width288,height44 in1140viewport. Hidden reserve controls intentionally overlap the action grid and are visibility-hidden. No career nav in intro/reveal. Legacy engineHost is hidden=true, aria-hidden=true, computed display:none; raw hidden legacy button/nav counts are not focusability evidence. Main127.0.0.1 career untouched. These observations are not v110 acceptance.
+
+NATIVE V110 ACCEPTANCE PENDING DOWNLOAD: repeat clean-storage UI x10, two-tab save arrival during intro then open/confirm/cancel recovery, MENU Home/in-season, full first-draft-pick path. Do not certify those by isolated handler iterations. v109 scoped squad-altitude visual acceptance, v108 trade rows/footer phone check and own-knockout transition still outstanding. No visual patch bundled into110.
+
+---
+
 # Current candidate: v109 squad-update altitude, 7 November 2026
 
 Maintained branch: work/v8-integrity-charcoal-candidate.

@@ -83,7 +83,7 @@
    if(action)el.querySelector(`[data-action="${action}"]`)?.focus({preventScroll:true});lastSignature=key;
   }else render(false);
  };
- function save(){if(s.dynasty){s.dynasty.v8UI={view:ui.view==='home'?ui.resumeView:ui.view,teamReturn:ui.teamReturn,seasonTab:ui.seasonTab,archiveReturn,resultRound:ui.result?.round,resultFinal:ui.result?.final,seasonBrief:X.cleanSeasonBrief(ui.seasonBrief)};s.dynasty.v8Match=ui.match?{...ui.match}:null;s.dynasty.v8Reveal=ui.reveal?{...ui.reveal,timer:undefined,year:s.year}:null;}if(s.dynasty)refreshSaveStatus(read.save());}
+ function save(){if(ui.view==='story')return;if(s.dynasty){s.dynasty.v8UI={view:ui.view==='home'?ui.resumeView:ui.view,teamReturn:ui.teamReturn,seasonTab:ui.seasonTab,archiveReturn,resultRound:ui.result?.round,resultFinal:ui.result?.final,seasonBrief:X.cleanSeasonBrief(ui.seasonBrief)};s.dynasty.v8Match=ui.match?{...ui.match}:null;s.dynasty.v8Reveal=ui.reveal?{...ui.reveal,timer:undefined,year:s.year}:null;}if(s.dynasty)refreshSaveStatus(read.save());}
  let matchTimer=null;
  const matchReference=r=>s.results.includes(r)?{type:'regular',round:r.round}:s.finals?.gf===r?{type:'gf'}:{type:'semis',index:s.finals?.semis?.indexOf(r)};
  const matchFromReference=ref=>ref?.type==='regular'?s.results.find(r=>r.round===ref.round):ref?.type==='gf'?s.finals?.gf:ref?.type==='semis'?s.finals?.semis?.[ref.index]:null;
@@ -135,7 +135,8 @@
  read.checkpointReady?.().then(()=>{if(ui.view==='home')render(false);});
  bind('home','*',()=>{if(ui.view==='home')return;X.rollHomeVenue();G.pauseSeason();ui.resumeView=ui.view;save();setView('home');});
  bind('play',['home'],()=>{if(X.hasSave())modal('Start again?','<p>Starting again replaces your saved dynasty.</p><div class="g8actions">'+btn('Keep career','close',[],'g8ghost')+btn('Start again','fresh',[],'g8primary')+'</div>','fresh');else setView('story');});
- bind('fresh',['home'],()=>{assert(ui.modal==='fresh','Open the new dynasty prompt first.');closeDialog();ui.newCareer=true;setView('story');});
+ bind('fresh',['home','story'],()=>{assert(ui.modal==='fresh','Open the new dynasty prompt first.');const fromIntro=ui.view==='story';closeDialog();ui.newCareer=true;if(fromIntro)commands.world();else setView('story');});
+ bind('continueSaved',['story'],()=>{assert(ui.modal==='fresh','Open the career choice first.');closeDialog();ui.newCareer=false;setView('home');commands.continue();});
  let revealTimer=null;
  const revealDelays=[1500,750,375];
  function cancelReveal(){if(revealTimer!==null)clock.clearTimeout(revealTimer);revealTimer=null;}
@@ -146,7 +147,7 @@
  }
  function startReveal(kind,snapshot=null){cancelReveal();ui.reveal={kind,count:snapshot?.count||0,speedIndex:snapshot?.speedIndex||0,running:snapshot?.running??true};ui.revealed=ui.reveal.count;scheduleReveal();}
  function finishReveal(){cancelReveal();ui.reveal=null;}
- bind('world',['story'],()=>{assert(ui.newCareer||!X.hasStoredSave(),'Another open game has started a career. Return home and choose Continue, or confirm Start again.');cancelMatchTimer();ui.match=null;finishReveal();read.fresh();ui.newCareer=false;G.skipLeagueReveal();ui.revealed=0;setView('leagueDraw');startReveal('league');render(false);save();});
+ bind('world',['story'],()=>{if(!ui.newCareer&&X.hasStoredSave()){modal('Choose your career','<p>A saved career is available. Open it, or start again with a new club.</p><p>Starting again replaces the saved career.</p><div class="g8actions">'+btn('Open saved career','continueSaved',[],'g8ghost')+btn('Start again','fresh',[],'g8primary')+'</div>','fresh');return;}cancelMatchTimer();ui.match=null;finishReveal();read.fresh();ui.newCareer=false;G.skipLeagueReveal();ui.revealed=0;setView('leagueDraw');startReveal('league');render(false);save();});
  bind('revealClub',['leagueDraw'],()=>{assert(revealActive(),'Open the reveal first.');ui.reveal.count=Math.min(8,ui.reveal.count+1);ui.revealed=ui.reveal.count;if(ui.reveal.count===8)ui.reveal.running=false;scheduleReveal();});
  bind('revealAll',['leagueDraw','draftDraw','dynasty'],()=>{assert(revealActive(),'Open the order reveal first.');cancelReveal();ui.reveal.count=8;ui.revealed=8;ui.reveal.running=false;pendingFocus='#gccuiRevealNext';});
  bind('revealRun',['leagueDraw','draftDraw','dynasty'],()=>{assert(revealActive()&&ui.reveal.count<8,'The reveal is complete.');ui.reveal.running=!ui.reveal.running;scheduleReveal();});
