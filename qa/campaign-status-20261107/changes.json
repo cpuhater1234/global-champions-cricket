@@ -1,0 +1,52 @@
+[
+  {
+    "path": "v8/ui/decision-ui.js",
+    "old": " X.campaignOverview=()=>{",
+    "new": " // Qualification uses possible points; unresolved NRR ties remain live.\n X.finalsRace=(rows,fixtures,own,places=4)=>{\n  const ownRow=rows.find(r=>r.club.abbr===own),rivals=rows.filter(r=>r.club.abbr!==own),n=rivals.length;\n  if(!ownRow)return {clinched:false,eliminated:false};\n  if(!fixtures.length){const rank=rows.indexOf(ownRow);return {clinched:rank<places,eliminated:rank>=places};}\n  const games=fixtures.filter(f=>f.home.abbr!==own&&f.away.abbr!==own),ownGames=fixtures.length-games.length;\n  const combinations=(size)=>{const out=[];for(let mask=0;mask<(1<<n);mask++){let count=0;for(let x=mask;x;x>>=1)count+=x&1;if(count===size)out.push(mask);}return out;};\n  const flow=(caps,minimum)=>{\n   const count=games.length,source=n+count,sink=source+1,edges=Array.from({length:sink+1},()=>[]);\n   const add=(a,b,c)=>{const forward={to:b,cap:c,rev:edges[b].length},back={to:a,cap:0,rev:edges[a].length};edges[a].push(forward);edges[b].push(back);};\n   if(caps.some(c=>c<0))return false;\n   caps.forEach((c,i)=>minimum?add(source,i,c):add(i,sink,c));\n   games.forEach((f,g)=>{const node=n+g;minimum?add(node,sink,1):add(source,node,1);rivals.forEach((r,i)=>{if(r.club.abbr===f.home.abbr||r.club.abbr===f.away.abbr)minimum?add(i,node,1):add(node,i,1);});});\n   const target=minimum?caps.reduce((a,b)=>a+b,0):count;let sent=0;\n   while(sent<target){const parent=Array(sink+1).fill(null),queue=[source];parent[source]=[-1,-1];for(let q=0;q<queue.length&&!parent[sink];q++){const node=queue[q];edges[node].forEach((e,i)=>{if(e.cap>0&&!parent[e.to]){parent[e.to]=[node,i];queue.push(e.to);}});}if(!parent[sink])return false;let amount=target-sent;for(let v=sink;v!==source;){const [u,i]=parent[v];amount=Math.min(amount,edges[u][i].cap);v=u;}for(let v=sink;v!==source;){const [u,i]=parent[v],e=edges[u][i];e.cap-=amount;edges[v][e.rev].cap+=amount;v=u;}sent+=amount;}\n   return true;\n  };\n  const points=Number(ownRow.pts)||0,maxPoints=points+2*ownGames;\n  const canQualify=combinations(Math.min(places-1,n)).some(mask=>flow(rivals.map((r,i)=>(mask&(1<<i))?games.length:Math.floor((maxPoints-(Number(r.pts)||0))/2)),false));\n  if(!canQualify)return {clinched:false,eliminated:true};\n  const canMiss=combinations(Math.min(places,n)).some(mask=>flow(rivals.map((r,i)=>{if(!(mask&(1<<i)))return 0;const gifts=fixtures.filter(f=>(f.home.abbr===own&&f.away.abbr===r.club.abbr)||(f.away.abbr===own&&f.home.abbr===r.club.abbr)).length;return Math.max(0,Math.ceil((points-(Number(r.pts)||0)-2*gifts)/2));}),true));\n  return {clinched:!canMiss,eliminated:false};\n };\n X.campaignRaceLabel=(rows,fixtures,own)=>{\n  const mine=rows.find(r=>r.club.abbr===own),rank=rows.indexOf(mine)+1,played=mine?.p||0;\n  if(!played)return 'Season opener';\n  const race=X.finalsRace(rows,fixtures,own);\n  if(race.clinched)return 'Finals clinched';\n  if(race.eliminated)return 'Eliminated';\n  if(played<4)return 'Early days';\n  const points=Number(mine.pts)||0;\n  if(rank<=4)return points-(Number(rows[4]?.pts)||0)<=2?'On the edge':'Well placed';\n  return (Number(rows[3]?.pts)||0)-points<=2?'In the hunt':fixtures.filter(f=>f.home.abbr===own||f.away.abbr===own).length<=3?'Last chance push':'Chasing finals';\n };\n X.campaignOverview=()=>{"
+  },
+  {
+    "path": "v8/ui/decision-ui.js",
+    "old": "const t=s.table[s.userClub.abbr]||{},played=t.p||0,rank=X.table().findIndex(row=>row.club.abbr===s.userClub.abbr)+1;",
+    "new": "const rows=X.table(),t=s.table[s.userClub.abbr]||{},played=t.p||0,rank=rows.findIndex(row=>row.club.abbr===s.userClub.abbr)+1,ordinal=rank+(rank===1?'st':rank===2?'nd':rank===3?'rd':'th'),race=X.campaignRaceLabel(rows,(s.fullSchedule||[]).slice(s.round||0).flat(),s.userClub.abbr);"
+  },
+  {
+    "path": "v8/ui/decision-ui.js",
+    "old": "${played?`${rank}<small> / ${s.league.length}</small>`:'\u2013'}",
+    "new": "${played?ordinal:'\u2013'}"
+  },
+  {
+    "path": "v8/ui/decision-ui.js",
+    "old": "${played?(rank<=4?'Inside the top four':'Outside the top four'):'No league matches played'}",
+    "new": "${esc(race)}"
+  },
+  {
+    "path": "v8/ui/decision-ui.js",
+    "old": "${t.w||0}<small> W \u00b7 </small>${t.l||0}<small> L</small>",
+    "new": "${t.w||0}-${t.l||0}"
+  },
+  {
+    "path": "v8/ui/decision-ui.css",
+    "old": "#g8app .gccuiCampaignRibbon>div{display:flex;flex-direction:column;justify-content:center;min-width:0;padding:12px 16px;gap:5px;border-right:1px solid #5c5c5c}",
+    "new": "#g8app .gccuiCampaignRibbon>div{display:grid;grid-template-rows:18px minmax(44px,auto) auto;align-content:start;min-width:0;padding:12px 16px;gap:5px;border-right:1px solid #5c5c5c}"
+  },
+  {
+    "path": "v8/ui/decision-ui.css",
+    "old": "#g8app .gccuiCampaignRibbon strong{font-size:25px;",
+    "new": "#g8app .gccuiCampaignRibbon strong{display:flex;align-items:center;min-height:44px;font-size:25px;"
+  },
+  {
+    "path": "v8/ui/decision-ui.css",
+    "old": "#g8app .gccuiCampaignForm{display:flex;gap:5px;min-height:28px;align-items:center}",
+    "new": "#g8app .gccuiCampaignForm{display:flex;gap:5px;min-height:44px;align-items:center}"
+  },
+  {
+    "path": "v8/ui/decision-ui.css",
+    "old": "width:27px;height:27px;flex:0 0 27px;border:1px solid #ffffff65;border-radius:3px;font-size:13px;",
+    "new": "width:32px;height:34px;flex:0 0 32px;border:1px solid #ffffff65;border-radius:3px;font-family:var(--vx-display);font-size:20px;"
+  },
+  {
+    "path": "v8/ui/decision-ui.css",
+    "old": "width:23px;height:25px;flex-basis:23px;font-size:12px}",
+    "new": "width:23px;height:28px;flex-basis:23px;font-size:15px}"
+  }
+]

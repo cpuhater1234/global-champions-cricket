@@ -41,10 +41,44 @@
  };
  X.views.draft=()=>X.decisionDraft(false);
  const dynasty=X.views.dynasty;X.views.dynasty=()=>s.dynasty?.offseason?.phase==='draft'?X.offseasonSteps()+X.decisionDraft(true):`<div class="gccui gccuiCampaign gccuiCareer">${dynasty()}</div>`;
+ // Qualification uses possible points; unresolved NRR ties remain live.
+ X.finalsRace=(rows,fixtures,own,places=4)=>{
+  const ownRow=rows.find(r=>r.club.abbr===own),rivals=rows.filter(r=>r.club.abbr!==own),n=rivals.length;
+  if(!ownRow)return {clinched:false,eliminated:false};
+  if(!fixtures.length){const rank=rows.indexOf(ownRow);return {clinched:rank<places,eliminated:rank>=places};}
+  const games=fixtures.filter(f=>f.home.abbr!==own&&f.away.abbr!==own),ownGames=fixtures.length-games.length;
+  const combinations=(size)=>{const out=[];for(let mask=0;mask<(1<<n);mask++){let count=0;for(let x=mask;x;x>>=1)count+=x&1;if(count===size)out.push(mask);}return out;};
+  const flow=(caps,minimum)=>{
+   const count=games.length,source=n+count,sink=source+1,edges=Array.from({length:sink+1},()=>[]);
+   const add=(a,b,c)=>{const forward={to:b,cap:c,rev:edges[b].length},back={to:a,cap:0,rev:edges[a].length};edges[a].push(forward);edges[b].push(back);};
+   if(caps.some(c=>c<0))return false;
+   caps.forEach((c,i)=>minimum?add(source,i,c):add(i,sink,c));
+   games.forEach((f,g)=>{const node=n+g;minimum?add(node,sink,1):add(source,node,1);rivals.forEach((r,i)=>{if(r.club.abbr===f.home.abbr||r.club.abbr===f.away.abbr)minimum?add(i,node,1):add(node,i,1);});});
+   const target=minimum?caps.reduce((a,b)=>a+b,0):count;let sent=0;
+   while(sent<target){const parent=Array(sink+1).fill(null),queue=[source];parent[source]=[-1,-1];for(let q=0;q<queue.length&&!parent[sink];q++){const node=queue[q];edges[node].forEach((e,i)=>{if(e.cap>0&&!parent[e.to]){parent[e.to]=[node,i];queue.push(e.to);}});}if(!parent[sink])return false;let amount=target-sent;for(let v=sink;v!==source;){const [u,i]=parent[v];amount=Math.min(amount,edges[u][i].cap);v=u;}for(let v=sink;v!==source;){const [u,i]=parent[v],e=edges[u][i];e.cap-=amount;edges[v][e.rev].cap+=amount;v=u;}sent+=amount;}
+   return true;
+  };
+  const points=Number(ownRow.pts)||0,maxPoints=points+2*ownGames;
+  const canQualify=combinations(Math.min(places-1,n)).some(mask=>flow(rivals.map((r,i)=>(mask&(1<<i))?games.length:Math.floor((maxPoints-(Number(r.pts)||0))/2)),false));
+  if(!canQualify)return {clinched:false,eliminated:true};
+  const canMiss=combinations(Math.min(places,n)).some(mask=>flow(rivals.map((r,i)=>{if(!(mask&(1<<i)))return 0;const gifts=fixtures.filter(f=>(f.home.abbr===own&&f.away.abbr===r.club.abbr)||(f.away.abbr===own&&f.home.abbr===r.club.abbr)).length;return Math.max(0,Math.ceil((points-(Number(r.pts)||0)-2*gifts)/2));}),true));
+  return {clinched:!canMiss,eliminated:false};
+ };
+ X.campaignRaceLabel=(rows,fixtures,own)=>{
+  const mine=rows.find(r=>r.club.abbr===own),rank=rows.indexOf(mine)+1,played=mine?.p||0;
+  if(!played)return 'Season opener';
+  const race=X.finalsRace(rows,fixtures,own);
+  if(race.clinched)return 'Finals clinched';
+  if(race.eliminated)return 'Eliminated';
+  if(played<4)return 'Early days';
+  const points=Number(mine.pts)||0;
+  if(rank<=4)return points-(Number(rows[4]?.pts)||0)<=2?'On the edge':'Well placed';
+  return (Number(rows[3]?.pts)||0)-points<=2?'In the hunt':fixtures.filter(f=>f.home.abbr===own||f.away.abbr===own).length<=3?'Last chance push':'Chasing finals';
+ };
  X.campaignOverview=()=>{
-  const t=s.table[s.userClub.abbr]||{},played=t.p||0,rank=X.table().findIndex(row=>row.club.abbr===s.userClub.abbr)+1;
+  const rows=X.table(),t=s.table[s.userClub.abbr]||{},played=t.p||0,rank=rows.findIndex(row=>row.club.abbr===s.userClub.abbr)+1,ordinal=rank+(rank===1?'st':rank===2?'nd':rank===3?'rd':'th'),race=X.campaignRaceLabel(rows,(s.fullSchedule||[]).slice(s.round||0).flat(),s.userClub.abbr);
   const recent=s.results.slice(-5),form=recent.map(r=>{const won=r.winner.abbr===s.userClub.abbr;return `<span class="${won?'is-won':'is-lost'}" aria-label="Round ${r.round}: ${won?'won':'lost'}" title="Round ${r.round} · ${won?'Won':'Lost'} ${esc(r.marginText||'')}">${won?'W':'L'}</span>`;}).join('');
-  return `<section class="gccuiCampaignRibbon" aria-label="Campaign overview"><div><span>League position</span><strong>${played?`${rank}<small> / ${s.league.length}</small>`:'–'}</strong><small>${played?(rank<=4?'Inside the top four':'Outside the top four'):'No league matches played'}</small></div><div><span>Season record</span><strong>${t.w||0}<small> W · </small>${t.l||0}<small> L</small></strong><small>${played} of 14 played</small></div><div><span>Net run rate</span><strong>${played?(Number(t.nrr)||0).toFixed(2):'–'}</strong><small>Runs per over difference</small></div><div><span>Recent form</span><div class="gccuiCampaignForm" aria-label="Recent form, oldest to newest">${form||'<small>First match ahead</small>'}</div><small>Last ${recent.length||'five'} league ${recent.length===1?'match':'matches'}</small></div></section>`;
+  return `<section class="gccuiCampaignRibbon" aria-label="Campaign overview"><div><span>League position</span><strong>${played?ordinal:'–'}</strong><small>${esc(race)}</small></div><div><span>Season record</span><strong>${t.w||0}-${t.l||0}</strong><small>${played} of 14 played</small></div><div><span>Net run rate</span><strong>${played?(Number(t.nrr)||0).toFixed(2):'–'}</strong><small>Runs per over difference</small></div><div><span>Recent form</span><div class="gccuiCampaignForm" aria-label="Recent form, oldest to newest">${form||'<small>First match ahead</small>'}</div><small>Last ${recent.length||'five'} league ${recent.length===1?'match':'matches'}</small></div></section>`;
  };
  X.matchdayHub=(fx,c,problem)=>{
   const latest=s.results.at(-1),won=latest?.winner.abbr===s.userClub.abbr;

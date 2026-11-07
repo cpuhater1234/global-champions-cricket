@@ -1,3 +1,21 @@
+# Current candidate: v103 sports record and season context, 7 November 2026
+
+Maintained branch: `work/v8-integrity-charcoal-candidate`.
+Download: `GCC_v103.html`; Library `libfile_965492a8efe88191a6ac08c4638e5f51`, version 0.
+SHA-256: `89fe0404d094ecfd996bf35c496c3c0afa63a61e1530c4f3da6d12d6db6b7fc9`; 6,588,923 bytes.
+
+Tom corrected the matchday ribbon: use ordinary sports record 1-1; league position 4th, with contextual season status underneath rather than stating the obvious top-four position. Recent form must align with the other values. New status copy includes Season opener, Early days, In the hunt, On the edge, Well placed, Chasing finals, Last chance push, Finals clinched and Eliminated.
+
+Definitive qualification status uses remaining actual fixtures and 2 points per win, consistent with the engine. A small flow solver considers each possible set of rivals permitted above the user. Equal-point finishes remain live because future NRR is unresolved. End-of-season status uses the actual sorted ladder. It changes presentation only, not simulated cricket or points. Latest-match form order remains oldest to newest.
+
+Validation: race.test.cjs compares against exhaustive result assignments for 600 seeded fixture sets with 4/8 clubs and NRR-tie uncertainty. Includes final standings, stage copy and 4th / 1-1 / lost-then-won rendering. All pass. All 20 scripts pass syntax; only script 18 changes. Assets, non-style/script markup and 14 stylesheet identities are unchanged. Candidate derives from exact v102. Full source rebuild not run in partial checkout. NATIVE V103 REVIEW PENDING DOWNLOAD.
+
+Native v102 checks before the correction: main home visually coherent; adjacent XI controls both 16px and 44px with no clip; no desktop overflow; top matchday cards both 410px with identical bottoms; lower cards both 280px with identical bottoms; measured sticky header 151.275px feeds clearance 152px. Isolated 390px draft has no sideways scroll (client 390, scroll 380), sidebar static, Scout/Pick both 16px and 44px. Those are completed checks, not full acceptance of every screen.
+
+Broader audit remains: desktop sticky draft at tall viewport; club chooser/guide; introduction/signing; toss; Manage at >=1100px and below; finals/review/archive/dialogs. Main saved Lucknow 2010 Round 3 is intact; no new match simulated. Separate localhost QA save remains foundation Round 1 Pick 8, 0/15. Viewport override reset before the new feedback.
+
+---
+
 # Current candidate: v102 selectively integrates the external layout audit, 7 November 2026
 
 Maintained branch: `work/v8-integrity-charcoal-candidate`.
