@@ -1,3 +1,13 @@
+# Safe integrated v112 composition review, 9 November 2026 (not promoted)
+
+Exact local review artifact: `GCC_v112_Integrated_Composition_Safe_Review.html`; SHA-256 `942c357419e39970d8e5b55271c8a5952dbb001944d57eaeb5a8b0348eda931a`, 6,601,234 bytes. Integrates the four recovered Grok CSS additions and the Season Hub owner edits inside 14 original stylesheet blocks. All20 scripts are byte-identical to canonical v112, non-style markup and assets unchanged; no full source rebuild and **no product source update**.
+
+A previous local integration `0b3fa5c386bebd164f85ba987b52d3b986da5a79b35c4fad7b055d1f3b17e329` is **unsafe**: the 19-byte `ui.newCareer=true` addition in the no-save `play` command bypassed save-arrival recovery. Safe review restores canonical play handler and passes 3/3 simulated save-arrival cases plus 10/10 simulated cold starts. Full disposable path: 15 draft picks -> 11 XI -> Lodge -> Season -> match result -> next round; 1280/700/390/375 widths no overflow and no visible stage target <36px. Real 375px XI reorder and swap preserved 11/11/order. No captured page errors.
+
+Evidence: `qa/integrated-composition-safe-20261109/README.md`. The original `GCC_v112.html` remains canonical. Browser used `page.set_content` with in-memory storage; native origin cold starts, two-tab race, source-built integration and user-browser acceptance remain open. Grok’s original `gcc_v112_composition.html` has a CSS boundary error and must not be used directly.
+
+---
+
 # Season Hub reviewed in isolated Chromium; not promoted, 9 November 2026
 
 GCC_v112.html remains the canonical delivered build (SHA-256 e7e2c5fc4013cfd43f556145b0b35243130268a7329cb9dfba7011d2f727b2d3). Local review candidate GCC_v112_Season_Hub_Review.html SHA-256 007e0dd077b41bc36ea3f7ef3fdf8fd16caede53f16a97f3e82dd0479c78ce36. Two existing embedded style bodies modified: decision-ui.css and broadcast.css owners; 14 style IDs and all20 scripts unchanged, markup/assets unchanged. Product-source branch NOT updated and no new release promoted.
