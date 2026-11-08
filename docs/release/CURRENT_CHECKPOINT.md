@@ -1,3 +1,11 @@
+# Isolated regular-chat v112 review, 9 November 2026
+
+Exact uploaded v112 HTML was exercised in isolated headless Chromium. The draft-order draw included Brisbane Heat; at desktop1280px and phone390px, its name/rank used shared light text on the navy card while its turquoise badge retained the original club-specific ink. Calculated text contrast was 13.58:1 to15.98:1; badge contrast5.01:1. Eight cards rendered, 390px document scroll width remained390px, and draft room also loaded without horizontal overflow at both widths. Tested click journey: Home -> Intro -> Reveal -> club chooser/guide -> signing skip -> draft-order reveal -> draft room. No captured page errors. All20 embedded scripts passed node --check; 14 style elements and valid single html/head/body structure.
+
+**Evidence boundary:** normal URL navigation was blocked by the isolated browser environment. Exact HTML was loaded via page.set_content with an in-memory localStorage substitute. Its “Progress not saved” banner is a harness artefact, not proof of failure in normal localhost storage. No native-origin persistence, reload, true two-tab race, ten clean-origin starts, or user's Chrome tab was tested. Native v112 acceptance remains pending. No game code or candidate bytes changed; no full source rebuild. QA detail: qa/v112-regular-chat-20261109/README.md. Local screenshots were generated in isolated QA, not the user's browser.
+
+---
+
 # Current candidate: v112 draft-order text contrast, 8 November 2026
 
 Download GCC_v112.html; Library libfile_3eac8af43b20819187967241a79457c3, version0. SHA-256 e7e2c5fc4013cfd43f556145b0b35243130268a7329cb9dfba7011d2f727b2d3;6,589,191 bytes.
