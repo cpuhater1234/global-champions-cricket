@@ -1,3 +1,13 @@
+# Season Hub reviewed in isolated Chromium; not promoted, 9 November 2026
+
+GCC_v112.html remains the canonical delivered build (SHA-256 e7e2c5fc4013cfd43f556145b0b35243130268a7329cb9dfba7011d2f727b2d3). Local review candidate GCC_v112_Season_Hub_Review.html SHA-256 007e0dd077b41bc36ea3f7ef3fdf8fd16caede53f16a97f3e82dd0479c78ce36. Two existing embedded style bodies modified: decision-ui.css and broadcast.css owners; 14 style IDs and all20 scripts unchanged, markup/assets unchanged. Product-source branch NOT updated and no new release promoted.
+
+Actual disposable browser journey through15 draft picks -> legal XI -> lodge -> Season Hub; responsive desktop1280/tablet768/phone390 with no horizontal overflow; match preview, Watch match, Show result, Return to Matchday all worked without captured page errors. Results reflected updated standing/record/NRR/form. Browser navigation to localhost remained blocked, so session used an in-memory storage shim; these are isolated renderer checks, not native save or two-tab certification.
+
+Integration blocker: Grok's reported gcc-contrast-v112, gcc-draft-milestone-v112, gcc-signing-manage-v112 and gcc-xi-team-v112 blocks are absent from verified canonical v112 and GitHub maintained source. Do not claim Season Hub prototype supersedes Grok's separate composition work. Reconcile actual Grok source first. Details: qa/season-hub-20261109/README.md.
+
+---
+
 # Isolated regular-chat v112 review, 9 November 2026
 
 Exact uploaded v112 HTML was exercised in isolated headless Chromium. The draft-order draw included Brisbane Heat; at desktop1280px and phone390px, its name/rank used shared light text on the navy card while its turquoise badge retained the original club-specific ink. Calculated text contrast was 13.58:1 to15.98:1; badge contrast5.01:1. Eight cards rendered, 390px document scroll width remained390px, and draft room also loaded without horizontal overflow at both widths. Tested click journey: Home -> Intro -> Reveal -> club chooser/guide -> signing skip -> draft-order reveal -> draft room. No captured page errors. All20 embedded scripts passed node --check; 14 style elements and valid single html/head/body structure.
