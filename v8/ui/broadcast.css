@@ -31,6 +31,17 @@
 #g8app#g8app #g8stage .gccuiCampaignRibbon>div>strong{font-family:var(--vx-display)!important;font-size:2.4rem!important;
   font-weight:800;line-height:1.05;color:#fff;letter-spacing:.01em}
 #g8app#g8app #g8stage .gccuiCampaignRibbon small{color:var(--gcc-muted)!important}
+/* Desktop matchday ledger: league position leads; record, NRR and form are supporting reads. */
+@media(min-width:1001px){
+ #g8app#g8app #g8stage .gccuiCommandCentre>.gccuiCampaignRibbon{grid-template-columns:minmax(0,1fr);margin:0}
+ #g8app#g8app #g8stage .gccuiCommandCentre>.gccuiCampaignRibbon>div{grid-template-rows:auto auto auto;padding:14px 18px;gap:5px;border-right:0!important;border-bottom:1px solid var(--gcc-line)!important}
+ #g8app#g8app #g8stage .gccuiCommandCentre>.gccuiCampaignRibbon>div:last-child{border-bottom:0!important}
+ #g8app#g8app #g8stage .gccuiCommandCentre>.gccuiCampaignRibbon>div:first-child{padding-top:18px;padding-bottom:20px;background:linear-gradient(115deg,#172d42,#11263a)!important}
+ #g8app#g8app #g8stage .gccuiCommandCentre>.gccuiCampaignRibbon>div:first-child strong{font-size:3.2rem!important}
+ #g8app#g8app #g8stage .gccuiCommandCentre>.gccuiCampaignRibbon>div:not(:first-child) strong{font-size:1.65rem!important;min-height:0}
+ #g8app#g8app #g8stage .gccuiCommandCentre>.gccuiCampaignRibbon .gccuiCampaignForm{min-height:30px}
+}
+
 
 #g8app#g8app #g8stage .gccuiFixture{overflow:hidden}
 #g8app#g8app #g8stage .gccuiFixtureTeams{display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;gap:.8rem}
@@ -378,3 +389,102 @@
 #g8app#g8app#g8app .g8annualdevelopment .g8skillchanges>li>small{color:var(--gcc-muted)}
 #g8app#g8app#g8app .g8annualdevelopment .g8skillrest{grid-column:1/-1;background:transparent!important;border:0!important;margin:0!important}
 #g8app#g8app#g8app .g8annualdevelopment .g8skillrest>summary{font-size:13px;min-height:36px;padding:8px 0}
+
+
+/* Reconciled gcc-signing-manage-v112; same CSS, maintained in its existing visual owner. */
+
+/* Signing wire + manage list milestone. Additive. Match composition law. */
+
+/* Days: equal chips, active is the only loud one */
+#g8app#g8app#g8app .g8days{
+  display:flex; flex-wrap:wrap; gap:8px;
+  margin:0 0 14px;
+}
+#g8app#g8app#g8app .g8days > span{
+  flex:1 1 0;
+  min-width:4.5rem;
+  text-align:center;
+  border-radius:8px !important;
+  border:1px solid var(--gcc-line, #3a4f5e) !important;
+  background:rgba(8,20,32,.55) !important;
+  box-shadow:none !important;
+  padding:.55rem .7rem !important;
+  font-weight:700;
+}
+#g8app#g8app#g8app .g8days > span.active{
+  background:rgba(18,36,56,.95) !important;
+  border-color:var(--vx-ink, #ed7547) !important;
+  color:var(--gcc-text, #f0f6fa) !important;
+  box-shadow:inset 0 -2px var(--vx-ink, #ed7547) !important;
+}
+
+/* Decision panel owns left; wire is feed */
+#g8app#g8app#g8app .g8signing{
+  gap:14px !important;
+  align-items:start;
+}
+#g8app#g8app#g8app .g8windowpanel{
+  background:rgba(18,36,56,.92) !important;
+  border:1px solid var(--gcc-line, #3a4f5e) !important;
+  border-radius:12px !important;
+  box-shadow:0 12px 32px -20px #000 !important;
+  padding:16px !important;
+}
+#g8app#g8app#g8app .g8signingtitle{
+  font-size:clamp(1.4rem, 2.4vw, 2rem) !important;
+  line-height:1.15 !important;
+  margin:.35rem 0 .75rem !important;
+}
+#g8app#g8app#g8app .g8signingfocus{
+  border:1px solid var(--gcc-line, #3a4f5e) !important;
+  border-left:3px solid var(--vx-ink, #ed7547) !important;
+  border-radius:8px !important;
+  background:rgba(8,20,32,.55) !important;
+  padding:12px 14px !important;
+}
+#g8app#g8app#g8app .g8wirepanel,
+#g8app#g8app#g8app .g8sheet.g8wirepanel{
+  background:rgba(10,22,34,.78) !important;
+  border:1px solid var(--gcc-line, #3a4f5e) !important;
+  border-radius:12px !important;
+  box-shadow:none !important;
+  color-scheme:dark !important;
+}
+#g8app#g8app#g8app .g8wire{
+  background:transparent !important;
+  border:0 !important;
+  max-height:min(52vh, 520px);
+}
+#g8app#g8app#g8app .g8wireline{
+  border-left-width:3px !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  color:var(--gcc-text, #e8f0f4) !important;
+}
+#g8app#g8app#g8app .g8wireline.g8wirein{ border-left-color:#3d9a6a !important; }
+#g8app#g8app#g8app .g8wireline.g8wireout{ border-left-color:#a85a4a !important; }
+#g8app#g8app#g8app .g8stamp{
+  font-size:.72rem !important;
+  letter-spacing:.06em !important;
+}
+
+/* Manage list — extend v93 quiet scanning */
+#g8app#g8app#g8app .g8managementlist{
+  gap:.5rem !important;
+}
+#g8app#g8app#g8app .g8managerow .g8manageactions{
+  opacity:.92;
+}
+#g8app#g8app#g8app .g8managerow .g8squadpulse{
+  gap:4px;
+}
+#g8app#g8app#g8app .g8manageworkspace{
+  border-radius:12px !important;
+}
+
+/* Season hub primary action clarity */
+#g8app#g8app#g8app .gccuiNextFixture,
+#g8app#g8app#g8app [class*="NextFixture"]{
+  border-radius:12px;
+}
+
