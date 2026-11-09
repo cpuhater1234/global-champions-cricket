@@ -1,3 +1,11 @@
+# Source synced for the safe integrated v112 review, 9 November 2026
+
+The maintained branch now includes the reviewed CSS integration in source owners, committed as `e1fce929c802a0fee02bb90596705b103d050356`: `v8/ui/decision-ui.css`, `v8/ui/broadcast.css`, `v8/ui/composition.css`. Replacing only these three owners in **hash-verified canonical v112** reconstructs `GCC_v112_Integrated_Composition_Safe_Review.html` byte-for-byte (SHA-256 `942c357419e39970d8e5b55271c8a5952dbb001944d57eaeb5a8b0348eda931a`). All 20 scripts remain canonical, HTML/style boundaries unchanged, 14 style elements, CSS parses.
+
+**Not a release promotion and not a full-project build.** Canonical delivered file remains `GCC_v112.html` (SHA-256 `e7e2c5fc4013cfd43f556145b0b35243130268a7329cb9dfba7011d2f727b2d3`). The later Grok `gcc-season-hub-owner-patch` described externally was not present in any available file; do not claim it merged. Need its exact updated artifact before integration. Further native localhost/two-tab validation and full `v8/build.py` regression remain open. QA source ownership manifest: `qa/source-reconciliation-20261109/README.md`.
+
+---
+
 # Safe integrated v112 composition review, 9 November 2026 (not promoted)
 
 Exact local review artifact: `GCC_v112_Integrated_Composition_Safe_Review.html`; SHA-256 `942c357419e39970d8e5b55271c8a5952dbb001944d57eaeb5a8b0348eda931a`, 6,601,234 bytes. Integrates the four recovered Grok CSS additions and the Season Hub owner edits inside 14 original stylesheet blocks. All20 scripts are byte-identical to canonical v112, non-style markup and assets unchanged; no full source rebuild and **no product source update**.
