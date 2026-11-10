@@ -166,9 +166,17 @@ def run_plan(browser, vp, plan):
             pg.wait_for_timeout(900)
             pg.reload(wait_until='load', timeout=60000)
             pg.wait_for_timeout(750)
-            reloaded=pg.evaluate("""()=>({view:document.querySelector('#g8stage')?.dataset.view,captaincy:window.GCC?.state?.results?.at(-1)?.captaincy,storageKeys:localStorage.length})""")
-            assert reloaded['storageKeys'] > 0, 'no browser storage detected after reload'
-            assert reloaded['captaincy'] == plan, 'saved captaincy metadata lost on reload'
+            storage_keys=pg.evaluate('localStorage.length')
+            assert storage_keys > 0, 'no browser storage detected after reload'
+            # v116 intentionally opens the Home launcher after reload. It does
+            # not load the saved career until the player selects Continue.
+            continued=click_text(pg, 'continue career') or click_text(pg, 'continue')
+            assert continued, 'saved career is not offered in the Home launcher'
+            pg.wait_for_timeout(900)
+            reloaded=pg.evaluate("""()=>({view:document.querySelector('#g8stage')?.dataset.view,captaincy:window.GCC?.state?.results?.at(-1)?.captaincy,storageKeys:localStorage.length,club:window.GCC?.state?.userClub?.abbr,round:window.GCC?.state?.round})""")
+            assert reloaded['storageKeys'] > 0, 'no browser storage after Continue'
+            assert reloaded['round'] == 1 and reloaded['club'], 'career progression not recovered by Continue'
+            assert reloaded['captaincy'] == plan, 'saved captaincy metadata lost after Continue'
         print('TEST: assertions passed',flush=True)
         return {'viewport':vp,'plan':plan,'opened':opened,'values':values,'metrics':metrics,
                 'result':result,'reloaded':reloaded,'screenshots':str(screenshot),
