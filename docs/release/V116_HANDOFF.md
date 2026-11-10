@@ -36,7 +36,7 @@ The earlier perfection-pass handoff explicitly deferred functional captaincy. Th
 
 The uploaded test targets visible `powerplay`, `middle` and `death` selectors, starts a match, skips playback and inspects the saved result's `captaincy` metadata. It includes two 390px scenarios, page/console-error checks, a document-overflow check and an assertion that selected plans appear on the completed result.
 
-The original captaincy test had Manus-specific paths. It has now been replaced **in place** with a portable runner: `python captaincy_layer_v116.py --html "GCC_v116_release (1).html"`. The runner pins the release SHA-256, uses disposable browser contexts, accepts configurable paths and marks `--mode isolated` as non-native. Two isolated tactical UI scenarios passed on this exact uploaded HTML; native HTTP save/reload remains unverified in this restricted environment. Separate random careers do not prove controlled tactical causality.
+The original captaincy test had Manus-specific paths. It has now been replaced **in place** with a portable runner: `python captaincy_layer_v116.py --html "GCC_v116_release (1).html"`. The runner pins the release SHA-256, uses disposable browser contexts, accepts configurable paths and marks `--mode isolated` as non-native. Two isolated tactical UI scenarios passed on this exact uploaded HTML. **Native HTTP storage, reload and Continue Career were subsequently verified in GitHub Actions** (run #3 below). Separate random careers do not prove controlled tactical causality.
 
 The final assertion compares whole result dictionaries from separate new careers. It does not by itself establish controlled tactical causality. A stronger follow-up should compare identical fixtures and random conditions, varying only the plan, and cover persistence, replay/playback consistency, default behaviour and invalid/legacy saves.
 
@@ -45,13 +45,21 @@ The final assertion compares whole result dictionaries from separate new careers
 - Isolated engine stress: **100 independent 14-round seasons**, **1,400/1,400** valid user-match delivery ledgers, no reported simulation errors. Controlled same-seed tactics changed scores in 100/100 paired comparisons and winners in 17/100. These are repeated regular seasons, not one 19-year career.
 - Two separate isolated UI tactical smoke cases passed from Draft through Match Result at 390px, with no captured JS errors or horizontal overflow. Storage was simulated rather than native.
 - Two bounded 2008–2010 career journeys passed with 42 user matches each, including annual drafts, 2008/2009 archive transitions and injury-triggered XI adjustments. A continuous 19-year browser run exceeded the restricted test limit, and is **not** a pass.
-- Native save/reload, two-tab recovery, a full 19-year career and source-build parity remain open. The gameplay HTML is unchanged. The engine stress sample still showed ~19.7% all-out innings and ~20.6% fours per recorded delivery.
+- **A 19-season 2008–2026 isolated career passed** with 266/266 validated league matches, 18 year-boundary restarts, five finals campaigns and injury-cover UI recovery. Native save/reload passed later in GitHub Actions (run #3). **Concurrent multi-tab conflict recovery and maintained-source build parity remain open.** The gameplay HTML is unchanged. The engine stress sample still showed ~19.7% all-out innings and ~20.6% fours per recorded delivery.
+
+## Native browser CI acceptance (10 November 2026)
+
+- **Run #3:** [GitHub Actions 42751656106](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/42751656106), commit `ebcd1342cbbe05bc9232fd11c4b893e593306d03`, **success**.
+- Both Playwright scenarios completed under `--mode http`, using fresh browser contexts and the exact v116 release SHA-256. The test verified saved Round 1 result metadata, club, year, round, XI and selected captaincy after browser reload and Continue Career.
+- Runs #1 and #2 had passing gameplay test steps but were marked failed solely because the account's GitHub Actions **artifact storage quota** prevented screenshot/log uploads. The workflow now writes a compact job summary instead of uploading artifacts.
+- **Scope boundary:** the CI pass covers two single-tab journeys, not simultaneous competing writers, legacy saves or the full dynasty using native storage.
+- No modifications to game HTML or maintained source were made for this CI fix.
 
 ## Next work
 
 1. Preserve the exact uploaded HTML and establish a standalone checksum.
 2. Obtain the complete implementation plan and perfection/captaincy evidence for this exact artifact.
-3. Run the now-portable captaincy test in default HTTP mode on an ordinary computer or CI runner to verify real browser storage. Use disposable careers only.
+3. **Completed for two scenarios:** native HTTP save, reload and Continue Career passed on GitHub Actions run #3. Extend to simultaneous-tab conflict/recovery cases and further long-career native persistence checks before treating the entire storage subsystem as certified.
 4. Verify captaincy selection persistence before a match, completed-result metadata after reload, playback consistency and bounded simulation effects under controlled conditions.
 5. Continue visual review across recruitment, draft, XI, match preview/live/results, management, trades, finals and archive at desktop and mobile widths, including enlarged text. Fix concrete issues rather than adding blanket decorative layers.
 6. Reconcile the uploaded release with maintained source and prove the documented build reproduces the intended artifact before any source-based release promotion.
