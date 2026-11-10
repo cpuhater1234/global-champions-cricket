@@ -1,55 +1,49 @@
 # Global Champions Cricket
 
-## Current work: read this first
+Cricket management game built around drafting, trades, team selection and seasons from 2008 to 2026.
 
-The maintained Floodlit candidate is on [work/v8-integrity-charcoal-candidate](https://github.com/cpuhater1234/global-champions-cricket/tree/work/v8-integrity-charcoal-candidate).
+## Start here — GCC v116
 
-**Start with [the current recovery checkpoint](docs/release/CURRENT_CHECKPOINT.md).** It records the accepted v93 recovery anchor, rejected v94, external polish, source differences and remaining reconciliation work. Do not choose a build from its version number alone.
+The project owner identifies **v116 as the latest release**. The uploaded release and its captaincy browser test are on the [`v116` branch](https://github.com/cpuhater1234/global-champions-cricket/tree/v116).
 
-The v101 section below describes the previous branch. It is retained as history and must not override the current checkpoint.
+- **Release HTML:** [GCC_v116_release (1).html](<https://github.com/cpuhater1234/global-champions-cricket/blob/v116/GCC_v116_release%20%281%29.html>) — download the raw file; GitHub's page is not the running game.
+- **Current handoff and evidence boundaries:** [V116_HANDOFF.md](https://github.com/cpuhater1234/global-champions-cricket/blob/v116/docs/release/V116_HANDOFF.md).
+- **Captaincy browser test:** [captaincy_layer_v116.py](https://github.com/cpuhater1234/global-champions-cricket/blob/v116/captaincy_layer_v116.py). It currently contains machine-specific paths and is not a portable one-command test suite.
+- **GitHub organization guide:** [REPOSITORY_GUIDE.md](https://github.com/cpuhater1234/global-champions-cricket/blob/v116/docs/REPOSITORY_GUIDE.md).
 
-## Historical branch checkpoint
+The older branch handoffs describing v101 or v112 are historical context, not instructions to replace this release. This documentation update does not promote v116 into `main`, certify gameplay or establish that the source build reproduces the uploaded HTML.
 
-- **Current active branch:** [`work/v8-game-first-rebuild`](https://github.com/cpuhater1234/global-champions-cricket/tree/work/v8-game-first-rebuild)
-- **Current playable version:** **GCC v101**
-- **Current playable:** [`game/gcc_v8_product_candidate.html`](https://github.com/cpuhater1234/global-champions-cricket/blob/work/v8-game-first-rebuild/game/gcc_v8_product_candidate.html)
-- **Release notes and QA:** [v101 living squad management](https://github.com/cpuhater1234/global-champions-cricket/blob/work/v8-game-first-rebuild/qa/team-management-20261029/README.md)
-- **Protected historical baseline:** **v7.0.14 — frozen, read-only reference**
+## Current scope
 
-**Do not use v7.0.14 as the source of truth for current development.** Current code is on the work branch. Default-branch game files remain historical.
+The owner-supplied v116 perfection-pass handoff reports recruitment empty-state improvements, clearer Scout → Pick actions, draft action alignment, a persistent squad-needs strip, mobile spacing and long result-heading wrapping. It reports successful protected-function/browser, responsive, match progression, scorecard, save/reload and scouting checks, including 42/42 scorecard-level fixtures.
 
-v101 makes squad management persistent: healthy omissions, batting-role use and meaningful bowling opportunities can create concerns. Optional commitments are checked against future matches; keeping or breaking them changes trust. Unresolved concerns can become a transfer request, handled through the existing legal trade system. Medical absences pause commitments and short innings do not count as full bowling opportunities.
+That earlier handoff described functional captaincy as the next pass. The later upload includes a captaincy test targeting powerplay, middle and death-over plans and saved result metadata. These are distinct evidence points: inspect and test the exact release before claiming captaincy is fully accepted. See the current handoff for details.
 
-Player profiles show actual recent innings/spells, fitness, expectations and commitments. XI rows carry compact form/concern indicators; team selection uses the actual next venue, and finals advice uses the same weather-adjusted conditions as the simulation. Relevant changes appear after matches. The previous fixed three-fixture recap presentation is replaced.
+Continuous visual review remains part of development: look for wasted space, dated treatments, overlaps, alignment, wrapping and responsive inconsistencies while preserving save, legality, accessibility, navigation and cricket behaviour.
 
-This is the first playable relationship layer, not a complete personality, training or dialogue simulation. Trust has no hidden performance modifier; form, fitness, conditions and batting-role effects remain in the unchanged cricket model. No automatic transfers or invented player quotes.
+## Repository map
 
-Validation: pure management regressions, real six-match selection/save/reload tests, controlled medical and finals scenarios, replay immutability, text contrast, 36 enlarged-text management layouts and the existing 84 screen/viewport scan. Only inline scripts16,17,19 change; all20 pass syntax checks. Full evidence and limits are in the release checkpoint.
+| Location | Purpose |
+| --- | --- |
+| Root v116 HTML | Latest owner-designated uploaded release; preserve its exact bytes during documentation cleanup |
+| `src/`, `v8/`, `tools/` | Existing source/build tooling; v116 reproduction is not yet established |
+| `game/` | Earlier builds and historical build inputs; do not select the current release by filename alone |
+| `docs/release/V116_HANDOFF.md` | Current v116 entry point and open verification work |
+| `docs/release/CURRENT_CHECKPOINT.md` | Earlier recovery/source reconciliation ledger, currently through v112; retained unchanged |
+| `qa/` | Historical and targeted QA evidence; check each record's version and limitations |
+| `BASELINE_SHA256.txt` | Protected historical baseline identity |
 
-The following section records the original protected baseline.
+## Preserved history
 
-This repository starts from the protected **v7.0.14** GCC build and exists to make aggressive QA safer, not to redesign the game.
+- `main`: existing default branch; its old v101 guidance is not the latest status. No v116 merge has been performed.
+- `work/v8-integrity-charcoal-candidate`: previous maintained source/reconciliation stream, recorded through v112.
+- `work/v8-game-first-rebuild`: older v101 management checkpoint.
+- `protected/v7.0.14`: historical reference branch. Its name does not itself enforce GitHub branch protection.
 
-## Protected historical baseline
+All older branches and protected baseline records remain intact. Do not delete or overwrite them as routine cleanup.
 
-- File: `game/global_champions_cricket_v7_0_14_mobile_interaction_hardened.html`
-- Canonical local SHA-256: `04072e8bb361cf3fc7259f058ab22ced7b6da6aa9ec8bf28f457e003e6cf0ac4`
-- Newline-normalised SHA-256: `147ac0db30e150a85e60332bd9b56c3e8f9edcdc2226aaed729b737dac40d54c`
+## Safe working rule
 
-The GitHub web upload removed six newline characters at transfer boundaries. The non-newline byte stream is identical to the protected local v7.0.14 file, and each join point was checked as syntactically harmless. No gameplay, simulation, UI or data content changed.
+Use a focused branch for each change, keep the exact release available, record version-specific evidence and review changes before merging. Do not assume a historical QA runner applies to v116 or rebuild the current release from older source without proving equivalence.
 
-## Working rule
-
-`main` is for promoted, tested builds only. Experimental work belongs on a `qa/...` branch and should be merged only after the relevant regression checks pass.
-
-For every candidate:
-
-1. reproduce the defect or design failure;
-2. make the smallest viable change;
-3. run targeted QA;
-4. run `python qa/check_candidate.py <candidate.html>`;
-5. checkpoint the result;
-6. only then promote the candidate.
-
-See `docs/WORKFLOW.md` for the operating rules and `qa/GCC_v7014_checkpoint.md` for the recovered v7.0.14 evidence.
-
+See [the organization guide](https://github.com/cpuhater1234/global-champions-cricket/blob/v116/docs/REPOSITORY_GUIDE.md) for the simple workflow. [WORKFLOW.md](docs/WORKFLOW.md) and older checkpoints remain useful history, but their version-specific commands are not automatically v116 release gates.
