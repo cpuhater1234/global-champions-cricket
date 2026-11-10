@@ -162,21 +162,41 @@ def run_plan(browser, vp, plan):
         assert metrics['boardHeight'] > 0, 'captaincy board has zero height'
         reloaded = None
         if SETTINGS.mode == 'http':
-            # This checks the *browser* persisted result, not a mock localStorage.
-            pg.wait_for_timeout(900)
+            # Autosave is coordinated asynchronously through IndexedDB and
+            # Web Locks. Wait for the *persisted* Round 1 match before reload,
+            # not an arbitrary timeout or just the existence of a prior save.
+            saved=pg.wait_for_function("""() => {
+                const raw=localStorage.getItem('gcc_dynasty_v8');
+                const meta=JSON.parse(localStorage.getItem('gcc_dynasty_meta_v8')||'null');
+                return !!raw && meta?.round===1;
+            }""",timeout=30000,polling=350)
+            persisted=pg.evaluate("""()=>{
+                const raw=localStorage.getItem('gcc_dynasty_v8');
+                const payload=window.GCC8_SAVE_CODEC.parse(raw);
+                const s=payload?.state, r=s?.results?.at(-1);
+                return {club:s?.userClub?.abbr,year:s?.year,round:s?.round,
+                        xi:s?.xi,results:s?.results?.length,
+                        captaincy:r?.captaincy,score:[r?.homeInnings?.total,r?.awayInnings?.total]};
+            }""")
+            assert persisted['captaincy']==plan, 'captaincy plan missing from durable browser save'
+            assert persisted['club'] and persisted['year']==2008 and persisted['round']==1, 'saved Round 1 state is incorrect'
+            assert len(persisted['xi'] or [])==11, 'saved XI is incomplete'
             pg.reload(wait_until='load', timeout=60000)
             pg.wait_for_timeout(750)
-            storage_keys=pg.evaluate('localStorage.length')
-            assert storage_keys > 0, 'no browser storage detected after reload'
-            # v116 intentionally opens the Home launcher after reload. It does
-            # not load the saved career until the player selects Continue.
+            assert pg.evaluate('localStorage.length') > 0, 'storage missing after reload'
+            # v116 intentionally shows Home after reload, and requires Continue.
             continued=click_text(pg, 'continue career') or click_text(pg, 'continue')
             assert continued, 'saved career is not offered in the Home launcher'
             pg.wait_for_timeout(900)
-            reloaded=pg.evaluate("""()=>({view:document.querySelector('#g8stage')?.dataset.view,captaincy:window.GCC?.state?.results?.at(-1)?.captaincy,storageKeys:localStorage.length,club:window.GCC?.state?.userClub?.abbr,round:window.GCC?.state?.round})""")
-            assert reloaded['storageKeys'] > 0, 'no browser storage after Continue'
-            assert reloaded['round'] == 1 and reloaded['club'], 'career progression not recovered by Continue'
-            assert reloaded['captaincy'] == plan, 'saved captaincy metadata lost after Continue'
+            reloaded=pg.evaluate("""()=>({
+                view:document.querySelector('#g8stage')?.dataset.view,
+                captaincy:window.GCC?.state?.results?.at(-1)?.captaincy,
+                storageKeys:localStorage.length,club:window.GCC?.state?.userClub?.abbr,
+                round:window.GCC?.state?.round,year:window.GCC?.state?.year,
+                xi:window.GCC?.state?.xi,results:window.GCC?.state?.results?.length})""")
+            assert reloaded['storageKeys']>0, 'browser storage missing after Continue'
+            for field in ('club','year','round','xi','results','captaincy'):
+                assert reloaded[field]==persisted[field], f'{field} changed across real reload and Continue'
         print('TEST: assertions passed',flush=True)
         return {'viewport':vp,'plan':plan,'opened':opened,'values':values,'metrics':metrics,
                 'result':result,'reloaded':reloaded,'screenshots':str(screenshot),
