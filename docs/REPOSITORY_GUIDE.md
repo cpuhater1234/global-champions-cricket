@@ -38,7 +38,7 @@ The branch named `protected/v7.0.14` is historical. A branch name does not enfor
 
 - Test the exact uploaded release rather than a similarly named local copy.
 - Reconcile current source with the release; do not assume the historical default build recreates v116.
-- Make the captaincy browser test paths configurable and document its dependencies.
+- Run portable `captaincy_layer_v116.py` in default HTTP mode for real native save/reload acceptance. `--mode isolated` verifies UI/gameplay only.
 - Preserve real player saves; exercise destructive flows only in disposable test careers/origins.
 - Distinguish reported prior results, checks rerun on the exact artifact and unresolved acceptance work.
 - Record a standalone checksum, build identity and known limitations before publishing a release asset.

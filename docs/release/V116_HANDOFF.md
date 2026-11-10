@@ -36,15 +36,22 @@ The earlier perfection-pass handoff explicitly deferred functional captaincy. Th
 
 The uploaded test targets visible `powerplay`, `middle` and `death` selectors, starts a match, skips playback and inspects the saved result's `captaincy` metadata. It includes two 390px scenarios, page/console-error checks, a document-overflow check and an assertion that selected plans appear on the completed result.
 
-The test was inspected, not run during this cleanup. Its existence alone does not prove the exact uploaded HTML passes it. It hard-codes `/home/ubuntu/gcc-work/GCC_v116_release.html`, an output directory and `/usr/bin/chromium`; the uploaded release has a different filename. Make the input/output/browser paths configurable before documenting a portable command.
+The original captaincy test had Manus-specific paths. It has now been replaced **in place** with a portable runner: `python captaincy_layer_v116.py --html "GCC_v116_release (1).html"`. The runner pins the release SHA-256, uses disposable browser contexts, accepts configurable paths and marks `--mode isolated` as non-native. Two isolated tactical UI scenarios passed on this exact uploaded HTML; native HTTP save/reload remains unverified in this restricted environment. Separate random careers do not prove controlled tactical causality.
 
 The final assertion compares whole result dictionaries from separate new careers. It does not by itself establish controlled tactical causality. A stronger follow-up should compare identical fixtures and random conditions, varying only the plan, and cover persistence, replay/playback consistency, default behaviour and invalid/legacy saves.
+
+## Additional verification on exact v116 HTML (10 November 2026)
+
+- Isolated engine stress: **100 independent 14-round seasons**, **1,400/1,400** valid user-match delivery ledgers, no reported simulation errors. Controlled same-seed tactics changed scores in 100/100 paired comparisons and winners in 17/100. These are repeated regular seasons, not one 19-year career.
+- Two separate isolated UI tactical smoke cases passed from Draft through Match Result at 390px, with no captured JS errors or horizontal overflow. Storage was simulated rather than native.
+- Two bounded 2008–2010 career journeys passed with 42 user matches each, including annual drafts, 2008/2009 archive transitions and injury-triggered XI adjustments. A continuous 19-year browser run exceeded the restricted test limit, and is **not** a pass.
+- Native save/reload, two-tab recovery, a full 19-year career and source-build parity remain open. The gameplay HTML is unchanged. The engine stress sample still showed ~19.7% all-out innings and ~20.6% fours per recorded delivery.
 
 ## Next work
 
 1. Preserve the exact uploaded HTML and establish a standalone checksum.
 2. Obtain the complete implementation plan and perfection/captaincy evidence for this exact artifact.
-3. Make the captaincy test portable and run it against the uploaded release in a disposable career; never reset a real user save for QA.
+3. Run the now-portable captaincy test in default HTTP mode on an ordinary computer or CI runner to verify real browser storage. Use disposable careers only.
 4. Verify captaincy selection persistence before a match, completed-result metadata after reload, playback consistency and bounded simulation effects under controlled conditions.
 5. Continue visual review across recruitment, draft, XI, match preview/live/results, management, trades, finals and archive at desktop and mobile widths, including enlarged text. Fix concrete issues rather than adding blanket decorative layers.
 6. Reconcile the uploaded release with maintained source and prove the documented build reproduces the intended artifact before any source-based release promotion.
