@@ -1,0 +1,47 @@
+name: GCC v116 native browser acceptance
+
+on:
+  push:
+    branches: [v116]
+    paths:
+      - 'GCC_v116_release (1).html'
+      - 'captaincy_layer_v116.py'
+      - '.github/workflows/v116-native-acceptance.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gcc-v116-native-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  captaincy-save-continue:
+    name: Captaincy, save, reload and Continue
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Playwright Chromium
+        run: |
+          python -m pip install --disable-pip-version-check playwright
+          python -m playwright install --with-deps chromium
+      - name: Verify exact v116 release through native browser storage
+        run: |
+          python captaincy_layer_v116.py \
+            --html 'GCC_v116_release (1).html' \
+            --mode http \
+            --case-timeout 240 \
+            --out-dir qa/results/v116-native
+      - name: Upload test results and failure logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gcc-v116-native-acceptance
+          path: qa/results/v116-native/
+          if-no-files-found: warn
+          retention-days: 7
