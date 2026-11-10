@@ -2,16 +2,21 @@
 
 Cricket management game built around drafting, trades, team selection and seasons from 2008 to 2026.
 
-## Start here — GCC v116
+## Stable playable release: GCC v116
 
-The project owner identifies **v116 as the latest release**. The uploaded release and its captaincy browser test are on the [`v116` branch](https://github.com/cpuhater1234/global-champions-cricket/tree/v116).
+**GCC v116 is the current, frozen stable playable build.** Its single-file release and acceptance test live on the [`v116` branch](https://github.com/cpuhater1234/global-champions-cricket/tree/v116).
+
+- **Release artifact:** `GCC_v116_release (1).html`, 6,635,097 bytes; SHA-256 `b27cf0b4c7e6e4e7a78eaa5c80154dfd0f70657ce9f774dd405505e97e82c6d0`. Do not rename or alter this recorded artifact when verifying it.
+- **Acceptance:** 100/100 simulated regular seasons (1,400 valid match ledgers), one complete 2008–2026 career (266/266 league matches, isolated yearly restarts), and two real-browser save/reload/Continue scenarios in [successful GitHub Actions run #3](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/42751656106).
+- **Limits:** concurrent-tab write/recovery and exact reproduction by the maintained source pipeline remain open. The 19-season career used isolated simulated storage, not one native-browser profile.
+- **Publishing state:** the `v116` branch is the canonical playable location; this designation does **not** merge gameplay into `main` or create a GitHub Release/tag.
 
 - **Release HTML:** [GCC_v116_release (1).html](<https://github.com/cpuhater1234/global-champions-cricket/blob/v116/GCC_v116_release%20%281%29.html>) — download the raw file; GitHub's page is not the running game.
 - **Current handoff and evidence boundaries:** [V116_HANDOFF.md](https://github.com/cpuhater1234/global-champions-cricket/blob/v116/docs/release/V116_HANDOFF.md).
 - **Captaincy browser test:** [captaincy_layer_v116.py](https://github.com/cpuhater1234/global-champions-cricket/blob/v116/captaincy_layer_v116.py). Run `python captaincy_layer_v116.py --html "GCC_v116_release (1).html"` after installing Playwright/Chromium. The default uses disposable local HTTP browser storage; `--mode isolated` is a non-native fallback.
 - **GitHub organization guide:** [REPOSITORY_GUIDE.md](https://github.com/cpuhater1234/global-champions-cricket/blob/v116/docs/REPOSITORY_GUIDE.md).
 
-The older branch handoffs describing v101 or v112 are historical context, not instructions to replace this release. This documentation update does not promote v116 into `main`, certify gameplay or establish that the source build reproduces the uploaded HTML.
+The older v101 and v112 handoffs are historical references, not alternative release instructions. Keep the playable binary frozen and record any future gameplay or source change as a separate, explicitly tested release candidate.
 
 ## Current scope
 
@@ -35,7 +40,7 @@ Continuous visual review remains part of development: look for wasted space, dat
 
 ## Preserved history
 
-- `main`: existing default branch; its old v101 guidance is not the latest status. No v116 merge has been performed.
+- `main`: historical default branch with a documentation pointer to v116. Its legacy game files are not the current playable release; no v116 gameplay merge has been performed.
 - `work/v8-integrity-charcoal-candidate`: previous maintained source/reconciliation stream, recorded through v112.
 - `work/v8-game-first-rebuild`: older v101 management checkpoint.
 - `protected/v7.0.14`: historical reference branch. Its name does not itself enforce GitHub branch protection.

@@ -1,20 +1,28 @@
-# GCC v116 — current handoff
+# GCC v116 — stable playable release handoff
 
-Recorded: 10 November 2026. This is a documentation and repository-navigation checkpoint, not a new game release or a test execution report.
+Status as of 10 November 2026: **v116 is the frozen stable playable release artifact.** This handoff records the controlled release decision, tested evidence and remaining engineering limits. No GitHub Release/tag has been created, and the old `main` game code has not been merged.
+
+## Stable release operating rules
+
+- **Single playable source of truth:** `v116/GCC_v116_release (1).html`. Keep the SHA-256 above pinned.
+- **Do not change the frozen HTML for cleanup**, release notes, testing, source refactors or visual experimentation. Keep testing/documentation changes separate.
+- **Known-good evidence:** 19-season isolated career acceptance; native single-tab Chromium save/reload/Continue on CI; both explicitly scoped in this document.
+- **Still open:** concurrent-tab save conflicts and reconciliation of maintained source with the exact binary. These should be handled without changing the published artifact.
+- **Repository discipline:** `main` remains historical code; the default landing page points here. Do not merge historical styles or rebuild v116 from an older source pipeline. No duplicate release files or new branches were created by this designation.
 
 ## Current identity
 
-The project owner identifies **v116 as the latest release**.
+The project owner has designated **v116 as the current stable playable build**.
 
 - Branch: `v116`
 - Upload commit: `7d6772364788fe4469b9bdac855ec33451e8974d`
 - Exact uploaded path: `GCC_v116_release (1).html`
 - Recorded Git blob SHA: `088cf689ef3a464b06e8512627811ad60864b3e8`
 - Recorded size: 6,635,097 bytes
-- Uploaded test: `captaincy_layer_v116.py`
-- Test Git blob SHA: `a48305e2b3353781308de1c778a35106a7192270`
+- Artifact SHA-256: `b27cf0b4c7e6e4e7a78eaa5c80154dfd0f70657ce9f774dd405505e97e82c6d0`
+- Portable acceptance test: `captaincy_layer_v116.py`; current test Git blob SHA: `3c6b1d121f6d3c640e86fc7f26b523394ab3d30a`.
 
-These Git blob identifiers are not standalone SHA-256 checksums. The release filename is preserved to avoid unnecessary copies or accidental byte changes. The owner-designated current release is not the same as a verified merge into `main` or a GitHub Release/tag.
+Git blob identifiers and standalone SHA-256 checksums are different identifiers. Preserve the exact release filename and bytes. This stable playable designation is distinct from a merge into `main` or the publication of a GitHub Release/tag.
 
 ## Owner-supplied perfection-pass report
 
