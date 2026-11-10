@@ -2,21 +2,24 @@
 
 Cricket management game built around drafting, trades, team selection and seasons from 2008 to 2026.
 
-## Current status
+## Current stable playable: GCC v116
 
-This repository is intentionally split between the protected historical baseline and the current active development branch.
+**GCC v116 is the frozen, owner-approved stable playable build.** The source-of-truth single-file game lives on the [`v116` branch](https://github.com/cpuhater1234/global-champions-cricket/tree/v116), not in the historical game files on `main`.
 
-- Active development branch: [`work/v8-game-first-rebuild`](https://github.com/cpuhater1234/global-champions-cricket/tree/work/v8-game-first-rebuild)
-- Current playable build: **GCC v101**
-- Active game file: [`game/gcc_v8_product_candidate.html`](https://github.com/cpuhater1234/global-champions-cricket/blob/work/v8-game-first-rebuild/game/gcc_v8_product_candidate.html)
-- QA and release notes: [`qa/team-management-20261029/README.md`](https://github.com/cpuhater1234/global-champions-cricket/blob/work/v8-game-first-rebuild/qa/team-management-20261029/README.md)
-- Protected historical baseline: **v7.0.14**
+- [Download the v116 playable HTML](https://github.com/cpuhater1234/global-champions-cricket/blob/v116/GCC_v116_release%20%281%29.html) (use **Download raw file**).
+- [Read the current release handoff and QA limitations](https://github.com/cpuhater1234/global-champions-cricket/blob/v116/docs/release/V116_HANDOFF.md).
+- [See the successful native-browser acceptance](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/42751656106): two save/reload/Continue scenarios passed in Chromium.
+- Release identity: 6,635,097 bytes, SHA-256 `b27cf0b4c7e6e4e7a78eaa5c80154dfd0f70657ce9f774dd405505e97e82c6d0`.
 
-Important: do not treat the historical v7.0.14 build as the source of truth for current development. The live game and current design work are on the `work/v8-game-first-rebuild` branch, while the default branch preserves the tested baseline for reference and rollback safety.
+**Branch policy:** `main` remains a historical/reference code branch. This README update does not merge v116 gameplay, delete checkpoints, switch the default branch or publish a GitHub Release/tag. Concurrent-tab conflict recovery and maintained-source build parity remain open.
 
-## What is active now
+## Historical status on `main`
 
-GCC v101 represents the current playable relationship layer for squad management. It includes:
+The details below describe earlier v101-era management development and the protected v7.0.14 baseline. They are retained as history, not as current download or build instructions.
+
+## Historical v101 management layer
+
+The historical v101 management layer included:
 
 - persistent squad management state
 - healthy omissions checks and batting-role usage
@@ -25,7 +28,7 @@ GCC v101 represents the current playable relationship layer for squad management
 - XI selection based on the actual next venue
 - finals advice and medical/selection guardrails
 
-This is the playable management layer for the current cycle, not a complete personality, training or dialogue simulation system.
+This section is historical context. The current playable artifact is v116.
 
 ## Repository layout
 
@@ -37,8 +40,8 @@ This is the playable management layer for the current cycle, not a complete pers
 
 ## Branch and versioning policy
 
-- `main` contains the latest promoted known-good baseline and historical reference files
-- `work/v8-game-first-rebuild` contains the current active build and ongoing iteration work
+- `main` preserves historical reference code and the current release pointer in this README
+- `work/v8-game-first-rebuild` is an earlier v101 development checkpoint; `v116` is the current playable branch
 - Do not silently overwrite protected versions
 - Record and preserve baseline hashes for any frozen release candidate
 
@@ -50,4 +53,4 @@ The project follows a deliberate QA workflow designed to keep high-risk gameplay
 
 This project is designed to keep the polished 2008 foundation protected while allowing experimental and active management changes to evolve separately. That ensures the game can continue to iterate without compromising the historical baseline.
 
-The current build is intentionally treated as the active source of truth for playtesting and release decisions, while older versions remain available as frozen references.
+The current playable source of truth is the frozen v116 HTML linked above. The `main` branch and older versions remain historical references.
