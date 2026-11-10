@@ -37,11 +37,20 @@ jobs:
             --mode http \
             --case-timeout 240 \
             --out-dir qa/results/v116-native
-      - name: Upload test results and failure logs
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: gcc-v116-native-acceptance
-          path: qa/results/v116-native/
-          if-no-files-found: warn
-          retention-days: 7
+      # Repository artifact storage is at quota. Keep test results in job logs
+      # and a short GitHub Actions summary without uploading an artifact.
+      - name: Verify and summarize native result
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          report = json.loads(Path('qa/results/v116-native/captaincy_result.json').read_text())
+          assert report['status'] == 'PASS'
+          assert report['mode'] == 'http' and report['native_storage_checked']
+          assert len(report['runs']) == 2
+          assert all(run['reloaded']['captaincy'] == run['plan'] for run in report['runs'])
+          message = 'PASS: 2/2 native Chromium save, reload and Continue scenarios'
+          print(message)
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as out:
+              out.write('## GCC v116 native acceptance\n\n' + message + '\n')
+          PY
