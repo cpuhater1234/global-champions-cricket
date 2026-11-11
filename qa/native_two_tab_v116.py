@@ -82,10 +82,16 @@ def run():
     ap=argparse.ArgumentParser()
     ap.add_argument('--html',type=Path,default=Path(__file__).resolve().parents[1]/'GCC_v116_release (1).html')
     ap.add_argument('--out',type=Path,default=Path('qa/results/v116-native-two-tab.json'))
+    ap.add_argument('--experimental-candidate',action='store_true',
+                    help='Accept only the deterministic one-declaration signing review candidate')
     a=ap.parse_args()
     data=a.html.read_bytes()
     sha=hashlib.sha256(data).hexdigest()
-    assert sha==native.OFFICIAL_SHA256, 'Canonical v116 SHA mismatch'
+    if a.experimental_candidate:
+        from qa.v116_signing_width_candidate import patch_release
+        assert data==patch_release(native.DEFAULT_HTML.read_bytes()), 'Not the exact deterministic signing review candidate'
+    else:
+        assert sha==native.OFFICIAL_SHA256, 'Canonical v116 SHA mismatch'
     native.SETTINGS=SimpleNamespace(mode='http')
     native.HTML_BYTES=data
     errors=[]
@@ -137,7 +143,7 @@ def run():
                 restored=durable(tab_a,2,TWO)
                 assert checkpoint(tab_a)==restored['raw'], 'Post-Continue IDB and localStorage disagree'
                 assert not errors, errors
-                result={'status':'PASS','sha256':sha,'native_origin':True,
+                result={'status':'PASS','sha256':sha,'native_origin':True,'candidate':a.experimental_candidate,
                   'rounds':[first['savedRound'],second['savedRound']],
                   'stale_save_rejected':True,'local_storage_preserved':True,
                   'indexeddb_preserved':True,'reloaded_latest':True,
