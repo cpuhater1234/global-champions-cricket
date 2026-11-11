@@ -1,0 +1,193 @@
+name: GCC v116 Claude menu cross-reference review
+
+on:
+  push:
+    branches:
+      - work/v116-candidate-acceptance
+    paths:
+      - '.github/workflows/v116-menu-review.yml'
+      - 'qa/v116_menu_review_candidate.py'
+      - 'qa/v116_menu_visual_audit.cjs'
+      - 'qa/v116_finals_layout_candidate.py'
+      - 'qa/v116_signing_width_candidate.py'
+      - 'qa/v116_source_reconciliation.py'
+      - 'v8/ui/decision-ui.css'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gcc-v116-claude-menu-review
+  cancel-in-progress: true
+
+jobs:
+  render-menu-review:
+    name: Render v116 guide pages with Claude flat-dense design
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: work/v116-candidate-acceptance
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install Chromium, Playwright and contact-sheet library
+        run: |
+          python -m pip install --disable-pip-version-check playwright pillow
+          python -m playwright install --with-deps chromium
+          npm install --no-save --no-package-lock playwright
+
+      - name: Build candidate by replacing the existing menu CSS owner
+        run: |
+          python qa/v116_menu_review_candidate.py \
+            --output qa/results/v116-menu-review/GCC_v116_menu_review.html \
+            --report qa/results/v116-menu-review/build.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('qa/results/v116-menu-review/build.json').read_text())
+          assert r['status']=='MENU_REVIEW_CANDIDATE_ONLY',r
+          assert r['base_accepted_candidate_sha256']=='5ba82e499b0b8d08706aab851449d20b6d315bf9b780a8c9674b44933d3fe094',r
+          assert r['existing_style_blocks_changed']==1 and r['new_style_blocks']==0,r
+          assert r['javascript_blocks_changed']==0,r
+          assert r['playable_release_unchanged'] and r['main_unchanged'],r
+          assert Path('qa/results/v116-menu-review/GCC_v116_menu_review.html').stat().st_size==r['candidate_bytes']
+          print('PASS: menu candidate changes one existing style block only')
+          print('Menu candidate SHA-256:',r['candidate_sha256'])
+          PY
+
+      - name: Syntax-check menu review tools
+        run: |
+          python -m py_compile qa/v116_menu_review_candidate.py
+          node --check qa/v116_menu_visual_audit.cjs
+
+      - name: Render guide pages and expanded rules at five widths
+        env:
+          GCC8_TEST_BUILD: qa/results/v116-menu-review/GCC_v116_menu_review.html
+          GCC8_MENU_SCREENSHOT_DIR: qa/results/v116-menu-review/screenshots
+        run: |
+          GCC8_CHROMIUM="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')" \
+            node qa/v116_menu_visual_audit.cjs
+
+      - name: Build labelled menu contact sheets
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageDraw, ImageFont
+          import json
+
+          root=Path('qa/results/v116-menu-review')
+          report=json.loads((root/'screenshots'/'report.json').read_text())
+          build=json.loads((root/'build.json').read_text())
+          assert report['status']=='MENU_VISUAL_REVIEW',report
+          assert report['candidate_sha256']==build['candidate_sha256'],report
+          assert len(report['states'])==18,len(report['states'])
+          assert not report['errors'] and not report['failures'],report['failures']
+
+          shots=root/'screenshots'
+          out=Path('docs/release/visual-review/menu')
+          out.mkdir(parents=True,exist_ok=True)
+          regular='/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
+          bold='/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
+          font=ImageFont.truetype(regular,16)
+          small=ImageFont.truetype(regular,12)
+          titlefont=ImageFont.truetype(bold,24)
+          bg=(17,19,18);panel=(36,39,36);line=(92,99,91);ink=(241,245,250);muted=(190,196,188);accent=(234,241,255)
+
+          def sheet(filename,title,names,cols=3,cell_w=420,cell_h=600):
+              pad=16;head=72;rows=(len(names)+cols-1)//cols
+              canvas=Image.new('RGB',(pad+cols*(cell_w+pad),head+pad+rows*(cell_h+pad)),bg)
+              draw=ImageDraw.Draw(canvas)
+              draw.text((pad,16),title,font=titlefont,fill=ink)
+              draw.text((pad,47),'Candidate '+build['candidate_sha256'],font=small,fill=muted)
+              for i,(label,filename_png) in enumerate(names):
+                  x=pad+(i%cols)*(cell_w+pad);y=head+pad+(i//cols)*(cell_h+pad)
+                  draw.rounded_rectangle((x,y,x+cell_w,y+cell_h),radius=8,fill=panel,outline=line,width=2)
+                  draw.text((x+10,y+8),label,font=font,fill=accent)
+                  img=Image.open(shots/filename_png).convert('RGB')
+                  img.thumbnail((cell_w-20,cell_h-48),Image.Resampling.LANCZOS)
+                  px=x+(cell_w-img.width)//2;py=y+40+(cell_h-48-img.height)//2
+                  canvas.paste(img,(px,py))
+              target=out/filename
+              canvas.save(target,'PNG',optimize=True)
+              print('WROTE',target,target.stat().st_size)
+
+          widths=[1440,1024,768,390,320]
+          for action,label in [('how','HOW TO PLAY'),('howItWorks','HOW IT WORKS'),('breakawayStory','THE BREAKAWAY STORY')]:
+              names=[]
+              for width in widths:
+                  image=f'{action}-{width}.png'
+                  assert (shots/image).is_file(),image
+                  names.append((f'{width}px',image))
+              if action=='how':
+                  for i in range(1,4):
+                      image=f'how-rule-{i}-390.png'
+                      assert (shots/image).is_file(),image
+                      names.append((f'RULE {i} OPEN | 390px',image))
+              sheet(f'{action}.png',label,names,cols=3,cell_w=420,cell_h=600)
+
+          allstates=[]
+          for action,label in [('how','How to play'),('howItWorks','How it works'),('breakawayStory','Breakaway story')]:
+              for width in widths:
+                  allstates.append({'page':label,'width':width,'file':f'{action}-{width}.png'})
+          summary={
+            'status':'MENU_VISUAL_REVIEW_READY',
+            'base_accepted_candidate_sha256':build['base_accepted_candidate_sha256'],
+            'menu_candidate_sha256':build['candidate_sha256'],
+            'states':len(report['states']),
+            'page_errors':report['errors'],
+            'layout_failures':report['failures'],
+            'screenshots':allstates,
+            'expanded_rules':3,
+            'source_edit':'one existing decision-ui.css guide owner block; no new style/script block',
+            'playable_release_unchanged':True,
+            'main_unchanged':True
+          }
+          (out/'summary.json').write_text(json.dumps(summary,indent=2)+'\\n')
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Add menu review notes
+        run: |
+          cat > docs/release/visual-review/menu/README.md <<'EOF'
+          # GCC v116 menu visual review
+
+          Cross-reference source: Claude's uploaded v115 menu prototype and gcc_menu_flat_dense_prototype.css.
+
+          The screenshots are rendered from a disposable v116 menu candidate. It starts from the already accepted finals candidate and replaces only the existing guide CSS owner inside the existing decision-ui.css style block. No new stylesheet or JavaScript is added.
+
+          Design changes under review:
+          - Two guide columns from 860px; one column below.
+          - Flat guide rows and rule disclosures with thin dividers.
+          - Circular numbered markers, matching v116's actual h3 guide headings.
+          - Story cards remain a single narrative column.
+          - Charcoal modal surface and readable story-card text.
+          - Footer links retain 44px minimum control height.
+
+          The 18 screenshots cover all three guide pages at 320, 390, 768, 1024 and 1440px, plus each expanded rule group on mobile.
+
+          This is a QA review candidate only. It is not the frozen v116 playable release and has not been promoted.
+          EOF
+
+      - name: Commit menu review sheets to isolated QA branch
+        env:
+          BRANCH: work/v116-candidate-acceptance
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/release/visual-review/menu
+          git diff --cached --check
+          if git diff --cached --quiet; then
+            echo "No menu review changes to commit."
+          else
+            git commit -m "QA visual review: add Claude menu prototype comparison"
+            git push origin "HEAD:refs/heads/$BRANCH"
+          fi
