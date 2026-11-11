@@ -43,6 +43,7 @@ const {createHash}=require('crypto');
   const all=[...guide.querySelectorAll('*')].filter(visible);
   const r=d.getBoundingClientRect(),grid=guide.querySelector('.g8guidegrid');
   const rules=guide.querySelector('.g8rulegrid');
+  const story=guide.querySelector('.g8storychapters');
   const footer=guide.querySelector('.g8guidefooter nav');
   const columns=el=>{
    if(!el)return 0;
@@ -64,7 +65,8 @@ const {createHash}=require('crypto');
    document:{clientWidth:document.documentElement.clientWidth,scrollWidth:document.documentElement.scrollWidth},
    horizontalOverflow:document.documentElement.scrollWidth>innerWidth+2||d.scrollWidth>d.clientWidth+2,
    guideCards:guide.querySelectorAll('.g8guidegrid>.g8guidecard').length,
-   guideColumns:columns(grid),ruleColumns:columns(rules),footerColumns:columns(footer),
+   hasGuideGrid:!!grid,hasRuleGrid:!!rules,hasStoryChapters:!!story,
+   guideColumns:columns(grid),ruleColumns:columns(rules),storyColumns:columns(story),footerColumns:columns(footer),
    introHeading:guide.querySelector('.g8guideintro h3')?getComputedStyle(guide.querySelector('.g8guideintro h3')).fontSize:null,
    introBackground:guide.querySelector('.g8guideintro')?getComputedStyle(guide.querySelector('.g8guideintro')).backgroundColor:null,
    cardBackground:guide.querySelector('.g8guidecard')?getComputedStyle(guide.querySelector('.g8guidecard')).backgroundColor:null,
@@ -109,10 +111,11 @@ const {createHash}=require('crypto');
   widths:[320,390,768,1024,1440],
   errors,states,
   failures:states.filter(s=>s.horizontalOverflow||s.outsideCount>0||
-   (s.viewport>=860&&s.guideColumns!==2)||
-   (s.viewport<860&&s.guideColumns!==1)||
-   (s.viewport>=860&&s.ruleColumns!==2)||
-   (s.viewport<860&&s.ruleColumns!==1))
+   (s.hasGuideGrid&&s.viewport>=860&&s.guideColumns!==2)||
+   (s.hasGuideGrid&&s.viewport<860&&s.guideColumns!==1)||
+   (s.hasRuleGrid&&s.viewport>=860&&s.ruleColumns!==2)||
+   (s.hasRuleGrid&&s.viewport<860&&s.ruleColumns!==1)||
+   (s.hasStoryChapters&&s.storyColumns!==1))
  };
  fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(report,null,2)+'\n');
  console.log(JSON.stringify({
