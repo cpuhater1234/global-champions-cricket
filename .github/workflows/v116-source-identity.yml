@@ -6,6 +6,7 @@ on:
     paths:
       - 'GCC_v116_release (1).html'
       - 'qa/v116_source_reconciliation.py'
+      - 'qa/v116_block_ownership.py'
       - '.github/workflows/v116-source-identity.yml'
   workflow_dispatch:
 
@@ -26,6 +27,12 @@ jobs:
         run: python qa/v116_source_reconciliation.py audit --json qa/results/v116-source-audit.json
       - name: Lossless extraction and exact binary round trip
         run: python qa/v116_source_reconciliation.py roundtrip --json qa/results/v116-source-roundtrip.json
+      - name: Map all 39 v116 blocks to tracked CSS/JS sources
+        run: |
+          python qa/v116_block_ownership.py \
+            --json qa/results/v116-block-map.json \
+            --md qa/results/v116-block-map.md \
+            --summary
       - name: Assert provenance and record limitations
         run: |
           python - <<'PY'
@@ -38,6 +45,11 @@ jobs:
           assert audit['styles']==17 and audit['scripts']==22
           assert roundtrip['roundtrip']['byte_identical_to_release']
           assert audit['source']['maintained_source_reproduction']=='NOT VERIFIED'
+          mapping=json.loads(Path('qa/results/v116-block-map.json').read_text())
+          assert len(mapping['styles'])==17 and len(mapping['scripts'])==22
+          assert mapping['maintained_build_parity']=='UNVERIFIED'
+          from collections import Counter
+          print('Block correspondence:',dict(Counter(row['status'] for row in mapping['styles']+mapping['scripts'])))
           msg='PASS: exact frozen v116 binary and lossless extraction round trip. Maintained v8/build.py parity: NOT VERIFIED.'
           print(msg)
           with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as f:
