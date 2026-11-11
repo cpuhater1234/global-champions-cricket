@@ -21,6 +21,8 @@ const {createHash}=require('crypto');
  });
  const page=await browser.newPage({viewport:{width:1440,height:1000},reducedMotion:'reduce'});
  const errors=[],states=[];
+ const years=(process.env.GCC8_DIAGNOSTIC_YEARS||'2019').split(',').map(Number);
+ const hypothesisCss='@media(max-width:760px){#g8app .gccuiFinals .g8matcharena{align-items:stretch!important}}';
  page.on('pageerror',e=>errors.push(e.message));
  await page.route('https://**/*',r=>r.abort());
  await page.goto(pathToFileURL(path.resolve(html)).href,{waitUntil:'domcontentloaded'});
@@ -34,6 +36,8 @@ const {createHash}=require('crypto');
  };
  const inspect=()=>page.evaluate(()=>{
   const root=document.documentElement,body=document.body,stage=document.getElementById('g8stage');
+  const campaign=document.querySelector('#g8stage>.gccuiFinals');
+  const campaignRect=campaign?.getBoundingClientRect();
   const visible=el=>{
    if(el.closest('[hidden],[inert]'))return false;
    const cs=getComputedStyle(el),r=el.getBoundingClientRect();
@@ -62,17 +66,49 @@ const {createHash}=require('crypto');
   const internal=nodes.filter(el=>el.scrollWidth>el.clientWidth+2)
    .sort((a,b)=>(b.scrollWidth-b.clientWidth)-(a.scrollWidth-a.clientWidth));
   const unique=[...new Set([...outside,...internal])];
+  const relevant=[...document.querySelectorAll('#g8stage .gccuiKnockoutFixture,#g8stage .gccuiKnockoutSide,#g8stage .g8matcharena,#g8stage .g8matcharena>div,#g8stage .gccuiScorecard,#g8stage .gcc-awards,#g8stage .gcc-worm,#g8stage .g8resultread,#g8stage .g8phasecards,#g8stage .g8phasecontest')]
+   .filter(visible).map(describe);
+  const overCampaign=campaignRect?nodes.filter(el=>{
+   if(!campaign.contains(el))return false;
+   const r=el.getBoundingClientRect();
+   return r.right>campaignRect.right+2||r.left<campaignRect.left-2;
+  }).sort((a,b)=>b.getBoundingClientRect().right-a.getBoundingClientRect().right).slice(0,12).map(describe):[];
+  const spillText=[];
+  if(campaignRect){
+   const walk=document.createTreeWalker(campaign,NodeFilter.SHOW_TEXT);
+   let node;
+   while((node=walk.nextNode())){
+    if(!node.textContent.trim()||!node.parentElement||!visible(node.parentElement))continue;
+    try{
+     const range=document.createRange();range.selectNodeContents(node);
+     for(const r of range.getClientRects()){
+      if(r.right>campaignRect.right+2||r.left<campaignRect.left-2){
+       spillText.push({text:node.textContent.trim().slice(0,90),
+        parent:node.parentElement.className?.baseVal||node.parentElement.className||node.parentElement.tagName,
+        right:Math.round(r.right),left:Math.round(r.left)});
+       break;
+      }
+     }
+    }catch{}
+   }
+  }
+  const rootChildren=campaign?[...campaign.children].filter(visible).map(el=>{
+   const r=el.getBoundingClientRect();
+   return {tag:el.tagName,cls:el.className?.baseVal||el.className,
+    left:Math.round(r.left),right:Math.round(r.right),scrollWidth:el.scrollWidth,clientWidth:el.clientWidth};
+  }):[];
   return {
    viewport:innerWidth,view:GCC8.ui.view,year:GCC8.G.state.year,finalsStage:GCC8.G.state.finals?.stage,
    document:{clientWidth:root.clientWidth,scrollWidth:root.scrollWidth,bodyScrollWidth:body.scrollWidth,
              stageClientWidth:stage?.clientWidth??null,stageScrollWidth:stage?.scrollWidth??null},
    overflow:root.scrollWidth>innerWidth+2||body.scrollWidth>innerWidth+2||(stage?.scrollWidth||0)>innerWidth+2,
    outsideCount:outside.length,internalOverflowCount:internal.length,
-   offenders:unique.slice(0,35).map(describe)
+   offenders:unique.slice(0,12).map(describe),
+   campaignRight:campaignRect?.right??null,relevant,overCampaign,spillText:spillText.slice(0,20),rootChildren
   };
  });
 
- for(const year of [2019,2025,2026]){
+ for(const year of years){
   const raw=fs.readFileSync(path.join(careerDir,'checkpoint-'+year+'.json'),'utf8');
   await page.evaluate(raw=>{
    GCC8.dispatch('home');
@@ -92,11 +128,14 @@ const {createHash}=require('crypto');
    for(const width of [1440,1024,768,390,360,320]){
     await page.setViewportSize({width,height:1000});
     await page.waitForTimeout(60);
-    const result=await inspect();
+    const baseline=await inspect();
+    const tag=await page.addStyleTag({content:hypothesisCss});
+    await page.waitForTimeout(40);
+    const experiment=await inspect();
+    await tag.evaluate(el=>el.remove());
     const name=year+'-finals-'+stage+'-'+width;
-    const record={name,...result};
-    states.push(record);
-    if([1440,390,320].includes(width)){
+    states.push({name,baseline,experiment});
+    if(process.env.GCC8_DIAGNOSTIC_SCREENSHOTS==='1'&&[390,320].includes(width)){
      await page.screenshot({path:path.join(out,name+'.png'),fullPage:true});
     }
    }
@@ -105,18 +144,27 @@ const {createHash}=require('crypto');
  const report={
   status:'DIAGNOSTIC_ONLY',
   candidate_sha256:sha,
-  years:[2019,2025,2026],
+  years,
   stages:['gf-ready','done'],
   widths:[1440,1024,768,390,360,320],
-  errors,states,
-  note:'No game source was changed. This report identifies the DOM elements and computed layout metrics behind the finals overflow flags; it does not apply a CSS fix.'
+  errors,states,hypothesisCss,
+  note:'Browser-only CSS hypothesis, removed after each measurement. No release or game source was changed. No artifact uploads.'
  };
  fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(report,null,2)+'\n');
  console.log(JSON.stringify({
   status:report.status,candidate_sha256:sha,states:states.length,errors,
-  overflowStates:states.filter(s=>s.overflow).map(s=>({
-   name:s.name,viewport:s.viewport,document:s.document,
-   offenders:s.offenders.slice(0,8)
+  hypothesisCss,
+  findings:states.filter(s=>s.baseline.overflow||s.experiment.overflow).map(s=>({
+   name:s.name,baselineWidth:s.baseline.document.scrollWidth,
+   experimentalWidth:s.experiment.document.scrollWidth,viewport:s.baseline.viewport,
+   previewSides:s.baseline.relevant.filter(e=>e.selector.includes('gccuiKnockoutSide')).map(e=>e.rect.width),
+   previewSidesAfter:s.experiment.relevant.filter(e=>e.selector.includes('gccuiKnockoutSide')).map(e=>e.rect.width),
+   baselineTextSpill:s.baseline.spillText.slice(0,10),
+   experimentalTextSpill:s.experiment.spillText.slice(0,10),
+   baselineRootChildren:s.baseline.rootChildren,
+   baselineOverCampaign:s.baseline.overCampaign.slice(0,10).map(e=>({selector:e.selector,rect:e.rect})),
+   baselineRelevant:s.baseline.relevant.slice(0,20).map(e=>({selector:e.selector,rect:e.rect,scroll:e.scrollWidth,client:e.clientWidth,min:e.css.minWidth,display:e.css.display,grid:e.css.gridTemplateColumns})),
+   experimentRelevant:s.experiment.relevant.slice(0,20).map(e=>({selector:e.selector,rect:e.rect,scroll:e.scrollWidth,client:e.clientWidth}))
   }))
  },null,2));
  await browser.close();
