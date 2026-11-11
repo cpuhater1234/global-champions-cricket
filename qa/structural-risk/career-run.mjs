@@ -70,7 +70,27 @@ function manualXI(){
   const outfield=best.filter(p=>!isKeeper(p)).slice(0,10);
   best.splice(0,best.length,...outfield,keeper);
  }
- doIt('clearXI');for(const p of best)doIt('select',p.id);
+ doIt('clearXI');
+ const rosterIds=s.teams[s.userClub.abbr]||[],selectionTrace=[];
+ for(const p of best){
+  const beforeCount=s.xi.length;
+  doIt('select',p.id);
+  selectionTrace.push({
+   id:p.id,name:p.name,role:p.role,keeping:p.keeping,retired:!!p.dynastyRetired,
+   rosterMember:rosterIds.includes(p.id),injury:s.dynasty.injuries?.[p.id]||null,
+   xiBefore:beforeCount,xiAfter:s.xi.length,selected:s.xi.includes(p.id),
+   view:X.ui.view,modal:X.ui.modal||null
+  });
+ }
+ if(s.xi.length!==11){
+  const detail={
+   year:s.year,club:s.userClub.abbr,view:X.ui.view,rosterCount:rosterIds.length,
+   roster:X.roster().map(p=>({id:p.id,name:p.name,retired:!!p.dynastyRetired,keeping:p.keeping,injury:s.dynasty.injuries?.[p.id]||null})),
+   availableCount:available.length,bestCount:best.length,
+   selectedCount:s.xi.length,selectionTrace
+  };
+  throw new Error('manual XI incomplete diagnostic: '+JSON.stringify(detail));
+ }
  check(s.xi.length===11,'manual XI complete');
  check(new Set(s.battingOrder).size===11,'unique batting order');
  check(s.xi.some(id=>isKeeper(G.byId(id))),'manual XI includes a recognised wicketkeeper');
