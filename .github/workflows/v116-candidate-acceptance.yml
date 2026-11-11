@@ -1,4 +1,4 @@
-name: GCC v116 finals-layout candidate full acceptance
+name: GCC v116 Claude menu candidate full acceptance
 
 on:
   push:
@@ -9,6 +9,9 @@ on:
       - 'qa/native_two_tab_v116.py'
       - 'qa/v116_signing_width_candidate.py'
       - 'qa/v116_finals_layout_candidate.py'
+      - 'qa/v116_menu_review_candidate.py'
+      - 'qa/v116_menu_visual_audit.cjs'
+      - 'v8/ui/decision-ui.css'
       - 'qa/v116_source_reconciliation.py'
       - 'qa/structural-risk/career-run.mjs'
       - 'qa/offline_game_host.mjs'
@@ -25,7 +28,7 @@ concurrency:
 
 jobs:
   candidate-acceptance:
-    name: Corrected finals candidate, 19 seasons, native persistence and visual QA
+    name: Claude menu candidate, 19 seasons, native persistence and visual QA
     runs-on: ubuntu-24.04
     timeout-minutes: 60
     steps:
@@ -45,31 +48,31 @@ jobs:
           python -m playwright install --with-deps chromium
           npm install --no-save --no-package-lock playwright
 
-      - name: Build guarded in-place finals layout candidate
+      - name: Build checksum-pinned Claude menu candidate
         run: |
-          python qa/v116_finals_layout_candidate.py \
-            --output qa/results/v116-finals-layout-review.html \
-            --report qa/results/v116-finals-candidate-build.json
+          python qa/v116_menu_review_candidate.py \
+            --output qa/results/v116-menu-review/GCC_v116_menu_review.html \
+            --report qa/results/v116-menu-review/build.json
           python - <<'PY'
-          import json
+          import json,hashlib
           from pathlib import Path
-          r=json.loads(Path('qa/results/v116-finals-candidate-build.json').read_text())
-          import hashlib
-          assert r['status']=='EXPERIMENTAL_CANDIDATE_ONLY' and r['playable_release_unchanged']
-          assert r['base_signing_sha256']=='a8aa0b653d2476b120353e3511e43e2b07d8f92e9a3b2ce9ff383313f7cf3ecb'
-          assert r['candidate_sha256']!='a8aa0b653d2476b120353e3511e43e2b07d8f92e9a3b2ce9ff383313f7cf3ecb'
-          assert len(r['css_edits'])==2
-          assert hashlib.sha256(Path('qa/results/v116-finals-layout-review.html').read_bytes()).hexdigest()==r['candidate_sha256']
-          assert r['candidate_bytes']>0
-          print('PASS: exact guarded finals candidate built; SHA-256',r['candidate_sha256'])
-          print('PASS: frozen v116 and main have not been modified')
+          r=json.loads(Path('qa/results/v116-menu-review/build.json').read_text())
+          assert r['status']=='MENU_REVIEW_CANDIDATE_ONLY' and r['playable_release_unchanged']
+          assert r['base_accepted_candidate_sha256']=='5ba82e499b0b8d08706aab851449d20b6d315bf9b780a8c9674b44933d3fe094'
+          assert r['candidate_sha256']=='943643a36730f9db6630437b15111b5f82041b540998f793230aab1745be21e3'
+          assert r['candidate_bytes']==6641178
+          assert r['existing_style_blocks_changed']==1 and r['new_style_blocks']==0
+          assert r['javascript_blocks_changed']==0
+          assert hashlib.sha256(Path('qa/results/v116-menu-review/GCC_v116_menu_review.html').read_bytes()).hexdigest()==r['candidate_sha256']
+          print('PASS: exact Claude menu candidate built; SHA-256',r['candidate_sha256'])
+          print('PASS: only one existing CSS block changed; frozen v116 and main remain untouched')
           PY
 
       - name: Check signing strip at five responsive widths
         run: |
           python qa/native_v116_signing_css.py \
-            --html qa/results/v116-finals-layout-review.html \
-            --finals-candidate \
+            --html qa/results/v116-menu-review/GCC_v116_menu_review.html \
+            --menu-candidate \
             --widths 320,360,390,768,1440 \
             --out qa/results/v116-signing-candidate-responsive.json
 
@@ -80,7 +83,7 @@ jobs:
           from pathlib import Path
           r=json.loads(Path('qa/results/v116-signing-candidate-responsive.json').read_text())
           assert r['status']=='PASS' and r['candidate']
-          assert r['sha256']==json.loads(Path('qa/results/v116-finals-candidate-build.json').read_text())['candidate_sha256']
+          assert r['sha256']==json.loads(Path('qa/results/v116-menu-review/build.json').read_text())['candidate_sha256']
           assert r['widths']==[320,360,390,768,1440]
           assert len(r['snapshots'])==5 and not r['known_overflows']
           for row in r['snapshots']:
@@ -98,7 +101,7 @@ jobs:
 
       - name: Run full 19-season cricket-engine acceptance on candidate
         env:
-          GCC8_TEST_BUILD: qa/results/v116-finals-layout-review.html
+          GCC8_TEST_BUILD: qa/results/v116-menu-review/GCC_v116_menu_review.html
           GCC8_TEST_REPORT_DIR: qa/results/v116-candidate-career
           GCC8_TEST_SEED: '101'
           GCC8_TEST_LAST_YEAR: '2026'
@@ -124,7 +127,7 @@ jobs:
       - name: Run native candidate gameplay, save, reload and Continue
         run: |
           python captaincy_layer_v116.py \
-            --html qa/results/v116-finals-layout-review.html \
+            --html qa/results/v116-menu-review/GCC_v116_menu_review.html \
             --no-hash-check --mode http --case-timeout 240 \
             --out-dir qa/results/v116-candidate-native-390
 
@@ -135,7 +138,7 @@ jobs:
           from pathlib import Path
           r=json.loads(Path('qa/results/v116-candidate-native-390/captaincy_result.json').read_text())
           assert r['status']=='PASS' and r['mode']=='http' and r['native_storage_checked']
-          assert r['sha256']==json.loads(Path('qa/results/v116-finals-candidate-build.json').read_text())['candidate_sha256']
+          assert r['sha256']==json.loads(Path('qa/results/v116-menu-review/build.json').read_text())['candidate_sha256']
           assert len(r['runs'])==2
           assert all(x['reloaded']['captaincy']==x['plan'] for x in r['runs'])
           line='PASS: exact candidate completed 2/2 independent native Chromium gameplay, save, reload and Continue scenarios at 390px'
@@ -150,7 +153,7 @@ jobs:
           failed=0
           for width in 320 360 768; do
             python captaincy_layer_v116.py \
-              --html qa/results/v116-finals-layout-review.html \
+              --html qa/results/v116-menu-review/GCC_v116_menu_review.html \
               --no-hash-check --mode http --width "$width" --case 0 \
               --case-timeout 240 --out-dir "qa/results/v116-candidate-journey-$width"
             status=$?
@@ -168,7 +171,7 @@ jobs:
           python - <<'PY'
           import json, os
           from pathlib import Path
-          expected=json.loads(Path('qa/results/v116-finals-candidate-build.json').read_text())['candidate_sha256']
+          expected=json.loads(Path('qa/results/v116-menu-review/build.json').read_text())['candidate_sha256']
           for width in (320,360,768):
               r=json.loads(Path(f'qa/results/v116-candidate-journey-{width}/captaincy_result.json').read_text())
               assert r['status']=='PASS' and r['sha256']==expected and r['native_storage_checked']
@@ -186,8 +189,8 @@ jobs:
       - name: Verify candidate two-tab stale-save protection and recovery
         run: |
           python qa/native_two_tab_v116.py \
-            --html qa/results/v116-finals-layout-review.html \
-            --finals-candidate \
+            --html qa/results/v116-menu-review/GCC_v116_menu_review.html \
+            --menu-candidate \
             --out qa/results/v116-candidate-two-tab.json
 
       - name: Summarize candidate two-tab recovery
@@ -197,7 +200,7 @@ jobs:
           from pathlib import Path
           r=json.loads(Path('qa/results/v116-candidate-two-tab.json').read_text())
           assert r['status']=='PASS' and r['native_origin'] and r['candidate']
-          assert r['sha256']==json.loads(Path('qa/results/v116-finals-candidate-build.json').read_text())['candidate_sha256']
+          assert r['sha256']==json.loads(Path('qa/results/v116-menu-review/build.json').read_text())['candidate_sha256']
           assert r['stale_save_rejected'] and r['indexeddb_preserved'] and r['reloaded_latest']
           assert r['career_identity_preserved'] and r['post_continue_checkpoint_consistent']
           line='PASS: candidate rejected stale-tab writes, preserved IndexedDB and restored latest Round 2 career'
@@ -208,7 +211,7 @@ jobs:
 
       - name: Render saved-career screens at responsive widths
         env:
-          GCC8_TEST_BUILD: qa/results/v116-finals-layout-review.html
+          GCC8_TEST_BUILD: qa/results/v116-menu-review/GCC_v116_menu_review.html
           GCC8_BROWSER_CAREER_DIR: qa/results/v116-candidate-career
           GCC8_BROWSER_REPORT_DIR: qa/results/v116-candidate-visual
           GCC8_BROWSER_YEARS: '2019,2025,2026'
@@ -216,6 +219,30 @@ jobs:
         run: |
           GCC8_CHROMIUM="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')" \
             node qa/v8_browser_career_audit.cjs
+
+      - name: Run native Chromium menu guide acceptance
+        env:
+          GCC8_TEST_BUILD: qa/results/v116-menu-review/GCC_v116_menu_review.html
+          GCC8_MENU_SCREENSHOT_DIR: qa/results/v116-menu-review/screenshots
+        run: |
+          GCC8_CHROMIUM="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')" \
+            node qa/v116_menu_visual_audit.cjs
+
+      - name: Verify Claude menu layout and candidate identity
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          build=json.loads(Path('qa/results/v116-menu-review/build.json').read_text())
+          r=json.loads(Path('qa/results/v116-menu-review/screenshots/report.json').read_text())
+          assert r['candidate_sha256']==build['candidate_sha256']
+          assert r['states']==18 and r['errors']==[] and r['failures']==[],r
+          assert build['candidate_sha256']=='943643a36730f9db6630437b15111b5f82041b540998f793230aab1745be21e3'
+          line='PASS: all three guide pages, all three expanded rule groups and 18 desktop/mobile/tablet states; no page errors or layout failures'
+          print(line)
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as out:
+              out.write('\\n## Claude menu responsive acceptance\\n\\n'+line+'\\n')
+          PY
 
       - name: Verify saved-career responsive rendering
         run: |
