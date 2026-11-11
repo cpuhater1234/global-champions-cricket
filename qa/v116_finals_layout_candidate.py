@@ -18,6 +18,8 @@ from v116_source_reconciliation import BLOCK, RELEASE
 from v116_signing_width_candidate import patch_release as signing_candidate
 
 EXPECTED_SIGNING_SHA = 'a8aa0b653d2476b120353e3511e43e2b07d8f92e9a3b2ce9ff383313f7cf3ecb'
+ACCEPTED_CANDIDATE_SHA = '5ba82e499b0b8d08706aab851449d20b6d315bf9b780a8c9674b44933d3fe094'
+ACCEPTED_CANDIDATE_BYTES = 6635108
 
 # Select precisely the existing mobile Grand Final arena rule.
 ARENA = re.compile(
@@ -73,6 +75,8 @@ def patch_release(data):
             changes+=1
     assert changes==2, f'Expected precisely two CSS block edits, got {changes}'
     assert b'align-items:stretch!important' in result
+    assert len(result)==ACCEPTED_CANDIDATE_BYTES, 'Accepted candidate size changed; stop and re-review'
+    assert sha256(result).hexdigest()==ACCEPTED_CANDIDATE_SHA, 'Accepted candidate SHA changed; stop and re-review'
     return result
 
 def main():
