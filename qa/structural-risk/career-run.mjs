@@ -69,7 +69,10 @@ function manualXI(){
  const keeper=available.find(isKeeper);
  check(!!keeper,'recognised wicketkeeper available to manual XI');
  const best=G.bestXI(available);
- if(keeper&&!best.some(isKeeper))best[best.length-1]=keeper;
+ if(keeper){
+  const outfield=best.filter(p=>!isKeeper(p)).slice(0,10);
+  best.splice(0,best.length,...outfield,keeper);
+ }
  doIt('clearXI');for(const p of best)doIt('select',p.id);
  check(s.xi.length===11,'manual XI complete');
  check(new Set(s.battingOrder).size===11,'unique batting order');
@@ -104,7 +107,7 @@ for(let guard=0;s.pickIndex<120&&guard<40;guard++){
 }
 check(s.pickIndex===120,'120 draft picks');check(Object.values(s.teams).every(ids=>ids.length===15),'all clubs have fifteen');check(new Set(Object.values(s.teams).flat()).size===120,'no duplicate roster players');doIt('team');manualXI();checkpoint('manual-XI');
 const first=s.battingOrder[0];doIt('move',first,1);check(s.battingOrder[1]===first,'batting order moves');
-const bench=X.roster().find(p=>!s.xi.includes(p.id));doIt('swapIn',bench.id);doIt('swapOut',s.xi[0]);check(s.xi.includes(bench.id),'manual swap works');doIt('rating','fielding');check(get('g8dialogContent').innerHTML.includes('Fielding'),'fielding opens fresh read');doIt('close');doIt('lodge');
+const isKeeper=p=>!!p&&(p.role==='WK-BAT'||Number(p.keeping||0)>=65);const bench=X.roster().find(p=>!s.xi.includes(p.id)&&!isKeeper(p))||X.roster().find(p=>!s.xi.includes(p.id));const outgoing=s.xi.find(id=>!isKeeper(G.byId(id)));doIt('swapIn',bench.id);doIt('swapOut',outgoing);check(s.xi.includes(bench.id),'manual swap works');check(s.xi.some(id=>isKeeper(G.byId(id))),'manual swap preserves recognised keeper');doIt('rating','fielding');check(get('g8dialogContent').innerHTML.includes('Fielding'),'fielding opens fresh read');doIt('close');doIt('lodge');
 // Double submission must not consume another match.
 doIt('prepare');doIt('playMatch',1);auditScorebook(s.results.at(-1));check(!X.dispatch('playMatch',[2]),'cannot double play');doIt('matchday');
 doIt('home');check(context.GCC8_CLOCK.paused,'title pauses domain runner');doIt('continue');check(s.round===1&&X.ui.view==='season','continues the same campaign');
