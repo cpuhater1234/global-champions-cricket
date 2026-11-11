@@ -7,6 +7,7 @@ on:
       - 'GCC_v116_release (1).html'
       - 'qa/v116_source_reconciliation.py'
       - 'qa/v116_block_ownership.py'
+      - 'qa/v116_css_cascade_audit.py'
       - '.github/workflows/v116-source-identity.yml'
   workflow_dispatch:
 
@@ -23,6 +24,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Install CSS parser for source-only diagnostics
+        run: python -m pip install --disable-pip-version-check tinycss2==1.4.0
       - name: Exact frozen release identity and source inventory
         run: python qa/v116_source_reconciliation.py audit --json qa/results/v116-source-audit.json
       - name: Lossless extraction and exact binary round trip
@@ -32,6 +35,12 @@ jobs:
           python qa/v116_block_ownership.py \
             --json qa/results/v116-block-map.json \
             --md qa/results/v116-block-map.md \
+            --summary
+      - name: Report exact-release CSS cascade review candidates
+        run: |
+          python qa/v116_css_cascade_audit.py \
+            --json qa/results/v116-css-cascade.json \
+            --md qa/results/v116-css-cascade.md \
             --summary
       - name: Assert provenance and record limitations
         run: |
@@ -48,6 +57,9 @@ jobs:
           mapping=json.loads(Path('qa/results/v116-block-map.json').read_text())
           assert len(mapping['styles'])==17 and len(mapping['scripts'])==22
           assert mapping['maintained_build_parity']=='UNVERIFIED'
+          cascade=json.loads(Path('qa/results/v116-css-cascade.json').read_text())
+          assert len(cascade['per_style'])==17
+          assert not cascade['browser_cascade_verified']
           from collections import Counter
           print('Block correspondence:',dict(Counter(row['status'] for row in mapping['styles']+mapping['scripts'])))
           msg='PASS: exact frozen v116 binary and lossless extraction round trip. Maintained v8/build.py parity: NOT VERIFIED.'
