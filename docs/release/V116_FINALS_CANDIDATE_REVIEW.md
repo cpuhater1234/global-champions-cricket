@@ -1,6 +1,6 @@
 # GCC v116: signing and finals layout acceptance candidate
 
-**QA record, 11 November 2026. Not a promoted release.**
+**QA record, 11 November 2026. Full automated candidate acceptance PASS; not a promoted release.**
 
 ## Protected baseline
 
@@ -41,7 +41,18 @@ The [candidate full-acceptance workflow](https://github.com/cpuhater1234/global-
 - Two-tab stale-save rejection, IndexedDB recovery and career identity preservation.
 - 156 saved-career screen/viewport states covering 2019, 2025 and 2026 at 1440, 1024, 768, 390, 360 and 320px.
 
-**Status at document creation:** candidate build, signing and syntax gates passed; full-career workflow in progress. Update this document with the final run result and candidate SHA before any promotion decision.
+**Final workflow result: PASS.** [GitHub Actions #42988406245](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/42988406245), completed 11 November 2026.
+
+- Exact corrected review candidate: **6,635,108 bytes**; SHA-256 `5ba82e499b0b8d08706aab851449d20b6d315bf9b780a8c9674b44933d3fe094`.
+- 19 years (2008–2026), 266 user regular-season fixtures, **16,564** engine assertions, zero reported runtime errors.
+- **5/5** signing-strip widths: PASS at 320, 360, 390, 768 and 1440px.
+- **2/2** native Chromium gameplay/save/reload/Continue scenarios: PASS.
+- **3/3** full mobile/tablet career-to-match journeys at 320, 360 and 768px: PASS.
+- Native two-tab stale-save rejection, IndexedDB preservation, newest-career restoration and checkpoint consistency: PASS.
+- **156/156** saved-career screen/viewport states across 2019, 2025 and 2026 at 320, 360, 390, 768, 1024 and 1440px: PASS. Zero page errors, horizontal overflows or flagged text clipping.
+- Previously observed **14 finals overflow states: cleared** by the two targeted corrections.
+
+The original v116 binary remains the stable playable release. The corrected HTML is **candidate only**; automated geometry does not equal a human visual sign-off.
 
 ## GitHub Actions storage limitation
 
