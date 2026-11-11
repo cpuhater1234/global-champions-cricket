@@ -66,9 +66,15 @@ function manualXI(){
  const keeper=available.find(isKeeper);
  check(!!keeper,'recognised wicketkeeper available to manual XI');
  const best=G.bestXI(available);
- if(keeper){
-  const outfield=best.filter(p=>!isKeeper(p)).slice(0,10);
-  best.splice(0,best.length,...outfield,keeper);
+ check(Array.isArray(best)&&best.length===11,'recommended XI contains eleven players');
+ check(new Set(best.map(p=>p.id)).size===11,'recommended XI contains eleven distinct players');
+ // Preserve the complete recommendation. Only replace one outfielder if the
+ // recommendation genuinely omitted every recognised keeper; never collapse
+ // a multi-keeper XI to a single keeper.
+ if(keeper&&!best.some(isKeeper)){
+  const candidates=best.map((p,index)=>({p,index})).filter(x=>!isKeeper(x.p)).sort((a,b)=>a.p.overall-b.p.overall);
+  check(candidates.length>0,'non-keeper position available for keeper inclusion');
+  if(candidates.length)best[candidates[0].index]=keeper;
  }
  doIt('clearXI');
  const rosterIds=s.teams[s.userClub.abbr]||[],selectionTrace=[];
