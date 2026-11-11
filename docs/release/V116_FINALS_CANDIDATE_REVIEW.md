@@ -117,6 +117,47 @@ the next source-migration task. Do not conflate exact snapshot reproduction
 with a modern maintained codebase. Keep historical `main` and `v116`
 frozen while source ownership is resolved.
 
+## Claude v115 menu prototype cross-reference
+
+Uploaded source files reviewed:
+- `GCC_v115_menu_prototype.html`
+- `gcc_menu_flat_dense_prototype.css`
+
+The v115 prototype uses the same guide structure as the v116 controller: `g8guideintro`,
+`g8guidegrid`, `g8guidecard`, `g8guiderules`, `g8rulegrid` and
+`g8guidefooter`. The guide copy and interactions are already present in v116.
+The Claude work is therefore a presentation refinement, not a menu rewrite.
+
+The CSS was adapted to the actual v116 markup and theme:
+- v116 emits an `h3` guide title, not the `h2` targeted by one selector in the prototype.
+- Guide and rule grids share an 860px two-column breakpoint; both collapse together below it.
+- The story's final chapter explicitly retains light text when its former light card surface is removed.
+- The guide modal body uses the current charcoal panel token, not the earlier blue surface.
+- Existing `--gcc-line`, `--gcc-muted`, `--vx-ink` and `--vx-display` tokens are used.
+
+The new rules replace the existing guide owner block in `v8/ui/decision-ui.css`.
+They do **not** add a stylesheet, style block, DOM structure or JavaScript. The
+review adapter confirms exactly one existing style block changed and zero
+JavaScript blocks changed.
+
+### Menu review candidate
+
+- Base accepted finals candidate: `5ba82e499b0b8d08706aab851449d20b6d315bf9b780a8c9674b44933d3fe094`.
+- Menu review candidate: **6,641,178 bytes**; SHA-256
+  `943643a36730f9db6630437b15111b5f82041b540998f793230aab1745be21e3`.
+- Native Chromium menu visual run [#43007866309](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/43007866309):
+  **18/18 states passed**, zero page errors and zero layout failures. It covers all three guide pages at 320, 390, 768, 1024 and 1440px, plus all three expanded rule groups at 390px.
+- Contact sheets on this isolated QA branch:
+  - [How to play](visual-review/menu/how.png)
+  - [How it works](visual-review/menu/howItWorks.png)
+  - [The breakaway story](visual-review/menu/breakawayStory.png)
+
+The full 19-season, native persistence and saved-career acceptance workflow
+has been switched to this exact menu candidate in
+[run #43008658075](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/43008658075).
+Its final result must be recorded before the menu candidate is considered fully
+automated-QA accepted.
+
 ## Outstanding release boundaries
 
 - Actual screenshot review/human sign-off, including colour hierarchy, clipping, spacing and deliberate narrow-screen composition, remains separate from automated geometry.
