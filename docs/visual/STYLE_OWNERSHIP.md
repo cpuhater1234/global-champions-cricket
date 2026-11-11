@@ -1,3 +1,7 @@
+> **V116 SOURCE-OWNERSHIP WARNING, 11 NOVEMBER 2026.** This chart documents previously audited v108/v109 owners. It is **not yet an authoritative map of all CSS in the frozen v116 build**. The [v116 block lineage](../release/V116_BLOCK_LINEAGE.md) found 21/39 byte-level CSS/JS block correspondences (with only partial block coverage in many cases), and the [static v116 cascade audit](../release/V116_CASCADE_INSPECTION.md) found same-selector/property overlaps. Before changing v116 visuals, identify the winning declaration in the actual release, reconcile it into a single version-specific owner, and verify native browser behaviour. Do not blindly copy these historical source files onto v116.
+
+---
+
 # Visual CSS ownership
 
 Current handoff reference: user's GCC_BULLETPROOF_HANDOFF.pdf, build floor v106. Home/Intro composition and the floodlit identity are protected. Source/build history is recorded in CURRENT_CHECKPOINT.md. v108 includes v107 plus a scoped command/trade cascade cleanup.
