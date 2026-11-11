@@ -7,6 +7,7 @@ on:
       - 'GCC_v116_release (1).html'
       - 'captaincy_layer_v116.py'
       - 'qa/native_two_tab_v116.py'
+      - 'qa/native_v116_signing_css.py'
       - '.github/workflows/v116-native-acceptance.yml'
   workflow_dispatch:
 
@@ -73,4 +74,28 @@ jobs:
           print(line)
           with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as out:
               out.write('\n## GCC v116 two-tab acceptance\n\n'+line+'\n')
+          PY
+
+      - name: Probe signing-week day strip in native Chromium
+        run: |
+          python qa/native_v116_signing_css.py \
+            --html 'GCC_v116_release (1).html' \
+            --out qa/results/v116-signing-css.json
+      - name: Summarize signing-week computed styles
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          report=json.loads(Path('qa/results/v116-signing-css.json').read_text())
+          assert report['status']=='PASS' and report['native_http']
+          assert report['widths']==[390,1440]
+          assert len(report['snapshots'])==2
+          for observed in report['snapshots']:
+              assert observed['days_visible']>=3 and observed['active']
+              assert observed['document_scroll_width']<=observed['viewport']['width']+1
+              assert not observed['page_errors']
+          msg='PASS: signing-week day strip rendered at 390px and 1440px, native Chromium; no horizontal overflow or JS errors. Manual visual sign-off remains open.'
+          print(msg)
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as out:
+              out.write('\n## GCC v116 signing-week computed-style probe\n\n'+msg+'\n')
           PY
