@@ -9,7 +9,8 @@ Design changes under review:
 - Flat guide rows and rule disclosures with thin dividers.
 - Circular numbered markers, matching v116's actual h3 guide headings.
 - Story cards remain a single narrative column.
-- Charcoal modal surface and readable story-card text.
+- Readable story-card text. The rendered modal surface remains Floodlit navy (#0c1a28), so the charcoal palette requirement is still unresolved.
+- Detailed visual findings and full acceptance evidence: [12 November review](../../V116_MENU_ACCEPTANCE_REVIEW_20261112.md).
 - Footer links retain 44px minimum control height.
 
 The 18 screenshots cover all three guide pages at 320, 390, 768, 1024 and 1440px, plus each expanded rule group on mobile.
