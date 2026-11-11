@@ -50,14 +50,30 @@ function checkpoint(label){
  check(core(cold.G.state)===core(s),label+' preserves career truth');check(cold.errors.length===0,label+' no restore errors');check(Y.ui.view===X.ui.view,label+' restores view');coverage.reloads.push({year:s.year,label});
 }
 function manualXI(){
- // Tests choose a balanced XI, but use only the exposed manual selection commands.
+ // Use the real manual XI actions, while explicitly retaining a recognised keeper.
+ const isKeeper=p=>!!p&&(p.role==='WK-BAT'||Number(p.keeping||0)>=65);
  let available=X.roster().filter(p=>s.dynasty.injuries?.[p.id]?.status!=='OUT');
- // Multiple natural injuries can leave fewer than eleven healthy players. Exercise
- // the same manual cover market a player must use, rather than failing the harness.
- while(available.length<11){const injured=X.roster().find(p=>s.dynasty.injuries?.[p.id]?.status==='OUT'&&!s.dynasty.replacementFor[p.id]&&context.GCC8_ENGINE_READ.replacements(p.id).length);check(!!injured,'injury cover available for depleted side');doIt('cover',injured.id);doIt('signCover',context.GCC8_ENGINE_READ.replacements(injured.id)[0]);coverage.injuryCovers++;available=X.roster().filter(p=>s.dynasty.injuries?.[p.id]?.status!=='OUT');}
-
- const best=G.bestXI(available);doIt('clearXI');for(const p of best)doIt('select',p.id);
- check(s.xi.length===11,'manual XI complete');check(new Set(s.battingOrder).size===11,'unique batting order');
+ // Multiple injuries can deplete the available XI or temporarily remove its keeper.
+ while(available.length<11||!available.some(isKeeper)){
+  const injured=X.roster().find(p=>s.dynasty.injuries?.[p.id]?.status==='OUT'&&!s.dynasty.replacementFor[p.id]&&
+    context.GCC8_ENGINE_READ.replacements(p.id).length&&
+    (available.length<11||isKeeper(p)));
+  check(!!injured,'eligible injury cover available for depleted or keeper-less XI');
+  if(!injured)break;
+  doIt('cover',injured.id);
+  const choices=context.GCC8_ENGINE_READ.replacements(injured.id);
+  doIt('signCover',choices[0]);
+  coverage.injuryCovers++;
+  available=X.roster().filter(p=>s.dynasty.injuries?.[p.id]?.status!=='OUT');
+ }
+ const keeper=available.find(isKeeper);
+ check(!!keeper,'recognised wicketkeeper available to manual XI');
+ const best=G.bestXI(available);
+ if(keeper&&!best.some(isKeeper))best[best.length-1]=keeper;
+ doIt('clearXI');for(const p of best)doIt('select',p.id);
+ check(s.xi.length===11,'manual XI complete');
+ check(new Set(s.battingOrder).size===11,'unique batting order');
+ check(s.xi.some(id=>isKeeper(G.byId(id))),'manual XI includes a recognised wicketkeeper');
 }
 function finishSeason(){
  for(let round=s.round+1;round<=14;round++){
