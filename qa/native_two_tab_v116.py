@@ -25,6 +25,21 @@ def snap(p):
        coordinated:GCC8_ENGINE_READ.saveCoordinated()};
     }""")
 
+def career_identity(p):
+    # Compare durable cricket facts, not serialized timestamps or presentation metadata.
+    return p.evaluate("""() => {
+      const s=GCC.state, team=s.userClub?.abbr;
+      return {club:team,year:s.year,round:s.round,
+        xi:[...(s.xi||[])],battingOrder:[...(s.battingOrder||[])],
+        roster:[...(s.teams?.[team]||[])],
+        results:(s.results||[]).map(r=>({
+          home:r.home?.abbr,away:r.away?.abbr,
+          score:[r.homeInnings?.total,r.awayInnings?.total],
+          winner:r.winner?.abbr,captaincy:r.captaincy
+        })),
+        table:s.table, archivedYears:Object.keys(s.dynasty?.archivedYears||{}).sort()};
+    }""")
+
 def play(p, plan):
     if view(p)=='result':
         assert native.click_action(p,'matchday') or native.click_text(p,'Next match'), 'Next match absent'
@@ -97,6 +112,7 @@ def run():
                 assert snap(tab_b)['raw'], 'No shared native storage'
                 play(tab_b,TWO)
                 second=durable(tab_b,2,TWO)
+                expected_career=career_identity(tab_b)
                 assert second['raw']!=first['raw'], 'Round 2 save unchanged'
                 assert checkpoint(tab_b)==second['raw'], 'Round 2 IDB mismatch'
                 assert tab_a.evaluate('GCC.state.round')==1, 'A unexpectedly updated'
@@ -113,12 +129,20 @@ def run():
                 recovered=snap(tab_a)
                 assert recovered['liveRound']==2, 'Latest Round 2 not recovered'
                 assert recovered['lastCaptaincy']==TWO, 'Captaincy not recovered'
-                assert recovered['raw']==second['raw'], 'Recovery changed saved bytes'
+                assert career_identity(tab_a)==expected_career, 'Recovered cricket state differs from latest saved career'
+                # Continue Career intentionally calls autoSave(), updating saveStamp and
+                # potentially serializing the current view. Test durability and career
+                # identity, not stale serialized-byte equality after a legitimate save.
+                assert tab_a.evaluate('async () => await GCC8_ENGINE_READ.flushSave()'), 'Post-Continue autosave failed'
+                restored=durable(tab_a,2,TWO)
+                assert checkpoint(tab_a)==restored['raw'], 'Post-Continue IDB and localStorage disagree'
                 assert not errors, errors
                 result={'status':'PASS','sha256':sha,'native_origin':True,
                   'rounds':[first['savedRound'],second['savedRound']],
                   'stale_save_rejected':True,'local_storage_preserved':True,
                   'indexeddb_preserved':True,'reloaded_latest':True,
+                  'career_identity_preserved':True,'post_continue_checkpoint_consistent':True,
+                  'post_continue_serialized_bytes_changed':restored['raw']!=second['raw'],
                   'checkpoint_mode':second['mode'],'page_errors':errors}
                 a.out.parent.mkdir(parents=True,exist_ok=True)
                 a.out.write_text(json.dumps(result,indent=2)+'\n')
