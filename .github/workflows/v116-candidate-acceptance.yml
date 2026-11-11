@@ -88,6 +88,9 @@ jobs:
               out.write('## Candidate signing responsive checks\n\n'+line+'\n')
           PY
 
+      - name: Validate full-career harness syntax
+        run: node --check qa/structural-risk/career-run.mjs
+
       - name: Run full 19-season cricket-engine acceptance on candidate
         env:
           GCC8_TEST_BUILD: qa/results/v116-signing-width-review.html
