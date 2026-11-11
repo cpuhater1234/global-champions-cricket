@@ -6,6 +6,7 @@ on:
     paths:
       - 'GCC_v116_release (1).html'
       - 'captaincy_layer_v116.py'
+      - 'qa/native_two_tab_v116.py'
       - '.github/workflows/v116-native-acceptance.yml'
   workflow_dispatch:
 
@@ -53,4 +54,23 @@ jobs:
           print(message)
           with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as out:
               out.write('## GCC v116 native acceptance\n\n' + message + '\n')
+          PY
+      - name: Verify two-tab stale-save protection and recovery
+        run: |
+          python qa/native_two_tab_v116.py \
+            --html 'GCC_v116_release (1).html' \
+            --out qa/results/v116-native-two-tab.json
+      - name: Summarize two-tab acceptance
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          r=json.loads(Path('qa/results/v116-native-two-tab.json').read_text())
+          assert r['status']=='PASS' and r['native_origin']
+          assert r['stale_save_rejected'] and r['indexeddb_preserved']
+          assert r['reloaded_latest'] and r['rounds']==[1,2]
+          line='PASS: native two-tab stale-save rejected, IndexedDB preserved, Continue restored latest Round 2'
+          print(line)
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as out:
+              out.write('\n## GCC v116 two-tab acceptance\n\n'+line+'\n')
           PY
