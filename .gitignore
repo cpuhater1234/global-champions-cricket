@@ -8,7 +8,9 @@ __pycache__/
 # Browser/visual QA output
 qa/output/
 qa/screenshots/
-qa/results/*.json
+# Generated candidate HTML, saved careers, screenshots and review gallery.
+# The QA reports are reproducible and must not clutter the Git tree.
+qa/results/
 
 # Instrumented and experimental builds stay off main unless deliberately promoted
 *_QA_INSTRUMENTED.html
