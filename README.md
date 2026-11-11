@@ -8,7 +8,7 @@ Cricket management game built around drafting, trades, team selection and season
 
 - **Release artifact:** `GCC_v116_release (1).html`, 6,635,097 bytes; SHA-256 `b27cf0b4c7e6e4e7a78eaa5c80154dfd0f70657ce9f774dd405505e97e82c6d0`. Do not rename or alter this recorded artifact when verifying it.
 - **Acceptance:** 100/100 simulated regular seasons (1,400 valid match ledgers), one complete 2008–2026 career (266/266 league matches, isolated yearly restarts), and two real-browser save/reload/Continue scenarios in [successful GitHub Actions run #3](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/42751656106).
-- **Limits:** concurrent-tab write/recovery and exact reproduction by the maintained source pipeline remain open. The 19-season career used isolated simulated storage, not one native-browser profile.
+- **Limits:** native two-tab stale-save rejection and recovery passed in GitHub Actions run #42968272367. Other concurrency and storage-failure cases, plus exact reproduction by the maintained source pipeline, remain open. The 19-season career used isolated simulated storage, not one native-browser profile.
 - **Publishing state:** the `v116` branch is the canonical playable location; this designation does **not** merge gameplay into `main` or create a GitHub Release/tag.
 
 - **Release HTML:** [GCC_v116_release (1).html](<https://github.com/cpuhater1234/global-champions-cricket/blob/v116/GCC_v116_release%20%281%29.html>) — download the raw file; GitHub's page is not the running game.
@@ -16,7 +16,7 @@ Cricket management game built around drafting, trades, team selection and season
 - **Captaincy browser test:** [captaincy_layer_v116.py](https://github.com/cpuhater1234/global-champions-cricket/blob/v116/captaincy_layer_v116.py). Run `python captaincy_layer_v116.py --html "GCC_v116_release (1).html"` after installing Playwright/Chromium. The default uses disposable local HTTP browser storage; `--mode isolated` is a non-native fallback.
 - **GitHub organization guide:** [REPOSITORY_GUIDE.md](https://github.com/cpuhater1234/global-champions-cricket/blob/v116/docs/REPOSITORY_GUIDE.md).
 
-The older v101 and v112 handoffs are historical references, not alternative release instructions. Keep the playable binary frozen and record any future gameplay or source change as a separate, explicitly tested release candidate.
+The [v116 source reconciliation audit](docs/release/V116_SOURCE_RECONCILIATION.md) records the verified 17-style/22-script frozen release inventory, an exact extraction round trip, and the unresolved maintained-builder parity.\n\nThe older v101 and v112 handoffs are historical references, not alternative release instructions. Keep the playable binary frozen and record any future gameplay or source change as a separate, explicitly tested release candidate.
 
 ## Current scope
 
