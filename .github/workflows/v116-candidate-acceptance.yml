@@ -236,7 +236,7 @@ jobs:
           build=json.loads(Path('qa/results/v116-menu-review/build.json').read_text())
           r=json.loads(Path('qa/results/v116-menu-review/screenshots/report.json').read_text())
           assert r['candidate_sha256']==build['candidate_sha256']
-          assert r['states']==18 and r['errors']==[] and r['failures']==[],r
+          assert len(r['states'])==18 and r['errors']==[] and r['failures']==[],r
           assert build['candidate_sha256']=='943643a36730f9db6630437b15111b5f82041b540998f793230aab1745be21e3'
           line='PASS: all three guide pages, all three expanded rule groups and 18 desktop/mobile/tablet states; no page errors or layout failures'
           print(line)
