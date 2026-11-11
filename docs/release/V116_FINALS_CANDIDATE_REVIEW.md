@@ -64,6 +64,7 @@ The QA branch includes `qa/v116_review_gallery.py`. It independently rebuilds th
 **accepted exact candidate SHA-256**, uses the same Chromium renderer as the
 successful 156-state workflow and writes screenshots plus a filterable local
 `index.html`. It does **not** upload screenshots or mutate the frozen HTML.
+The local-gallery smoke test [GitHub Actions #42992051804](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/42992051804) **PASSED**: 27 real PNGs for the 2019 saved career at 320/390/1440px, one clickable gallery, the exact candidate SHA, no page errors or geometry defects, and no artifact uploads.
 Everything generated is excluded by `.gitignore`.
 
 From the **QA branch checkout**, with Python 3, Node.js and Playwright installed:
