@@ -754,19 +754,135 @@
 #g8dialog[data-prompt=player] .gccuiCareerRates{margin-top:12px;border-top:1px solid var(--gcc-line);padding-top:12px}
 #g8dialog[data-prompt=player] .gccuiCareerRates>summary{min-height:44px;display:list-item;padding:10px 0;font-size:14px;line-height:1.5;font-weight:700;cursor:pointer}
 #g8dialog[data-prompt=player] .gccuiCareerRates .g8fine{margin:10px 0 0!important;font-size:13px!important;line-height:1.5!important;color:#ddd!important}
-/* Guide review: readable headings, aligned cricket glyphs and one reading edge. */
-#g8dialog .g8guideintro{text-align:left!important;padding:18px!important}
-#g8dialog .g8guideintro>.g8eyebrow{font-size:12px!important;text-align:left!important;letter-spacing:.06em!important}
-#g8dialog .g8guideintro>h3{font-size:24px!important;line-height:1.3!important;text-align:left!important;text-transform:none!important;font-style:normal!important;margin:8px 0 10px!important}
-#g8dialog .g8guideintro>p{max-width:none!important;margin:0!important;font-size:16px!important;line-height:1.6!important;text-align:left!important}
-#g8dialog .g8guideintro>.g8storyopening{margin-top:16px!important;padding-top:16px!important}
-#g8dialog .g8guidegrid{display:block!important;max-width:76ch;margin:0 auto!important}
-#g8dialog .g8guidecard{padding:18px 0!important;background:transparent!important;border:0!important;border-bottom:1px solid var(--gcc-line)!important;border-radius:0!important;box-shadow:none!important}
-#g8dialog .g8guidecardhead{display:flex!important;align-items:center!important;gap:12px!important;margin-bottom:10px!important}
-#g8dialog .g8guidecardhead>.g8icon{width:24px!important;height:24px!important;flex:0 0 24px!important;color:#f1f1f1!important;opacity:1!important}
-#g8dialog .g8guidecardhead>h3{font-size:18px!important;line-height:1.35!important;text-transform:none!important;font-style:normal!important;text-align:left!important;margin:0!important}
-#g8dialog .g8guidecard>p{font-size:16px!important;line-height:1.6!important;margin:0!important}
-#g8dialog .g8guidefooter nav .g8button,#g8hud .g8utilitymenu>div>.g8button{display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:10px!important;min-height:44px!important}
+/* Guide review: Claude flat + dense layout, adapted to v116 markup and charcoal tokens. */
+#g8dialog#g8dialog#g8dialog .g8modalbody:has(>.g8guide){background:var(--gcc-panel)!important}
+#g8dialog#g8dialog#g8dialog .g8guide{max-width:none!important;min-width:0!important}
+#g8dialog#g8dialog#g8dialog .g8guideintro{
+  background:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;
+  padding:0 0 .9rem!important;margin:0 0 .4rem!important;border-bottom:1px solid var(--gcc-line)!important;
+  text-align:left!important
+}
+#g8dialog#g8dialog#g8dialog .g8guideintro>.g8eyebrow{
+  display:block!important;color:var(--vx-ink,var(--gcc-text))!important;font-size:.85rem!important;
+  line-height:1.5!important;font-weight:700!important;letter-spacing:.06em!important;margin:0 0 .35rem!important
+}
+#g8dialog#g8dialog#g8dialog .g8guideintro>h3{
+  color:var(--gcc-text)!important;font-family:var(--vx-display,Arial,Helvetica,sans-serif)!important;
+  font-size:1.5rem!important;line-height:1.3!important;font-weight:800!important;
+  text-transform:none!important;font-style:normal!important;margin:.1rem 0 .25rem!important
+}
+#g8dialog#g8dialog#g8dialog .g8guideintro>p{
+  color:var(--gcc-muted)!important;font-size:1rem!important;line-height:1.45!important;
+  font-weight:400!important;text-align:left!important;margin:0!important;max-width:none!important
+}
+#g8dialog#g8dialog#g8dialog .g8guideintro>.g8storyopening{
+  margin-top:.7rem!important;padding-top:.7rem!important;border-top:1px solid var(--gcc-line)!important
+}
+#g8dialog#g8dialog#g8dialog .g8guidegrid{
+  display:grid!important;grid-template-columns:minmax(0,1fr)!important;column-gap:2.4rem!important;
+  padding:0!important;margin:0!important;width:100%!important;max-width:none!important
+}
+#g8dialog#g8dialog#g8dialog .g8guidecard{
+  background:none!important;border:0!important;border-top:1px solid var(--gcc-line)!important;
+  border-radius:0!important;box-shadow:none!important;padding:.75rem 0 .8rem!important;margin:0!important;
+  min-width:0!important
+}
+#g8dialog#g8dialog#g8dialog .g8guidecardhead{
+  display:flex!important;align-items:center!important;gap:.6rem!important;margin:0 0 .25rem!important
+}
+#g8dialog#g8dialog#g8dialog .g8guidecardhead>.g8icon{
+  display:block!important;width:1.7rem!important;height:1.7rem!important;flex:0 0 1.7rem!important;
+  color:var(--gcc-text)!important;opacity:1!important
+}
+#g8dialog#g8dialog#g8dialog .g8guidenumber{
+  flex:0 0 auto!important;display:inline-grid!important;place-items:center!important;
+  width:1.7rem!important;min-width:1.7rem!important;height:1.7rem!important;min-height:1.7rem!important;
+  padding:0!important;border-radius:50%!important;background:none!important;
+  color:var(--vx-ink,var(--gcc-text))!important;border:1.5px solid currentColor!important;
+  font-family:var(--vx-display,Arial,Helvetica,sans-serif)!important;font-weight:800!important;
+  font-size:.95rem!important;line-height:1!important;font-variant-numeric:tabular-nums
+}
+#g8dialog#g8dialog#g8dialog .g8guidecardhead>h3{
+  color:var(--gcc-text)!important;font-size:1.15rem!important;line-height:1.35!important;
+  font-weight:700!important;text-transform:none!important;font-style:normal!important;
+  text-align:left!important;margin:0!important;min-width:0!important
+}
+#g8dialog#g8dialog#g8dialog .g8guidecard>p{
+  color:var(--gcc-muted)!important;font-size:1rem!important;line-height:1.45!important;
+  font-weight:400!important;margin:0 0 0 2.3rem!important
+}
+#g8dialog#g8dialog#g8dialog .g8guiderules{margin-top:.6rem!important}
+#g8dialog#g8dialog#g8dialog .g8guiderules .g8disclosure{
+  background:none!important;border:0!important;border-top:1px solid var(--gcc-line)!important;
+  border-radius:0!important;box-shadow:none!important;margin:0!important;padding:0!important
+}
+#g8dialog#g8dialog#g8dialog .g8guiderules .g8disclosure>summary{
+  display:flex!important;align-items:center!important;gap:.6rem!important;
+  min-height:48px!important;padding:.65rem 0!important;margin:0!important;
+  background:none!important;border:0!important;border-radius:0!important;
+  color:var(--gcc-text)!important;font-size:1rem!important;font-weight:700!important;line-height:1.45!important
+}
+#g8dialog#g8dialog#g8dialog .g8guiderules .g8disclosure>summary:hover,
+#g8dialog#g8dialog#g8dialog .g8guiderules .g8disclosure[open]>summary{
+  background:none!important;color:var(--vx-ink,var(--gcc-text))!important
+}
+#g8dialog#g8dialog#g8dialog .g8guiderules .g8disclosure>summary:focus-visible{
+  outline:3px solid var(--vx-ink,var(--gcc-text))!important;outline-offset:-3px!important
+}
+#g8dialog#g8dialog#g8dialog .g8guiderules .g8disclosurebody{padding:.55rem 0 .25rem!important}
+#g8dialog#g8dialog#g8dialog .g8guiderules .g8rulegrid{
+  display:grid!important;grid-template-columns:minmax(0,1fr)!important;
+  gap:0!important;padding:0!important;margin:0!important
+}
+#g8dialog#g8dialog#g8dialog .g8storychapters{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:0!important}
+#g8dialog#g8dialog#g8dialog .g8storychapters>.g8guidecard:first-child{border-top:0!important}
+#g8dialog#g8dialog#g8dialog .g8storychapters>.g8guidecard:last-child :is(h3,p,.g8icon){color:var(--gcc-text)!important}
+#g8dialog#g8dialog#g8dialog p.g8guidenote{
+  background:none!important;border:0!important;border-top:1px solid var(--gcc-line)!important;
+  border-radius:0!important;padding:.75rem 0 0!important;margin:.7rem 0 0!important;
+  color:var(--gcc-muted)!important;font-size:1rem!important;font-weight:600!important;
+  line-height:1.5!important;text-align:left!important
+}
+#g8dialog#g8dialog#g8dialog p.g8guideclosing{
+  color:var(--gcc-text)!important;font-size:1.05rem!important;line-height:1.5!important;
+  font-weight:700!important;text-align:left!important;margin:.8rem 0 .1rem!important;padding:0!important
+}
+#g8dialog#g8dialog#g8dialog .g8guidefooter{
+  border:0!important;background:none!important;padding:.8rem 0 0!important;
+  margin:.6rem 0 0!important;display:flex!important;flex-direction:column!important;
+  align-items:stretch!important;gap:.8rem!important
+}
+#g8dialog#g8dialog#g8dialog .g8guidefooter nav{
+  display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:.5rem!important;width:100%!important
+}
+#g8dialog#g8dialog#g8dialog .g8guidefooter .g8button{
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  min-height:44px!important;margin:0!important;padding:.55rem .65rem!important;
+  font-size:.95rem!important;line-height:1.4!important;white-space:normal!important;text-align:center!important
+}
+#g8dialog#g8dialog#g8dialog .g8guidefooter .g8guidecurrent:disabled{
+  opacity:1!important;background:var(--gcc-raised)!important;color:var(--gcc-text)!important;
+  border-color:var(--gcc-line)!important;cursor:default!important
+}
+#g8dialog#g8dialog#g8dialog .g8guidefooter>.g8primary{min-width:min(100%,12rem)!important;align-self:center!important}
+@media(min-width:860px){
+  #g8dialog#g8dialog#g8dialog .g8guidegrid,
+  #g8dialog#g8dialog#g8dialog .g8guiderules .g8rulegrid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  #g8dialog#g8dialog#g8dialog .g8guidegrid>.g8guidecard:nth-child(-n+2),
+  #g8dialog#g8dialog#g8dialog .g8guiderules .g8rulegrid>.g8guidecard:nth-child(-n+2){border-top:0!important}
+}
+@media(max-width:859px){
+  #g8dialog#g8dialog#g8dialog .g8guidegrid>.g8guidecard:first-child,
+  #g8dialog#g8dialog#g8dialog .g8guiderules .g8rulegrid>.g8guidecard:first-child{border-top:0!important}
+}
+@media(max-width:650px){
+  #g8dialog#g8dialog#g8dialog .g8guidefooter nav{grid-template-columns:minmax(0,1fr)!important}
+}
+@media(max-width:560px){
+  #g8dialog#g8dialog#g8dialog .g8guidecard{padding:.6rem 0 .65rem!important}
+  #g8dialog#g8dialog#g8dialog .g8guidecard>p{margin-left:0!important;font-size:.95rem!important}
+}
 #g8dialog[data-prompt=prepare] .g8previewvenue>.g8eyebrow{justify-content:flex-start!important;text-align:left!important}
 @media(max-width:600px){#g8dialog .g8guideintro>h3{font-size:21px!important}#g8dialog .g8guideintro,#g8dialog .g8guidecard{padding:14px!important}}
 /* Archive scorebooks: four readable columns, neutral rows and a stable name edge. */
