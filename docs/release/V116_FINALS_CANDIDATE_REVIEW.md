@@ -123,7 +123,9 @@ Uploaded source files reviewed:
 - `GCC_v115_menu_prototype.html`
 - `gcc_menu_flat_dense_prototype.css`
 
-The v115 prototype uses the same guide structure as the v116 controller: `g8guideintro`,
+The v115 HTML prototype contains an earlier card-based guide treatment. The separate `gcc_menu_flat_dense_prototype.css` is the later flat/dense direction, and that is the visual reference used for this candidate. The v115 HTML was used to cross-check the underlying guide markup and copy.
+
+Both v115 and the v116 controller use the same guide structure: `g8guideintro`,
 `g8guidegrid`, `g8guidecard`, `g8guiderules`, `g8rulegrid` and
 `g8guidefooter`. The guide copy and interactions are already present in v116.
 The Claude work is therefore a presentation refinement, not a menu rewrite.
