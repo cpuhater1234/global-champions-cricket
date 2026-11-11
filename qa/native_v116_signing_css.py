@@ -84,6 +84,21 @@ SCRIPT = r"""() => {
     all_widths:visible.map(el=>Math.round(el.getBoundingClientRect().width*10)/10),
     day_labels:visible.map(el=>el.textContent.replace(/\s+/g,' ').trim().slice(0,60)),
     day_classes:visible.map(el=>el.className),
+    day_parent:container?(()=>{
+      const c=getComputedStyle(container),r=container.getBoundingClientRect();
+      return {
+        display:c.display,grid_template_columns:c.gridTemplateColumns,
+        flex_wrap:c.flexWrap, gap:c.gap,
+        width:c.width,min_width:c.minWidth,
+        padding_left:c.paddingLeft,padding_right:c.paddingRight,
+        rect:{left:r.left,right:r.right,width:r.width},
+      };
+    })():null,
+    span_measures:visible.map(el=>{
+      const c=getComputedStyle(el),r=el.getBoundingClientRect();
+      return {text:el.textContent.trim(),width:r.width,min_width:c.minWidth,
+        box_sizing:c.boxSizing,padding_left:c.paddingLeft,padding_right:c.paddingRight};
+    }),
     overflow_candidates:[...document.querySelectorAll('body *')]
       .map(el=>({el,rect:el.getBoundingClientRect()}))
       .filter(x=>x.rect.width>0&&x.rect.height>0&&x.rect.right>innerWidth+1)
@@ -146,6 +161,27 @@ def main():
                         # before the first scheduled signing; that is not a defect.
                         assert observation["inactive"] or observation["active"], (
                             f"No inspectable day cell at {width}px")
+                        if observation["document_scroll_width"]>width+1:
+                            whatif=page.evaluate("""()=>{
+                              const days=[...document.querySelectorAll('#g8stage .g8days>span')];
+                              const original=days.map(x=>x.getAttribute('style'));
+                              const measure=()=>({
+                                scroll_width:document.documentElement.scrollWidth,
+                                widths:days.map(x=>Math.round(x.getBoundingClientRect().width*10)/10),
+                                last_right:days.at(-1)?.getBoundingClientRect().right
+                              });
+                              days.forEach(x=>x.style.setProperty('min-width','0px','important'));
+                              const min_width_zero=measure();
+                              days.forEach((x,i)=>original[i]===null?x.removeAttribute('style'):x.setAttribute('style',original[i]));
+                              return {min_width_zero,original_after_restore:measure()};
+                            }""")
+                            print("SIGNING OVERFLOW DIAGNOSTIC "+json.dumps({
+                                "width":width,
+                                "parent":observation["day_parent"],
+                                "span_measures":observation["span_measures"],
+                                "offending":observation["overflow_candidates"][:12],
+                                "hypothesis":whatif
+                            }),flush=True)
                         assert observation["document_scroll_width"]<=width+1, (
                             f"Horizontal overflow at {width}px: {observation['document_scroll_width']} "
                             f"candidates={json.dumps(observation['overflow_candidates'][:18])}")
