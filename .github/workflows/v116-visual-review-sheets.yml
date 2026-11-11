@@ -146,7 +146,7 @@ jobs:
             'contact_sheets':sorted(p.name for p in out.glob('*.png')),
             'artifact_upload':'not used; contact sheets are committed to the isolated QA branch'
           }
-          (out/'summary.json').write_text(json.dumps(summary,indent=2)+'\\n')
+          (out/'summary.json').write_text(json.dumps(summary,indent=2)+'\n')
           print(json.dumps(summary,indent=2))
           PY
 
