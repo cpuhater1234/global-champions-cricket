@@ -139,6 +139,8 @@ def main():
                     help="Inventory the frozen v116 mobile overflow without declaring the legacy release fixed")
     ap.add_argument("--experimental-candidate",action="store_true",
                     help="Accept only the exact deterministic one-declaration review candidate")
+    ap.add_argument("--finals-candidate",action="store_true",
+                    help="Accept only the exact in-place finals layout review candidate")
     ap.add_argument("--widths",default="390,1440",
                     help="Comma-separated viewport widths; default: 390,1440")
     args=ap.parse_args()
@@ -146,10 +148,15 @@ def main():
     assert widths and len(widths)==len(set(widths)) and all(x>=280 for x in widths), "Invalid responsive width list"
     data=args.html.read_bytes()
     sha=sha256(data).hexdigest()
-    if args.experimental_candidate:
-        from v116_signing_width_candidate import patch_release
+    assert not (args.experimental_candidate and args.finals_candidate), "Select only one candidate"
+    candidate=bool(args.experimental_candidate or args.finals_candidate)
+    if candidate:
+        if args.finals_candidate:
+            from v116_finals_layout_candidate import patch_release
+        else:
+            from v116_signing_width_candidate import patch_release
         original=Path(__file__).resolve().parents[1]/"GCC_v116_release (1).html"
-        assert data==patch_release(original.read_bytes()), "Not the exact approved signing review candidate"
+        assert data==patch_release(original.read_bytes()), "Not the exact requested review candidate"
         assert not args.expect_known_overflow
     else:
         assert sha==native.OFFICIAL_SHA256, "Frozen v116 hash mismatch"
@@ -207,7 +214,7 @@ def main():
                             assert args.expect_known_overflow and width==390, (
                                 f"Unexpected horizontal overflow at {width}px: "
                                 f"{observation['document_scroll_width']}")
-                        assert not (args.experimental_candidate and observation["document_scroll_width"]>width+1), (
+                        assert not (candidate and observation["document_scroll_width"]>width+1), (
                             f"Review candidate still overflows at {width}px")
                         assert not errors, f"Browser JS exceptions at {width}px: {errors}"
                         rows.append(observation)
@@ -222,7 +229,7 @@ def main():
         assert not overflows, f"Unexpected viewport overflow: {overflows}"
     output={
         "status":"KNOWN_OVERFLOW" if args.expect_known_overflow else "PASS",
-        "candidate":bool(args.experimental_candidate),
+        "candidate":candidate,
         "known_overflows":overflows,"sha256":sha,"native_http":True,
         "widths":widths,
         "snapshots":rows,
