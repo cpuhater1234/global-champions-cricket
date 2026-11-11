@@ -86,13 +86,18 @@ def run():
                     help='Accept only the deterministic one-declaration signing review candidate')
     ap.add_argument('--finals-candidate',action='store_true',
                     help='Accept only the strict in-place finals layout candidate')
+    ap.add_argument('--menu-candidate',action='store_true',
+                    help='Accept only the exact Claude flat-dense menu review candidate')
     a=ap.parse_args()
     data=a.html.read_bytes()
     sha=hashlib.sha256(data).hexdigest()
-    assert not (a.experimental_candidate and a.finals_candidate), 'Select only one candidate'
-    candidate=bool(a.experimental_candidate or a.finals_candidate)
+    selected=[a.experimental_candidate,a.finals_candidate,a.menu_candidate]
+    assert sum(selected)<=1, 'Select only one candidate'
+    candidate=any(selected)
     if candidate:
-        if a.finals_candidate:
+        if a.menu_candidate:
+            from qa.v116_menu_review_candidate import patch_release
+        elif a.finals_candidate:
             from qa.v116_finals_layout_candidate import patch_release
         else:
             from qa.v116_signing_width_candidate import patch_release
