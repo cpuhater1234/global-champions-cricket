@@ -36,18 +36,15 @@ function auditScorebook(r){
  for(const row of Object.values(s.table)){check(Math.abs(row.nrr-(row.ballsFor?row.runsFor*6/row.ballsFor-row.runsAgainst*6/row.ballsAgainst:0))<1e-9,'net run rate formula');}for(const row of Object.values(s.table))check(row.p===row.w+row.l&&row.pts===row.w*2&&Number.isFinite(row.nrr),'ladder arithmetic');
 }
 function checkpoint(label){
- const raw=host.storage.get('gcc_dynasty_v8');
- // A new v116 career may not have a durable save until its first completed match.
- // Do not misreport an absent pre-match snapshot as a failed cold-reload test.
- if(!raw){
-  coverage.deferredCheckpoints.push({year:s.year,label,reason:'No durable career snapshot exists yet'});
-  console.log('Deferred cold-reload checkpoint (no saved snapshot yet):',label);
-  return;
- }
+ // The VM host intentionally has no IndexedDB/Web Locks, so autosave is disabled.
+ // Use the game's own validated export serializer for state-transition checkpoints;
+ // native browser storage and multi-tab durability are tested separately in Playwright.
+ const raw=context.GCC8_ENGINE_READ.backupRaw();
+ check(typeof raw==='string'&&raw.length>0,label+' validated backup serialises');
  const cold=loadGame(path,777,new Map([['gcc_dynasty_v8',raw]]),{strictIds:true}),Y=cold.context.GCC8;
  check(Y.dispatch('continue'),label+' cold Continue');
  const core=t=>JSON.stringify({year:t.year,seed:t.seed,user:t.userClub?.abbr,teams:t.teams,xi:t.xi,order:t.battingOrder,results:t.results,table:t.table,round:t.round,pick:t.pickIndex,offseason:t.dynasty.offseason});
- check(core(cold.G.state)===core(s),label+' preserves career truth');check(cold.errors.length===0,label+' no restore errors');check(Y.ui.view===X.ui.view,label+' restores view');coverage.reloads.push({year:s.year,label});
+ check(core(cold.G.state)===core(s),label+' preserves career truth');check(cold.errors.length===0,label+' no restore errors');check(Y.ui.view===X.ui.view,label+' restores view');coverage.reloads.push({year:s.year,label,source:'validated backup snapshot'});
 }
 function manualXI(){
  // Use the real manual XI actions, while explicitly retaining a recognised keeper.
@@ -123,14 +120,14 @@ for(let year=2009;year<=lastYear;year++){
  }
  check(X.ui.view==='team'&&!s.dynasty.offseason,'annual draft automatically enters team room');doIt('lodgeList');check(Object.values(s.teams).every(ids=>ids.length===15),'annual lists fifteen');
  for(const c of s.league.filter(c=>c.abbr!==s.userClub.abbr))check(s.teams[c.abbr].map(G.byId).some(p=>Number(p.keeping||0)>=65),'CPU recognised keeper integrity');
- doIt('annualTeam');manualXI();doIt('lodge');finishSeason();fs.writeFileSync(reportDir+'/checkpoint-'+year+'.json',host.storage.get('gcc_dynasty_v8'));console.log('Closed season',year);
+ doIt('annualTeam');manualXI();doIt('lodge');finishSeason();fs.writeFileSync(reportDir+'/checkpoint-'+year+'.json',context.GCC8_ENGINE_READ.backupRaw());console.log('Closed season',year);
 }
 if(lastYear===2026){doIt('finishCareer');check(X.ui.view==='legacy','2026 ending');check(s.dynasty.history.length===19,'nineteen seasons archived');check(!X.dispatch('offseason'),'career cannot enter 2027');}
 check(host.errors.length===0,JSON.stringify(host.errors));
 if(process.env.GCC8_TEST_SCOREBOOKS)fs.writeFileSync(reportDir+'/v8_scorebooks.json',JSON.stringify(scorebooks));
-const saved=host.storage.get('gcc_dynasty_v8');if(lastYear!==2026)fs.writeFileSync(reportDir+'/v8_smoke_save.json',saved);check(!!saved,'separate v8 save');check(!host.storage.has('gcc_dynasty_v7_2'),'v7 save not overwritten');
+const saved=context.GCC8_ENGINE_READ.backupRaw();if(lastYear!==2026)fs.writeFileSync(reportDir+'/v8_smoke_save.json',saved);check(!!saved,'validated career backup');check(!host.storage.has('gcc_dynasty_v7_2'),'v7 save not overwritten');
 const resumed=loadGame(path,202,new Map([['gcc_dynasty_v8',saved]]),{strictIds:true});check(resumed.context.GCC8.dispatch('continue'),'reload continues');check(resumed.context.GCC8.ui.view===(lastYear===2026?'legacy':'review'),'reload reaches saved career stage');
 fs.writeFileSync(reportDir+'/v8_markup_snapshot.json',JSON.stringify(markup,null,2));
 if(process.env.GCC8_TEST_KEEP_FINAL_SAVE)fs.writeFileSync(reportDir+'/v8_final_save.json',saved);
-const results={scope:'Real cricket engine + new UI dispatch in a VM DOM stub. Cold reload is attempted only after a durable snapshot exists. No browser, visual, geometry, focus or latency certification.',seed:Number(process.env.GCC8_TEST_SEED||101),club:s.userClub.abbr,coverage,checks,seasons:s.dynasty.history.length,regularSeasonMatches:s.dynasty.manager.matches,storageStats:host.storageStats,errors:host.errors};
+const results={scope:'Real cricket engine + new UI dispatch in a VM DOM stub. Cold reload uses the game's validated backup serializer; native storage/IndexedDB durability is covered by separate Playwright tests. No visual, geometry, focus or latency certification.',seed:Number(process.env.GCC8_TEST_SEED||101),club:s.userClub.abbr,coverage,checks,seasons:s.dynasty.history.length,regularSeasonMatches:s.dynasty.manager.matches,storageStats:host.storageStats,errors:host.errors};
 fs.writeFileSync(reportDir+(lastYear===2026?'/v8_game_results.json':'/v8_smoke_results.json'),JSON.stringify(results,null,2)+'\n');console.log(JSON.stringify(results,null,2));
