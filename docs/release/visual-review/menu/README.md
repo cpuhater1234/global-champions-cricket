@@ -1,6 +1,6 @@
 # GCC v116 menu visual review
 
-Cross-reference source: Claude's uploaded v115 menu prototype and gcc_menu_flat_dense_prototype.css.
+Cross-reference source: Claude's uploaded v115 HTML prototype and gcc_menu_flat_dense_prototype.css. The HTML contains the earlier card-based treatment; the standalone CSS is the later flat-dense direction used for this review.
 
 The screenshots are rendered from a disposable v116 menu candidate. It starts from the already accepted finals candidate and replaces only the existing guide CSS owner inside the existing decision-ui.css style block. No new stylesheet or JavaScript is added.
 
