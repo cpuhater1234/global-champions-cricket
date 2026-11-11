@@ -51,7 +51,7 @@ function checkpoint(label){
 }
 function manualXI(){
  // Use the real manual XI actions, while explicitly retaining a recognised keeper.
- const isKeeper=p=>!!p&&(p.role==='WK-BAT'||Number(p.keeping||0)>=65);
+ const isKeeper=p=>!!p&&Number(p.keeping||0)>=65;
  let available=X.roster().filter(p=>s.dynasty.injuries?.[p.id]?.status!=='OUT');
  // Multiple injuries can deplete the available XI or temporarily remove its keeper.
  while(available.length<11||!available.some(isKeeper)){
@@ -102,7 +102,7 @@ check(!X.dispatch('draftDraw'),'signing cannot be bypassed with unfinished state
 doIt('signingRun');check(s.recruit.running,'signing clock begins');for(let i=0;i<12;i++)host.advance(250);check(s.recruit.feedSeq>1,'real signing callbacks progress');doIt('signingRun');check(!s.recruit.running,'pause signing');doIt('signingSkip');doIt('draftDraw');doIt('revealAll');doIt('beginDraft');
 for(let guard=0;s.pickIndex<120&&guard<40;guard++){
  doIt('skipPick');if(s.pickIndex>=120)break;if(s.pickIndex<8)checkpoint('foundation-user-pick');
- const rs=X.roster(),free=X.pool();let p=free.find(p=>p.role==='WK-BAT'&&!rs.some(p=>p.role==='WK-BAT'))||free.find(p=>p.maxOvers>=4&&rs.filter(p=>p.maxOvers>=4).length<6)||free[0];
+ const rs=X.roster(),free=X.pool(),hasKeeper=rs.some(p=>Number(p.keeping||0)>=65);let p=free.find(p=>Number(p.keeping||0)>=65&&!hasKeeper)||free.find(p=>p.maxOvers>=4&&rs.filter(p=>p.maxOvers>=4).length<6)||free[0];
  doIt('inspect',p.id);doIt('draftPlayer',p.id);
 }
 check(s.pickIndex===120,'120 draft picks');check(Object.values(s.teams).every(ids=>ids.length===15),'all clubs have fifteen');check(new Set(Object.values(s.teams).flat()).size===120,'no duplicate roster players');doIt('team');manualXI();checkpoint('manual-XI');
@@ -119,10 +119,10 @@ for(let year=2009;year<=lastYear;year++){
  doIt('cpuMarket');doIt('annualDraw');doIt('revealAll');checkpoint('annual-order');doIt('annualDraft');
  for(let guard=0;s.dynasty.offseason?.phase==='draft'&&guard<30;guard++){
   doIt('skipPick');if(s.dynasty.offseason?.phase!=='draft')break;
-  const free=X.pool(true),rs=X.roster();const p=free.find(p=>p.role==='WK-BAT'&&!rs.some(p=>p.role==='WK-BAT'))||free.find(p=>p.maxOvers>=4&&rs.filter(p=>p.maxOvers>=4).length<6)||free[0];check(!!p,'annual player pool');if(guard===0)checkpoint('annual-user-pick');doIt('inspect',p.id);doIt('draftPlayer',p.id);
+  const free=X.pool(true),rs=X.roster(),hasKeeper=rs.some(p=>Number(p.keeping||0)>=65);const p=free.find(p=>Number(p.keeping||0)>=65&&!hasKeeper)||free.find(p=>p.maxOvers>=4&&rs.filter(p=>p.maxOvers>=4).length<6)||free[0];check(!!p,'annual player pool');if(guard===0)checkpoint('annual-user-pick');doIt('inspect',p.id);doIt('draftPlayer',p.id);
  }
  check(X.ui.view==='team'&&!s.dynasty.offseason,'annual draft automatically enters team room');doIt('lodgeList');check(Object.values(s.teams).every(ids=>ids.length===15),'annual lists fifteen');
- for(const c of s.league.filter(c=>c.abbr!==s.userClub.abbr))check(s.teams[c.abbr].map(G.byId).some(p=>p.role==='WK-BAT'||p.keeping>=65),'CPU keeper integrity');
+ for(const c of s.league.filter(c=>c.abbr!==s.userClub.abbr))check(s.teams[c.abbr].map(G.byId).some(p=>Number(p.keeping||0)>=65),'CPU recognised keeper integrity');
  doIt('annualTeam');manualXI();doIt('lodge');finishSeason();fs.writeFileSync(reportDir+'/checkpoint-'+year+'.json',host.storage.get('gcc_dynasty_v8'));console.log('Closed season',year);
 }
 if(lastYear===2026){doIt('finishCareer');check(X.ui.view==='legacy','2026 ending');check(s.dynasty.history.length===19,'nineteen seasons archived');check(!X.dispatch('offseason'),'career cannot enter 2027');}
