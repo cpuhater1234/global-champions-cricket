@@ -141,6 +141,8 @@ def main():
                     help="Accept only the exact deterministic one-declaration review candidate")
     ap.add_argument("--finals-candidate",action="store_true",
                     help="Accept only the exact in-place finals layout review candidate")
+    ap.add_argument("--menu-candidate",action="store_true",
+                    help="Accept only the exact Claude flat-dense menu review candidate")
     ap.add_argument("--widths",default="390,1440",
                     help="Comma-separated viewport widths; default: 390,1440")
     args=ap.parse_args()
@@ -148,10 +150,13 @@ def main():
     assert widths and len(widths)==len(set(widths)) and all(x>=280 for x in widths), "Invalid responsive width list"
     data=args.html.read_bytes()
     sha=sha256(data).hexdigest()
-    assert not (args.experimental_candidate and args.finals_candidate), "Select only one candidate"
-    candidate=bool(args.experimental_candidate or args.finals_candidate)
+    selected=[args.experimental_candidate,args.finals_candidate,args.menu_candidate]
+    assert sum(selected)<=1, "Select only one candidate"
+    candidate=any(selected)
     if candidate:
-        if args.finals_candidate:
+        if args.menu_candidate:
+            from v116_menu_review_candidate import patch_release
+        elif args.finals_candidate:
             from v116_finals_layout_candidate import patch_release
         else:
             from v116_signing_width_candidate import patch_release
