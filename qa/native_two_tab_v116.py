@@ -84,12 +84,19 @@ def run():
     ap.add_argument('--out',type=Path,default=Path('qa/results/v116-native-two-tab.json'))
     ap.add_argument('--experimental-candidate',action='store_true',
                     help='Accept only the deterministic one-declaration signing review candidate')
+    ap.add_argument('--finals-candidate',action='store_true',
+                    help='Accept only the strict in-place finals layout candidate')
     a=ap.parse_args()
     data=a.html.read_bytes()
     sha=hashlib.sha256(data).hexdigest()
-    if a.experimental_candidate:
-        from qa.v116_signing_width_candidate import patch_release
-        assert data==patch_release(native.DEFAULT_HTML.read_bytes()), 'Not the exact deterministic signing review candidate'
+    assert not (a.experimental_candidate and a.finals_candidate), 'Select only one candidate'
+    candidate=bool(a.experimental_candidate or a.finals_candidate)
+    if candidate:
+        if a.finals_candidate:
+            from qa.v116_finals_layout_candidate import patch_release
+        else:
+            from qa.v116_signing_width_candidate import patch_release
+        assert data==patch_release(native.DEFAULT_HTML.read_bytes()), 'Not the exact requested review candidate'
     else:
         assert sha==native.OFFICIAL_SHA256, 'Canonical v116 SHA mismatch'
     native.SETTINGS=SimpleNamespace(mode='http')
@@ -143,7 +150,7 @@ def run():
                 restored=durable(tab_a,2,TWO)
                 assert checkpoint(tab_a)==restored['raw'], 'Post-Continue IDB and localStorage disagree'
                 assert not errors, errors
-                result={'status':'PASS','sha256':sha,'native_origin':True,'candidate':a.experimental_candidate,
+                result={'status':'PASS','sha256':sha,'native_origin':True,'candidate':candidate,
                   'rounds':[first['savedRound'],second['savedRound']],
                   'stale_save_rejected':True,'local_storage_preserved':True,
                   'indexeddb_preserved':True,'reloaded_latest':True,
