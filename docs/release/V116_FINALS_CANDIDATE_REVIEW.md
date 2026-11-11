@@ -87,6 +87,24 @@ external image requests, so some stadium photography may be missing. Passing
 its geometry assertions is **not a substitute for judging the rendered design,
 alignment, typographic hierarchy and interactions**.
 
+## Maintained CSS ownership alignment (QA branch only)
+
+Two maintained CSS declarations have now been aligned with the accepted
+rendered candidate, without appending another stylesheet or changing a script:
+
+- `v8/ui/decision-ui.css`: the existing mobile
+  `#g8app .gccuiFinals .g8matcharena` rule now includes
+  `align-items:stretch!important`, matching the native 320/360/390px proof.
+- `v8/ui/broadcast.css`: the existing champion
+  `.gccuiFinals.gccuiTitleWon::after` glow now uses
+  `left:0;right:0` rather than `left:-6%;right:-6%`.
+
+These are **source alignment only** on `work/v116-candidate-acceptance`.
+They are not inputs to the current deterministic release adapter, which still
+edits the checksum-verified frozen HTML directly, and they do **not** certify
+full `v8/build.py` reproducibility. The frozen release and historical
+`main` retain their original CSS bytes.
+
 ## Source architecture decision
 
 The maintained `v8/build.py` is an older builder and does not reproduce v116.
