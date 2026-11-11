@@ -8,6 +8,7 @@ on:
       - 'captaincy_layer_v116.py'
       - 'qa/native_two_tab_v116.py'
       - 'qa/native_v116_signing_css.py'
+      - 'qa/v116_signing_width_candidate.py'
       - '.github/workflows/v116-native-acceptance.yml'
   workflow_dispatch:
 
@@ -32,28 +33,44 @@ jobs:
         run: |
           python -m pip install --disable-pip-version-check playwright
           python -m playwright install --with-deps chromium
-      - name: Probe signing-week day strip in native Chromium
+      - name: Document original v116 signing-day mobile overflow
         run: |
           python qa/native_v116_signing_css.py \
             --html 'GCC_v116_release (1).html' \
-            --out qa/results/v116-signing-css.json
-      - name: Summarize signing-week computed styles
+            --expect-known-overflow \
+            --out qa/results/v116-signing-original.json
+      - name: Build one-declaration experimental signing review candidate
+        run: |
+          python qa/v116_signing_width_candidate.py \
+            --output qa/results/v116-signing-width-review.html \
+            --report qa/results/v116-signing-candidate-build.json
+      - name: Native phone and desktop candidate signing check
+        run: |
+          python qa/native_v116_signing_css.py \
+            --html qa/results/v116-signing-width-review.html \
+            --experimental-candidate \
+            --out qa/results/v116-signing-candidate-native.json
+      - name: Verify observed original defect and corrected candidate separately
         run: |
           python - <<'PY'
           import json, os
           from pathlib import Path
-          report=json.loads(Path('qa/results/v116-signing-css.json').read_text())
-          assert report['status']=='PASS' and report['native_http']
-          assert report['widths']==[390,1440]
-          assert len(report['snapshots'])==2
-          for observed in report['snapshots']:
-              assert observed['days_visible']>=3 and (observed['active'] or observed['inactive'])
-              assert observed['document_scroll_width']<=observed['viewport']['width']+1
-              assert not observed['page_errors']
-          msg='PASS: signing-week day strip rendered at 390px and 1440px, native Chromium; no horizontal overflow or JS errors. Manual visual sign-off remains open.'
+          original=json.loads(Path('qa/results/v116-signing-original.json').read_text())
+          build=json.loads(Path('qa/results/v116-signing-candidate-build.json').read_text())
+          candidate=json.loads(Path('qa/results/v116-signing-candidate-native.json').read_text())
+          assert original['status']=='KNOWN_OVERFLOW' and not original['candidate']
+          assert original['known_overflows'][0]['viewport']==390
+          assert original['known_overflows'][0]['document_scroll_width']>390
+          assert build['status']=='CANDIDATE_ONLY' and build['playable_release_unchanged']
+          assert candidate['status']=='PASS' and candidate['candidate']
+          assert candidate['sha256']==build['candidate_sha256']!=original['sha256']
+          assert candidate['widths']==[390,1440]
+          assert not candidate['known_overflows']
+          assert all(not r['page_errors'] for r in candidate['snapshots'])
+          msg='KNOWN DEFECT: frozen v116 signing day strip exceeds 390px viewport. EXPERIMENT PASS: one-declaration review candidate fits both 390px/1440px without JS errors. Not promoted.'
           print(msg)
           with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as out:
-              out.write('\n## GCC v116 signing-week computed-style probe\n\n'+msg+'\n')
+              out.write('## Signing-week visual defect and review candidate\n\n'+msg+'\n')
           PY
       - name: Verify exact v116 release through native browser storage
         run: |
