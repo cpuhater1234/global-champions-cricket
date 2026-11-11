@@ -1,0 +1,87 @@
+name: GCC v116 candidate finals overflow diagnostic
+
+on:
+  push:
+    branches:
+      - work/v116-candidate-acceptance
+    paths:
+      - 'qa/v116_finals_overflow_diagnostic.cjs'
+      - '.github/workflows/v116-candidate-visual-diagnostic.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gcc-v116-finals-overflow-diagnostic
+  cancel-in-progress: true
+
+jobs:
+  finals-overflow:
+    name: Inspect saved-career finals layout without changing game source
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install Chromium and browser test dependencies
+        run: |
+          python -m pip install --disable-pip-version-check playwright
+          python -m playwright install --with-deps chromium
+          npm install --no-save --no-package-lock playwright
+
+      - name: Build exact isolated signing-width candidate
+        run: |
+          python qa/v116_signing_width_candidate.py \
+            --output qa/results/v116-signing-width-review.html \
+            --report qa/results/v116-signing-candidate-build.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('qa/results/v116-signing-candidate-build.json').read_text())
+          assert r['status']=='CANDIDATE_ONLY' and r['playable_release_unchanged']
+          assert r['candidate_sha256']=='a8aa0b653d2476b120353e3511e43e2b07d8f92e9a3b2ce9ff383313f7cf3ecb'
+          assert r['candidate_bytes']==6635082
+          print('PASS: exact candidate built; frozen v116 unchanged')
+          PY
+
+      - name: Generate deterministic saved-career checkpoints
+        env:
+          GCC8_TEST_BUILD: qa/results/v116-signing-width-review.html
+          GCC8_TEST_REPORT_DIR: qa/results/v116-candidate-career
+          GCC8_TEST_SEED: '101'
+          GCC8_TEST_LAST_YEAR: '2026'
+          GCC8_TEST_SCOREBOOKS: '1'
+        run: node qa/structural-risk/career-run.mjs
+
+      - name: Validate diagnostic script
+        run: node --check qa/v116_finals_overflow_diagnostic.cjs
+
+      - name: Inspect finals DOM at desktop, tablet and mobile widths
+        env:
+          GCC8_TEST_BUILD: qa/results/v116-signing-width-review.html
+          GCC8_BROWSER_CAREER_DIR: qa/results/v116-candidate-career
+          GCC8_DIAGNOSTIC_DIR: qa/results/v116-finals-diagnostic
+        run: |
+          GCC8_CHROMIUM="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')" \
+            node qa/v116_finals_overflow_diagnostic.cjs
+
+      - name: Upload diagnostic report, screenshots and source checkpoints
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v116-finals-overflow-diagnostic
+          path: |
+            qa/results/v116-finals-diagnostic/
+            qa/results/v116-candidate-career/checkpoint-2019.json
+            qa/results/v116-candidate-career/checkpoint-2025.json
+            qa/results/v116-candidate-career/checkpoint-2026.json
+          if-no-files-found: warn
+          retention-days: 7
