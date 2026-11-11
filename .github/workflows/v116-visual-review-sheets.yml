@@ -1,0 +1,183 @@
+name: GCC v116 accepted-candidate visual review sheets
+
+on:
+  push:
+    branches:
+      - work/v116-candidate-acceptance
+    paths:
+      - '.github/workflows/v116-visual-review-sheets.yml'
+      - 'qa/v116_review_gallery.py'
+      - 'qa/v116_finals_layout_candidate.py'
+      - 'qa/v116_signing_width_candidate.py'
+      - 'qa/v116_source_reconciliation.py'
+      - 'qa/structural-risk/career-run.mjs'
+      - 'qa/v8_browser_career_audit.cjs'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gcc-v116-visual-review-sheets
+  cancel-in-progress: true
+
+jobs:
+  render-and-commit-review-sheets:
+    name: Render accepted candidate screens and commit compact review sheets
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: work/v116-candidate-acceptance
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install Chromium, Playwright and contact-sheet image library
+        run: |
+          python -m pip install --disable-pip-version-check playwright pillow
+          python -m playwright install --with-deps chromium
+          npm install --no-save --no-package-lock playwright
+
+      - name: Generate checksum-pinned 19-season candidate and screenshot gallery
+        run: |
+          python qa/v116_review_gallery.py \
+            --generate-checkpoints \
+            --years 2019,2025,2026 \
+            --widths 320,390,768,1440 \
+            --output qa/results/v116-human-review \
+            --no-open
+
+      - name: Build labelled desktop, tablet and mobile contact sheets
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageDraw, ImageFont
+          import json
+
+          root=Path('qa/results/v116-human-review')
+          report=json.loads((root/'screenshots'/'report.json').read_text())
+          meta=json.loads((root/'gallery.json').read_text())
+          expected='5ba82e499b0b8d08706aab851449d20b6d315bf9b780a8c9674b44933d3fe094'
+          assert meta['status']=='VISUAL_REVIEW_READY' and meta['candidate_sha256']==expected, meta
+          assert meta['geometry_issues']==[] and meta['browser_errors']==[], meta
+          assert len(report['states'])==104, len(report['states'])
+          assert len({(s['name'],s['width']) for s in report['states']})==104
+
+          out=Path('docs/release/visual-review')
+          out.mkdir(parents=True,exist_ok=True)
+          regular='/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
+          bold='/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
+          font=ImageFont.truetype(regular,18)
+          small=ImageFont.truetype(regular,14)
+          heading=ImageFont.truetype(bold,27)
+          accent=(255,190,74)
+          bg=(13,21,34)
+          card=(25,38,58)
+          border=(65,87,117)
+          white=(239,245,255)
+          muted=(178,197,220)
+          screenshots=root/'screenshots'
+          states=report['states']
+
+          def make_sheet(filename,title,items,cols=4,cell_w=380,cell_h=540):
+              rows=(len(items)+cols-1)//cols
+              pad=18; head_h=82
+              canvas=Image.new('RGB',(pad+cols*(cell_w+pad),head_h+pad+rows*(cell_h+pad)),bg)
+              draw=ImageDraw.Draw(canvas)
+              draw.text((pad,20),title,font=heading,fill=white)
+              draw.text((pad,54),'Candidate '+expected+' | '+str(len(items))+' native Chromium screenshots',font=small,fill=muted)
+              for i,(label,filename_png) in enumerate(items):
+                  x=pad+(i%cols)*(cell_w+pad); y=head_h+pad+(i//cols)*(cell_h+pad)
+                  draw.rounded_rectangle((x,y,x+cell_w,y+cell_h),radius=8,fill=card,outline=border,width=2)
+                  draw.text((x+12,y+10),label,font=font,fill=accent)
+                  img=Image.open(filename_png).convert('RGB')
+                  img.thumbnail((cell_w-24,cell_h-58),Image.Resampling.LANCZOS)
+                  px=x+(cell_w-img.width)//2; py=y+48+(cell_h-58-img.height)//2
+                  canvas.paste(img,(px,py))
+              target=out/filename
+              canvas.save(target,format='PNG',optimize=True)
+              print('WROTE',target,target.stat().st_size,'bytes')
+              return target
+
+          widths=[1440,768,390,320]
+          stages=['ready','semis','gf-ready','done']
+          years=[2019,2025,2026]
+          by={(s['name'],s['width']):s for s in states}
+          for year in years:
+              items=[]
+              for stage in stages:
+                  name=f'{year}-finals-{stage}'
+                  for width in widths:
+                      row=by.get((name,width))
+                      assert row is not None,(name,width)
+                      assert not row['overflow'] and not row['clipped'],row
+                      image=screenshots/f'{name}-{width}.png'
+                      assert image.is_file(),image
+                      items.append((f'{stage.upper()} | {width}px',image))
+              make_sheet(f'finals-{year}.png',f'{year} FINALS | Desktop to mobile',items)
+
+          for width,filename,title in [
+              (1440,'overview-desktop-1440.png','CAREER OVERVIEW | DESKTOP 1440px'),
+              (768,'overview-tablet-768.png','CAREER OVERVIEW | TABLET 768px'),
+              (390,'overview-mobile-390.png','CAREER OVERVIEW | MOBILE 390px')]:
+              items=[]
+              for row in sorted((s for s in states if s['width']==width),key=lambda x:x['name']):
+                  image=screenshots/f"{row['name']}-{width}.png"
+                  assert image.is_file(),image
+                  items.append((row['name'],image))
+              assert len(items)==26,(width,len(items))
+              make_sheet(filename,title,items,cols=3,cell_w=430,cell_h=520)
+
+          summary={
+            'status':'VISUAL_REVIEW_READY',
+            'candidate_sha256':expected,
+            'rendered_states':len(states),
+            'years':years,
+            'widths':[320,390,768,1440],
+            'page_errors':report['errors'],
+            'geometry_issues':[],
+            'contact_sheets':sorted(p.name for p in out.glob('*.png')),
+            'artifact_upload':'not used; contact sheets are committed to the isolated QA branch'
+          }
+          (out/'summary.json').write_text(json.dumps(summary,indent=2)+'\\n')
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Add review instructions
+        run: |
+          cat > docs/release/visual-review/README.md <<'EOF'
+          # GCC v116 accepted-candidate visual review
+
+          These contact sheets are rendered from the checksum-pinned, automated-QA-accepted candidate, not the frozen playable v116 file.
+
+          Candidate SHA-256: `5ba82e499b0b8d08706aab851449d20b6d315bf9b780a8c9674b44933d3fe094`
+
+          - `finals-2019.png`, `finals-2025.png`, `finals-2026.png`: four finals stages across desktop, tablet and two mobile widths.
+          - `overview-desktop-1440.png`, `overview-tablet-768.png`, `overview-mobile-390.png`: saved-career review, archive, scorebook, finals, offseason, squad and draft screens.
+
+          All screens use deterministic synthetic career saves. These are human-review aids; automated geometry passing does not replace visual judgement. Remote venue images may be absent because external image requests are disabled during the offline browser run.
+
+          This folder exists only on `work/v116-candidate-acceptance`. It is not part of a release, and no screenshot artifacts are uploaded to GitHub Actions storage.
+          EOF
+
+      - name: Commit review sheets to isolated QA branch
+        env:
+          BRANCH: work/v116-candidate-acceptance
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/release/visual-review
+          git diff --cached --check
+          if git diff --cached --quiet; then
+            echo "No visual review changes to commit."
+          else
+            git commit -m "QA visual review: add accepted-candidate contact sheets"
+            git push origin "HEAD:refs/heads/$BRANCH"
+          fi
