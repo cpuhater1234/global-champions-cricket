@@ -139,7 +139,11 @@ def main():
                     help="Inventory the frozen v116 mobile overflow without declaring the legacy release fixed")
     ap.add_argument("--experimental-candidate",action="store_true",
                     help="Accept only the exact deterministic one-declaration review candidate")
+    ap.add_argument("--widths",default="390,1440",
+                    help="Comma-separated viewport widths; default: 390,1440")
     args=ap.parse_args()
+    widths=[int(x.strip()) for x in args.widths.split(",") if x.strip()]
+    assert widths and len(widths)==len(set(widths)) and all(x>=280 for x in widths), "Invalid responsive width list"
     data=args.html.read_bytes()
     sha=sha256(data).hexdigest()
     if args.experimental_candidate:
@@ -158,7 +162,8 @@ def main():
         with sync_playwright() as pw:
             browser=pw.chromium.launch(headless=True)
             try:
-                for width,height in ((390,844),(1440,900)):
+                for width in widths:
+                    height=844 if width<=430 else 900
                     ctx=browser.new_context(viewport={"width":width,"height":height},accept_downloads=False)
                     page=ctx.new_page()
                     errors=[]
@@ -167,7 +172,7 @@ def main():
                         enter_signing(page)
                         observation=page.evaluate(SCRIPT)
                         observation["page_errors"]=errors
-                        assert observation["days_visible"]>=3, f"Missing signing day strip at {width}px: {observation}"
+                        assert observation["days_visible"]==5, f"Expected all five signing days at {width}px: {observation}"
                         # The freshly opened signing window may have no .active day
                         # before the first scheduled signing; that is not a defect.
                         assert observation["inactive"] or observation["active"], (
@@ -219,7 +224,7 @@ def main():
         "status":"KNOWN_OVERFLOW" if args.expect_known_overflow else "PASS",
         "candidate":bool(args.experimental_candidate),
         "known_overflows":overflows,"sha256":sha,"native_http":True,
-        "widths":[390,1440],
+        "widths":widths,
         "snapshots":rows,
         "note":"Computed styles and matching CSSOM declarations, not full visual sign-off or selector ownership proof"
     }
