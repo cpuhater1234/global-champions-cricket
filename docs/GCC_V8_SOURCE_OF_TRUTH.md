@@ -1,3 +1,7 @@
+> **HISTORICAL SOURCE POINTER, SUPERSEDED 11 NOVEMBER 2026.** The current frozen playable release is [GCC v116](release/V116_HANDOFF.md) on the [`v116` branch](https://github.com/cpuhater1234/global-champions-cricket/tree/v116). The maintained `v8/build.py` pipeline below targets an older candidate and has **not** been proven to reproduce v116. For current code correspondence, see [v116 block lineage](release/V116_BLOCK_LINEAGE.md) and [source reconciliation](release/V116_SOURCE_RECONCILIATION.md). All below branch references and build instructions are preserved **only as a historical record**. Do not select an old candidate as the release.
+
+---
+
 # Global Champions Cricket — source of truth
 
 > **Status checked 4 November 2026.** This document is the current branch and file-of-record pointer for development. It supersedes older branch pointers in the README and historical handoff notes where they disagree.
