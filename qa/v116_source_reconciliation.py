@@ -46,10 +46,10 @@ def inspect_release(path):
     tags.feed(data.decode("utf-8", errors="strict"))
     tags.close()
     for tag, count in (("html", 1), ("head", 1), ("body", 1),
-                       ("style", 14), ("script", 20)):
+                       ("style", 17), ("script", 20)):
         if tags.starts[tag] != count or tags.ends[tag] != count:
             raise ValueError(f"Unbalanced <{tag}>: {tags.starts[tag]} starts, {tags.ends[tag]} ends")
-    if counts["style"] != 14 or counts["script"] != 20:
+    if counts["style"] != 17 or counts["script"] != 20:
         raise ValueError(f"Unexpected style/script block inventory: {counts}")
     seen = set()
     record = []
@@ -155,7 +155,7 @@ def main():
         data, blocks, detail = inspect_release(args.release)
         result = {"release_sha256": sha(data), "release_bytes": len(data),
                   "recorded_git_blob": EXPECTED_GIT_BLOB,
-                  "styles": 14, "scripts": 20, "blocks": detail,
+                  "styles": 17, "scripts": 20, "blocks": detail,
                   "source": source_inventory(blocks)}
         if args.action == "extract":
             if not args.source:
