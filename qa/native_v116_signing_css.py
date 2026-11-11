@@ -83,7 +83,20 @@ SCRIPT = r"""() => {
     inactive:visible.find(el=>!el.matches('.active'))?snapshot(visible.find(el=>!el.matches('.active'))):null,
     all_widths:visible.map(el=>Math.round(el.getBoundingClientRect().width*10)/10),
     day_labels:visible.map(el=>el.textContent.replace(/\s+/g,' ').trim().slice(0,60)),
-    day_classes:visible.map(el=>el.className)
+    day_classes:visible.map(el=>el.className),
+    overflow_candidates:[...document.querySelectorAll('body *')]
+      .map(el=>({el,rect:el.getBoundingClientRect()}))
+      .filter(x=>x.rect.width>0&&x.rect.height>0&&x.rect.right>innerWidth+1)
+      .sort((a,b)=>b.rect.right-a.rect.right)
+      .slice(0,25).map(({el,rect})=>({
+        tag:el.tagName.toLowerCase(), id:el.id||null,
+        class_name:String(el.getAttribute('class')||'').slice(0,160),
+        text:(el.textContent||'').replace(/\s+/g,' ').trim().slice(0,55),
+        left:Math.round(rect.left*10)/10,right:Math.round(rect.right*10)/10,
+        width:Math.round(rect.width*10)/10,
+        overflow_x:getComputedStyle(el).overflowX,
+        position:getComputedStyle(el).position
+      }))
   };
 }"""
 
@@ -134,7 +147,8 @@ def main():
                         assert observation["inactive"] or observation["active"], (
                             f"No inspectable day cell at {width}px")
                         assert observation["document_scroll_width"]<=width+1, (
-                            f"Horizontal overflow at {width}px: {observation['document_scroll_width']}")
+                            f"Horizontal overflow at {width}px: {observation['document_scroll_width']} "
+                            f"candidates={json.dumps(observation['overflow_candidates'][:18])}")
                         assert not errors, f"Browser JS exceptions at {width}px: {errors}"
                         rows.append(observation)
                     finally:
