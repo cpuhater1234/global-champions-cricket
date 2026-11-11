@@ -136,6 +136,8 @@ def main():
             raise FileNotFoundError("Renderer omitted expected screenshot " + str(image))
         ref = "screenshots/" + image.name
         year = next((int(x) for x in row["name"].split("-") if x.isdigit() and len(x) == 4), None)
+        if year not in years and year is not None and (year - 1) in years:
+            year -= 1  # The following year's squad/draw belongs to this saved-year review.
         cards.append(
             '<article class="frame" data-width="%d" data-year="%s">'
             '<a href="%s" target="_blank" rel="noopener" title="Open full-size screenshot">'
@@ -178,7 +180,7 @@ footer{padding:16px max(20px,3vw) 40px;color:#a9bdd5;font-size:12px}
 <header><h1>Global Champions Cricket | v116 candidate visual review</h1>
 <p>Rendered from the exact checksum-verified candidate through native Chromium.
 Click any screenshot for the original resolution. These are disposable saved careers,
-not real user data. Passing geometry tests does not replace visual judgement.</p></header>
+not real user data. Passing geometry tests does not replace visual judgement. Remote image requests are disabled during deterministic screenshot rendering, so venue photography may be absent.</p></header>
 <div class="toolbar">
 <label>Viewport <select id="width"><option value="">All widths</option>__WIDTHS__</select></label>
 <label>Career <select id="year"><option value="">All years</option>__YEARS__</select></label>
