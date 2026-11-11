@@ -135,13 +135,24 @@ def main():
     ap=argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--html",type=Path,default=Path(__file__).resolve().parents[1]/"GCC_v116_release (1).html")
     ap.add_argument("--out",type=Path,default=Path("qa/results/v116-signing-css.json"))
+    ap.add_argument("--expect-known-overflow",action="store_true",
+                    help="Inventory the frozen v116 mobile overflow without declaring the legacy release fixed")
+    ap.add_argument("--experimental-candidate",action="store_true",
+                    help="Accept only the exact deterministic one-declaration review candidate")
     args=ap.parse_args()
     data=args.html.read_bytes()
     sha=sha256(data).hexdigest()
-    assert sha==native.OFFICIAL_SHA256, "Frozen v116 hash mismatch"
+    if args.experimental_candidate:
+        from v116_signing_width_candidate import patch_release
+        original=Path(__file__).resolve().parents[1]/"GCC_v116_release (1).html"
+        assert data==patch_release(original.read_bytes()), "Not the exact approved signing review candidate"
+        assert not args.expect_known_overflow
+    else:
+        assert sha==native.OFFICIAL_SHA256, "Frozen v116 hash mismatch"
     native.SETTINGS=SimpleNamespace(mode="http")
     native.HTML_BYTES=data
     rows=[]
+    overflows=[]
     with native.temporary_release_server(data) as url:
         native.GAME_URL=url
         with sync_playwright() as pw:
@@ -182,17 +193,32 @@ def main():
                                 "offending":observation["overflow_candidates"][:12],
                                 "hypothesis":whatif
                             }),flush=True)
-                        assert observation["document_scroll_width"]<=width+1, (
-                            f"Horizontal overflow at {width}px: {observation['document_scroll_width']} "
-                            f"candidates={json.dumps(observation['overflow_candidates'][:18])}")
+                        if observation["document_scroll_width"]>width+1:
+                            overflows.append({
+                                "viewport":width,
+                                "document_scroll_width":observation["document_scroll_width"],
+                                "offending":observation["overflow_candidates"][:12]
+                            })
+                            assert args.expect_known_overflow and width==390, (
+                                f"Unexpected horizontal overflow at {width}px: "
+                                f"{observation['document_scroll_width']}")
+                        assert not (args.experimental_candidate and observation["document_scroll_width"]>width+1), (
+                            f"Review candidate still overflows at {width}px")
                         assert not errors, f"Browser JS exceptions at {width}px: {errors}"
                         rows.append(observation)
                     finally:
                         ctx.close()
             finally:
                 browser.close()
+    if args.expect_known_overflow:
+        assert len(overflows)==1 and overflows[0]["viewport"]==390, (
+            f"Frozen release overflow boundary changed: {overflows}")
+    else:
+        assert not overflows, f"Unexpected viewport overflow: {overflows}"
     output={
-        "status":"PASS","sha256":sha,"native_http":True,
+        "status":"KNOWN_OVERFLOW" if args.expect_known_overflow else "PASS",
+        "candidate":bool(args.experimental_candidate),
+        "known_overflows":overflows,"sha256":sha,"native_http":True,
         "widths":[390,1440],
         "snapshots":rows,
         "note":"Computed styles and matching CSSOM declarations, not full visual sign-off or selector ownership proof"
@@ -201,6 +227,7 @@ def main():
     args.out.write_text(json.dumps(output,indent=2)+"\n")
     print(json.dumps({
         "status":output["status"],"sha256":sha,
+        "candidate":output["candidate"],"known_overflows":output["known_overflows"],
         "widths":[r["viewport"]["width"] for r in rows],
         "signing_views":[r["view"] for r in rows],
         "visible_day_spans":[r["days_visible"] for r in rows],
