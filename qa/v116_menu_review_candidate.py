@@ -17,7 +17,7 @@ from v116_source_reconciliation import BLOCK, RELEASE
 from v116_finals_layout_candidate import patch_release as finals_candidate
 
 OLD_START=b"/* Guide review: readable headings, aligned cricket glyphs and one reading edge. */"
-OLD_END=b"#g8dialog[data-prompt=prepare] .g8previewvenue>.g8eyebrow"
+OLD_END=b"/* Archive scorebooks: four readable columns, neutral rows and a stable name edge. */"
 NEW_START=b"/* Guide review: Claude flat + dense layout, adapted to v116 markup and charcoal tokens. */"
 NEW_END=OLD_END
 
