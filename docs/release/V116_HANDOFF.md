@@ -8,6 +8,7 @@ Status updated 11 November 2026: **v116 is the frozen stable playable release ar
 - [Frozen source identity and exact extraction run #42970876618](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/42970876618): **PASS**, 17 styles / 22 scripts in exact v116. This is lossless extraction, not historical `v8/build.py` parity.
 - [39-block lineage audit #42971180377](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/42971180377): **PASS**; 21 blocks with exact partial/full source correspondence, 10 heuristic-only, 8 unmapped.
 - [Static CSS cascade inventory #42971485315](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/42971485315): **PASS**. 70 cross-block same-context selector/property repetitions, 52 with different values. This is not a count of confirmed user-facing defects.
+- **Confirmed mobile layout issue:** initial signing-day row exceeds 390px by 8px in the frozen v116. A [single-declaration CSS review candidate](V116_SIGNING_WIDTH_REVIEW.md) passed native 390px/1440px signing checks in [Actions run #42973181343](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/42973181343); **not promoted**. The same workflow passed native original-release save/reload and two-tab recovery again.
 - **Open:** full maintained-source parity, visual/manual sign-off, other storage failure modes and extended native career persistence.
 
 ## Stable release operating rules
