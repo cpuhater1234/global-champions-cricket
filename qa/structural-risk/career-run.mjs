@@ -7,7 +7,7 @@ const path=process.env.GCC8_TEST_BUILD||'game/gcc_v8_product_candidate.html';
 const host=loadGame(path,Number(process.env.GCC8_TEST_SEED||101),new Map(),{strictIds:true,storageLimitBytes:Number(process.env.GCC8_STORAGE_LIMIT_BYTES)||undefined}),{G,context,get}=host,X=context.GCC8,s=G.state;
 const observations=[], actionLog=[], draftChoices=[];
 function observe(){const ps=X.roster(),dev=s.dynasty.developmentByYear?.[s.year]||[];observations.push({year:s.year,position:s.regularSeasonPosition,champion:s.champion?.abbr,user:s.userClub.abbr,table:Object.fromEntries(Object.entries(s.table).map(([k,t])=>[k,{wins:t.w,losses:t.l,points:t.pts}])),teams:Object.fromEntries(s.league.map(c=>[c.abbr,s.teams[c.abbr].map(id=>{const p=G.byId(id);return {id,name:p.name,role:p.role,overall:p.overall,age:s.year-p.birthYear};})])),development:dev,annualActions:actionLog.filter(a=>a.year===s.year&&['dynasty','team'].includes(a.view)),choices:draftChoices.filter(p=>p.year===s.year)});fs.writeFileSync(reportDir+'/observations.json',JSON.stringify(observations,null,2));}
-const coverage={reloads:[],finals:0,injurySelections:0,injuryCovers:0,superOvers:0,clubs:[]};const scorebooks=[];const markup={};let checks=0;const check=(test,msg)=>{assert.ok(test,msg);checks++;};
+const coverage={reloads:[],deferredCheckpoints:[],finals:0,injurySelections:0,injuryCovers:0,superOvers:0,clubs:[]};const scorebooks=[];const markup={};let checks=0;const check=(test,msg)=>{assert.ok(test,msg);checks++;};
 const doIt=(name,...args)=>{actionLog.push({year:s.year,view:X.ui.view,action:name});if(name==='draftPlayer'){const p=G.byId(args[0]),pool=X.pool(s.year>2008);draftChoices.push({year:s.year,id:p.id,name:p.name,role:p.role,overall:p.overall,alternatives:pool.length,top:pool.slice(0,5).map(p=>({id:p.id,name:p.name,overall:p.overall,role:p.role})),entryYears:Object.fromEntries([...new Set(pool.map(p=>p.dynastyCareer?.debutYear||2008))].map(y=>[y,pool.filter(p=>(p.dynastyCareer?.debutYear||2008)===y).length]))});}const ok=X.dispatch(name,args);check(ok,`${name}: ${get('g8feedback').textContent}`);const key=X.ui.view+(X.ui.view==='dynasty'?'-'+s.dynasty.offseason?.phase:'')+(X.ui.modal?'-'+X.ui.modal:'');if(!markup[key])markup[key]={stage:get('g8stage').innerHTML,hud:get('g8hud').innerHTML,dialog:X.ui.modal?get('g8dialogContent').innerHTML:''};if(X.ui.view==='matchReveal'){check(X.dispatch('matchSkip'),'instant match completion');}};
 function captureScorebook(r){scorebooks.push({year:s.year,round:r.round||null,home:r.home.abbr,away:r.away.abbr,winner:r.winner.abbr,battingFirst:r.battingFirst.abbr,battingSecond:r.battingSecond.abbr,marginText:r.marginText,superOver:!!r.superOver,innings:r.scorecard.innings.map(i=>({club:i.club.abbr,total:i.total,wickets:i.wickets,balls:i.balls,extras:i.extras,extrasBreakdown:i.extrasBreakdown,phases:i.phases,batting:i.batting.map(b=>({id:b.player.id,name:b.player.name,runs:b.runs,balls:b.balls,fours:b.fours,sixes:b.sixes,dismissal:b.dismissal,dnb:b.dnb})),bowling:i.bowling.map(b=>({id:b.player.id,name:b.player.name,balls:b.balls,runs:b.runs,wickets:b.wickets})),plan:(i.club.abbr===r.home.abbr?r.homeInnings:r.awayInnings).bowlingPlan}))});}
 function auditScorebook(r){
@@ -36,7 +36,15 @@ function auditScorebook(r){
  for(const row of Object.values(s.table)){check(Math.abs(row.nrr-(row.ballsFor?row.runsFor*6/row.ballsFor-row.runsAgainst*6/row.ballsAgainst:0))<1e-9,'net run rate formula');}for(const row of Object.values(s.table))check(row.p===row.w+row.l&&row.pts===row.w*2&&Number.isFinite(row.nrr),'ladder arithmetic');
 }
 function checkpoint(label){
- const raw=host.storage.get('gcc_dynasty_v8'),cold=loadGame(path,777,new Map([['gcc_dynasty_v8',raw]]),{strictIds:true}),Y=cold.context.GCC8;
+ const raw=host.storage.get('gcc_dynasty_v8');
+ // A new v116 career may not have a durable save until its first completed match.
+ // Do not misreport an absent pre-match snapshot as a failed cold-reload test.
+ if(!raw){
+  coverage.deferredCheckpoints.push({year:s.year,label,reason:'No durable career snapshot exists yet'});
+  console.log('Deferred cold-reload checkpoint (no saved snapshot yet):',label);
+  return;
+ }
+ const cold=loadGame(path,777,new Map([['gcc_dynasty_v8',raw]]),{strictIds:true}),Y=cold.context.GCC8;
  check(Y.dispatch('continue'),label+' cold Continue');
  const core=t=>JSON.stringify({year:t.year,seed:t.seed,user:t.userClub?.abbr,teams:t.teams,xi:t.xi,order:t.battingOrder,results:t.results,table:t.table,round:t.round,pick:t.pickIndex,offseason:t.dynasty.offseason});
  check(core(cold.G.state)===core(s),label+' preserves career truth');check(cold.errors.length===0,label+' no restore errors');check(Y.ui.view===X.ui.view,label+' restores view');coverage.reloads.push({year:s.year,label});
@@ -105,5 +113,5 @@ const saved=host.storage.get('gcc_dynasty_v8');if(lastYear!==2026)fs.writeFileSy
 const resumed=loadGame(path,202,new Map([['gcc_dynasty_v8',saved]]),{strictIds:true});check(resumed.context.GCC8.dispatch('continue'),'reload continues');check(resumed.context.GCC8.ui.view===(lastYear===2026?'legacy':'review'),'reload reaches saved career stage');
 fs.writeFileSync(reportDir+'/v8_markup_snapshot.json',JSON.stringify(markup,null,2));
 if(process.env.GCC8_TEST_KEEP_FINAL_SAVE)fs.writeFileSync(reportDir+'/v8_final_save.json',saved);
-const results={scope:'Real cricket engine + new UI dispatch in a VM DOM stub. No browser, visual, geometry, focus or latency certification.',seed:Number(process.env.GCC8_TEST_SEED||101),club:s.userClub.abbr,coverage,checks,seasons:s.dynasty.history.length,regularSeasonMatches:s.dynasty.manager.matches,storageStats:host.storageStats,errors:host.errors};
+const results={scope:'Real cricket engine + new UI dispatch in a VM DOM stub. Cold reload is attempted only after a durable snapshot exists. No browser, visual, geometry, focus or latency certification.',seed:Number(process.env.GCC8_TEST_SEED||101),club:s.userClub.abbr,coverage,checks,seasons:s.dynasty.history.length,regularSeasonMatches:s.dynasty.manager.matches,storageStats:host.storageStats,errors:host.errors};
 fs.writeFileSync(reportDir+(lastYear===2026?'/v8_game_results.json':'/v8_smoke_results.json'),JSON.stringify(results,null,2)+'\n');console.log(JSON.stringify(results,null,2));
