@@ -1,6 +1,6 @@
 # v116 menu candidate review | 12 November 2026
 
-Status: acceptance rerun in progress; candidate not approved or promoted.
+Status: assertion corrected and visually reviewed; full acceptance blocked by runner package-mirror DNS failure on two attempts. Candidate not approved or promoted.
 
 ## Candidate identity
 
@@ -44,3 +44,11 @@ The builder explicitly describes itself as a guarded review adapter, not full ma
 - Starting QA branch: `c73afb1d26a12ee61b4e52645f621658241a96f2`
 
 Only the QA workflow and this review documentation were changed in this session. The frozen HTML was not edited. No promotion is authorized by this review.
+
+## Acceptance rerun outcome
+
+Run 43032675898 attempts 1 and 2 both failed in `Install native Chromium and test dependencies`, before candidate generation or gameplay tests. Job IDs: 130563455258 and 130567438932. Both logs report `Temporary failure resolving 'azure.archive.ubuntu.com'`, failing to download nine Ubuntu font/Xfont packages; Playwright dependency installation exits with code 100. No acceptance gate was removed or skipped to work around the infrastructure failure. Full acceptance, including the final saved-career verifier, is therefore NOT cleared.
+
+The actual assertion-report payload from the earlier failed run was independently evaluated locally: the old array-to-integer comparison fails, and the corrected length comparison passes with all 18 states, empty errors/failures and the exact candidate checksum. This confirms the assertion correction but does not substitute for the full rerun.
+
+Earlier run 43008658075 passed 19 seasons, 266 user regular-season matches and 16,564 assertions, plus native persistence and two-tab recovery. These are prior-run results, not a new full acceptance pass.
