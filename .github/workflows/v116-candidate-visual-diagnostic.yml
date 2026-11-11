@@ -6,6 +6,8 @@ on:
       - work/v116-candidate-acceptance
     paths:
       - 'qa/v116_finals_overflow_diagnostic.cjs'
+      - 'qa/v116_finals_layout_candidate.py'
+      - 'qa/v116_review_gallery.py'
       - '.github/workflows/v116-candidate-visual-diagnostic.yml'
 
 permissions:
@@ -73,6 +75,32 @@ jobs:
         run: |
           GCC8_CHROMIUM="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')" \
             node qa/v116_finals_overflow_diagnostic.cjs
+
+      - name: Syntax-check local visual gallery builder
+        run: python -m py_compile qa/v116_review_gallery.py qa/v116_finals_layout_candidate.py
+
+      - name: Render and verify local screenshot gallery from 2019 saved career
+        run: |
+          GCC8_CHROMIUM="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')" \
+            python qa/v116_review_gallery.py \
+              --checkpoint-dir qa/results/v116-candidate-career \
+              --years 2019 \
+              --widths 320,390,1440 \
+              --output qa/results/v116-gallery-proof \
+              --no-open
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path('qa/results/v116-gallery-proof/gallery.json').read_text())
+          assert data['status']=='VISUAL_REVIEW_READY',data
+          assert data['candidate_sha256']=='5ba82e499b0b8d08706aab851449d20b6d315bf9b780a8c9674b44933d3fe094'
+          assert data['states']==27, data
+          assert data['geometry_issues']==[] and data['browser_errors']==[], data
+          assert Path(data['index']).is_file()
+          screenshots=list(Path('qa/results/v116-gallery-proof/screenshots').glob('*.png'))
+          assert len(screenshots)==27,len(screenshots)
+          print('PASS: local review gallery generated 27 native Chromium PNGs and one clickable HTML index, with no artifact upload')
+          PY
 
       - name: Summarize diagnostics without artifacts
         if: always()
