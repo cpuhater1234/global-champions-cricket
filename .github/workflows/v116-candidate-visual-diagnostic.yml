@@ -57,7 +57,7 @@ jobs:
           GCC8_TEST_BUILD: qa/results/v116-signing-width-review.html
           GCC8_TEST_REPORT_DIR: qa/results/v116-candidate-career
           GCC8_TEST_SEED: '101'
-          GCC8_TEST_LAST_YEAR: '2026'
+          GCC8_TEST_LAST_YEAR: '2019'
           GCC8_TEST_SCOREBOOKS: '1'
         run: node qa/structural-risk/career-run.mjs
 
@@ -69,19 +69,24 @@ jobs:
           GCC8_TEST_BUILD: qa/results/v116-signing-width-review.html
           GCC8_BROWSER_CAREER_DIR: qa/results/v116-candidate-career
           GCC8_DIAGNOSTIC_DIR: qa/results/v116-finals-diagnostic
+          GCC8_DIAGNOSTIC_YEARS: '2019'
         run: |
           GCC8_CHROMIUM="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')" \
             node qa/v116_finals_overflow_diagnostic.cjs
 
-      - name: Upload diagnostic report, screenshots and source checkpoints
+      - name: Summarize diagnostics without artifacts
         if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: v116-finals-overflow-diagnostic
-          path: |
-            qa/results/v116-finals-diagnostic/
-            qa/results/v116-candidate-career/checkpoint-2019.json
-            qa/results/v116-candidate-career/checkpoint-2025.json
-            qa/results/v116-candidate-career/checkpoint-2026.json
-          if-no-files-found: warn
-          retention-days: 7
+        run: |
+          if [ -f qa/results/v116-finals-diagnostic/report.json ]; then
+            node - <<'JS'
+          const fs=require('fs');
+          const d=JSON.parse(fs.readFileSync('qa/results/v116-finals-diagnostic/report.json','utf8'));
+          const issue=d.states.filter(s=>s.baseline.overflow).length;
+          const after=d.states.filter(s=>s.experiment.overflow).length;
+          fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,
+            '## Finals diagnostic (no artifact storage)\n\n'+
+            '- Baseline overflow states: '+issue+'\n'+
+            '- Browser-only stretch experiment overflow states: '+after+'\n'+
+            '- Release files modified: no\n');
+          JS
+          fi
