@@ -35,7 +35,7 @@ jobs:
           roundtrip=json.loads(Path('qa/results/v116-source-roundtrip.json').read_text())
           assert audit['release_sha256']=='b27cf0b4c7e6e4e7a78eaa5c80154dfd0f70657ce9f774dd405505e97e82c6d0'
           assert audit['recorded_git_blob']=='088cf689ef3a464b06e8512627811ad60864b3e8'
-          assert audit['styles']==17 and audit['scripts']==20
+          assert audit['styles']==17 and audit['scripts']==22
           assert roundtrip['roundtrip']['byte_identical_to_release']
           assert audit['source']['maintained_source_reproduction']=='NOT VERIFIED'
           msg='PASS: exact frozen v116 binary and lossless extraction round trip. Maintained v8/build.py parity: NOT VERIFIED.'
