@@ -1,0 +1,27 @@
+{
+  "status": "VISUAL_REVIEW_READY",
+  "candidate_sha256": "5ba82e499b0b8d08706aab851449d20b6d315bf9b780a8c9674b44933d3fe094",
+  "rendered_states": 104,
+  "years": [
+    2019,
+    2025,
+    2026
+  ],
+  "widths": [
+    320,
+    390,
+    768,
+    1440
+  ],
+  "page_errors": [],
+  "geometry_issues": [],
+  "contact_sheets": [
+    "finals-2019.png",
+    "finals-2025.png",
+    "finals-2026.png",
+    "overview-desktop-1440.png",
+    "overview-mobile-390.png",
+    "overview-tablet-768.png"
+  ],
+  "artifact_upload": "not used; contact sheets are committed to the isolated QA branch"
+}
