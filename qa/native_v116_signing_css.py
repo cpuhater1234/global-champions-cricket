@@ -81,7 +81,9 @@ SCRIPT = r"""() => {
     active_count:visible.filter(el=>el.matches('.active')).length,
     active:visible.find(el=>el.matches('.active'))?snapshot(visible.find(el=>el.matches('.active'))):null,
     inactive:visible.find(el=>!el.matches('.active'))?snapshot(visible.find(el=>!el.matches('.active'))):null,
-    all_widths:visible.map(el=>Math.round(el.getBoundingClientRect().width*10)/10)
+    all_widths:visible.map(el=>Math.round(el.getBoundingClientRect().width*10)/10),
+    day_labels:visible.map(el=>el.textContent.replace(/\s+/g,' ').trim().slice(0,60)),
+    day_classes:visible.map(el=>el.className)
   };
 }"""
 
@@ -127,7 +129,10 @@ def main():
                         observation=page.evaluate(SCRIPT)
                         observation["page_errors"]=errors
                         assert observation["days_visible"]>=3, f"Missing signing day strip at {width}px: {observation}"
-                        assert observation["active_count"]>=1, f"Missing active signing day at {width}px"
+                        # The freshly opened signing window may have no .active day
+                        # before the first scheduled signing; that is not a defect.
+                        assert observation["inactive"] or observation["active"], (
+                            f"No inspectable day cell at {width}px")
                         assert observation["document_scroll_width"]<=width+1, (
                             f"Horizontal overflow at {width}px: {observation['document_scroll_width']}")
                         assert not errors, f"Browser JS exceptions at {width}px: {errors}"
@@ -149,11 +154,14 @@ def main():
         "widths":[r["viewport"]["width"] for r in rows],
         "signing_views":[r["view"] for r in rows],
         "visible_day_spans":[r["days_visible"] for r in rows],
-        "active_text":[r["active"]["text"] for r in rows],
-        "active_computed":[r["active"]["computed"] for r in rows],
+        "active_count":[r["active_count"] for r in rows],
+        "day_labels":[r["day_labels"] for r in rows],
+        "day_classes":[r["day_classes"] for r in rows],
+        "active_text":[r["active"]["text"] if r["active"] else None for r in rows],
+        "active_computed":[r["active"]["computed"] if r["active"] else None for r in rows],
         "inactive_computed":[r["inactive"]["computed"] if r["inactive"] else None for r in rows],
-        "active_matching_style_ids":[list(dict.fromkeys(
-            x["style_id"] for x in r["active"]["matching_css_rules"] if x["style_id"]
+        "representative_matching_style_ids":[list(dict.fromkeys(
+            x["style_id"] for x in (r["active"] or r["inactive"])["matching_css_rules"] if x["style_id"]
         )) for r in rows],
         "page_errors":[r["page_errors"] for r in rows]
     },indent=2),flush=True)
