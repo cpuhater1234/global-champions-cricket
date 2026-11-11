@@ -16,6 +16,9 @@ sys.path.insert(0,str(Path(__file__).resolve().parent))
 from v116_source_reconciliation import BLOCK, RELEASE
 from v116_finals_layout_candidate import patch_release as finals_candidate
 
+ACCEPTED_MENU_SHA256="943643a36730f9db6630437b15111b5f82041b540998f793230aab1745be21e3"
+ACCEPTED_MENU_BYTES=6641178
+
 OLD_START=b"/* Guide review: readable headings, aligned cricket glyphs and one reading edge. */"
 OLD_END=b"/* Archive scorebooks: four readable columns, neutral rows and a stable name edge. */"
 NEW_START=b"/* Guide review: Claude flat + dense layout, adapted to v116 markup and charcoal tokens. */"
@@ -70,6 +73,8 @@ def patch_release(data):
     assert style_changes==1 and script_changes==0, (style_changes,script_changes)
     assert result.count(NEW_START)==1 and result.count(OLD_START)==0
     assert b"g8guideintro>h3" in new_menu and b"g8guideintro h2" not in new_menu
+    assert len(result)==ACCEPTED_MENU_BYTES, "Accepted menu candidate size changed; stop and re-review"
+    assert sha256(result).hexdigest()==ACCEPTED_MENU_SHA256, "Accepted menu candidate SHA changed; stop and re-review"
     return result
 
 def main():
