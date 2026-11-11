@@ -130,6 +130,14 @@ def analyze():
         "late_layer_differing_values": sum(x["values_differ"] for x in late_collisions),
         "cross_style_detail": cross_block,
         "late_layer_detail": late_collisions,
+        "signing_day_declarations": [
+            d for d in declarations
+            if ".g8days" in d["selector"] and
+            d["property"] in ("display", "width", "min-width", "max-width",
+                              "gap", "padding", "padding-left", "padding-right",
+                              "flex", "flex-basis", "flex-shrink",
+                              "grid-template-columns")
+        ],
         "browser_cascade_verified": False,
         "warnings": [
             "Repeated declaration is a REVIEW CANDIDATE, not a proven defect",
@@ -159,6 +167,20 @@ def format_report(data):
         lines.append(
             f"| {block['index']:02d} | \`{block['id'] or '(none)'}\` | "
             f"{block['selectors']:,} | {block['declarations']:,} | {block['parse_errors']} |")
+    lines += [
+        "",
+        "## Signing-day layout declarations by source block",
+        "",
+        "| Block | Selector | Property | Value | Context |",
+        "|---|---|---|---|---|",
+    ]
+    for entry in data["signing_day_declarations"][:90]:
+        sel = entry["selector"].replace("|", "\\|")
+        val = entry["value"].replace("|", "\\|")
+        context = " / ".join(entry["context"]).replace("|", "\\|") or "global"
+        lines.append(
+            f"| {entry['index']:02d} `{entry['id'] or '(none)'}` | "
+            f"`{sel}` | `{entry['property']}` | `{val}` | {context} |")
     lines += [
         "",
         "## High-priority late-block duplication candidates",
