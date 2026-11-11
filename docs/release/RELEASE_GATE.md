@@ -1,3 +1,7 @@
+> **ARCHIVED V8 CANDIDATE GATE.** This file records a pre-v116 checkpoint and is not the current release-go/no-go decision. The frozen playable build is [v116](V116_HANDOFF.md); current native acceptance, source-lineage and CSS inspection are in [V116_SOURCE_RECONCILIATION.md](V116_SOURCE_RECONCILIATION.md), [V116_BLOCK_LINEAGE.md](V116_BLOCK_LINEAGE.md), and [V116_CASCADE_INSPECTION.md](V116_CASCADE_INSPECTION.md). Do not run the old builder below expecting an exact v116 release.
+
+---
+
 # GCC release gate
 
 ## Maintained candidate
