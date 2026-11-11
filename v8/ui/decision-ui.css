@@ -1169,7 +1169,7 @@ html:has(#g8dialog[open]){overflow:hidden}
 #g8app .gccuiOffseasonIssues>.g8disclosure{margin:10px 0!important}
 #g8app .gccuiOffseasonIssues>.g8disclosure>summary{min-height:44px;padding:12px!important;font-size:14px!important}
 @media(max-width:760px){
- #g8app .gccuiFinals .g8matcharena{display:flex!important;flex-direction:column!important;gap:16px!important;padding:16px!important}
+ #g8app .gccuiFinals .g8matcharena{display:flex!important;flex-direction:column!important;gap:16px!important;padding:16px!important;align-items:stretch!important}
  #g8app .gccuiFinals .g8matcharena>.g8stadium{width:100%!important;height:auto!important;margin:0!important}
  #g8app .gccuiFinals .g8matcharena>.g8stadium .g8venueframe{height:120px!important;min-height:0!important}
  #g8app .gccuiFinals .g8matcharena>.g8stadium .g8stadiumphoto{height:120px!important;object-fit:cover!important}
