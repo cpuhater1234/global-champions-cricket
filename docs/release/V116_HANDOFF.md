@@ -1,13 +1,21 @@
 # GCC v116 — stable playable release handoff
 
-Status as of 10 November 2026: **v116 is the frozen stable playable release artifact.** This handoff records the controlled release decision, tested evidence and remaining engineering limits. No GitHub Release/tag has been created, and the old `main` game code has not been merged.
+Status updated 11 November 2026: **v116 is the frozen stable playable release artifact.** This handoff records the controlled release decision, tested evidence and remaining engineering limits. No GitHub Release/tag has been created, and the old `main` game code has not been merged.
+
+## 11 November 2026 verification update
+
+- [Native two-tab stale-save/recovery run #42968272367](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/42968272367): **PASS**. One stale Round 1 tab could not overwrite the newer Round 2 career, and native localStorage/IndexedDB checkpoints and continued career identity were preserved.
+- [Frozen source identity and exact extraction run #42970876618](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/42970876618): **PASS**, 17 styles / 22 scripts in exact v116. This is lossless extraction, not historical `v8/build.py` parity.
+- [39-block lineage audit #42971180377](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/42971180377): **PASS**; 21 blocks with exact partial/full source correspondence, 10 heuristic-only, 8 unmapped.
+- [Static CSS cascade inventory #42971485315](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/42971485315): **PASS**. 70 cross-block same-context selector/property repetitions, 52 with different values. This is not a count of confirmed user-facing defects.
+- **Open:** full maintained-source parity, visual/manual sign-off, other storage failure modes and extended native career persistence.
 
 ## Stable release operating rules
 
 - **Single playable source of truth:** `v116/GCC_v116_release (1).html`. Keep the SHA-256 above pinned.
 - **Do not change the frozen HTML for cleanup**, release notes, testing, source refactors or visual experimentation. Keep testing/documentation changes separate.
-- **Known-good evidence:** 19-season isolated career acceptance; native single-tab Chromium save/reload/Continue on CI; both explicitly scoped in this document.
-- **Still open:** concurrent-tab save conflicts and reconciliation of maintained source with the exact binary. These should be handled without changing the published artifact.
+- **Known-good evidence:** 19-season isolated career acceptance; native single-tab save/reload/Continue; and a real-browser two-tab stale-save rejection and recovery on exact v116, each with its stated scope.
+- **Still open:** other concurrent-edit/storage-failure scenarios and reconciliation of maintained source with the exact binary. The targeted two-tab stale-save scenario **passed** in [run #42968272367](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/42968272367).
 - **Repository discipline:** `main` remains historical code; the default landing page points here. Do not merge historical styles or rebuild v116 from an older source pipeline. No duplicate release files or new branches were created by this designation.
 
 ## Current identity
@@ -53,7 +61,7 @@ The final assertion compares whole result dictionaries from separate new careers
 - Isolated engine stress: **100 independent 14-round seasons**, **1,400/1,400** valid user-match delivery ledgers, no reported simulation errors. Controlled same-seed tactics changed scores in 100/100 paired comparisons and winners in 17/100. These are repeated regular seasons, not one 19-year career.
 - Two separate isolated UI tactical smoke cases passed from Draft through Match Result at 390px, with no captured JS errors or horizontal overflow. Storage was simulated rather than native.
 - Two bounded 2008–2010 career journeys passed with 42 user matches each, including annual drafts, 2008/2009 archive transitions and injury-triggered XI adjustments. A continuous 19-year browser run exceeded the restricted test limit, and is **not** a pass.
-- **A 19-season 2008–2026 isolated career passed** with 266/266 validated league matches, 18 year-boundary restarts, five finals campaigns and injury-cover UI recovery. Native save/reload passed later in GitHub Actions (run #3). **Concurrent multi-tab conflict recovery and maintained-source build parity remain open.** The gameplay HTML is unchanged. The engine stress sample still showed ~19.7% all-out innings and ~20.6% fours per recorded delivery.
+- **A 19-season 2008–2026 isolated career passed** with 266/266 validated league matches, 18 year-boundary restarts, five finals campaigns and injury-cover UI recovery. Native save/reload passed later in GitHub Actions (run #3). **A targeted native two-tab conflict/recovery test passed on 11 November; broader storage cases and maintained-source build parity remain open.** The gameplay HTML is unchanged. The engine stress sample still showed ~19.7% all-out innings and ~20.6% fours per recorded delivery.
 
 ## Native browser CI acceptance (10 November 2026)
 
@@ -67,14 +75,14 @@ The final assertion compares whole result dictionaries from separate new careers
 
 1. Preserve the exact uploaded HTML and establish a standalone checksum.
 2. Obtain the complete implementation plan and perfection/captaincy evidence for this exact artifact.
-3. **Completed for two scenarios:** native HTTP save, reload and Continue Career passed on GitHub Actions run #3. Extend to simultaneous-tab conflict/recovery cases and further long-career native persistence checks before treating the entire storage subsystem as certified.
+3. **Completed for two single-tab scenarios:** native HTTP save, reload and Continue Career passed in run #42751656106. **Completed for one two-tab scenario:** stale writes rejected and latest career restored in [run #42968272367](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/42968272367). Extend to other competing-writer and storage-failure cases before certifying the full subsystem.
 4. Verify captaincy selection persistence before a match, completed-result metadata after reload, playback consistency and bounded simulation effects under controlled conditions.
 5. Continue visual review across recruitment, draft, XI, match preview/live/results, management, trades, finals and archive at desktop and mobile widths, including enlarged text. Fix concrete issues rather than adding blanket decorative layers.
-6. Reconcile the uploaded release with maintained source and prove the documented build reproduces the intended artifact before any source-based release promotion.
+6. Reconcile the uploaded release with maintained source and prove documented build parity before any source-based release promotion. The [source round-trip](V116_SOURCE_RECONCILIATION.md) passed; a [39-block lineage map](V116_BLOCK_LINEAGE.md) and [static CSS cascade report](V116_CASCADE_INSPECTION.md) now identify the remaining work. These are **not** independent maintained-source build parity.
 7. Review a deliberate promotion into `main`; only then create an agreed release/tag and update the default-branch entry point.
 
 Earlier v112 cold-start and source-reconciliation findings remain historical evidence, not automatically open or resolved v116 defects. Reproduce them on v116 before assigning their status.
 
 ## Cleanup boundary
 
-Only the root README, this handoff and the repository organization guide are changed by this cleanup. No HTML, gameplay, test implementation, baseline hash record, old checkpoint, branch setting or release tag is changed. No branch is deleted or merged.
+For the **10 November documentation cleanup alone**, only the root README, this handoff and the repository organization guide were changed. Subsequent 11 November QA/doc commits are separately recorded in GitHub. No HTML, gameplay, test implementation, baseline hash record, old checkpoint, branch setting or release tag is changed. No branch is deleted or merged.
