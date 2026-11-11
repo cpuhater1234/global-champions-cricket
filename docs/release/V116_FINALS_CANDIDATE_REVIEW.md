@@ -58,6 +58,46 @@ The original v116 binary remains the stable playable release. The corrected HTML
 
 [Diagnostic #42985232711](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/42985232711) ran its full browser diagnostic successfully but finished as failed solely when `actions/upload-artifact` returned **Artifact storage quota has been hit**. The issue is artifact storage, not proof that workflow execution minutes were exhausted. The narrowed follow-up wrote diagnostics to job logs and summaries without uploads; do not delete existing artifacts without reviewing them first.
 
+## Practical visual sign-off without GitHub artifact storage
+
+The QA branch includes `qa/v116_review_gallery.py`. It independently rebuilds the
+**accepted exact candidate SHA-256**, uses the same Chromium renderer as the
+successful 156-state workflow and writes screenshots plus a filterable local
+`index.html`. It does **not** upload screenshots or mutate the frozen HTML.
+Everything generated is excluded by `.gitignore`.
+
+From the **QA branch checkout**, with Python 3, Node.js and Playwright installed:
+
+```sh
+python -m pip install playwright
+python -m playwright install chromium
+npm install --no-save --no-package-lock playwright
+python qa/v116_review_gallery.py --years 2019 --widths 320,390,1440 --generate-checkpoints
+```
+
+The script automatically opens `qa/results/v116-human-review/index.html`
+(or that file can be opened manually). Each screenshot opens at full resolution.
+For the comprehensive 2019/2025/2026 review, omit the `--years` and `--widths`
+restrictions; the default is 156 saved-career states and the full 2008–2026
+checkpoint generator. Existing checkpoints can be reused by omitting
+`--generate-checkpoints` and pointing `--checkpoint-dir` at them.
+
+This is a deterministic offline visual comparison. The native audit blocks
+external image requests, so some stadium photography may be missing. Passing
+its geometry assertions is **not a substitute for judging the rendered design,
+alignment, typographic hierarchy and interactions**.
+
+## Source architecture decision
+
+The maintained `v8/build.py` is an older builder and does not reproduce v116.
+The accepted candidate is presently **byte-reproducible** via the strictly
+bounded QA builder, but that is *not maintained-source parity*.
+The existing 39-block v116 exact-source snapshot already reconstructs the frozen
+HTML; establishing independent owners for late CSS and behaviour blocks is
+the next source-migration task. Do not conflate exact snapshot reproduction
+with a modern maintained codebase. Keep historical `main` and `v116`
+frozen while source ownership is resolved.
+
 ## Outstanding release boundaries
 
 - Actual screenshot review/human sign-off, including colour hierarchy, clipping, spacing and deliberate narrow-screen composition, remains separate from automated geometry.
