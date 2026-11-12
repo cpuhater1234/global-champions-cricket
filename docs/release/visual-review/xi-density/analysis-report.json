@@ -1,0 +1,4803 @@
+{
+  "baseline_sha256": "1f7ae1e1811d53327f425b80ed66779258cfd2fb52382ea6db973d99af9e385f",
+  "candidate_sha256": "94a4d771548cbba76798461bf73bd2f888c12e9fed4bda6e6b7b2bd99a7faf41",
+  "checkpoint_sha256": "c3dde5d4124a365155b6ee51b08c4c4478c1948c500512e2e5370aebea1e2345",
+  "states": [
+    {
+      "label": "before",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "prompt": "teamAnalysis",
+      "xiIds": [
+        8,
+        85,
+        94,
+        63,
+        26,
+        165,
+        204,
+        77,
+        219,
+        87,
+        16
+      ],
+      "horizontalOverflow": false,
+      "summary": {
+        "x": 268,
+        "y": 125,
+        "width": 904,
+        "height": 653.03125,
+        "right": 1172,
+        "bottom": 778.03125
+      },
+      "groups": [
+        "Batting",
+        "Bowling",
+        "Team balance"
+      ],
+      "metrics": [
+        {
+          "key": "powerplayBat",
+          "label": "Powerplay batting",
+          "value": "80",
+          "ratingColor": "rgb(186, 190, 116)",
+          "interactive": false,
+          "x": 295,
+          "y": 273.984375,
+          "width": 206.5,
+          "height": 102.890625,
+          "right": 501.5,
+          "bottom": 376.875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Powerplay batting",
+              "x": 341.40625,
+              "y": 283.984375,
+              "width": 113.671875,
+              "height": 35.09375,
+              "right": 455.078125,
+              "bottom": 319.078125
+            },
+            {
+              "tag": "STRONG",
+              "text": "80",
+              "x": 375.40625,
+              "y": 327.078125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 421.09375,
+              "bottom": 364.875
+            }
+          ]
+        },
+        {
+          "key": "middleBat",
+          "label": "Middle overs batting",
+          "value": "80",
+          "ratingColor": "rgb(186, 190, 116)",
+          "interactive": false,
+          "x": 509.5,
+          "y": 273.984375,
+          "width": 206.5,
+          "height": 102.890625,
+          "right": 716,
+          "bottom": 376.875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Middle overs batting",
+              "x": 548.453125,
+              "y": 283.984375,
+              "width": 128.59375,
+              "height": 35.09375,
+              "right": 677.046875,
+              "bottom": 319.078125
+            },
+            {
+              "tag": "STRONG",
+              "text": "80",
+              "x": 589.90625,
+              "y": 327.078125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 635.59375,
+              "bottom": 364.875
+            }
+          ]
+        },
+        {
+          "key": "finishing",
+          "label": "Death batting",
+          "value": "75",
+          "ratingColor": "rgb(202, 188, 109)",
+          "interactive": false,
+          "x": 724,
+          "y": 273.984375,
+          "width": 206.5,
+          "height": 102.890625,
+          "right": 930.5,
+          "bottom": 376.875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Death batting",
+              "x": 784.84375,
+              "y": 283.984375,
+              "width": 84.796875,
+              "height": 35.09375,
+              "right": 869.640625,
+              "bottom": 319.078125
+            },
+            {
+              "tag": "STRONG",
+              "text": "75",
+              "x": 804.40625,
+              "y": 327.078125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 850.09375,
+              "bottom": 364.875
+            }
+          ]
+        },
+        {
+          "key": "battingResources",
+          "label": "Batting depth",
+          "value": "71",
+          "ratingColor": "rgb(215, 185, 103)",
+          "interactive": false,
+          "x": 938.5,
+          "y": 273.984375,
+          "width": 206.5,
+          "height": 102.890625,
+          "right": 1145,
+          "bottom": 376.875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Batting depth",
+              "x": 999.5625,
+              "y": 283.984375,
+              "width": 84.375,
+              "height": 35.09375,
+              "right": 1083.9375,
+              "bottom": 319.078125
+            },
+            {
+              "tag": "STRONG",
+              "text": "71",
+              "x": 1018.90625,
+              "y": 327.078125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 1064.59375,
+              "bottom": 364.875
+            }
+          ]
+        },
+        {
+          "key": "newBall",
+          "label": "New ball bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 295,
+          "y": 461.0625,
+          "width": 206.5,
+          "height": 102.890625,
+          "right": 501.5,
+          "bottom": 563.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "New ball bowling",
+              "x": 344.765625,
+              "y": 471.0625,
+              "width": 106.96875,
+              "height": 35.09375,
+              "right": 451.734375,
+              "bottom": 506.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 375.40625,
+              "y": 514.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 421.09375,
+              "bottom": 551.953125
+            }
+          ]
+        },
+        {
+          "key": "middleBowl",
+          "label": "Middle overs bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 509.5,
+          "y": 461.0625,
+          "width": 206.5,
+          "height": 102.890625,
+          "right": 716,
+          "bottom": 563.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Middle overs bowling",
+              "x": 545.765625,
+              "y": 471.0625,
+              "width": 133.953125,
+              "height": 35.09375,
+              "right": 679.71875,
+              "bottom": 506.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 589.90625,
+              "y": 514.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 635.59375,
+              "bottom": 551.953125
+            }
+          ]
+        },
+        {
+          "key": "death",
+          "label": "Death bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 724,
+          "y": 461.0625,
+          "width": 206.5,
+          "height": 102.890625,
+          "right": 930.5,
+          "bottom": 563.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Death bowling",
+              "x": 782.171875,
+              "y": 471.0625,
+              "width": 90.15625,
+              "height": 35.09375,
+              "right": 872.328125,
+              "bottom": 506.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 804.40625,
+              "y": 514.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 850.09375,
+              "bottom": 551.953125
+            }
+          ]
+        },
+        {
+          "key": "bowlingResources",
+          "label": "Bowling depth",
+          "value": "90",
+          "ratingColor": "rgb(155, 196, 130)",
+          "interactive": false,
+          "x": 938.5,
+          "y": 461.0625,
+          "width": 206.5,
+          "height": 102.890625,
+          "right": 1145,
+          "bottom": 563.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Bowling depth",
+              "x": 996.8125,
+              "y": 471.0625,
+              "width": 89.859375,
+              "height": 35.09375,
+              "right": 1086.671875,
+              "bottom": 506.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "90",
+              "x": 1018.90625,
+              "y": 514.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 1064.59375,
+              "bottom": 551.953125
+            }
+          ]
+        },
+        {
+          "key": "keeping",
+          "label": "Wicketkeeping",
+          "value": "82",
+          "ratingColor": "rgb(180, 192, 119)",
+          "interactive": false,
+          "x": 295,
+          "y": 648.140625,
+          "width": 206.5,
+          "height": 102.890625,
+          "right": 501.5,
+          "bottom": 751.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Wicketkeeping",
+              "x": 351.375,
+              "y": 658.140625,
+              "width": 93.734375,
+              "height": 35.09375,
+              "right": 445.109375,
+              "bottom": 693.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "82",
+              "x": 375.40625,
+              "y": 701.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 421.09375,
+              "bottom": 739.03125
+            }
+          ]
+        },
+        {
+          "key": "roleFit",
+          "label": "Role fit",
+          "value": "99",
+          "ratingColor": "rgb(126, 201, 142)",
+          "interactive": false,
+          "x": 509.5,
+          "y": 648.140625,
+          "width": 206.5,
+          "height": 102.890625,
+          "right": 716,
+          "bottom": 751.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Role fit",
+              "x": 590.890625,
+              "y": 658.140625,
+              "width": 43.71875,
+              "height": 35.09375,
+              "right": 634.609375,
+              "bottom": 693.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "99",
+              "x": 589.90625,
+              "y": 701.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 635.59375,
+              "bottom": 739.03125
+            }
+          ]
+        },
+        {
+          "key": "fielding",
+          "label": "Fielding",
+          "value": "78",
+          "ratingColor": "rgb(193, 189, 113)",
+          "interactive": false,
+          "x": 724,
+          "y": 648.140625,
+          "width": 206.5,
+          "height": 102.890625,
+          "right": 930.5,
+          "bottom": 751.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Fielding",
+              "x": 802.375,
+              "y": 658.140625,
+              "width": 49.734375,
+              "height": 35.09375,
+              "right": 852.109375,
+              "bottom": 693.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "78",
+              "x": 804.40625,
+              "y": 701.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 850.09375,
+              "bottom": 739.03125
+            }
+          ]
+        },
+        {
+          "key": "chemistry",
+          "label": "Cohesion",
+          "value": "83",
+          "ratingColor": "rgb(177, 192, 120)",
+          "interactive": false,
+          "x": 938.5,
+          "y": 648.140625,
+          "width": 206.5,
+          "height": 102.890625,
+          "right": 1145,
+          "bottom": 751.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Cohesion",
+              "x": 1011.96875,
+              "y": 658.140625,
+              "width": 59.5625,
+              "height": 35.09375,
+              "right": 1071.53125,
+              "bottom": 693.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "83",
+              "x": 1018.90625,
+              "y": 701.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 1064.59375,
+              "bottom": 739.03125
+            }
+          ]
+        }
+      ],
+      "close": {
+        "x": 1132,
+        "y": 25,
+        "width": 44,
+        "height": 44,
+        "right": 1176,
+        "bottom": 69
+      },
+      "scrollRegions": [
+        {
+          "tag": "DIALOG",
+          "className": "",
+          "clientHeight": 874,
+          "scrollHeight": 1905
+        }
+      ],
+      "scrollProbe": {
+        "needed": true,
+        "top": 1031,
+        "max": 1031
+      }
+    },
+    {
+      "label": "before",
+      "viewport": {
+        "width": 1150,
+        "height": 720
+      },
+      "prompt": "teamAnalysis",
+      "xiIds": [
+        8,
+        85,
+        94,
+        63,
+        26,
+        165,
+        204,
+        77,
+        219,
+        87,
+        16
+      ],
+      "horizontalOverflow": false,
+      "summary": {
+        "x": 123,
+        "y": 125,
+        "width": 904,
+        "height": 653.03125,
+        "right": 1027,
+        "bottom": 778.03125
+      },
+      "groups": [
+        "Batting",
+        "Bowling",
+        "Team balance"
+      ],
+      "metrics": [
+        {
+          "key": "powerplayBat",
+          "label": "Powerplay batting",
+          "value": "80",
+          "ratingColor": "rgb(186, 190, 116)",
+          "interactive": false,
+          "x": 150,
+          "y": 273.984375,
+          "width": 206.5,
+          "height": 102.890625,
+          "right": 356.5,
+          "bottom": 376.875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Powerplay batting",
+              "x": 196.40625,
+              "y": 283.984375,
+              "width": 113.671875,
+              "height": 35.09375,
+              "right": 310.078125,
+              "bottom": 319.078125
+            },
+            {
+              "tag": "STRONG",
+              "text": "80",
+              "x": 230.40625,
+              "y": 327.078125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 276.09375,
+              "bottom": 364.875
+            }
+          ]
+        },
+        {
+          "key": "middleBat",
+          "label": "Middle overs batting",
+          "value": "80",
+          "ratingColor": "rgb(186, 190, 116)",
+          "interactive": false,
+          "x": 364.5,
+          "y": 273.984375,
+          "width": 206.5,
+          "height": 102.890625,
+          "right": 571,
+          "bottom": 376.875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Middle overs batting",
+              "x": 403.453125,
+              "y": 283.984375,
+              "width": 128.59375,
+              "height": 35.09375,
+              "right": 532.046875,
+              "bottom": 319.078125
+            },
+            {
+              "tag": "STRONG",
+              "text": "80",
+              "x": 444.90625,
+              "y": 327.078125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 490.59375,
+              "bottom": 364.875
+            }
+          ]
+        },
+        {
+          "key": "finishing",
+          "label": "Death batting",
+          "value": "75",
+          "ratingColor": "rgb(202, 188, 109)",
+          "interactive": false,
+          "x": 579,
+          "y": 273.984375,
+          "width": 206.5,
+          "height": 102.890625,
+          "right": 785.5,
+          "bottom": 376.875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Death batting",
+              "x": 639.84375,
+              "y": 283.984375,
+              "width": 84.796875,
+              "height": 35.09375,
+              "right": 724.640625,
+              "bottom": 319.078125
+            },
+            {
+              "tag": "STRONG",
+              "text": "75",
+              "x": 659.40625,
+              "y": 327.078125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 705.09375,
+              "bottom": 364.875
+            }
+          ]
+        },
+        {
+          "key": "battingResources",
+          "label": "Batting depth",
+          "value": "71",
+          "ratingColor": "rgb(215, 185, 103)",
+          "interactive": false,
+          "x": 793.5,
+          "y": 273.984375,
+          "width": 206.5,
+          "height": 102.890625,
+          "right": 1000,
+          "bottom": 376.875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Batting depth",
+              "x": 854.5625,
+              "y": 283.984375,
+              "width": 84.375,
+              "height": 35.09375,
+              "right": 938.9375,
+              "bottom": 319.078125
+            },
+            {
+              "tag": "STRONG",
+              "text": "71",
+              "x": 873.90625,
+              "y": 327.078125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 919.59375,
+              "bottom": 364.875
+            }
+          ]
+        },
+        {
+          "key": "newBall",
+          "label": "New ball bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 150,
+          "y": 461.0625,
+          "width": 206.5,
+          "height": 102.890625,
+          "right": 356.5,
+          "bottom": 563.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "New ball bowling",
+              "x": 199.765625,
+              "y": 471.0625,
+              "width": 106.96875,
+              "height": 35.09375,
+              "right": 306.734375,
+              "bottom": 506.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 230.40625,
+              "y": 514.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 276.09375,
+              "bottom": 551.953125
+            }
+          ]
+        },
+        {
+          "key": "middleBowl",
+          "label": "Middle overs bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 364.5,
+          "y": 461.0625,
+          "width": 206.5,
+          "height": 102.890625,
+          "right": 571,
+          "bottom": 563.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Middle overs bowling",
+              "x": 400.765625,
+              "y": 471.0625,
+              "width": 133.953125,
+              "height": 35.09375,
+              "right": 534.71875,
+              "bottom": 506.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 444.90625,
+              "y": 514.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 490.59375,
+              "bottom": 551.953125
+            }
+          ]
+        },
+        {
+          "key": "death",
+          "label": "Death bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 579,
+          "y": 461.0625,
+          "width": 206.5,
+          "height": 102.890625,
+          "right": 785.5,
+          "bottom": 563.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Death bowling",
+              "x": 637.171875,
+              "y": 471.0625,
+              "width": 90.15625,
+              "height": 35.09375,
+              "right": 727.328125,
+              "bottom": 506.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 659.40625,
+              "y": 514.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 705.09375,
+              "bottom": 551.953125
+            }
+          ]
+        },
+        {
+          "key": "bowlingResources",
+          "label": "Bowling depth",
+          "value": "90",
+          "ratingColor": "rgb(155, 196, 130)",
+          "interactive": false,
+          "x": 793.5,
+          "y": 461.0625,
+          "width": 206.5,
+          "height": 102.890625,
+          "right": 1000,
+          "bottom": 563.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Bowling depth",
+              "x": 851.8125,
+              "y": 471.0625,
+              "width": 89.859375,
+              "height": 35.09375,
+              "right": 941.671875,
+              "bottom": 506.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "90",
+              "x": 873.90625,
+              "y": 514.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 919.59375,
+              "bottom": 551.953125
+            }
+          ]
+        },
+        {
+          "key": "keeping",
+          "label": "Wicketkeeping",
+          "value": "82",
+          "ratingColor": "rgb(180, 192, 119)",
+          "interactive": false,
+          "x": 150,
+          "y": 648.140625,
+          "width": 206.5,
+          "height": 102.890625,
+          "right": 356.5,
+          "bottom": 751.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Wicketkeeping",
+              "x": 206.375,
+              "y": 658.140625,
+              "width": 93.734375,
+              "height": 35.09375,
+              "right": 300.109375,
+              "bottom": 693.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "82",
+              "x": 230.40625,
+              "y": 701.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 276.09375,
+              "bottom": 739.03125
+            }
+          ]
+        },
+        {
+          "key": "roleFit",
+          "label": "Role fit",
+          "value": "99",
+          "ratingColor": "rgb(126, 201, 142)",
+          "interactive": false,
+          "x": 364.5,
+          "y": 648.140625,
+          "width": 206.5,
+          "height": 102.890625,
+          "right": 571,
+          "bottom": 751.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Role fit",
+              "x": 445.890625,
+              "y": 658.140625,
+              "width": 43.71875,
+              "height": 35.09375,
+              "right": 489.609375,
+              "bottom": 693.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "99",
+              "x": 444.90625,
+              "y": 701.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 490.59375,
+              "bottom": 739.03125
+            }
+          ]
+        },
+        {
+          "key": "fielding",
+          "label": "Fielding",
+          "value": "78",
+          "ratingColor": "rgb(193, 189, 113)",
+          "interactive": false,
+          "x": 579,
+          "y": 648.140625,
+          "width": 206.5,
+          "height": 102.890625,
+          "right": 785.5,
+          "bottom": 751.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Fielding",
+              "x": 657.375,
+              "y": 658.140625,
+              "width": 49.734375,
+              "height": 35.09375,
+              "right": 707.109375,
+              "bottom": 693.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "78",
+              "x": 659.40625,
+              "y": 701.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 705.09375,
+              "bottom": 739.03125
+            }
+          ]
+        },
+        {
+          "key": "chemistry",
+          "label": "Cohesion",
+          "value": "83",
+          "ratingColor": "rgb(177, 192, 120)",
+          "interactive": false,
+          "x": 793.5,
+          "y": 648.140625,
+          "width": 206.5,
+          "height": 102.890625,
+          "right": 1000,
+          "bottom": 751.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Cohesion",
+              "x": 866.96875,
+              "y": 658.140625,
+              "width": 59.5625,
+              "height": 35.09375,
+              "right": 926.53125,
+              "bottom": 693.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "83",
+              "x": 873.90625,
+              "y": 701.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 919.59375,
+              "bottom": 739.03125
+            }
+          ]
+        }
+      ],
+      "close": {
+        "x": 987,
+        "y": 25,
+        "width": 44,
+        "height": 44,
+        "right": 1031,
+        "bottom": 69
+      },
+      "scrollRegions": [
+        {
+          "tag": "DIALOG",
+          "className": "",
+          "clientHeight": 694,
+          "scrollHeight": 1905
+        }
+      ],
+      "scrollProbe": {
+        "needed": true,
+        "top": 1211,
+        "max": 1211
+      }
+    },
+    {
+      "label": "before",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "prompt": "teamAnalysis",
+      "xiIds": [
+        8,
+        85,
+        94,
+        63,
+        26,
+        165,
+        204,
+        77,
+        219,
+        87,
+        16
+      ],
+      "horizontalOverflow": false,
+      "summary": {
+        "x": 46.046875,
+        "y": 125,
+        "width": 675.90625,
+        "height": 653.03125,
+        "right": 721.953125,
+        "bottom": 778.03125
+      },
+      "groups": [
+        "Batting",
+        "Bowling",
+        "Team balance"
+      ],
+      "metrics": [
+        {
+          "key": "powerplayBat",
+          "label": "Powerplay batting",
+          "value": "80",
+          "ratingColor": "rgb(186, 190, 116)",
+          "interactive": false,
+          "x": 73.046875,
+          "y": 273.984375,
+          "width": 149.46875,
+          "height": 102.890625,
+          "right": 222.515625,
+          "bottom": 376.875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Powerplay batting",
+              "x": 90.9375,
+              "y": 283.984375,
+              "width": 113.671875,
+              "height": 35.09375,
+              "right": 204.609375,
+              "bottom": 319.078125
+            },
+            {
+              "tag": "STRONG",
+              "text": "80",
+              "x": 124.9375,
+              "y": 327.078125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 170.625,
+              "bottom": 364.875
+            }
+          ]
+        },
+        {
+          "key": "middleBat",
+          "label": "Middle overs batting",
+          "value": "80",
+          "ratingColor": "rgb(186, 190, 116)",
+          "interactive": false,
+          "x": 230.515625,
+          "y": 273.984375,
+          "width": 149.484375,
+          "height": 102.890625,
+          "right": 380,
+          "bottom": 376.875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Middle overs batting",
+              "x": 240.953125,
+              "y": 283.984375,
+              "width": 128.59375,
+              "height": 35.09375,
+              "right": 369.546875,
+              "bottom": 319.078125
+            },
+            {
+              "tag": "STRONG",
+              "text": "80",
+              "x": 282.40625,
+              "y": 327.078125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 328.09375,
+              "bottom": 364.875
+            }
+          ]
+        },
+        {
+          "key": "finishing",
+          "label": "Death batting",
+          "value": "75",
+          "ratingColor": "rgb(202, 188, 109)",
+          "interactive": false,
+          "x": 388,
+          "y": 273.984375,
+          "width": 149.46875,
+          "height": 102.890625,
+          "right": 537.46875,
+          "bottom": 376.875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Death batting",
+              "x": 420.328125,
+              "y": 283.984375,
+              "width": 84.796875,
+              "height": 35.09375,
+              "right": 505.125,
+              "bottom": 319.078125
+            },
+            {
+              "tag": "STRONG",
+              "text": "75",
+              "x": 439.890625,
+              "y": 327.078125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 485.578125,
+              "bottom": 364.875
+            }
+          ]
+        },
+        {
+          "key": "battingResources",
+          "label": "Batting depth",
+          "value": "71",
+          "ratingColor": "rgb(215, 185, 103)",
+          "interactive": false,
+          "x": 545.46875,
+          "y": 273.984375,
+          "width": 149.484375,
+          "height": 102.890625,
+          "right": 694.953125,
+          "bottom": 376.875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Batting depth",
+              "x": 578.015625,
+              "y": 283.984375,
+              "width": 84.375,
+              "height": 35.09375,
+              "right": 662.390625,
+              "bottom": 319.078125
+            },
+            {
+              "tag": "STRONG",
+              "text": "71",
+              "x": 597.359375,
+              "y": 327.078125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 643.046875,
+              "bottom": 364.875
+            }
+          ]
+        },
+        {
+          "key": "newBall",
+          "label": "New ball bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 73.046875,
+          "y": 461.0625,
+          "width": 149.46875,
+          "height": 102.890625,
+          "right": 222.515625,
+          "bottom": 563.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "New ball bowling",
+              "x": 94.296875,
+              "y": 471.0625,
+              "width": 106.96875,
+              "height": 35.09375,
+              "right": 201.265625,
+              "bottom": 506.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 124.9375,
+              "y": 514.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 170.625,
+              "bottom": 551.953125
+            }
+          ]
+        },
+        {
+          "key": "middleBowl",
+          "label": "Middle overs bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 230.515625,
+          "y": 461.0625,
+          "width": 149.484375,
+          "height": 102.890625,
+          "right": 380,
+          "bottom": 563.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Middle overs bowling",
+              "x": 238.515625,
+              "y": 471.0625,
+              "width": 133.484375,
+              "height": 35.09375,
+              "right": 372,
+              "bottom": 506.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 282.40625,
+              "y": 514.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 328.09375,
+              "bottom": 551.953125
+            }
+          ]
+        },
+        {
+          "key": "death",
+          "label": "Death bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 388,
+          "y": 461.0625,
+          "width": 149.46875,
+          "height": 102.890625,
+          "right": 537.46875,
+          "bottom": 563.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Death bowling",
+              "x": 417.65625,
+              "y": 471.0625,
+              "width": 90.15625,
+              "height": 35.09375,
+              "right": 507.8125,
+              "bottom": 506.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 439.890625,
+              "y": 514.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 485.578125,
+              "bottom": 551.953125
+            }
+          ]
+        },
+        {
+          "key": "bowlingResources",
+          "label": "Bowling depth",
+          "value": "90",
+          "ratingColor": "rgb(155, 196, 130)",
+          "interactive": false,
+          "x": 545.46875,
+          "y": 461.0625,
+          "width": 149.484375,
+          "height": 102.890625,
+          "right": 694.953125,
+          "bottom": 563.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Bowling depth",
+              "x": 575.28125,
+              "y": 471.0625,
+              "width": 89.859375,
+              "height": 35.09375,
+              "right": 665.140625,
+              "bottom": 506.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "90",
+              "x": 597.359375,
+              "y": 514.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 643.046875,
+              "bottom": 551.953125
+            }
+          ]
+        },
+        {
+          "key": "keeping",
+          "label": "Wicketkeeping",
+          "value": "82",
+          "ratingColor": "rgb(180, 192, 119)",
+          "interactive": false,
+          "x": 73.046875,
+          "y": 648.140625,
+          "width": 149.46875,
+          "height": 102.890625,
+          "right": 222.515625,
+          "bottom": 751.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Wicketkeeping",
+              "x": 100.90625,
+              "y": 658.140625,
+              "width": 93.734375,
+              "height": 35.09375,
+              "right": 194.640625,
+              "bottom": 693.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "82",
+              "x": 124.9375,
+              "y": 701.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 170.625,
+              "bottom": 739.03125
+            }
+          ]
+        },
+        {
+          "key": "roleFit",
+          "label": "Role fit",
+          "value": "99",
+          "ratingColor": "rgb(126, 201, 142)",
+          "interactive": false,
+          "x": 230.515625,
+          "y": 648.140625,
+          "width": 149.484375,
+          "height": 102.890625,
+          "right": 380,
+          "bottom": 751.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Role fit",
+              "x": 283.390625,
+              "y": 658.140625,
+              "width": 43.71875,
+              "height": 35.09375,
+              "right": 327.109375,
+              "bottom": 693.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "99",
+              "x": 282.40625,
+              "y": 701.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 328.09375,
+              "bottom": 739.03125
+            }
+          ]
+        },
+        {
+          "key": "fielding",
+          "label": "Fielding",
+          "value": "78",
+          "ratingColor": "rgb(193, 189, 113)",
+          "interactive": false,
+          "x": 388,
+          "y": 648.140625,
+          "width": 149.46875,
+          "height": 102.890625,
+          "right": 537.46875,
+          "bottom": 751.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Fielding",
+              "x": 437.859375,
+              "y": 658.140625,
+              "width": 49.734375,
+              "height": 35.09375,
+              "right": 487.59375,
+              "bottom": 693.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "78",
+              "x": 439.890625,
+              "y": 701.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 485.578125,
+              "bottom": 739.03125
+            }
+          ]
+        },
+        {
+          "key": "chemistry",
+          "label": "Cohesion",
+          "value": "83",
+          "ratingColor": "rgb(177, 192, 120)",
+          "interactive": false,
+          "x": 545.46875,
+          "y": 648.140625,
+          "width": 149.484375,
+          "height": 102.890625,
+          "right": 694.953125,
+          "bottom": 751.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Cohesion",
+              "x": 590.421875,
+              "y": 658.140625,
+              "width": 59.5625,
+              "height": 35.09375,
+              "right": 649.984375,
+              "bottom": 693.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "83",
+              "x": 597.359375,
+              "y": 701.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 643.046875,
+              "bottom": 739.03125
+            }
+          ]
+        }
+      ],
+      "close": {
+        "x": 681.953125,
+        "y": 25,
+        "width": 44,
+        "height": 44,
+        "right": 725.953125,
+        "bottom": 69
+      },
+      "scrollRegions": [
+        {
+          "tag": "DIALOG",
+          "className": "",
+          "clientHeight": 874,
+          "scrollHeight": 1905
+        }
+      ],
+      "scrollProbe": {
+        "needed": true,
+        "top": 1031,
+        "max": 1031
+      }
+    },
+    {
+      "label": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "prompt": "teamAnalysis",
+      "xiIds": [
+        8,
+        85,
+        94,
+        63,
+        26,
+        165,
+        204,
+        77,
+        219,
+        87,
+        16
+      ],
+      "horizontalOverflow": false,
+      "summary": {
+        "x": 29,
+        "y": 119,
+        "width": 332,
+        "height": 1011.890625,
+        "right": 361,
+        "bottom": 1130.890625
+      },
+      "groups": [
+        "Batting",
+        "Bowling",
+        "Team balance"
+      ],
+      "metrics": [
+        {
+          "key": "powerplayBat",
+          "label": "Powerplay batting",
+          "value": "80",
+          "ratingColor": "rgb(186, 190, 116)",
+          "interactive": false,
+          "x": 56,
+          "y": 294.171875,
+          "width": 135,
+          "height": 102.890625,
+          "right": 191,
+          "bottom": 397.0625,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Powerplay batting",
+              "x": 66.65625,
+              "y": 304.171875,
+              "width": 113.671875,
+              "height": 35.09375,
+              "right": 180.328125,
+              "bottom": 339.265625
+            },
+            {
+              "tag": "STRONG",
+              "text": "80",
+              "x": 100.65625,
+              "y": 347.265625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 146.34375,
+              "bottom": 385.0625
+            }
+          ]
+        },
+        {
+          "key": "middleBat",
+          "label": "Middle overs batting",
+          "value": "80",
+          "ratingColor": "rgb(186, 190, 116)",
+          "interactive": false,
+          "x": 199,
+          "y": 294.171875,
+          "width": 135,
+          "height": 102.890625,
+          "right": 334,
+          "bottom": 397.0625,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Middle overs batting",
+              "x": 207,
+              "y": 304.171875,
+              "width": 119,
+              "height": 35.09375,
+              "right": 326,
+              "bottom": 339.265625
+            },
+            {
+              "tag": "STRONG",
+              "text": "80",
+              "x": 243.65625,
+              "y": 347.265625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 289.34375,
+              "bottom": 385.0625
+            }
+          ]
+        },
+        {
+          "key": "finishing",
+          "label": "Death batting",
+          "value": "75",
+          "ratingColor": "rgb(202, 188, 109)",
+          "interactive": false,
+          "x": 56,
+          "y": 405.0625,
+          "width": 135,
+          "height": 102.890625,
+          "right": 191,
+          "bottom": 507.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Death batting",
+              "x": 81.09375,
+              "y": 415.0625,
+              "width": 84.796875,
+              "height": 35.09375,
+              "right": 165.890625,
+              "bottom": 450.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "75",
+              "x": 100.65625,
+              "y": 458.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 146.34375,
+              "bottom": 495.953125
+            }
+          ]
+        },
+        {
+          "key": "battingResources",
+          "label": "Batting depth",
+          "value": "71",
+          "ratingColor": "rgb(215, 185, 103)",
+          "interactive": false,
+          "x": 199,
+          "y": 405.0625,
+          "width": 135,
+          "height": 102.890625,
+          "right": 334,
+          "bottom": 507.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Batting depth",
+              "x": 224.3125,
+              "y": 415.0625,
+              "width": 84.375,
+              "height": 35.09375,
+              "right": 308.6875,
+              "bottom": 450.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "71",
+              "x": 243.65625,
+              "y": 458.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 289.34375,
+              "bottom": 495.953125
+            }
+          ]
+        },
+        {
+          "key": "newBall",
+          "label": "New ball bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 56,
+          "y": 592.140625,
+          "width": 135,
+          "height": 102.890625,
+          "right": 191,
+          "bottom": 695.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "New ball bowling",
+              "x": 70.015625,
+              "y": 602.140625,
+              "width": 106.96875,
+              "height": 35.09375,
+              "right": 176.984375,
+              "bottom": 637.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 100.65625,
+              "y": 645.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 146.34375,
+              "bottom": 683.03125
+            }
+          ]
+        },
+        {
+          "key": "middleBowl",
+          "label": "Middle overs bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 199,
+          "y": 592.140625,
+          "width": 135,
+          "height": 102.890625,
+          "right": 334,
+          "bottom": 695.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Middle overs bowling",
+              "x": 207,
+              "y": 602.140625,
+              "width": 119,
+              "height": 35.09375,
+              "right": 326,
+              "bottom": 637.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 243.65625,
+              "y": 645.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 289.34375,
+              "bottom": 683.03125
+            }
+          ]
+        },
+        {
+          "key": "death",
+          "label": "Death bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 56,
+          "y": 703.03125,
+          "width": 135,
+          "height": 102.890625,
+          "right": 191,
+          "bottom": 805.921875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Death bowling",
+              "x": 78.421875,
+              "y": 713.03125,
+              "width": 90.15625,
+              "height": 35.09375,
+              "right": 168.578125,
+              "bottom": 748.125
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 100.65625,
+              "y": 756.125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 146.34375,
+              "bottom": 793.921875
+            }
+          ]
+        },
+        {
+          "key": "bowlingResources",
+          "label": "Bowling depth",
+          "value": "90",
+          "ratingColor": "rgb(155, 196, 130)",
+          "interactive": false,
+          "x": 199,
+          "y": 703.03125,
+          "width": 135,
+          "height": 102.890625,
+          "right": 334,
+          "bottom": 805.921875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Bowling depth",
+              "x": 221.5625,
+              "y": 713.03125,
+              "width": 89.859375,
+              "height": 35.09375,
+              "right": 311.421875,
+              "bottom": 748.125
+            },
+            {
+              "tag": "STRONG",
+              "text": "90",
+              "x": 243.65625,
+              "y": 756.125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 289.34375,
+              "bottom": 793.921875
+            }
+          ]
+        },
+        {
+          "key": "keeping",
+          "label": "Wicketkeeping",
+          "value": "82",
+          "ratingColor": "rgb(180, 192, 119)",
+          "interactive": false,
+          "x": 56,
+          "y": 890.109375,
+          "width": 135,
+          "height": 102.890625,
+          "right": 191,
+          "bottom": 993,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Wicketkeeping",
+              "x": 76.625,
+              "y": 900.109375,
+              "width": 93.734375,
+              "height": 35.09375,
+              "right": 170.359375,
+              "bottom": 935.203125
+            },
+            {
+              "tag": "STRONG",
+              "text": "82",
+              "x": 100.65625,
+              "y": 943.203125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 146.34375,
+              "bottom": 981
+            }
+          ]
+        },
+        {
+          "key": "roleFit",
+          "label": "Role fit",
+          "value": "99",
+          "ratingColor": "rgb(126, 201, 142)",
+          "interactive": false,
+          "x": 199,
+          "y": 890.109375,
+          "width": 135,
+          "height": 102.890625,
+          "right": 334,
+          "bottom": 993,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Role fit",
+              "x": 244.640625,
+              "y": 900.109375,
+              "width": 43.71875,
+              "height": 35.09375,
+              "right": 288.359375,
+              "bottom": 935.203125
+            },
+            {
+              "tag": "STRONG",
+              "text": "99",
+              "x": 243.65625,
+              "y": 943.203125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 289.34375,
+              "bottom": 981
+            }
+          ]
+        },
+        {
+          "key": "fielding",
+          "label": "Fielding",
+          "value": "78",
+          "ratingColor": "rgb(193, 189, 113)",
+          "interactive": false,
+          "x": 56,
+          "y": 1001,
+          "width": 135,
+          "height": 102.890625,
+          "right": 191,
+          "bottom": 1103.890625,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Fielding",
+              "x": 98.625,
+              "y": 1011,
+              "width": 49.734375,
+              "height": 35.09375,
+              "right": 148.359375,
+              "bottom": 1046.09375
+            },
+            {
+              "tag": "STRONG",
+              "text": "78",
+              "x": 100.65625,
+              "y": 1054.09375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 146.34375,
+              "bottom": 1091.890625
+            }
+          ]
+        },
+        {
+          "key": "chemistry",
+          "label": "Cohesion",
+          "value": "83",
+          "ratingColor": "rgb(177, 192, 120)",
+          "interactive": false,
+          "x": 199,
+          "y": 1001,
+          "width": 135,
+          "height": 102.890625,
+          "right": 334,
+          "bottom": 1103.890625,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Cohesion",
+              "x": 236.71875,
+              "y": 1011,
+              "width": 59.5625,
+              "height": 35.09375,
+              "right": 296.28125,
+              "bottom": 1046.09375
+            },
+            {
+              "tag": "STRONG",
+              "text": "83",
+              "x": 243.65625,
+              "y": 1054.09375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 289.34375,
+              "bottom": 1091.890625
+            }
+          ]
+        }
+      ],
+      "close": {
+        "x": 315,
+        "y": 25,
+        "width": 44,
+        "height": 44,
+        "right": 359,
+        "bottom": 69
+      },
+      "scrollRegions": [
+        {
+          "tag": "DIALOG",
+          "className": "",
+          "clientHeight": 818,
+          "scrollHeight": 2389
+        }
+      ],
+      "scrollProbe": {
+        "needed": true,
+        "top": 1571,
+        "max": 1571
+      }
+    },
+    {
+      "label": "before",
+      "viewport": {
+        "width": 320,
+        "height": 720
+      },
+      "prompt": "teamAnalysis",
+      "xiIds": [
+        8,
+        85,
+        94,
+        63,
+        26,
+        165,
+        204,
+        77,
+        219,
+        87,
+        16
+      ],
+      "horizontalOverflow": false,
+      "summary": {
+        "x": 29,
+        "y": 119,
+        "width": 262,
+        "height": 1011.890625,
+        "right": 291,
+        "bottom": 1130.890625
+      },
+      "groups": [
+        "Batting",
+        "Bowling",
+        "Team balance"
+      ],
+      "metrics": [
+        {
+          "key": "powerplayBat",
+          "label": "Powerplay batting",
+          "value": "80",
+          "ratingColor": "rgb(186, 190, 116)",
+          "interactive": false,
+          "x": 56,
+          "y": 294.171875,
+          "width": 100,
+          "height": 102.890625,
+          "right": 156,
+          "bottom": 397.0625,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Powerplay batting",
+              "x": 64,
+              "y": 304.171875,
+              "width": 84,
+              "height": 35.09375,
+              "right": 148,
+              "bottom": 339.265625
+            },
+            {
+              "tag": "STRONG",
+              "text": "80",
+              "x": 83.15625,
+              "y": 347.265625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 128.84375,
+              "bottom": 385.0625
+            }
+          ]
+        },
+        {
+          "key": "middleBat",
+          "label": "Middle overs batting",
+          "value": "80",
+          "ratingColor": "rgb(186, 190, 116)",
+          "interactive": false,
+          "x": 164,
+          "y": 294.171875,
+          "width": 100,
+          "height": 102.890625,
+          "right": 264,
+          "bottom": 397.0625,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Middle overs batting",
+              "x": 172,
+              "y": 304.171875,
+              "width": 84,
+              "height": 35.09375,
+              "right": 256,
+              "bottom": 339.265625
+            },
+            {
+              "tag": "STRONG",
+              "text": "80",
+              "x": 191.15625,
+              "y": 347.265625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 236.84375,
+              "bottom": 385.0625
+            }
+          ]
+        },
+        {
+          "key": "finishing",
+          "label": "Death batting",
+          "value": "75",
+          "ratingColor": "rgb(202, 188, 109)",
+          "interactive": false,
+          "x": 56,
+          "y": 405.0625,
+          "width": 100,
+          "height": 102.890625,
+          "right": 156,
+          "bottom": 507.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Death batting",
+              "x": 64,
+              "y": 415.0625,
+              "width": 84,
+              "height": 35.09375,
+              "right": 148,
+              "bottom": 450.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "75",
+              "x": 83.15625,
+              "y": 458.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 128.84375,
+              "bottom": 495.953125
+            }
+          ]
+        },
+        {
+          "key": "battingResources",
+          "label": "Batting depth",
+          "value": "71",
+          "ratingColor": "rgb(215, 185, 103)",
+          "interactive": false,
+          "x": 164,
+          "y": 405.0625,
+          "width": 100,
+          "height": 102.890625,
+          "right": 264,
+          "bottom": 507.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Batting depth",
+              "x": 172,
+              "y": 415.0625,
+              "width": 84,
+              "height": 35.09375,
+              "right": 256,
+              "bottom": 450.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "71",
+              "x": 191.15625,
+              "y": 458.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 236.84375,
+              "bottom": 495.953125
+            }
+          ]
+        },
+        {
+          "key": "newBall",
+          "label": "New ball bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 56,
+          "y": 592.140625,
+          "width": 100,
+          "height": 102.890625,
+          "right": 156,
+          "bottom": 695.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "New ball bowling",
+              "x": 64,
+              "y": 602.140625,
+              "width": 84,
+              "height": 35.09375,
+              "right": 148,
+              "bottom": 637.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 83.15625,
+              "y": 645.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 128.84375,
+              "bottom": 683.03125
+            }
+          ]
+        },
+        {
+          "key": "middleBowl",
+          "label": "Middle overs bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 164,
+          "y": 592.140625,
+          "width": 100,
+          "height": 102.890625,
+          "right": 264,
+          "bottom": 695.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Middle overs bowling",
+              "x": 172,
+              "y": 602.140625,
+              "width": 84,
+              "height": 35.09375,
+              "right": 256,
+              "bottom": 637.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 191.15625,
+              "y": 645.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 236.84375,
+              "bottom": 683.03125
+            }
+          ]
+        },
+        {
+          "key": "death",
+          "label": "Death bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 56,
+          "y": 703.03125,
+          "width": 100,
+          "height": 102.890625,
+          "right": 156,
+          "bottom": 805.921875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Death bowling",
+              "x": 64,
+              "y": 713.03125,
+              "width": 84,
+              "height": 35.09375,
+              "right": 148,
+              "bottom": 748.125
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 83.15625,
+              "y": 756.125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 128.84375,
+              "bottom": 793.921875
+            }
+          ]
+        },
+        {
+          "key": "bowlingResources",
+          "label": "Bowling depth",
+          "value": "90",
+          "ratingColor": "rgb(155, 196, 130)",
+          "interactive": false,
+          "x": 164,
+          "y": 703.03125,
+          "width": 100,
+          "height": 102.890625,
+          "right": 264,
+          "bottom": 805.921875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Bowling depth",
+              "x": 172,
+              "y": 713.03125,
+              "width": 84,
+              "height": 35.09375,
+              "right": 256,
+              "bottom": 748.125
+            },
+            {
+              "tag": "STRONG",
+              "text": "90",
+              "x": 191.15625,
+              "y": 756.125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 236.84375,
+              "bottom": 793.921875
+            }
+          ]
+        },
+        {
+          "key": "keeping",
+          "label": "Wicketkeeping",
+          "value": "82",
+          "ratingColor": "rgb(180, 192, 119)",
+          "interactive": false,
+          "x": 56,
+          "y": 890.109375,
+          "width": 100,
+          "height": 102.890625,
+          "right": 156,
+          "bottom": 993,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Wicketkeeping",
+              "x": 59.140625,
+              "y": 900.109375,
+              "width": 93.734375,
+              "height": 35.09375,
+              "right": 152.875,
+              "bottom": 935.203125
+            },
+            {
+              "tag": "STRONG",
+              "text": "82",
+              "x": 83.15625,
+              "y": 943.203125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 128.84375,
+              "bottom": 981
+            }
+          ]
+        },
+        {
+          "key": "roleFit",
+          "label": "Role fit",
+          "value": "99",
+          "ratingColor": "rgb(126, 201, 142)",
+          "interactive": false,
+          "x": 164,
+          "y": 890.109375,
+          "width": 100,
+          "height": 102.890625,
+          "right": 264,
+          "bottom": 993,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Role fit",
+              "x": 192.140625,
+              "y": 900.109375,
+              "width": 43.71875,
+              "height": 35.09375,
+              "right": 235.859375,
+              "bottom": 935.203125
+            },
+            {
+              "tag": "STRONG",
+              "text": "99",
+              "x": 191.15625,
+              "y": 943.203125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 236.84375,
+              "bottom": 981
+            }
+          ]
+        },
+        {
+          "key": "fielding",
+          "label": "Fielding",
+          "value": "78",
+          "ratingColor": "rgb(193, 189, 113)",
+          "interactive": false,
+          "x": 56,
+          "y": 1001,
+          "width": 100,
+          "height": 102.890625,
+          "right": 156,
+          "bottom": 1103.890625,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Fielding",
+              "x": 81.125,
+              "y": 1011,
+              "width": 49.734375,
+              "height": 35.09375,
+              "right": 130.859375,
+              "bottom": 1046.09375
+            },
+            {
+              "tag": "STRONG",
+              "text": "78",
+              "x": 83.15625,
+              "y": 1054.09375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 128.84375,
+              "bottom": 1091.890625
+            }
+          ]
+        },
+        {
+          "key": "chemistry",
+          "label": "Cohesion",
+          "value": "83",
+          "ratingColor": "rgb(177, 192, 120)",
+          "interactive": false,
+          "x": 164,
+          "y": 1001,
+          "width": 100,
+          "height": 102.890625,
+          "right": 264,
+          "bottom": 1103.890625,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Cohesion",
+              "x": 184.21875,
+              "y": 1011,
+              "width": 59.5625,
+              "height": 35.09375,
+              "right": 243.78125,
+              "bottom": 1046.09375
+            },
+            {
+              "tag": "STRONG",
+              "text": "83",
+              "x": 191.15625,
+              "y": 1054.09375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 236.84375,
+              "bottom": 1091.890625
+            }
+          ]
+        }
+      ],
+      "close": {
+        "x": 245,
+        "y": 25,
+        "width": 44,
+        "height": 44,
+        "right": 289,
+        "bottom": 69
+      },
+      "scrollRegions": [
+        {
+          "tag": "DIALOG",
+          "className": "",
+          "clientHeight": 694,
+          "scrollHeight": 2483
+        }
+      ],
+      "scrollProbe": {
+        "needed": true,
+        "top": 1789,
+        "max": 1789
+      }
+    },
+    {
+      "label": "after",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "prompt": "teamAnalysis",
+      "xiIds": [
+        8,
+        85,
+        94,
+        63,
+        26,
+        165,
+        204,
+        77,
+        219,
+        87,
+        16
+      ],
+      "horizontalOverflow": false,
+      "summary": {
+        "x": 268,
+        "y": 125,
+        "width": 904,
+        "height": 567.03125,
+        "right": 1172,
+        "bottom": 692.03125
+      },
+      "groups": [
+        "Batting",
+        "Bowling",
+        "Team balance"
+      ],
+      "metrics": [
+        {
+          "key": "powerplayBat",
+          "label": "Powerplay batting",
+          "value": "80",
+          "ratingColor": "rgb(186, 190, 116)",
+          "interactive": false,
+          "x": 284,
+          "y": 254.984375,
+          "width": 212,
+          "height": 94.890625,
+          "right": 496,
+          "bottom": 349.875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Powerplay batting",
+              "x": 333.15625,
+              "y": 262.984375,
+              "width": 113.671875,
+              "height": 35.09375,
+              "right": 446.828125,
+              "bottom": 298.078125
+            },
+            {
+              "tag": "STRONG",
+              "text": "80",
+              "x": 367.15625,
+              "y": 302.078125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 412.84375,
+              "bottom": 339.875
+            }
+          ]
+        },
+        {
+          "key": "middleBat",
+          "label": "Middle overs batting",
+          "value": "80",
+          "ratingColor": "rgb(186, 190, 116)",
+          "interactive": false,
+          "x": 504,
+          "y": 254.984375,
+          "width": 212,
+          "height": 94.890625,
+          "right": 716,
+          "bottom": 349.875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Middle overs batting",
+              "x": 545.703125,
+              "y": 262.984375,
+              "width": 128.59375,
+              "height": 35.09375,
+              "right": 674.296875,
+              "bottom": 298.078125
+            },
+            {
+              "tag": "STRONG",
+              "text": "80",
+              "x": 587.15625,
+              "y": 302.078125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 632.84375,
+              "bottom": 339.875
+            }
+          ]
+        },
+        {
+          "key": "finishing",
+          "label": "Death batting",
+          "value": "75",
+          "ratingColor": "rgb(202, 188, 109)",
+          "interactive": false,
+          "x": 724,
+          "y": 254.984375,
+          "width": 212,
+          "height": 94.890625,
+          "right": 936,
+          "bottom": 349.875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Death batting",
+              "x": 787.59375,
+              "y": 262.984375,
+              "width": 84.796875,
+              "height": 35.09375,
+              "right": 872.390625,
+              "bottom": 298.078125
+            },
+            {
+              "tag": "STRONG",
+              "text": "75",
+              "x": 807.15625,
+              "y": 302.078125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 852.84375,
+              "bottom": 339.875
+            }
+          ]
+        },
+        {
+          "key": "battingResources",
+          "label": "Batting depth",
+          "value": "71",
+          "ratingColor": "rgb(215, 185, 103)",
+          "interactive": false,
+          "x": 944,
+          "y": 254.984375,
+          "width": 212,
+          "height": 94.890625,
+          "right": 1156,
+          "bottom": 349.875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Batting depth",
+              "x": 1007.8125,
+              "y": 262.984375,
+              "width": 84.375,
+              "height": 35.09375,
+              "right": 1092.1875,
+              "bottom": 298.078125
+            },
+            {
+              "tag": "STRONG",
+              "text": "71",
+              "x": 1027.15625,
+              "y": 302.078125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 1072.84375,
+              "bottom": 339.875
+            }
+          ]
+        },
+        {
+          "key": "newBall",
+          "label": "New ball bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 284,
+          "y": 418.0625,
+          "width": 212,
+          "height": 94.890625,
+          "right": 496,
+          "bottom": 512.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "New ball bowling",
+              "x": 336.515625,
+              "y": 426.0625,
+              "width": 106.96875,
+              "height": 35.09375,
+              "right": 443.484375,
+              "bottom": 461.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 367.15625,
+              "y": 465.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 412.84375,
+              "bottom": 502.953125
+            }
+          ]
+        },
+        {
+          "key": "middleBowl",
+          "label": "Middle overs bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 504,
+          "y": 418.0625,
+          "width": 212,
+          "height": 94.890625,
+          "right": 716,
+          "bottom": 512.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Middle overs bowling",
+              "x": 543.015625,
+              "y": 426.0625,
+              "width": 133.953125,
+              "height": 35.09375,
+              "right": 676.96875,
+              "bottom": 461.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 587.15625,
+              "y": 465.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 632.84375,
+              "bottom": 502.953125
+            }
+          ]
+        },
+        {
+          "key": "death",
+          "label": "Death bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 724,
+          "y": 418.0625,
+          "width": 212,
+          "height": 94.890625,
+          "right": 936,
+          "bottom": 512.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Death bowling",
+              "x": 784.921875,
+              "y": 426.0625,
+              "width": 90.15625,
+              "height": 35.09375,
+              "right": 875.078125,
+              "bottom": 461.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 807.15625,
+              "y": 465.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 852.84375,
+              "bottom": 502.953125
+            }
+          ]
+        },
+        {
+          "key": "bowlingResources",
+          "label": "Bowling depth",
+          "value": "90",
+          "ratingColor": "rgb(155, 196, 130)",
+          "interactive": false,
+          "x": 944,
+          "y": 418.0625,
+          "width": 212,
+          "height": 94.890625,
+          "right": 1156,
+          "bottom": 512.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Bowling depth",
+              "x": 1005.0625,
+              "y": 426.0625,
+              "width": 89.859375,
+              "height": 35.09375,
+              "right": 1094.921875,
+              "bottom": 461.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "90",
+              "x": 1027.15625,
+              "y": 465.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 1072.84375,
+              "bottom": 502.953125
+            }
+          ]
+        },
+        {
+          "key": "keeping",
+          "label": "Wicketkeeping",
+          "value": "82",
+          "ratingColor": "rgb(180, 192, 119)",
+          "interactive": false,
+          "x": 284,
+          "y": 581.140625,
+          "width": 212,
+          "height": 94.890625,
+          "right": 496,
+          "bottom": 676.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Wicketkeeping",
+              "x": 343.125,
+              "y": 589.140625,
+              "width": 93.734375,
+              "height": 35.09375,
+              "right": 436.859375,
+              "bottom": 624.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "82",
+              "x": 367.15625,
+              "y": 628.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 412.84375,
+              "bottom": 666.03125
+            }
+          ]
+        },
+        {
+          "key": "roleFit",
+          "label": "Role fit",
+          "value": "99",
+          "ratingColor": "rgb(126, 201, 142)",
+          "interactive": false,
+          "x": 504,
+          "y": 581.140625,
+          "width": 212,
+          "height": 94.890625,
+          "right": 716,
+          "bottom": 676.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Role fit",
+              "x": 588.140625,
+              "y": 589.140625,
+              "width": 43.71875,
+              "height": 35.09375,
+              "right": 631.859375,
+              "bottom": 624.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "99",
+              "x": 587.15625,
+              "y": 628.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 632.84375,
+              "bottom": 666.03125
+            }
+          ]
+        },
+        {
+          "key": "fielding",
+          "label": "Fielding",
+          "value": "78",
+          "ratingColor": "rgb(193, 189, 113)",
+          "interactive": false,
+          "x": 724,
+          "y": 581.140625,
+          "width": 212,
+          "height": 94.890625,
+          "right": 936,
+          "bottom": 676.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Fielding",
+              "x": 805.125,
+              "y": 589.140625,
+              "width": 49.734375,
+              "height": 35.09375,
+              "right": 854.859375,
+              "bottom": 624.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "78",
+              "x": 807.15625,
+              "y": 628.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 852.84375,
+              "bottom": 666.03125
+            }
+          ]
+        },
+        {
+          "key": "chemistry",
+          "label": "Cohesion",
+          "value": "83",
+          "ratingColor": "rgb(177, 192, 120)",
+          "interactive": false,
+          "x": 944,
+          "y": 581.140625,
+          "width": 212,
+          "height": 94.890625,
+          "right": 1156,
+          "bottom": 676.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Cohesion",
+              "x": 1020.21875,
+              "y": 589.140625,
+              "width": 59.5625,
+              "height": 35.09375,
+              "right": 1079.78125,
+              "bottom": 624.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "83",
+              "x": 1027.15625,
+              "y": 628.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 1072.84375,
+              "bottom": 666.03125
+            }
+          ]
+        }
+      ],
+      "close": {
+        "x": 1132,
+        "y": 25,
+        "width": 44,
+        "height": 44,
+        "right": 1176,
+        "bottom": 69
+      },
+      "scrollRegions": [
+        {
+          "tag": "DIALOG",
+          "className": "",
+          "clientHeight": 874,
+          "scrollHeight": 1819
+        }
+      ],
+      "scrollProbe": {
+        "needed": true,
+        "top": 945,
+        "max": 945
+      }
+    },
+    {
+      "label": "after",
+      "viewport": {
+        "width": 1150,
+        "height": 720
+      },
+      "prompt": "teamAnalysis",
+      "xiIds": [
+        8,
+        85,
+        94,
+        63,
+        26,
+        165,
+        204,
+        77,
+        219,
+        87,
+        16
+      ],
+      "horizontalOverflow": false,
+      "summary": {
+        "x": 123,
+        "y": 125,
+        "width": 904,
+        "height": 567.03125,
+        "right": 1027,
+        "bottom": 692.03125
+      },
+      "groups": [
+        "Batting",
+        "Bowling",
+        "Team balance"
+      ],
+      "metrics": [
+        {
+          "key": "powerplayBat",
+          "label": "Powerplay batting",
+          "value": "80",
+          "ratingColor": "rgb(186, 190, 116)",
+          "interactive": false,
+          "x": 139,
+          "y": 254.984375,
+          "width": 212,
+          "height": 94.890625,
+          "right": 351,
+          "bottom": 349.875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Powerplay batting",
+              "x": 188.15625,
+              "y": 262.984375,
+              "width": 113.671875,
+              "height": 35.09375,
+              "right": 301.828125,
+              "bottom": 298.078125
+            },
+            {
+              "tag": "STRONG",
+              "text": "80",
+              "x": 222.15625,
+              "y": 302.078125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 267.84375,
+              "bottom": 339.875
+            }
+          ]
+        },
+        {
+          "key": "middleBat",
+          "label": "Middle overs batting",
+          "value": "80",
+          "ratingColor": "rgb(186, 190, 116)",
+          "interactive": false,
+          "x": 359,
+          "y": 254.984375,
+          "width": 212,
+          "height": 94.890625,
+          "right": 571,
+          "bottom": 349.875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Middle overs batting",
+              "x": 400.703125,
+              "y": 262.984375,
+              "width": 128.59375,
+              "height": 35.09375,
+              "right": 529.296875,
+              "bottom": 298.078125
+            },
+            {
+              "tag": "STRONG",
+              "text": "80",
+              "x": 442.15625,
+              "y": 302.078125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 487.84375,
+              "bottom": 339.875
+            }
+          ]
+        },
+        {
+          "key": "finishing",
+          "label": "Death batting",
+          "value": "75",
+          "ratingColor": "rgb(202, 188, 109)",
+          "interactive": false,
+          "x": 579,
+          "y": 254.984375,
+          "width": 212,
+          "height": 94.890625,
+          "right": 791,
+          "bottom": 349.875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Death batting",
+              "x": 642.59375,
+              "y": 262.984375,
+              "width": 84.796875,
+              "height": 35.09375,
+              "right": 727.390625,
+              "bottom": 298.078125
+            },
+            {
+              "tag": "STRONG",
+              "text": "75",
+              "x": 662.15625,
+              "y": 302.078125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 707.84375,
+              "bottom": 339.875
+            }
+          ]
+        },
+        {
+          "key": "battingResources",
+          "label": "Batting depth",
+          "value": "71",
+          "ratingColor": "rgb(215, 185, 103)",
+          "interactive": false,
+          "x": 799,
+          "y": 254.984375,
+          "width": 212,
+          "height": 94.890625,
+          "right": 1011,
+          "bottom": 349.875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Batting depth",
+              "x": 862.8125,
+              "y": 262.984375,
+              "width": 84.375,
+              "height": 35.09375,
+              "right": 947.1875,
+              "bottom": 298.078125
+            },
+            {
+              "tag": "STRONG",
+              "text": "71",
+              "x": 882.15625,
+              "y": 302.078125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 927.84375,
+              "bottom": 339.875
+            }
+          ]
+        },
+        {
+          "key": "newBall",
+          "label": "New ball bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 139,
+          "y": 418.0625,
+          "width": 212,
+          "height": 94.890625,
+          "right": 351,
+          "bottom": 512.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "New ball bowling",
+              "x": 191.515625,
+              "y": 426.0625,
+              "width": 106.96875,
+              "height": 35.09375,
+              "right": 298.484375,
+              "bottom": 461.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 222.15625,
+              "y": 465.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 267.84375,
+              "bottom": 502.953125
+            }
+          ]
+        },
+        {
+          "key": "middleBowl",
+          "label": "Middle overs bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 359,
+          "y": 418.0625,
+          "width": 212,
+          "height": 94.890625,
+          "right": 571,
+          "bottom": 512.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Middle overs bowling",
+              "x": 398.015625,
+              "y": 426.0625,
+              "width": 133.953125,
+              "height": 35.09375,
+              "right": 531.96875,
+              "bottom": 461.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 442.15625,
+              "y": 465.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 487.84375,
+              "bottom": 502.953125
+            }
+          ]
+        },
+        {
+          "key": "death",
+          "label": "Death bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 579,
+          "y": 418.0625,
+          "width": 212,
+          "height": 94.890625,
+          "right": 791,
+          "bottom": 512.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Death bowling",
+              "x": 639.921875,
+              "y": 426.0625,
+              "width": 90.15625,
+              "height": 35.09375,
+              "right": 730.078125,
+              "bottom": 461.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 662.15625,
+              "y": 465.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 707.84375,
+              "bottom": 502.953125
+            }
+          ]
+        },
+        {
+          "key": "bowlingResources",
+          "label": "Bowling depth",
+          "value": "90",
+          "ratingColor": "rgb(155, 196, 130)",
+          "interactive": false,
+          "x": 799,
+          "y": 418.0625,
+          "width": 212,
+          "height": 94.890625,
+          "right": 1011,
+          "bottom": 512.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Bowling depth",
+              "x": 860.0625,
+              "y": 426.0625,
+              "width": 89.859375,
+              "height": 35.09375,
+              "right": 949.921875,
+              "bottom": 461.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "90",
+              "x": 882.15625,
+              "y": 465.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 927.84375,
+              "bottom": 502.953125
+            }
+          ]
+        },
+        {
+          "key": "keeping",
+          "label": "Wicketkeeping",
+          "value": "82",
+          "ratingColor": "rgb(180, 192, 119)",
+          "interactive": false,
+          "x": 139,
+          "y": 581.140625,
+          "width": 212,
+          "height": 94.890625,
+          "right": 351,
+          "bottom": 676.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Wicketkeeping",
+              "x": 198.125,
+              "y": 589.140625,
+              "width": 93.734375,
+              "height": 35.09375,
+              "right": 291.859375,
+              "bottom": 624.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "82",
+              "x": 222.15625,
+              "y": 628.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 267.84375,
+              "bottom": 666.03125
+            }
+          ]
+        },
+        {
+          "key": "roleFit",
+          "label": "Role fit",
+          "value": "99",
+          "ratingColor": "rgb(126, 201, 142)",
+          "interactive": false,
+          "x": 359,
+          "y": 581.140625,
+          "width": 212,
+          "height": 94.890625,
+          "right": 571,
+          "bottom": 676.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Role fit",
+              "x": 443.140625,
+              "y": 589.140625,
+              "width": 43.71875,
+              "height": 35.09375,
+              "right": 486.859375,
+              "bottom": 624.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "99",
+              "x": 442.15625,
+              "y": 628.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 487.84375,
+              "bottom": 666.03125
+            }
+          ]
+        },
+        {
+          "key": "fielding",
+          "label": "Fielding",
+          "value": "78",
+          "ratingColor": "rgb(193, 189, 113)",
+          "interactive": false,
+          "x": 579,
+          "y": 581.140625,
+          "width": 212,
+          "height": 94.890625,
+          "right": 791,
+          "bottom": 676.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Fielding",
+              "x": 660.125,
+              "y": 589.140625,
+              "width": 49.734375,
+              "height": 35.09375,
+              "right": 709.859375,
+              "bottom": 624.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "78",
+              "x": 662.15625,
+              "y": 628.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 707.84375,
+              "bottom": 666.03125
+            }
+          ]
+        },
+        {
+          "key": "chemistry",
+          "label": "Cohesion",
+          "value": "83",
+          "ratingColor": "rgb(177, 192, 120)",
+          "interactive": false,
+          "x": 799,
+          "y": 581.140625,
+          "width": 212,
+          "height": 94.890625,
+          "right": 1011,
+          "bottom": 676.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Cohesion",
+              "x": 875.21875,
+              "y": 589.140625,
+              "width": 59.5625,
+              "height": 35.09375,
+              "right": 934.78125,
+              "bottom": 624.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "83",
+              "x": 882.15625,
+              "y": 628.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 927.84375,
+              "bottom": 666.03125
+            }
+          ]
+        }
+      ],
+      "close": {
+        "x": 987,
+        "y": 25,
+        "width": 44,
+        "height": 44,
+        "right": 1031,
+        "bottom": 69
+      },
+      "scrollRegions": [
+        {
+          "tag": "DIALOG",
+          "className": "",
+          "clientHeight": 694,
+          "scrollHeight": 1819
+        }
+      ],
+      "scrollProbe": {
+        "needed": true,
+        "top": 1125,
+        "max": 1125
+      }
+    },
+    {
+      "label": "after",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "prompt": "teamAnalysis",
+      "xiIds": [
+        8,
+        85,
+        94,
+        63,
+        26,
+        165,
+        204,
+        77,
+        219,
+        87,
+        16
+      ],
+      "horizontalOverflow": false,
+      "summary": {
+        "x": 46.046875,
+        "y": 125,
+        "width": 675.90625,
+        "height": 567.03125,
+        "right": 721.953125,
+        "bottom": 692.03125
+      },
+      "groups": [
+        "Batting",
+        "Bowling",
+        "Team balance"
+      ],
+      "metrics": [
+        {
+          "key": "powerplayBat",
+          "label": "Powerplay batting",
+          "value": "80",
+          "ratingColor": "rgb(186, 190, 116)",
+          "interactive": false,
+          "x": 62.046875,
+          "y": 254.984375,
+          "width": 154.96875,
+          "height": 94.890625,
+          "right": 217.015625,
+          "bottom": 349.875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Powerplay batting",
+              "x": 82.6875,
+              "y": 262.984375,
+              "width": 113.671875,
+              "height": 35.09375,
+              "right": 196.359375,
+              "bottom": 298.078125
+            },
+            {
+              "tag": "STRONG",
+              "text": "80",
+              "x": 116.6875,
+              "y": 302.078125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 162.375,
+              "bottom": 339.875
+            }
+          ]
+        },
+        {
+          "key": "middleBat",
+          "label": "Middle overs batting",
+          "value": "80",
+          "ratingColor": "rgb(186, 190, 116)",
+          "interactive": false,
+          "x": 225.015625,
+          "y": 254.984375,
+          "width": 154.984375,
+          "height": 94.890625,
+          "right": 380,
+          "bottom": 349.875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Middle overs batting",
+              "x": 238.203125,
+              "y": 262.984375,
+              "width": 128.59375,
+              "height": 35.09375,
+              "right": 366.796875,
+              "bottom": 298.078125
+            },
+            {
+              "tag": "STRONG",
+              "text": "80",
+              "x": 279.65625,
+              "y": 302.078125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 325.34375,
+              "bottom": 339.875
+            }
+          ]
+        },
+        {
+          "key": "finishing",
+          "label": "Death batting",
+          "value": "75",
+          "ratingColor": "rgb(202, 188, 109)",
+          "interactive": false,
+          "x": 388,
+          "y": 254.984375,
+          "width": 154.96875,
+          "height": 94.890625,
+          "right": 542.96875,
+          "bottom": 349.875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Death batting",
+              "x": 423.078125,
+              "y": 262.984375,
+              "width": 84.796875,
+              "height": 35.09375,
+              "right": 507.875,
+              "bottom": 298.078125
+            },
+            {
+              "tag": "STRONG",
+              "text": "75",
+              "x": 442.640625,
+              "y": 302.078125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 488.328125,
+              "bottom": 339.875
+            }
+          ]
+        },
+        {
+          "key": "battingResources",
+          "label": "Batting depth",
+          "value": "71",
+          "ratingColor": "rgb(215, 185, 103)",
+          "interactive": false,
+          "x": 550.96875,
+          "y": 254.984375,
+          "width": 154.984375,
+          "height": 94.890625,
+          "right": 705.953125,
+          "bottom": 349.875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Batting depth",
+              "x": 586.265625,
+              "y": 262.984375,
+              "width": 84.375,
+              "height": 35.09375,
+              "right": 670.640625,
+              "bottom": 298.078125
+            },
+            {
+              "tag": "STRONG",
+              "text": "71",
+              "x": 605.609375,
+              "y": 302.078125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 651.296875,
+              "bottom": 339.875
+            }
+          ]
+        },
+        {
+          "key": "newBall",
+          "label": "New ball bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 62.046875,
+          "y": 418.0625,
+          "width": 154.96875,
+          "height": 94.890625,
+          "right": 217.015625,
+          "bottom": 512.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "New ball bowling",
+              "x": 86.046875,
+              "y": 426.0625,
+              "width": 106.96875,
+              "height": 35.09375,
+              "right": 193.015625,
+              "bottom": 461.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 116.6875,
+              "y": 465.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 162.375,
+              "bottom": 502.953125
+            }
+          ]
+        },
+        {
+          "key": "middleBowl",
+          "label": "Middle overs bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 225.015625,
+          "y": 418.0625,
+          "width": 154.984375,
+          "height": 94.890625,
+          "right": 380,
+          "bottom": 512.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Middle overs bowling",
+              "x": 235.53125,
+              "y": 426.0625,
+              "width": 133.953125,
+              "height": 35.09375,
+              "right": 369.484375,
+              "bottom": 461.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 279.65625,
+              "y": 465.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 325.34375,
+              "bottom": 502.953125
+            }
+          ]
+        },
+        {
+          "key": "death",
+          "label": "Death bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 388,
+          "y": 418.0625,
+          "width": 154.96875,
+          "height": 94.890625,
+          "right": 542.96875,
+          "bottom": 512.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Death bowling",
+              "x": 420.40625,
+              "y": 426.0625,
+              "width": 90.15625,
+              "height": 35.09375,
+              "right": 510.5625,
+              "bottom": 461.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 442.640625,
+              "y": 465.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 488.328125,
+              "bottom": 502.953125
+            }
+          ]
+        },
+        {
+          "key": "bowlingResources",
+          "label": "Bowling depth",
+          "value": "90",
+          "ratingColor": "rgb(155, 196, 130)",
+          "interactive": false,
+          "x": 550.96875,
+          "y": 418.0625,
+          "width": 154.984375,
+          "height": 94.890625,
+          "right": 705.953125,
+          "bottom": 512.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Bowling depth",
+              "x": 583.53125,
+              "y": 426.0625,
+              "width": 89.859375,
+              "height": 35.09375,
+              "right": 673.390625,
+              "bottom": 461.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "90",
+              "x": 605.609375,
+              "y": 465.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 651.296875,
+              "bottom": 502.953125
+            }
+          ]
+        },
+        {
+          "key": "keeping",
+          "label": "Wicketkeeping",
+          "value": "82",
+          "ratingColor": "rgb(180, 192, 119)",
+          "interactive": false,
+          "x": 62.046875,
+          "y": 581.140625,
+          "width": 154.96875,
+          "height": 94.890625,
+          "right": 217.015625,
+          "bottom": 676.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Wicketkeeping",
+              "x": 92.65625,
+              "y": 589.140625,
+              "width": 93.734375,
+              "height": 35.09375,
+              "right": 186.390625,
+              "bottom": 624.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "82",
+              "x": 116.6875,
+              "y": 628.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 162.375,
+              "bottom": 666.03125
+            }
+          ]
+        },
+        {
+          "key": "roleFit",
+          "label": "Role fit",
+          "value": "99",
+          "ratingColor": "rgb(126, 201, 142)",
+          "interactive": false,
+          "x": 225.015625,
+          "y": 581.140625,
+          "width": 154.984375,
+          "height": 94.890625,
+          "right": 380,
+          "bottom": 676.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Role fit",
+              "x": 280.640625,
+              "y": 589.140625,
+              "width": 43.71875,
+              "height": 35.09375,
+              "right": 324.359375,
+              "bottom": 624.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "99",
+              "x": 279.65625,
+              "y": 628.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 325.34375,
+              "bottom": 666.03125
+            }
+          ]
+        },
+        {
+          "key": "fielding",
+          "label": "Fielding",
+          "value": "78",
+          "ratingColor": "rgb(193, 189, 113)",
+          "interactive": false,
+          "x": 388,
+          "y": 581.140625,
+          "width": 154.96875,
+          "height": 94.890625,
+          "right": 542.96875,
+          "bottom": 676.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Fielding",
+              "x": 440.609375,
+              "y": 589.140625,
+              "width": 49.734375,
+              "height": 35.09375,
+              "right": 490.34375,
+              "bottom": 624.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "78",
+              "x": 442.640625,
+              "y": 628.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 488.328125,
+              "bottom": 666.03125
+            }
+          ]
+        },
+        {
+          "key": "chemistry",
+          "label": "Cohesion",
+          "value": "83",
+          "ratingColor": "rgb(177, 192, 120)",
+          "interactive": false,
+          "x": 550.96875,
+          "y": 581.140625,
+          "width": 154.984375,
+          "height": 94.890625,
+          "right": 705.953125,
+          "bottom": 676.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Cohesion",
+              "x": 598.671875,
+              "y": 589.140625,
+              "width": 59.5625,
+              "height": 35.09375,
+              "right": 658.234375,
+              "bottom": 624.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "83",
+              "x": 605.609375,
+              "y": 628.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 651.296875,
+              "bottom": 666.03125
+            }
+          ]
+        }
+      ],
+      "close": {
+        "x": 681.953125,
+        "y": 25,
+        "width": 44,
+        "height": 44,
+        "right": 725.953125,
+        "bottom": 69
+      },
+      "scrollRegions": [
+        {
+          "tag": "DIALOG",
+          "className": "",
+          "clientHeight": 874,
+          "scrollHeight": 1819
+        }
+      ],
+      "scrollProbe": {
+        "needed": true,
+        "top": 945,
+        "max": 945
+      }
+    },
+    {
+      "label": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "prompt": "teamAnalysis",
+      "xiIds": [
+        8,
+        85,
+        94,
+        63,
+        26,
+        165,
+        204,
+        77,
+        219,
+        87,
+        16
+      ],
+      "horizontalOverflow": false,
+      "summary": {
+        "x": 29,
+        "y": 119,
+        "width": 332,
+        "height": 901.890625,
+        "right": 361,
+        "bottom": 1020.890625
+      },
+      "groups": [
+        "Batting",
+        "Bowling",
+        "Team balance"
+      ],
+      "metrics": [
+        {
+          "key": "powerplayBat",
+          "label": "Powerplay batting",
+          "value": "80",
+          "ratingColor": "rgb(186, 190, 116)",
+          "interactive": false,
+          "x": 45,
+          "y": 275.171875,
+          "width": 146,
+          "height": 94.890625,
+          "right": 191,
+          "bottom": 370.0625,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Powerplay batting",
+              "x": 61.15625,
+              "y": 283.171875,
+              "width": 113.671875,
+              "height": 35.09375,
+              "right": 174.828125,
+              "bottom": 318.265625
+            },
+            {
+              "tag": "STRONG",
+              "text": "80",
+              "x": 95.15625,
+              "y": 322.265625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 140.84375,
+              "bottom": 360.0625
+            }
+          ]
+        },
+        {
+          "key": "middleBat",
+          "label": "Middle overs batting",
+          "value": "80",
+          "ratingColor": "rgb(186, 190, 116)",
+          "interactive": false,
+          "x": 199,
+          "y": 275.171875,
+          "width": 146,
+          "height": 94.890625,
+          "right": 345,
+          "bottom": 370.0625,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Middle overs batting",
+              "x": 207.703125,
+              "y": 283.171875,
+              "width": 128.59375,
+              "height": 35.09375,
+              "right": 336.296875,
+              "bottom": 318.265625
+            },
+            {
+              "tag": "STRONG",
+              "text": "80",
+              "x": 249.15625,
+              "y": 322.265625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 294.84375,
+              "bottom": 360.0625
+            }
+          ]
+        },
+        {
+          "key": "finishing",
+          "label": "Death batting",
+          "value": "75",
+          "ratingColor": "rgb(202, 188, 109)",
+          "interactive": false,
+          "x": 45,
+          "y": 378.0625,
+          "width": 146,
+          "height": 94.890625,
+          "right": 191,
+          "bottom": 472.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Death batting",
+              "x": 75.59375,
+              "y": 386.0625,
+              "width": 84.796875,
+              "height": 35.09375,
+              "right": 160.390625,
+              "bottom": 421.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "75",
+              "x": 95.15625,
+              "y": 425.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 140.84375,
+              "bottom": 462.953125
+            }
+          ]
+        },
+        {
+          "key": "battingResources",
+          "label": "Batting depth",
+          "value": "71",
+          "ratingColor": "rgb(215, 185, 103)",
+          "interactive": false,
+          "x": 199,
+          "y": 378.0625,
+          "width": 146,
+          "height": 94.890625,
+          "right": 345,
+          "bottom": 472.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Batting depth",
+              "x": 229.8125,
+              "y": 386.0625,
+              "width": 84.375,
+              "height": 35.09375,
+              "right": 314.1875,
+              "bottom": 421.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "71",
+              "x": 249.15625,
+              "y": 425.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 294.84375,
+              "bottom": 462.953125
+            }
+          ]
+        },
+        {
+          "key": "newBall",
+          "label": "New ball bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 45,
+          "y": 541.140625,
+          "width": 146,
+          "height": 94.890625,
+          "right": 191,
+          "bottom": 636.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "New ball bowling",
+              "x": 64.515625,
+              "y": 549.140625,
+              "width": 106.96875,
+              "height": 35.09375,
+              "right": 171.484375,
+              "bottom": 584.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 95.15625,
+              "y": 588.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 140.84375,
+              "bottom": 626.03125
+            }
+          ]
+        },
+        {
+          "key": "middleBowl",
+          "label": "Middle overs bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 199,
+          "y": 541.140625,
+          "width": 146,
+          "height": 94.890625,
+          "right": 345,
+          "bottom": 636.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Middle overs bowling",
+              "x": 207,
+              "y": 549.140625,
+              "width": 130,
+              "height": 35.09375,
+              "right": 337,
+              "bottom": 584.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 249.15625,
+              "y": 588.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 294.84375,
+              "bottom": 626.03125
+            }
+          ]
+        },
+        {
+          "key": "death",
+          "label": "Death bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 45,
+          "y": 644.03125,
+          "width": 146,
+          "height": 94.890625,
+          "right": 191,
+          "bottom": 738.921875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Death bowling",
+              "x": 72.921875,
+              "y": 652.03125,
+              "width": 90.15625,
+              "height": 35.09375,
+              "right": 163.078125,
+              "bottom": 687.125
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 95.15625,
+              "y": 691.125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 140.84375,
+              "bottom": 728.921875
+            }
+          ]
+        },
+        {
+          "key": "bowlingResources",
+          "label": "Bowling depth",
+          "value": "90",
+          "ratingColor": "rgb(155, 196, 130)",
+          "interactive": false,
+          "x": 199,
+          "y": 644.03125,
+          "width": 146,
+          "height": 94.890625,
+          "right": 345,
+          "bottom": 738.921875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Bowling depth",
+              "x": 227.0625,
+              "y": 652.03125,
+              "width": 89.859375,
+              "height": 35.09375,
+              "right": 316.921875,
+              "bottom": 687.125
+            },
+            {
+              "tag": "STRONG",
+              "text": "90",
+              "x": 249.15625,
+              "y": 691.125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 294.84375,
+              "bottom": 728.921875
+            }
+          ]
+        },
+        {
+          "key": "keeping",
+          "label": "Wicketkeeping",
+          "value": "82",
+          "ratingColor": "rgb(180, 192, 119)",
+          "interactive": false,
+          "x": 45,
+          "y": 807.109375,
+          "width": 146,
+          "height": 94.890625,
+          "right": 191,
+          "bottom": 902,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Wicketkeeping",
+              "x": 71.125,
+              "y": 815.109375,
+              "width": 93.734375,
+              "height": 35.09375,
+              "right": 164.859375,
+              "bottom": 850.203125
+            },
+            {
+              "tag": "STRONG",
+              "text": "82",
+              "x": 95.15625,
+              "y": 854.203125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 140.84375,
+              "bottom": 892
+            }
+          ]
+        },
+        {
+          "key": "roleFit",
+          "label": "Role fit",
+          "value": "99",
+          "ratingColor": "rgb(126, 201, 142)",
+          "interactive": false,
+          "x": 199,
+          "y": 807.109375,
+          "width": 146,
+          "height": 94.890625,
+          "right": 345,
+          "bottom": 902,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Role fit",
+              "x": 250.140625,
+              "y": 815.109375,
+              "width": 43.71875,
+              "height": 35.09375,
+              "right": 293.859375,
+              "bottom": 850.203125
+            },
+            {
+              "tag": "STRONG",
+              "text": "99",
+              "x": 249.15625,
+              "y": 854.203125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 294.84375,
+              "bottom": 892
+            }
+          ]
+        },
+        {
+          "key": "fielding",
+          "label": "Fielding",
+          "value": "78",
+          "ratingColor": "rgb(193, 189, 113)",
+          "interactive": false,
+          "x": 45,
+          "y": 910,
+          "width": 146,
+          "height": 94.890625,
+          "right": 191,
+          "bottom": 1004.890625,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Fielding",
+              "x": 93.125,
+              "y": 918,
+              "width": 49.734375,
+              "height": 35.09375,
+              "right": 142.859375,
+              "bottom": 953.09375
+            },
+            {
+              "tag": "STRONG",
+              "text": "78",
+              "x": 95.15625,
+              "y": 957.09375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 140.84375,
+              "bottom": 994.890625
+            }
+          ]
+        },
+        {
+          "key": "chemistry",
+          "label": "Cohesion",
+          "value": "83",
+          "ratingColor": "rgb(177, 192, 120)",
+          "interactive": false,
+          "x": 199,
+          "y": 910,
+          "width": 146,
+          "height": 94.890625,
+          "right": 345,
+          "bottom": 1004.890625,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Cohesion",
+              "x": 242.21875,
+              "y": 918,
+              "width": 59.5625,
+              "height": 35.09375,
+              "right": 301.78125,
+              "bottom": 953.09375
+            },
+            {
+              "tag": "STRONG",
+              "text": "83",
+              "x": 249.15625,
+              "y": 957.09375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 294.84375,
+              "bottom": 994.890625
+            }
+          ]
+        }
+      ],
+      "close": {
+        "x": 315,
+        "y": 25,
+        "width": 44,
+        "height": 44,
+        "right": 359,
+        "bottom": 69
+      },
+      "scrollRegions": [
+        {
+          "tag": "DIALOG",
+          "className": "",
+          "clientHeight": 818,
+          "scrollHeight": 2279
+        }
+      ],
+      "scrollProbe": {
+        "needed": true,
+        "top": 1461,
+        "max": 1461
+      }
+    },
+    {
+      "label": "after",
+      "viewport": {
+        "width": 320,
+        "height": 720
+      },
+      "prompt": "teamAnalysis",
+      "xiIds": [
+        8,
+        85,
+        94,
+        63,
+        26,
+        165,
+        204,
+        77,
+        219,
+        87,
+        16
+      ],
+      "horizontalOverflow": false,
+      "summary": {
+        "x": 29,
+        "y": 119,
+        "width": 262,
+        "height": 901.890625,
+        "right": 291,
+        "bottom": 1020.890625
+      },
+      "groups": [
+        "Batting",
+        "Bowling",
+        "Team balance"
+      ],
+      "metrics": [
+        {
+          "key": "powerplayBat",
+          "label": "Powerplay batting",
+          "value": "80",
+          "ratingColor": "rgb(186, 190, 116)",
+          "interactive": false,
+          "x": 45,
+          "y": 275.171875,
+          "width": 111,
+          "height": 94.890625,
+          "right": 156,
+          "bottom": 370.0625,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Powerplay batting",
+              "x": 53,
+              "y": 283.171875,
+              "width": 95,
+              "height": 35.09375,
+              "right": 148,
+              "bottom": 318.265625
+            },
+            {
+              "tag": "STRONG",
+              "text": "80",
+              "x": 77.65625,
+              "y": 322.265625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 123.34375,
+              "bottom": 360.0625
+            }
+          ]
+        },
+        {
+          "key": "middleBat",
+          "label": "Middle overs batting",
+          "value": "80",
+          "ratingColor": "rgb(186, 190, 116)",
+          "interactive": false,
+          "x": 164,
+          "y": 275.171875,
+          "width": 111,
+          "height": 94.890625,
+          "right": 275,
+          "bottom": 370.0625,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Middle overs batting",
+              "x": 172,
+              "y": 283.171875,
+              "width": 95,
+              "height": 35.09375,
+              "right": 267,
+              "bottom": 318.265625
+            },
+            {
+              "tag": "STRONG",
+              "text": "80",
+              "x": 196.65625,
+              "y": 322.265625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 242.34375,
+              "bottom": 360.0625
+            }
+          ]
+        },
+        {
+          "key": "finishing",
+          "label": "Death batting",
+          "value": "75",
+          "ratingColor": "rgb(202, 188, 109)",
+          "interactive": false,
+          "x": 45,
+          "y": 378.0625,
+          "width": 111,
+          "height": 94.890625,
+          "right": 156,
+          "bottom": 472.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Death batting",
+              "x": 58.09375,
+              "y": 386.0625,
+              "width": 84.796875,
+              "height": 35.09375,
+              "right": 142.890625,
+              "bottom": 421.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "75",
+              "x": 77.65625,
+              "y": 425.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 123.34375,
+              "bottom": 462.953125
+            }
+          ]
+        },
+        {
+          "key": "battingResources",
+          "label": "Batting depth",
+          "value": "71",
+          "ratingColor": "rgb(215, 185, 103)",
+          "interactive": false,
+          "x": 164,
+          "y": 378.0625,
+          "width": 111,
+          "height": 94.890625,
+          "right": 275,
+          "bottom": 472.953125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Batting depth",
+              "x": 177.3125,
+              "y": 386.0625,
+              "width": 84.375,
+              "height": 35.09375,
+              "right": 261.6875,
+              "bottom": 421.15625
+            },
+            {
+              "tag": "STRONG",
+              "text": "71",
+              "x": 196.65625,
+              "y": 425.15625,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 242.34375,
+              "bottom": 462.953125
+            }
+          ]
+        },
+        {
+          "key": "newBall",
+          "label": "New ball bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 45,
+          "y": 541.140625,
+          "width": 111,
+          "height": 94.890625,
+          "right": 156,
+          "bottom": 636.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "New ball bowling",
+              "x": 53,
+              "y": 549.140625,
+              "width": 95,
+              "height": 35.09375,
+              "right": 148,
+              "bottom": 584.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 77.65625,
+              "y": 588.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 123.34375,
+              "bottom": 626.03125
+            }
+          ]
+        },
+        {
+          "key": "middleBowl",
+          "label": "Middle overs bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 164,
+          "y": 541.140625,
+          "width": 111,
+          "height": 94.890625,
+          "right": 275,
+          "bottom": 636.03125,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Middle overs bowling",
+              "x": 172,
+              "y": 549.140625,
+              "width": 95,
+              "height": 35.09375,
+              "right": 267,
+              "bottom": 584.234375
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 196.65625,
+              "y": 588.234375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 242.34375,
+              "bottom": 626.03125
+            }
+          ]
+        },
+        {
+          "key": "death",
+          "label": "Death bowling",
+          "value": "86",
+          "ratingColor": "rgb(167, 194, 124)",
+          "interactive": false,
+          "x": 45,
+          "y": 644.03125,
+          "width": 111,
+          "height": 94.890625,
+          "right": 156,
+          "bottom": 738.921875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Death bowling",
+              "x": 55.421875,
+              "y": 652.03125,
+              "width": 90.15625,
+              "height": 35.09375,
+              "right": 145.578125,
+              "bottom": 687.125
+            },
+            {
+              "tag": "STRONG",
+              "text": "86",
+              "x": 77.65625,
+              "y": 691.125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 123.34375,
+              "bottom": 728.921875
+            }
+          ]
+        },
+        {
+          "key": "bowlingResources",
+          "label": "Bowling depth",
+          "value": "90",
+          "ratingColor": "rgb(155, 196, 130)",
+          "interactive": false,
+          "x": 164,
+          "y": 644.03125,
+          "width": 111,
+          "height": 94.890625,
+          "right": 275,
+          "bottom": 738.921875,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Bowling depth",
+              "x": 174.5625,
+              "y": 652.03125,
+              "width": 89.859375,
+              "height": 35.09375,
+              "right": 264.421875,
+              "bottom": 687.125
+            },
+            {
+              "tag": "STRONG",
+              "text": "90",
+              "x": 196.65625,
+              "y": 691.125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 242.34375,
+              "bottom": 728.921875
+            }
+          ]
+        },
+        {
+          "key": "keeping",
+          "label": "Wicketkeeping",
+          "value": "82",
+          "ratingColor": "rgb(180, 192, 119)",
+          "interactive": false,
+          "x": 45,
+          "y": 807.109375,
+          "width": 111,
+          "height": 94.890625,
+          "right": 156,
+          "bottom": 902,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Wicketkeeping",
+              "x": 53.625,
+              "y": 815.109375,
+              "width": 93.734375,
+              "height": 35.09375,
+              "right": 147.359375,
+              "bottom": 850.203125
+            },
+            {
+              "tag": "STRONG",
+              "text": "82",
+              "x": 77.65625,
+              "y": 854.203125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 123.34375,
+              "bottom": 892
+            }
+          ]
+        },
+        {
+          "key": "roleFit",
+          "label": "Role fit",
+          "value": "99",
+          "ratingColor": "rgb(126, 201, 142)",
+          "interactive": false,
+          "x": 164,
+          "y": 807.109375,
+          "width": 111,
+          "height": 94.890625,
+          "right": 275,
+          "bottom": 902,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Role fit",
+              "x": 197.640625,
+              "y": 815.109375,
+              "width": 43.71875,
+              "height": 35.09375,
+              "right": 241.359375,
+              "bottom": 850.203125
+            },
+            {
+              "tag": "STRONG",
+              "text": "99",
+              "x": 196.65625,
+              "y": 854.203125,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 242.34375,
+              "bottom": 892
+            }
+          ]
+        },
+        {
+          "key": "fielding",
+          "label": "Fielding",
+          "value": "78",
+          "ratingColor": "rgb(193, 189, 113)",
+          "interactive": false,
+          "x": 45,
+          "y": 910,
+          "width": 111,
+          "height": 94.890625,
+          "right": 156,
+          "bottom": 1004.890625,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Fielding",
+              "x": 75.625,
+              "y": 918,
+              "width": 49.734375,
+              "height": 35.09375,
+              "right": 125.359375,
+              "bottom": 953.09375
+            },
+            {
+              "tag": "STRONG",
+              "text": "78",
+              "x": 77.65625,
+              "y": 957.09375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 123.34375,
+              "bottom": 994.890625
+            }
+          ]
+        },
+        {
+          "key": "chemistry",
+          "label": "Cohesion",
+          "value": "83",
+          "ratingColor": "rgb(177, 192, 120)",
+          "interactive": false,
+          "x": 164,
+          "y": 910,
+          "width": 111,
+          "height": 94.890625,
+          "right": 275,
+          "bottom": 1004.890625,
+          "children": [
+            {
+              "tag": "SPAN",
+              "text": "Cohesion",
+              "x": 189.71875,
+              "y": 918,
+              "width": 59.5625,
+              "height": 35.09375,
+              "right": 249.28125,
+              "bottom": 953.09375
+            },
+            {
+              "tag": "STRONG",
+              "text": "83",
+              "x": 196.65625,
+              "y": 957.09375,
+              "width": 45.6875,
+              "height": 37.796875,
+              "right": 242.34375,
+              "bottom": 994.890625
+            }
+          ]
+        }
+      ],
+      "close": {
+        "x": 245,
+        "y": 25,
+        "width": 44,
+        "height": 44,
+        "right": 289,
+        "bottom": 69
+      },
+      "scrollRegions": [
+        {
+          "tag": "DIALOG",
+          "className": "",
+          "clientHeight": 694,
+          "scrollHeight": 2373
+        }
+      ],
+      "scrollProbe": {
+        "needed": true,
+        "top": 1679,
+        "max": 1679
+      }
+    }
+  ],
+  "failures": [],
+  "errors": [],
+  "omissions": [
+    {
+      "label": "before",
+      "scope": "metric click probe",
+      "reason": "Actual twelve metric tiles are noninteractive divs, not rating buttons; no click behavior or touch target was invented."
+    },
+    {
+      "label": "after",
+      "scope": "metric click probe",
+      "reason": "Actual twelve metric tiles are noninteractive divs, not rating buttons; no click behavior or touch target was invented."
+    }
+  ],
+  "scope": "Actual generated2009 checkpoint legally progresses to the next manualXI; team analysis metrics are noninteractive divs. No user save. Test-only deterministic randomness.",
+  "status": "PASS"
+}
