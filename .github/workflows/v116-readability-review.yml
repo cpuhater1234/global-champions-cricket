@@ -1,0 +1,68 @@
+name: GCC v116 readable captaincy and dossier review
+
+on:
+  push:
+    branches: [work/v116-candidate-acceptance]
+    paths:
+      - '.github/workflows/v116-readability-review.yml'
+      - 'qa/v116_readability_candidate.py'
+      - 'qa/v116_readability_audit.py'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gcc-v116-readability-review
+  cancel-in-progress: true
+
+jobs:
+  readability:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install native browser dependencies
+        run: |
+          if [ -f /etc/apt/apt-mirrors.txt ]; then
+            sudo sed -i 's|http://azure.archive.ubuntu.com/ubuntu|https://archive.ubuntu.com/ubuntu|g; s|https://azure.archive.ubuntu.com/ubuntu|https://archive.ubuntu.com/ubuntu|g' /etc/apt/apt-mirrors.txt
+          fi
+          python -m pip install --disable-pip-version-check playwright
+          python -m playwright install --with-deps chromium
+      - name: Build pinned baseline and three-rule candidate
+        run: |
+          python -m py_compile qa/v116_readability_candidate.py qa/v116_readability_audit.py
+          python qa/v116_menu_review_candidate.py --output qa/results/readability/baseline.html
+          python qa/v116_readability_candidate.py --output qa/results/readability/candidate.html --report qa/results/readability/build.json
+      - name: Reproduce baseline failure and verify candidate across club palettes
+        run: |
+          python qa/v116_readability_audit.py --html qa/results/readability/baseline.html --report qa/results/readability/baseline.json || true
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('qa/results/readability/baseline.json').read_text())
+          assert r['status']=='CONTRAST_FAIL', r
+          assert r['sha256']=='943643a36730f9db6630437b15111b5f82041b540998f793230aab1745be21e3'
+          lucknow=[x for x in r['failures'] if x['club_colour']=='#17468b']
+          assert len(lucknow)==15, lucknow
+          print('Confirmed baseline failure: all five Lucknow labels at all three widths')
+          PY
+          python qa/v116_readability_audit.py --html qa/results/readability/candidate.html --report qa/results/readability/candidate.json
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          r=json.loads(Path('qa/results/readability/candidate.json').read_text())
+          build=json.loads(Path('qa/results/readability/build.json').read_text())
+          assert r['status']=='PASS' and not r['failures'],r
+          assert r['sha256']==build['candidate_sha256']=='bdfa54f5784b42eb1a0ac06065b2d2333c55548dd07789ccd41560b6848e82e0'
+          assert r['palette_count']>=20 and r['samples']==r['palette_count']*3*5,r
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:
+              f.write(f"Readability cascade regression passed: {r['palette_count']} real club colours, {r['samples']} text samples, minimum approximate contrast {r['minimum_contrast']}:1. No JavaScript changed. This is scoped stylesheet verification, not full visual/gameplay acceptance.\n")
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v116-readability-review
+          path: qa/results/readability
