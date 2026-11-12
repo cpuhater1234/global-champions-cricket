@@ -12,6 +12,10 @@
   font-size:15px!important;line-height:1.5!important;text-align:left!important
 }
 #g8dialog#g8dialog#g8dialog:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])[open]{display:flex!important;flex-direction:column!important}
+#g8dialog#g8dialog#g8dialog:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])>#g8dialogContent{
+  display:flex!important;flex-direction:column!important;flex:1 1 auto!important;min-height:0!important;
+  width:100%!important;max-height:calc(100dvh - 34px)!important;overflow:hidden!important
+}
 #g8dialog#g8dialog#g8dialog:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])::backdrop{background:#080c12b8!important;backdrop-filter:blur(5px)!important}
 #g8dialog#g8dialog#g8dialog:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory]) .g8modalhead{
   position:relative!important;inset:auto!important;flex:0 0 auto!important;min-height:64px!important;
@@ -79,6 +83,7 @@
 }
 @media(max-width:650px){
  #g8dialog#g8dialog#g8dialog:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory]){width:calc(100vw - 20px)!important;max-width:calc(100vw - 20px)!important;max-height:calc(100dvh - 20px)!important;border-radius:10px!important}
+ #g8dialog#g8dialog#g8dialog:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])>#g8dialogContent{max-height:calc(100dvh - 22px)!important}
  #g8dialog#g8dialog#g8dialog:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory]) .g8modalhead{min-height:60px!important;padding:8px 16px!important}
  #g8dialog#g8dialog#g8dialog:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory]) .g8modalbody{padding:18px 16px!important}
  #g8dialog#g8dialog#g8dialog .g8guideintro>h3{font-size:22px!important}
