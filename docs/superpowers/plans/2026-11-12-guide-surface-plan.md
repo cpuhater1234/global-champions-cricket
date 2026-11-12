@@ -48,3 +48,13 @@ match-flow or phase-engine changes in this visual candidate.
 Once this owner correction is visibly credible, inspect equivalent patterns on
 Matchday, XI, player reports and trading. Each surface gets an explicit owner and
 before/after evidence. Do not propagate the menu layout or palette globally.
+
+## Completed evidence
+
+Tasks 1-5 for the bounded guide candidate are complete. Exact candidate SHA:
+79a2fbfe965453ad0ef04d238ee7047346fb38e537deeec47d91cfcbebf51c4a.
+Native run 43154341321 passed all 54 states; independent visual review found the
+captured guide correction credible for user review. Shared guide-owner promotion
+was approved after native validation; earlier blocked-status notes above describe
+the staging sequence. No user visual approval or whole-game completion is claimed.
+See docs/release/V116_SURGICAL_GUIDE_REVIEW_20261112.md for scope and limits.
