@@ -3,6 +3,9 @@ on:
   push:
     branches: [work/v116-candidate-acceptance]
     paths: ['qa/v116_whole_ui_capture.cjs', '.github/workflows/v116-whole-ui-review.yml']
+concurrency:
+  group: gcc-whole-interface-evidence
+  cancel-in-progress: true
 permissions:
   contents: write
 jobs:
@@ -25,6 +28,10 @@ jobs:
           pip install playwright pillow
           python -m playwright install --with-deps chromium
           npm install --no-save --no-package-lock playwright
+      - uses: actions/cache@v4
+        with:
+          path: qa/results/whole-ui-career
+          key: gcc-ui-career-79a2fbfe-seed101-v1-${{ hashFiles('qa/structural-risk/career-run.mjs', 'qa/offline_game_host.mjs') }}
       - name: Compose pinned review build and actual career checkpoints
         env:
           GCC8_TEST_BUILD: qa/results/whole-ui/build.html
@@ -35,7 +42,7 @@ jobs:
         run: |
           python qa/v116_menu_surface_candidate.py --output qa/results/whole-ui/build.html --report qa/results/whole-ui/build.json
           sha256sum qa/results/whole-ui/build.html
-          node qa/structural-risk/career-run.mjs
+          if [ ! -f qa/results/whole-ui-career/checkpoint-2026.json ]; then node qa/structural-risk/career-run.mjs; fi
       - name: Capture disposable native journeys
         id: capture
         continue-on-error: true
@@ -77,12 +84,15 @@ jobs:
           git add docs/release/visual-review/whole-ui
           if ! git diff --cached --quiet; then
             git commit -m 'QA: preserve authorised disposable career visual evidence'
-            git pull --rebase origin work/v116-candidate-acceptance
-            git push origin HEAD:refs/heads/work/v116-candidate-acceptance
+            published=0
+            for attempt in 1 2 3; do
+              git pull --rebase origin work/v116-candidate-acceptance
+              if git push origin HEAD:refs/heads/work/v116-candidate-acceptance; then published=1; break; fi
+            done
+            test "$published" = 1
           fi
       - name: Require capture outcome
         if: always()
         env:
           CAPTURE_OUTCOME: ${{ steps.capture.outcome }}
         run: test "$CAPTURE_OUTCOME" = success
-
