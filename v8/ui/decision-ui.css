@@ -754,137 +754,108 @@
 #g8dialog[data-prompt=player] .gccuiCareerRates{margin-top:12px;border-top:1px solid var(--gcc-line);padding-top:12px}
 #g8dialog[data-prompt=player] .gccuiCareerRates>summary{min-height:44px;display:list-item;padding:10px 0;font-size:14px;line-height:1.5;font-weight:700;cursor:pointer}
 #g8dialog[data-prompt=player] .gccuiCareerRates .g8fine{margin:10px 0 0!important;font-size:13px!important;line-height:1.5!important;color:#ddd!important}
-/* Guide review: Claude flat + dense layout, adapted to v116 markup and charcoal tokens. */
-#g8dialog#g8dialog#g8dialog .g8modalbody:has(>.g8guide){background:var(--gcc-panel)!important}
-#g8dialog#g8dialog#g8dialog .g8guide{max-width:none!important;min-width:0!important}
+/* GCC guide reference surface. Replaces the existing guide owner in place.
+   Shared game and non-guide dialog presentation is intentionally unchanged. */
+#g8dialog#g8dialog#g8dialog:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory]){
+  --guide-ground:#171b20;--guide-line:#343c46;--guide-text:#edf1f5;--guide-muted:#b9c3ce;--guide-accent:#a7d9e3;
+  --gcc-panel:var(--guide-ground);--gcc-inset:var(--guide-ground);--gcc-raised:#222930;
+  --gcc-line:var(--guide-line);--gcc-text:var(--guide-text);--gcc-muted:var(--guide-muted);
+  width:min(920px,calc(100vw - 32px))!important;max-width:calc(100vw - 32px)!important;
+  max-height:calc(100dvh - 32px)!important;padding:0!important;overflow:hidden!important;
+  background:var(--guide-ground)!important;color:var(--guide-text)!important;
+  border:1px solid var(--guide-line)!important;border-radius:12px!important;
+  box-shadow:0 24px 80px #0008!important;font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif!important;
+  font-size:15px!important;line-height:1.5!important;text-align:left!important
+}
+#g8dialog#g8dialog#g8dialog:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])[open]{display:flex!important;flex-direction:column!important}
+#g8dialog#g8dialog#g8dialog:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])>#g8dialogContent{
+  display:flex!important;flex-direction:column!important;flex:1 1 auto!important;min-height:0!important;
+  width:100%!important;max-height:calc(100dvh - 34px)!important;overflow:hidden!important
+}
+#g8dialog#g8dialog#g8dialog:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])::backdrop{background:#080c12b8!important;backdrop-filter:blur(5px)!important}
+#g8dialog#g8dialog#g8dialog:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory]) .g8modalhead{
+  position:relative!important;inset:auto!important;flex:0 0 auto!important;min-height:64px!important;
+  padding:10px 24px!important;gap:16px!important;align-items:center!important;background:var(--guide-ground)!important;
+  border:0!important;border-bottom:1px solid var(--guide-line)!important;box-shadow:none!important
+}
+#g8dialog#g8dialog#g8dialog:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory]) .g8modalhead h2{
+  margin:0!important;font-family:inherit!important;font-size:21px!important;font-weight:650!important;
+  line-height:1.3!important;letter-spacing:-.02em!important;text-transform:none!important;font-style:normal!important;color:var(--guide-text)!important
+}
+#g8dialog#g8dialog#g8dialog:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory]) .g8modalhead .g8eyebrow{display:none!important}
+#g8dialog#g8dialog#g8dialog:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory]) .g8dialogclose{
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  min-width:44px!important;width:44px!important;height:44px!important;padding:0!important;
+  border:0!important;border-radius:6px!important;background:transparent!important;color:var(--guide-muted)!important;
+  box-shadow:none!important;font-family:inherit!important;font-size:24px!important;transform:none!important
+}
+#g8dialog#g8dialog#g8dialog:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory]) .g8modalbody{
+  flex:1 1 auto!important;min-height:0!important;padding:24px!important;overflow-x:hidden!important;overflow-y:auto!important;
+  background:var(--guide-ground)!important;scroll-padding:20px;overscroll-behavior:contain;scrollbar-width:thin;
+  scrollbar-color:#4b5662 transparent
+}
+#g8dialog#g8dialog#g8dialog .g8guide{max-width:none!important;min-width:0!important;color:var(--guide-text)!important}
+#g8dialog#g8dialog#g8dialog .g8guide :is(h3,p,summary,button){font-family:inherit!important;font-style:normal!important;letter-spacing:normal!important;text-transform:none!important;text-shadow:none!important}
 #g8dialog#g8dialog#g8dialog .g8guideintro{
   background:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;
-  padding:0 0 .9rem!important;margin:0 0 .4rem!important;border-bottom:1px solid var(--gcc-line)!important;
-  text-align:left!important
+  padding:0 0 22px!important;margin:0!important;text-align:left!important
 }
-#g8dialog#g8dialog#g8dialog .g8guideintro>.g8eyebrow{
-  display:block!important;color:var(--vx-ink,var(--gcc-text))!important;font-size:.85rem!important;
-  line-height:1.5!important;font-weight:700!important;letter-spacing:.06em!important;margin:0 0 .35rem!important
-}
-#g8dialog#g8dialog#g8dialog .g8guideintro>h3{
-  color:var(--gcc-text)!important;font-family:var(--vx-display,Arial,Helvetica,sans-serif)!important;
-  font-size:1.5rem!important;line-height:1.3!important;font-weight:800!important;
-  text-transform:none!important;font-style:normal!important;margin:.1rem 0 .25rem!important
-}
-#g8dialog#g8dialog#g8dialog .g8guideintro>p{
-  color:var(--gcc-muted)!important;font-size:1rem!important;line-height:1.45!important;
-  font-weight:400!important;text-align:left!important;margin:0!important;max-width:none!important
-}
-#g8dialog#g8dialog#g8dialog .g8guideintro>.g8storyopening{
-  margin-top:.7rem!important;padding-top:.7rem!important;border-top:1px solid var(--gcc-line)!important
-}
-#g8dialog#g8dialog#g8dialog .g8guidegrid{
-  display:grid!important;grid-template-columns:minmax(0,1fr)!important;column-gap:2.4rem!important;
-  padding:0!important;margin:0!important;width:100%!important;max-width:none!important
-}
-#g8dialog#g8dialog#g8dialog .g8guidecard{
-  background:none!important;border:0!important;border-top:1px solid var(--gcc-line)!important;
-  border-radius:0!important;box-shadow:none!important;padding:.75rem 0 .8rem!important;margin:0!important;
-  min-width:0!important
-}
-#g8dialog#g8dialog#g8dialog .g8guidecardhead{
-  display:flex!important;align-items:center!important;gap:.6rem!important;margin:0 0 .25rem!important
-}
-#g8dialog#g8dialog#g8dialog .g8guidecardhead>.g8icon{
-  display:block!important;width:1.7rem!important;height:1.7rem!important;flex:0 0 1.7rem!important;
-  color:var(--gcc-text)!important;opacity:1!important
-}
-#g8dialog#g8dialog#g8dialog .g8guidenumber{
-  flex:0 0 auto!important;display:inline-grid!important;place-items:center!important;
-  width:1.7rem!important;min-width:1.7rem!important;height:1.7rem!important;min-height:1.7rem!important;
-  padding:0!important;border-radius:50%!important;background:none!important;
-  color:var(--vx-ink,var(--gcc-text))!important;border:1.5px solid currentColor!important;
-  font-family:var(--vx-display,Arial,Helvetica,sans-serif)!important;font-weight:800!important;
-  font-size:.95rem!important;line-height:1!important;font-variant-numeric:tabular-nums
-}
-#g8dialog#g8dialog#g8dialog .g8guidecardhead>h3{
-  color:var(--gcc-text)!important;font-size:1.15rem!important;line-height:1.35!important;
-  font-weight:700!important;text-transform:none!important;font-style:normal!important;
-  text-align:left!important;margin:0!important;min-width:0!important
-}
-#g8dialog#g8dialog#g8dialog .g8guidecard>p{
-  color:var(--gcc-muted)!important;font-size:1rem!important;line-height:1.45!important;
-  font-weight:400!important;margin:0 0 0 2.3rem!important
-}
-#g8dialog#g8dialog#g8dialog .g8guiderules{margin-top:.6rem!important}
-#g8dialog#g8dialog#g8dialog .g8guiderules .g8disclosure{
-  background:none!important;border:0!important;border-top:1px solid var(--gcc-line)!important;
-  border-radius:0!important;box-shadow:none!important;margin:0!important;padding:0!important
-}
-#g8dialog#g8dialog#g8dialog .g8guiderules .g8disclosure>summary{
-  display:flex!important;align-items:center!important;gap:.6rem!important;
-  min-height:48px!important;padding:.65rem 0!important;margin:0!important;
-  background:none!important;border:0!important;border-radius:0!important;
-  color:var(--gcc-text)!important;font-size:1rem!important;font-weight:700!important;line-height:1.45!important
-}
-#g8dialog#g8dialog#g8dialog .g8guiderules .g8disclosure>summary:hover,
-#g8dialog#g8dialog#g8dialog .g8guiderules .g8disclosure[open]>summary{
-  background:none!important;color:var(--vx-ink,var(--gcc-text))!important
-}
-#g8dialog#g8dialog#g8dialog .g8guiderules .g8disclosure>summary:focus-visible{
-  outline:3px solid var(--vx-ink,var(--gcc-text))!important;outline-offset:-3px!important
-}
-#g8dialog#g8dialog#g8dialog .g8guiderules .g8disclosurebody{padding:.55rem 0 .25rem!important}
-#g8dialog#g8dialog#g8dialog .g8guiderules .g8rulegrid{
-  display:grid!important;grid-template-columns:minmax(0,1fr)!important;
-  gap:0!important;padding:0!important;margin:0!important
-}
+#g8dialog#g8dialog#g8dialog .g8guideintro>.g8eyebrow{display:block!important;margin:0 0 6px!important;font:600 11px/1.5 Inter,system-ui,sans-serif!important;letter-spacing:.1em!important;color:var(--guide-muted)!important;text-transform:uppercase!important}
+#g8dialog#g8dialog#g8dialog .g8guideintro>h3{margin:0 0 8px!important;font-size:25px!important;line-height:1.25!important;font-weight:650!important;letter-spacing:-.025em!important;color:var(--guide-text)!important;text-align:left!important}
+#g8dialog#g8dialog#g8dialog .g8guideintro>p{margin:0!important;max-width:68ch!important;font-size:14px!important;line-height:1.6!important;font-weight:400!important;color:var(--guide-muted)!important;text-align:left!important}
+#g8dialog#g8dialog#g8dialog .g8guideintro>.g8storyopening{margin-top:14px!important;padding-top:14px!important;border-top:1px solid var(--guide-line)!important}
+#g8dialog#g8dialog#g8dialog .g8guidegrid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:0 32px!important;width:100%!important;max-width:none!important;padding:0!important;margin:0!important}
+#g8dialog#g8dialog#g8dialog .g8guidecard{min-width:0!important;background:none!important;border:0!important;border-top:1px solid var(--guide-line)!important;border-radius:0!important;box-shadow:none!important;padding:16px 0!important;margin:0!important}
+#g8dialog#g8dialog#g8dialog .g8guidecardhead{display:flex!important;align-items:center!important;gap:10px!important;margin:0 0 7px!important;min-width:0!important}
+#g8dialog#g8dialog#g8dialog .g8guidecardhead>h3{margin:0!important;min-width:0!important;color:var(--guide-text)!important;font-size:15px!important;line-height:1.4!important;font-weight:650!important;text-align:left!important}
+#g8dialog#g8dialog#g8dialog .g8guidecardhead>.g8icon{width:22px!important;height:22px!important;flex:0 0 22px!important;color:var(--guide-muted)!important;opacity:1!important}
+#g8dialog#g8dialog#g8dialog .g8guidenumber{display:inline-grid!important;place-items:center!important;flex:0 0 22px!important;width:22px!important;min-width:22px!important;height:22px!important;min-height:22px!important;padding:0!important;border:1px solid #4b606b!important;border-radius:50%!important;background:transparent!important;color:var(--guide-accent)!important;font:600 11px/1 Inter,system-ui,sans-serif!important;box-shadow:none!important}
+#g8dialog#g8dialog#g8dialog .g8guidecard>p{margin:0 0 0 32px!important;color:var(--guide-muted)!important;font-size:14px!important;line-height:1.65!important;font-weight:400!important;max-width:64ch!important}
+#g8dialog#g8dialog#g8dialog .g8guiderules{margin-top:12px!important}
+#g8dialog#g8dialog#g8dialog .g8guiderules .g8disclosure{margin:0!important;padding:0!important;background:none!important;border:0!important;border-top:1px solid var(--guide-line)!important;border-radius:0!important;box-shadow:none!important}
+#g8dialog#g8dialog#g8dialog .g8guiderules .g8disclosure>summary{display:flex!important;align-items:center!important;gap:12px!important;min-height:52px!important;padding:12px 0!important;margin:0!important;border:0!important;border-radius:0!important;background:none!important;color:var(--guide-text)!important;font-size:14px!important;line-height:1.5!important;font-weight:600!important;text-decoration:none!important}
+#g8dialog#g8dialog#g8dialog .g8guiderules .g8disclosure>summary:hover,#g8dialog#g8dialog#g8dialog .g8guiderules .g8disclosure[open]>summary{color:var(--guide-accent)!important;background:none!important}
+#g8dialog#g8dialog#g8dialog .g8guiderules .g8disclosurebody{padding:0 0 8px!important}
+#g8dialog#g8dialog#g8dialog .g8guiderules .g8rulegrid{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:0!important;padding:0!important;margin:0!important}
+#g8dialog#g8dialog#g8dialog .g8guiderules .g8rulegrid>.g8guidecard{display:grid!important;grid-template-columns:190px minmax(0,1fr)!important;align-items:start!important;gap:24px!important;padding:16px 0!important;border-top:1px solid #2c343d!important}
+#g8dialog#g8dialog#g8dialog .g8guiderules .g8guidecardhead{margin:0!important;align-items:flex-start!important}
+#g8dialog#g8dialog#g8dialog .g8guiderules .g8guidecardhead>h3{font-size:14px!important;line-height:1.55!important}
+#g8dialog#g8dialog#g8dialog .g8guiderules .g8guidecard>p{margin:0!important;font-size:14px!important;line-height:1.65!important}
 #g8dialog#g8dialog#g8dialog .g8storychapters{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:0!important}
 #g8dialog#g8dialog#g8dialog .g8storychapters>.g8guidecard:first-child{border-top:0!important}
-#g8dialog#g8dialog#g8dialog .g8storychapters>.g8guidecard:last-child :is(h3,p,.g8icon){color:var(--gcc-text)!important}
-#g8dialog#g8dialog#g8dialog p.g8guidenote{
-  background:none!important;border:0!important;border-top:1px solid var(--gcc-line)!important;
-  border-radius:0!important;padding:.75rem 0 0!important;margin:.7rem 0 0!important;
-  color:var(--gcc-muted)!important;font-size:1rem!important;font-weight:600!important;
-  line-height:1.5!important;text-align:left!important
-}
-#g8dialog#g8dialog#g8dialog p.g8guideclosing{
-  color:var(--gcc-text)!important;font-size:1.05rem!important;line-height:1.5!important;
-  font-weight:700!important;text-align:left!important;margin:.8rem 0 .1rem!important;padding:0!important
-}
-#g8dialog#g8dialog#g8dialog .g8guidefooter{
-  border:0!important;background:none!important;padding:.8rem 0 0!important;
-  margin:.6rem 0 0!important;display:flex!important;flex-direction:column!important;
-  align-items:stretch!important;gap:.8rem!important
-}
-#g8dialog#g8dialog#g8dialog .g8guidefooter nav{
-  display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
-  gap:.5rem!important;width:100%!important
-}
-#g8dialog#g8dialog#g8dialog .g8guidefooter .g8button{
-  display:flex!important;align-items:center!important;justify-content:center!important;
-  min-height:44px!important;margin:0!important;padding:.55rem .65rem!important;
-  font-size:.95rem!important;line-height:1.4!important;white-space:normal!important;text-align:center!important
-}
-#g8dialog#g8dialog#g8dialog .g8guidefooter .g8guidecurrent:disabled{
-  opacity:1!important;background:var(--gcc-raised)!important;color:var(--gcc-text)!important;
-  border-color:var(--gcc-line)!important;cursor:default!important
-}
-#g8dialog#g8dialog#g8dialog .g8guidefooter>.g8primary{min-width:min(100%,12rem)!important;align-self:center!important}
-@media(min-width:860px){
-  #g8dialog#g8dialog#g8dialog .g8guidegrid,
-  #g8dialog#g8dialog#g8dialog .g8guiderules .g8rulegrid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
-  #g8dialog#g8dialog#g8dialog .g8guidegrid>.g8guidecard:nth-child(-n+2),
-  #g8dialog#g8dialog#g8dialog .g8guiderules .g8rulegrid>.g8guidecard:nth-child(-n+2){border-top:0!important}
-}
+#g8dialog#g8dialog#g8dialog .g8storychapters>.g8guidecard>p{max-width:76ch!important}
+#g8dialog#g8dialog#g8dialog p.g8guidenote{padding:16px 0 0!important;margin:8px 0 0!important;background:none!important;border:0!important;border-top:1px solid var(--guide-line)!important;border-radius:0!important;color:var(--guide-muted)!important;font-size:13px!important;line-height:1.6!important;font-weight:400!important;text-align:left!important}
+#g8dialog#g8dialog#g8dialog p.g8guideclosing{padding:0!important;margin:20px 0 0!important;color:var(--guide-text)!important;font-size:16px!important;line-height:1.55!important;font-weight:600!important;text-align:left!important}
+#g8dialog#g8dialog#g8dialog .g8guidefooter{display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:space-between!important;gap:16px!important;border:0!important;border-top:1px solid var(--guide-line)!important;background:none!important;padding:14px 0 0!important;margin:16px 0 0!important}
+#g8dialog#g8dialog#g8dialog .g8guidefooter nav{display:flex!important;align-items:center!important;gap:4px!important;width:auto!important;min-width:0!important}
+#g8dialog#g8dialog#g8dialog .g8guidefooter .g8button{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:7px!important;width:auto!important;min-width:0!important;min-height:44px!important;margin:0!important;padding:8px 10px!important;border:1px solid transparent!important;border-radius:6px!important;background:transparent!important;color:var(--guide-muted)!important;box-shadow:none!important;transform:none!important;font:500 13px/1.4 Inter,system-ui,sans-serif!important;letter-spacing:normal!important;white-space:normal!important;text-align:center!important;transition:background 120ms ease,color 120ms ease!important}
+#g8dialog#g8dialog#g8dialog .g8guidefooter .g8button>.g8icon{width:18px!important;height:18px!important;flex:0 0 18px!important}
+#g8dialog#g8dialog#g8dialog .g8guidefooter nav .g8button{background:transparent!important;border-color:transparent!important;box-shadow:none!important}
+#g8dialog#g8dialog#g8dialog .g8guidefooter nav .g8button:hover:enabled{background:#242d35!important;color:var(--guide-text)!important}
+#g8dialog#g8dialog#g8dialog .g8guidefooter .g8guidecurrent:disabled{opacity:1!important;background:#252f37!important;color:var(--guide-accent)!important;border-color:transparent!important;box-shadow:none!important;cursor:default!important}
+#g8dialog#g8dialog#g8dialog .g8guidefooter>.g8button.g8primary{flex:0 0 auto!important;align-self:center!important;min-width:0!important;border:1px solid #46535f!important;border-radius:6px!important;color:var(--guide-text)!important;background:transparent!important;box-shadow:none!important;transform:none!important;font-weight:600!important}
+#g8dialog#g8dialog#g8dialog .g8guidefooter>.g8button.g8primary:hover:enabled{background:#242d35!important;color:var(--guide-text)!important;border-color:#60717e!important;box-shadow:none!important;transform:none!important}
+#g8dialog#g8dialog#g8dialog .g8guidefooter .g8button:focus-visible,#g8dialog#g8dialog#g8dialog .g8guidefooter>.g8button.g8primary:focus-visible{outline:2px solid var(--guide-accent)!important;outline-offset:2px!important;box-shadow:none!important}
+#g8dialog#g8dialog#g8dialog .g8guide :is(button,summary):focus-visible{outline:2px solid var(--guide-accent)!important;outline-offset:2px!important}
 @media(max-width:859px){
-  #g8dialog#g8dialog#g8dialog .g8guidegrid>.g8guidecard:first-child,
-  #g8dialog#g8dialog#g8dialog .g8guiderules .g8rulegrid>.g8guidecard:first-child{border-top:0!important}
+ #g8dialog#g8dialog#g8dialog .g8guidegrid{grid-template-columns:minmax(0,1fr)!important}
 }
 @media(max-width:650px){
-  #g8dialog#g8dialog#g8dialog .g8guidefooter nav{grid-template-columns:minmax(0,1fr)!important}
+ #g8dialog#g8dialog#g8dialog:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory]){width:calc(100vw - 20px)!important;max-width:calc(100vw - 20px)!important;max-height:calc(100dvh - 20px)!important;border-radius:10px!important}
+ #g8dialog#g8dialog#g8dialog:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])>#g8dialogContent{max-height:calc(100dvh - 22px)!important}
+ #g8dialog#g8dialog#g8dialog:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory]) .g8modalhead{min-height:60px!important;padding:8px 16px!important}
+ #g8dialog#g8dialog#g8dialog:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory]) .g8modalbody{padding:18px 16px!important}
+ #g8dialog#g8dialog#g8dialog .g8guideintro>h3{font-size:22px!important}
+ #g8dialog#g8dialog#g8dialog .g8guiderules .g8rulegrid>.g8guidecard{grid-template-columns:minmax(0,1fr)!important;gap:8px!important}
+ #g8dialog#g8dialog#g8dialog .g8guidefooter{flex-direction:column!important;gap:10px!important}
+ #g8dialog#g8dialog#g8dialog .g8guidefooter nav{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;width:100%!important;gap:2px!important;align-items:stretch!important}
+ #g8dialog#g8dialog#g8dialog .g8guidefooter nav .g8button{align-self:stretch!important;flex-direction:row!important;gap:4px!important;padding:8px 3px!important;font-size:12px!important}
+ #g8dialog#g8dialog#g8dialog .g8guidefooter nav .g8button>.g8icon{display:none!important}
+ #g8dialog#g8dialog#g8dialog .g8guidefooter>.g8primary{align-self:flex-end!important}
 }
-@media(max-width:560px){
-  #g8dialog#g8dialog#g8dialog .g8guidecard{padding:.6rem 0 .65rem!important}
-  #g8dialog#g8dialog#g8dialog .g8guidecard>p{margin-left:0!important;font-size:.95rem!important}
-}
+@media(prefers-reduced-motion:reduce){#g8dialog#g8dialog#g8dialog .g8guide .g8button,#g8dialog#g8dialog#g8dialog .g8guidefooter .g8button{transition:none!important}}
+
 #g8dialog[data-prompt=prepare] .g8previewvenue>.g8eyebrow{justify-content:flex-start!important;text-align:left!important}
-@media(max-width:600px){#g8dialog .g8guideintro>h3{font-size:21px!important}#g8dialog .g8guideintro,#g8dialog .g8guidecard{padding:14px!important}}
 /* Archive scorebooks: four readable columns, neutral rows and a stable name edge. */
 #g8dialog[data-prompt=archiveSeason] .gccuiArchiveSeasonSummary{margin:0 0 12px!important;line-height:1.5;font-size:15px}
 #g8dialog[data-prompt=archiveSeason] .gccuiArchiveTable{padding:0!important;border:1px solid var(--gcc-line)!important;border-radius:4px;background:var(--gcc-panel)!important}
