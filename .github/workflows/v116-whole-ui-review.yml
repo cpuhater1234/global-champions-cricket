@@ -4,7 +4,7 @@ on:
     branches: [work/v116-candidate-acceptance]
     paths: ['qa/v116_whole_ui_capture.cjs', '.github/workflows/v116-whole-ui-review.yml']
 permissions:
-  contents: read
+  contents: write
 jobs:
   capture:
     runs-on: ubuntu-24.04
@@ -56,8 +56,33 @@ jobs:
               r=json.loads(p.read_text())
               print(json.dumps({'sha256':r['sha256'],'screenshots':len(r['screenshots']),'failures':r['failures'],'omissions':r['omissions'],'states':[{'name':s['name'],'viewport':s['viewport'],'horizontalOverflow':s['horizontalOverflow']} for s in r['screenshots']]},indent=2))
           PYREPORT
+      - name: Save authorised disposable test screenshots
+        if: always()
+        run: |
+          python - <<'PYSAVE'
+          import json,shutil
+          from pathlib import Path
+          from PIL import Image
+          src=Path('qa/results/whole-ui-native'); dst=Path('docs/release/visual-review/whole-ui')
+          dst.mkdir(parents=True,exist_ok=True)
+          if (src/'manifest.json').exists():
+              shutil.copyfile(src/'manifest.json',dst/'manifest.json')
+          for f in src.glob('*.png'):
+              im=Image.open(f).convert('RGB')
+              # Preserve actual pixels up to a bounded long-page height, with no resize.
+              im.crop((0,0,im.width,min(im.height,8000))).save(dst/(f.stem+'.jpg'),quality=88,optimize=True)
+          PYSAVE
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/release/visual-review/whole-ui
+          if ! git diff --cached --quiet; then
+            git commit -m 'QA: preserve authorised disposable career visual evidence'
+            git pull --rebase origin work/v116-candidate-acceptance
+            git push origin HEAD:refs/heads/work/v116-candidate-acceptance
+          fi
       - name: Require capture outcome
         if: always()
         env:
           CAPTURE_OUTCOME: ${{ steps.capture.outcome }}
         run: test "$CAPTURE_OUTCOME" = success
+
