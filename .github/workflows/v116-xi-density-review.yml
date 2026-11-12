@@ -1,8 +1,8 @@
-name: GCC XI density review
+name: GCC XI and analysis density review
 on:
   push:
     branches: [work/v116-candidate-acceptance]
-    paths: ['qa/v116_xi_density_candidate.py', 'qa/v116_xi_density_audit.cjs', '.github/workflows/v116-xi-density-review.yml']
+    paths: ['qa/v116_xi_density_candidate.py', 'qa/v116_xi_density_audit.cjs', 'qa/v116_analysis_density_candidate.py', 'qa/v116_analysis_density_audit.cjs', '.github/workflows/v116-xi-density-review.yml']
 concurrency:
   group: gcc-xi-density-review
   cancel-in-progress: true
@@ -28,28 +28,43 @@ jobs:
           pip install playwright pillow
           python -m playwright install --with-deps chromium
           npm install --no-save --no-package-lock playwright
+      - uses: actions/cache/restore@v4
+        with:
+          path: qa/results/whole-ui-career
+          key: gcc-ui-career-79a2fbfe-seed101-v1-${{ hashFiles('qa/structural-risk/career-run.mjs', 'qa/offline_game_host.mjs') }}
       - name: Compose pinned review build and actual career checkpoints
         env:
           GCC8_TEST_BUILD: qa/results/xi-density/baseline.html
-          GCC8_TEST_REPORT_DIR: qa/results/xi-density-career
+          GCC8_TEST_REPORT_DIR: qa/results/whole-ui-career
           GCC8_TEST_SEED: '101'
           GCC8_TEST_LAST_YEAR: '2009'
           GCC8_TEST_SCOREBOOKS: '1'
         run: |
           python qa/v116_finals_image_candidate.py --output qa/results/xi-density/baseline.html --report qa/results/xi-density/baseline.json
-          python qa/v116_xi_density_candidate.py --output qa/results/xi-density/candidate.html --report qa/results/xi-density/build.json
+          python qa/v116_xi_density_candidate.py --output qa/results/xi-density/xi-baseline.html --report qa/results/xi-density/xi-build.json
+          python qa/v116_analysis_density_candidate.py --output qa/results/xi-density/candidate.html --report qa/results/xi-density/build.json
           sha256sum qa/results/xi-density/candidate.html
-          node qa/structural-risk/career-run.mjs
+          if [ ! -f qa/results/whole-ui-career/checkpoint-2009.json ]; then node qa/structural-risk/career-run.mjs; fi
       - name: Capture disposable native journeys
         id: capture
         continue-on-error: true
         env:
           GCC8_BASELINE_BUILD: qa/results/xi-density/baseline.html
           GCC8_TEST_BUILD: qa/results/xi-density/candidate.html
-          GCC8_BROWSER_CAREER_DIR: qa/results/xi-density-career
+          GCC8_BROWSER_CAREER_DIR: qa/results/whole-ui-career
           GCC8_XI_DIR: qa/results/xi-density-native
         run: |
           GCC8_CHROMIUM="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')" node qa/v116_xi_density_audit.cjs
+      - name: Compare actual team analysis metrics and containment
+        id: analysis
+        continue-on-error: true
+        env:
+          GCC8_BASELINE_BUILD: qa/results/xi-density/xi-baseline.html
+          GCC8_TEST_BUILD: qa/results/xi-density/candidate.html
+          GCC8_BROWSER_CAREER_DIR: qa/results/whole-ui-career
+          GCC8_ANALYSIS_DIR: qa/results/analysis-density-native
+        run: |
+          GCC8_CHROMIUM="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')" node qa/v116_analysis_density_audit.cjs
       - name: Save authorised disposable test screenshots
         if: always()
         run: |
@@ -62,7 +77,11 @@ jobs:
           if (src/'report.json').exists():
               shutil.copyfile(src/'report.json',dst/'report.json')
               r=json.loads((src/'report.json').read_text()); print(json.dumps({**r,'states':len(r['states'])}))
-          for f in src.glob('*.png'):
+          analysis=Path('qa/results/analysis-density-native')
+          if (analysis/'report.json').exists():
+              shutil.copyfile(analysis/'report.json',dst/'analysis-report.json')
+              ar=json.loads((analysis/'report.json').read_text()); print(json.dumps({**ar,'states':len(ar['states'])}))
+          for f in list(src.glob('*.png'))+list(analysis.glob('*.png')):
               im=Image.open(f).convert('RGB')
               # Preserve actual pixels up to a bounded long-page height, with no resize.
               im.crop((0,0,im.width,min(im.height,8000))).save(dst/(f.stem+'.jpg'),quality=88,optimize=True)
@@ -83,4 +102,5 @@ jobs:
         if: always()
         env:
           CAPTURE_OUTCOME: ${{ steps.capture.outcome }}
-        run: test "$CAPTURE_OUTCOME" = success
+          ANALYSIS_OUTCOME: ${{ steps.analysis.outcome }}
+        run: test "$CAPTURE_OUTCOME" = success && test "$ANALYSIS_OUTCOME" = success

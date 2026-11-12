@@ -18,7 +18,6 @@ def patch_xi(base):
   css=css.replace(old,new);edits.append({'before':old.decode(),'after':new.decode()})
  replace(b'#g8app .gccuiSelection .gccuiOrderRow,#g8app .gccuiSelection .gccuiBenchRow{min-height:88px;padding:10px 12px}',b'#g8app .gccuiSelection .gccuiOrderRow,#g8app .gccuiSelection .gccuiBenchRow{min-height:76px;padding:8px 12px}')
  replace(b'#g8app .gccuiSelection .gccuiRosterName{gap:4px}',b'#g8app .gccuiSelection .gccuiRosterName{gap:3px}')
- replace(b'#g8app .gccui .gccuiSelectionGrid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);',b'#g8app .gccui .gccuiSelectionGrid{display:grid;grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);')
  anchor=b'#g8app .gccuiSelection .gccuiRosterName{gap:3px}\n'
  if css.count(anchor)!=1:raise ValueError('Ambiguous scoped neutral status insertion')
  css=css.replace(anchor,anchor+NEUTRAL)
