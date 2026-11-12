@@ -1,0 +1,63 @@
+name: GCC whole interface evidence
+on:
+  push:
+    branches: [work/v116-candidate-acceptance]
+    paths: ['qa/v116_whole_ui_capture.cjs', '.github/workflows/v116-whole-ui-review.yml']
+permissions:
+  contents: read
+jobs:
+  capture:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser
+        run: |
+          if [ -f /etc/apt/apt-mirrors.txt ]; then
+            sudo sed -i 's|http://azure.archive.ubuntu.com/ubuntu|https://archive.ubuntu.com/ubuntu|g' /etc/apt/apt-mirrors.txt
+          fi
+          pip install playwright pillow
+          python -m playwright install --with-deps chromium
+          npm install --no-save --no-package-lock playwright
+      - name: Compose pinned review build and actual career checkpoints
+        env:
+          GCC8_TEST_BUILD: qa/results/whole-ui/build.html
+          GCC8_TEST_REPORT_DIR: qa/results/whole-ui-career
+          GCC8_TEST_SEED: '101'
+          GCC8_TEST_LAST_YEAR: '2026'
+          GCC8_TEST_SCOREBOOKS: '1'
+        run: |
+          python qa/v116_menu_surface_candidate.py --output qa/results/whole-ui/build.html --report qa/results/whole-ui/build.json
+          sha256sum qa/results/whole-ui/build.html
+          node qa/structural-risk/career-run.mjs
+      - name: Capture disposable native journeys
+        id: capture
+        continue-on-error: true
+        env:
+          GCC8_TEST_BUILD: qa/results/whole-ui/build.html
+          GCC8_BROWSER_CAREER_DIR: qa/results/whole-ui-career
+          GCC8_WHOLE_UI_DIR: qa/results/whole-ui-native
+        run: |
+          GCC8_CHROMIUM="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')" node qa/v116_whole_ui_capture.cjs
+      - name: Report isolated test coverage
+        if: always()
+        run: |
+          python - <<'PYREPORT'
+          import json
+          from pathlib import Path
+          p=Path('qa/results/whole-ui-native/manifest.json')
+          if p.exists():
+              r=json.loads(p.read_text())
+              print(json.dumps({'sha256':r['sha256'],'screenshots':len(r['screenshots']),'failures':r['failures'],'omissions':r['omissions'],'states':[{'name':s['name'],'viewport':s['viewport'],'horizontalOverflow':s['horizontalOverflow']} for s in r['screenshots']]},indent=2))
+          PYREPORT
+      - name: Require capture outcome
+        if: always()
+        env:
+          CAPTURE_OUTCOME: ${{ steps.capture.outcome }}
+        run: test "$CAPTURE_OUTCOME" = success
