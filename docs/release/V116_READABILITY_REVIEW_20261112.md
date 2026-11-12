@@ -22,7 +22,7 @@ Native cascade regression: https://github.com/cpuhater1234/global-champions-cric
 
 The regression extracts all 17 real stylesheets and uses scoped DOM fixtures with the actual prepare/player modal contexts. It first requires the baseline to fail on all five Lucknow text targets at 320/390/1440px, then requires the candidate to pass a 4.5:1 threshold across every extracted club colour. Contrast is calculated against representative opaque gradient/theme surfaces, not pixel-sampled translucent backgrounds.
 
-The workflow result is pending at document creation. Fixture coverage is not full visual, gameplay or persistence acceptance. A local native-browser launch was unavailable because the workspace disallows the socket used by Chromium; no sandbox override was requested.
+The native build and regression steps passed. The baseline reproduced the defect; the candidate passed all 540 samples across 36 colours with minimum approximate contrast 12.515:1. The job's final conclusion was failure solely because artifact upload hit GitHub's storage quota. The complete result summaries and upload error were verified in job 130932295244's logs. A follow-up workflow change retains JSON reports in the log, makes only the download upload optional, and limits its retention to one day. Every mandatory test is unchanged. Fixture coverage is not full visual, gameplay or persistence acceptance. A local native-browser launch was unavailable because the workspace disallows the socket used by Chromium; no sandbox override was requested.
 
 ## Baseline acceptance infrastructure
 
@@ -31,3 +31,7 @@ The official Ubuntu archive substitution cleared dependency installation in run 
 ## Limits and protected state
 
 This remains a review adapter, not maintained-source build parity. The frozen release, main branch and user's live career are unchanged. No fixture was played. Captaincy discoverability, phase timing, broader source ownership and full visual refinement remain separate work.
+
+## Baseline acceptance completion
+
+Run 43141508809 subsequently completed successfully, including all responsive, two-tab recovery, menu-layout and final saved-career rendering verifiers. The user's downloaded consolidated-menu build restored Lucknow 2010 Round 3, 1-1, NRR 0.53, XI rating 79 in the connected browser. No match was played.
