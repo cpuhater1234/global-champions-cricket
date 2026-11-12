@@ -33,7 +33,7 @@ let activeBrowser;
    hasGrid:!!g.querySelector('.g8guidegrid'),hasRules:!!g.querySelector('.g8rulegrid'),
    documentOverflow:document.documentElement.scrollWidth>innerWidth+1,
    dialogOverflowX:d.scrollWidth>d.clientWidth+1,
-   buttons:[...b.querySelectorAll('.g8guidefooter button')].map(e=>({text:e.textContent.trim(),...rect(e)})),
+   buttons:[...b.querySelectorAll('.g8guidefooter button')].map(e=>({text:e.textContent.trim(),background:getComputedStyle(e).backgroundColor,image:getComputedStyle(e).backgroundImage,shadow:getComputedStyle(e).boxShadow,...rect(e)})),
    headingOutsideBody:[...g.querySelectorAll('h3')].filter(e=>{const r=e.getBoundingClientRect();return r.width>0&&r.height>0&&(r.left<b.getBoundingClientRect().left-1||r.right>b.getBoundingClientRect().right+1)}).length,
    scroll:{top:b.scrollTop,height:b.scrollHeight,client:b.clientHeight},
   };
@@ -64,6 +64,8 @@ let activeBrowser;
      if(state.hasGrid&&state.guideColumns!==(width>=860?2:1))issues.push('step column contract');
      if(state.hasRules&&state.ruleColumns!==1)issues.push('reference rules must be rows');
      if(width>650&&state.footer.height>76)issues.push('desktop footer too tall');
+     const allowedFills=['rgba(0, 0, 0, 0)','rgb(36, 45, 53)','rgb(37, 47, 55)'];
+     if(state.buttons.some(b=>b.image!=='none'||b.shadow!=='none'||!allowedFills.includes(b.background)))issues.push('footer inherited an unowned button skin');
      if(issues.length)failures.push({action,width,height,issues});
     }
     await page.screenshot({path:path.join(out,`${label}-${action}-${width}x${height}.png`)});
