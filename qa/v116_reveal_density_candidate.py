@@ -25,7 +25,7 @@ def patch_reveal(base):
  css=replace(css,'.g8snakeintro p{grid-column:1/-1;flex-basis:auto;margin:0;padding-top:.65rem;','.g8snakeintro p{grid-column:1/-1;flex-basis:auto;margin:0;padding-top:.4rem;',1,'base snake paragraph')
  comp=replace(comp,'align-items:center!important; gap:1rem!important; text-align:center;','align-items:center!important; gap:.65rem!important; padding:12px!important; margin-bottom:16px!important; text-align:center;',1,'composition draw')
  comp=replace(comp,'grid-area:1/1; justify-content:center!important; align-items:center!important;','grid-area:1/1; justify-content:center!important; align-items:stretch!important;',1,'composition overlapping control cells')
- comp=replace(comp,'.g8drawcontrols .g8drawpace>.g8button { flex:1 1 8rem; }','.g8drawcontrols .g8drawpace>.g8button { flex:1 1 0; min-width:0; font-size:14px!important; padding:10px 8px!important; }',1,'composition mobile pace')
+ comp=replace(comp,'.g8drawcontrols .g8drawpace>.g8button { flex:1 1 8rem; }','.g8drawcontrols .g8drawpace>.g8button { flex:1 1 0; min-width:0; flex-direction:column!important; gap:4px!important; font-size:14px!important; padding:10px 8px!important; }',1,'composition mobile pace')
  result=base
  for m,data in sorted([(first,css),(owner,comp)],key=lambda x:x[0].start(),reverse=True):result=result[:m.start(3)]+data+result[m.end(3):]
  after=list(BLOCK.finditer(result));assert len(after)==len(blocks)==39
