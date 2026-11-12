@@ -1,5 +1,5 @@
 {
-  "status": "FAIL",
+  "status": "PASS",
   "baseline_sha256": "943643a36730f9db6630437b15111b5f82041b540998f793230aab1745be21e3",
   "candidate_sha256": "97463654a53a4f1b173fcf9ad713205c6aef9eebee432662251dc211a44f41d4",
   "states": [
@@ -1325,8 +1325,8 @@
         "right": 1038
       },
       "body": {
-        "top": 95,
-        "bottom": 1214.015625,
+        "top": -124,
+        "bottom": 995.015625,
         "width": 926,
         "height": 1119.015625,
         "left": 112,
@@ -1428,8 +1428,8 @@
         }
       ],
       "footer": {
-        "top": 1078.421875,
-        "bottom": 1192.015625,
+        "top": 859.421875,
+        "bottom": 973.015625,
         "width": 882,
         "height": 113.59375,
         "left": 134,
@@ -1444,8 +1444,8 @@
       "buttons": [
         {
           "text": "How to play",
-          "top": 1091.21875,
-          "bottom": 1135.21875,
+          "top": 872.21875,
+          "bottom": 916.21875,
           "width": 288.65625,
           "height": 44,
           "left": 134,
@@ -1453,8 +1453,8 @@
         },
         {
           "text": "How it works",
-          "top": 1091.21875,
-          "bottom": 1135.21875,
+          "top": 872.21875,
+          "bottom": 916.21875,
           "width": 288.671875,
           "height": 44,
           "left": 430.65625,
@@ -1462,8 +1462,8 @@
         },
         {
           "text": "The breakaway story",
-          "top": 1091.21875,
-          "bottom": 1135.21875,
+          "top": 872.21875,
+          "bottom": 916.21875,
           "width": 288.65625,
           "height": 44,
           "left": 727.328125,
@@ -1471,8 +1471,8 @@
         },
         {
           "text": "Back to game",
-          "top": 1148.015625,
-          "bottom": 1192.015625,
+          "top": 929.015625,
+          "bottom": 973.015625,
           "width": 192,
           "height": 44,
           "left": 479,
@@ -1513,8 +1513,8 @@
         "right": 1038
       },
       "body": {
-        "top": 70,
-        "bottom": 1085.65625,
+        "top": -124,
+        "bottom": 891.65625,
         "width": 926,
         "height": 1015.65625,
         "left": 112,
@@ -1616,8 +1616,8 @@
         }
       ],
       "footer": {
-        "top": 950.0625,
-        "bottom": 1063.65625,
+        "top": 756.0625,
+        "bottom": 869.65625,
         "width": 882,
         "height": 113.59375,
         "left": 134,
@@ -1632,8 +1632,8 @@
       "buttons": [
         {
           "text": "How to play",
-          "top": 962.859375,
-          "bottom": 1006.859375,
+          "top": 768.859375,
+          "bottom": 812.859375,
           "width": 288.65625,
           "height": 44,
           "left": 134,
@@ -1641,8 +1641,8 @@
         },
         {
           "text": "How it works",
-          "top": 962.859375,
-          "bottom": 1006.859375,
+          "top": 768.859375,
+          "bottom": 812.859375,
           "width": 288.671875,
           "height": 44,
           "left": 430.65625,
@@ -1650,8 +1650,8 @@
         },
         {
           "text": "The breakaway story",
-          "top": 962.859375,
-          "bottom": 1006.859375,
+          "top": 768.859375,
+          "bottom": 812.859375,
           "width": 288.65625,
           "height": 44,
           "left": 727.328125,
@@ -1659,8 +1659,8 @@
         },
         {
           "text": "Back to game",
-          "top": 1019.65625,
-          "bottom": 1063.65625,
+          "top": 825.65625,
+          "bottom": 869.65625,
           "width": 192,
           "height": 44,
           "left": 479,
@@ -4485,6 +4485,27 @@
         "top": 0,
         "height": 794,
         "client": 621
+      },
+      "returnAfterFocus": {
+        "control": {
+          "x": 903.0625,
+          "y": 634.984375,
+          "width": 106.9375,
+          "height": 44
+        },
+        "body": {
+          "top": 82,
+          "bottom": 703,
+          "width": 918,
+          "height": 621,
+          "left": 116,
+          "right": 1034
+        },
+        "scroll": {
+          "top": 173,
+          "height": 794,
+          "client": 621
+        }
       }
     },
     {
@@ -4670,6 +4691,27 @@
         "top": 0,
         "height": 794,
         "client": 794
+      },
+      "returnAfterFocus": {
+        "control": {
+          "x": 1048.0625,
+          "y": 861.484375,
+          "width": 106.9375,
+          "height": 44
+        },
+        "body": {
+          "top": 135.5,
+          "bottom": 929.484375,
+          "width": 918,
+          "height": 793.984375,
+          "left": 261,
+          "right": 1179
+        },
+        "scroll": {
+          "top": 0,
+          "height": 794,
+          "client": 794
+        }
       }
     },
     {
@@ -4855,6 +4897,27 @@
         "top": 0,
         "height": 794,
         "client": 669
+      },
+      "returnAfterFocus": {
+        "control": {
+          "x": 840.0625,
+          "y": 682.984375,
+          "width": 106.9375,
+          "height": 44
+        },
+        "body": {
+          "top": 82,
+          "bottom": 751,
+          "width": 918,
+          "height": 669,
+          "left": 53,
+          "right": 971
+        },
+        "scroll": {
+          "top": 125,
+          "height": 794,
+          "client": 669
+        }
       }
     },
     {
@@ -5040,6 +5103,27 @@
         "top": 0,
         "height": 1026,
         "client": 901
+      },
+      "returnAfterFocus": {
+        "control": {
+          "x": 620.0625,
+          "y": 915.171875,
+          "width": 106.9375,
+          "height": 44
+        },
+        "body": {
+          "top": 82,
+          "bottom": 983,
+          "width": 734,
+          "height": 901,
+          "left": 17,
+          "right": 751
+        },
+        "scroll": {
+          "top": 125,
+          "height": 1026,
+          "client": 901
+        }
       }
     },
     {
@@ -5225,6 +5309,27 @@
         "top": 0,
         "height": 1324,
         "client": 761
+      },
+      "returnAfterFocus": {
+        "control": {
+          "x": 256.0625,
+          "y": 771.25,
+          "width": 106.9375,
+          "height": 44
+        },
+        "body": {
+          "top": 72,
+          "bottom": 833,
+          "width": 368,
+          "height": 761,
+          "left": 11,
+          "right": 379
+        },
+        "scroll": {
+          "top": 563,
+          "height": 1324,
+          "client": 761
+        }
       }
     },
     {
@@ -5410,6 +5515,27 @@
         "top": 0,
         "height": 1471,
         "client": 637
+      },
+      "returnAfterFocus": {
+        "control": {
+          "x": 186.0625,
+          "y": 646.515625,
+          "width": 106.9375,
+          "height": 44
+        },
+        "body": {
+          "top": 72,
+          "bottom": 709,
+          "width": 298,
+          "height": 637,
+          "left": 11,
+          "right": 309
+        },
+        "scroll": {
+          "top": 834,
+          "height": 1471,
+          "client": 637
+        }
       }
     },
     {
@@ -5595,6 +5721,27 @@
         "top": 0,
         "height": 1026,
         "client": 291
+      },
+      "returnAfterFocus": {
+        "control": {
+          "x": 696.0625,
+          "y": 305.171875,
+          "width": 106.9375,
+          "height": 44
+        },
+        "body": {
+          "top": 82,
+          "bottom": 373,
+          "width": 810,
+          "height": 291,
+          "left": 17,
+          "right": 827
+        },
+        "scroll": {
+          "top": 735,
+          "height": 1026,
+          "client": 291
+        }
       }
     },
     {
@@ -6866,6 +7013,27 @@
         "top": 0,
         "height": 714,
         "client": 621
+      },
+      "returnAfterFocus": {
+        "control": {
+          "x": 903.0625,
+          "y": 635.265625,
+          "width": 106.9375,
+          "height": 44
+        },
+        "body": {
+          "top": 82,
+          "bottom": 703,
+          "width": 918,
+          "height": 621,
+          "left": 116,
+          "right": 1034
+        },
+        "scroll": {
+          "top": 93,
+          "height": 714,
+          "client": 621
+        }
       }
     },
     {
@@ -7009,6 +7177,27 @@
         "top": 0,
         "height": 714,
         "client": 714
+      },
+      "returnAfterFocus": {
+        "control": {
+          "x": 1048.0625,
+          "y": 821.625,
+          "width": 106.9375,
+          "height": 44
+        },
+        "body": {
+          "top": 175.359375,
+          "bottom": 889.625,
+          "width": 918,
+          "height": 714.265625,
+          "left": 261,
+          "right": 1179
+        },
+        "scroll": {
+          "top": 0,
+          "height": 714,
+          "client": 714
+        }
       }
     },
     {
@@ -7152,6 +7341,27 @@
         "top": 0,
         "height": 714,
         "client": 669
+      },
+      "returnAfterFocus": {
+        "control": {
+          "x": 840.0625,
+          "y": 687.265625,
+          "width": 106.9375,
+          "height": 44
+        },
+        "body": {
+          "top": 82,
+          "bottom": 751,
+          "width": 918,
+          "height": 669,
+          "left": 53,
+          "right": 971
+        },
+        "scroll": {
+          "top": 41,
+          "height": 714,
+          "client": 669
+        }
       }
     },
     {
@@ -7295,6 +7505,27 @@
         "top": 0,
         "height": 993,
         "client": 901
+      },
+      "returnAfterFocus": {
+        "control": {
+          "x": 620.0625,
+          "y": 914.640625,
+          "width": 106.9375,
+          "height": 44
+        },
+        "body": {
+          "top": 82,
+          "bottom": 983,
+          "width": 734,
+          "height": 901,
+          "left": 17,
+          "right": 751
+        },
+        "scroll": {
+          "top": 92,
+          "height": 993,
+          "client": 901
+        }
       }
     },
     {
@@ -7438,6 +7669,27 @@
         "top": 0,
         "height": 1358,
         "client": 761
+      },
+      "returnAfterFocus": {
+        "control": {
+          "x": 256.0625,
+          "y": 771.40625,
+          "width": 106.9375,
+          "height": 44
+        },
+        "body": {
+          "top": 72,
+          "bottom": 833,
+          "width": 368,
+          "height": 761,
+          "left": 11,
+          "right": 379
+        },
+        "scroll": {
+          "top": 597,
+          "height": 1358,
+          "client": 761
+        }
       }
     },
     {
@@ -7581,6 +7833,27 @@
         "top": 0,
         "height": 1541,
         "client": 637
+      },
+      "returnAfterFocus": {
+        "control": {
+          "x": 186.0625,
+          "y": 646.5625,
+          "width": 106.9375,
+          "height": 44
+        },
+        "body": {
+          "top": 72,
+          "bottom": 709,
+          "width": 298,
+          "height": 637,
+          "left": 11,
+          "right": 309
+        },
+        "scroll": {
+          "top": 904,
+          "height": 1541,
+          "client": 637
+        }
       }
     },
     {
@@ -7724,6 +7997,27 @@
         "top": 0,
         "height": 993,
         "client": 291
+      },
+      "returnAfterFocus": {
+        "control": {
+          "x": 696.0625,
+          "y": 304.640625,
+          "width": 106.9375,
+          "height": 44
+        },
+        "body": {
+          "top": 82,
+          "bottom": 373,
+          "width": 810,
+          "height": 291,
+          "left": 17,
+          "right": 827
+        },
+        "scroll": {
+          "top": 702,
+          "height": 993,
+          "client": 291
+        }
       }
     },
     {
@@ -7849,6 +8143,27 @@
         "top": 0,
         "height": 763,
         "client": 621
+      },
+      "returnAfterFocus": {
+        "control": {
+          "x": 903.0625,
+          "y": 634.953125,
+          "width": 106.9375,
+          "height": 44
+        },
+        "body": {
+          "top": 82,
+          "bottom": 703,
+          "width": 918,
+          "height": 621,
+          "left": 116,
+          "right": 1034
+        },
+        "scroll": {
+          "top": 142,
+          "height": 763,
+          "client": 621
+        }
       }
     },
     {
@@ -7974,6 +8289,27 @@
         "top": 0,
         "height": 763,
         "client": 763
+      },
+      "returnAfterFocus": {
+        "control": {
+          "x": 1048.0625,
+          "y": 845.96875,
+          "width": 106.9375,
+          "height": 44
+        },
+        "body": {
+          "top": 151.015625,
+          "bottom": 913.96875,
+          "width": 918,
+          "height": 762.953125,
+          "left": 261,
+          "right": 1179
+        },
+        "scroll": {
+          "top": 0,
+          "height": 763,
+          "client": 763
+        }
       }
     },
     {
@@ -8099,6 +8435,27 @@
         "top": 0,
         "height": 763,
         "client": 669
+      },
+      "returnAfterFocus": {
+        "control": {
+          "x": 840.0625,
+          "y": 682.953125,
+          "width": 106.9375,
+          "height": 44
+        },
+        "body": {
+          "top": 82,
+          "bottom": 751,
+          "width": 918,
+          "height": 669,
+          "left": 53,
+          "right": 971
+        },
+        "scroll": {
+          "top": 94,
+          "height": 763,
+          "client": 669
+        }
       }
     },
     {
@@ -8224,6 +8581,27 @@
         "top": 0,
         "height": 763,
         "client": 763
+      },
+      "returnAfterFocus": {
+        "control": {
+          "x": 620.0625,
+          "y": 845.96875,
+          "width": 106.9375,
+          "height": 44
+        },
+        "body": {
+          "top": 151.015625,
+          "bottom": 913.96875,
+          "width": 734,
+          "height": 762.953125,
+          "left": 17,
+          "right": 751
+        },
+        "scroll": {
+          "top": 0,
+          "height": 763,
+          "client": 763
+        }
       }
     },
     {
@@ -8349,6 +8727,27 @@
         "top": 0,
         "height": 1112,
         "client": 761
+      },
+      "returnAfterFocus": {
+        "control": {
+          "x": 256.0625,
+          "y": 770.921875,
+          "width": 106.9375,
+          "height": 44
+        },
+        "body": {
+          "top": 72,
+          "bottom": 833,
+          "width": 368,
+          "height": 761,
+          "left": 11,
+          "right": 379
+        },
+        "scroll": {
+          "top": 351,
+          "height": 1112,
+          "client": 761
+        }
       }
     },
     {
@@ -8474,6 +8873,27 @@
         "top": 0,
         "height": 1290,
         "client": 637
+      },
+      "returnAfterFocus": {
+        "control": {
+          "x": 186.0625,
+          "y": 646.671875,
+          "width": 106.9375,
+          "height": 44
+        },
+        "body": {
+          "top": 72,
+          "bottom": 709,
+          "width": 298,
+          "height": 637,
+          "left": 11,
+          "right": 309
+        },
+        "scroll": {
+          "top": 653,
+          "height": 1290,
+          "client": 637
+        }
       }
     },
     {
@@ -8599,124 +9019,32 @@
         "top": 0,
         "height": 763,
         "client": 291
+      },
+      "returnAfterFocus": {
+        "control": {
+          "x": 696.0625,
+          "y": 304.953125,
+          "width": 106.9375,
+          "height": 44
+        },
+        "body": {
+          "top": 82,
+          "bottom": 373,
+          "width": 810,
+          "height": 291,
+          "left": 17,
+          "right": 827
+        },
+        "scroll": {
+          "top": 472,
+          "height": 763,
+          "client": 291
+        }
       }
     }
   ],
   "errors": [],
-  "failures": [
-    {
-      "action": "how",
-      "width": 1024,
-      "height": 768,
-      "issues": [
-        "return control not reachable"
-      ]
-    },
-    {
-      "action": "how",
-      "width": 768,
-      "height": 1000,
-      "issues": [
-        "return control not reachable"
-      ]
-    },
-    {
-      "action": "how",
-      "width": 390,
-      "height": 844,
-      "issues": [
-        "return control not reachable"
-      ]
-    },
-    {
-      "action": "how",
-      "width": 320,
-      "height": 720,
-      "issues": [
-        "return control not reachable"
-      ]
-    },
-    {
-      "action": "how",
-      "width": 844,
-      "height": 390,
-      "issues": [
-        "return control not reachable"
-      ]
-    },
-    {
-      "action": "howItWorks",
-      "width": 1024,
-      "height": 768,
-      "issues": [
-        "return control not reachable"
-      ]
-    },
-    {
-      "action": "howItWorks",
-      "width": 768,
-      "height": 1000,
-      "issues": [
-        "return control not reachable"
-      ]
-    },
-    {
-      "action": "howItWorks",
-      "width": 390,
-      "height": 844,
-      "issues": [
-        "return control not reachable"
-      ]
-    },
-    {
-      "action": "howItWorks",
-      "width": 320,
-      "height": 720,
-      "issues": [
-        "return control not reachable"
-      ]
-    },
-    {
-      "action": "howItWorks",
-      "width": 844,
-      "height": 390,
-      "issues": [
-        "return control not reachable"
-      ]
-    },
-    {
-      "action": "breakawayStory",
-      "width": 1024,
-      "height": 768,
-      "issues": [
-        "return control not reachable"
-      ]
-    },
-    {
-      "action": "breakawayStory",
-      "width": 390,
-      "height": 844,
-      "issues": [
-        "return control not reachable"
-      ]
-    },
-    {
-      "action": "breakawayStory",
-      "width": 320,
-      "height": 720,
-      "issues": [
-        "return control not reachable"
-      ]
-    },
-    {
-      "action": "breakawayStory",
-      "width": 844,
-      "height": 390,
-      "issues": [
-        "return control not reachable"
-      ]
-    }
-  ],
+  "failures": [],
   "browser_focus_boundaries": [
     {
       "action": "how",
@@ -8732,6 +9060,10 @@
     },
     {
       "action": "howItWorks",
+      "tag": "BODY"
+    },
+    {
+      "action": "breakawayStory",
       "tag": "BODY"
     },
     {
