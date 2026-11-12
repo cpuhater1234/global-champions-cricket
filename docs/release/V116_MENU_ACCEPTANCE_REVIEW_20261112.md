@@ -1,6 +1,6 @@
 # v116 menu candidate review | 12 November 2026
 
-Status: assertion corrected and visually reviewed; full acceptance blocked by runner package-mirror DNS failure on two attempts. Candidate not approved or promoted.
+Status: full automated acceptance passed in run 43141508809 after correcting the runner's package mirror. This verifies the checksum-pinned menu candidate; it does not promote the artifact or resolve the outstanding palette/source-ownership findings.
 
 ## Candidate identity
 
@@ -52,3 +52,9 @@ Run 43032675898 attempts 1 and 2 both failed in `Install native Chromium and tes
 The actual assertion-report payload from the earlier failed run was independently evaluated locally: the old array-to-integer comparison fails, and the corrected length comparison passes with all 18 states, empty errors/failures and the exact candidate checksum. This confirms the assertion correction but does not substitute for the full rerun.
 
 Earlier run 43008658075 passed 19 seasons, 266 user regular-season matches and 16,564 assertions, plus native persistence and two-tab recovery. These are prior-run results, not a new full acceptance pass.
+
+## Successful full acceptance after mirror correction
+
+Run https://github.com/cpuhater1234/global-champions-cricket/actions/runs/43141508809 completed successfully on commit `03e41c9af9d052c0bd73edf863a4a74d7b342cad`. All test and verifier steps passed, including the exact candidate build, signing at five widths, 19-season career harness, native gameplay/save/reload/Continue, responsive new careers, two-tab stale-save recovery, menu layout and final saved-career responsive rendering. No acceptance gate was removed.
+
+The sole workflow change replaces the failing Azure Ubuntu archive address in the runner mirror list with the official Ubuntu archive before the existing dependency installation. The candidate remains exactly `943643a36730f9db6630437b15111b5f82041b540998f793230aab1745be21e3`, 6,641,178 bytes. Earlier failed-run descriptions above are historical and are superseded for automated acceptance by this result. The navy palette and maintained-source parity limitations remain open.
