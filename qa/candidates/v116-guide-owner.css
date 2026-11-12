@@ -74,9 +74,12 @@
 #g8dialog#g8dialog#g8dialog .g8guidefooter nav{display:flex!important;align-items:center!important;gap:4px!important;width:auto!important;min-width:0!important}
 #g8dialog#g8dialog#g8dialog .g8guidefooter .g8button{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:7px!important;width:auto!important;min-width:0!important;min-height:44px!important;margin:0!important;padding:8px 10px!important;border:1px solid transparent!important;border-radius:6px!important;background:transparent!important;color:var(--guide-muted)!important;box-shadow:none!important;transform:none!important;font:500 13px/1.4 Inter,system-ui,sans-serif!important;letter-spacing:normal!important;white-space:normal!important;text-align:center!important;transition:background 120ms ease,color 120ms ease!important}
 #g8dialog#g8dialog#g8dialog .g8guidefooter .g8button>.g8icon{width:18px!important;height:18px!important;flex:0 0 18px!important}
-#g8dialog#g8dialog#g8dialog .g8guidefooter .g8button:hover:enabled{background:#242d35!important;color:var(--guide-text)!important}
+#g8dialog#g8dialog#g8dialog .g8guidefooter nav .g8button{background:transparent!important;border-color:transparent!important;box-shadow:none!important}
+#g8dialog#g8dialog#g8dialog .g8guidefooter nav .g8button:hover:enabled{background:#242d35!important;color:var(--guide-text)!important}
 #g8dialog#g8dialog#g8dialog .g8guidefooter .g8guidecurrent:disabled{opacity:1!important;background:#252f37!important;color:var(--guide-accent)!important;border-color:transparent!important;box-shadow:none!important;cursor:default!important}
-#g8dialog#g8dialog#g8dialog .g8guidefooter>.g8primary{flex:0 0 auto!important;align-self:center!important;min-width:0!important;border-color:#46535f!important;color:var(--guide-text)!important;background:transparent!important;font-weight:600!important}
+#g8dialog#g8dialog#g8dialog .g8guidefooter>.g8button.g8primary{flex:0 0 auto!important;align-self:center!important;min-width:0!important;border:1px solid #46535f!important;border-radius:6px!important;color:var(--guide-text)!important;background:transparent!important;box-shadow:none!important;transform:none!important;font-weight:600!important}
+#g8dialog#g8dialog#g8dialog .g8guidefooter>.g8button.g8primary:hover:enabled{background:#242d35!important;color:var(--guide-text)!important;border-color:#60717e!important;box-shadow:none!important;transform:none!important}
+#g8dialog#g8dialog#g8dialog .g8guidefooter .g8button:focus-visible,#g8dialog#g8dialog#g8dialog .g8guidefooter>.g8button.g8primary:focus-visible{outline:2px solid var(--guide-accent)!important;outline-offset:2px!important;box-shadow:none!important}
 #g8dialog#g8dialog#g8dialog .g8guide :is(button,summary):focus-visible{outline:2px solid var(--guide-accent)!important;outline-offset:2px!important}
 @media(max-width:859px){
  #g8dialog#g8dialog#g8dialog .g8guidegrid{grid-template-columns:minmax(0,1fr)!important}
