@@ -26,7 +26,7 @@ const {chromium}=require('playwright'),fs=require('fs'),path=require('path'),{pa
    tabReachable:draw?[...draw.querySelectorAll('button')].filter(e=>vis(e)&&!e.disabled&&!e.closest('[inert]')&&e.tabIndex>=0).map(e=>({text:e.textContent.trim(),group:e.closest('.g8drawpace')?'pace':'next'})):[],
    gates:draw?{paceInert:pace.inert,paceHidden:pace.getAttribute('aria-hidden'),nextInert:next.inert,nextHidden:next.getAttribute('aria-hidden'),nextDisabled:n.disabled,paceDisabled:[...pace.querySelectorAll('button')].map(e=>e.disabled)}:null,
    dialog:dialog?{text:dialog.textContent.replace(/\s+/g,' ').trim(),buttons:[...dialog.querySelectorAll('button')].map(e=>[e.textContent.trim(),e.dataset.action,e.dataset.args,e.disabled])}:null,
-   decisions:panel?{text:panel.textContent.replace(/\s+/g,' ').trim(),...rect(panel),buttons:[...panel.querySelectorAll('button')].filter(vis).map(e=>({text:e.textContent.trim(),action:e.dataset.action,args:e.dataset.args,disabled:e.disabled,...rect(e)}))}:null};
+   decisions:panel?{rows:[...panel.querySelectorAll('.g8decisionline')].filter(vis).map(e=>({...rect(e),children:[...e.children].filter(vis).map(c=>({...rect(c),text:c.textContent.trim()}))})),text:panel.textContent.replace(/\s+/g,' ').trim(),...rect(panel),buttons:[...panel.querySelectorAll('button')].filter(vis).map(e=>({text:e.textContent.trim(),action:e.dataset.action,args:e.dataset.args,disabled:e.disabled,...rect(e)}))}:null};
  });
  const capture=async(name)=>{
   for(const [width,height] of sizes){await page.setViewportSize({width,height});await page.evaluate(()=>document.fonts.ready);await page.evaluate(()=>scrollTo(0,0));
@@ -47,7 +47,7 @@ const {chromium}=require('playwright'),fs=require('fs'),path=require('path'),{pa
    if(s.dialog){const k=name+'-dialog-'+width;if(label==='before')parity[k]=s.dialog;else check(JSON.stringify(parity[k])===JSON.stringify(s.dialog),name+' management dialog content/actions parity',{width});}
    if(s.decisions){const key=name+'-'+width,content={text:s.decisions.text,buttons:s.decisions.buttons.map(b=>[b.text,b.action,b.args,b.disabled])};
     if(label==='before')parity[key]=content;else check(JSON.stringify(parity[key])===JSON.stringify(content),name+' decision content/actions parity',{width});
-    if(label==='after')for(const b of s.decisions.buttons)check(b.height>=43.5,name+' decision 44px button',{width,b});
+    if(label==='after'){for(const b of s.decisions.buttons)check(b.height>=43.5,name+' decision 44px button',{width,b});for(const row of s.decisions.rows)for(const child of row.children)check(child.x>=row.x-2&&child.x+child.width<=row.x+row.width+2&&child.y>=row.y-2&&child.y+child.height<=row.y+row.height+2,name+' decision row content bounds',{width,row,child});}
    }
    if(s.cards.length){const eligible=await page.locator('.g8drawcontrols button').evaluateAll(es=>es.findIndex(e=>!e.disabled&&!e.closest('[inert]')&&getComputedStyle(e).visibility!=='hidden'));if(eligible>=0){await page.locator('.g8drawcontrols button').nth(eligible).focus();await page.keyboard.press('Tab');const focus=await page.evaluate(()=>{const e=document.activeElement;return {inDraw:!!e.closest('.g8drawcontrols'),inert:!!e.closest('[inert]'),group:e.closest('.g8drawpace')?'pace':e.closest('.g8drawnext')?'next':null};});check(!focus.inert&&(!focus.inDraw||focus.group===(s.reveal.count===8?'next':'pace')),name+' real Tab respects gate',{width,focus});}}
    await page.screenshot({path:path.join(out,`${label}-${name}-${width}x${height}.png`),fullPage:true});
@@ -86,12 +86,14 @@ const {chromium}=require('playwright'),fs=require('fs'),path=require('path'),{pa
    await section('fresh legal reveal journey',async()=>{ctx=await load(file);try{await call('play');await call('world');await draw('club-reveal',true);await call('clubs');await call('club',0);await call('confirmClub');await call('signingSkip');await call('draftDraw');await draw('foundation-order');}finally{await ctx.close();}});
    const career=process.env.GCC8_BROWSER_CAREER_DIR;if(!career){omissions.push({label,scope:'annual/decisions',reason:'GCC8_BROWSER_CAREER_DIR missing'});continue;}
    await section('actual checkpoint decisions and annual draw',async()=>{ctx=await load(file,fs.readFileSync(path.join(career,'checkpoint-2009.json'),'utf8'));try{
-    await call('continue');await call('offseason');await decisions('offseason-decisions');
+    await call('continue');
+    if(await page.evaluate(()=>!!GCC8.G.state.finals?.gf)){await page.evaluate(()=>{GCC8.G.state.finals.stage='ready';GCC8.ui.view='finals';GCC8.render(true);});await decisions('historical-finals-ready-decisions');await page.evaluate(()=>{GCC8.G.state.finals.stage='done';GCC8.ui.view='review';GCC8.render(true);});}else omissions.push({label,scope:'historical finals',reason:'Actual checkpoint has no completed grand final'});
+    await call('offseason');await decisions('offseason-decisions');
     await call('cpuMarket');await call('annualDraw');await draw('annual-order');await finishAnnual();
    }finally{await ctx.close();}});
   }
  }catch(e){failures.push({label,scope:'runner',error:String(e.stack||e)});}finally{
-  if(browser)await browser.close();const report={status:failures.length||errors.length?'FAIL':'PASS',baseline_sha256:hash(baseline),candidate_sha256:hash(candidate),scope:'Real disposable native journeys; deterministic fresh random seed; no user save',states,failures,errors,omissions};
+  if(browser)await browser.close();const report={status:failures.length||errors.length?'FAIL':'PASS',baseline_sha256:hash(baseline),candidate_sha256:hash(candidate),scope:'Real disposable native journeys; deterministic fresh random seed; historical finals ready stage explicitly reconstructed from actual completed finalists/results; no user save',states,failures,errors,omissions};
   fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({...report,states:states.length},null,2));if(report.status!=='PASS')process.exitCode=1;
  }
 })().catch(e=>{console.error(e);process.exitCode=1;});

@@ -61,7 +61,7 @@ jobs:
           import json,shutil
           from pathlib import Path
           from PIL import Image
-          src=Path('qa/results/reveal-decisions-native'); dst=Path('docs/release/visual-review/reveal-decisions')
+          src=Path('qa/results/reveal-decisions-native'); dst=Path('docs/release/visual-review/reveal-decisions/${{ github.run_id }}')
           dst.mkdir(parents=True,exist_ok=True)
           if (src/'report.json').exists():
               shutil.copyfile(src/'report.json',dst/'report.json')
