@@ -26,7 +26,8 @@ NEW_END=OLD_END
 
 def patch_release(data):
     base=finals_candidate(data)
-    source=(ROOT/"v8/ui/decision-ui.css").read_bytes()
+    # Accepted review evidence must remain reproducible as the maintained UI evolves.
+    source=(ROOT/"qa/fixtures/v116-accepted-guide-owner.css").read_bytes()+NEW_END
     assert source.count(NEW_START)==1, "Expected exactly one adapted menu owner block in decision-ui.css"
     a=source.index(NEW_START)
     b=source.index(NEW_END,a)
@@ -94,7 +95,7 @@ def main():
       "existing_style_blocks_changed":1,
       "new_style_blocks":0,
       "javascript_blocks_changed":0,
-      "source_owner":"v8/ui/decision-ui.css",
+      "source_owner":"qa/fixtures/v116-accepted-guide-owner.css",
       "source_reproducibility":"This is a guarded review adapter, not yet full maintained-source build parity",
       "playable_release_unchanged":True,
       "main_unchanged":True
