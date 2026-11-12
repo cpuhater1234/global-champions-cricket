@@ -63,7 +63,7 @@ const {createHash}=require('crypto');
      if(issues.length)failures.push({action,width,height,issues});
     }
     await page.screenshot({path:path.join(out,`${label}-${action}-${width}x${height}.png`)});
-    // Last control must be reachable by ordinary keyboard focus scrolling.
+    // Last control must be reachable through focus-induced scrolling.
     const last=page.locator('#g8dialog .g8guidefooter>button');
     await last.focus();
     const bottom=await inspect(page);
@@ -86,8 +86,21 @@ const {createHash}=require('crypto');
      }
     }
    }
+   if(label==='after'){
+    await page.setViewportSize({width:390,height:844});
+    await page.locator('#g8dialog .g8dialogclose').focus();
+    let reachedReturn=false;
+    for(let i=0;i<14;i++){
+     await page.keyboard.press('Tab');
+     const focus=await page.evaluate(()=>({inside:!!document.activeElement?.closest('#g8dialog'),isReturn:document.activeElement?.matches('.g8guidefooter>.g8primary')}));
+     if(!focus.inside)failures.push({action,issues:['keyboard focus escaped the modal']});
+     reachedReturn=reachedReturn||focus.isReturn;
+    }
+    if(!reachedReturn)failures.push({action,issues:['return action missing from Tab order']});
+   }
    await page.keyboard.press('Escape');
    if(await page.locator('#g8dialog').evaluate(e=>e.open))throw Error('Escape did not close '+action);
+   if(label==='after'&&await page.locator('#g8dialog').evaluate(e=>getComputedStyle(e).display!=='none'&&e.getClientRects().length>0))failures.push({action,issues:['closed dialog still rendered']});
   }
   await page.close();
  }
