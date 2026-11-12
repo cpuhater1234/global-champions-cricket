@@ -47,7 +47,7 @@ jobs:
           from hashlib import sha256
           import json
           r=json.loads(Path('qa/results/menu-surgical/build.json').read_text())
-          assert r['candidate_sha256']=='064df606067b3a406c8ea7414391ebaa385121667149f7af50328ad1b320fbd4',r
+          assert r['candidate_sha256']=='79a2fbfe965453ad0ef04d238ee7047346fb38e537deeec47d91cfcbebf51c4a',r
           assert r['existing_style_blocks_changed']==2 and r['javascript_blocks_changed']==0 and r['new_style_blocks']==0,r
           assert sha256(Path('qa/results/menu-surgical/baseline.html').read_bytes()).hexdigest()=='943643a36730f9db6630437b15111b5f82041b540998f793230aab1745be21e3'
           PY
