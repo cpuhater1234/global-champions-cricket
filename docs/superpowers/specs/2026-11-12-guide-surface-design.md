@@ -22,10 +22,13 @@ guide owner in place with one complete surface owner. Generic inherited styling
 remains available for other dialogs. A new global theme would risk every strong
 screen; another appended guide override would repeat the ownership mistake.
 
-The proposed owner is currently staged at qa/candidates/v116-guide-owner.css.
-Automatic approval review rejected writing the shared decision-ui.css file before
-native validation. The remote shared source remains exactly blob
-b78207f81da4db1b1cc20ef7472e95b87998966f. No workflow promotes that source file.
+The owner was initially staged at qa/candidates/v116-guide-owner.css after automatic
+approval review blocked shared-source promotion before native validation. Native
+run 43154341321 then passed all 54 paired states with non-guide fixture parity.
+Following that evidence, promotion of the guide region only was approved as commit
+6b8d925f2e75dea49fcdae6a470b9aacfdb72d32. The authoritative owner is now
+v8/ui/decision-ui.css; the builder proves it equals the reviewed snapshot. Full
+maintained-source build parity remains a separate unverified contract.
 
 ## Candidate design
 
