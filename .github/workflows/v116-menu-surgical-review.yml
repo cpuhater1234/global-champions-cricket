@@ -1,0 +1,113 @@
+name: GCC surgical guide ownership review
+
+on:
+  push:
+    branches: [work/v116-candidate-acceptance]
+    paths:
+      - '.github/workflows/v116-menu-surgical-review.yml'
+      - 'qa/v116_menu_surface_candidate.py'
+      - 'qa/v116_menu_surface_audit.cjs'
+      - 'qa/candidates/v116-guide-owner.css'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gcc-v116-surgical-guide-review
+  cancel-in-progress: true
+
+jobs:
+  surgical-guide:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install native browser dependencies
+        run: |
+          if [ -f /etc/apt/apt-mirrors.txt ]; then
+            sudo sed -i 's|http://azure.archive.ubuntu.com/ubuntu|https://archive.ubuntu.com/ubuntu|g; s|https://azure.archive.ubuntu.com/ubuntu|https://archive.ubuntu.com/ubuntu|g' /etc/apt/apt-mirrors.txt
+          fi
+          python -m pip install --disable-pip-version-check playwright pillow
+          python -m playwright install --with-deps chromium
+          npm install --no-save --no-package-lock playwright
+      - name: Build unchanged baseline and surgical candidate
+        run: |
+          python -m py_compile qa/v116_menu_surface_candidate.py
+          node --check qa/v116_menu_surface_audit.cjs
+          python qa/v116_menu_review_candidate.py --output qa/results/menu-surgical/baseline.html
+          python qa/v116_menu_surface_candidate.py --output qa/results/menu-surgical/candidate.html --report qa/results/menu-surgical/build.json
+          python - <<'PY'
+          from pathlib import Path
+          from hashlib import sha256
+          import json
+          r=json.loads(Path('qa/results/menu-surgical/build.json').read_text())
+          assert r['candidate_sha256']=='65385848046c11807ac3ee20617fdc679310d41148087e8d9aae6469b32a2d70',r
+          assert r['existing_style_blocks_changed']==2 and r['javascript_blocks_changed']==0 and r['new_style_blocks']==0,r
+          assert sha256(Path('qa/results/menu-surgical/baseline.html').read_bytes()).hexdigest()=='943643a36730f9db6630437b15111b5f82041b540998f793230aab1745be21e3'
+          PY
+      - name: Compare actual guide journeys and non-guide cascade fixtures
+        id: audit
+        continue-on-error: true
+        env:
+          GCC8_BASELINE_BUILD: qa/results/menu-surgical/baseline.html
+          GCC8_TEST_BUILD: qa/results/menu-surgical/candidate.html
+          GCC8_MENU_SCREENSHOT_DIR: qa/results/menu-surgical/captures
+        run: |
+          GCC8_CHROMIUM="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')" node qa/v116_menu_surface_audit.cjs
+      - name: Preserve bounded before and after evidence
+        if: always()
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image,ImageDraw
+          import shutil
+          src=Path('qa/results/menu-surgical')
+          target=Path('docs/release/visual-review/surgical-menu')
+          target.mkdir(parents=True,exist_ok=True)
+          for f in [src/'build.json',src/'captures/report.json']:
+              if f.is_file():
+                  shutil.copyfile(f,target/f.name)
+                  print(f.name,flush=True)
+                  print(f.read_text(),flush=True)
+          for name,shot in [('desktop','how-1150x720'),('rules','rule-1-1150'),('mobile','how-390x844')]:
+              before=src/'captures'/f'before-{shot}.png'
+              after=src/'captures'/f'after-{shot}.png'
+              if not before.is_file() or not after.is_file(): continue
+              a=Image.open(before).convert('RGB');b=Image.open(after).convert('RGB')
+              canvas=Image.new('RGB',(a.width+b.width,max(a.height,b.height)+32),'#11151a')
+              canvas.paste(a,(0,32));canvas.paste(b,(a.width,32))
+              draw=ImageDraw.Draw(canvas)
+              draw.text((12,10),'BEFORE: rejected accepted baseline',fill='white')
+              draw.text((a.width+12,10),'AFTER: surgical owner correction | REVIEW ONLY',fill='white')
+              canvas.save(target/f'comparison-{name}.png',optimize=True)
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/release/visual-review/surgical-menu
+          git diff --cached --check
+          if ! git diff --cached --quiet; then
+            git commit -m "QA: preserve bounded surgical guide comparison evidence"
+            git pull --rebase origin work/v116-candidate-acceptance
+            git push origin HEAD:refs/heads/work/v116-candidate-acceptance
+          fi
+      - name: Enforce native audit outcome
+        if: always()
+        env:
+          AUDIT_OUTCOME: ${{ steps.audit.outcome }}
+        run: |
+          test "$AUDIT_OUTCOME" = success
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('qa/results/menu-surgical/captures/report.json').read_text())
+          assert r['status']=='PASS' and not r['failures'] and not r['errors'],r
+          assert r['non_guide_fixture_parity'] is True,r
+          assert len(r['states'])==54,len(r['states'])
+          print('PASS: 54 paired native guide states; no layout/script errors; non-guide cascade fixtures unchanged')
+          PY
