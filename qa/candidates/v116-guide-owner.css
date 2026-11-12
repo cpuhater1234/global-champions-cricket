@@ -92,11 +92,12 @@
  #g8dialog#g8dialog#g8dialog .g8guideintro>h3{font-size:22px!important}
  #g8dialog#g8dialog#g8dialog .g8guiderules .g8rulegrid>.g8guidecard{grid-template-columns:minmax(0,1fr)!important;gap:8px!important}
  #g8dialog#g8dialog#g8dialog .g8guidefooter{flex-direction:column!important;gap:10px!important}
- #g8dialog#g8dialog#g8dialog .g8guidefooter nav{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;width:100%!important;gap:2px!important}
- #g8dialog#g8dialog#g8dialog .g8guidefooter nav .g8button{flex-direction:column!important;gap:4px!important;padding:8px 3px!important;font-size:12px!important}
+ #g8dialog#g8dialog#g8dialog .g8guidefooter nav{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;width:100%!important;gap:2px!important;align-items:stretch!important}
+ #g8dialog#g8dialog#g8dialog .g8guidefooter nav .g8button{align-self:stretch!important;flex-direction:row!important;gap:4px!important;padding:8px 3px!important;font-size:12px!important}
+ #g8dialog#g8dialog#g8dialog .g8guidefooter nav .g8button>.g8icon{display:none!important}
  #g8dialog#g8dialog#g8dialog .g8guidefooter>.g8primary{align-self:flex-end!important}
 }
-@media(prefers-reduced-motion:reduce){#g8dialog#g8dialog#g8dialog .g8guide .g8button{transition:none!important}}
+@media(prefers-reduced-motion:reduce){#g8dialog#g8dialog#g8dialog .g8guide .g8button,#g8dialog#g8dialog#g8dialog .g8guidefooter .g8button{transition:none!important}}
 
 #g8dialog[data-prompt=prepare] .g8previewvenue>.g8eyebrow{justify-content:flex-start!important;text-align:left!important}
 /* Archive scorebooks: four readable columns, neutral rows and a stable name edge. */
