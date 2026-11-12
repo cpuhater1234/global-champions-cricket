@@ -28,12 +28,12 @@ let activeBrowser;
   return {viewport:{width:innerWidth,height:innerHeight},dialog:rect(d),head:rect(h),body:rect(b),
    bodyOverflow:getComputedStyle(b).overflowY,dialogOverflow:getComputedStyle(d).overflowY,
    background:getComputedStyle(d).backgroundColor,title:text(h.querySelector('h2')),
-   headings:[...g.querySelectorAll('h3')].map(text),footer:rect(g.querySelector('.g8guidefooter')),
+   headings:[...g.querySelectorAll('h3')].map(text),footer:rect(b.querySelector('.g8guidefooter')),
    guideColumns:columns(g.querySelector('.g8guidegrid')),ruleColumns:columns(g.querySelector('.g8rulegrid')),
    hasGrid:!!g.querySelector('.g8guidegrid'),hasRules:!!g.querySelector('.g8rulegrid'),
    documentOverflow:document.documentElement.scrollWidth>innerWidth+1,
    dialogOverflowX:d.scrollWidth>d.clientWidth+1,
-   buttons:[...g.querySelectorAll('button')].map(e=>({text:e.textContent.trim(),...rect(e)})),
+   buttons:[...b.querySelectorAll('.g8guidefooter button')].map(e=>({text:e.textContent.trim(),...rect(e)})),
    headingOutsideBody:[...g.querySelectorAll('h3')].filter(e=>{const r=e.getBoundingClientRect();return r.width>0&&r.height>0&&(r.left<b.getBoundingClientRect().left-1||r.right>b.getBoundingClientRect().right+1)}).length,
    scroll:{top:b.scrollTop,height:b.scrollHeight,client:b.clientHeight},
   };
@@ -51,6 +51,7 @@ let activeBrowser;
    for(const [width,height] of [[1150,720],[1440,1000],[1024,768],[768,1000],[390,844],[320,720],[844,390]]){
     console.log('CAPTURE',label,action,width,height);
     await page.setViewportSize({width,height});
+    await page.locator('#g8dialog').evaluate(e=>e.scrollTop=0);
     await page.locator('#g8dialog .g8modalbody').evaluate(e=>e.scrollTop=0);
     const state={label,action,...await inspect(page)};states.push(state);
     if(label==='after'){
@@ -80,11 +81,13 @@ let activeBrowser;
      await page.setViewportSize({width,height});
      const summaries=page.locator('#g8dialog .g8guiderules details>summary');
      for(let i=0;i<await summaries.count();i++){
+      console.log('EXPAND',label,width,i+1);
       await summaries.nth(i).click();
       await page.locator('#g8dialog .g8modalbody').evaluate(e=>e.scrollTop=e.scrollHeight);
       const state={label,action,expanded:i,width,height,...await inspect(page)};states.push(state);
       if(label==='after'&&(state.documentOverflow||state.dialogOverflowX||state.body.top<state.head.bottom-1))failures.push({action,width,expanded:i,issues:['expanded rule containment']});
       await page.screenshot({path:path.join(out,`${label}-rule-${i+1}-${width}.png`)});
+      console.log('COLLAPSE',label,width,i+1);
       await summaries.nth(i).click();
      }
     }
