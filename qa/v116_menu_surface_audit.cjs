@@ -66,6 +66,8 @@ let activeBrowser;
      if(width>650&&state.footer.height>76)issues.push('desktop footer too tall');
      const allowedFills=['rgba(0, 0, 0, 0)','rgb(36, 45, 53)','rgb(37, 47, 55)'];
      if(state.buttons.some(b=>b.image!=='none'||b.shadow!=='none'||!allowedFills.includes(b.background)))issues.push('footer inherited an unowned button skin');
+     const navHeights=state.buttons.slice(0,3).map(b=>b.height);
+     if(Math.max(...navHeights)-Math.min(...navHeights)>1)issues.push('guide navigation control heights differ');
      if(issues.length)failures.push({action,width,height,issues});
     }
     await page.screenshot({path:path.join(out,`${label}-${action}-${width}x${height}.png`)});
