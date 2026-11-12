@@ -24,10 +24,12 @@ def patch_release(data):
     guide=owner[0]; old=guide.group(3)
     a=old.index(GUIDE_START);b=old.index(GUIDE_END,a)
     assert old[a:b].count(PREPARE)==1
-    source=(ROOT/'qa/candidates/v116-guide-owner.css').read_bytes()
+    source=(ROOT/'v8/ui/decision-ui.css').read_bytes()
     start=source.index(b'/* GCC guide reference surface.')
     end=source.index(GUIDE_END,start)
     css=source[start:end]
+    reviewed=(ROOT/'qa/candidates/v116-guide-owner.css').read_bytes()
+    assert css==reviewed[:reviewed.index(GUIDE_END)], 'Maintained guide owner differs from reviewed bytes'
     assert css.count(PREPARE)==1
     css=css.replace(PREPARE,b'')
     assert css.count(b'/* GCC guide reference surface.')==1
@@ -49,8 +51,8 @@ def patch_release(data):
     assert all(x.group(0)==y.group(0) for x,y in zip(blocks,after) if x.group(1).lower()==b'script')
     assert result.count(GUIDE_START)==0
     assert result.count(b'/* GCC guide reference surface.')==1
-    return result,dict(base_sha256=BASE_SHA,guide_owner='qa/candidates/v116-guide-owner.css',
-                       proposed_source_owner='v8/ui/decision-ui.css',promoted_to_maintained_source=False,
+    return result,dict(base_sha256=BASE_SHA,guide_owner='v8/ui/decision-ui.css',
+                       reviewed_owner_fixture='qa/candidates/v116-guide-owner.css',promoted_to_maintained_source=True,
                        late_dialog_selector_exclusions=n,existing_style_blocks_changed=2,
                        new_style_blocks=0,javascript_blocks_changed=0)
 
