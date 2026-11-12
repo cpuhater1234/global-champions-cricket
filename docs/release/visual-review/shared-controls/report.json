@@ -21515,7 +21515,7 @@
           "disabled": false,
           "selected": null,
           "x": 98.578125,
-          "y": 1087.3125,
+          "y": 1085.3125,
           "width": 189.375,
           "height": 44,
           "fontFamily": "\"Barlow Condensed\", Oswald, \"Roboto Condensed\", \"Arial Narrow\", Impact, \"Arial Black\", sans-serif",
@@ -64271,26 +64271,7 @@
       }
     }
   ],
-  "failures": [
-    {
-      "label": "before",
-      "scope": "trade Review disabled until assets chosen",
-      "detail": {
-        "text": "Review trade",
-        "disabled": true,
-        "opacity": "1"
-      }
-    },
-    {
-      "label": "after",
-      "scope": "trade Review disabled until assets chosen",
-      "detail": {
-        "text": "Review trade",
-        "disabled": true,
-        "opacity": "1"
-      }
-    }
-  ],
+  "failures": [],
   "errors": [],
   "omissions": [
     {
@@ -64325,6 +64306,6 @@
     }
   ],
   "scope": "Real game DOM and controller actions in disposable browser contexts. Test-only deterministic Math.random gives paired home photography. Generated completed-2009 checkpoint optionally progresses legally through the next annual draft; no live user data.",
-  "status": "FAIL",
+  "status": "PASS",
   "guide_computed_style_parity": true
 }
