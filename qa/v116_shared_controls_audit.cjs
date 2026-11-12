@@ -8,7 +8,7 @@ const fs=require('fs'),path=require('path'),{pathToFileURL}=require('url'),{crea
  const sizes=[[1440,900],[1280,720],[390,844]],guides={},states=[],failures=[],errors=[],omissions=[];
  const hash=file=>createHash('sha256').update(fs.readFileSync(file)).digest('hex');
  const report={baseline_sha256:hash(baseline),candidate_sha256:hash(candidate),states,failures,errors,omissions,
-  scope:'Real game DOM and controller actions in disposable browser contexts. Generated completed-2009 checkpoint optionally progresses legally through the next annual draft; no live user data.'};
+  scope:'Real game DOM and controller actions in disposable browser contexts. Test-only deterministic Math.random gives paired home photography. Generated completed-2009 checkpoint optionally progresses legally through the next annual draft; no live user data.'};
  let browser,page,label;
  const check=(ok,scope,detail)=>{if(!ok)failures.push({label,scope,detail});};
  const call=async(action,...args)=>{const r=await page.evaluate(([action,args])=>({ok:GCC8.dispatch(action,args),feedback:document.querySelector('#g8feedback')?.textContent}),[action,args]);if(!r.ok)throw Error(action+': '+r.feedback);};
@@ -39,21 +39,25 @@ const fs=require('fs'),path=require('path'),{pathToFileURL}=require('url'),{crea
   await page.screenshot({path:path.join(out,`${label}-${name}-${width}x${height}.png`),fullPage:true});
  }await page.setViewportSize({width:1440,height:900});};
  const probeInteractions=async(name)=>{
+  // Native dialogs make the page behind them inert, even though Playwright's
+  // :visible still matches those background controls. Scope to the active UI.
+  const scope=await page.locator('#g8dialog[open]').count()?'#g8dialog[open]':'#g8app';
   for(const kind of ['g8primary','g8ghost']){
-   const b=page.locator(`.g8button.${kind}:visible:not(:disabled)`).first();if(!await b.count()){omissions.push({label,scope:name+' '+kind,reason:'No enabled visible instance'});continue;}
+   const b=page.locator(`${scope} .g8button.${kind}:visible:not(:disabled)`).first();if(!await b.count()){omissions.push({label,scope:name+' '+kind,reason:'No enabled visible instance in the active UI'});continue;}
    await b.hover();let style=await b.evaluate(e=>({text:e.textContent.trim(),transform:getComputedStyle(e).transform,shadow:getComputedStyle(e).boxShadow}));states.push({label,name:name+' hover '+kind,...style});
    if(label==='after')check(style.transform==='none',name+' stationary hover',style);
    const box=await b.boundingBox();await page.mouse.move(box.x+box.width/2,box.y+box.height/2);await page.mouse.down();
    try{style=await b.evaluate(e=>({text:e.textContent.trim(),transform:getComputedStyle(e).transform}));if(label==='after')check(style.transform==='none',name+' stationary active',style);states.push({label,name:name+' active '+kind,...style});}
    finally{await page.mouse.move(0,0);await page.mouse.up();}
   }
-  const first=page.locator('.g8button:visible:not(:disabled)').first();await first.focus();await page.keyboard.press('Tab');
+  const selects=page.locator(`${scope} select:visible`),first=await selects.count()?selects.first():page.locator(`${scope} .g8button:visible:not(:disabled)`).first();await first.focus();await page.keyboard.press('Tab');
   const focus=await page.evaluate(()=>{const e=document.activeElement,s=getComputedStyle(e);return {tag:e.tagName,text:e.textContent.trim().slice(0,100),outlineStyle:s.outlineStyle,outlineWidth:s.outlineWidth,disabled:e.disabled,insideModal:!!e.closest('#g8dialog')};});states.push({label,name:name+' keyboard Tab',focus});
   if(label==='after')check(!focus.disabled&&focus.outlineStyle!=='none'&&parseFloat(focus.outlineWidth)>=2,name+' visible keyboard focus',focus);
  };
  const load=async(file,raw)=>{
   const context=await browser.newContext({viewport:{width:1440,height:900},reducedMotion:'reduce'});page=await context.newPage();page.setDefaultTimeout(12000);
   page.on('pageerror',e=>errors.push({label,message:e.message}));await page.route(/^https?:/,r=>r.abort());
+  await page.addInitScript(()=>{let testSeed=101;Math.random=()=>{testSeed=(Math.imul(1664525,testSeed)+1013904223)>>>0;return testSeed/4294967296;};});
   if(raw)await page.addInitScript(raw=>localStorage.setItem('gcc_dynasty_v8',raw),raw);
   await page.goto(pathToFileURL(path.resolve(file)).href,{waitUntil:'domcontentloaded'});await page.waitForFunction(()=>!!window.GCC8?.dispatch);return context;
  };
@@ -62,7 +66,7 @@ const fs=require('fs'),path=require('path'),{pathToFileURL}=require('url'),{crea
   for(const pair of [['before',baseline],['after',candidate]]){label=pair[0];const file=pair[1];let context;
    try{
     context=await load(file);await section('home',async()=>{await capture('home');await probeInteractions('home');
-     const disabled=await page.locator('.g8button:disabled:visible').evaluateAll(es=>es.map(e=>({text:e.textContent.trim(),disabled:e.disabled,opacity:getComputedStyle(e).opacity})));states.push({label,name:'home disabled controls',disabled});check(disabled.length>0,'home disabled coverage','Fresh career should expose disabled Continue');});
+     const disabled=await page.locator('#g8app .g8button:disabled:visible').evaluateAll(es=>es.map(e=>({text:e.textContent.trim(),disabled:e.disabled,opacity:getComputedStyle(e).opacity})));states.push({label,name:'home disabled controls',disabled});if(!disabled.length)omissions.push({label,scope:'fresh home disabled control',reason:'Fresh home intentionally omits Continue when there is no saved career; disabled trade Review is tested below.'});});
     for(const action of ['how','howItWorks','breakawayStory'])await section(action,async()=>{
      await call(action);await capture(action,{guide:true});
      await page.locator('#g8dialog .g8dialogclose').focus();await page.keyboard.press('Tab');
@@ -78,7 +82,9 @@ const fs=require('fs'),path=require('path'),{pathToFileURL}=require('url'),{crea
      await call('continue');await capture('season-review');
      const id=await page.evaluate(()=>GCC8.roster().sort((a,b)=>b.name.length-a.name.length)[0].id);
      await call('inspect',id);await capture('player');await call('playerTab','skills');await capture('player-attributes');await call('close');
-     await call('offseason');await call('trade');await capture('trade');await probeInteractions('trade');await call('close');
+     await call('offseason');await call('trade');await capture('trade');
+     const disabledReview=await page.locator('#g8dialog[open] button[data-action="propose"]').evaluate(e=>({text:e.textContent.trim(),disabled:e.disabled,opacity:getComputedStyle(e).opacity}));states.push({label,name:'trade disabled Review',control:disabledReview});check(disabledReview.disabled&&parseFloat(disabledReview.opacity)<1,'trade Review disabled until assets chosen',disabledReview);
+     await probeInteractions('trade');await call('close');
      await call('cpuMarket');await call('annualDraw');await call('revealAll');await call('annualDraft');
      for(let guard=0;guard<30&&await page.evaluate(()=>GCC8.G.state.dynasty.offseason?.phase==='draft');guard++){
       await call('skipPick');if(!await page.evaluate(()=>GCC8.G.state.dynasty.offseason?.phase==='draft'))break;

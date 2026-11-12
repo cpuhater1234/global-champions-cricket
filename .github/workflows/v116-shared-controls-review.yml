@@ -3,6 +3,9 @@ on:
   push:
     branches: [work/v116-candidate-acceptance]
     paths: ['qa/v116_shared_controls_candidate.py', 'qa/v116_shared_controls_audit.cjs', '.github/workflows/v116-shared-controls-review.yml']
+concurrency:
+  group: gcc-shared-controls-review
+  cancel-in-progress: true
 permissions:
   contents: write
 jobs:
@@ -69,12 +72,15 @@ jobs:
           git add docs/release/visual-review/shared-controls
           if ! git diff --cached --quiet; then
             git commit -m 'QA: preserve authorised disposable career visual evidence'
-            git pull --rebase origin work/v116-candidate-acceptance
-            git push origin HEAD:refs/heads/work/v116-candidate-acceptance
+            published=0
+            for attempt in 1 2 3; do
+              git pull --rebase origin work/v116-candidate-acceptance
+              if git push origin HEAD:refs/heads/work/v116-candidate-acceptance; then published=1; break; fi
+            done
+            test "$published" = 1
           fi
       - name: Require capture outcome
         if: always()
         env:
           CAPTURE_OUTCOME: ${{ steps.capture.outcome }}
         run: test "$CAPTURE_OUTCOME" = success
-

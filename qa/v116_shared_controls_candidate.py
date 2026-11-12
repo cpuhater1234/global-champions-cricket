@@ -23,7 +23,8 @@ def patch_controls(base):
         raise ValueError('Shared-controls baseline identity mismatch: STOP')
     blocks = list(BLOCK.finditer(base))
     owners = {}
-    for name in ('gcc-floodlit-visual', 'gcc-cleanup-pass'):
+    for name in ('gcc-floodlit-visual', 'gcc-cleanup-pass',
+                 'gcc-composition-20261107', 'gcc-v116-perfection-pass'):
         hits = [m for m in blocks if m.group(1).lower() == b'style'
                 and ('id="' + name + '"').encode() in m.group(2)]
         if len(hits) != 1:
@@ -32,7 +33,7 @@ def patch_controls(base):
     corrections = []
 
     def edit_rule(css, owner, selector, old, new):
-        pattern = re.compile(re.escape(selector) + rb'\{([^{}]*)\}')
+        pattern = re.compile(re.escape(selector) + rb'\s*\{([^{}]*)\}')
         # This owner has a later width-only rule with the same app selector.
         # Select the declaration owner, preserving that unrelated rule verbatim.
         hits = [h for h in pattern.finditer(css) if old in h.group(1)]
@@ -62,6 +63,14 @@ def patch_controls(base):
         (APP + b' .g8primary:active:enabled', b'transform:translateY(1px)'),
     ):
         css = edit_rule(css, 'gcc-floodlit-visual', selector, old, b'transform:none')
+    # More specific ordinary-tab rules previously defeated the generic button
+    # font change. Edit their existing owners rather than escalating specificity.
+    for selector in (APP + b' .g8tabs .g8button',
+                     b'#g8app#g8app #g8stage .gccuiPaneTabs button'):
+        for old, new in ((b'font-family:var(--vx-display)!important', b'font-family:var(--vx-body)!important'),
+                         (b'letter-spacing:.1em', b'letter-spacing:0'),
+                         (b'text-transform:uppercase', b'text-transform:none')):
+            css = edit_rule(css, 'gcc-floodlit-visual', selector, old, new)
 
     cleanup = owners['gcc-cleanup-pass']
     primary_selector = (APP + b' .g8button.g8primary,\n'
@@ -72,8 +81,20 @@ def patch_controls(base):
     clean_css = edit_rule(cleanup.group(3), 'gcc-cleanup-pass', primary_selector,
                           b'box-shadow:0 3px 0 #347887!important',
                           b'box-shadow:none!important')
+    composition = owners['gcc-composition-20261107']
+    composition_css = composition.group(3)
+    for old, new in ((b'font-family:var(--vx-display)!important', b'font-family:var(--vx-body)!important'),
+                     (b'letter-spacing:.06em!important', b'letter-spacing:0!important'),
+                     (b'text-transform:uppercase!important', b'text-transform:none!important')):
+        composition_css = edit_rule(composition_css, 'gcc-composition-20261107',
+                                    APP + b' .g8hero .g8welcomeactions>.g8button', old, new)
+    perfection = owners['gcc-v116-perfection-pass']
+    perfection_css = edit_rule(perfection.group(3), 'gcc-v116-perfection-pass',
+                               b'#g8dialog[data-prompt="player"] .gccuiProfileViews .g8button',
+                               b'min-height:42px!important', b'min-height:44px!important')
     result = base
-    for m, replacement in sorted(((flood, css), (cleanup, clean_css)),
+    for m, replacement in sorted(((flood, css), (cleanup, clean_css),
+                                  (composition, composition_css), (perfection, perfection_css)),
                                  key=lambda pair: pair[0].start(), reverse=True):
         result = result[:m.start(3)] + replacement + result[m.end(3):]
 
@@ -84,7 +105,7 @@ def patch_controls(base):
         if sum(m.group(1).lower() == kind for m in after) != expected:
             raise ValueError('Unexpected ' + kind.decode() + ' count')
     changed = [(a, b) for a, b in zip(blocks, after) if a.group(0) != b.group(0)]
-    if [a.start() for a, _ in changed] != sorted([flood.start(), cleanup.start()]):
+    if [a.start() for a, _ in changed] != sorted(m.start() for m in owners.values()):
         raise ValueError('Unexpected changed owner')
     if any(a.group(0) != b.group(0) for a, b in zip(blocks, after)
            if a.group(1).lower() == b'script'):
@@ -98,7 +119,7 @@ def patch_controls(base):
     return result, dict(
         status='SHARED_CONTROLS_REVIEW_ONLY', base_sha256=BASE_SHA256,
         candidate_sha256=sha256(result).hexdigest(), candidate_bytes=len(result),
-        existing_style_blocks_changed=2, new_style_blocks=0, styles=17,
+        revision=2, existing_style_blocks_changed=4, new_style_blocks=0, styles=17,
         javascript_blocks_changed=0, scripts=22,
         corrections=corrections, guide_owner_byte_identical=True,
         notes=['Guide computed-style parity still requires native verification.',
