@@ -13,7 +13,7 @@ let activeBrowser;
  fs.mkdirSync(out,{recursive:true});
  const browser=await chromium.launch({executablePath:process.env.GCC8_CHROMIUM||undefined,headless:true});
  activeBrowser=browser;
- const states=[],errors=[],failures=[];
+ const states=[],errors=[],failures=[],focusBoundaries=[];
  const inspect=async page=>page.evaluate(()=>{
   const d=document.querySelector('#g8dialog'),b=d.querySelector('.g8modalbody'),h=d.querySelector('.g8modalhead'),g=d.querySelector('.g8guide');
   const rect=e=>{const r=e.getBoundingClientRect();return {top:r.top,bottom:r.bottom,width:r.width,height:r.height,left:r.left,right:r.right}};
@@ -98,11 +98,22 @@ let activeBrowser;
     let reachedReturn=false;
     for(let i=0;i<14;i++){
      await page.keyboard.press('Tab');
-     const focus=await page.evaluate(()=>({inside:!!document.activeElement?.closest('#g8dialog'),isReturn:document.activeElement?.matches('.g8guidefooter>.g8primary')}));
-     if(!focus.inside)failures.push({action,issues:['keyboard focus escaped the modal']});
+     const focus=await page.evaluate(()=>({inside:!!document.activeElement?.closest('#g8dialog'),tag:document.activeElement?.tagName,isReturn:document.activeElement?.matches('.g8guidefooter>.g8primary')}));
+     if(!focus.inside){
+      if(['BODY','HTML'].includes(focus.tag))focusBoundaries.push({action,tag:focus.tag});
+      else failures.push({action,issues:['keyboard focus reached background content'],focus});
+     }
      reachedReturn=reachedReturn||focus.isReturn;
     }
     if(!reachedReturn)failures.push({action,issues:['return action missing from Tab order']});
+    // Chromium can visit its browser-level focus boundary during Tab traversal.
+    // Independently verify that a real background control cannot take page focus.
+    const backgroundFocusBlocked=await page.evaluate(()=>{
+     const background=document.querySelector('#g8stage button');
+     if(!background)return null;
+     background.focus();return document.activeElement!==background;
+    });
+    if(backgroundFocusBlocked!==true)failures.push({action,issues:['native modal failed to block background focus']});
    }
    await page.keyboard.press('Escape');
    if(await page.locator('#g8dialog').evaluate(e=>e.open))throw Error('Escape did not close '+action);
@@ -129,7 +140,7 @@ let activeBrowser;
   await page.close();
  }
  if(JSON.stringify(probes.before)!==JSON.stringify(probes.after))failures.push({issues:['non-guide cascade changed'],probes});
- const report={status:failures.length||errors.length?'FAIL':'PASS',baseline_sha256:createHash('sha256').update(fs.readFileSync(baseline)).digest('hex'),candidate_sha256:createHash('sha256').update(fs.readFileSync(candidate)).digest('hex'),states,errors,failures,non_guide_fixture_parity:JSON.stringify(probes.before)===JSON.stringify(probes.after)};
+ const report={status:failures.length||errors.length?'FAIL':'PASS',baseline_sha256:createHash('sha256').update(fs.readFileSync(baseline)).digest('hex'),candidate_sha256:createHash('sha256').update(fs.readFileSync(candidate)).digest('hex'),states,errors,failures,browser_focus_boundaries:focusBoundaries,non_guide_fixture_parity:JSON.stringify(probes.before)===JSON.stringify(probes.after)};
  fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(report,null,2)+'\n');
  console.log(JSON.stringify({...report,states:states.length},null,2));
  await browser.close();if(report.status!=='PASS')process.exitCode=1;
