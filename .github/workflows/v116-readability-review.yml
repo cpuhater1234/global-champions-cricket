@@ -61,8 +61,19 @@ jobs:
           with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:
               f.write(f"Readability cascade regression passed: {r['palette_count']} real club colours, {r['samples']} text samples, minimum approximate contrast {r['minimum_contrast']}:1. No JavaScript changed. This is scoped stylesheet verification, not full visual/gameplay acceptance.\n")
           PY
+      - name: Preserve JSON evidence in the job log
+        if: always()
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          for report in sorted(Path('qa/results/readability').glob('*.json')):
+              print(report.name, flush=True)
+              print(report.read_text(), flush=True)
+          PY
       - uses: actions/upload-artifact@v4
         if: always()
+        continue-on-error: true
         with:
           name: v116-readability-review
           path: qa/results/readability
+          retention-days: 1
