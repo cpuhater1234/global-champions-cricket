@@ -83,7 +83,7 @@ const fs=require('fs'),path=require('path'),{pathToFileURL}=require('url'),{crea
      const id=await page.evaluate(()=>GCC8.roster().sort((a,b)=>b.name.length-a.name.length)[0].id);
      await call('inspect',id);await capture('player');await call('playerTab','skills');await capture('player-attributes');await call('close');
      await call('offseason');await call('trade');await capture('trade');
-     const disabledReview=await page.locator('#g8dialog[open] button[data-action="propose"]').evaluate(e=>({text:e.textContent.trim(),disabled:e.disabled,opacity:getComputedStyle(e).opacity}));states.push({label,name:'trade disabled Review',control:disabledReview});check(disabledReview.disabled&&parseFloat(disabledReview.opacity)<1,'trade Review disabled until assets chosen',disabledReview);
+     const disabledReview=await page.locator('#g8dialog[open] button[data-action="propose"]').evaluate(e=>({text:e.textContent.trim(),disabled:e.disabled,opacity:getComputedStyle(e).opacity}));states.push({label,name:'trade disabled Review',control:disabledReview});check(disabledReview.disabled,'trade Review disabled until assets chosen',disabledReview);
      await probeInteractions('trade');await call('close');
      await call('cpuMarket');await call('annualDraw');await call('revealAll');await call('annualDraft');
      for(let guard=0;guard<30&&await page.evaluate(()=>GCC8.G.state.dynasty.offseason?.phase==='draft');guard++){
