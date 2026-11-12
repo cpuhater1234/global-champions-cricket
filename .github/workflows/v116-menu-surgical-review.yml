@@ -8,6 +8,7 @@ on:
       - 'qa/v116_menu_surface_candidate.py'
       - 'qa/v116_menu_surface_audit.cjs'
       - 'qa/candidates/v116-guide-owner.css'
+      - 'v8/ui/decision-ui.css'
 
 permissions:
   contents: write
