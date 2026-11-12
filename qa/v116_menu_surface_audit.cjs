@@ -69,10 +69,14 @@ let activeBrowser;
     await page.screenshot({path:path.join(out,`${label}-${action}-${width}x${height}.png`)});
     // Last control must be reachable through focus-induced scrolling.
     const last=page.locator('#g8dialog .g8guidefooter>button');
+    // Move focus away first: calling focus() on an already-focused element is
+    // a no-op after the test explicitly resets its scroll container.
+    await page.locator('#g8dialog .g8dialogclose').focus();
     await last.focus();
     const bottom=await inspect(page);
     if(label==='after'){
      const r=await last.boundingBox();
+     state.returnAfterFocus={control:r,body:bottom.body,scroll:bottom.scroll};
      if(!r||r.y<bottom.head.bottom-1||r.y+r.height>bottom.body.bottom+1)failures.push({action,width,height,issues:['return control not reachable']});
     }
    }
@@ -114,6 +118,10 @@ let activeBrowser;
      background.focus();return document.activeElement!==background;
     });
     if(backgroundFocusBlocked!==true)failures.push({action,issues:['native modal failed to block background focus']});
+    await page.locator('#g8dialog .g8guidefooter>button').click();
+    if(await page.locator('#g8dialog').evaluate(e=>e.open))failures.push({action,issues:['return action failed to close guide']});
+    await page.evaluate(a=>GCC8.dispatch(a,[]),action);
+    await page.waitForFunction(()=>document.querySelector('#g8dialog[open] .g8guide'));
    }
    await page.keyboard.press('Escape');
    if(await page.locator('#g8dialog').evaluate(e=>e.open))throw Error('Escape did not close '+action);
