@@ -22,7 +22,7 @@ MARKUP = '''<div id="g8app"><main id="g8stage"></main></div>
 <section class="g8scoutoutlook"><h3>Career outlook</h3></section>
 <section class="g8gccrecord"><h3>GCC record</h3></section>
 </div></div></dialog>'''
-TARGETS = '.gccuiCaptaincyGrid label>span,.gccuiProfileOverview .g8scoutoutlook>h3,.gccuiProfileOverview .g8gccrecord>h3'
+TARGETS = '.gccuiProfileOverview .g8scoutoutlook>h3,.gccuiProfileOverview .g8gccrecord>h3'
 
 def luminance(rgb):
     values = [v/255 for v in rgb]
@@ -54,7 +54,10 @@ def audit(path, chromium=None):
                 for raw in colours:
                     colour = raw.decode()
                     page.evaluate('colour => document.documentElement.style.setProperty("--club-accent",colour)',colour)
-                    samples = page.locator(TARGETS).evaluate_all('(els)=>els.map(e=>({text:e.textContent,colour:getComputedStyle(e).color}))')
+                    page.locator('#g8dialog').evaluate('(e)=>e.setAttribute("data-prompt","prepare")')
+                    samples = page.locator('.gccuiCaptaincyGrid label>span').evaluate_all('(els)=>els.map(e=>({text:e.textContent,colour:getComputedStyle(e).color}))')
+                    page.locator('#g8dialog').evaluate('(e)=>e.setAttribute("data-prompt","player")')
+                    samples += page.locator(TARGETS).evaluate_all('(els)=>els.map(e=>({text:e.textContent,colour:getComputedStyle(e).color}))')
                     assert len(samples) == 5
                     for sample in samples:
                         rgb = tuple(map(float,re.findall(r'[\d.]+',sample['colour'])[:3]))
