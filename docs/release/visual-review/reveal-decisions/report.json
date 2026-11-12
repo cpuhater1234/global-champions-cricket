@@ -1,0 +1,6869 @@
+{
+  "status": "FAIL",
+  "baseline_sha256": "94a4d771548cbba76798461bf73bd2f888c12e9fed4bda6e6b7b2bd99a7faf41",
+  "candidate_sha256": "9e5af18ef6119c53d5266257a648f7f5443a958e47642f2bdb847f9baeb29ea8",
+  "scope": "Real disposable native journeys; deterministic fresh random seed; no user save",
+  "states": [
+    {
+      "label": "before",
+      "name": "club-reveal-sealed",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 0,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 1440,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 83.1875,
+          "y": 452.59375,
+          "width": 306.40625,
+          "height": 410,
+          "sealed": true,
+          "name": "Perth Scorchers",
+          "ground": "WACA GroundPace and bounce"
+        },
+        {
+          "x": 405.59375,
+          "y": 452.59375,
+          "width": 306.40625,
+          "height": 410,
+          "sealed": true,
+          "name": "Hampshire Hawks",
+          "ground": "The Rose BowlControl and seam"
+        },
+        {
+          "x": 728,
+          "y": 452.59375,
+          "width": 306.40625,
+          "height": 410,
+          "sealed": true,
+          "name": "Mumbai Indians",
+          "ground": "Wankhede StadiumPace and power"
+        },
+        {
+          "x": 1050.40625,
+          "y": 452.59375,
+          "width": 306.40625,
+          "height": 410,
+          "sealed": true,
+          "name": "Delhi Capitals",
+          "ground": "Arun Jaitley StadiumVariable surface"
+        },
+        {
+          "x": 83.1875,
+          "y": 878.59375,
+          "width": 306.40625,
+          "height": 410,
+          "sealed": true,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 405.59375,
+          "y": 878.59375,
+          "width": 306.40625,
+          "height": 410,
+          "sealed": true,
+          "name": "Brisbane Heat",
+          "ground": "The GabbaBounce and carry"
+        },
+        {
+          "x": 728,
+          "y": 878.59375,
+          "width": 306.40625,
+          "height": 410,
+          "sealed": true,
+          "name": "Gujarat Titans",
+          "ground": "Narendra Modi StadiumVariable strips and larger pockets"
+        },
+        {
+          "x": 1050.40625,
+          "y": 878.59375,
+          "width": 306.40625,
+          "height": 410,
+          "sealed": true,
+          "name": "Derbyshire Falcons",
+          "ground": "County Ground, DerbyTiming and controlled aggression"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 493.671875,
+          "y": 362.59375,
+          "width": 172.375,
+          "height": 44
+        },
+        {
+          "text": "Speed 1×",
+          "disabled": false,
+          "x": 675.640625,
+          "y": 362.59375,
+          "width": 129.25,
+          "height": 44
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 814.484375,
+          "y": 362.59375,
+          "width": 131.84375,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 83.1875,
+        "y": 280.765625,
+        "width": 1273.625,
+        "height": 143.828125
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "before",
+      "name": "club-reveal-sealed",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 0,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 1150,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 34.5,
+          "y": 442.84375,
+          "width": 258.25,
+          "height": 410,
+          "sealed": true,
+          "name": "Perth Scorchers",
+          "ground": "WACA GroundPace and bounce"
+        },
+        {
+          "x": 308.75,
+          "y": 442.84375,
+          "width": 258.25,
+          "height": 410,
+          "sealed": true,
+          "name": "Hampshire Hawks",
+          "ground": "The Rose BowlControl and seam"
+        },
+        {
+          "x": 583,
+          "y": 442.84375,
+          "width": 258.25,
+          "height": 410,
+          "sealed": true,
+          "name": "Mumbai Indians",
+          "ground": "Wankhede StadiumPace and power"
+        },
+        {
+          "x": 857.25,
+          "y": 442.84375,
+          "width": 258.25,
+          "height": 410,
+          "sealed": true,
+          "name": "Delhi Capitals",
+          "ground": "Arun Jaitley StadiumVariable surface"
+        },
+        {
+          "x": 34.5,
+          "y": 868.84375,
+          "width": 258.25,
+          "height": 410,
+          "sealed": true,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 308.75,
+          "y": 868.84375,
+          "width": 258.25,
+          "height": 410,
+          "sealed": true,
+          "name": "Brisbane Heat",
+          "ground": "The GabbaBounce and carry"
+        },
+        {
+          "x": 583,
+          "y": 868.84375,
+          "width": 258.25,
+          "height": 410,
+          "sealed": true,
+          "name": "Gujarat Titans",
+          "ground": "Narendra Modi StadiumVariable strips and larger pockets"
+        },
+        {
+          "x": 857.25,
+          "y": 868.84375,
+          "width": 258.25,
+          "height": 410,
+          "sealed": true,
+          "name": "Derbyshire Falcons",
+          "ground": "County Ground, DerbyTiming and controlled aggression"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 348.671875,
+          "y": 352.84375,
+          "width": 172.375,
+          "height": 44
+        },
+        {
+          "text": "Speed 1×",
+          "disabled": false,
+          "x": 530.640625,
+          "y": 352.84375,
+          "width": 129.25,
+          "height": 44
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 669.484375,
+          "y": 352.84375,
+          "width": 131.84375,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 34.5,
+        "y": 271.015625,
+        "width": 1081,
+        "height": 143.828125
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "before",
+      "name": "club-reveal-sealed",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 0,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 768,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 23.03125,
+          "y": 494.65625,
+          "width": 352.96875,
+          "height": 410,
+          "sealed": true,
+          "name": "Perth Scorchers",
+          "ground": "WACA GroundPace and bounce"
+        },
+        {
+          "x": 392,
+          "y": 494.65625,
+          "width": 352.96875,
+          "height": 410,
+          "sealed": true,
+          "name": "Hampshire Hawks",
+          "ground": "The Rose BowlControl and seam"
+        },
+        {
+          "x": 23.03125,
+          "y": 920.65625,
+          "width": 352.96875,
+          "height": 410,
+          "sealed": true,
+          "name": "Mumbai Indians",
+          "ground": "Wankhede StadiumPace and power"
+        },
+        {
+          "x": 392,
+          "y": 920.65625,
+          "width": 352.96875,
+          "height": 410,
+          "sealed": true,
+          "name": "Delhi Capitals",
+          "ground": "Arun Jaitley StadiumVariable surface"
+        },
+        {
+          "x": 23.03125,
+          "y": 1346.65625,
+          "width": 352.96875,
+          "height": 410,
+          "sealed": true,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 392,
+          "y": 1346.65625,
+          "width": 352.96875,
+          "height": 410,
+          "sealed": true,
+          "name": "Brisbane Heat",
+          "ground": "The GabbaBounce and carry"
+        },
+        {
+          "x": 23.03125,
+          "y": 1772.65625,
+          "width": 352.96875,
+          "height": 410,
+          "sealed": true,
+          "name": "Gujarat Titans",
+          "ground": "Narendra Modi StadiumVariable strips and larger pockets"
+        },
+        {
+          "x": 392,
+          "y": 1772.65625,
+          "width": 352.96875,
+          "height": 410,
+          "sealed": true,
+          "name": "Derbyshire Falcons",
+          "ground": "County Ground, DerbyTiming and controlled aggression"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 157.671875,
+          "y": 404.65625,
+          "width": 172.375,
+          "height": 44
+        },
+        {
+          "text": "Speed 1×",
+          "disabled": false,
+          "x": 339.640625,
+          "y": 404.65625,
+          "width": 129.25,
+          "height": 44
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 478.484375,
+          "y": 404.65625,
+          "width": 131.84375,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 23.03125,
+        "y": 322.828125,
+        "width": 721.9375,
+        "height": 143.828125
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "before",
+      "name": "club-reveal-sealed",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 0,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 390,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 12,
+          "y": 457.59375,
+          "width": 366,
+          "height": 390,
+          "sealed": true,
+          "name": "Perth Scorchers",
+          "ground": "WACA GroundPace and bounce"
+        },
+        {
+          "x": 12,
+          "y": 863.59375,
+          "width": 366,
+          "height": 390,
+          "sealed": true,
+          "name": "Hampshire Hawks",
+          "ground": "The Rose BowlControl and seam"
+        },
+        {
+          "x": 12,
+          "y": 1269.59375,
+          "width": 366,
+          "height": 390,
+          "sealed": true,
+          "name": "Mumbai Indians",
+          "ground": "Wankhede StadiumPace and power"
+        },
+        {
+          "x": 12,
+          "y": 1675.59375,
+          "width": 366,
+          "height": 390,
+          "sealed": true,
+          "name": "Delhi Capitals",
+          "ground": "Arun Jaitley StadiumVariable surface"
+        },
+        {
+          "x": 12,
+          "y": 2081.59375,
+          "width": 366,
+          "height": 390,
+          "sealed": true,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 12,
+          "y": 2487.59375,
+          "width": 366,
+          "height": 390,
+          "sealed": true,
+          "name": "Brisbane Heat",
+          "ground": "The GabbaBounce and carry"
+        },
+        {
+          "x": 12,
+          "y": 2893.59375,
+          "width": 366,
+          "height": 390,
+          "sealed": true,
+          "name": "Gujarat Titans",
+          "ground": "Narendra Modi StadiumVariable strips and larger pockets"
+        },
+        {
+          "x": 12,
+          "y": 3299.59375,
+          "width": 366,
+          "height": 390,
+          "sealed": true,
+          "name": "Derbyshire Falcons",
+          "ground": "County Ground, DerbyTiming and controlled aggression"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 30,
+          "y": 296,
+          "width": 160.203125,
+          "height": 62
+        },
+        {
+          "text": "Speed 1×",
+          "disabled": false,
+          "x": 199.796875,
+          "y": 305,
+          "width": 160.203125,
+          "height": 44
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 30,
+          "y": 367.59375,
+          "width": 330,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 12,
+        "y": 214.171875,
+        "width": 366,
+        "height": 215.421875
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "before",
+      "name": "club-reveal-sealed",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 0,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 320,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 12,
+          "y": 517.1875,
+          "width": 296,
+          "height": 390,
+          "sealed": true,
+          "name": "Perth Scorchers",
+          "ground": "WACA GroundPace and bounce"
+        },
+        {
+          "x": 12,
+          "y": 923.1875,
+          "width": 296,
+          "height": 390,
+          "sealed": true,
+          "name": "Hampshire Hawks",
+          "ground": "The Rose BowlControl and seam"
+        },
+        {
+          "x": 12,
+          "y": 1329.1875,
+          "width": 296,
+          "height": 390,
+          "sealed": true,
+          "name": "Mumbai Indians",
+          "ground": "Wankhede StadiumPace and power"
+        },
+        {
+          "x": 12,
+          "y": 1735.1875,
+          "width": 296,
+          "height": 390,
+          "sealed": true,
+          "name": "Delhi Capitals",
+          "ground": "Arun Jaitley StadiumVariable surface"
+        },
+        {
+          "x": 12,
+          "y": 2141.1875,
+          "width": 296,
+          "height": 390,
+          "sealed": true,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 12,
+          "y": 2547.1875,
+          "width": 296,
+          "height": 390,
+          "sealed": true,
+          "name": "Brisbane Heat",
+          "ground": "The GabbaBounce and carry"
+        },
+        {
+          "x": 12,
+          "y": 2953.1875,
+          "width": 296,
+          "height": 390,
+          "sealed": true,
+          "name": "Gujarat Titans",
+          "ground": "Narendra Modi StadiumVariable strips and larger pockets"
+        },
+        {
+          "x": 12,
+          "y": 3359.1875,
+          "width": 296,
+          "height": 390,
+          "sealed": true,
+          "name": "Derbyshire Falcons",
+          "ground": "County Ground, DerbyTiming and controlled aggression"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 30,
+          "y": 320,
+          "width": 260,
+          "height": 44
+        },
+        {
+          "text": "Speed 1×",
+          "disabled": false,
+          "x": 30,
+          "y": 373.59375,
+          "width": 260,
+          "height": 44
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 30,
+          "y": 427.1875,
+          "width": 260,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 12,
+        "y": 214.171875,
+        "width": 296,
+        "height": 275.015625
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "before",
+      "name": "club-reveal-partial",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 2,
+        "speedIndex": 2,
+        "running": false
+      },
+      "width": 1440,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 83.1875,
+          "y": 452.59375,
+          "width": 306.40625,
+          "height": 410,
+          "sealed": false,
+          "name": "Perth Scorchers",
+          "ground": "WACA GroundPace and bounce"
+        },
+        {
+          "x": 405.59375,
+          "y": 452.59375,
+          "width": 306.40625,
+          "height": 410,
+          "sealed": false,
+          "name": "Hampshire Hawks",
+          "ground": "The Rose BowlControl and seam"
+        },
+        {
+          "x": 728,
+          "y": 452.59375,
+          "width": 306.40625,
+          "height": 410,
+          "sealed": true,
+          "name": "Mumbai Indians",
+          "ground": "Wankhede StadiumPace and power"
+        },
+        {
+          "x": 1050.40625,
+          "y": 452.59375,
+          "width": 306.40625,
+          "height": 410,
+          "sealed": true,
+          "name": "Delhi Capitals",
+          "ground": "Arun Jaitley StadiumVariable surface"
+        },
+        {
+          "x": 83.1875,
+          "y": 878.59375,
+          "width": 306.40625,
+          "height": 410,
+          "sealed": true,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 405.59375,
+          "y": 878.59375,
+          "width": 306.40625,
+          "height": 410,
+          "sealed": true,
+          "name": "Brisbane Heat",
+          "ground": "The GabbaBounce and carry"
+        },
+        {
+          "x": 728,
+          "y": 878.59375,
+          "width": 306.40625,
+          "height": 410,
+          "sealed": true,
+          "name": "Gujarat Titans",
+          "ground": "Narendra Modi StadiumVariable strips and larger pockets"
+        },
+        {
+          "x": 1050.40625,
+          "y": 878.59375,
+          "width": 306.40625,
+          "height": 410,
+          "sealed": true,
+          "name": "Derbyshire Falcons",
+          "ground": "County Ground, DerbyTiming and controlled aggression"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 491.6875,
+          "y": 362.59375,
+          "width": 172.375,
+          "height": 44
+        },
+        {
+          "text": "Speed 4×",
+          "disabled": false,
+          "x": 673.65625,
+          "y": 362.59375,
+          "width": 133.203125,
+          "height": 44
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 816.453125,
+          "y": 362.59375,
+          "width": 131.84375,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 83.1875,
+        "y": 280.765625,
+        "width": 1273.625,
+        "height": 143.828125
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "before",
+      "name": "club-reveal-partial",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 2,
+        "speedIndex": 2,
+        "running": false
+      },
+      "width": 1150,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 34.5,
+          "y": 442.84375,
+          "width": 258.25,
+          "height": 410,
+          "sealed": false,
+          "name": "Perth Scorchers",
+          "ground": "WACA GroundPace and bounce"
+        },
+        {
+          "x": 308.75,
+          "y": 442.84375,
+          "width": 258.25,
+          "height": 410,
+          "sealed": false,
+          "name": "Hampshire Hawks",
+          "ground": "The Rose BowlControl and seam"
+        },
+        {
+          "x": 583,
+          "y": 442.84375,
+          "width": 258.25,
+          "height": 410,
+          "sealed": true,
+          "name": "Mumbai Indians",
+          "ground": "Wankhede StadiumPace and power"
+        },
+        {
+          "x": 857.25,
+          "y": 442.84375,
+          "width": 258.25,
+          "height": 410,
+          "sealed": true,
+          "name": "Delhi Capitals",
+          "ground": "Arun Jaitley StadiumVariable surface"
+        },
+        {
+          "x": 34.5,
+          "y": 868.84375,
+          "width": 258.25,
+          "height": 410,
+          "sealed": true,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 308.75,
+          "y": 868.84375,
+          "width": 258.25,
+          "height": 410,
+          "sealed": true,
+          "name": "Brisbane Heat",
+          "ground": "The GabbaBounce and carry"
+        },
+        {
+          "x": 583,
+          "y": 868.84375,
+          "width": 258.25,
+          "height": 410,
+          "sealed": true,
+          "name": "Gujarat Titans",
+          "ground": "Narendra Modi StadiumVariable strips and larger pockets"
+        },
+        {
+          "x": 857.25,
+          "y": 868.84375,
+          "width": 258.25,
+          "height": 410,
+          "sealed": true,
+          "name": "Derbyshire Falcons",
+          "ground": "County Ground, DerbyTiming and controlled aggression"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 346.6875,
+          "y": 352.84375,
+          "width": 172.375,
+          "height": 44
+        },
+        {
+          "text": "Speed 4×",
+          "disabled": false,
+          "x": 528.65625,
+          "y": 352.84375,
+          "width": 133.203125,
+          "height": 44
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 671.453125,
+          "y": 352.84375,
+          "width": 131.84375,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 34.5,
+        "y": 271.015625,
+        "width": 1081,
+        "height": 143.828125
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "before",
+      "name": "club-reveal-partial",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 2,
+        "speedIndex": 2,
+        "running": false
+      },
+      "width": 768,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 23.03125,
+          "y": 494.65625,
+          "width": 352.96875,
+          "height": 410,
+          "sealed": false,
+          "name": "Perth Scorchers",
+          "ground": "WACA GroundPace and bounce"
+        },
+        {
+          "x": 392,
+          "y": 494.65625,
+          "width": 352.96875,
+          "height": 410,
+          "sealed": false,
+          "name": "Hampshire Hawks",
+          "ground": "The Rose BowlControl and seam"
+        },
+        {
+          "x": 23.03125,
+          "y": 920.65625,
+          "width": 352.96875,
+          "height": 410,
+          "sealed": true,
+          "name": "Mumbai Indians",
+          "ground": "Wankhede StadiumPace and power"
+        },
+        {
+          "x": 392,
+          "y": 920.65625,
+          "width": 352.96875,
+          "height": 410,
+          "sealed": true,
+          "name": "Delhi Capitals",
+          "ground": "Arun Jaitley StadiumVariable surface"
+        },
+        {
+          "x": 23.03125,
+          "y": 1346.65625,
+          "width": 352.96875,
+          "height": 410,
+          "sealed": true,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 392,
+          "y": 1346.65625,
+          "width": 352.96875,
+          "height": 410,
+          "sealed": true,
+          "name": "Brisbane Heat",
+          "ground": "The GabbaBounce and carry"
+        },
+        {
+          "x": 23.03125,
+          "y": 1772.65625,
+          "width": 352.96875,
+          "height": 410,
+          "sealed": true,
+          "name": "Gujarat Titans",
+          "ground": "Narendra Modi StadiumVariable strips and larger pockets"
+        },
+        {
+          "x": 392,
+          "y": 1772.65625,
+          "width": 352.96875,
+          "height": 410,
+          "sealed": true,
+          "name": "Derbyshire Falcons",
+          "ground": "County Ground, DerbyTiming and controlled aggression"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 155.6875,
+          "y": 404.65625,
+          "width": 172.375,
+          "height": 44
+        },
+        {
+          "text": "Speed 4×",
+          "disabled": false,
+          "x": 337.65625,
+          "y": 404.65625,
+          "width": 133.203125,
+          "height": 44
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 480.453125,
+          "y": 404.65625,
+          "width": 131.84375,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 23.03125,
+        "y": 322.828125,
+        "width": 721.9375,
+        "height": 143.828125
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "before",
+      "name": "club-reveal-partial",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 2,
+        "speedIndex": 2,
+        "running": false
+      },
+      "width": 390,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 12,
+          "y": 457.59375,
+          "width": 366,
+          "height": 390,
+          "sealed": false,
+          "name": "Perth Scorchers",
+          "ground": "WACA GroundPace and bounce"
+        },
+        {
+          "x": 12,
+          "y": 863.59375,
+          "width": 366,
+          "height": 390,
+          "sealed": false,
+          "name": "Hampshire Hawks",
+          "ground": "The Rose BowlControl and seam"
+        },
+        {
+          "x": 12,
+          "y": 1269.59375,
+          "width": 366,
+          "height": 390,
+          "sealed": true,
+          "name": "Mumbai Indians",
+          "ground": "Wankhede StadiumPace and power"
+        },
+        {
+          "x": 12,
+          "y": 1675.59375,
+          "width": 366,
+          "height": 390,
+          "sealed": true,
+          "name": "Delhi Capitals",
+          "ground": "Arun Jaitley StadiumVariable surface"
+        },
+        {
+          "x": 12,
+          "y": 2081.59375,
+          "width": 366,
+          "height": 390,
+          "sealed": true,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 12,
+          "y": 2487.59375,
+          "width": 366,
+          "height": 390,
+          "sealed": true,
+          "name": "Brisbane Heat",
+          "ground": "The GabbaBounce and carry"
+        },
+        {
+          "x": 12,
+          "y": 2893.59375,
+          "width": 366,
+          "height": 390,
+          "sealed": true,
+          "name": "Gujarat Titans",
+          "ground": "Narendra Modi StadiumVariable strips and larger pockets"
+        },
+        {
+          "x": 12,
+          "y": 3299.59375,
+          "width": 366,
+          "height": 390,
+          "sealed": true,
+          "name": "Derbyshire Falcons",
+          "ground": "County Ground, DerbyTiming and controlled aggression"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 30,
+          "y": 296,
+          "width": 160.203125,
+          "height": 62
+        },
+        {
+          "text": "Speed 4×",
+          "disabled": false,
+          "x": 199.796875,
+          "y": 305,
+          "width": 160.203125,
+          "height": 44
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 30,
+          "y": 367.59375,
+          "width": 330,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 12,
+        "y": 214.171875,
+        "width": 366,
+        "height": 215.421875
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "before",
+      "name": "club-reveal-partial",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 2,
+        "speedIndex": 2,
+        "running": false
+      },
+      "width": 320,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 12,
+          "y": 517.1875,
+          "width": 296,
+          "height": 390,
+          "sealed": false,
+          "name": "Perth Scorchers",
+          "ground": "WACA GroundPace and bounce"
+        },
+        {
+          "x": 12,
+          "y": 923.1875,
+          "width": 296,
+          "height": 390,
+          "sealed": false,
+          "name": "Hampshire Hawks",
+          "ground": "The Rose BowlControl and seam"
+        },
+        {
+          "x": 12,
+          "y": 1329.1875,
+          "width": 296,
+          "height": 390,
+          "sealed": true,
+          "name": "Mumbai Indians",
+          "ground": "Wankhede StadiumPace and power"
+        },
+        {
+          "x": 12,
+          "y": 1735.1875,
+          "width": 296,
+          "height": 390,
+          "sealed": true,
+          "name": "Delhi Capitals",
+          "ground": "Arun Jaitley StadiumVariable surface"
+        },
+        {
+          "x": 12,
+          "y": 2141.1875,
+          "width": 296,
+          "height": 390,
+          "sealed": true,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 12,
+          "y": 2547.1875,
+          "width": 296,
+          "height": 390,
+          "sealed": true,
+          "name": "Brisbane Heat",
+          "ground": "The GabbaBounce and carry"
+        },
+        {
+          "x": 12,
+          "y": 2953.1875,
+          "width": 296,
+          "height": 390,
+          "sealed": true,
+          "name": "Gujarat Titans",
+          "ground": "Narendra Modi StadiumVariable strips and larger pockets"
+        },
+        {
+          "x": 12,
+          "y": 3359.1875,
+          "width": 296,
+          "height": 390,
+          "sealed": true,
+          "name": "Derbyshire Falcons",
+          "ground": "County Ground, DerbyTiming and controlled aggression"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 30,
+          "y": 320,
+          "width": 260,
+          "height": 44
+        },
+        {
+          "text": "Speed 4×",
+          "disabled": false,
+          "x": 30,
+          "y": 373.59375,
+          "width": 260,
+          "height": 44
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 30,
+          "y": 427.1875,
+          "width": 260,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 12,
+        "y": 214.171875,
+        "width": 296,
+        "height": 275.015625
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "before",
+      "name": "club-reveal-complete",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 8,
+        "speedIndex": 2,
+        "running": false
+      },
+      "width": 1440,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 83.1875,
+          "y": 452.59375,
+          "width": 306.40625,
+          "height": 410,
+          "sealed": false,
+          "name": "Perth Scorchers",
+          "ground": "WACA GroundPace and bounce"
+        },
+        {
+          "x": 405.59375,
+          "y": 452.59375,
+          "width": 306.40625,
+          "height": 410,
+          "sealed": false,
+          "name": "Hampshire Hawks",
+          "ground": "The Rose BowlControl and seam"
+        },
+        {
+          "x": 728,
+          "y": 452.59375,
+          "width": 306.40625,
+          "height": 410,
+          "sealed": false,
+          "name": "Mumbai Indians",
+          "ground": "Wankhede StadiumPace and power"
+        },
+        {
+          "x": 1050.40625,
+          "y": 452.59375,
+          "width": 306.40625,
+          "height": 410,
+          "sealed": false,
+          "name": "Delhi Capitals",
+          "ground": "Arun Jaitley StadiumVariable surface"
+        },
+        {
+          "x": 83.1875,
+          "y": 878.59375,
+          "width": 306.40625,
+          "height": 410,
+          "sealed": false,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 405.59375,
+          "y": 878.59375,
+          "width": 306.40625,
+          "height": 410,
+          "sealed": false,
+          "name": "Brisbane Heat",
+          "ground": "The GabbaBounce and carry"
+        },
+        {
+          "x": 728,
+          "y": 878.59375,
+          "width": 306.40625,
+          "height": 410,
+          "sealed": false,
+          "name": "Gujarat Titans",
+          "ground": "Narendra Modi StadiumVariable strips and larger pockets"
+        },
+        {
+          "x": 1050.40625,
+          "y": 878.59375,
+          "width": 306.40625,
+          "height": 410,
+          "sealed": false,
+          "name": "Derbyshire Falcons",
+          "ground": "County Ground, DerbyTiming and controlled aggression"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Choose your club",
+          "disabled": false,
+          "x": 576,
+          "y": 362.59375,
+          "width": 288,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 83.1875,
+        "y": 280.765625,
+        "width": 1273.625,
+        "height": 143.828125
+      },
+      "gates": {
+        "paceInert": true,
+        "paceHidden": "true",
+        "nextInert": false,
+        "nextHidden": null,
+        "nextDisabled": false,
+        "paceDisabled": [
+          true,
+          true,
+          true
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "before",
+      "name": "club-reveal-complete",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 8,
+        "speedIndex": 2,
+        "running": false
+      },
+      "width": 1150,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 34.5,
+          "y": 442.84375,
+          "width": 258.25,
+          "height": 410,
+          "sealed": false,
+          "name": "Perth Scorchers",
+          "ground": "WACA GroundPace and bounce"
+        },
+        {
+          "x": 308.75,
+          "y": 442.84375,
+          "width": 258.25,
+          "height": 410,
+          "sealed": false,
+          "name": "Hampshire Hawks",
+          "ground": "The Rose BowlControl and seam"
+        },
+        {
+          "x": 583,
+          "y": 442.84375,
+          "width": 258.25,
+          "height": 410,
+          "sealed": false,
+          "name": "Mumbai Indians",
+          "ground": "Wankhede StadiumPace and power"
+        },
+        {
+          "x": 857.25,
+          "y": 442.84375,
+          "width": 258.25,
+          "height": 410,
+          "sealed": false,
+          "name": "Delhi Capitals",
+          "ground": "Arun Jaitley StadiumVariable surface"
+        },
+        {
+          "x": 34.5,
+          "y": 868.84375,
+          "width": 258.25,
+          "height": 410,
+          "sealed": false,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 308.75,
+          "y": 868.84375,
+          "width": 258.25,
+          "height": 410,
+          "sealed": false,
+          "name": "Brisbane Heat",
+          "ground": "The GabbaBounce and carry"
+        },
+        {
+          "x": 583,
+          "y": 868.84375,
+          "width": 258.25,
+          "height": 410,
+          "sealed": false,
+          "name": "Gujarat Titans",
+          "ground": "Narendra Modi StadiumVariable strips and larger pockets"
+        },
+        {
+          "x": 857.25,
+          "y": 868.84375,
+          "width": 258.25,
+          "height": 410,
+          "sealed": false,
+          "name": "Derbyshire Falcons",
+          "ground": "County Ground, DerbyTiming and controlled aggression"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Choose your club",
+          "disabled": false,
+          "x": 431,
+          "y": 352.84375,
+          "width": 288,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 34.5,
+        "y": 271.015625,
+        "width": 1081,
+        "height": 143.828125
+      },
+      "gates": {
+        "paceInert": true,
+        "paceHidden": "true",
+        "nextInert": false,
+        "nextHidden": null,
+        "nextDisabled": false,
+        "paceDisabled": [
+          true,
+          true,
+          true
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "before",
+      "name": "club-reveal-complete",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 8,
+        "speedIndex": 2,
+        "running": false
+      },
+      "width": 768,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 23.03125,
+          "y": 494.65625,
+          "width": 352.96875,
+          "height": 410,
+          "sealed": false,
+          "name": "Perth Scorchers",
+          "ground": "WACA GroundPace and bounce"
+        },
+        {
+          "x": 392,
+          "y": 494.65625,
+          "width": 352.96875,
+          "height": 410,
+          "sealed": false,
+          "name": "Hampshire Hawks",
+          "ground": "The Rose BowlControl and seam"
+        },
+        {
+          "x": 23.03125,
+          "y": 920.65625,
+          "width": 352.96875,
+          "height": 410,
+          "sealed": false,
+          "name": "Mumbai Indians",
+          "ground": "Wankhede StadiumPace and power"
+        },
+        {
+          "x": 392,
+          "y": 920.65625,
+          "width": 352.96875,
+          "height": 410,
+          "sealed": false,
+          "name": "Delhi Capitals",
+          "ground": "Arun Jaitley StadiumVariable surface"
+        },
+        {
+          "x": 23.03125,
+          "y": 1346.65625,
+          "width": 352.96875,
+          "height": 410,
+          "sealed": false,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 392,
+          "y": 1346.65625,
+          "width": 352.96875,
+          "height": 410,
+          "sealed": false,
+          "name": "Brisbane Heat",
+          "ground": "The GabbaBounce and carry"
+        },
+        {
+          "x": 23.03125,
+          "y": 1772.65625,
+          "width": 352.96875,
+          "height": 410,
+          "sealed": false,
+          "name": "Gujarat Titans",
+          "ground": "Narendra Modi StadiumVariable strips and larger pockets"
+        },
+        {
+          "x": 392,
+          "y": 1772.65625,
+          "width": 352.96875,
+          "height": 410,
+          "sealed": false,
+          "name": "Derbyshire Falcons",
+          "ground": "County Ground, DerbyTiming and controlled aggression"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Choose your club",
+          "disabled": false,
+          "x": 240,
+          "y": 404.65625,
+          "width": 288,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 23.03125,
+        "y": 322.828125,
+        "width": 721.9375,
+        "height": 143.828125
+      },
+      "gates": {
+        "paceInert": true,
+        "paceHidden": "true",
+        "nextInert": false,
+        "nextHidden": null,
+        "nextDisabled": false,
+        "paceDisabled": [
+          true,
+          true,
+          true
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "before",
+      "name": "club-reveal-complete",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 8,
+        "speedIndex": 2,
+        "running": false
+      },
+      "width": 390,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 12,
+          "y": 457.59375,
+          "width": 366,
+          "height": 390,
+          "sealed": false,
+          "name": "Perth Scorchers",
+          "ground": "WACA GroundPace and bounce"
+        },
+        {
+          "x": 12,
+          "y": 863.59375,
+          "width": 366,
+          "height": 390,
+          "sealed": false,
+          "name": "Hampshire Hawks",
+          "ground": "The Rose BowlControl and seam"
+        },
+        {
+          "x": 12,
+          "y": 1269.59375,
+          "width": 366,
+          "height": 390,
+          "sealed": false,
+          "name": "Mumbai Indians",
+          "ground": "Wankhede StadiumPace and power"
+        },
+        {
+          "x": 12,
+          "y": 1675.59375,
+          "width": 366,
+          "height": 390,
+          "sealed": false,
+          "name": "Delhi Capitals",
+          "ground": "Arun Jaitley StadiumVariable surface"
+        },
+        {
+          "x": 12,
+          "y": 2081.59375,
+          "width": 366,
+          "height": 390,
+          "sealed": false,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 12,
+          "y": 2487.59375,
+          "width": 366,
+          "height": 390,
+          "sealed": false,
+          "name": "Brisbane Heat",
+          "ground": "The GabbaBounce and carry"
+        },
+        {
+          "x": 12,
+          "y": 2893.59375,
+          "width": 366,
+          "height": 390,
+          "sealed": false,
+          "name": "Gujarat Titans",
+          "ground": "Narendra Modi StadiumVariable strips and larger pockets"
+        },
+        {
+          "x": 12,
+          "y": 3299.59375,
+          "width": 366,
+          "height": 390,
+          "sealed": false,
+          "name": "Derbyshire Falcons",
+          "ground": "County Ground, DerbyTiming and controlled aggression"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Choose your club",
+          "disabled": false,
+          "x": 30,
+          "y": 331.796875,
+          "width": 330,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 12,
+        "y": 214.171875,
+        "width": 366,
+        "height": 215.421875
+      },
+      "gates": {
+        "paceInert": true,
+        "paceHidden": "true",
+        "nextInert": false,
+        "nextHidden": null,
+        "nextDisabled": false,
+        "paceDisabled": [
+          true,
+          true,
+          true
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "before",
+      "name": "club-reveal-complete",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 8,
+        "speedIndex": 2,
+        "running": false
+      },
+      "width": 320,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 12,
+          "y": 517.1875,
+          "width": 296,
+          "height": 390,
+          "sealed": false,
+          "name": "Perth Scorchers",
+          "ground": "WACA GroundPace and bounce"
+        },
+        {
+          "x": 12,
+          "y": 923.1875,
+          "width": 296,
+          "height": 390,
+          "sealed": false,
+          "name": "Hampshire Hawks",
+          "ground": "The Rose BowlControl and seam"
+        },
+        {
+          "x": 12,
+          "y": 1329.1875,
+          "width": 296,
+          "height": 390,
+          "sealed": false,
+          "name": "Mumbai Indians",
+          "ground": "Wankhede StadiumPace and power"
+        },
+        {
+          "x": 12,
+          "y": 1735.1875,
+          "width": 296,
+          "height": 390,
+          "sealed": false,
+          "name": "Delhi Capitals",
+          "ground": "Arun Jaitley StadiumVariable surface"
+        },
+        {
+          "x": 12,
+          "y": 2141.1875,
+          "width": 296,
+          "height": 390,
+          "sealed": false,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 12,
+          "y": 2547.1875,
+          "width": 296,
+          "height": 390,
+          "sealed": false,
+          "name": "Brisbane Heat",
+          "ground": "The GabbaBounce and carry"
+        },
+        {
+          "x": 12,
+          "y": 2953.1875,
+          "width": 296,
+          "height": 390,
+          "sealed": false,
+          "name": "Gujarat Titans",
+          "ground": "Narendra Modi StadiumVariable strips and larger pockets"
+        },
+        {
+          "x": 12,
+          "y": 3359.1875,
+          "width": 296,
+          "height": 390,
+          "sealed": false,
+          "name": "Derbyshire Falcons",
+          "ground": "County Ground, DerbyTiming and controlled aggression"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Choose your club",
+          "disabled": false,
+          "x": 30,
+          "y": 373.59375,
+          "width": 260,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 12,
+        "y": 214.171875,
+        "width": 296,
+        "height": 275.015625
+      },
+      "gates": {
+        "paceInert": true,
+        "paceHidden": "true",
+        "nextInert": false,
+        "nextHidden": null,
+        "nextDisabled": false,
+        "paceDisabled": [
+          true,
+          true,
+          true
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "before",
+      "name": "foundation-order-sealed",
+      "view": "draftDraw",
+      "reveal": {
+        "kind": "draft",
+        "count": 0,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 1440,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 83.1875,
+          "y": 553.828125,
+          "width": 630.40625,
+          "height": 112,
+          "sealed": false,
+          "name": "Derbyshire Falcons"
+        },
+        {
+          "x": 726.390625,
+          "y": 553.828125,
+          "width": 630.421875,
+          "height": 112,
+          "sealed": false,
+          "name": "Melbourne Stars"
+        },
+        {
+          "x": 83.1875,
+          "y": 678.625,
+          "width": 630.40625,
+          "height": 112,
+          "sealed": false,
+          "name": "Delhi Capitals"
+        },
+        {
+          "x": 726.390625,
+          "y": 678.625,
+          "width": 630.421875,
+          "height": 112,
+          "sealed": false,
+          "name": "Gujarat Titans"
+        },
+        {
+          "x": 83.1875,
+          "y": 803.421875,
+          "width": 630.40625,
+          "height": 112,
+          "sealed": false,
+          "name": "Perth Scorchers"
+        },
+        {
+          "x": 726.390625,
+          "y": 803.421875,
+          "width": 630.421875,
+          "height": 112,
+          "sealed": false,
+          "name": "Mumbai Indians"
+        },
+        {
+          "x": 83.1875,
+          "y": 928.21875,
+          "width": 630.40625,
+          "height": 112,
+          "sealed": false,
+          "name": "Brisbane Heat"
+        },
+        {
+          "x": 726.390625,
+          "y": 928.21875,
+          "width": 630.421875,
+          "height": 112,
+          "sealed": false,
+          "name": "Hampshire Hawks"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 493.671875,
+          "y": 463.828125,
+          "width": 172.375,
+          "height": 44
+        },
+        {
+          "text": "Speed 1×",
+          "disabled": false,
+          "x": 675.640625,
+          "y": 463.828125,
+          "width": 129.25,
+          "height": 44
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 814.484375,
+          "y": 463.828125,
+          "width": 131.84375,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 83.1875,
+        "y": 382,
+        "width": 1273.625,
+        "height": 143.828125
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "before",
+      "name": "foundation-order-sealed",
+      "view": "draftDraw",
+      "reveal": {
+        "kind": "draft",
+        "count": 0,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 1150,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 34.5,
+          "y": 544.078125,
+          "width": 534.09375,
+          "height": 112,
+          "sealed": false,
+          "name": "Derbyshire Falcons"
+        },
+        {
+          "x": 581.390625,
+          "y": 544.078125,
+          "width": 534.109375,
+          "height": 112,
+          "sealed": false,
+          "name": "Melbourne Stars"
+        },
+        {
+          "x": 34.5,
+          "y": 668.875,
+          "width": 534.09375,
+          "height": 112,
+          "sealed": false,
+          "name": "Delhi Capitals"
+        },
+        {
+          "x": 581.390625,
+          "y": 668.875,
+          "width": 534.109375,
+          "height": 112,
+          "sealed": false,
+          "name": "Gujarat Titans"
+        },
+        {
+          "x": 34.5,
+          "y": 793.671875,
+          "width": 534.09375,
+          "height": 112,
+          "sealed": false,
+          "name": "Perth Scorchers"
+        },
+        {
+          "x": 581.390625,
+          "y": 793.671875,
+          "width": 534.109375,
+          "height": 112,
+          "sealed": false,
+          "name": "Mumbai Indians"
+        },
+        {
+          "x": 34.5,
+          "y": 918.46875,
+          "width": 534.09375,
+          "height": 112,
+          "sealed": false,
+          "name": "Brisbane Heat"
+        },
+        {
+          "x": 581.390625,
+          "y": 918.46875,
+          "width": 534.109375,
+          "height": 112,
+          "sealed": false,
+          "name": "Hampshire Hawks"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 348.671875,
+          "y": 454.078125,
+          "width": 172.375,
+          "height": 44
+        },
+        {
+          "text": "Speed 1×",
+          "disabled": false,
+          "x": 530.640625,
+          "y": 454.078125,
+          "width": 129.25,
+          "height": 44
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 669.484375,
+          "y": 454.078125,
+          "width": 131.84375,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 34.5,
+        "y": 372.25,
+        "width": 1081,
+        "height": 143.828125
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "before",
+      "name": "foundation-order-sealed",
+      "view": "draftDraw",
+      "reveal": {
+        "kind": "draft",
+        "count": 0,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 768,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 23.03125,
+          "y": 607.5,
+          "width": 354.5625,
+          "height": 112,
+          "sealed": false,
+          "name": "Derbyshire Falcons"
+        },
+        {
+          "x": 390.390625,
+          "y": 607.5,
+          "width": 354.578125,
+          "height": 112,
+          "sealed": false,
+          "name": "Melbourne Stars"
+        },
+        {
+          "x": 23.03125,
+          "y": 732.296875,
+          "width": 354.5625,
+          "height": 112,
+          "sealed": false,
+          "name": "Delhi Capitals"
+        },
+        {
+          "x": 390.390625,
+          "y": 732.296875,
+          "width": 354.578125,
+          "height": 112,
+          "sealed": false,
+          "name": "Gujarat Titans"
+        },
+        {
+          "x": 23.03125,
+          "y": 857.09375,
+          "width": 354.5625,
+          "height": 112,
+          "sealed": false,
+          "name": "Perth Scorchers"
+        },
+        {
+          "x": 390.390625,
+          "y": 857.09375,
+          "width": 354.578125,
+          "height": 112,
+          "sealed": false,
+          "name": "Mumbai Indians"
+        },
+        {
+          "x": 23.03125,
+          "y": 981.890625,
+          "width": 354.5625,
+          "height": 112,
+          "sealed": false,
+          "name": "Brisbane Heat"
+        },
+        {
+          "x": 390.390625,
+          "y": 981.890625,
+          "width": 354.578125,
+          "height": 112,
+          "sealed": false,
+          "name": "Hampshire Hawks"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 157.671875,
+          "y": 517.5,
+          "width": 172.375,
+          "height": 44
+        },
+        {
+          "text": "Speed 1×",
+          "disabled": false,
+          "x": 339.640625,
+          "y": 517.5,
+          "width": 129.25,
+          "height": 44
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 478.484375,
+          "y": 517.5,
+          "width": 131.84375,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 23.03125,
+        "y": 435.671875,
+        "width": 721.9375,
+        "height": 143.828125
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "before",
+      "name": "foundation-order-sealed",
+      "view": "draftDraw",
+      "reveal": {
+        "kind": "draft",
+        "count": 0,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 390,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 12,
+          "y": 660.796875,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Derbyshire Falcons"
+        },
+        {
+          "x": 12,
+          "y": 785.59375,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Melbourne Stars"
+        },
+        {
+          "x": 12,
+          "y": 910.390625,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Delhi Capitals"
+        },
+        {
+          "x": 12,
+          "y": 1035.1875,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Gujarat Titans"
+        },
+        {
+          "x": 12,
+          "y": 1159.984375,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Perth Scorchers"
+        },
+        {
+          "x": 12,
+          "y": 1284.78125,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Mumbai Indians"
+        },
+        {
+          "x": 12,
+          "y": 1409.578125,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Brisbane Heat"
+        },
+        {
+          "x": 12,
+          "y": 1534.375,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Hampshire Hawks"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 30,
+          "y": 499.203125,
+          "width": 160.203125,
+          "height": 62
+        },
+        {
+          "text": "Speed 1×",
+          "disabled": false,
+          "x": 199.796875,
+          "y": 508.203125,
+          "width": 160.203125,
+          "height": 44
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 30,
+          "y": 570.796875,
+          "width": 330,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 12,
+        "y": 417.375,
+        "width": 366,
+        "height": 215.421875
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "before",
+      "name": "foundation-order-sealed",
+      "view": "draftDraw",
+      "reveal": {
+        "kind": "draft",
+        "count": 0,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 320,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 12,
+          "y": 743.953125,
+          "width": 296,
+          "height": 152.890625,
+          "sealed": false,
+          "name": "Derbyshire Falcons"
+        },
+        {
+          "x": 12,
+          "y": 909.640625,
+          "width": 296,
+          "height": 152.890625,
+          "sealed": false,
+          "name": "Melbourne Stars"
+        },
+        {
+          "x": 12,
+          "y": 1075.328125,
+          "width": 296,
+          "height": 152.890625,
+          "sealed": false,
+          "name": "Delhi Capitals"
+        },
+        {
+          "x": 12,
+          "y": 1241.015625,
+          "width": 296,
+          "height": 152.890625,
+          "sealed": false,
+          "name": "Gujarat Titans"
+        },
+        {
+          "x": 12,
+          "y": 1406.703125,
+          "width": 296,
+          "height": 152.890625,
+          "sealed": false,
+          "name": "Perth Scorchers"
+        },
+        {
+          "x": 12,
+          "y": 1572.390625,
+          "width": 296,
+          "height": 152.890625,
+          "sealed": false,
+          "name": "Mumbai Indians"
+        },
+        {
+          "x": 12,
+          "y": 1738.078125,
+          "width": 296,
+          "height": 152.890625,
+          "sealed": false,
+          "name": "Brisbane Heat"
+        },
+        {
+          "x": 12,
+          "y": 1903.765625,
+          "width": 296,
+          "height": 152.890625,
+          "sealed": false,
+          "name": "Hampshire Hawks"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 30,
+          "y": 546.765625,
+          "width": 260,
+          "height": 44
+        },
+        {
+          "text": "Speed 1×",
+          "disabled": false,
+          "x": 30,
+          "y": 600.359375,
+          "width": 260,
+          "height": 44
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 30,
+          "y": 653.953125,
+          "width": 260,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 12,
+        "y": 440.9375,
+        "width": 296,
+        "height": 275.015625
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "before",
+      "name": "foundation-order-complete",
+      "view": "draftDraw",
+      "reveal": {
+        "kind": "draft",
+        "count": 8,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 1440,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 83.1875,
+          "y": 553.828125,
+          "width": 630.40625,
+          "height": 112,
+          "sealed": false,
+          "name": "Derbyshire Falcons"
+        },
+        {
+          "x": 726.390625,
+          "y": 553.828125,
+          "width": 630.421875,
+          "height": 112,
+          "sealed": false,
+          "name": "Melbourne Stars"
+        },
+        {
+          "x": 83.1875,
+          "y": 678.625,
+          "width": 630.40625,
+          "height": 112,
+          "sealed": false,
+          "name": "Delhi Capitals"
+        },
+        {
+          "x": 726.390625,
+          "y": 678.625,
+          "width": 630.421875,
+          "height": 112,
+          "sealed": false,
+          "name": "Gujarat Titans"
+        },
+        {
+          "x": 83.1875,
+          "y": 803.421875,
+          "width": 630.40625,
+          "height": 112,
+          "sealed": false,
+          "name": "Perth Scorchers"
+        },
+        {
+          "x": 726.390625,
+          "y": 803.421875,
+          "width": 630.421875,
+          "height": 112,
+          "sealed": false,
+          "name": "Mumbai Indians"
+        },
+        {
+          "x": 83.1875,
+          "y": 928.21875,
+          "width": 630.40625,
+          "height": 112,
+          "sealed": false,
+          "name": "Brisbane Heat"
+        },
+        {
+          "x": 726.390625,
+          "y": 928.21875,
+          "width": 630.421875,
+          "height": 112,
+          "sealed": false,
+          "name": "Hampshire Hawks"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Enter the draft room",
+          "disabled": false,
+          "x": 576,
+          "y": 463.828125,
+          "width": 288,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 83.1875,
+        "y": 382,
+        "width": 1273.625,
+        "height": 143.828125
+      },
+      "gates": {
+        "paceInert": true,
+        "paceHidden": "true",
+        "nextInert": false,
+        "nextHidden": null,
+        "nextDisabled": false,
+        "paceDisabled": [
+          true,
+          true,
+          true
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "before",
+      "name": "foundation-order-complete",
+      "view": "draftDraw",
+      "reveal": {
+        "kind": "draft",
+        "count": 8,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 1150,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 34.5,
+          "y": 544.078125,
+          "width": 534.09375,
+          "height": 112,
+          "sealed": false,
+          "name": "Derbyshire Falcons"
+        },
+        {
+          "x": 581.390625,
+          "y": 544.078125,
+          "width": 534.109375,
+          "height": 112,
+          "sealed": false,
+          "name": "Melbourne Stars"
+        },
+        {
+          "x": 34.5,
+          "y": 668.875,
+          "width": 534.09375,
+          "height": 112,
+          "sealed": false,
+          "name": "Delhi Capitals"
+        },
+        {
+          "x": 581.390625,
+          "y": 668.875,
+          "width": 534.109375,
+          "height": 112,
+          "sealed": false,
+          "name": "Gujarat Titans"
+        },
+        {
+          "x": 34.5,
+          "y": 793.671875,
+          "width": 534.09375,
+          "height": 112,
+          "sealed": false,
+          "name": "Perth Scorchers"
+        },
+        {
+          "x": 581.390625,
+          "y": 793.671875,
+          "width": 534.109375,
+          "height": 112,
+          "sealed": false,
+          "name": "Mumbai Indians"
+        },
+        {
+          "x": 34.5,
+          "y": 918.46875,
+          "width": 534.09375,
+          "height": 112,
+          "sealed": false,
+          "name": "Brisbane Heat"
+        },
+        {
+          "x": 581.390625,
+          "y": 918.46875,
+          "width": 534.109375,
+          "height": 112,
+          "sealed": false,
+          "name": "Hampshire Hawks"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Enter the draft room",
+          "disabled": false,
+          "x": 431,
+          "y": 454.078125,
+          "width": 288,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 34.5,
+        "y": 372.25,
+        "width": 1081,
+        "height": 143.828125
+      },
+      "gates": {
+        "paceInert": true,
+        "paceHidden": "true",
+        "nextInert": false,
+        "nextHidden": null,
+        "nextDisabled": false,
+        "paceDisabled": [
+          true,
+          true,
+          true
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "before",
+      "name": "foundation-order-complete",
+      "view": "draftDraw",
+      "reveal": {
+        "kind": "draft",
+        "count": 8,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 768,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 23.03125,
+          "y": 607.5,
+          "width": 354.5625,
+          "height": 112,
+          "sealed": false,
+          "name": "Derbyshire Falcons"
+        },
+        {
+          "x": 390.390625,
+          "y": 607.5,
+          "width": 354.578125,
+          "height": 112,
+          "sealed": false,
+          "name": "Melbourne Stars"
+        },
+        {
+          "x": 23.03125,
+          "y": 732.296875,
+          "width": 354.5625,
+          "height": 112,
+          "sealed": false,
+          "name": "Delhi Capitals"
+        },
+        {
+          "x": 390.390625,
+          "y": 732.296875,
+          "width": 354.578125,
+          "height": 112,
+          "sealed": false,
+          "name": "Gujarat Titans"
+        },
+        {
+          "x": 23.03125,
+          "y": 857.09375,
+          "width": 354.5625,
+          "height": 112,
+          "sealed": false,
+          "name": "Perth Scorchers"
+        },
+        {
+          "x": 390.390625,
+          "y": 857.09375,
+          "width": 354.578125,
+          "height": 112,
+          "sealed": false,
+          "name": "Mumbai Indians"
+        },
+        {
+          "x": 23.03125,
+          "y": 981.890625,
+          "width": 354.5625,
+          "height": 112,
+          "sealed": false,
+          "name": "Brisbane Heat"
+        },
+        {
+          "x": 390.390625,
+          "y": 981.890625,
+          "width": 354.578125,
+          "height": 112,
+          "sealed": false,
+          "name": "Hampshire Hawks"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Enter the draft room",
+          "disabled": false,
+          "x": 240,
+          "y": 517.5,
+          "width": 288,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 23.03125,
+        "y": 435.671875,
+        "width": 721.9375,
+        "height": 143.828125
+      },
+      "gates": {
+        "paceInert": true,
+        "paceHidden": "true",
+        "nextInert": false,
+        "nextHidden": null,
+        "nextDisabled": false,
+        "paceDisabled": [
+          true,
+          true,
+          true
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "before",
+      "name": "foundation-order-complete",
+      "view": "draftDraw",
+      "reveal": {
+        "kind": "draft",
+        "count": 8,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 390,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 12,
+          "y": 660.796875,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Derbyshire Falcons"
+        },
+        {
+          "x": 12,
+          "y": 785.59375,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Melbourne Stars"
+        },
+        {
+          "x": 12,
+          "y": 910.390625,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Delhi Capitals"
+        },
+        {
+          "x": 12,
+          "y": 1035.1875,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Gujarat Titans"
+        },
+        {
+          "x": 12,
+          "y": 1159.984375,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Perth Scorchers"
+        },
+        {
+          "x": 12,
+          "y": 1284.78125,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Mumbai Indians"
+        },
+        {
+          "x": 12,
+          "y": 1409.578125,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Brisbane Heat"
+        },
+        {
+          "x": 12,
+          "y": 1534.375,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Hampshire Hawks"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Enter the draft room",
+          "disabled": false,
+          "x": 30,
+          "y": 535,
+          "width": 330,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 12,
+        "y": 417.375,
+        "width": 366,
+        "height": 215.421875
+      },
+      "gates": {
+        "paceInert": true,
+        "paceHidden": "true",
+        "nextInert": false,
+        "nextHidden": null,
+        "nextDisabled": false,
+        "paceDisabled": [
+          true,
+          true,
+          true
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "before",
+      "name": "foundation-order-complete",
+      "view": "draftDraw",
+      "reveal": {
+        "kind": "draft",
+        "count": 8,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 320,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 12,
+          "y": 743.953125,
+          "width": 296,
+          "height": 152.890625,
+          "sealed": false,
+          "name": "Derbyshire Falcons"
+        },
+        {
+          "x": 12,
+          "y": 909.640625,
+          "width": 296,
+          "height": 152.890625,
+          "sealed": false,
+          "name": "Melbourne Stars"
+        },
+        {
+          "x": 12,
+          "y": 1075.328125,
+          "width": 296,
+          "height": 152.890625,
+          "sealed": false,
+          "name": "Delhi Capitals"
+        },
+        {
+          "x": 12,
+          "y": 1241.015625,
+          "width": 296,
+          "height": 152.890625,
+          "sealed": false,
+          "name": "Gujarat Titans"
+        },
+        {
+          "x": 12,
+          "y": 1406.703125,
+          "width": 296,
+          "height": 152.890625,
+          "sealed": false,
+          "name": "Perth Scorchers"
+        },
+        {
+          "x": 12,
+          "y": 1572.390625,
+          "width": 296,
+          "height": 152.890625,
+          "sealed": false,
+          "name": "Mumbai Indians"
+        },
+        {
+          "x": 12,
+          "y": 1738.078125,
+          "width": 296,
+          "height": 152.890625,
+          "sealed": false,
+          "name": "Brisbane Heat"
+        },
+        {
+          "x": 12,
+          "y": 1903.765625,
+          "width": 296,
+          "height": 152.890625,
+          "sealed": false,
+          "name": "Hampshire Hawks"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Enter the draft room",
+          "disabled": false,
+          "x": 30,
+          "y": 600.359375,
+          "width": 260,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 12,
+        "y": 440.9375,
+        "width": 296,
+        "height": 275.015625
+      },
+      "gates": {
+        "paceInert": true,
+        "paceHidden": "true",
+        "nextInert": false,
+        "nextHidden": null,
+        "nextDisabled": false,
+        "paceDisabled": [
+          true,
+          true,
+          true
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "before",
+      "name": "offseason-decisions",
+      "view": "dynasty",
+      "reveal": null,
+      "width": 1440,
+      "overflow": false,
+      "cards": [],
+      "controls": [],
+      "draw": null,
+      "gates": null,
+      "decisions": {
+        "text": "IN THE DRESSING ROOMSquad decisionsAndre NelWants a moveUnresolved transfer requestReview playerInzamam-ul-HaqWants a moveUnresolved transfer requestReview playerAndrew HallWants a moveUnresolved transfer requestReview player1 more squad decision+Muttiah MuralitharanWants a moveUnresolved transfer requestReview player",
+        "x": 120.578125,
+        "y": 643.875,
+        "width": 1198.84375,
+        "height": 449.484375,
+        "buttons": [
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[133]",
+            "disabled": false,
+            "x": 1173.015625,
+            "y": 749.59375,
+            "width": 125.40625,
+            "height": 46.296875
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[209]",
+            "disabled": false,
+            "x": 1173.015625,
+            "y": 835.484375,
+            "width": 125.40625,
+            "height": 46.296875
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[219]",
+            "disabled": false,
+            "x": 1173.015625,
+            "y": 921.375,
+            "width": 125.40625,
+            "height": 46.296875
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[87]",
+            "disabled": false,
+            "x": 1162.015625,
+            "y": 1082.25,
+            "width": 125.40625,
+            "height": 46.296875
+          }
+        ]
+      }
+    },
+    {
+      "label": "before",
+      "name": "offseason-decisions",
+      "view": "dynasty",
+      "reveal": null,
+      "width": 1150,
+      "overflow": false,
+      "cards": [],
+      "controls": [],
+      "draw": null,
+      "gates": null,
+      "decisions": {
+        "text": "IN THE DRESSING ROOMSquad decisionsAndre NelWants a moveUnresolved transfer requestReview playerInzamam-ul-HaqWants a moveUnresolved transfer requestReview playerAndrew HallWants a moveUnresolved transfer requestReview player1 more squad decision+Muttiah MuralitharanWants a moveUnresolved transfer requestReview player",
+        "x": 71.890625,
+        "y": 634.125,
+        "width": 1006.21875,
+        "height": 449.484375,
+        "buttons": [
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[133]",
+            "disabled": false,
+            "x": 931.703125,
+            "y": 739.84375,
+            "width": 125.40625,
+            "height": 46.296875
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[209]",
+            "disabled": false,
+            "x": 931.703125,
+            "y": 825.734375,
+            "width": 125.40625,
+            "height": 46.296875
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[219]",
+            "disabled": false,
+            "x": 931.703125,
+            "y": 911.625,
+            "width": 125.40625,
+            "height": 46.296875
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[87]",
+            "disabled": false,
+            "x": 920.703125,
+            "y": 1072.5,
+            "width": 125.40625,
+            "height": 46.296875
+          }
+        ]
+      }
+    },
+    {
+      "label": "before",
+      "name": "offseason-decisions",
+      "view": "dynasty",
+      "reveal": null,
+      "width": 768,
+      "overflow": false,
+      "cards": [],
+      "controls": [],
+      "draw": null,
+      "gates": null,
+      "decisions": {
+        "text": "IN THE DRESSING ROOMSquad decisionsAndre NelWants a moveUnresolved transfer requestReview playerInzamam-ul-HaqWants a moveUnresolved transfer requestReview playerAndrew HallWants a moveUnresolved transfer requestReview player1 more squad decision+Muttiah MuralitharanWants a moveUnresolved transfer requestReview player",
+        "x": 56.421875,
+        "y": 691.046875,
+        "width": 655.15625,
+        "height": 449.484375,
+        "buttons": [
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[133]",
+            "disabled": false,
+            "x": 565.171875,
+            "y": 796.765625,
+            "width": 125.40625,
+            "height": 46.296875
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[209]",
+            "disabled": false,
+            "x": 565.171875,
+            "y": 882.65625,
+            "width": 125.40625,
+            "height": 46.296875
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[219]",
+            "disabled": false,
+            "x": 565.171875,
+            "y": 968.546875,
+            "width": 125.40625,
+            "height": 46.296875
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[87]",
+            "disabled": false,
+            "x": 554.171875,
+            "y": 1129.421875,
+            "width": 125.40625,
+            "height": 46.296875
+          }
+        ]
+      }
+    },
+    {
+      "label": "before",
+      "name": "offseason-decisions",
+      "view": "dynasty",
+      "reveal": null,
+      "width": 390,
+      "overflow": false,
+      "cards": [],
+      "controls": [],
+      "draw": null,
+      "gates": null,
+      "decisions": {
+        "text": "IN THE DRESSING ROOMSquad decisionsAndre NelWants a moveUnresolved transfer requestReview playerInzamam-ul-HaqWants a moveUnresolved transfer requestReview playerAndrew HallWants a moveUnresolved transfer requestReview player1 more squad decision+Muttiah MuralitharanWants a moveUnresolved transfer requestReview player",
+        "x": 45.390625,
+        "y": 680.203125,
+        "width": 299.21875,
+        "height": 631.984375,
+        "buttons": [
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[133]",
+            "disabled": false,
+            "x": 69.390625,
+            "y": 849.515625,
+            "width": 254.21875,
+            "height": 46.296875
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[209]",
+            "disabled": false,
+            "x": 69.390625,
+            "y": 989.703125,
+            "width": 254.21875,
+            "height": 46.296875
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[219]",
+            "disabled": false,
+            "x": 69.390625,
+            "y": 1129.890625,
+            "width": 254.21875,
+            "height": 46.296875
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[87]",
+            "disabled": false,
+            "x": 80.390625,
+            "y": 1364.671875,
+            "width": 232.21875,
+            "height": 46.296875
+          }
+        ]
+      }
+    },
+    {
+      "label": "before",
+      "name": "offseason-decisions",
+      "view": "dynasty",
+      "reveal": null,
+      "width": 320,
+      "overflow": false,
+      "cards": [],
+      "controls": [],
+      "draw": null,
+      "gates": null,
+      "decisions": {
+        "text": "IN THE DRESSING ROOMSquad decisionsAndre NelWants a moveUnresolved transfer requestReview playerInzamam-ul-HaqWants a moveUnresolved transfer requestReview playerAndrew HallWants a moveUnresolved transfer requestReview player1 more squad decision+Muttiah MuralitharanWants a moveUnresolved transfer requestReview player",
+        "x": 45.390625,
+        "y": 721,
+        "width": 229.21875,
+        "height": 713.875,
+        "buttons": [
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[133]",
+            "disabled": false,
+            "x": 69.390625,
+            "y": 910.609375,
+            "width": 184.21875,
+            "height": 46.296875
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[209]",
+            "disabled": false,
+            "x": 69.390625,
+            "y": 1071.09375,
+            "width": 184.21875,
+            "height": 46.296875
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[219]",
+            "disabled": false,
+            "x": 69.390625,
+            "y": 1231.578125,
+            "width": 184.21875,
+            "height": 46.296875
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[87]",
+            "disabled": false,
+            "x": 80.390625,
+            "y": 1507.65625,
+            "width": 162.21875,
+            "height": 46.296875
+          }
+        ]
+      }
+    },
+    {
+      "label": "after",
+      "name": "club-reveal-sealed",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 0,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 1440,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 83.1875,
+          "y": 426.984375,
+          "width": 306.40625,
+          "height": 399.5,
+          "sealed": true,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 405.59375,
+          "y": 426.984375,
+          "width": 306.40625,
+          "height": 399.5,
+          "sealed": true,
+          "name": "Surrey",
+          "ground": "The OvalGood batting wicket"
+        },
+        {
+          "x": 728,
+          "y": 426.984375,
+          "width": 306.40625,
+          "height": 399.5,
+          "sealed": true,
+          "name": "Hobart Hurricanes",
+          "ground": "Bellerive OvalSeam and wind"
+        },
+        {
+          "x": 1050.40625,
+          "y": 426.984375,
+          "width": 306.40625,
+          "height": 399.5,
+          "sealed": true,
+          "name": "Northamptonshire Steelbacks",
+          "ground": "County Ground, NorthamptonBoundary hitting and execution"
+        },
+        {
+          "x": 83.1875,
+          "y": 842.484375,
+          "width": 306.40625,
+          "height": 399.5,
+          "sealed": true,
+          "name": "Sunrisers Hyderabad",
+          "ground": "Rajiv Gandhi International Cricket StadiumStrokeplay and scoring pressure"
+        },
+        {
+          "x": 405.59375,
+          "y": 842.484375,
+          "width": 306.40625,
+          "height": 399.5,
+          "sealed": true,
+          "name": "Sydney Thunder",
+          "ground": "Sydney Showground StadiumPower and strong square pockets"
+        },
+        {
+          "x": 728,
+          "y": 842.484375,
+          "width": 306.40625,
+          "height": 399.5,
+          "sealed": true,
+          "name": "Rajasthan Royals",
+          "ground": "Sawai Mansingh StadiumGrip and control"
+        },
+        {
+          "x": 1050.40625,
+          "y": 842.484375,
+          "width": 306.40625,
+          "height": 399.5,
+          "sealed": true,
+          "name": "Chennai Super Kings",
+          "ground": "MA Chidambaram StadiumSlow surface and grip"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 493.671875,
+          "y": 352.984375,
+          "width": 172.375,
+          "height": 44
+        },
+        {
+          "text": "Speed 1×",
+          "disabled": false,
+          "x": 675.640625,
+          "y": 352.984375,
+          "width": 129.25,
+          "height": 44
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 814.484375,
+          "y": 352.984375,
+          "width": 131.84375,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 83.1875,
+        "y": 280.765625,
+        "width": 1273.625,
+        "height": 130.21875
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "after",
+      "name": "club-reveal-sealed",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 0,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 1150,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 34.5,
+          "y": 417.234375,
+          "width": 258.25,
+          "height": 421.09375,
+          "sealed": true,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 308.75,
+          "y": 417.234375,
+          "width": 258.25,
+          "height": 421.09375,
+          "sealed": true,
+          "name": "Surrey",
+          "ground": "The OvalGood batting wicket"
+        },
+        {
+          "x": 583,
+          "y": 417.234375,
+          "width": 258.25,
+          "height": 421.09375,
+          "sealed": true,
+          "name": "Hobart Hurricanes",
+          "ground": "Bellerive OvalSeam and wind"
+        },
+        {
+          "x": 857.25,
+          "y": 417.234375,
+          "width": 258.25,
+          "height": 421.09375,
+          "sealed": true,
+          "name": "Northamptonshire Steelbacks",
+          "ground": "County Ground, NorthamptonBoundary hitting and execution"
+        },
+        {
+          "x": 34.5,
+          "y": 854.328125,
+          "width": 258.25,
+          "height": 421.09375,
+          "sealed": true,
+          "name": "Sunrisers Hyderabad",
+          "ground": "Rajiv Gandhi International Cricket StadiumStrokeplay and scoring pressure"
+        },
+        {
+          "x": 308.75,
+          "y": 854.328125,
+          "width": 258.25,
+          "height": 421.09375,
+          "sealed": true,
+          "name": "Sydney Thunder",
+          "ground": "Sydney Showground StadiumPower and strong square pockets"
+        },
+        {
+          "x": 583,
+          "y": 854.328125,
+          "width": 258.25,
+          "height": 421.09375,
+          "sealed": true,
+          "name": "Rajasthan Royals",
+          "ground": "Sawai Mansingh StadiumGrip and control"
+        },
+        {
+          "x": 857.25,
+          "y": 854.328125,
+          "width": 258.25,
+          "height": 421.09375,
+          "sealed": true,
+          "name": "Chennai Super Kings",
+          "ground": "MA Chidambaram StadiumSlow surface and grip"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 348.671875,
+          "y": 343.234375,
+          "width": 172.375,
+          "height": 44
+        },
+        {
+          "text": "Speed 1×",
+          "disabled": false,
+          "x": 530.640625,
+          "y": 343.234375,
+          "width": 129.25,
+          "height": 44
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 669.484375,
+          "y": 343.234375,
+          "width": 131.84375,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 34.5,
+        "y": 271.015625,
+        "width": 1081,
+        "height": 130.21875
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "after",
+      "name": "club-reveal-sealed",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 0,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 768,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 23.03125,
+          "y": 469.046875,
+          "width": 352.96875,
+          "height": 377.109375,
+          "sealed": true,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 392,
+          "y": 469.046875,
+          "width": 352.96875,
+          "height": 377.109375,
+          "sealed": true,
+          "name": "Surrey",
+          "ground": "The OvalGood batting wicket"
+        },
+        {
+          "x": 23.03125,
+          "y": 862.15625,
+          "width": 352.96875,
+          "height": 377.109375,
+          "sealed": true,
+          "name": "Hobart Hurricanes",
+          "ground": "Bellerive OvalSeam and wind"
+        },
+        {
+          "x": 392,
+          "y": 862.15625,
+          "width": 352.96875,
+          "height": 377.109375,
+          "sealed": true,
+          "name": "Northamptonshire Steelbacks",
+          "ground": "County Ground, NorthamptonBoundary hitting and execution"
+        },
+        {
+          "x": 23.03125,
+          "y": 1255.265625,
+          "width": 352.96875,
+          "height": 377.109375,
+          "sealed": true,
+          "name": "Sunrisers Hyderabad",
+          "ground": "Rajiv Gandhi International Cricket StadiumStrokeplay and scoring pressure"
+        },
+        {
+          "x": 392,
+          "y": 1255.265625,
+          "width": 352.96875,
+          "height": 377.109375,
+          "sealed": true,
+          "name": "Sydney Thunder",
+          "ground": "Sydney Showground StadiumPower and strong square pockets"
+        },
+        {
+          "x": 23.03125,
+          "y": 1648.375,
+          "width": 352.96875,
+          "height": 377.109375,
+          "sealed": true,
+          "name": "Rajasthan Royals",
+          "ground": "Sawai Mansingh StadiumGrip and control"
+        },
+        {
+          "x": 392,
+          "y": 1648.375,
+          "width": 352.96875,
+          "height": 377.109375,
+          "sealed": true,
+          "name": "Chennai Super Kings",
+          "ground": "MA Chidambaram StadiumSlow surface and grip"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 157.671875,
+          "y": 395.046875,
+          "width": 172.375,
+          "height": 44
+        },
+        {
+          "text": "Speed 1×",
+          "disabled": false,
+          "x": 339.640625,
+          "y": 395.046875,
+          "width": 129.25,
+          "height": 44
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 478.484375,
+          "y": 395.046875,
+          "width": 131.84375,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 23.03125,
+        "y": 322.828125,
+        "width": 721.9375,
+        "height": 130.21875
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "after",
+      "name": "club-reveal-sealed",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 0,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 390,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 12,
+          "y": 373.390625,
+          "width": 366,
+          "height": 370.703125,
+          "sealed": true,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 12,
+          "y": 760.09375,
+          "width": 366,
+          "height": 370.703125,
+          "sealed": true,
+          "name": "Surrey",
+          "ground": "The OvalGood batting wicket"
+        },
+        {
+          "x": 12,
+          "y": 1146.796875,
+          "width": 366,
+          "height": 370.703125,
+          "sealed": true,
+          "name": "Hobart Hurricanes",
+          "ground": "Bellerive OvalSeam and wind"
+        },
+        {
+          "x": 12,
+          "y": 1533.5,
+          "width": 366,
+          "height": 370.703125,
+          "sealed": true,
+          "name": "Northamptonshire Steelbacks",
+          "ground": "County Ground, NorthamptonBoundary hitting and execution"
+        },
+        {
+          "x": 12,
+          "y": 1920.203125,
+          "width": 366,
+          "height": 370.703125,
+          "sealed": true,
+          "name": "Sunrisers Hyderabad",
+          "ground": "Rajiv Gandhi International Cricket StadiumStrokeplay and scoring pressure"
+        },
+        {
+          "x": 12,
+          "y": 2306.90625,
+          "width": 366,
+          "height": 370.703125,
+          "sealed": true,
+          "name": "Sydney Thunder",
+          "ground": "Sydney Showground StadiumPower and strong square pockets"
+        },
+        {
+          "x": 12,
+          "y": 2693.609375,
+          "width": 366,
+          "height": 370.703125,
+          "sealed": true,
+          "name": "Rajasthan Royals",
+          "ground": "Sawai Mansingh StadiumGrip and control"
+        },
+        {
+          "x": 12,
+          "y": 3080.3125,
+          "width": 366,
+          "height": 370.703125,
+          "sealed": true,
+          "name": "Chennai Super Kings",
+          "ground": "MA Chidambaram StadiumSlow surface and grip"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 26,
+          "y": 286.390625,
+          "width": 106.265625,
+          "height": 57
+        },
+        {
+          "text": "Speed 1×",
+          "disabled": false,
+          "x": 141.859375,
+          "y": 286.390625,
+          "width": 106.28125,
+          "height": 57
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 257.734375,
+          "y": 286.390625,
+          "width": 106.265625,
+          "height": 57
+        }
+      ],
+      "draw": {
+        "x": 12,
+        "y": 214.171875,
+        "width": 366,
+        "height": 143.21875
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "after",
+      "name": "club-reveal-sealed",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 0,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 320,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 12,
+          "y": 408.390625,
+          "width": 296,
+          "height": 393.09375,
+          "sealed": true,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 12,
+          "y": 817.484375,
+          "width": 296,
+          "height": 393.09375,
+          "sealed": true,
+          "name": "Surrey",
+          "ground": "The OvalGood batting wicket"
+        },
+        {
+          "x": 12,
+          "y": 1226.578125,
+          "width": 296,
+          "height": 393.09375,
+          "sealed": true,
+          "name": "Hobart Hurricanes",
+          "ground": "Bellerive OvalSeam and wind"
+        },
+        {
+          "x": 12,
+          "y": 1635.671875,
+          "width": 296,
+          "height": 393.09375,
+          "sealed": true,
+          "name": "Northamptonshire Steelbacks",
+          "ground": "County Ground, NorthamptonBoundary hitting and execution"
+        },
+        {
+          "x": 12,
+          "y": 2044.765625,
+          "width": 296,
+          "height": 393.09375,
+          "sealed": true,
+          "name": "Sunrisers Hyderabad",
+          "ground": "Rajiv Gandhi International Cricket StadiumStrokeplay and scoring pressure"
+        },
+        {
+          "x": 12,
+          "y": 2453.859375,
+          "width": 296,
+          "height": 393.09375,
+          "sealed": true,
+          "name": "Sydney Thunder",
+          "ground": "Sydney Showground StadiumPower and strong square pockets"
+        },
+        {
+          "x": 12,
+          "y": 2862.953125,
+          "width": 296,
+          "height": 393.09375,
+          "sealed": true,
+          "name": "Rajasthan Royals",
+          "ground": "Sawai Mansingh StadiumGrip and control"
+        },
+        {
+          "x": 12,
+          "y": 3272.046875,
+          "width": 296,
+          "height": 393.09375,
+          "sealed": true,
+          "name": "Chennai Super Kings",
+          "ground": "MA Chidambaram StadiumSlow surface and grip"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 26,
+          "y": 286.390625,
+          "width": 82.9375,
+          "height": 92
+        },
+        {
+          "text": "Speed 1×",
+          "disabled": false,
+          "x": 118.53125,
+          "y": 286.390625,
+          "width": 82.9375,
+          "height": 92
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 211.0625,
+          "y": 286.390625,
+          "width": 82.9375,
+          "height": 92
+        }
+      ],
+      "draw": {
+        "x": 12,
+        "y": 214.171875,
+        "width": 296,
+        "height": 178.21875
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "after",
+      "name": "club-reveal-partial",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 2,
+        "speedIndex": 2,
+        "running": false
+      },
+      "width": 1440,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 83.1875,
+          "y": 426.984375,
+          "width": 306.40625,
+          "height": 399.5,
+          "sealed": false,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 405.59375,
+          "y": 426.984375,
+          "width": 306.40625,
+          "height": 399.5,
+          "sealed": false,
+          "name": "Surrey",
+          "ground": "The OvalGood batting wicket"
+        },
+        {
+          "x": 728,
+          "y": 426.984375,
+          "width": 306.40625,
+          "height": 399.5,
+          "sealed": true,
+          "name": "Hobart Hurricanes",
+          "ground": "Bellerive OvalSeam and wind"
+        },
+        {
+          "x": 1050.40625,
+          "y": 426.984375,
+          "width": 306.40625,
+          "height": 399.5,
+          "sealed": true,
+          "name": "Northamptonshire Steelbacks",
+          "ground": "County Ground, NorthamptonBoundary hitting and execution"
+        },
+        {
+          "x": 83.1875,
+          "y": 842.484375,
+          "width": 306.40625,
+          "height": 399.5,
+          "sealed": true,
+          "name": "Sunrisers Hyderabad",
+          "ground": "Rajiv Gandhi International Cricket StadiumStrokeplay and scoring pressure"
+        },
+        {
+          "x": 405.59375,
+          "y": 842.484375,
+          "width": 306.40625,
+          "height": 399.5,
+          "sealed": true,
+          "name": "Sydney Thunder",
+          "ground": "Sydney Showground StadiumPower and strong square pockets"
+        },
+        {
+          "x": 728,
+          "y": 842.484375,
+          "width": 306.40625,
+          "height": 399.5,
+          "sealed": true,
+          "name": "Rajasthan Royals",
+          "ground": "Sawai Mansingh StadiumGrip and control"
+        },
+        {
+          "x": 1050.40625,
+          "y": 842.484375,
+          "width": 306.40625,
+          "height": 399.5,
+          "sealed": true,
+          "name": "Chennai Super Kings",
+          "ground": "MA Chidambaram StadiumSlow surface and grip"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 491.6875,
+          "y": 352.984375,
+          "width": 172.375,
+          "height": 44
+        },
+        {
+          "text": "Speed 4×",
+          "disabled": false,
+          "x": 673.65625,
+          "y": 352.984375,
+          "width": 133.203125,
+          "height": 44
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 816.453125,
+          "y": 352.984375,
+          "width": 131.84375,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 83.1875,
+        "y": 280.765625,
+        "width": 1273.625,
+        "height": 130.21875
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "after",
+      "name": "club-reveal-partial",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 2,
+        "speedIndex": 2,
+        "running": false
+      },
+      "width": 1150,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 34.5,
+          "y": 417.234375,
+          "width": 258.25,
+          "height": 421.09375,
+          "sealed": false,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 308.75,
+          "y": 417.234375,
+          "width": 258.25,
+          "height": 421.09375,
+          "sealed": false,
+          "name": "Surrey",
+          "ground": "The OvalGood batting wicket"
+        },
+        {
+          "x": 583,
+          "y": 417.234375,
+          "width": 258.25,
+          "height": 421.09375,
+          "sealed": true,
+          "name": "Hobart Hurricanes",
+          "ground": "Bellerive OvalSeam and wind"
+        },
+        {
+          "x": 857.25,
+          "y": 417.234375,
+          "width": 258.25,
+          "height": 421.09375,
+          "sealed": true,
+          "name": "Northamptonshire Steelbacks",
+          "ground": "County Ground, NorthamptonBoundary hitting and execution"
+        },
+        {
+          "x": 34.5,
+          "y": 854.328125,
+          "width": 258.25,
+          "height": 421.09375,
+          "sealed": true,
+          "name": "Sunrisers Hyderabad",
+          "ground": "Rajiv Gandhi International Cricket StadiumStrokeplay and scoring pressure"
+        },
+        {
+          "x": 308.75,
+          "y": 854.328125,
+          "width": 258.25,
+          "height": 421.09375,
+          "sealed": true,
+          "name": "Sydney Thunder",
+          "ground": "Sydney Showground StadiumPower and strong square pockets"
+        },
+        {
+          "x": 583,
+          "y": 854.328125,
+          "width": 258.25,
+          "height": 421.09375,
+          "sealed": true,
+          "name": "Rajasthan Royals",
+          "ground": "Sawai Mansingh StadiumGrip and control"
+        },
+        {
+          "x": 857.25,
+          "y": 854.328125,
+          "width": 258.25,
+          "height": 421.09375,
+          "sealed": true,
+          "name": "Chennai Super Kings",
+          "ground": "MA Chidambaram StadiumSlow surface and grip"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 346.6875,
+          "y": 343.234375,
+          "width": 172.375,
+          "height": 44
+        },
+        {
+          "text": "Speed 4×",
+          "disabled": false,
+          "x": 528.65625,
+          "y": 343.234375,
+          "width": 133.203125,
+          "height": 44
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 671.453125,
+          "y": 343.234375,
+          "width": 131.84375,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 34.5,
+        "y": 271.015625,
+        "width": 1081,
+        "height": 130.21875
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "after",
+      "name": "club-reveal-partial",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 2,
+        "speedIndex": 2,
+        "running": false
+      },
+      "width": 768,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 23.03125,
+          "y": 469.046875,
+          "width": 352.96875,
+          "height": 377.109375,
+          "sealed": false,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 392,
+          "y": 469.046875,
+          "width": 352.96875,
+          "height": 377.109375,
+          "sealed": false,
+          "name": "Surrey",
+          "ground": "The OvalGood batting wicket"
+        },
+        {
+          "x": 23.03125,
+          "y": 862.15625,
+          "width": 352.96875,
+          "height": 377.109375,
+          "sealed": true,
+          "name": "Hobart Hurricanes",
+          "ground": "Bellerive OvalSeam and wind"
+        },
+        {
+          "x": 392,
+          "y": 862.15625,
+          "width": 352.96875,
+          "height": 377.109375,
+          "sealed": true,
+          "name": "Northamptonshire Steelbacks",
+          "ground": "County Ground, NorthamptonBoundary hitting and execution"
+        },
+        {
+          "x": 23.03125,
+          "y": 1255.265625,
+          "width": 352.96875,
+          "height": 377.109375,
+          "sealed": true,
+          "name": "Sunrisers Hyderabad",
+          "ground": "Rajiv Gandhi International Cricket StadiumStrokeplay and scoring pressure"
+        },
+        {
+          "x": 392,
+          "y": 1255.265625,
+          "width": 352.96875,
+          "height": 377.109375,
+          "sealed": true,
+          "name": "Sydney Thunder",
+          "ground": "Sydney Showground StadiumPower and strong square pockets"
+        },
+        {
+          "x": 23.03125,
+          "y": 1648.375,
+          "width": 352.96875,
+          "height": 377.109375,
+          "sealed": true,
+          "name": "Rajasthan Royals",
+          "ground": "Sawai Mansingh StadiumGrip and control"
+        },
+        {
+          "x": 392,
+          "y": 1648.375,
+          "width": 352.96875,
+          "height": 377.109375,
+          "sealed": true,
+          "name": "Chennai Super Kings",
+          "ground": "MA Chidambaram StadiumSlow surface and grip"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 155.6875,
+          "y": 395.046875,
+          "width": 172.375,
+          "height": 44
+        },
+        {
+          "text": "Speed 4×",
+          "disabled": false,
+          "x": 337.65625,
+          "y": 395.046875,
+          "width": 133.203125,
+          "height": 44
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 480.453125,
+          "y": 395.046875,
+          "width": 131.84375,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 23.03125,
+        "y": 322.828125,
+        "width": 721.9375,
+        "height": 130.21875
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "after",
+      "name": "club-reveal-partial",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 2,
+        "speedIndex": 2,
+        "running": false
+      },
+      "width": 390,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 12,
+          "y": 373.390625,
+          "width": 366,
+          "height": 370.703125,
+          "sealed": false,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 12,
+          "y": 760.09375,
+          "width": 366,
+          "height": 370.703125,
+          "sealed": false,
+          "name": "Surrey",
+          "ground": "The OvalGood batting wicket"
+        },
+        {
+          "x": 12,
+          "y": 1146.796875,
+          "width": 366,
+          "height": 370.703125,
+          "sealed": true,
+          "name": "Hobart Hurricanes",
+          "ground": "Bellerive OvalSeam and wind"
+        },
+        {
+          "x": 12,
+          "y": 1533.5,
+          "width": 366,
+          "height": 370.703125,
+          "sealed": true,
+          "name": "Northamptonshire Steelbacks",
+          "ground": "County Ground, NorthamptonBoundary hitting and execution"
+        },
+        {
+          "x": 12,
+          "y": 1920.203125,
+          "width": 366,
+          "height": 370.703125,
+          "sealed": true,
+          "name": "Sunrisers Hyderabad",
+          "ground": "Rajiv Gandhi International Cricket StadiumStrokeplay and scoring pressure"
+        },
+        {
+          "x": 12,
+          "y": 2306.90625,
+          "width": 366,
+          "height": 370.703125,
+          "sealed": true,
+          "name": "Sydney Thunder",
+          "ground": "Sydney Showground StadiumPower and strong square pockets"
+        },
+        {
+          "x": 12,
+          "y": 2693.609375,
+          "width": 366,
+          "height": 370.703125,
+          "sealed": true,
+          "name": "Rajasthan Royals",
+          "ground": "Sawai Mansingh StadiumGrip and control"
+        },
+        {
+          "x": 12,
+          "y": 3080.3125,
+          "width": 366,
+          "height": 370.703125,
+          "sealed": true,
+          "name": "Chennai Super Kings",
+          "ground": "MA Chidambaram StadiumSlow surface and grip"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 26,
+          "y": 286.390625,
+          "width": 106.265625,
+          "height": 57
+        },
+        {
+          "text": "Speed 4×",
+          "disabled": false,
+          "x": 141.859375,
+          "y": 286.390625,
+          "width": 106.28125,
+          "height": 57
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 257.734375,
+          "y": 286.390625,
+          "width": 106.265625,
+          "height": 57
+        }
+      ],
+      "draw": {
+        "x": 12,
+        "y": 214.171875,
+        "width": 366,
+        "height": 143.21875
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "after",
+      "name": "club-reveal-partial",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 2,
+        "speedIndex": 2,
+        "running": false
+      },
+      "width": 320,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 12,
+          "y": 408.390625,
+          "width": 296,
+          "height": 393.09375,
+          "sealed": false,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 12,
+          "y": 817.484375,
+          "width": 296,
+          "height": 393.09375,
+          "sealed": false,
+          "name": "Surrey",
+          "ground": "The OvalGood batting wicket"
+        },
+        {
+          "x": 12,
+          "y": 1226.578125,
+          "width": 296,
+          "height": 393.09375,
+          "sealed": true,
+          "name": "Hobart Hurricanes",
+          "ground": "Bellerive OvalSeam and wind"
+        },
+        {
+          "x": 12,
+          "y": 1635.671875,
+          "width": 296,
+          "height": 393.09375,
+          "sealed": true,
+          "name": "Northamptonshire Steelbacks",
+          "ground": "County Ground, NorthamptonBoundary hitting and execution"
+        },
+        {
+          "x": 12,
+          "y": 2044.765625,
+          "width": 296,
+          "height": 393.09375,
+          "sealed": true,
+          "name": "Sunrisers Hyderabad",
+          "ground": "Rajiv Gandhi International Cricket StadiumStrokeplay and scoring pressure"
+        },
+        {
+          "x": 12,
+          "y": 2453.859375,
+          "width": 296,
+          "height": 393.09375,
+          "sealed": true,
+          "name": "Sydney Thunder",
+          "ground": "Sydney Showground StadiumPower and strong square pockets"
+        },
+        {
+          "x": 12,
+          "y": 2862.953125,
+          "width": 296,
+          "height": 393.09375,
+          "sealed": true,
+          "name": "Rajasthan Royals",
+          "ground": "Sawai Mansingh StadiumGrip and control"
+        },
+        {
+          "x": 12,
+          "y": 3272.046875,
+          "width": 296,
+          "height": 393.09375,
+          "sealed": true,
+          "name": "Chennai Super Kings",
+          "ground": "MA Chidambaram StadiumSlow surface and grip"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 26,
+          "y": 286.390625,
+          "width": 82.9375,
+          "height": 92
+        },
+        {
+          "text": "Speed 4×",
+          "disabled": false,
+          "x": 118.53125,
+          "y": 286.390625,
+          "width": 82.9375,
+          "height": 92
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 211.0625,
+          "y": 286.390625,
+          "width": 82.9375,
+          "height": 92
+        }
+      ],
+      "draw": {
+        "x": 12,
+        "y": 214.171875,
+        "width": 296,
+        "height": 178.21875
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "after",
+      "name": "club-reveal-complete",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 8,
+        "speedIndex": 2,
+        "running": false
+      },
+      "width": 1440,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 83.1875,
+          "y": 426.984375,
+          "width": 306.40625,
+          "height": 399.5,
+          "sealed": false,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 405.59375,
+          "y": 426.984375,
+          "width": 306.40625,
+          "height": 399.5,
+          "sealed": false,
+          "name": "Surrey",
+          "ground": "The OvalGood batting wicket"
+        },
+        {
+          "x": 728,
+          "y": 426.984375,
+          "width": 306.40625,
+          "height": 399.5,
+          "sealed": false,
+          "name": "Hobart Hurricanes",
+          "ground": "Bellerive OvalSeam and wind"
+        },
+        {
+          "x": 1050.40625,
+          "y": 426.984375,
+          "width": 306.40625,
+          "height": 399.5,
+          "sealed": false,
+          "name": "Northamptonshire Steelbacks",
+          "ground": "County Ground, NorthamptonBoundary hitting and execution"
+        },
+        {
+          "x": 83.1875,
+          "y": 842.484375,
+          "width": 306.40625,
+          "height": 399.5,
+          "sealed": false,
+          "name": "Sunrisers Hyderabad",
+          "ground": "Rajiv Gandhi International Cricket StadiumStrokeplay and scoring pressure"
+        },
+        {
+          "x": 405.59375,
+          "y": 842.484375,
+          "width": 306.40625,
+          "height": 399.5,
+          "sealed": false,
+          "name": "Sydney Thunder",
+          "ground": "Sydney Showground StadiumPower and strong square pockets"
+        },
+        {
+          "x": 728,
+          "y": 842.484375,
+          "width": 306.40625,
+          "height": 399.5,
+          "sealed": false,
+          "name": "Rajasthan Royals",
+          "ground": "Sawai Mansingh StadiumGrip and control"
+        },
+        {
+          "x": 1050.40625,
+          "y": 842.484375,
+          "width": 306.40625,
+          "height": 399.5,
+          "sealed": false,
+          "name": "Chennai Super Kings",
+          "ground": "MA Chidambaram StadiumSlow surface and grip"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Choose your club",
+          "disabled": false,
+          "x": 576,
+          "y": 352.984375,
+          "width": 288,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 83.1875,
+        "y": 280.765625,
+        "width": 1273.625,
+        "height": 130.21875
+      },
+      "gates": {
+        "paceInert": true,
+        "paceHidden": "true",
+        "nextInert": false,
+        "nextHidden": null,
+        "nextDisabled": false,
+        "paceDisabled": [
+          true,
+          true,
+          true
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "after",
+      "name": "club-reveal-complete",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 8,
+        "speedIndex": 2,
+        "running": false
+      },
+      "width": 1150,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 34.5,
+          "y": 417.234375,
+          "width": 258.25,
+          "height": 421.09375,
+          "sealed": false,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 308.75,
+          "y": 417.234375,
+          "width": 258.25,
+          "height": 421.09375,
+          "sealed": false,
+          "name": "Surrey",
+          "ground": "The OvalGood batting wicket"
+        },
+        {
+          "x": 583,
+          "y": 417.234375,
+          "width": 258.25,
+          "height": 421.09375,
+          "sealed": false,
+          "name": "Hobart Hurricanes",
+          "ground": "Bellerive OvalSeam and wind"
+        },
+        {
+          "x": 857.25,
+          "y": 417.234375,
+          "width": 258.25,
+          "height": 421.09375,
+          "sealed": false,
+          "name": "Northamptonshire Steelbacks",
+          "ground": "County Ground, NorthamptonBoundary hitting and execution"
+        },
+        {
+          "x": 34.5,
+          "y": 854.328125,
+          "width": 258.25,
+          "height": 421.09375,
+          "sealed": false,
+          "name": "Sunrisers Hyderabad",
+          "ground": "Rajiv Gandhi International Cricket StadiumStrokeplay and scoring pressure"
+        },
+        {
+          "x": 308.75,
+          "y": 854.328125,
+          "width": 258.25,
+          "height": 421.09375,
+          "sealed": false,
+          "name": "Sydney Thunder",
+          "ground": "Sydney Showground StadiumPower and strong square pockets"
+        },
+        {
+          "x": 583,
+          "y": 854.328125,
+          "width": 258.25,
+          "height": 421.09375,
+          "sealed": false,
+          "name": "Rajasthan Royals",
+          "ground": "Sawai Mansingh StadiumGrip and control"
+        },
+        {
+          "x": 857.25,
+          "y": 854.328125,
+          "width": 258.25,
+          "height": 421.09375,
+          "sealed": false,
+          "name": "Chennai Super Kings",
+          "ground": "MA Chidambaram StadiumSlow surface and grip"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Choose your club",
+          "disabled": false,
+          "x": 431,
+          "y": 343.234375,
+          "width": 288,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 34.5,
+        "y": 271.015625,
+        "width": 1081,
+        "height": 130.21875
+      },
+      "gates": {
+        "paceInert": true,
+        "paceHidden": "true",
+        "nextInert": false,
+        "nextHidden": null,
+        "nextDisabled": false,
+        "paceDisabled": [
+          true,
+          true,
+          true
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "after",
+      "name": "club-reveal-complete",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 8,
+        "speedIndex": 2,
+        "running": false
+      },
+      "width": 768,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 23.03125,
+          "y": 469.046875,
+          "width": 352.96875,
+          "height": 377.109375,
+          "sealed": false,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 392,
+          "y": 469.046875,
+          "width": 352.96875,
+          "height": 377.109375,
+          "sealed": false,
+          "name": "Surrey",
+          "ground": "The OvalGood batting wicket"
+        },
+        {
+          "x": 23.03125,
+          "y": 862.15625,
+          "width": 352.96875,
+          "height": 377.109375,
+          "sealed": false,
+          "name": "Hobart Hurricanes",
+          "ground": "Bellerive OvalSeam and wind"
+        },
+        {
+          "x": 392,
+          "y": 862.15625,
+          "width": 352.96875,
+          "height": 377.109375,
+          "sealed": false,
+          "name": "Northamptonshire Steelbacks",
+          "ground": "County Ground, NorthamptonBoundary hitting and execution"
+        },
+        {
+          "x": 23.03125,
+          "y": 1255.265625,
+          "width": 352.96875,
+          "height": 377.109375,
+          "sealed": false,
+          "name": "Sunrisers Hyderabad",
+          "ground": "Rajiv Gandhi International Cricket StadiumStrokeplay and scoring pressure"
+        },
+        {
+          "x": 392,
+          "y": 1255.265625,
+          "width": 352.96875,
+          "height": 377.109375,
+          "sealed": false,
+          "name": "Sydney Thunder",
+          "ground": "Sydney Showground StadiumPower and strong square pockets"
+        },
+        {
+          "x": 23.03125,
+          "y": 1648.375,
+          "width": 352.96875,
+          "height": 377.109375,
+          "sealed": false,
+          "name": "Rajasthan Royals",
+          "ground": "Sawai Mansingh StadiumGrip and control"
+        },
+        {
+          "x": 392,
+          "y": 1648.375,
+          "width": 352.96875,
+          "height": 377.109375,
+          "sealed": false,
+          "name": "Chennai Super Kings",
+          "ground": "MA Chidambaram StadiumSlow surface and grip"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Choose your club",
+          "disabled": false,
+          "x": 240,
+          "y": 395.046875,
+          "width": 288,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 23.03125,
+        "y": 322.828125,
+        "width": 721.9375,
+        "height": 130.21875
+      },
+      "gates": {
+        "paceInert": true,
+        "paceHidden": "true",
+        "nextInert": false,
+        "nextHidden": null,
+        "nextDisabled": false,
+        "paceDisabled": [
+          true,
+          true,
+          true
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "after",
+      "name": "club-reveal-complete",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 8,
+        "speedIndex": 2,
+        "running": false
+      },
+      "width": 390,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 12,
+          "y": 373.390625,
+          "width": 366,
+          "height": 370.703125,
+          "sealed": false,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 12,
+          "y": 760.09375,
+          "width": 366,
+          "height": 370.703125,
+          "sealed": false,
+          "name": "Surrey",
+          "ground": "The OvalGood batting wicket"
+        },
+        {
+          "x": 12,
+          "y": 1146.796875,
+          "width": 366,
+          "height": 370.703125,
+          "sealed": false,
+          "name": "Hobart Hurricanes",
+          "ground": "Bellerive OvalSeam and wind"
+        },
+        {
+          "x": 12,
+          "y": 1533.5,
+          "width": 366,
+          "height": 370.703125,
+          "sealed": false,
+          "name": "Northamptonshire Steelbacks",
+          "ground": "County Ground, NorthamptonBoundary hitting and execution"
+        },
+        {
+          "x": 12,
+          "y": 1920.203125,
+          "width": 366,
+          "height": 370.703125,
+          "sealed": false,
+          "name": "Sunrisers Hyderabad",
+          "ground": "Rajiv Gandhi International Cricket StadiumStrokeplay and scoring pressure"
+        },
+        {
+          "x": 12,
+          "y": 2306.90625,
+          "width": 366,
+          "height": 370.703125,
+          "sealed": false,
+          "name": "Sydney Thunder",
+          "ground": "Sydney Showground StadiumPower and strong square pockets"
+        },
+        {
+          "x": 12,
+          "y": 2693.609375,
+          "width": 366,
+          "height": 370.703125,
+          "sealed": false,
+          "name": "Rajasthan Royals",
+          "ground": "Sawai Mansingh StadiumGrip and control"
+        },
+        {
+          "x": 12,
+          "y": 3080.3125,
+          "width": 366,
+          "height": 370.703125,
+          "sealed": false,
+          "name": "Chennai Super Kings",
+          "ground": "MA Chidambaram StadiumSlow surface and grip"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Choose your club",
+          "disabled": false,
+          "x": 26,
+          "y": 292.890625,
+          "width": 338,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 12,
+        "y": 214.171875,
+        "width": 366,
+        "height": 143.21875
+      },
+      "gates": {
+        "paceInert": true,
+        "paceHidden": "true",
+        "nextInert": false,
+        "nextHidden": null,
+        "nextDisabled": false,
+        "paceDisabled": [
+          true,
+          true,
+          true
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "after",
+      "name": "club-reveal-complete",
+      "view": "leagueDraw",
+      "reveal": {
+        "kind": "league",
+        "count": 8,
+        "speedIndex": 2,
+        "running": false
+      },
+      "width": 320,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 12,
+          "y": 408.390625,
+          "width": 296,
+          "height": 393.09375,
+          "sealed": false,
+          "name": "Melbourne Stars",
+          "ground": "MCGBig square boundaries"
+        },
+        {
+          "x": 12,
+          "y": 817.484375,
+          "width": 296,
+          "height": 393.09375,
+          "sealed": false,
+          "name": "Surrey",
+          "ground": "The OvalGood batting wicket"
+        },
+        {
+          "x": 12,
+          "y": 1226.578125,
+          "width": 296,
+          "height": 393.09375,
+          "sealed": false,
+          "name": "Hobart Hurricanes",
+          "ground": "Bellerive OvalSeam and wind"
+        },
+        {
+          "x": 12,
+          "y": 1635.671875,
+          "width": 296,
+          "height": 393.09375,
+          "sealed": false,
+          "name": "Northamptonshire Steelbacks",
+          "ground": "County Ground, NorthamptonBoundary hitting and execution"
+        },
+        {
+          "x": 12,
+          "y": 2044.765625,
+          "width": 296,
+          "height": 393.09375,
+          "sealed": false,
+          "name": "Sunrisers Hyderabad",
+          "ground": "Rajiv Gandhi International Cricket StadiumStrokeplay and scoring pressure"
+        },
+        {
+          "x": 12,
+          "y": 2453.859375,
+          "width": 296,
+          "height": 393.09375,
+          "sealed": false,
+          "name": "Sydney Thunder",
+          "ground": "Sydney Showground StadiumPower and strong square pockets"
+        },
+        {
+          "x": 12,
+          "y": 2862.953125,
+          "width": 296,
+          "height": 393.09375,
+          "sealed": false,
+          "name": "Rajasthan Royals",
+          "ground": "Sawai Mansingh StadiumGrip and control"
+        },
+        {
+          "x": 12,
+          "y": 3272.046875,
+          "width": 296,
+          "height": 393.09375,
+          "sealed": false,
+          "name": "Chennai Super Kings",
+          "ground": "MA Chidambaram StadiumSlow surface and grip"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Choose your club",
+          "disabled": false,
+          "x": 26,
+          "y": 310.390625,
+          "width": 268,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 12,
+        "y": 214.171875,
+        "width": 296,
+        "height": 178.21875
+      },
+      "gates": {
+        "paceInert": true,
+        "paceHidden": "true",
+        "nextInert": false,
+        "nextHidden": null,
+        "nextDisabled": false,
+        "paceDisabled": [
+          true,
+          true,
+          true
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "after",
+      "name": "foundation-order-sealed",
+      "view": "draftDraw",
+      "reveal": {
+        "kind": "draft",
+        "count": 0,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 1440,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 83.1875,
+          "y": 507.421875,
+          "width": 630.40625,
+          "height": 112,
+          "sealed": false,
+          "name": "Melbourne Stars"
+        },
+        {
+          "x": 726.390625,
+          "y": 507.421875,
+          "width": 630.421875,
+          "height": 112,
+          "sealed": false,
+          "name": "Hobart Hurricanes"
+        },
+        {
+          "x": 83.1875,
+          "y": 632.21875,
+          "width": 630.40625,
+          "height": 112,
+          "sealed": false,
+          "name": "Chennai Super Kings"
+        },
+        {
+          "x": 726.390625,
+          "y": 632.21875,
+          "width": 630.421875,
+          "height": 112,
+          "sealed": false,
+          "name": "Rajasthan Royals"
+        },
+        {
+          "x": 83.1875,
+          "y": 757.015625,
+          "width": 630.40625,
+          "height": 112,
+          "sealed": false,
+          "name": "Sydney Thunder"
+        },
+        {
+          "x": 726.390625,
+          "y": 757.015625,
+          "width": 630.421875,
+          "height": 112,
+          "sealed": false,
+          "name": "Northamptonshire Steelbacks"
+        },
+        {
+          "x": 83.1875,
+          "y": 881.8125,
+          "width": 630.40625,
+          "height": 112,
+          "sealed": false,
+          "name": "Surrey"
+        },
+        {
+          "x": 726.390625,
+          "y": 881.8125,
+          "width": 630.421875,
+          "height": 112,
+          "sealed": false,
+          "name": "Sunrisers Hyderabad"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 493.671875,
+          "y": 433.421875,
+          "width": 172.375,
+          "height": 44
+        },
+        {
+          "text": "Speed 1×",
+          "disabled": false,
+          "x": 675.640625,
+          "y": 433.421875,
+          "width": 129.25,
+          "height": 44
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 814.484375,
+          "y": 433.421875,
+          "width": 131.84375,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 83.1875,
+        "y": 361.203125,
+        "width": 1273.625,
+        "height": 130.21875
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "after",
+      "name": "foundation-order-sealed",
+      "view": "draftDraw",
+      "reveal": {
+        "kind": "draft",
+        "count": 0,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 1150,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 34.5,
+          "y": 497.671875,
+          "width": 534.09375,
+          "height": 112,
+          "sealed": false,
+          "name": "Melbourne Stars"
+        },
+        {
+          "x": 581.390625,
+          "y": 497.671875,
+          "width": 534.109375,
+          "height": 112,
+          "sealed": false,
+          "name": "Hobart Hurricanes"
+        },
+        {
+          "x": 34.5,
+          "y": 622.46875,
+          "width": 534.09375,
+          "height": 112,
+          "sealed": false,
+          "name": "Chennai Super Kings"
+        },
+        {
+          "x": 581.390625,
+          "y": 622.46875,
+          "width": 534.109375,
+          "height": 112,
+          "sealed": false,
+          "name": "Rajasthan Royals"
+        },
+        {
+          "x": 34.5,
+          "y": 747.265625,
+          "width": 534.09375,
+          "height": 112,
+          "sealed": false,
+          "name": "Sydney Thunder"
+        },
+        {
+          "x": 581.390625,
+          "y": 747.265625,
+          "width": 534.109375,
+          "height": 112,
+          "sealed": false,
+          "name": "Northamptonshire Steelbacks"
+        },
+        {
+          "x": 34.5,
+          "y": 872.0625,
+          "width": 534.09375,
+          "height": 112,
+          "sealed": false,
+          "name": "Surrey"
+        },
+        {
+          "x": 581.390625,
+          "y": 872.0625,
+          "width": 534.109375,
+          "height": 112,
+          "sealed": false,
+          "name": "Sunrisers Hyderabad"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 348.671875,
+          "y": 423.671875,
+          "width": 172.375,
+          "height": 44
+        },
+        {
+          "text": "Speed 1×",
+          "disabled": false,
+          "x": 530.640625,
+          "y": 423.671875,
+          "width": 129.25,
+          "height": 44
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 669.484375,
+          "y": 423.671875,
+          "width": 131.84375,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 34.5,
+        "y": 351.453125,
+        "width": 1081,
+        "height": 130.21875
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "after",
+      "name": "foundation-order-sealed",
+      "view": "draftDraw",
+      "reveal": {
+        "kind": "draft",
+        "count": 0,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 768,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 23.03125,
+          "y": 561.09375,
+          "width": 354.5625,
+          "height": 112,
+          "sealed": false,
+          "name": "Melbourne Stars"
+        },
+        {
+          "x": 390.390625,
+          "y": 561.09375,
+          "width": 354.578125,
+          "height": 112,
+          "sealed": false,
+          "name": "Hobart Hurricanes"
+        },
+        {
+          "x": 23.03125,
+          "y": 685.890625,
+          "width": 354.5625,
+          "height": 112,
+          "sealed": false,
+          "name": "Chennai Super Kings"
+        },
+        {
+          "x": 390.390625,
+          "y": 685.890625,
+          "width": 354.578125,
+          "height": 112,
+          "sealed": false,
+          "name": "Rajasthan Royals"
+        },
+        {
+          "x": 23.03125,
+          "y": 810.6875,
+          "width": 354.5625,
+          "height": 112,
+          "sealed": false,
+          "name": "Sydney Thunder"
+        },
+        {
+          "x": 390.390625,
+          "y": 810.6875,
+          "width": 354.578125,
+          "height": 112,
+          "sealed": false,
+          "name": "Northamptonshire Steelbacks"
+        },
+        {
+          "x": 23.03125,
+          "y": 935.484375,
+          "width": 354.5625,
+          "height": 112,
+          "sealed": false,
+          "name": "Surrey"
+        },
+        {
+          "x": 390.390625,
+          "y": 935.484375,
+          "width": 354.578125,
+          "height": 112,
+          "sealed": false,
+          "name": "Sunrisers Hyderabad"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 157.671875,
+          "y": 487.09375,
+          "width": 172.375,
+          "height": 44
+        },
+        {
+          "text": "Speed 1×",
+          "disabled": false,
+          "x": 339.640625,
+          "y": 487.09375,
+          "width": 129.25,
+          "height": 44
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 478.484375,
+          "y": 487.09375,
+          "width": 131.84375,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 23.03125,
+        "y": 414.875,
+        "width": 721.9375,
+        "height": 130.21875
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "after",
+      "name": "foundation-order-sealed",
+      "view": "draftDraw",
+      "reveal": {
+        "kind": "draft",
+        "count": 0,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 390,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 12,
+          "y": 551,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Melbourne Stars"
+        },
+        {
+          "x": 12,
+          "y": 675.796875,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Hobart Hurricanes"
+        },
+        {
+          "x": 12,
+          "y": 800.59375,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Chennai Super Kings"
+        },
+        {
+          "x": 12,
+          "y": 925.390625,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Rajasthan Royals"
+        },
+        {
+          "x": 12,
+          "y": 1050.1875,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Sydney Thunder"
+        },
+        {
+          "x": 12,
+          "y": 1174.984375,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Northamptonshire Steelbacks"
+        },
+        {
+          "x": 12,
+          "y": 1299.78125,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Surrey"
+        },
+        {
+          "x": 12,
+          "y": 1424.578125,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Sunrisers Hyderabad"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 26,
+          "y": 464,
+          "width": 106.265625,
+          "height": 57
+        },
+        {
+          "text": "Speed 1×",
+          "disabled": false,
+          "x": 141.859375,
+          "y": 464,
+          "width": 106.28125,
+          "height": 57
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 257.734375,
+          "y": 464,
+          "width": 106.265625,
+          "height": 57
+        }
+      ],
+      "draw": {
+        "x": 12,
+        "y": 391.78125,
+        "width": 366,
+        "height": 143.21875
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "after",
+      "name": "foundation-order-sealed",
+      "view": "draftDraw",
+      "reveal": {
+        "kind": "draft",
+        "count": 0,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 320,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 12,
+          "y": 609.5625,
+          "width": 296,
+          "height": 154.625,
+          "sealed": false,
+          "name": "Melbourne Stars"
+        },
+        {
+          "x": 12,
+          "y": 776.984375,
+          "width": 296,
+          "height": 154.625,
+          "sealed": false,
+          "name": "Hobart Hurricanes"
+        },
+        {
+          "x": 12,
+          "y": 944.40625,
+          "width": 296,
+          "height": 154.625,
+          "sealed": false,
+          "name": "Chennai Super Kings"
+        },
+        {
+          "x": 12,
+          "y": 1111.828125,
+          "width": 296,
+          "height": 154.625,
+          "sealed": false,
+          "name": "Rajasthan Royals"
+        },
+        {
+          "x": 12,
+          "y": 1279.25,
+          "width": 296,
+          "height": 154.625,
+          "sealed": false,
+          "name": "Sydney Thunder"
+        },
+        {
+          "x": 12,
+          "y": 1446.671875,
+          "width": 296,
+          "height": 154.625,
+          "sealed": false,
+          "name": "Northamptonshire Steelbacks"
+        },
+        {
+          "x": 12,
+          "y": 1614.09375,
+          "width": 296,
+          "height": 154.625,
+          "sealed": false,
+          "name": "Surrey"
+        },
+        {
+          "x": 12,
+          "y": 1781.515625,
+          "width": 296,
+          "height": 154.625,
+          "sealed": false,
+          "name": "Sunrisers Hyderabad"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume revealResume reveal",
+          "disabled": false,
+          "x": 26,
+          "y": 487.5625,
+          "width": 82.9375,
+          "height": 92
+        },
+        {
+          "text": "Speed 1×",
+          "disabled": false,
+          "x": 118.53125,
+          "y": 487.5625,
+          "width": 82.9375,
+          "height": 92
+        },
+        {
+          "text": "Reveal all",
+          "disabled": false,
+          "x": 211.0625,
+          "y": 487.5625,
+          "width": 82.9375,
+          "height": 92
+        }
+      ],
+      "draw": {
+        "x": 12,
+        "y": 415.34375,
+        "width": 296,
+        "height": 178.21875
+      },
+      "gates": {
+        "paceInert": false,
+        "paceHidden": null,
+        "nextInert": true,
+        "nextHidden": "true",
+        "nextDisabled": true,
+        "paceDisabled": [
+          false,
+          false,
+          false
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "after",
+      "name": "foundation-order-complete",
+      "view": "draftDraw",
+      "reveal": {
+        "kind": "draft",
+        "count": 8,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 1440,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 83.1875,
+          "y": 507.421875,
+          "width": 630.40625,
+          "height": 112,
+          "sealed": false,
+          "name": "Melbourne Stars"
+        },
+        {
+          "x": 726.390625,
+          "y": 507.421875,
+          "width": 630.421875,
+          "height": 112,
+          "sealed": false,
+          "name": "Hobart Hurricanes"
+        },
+        {
+          "x": 83.1875,
+          "y": 632.21875,
+          "width": 630.40625,
+          "height": 112,
+          "sealed": false,
+          "name": "Chennai Super Kings"
+        },
+        {
+          "x": 726.390625,
+          "y": 632.21875,
+          "width": 630.421875,
+          "height": 112,
+          "sealed": false,
+          "name": "Rajasthan Royals"
+        },
+        {
+          "x": 83.1875,
+          "y": 757.015625,
+          "width": 630.40625,
+          "height": 112,
+          "sealed": false,
+          "name": "Sydney Thunder"
+        },
+        {
+          "x": 726.390625,
+          "y": 757.015625,
+          "width": 630.421875,
+          "height": 112,
+          "sealed": false,
+          "name": "Northamptonshire Steelbacks"
+        },
+        {
+          "x": 83.1875,
+          "y": 881.8125,
+          "width": 630.40625,
+          "height": 112,
+          "sealed": false,
+          "name": "Surrey"
+        },
+        {
+          "x": 726.390625,
+          "y": 881.8125,
+          "width": 630.421875,
+          "height": 112,
+          "sealed": false,
+          "name": "Sunrisers Hyderabad"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Enter the draft room",
+          "disabled": false,
+          "x": 576,
+          "y": 433.421875,
+          "width": 288,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 83.1875,
+        "y": 361.203125,
+        "width": 1273.625,
+        "height": 130.21875
+      },
+      "gates": {
+        "paceInert": true,
+        "paceHidden": "true",
+        "nextInert": false,
+        "nextHidden": null,
+        "nextDisabled": false,
+        "paceDisabled": [
+          true,
+          true,
+          true
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "after",
+      "name": "foundation-order-complete",
+      "view": "draftDraw",
+      "reveal": {
+        "kind": "draft",
+        "count": 8,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 1150,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 34.5,
+          "y": 497.671875,
+          "width": 534.09375,
+          "height": 112,
+          "sealed": false,
+          "name": "Melbourne Stars"
+        },
+        {
+          "x": 581.390625,
+          "y": 497.671875,
+          "width": 534.109375,
+          "height": 112,
+          "sealed": false,
+          "name": "Hobart Hurricanes"
+        },
+        {
+          "x": 34.5,
+          "y": 622.46875,
+          "width": 534.09375,
+          "height": 112,
+          "sealed": false,
+          "name": "Chennai Super Kings"
+        },
+        {
+          "x": 581.390625,
+          "y": 622.46875,
+          "width": 534.109375,
+          "height": 112,
+          "sealed": false,
+          "name": "Rajasthan Royals"
+        },
+        {
+          "x": 34.5,
+          "y": 747.265625,
+          "width": 534.09375,
+          "height": 112,
+          "sealed": false,
+          "name": "Sydney Thunder"
+        },
+        {
+          "x": 581.390625,
+          "y": 747.265625,
+          "width": 534.109375,
+          "height": 112,
+          "sealed": false,
+          "name": "Northamptonshire Steelbacks"
+        },
+        {
+          "x": 34.5,
+          "y": 872.0625,
+          "width": 534.09375,
+          "height": 112,
+          "sealed": false,
+          "name": "Surrey"
+        },
+        {
+          "x": 581.390625,
+          "y": 872.0625,
+          "width": 534.109375,
+          "height": 112,
+          "sealed": false,
+          "name": "Sunrisers Hyderabad"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Enter the draft room",
+          "disabled": false,
+          "x": 431,
+          "y": 423.671875,
+          "width": 288,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 34.5,
+        "y": 351.453125,
+        "width": 1081,
+        "height": 130.21875
+      },
+      "gates": {
+        "paceInert": true,
+        "paceHidden": "true",
+        "nextInert": false,
+        "nextHidden": null,
+        "nextDisabled": false,
+        "paceDisabled": [
+          true,
+          true,
+          true
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "after",
+      "name": "foundation-order-complete",
+      "view": "draftDraw",
+      "reveal": {
+        "kind": "draft",
+        "count": 8,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 768,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 23.03125,
+          "y": 561.09375,
+          "width": 354.5625,
+          "height": 112,
+          "sealed": false,
+          "name": "Melbourne Stars"
+        },
+        {
+          "x": 390.390625,
+          "y": 561.09375,
+          "width": 354.578125,
+          "height": 112,
+          "sealed": false,
+          "name": "Hobart Hurricanes"
+        },
+        {
+          "x": 23.03125,
+          "y": 685.890625,
+          "width": 354.5625,
+          "height": 112,
+          "sealed": false,
+          "name": "Chennai Super Kings"
+        },
+        {
+          "x": 390.390625,
+          "y": 685.890625,
+          "width": 354.578125,
+          "height": 112,
+          "sealed": false,
+          "name": "Rajasthan Royals"
+        },
+        {
+          "x": 23.03125,
+          "y": 810.6875,
+          "width": 354.5625,
+          "height": 112,
+          "sealed": false,
+          "name": "Sydney Thunder"
+        },
+        {
+          "x": 390.390625,
+          "y": 810.6875,
+          "width": 354.578125,
+          "height": 112,
+          "sealed": false,
+          "name": "Northamptonshire Steelbacks"
+        },
+        {
+          "x": 23.03125,
+          "y": 935.484375,
+          "width": 354.5625,
+          "height": 112,
+          "sealed": false,
+          "name": "Surrey"
+        },
+        {
+          "x": 390.390625,
+          "y": 935.484375,
+          "width": 354.578125,
+          "height": 112,
+          "sealed": false,
+          "name": "Sunrisers Hyderabad"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Enter the draft room",
+          "disabled": false,
+          "x": 240,
+          "y": 487.09375,
+          "width": 288,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 23.03125,
+        "y": 414.875,
+        "width": 721.9375,
+        "height": 130.21875
+      },
+      "gates": {
+        "paceInert": true,
+        "paceHidden": "true",
+        "nextInert": false,
+        "nextHidden": null,
+        "nextDisabled": false,
+        "paceDisabled": [
+          true,
+          true,
+          true
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "after",
+      "name": "foundation-order-complete",
+      "view": "draftDraw",
+      "reveal": {
+        "kind": "draft",
+        "count": 8,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 390,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 12,
+          "y": 551,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Melbourne Stars"
+        },
+        {
+          "x": 12,
+          "y": 675.796875,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Hobart Hurricanes"
+        },
+        {
+          "x": 12,
+          "y": 800.59375,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Chennai Super Kings"
+        },
+        {
+          "x": 12,
+          "y": 925.390625,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Rajasthan Royals"
+        },
+        {
+          "x": 12,
+          "y": 1050.1875,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Sydney Thunder"
+        },
+        {
+          "x": 12,
+          "y": 1174.984375,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Northamptonshire Steelbacks"
+        },
+        {
+          "x": 12,
+          "y": 1299.78125,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Surrey"
+        },
+        {
+          "x": 12,
+          "y": 1424.578125,
+          "width": 366,
+          "height": 112,
+          "sealed": false,
+          "name": "Sunrisers Hyderabad"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Enter the draft room",
+          "disabled": false,
+          "x": 26,
+          "y": 470.5,
+          "width": 338,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 12,
+        "y": 391.78125,
+        "width": 366,
+        "height": 143.21875
+      },
+      "gates": {
+        "paceInert": true,
+        "paceHidden": "true",
+        "nextInert": false,
+        "nextHidden": null,
+        "nextDisabled": false,
+        "paceDisabled": [
+          true,
+          true,
+          true
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "after",
+      "name": "foundation-order-complete",
+      "view": "draftDraw",
+      "reveal": {
+        "kind": "draft",
+        "count": 8,
+        "speedIndex": 0,
+        "running": false
+      },
+      "width": 320,
+      "overflow": false,
+      "cards": [
+        {
+          "x": 12,
+          "y": 609.5625,
+          "width": 296,
+          "height": 154.625,
+          "sealed": false,
+          "name": "Melbourne Stars"
+        },
+        {
+          "x": 12,
+          "y": 776.984375,
+          "width": 296,
+          "height": 154.625,
+          "sealed": false,
+          "name": "Hobart Hurricanes"
+        },
+        {
+          "x": 12,
+          "y": 944.40625,
+          "width": 296,
+          "height": 154.625,
+          "sealed": false,
+          "name": "Chennai Super Kings"
+        },
+        {
+          "x": 12,
+          "y": 1111.828125,
+          "width": 296,
+          "height": 154.625,
+          "sealed": false,
+          "name": "Rajasthan Royals"
+        },
+        {
+          "x": 12,
+          "y": 1279.25,
+          "width": 296,
+          "height": 154.625,
+          "sealed": false,
+          "name": "Sydney Thunder"
+        },
+        {
+          "x": 12,
+          "y": 1446.671875,
+          "width": 296,
+          "height": 154.625,
+          "sealed": false,
+          "name": "Northamptonshire Steelbacks"
+        },
+        {
+          "x": 12,
+          "y": 1614.09375,
+          "width": 296,
+          "height": 154.625,
+          "sealed": false,
+          "name": "Surrey"
+        },
+        {
+          "x": 12,
+          "y": 1781.515625,
+          "width": 296,
+          "height": 154.625,
+          "sealed": false,
+          "name": "Sunrisers Hyderabad"
+        }
+      ],
+      "controls": [
+        {
+          "text": "Enter the draft room",
+          "disabled": false,
+          "x": 26,
+          "y": 511.5625,
+          "width": 268,
+          "height": 44
+        }
+      ],
+      "draw": {
+        "x": 12,
+        "y": 415.34375,
+        "width": 296,
+        "height": 178.21875
+      },
+      "gates": {
+        "paceInert": true,
+        "paceHidden": "true",
+        "nextInert": false,
+        "nextHidden": null,
+        "nextDisabled": false,
+        "paceDisabled": [
+          true,
+          true,
+          true
+        ]
+      },
+      "decisions": null
+    },
+    {
+      "label": "after",
+      "name": "offseason-decisions",
+      "view": "dynasty",
+      "reveal": null,
+      "width": 1440,
+      "overflow": false,
+      "cards": [],
+      "controls": [],
+      "draw": null,
+      "gates": null,
+      "decisions": {
+        "text": "IN THE DRESSING ROOMSquad decisionsAndre NelWants a moveUnresolved transfer requestReview playerInzamam-ul-HaqWants a moveUnresolved transfer requestReview playerAndrew HallWants a moveUnresolved transfer requestReview player1 more squad decision+Muttiah MuralitharanWants a moveUnresolved transfer requestReview player",
+        "x": 120.578125,
+        "y": 643.875,
+        "width": 1198.84375,
+        "height": 421.484375,
+        "buttons": [
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[133]",
+            "disabled": false,
+            "x": 1181.015625,
+            "y": 740.734375,
+            "width": 125.40625,
+            "height": 44
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[209]",
+            "disabled": false,
+            "x": 1181.015625,
+            "y": 822.625,
+            "width": 125.40625,
+            "height": 44
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[219]",
+            "disabled": false,
+            "x": 1181.015625,
+            "y": 904.515625,
+            "width": 125.40625,
+            "height": 44
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[87]",
+            "disabled": false,
+            "x": 1170.015625,
+            "y": 1061.390625,
+            "width": 125.40625,
+            "height": 44
+          }
+        ]
+      }
+    },
+    {
+      "label": "after",
+      "name": "offseason-decisions",
+      "view": "dynasty",
+      "reveal": null,
+      "width": 1150,
+      "overflow": false,
+      "cards": [],
+      "controls": [],
+      "draw": null,
+      "gates": null,
+      "decisions": {
+        "text": "IN THE DRESSING ROOMSquad decisionsAndre NelWants a moveUnresolved transfer requestReview playerInzamam-ul-HaqWants a moveUnresolved transfer requestReview playerAndrew HallWants a moveUnresolved transfer requestReview player1 more squad decision+Muttiah MuralitharanWants a moveUnresolved transfer requestReview player",
+        "x": 71.890625,
+        "y": 634.125,
+        "width": 1006.21875,
+        "height": 421.484375,
+        "buttons": [
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[133]",
+            "disabled": false,
+            "x": 939.703125,
+            "y": 730.984375,
+            "width": 125.40625,
+            "height": 44
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[209]",
+            "disabled": false,
+            "x": 939.703125,
+            "y": 812.875,
+            "width": 125.40625,
+            "height": 44
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[219]",
+            "disabled": false,
+            "x": 939.703125,
+            "y": 894.765625,
+            "width": 125.40625,
+            "height": 44
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[87]",
+            "disabled": false,
+            "x": 928.703125,
+            "y": 1051.640625,
+            "width": 125.40625,
+            "height": 44
+          }
+        ]
+      }
+    },
+    {
+      "label": "after",
+      "name": "offseason-decisions",
+      "view": "dynasty",
+      "reveal": null,
+      "width": 768,
+      "overflow": false,
+      "cards": [],
+      "controls": [],
+      "draw": null,
+      "gates": null,
+      "decisions": {
+        "text": "IN THE DRESSING ROOMSquad decisionsAndre NelWants a moveUnresolved transfer requestReview playerInzamam-ul-HaqWants a moveUnresolved transfer requestReview playerAndrew HallWants a moveUnresolved transfer requestReview player1 more squad decision+Muttiah MuralitharanWants a moveUnresolved transfer requestReview player",
+        "x": 56.421875,
+        "y": 691.046875,
+        "width": 655.15625,
+        "height": 421.484375,
+        "buttons": [
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[133]",
+            "disabled": false,
+            "x": 573.171875,
+            "y": 787.90625,
+            "width": 125.40625,
+            "height": 44
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[209]",
+            "disabled": false,
+            "x": 573.171875,
+            "y": 869.796875,
+            "width": 125.40625,
+            "height": 44
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[219]",
+            "disabled": false,
+            "x": 573.171875,
+            "y": 951.6875,
+            "width": 125.40625,
+            "height": 44
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[87]",
+            "disabled": false,
+            "x": 562.171875,
+            "y": 1108.5625,
+            "width": 125.40625,
+            "height": 44
+          }
+        ]
+      }
+    },
+    {
+      "label": "after",
+      "name": "offseason-decisions",
+      "view": "dynasty",
+      "reveal": null,
+      "width": 390,
+      "overflow": false,
+      "cards": [],
+      "controls": [],
+      "draw": null,
+      "gates": null,
+      "decisions": {
+        "text": "IN THE DRESSING ROOMSquad decisionsAndre NelWants a moveUnresolved transfer requestReview playerInzamam-ul-HaqWants a moveUnresolved transfer requestReview playerAndrew HallWants a moveUnresolved transfer requestReview player1 more squad decision+Muttiah MuralitharanWants a moveUnresolved transfer requestReview player",
+        "x": 45.390625,
+        "y": 680.203125,
+        "width": 299.21875,
+        "height": 577.484375,
+        "buttons": [
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[133]",
+            "disabled": false,
+            "x": 61.390625,
+            "y": 837.515625,
+            "width": 270.21875,
+            "height": 44
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[209]",
+            "disabled": false,
+            "x": 61.390625,
+            "y": 971.40625,
+            "width": 270.21875,
+            "height": 44
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[219]",
+            "disabled": false,
+            "x": 61.390625,
+            "y": 1105.296875,
+            "width": 270.21875,
+            "height": 44
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[87]",
+            "disabled": false,
+            "x": 72.390625,
+            "y": 1314.171875,
+            "width": 248.21875,
+            "height": 44
+          }
+        ]
+      }
+    },
+    {
+      "label": "after",
+      "name": "offseason-decisions",
+      "view": "dynasty",
+      "reveal": null,
+      "width": 320,
+      "overflow": false,
+      "cards": [],
+      "controls": [],
+      "draw": null,
+      "gates": null,
+      "decisions": {
+        "text": "IN THE DRESSING ROOMSquad decisionsAndre NelWants a moveUnresolved transfer requestReview playerInzamam-ul-HaqWants a moveUnresolved transfer requestReview playerAndrew HallWants a moveUnresolved transfer requestReview player1 more squad decision+Muttiah MuralitharanWants a moveUnresolved transfer requestReview player",
+        "x": 45.390625,
+        "y": 721,
+        "width": 229.21875,
+        "height": 597.09375,
+        "buttons": [
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[133]",
+            "disabled": false,
+            "x": 61.390625,
+            "y": 878.3125,
+            "width": 200.21875,
+            "height": 44
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[209]",
+            "disabled": false,
+            "x": 61.390625,
+            "y": 1012.203125,
+            "width": 200.21875,
+            "height": 44
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[219]",
+            "disabled": false,
+            "x": 61.390625,
+            "y": 1146.09375,
+            "width": 200.21875,
+            "height": 44
+          },
+          {
+            "text": "Review player",
+            "action": "manageInspect",
+            "args": "[87]",
+            "disabled": false,
+            "x": 72.390625,
+            "y": 1394.875,
+            "width": 178.21875,
+            "height": 44
+          }
+        ]
+      }
+    }
+  ],
+  "failures": [
+    {
+      "label": "before",
+      "scope": "club-reveal-sealed equal control heights",
+      "detail": {
+        "width": 390,
+        "heights": [
+          62,
+          44,
+          44
+        ]
+      }
+    },
+    {
+      "label": "before",
+      "scope": "club-reveal-partial equal control heights",
+      "detail": {
+        "width": 390,
+        "heights": [
+          62,
+          44,
+          44
+        ]
+      }
+    },
+    {
+      "label": "before",
+      "scope": "foundation-order-sealed equal control heights",
+      "detail": {
+        "width": 390,
+        "heights": [
+          62,
+          44,
+          44
+        ]
+      }
+    },
+    {
+      "label": "before",
+      "scope": "actual checkpoint decisions and annual draw",
+      "error": "locator.click: Timeout 12000ms exceeded.\nCall log:\n  - waiting for locator('.gccuiMatchDecisions,.g8dressingroom').first().locator('details').first().locator('summary')\n    - locator resolved to <summary>…</summary>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 100ms\n    23 × waiting for element to be visible, enabled and stable\n       - element is not visible\n     - retrying click action\n       - waiting 500ms\n\n    at /home/runner/work/global-champions-cricket/global-champions-cricket/qa/v116_reveal_decisions_audit.cjs:64:103\n    at async section (/home/runner/work/global-champions-cricket/global-champions-cricket/qa/v116_reveal_decisions_audit.cjs:10:37)\n    at async /home/runner/work/global-champions-cricket/global-champions-cricket/qa/v116_reveal_decisions_audit.cjs:60:4"
+    },
+    {
+      "label": "after",
+      "scope": "club-reveal-complete club text parity",
+      "detail": {
+        "width": 1440
+      }
+    },
+    {
+      "label": "after",
+      "scope": "club-reveal-complete club text parity",
+      "detail": {
+        "width": 1150
+      }
+    },
+    {
+      "label": "after",
+      "scope": "club-reveal-complete club text parity",
+      "detail": {
+        "width": 768
+      }
+    },
+    {
+      "label": "after",
+      "scope": "club-reveal-complete club text parity",
+      "detail": {
+        "width": 390
+      }
+    },
+    {
+      "label": "after",
+      "scope": "club-reveal-complete club text parity",
+      "detail": {
+        "width": 320
+      }
+    },
+    {
+      "label": "after",
+      "scope": "foundation-order-complete club text parity",
+      "detail": {
+        "width": 1440
+      }
+    },
+    {
+      "label": "after",
+      "scope": "foundation-order-complete club text parity",
+      "detail": {
+        "width": 1150
+      }
+    },
+    {
+      "label": "after",
+      "scope": "foundation-order-complete club text parity",
+      "detail": {
+        "width": 768
+      }
+    },
+    {
+      "label": "after",
+      "scope": "foundation-order-complete club text parity",
+      "detail": {
+        "width": 390
+      }
+    },
+    {
+      "label": "after",
+      "scope": "foundation-order-complete club text parity",
+      "detail": {
+        "width": 320
+      }
+    },
+    {
+      "label": "after",
+      "scope": "actual checkpoint decisions and annual draw",
+      "error": "locator.click: Timeout 12000ms exceeded.\nCall log:\n  - waiting for locator('.gccuiMatchDecisions,.g8dressingroom').first().locator('details').first().locator('summary')\n    - locator resolved to <summary>…</summary>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 100ms\n    23 × waiting for element to be visible, enabled and stable\n       - element is not visible\n     - retrying click action\n       - waiting 500ms\n\n    at /home/runner/work/global-champions-cricket/global-champions-cricket/qa/v116_reveal_decisions_audit.cjs:64:103\n    at async section (/home/runner/work/global-champions-cricket/global-champions-cricket/qa/v116_reveal_decisions_audit.cjs:10:37)\n    at async /home/runner/work/global-champions-cricket/global-champions-cricket/qa/v116_reveal_decisions_audit.cjs:60:4"
+    }
+  ],
+  "errors": [],
+  "omissions": [
+    {
+      "label": "before",
+      "scope": "matchday/XI decisions",
+      "reason": "Optional annual-draft progression excluded from bounded reveal/decision comparator; only actual checkpoint panel covered"
+    },
+    {
+      "label": "after",
+      "scope": "matchday/XI decisions",
+      "reason": "Optional annual-draft progression excluded from bounded reveal/decision comparator; only actual checkpoint panel covered"
+    }
+  ]
+}
