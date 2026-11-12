@@ -4,6 +4,7 @@ const {pathToFileURL}=require('url');
 const {createHash}=require('crypto');
 
 // Real guide journeys plus narrowly labelled non-guide cascade fixtures.
+let activeBrowser;
 (async()=>{
  const baseline=process.env.GCC8_BASELINE_BUILD;
  const candidate=process.env.GCC8_TEST_BUILD;
@@ -11,6 +12,7 @@ const {createHash}=require('crypto');
  if(!baseline||!candidate)throw Error('Both exact builds are required');
  fs.mkdirSync(out,{recursive:true});
  const browser=await chromium.launch({executablePath:process.env.GCC8_CHROMIUM||undefined,headless:true});
+ activeBrowser=browser;
  const states=[],errors=[],failures=[];
  const inspect=async page=>page.evaluate(()=>{
   const d=document.querySelector('#g8dialog'),b=d.querySelector('.g8modalbody'),h=d.querySelector('.g8modalhead'),g=d.querySelector('.g8guide');
@@ -47,6 +49,7 @@ const {createHash}=require('crypto');
    await page.waitForFunction(()=>document.querySelector('#g8dialog[open] .g8guide'));
    await page.evaluate(()=>document.fonts.ready);
    for(const [width,height] of [[1150,720],[1440,1000],[1024,768],[768,1000],[390,844],[320,720],[844,390]]){
+    console.log('CAPTURE',label,action,width,height);
     await page.setViewportSize({width,height});
     await page.locator('#g8dialog .g8modalbody').evaluate(e=>e.scrollTop=0);
     const state={label,action,...await inspect(page)};states.push(state);
@@ -127,4 +130,4 @@ const {createHash}=require('crypto');
  fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(report,null,2)+'\n');
  console.log(JSON.stringify({...report,states:states.length},null,2));
  await browser.close();if(report.status!=='PASS')process.exitCode=1;
-})().catch(e=>{console.error(e);process.exitCode=1});
+})().catch(async e=>{console.error(e);if(activeBrowser)await activeBrowser.close();process.exitCode=1});
