@@ -1,0 +1,75 @@
+name: GCC whole interface and copy audit
+on:
+  push:
+    branches: [work/v116-candidate-acceptance]
+    paths: ['qa/v116_interface_audit.cjs', 'qa/v116_surface_audit_helpers.cjs', '.github/workflows/v116-interface-audit.yml']
+permissions:
+  contents: write
+env:
+  # Exact six-background match-surface candidate.
+  CANDIDATE_SHA256: f0b75473b15d2548c8b676c8c2c483df75d08559ca3f72ef46f3019225808005
+concurrency:
+  group: gcc-interface-audit
+  cancel-in-progress: true
+jobs:
+  acceptance:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install native browser
+        run: |
+          if [ -f /etc/apt/apt-mirrors.txt ]; then
+            sudo sed -i 's|http://azure.archive.ubuntu.com/ubuntu|https://archive.ubuntu.com/ubuntu|g' /etc/apt/apt-mirrors.txt
+          fi
+          pip install playwright pillow
+          python -m playwright install --with-deps chromium
+          npm install --no-save --no-package-lock playwright
+      - name: Build exact review candidate
+        run: |
+          python qa/v116_canonical_source.py build --source v116/canonical --output qa/results/interface-audit.html
+          sha256sum qa/results/interface-audit.html
+      - uses: actions/cache/restore@v4
+        with:
+          path: qa/results/whole-ui-career
+          key: gcc-ui-career-79a2fbfe-seed101-v1-${{ hashFiles('qa/structural-risk/career-run.mjs', 'qa/offline_game_host.mjs') }}
+      - name: Require existing checkpoints
+        run: |
+          test -f qa/results/whole-ui-career/checkpoint-2009.json
+          test -f qa/results/whole-ui-career/checkpoint-2019.json
+          test -f qa/results/whole-ui-career/checkpoint-2025.json
+          test -f qa/results/whole-ui-career/checkpoint-2026.json
+      - name: Audit main screens, secondary panels and terminology
+        env:
+          GCC8_TEST_BUILD: qa/results/interface-audit.html
+          GCC8_WHOLE_UI_DIR: qa/results/interface-audit
+          GCC8_BROWSER_CAREER_DIR: qa/results/whole-ui-career
+        run: |
+          GCC8_CHROMIUM="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')" node qa/v116_interface_audit.cjs
+      - name: Preserve diagnostic evidence
+        if: always()
+        run: |
+          python - <<'SAVE'
+          from pathlib import Path
+          from PIL import Image
+          import shutil
+          src=Path('qa/results/interface-audit');dst=Path('docs/release/interface-audit/${{ github.run_id }}');dst.mkdir(parents=True,exist_ok=True)
+          for f in src.glob('*.json'):shutil.copyfile(f,dst/f.name)
+          for f in src.glob('*.png'):Image.open(f).convert('RGB').save(dst/f.with_suffix('.jpg').name,quality=88,optimize=True)
+          SAVE
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/release/interface-audit
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record native match UI flow evidence'
+            git pull --rebase origin work/v116-candidate-acceptance
+            git push origin HEAD:refs/heads/work/v116-candidate-acceptance
+          fi
