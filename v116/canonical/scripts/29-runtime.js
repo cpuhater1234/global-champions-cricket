@@ -141,15 +141,16 @@
  const revealDelays=[1500,750,375];
  function cancelReveal(){if(revealTimer!==null)clock.clearTimeout(revealTimer);revealTimer=null;}
  function revealActive(){return ui.reveal&&(ui.reveal.kind==='league'?ui.view==='leagueDraw':ui.reveal.kind==='draft'?ui.view==='draftDraw':ui.view==='dynasty'&&s.dynasty.offseason?.phase==='lottery');}
+ function completeLeagueReveal(){if(ui.view!=='leagueDraw'||ui.reveal?.kind!=='league'||ui.reveal.count<8)return false;finishReveal();G.finishLeagueReveal();setView('clubs');return true;}
  function scheduleReveal(){
-  cancelReveal();const r=ui.reveal;if(!r||!r.running||r.count>=8||!revealActive())return;
-  revealTimer=clock.setTimeout(()=>{revealTimer=null;if(!revealActive()||!ui.reveal.running)return;const focusedReveal=!!document.activeElement?.closest?.('.g8drawcontrols');ui.reveal.count=Math.min(8,ui.reveal.count+1);ui.revealed=ui.reveal.count;if(ui.reveal.count===8)ui.reveal.running=false;render(false);if(ui.reveal.count===8&&focusedReveal)document.getElementById('gccuiRevealNext')?.focus({preventScroll:true});save();scheduleReveal();},revealDelays[r.speedIndex]);
+  if(completeLeagueReveal())return;cancelReveal();const r=ui.reveal;if(!r||!r.running||r.count>=8||!revealActive())return;
+  revealTimer=clock.setTimeout(()=>{revealTimer=null;if(!revealActive()||!ui.reveal.running)return;const focusedReveal=!!document.activeElement?.closest?.('.g8drawcontrols');ui.reveal.count=Math.min(8,ui.reveal.count+1);ui.revealed=ui.reveal.count;if(ui.reveal.count===8)ui.reveal.running=false;if(completeLeagueReveal()){save();return;}render(false);if(ui.reveal.count===8&&focusedReveal)document.getElementById('gccuiRevealNext')?.focus({preventScroll:true});save();scheduleReveal();},revealDelays[r.speedIndex]);
  }
  function startReveal(kind,snapshot=null){cancelReveal();ui.reveal={kind,count:snapshot?.count||0,speedIndex:snapshot?.speedIndex||0,running:snapshot?.running??true};ui.revealed=ui.reveal.count;scheduleReveal();}
  function finishReveal(){cancelReveal();ui.reveal=null;}
  bind('world',['story'],()=>{if(!ui.newCareer&&X.hasStoredSave()){modal('Choose your career','<p>A saved career is available. Open it, or start again with a new club.</p><p>Starting again replaces the saved career.</p><div class="g8actions">'+btn('Open saved career','continueSaved',[],'g8ghost')+btn('Start again','fresh',[],'g8primary')+'</div>','fresh');return;}cancelMatchTimer();ui.match=null;finishReveal();read.fresh();ui.newCareer=false;G.skipLeagueReveal();ui.revealed=0;setView('leagueDraw');startReveal('league');render(false);save();});
- bind('revealClub',['leagueDraw'],()=>{assert(revealActive(),'Open the reveal first.');ui.reveal.count=Math.min(8,ui.reveal.count+1);ui.revealed=ui.reveal.count;if(ui.reveal.count===8)ui.reveal.running=false;scheduleReveal();});
- bind('revealAll',['leagueDraw','draftDraw','dynasty'],()=>{assert(revealActive(),'Open the order reveal first.');cancelReveal();ui.reveal.count=8;ui.revealed=8;ui.reveal.running=false;pendingFocus='#gccuiRevealNext';});
+ bind('revealClub',['leagueDraw'],()=>{assert(revealActive(),'Open the reveal first.');ui.reveal.count=Math.min(8,ui.reveal.count+1);ui.revealed=ui.reveal.count;if(ui.reveal.count===8)ui.reveal.running=false;if(completeLeagueReveal())return;scheduleReveal();});
+ bind('revealAll',['leagueDraw','draftDraw','dynasty'],()=>{assert(revealActive(),'Open the order reveal first.');cancelReveal();ui.reveal.count=8;ui.revealed=8;ui.reveal.running=false;if(completeLeagueReveal())return;pendingFocus='#gccuiRevealNext';});
  bind('revealRun',['leagueDraw','draftDraw','dynasty'],()=>{assert(revealActive()&&ui.reveal.count<8,'The reveal is complete.');ui.reveal.running=!ui.reveal.running;scheduleReveal();});
  bind('revealSpeed',['leagueDraw','draftDraw','dynasty'],()=>{assert(revealActive(),'Open the reveal first.');ui.reveal.speedIndex=(ui.reveal.speedIndex+1)%3;scheduleReveal();});
  bind('clubs',['leagueDraw'],()=>{assert(ui.reveal?.count===8,'Reveal the clubs first.');finishReveal();G.finishLeagueReveal();setView('clubs');});
