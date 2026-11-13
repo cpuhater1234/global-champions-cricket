@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "sha256": "9e1fec325f6d5dc08e16b79ce4cf2019e2c4aa0872d076a283cf1b1a70a01601",
+  "states": 60,
+  "verification": "Exact canonical build, candidate mode only; no injected CSS.",
+  "candidateFindings": 0,
+  "errors": [],
+  "clubs": [
+    "Royal Challengers Bengaluru",
+    "Mumbai Indians",
+    "Worcestershire Rapids"
+  ],
+  "widths": [
+    320,
+    360,
+    390,
+    768,
+    1440
+  ],
+  "baselineDiagnostic": {
+    "run": 43405733421,
+    "misaligned": 54,
+    "clipped": 4
+  },
+  "scope": "Existing liveScoreboard renderer with real drawn club objects and labelled representative score/toss fixtures. Not played-match, full catalogue or persistence acceptance."
+}
