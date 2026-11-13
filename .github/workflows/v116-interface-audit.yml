@@ -7,7 +7,7 @@ permissions:
   contents: write
 env:
   # Exact six-background match-surface candidate.
-  CANDIDATE_SHA256: f0b75473b15d2548c8b676c8c2c483df75d08559ca3f72ef46f3019225808005
+  CANDIDATE_SHA256: 1dff92ee444b2aadd97658badc8c1db6b53a9f824f6fa95fb47ad7e0894346e6
 concurrency:
   group: gcc-interface-audit
   cancel-in-progress: true
@@ -35,7 +35,7 @@ jobs:
           npm install --no-save --no-package-lock playwright
       - name: Build exact review candidate
         run: |
-          python qa/v116_canonical_source.py build --source v116/canonical --output qa/results/interface-audit.html
+          python qa/v116_canonical_source.py build --source v116/canonical --allow-runtime-changes --output qa/results/interface-audit.html
           sha256sum qa/results/interface-audit.html
       - uses: actions/cache/restore@v4
         with:
@@ -51,6 +51,7 @@ jobs:
         env:
           GCC8_TEST_BUILD: qa/results/interface-audit.html
           GCC8_WHOLE_UI_DIR: qa/results/interface-audit
+          GCC8_REQUIRE_OWNER_FIX: '1'
           GCC8_BROWSER_CAREER_DIR: qa/results/whole-ui-career
         run: |
           GCC8_CHROMIUM="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')" node qa/v116_interface_audit.cjs
@@ -62,8 +63,10 @@ jobs:
           from PIL import Image
           import shutil
           src=Path('qa/results/interface-audit');dst=Path('docs/release/interface-audit/${{ github.run_id }}');dst.mkdir(parents=True,exist_ok=True)
-          for f in src.glob('*.json'):shutil.copyfile(f,dst/f.name)
-          for f in src.glob('*.png'):Image.open(f).convert('RGB').save(dst/f.with_suffix('.jpg').name,quality=88,optimize=True)
+          for f in src.glob('*.json'):
+              folder=dst if f.name=='manifest.json' else dst/(f.name[:4] if f.name[:4].isdigit() else 'foundation');folder.mkdir(parents=True,exist_ok=True);shutil.copyfile(f,folder/f.name)
+          for f in src.glob('*.png'):
+              folder=dst/(f.name[:4] if f.name[:4].isdigit() else 'foundation');folder.mkdir(parents=True,exist_ok=True);Image.open(f).convert('RGB').save(folder/f.with_suffix('.jpg').name,quality=88,optimize=True)
           SAVE
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'

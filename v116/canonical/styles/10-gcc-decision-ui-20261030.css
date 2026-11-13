@@ -351,12 +351,13 @@
 #g8dialog[data-prompt=teamAnalysis] .g8analysisgrid{grid-template-columns:minmax(0,1fr)!important;gap:12px!important;align-items:start}
 #g8dialog[data-prompt=teamAnalysis] .g8analysissection{display:block!important}
 #g8dialog[data-prompt=teamAnalysis] .g8analysistiles{grid-template-columns:repeat(4,minmax(0,1fr))!important;grid-template-rows:none!important;grid-auto-rows:minmax(76px,auto);height:auto!important}
+:is(#g8dialog,#g8app) .g8simpleanalysis .g8analysistiles{grid-template-columns:repeat(auto-fit,minmax(min(100%,110px),1fr));grid-template-rows:none;grid-auto-rows:minmax(76px,auto);height:auto}
 @media(max-width:1000px){#g8dialog[data-prompt=teamAnalysis] .g8analysisgrid{grid-template-columns:minmax(0,1fr)!important}#g8dialog[data-prompt=teamAnalysis] .g8analysistiles{grid-template-columns:repeat(4,minmax(0,1fr))!important}}
 @media(max-width:600px){#g8dialog[data-prompt=teamAnalysis] .g8analysistiles{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 #g8dialog[data-prompt=teamAnalysis] .g8analysissection{padding:8px!important}
 #g8dialog[data-prompt=teamAnalysis] .g8analysissection h3{font-size:15px!important;justify-content:flex-start!important;font-style:normal!important}
 #g8dialog[data-prompt=teamAnalysis] .g8analysisrow{min-height:76px!important;padding:8px 8px!important;gap:4px!important}
-#g8dialog[data-prompt=teamAnalysis] .g8analysisrow>span{font-size:13px!important;line-height:1.35!important;overflow-wrap:normal!important;word-break:normal!important;hyphens:none!important}
+:is(#g8dialog,#g8app) .g8simpleanalysis .g8analysisrow>span{font-size:13px!important;line-height:1.35!important;overflow-wrap:normal!important;word-break:normal!important;hyphens:none!important}
 #g8dialog[data-prompt=teamAnalysis] .g8analysisrow>strong{font-size:28px!important;line-height:1.1!important}
 @media(max-width:600px){#g8dialog[data-prompt=teamAnalysis] .g8roleboardhead{flex-wrap:wrap!important;gap:8px!important}#g8dialog[data-prompt=teamAnalysis] .g8coverread{flex-basis:100%;text-align:left!important}}
 /* Tables and schedule: visible selection, complete columns, aligned club rows. */
@@ -657,6 +658,8 @@
 #g8dialog[data-prompt=player] .gccuiFullSkills>h3{font-size:18px!important;margin:0 0 14px!important}
 #g8dialog[data-prompt=player] .gccuiFullSkills .g8scoutcategories{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 #g8dialog[data-prompt=player] .gccuiFullSkills .g8skillcategory{padding:10px 0!important;min-width:0}
+#g8dialog[data-prompt=player] .gccuiFullSkills .g8abilitybar>span{grid-column:1/-1;overflow-wrap:normal;word-break:normal}
+#g8dialog[data-prompt=player] .gccuiFullSkills .g8abilitybar>b{grid-row:2}
 #g8dialog[data-prompt=player] .gccuiFullSkills>p{font-size:12px;color:#d0cec8;margin:12px 0 0!important}
 @media(max-width:760px){#g8dialog[data-prompt=player] .gccuiProfileOverview{grid-template-columns:1fr}#g8dialog[data-prompt=player] .gccuiFullSkills .g8scoutcategories{grid-template-columns:1fr}#g8dialog[data-prompt=player] .gccuiProfileViews .g8button{flex:1 1 96px;padding:8px!important;font-size:14px!important;white-space:normal}#g8dialog[data-prompt=player] .gccuiProfileViews .g8button span{font-size:14px!important}#g8dialog[data-prompt=player] .g8modalbody{padding:12px!important}#g8dialog[data-prompt=player] .g8ordereditor{flex-wrap:wrap}#g8dialog[data-prompt=player] .g8ordereditor .g8actions{flex-wrap:wrap}#g8dialog[data-prompt=player] .gccuiProfileOverview .g8recordstats{gap:8px}#g8dialog[data-prompt=player] .gccuiProfileOverview .g8recordstats strong{font-size:25px!important}}
 /* One player identity, with name, role, bio and rating in the sticky report head. */
@@ -1220,7 +1223,7 @@ html:has(#g8dialog[open]){overflow:hidden}
 #g8dialog[data-prompt=player] .gccuiProfilePanel .gccuiManagementFocus>.g8commitment span{font-size:12px!important;line-height:1.5!important}
 #g8dialog[data-prompt=player] .gccuiManagementMedical{margin:6px 0!important;color:#ffcc8c!important;font-size:13px!important}
 #g8dialog[data-prompt=player] .gccuiManagementContext,#g8dialog[data-prompt=player] .gccuiOptionalPromises{border:0!important;border-top:1px solid var(--gcc-line)!important;border-radius:0!important;padding:0!important;margin:12px 0 0!important;background:transparent!important;box-shadow:none!important}
-#g8dialog[data-prompt=player] .gccuiManagementContext>summary,#g8dialog[data-prompt=player] .gccuiOptionalPromises>summary{padding:12px 2px!important;min-height:44px!important;box-sizing:border-box;font-weight:700;font-size:13px!important;cursor:pointer}
+#g8dialog[data-prompt=player] .gccuiManagementContext>summary,#g8dialog[data-prompt=player] .gccuiOptionalPromises>summary{padding:12px 2px!important;min-height:44px!important;box-sizing:border-box;font-weight:700;font-size:13px!important;cursor:pointer;background:transparent!important;border:0!important;border-radius:0!important}
 #g8dialog[data-prompt=player] .gccuiManagementContext>summary:focus-visible,#g8dialog[data-prompt=player] .gccuiOptionalPromises>summary:focus-visible{outline:2px solid #ffc45b;outline-offset:2px}
 #g8dialog[data-prompt=player] .gccuiManagementContext .g8playercontext{display:flex!important;flex-wrap:wrap;gap:14px!important}
 #g8dialog[data-prompt=player] .gccuiManagementContext .g8playercontext>div{padding:0!important;background:none!important;border:0!important}

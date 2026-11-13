@@ -130,7 +130,7 @@
     linear-gradient(115deg,transparent 0 62%,rgba(255,255,255,.14) 62% 64%,transparent 64%),
     linear-gradient(135deg,var(--accent),color-mix(in srgb,var(--accent) 45%,#000))!important}
 #g8stage#g8stage#g8stage .g8clubwatermark{font-weight:800!important;font-style:italic;font-size:5.2rem!important;opacity:.22}
-#g8stage#g8stage#g8stage .g8club h3{font-family:var(--vx-display)!important;font-size:1.65rem;font-weight:700;
+#g8stage#g8stage#g8stage .g8club:not(.g8ordercard) h3{font-family:var(--vx-display)!important;font-size:1.65rem;font-weight:700;
   text-transform:uppercase;letter-spacing:.03em;line-height:1.05}
 #g8stage#g8stage#g8stage .g8clublocation{color:var(--gcc-muted)!important;letter-spacing:.1em;text-transform:uppercase;font-size:.8rem}
 #g8stage#g8stage#g8stage .g8clubground{background:rgba(0,0,0,.28)!important;border:1px solid var(--gcc-line)!important;
@@ -261,14 +261,11 @@
 #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8concernreason b{color:var(--gcc-text)!important;font-weight:700}
 #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) :is(.g8commitmentchoice>p,.g8commitmentoptions>p,.g8rotationconversation>p){color:var(--gcc-muted)!important}
 #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) :is(.g8commitmentoptions,.g8rotationconversation) h4{color:var(--gcc-text)!important}
-#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .gccuiManagementContext .g8playercontext{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important}
-#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .gccuiManagementContext .g8playercontext>div{background:var(--gcc-raised)!important;border:1px solid var(--gcc-line)!important;border-radius:6px;padding:10px 12px!important;min-width:0}
 #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8playercontext dt{color:var(--gcc-muted)!important}
 #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8playercontext dd{margin:4px 0 0!important;color:var(--gcc-text)!important}
 #g8app#g8app#g8app :is(button,summary,a,input,select):focus-visible,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) :is(button,summary,a,input,select):focus-visible{outline:3px solid #7fe0ee!important;outline-offset:3px}
 #g8app#g8app#g8app .gccuiPickedPlayer:focus-visible{outline-offset:-4px!important}
 #g8app#g8app#g8app .gccuiPlayerStatsTable .g8table tr>:first-child{box-shadow:2px 0 var(--gcc-line)!important}
-@media(max-width:400px){#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .gccuiManagementContext .g8playercontext{grid-template-columns:1fr!important}}
 /* Conditions: one header, one scale, no legacy band-value chip. */
 #g8app#g8app#g8app .g8conditionread>div:first-child,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8conditionread>div:first-child{flex-direction:row!important;align-items:baseline!important;justify-content:space-between!important;text-align:left!important;gap:8px!important;flex-wrap:wrap}
 #g8app#g8app#g8app .g8conditionread>div:first-child>b,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8conditionread>div:first-child>b{font:700 15px/1.35 var(--vx-body)!important;color:var(--gcc-text)!important}
@@ -553,10 +550,10 @@
 #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) h3{font-family:var(--vx-display)!important;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
 #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8eyebrow,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .gccuiKicker{color:var(--vx-ink)!important}
 #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .gccuiRating,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) [class*="overall"] strong{font-family:var(--vx-display)!important;font-weight:800}
-#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) summary{background:var(--gcc-raised)!important;color:var(--gcc-text)!important;
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) summary:not(:where(.gccuiManagementContext>summary,.gccuiOptionalPromises>summary)){background:var(--gcc-raised)!important;color:var(--gcc-text)!important;
   border:1px solid var(--gcc-line)!important;border-radius:8px;font-weight:700;letter-spacing:.03em}
-#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) details[open]>summary{border-bottom-left-radius:0;border-bottom-right-radius:0;border-color:var(--vx-glow)!important}
-#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) details{background:rgba(0,0,0,.18)!important;border:0!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) details[open]>summary:not(:where(.gccuiManagementContext>summary,.gccuiOptionalPromises>summary)){border-bottom-left-radius:0;border-bottom-right-radius:0;border-color:var(--vx-glow)!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) details:not(:where(.gccuiManagementContext,.gccuiOptionalPromises)){background:rgba(0,0,0,.18)!important;border:0!important}
 /* Skill labels remain plain text; avoid wildcard bar-name glow. */
 #g8app#g8app#g8app .g8utilitymenu>div{background:var(--gcc-panel)!important;border:1px solid var(--gcc-line)!important;
   border-radius:12px!important;box-shadow:0 24px 50px -16px #000}

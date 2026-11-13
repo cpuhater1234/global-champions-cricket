@@ -1,0 +1,393 @@
+{
+  "scope": "Source route inventory, not coverage proof. Rendered native evidence is separate.",
+  "commands": [
+    {
+      "command": "startPlayback",
+      "allowedFrom": "['matchReveal']"
+    },
+    {
+      "command": "matchRun",
+      "allowedFrom": "['matchReveal']"
+    },
+    {
+      "command": "matchSpeed",
+      "allowedFrom": "['matchReveal']"
+    },
+    {
+      "command": "matchSkip",
+      "allowedFrom": "['matchReveal']"
+    },
+    {
+      "command": "home",
+      "allowedFrom": "'*'"
+    },
+    {
+      "command": "play",
+      "allowedFrom": "['home']"
+    },
+    {
+      "command": "fresh",
+      "allowedFrom": "['home','story']"
+    },
+    {
+      "command": "continueSaved",
+      "allowedFrom": "['story']"
+    },
+    {
+      "command": "world",
+      "allowedFrom": "['story']"
+    },
+    {
+      "command": "revealClub",
+      "allowedFrom": "['leagueDraw']"
+    },
+    {
+      "command": "revealAll",
+      "allowedFrom": "['leagueDraw','draftDraw','dynasty']"
+    },
+    {
+      "command": "revealRun",
+      "allowedFrom": "['leagueDraw','draftDraw','dynasty']"
+    },
+    {
+      "command": "revealSpeed",
+      "allowedFrom": "['leagueDraw','draftDraw','dynasty']"
+    },
+    {
+      "command": "clubs",
+      "allowedFrom": "['leagueDraw']"
+    },
+    {
+      "command": "club",
+      "allowedFrom": "['clubs']"
+    },
+    {
+      "command": "confirmClub",
+      "allowedFrom": "['clubs']"
+    },
+    {
+      "command": "continue",
+      "allowedFrom": "['home']"
+    },
+    {
+      "command": "how",
+      "allowedFrom": "'*'"
+    },
+    {
+      "command": "howItWorks",
+      "allowedFrom": "'*'"
+    },
+    {
+      "command": "breakawayStory",
+      "allowedFrom": "'*'"
+    },
+    {
+      "command": "close",
+      "allowedFrom": "'*'"
+    },
+    {
+      "command": "signingRun",
+      "allowedFrom": "['recruit']"
+    },
+    {
+      "command": "signingSpeed",
+      "allowedFrom": "['recruit']"
+    },
+    {
+      "command": "signingSkip",
+      "allowedFrom": "['recruit']"
+    },
+    {
+      "command": "draftDraw",
+      "allowedFrom": "['recruit']"
+    },
+    {
+      "command": "beginDraft",
+      "allowedFrom": "['draftDraw']"
+    },
+    {
+      "command": "draftSpeed",
+      "allowedFrom": "['draft','dynasty']"
+    },
+    {
+      "command": "skipPick",
+      "allowedFrom": "['draft','dynasty']"
+    },
+    {
+      "command": "more",
+      "allowedFrom": "['draft','dynasty']"
+    },
+    {
+      "command": "playerTab",
+      "allowedFrom": "'*'"
+    },
+    {
+      "command": "inspect",
+      "allowedFrom": "'*'"
+    },
+    {
+      "command": "manageInspect",
+      "allowedFrom": "['team','season','dynasty','finals','result']"
+    },
+    {
+      "command": "managePlayer",
+      "allowedFrom": "['team','season','dynasty','finals','result']"
+    },
+    {
+      "command": "manageRest",
+      "allowedFrom": "['team','season']"
+    },
+    {
+      "command": "manageTrade",
+      "allowedFrom": "['team','season','dynasty','result']"
+    },
+    {
+      "command": "teamAnalysis",
+      "allowedFrom": "['team']"
+    },
+    {
+      "command": "teamPane",
+      "allowedFrom": "['team']"
+    },
+    {
+      "command": "offseasonPane",
+      "allowedFrom": "['dynasty']"
+    },
+    {
+      "command": "squadFilter",
+      "allowedFrom": "['team','dynasty']"
+    },
+    {
+      "command": "draftPlayer",
+      "allowedFrom": "['draft','dynasty']"
+    },
+    {
+      "command": "team",
+      "allowedFrom": "['draft','team']"
+    },
+    {
+      "command": "editXI",
+      "allowedFrom": "['season','finals']"
+    },
+    {
+      "command": "select",
+      "allowedFrom": "['team']"
+    },
+    {
+      "command": "remove",
+      "allowedFrom": "['team']"
+    },
+    {
+      "command": "move",
+      "allowedFrom": "['team']"
+    },
+    {
+      "command": "swapSelected",
+      "allowedFrom": "['team']"
+    },
+    {
+      "command": "swapSelectedWith",
+      "allowedFrom": "['team']"
+    },
+    {
+      "command": "swapIn",
+      "allowedFrom": "['team']"
+    },
+    {
+      "command": "swapOut",
+      "allowedFrom": "['team']"
+    },
+    {
+      "command": "cancelSwap",
+      "allowedFrom": "['team']"
+    },
+    {
+      "command": "clearXI",
+      "allowedFrom": "['team']"
+    },
+    {
+      "command": "naturalOrder",
+      "allowedFrom": "['team']"
+    },
+    {
+      "command": "draftSquad",
+      "allowedFrom": "['draft','dynasty']"
+    },
+    {
+      "command": "draftDetail",
+      "allowedFrom": "['draft','dynasty']"
+    },
+    {
+      "command": "rating",
+      "allowedFrom": "['team','review','draft','dynasty']"
+    },
+    {
+      "command": "lodge",
+      "allowedFrom": "['team']"
+    },
+    {
+      "command": "careerSection",
+      "allowedFrom": "['season','team','result']"
+    },
+    {
+      "command": "seasonTab",
+      "allowedFrom": "['season']"
+    },
+    {
+      "command": "fixtureNext",
+      "allowedFrom": "['season']"
+    },
+    {
+      "command": "matchday",
+      "allowedFrom": "['result']"
+    },
+    {
+      "command": "prepare",
+      "allowedFrom": "['season']"
+    },
+    {
+      "command": "watchNext",
+      "allowedFrom": "['season']"
+    },
+    {
+      "command": "playMatch",
+      "allowedFrom": "['season']"
+    },
+    {
+      "command": "result",
+      "allowedFrom": "['season']"
+    },
+    {
+      "command": "resultScorecard",
+      "allowedFrom": "['result']"
+    },
+    {
+      "command": "scorecard",
+      "allowedFrom": "['season']"
+    },
+    {
+      "command": "finalScorecard",
+      "allowedFrom": "['finals','review']"
+    },
+    {
+      "command": "postSeason",
+      "allowedFrom": "['season']"
+    },
+    {
+      "command": "simulateFinals",
+      "allowedFrom": "['finals']"
+    },
+    {
+      "command": "advanceFinals",
+      "allowedFrom": "['finals']"
+    },
+    {
+      "command": "finalsReturn",
+      "allowedFrom": "['result']"
+    },
+    {
+      "command": "review",
+      "allowedFrom": "['finals']"
+    },
+    {
+      "command": "averages",
+      "allowedFrom": "['review']"
+    },
+    {
+      "command": "offseason",
+      "allowedFrom": "['review']"
+    },
+    {
+      "command": "finishCareer",
+      "allowedFrom": "['review']"
+    },
+    {
+      "command": "cpuMarket",
+      "allowedFrom": "['dynasty']"
+    },
+    {
+      "command": "keepSquad",
+      "allowedFrom": "['dynasty']"
+    },
+    {
+      "command": "retainXI",
+      "allowedFrom": "['team']"
+    },
+    {
+      "command": "reviewList",
+      "allowedFrom": "['dynasty']"
+    },
+    {
+      "command": "annualDraw",
+      "allowedFrom": "['dynasty']"
+    },
+    {
+      "command": "annualDraft",
+      "allowedFrom": "['dynasty']"
+    },
+    {
+      "command": "annualList",
+      "allowedFrom": "['dynasty']"
+    },
+    {
+      "command": "lodgeList",
+      "allowedFrom": "['dynasty','team']"
+    },
+    {
+      "command": "annualTeam",
+      "allowedFrom": "['dynasty','team']"
+    },
+    {
+      "command": "release",
+      "allowedFrom": "['dynasty']"
+    },
+    {
+      "command": "confirmRelease",
+      "allowedFrom": "['dynasty']"
+    },
+    {
+      "command": "finalCut",
+      "allowedFrom": "['dynasty']"
+    },
+    {
+      "command": "confirmFinalCut",
+      "allowedFrom": "['dynasty']"
+    },
+    {
+      "command": "trade",
+      "allowedFrom": "['dynasty','season']"
+    },
+    {
+      "command": "propose",
+      "allowedFrom": "['dynasty','season']"
+    },
+    {
+      "command": "editTrade",
+      "allowedFrom": "['dynasty','season']"
+    },
+    {
+      "command": "confirmTrade",
+      "allowedFrom": "['dynasty','season']"
+    },
+    {
+      "command": "cover",
+      "allowedFrom": "['team']"
+    },
+    {
+      "command": "signCover",
+      "allowedFrom": "['team']"
+    },
+    {
+      "command": "archive",
+      "allowedFrom": "'*'"
+    },
+    {
+      "command": "archiveBack",
+      "allowedFrom": "['archive']"
+    },
+    {
+      "command": "archiveSeason",
+      "allowedFrom": "['archive']"
+    }
+  ]
+}
