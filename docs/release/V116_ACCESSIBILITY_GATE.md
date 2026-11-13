@@ -1,4 +1,6 @@
-# Exact-candidate accessibility gate, 13 November 2026
+# v116 accessibility gate, 13 November 2026
+
+Current candidate is **c8990d21…5909a0, HOLD**, documented in the follow-up below. The initial sections retain historical c456 findings; they are not current unresolved narrow-layout or zoom-capture defects.
 
 Candidate: `GCC_v116_Draft_Cards_Review.html`  
 SHA-256: `c45684a540d098ec35beeb8a959995e88292bccded4ce1314390140d1e7720ab`  
@@ -69,3 +71,12 @@ Evidence folder: [accessibility-gate/local-20261113-c8990d21](accessibility-gate
 - **Real screen-reader speech: NOT TESTED.** The sandbox has no NVDA/JAWS/VoiceOver. Chromium still exposes one polite/atomic status, but the region instance changes on every update (7 instances for 7 messages). No live-score code was changed, because no speech defect has been reproduced. This must be run by a person on Windows (NVDA + Chrome) or macOS (VoiceOver + Safari) using the protocol in the handoff.
 - **Visual sign-off** of the zoom captures above is by this reviewer only; there is no independent whole-game approval.
 - Untested: short landscape screens (`max-height:520px`) keep an existing `!important` nav padding owner, so the bottom 5px of the nav focus ring may still be clipped there; Firefox and Safari focus scrolling with `scroll-padding`; widths other than 320/360/390 for the new focus assertions.
+
+
+## Reconciliation after external work, 13 November 2026
+
+Reviewed branch head8796811c46006010804a76ebf3d0d270c7974451 and the complete source diff from the previous handoff. The product change is exactly two rules in the existing styles/31 owner. Re-read the three CI reports from43361047557: all pin c8990d219359ce23f697db136d47e44673427167cec0bae83638e61ceb5909a0; no findings or runner errors. The CI existing-gate count is1,020 (the1,018 figure above describes an earlier local run). Reviewed all31 existing screenshots:22 zoom viewport segments,2 zoom focus images and7 narrow/focus images. The record text is separate, Fixtures and its ring are visible in both directions, and the zoom images capture the tested viewport without the former raster clipping. Overlapping scrolled segments collectively cover each tested page/dialog; offscreen unfocused career-nav items remain intentionally scrollable.
+
+Local canonical build reproduced c899 exactly at6,655,238bytes, with only styles/31 differing from the previous manifest snapshot. No native tests reran during reconciliation. No product change, new download or promotion was made. The recorded manifest is deliberately still c456; strict parity with that previous snapshot is not claimed for c899.
+
+The outstanding release gate is real screen-reader speech. The current connection supplies no verified screen-reader speech channel, so this cannot be marked passed. Follow the human test protocol in CURRENT_V116_REVIEW_HANDOFF.md; record screen-reader/browser/OS versions and delivery-by-delivery spoken output against the visible score, including keyboard Pause/Resume. A changed status-region instance is a risk to verify, not sufficient evidence to edit runtime code or to fail actual speech. Keep HOLD until the result is recorded and assessed.

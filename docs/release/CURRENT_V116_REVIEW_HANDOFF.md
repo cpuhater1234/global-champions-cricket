@@ -40,9 +40,9 @@ Gameplay and save/reload were not re-run because no runtime body changed. That r
 | Previous review candidate (recorded manifest snapshot) | `GCC_v116_Draft_Cards_Review.html` | `c45684a540d098ec35beeb8a959995e88292bccded4ce1314390140d1e7720ab` |
 | **Current edited accessibility candidate (HOLD)** | `GCC_v116_accessibility_review.html` | `c8990d219359ce23f697db136d47e44673427167cec0bae83638e61ceb5909a0` |
 
-Current candidate size:6,655,156bytes. It is not a stable release or tag. Main and frozen release have not been promoted or overwritten. All22 script bodies compare byte-identically with frozen v116; changes are in existing style bodies.17 style blocks remain, with deliberate cascade consolidation still separate.
+Current candidate size:6,655,238bytes. It is not a stable release or tag. Main and frozen release have not been promoted or overwritten. All22 script bodies compare byte-identically with frozen v116; changes are in existing style bodies.17 style blocks remain, with deliberate cascade consolidation still separate.
 
-## Signing-width correction
+## Historical c456 candidate: signing-width acceptance
 
 The obsolete72px day-cell minimum from the later cleanup owner is already removed. The composition owner retains the shrinkable day cells. The original report remains accurate for its own11November artifact and390/1440 initial-state probe.
 
@@ -55,15 +55,15 @@ Day1–5 indicators are noninteractive spans, not day-selection buttons. Focused
 -2 independent390px native full new-career/draft/manual-XI/match scenarios: selected captaincy metadata,11-player XI, club/year/round/results preserved through real HTTP save/reload/Continue. No page or console errors or measured captaincy-board horizontal overflow.
 - Native two-tab test: stale Round1 writes rejected after Round2 saved elsewhere; localStorage/IndexedDB/latest career identity preserved, then post-Continue checkpoints agree.
 
-The game artifact is unchanged. Frozen rollback reference remains byte-identical. This closes the named candidate verification gap; it does not certify every browser, storage failure mode or full-dynasty native scenario. It builds the canonical source, verifies checksum, then runs15 signing states across320/360/390/768/1440px, real mid-signing save/reload/Continue at those widths, two full native gameplay/save/reload/Continue scenarios and guarded two-tab stale-write recovery. All browser contexts/careers are disposable; the user's actual career is not used.
+That acceptance run left the c456 artifact unchanged. The later c899 candidate contains only the two CSS edits documented above. Frozen rollback reference remains byte-identical. This closes the named candidate verification gap; it does not certify every browser, storage failure mode or full-dynasty native scenario. It builds the canonical source, verifies checksum, then runs15 signing states across320/360/390/768/1440px, real mid-signing save/reload/Continue at those widths, two full native gameplay/save/reload/Continue scenarios and guarded two-tab stale-write recovery. All browser contexts/careers are disposable; the user's actual career is not used.
 
-## Focused visual review
+## Historical c456 signing visual review
 
 All15 initial/during/completed signing renders were inspected at the five requested widths. Day labels and controls remain readable;320px intentionally wraps each Day label across two lines. No clipping or document-width regression was observed. At768px during signing, Resume signing wraps and is taller than its adjacent Speed control; this is a minor recorded consistency issue, not a claim that the full interface is visually finished. No product edit was made in this verification pass.
 
 ## Reproducible candidate source
 
-[Source parity run43339977558](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/43339977558) passed. `v116/canonical` contains the lossless template,17 CSS owner bodies,22 script bodies and manifest. `qa/v116_canonical_source.py build --source v116/canonical --output qa/results/candidate.html --check-manifest` reproduces the current candidate byte-for-byte. Runtime-body drift is rejected unless explicitly acknowledged for renewed engine QA.
+[Source parity run43339977558](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/43339977558) passed. `v116/canonical` contains the lossless template,17 CSS owner bodies,22 script bodies and manifest. `qa/v116_canonical_source.py build --source v116/canonical --output qa/results/candidate.html --check-manifest` reproduces the recorded c456 snapshot byte-for-byte. For the current c899 candidate, use the non-strict build command above and require its exact hash and the single changed CSS owner; the manifest intentionally remains the previous snapshot. Runtime-body drift is rejected unless explicitly acknowledged for renewed engine QA.
 
 This supplies a safe, repeatable path for the staged candidate. It does **not** prove historical `v8/build.py` or the legacy v8 module tree reproduces v116. Do not use that older pipeline to replace the playable candidate. Future canonical edits require fresh native acceptance against the newly built file; historical composer workflows do not automatically cover them.
 
@@ -74,14 +74,16 @@ This supplies a safe, repeatable path for the staged candidate. It does **not** 
 - Player reports:90 paired states, run43336190086; all three tabs, narrow header and rating/close separation.
 - Earlier reveal/decision and XI/analysis passes are recorded in their release review documents. These do not substitute for exact-current persistence checks.
 
-## Accessibility gate and promotion decision
+## Historical c456 accessibility findings (superseded by fixes above)
 
 The exact c45684a5…e7720ab candidate has now undergone the next bounded accessibility diagnostic. See [V116_ACCESSIBILITY_GATE.md](V116_ACCESSIBILITY_GATE.md) for evidence, diagnostic corrections, confirmed findings and limits. **Promotion remains HOLD**. No product body changed and no new build download is required.
 
 The 768px signing-button height difference is visible but cosmetic in the tested state: labels fit, minimum height44px, keyboard Resume/Pause works, focus is visible/unobscured. Deferred without a patch. Final native diagnostic [43346413874](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/43346413874) completed33 states/105 focus observations without runner/page errors. Actual320px Tab traversal leaves Fixtures partly offscreen;360/390px initial-focus observations also need triage. A separate confirmed320px Matchday readability defect is the Season record label overlapping its value. Live-score text updates and is exposed as polite/atomic in Chromium, but the status container is replaced each update; actual spoken announcements remain unverified.200% native zoom was activated, but zoomed raster capture clips and does not provide complete visual signoff.
 
-## Next gates
+## Current next gate and promotion decision
 
-Exact-current focused acceptance is now recorded. Before promotion, resolve or explicitly accept the narrow navigation focus visibility and confirmed narrow-screen readability findings and complete live-announcement assistive-technology verification plus reliable zoomed visual review. The bounded diagnostic does not certify every browser, storage failure mode or full career horizon. No new feature or cricket-simulation change is justified without a specific reproduced problem.
+**HOLD, unpromoted.** The two narrow-screen defects and the clipped zoom-capture process are resolved for the exact c899 candidate in the bounded Chromium evidence. Do not repeat those completed checks or the prior gameplay/save acceptance without a new change or failure that justifies it. The remaining release gate is actual live-score spoken output using a screen reader, following the protocol above. This connection provides no verified screen-reader speech output; DOM/AX evidence cannot close that gate. Do not change the live-score script merely on the assumption that replacing the status region causes lost speech.
 
-Remaining visual work includes archive/offseason summary density, mobile draft chrome/companion, long-club-name live alignment, remaining match-specific surfaces and separately verified cascade consolidation. The previous71/100 whole-interface assessment is not rescored by individual component tests. No independent whole-game final visual approval is claimed.
+The13 November reconciliation re-read all three CI reports from run43361047557 (gate:0 findings/1,020 observations; narrow:126/126; zoom:44/44), inspected31 existing screenshots (22 zoom viewport segments,2 zoom focus images,7 narrow/focus images), and locally rebuilt the exact6,655,238byte c899 artifact. No tests were rerun, no game body was edited and no new download was made during reconciliation. Discarded unused replacement diagnostics prepared before the external work was discovered.
+
+The tablet height difference remains cosmetic/deferred. Remaining visual work includes archive/offseason summary density, mobile draft chrome/companion, long-club-name live alignment, remaining match-specific surfaces and separately verified cascade consolidation. Those are separate passes. Short landscape screens and Firefox/Safari focus scrolling remain outside this bounded evidence. The previous71/100 whole-interface assessment is not rescored by individual component tests; no whole-game final visual approval is claimed.
