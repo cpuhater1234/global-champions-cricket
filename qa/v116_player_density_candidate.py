@@ -20,6 +20,11 @@ def patch_release(data):
  edit(p+'.gccuiFullSkills .g8skillcategory','padding:14px!important','padding:10px 0!important')
  edit(p+'.gccuiFullSkills .g8skillcategory','background:var(--gcc-panel)!important;border:1px solid var(--gcc-line)!important;border-top:3px solid var(--gcc-accent)!important','background:transparent!important;border:0!important;border-radius:0!important')
  edit(p+'.gccuiFullSkills .g8skillcategory h3','margin:0 0 10px!important;padding:0 0 8px!important;border-color:var(--gcc-line)!important','margin:0 0 4px!important;padding:0 0 4px!important;border-bottom:0!important')
+ # Reuse the existing narrow-player-header media block; rating sits below close.
+ anchor=b'#g8dialog[data-prompt=player] .gccuiProfileHead{padding:12px!important;gap:12px 8px!important}'
+ if css.count(anchor)!=1:raise ValueError('Mobile header owner mismatch')
+ mobile=b'\n@media(max-width:360px){\n#g8dialog[data-prompt=player] .gccuiProfileHead>.gccuiDossierIdentity{grid-column:1/-1}\n#g8dialog[data-prompt=player] .gccuiDossierIdentity>.g8nameandrating{align-items:start!important}\n#g8dialog[data-prompt=player] .gccuiDossierIdentity .gccuiDossierRating{padding-top:50px!important}\n}\n'
+ css=css.replace(anchor,anchor+mobile,1);edits.append(['existing mobile player-header media block','identity and rating share restricted column','identity spans header; rating below close'])
  out=base[:m.start(3)]+css+base[m.end(3):];after=list(BLOCK.finditer(out))
  assert len(after)==len(bs)==39
  assert [x[0] for x in after if x[1].lower()==b'script']==[x[0] for x in bs if x[1].lower()==b'script']
