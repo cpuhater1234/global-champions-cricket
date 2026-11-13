@@ -15,3 +15,5 @@ Check the current snapshot against its recorded manifest:
 Future candidate edits should edit the relevant owner body and rebuild. A strict manifest check intentionally fails after edits until a newly reviewed snapshot is recorded. CSS edits must preserve runtime body hashes; script edits require renewed engine acceptance. Existing staged composers are historical reproductions, not an alternate maintained source to import wholesale. Do not edit the legacy v8 CSS and inject it into this candidate.
 
 This snapshot resolves candidate source/build identity. It does not consolidate the17 legacy style owners into one design stylesheet or remove every competing declaration. Cascade consolidation remains a separate, render-verified task.
+
+Existing historical-composer workflows do not automatically validate edits to this source tree. Build the edited canonical tree and run the appropriate native acceptance against that output before recording a new reviewed snapshot.
