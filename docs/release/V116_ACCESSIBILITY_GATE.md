@@ -1,5 +1,7 @@
 # v116 accessibility gate, 13 November 2026
 
+**Later user scope decision:** actual screen-reader speech testing is excluded and no longer blocks promotion. The historical speech HOLD statements below are retained as history, not the current release criterion. Narrow layout and zoom findings remain closed for c899.
+
 Current candidate is **c8990d21…5909a0, HOLD**, documented in the follow-up below. The initial sections retain historical c456 findings; they are not current unresolved narrow-layout or zoom-capture defects.
 
 Candidate: `GCC_v116_Draft_Cards_Review.html`  
