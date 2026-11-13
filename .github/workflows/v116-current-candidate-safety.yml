@@ -1,0 +1,106 @@
+name: GCC current candidate signing and native persistence
+on:
+  push:
+    branches: [work/v116-candidate-acceptance]
+    paths: ['qa/v116_current_signing_acceptance.cjs', 'qa/native_current_candidate_two_tab_v116.py', '.github/workflows/v116-current-candidate-safety.yml']
+permissions:
+  contents: write
+concurrency:
+  group: gcc-current-candidate-safety
+  cancel-in-progress: true
+jobs:
+  acceptance:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install native browser
+        run: |
+          if [ -f /etc/apt/apt-mirrors.txt ]; then
+            sudo sed -i 's|http://azure.archive.ubuntu.com/ubuntu|https://archive.ubuntu.com/ubuntu|g' /etc/apt/apt-mirrors.txt
+          fi
+          pip install playwright pillow
+          python -m playwright install --with-deps chromium
+          npm install --no-save --no-package-lock playwright
+      - name: Build current candidate from canonical source
+        run: |
+          python qa/v116_canonical_source.py build --source v116/canonical --output qa/results/current-safety/candidate.html --check-manifest --report qa/results/current-safety/build.json
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          r=json.loads(Path('qa/results/current-safety/build.json').read_text());assert r['sha256']=='c45684a540d098ec35beeb8a959995e88292bccded4ce1314390140d1e7720ab'
+          from qa.v116_source_reconciliation import BLOCK,RELEASE
+          a=list(BLOCK.finditer(RELEASE.read_bytes()));b=list(BLOCK.finditer(Path('qa/results/current-safety/candidate.html').read_bytes()))
+          assert [m[3] for m in a if m[1]==b'script']==[m[3] for m in b if m[1]==b'script']
+          print('PASS: all22 script bodies identical to frozen v116; exact current candidate pinned')
+          PY
+      - name: Signing states and native mid-signing reload at five widths
+        id: signing
+        continue-on-error: true
+        env:
+          GCC8_TEST_BUILD: qa/results/current-safety/candidate.html
+          GCC8_SIGNING_DIR: qa/results/current-safety/signing
+        run: |
+          GCC8_CHROMIUM="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')" node qa/v116_current_signing_acceptance.cjs
+      - name: Exact candidate gameplay save reload Continue
+        id: gameplay
+        continue-on-error: true
+        run: |
+          python captaincy_layer_v116.py --html qa/results/current-safety/candidate.html --no-hash-check --mode http --case-timeout 240 --out-dir qa/results/current-safety/gameplay
+      - name: Exact candidate two-tab stale-save recovery
+        id: tabs
+        continue-on-error: true
+        run: |
+          python qa/native_current_candidate_two_tab_v116.py --html qa/results/current-safety/candidate.html --canonical-candidate --out qa/results/current-safety/two-tab.json
+      - name: Preserve exact-candidate acceptance evidence
+        if: always()
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json,shutil
+          from PIL import Image
+          src=Path('qa/results/current-safety');dst=Path('docs/release/current-candidate-safety/${{ github.run_id }}');dst.mkdir(parents=True,exist_ok=True)
+          for f in src.rglob('*.json'):
+              target=dst/f.relative_to(src);target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(f,target)
+          for f in src.rglob('*.png'):
+              target=dst/f.relative_to(src).with_suffix('.jpg');target.parent.mkdir(parents=True,exist_ok=True);im=Image.open(f).convert('RGB');im.crop((0,0,im.width,min(8000,im.height))).save(target,quality=88,optimize=True)
+          reports={}
+          for name,rel in [('signing','signing/report.json'),('gameplay','gameplay/captaincy_result.json'),('two_tab','two-tab.json')]:
+              p=src/rel;r=json.loads(p.read_text()) if p.exists() else {'status':'NOT_COMPLETED'}
+              reports[name]={'status':r.get('status'),'sha256':r.get('sha256'),'states':len(r.get('states',[])),'reloads':len(r.get('reloads',[])),'runs':len(r.get('runs',[]))}
+          summary={'candidate_sha256':'c45684a540d098ec35beeb8a959995e88292bccded4ce1314390140d1e7720ab','reports':reports,'frozen_release_unchanged':True,'no_product_changes':True}
+          (dst/'summary.json').write_text(json.dumps(summary,indent=2)+'\n');print(json.dumps(summary))
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/release/current-candidate-safety
+          if ! git diff --cached --quiet; then
+            git commit -m 'Preserve exact current candidate signing and native persistence evidence'
+            published=0
+            for attempt in 1 2 3; do
+              git pull --rebase origin work/v116-candidate-acceptance
+              if git push origin HEAD:refs/heads/work/v116-candidate-acceptance; then published=1; break; fi
+            done
+            test "$published" = 1
+          fi
+      - name: Require all exact candidate outcomes
+        if: always()
+        env:
+          SIGNING: ${{ steps.signing.outcome }}
+          GAMEPLAY: ${{ steps.gameplay.outcome }}
+          TABS: ${{ steps.tabs.outcome }}
+        run: |
+          test "$SIGNING" = success && test "$GAMEPLAY" = success && test "$TABS" = success
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          expected='c45684a540d098ec35beeb8a959995e88292bccded4ce1314390140d1e7720ab'
+          for rel in ['signing/report.json','gameplay/captaincy_result.json','two-tab.json']:
+              r=json.loads((Path('qa/results/current-safety')/rel).read_text());assert r['status']=='PASS' and r['sha256']==expected
+          PY
