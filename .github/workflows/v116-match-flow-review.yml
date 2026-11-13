@@ -1,0 +1,64 @@
+name: GCC match flow review
+on:
+  push:
+    branches: [work/v116-candidate-acceptance]
+    paths: ['qa/v116_match_flow_review.cjs', '.github/workflows/v116-match-flow-review.yml']
+permissions:
+  contents: write
+env:
+  # Exact staged live-header candidate; native integration review only.
+  CANDIDATE_SHA256: 9e1fec325f6d5dc08e16b79ce4cf2019e2c4aa0872d076a283cf1b1a70a01601
+concurrency:
+  group: gcc-match-flow-review
+  cancel-in-progress: true
+jobs:
+  acceptance:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install native browser
+        run: |
+          if [ -f /etc/apt/apt-mirrors.txt ]; then
+            sudo sed -i 's|http://azure.archive.ubuntu.com/ubuntu|https://archive.ubuntu.com/ubuntu|g' /etc/apt/apt-mirrors.txt
+          fi
+          pip install playwright pillow
+          python -m playwright install --with-deps chromium
+          npm install --no-save --no-package-lock playwright
+      - name: Build exact review candidate
+        run: |
+          python qa/v116_canonical_source.py build --source v116/canonical --output qa/results/match-flow-review.html
+          sha256sum qa/results/match-flow-review.html
+      - name: Review native live/result/scorebook flow
+        env:
+          GCC8_TEST_BUILD: qa/results/match-flow-review.html
+          GCC8_MATCH_FLOW_DIR: qa/results/match-flow-review
+        run: |
+          GCC8_CHROMIUM="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')" node qa/v116_match_flow_review.cjs
+      - name: Preserve diagnostic evidence
+        if: always()
+        run: |
+          python - <<'SAVE'
+          from pathlib import Path
+          from PIL import Image
+          import shutil
+          src=Path('qa/results/match-flow-review');dst=Path('docs/release/match-flow-review/${{ github.run_id }}');dst.mkdir(parents=True,exist_ok=True)
+          for f in src.glob('*.json'):shutil.copyfile(f,dst/f.name)
+          for f in src.glob('*.png'):Image.open(f).convert('RGB').save(dst/f.with_suffix('.jpg').name,quality=88,optimize=True)
+          SAVE
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/release/match-flow-review
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record native match UI flow evidence'
+            git pull --rebase origin work/v116-candidate-acceptance
+            git push origin HEAD:refs/heads/work/v116-candidate-acceptance
+          fi
