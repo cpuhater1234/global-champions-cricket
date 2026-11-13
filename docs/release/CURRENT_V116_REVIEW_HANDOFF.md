@@ -2,9 +2,9 @@
 
 13 November2026. Working branch: `work/v116-candidate-acceptance`. The `v116` branch reports dated11November describe the frozen release and early signing experiment; they are historical evidence, not the current candidate acceptance record.
 
-## Staged finals presentation correction and external review reconciliation
+## Delivered finals review and external review reconciliation
 
-14November2026. Current staged source candidate f0b75473b15d2548c8b676c8c2c483df75d08559ca3f72ef46f3019225808005 (6,658,204bytes). Native run43439420803 passed48states/806checks, zero findings/errors. Historical finals presentation reconstructed from actual2009/2019/2025 results at320/390/768/1440. Paired desktop semi-final result and inner score rows align; long club words stay intact; phase disclosures now44px minimum. All22scripts and all48screen texts unchanged. Sampled desktop/phone image review complete. Accepted for next review bundle; not delivered or stable-promoted. Opened Match Review aa9930f0 remains untouched. [Finals review](V116_FINALS_PRESENTATION_REVIEW.md).
+14November2026. Current staged source candidate f0b75473b15d2548c8b676c8c2c483df75d08559ca3f72ef46f3019225808005 (6,658,204bytes). Native run43439420803 passed48states/806checks, zero findings/errors. Historical finals presentation reconstructed from actual2009/2019/2025 results at320/390/768/1440. Paired desktop semi-final result and inner score rows align; long club words stay intact; phase disclosures now44px minimum. All22scripts and all48screen texts unchanged. Sampled desktop/phone image review complete. Delivered as GCC_v116_Finals_Review.html at the exact hash above after user requested the bundle. No stable promotion. Opened Match Review aa9930f0 remains untouched. [Finals review](V116_FINALS_PRESENTATION_REVIEW.md).
 
 External transcript and GitHub issues2/3 reconciled against active QA branch. Useful identity/guardrail direction retained; frozen-branch claims of no screenshot evidence or untested signing/mobile work are not applied to current QA. No bulk cleanup, breakpoint collapse, save-key rename, engine change or repeated closed acceptance. Consolidated deterministic raster gate remains separate follow-up work. [Reconciliation](V116_EXTERNAL_REVIEW_RECONCILIATION_20261114.md).
 
