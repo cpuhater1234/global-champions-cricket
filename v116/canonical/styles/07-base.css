@@ -1,0 +1,35 @@
+/* Matchday owns its composition; no inherited fixture gradients or nested team cards. */
+#g8stage:has(.g8matchhub)>.g8heading{display:none}
+#g8stage .g8matchhub{background:#242d37;color:#fff;border:3px solid #080c10;box-shadow:0 4px 0 #080c10;border-radius:6px;overflow:hidden;margin:0 0 22px;padding:0}
+#g8stage .g8matchhub>header{display:grid;grid-template-columns:150px minmax(0,1fr);gap:20px;align-items:center;background:#1c242d;padding:16px;border-bottom:2px solid #080c10}
+#g8stage .g8hubground{height:90px;position:relative;overflow:hidden;border:2px solid #080c10;border-radius:3px}
+#g8stage .g8hubground>*{width:100%;height:100%;object-fit:cover;position:static;opacity:1;filter:none}
+#g8stage .g8hubground img{width:100%;height:100%;object-fit:cover}
+#g8stage .g8matchhub h1{font-size:clamp(1.1rem,2vw,1.7rem);line-height:1.2;letter-spacing:0;text-transform:none;font-style:normal;margin:7px 0}
+#g8stage .g8matchhub header p{margin:0;font-size:.8rem;color:#d7e0e9}
+#g8stage .g8matchhub .g8eyebrow{color:#d7e0e9;font-size:.72rem}
+#g8stage .g8hubteams{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:14px;padding:18px;align-items:stretch}
+#g8stage .g8hubclub{padding:16px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 12px;border:2px solid #080c10;border-radius:3px;align-content:center;min-width:0}
+#g8stage .g8hubclub .g8badge{grid-row:1/3;white-space:nowrap;width:3rem;height:3rem;min-width:0;border:2px solid currentColor;background:transparent!important;color:inherit!important}
+#g8stage .g8hubclub strong{font-size:1.15rem;line-height:1.25;overflow-wrap:anywhere;min-width:0}
+#g8stage .g8hubclub small{font-size:.65rem;font-weight:750;letter-spacing:.05em;line-height:1.4}
+#g8stage .g8hubversus{align-self:center;font-weight:900;color:#dce4ed}
+#g8stage .g8hubconditions{display:flex;align-items:center;gap:10px;margin:0;padding:0 18px 16px;color:#e9edf2;font-size:.85rem;line-height:1.55}
+#g8stage .g8hubconditions svg{width:20px;height:20px;flex-shrink:0}
+#g8stage .g8matchhub>footer{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;background:#303b48;border-top:2px solid #080c10;padding:14px 18px}
+#g8stage .g8matchhub footer>p{font-size:.8rem;margin:0;color:#e7edf4}
+#g8stage .g8matchhub .g8actions{display:flex;gap:10px;flex-wrap:wrap}
+#g8stage .g8matchhub .g8button{white-space:nowrap;min-height:44px;padding:10px 16px;border:2px solid #080c10;box-shadow:none;font-size:.9rem}
+#g8stage .g8careerstory{background:#572639;color:#fff;border:3px solid #080c10;border-left:7px solid #e2a63c;border-radius:4px;box-shadow:0 4px 0 #080c10;margin:20px 0;padding:22px;min-width:0}
+#g8stage .g8storylabel{display:flex;align-items:center;gap:8px;font-size:.65rem;font-weight:850;letter-spacing:.08em;color:#f4d28d}
+#g8stage .g8storylabel svg{width:20px;height:20px;flex-shrink:0}
+#g8stage .g8careerstory h2{font-style:normal;text-transform:none;letter-spacing:0;font-size:1.3rem;margin:12px 0;line-height:1.3}
+#g8stage .g8careerstory p{color:#fff;line-height:1.65;margin:0;font-size:.95rem}
+#g8stage .g8storydecision{margin-top:18px;display:flex;justify-content:space-between;gap:14px;align-items:center;flex-wrap:wrap}
+#g8stage .g8storydecision>span{font-size:.8rem;font-weight:700}
+#g8stage .g8careerstory .g8button{background:#303b48;color:#fff;border:2px solid #080c10;box-shadow:none}
+#g8stage .g8careerstory .g8storyfoot{border-top:1px solid #be8197;margin-top:16px;padding-top:12px;font-size:.8rem}
+#g8stage .g8storyresult{background:#214f3d;border-left-color:#e2a63c}
+@media(max-width:600px){#g8stage .g8matchhub>header{grid-template-columns:88px minmax(0,1fr);padding:12px;gap:12px}#g8stage .g8hubground{height:72px}#g8stage .g8hubteams{padding:12px;gap:8px}#g8stage .g8hubclub{grid-template-columns:1fr;padding:12px 10px;gap:8px}#g8stage .g8hubclub .g8badge{grid-row:auto;width:2.3rem;height:2.3rem}#g8stage .g8hubclub strong{font-size:.9rem}#g8stage .g8hubclub small{font-size:.58rem}#g8stage .g8hubconditions{padding:0 12px 12px;font-size:.78rem}#g8stage .g8matchhub>footer{padding:12px;gap:10px}#g8stage .g8matchhub .g8actions{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:8px}#g8stage .g8matchhub .g8button{font-size:.85rem;padding:10px 8px}#g8stage .g8careerstory{padding:16px}#g8stage .g8careerstory h2{font-size:1.1rem}}
+#g8stage .g8hubclub .g8badge{border:0!important;border-radius:0!important;box-shadow:none!important}
+#g8stage .g8hubclub .g8badge:before,#g8stage .g8hubclub .g8badge:after{display:none!important}

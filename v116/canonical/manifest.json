@@ -1,0 +1,321 @@
+{
+  "format": 1,
+  "scope": "QA review candidate only; main/frozen release not promoted",
+  "reference_sha256": "c45684a540d098ec35beeb8a959995e88292bccded4ce1314390140d1e7720ab",
+  "reference_bytes": 6655156,
+  "template_sha256": "c6826a3f0a617596bc659a49b021766706c8f5af98c07976a282bb5a91ebc25a",
+  "blocks": [
+    {
+      "index": 0,
+      "kind": "script",
+      "path": "scripts/00-g8homephoto.js",
+      "token": "@@GCC_V116_BODY_00@@",
+      "sha256": "109df888cc50edf2b77aae8d05d3bc606543aeebc091811c10d10080d67c4205",
+      "attributes": " id=\"g8homephoto\""
+    },
+    {
+      "index": 1,
+      "kind": "style",
+      "path": "styles/01-base.css",
+      "token": "@@GCC_V116_BODY_01@@",
+      "sha256": "87d8ef72f900576e145341f517ed6fa9bd2413d9d85fe974bee557a902228881",
+      "attributes": ""
+    },
+    {
+      "index": 2,
+      "kind": "style",
+      "path": "styles/02-gcc-club-catalogue-styles.css",
+      "token": "@@GCC_V116_BODY_02@@",
+      "sha256": "f84a4160381c66f1aa105aaf8b7dda00ec310cf1487742c594cc84cf7b7d7e4b",
+      "attributes": " id=\"gcc-club-catalogue-styles\""
+    },
+    {
+      "index": 3,
+      "kind": "style",
+      "path": "styles/03-gcc-bulletproof-styles.css",
+      "token": "@@GCC_V116_BODY_03@@",
+      "sha256": "4e38eca7f3d752f9fb90fdac22dc738f9ea296539d250fc554615b0d3c93ffe2",
+      "attributes": " id=\"gcc-bulletproof-styles\""
+    },
+    {
+      "index": 4,
+      "kind": "style",
+      "path": "styles/04-gcc-save-status-styles.css",
+      "token": "@@GCC_V116_BODY_04@@",
+      "sha256": "f0428850d1dc0cabc069796ec232bf27cf0e265f3e9e9f2f2d4c6f88c712d667",
+      "attributes": " id=\"gcc-save-status-styles\""
+    },
+    {
+      "index": 5,
+      "kind": "style",
+      "path": "styles/05-base.css",
+      "token": "@@GCC_V116_BODY_05@@",
+      "sha256": "f1ebebf234c8a416d0d3464176ecd1a6467670c5d1ce8b78fbd351af269c9a4c",
+      "attributes": ""
+    },
+    {
+      "index": 6,
+      "kind": "style",
+      "path": "styles/06-base.css",
+      "token": "@@GCC_V116_BODY_06@@",
+      "sha256": "99f7667d280672eddac2e92f622f78d67f3417db52c00116bfbe9169c07e8c7d",
+      "attributes": ""
+    },
+    {
+      "index": 7,
+      "kind": "style",
+      "path": "styles/07-base.css",
+      "token": "@@GCC_V116_BODY_07@@",
+      "sha256": "002922c82142063b591edba525bea3622af8e5e26c313d5206fa8323e877ec81",
+      "attributes": ""
+    },
+    {
+      "index": 8,
+      "kind": "style",
+      "path": "styles/08-base.css",
+      "token": "@@GCC_V116_BODY_08@@",
+      "sha256": "3e7d2af4c6053d1fec66beea0b4818a5affde60cc4b2a652c2eb1ab24f6680c9",
+      "attributes": ""
+    },
+    {
+      "index": 9,
+      "kind": "style",
+      "path": "styles/09-gcc-charcoal-20261030.css",
+      "token": "@@GCC_V116_BODY_09@@",
+      "sha256": "02ea17bec32a6664e1e609bc923b41c6307d8fc285ffc253ac0ddcd91710bc2d",
+      "attributes": " id=\"gcc-charcoal-20261030\""
+    },
+    {
+      "index": 10,
+      "kind": "style",
+      "path": "styles/10-gcc-decision-ui-20261030.css",
+      "token": "@@GCC_V116_BODY_10@@",
+      "sha256": "cfba4fd1a7b787ebf61af634664cbf708c9700c695c81c4eb2ce5520e7472745",
+      "attributes": " id=\"gcc-decision-ui-20261030\""
+    },
+    {
+      "index": 11,
+      "kind": "script",
+      "path": "scripts/11-runtime.js",
+      "token": "@@GCC_V116_BODY_11@@",
+      "sha256": "8dec2621ac75687a91883ddf88b359e9a9eeb31a4af467cf27fbc8f5d5a3b934",
+      "attributes": ""
+    },
+    {
+      "index": 12,
+      "kind": "script",
+      "path": "scripts/12-runtime.js",
+      "token": "@@GCC_V116_BODY_12@@",
+      "sha256": "1c74c5f11dc834978ee4b3b341a8681e27743b378cb33772205015a664ec966b",
+      "attributes": ""
+    },
+    {
+      "index": 13,
+      "kind": "script",
+      "path": "scripts/13-runtime.js",
+      "token": "@@GCC_V116_BODY_13@@",
+      "sha256": "edc4fd96abf473ac6d39cfab6a230c5ec3abeec17f449f43f62ee90ea9c28c12",
+      "attributes": ""
+    },
+    {
+      "index": 14,
+      "kind": "script",
+      "path": "scripts/14-runtime.js",
+      "token": "@@GCC_V116_BODY_14@@",
+      "sha256": "d5f83aa4ac3f0fc28353a0ad4e51987733771b85fc236562f2a432a76ca101f9",
+      "attributes": ""
+    },
+    {
+      "index": 15,
+      "kind": "script",
+      "path": "scripts/15-runtime.js",
+      "token": "@@GCC_V116_BODY_15@@",
+      "sha256": "258df13418f9291585db4010260ea319c7c5fbb7a608c2b411528270f0ac43c0",
+      "attributes": ""
+    },
+    {
+      "index": 16,
+      "kind": "script",
+      "path": "scripts/16-runtime.js",
+      "token": "@@GCC_V116_BODY_16@@",
+      "sha256": "00655fd6587ca592598c22faa8b5fa8d8d840a6c4aff3eb1794774027043d710",
+      "attributes": ""
+    },
+    {
+      "index": 17,
+      "kind": "script",
+      "path": "scripts/17-runtime.js",
+      "token": "@@GCC_V116_BODY_17@@",
+      "sha256": "23aa05b7ecf46e40cea327ae62680dcea1b0881d031a83d0db60c2f95eb3d7cb",
+      "attributes": ""
+    },
+    {
+      "index": 18,
+      "kind": "script",
+      "path": "scripts/18-runtime.js",
+      "token": "@@GCC_V116_BODY_18@@",
+      "sha256": "9ad25e67d41caf9f4dc37922d0c99c3e6f594491da63c761fcf43421575195e8",
+      "attributes": ""
+    },
+    {
+      "index": 19,
+      "kind": "script",
+      "path": "scripts/19-runtime.js",
+      "token": "@@GCC_V116_BODY_19@@",
+      "sha256": "53a03be07cdf6a63f81c6dd96bd7eadbec78ef8f52978fa3784b2c3a8d8faa3b",
+      "attributes": ""
+    },
+    {
+      "index": 20,
+      "kind": "script",
+      "path": "scripts/20-runtime.js",
+      "token": "@@GCC_V116_BODY_20@@",
+      "sha256": "19d2159380a218f29651eb0ce6cf3190abb786bd18182db1cbb347e85b52d05a",
+      "attributes": ""
+    },
+    {
+      "index": 21,
+      "kind": "script",
+      "path": "scripts/21-runtime.js",
+      "token": "@@GCC_V116_BODY_21@@",
+      "sha256": "ea66938263c2702d81e8a2ecd3468795499659c178e9cb51a6fbe2073c6d905e",
+      "attributes": ""
+    },
+    {
+      "index": 22,
+      "kind": "script",
+      "path": "scripts/22-runtime.js",
+      "token": "@@GCC_V116_BODY_22@@",
+      "sha256": "4e6c0242e072055a4ba750c6e025b28e5bfe507de9bf2900bd8152e2dee04cc4",
+      "attributes": ""
+    },
+    {
+      "index": 23,
+      "kind": "script",
+      "path": "scripts/23-runtime.js",
+      "token": "@@GCC_V116_BODY_23@@",
+      "sha256": "31d96dbf6a6fcea7110c19c3692e4e9e18e9c9467312a17ff60cd70d5d11e829",
+      "attributes": ""
+    },
+    {
+      "index": 24,
+      "kind": "script",
+      "path": "scripts/24-runtime.js",
+      "token": "@@GCC_V116_BODY_24@@",
+      "sha256": "0bff4b38e7e5c2777698987835b95b92411a3707ffe798d0b4d7ffc058c36844",
+      "attributes": ""
+    },
+    {
+      "index": 25,
+      "kind": "script",
+      "path": "scripts/25-runtime.js",
+      "token": "@@GCC_V116_BODY_25@@",
+      "sha256": "cffc42b695573ffceb535038c4c37258ed64c3d570ba2314955ccdf63b5f86c5",
+      "attributes": ""
+    },
+    {
+      "index": 26,
+      "kind": "script",
+      "path": "scripts/26-runtime.js",
+      "token": "@@GCC_V116_BODY_26@@",
+      "sha256": "15da0ecb11153cb157d86f2a76d3c247d44af4525ee6205585ef3a2c2ccc5c30",
+      "attributes": ""
+    },
+    {
+      "index": 27,
+      "kind": "script",
+      "path": "scripts/27-runtime.js",
+      "token": "@@GCC_V116_BODY_27@@",
+      "sha256": "4274937b9c3acde27edf1e276240a407fbc0ac904305184d4f741b20a7f30312",
+      "attributes": ""
+    },
+    {
+      "index": 28,
+      "kind": "script",
+      "path": "scripts/28-runtime.js",
+      "token": "@@GCC_V116_BODY_28@@",
+      "sha256": "04cb133616b91fac0c717162cf4b8ccdfe03713ac4f8e8039ae66a836ccf306e",
+      "attributes": ""
+    },
+    {
+      "index": 29,
+      "kind": "script",
+      "path": "scripts/29-runtime.js",
+      "token": "@@GCC_V116_BODY_29@@",
+      "sha256": "573ef795b8f5f14c892a572c035518205ecc2d898341d6b8c0794255fb3921a5",
+      "attributes": ""
+    },
+    {
+      "index": 30,
+      "kind": "style",
+      "path": "styles/30-gcc-floodlit-fonts.css",
+      "token": "@@GCC_V116_BODY_30@@",
+      "sha256": "b1c556f51d5b8cbd49c082159509b0e6b07d267ec7b60bb2698f5223b1da1516",
+      "attributes": " id=\"gcc-floodlit-fonts\""
+    },
+    {
+      "index": 31,
+      "kind": "style",
+      "path": "styles/31-gcc-floodlit-visual.css",
+      "token": "@@GCC_V116_BODY_31@@",
+      "sha256": "8fd797d4460de885a4f6d22b7a74c917d7a90d2772cd453913ffd4936df4eaa4",
+      "attributes": " id=\"gcc-floodlit-visual\""
+    },
+    {
+      "index": 32,
+      "kind": "style",
+      "path": "styles/32-gcc-floodlit-v93.css",
+      "token": "@@GCC_V116_BODY_32@@",
+      "sha256": "8a650a4a4113ee4b6dcd911d7dea5e9b18458a4e94042085ecb580e118a03f6b",
+      "attributes": " id=\"gcc-floodlit-v93\""
+    },
+    {
+      "index": 33,
+      "kind": "style",
+      "path": "styles/33-gcc-composition-20261107.css",
+      "token": "@@GCC_V116_BODY_33@@",
+      "sha256": "ab84379ee3dc04b96e612aac03fccc31d9e93922d1711db7864acdf074034c25",
+      "attributes": " id=\"gcc-composition-20261107\""
+    },
+    {
+      "index": 34,
+      "kind": "style",
+      "path": "styles/34-gcc-visual-pass.css",
+      "token": "@@GCC_V116_BODY_34@@",
+      "sha256": "ff441448472757162c8d0911cfc398c1c0c1eb310494acba3613b3629f6fbf84",
+      "attributes": " id=\"gcc-visual-pass\""
+    },
+    {
+      "index": 35,
+      "kind": "style",
+      "path": "styles/35-gcc-cleanup-pass.css",
+      "token": "@@GCC_V116_BODY_35@@",
+      "sha256": "2ca8e90a9e8d2da6d57bc3354198d88fab5953be481c25901785b69f474eba6f",
+      "attributes": " id=\"gcc-cleanup-pass\""
+    },
+    {
+      "index": 36,
+      "kind": "script",
+      "path": "scripts/36-gcc-cleanup-behaviour.js",
+      "token": "@@GCC_V116_BODY_36@@",
+      "sha256": "98748b00e6e3f2ecfb209b97fd888c872b9ff3db7a9827341e55674f98b1d00b",
+      "attributes": " id=\"gcc-cleanup-behaviour\""
+    },
+    {
+      "index": 37,
+      "kind": "style",
+      "path": "styles/37-gcc-v116-perfection-pass.css",
+      "token": "@@GCC_V116_BODY_37@@",
+      "sha256": "9f1bacc0a7548680817fbea2ac734086c96e59522328db93434b32f3ed6d6176",
+      "attributes": " id=\"gcc-v116-perfection-pass\""
+    },
+    {
+      "index": 38,
+      "kind": "script",
+      "path": "scripts/38-gcc-v116-perfection-behaviour.js",
+      "token": "@@GCC_V116_BODY_38@@",
+      "sha256": "faeeff5aae24240d641fbcf08fdfe10e5327d17b3f1d524a42881cbcdd8a6853",
+      "attributes": " id=\"gcc-v116-perfection-behaviour\""
+    }
+  ]
+}

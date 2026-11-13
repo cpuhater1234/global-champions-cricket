@@ -1,0 +1,63 @@
+
+/* GCC v114 cleanup — preserve-mode evolution. */
+:root{--gcc-action:#7fe0ee;--gcc-action-ink:#071827;--gcc-brand:#ed7547;--gcc-panel:#171b20;--gcc-rule:#343c46}
+/* One action language: club colour identifies a side; cyan means press this. */
+#g8app#g8app#g8app .g8button.g8primary,
+#g8dialog#g8dialog#g8dialog .g8button.g8primary,
+#g8app#g8app#g8app .g8hero .g8button.g8primary,
+#g8app#g8app#g8app .gccuiPreMatchActions .g8button.g8primary,
+#g8app#g8app#g8app [data-action="watchMatch"]{
+  background:var(--gcc-action)!important;border-color:var(--gcc-action)!important;color:var(--gcc-action-ink)!important;
+  box-shadow:none!important
+}
+#g8app#g8app#g8app .g8button.g8primary:hover:enabled,
+#g8dialog#g8dialog#g8dialog .g8button.g8primary:hover:enabled,
+#g8app#g8app#g8app .gccuiPreMatchActions .g8button.g8primary:hover:enabled{background:#b4f3f7!important;border-color:#b4f3f7!important;color:#071827!important}
+#g8app#g8app#g8app :is(.g8hero,.gccuiPreMatch) .g8eyebrow{color:var(--gcc-brand)!important}
+/* Keep orange as a brand signal, not a competing action signal. */
+#g8app#g8app#g8app .g8hero,.gccuiPreMatch{--club-accent:var(--gcc-brand)}
+/* The broadcast header and toss are a composed matchday surface, not a floating sentence. */
+#g8app#g8app#g8app .gccuiPreMatch{max-width:1180px;margin:0 auto;padding-bottom:2rem}
+#g8app#g8app#g8app .gccuiPreMatch .gccuiHeading{margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--gcc-rule)}
+#g8app#g8app#g8app .gccuiPreMatch .gccuiHeading h1{font-size:clamp(2.5rem,5vw,4.4rem)!important}
+#g8app#g8app#g8app .gccui.gccuiPreMatch .gccuiPreMatchPanel{position:relative;display:grid;grid-template-columns:minmax(170px,.32fr) minmax(0,1fr);grid-template-rows:auto auto auto;gap:.35rem 2rem;align-items:center;min-height:300px!important;padding:2rem 2.4rem!important;text-align:left!important;overflow:hidden;background:linear-gradient(135deg,#102b3b,#0b1a2a)!important;border:1px solid #426877!important;border-top:5px solid var(--gcc-action)!important;box-shadow:8px 9px 0 #020f1b!important}
+#g8app#g8app#g8app .gccui.gccuiPreMatch .gccuiPreMatchPanel:before{content:"MATCHDAY / TOSS";position:absolute;top:1rem;right:1.4rem;color:#a9cfd7;font:700 .72rem/1 var(--vx-body,Arial,sans-serif);letter-spacing:.16em}
+#g8app#g8app#g8app .gccui.gccuiPreMatch .gccuiPreMatchPanel:after{content:"PLAY THE MOMENT";position:absolute;bottom:1rem;right:1.4rem;color:#668c99;font:700 .68rem/1 var(--vx-body,Arial,sans-serif);letter-spacing:.14em}
+#g8app#g8app#g8app .gccuiCoinStage{grid-column:1;grid-row:1 / span 3;height:150px!important;margin:0!important;align-self:center}
+#g8app#g8app#g8app .gccuiCoin{width:108px;height:108px;border-color:#f7b27c;background:#d18b3d;box-shadow:0 6px 0 #68441f}
+#g8app#g8app#g8app .gccui.gccuiPreMatch .gccuiPreMatchPanel>h2{grid-column:2;grid-row:1;font-size:clamp(1.6rem,3vw,2.5rem)!important;max-width:25ch;margin:0!important;line-height:1.1!important;color:#f5f8ff!important}
+#g8app#g8app#g8app .gccui.gccuiPreMatch .gccuiPreMatchPanel .gccuiPreMatchNote{grid-column:2;grid-row:2;margin:0!important;color:#a9cfd7!important}
+#g8app#g8app#g8app .gccuiPreMatchActions{grid-column:2;grid-row:3;justify-content:flex-start!important;padding-top:1rem!important}
+#g8app#g8app#g8app .gccuiPreMatchActions button{min-width:150px;min-height:48px}
+/* Signing window: active day is unmistakable and empty wire is an intentional queue. */
+#g8app#g8app#g8app .g8days{gap:.4rem;margin:0 0 1rem}
+#g8app#g8app#g8app .g8days>span{flex:1;text-align:center;background:#10263a!important;border-color:#365667!important;color:#a9cfd7!important}
+#g8app#g8app#g8app .g8days>span.active{background:var(--gcc-action)!important;border-color:var(--gcc-action)!important;color:var(--gcc-action-ink)!important;box-shadow:0 3px 0 #347887!important}
+#g8app#g8app#g8app .g8wirepanel{min-height:0!important}
+#g8app#g8app#g8app .g8wirepanel .g8wire{min-height:210px;align-content:start}
+#g8app#g8app#g8app .g8wirepanel .g8wire:empty:before{content:"THE WIRE IS QUIET";display:block;padding:2rem 1rem;text-align:center;color:#8baeb8;font:700 .8rem/1.4 var(--vx-body,Arial,sans-serif);letter-spacing:.14em}
+#g8app#g8app#g8app .g8signingfocus{background:#122b3c!important;border-color:#365667!important}
+/* Draft: a visible legality cue prevents the keeper dead end at the XI gate. */
+#g8app#g8app#g8app .gccKeeperNotice{display:flex;align-items:center;justify-content:space-between;gap:.8rem;margin:0 0 1rem;padding:.75rem .9rem;border:1px solid #526c7b;border-left:4px solid #f7b27c;border-radius:6px;background:#142b3d;color:#dceff1}
+#g8app#g8app#g8app .gccKeeperNotice.is-ready{border-left-color:#7ad69b}
+#g8app#g8app#g8app .gccKeeperNotice strong{display:block;font-size:.95rem}
+#g8app#g8app#g8app .gccKeeperNotice span{display:block;color:#9ec1c9;font-size:.8rem;margin-top:.15rem}
+#g8app#g8app#g8app .gccKeeperNotice button{flex:none;min-height:38px;padding:.45rem .65rem;border:1px solid #7fe0ee;border-radius:5px;background:#10263a;color:#7fe0ee;font:700 .8rem/1 var(--vx-body,Arial,sans-serif);cursor:pointer}
+#g8app#g8app#g8app .gccKeeperNotice button:hover{background:#7fe0ee;color:#071827}
+/* Dialog typography stays in the product system. */
+#g8dialog#g8dialog#g8dialog :is(input,select,button,textarea){font-family:var(--vx-body,Arial,sans-serif)!important}
+/* Quiet, readable credits: legal text stays present but stops competing with the hero. */
+#g8app#g8app#g8app .g8photocredit{font-size:.72rem!important;color:#9ab2bb!important;opacity:.88}
+/* Mobile: preserve the broadcast composition without squeezing the toss into a banner. */
+@media(max-width:700px){
+ #g8app#g8app#g8app .gccuiPreMatchPanel{grid-template-columns:1fr;grid-template-rows:auto auto auto auto;min-height:0!important;padding:1.35rem!important;gap:.7rem}
+ #g8app#g8app#g8app .gccui.gccuiPreMatch .gccuiPreMatchPanel:before{position:static;grid-column:1;grid-row:1}
+ #g8app#g8app#g8app .gccuiCoinStage{grid-column:1;grid-row:2;height:90px!important}
+ #g8app#g8app#g8app .gccuiCoin{width:78px;height:78px;font-size:20px}
+ #g8app#g8app#g8app .gccui.gccuiPreMatch .gccuiPreMatchPanel>h2{grid-column:1;grid-row:3;font-size:1.55rem!important;max-width:none}
+ #g8app#g8app#g8app .gccui.gccuiPreMatch .gccuiPreMatchPanel .gccuiPreMatchNote{grid-column:1;grid-row:4}
+ #g8app#g8app#g8app .gccuiPreMatchActions{grid-column:1;grid-row:5;display:grid!important;grid-template-columns:1fr;width:100%;padding-top:.5rem!important}
+ #g8app#g8app#g8app .gccui.gccuiPreMatch .gccuiPreMatchPanel:after{display:none}
+ #g8app#g8app#g8app .gccKeeperNotice{align-items:flex-start;flex-direction:column}
+ #g8app#g8app#g8app .gccKeeperNotice button{width:100%}
+}

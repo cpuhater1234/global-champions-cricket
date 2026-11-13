@@ -1,0 +1,21 @@
+
+/* GCC visual pass — cosmetics only. Append-only overrides; remove this block to revert. */
+:root{--focus:#f7b27c}
+:focus-visible{outline-color:var(--focus)!important;outline-offset:2px!important}
+/* 1. The home CTA carried cream text on orange at 2.6:1. Ink on accent instead. */
+.g8welcomepanel .g8primary,.g8welcomepanel .g8primary *{color:#1d1108!important}
+.g8welcomepanel .g8primary .g8resumemeta{color:rgba(29,17,8,.70)!important}
+/* 2. Club watermark sat behind the CLUB n chip; quieten it so the chip wins. */
+.g8clubwatermark{opacity:.055!important;font-size:5rem!important;right:-.35rem!important;bottom:-1.05rem!important}
+/* 3. Disabled controls were dark-on-dark (1.6:1). Legible, visibly inert. */
+button:disabled,.g8button:disabled{color:#9db0c7!important;background:rgba(255,255,255,.045)!important;
+ border-color:rgba(255,255,255,.13)!important;opacity:1!important;cursor:not-allowed}
+/* 4. Empty states were dashed wireframes — the loudest thing on four screens. Hairline instead. */
+[class*="empty"]{border-style:solid!important;border-color:rgba(234,241,255,.085)!important;background:rgba(234,241,255,.018)!important}
+/* 5. Typographic finishing. */
+h1,h2,h3{text-wrap:balance}
+p,li{text-wrap:pretty}
+.g8statvalue,td,.g8ovr,[class*="rating"]{font-variant-numeric:tabular-nums}
+::selection{background:var(--focus);color:#140d06}
+/* 6. Motion: the surge/reveal pulses should not strobe for reduced-motion users. */
+@media (prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}}

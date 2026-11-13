@@ -1,0 +1,689 @@
+/* ==========================================================================
+   GCC VISUAL LAYER v9 - "Floodlit Night Match"
+   Drop-in override stylesheet. Paste inside <style id="gcc-visual-v9"> as the
+   LAST style block (just before </body>). It only changes presentation:
+   no JS, no markup, no game logic touched.
+   Design moves: navy night-sky palette, condensed broadcast type, club-colour
+   glow, angled panels, lit-up buttons, staggered entrances.
+   ========================================================================== */
+
+/* 1 ─ Palette & type tokens (the game already themes through these) */
+:root,#g8app#g8app#g8app{
+  --gcc-ground:#101419;
+  --gcc-panel:#171b20;
+  --gcc-raised:#222930;
+  --gcc-inset:#11161b;
+  --gcc-line:#343c46;
+  --gcc-muted:#b9c3ce;
+  --gcc-text:#edf1f5;
+  --vx-display:'Barlow Condensed','Oswald','Roboto Condensed','Arial Narrow',Impact,'Arial Black',sans-serif;
+  --vx-body:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --vx-glow:var(--gcc-accent,#ed7547);
+  --vx-ease:cubic-bezier(.2,.75,.2,1);
+}
+#g8app#g8app#g8app,#g8app#g8app#g8app button,#g8app#g8app#g8app input,#g8app#g8app#g8app select{font-family:var(--vx-body)!important}
+#g8app#g8app#g8app h1,#g8app#g8app#g8app h2,#g8app#g8app#g8app .g8eyebrow,#g8app#g8app#g8app .gccuiKicker,#g8app#g8app#g8app .g8arenaheader,
+#g8app#g8app#g8app .g8clubwatermark,#g8app#g8app#g8app .g8badge,#g8app#g8app#g8app .gccBrandWordmark,
+#g8app#g8app#g8app .g8leagueformat strong,#g8app#g8app#g8app .gccuiRating,#g8app#g8app#g8app .gccuiPlayerOverall small{
+  font-family:var(--vx-display)!important}
+
+/* 2 ─ Night-sky backdrop: floodlights + faint pitch stripes at the bottom */
+#g8app#g8app#g8app{
+  background:
+    radial-gradient(900px 400px at 85% -10%,color-mix(in srgb,var(--vx-glow) 8%,transparent),transparent 68%),linear-gradient(180deg,var(--gcc-panel),var(--gcc-ground))!important;
+  background-attachment:fixed!important}
+::selection{background:var(--vx-glow);color:#0a0f14}
+*{scrollbar-width:thin;scrollbar-color:#2b4a66 #07131e}
+
+/* 3 ─ Top bar: frosted glass with a glowing club-colour underline */
+#g8hud#g8hud#g8hud{
+  position:sticky;top:0;z-index:60;
+  background:var(--gcc-ground)!important;
+  -webkit-backdrop-filter:blur(14px) saturate(1.3);backdrop-filter:blur(14px) saturate(1.3);
+  border-bottom:2px solid var(--vx-glow)!important;
+  box-shadow:0 10px 30px -14px color-mix(in srgb,var(--vx-glow) 70%,transparent)}
+#g8hud#g8hud#g8hud .g8headerslogan{font-family:var(--vx-display)!important;font-weight:700;
+  font-size:1.15rem;letter-spacing:.14em;text-transform:uppercase;color:#dbe9f3}
+#g8hud#g8hud#g8hud .g8headerslogan span{color:var(--vx-glow)}
+#g8hud#g8hud#g8hud summary{border:1px solid var(--gcc-line)!important;background:rgba(255,255,255,.04)!important;
+  border-radius:8px!important;letter-spacing:.06em;text-transform:uppercase;font-weight:700;font-size:.85rem}
+#g8hud#g8hud#g8hud summary:hover{border-color:var(--vx-glow)!important}
+
+/* 4 ─ Headings: big, condensed, uppercase, broadcast-title feel */
+#g8stage#g8stage#g8stage h1{font-weight:800!important;text-transform:uppercase;letter-spacing:.015em;line-height:.98;
+  font-size:clamp(2.4rem,4.4vw,4rem)!important}
+#g8stage#g8stage#g8stage h2{font-weight:700!important;text-transform:uppercase;letter-spacing:.03em}
+#g8stage#g8stage#g8stage .g8eyebrow,#g8stage#g8stage#g8stage .gccuiKicker{font-weight:700!important;letter-spacing:.2em!important;
+  color:var(--vx-glow)!important;font-size:.85rem!important}
+
+/* 5 ─ Page-heading banners: gradient + angled corner instead of grey box */
+#g8stage#g8stage#g8stage .g8heading,#g8stage#g8stage#g8stage .gccuiTurn{
+  background:linear-gradient(105deg,var(--gcc-raised),var(--gcc-panel))!important;
+  border:1px solid var(--gcc-line)!important;border-left:6px solid var(--vx-glow)!important;
+  border-radius:4px 4px 4px 4px;
+  clip-path:polygon(0 0,100% 0,100% calc(100% - 20px),calc(100% - 20px) 100%,0 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
+
+#g8stage#g8stage#g8stage .g8heading h1,#g8stage#g8stage#g8stage .gccuiHeading h1{font-size:clamp(1.9rem,3vw,2.7rem)!important}
+#g8stage#g8stage#g8stage .gccuiHeadingIcon{border-color:var(--vx-glow)!important;color:var(--vx-glow)!important}
+
+/* 6 ─ Buttons: lit primary, glass secondary */
+#g8app#g8app#g8app .g8button{
+  font-family:var(--vx-body)!important;font-size:1rem!important;font-weight:700!important;
+  line-height:1.25!important;letter-spacing:0!important;text-transform:none!important;
+  min-height:44px;padding:10px 14px!important;box-sizing:border-box;
+  border:1px solid var(--gcc-line)!important;border-radius:8px!important;clip-path:none!important;
+  box-shadow:none!important;white-space:normal!important;
+}
+#g8app#g8app#g8app .g8button:not(.g8primary){
+  background:rgba(255,255,255,.045)!important;color:var(--gcc-text)!important}
+#g8app#g8app#g8app .g8button:not(.g8primary):hover:enabled{
+  background:rgba(255,255,255,.09)!important;border-color:var(--vx-glow)!important;transform:none}
+
+#g8app#g8app#g8app .g8primary:hover:enabled{transform:none;filter:brightness(1.08) saturate(1.1)}
+#g8app#g8app#g8app .g8primary:active:enabled{transform:none}
+#g8app#g8app#g8app .g8primary:disabled{filter:grayscale(.8) brightness(.6)}
+
+/* Adjacent campaign commands share one shape and type scale. Colour marks the primary action. */
+#g8app#g8app#g8app :is(.gccuiSelectionActions,.gccuiFixtureActions>div,.gccuiFinalActions,.gccuiResultActions,.gccuiOffseasonActions,.gccuiPreMatchActions,.g8playbackcontrols>.g8actions)>.g8button{align-self:stretch}
+
+#g8app#g8app#g8app :focus-visible{outline:3px solid #7fe0ee!important;outline-offset:3px}
+#g8stage#g8stage#g8stage:focus-visible,#g8stage#g8stage#g8stage:focus{outline:none!important}
+
+/* 7 ─ Home hero */
+#g8stage#g8stage#g8stage .g8welcomepanel{
+  background:var(--gcc-panel)!important;
+  border:1px solid var(--gcc-line)!important;border-top:4px solid var(--vx-glow)!important;
+  border-radius:6px 28px 6px 28px!important;
+  box-shadow:0 30px 60px -30px #000,0 0 80px -40px var(--vx-glow)}
+#g8stage#g8stage#g8stage .gccBrandWordmark{
+  font-weight:800!important;font-style:italic;text-transform:uppercase;letter-spacing:.01em;
+  font-size:clamp(2.4rem,4.4vw,4.6rem)!important;line-height:.92!important;max-width:100%;overflow-wrap:anywhere;
+  background:linear-gradient(180deg,#fff 20%,#a9d4ee 100%);-webkit-background-clip:text;background-clip:text;
+  color:transparent!important;-webkit-text-fill-color:transparent;filter:drop-shadow(0 4px 0 rgba(0,0,0,.45))}
+#g8stage#g8stage#g8stage .g8heroart{
+  border:1px solid var(--gcc-line)!important;border-radius:28px 6px 28px 6px!important;overflow:hidden;
+  background:var(--gcc-ground)!important;box-shadow:0 30px 60px -30px #000,0 0 80px -40px #5aafff}
+#g8stage#g8stage#g8stage .g8arenaheader{
+  background:linear-gradient(90deg,var(--vx-glow),color-mix(in srgb,var(--vx-glow) 40%,#0b1825))!important;
+  color:#0a0f14!important;font-weight:800;letter-spacing:.16em;border:0!important}
+#g8stage#g8stage#g8stage .g8arenaheader span{color:inherit!important}
+#g8stage#g8stage#g8stage .g8venueframe{position:relative;overflow:hidden}
+#g8stage#g8stage#g8stage .g8venueframe::after{content:"";position:absolute;z-index:2;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(5,13,22,.0) 40%,rgba(5,13,22,.88) 100%),
+             radial-gradient(120% 90% at 50% 0%,transparent 50%,rgba(5,13,22,.55))}
+#g8stage#g8stage#g8stage .g8homestadium .g8stadiumphoto{animation:vx-ken 24s ease-in-out infinite alternate!important}
+#g8stage#g8stage#g8stage .g8stadium figcaption{background:var(--gcc-inset)!important;color:#b9cddb!important;border-top:2px solid var(--vx-glow);font-size:.9rem!important}
+#g8stage#g8stage#g8stage .g8heroart>p{background:var(--gcc-inset)!important;border-top:2px solid var(--vx-glow)!important;
+  font-family:var(--vx-display)!important;font-weight:700;letter-spacing:.2em!important;font-size:1.05rem!important}
+
+/* 8 ─ Club cards */
+#g8stage#g8stage#g8stage .g8club{
+  background:linear-gradient(165deg,var(--gcc-raised),var(--gcc-panel) 70%)!important;
+  border:1px solid var(--gcc-line)!important;border-radius:14px!important;overflow:hidden;
+  transition:transform .28s var(--vx-ease),box-shadow .28s var(--vx-ease),border-color .28s}
+#g8stage#g8stage#g8stage .g8club:hover{
+  transform:translateY(-6px);border-color:var(--accent,var(--vx-glow))!important;
+  box-shadow:0 22px 40px -18px #000,0 0 0 1px var(--accent,var(--vx-glow)),0 0 50px -14px var(--accent,var(--vx-glow))}
+#g8stage#g8stage#g8stage .g8clubcover{
+  background:
+    linear-gradient(115deg,transparent 0 62%,rgba(255,255,255,.14) 62% 64%,transparent 64%),
+    linear-gradient(135deg,var(--accent),color-mix(in srgb,var(--accent) 45%,#000))!important}
+#g8stage#g8stage#g8stage .g8clubwatermark{font-weight:800!important;font-style:italic;font-size:5.2rem!important;opacity:.22}
+#g8stage#g8stage#g8stage .g8club h3{font-family:var(--vx-display)!important;font-size:1.65rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.03em;line-height:1.05}
+#g8stage#g8stage#g8stage .g8clublocation{color:var(--gcc-muted)!important;letter-spacing:.1em;text-transform:uppercase;font-size:.8rem}
+#g8stage#g8stage#g8stage .g8clubground{background:rgba(0,0,0,.28)!important;border:1px solid var(--gcc-line)!important;
+  border-left:3px solid var(--accent,var(--vx-glow))!important;border-radius:6px}
+
+/* 9 ─ Draft / XI: panels, player cards, big glowing ratings */
+#g8stage#g8stage#g8stage .gccuiPanel,#g8stage#g8stage#g8stage .gccuiSquad,#g8stage#g8stage#g8stage .g8panel,#g8stage#g8stage#g8stage .g8card{
+  background:var(--gcc-panel)!important;
+  border:1px solid var(--gcc-line)!important;border-radius:12px!important;
+  box-shadow:0 18px 40px -26px #000}
+#g8stage#g8stage#g8stage .gccuiPanelHead h2{font-size:1.5rem}
+#g8stage#g8stage#g8stage .gccuiPlayer{
+  background:var(--gcc-panel)!important;
+  border:1px solid var(--gcc-line)!important;border-top:3px solid var(--gcc-role,#e2b368)!important;
+  border-radius:12px!important;position:relative;overflow:hidden;
+  transition:transform .22s var(--vx-ease),box-shadow .22s var(--vx-ease),border-color .22s}
+#g8stage#g8stage#g8stage .gccuiPlayer::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background:radial-gradient(120px 90px at 0% 0%,color-mix(in srgb,var(--gcc-role,#e2b368) 32%,transparent),transparent 70%)}
+#g8stage#g8stage#g8stage .gccuiPlayer:hover{transform:translateY(-4px);border-color:var(--gcc-role,#e2b368)!important;
+  box-shadow:0 18px 30px -16px #000,0 0 36px -14px var(--gcc-role,#e2b368)}
+#g8stage#g8stage#g8stage .gccuiPlayerOverall{min-width:3.6rem;flex-shrink:0}
+#g8stage#g8stage#g8stage .gccuiPlayerOverall strong{white-space:nowrap;font-size:2.4rem!important;font-weight:800;line-height:.9;
+  text-shadow:0 0 22px color-mix(in srgb,var(--rating-color,#94c584) 55%,transparent)}
+#g8stage#g8stage#g8stage .gccuiPlayerOverall small{letter-spacing:.2em;font-weight:700;color:var(--gcc-muted)}
+#g8stage#g8stage#g8stage .gccuiPlayerIdentity b{font-family:var(--vx-display)!important;font-size:1.35rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.02em}
+#g8stage#g8stage#g8stage .gccuiPlayerSkills dt{letter-spacing:.12em;text-transform:uppercase;font-size:.7rem;color:var(--gcc-muted)}
+#g8stage#g8stage#g8stage .gccuiPlayerSkills .gccuiRating{font-size:1.5rem;font-weight:700}
+#g8stage#g8stage#g8stage .gccuiTurn{border-left-color:var(--vx-glow)!important}
+#g8stage#g8stage#g8stage .gccuiTurn h2{font-size:1.9rem}
+#g8stage#g8stage#g8stage .gccuiTurn::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--vx-glow);
+  position:absolute;right:10px;top:10px;animation:vx-pulse 1.6s ease-in-out infinite}
+#g8stage#g8stage#g8stage .gccuiTurn{position:relative}
+#g8stage#g8stage#g8stage input,#g8stage#g8stage#g8stage select{background:var(--gcc-inset)!important;border:1px solid var(--gcc-line)!important;border-radius:8px!important}
+
+/* 10 ─ Signing window cards (green/red stat tiles) */
+#g8stage#g8stage#g8stage .g8signstat,#g8stage#g8stage#g8stage [class*="commit"]{border-radius:8px}
+
+/* 11 ─ Motion */
+@keyframes vx-rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes vx-ken{from{transform:scale(1)}to{transform:scale(1.07)}}
+@keyframes vx-pulse{0%,100%{box-shadow:0 0 0 0 color-mix(in srgb,var(--vx-glow) 70%,transparent)}
+                    50%{box-shadow:0 0 0 10px transparent}}
+#g8stage#g8stage#g8stage .g8welcomepanel,#g8stage#g8stage#g8stage .g8heroart{animation:vx-rise .55s var(--vx-ease) both}
+#g8stage#g8stage#g8stage .g8clubgrid>*,#g8stage#g8stage#g8stage .gccuiPlayers>*{animation:vx-rise .5s var(--vx-ease) both}
+#g8stage#g8stage#g8stage .g8clubgrid>*:nth-child(2),#g8stage#g8stage#g8stage .gccuiPlayers>*:nth-child(2){animation-delay:.05s}
+#g8stage#g8stage#g8stage .g8clubgrid>*:nth-child(3),#g8stage#g8stage#g8stage .gccuiPlayers>*:nth-child(3){animation-delay:.10s}
+#g8stage#g8stage#g8stage .g8clubgrid>*:nth-child(4),#g8stage#g8stage#g8stage .gccuiPlayers>*:nth-child(4){animation-delay:.15s}
+#g8stage#g8stage#g8stage .g8clubgrid>*:nth-child(5),#g8stage#g8stage#g8stage .gccuiPlayers>*:nth-child(5){animation-delay:.20s}
+#g8stage#g8stage#g8stage .g8clubgrid>*:nth-child(6),#g8stage#g8stage#g8stage .gccuiPlayers>*:nth-child(6){animation-delay:.25s}
+#g8stage#g8stage#g8stage .g8clubgrid>*:nth-child(7),#g8stage#g8stage#g8stage .gccuiPlayers>*:nth-child(7){animation-delay:.30s}
+#g8stage#g8stage#g8stage .g8clubgrid>*:nth-child(8),#g8stage#g8stage#g8stage .gccuiPlayers>*:nth-child(8){animation-delay:.35s}
+@media (prefers-reduced-motion:reduce){
+  #g8app#g8app#g8app *,#g8app#g8app#g8app *::before,#g8app#g8app#g8app *::after{animation:none!important;transition:none!important}}
+
+/* Current game screens adopt the approved treatment at the same cascade strength. */
+#g8app#g8app#g8app,#g8hud#g8hud#g8hud,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])){--vx-glow:var(--gcc-accent,#ed7547);--vx-signal:color-mix(in srgb,var(--vx-glow) 48%,#fff);font-family:var(--vx-body)!important}
+#g8stage#g8stage#g8stage :is(.g8eyebrow,.gccuiKicker),#g8stage#g8stage#g8stage .gccuiHeadingIcon{color:var(--vx-signal)!important}
+#g8app#g8app#g8app .g8primary,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8primary{background:linear-gradient(180deg,color-mix(in srgb,var(--vx-glow) 78%,#fff) 0%,var(--vx-glow) 18%,var(--vx-glow) 82%,color-mix(in srgb,var(--vx-glow) 94%,#000) 100%)!important;color:var(--gcc-accent-ink)!important}
+#g8app#g8app#g8app .g8button{max-width:100%;min-width:0;white-space:normal!important}
+#g8app#g8app#g8app .g8primary:focus-visible,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8primary:focus-visible{clip-path:none!important;outline:3px solid #7fe0ee!important;outline-offset:3px}
+#g8stage#g8stage#g8stage :is(.g8heading,.gccuiTurn):focus-within{clip-path:none!important}
+/* Retain semantic success/medical/warning colours and the authored club fills. */
+#g8stage#g8stage#g8stage :is(.g8sheet,.gccuiAllowance,.gccuiFixture,.gccuiMatchPreparation,.gccuiLatestResult,.gccuiMatchLinks,.gccuiSummary,.g8dressingroom,.g8reviewsummary,.g8development,.g8teamread){background:linear-gradient(155deg,var(--gcc-raised),var(--gcc-panel) 60%)!important;border-color:var(--gcc-line)!important}
+/* Squad update: the decision surface owns club identity; supporting detail is inset. */
+#g8stage#g8stage#g8stage .g8annualhero{background:linear-gradient(120deg,color-mix(in srgb,var(--gcc-accent) 16%,var(--gcc-raised)),var(--gcc-panel) 72%)!important;border-color:var(--gcc-line)!important;border-top-color:var(--vx-signal)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 18px 40px -26px #000!important}
+#g8stage#g8stage#g8stage :is(.g8annualdevelopment,.g8departureguide){background:var(--gcc-inset)!important;border-color:var(--gcc-line)!important}
+#g8app#g8app#g8app .gccuiTableView .g8table thead th,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8table thead th{background:var(--gcc-raised)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
+#g8app#g8app#g8app .gccuiTableView .g8table tbody tr:nth-child(odd),#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8table tbody tr:nth-child(odd){background:var(--gcc-panel)!important}
+#g8app#g8app#g8app .gccuiTableView .g8table tbody tr:nth-child(even),#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8table tbody tr:nth-child(even){background:var(--gcc-raised)!important}
+#g8app#g8app#g8app .gccuiTableView .g8table tbody tr.mine{background:color-mix(in srgb,var(--vx-glow) 18%,var(--gcc-panel))!important}
+#g8app#g8app#g8app .gccuiPlayerStatsTable .g8table tbody tr:nth-child(odd)>:first-child{background:var(--gcc-panel)!important}
+#g8app#g8app#g8app .gccuiPlayerStatsTable .g8table tbody tr:nth-child(even)>:first-child{background:var(--gcc-raised)!important}
+#g8app#g8app#g8app .gccuiPlayerStatsTable .g8table thead tr>:first-child{background:var(--gcc-raised)!important}
+#g8app#g8app#g8app .g8button.gccuiStatPlayer{background:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;transform:none!important;letter-spacing:normal!important;padding:8px 0!important;font-family:var(--vx-body)!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])){background:var(--gcc-inset)!important;border-color:var(--gcc-line)!important;color:var(--gcc-text)!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) :is(.g8modalhead,.gccuiDossierRail){background:var(--gcc-panel)!important;border-color:var(--gcc-line)!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) :is(h2,h3,.g8eyebrow){font-family:var(--vx-display)!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8modalhead h2{font-size:30px!important;line-height:1.05!important;font-weight:800!important;text-transform:uppercase!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) :is(button,input,select){font-family:var(--vx-body)!important}
+/* Compact scorebook cells fit phone widths without a near-empty horizontal scroll. */
+@media(max-width:600px){
+ #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .gcc-scoreinnings .g8table :is(th,td){padding:11px 5px!important;font-size:13px!important}
+ #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .gcc-scoreinnings .g8table :is(th,td):first-child{padding-left:10px!important;padding-right:8px!important}
+ #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .gcc-scoreinnings .g8table thead th{font-size:12px!important}
+}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8button{font-family:var(--vx-body)!important;font-size:1rem!important;font-weight:700!important;line-height:1.25!important;letter-spacing:0!important;text-transform:none!important;min-height:44px;padding:10px 14px!important;border:1px solid var(--gcc-line)!important;border-radius:8px!important;clip-path:none!important;box-shadow:none!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8button:not(.g8primary){background:var(--gcc-raised)!important;color:var(--gcc-text)!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) :is(.g8tradeplayer,.g8tradeimpact,.g8recordstats>div,.gccuiProfilePanel,.g8give,.g8receive,.g8teamread,.g8development,.g8developmentrow,.g8skillchanges>li){background:var(--gcc-panel)!important;border-color:var(--gcc-line)!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8modalbody>.g8actions:last-child{background:var(--gcc-inset)!important;border-color:var(--gcc-line)!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) :is(input,select){background:var(--gcc-inset)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
+@media(max-width:760px){
+ #g8stage#g8stage#g8stage h1{font-size:clamp(1.8rem,8vw,2.5rem)!important;line-height:1.02!important}
+ #g8stage#g8stage#g8stage .gccBrandWordmark{font-size:clamp(2.4rem,10vw,3.5rem)!important}
+}
+@media(prefers-reduced-motion:reduce){
+ #g8app#g8app#g8app *,#g8app#g8app#g8app *::before,#g8app#g8app#g8app *::after,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) *,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) *::before,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+/* Dialog confirmations use the same sports treatment as the main game. */
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8button.g8primary{min-width:0;max-width:100%;white-space:normal!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8button.g8primary:hover:enabled{transform:translateY(-2px)!important}
+
+
+#g8app#g8app#g8app .gccui{--ui-rule:var(--gcc-line)}
+#g8stage#g8stage#g8stage .g8arenaheader{color:var(--gcc-accent-ink)!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .gcc-scoreinnings{background:var(--gcc-panel)!important;border-color:var(--gcc-line)!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .gcc-scoreinnings>header{background:var(--innings-club,var(--gcc-raised))!important;color:var(--innings-ink,var(--gcc-text))!important;border-color:var(--gcc-line)!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .gcc-scoreinnings .g8table caption{background:var(--gcc-inset)!important;color:var(--gcc-text)!important}
+/* The legacy fall-of-wickets strip belongs to the scorebook surface palette. */
+#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .gcc-fow{background:var(--gcc-inset);color:var(--gcc-text)}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8modalbody>.g8actions:last-child{box-shadow:0 -10px 16px var(--gcc-inset)!important}
+::selection{background:var(--club-accent,#ed7547);color:var(--club-ink,#171717)}
+#g8app#g8app#g8app .g8button:is(.selected,[aria-pressed="true"],[aria-current="page"]),#g8hud#g8hud#g8hud .g8button:is(.selected,[aria-pressed="true"],[aria-current="page"]),#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8button:is(.selected,[aria-pressed="true"],[aria-current="page"]){background:var(--gcc-accent)!important;color:var(--gcc-accent-ink)!important;border-color:var(--vx-signal)!important;box-shadow:inset 0 -3px 0 var(--vx-signal)!important}
+#g8app#g8app#g8app .g8button.gccuiStatPlayer:hover:enabled{background:none!important;border:0!important;box-shadow:none!important;transform:none!important;text-decoration:underline;text-underline-offset:3px}
+#g8app#g8app#g8app .g8button.g8danger,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8button.g8danger{background:linear-gradient(180deg,#a32635,#791c29)!important;color:#fff!important;border:1px solid #e98690!important}
+/* Resolve club colour at the action itself, including saved-career and club-preview overrides. */
+#g8app#g8app#g8app .g8button.g8primary,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8button.g8primary{--vx-glow:var(--gcc-accent,#ed7547)}
+#g8app#g8app#g8app .g8button.gccuiStatPlayer{display:flex!important;justify-content:flex-start!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8button.g8swapchoice:hover:enabled{background:color-mix(in srgb,var(--vx-signal) 8%,var(--gcc-raised))!important;border-color:var(--vx-signal)!important}
+#g8app#g8app#g8app .g8button:is(.selected,[aria-pressed="true"],[aria-current="page"]):hover:enabled,#g8hud#g8hud#g8hud .g8button:is(.selected,[aria-pressed="true"],[aria-current="page"]):hover:enabled,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8button:is(.selected,[aria-pressed="true"],[aria-current="page"]):hover:enabled{background:var(--gcc-accent)!important;color:var(--gcc-accent-ink)!important;border-color:var(--vx-signal)!important;box-shadow:inset 0 -3px 0 var(--vx-signal)!important}
+@media(max-width:600px){#g8app#g8app#g8app .gccuiLadderTable .g8ladder tr>:first-child{width:36px!important}}
+#g8app#g8app#g8app .g8button.g8danger:hover:enabled,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8button.g8danger:hover:enabled{background:linear-gradient(180deg,#a32635,#791c29)!important;color:#fff!important;border-color:#e98690!important}
+
+/* Shared secondary surfaces complete the Floodlit palette without changing status colours. */
+#g8app#g8app#g8app .gccui,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])){--ui-panel:var(--gcc-panel);--ui-inset:var(--gcc-inset);--ui-line:var(--gcc-line);--ui-rule:var(--gcc-line);--ui-text:var(--gcc-text);--ui-muted:var(--gcc-muted)}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) :is(.g8concernreason,.g8commitmentchoice,.g8coverread){background:var(--gcc-raised)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8concernreason{border-left:3px solid var(--gcc-accent)!important;padding:12px 14px!important;margin:12px 0!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8concernreason b{color:var(--gcc-text)!important;font-weight:700}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) :is(.g8commitmentchoice>p,.g8commitmentoptions>p,.g8rotationconversation>p){color:var(--gcc-muted)!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) :is(.g8commitmentoptions,.g8rotationconversation) h4{color:var(--gcc-text)!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .gccuiManagementContext .g8playercontext{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .gccuiManagementContext .g8playercontext>div{background:var(--gcc-raised)!important;border:1px solid var(--gcc-line)!important;border-radius:6px;padding:10px 12px!important;min-width:0}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8playercontext dt{color:var(--gcc-muted)!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8playercontext dd{margin:4px 0 0!important;color:var(--gcc-text)!important}
+#g8app#g8app#g8app :is(button,summary,a,input,select):focus-visible,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) :is(button,summary,a,input,select):focus-visible{outline:3px solid #7fe0ee!important;outline-offset:3px}
+#g8app#g8app#g8app .gccuiPickedPlayer:focus-visible{outline-offset:-4px!important}
+#g8app#g8app#g8app .gccuiPlayerStatsTable .g8table tr>:first-child{box-shadow:2px 0 var(--gcc-line)!important}
+@media(max-width:400px){#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .gccuiManagementContext .g8playercontext{grid-template-columns:1fr!important}}
+/* Conditions: one header, one scale, no legacy band-value chip. */
+#g8app#g8app#g8app .g8conditionread>div:first-child,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8conditionread>div:first-child{flex-direction:row!important;align-items:baseline!important;justify-content:space-between!important;text-align:left!important;gap:8px!important;flex-wrap:wrap}
+#g8app#g8app#g8app .g8conditionread>div:first-child>b,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8conditionread>div:first-child>b{font:700 15px/1.35 var(--vx-body)!important;color:var(--gcc-text)!important}
+#g8app#g8app#g8app .g8conditionread>div:first-child>strong,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8conditionread>div:first-child>strong{background:none!important;border:0!important;border-radius:0!important;padding:0!important;box-shadow:none!important;font:600 13px/1.4 var(--vx-body)!important;color:var(--gcc-muted)!important;overflow-wrap:normal!important}
+#g8app#g8app#g8app .g8conditionends,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8conditionends{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:4px!important;font:400 12px/1.4 var(--vx-body)!important;color:var(--gcc-muted)!important}
+#g8app#g8app#g8app .g8conditionends>:nth-child(2),#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8conditionends>:nth-child(2){text-align:center}
+#g8app#g8app#g8app .g8conditionends>:last-child,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8conditionends>:last-child{text-align:right}
+#g8app#g8app#g8app :is(.g8groundinterpretation,.g8weatherread) h3,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) :is(.g8groundinterpretation,.g8weatherread) h3{font:700 18px/1.3 var(--vx-body)!important;color:var(--gcc-text)!important;text-transform:none!important;letter-spacing:normal!important}
+#g8app#g8app#g8app :is(.g8groundinterpretation,.g8weatherread) p,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) :is(.g8groundinterpretation,.g8weatherread) p{font:400 15px/1.55 var(--vx-body)!important;color:var(--gcc-muted)!important;max-width:70ch;margin-top:8px!important}
+/* Shared type roles: display titles, quiet metadata and readable labels. */
+#g8app#g8app#g8app .g8table caption,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8table caption{font-family:var(--vx-body)!important;font-size:13px!important;line-height:1.45!important}
+#g8app#g8app#g8app .g8button:not(.g8primary),#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8button:not(.g8primary){letter-spacing:normal!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .gccuiIdentityText #g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory]))Title{font-size:28px!important;line-height:1.15!important;letter-spacing:normal!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .gccuiIdentityText>h3{font:400 14px/1.4 var(--vx-body)!important;letter-spacing:normal!important;text-transform:none!important;color:var(--gcc-muted)!important}
+#g8app#g8app#g8app .gccuiPlayerScout:focus-visible{outline-offset:-4px!important}
+#g8app#g8app#g8app .g8table :is(td,th),#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8table :is(td,th){border-color:var(--gcc-line)!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8previewvenue>span:last-child{background:var(--gcc-inset)!important;border-color:var(--gcc-line)!important;color:var(--gcc-muted)!important}
+#g8hud#g8hud#g8hud .g8headerslogan span{color:var(--vx-signal)!important}
+@media(max-width:600px){#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .gccuiIdentityText #g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory]))Title{font-size:24px!important}}
+@media(max-width:480px){#g8app#g8app#g8app .gccuiSelection .gccuiOrderRow{grid-template-columns:18px minmax(0,1fr) 30px!important}#g8app#g8app#g8app .gccuiSelection .gccuiRosterActions{grid-column:2/-1!important;justify-content:flex-start!important}}
+@media(prefers-reduced-motion:reduce){#g8app#g8app#g8app .g8button:hover,#g8app#g8app#g8app .g8club:hover,#g8app#g8app#g8app .gccuiPlayer:hover,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8button:hover{transform:none!important}}
+/* Narrow condition cards retain the same two-line header and readable endpoints. */
+#g8app#g8app#g8app .g8conditionread>div:first-child,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8conditionread>div:first-child{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:5px!important;min-height:47px}
+#g8app#g8app#g8app .g8conditionends>span,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8conditionends>span{min-width:0!important;white-space:normal!important;overflow-wrap:normal!important}
+
+/* Equal condition rows keep gauges level when endpoint text wraps. */
+#g8app#g8app#g8app .g8pitchread .g8conditionread,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8pitchread .g8conditionread{display:grid!important;grid-template-columns:minmax(0,1fr)!important;grid-template-rows:minmax(47px,auto) 12px minmax(34px,auto)!important;align-content:start!important;gap:12px!important}
+#g8app#g8app#g8app .gccuiArchive .g8archiveyears>.g8seasonbook:only-child{grid-column:1/-1}
+
+/* Scouting cards: personal identity and restrained, explicit rating bands. */
+#g8app#g8app#g8app .gccuiPlayer{--card-tier:var(--gcc-line)}
+#g8app#g8app#g8app .gccuiPlayerScout{grid-template-columns:60px minmax(0,1fr)!important;gap:12px!important;padding:12px!important}
+#g8app#g8app#g8app .gccuiPlayerOverall{min-width:0!important;width:60px;box-sizing:border-box;background:var(--gcc-inset)!important;border-color:var(--card-tier)!important;padding:6px 4px!important}
+#g8app#g8app#g8app .gccuiPlayerMonogram{display:grid;place-items:center;width:28px;height:28px;margin:0 auto 6px;border-radius:50%;border:1px solid var(--gcc-role,var(--gcc-line));background:var(--gcc-raised);font:700 15px/1 var(--vx-body);letter-spacing:normal;color:var(--gcc-text)}
+#g8app#g8app#g8app .gccuiPlayerIdentity>b{font:700 17px/1.35 var(--vx-body)!important;text-transform:none!important;letter-spacing:normal!important;overflow-wrap:normal!important}
+#g8app#g8app#g8app .gccuiPlayerOverall small{font:600 11px/1.3 var(--vx-body)!important;letter-spacing:.04em!important;margin-top:3px!important}
+#g8app#g8app#g8app .gccuiPlayerSkills dt{font:600 12px/1.4 var(--vx-body)!important;letter-spacing:normal!important;text-transform:none!important}
+
+/* ==========================================================================
+   GCC VISUAL LAYER v9.1 patch — season hub, live match, result, tables, finals, dialogs
+   Additive: place AFTER the existing #gcc-floodlit-visual block. Presentation only.
+   ========================================================================== */
+/* 12 ─ Legibility: dark club colours (navy, crimson, purple) vanish as text on
+   the night backdrop, so text uses a lightened version of the same hue. */
+:root,#g8app#g8app#g8app{--vx-ink:color-mix(in oklab,var(--gcc-accent,#ed7547) 45%,#fff)}
+@supports (color:oklch(from red l c h)){
+  :root,#g8app#g8app#g8app{--vx-ink:oklch(from var(--gcc-accent,#ed7547) max(l,.8) min(c,.16) h)}}
+#g8app#g8app#g8app .g8eyebrow,#g8app#g8app#g8app .gccuiKicker,#g8hud#g8hud#g8hud .g8headerslogan span,
+#g8app#g8app#g8app .gccuiVenue .gccuiKicker{color:var(--vx-ink)!important}
+
+/* 13 ─ Badge fix: crest text sat in the top-left corner on the live scoreboard */
+#g8stage#g8stage#g8stage .g8badge{display:inline-flex!important;align-items:center;justify-content:center;
+  text-align:center;line-height:1!important;font-weight:800;letter-spacing:.02em}
+#g8app#g8app#g8app .gccuiLiveSide>header>.g8badge{padding-top:2px!important}
+
+/* 15 ─ Season hub */
+#g8app#g8app #g8stage .gccuiCampaignRibbon{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;
+  background:var(--gcc-panel)!important;
+  border:1px solid var(--gcc-line)!important;border-radius:12px!important;overflow:hidden;
+  box-shadow:0 18px 40px -28px #000}
+#g8app#g8app #g8stage .gccuiCampaignRibbon>div{padding:8px 14px;border-right:1px solid var(--gcc-line)!important;
+  background:none!important;position:relative}
+#g8app#g8app #g8stage .gccuiCampaignRibbon>div:last-child{border-right:0!important}
+#g8app#g8app #g8stage .gccuiCampaignRibbon>div::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:var(--vx-glow);opacity:.0}
+#g8app#g8app #g8stage .gccuiCampaignRibbon>div:first-child::before{opacity:1}
+#g8app#g8app #g8stage .gccuiCampaignRibbon>div>span{font-size:.75rem!important;letter-spacing:.18em;text-transform:uppercase;
+  font-weight:700;color:var(--gcc-muted)!important}
+#g8app#g8app #g8stage .gccuiCampaignRibbon>div>strong{font-family:var(--vx-display)!important;font-size:2rem!important;
+  font-weight:800;line-height:1.05;color:#fff;letter-spacing:.01em}
+#g8app#g8app #g8stage .gccuiCampaignRibbon small{color:var(--gcc-muted)!important}
+
+#g8app#g8app #g8stage .gccuiFixture{overflow:hidden}
+#g8app#g8app #g8stage .gccuiFixtureTeams{display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;gap:.8rem}
+#g8app#g8app #g8stage .gccuiFixtureClub{
+  background:linear-gradient(120deg,var(--side),color-mix(in srgb,var(--side) 48%,#000))!important;
+  color:var(--side-ink,#fff)!important;border:0!important;border-radius:10px!important;padding:1rem 1.1rem!important;
+  position:relative;overflow:hidden;box-shadow:0 14px 30px -18px var(--side)}
+#g8app#g8app #g8stage .gccuiFixtureClub::after{content:"";position:absolute;right:-30px;top:-20px;bottom:-20px;width:90px;
+  background:rgba(255,255,255,.12);transform:skewX(-18deg);pointer-events:none}
+#g8app#g8app #g8stage .gccuiFixtureClub b{font-family:var(--vx-display)!important;font-size:1.9rem!important;font-weight:800;
+  text-transform:uppercase;letter-spacing:.02em;line-height:1}
+#g8app#g8app #g8stage .gccuiFixtureClub span:not(.g8badge){font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;opacity:.9}
+#g8app#g8app #g8stage .gccuiVersus{align-self:center;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;
+  background:#050d16;border:2px solid var(--vx-glow);font-family:var(--vx-display)!important;font-weight:800;
+  text-transform:uppercase;font-size:1.05rem;color:var(--vx-ink);box-shadow:0 0 22px -6px var(--vx-glow)}
+#g8app#g8app #g8stage .gccuiFixtureActions{background:rgba(0,0,0,.18)!important;border-bottom:1px solid var(--gcc-line)!important}
+#g8app#g8app #g8stage .gccuiNextOpponent{font-family:var(--vx-display)!important;font-size:1.3rem;text-transform:uppercase;letter-spacing:.04em}
+#g8app#g8app #g8stage .gccuiMatchConditions{background:rgba(0,0,0,.22)!important;border-top:1px solid var(--gcc-line)!important;
+  border-left:3px solid var(--vx-glow)!important}
+#g8app#g8app #g8stage .gccuiVenue{border-top:1px solid var(--gcc-line)!important}
+#g8app#g8app #g8stage .gccuiVenuePhoto img{border-radius:8px}
+#g8app#g8app #g8stage .gccuiVenueName{font-family:var(--vx-display)!important;font-size:1.4rem;font-weight:700;text-transform:uppercase}
+#g8app#g8app #g8stage .g8dressingroom,#g8app#g8app #g8stage .g8relationship{
+  background:var(--gcc-panel)!important;
+  border:1px solid var(--gcc-line)!important;border-left:4px solid var(--vx-glow)!important;border-radius:10px!important}
+#g8app#g8app #g8stage .g8nextstep{background:linear-gradient(100deg,var(--gcc-raised),var(--gcc-panel))!important;
+  border:1px solid var(--gcc-line)!important;border-left:5px solid var(--vx-glow)!important;border-radius:6px}
+#g8app#g8app #g8stage .g8nextstep h2{font-size:1.6rem}
+#g8app#g8app #g8stage details.g8disclosure{background:rgba(0,0,0,.2)!important;border:1px solid var(--gcc-line)!important;border-radius:8px!important}
+#g8app#g8app #g8stage .g8disclosure summary{font-weight:700;letter-spacing:.04em}
+#g8app#g8app #g8stage .g8conditiongauge{background:linear-gradient(90deg,#1a4a63,#2b5f78 40%,#2a7a55 70%,#1f9060)!important;border-radius:99px!important}
+
+/* 16 ─ Live scoreboard */
+#g8app#g8app#g8app .g8ballarena{border:0!important;background:none!important;box-shadow:none!important}
+#g8app#g8app#g8app .gccuiLiveScoreboard{background:linear-gradient(180deg,rgba(19,40,64,.8),rgba(7,19,30,.96))!important;
+  border:1px solid var(--gcc-line)!important;border-radius:14px!important;padding:1rem!important;
+  box-shadow:0 24px 50px -30px #000}
+#g8app#g8app#g8app .gccuiLivePhase{white-space:nowrap;font-family:var(--vx-display)!important;font-size:1.05rem!important;font-weight:700!important;
+  letter-spacing:.28em!important;color:var(--vx-ink)!important;text-transform:uppercase}
+#g8app#g8app#g8app .gccuiLiveSide{border-radius:10px!important;overflow:hidden;border:1px solid var(--gcc-line)!important;
+  background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(0,0,0,.4))!important;
+  transition:box-shadow .3s,border-color .3s}
+#g8app#g8app#g8app .gccuiLiveSide>header{background:linear-gradient(110deg,var(--side),color-mix(in srgb,var(--side) 50%,#000))!important;
+  color:var(--side-ink,#fff)!important}
+#g8app#g8app#g8app .gccuiLiveSide>header h2{font-family:var(--vx-display)!important;font-size:1.6rem!important;font-weight:800;
+  text-transform:uppercase;letter-spacing:.03em;color:inherit!important}
+#g8app#g8app#g8app .gccuiLiveSide>header span:not(.g8badge){letter-spacing:.14em;text-transform:uppercase;font-size:.72rem;font-weight:700}
+#g8app#g8app#g8app .gccuiLiveSide.is-batting{border-color:var(--side)!important;
+  box-shadow:0 0 0 1px var(--side),0 0 46px -14px var(--side)}
+#g8app#g8app#g8app .gccuiLiveSide>div>strong{font-family:var(--vx-display)!important;font-size:3.6rem!important;font-weight:800;
+  line-height:1;letter-spacing:.01em;color:#fff}
+#g8app#g8app#g8app .gccuiLiveSide>div>strong.gccuiWaitingScore{font-size:1.9rem!important;color:var(--gcc-muted)}
+#g8app#g8app#g8app .gccuiLiveOrder{color:var(--gcc-muted)!important}
+#g8app#g8app#g8app .gccuiLiveEquation{background:rgba(255,255,255,.05)!important;border-left:4px solid var(--vx-glow)!important;
+  font-weight:700;border-radius:0 6px 6px 0}
+#g8app#g8app#g8app .g8playbackcontrols{background:rgba(7,19,30,.85)!important;border:1px solid var(--gcc-line)!important;
+  border-radius:10px!important;padding:.6rem .9rem!important;margin-block:.8rem}
+#g8app#g8app#g8app .g8playbackcontrols>span{font-family:var(--vx-display);letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#7ef0a8}
+#g8app#g8app#g8app .gcc-livegrid{border:1px solid var(--gcc-line);border-radius:12px;overflow:hidden;
+  background:rgba(7,19,30,.7)!important}
+#g8app#g8app#g8app .gcc-delivery,#g8app#g8app#g8app .gcc-crease{background:none!important;border-color:var(--gcc-line)!important}
+
+/* 17 ─ The ball-by-ball "moment": bigger, and it reacts to fours, sixes, wickets */
+@keyframes vx-pop{0%{transform:scale(.97);opacity:.4}60%{transform:scale(1.015)}100%{transform:none;opacity:1}}
+#g8app#g8app#g8app .gcc-moment{
+  background:linear-gradient(120deg,var(--gcc-raised),var(--gcc-panel))!important;
+  border:1px solid var(--gcc-line)!important;border-left:6px solid #3d5b78!important;border-radius:12px!important;
+  animation:vx-pop .38s var(--vx-ease) both!important}
+#g8app#g8app#g8app .gcc-moment .gcc-event{font-family:var(--vx-display)!important;font-size:5.4rem!important;font-weight:800;
+  background:none!important;line-height:.9;color:#fff!important}
+#g8app#g8app#g8app .gcc-moment h2{font-size:clamp(1.1rem,1.7vw,1.5rem)!important;font-weight:600}
+#g8app#g8app#g8app .gcc-moment.gcc-four{background:linear-gradient(120deg,#0f5a3a,#0a2a24)!important;border-left-color:#3ddc97!important;
+  box-shadow:0 0 56px -18px #1fcf80}
+#g8app#g8app#g8app .gcc-moment.gcc-four .gcc-event{color:#7dffc0!important}
+#g8app#g8app#g8app .gcc-moment.gcc-six{background:linear-gradient(120deg,#52289a,#1d1040)!important;border-left-color:#ffd24a!important;
+  box-shadow:0 0 70px -14px #a96bff}
+#g8app#g8app#g8app .gcc-moment.gcc-six .gcc-event{color:#ffd24a!important;text-shadow:0 0 26px rgba(255,210,74,.55)}
+#g8app#g8app#g8app .gcc-moment.gcc-wicket{background:linear-gradient(120deg,#6a1428,#240b14)!important;border-left-color:#ff5a76!important;
+  box-shadow:0 0 70px -14px #ff3d5e}
+#g8app#g8app#g8app .gcc-moment.gcc-wicket .gcc-event{color:#ff8da1!important;text-shadow:0 0 26px rgba(255,90,118,.5)}
+#g8app#g8app#g8app .gcc-currentover h3{font-family:var(--vx-display);letter-spacing:.16em;text-transform:uppercase;font-size:.95rem;color:var(--gcc-muted)}
+#g8app#g8app#g8app .gcc-currentover>div span,#g8app#g8app#g8app .gcc-history .g8overdeliveries span{
+  display:inline-grid;place-items:center;min-width:2.3rem;height:2.3rem;border-radius:50%!important;
+  background:#1b3249!important;border:1px solid #365675!important;font-weight:800;margin-right:.3rem}
+#g8app#g8app#g8app .gcc-currentover>div span.gcc-four,#g8app#g8app#g8app .gcc-history .g8ballboundary{background:#12683e!important;border-color:#3ddc97!important}
+#g8app#g8app#g8app .gcc-currentover>div span.gcc-six{background:#6734a2!important;border-color:#ffd24a!important}
+#g8app#g8app#g8app .gcc-currentover>div span.gcc-wicket,#g8app#g8app#g8app .gcc-history .g8ballwicket{background:#a5253d!important;border-color:#ff5a76!important}
+#g8app#g8app#g8app .gcc-crease h2,#g8app#g8app#g8app .gcc-history h2{font-size:1.15rem;letter-spacing:.14em}
+#g8app#g8app#g8app .gcc-crease table th{letter-spacing:.1em;text-transform:uppercase;font-size:.72rem;color:var(--gcc-muted)}
+#g8app#g8app#g8app .gcc-crease table td b{font-family:var(--vx-display);font-size:1.4rem}
+#g8app#g8app#g8app .gcc-bowler{background:linear-gradient(180deg,var(--gcc-raised),var(--gcc-panel))!important;
+  border:1px solid var(--gcc-line)!important;border-top:3px solid #f0c15a!important;border-radius:8px}
+#g8app#g8app#g8app .gcc-bowler strong{font-family:var(--vx-display);font-size:2rem}
+/* Keep changing live statistics aligned across proportional and display faces. */
+#g8app#g8app#g8app .gcc-crease :is(td,td b),#g8app#g8app#g8app .gcc-bowler :is(strong,strong small){font-variant-numeric:tabular-nums}
+#g8app#g8app#g8app .gcc-history{background:rgba(7,19,30,.7)!important;border:1px solid var(--gcc-line)!important;border-radius:12px;overflow:hidden}
+#g8app#g8app#g8app .gcc-history>*{background-color:transparent!important}
+#g8app#g8app#g8app .gcc-history .g8overrow,#g8app#g8app#g8app .gcc-history article,#g8app#g8app#g8app .gcc-history li{background:rgba(255,255,255,.04)!important;
+  border:1px solid var(--gcc-line)!important;border-radius:8px}
+
+/* 18 ─ Result screen */
+#g8app#g8app#g8app .gccuiScorecard{background:linear-gradient(180deg,rgba(19,40,64,.75),rgba(7,19,30,.97))!important;
+  border:1px solid var(--gcc-line)!important;border-top:4px solid var(--vx-glow)!important;border-radius:14px!important;
+  box-shadow:0 30px 60px -36px #000}
+#g8app#g8app#g8app .gccuiScorecard.gccuiWon{border-top-color:#3ddc97!important;box-shadow:0 30px 60px -36px #000,0 0 90px -40px #1fcf80}
+#g8app#g8app#g8app .gccuiScorecard.gccuiLost{border-top-color:#ff5a76!important;box-shadow:0 30px 60px -36px #000,0 0 90px -44px #ff3d5e}
+#g8app#g8app#g8app .gccuiScoreContext strong{font-family:var(--vx-display)!important;font-size:1.15rem;font-weight:800;
+  letter-spacing:.22em;text-transform:uppercase;color:#7dffc0}
+#g8app#g8app#g8app .gccuiLost .gccuiScoreContext strong{color:#ff8da1}
+#g8app#g8app#g8app .gccuiScoreContext span{color:var(--gcc-muted)}
+#g8app#g8app#g8app .gccuiScorecard>h2{font-size:clamp(1.7rem,3vw,2.7rem)!important;font-weight:800!important;line-height:1.05;text-transform:uppercase}
+#g8app#g8app#g8app .gccuiScoreSide{border-radius:10px!important;overflow:hidden;border:1px solid var(--gcc-line)!important;
+  background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(0,0,0,.4))!important}
+#g8app#g8app#g8app .gccuiScoreSide>header{background:linear-gradient(110deg,var(--side),color-mix(in srgb,var(--side) 50%,#000))!important;
+  color:var(--side-ink,#fff)!important}
+#g8app#g8app#g8app .gccuiScoreSide>header h3{font-family:var(--vx-display)!important;font-size:1.5rem;font-weight:800;text-transform:uppercase;
+  letter-spacing:.03em;color:inherit}
+#g8app#g8app#g8app .gccuiScoreSide>div>strong{font-family:var(--vx-display)!important;font-size:4.2rem!important;font-weight:800;line-height:1}
+#g8app#g8app#g8app .gccuiScoreSide>div>strong small{font-size:2rem;color:var(--gcc-muted)}
+#g8app#g8app#g8app .gcc-awards{display:block!important;border:1px solid var(--gcc-line);border-radius:8px;overflow:hidden;background:var(--gcc-panel)}
+#g8app#g8app#g8app .gcc-award{display:grid!important;grid-template-columns:minmax(150px,.8fr) minmax(0,1.2fr) minmax(120px,auto);gap:16px;align-items:center;min-height:0!important;padding:14px 16px!important;margin:0!important;background:transparent!important;border:0!important;border-bottom:1px solid var(--gcc-line)!important;border-radius:0!important;box-shadow:none!important}
+#g8app#g8app#g8app .gcc-award:last-child{border-bottom:0!important}
+#g8app#g8app#g8app .gcc-award>.g8eyebrow{display:flex;align-items:center;gap:8px;margin:0!important;font-size:12px;line-height:1.4;letter-spacing:.08em}
+#g8app#g8app#g8app .gcc-award h2{margin:0!important;font-family:var(--vx-display)!important;font-size:22px!important;line-height:1.2;font-weight:700;text-transform:uppercase}
+#g8app#g8app#g8app .gcc-award strong{font-family:var(--vx-display);font-size:22px;color:#f6d98a;text-align:right;white-space:normal}
+@media(max-width:600px){#g8app#g8app#g8app .gcc-award{grid-template-columns:minmax(0,1fr) auto;gap:6px 12px;padding:12px!important}#g8app#g8app#g8app .gcc-award>.g8eyebrow{grid-column:1/-1}#g8app#g8app#g8app .gcc-award h2{font-size:20px!important}}
+#g8app#g8app#g8app .gcc-worm{background:rgba(7,19,30,.75)!important;border:1px solid var(--gcc-line)!important;border-radius:12px!important}
+#g8app#g8app#g8app .gccuiResultTop .g8button{white-space:nowrap}
+
+/* 19 ─ Give the "v" medallion room (the base layout only reserves 20px) */
+@media (min-width:900px){
+  #g8app#g8app#g8app .gccui .gccuiFixtureTeams{grid-template-columns:minmax(0,1fr) 46px minmax(0,1fr)}
+  #g8app#g8app#g8app .gccuiScoreTeams{grid-template-columns:minmax(0,1fr) 46px minmax(0,1fr)}}
+
+/* 20 ─ Tables (ladder, stats): navy headers, own-club row lit, finals cut-line */
+#g8app#g8app#g8app .g8sheet,#g8app#g8app#g8app .g8tablewrap{background:var(--gcc-panel)!important;
+  border:1px solid var(--gcc-line)!important;border-radius:12px!important;box-shadow:0 18px 40px -28px #000}
+#g8app#g8app#g8app .g8table{border-collapse:separate;border-spacing:0}
+#g8app#g8app#g8app .g8table caption{color:var(--gcc-muted)}
+#g8app#g8app#g8app .g8table thead th,#g8app#g8app#g8app .gccuiTableView .g8table thead th,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8table thead th,
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .gcc-scoreinnings .g8table thead th{background:var(--gcc-raised)!important;color:#bcd0de!important;
+  font-family:var(--vx-display)!important;font-size:.95rem!important;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;border-bottom:2px solid var(--vx-glow)!important;padding:12px!important}
+#g8app#g8app#g8app .g8table tbody :is(td,th){border-bottom:1px solid rgba(80,120,160,.22)!important}
+#g8app#g8app#g8app .g8table tbody tr{transition:background .15s}
+#g8app#g8app#g8app .g8table tbody tr:hover td{background:rgba(255,255,255,.05)!important}
+#g8app#g8app#g8app .g8table tbody td:first-child{font-family:var(--vx-display);font-size:1.25rem;font-weight:700;color:var(--gcc-muted)}
+#g8app#g8app#g8app .g8table tr.mine :is(td,th){background:color-mix(in srgb,var(--vx-glow) 26%,#0c1a28)!important;font-weight:800;color:#fff}
+#g8app#g8app#g8app .g8table tr.mine>:first-child{box-shadow:inset 4px 0 var(--vx-glow);color:#fff}
+#g8app#g8app#g8app .g8ladder tbody tr:nth-child(4) :is(td,th){border-bottom:2px dashed #3ddc97!important}
+#g8app#g8app#g8app .g8teamlabel{border-radius:4px!important;font-family:var(--vx-display)!important;font-weight:800;font-size:1.05rem!important;
+  letter-spacing:.05em;text-transform:uppercase;padding:.2rem .65rem!important;
+  box-shadow:0 0 0 1px rgba(255,255,255,.18) inset}
+#g8app#g8app#g8app .g8tabs{gap:.4rem}
+#g8app#g8app#g8app .g8tabs .g8button{font-family:var(--vx-body)!important;letter-spacing:0;text-transform:none;font-size:1.05rem}
+#g8app#g8app#g8app .g8seasonread{color:var(--gcc-muted)}
+
+/* 21 ─ Squad / XI rows */
+#g8app#g8app #g8stage .gccuiBenchRow,#g8app#g8app #g8stage .gccuiOrderRow{transition:background .15s,box-shadow .15s}
+#g8app#g8app #g8stage .gccuiBenchRow:hover,#g8app#g8app #g8stage .gccuiOrderRow:hover{background:rgba(255,255,255,.06)!important;
+  box-shadow:inset 3px 0 var(--vx-glow)}
+#g8app#g8app #g8stage .gccuiOverall strong,#g8app#g8app #g8stage .gccuiOrderRow .gccuiRating,#g8app#g8app #g8stage .gccuiBenchRow .gccuiRating{
+  font-family:var(--vx-display)!important;font-size:1.9rem!important;font-weight:800;line-height:1}
+#g8app#g8app #g8stage .gccuiOrderNumber{font-family:var(--vx-display)!important;font-size:1.5rem;font-weight:700;color:var(--vx-ink)}
+#g8app#g8app #g8stage .gccuiRosterName{font-weight:700;letter-spacing:.01em}
+#g8app#g8app #g8stage .gccuiSelectionStatus{background:var(--gcc-panel)!important;
+  border:1px solid var(--gcc-line)!important;border-top:3px solid var(--vx-glow)!important;border-radius:12px!important}
+#g8app#g8app #g8stage .gccuiSelectionStatus strong{font-family:var(--vx-display)!important;font-size:28px!important;font-weight:800!important;line-height:1.1!important}
+#g8app#g8app #g8stage .gccuiPaneTabs button{font-family:var(--vx-body)!important;letter-spacing:0;text-transform:none}
+
+
+/* 22 ─ Small screens */
+#g8hud#g8hud#g8hud .g8hudclub{min-width:0}
+#g8app#g8app#g8app .g8careernav{overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}
+#g8app#g8app#g8app .g8careernav::-webkit-scrollbar{display:none}
+#g8app#g8app#g8app .g8careernav .g8navitem{flex:0 0 auto}
+@media (max-width:700px){
+  #g8hud#g8hud#g8hud .g8headerslogan{font-size:.85rem}
+  #g8app#g8app#g8app .g8careernav{padding-inline:3vw;gap:.1rem}
+  #g8app#g8app#g8app .g8careernav .g8navitem{font-size:.95rem;padding:.5rem .7rem!important;letter-spacing:.06em}
+  #g8app#g8app #g8stage .gccBrandWordmark{font-size:clamp(1.7rem,8.4vw,2.5rem)!important;overflow-wrap:normal}
+  #g8app#g8app #g8stage .gccuiCampaignRibbon{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #g8app#g8app #g8stage .gccuiCampaignRibbon>div{border-bottom:1px solid var(--gcc-line)!important}
+  #g8app#g8app #g8stage .gccuiCampaignRibbon>div:nth-child(2n){border-right:0!important}
+  #g8app#g8app #g8stage .gccuiCampaignRibbon>div>strong{font-size:1.9rem!important}
+  #g8app#g8app #g8stage .gccuiFixtureClub b{font-size:1.45rem!important}
+  #g8app#g8app#g8app .gccui .gccuiContest .gccuiFixtureTeams,#g8app#g8app#g8app .gccui .gccuiFixtureTeams{grid-template-columns:minmax(0,1fr)!important;gap:.4rem}
+  #g8app#g8app#g8app .gccuiVersus{justify-self:center;width:38px;height:38px;margin-block:-.9rem;z-index:2;position:relative}
+  #g8app#g8app#g8app .gccuiLiveSide>header h2{font-size:1.1rem!important}
+  #g8app#g8app#g8app .gccuiLiveSide>div>strong{font-size:2.5rem!important}
+  #g8app#g8app#g8app .gccuiLiveSide>div>strong.gccuiWaitingScore{font-size:1.4rem!important}
+  #g8app#g8app#g8app .gcc-moment .gcc-event{font-size:3.8rem!important}
+  #g8app#g8app#g8app .gccuiScoreSide>div>strong{font-size:3.2rem!important}
+  #g8app#g8app #g8stage .gccuiOrderNumber{font-size:1.15rem;min-width:1.6ch;white-space:nowrap}
+  #g8app#g8app #g8stage .gccuiPlayerOverall strong{font-size:2.1rem!important}
+  #g8app#g8app #g8stage h1{font-size:clamp(2rem,9vw,2.6rem)!important}
+  #g8app#g8app #g8stage .g8heading,#g8app#g8app #g8stage .gccuiTurn{clip-path:none}
+}
+
+/* Short viewports must be able to scroll the full header out of the way. */
+@media(max-height:500px){#g8hud#g8hud#g8hud{position:static}}
+
+/* 23 ─ Dialogs (scout report, club guide, how-to-play, scorebook) */
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])){border:1px solid var(--gcc-line)!important;border-radius:16px!important;overflow-x:hidden;overflow-y:auto;
+  box-shadow:0 50px 100px -20px #000,0 0 90px -40px var(--vx-glow)!important;animation:vx-rise .3s var(--vx-ease) both}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory]))::backdrop{background:rgba(2,7,12,.74);-webkit-backdrop-filter:blur(7px);backdrop-filter:blur(7px)}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) h2,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) h1{font-family:var(--vx-display)!important;font-weight:800!important;text-transform:uppercase;
+  letter-spacing:.03em;font-size:clamp(1.6rem,2.6vw,2.2rem)}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) h3{font-family:var(--vx-display)!important;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8eyebrow,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .gccuiKicker{color:var(--vx-ink)!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .gccuiRating,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) [class*="overall"] strong{font-family:var(--vx-display)!important;font-weight:800}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) summary{background:var(--gcc-raised)!important;color:var(--gcc-text)!important;
+  border:1px solid var(--gcc-line)!important;border-radius:8px;font-weight:700;letter-spacing:.03em}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) details[open]>summary{border-bottom-left-radius:0;border-bottom-right-radius:0;border-color:var(--vx-glow)!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) details{background:rgba(0,0,0,.18)!important;border:0!important}
+/* Skill labels remain plain text; avoid wildcard bar-name glow. */
+#g8app#g8app#g8app .g8utilitymenu>div{background:var(--gcc-panel)!important;border:1px solid var(--gcc-line)!important;
+  border-radius:12px!important;box-shadow:0 24px 50px -16px #000}
+
+/* 24 ─ Finals: no medallion in the cramped knockout fixtures; headlines scale with their card */
+#g8app#g8app #g8stage[data-view="finals"] .gccuiFixtureTeams{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}
+#g8app#g8app #g8stage[data-view="finals"] .gccuiFixtureTeams .gccuiVersus{display:none!important}
+#g8app#g8app#g8app .gccuiScorecard{container-type:inline-size}
+@container (max-width:760px){
+  .gccuiScorecard>h2{font-size:clamp(1.35rem,5.4cqw,2rem)!important}
+  .gccuiScoreSide>div>strong{font-size:clamp(2.4rem,9cqw,3.6rem)!important}}
+
+/* ==========================================================================
+   GCC VISUAL LAYER v9.2 — rating tiers, champions moment, home hero
+   Needs two tiny render hooks (see HOOKS.md): data-tier on .gccuiRating,
+   and gccuiTitleWon / gccuiTitleDone on the finals wrapper.
+   ========================================================================== */
+@keyframes vx-foil{0%,55%{transform:translateX(-130%)}100%{transform:translateX(130%)}}
+@keyframes vx-confetti{0%{opacity:0;transform:translateY(-105vh) rotate(0)}6%{opacity:1}80%{opacity:1}100%{opacity:0;transform:translateY(8vh) rotate(24deg)}}
+@keyframes vx-glowpulse{0%,100%{text-shadow:0 0 18px rgba(255,210,74,.35)}50%{text-shadow:0 0 34px rgba(255,210,74,.7)}}
+
+/* A ─ Rating tiers on player cards (elite90+, strong82+, sound73+, thin64+, weak below) */
+#g8app#g8app#g8app .gccuiPlayer:has(:is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="elite"]){
+  --tier:#f4cf6a;border-color:#b8923a!important;border-top:4px solid var(--tier)!important;
+  background:linear-gradient(180deg,#4d3a12 0%,#1a2638 38%,#0a1826 100%)!important;
+  box-shadow:0 0 0 1px rgba(244,207,106,.35),0 16px 34px -18px rgba(244,207,106,.55)}
+#g8app#g8app#g8app .gccuiPlayer:has(:is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="elite"])::after{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  background:linear-gradient(115deg,transparent 38%,rgba(255,236,170,.20) 50%,transparent 62%);
+  animation:vx-foil 6s ease-in-out infinite}
+#g8app#g8app#g8app .gccuiPlayer:has(:is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="elite"]) .gccuiPlayerOverall{
+  background:linear-gradient(180deg,#6b4f14,#2a1d08)!important;border-color:var(--tier)!important}
+#g8app#g8app#g8app :is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="elite"]{color:#ffe08a!important;text-shadow:0 0 22px rgba(255,210,74,.55)}
+#g8app#g8app#g8app .gccuiPlayer:has(:is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="strong"]){--tier:#9fd6ff;
+  border-color:#4f7ea3!important;box-shadow:0 0 0 1px rgba(159,214,255,.25),0 14px 30px -20px rgba(159,214,255,.5)}
+#g8app#g8app#g8app .gccuiPlayer:has(:is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="strong"]) .gccuiPlayerOverall{
+  background:linear-gradient(180deg,#1d4466,#0b1a2a)!important;border-color:var(--tier)!important}
+#g8app#g8app#g8app .gccuiPlayer:has(:is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="sound"]) .gccuiPlayerOverall{border-color:#4a6f55!important}
+/* rows (XI, bench, roster) just colour the numeral, no foil */
+#g8app#g8app#g8app :is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="strong"]{text-shadow:0 0 18px rgba(159,214,255,.4)}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) :is(.gccuiOverall,.gccuiPlayerOverall>.gccuiRating)[data-tier="elite"]{font-size:1.15em}
+
+/* B ─ Champions moment (finals + season review) */
+#g8app#g8app#g8app .gccuiFinals.gccuiTitleWon{position:relative}
+#g8app#g8app#g8app .gccuiFinals.gccuiTitleWon::before{
+  content:"";position:fixed;left:0;top:0;width:7px;height:7px;border-radius:2px;pointer-events:none;z-index:60;
+  background:#ffd24a;box-shadow:32.4vw 15.1vh 0 1px #ffd24a,8.0vw 53.6vh 0 0px #9df0b0,6.6vw 50.7vh 0 0px #ffd24a,43.1vw 7.0vh 0 0px #9df0b0,42.2vw 82.7vh 0 0px #ff6f91,62.2vw 58.3vh 0 0px #9df0b0,57.8vw 5.0vh 0 0px #ffd24a,55.0vw 13.3vh 0 0px #ff6f91,53.4vw 57.1vh 0 1px #c79bff,18.5vw 58.2vh 0 1px #ff6f91,37.1vw 54.8vh 0 0px #9df0b0,6.8vw 20.6vh 0 1px #9df0b0,42.5vw 31.4vh 0 1px #ffffff,36.1vw 24.8vh 0 0px #c79bff,76.6vw 8.2vh 0 0px #9df0b0,49.0vw 34.3vh 0 0px #6fe3ff,60.1vw 7.3vh 0 1px #ffffff,17.0vw 34.2vh 0 0px #ffffff,4.8vw 66.8vh 0 1px #9df0b0,77.5vw 81.8vh 0 0px #c79bff,35.0vw 49.7vh 0 0px #ffd24a,82.5vw 94.5vh 0 0px #c79bff,65.4vw 6.1vh 0 1px #6fe3ff,63.8vw 99.3vh 0 0px #6fe3ff,70.5vw 88.7vh 0 0px #ffd24a,92.2vw 35.5vh 0 1px #ffd24a,48.9vw 21.8vh 0 0px #ff6f91,72.6vw 39.8vh 0 0px #ffd24a,17.1vw 40.2vh 0 0px #ff6f91,80.5vw 86.4vh 0 0px #c79bff,41.3vw 35.9vh 0 0px #ff6f91,15.6vw 17.6vh 0 0px #c79bff,23.6vw 48.5vh 0 1px #ff6f91,26.5vw 0.4vh 0 0px #9df0b0,36.8vw 56.6vh 0 0px #c79bff,84.3vw 95.0vh 0 1px #c79bff,72.8vw 45.7vh 0 1px #9df0b0,39.1vw 39.9vh 0 0px #ffffff,62.5vw 6.2vh 0 0px #ff6f91,43.7vw 11.0vh 0 1px #ffd24a,10.9vw 56.7vh 0 1px #ffd24a,93.0vw 61.4vh 0 0px #ff6f91,60.6vw 14.9vh 0 0px #6fe3ff,59.4vw 47.4vh 0 0px #ffffff,97.3vw 46.6vh 0 0px #6fe3ff,9.3vw 10.2vh 0 0px #c79bff,26.7vw 82.9vh 0 0px #9df0b0,3.2vw 95.1vh 0 1px #6fe3ff,15.2vw 54.3vh 0 0px #9df0b0,29.9vw 64.3vh 0 0px #c79bff,83.0vw 51.8vh 0 0px #6fe3ff,75.9vw 53.3vh 0 1px #6fe3ff,62.7vw 61.3vh 0 0px #ff6f91,80.4vw 74.0vh 0 0px #ff6f91,51.2vw 35.6vh 0 0px #ffd24a,77.6vw 47.2vh 0 0px #c79bff,59.7vw 34.4vh 0 1px #6fe3ff,93.6vw 36.5vh 0 0px #ffd24a,23.0vw 19.7vh 0 0px #ffffff,61.5vw 90.0vh 0 0px #ffffff,89.2vw 34.4vh 0 1px #ffd24a,82.0vw 12.0vh 0 0px #c79bff,73.8vw 47.8vh 0 0px #ffffff,77.5vw 33.3vh 0 1px #ffffff,45.9vw 74.3vh 0 0px #c79bff,16.4vw 99.3vh 0 0px #ff6f91,58.3vw 46.5vh 0 1px #ff6f91,60.3vw 59.6vh 0 0px #c79bff,91.9vw 15.6vh 0 1px #ff6f91,3.1vw 79.9vh 0 1px #c79bff,11.0vw 74.9vh 0 0px #ffffff,96.7vw 19.5vh 0 0px #ffd24a,25.4vw 29.3vh 0 0px #9df0b0,32.6vw 54.4vh 0 0px #ffd24a,89.3vw 35.4vh 0 0px #c79bff,57.6vw 90.4vh 0 0px #9df0b0,13.7vw 15.2vh 0 1px #ffd24a,85.7vw 77.7vh 0 1px #ffd24a,76.3vw 15.0vh 0 0px #ffffff,61.1vw 12.0vh 0 0px #6fe3ff,67.2vw 53.1vh 0 0px #ffd24a,86.7vw 5.7vh 0 0px #6fe3ff,5.1vw 9.8vh 0 0px #9df0b0,3.7vw 89.4vh 0 0px #ffffff,32.6vw 97.3vh 0 1px #9df0b0,20.3vw 27.7vh 0 1px #9df0b0,79.3vw 50.8vh 0 0px #c79bff,51.8vw 87.6vh 0 0px #9df0b0,87.6vw 20.3vh 0 0px #ff6f91,41.4vw 39.2vh 0 0px #ffd24a;
+  animation:vx-confetti 6.5s cubic-bezier(.3,.1,.5,1) .35s 1 both}
+#g8app#g8app#g8app .gccuiFinals.gccuiTitleWon::after{
+  content:"";position:absolute;left:0;right:0;top:-40px;height:380px;pointer-events:none;z-index:0;
+  background:radial-gradient(60% 100% at 50% 0%,rgba(255,210,74,.28),transparent 70%)}
+#g8app#g8app#g8app .gccuiFinals.gccuiTitleWon .gccuiCampaignTop,
+#g8app#g8app#g8app .gccuiFinals.gccuiTitleWon>*{position:relative;z-index:1}
+#g8app#g8app#g8app .gccuiTitleWon .gccuiCampaignTop h1,#g8app#g8app#g8app .gccuiTitleWon .gccuiHeading h1{
+  background:linear-gradient(180deg,#fff6cf 10%,#f4cf6a 55%,#b8862a 100%);-webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent!important;font-size:clamp(2.4rem,5.6vw,4.6rem)!important;
+  filter:drop-shadow(0 3px 0 rgba(0,0,0,.5));animation:vx-glowpulse 3s ease-in-out infinite}
+#g8app#g8app#g8app .gccuiTitleWon .gccuiHeadingIcon{color:#ffd24a!important;border-color:#ffd24a!important;
+  background:radial-gradient(circle,rgba(255,210,74,.25),transparent 70%)!important;box-shadow:0 0 30px -4px rgba(255,210,74,.7)}
+#g8app#g8app#g8app .gccuiTitleWon .gccuiKicker{color:#ffe08a!important}
+#g8app#g8app#g8app .gccuiTitleWon .gccuiScorecard{border-top-color:#ffd24a!important;
+  box-shadow:0 30px 60px -36px #000,0 0 110px -36px rgba(255,210,74,.65)!important}
+/* someone else won: quiet gold on the heading only */
+#g8app#g8app#g8app .gccuiTitleDone .gccuiCampaignTop h1{color:#f6dd9a!important}
+/* season review when the title is yours */
+#g8app#g8app#g8app .g8reviewsummary.g8titlewon{
+  background:linear-gradient(160deg,#4a3a12,#14243a 60%)!important;border:1px solid #b8923a!important;
+  border-top:4px solid #ffd24a!important;box-shadow:0 0 90px -30px rgba(255,210,74,.6)!important}
+#g8app#g8app#g8app .g8reviewsummary.g8titlewon h2{font-family:var(--vx-display)!important;font-size:2.4rem;text-transform:uppercase;color:#ffe08a}
+
+@media (prefers-reduced-motion:reduce){
+  #g8app .gccuiPlayer::after,#g8app .gccuiTitleWon::before{animation:none!important;display:none}}
+
+/* Integration contracts: keep reading text, control states and reduced motion intact. */
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .gccuiIdentityText>h3{font:400 14px/1.4 var(--vx-body)!important;letter-spacing:normal!important;text-transform:none!important}
+#g8app#g8app#g8app .gccuiPlayerIdentity>b{font:700 17px/1.35 var(--vx-body)!important;letter-spacing:normal!important;text-transform:none!important}
+#g8app#g8app#g8app .g8table caption,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8table caption{font-family:var(--vx-body)!important}
+#g8app#g8app#g8app .gccuiFinals.gccuiTitleWon::before{display:none!important}
+#g8app#g8app#g8app .gccuiTitleWon :is(.gccuiCampaignTop,.gccuiHeading) h1{animation:none!important}
+#g8app#g8app#g8app .gccuiPlayer::after{animation:none!important}
+#g8app#g8app#g8app .gcc-moment{animation:none!important}
+#g8app#g8app#g8app .g8table tbody td:first-child{font-family:var(--vx-body)!important;font-size:14px!important}
+@media(prefers-reduced-motion:reduce){#g8app#g8app#g8app *,#g8app#g8app#g8app *::before,#g8app#g8app#g8app *::after,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])){animation:none!important;transition:none!important}}
+@media(max-width:700px){#g8app#g8app#g8app .g8table thead th,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8table thead th{font-family:var(--vx-body)!important;font-size:12px!important;letter-spacing:.04em!important;padding:10px 6px!important}#g8app#g8app#g8app .gccuiLivePhase{white-space:normal!important;letter-spacing:.12em!important}}
+/* Keep each authored club fill/ink pairing readable across the whole header. */
+#g8app#g8app#g8app .gccuiFixtureClub,#g8app#g8app#g8app .gccuiLiveSide>header,#g8app#g8app#g8app .gccuiScoreSide>header{background:linear-gradient(110deg,rgba(255,255,255,.10),transparent 65%),var(--side)!important;color:var(--side-ink,#fff)!important}
+/* Live names are identities, not column labels. */
+#g8app#g8app#g8app .gcc-crease table tbody th{font-family:var(--vx-body)!important;font-size:14px!important;line-height:1.4!important;font-weight:700!important;letter-spacing:normal!important;text-transform:none!important;color:var(--gcc-text)!important}
+/* A quiet match needs no alert-sized management panel. */
+#g8app#g8app#g8app .gccuiConsequences:has(.gccuiConsequenceQuiet){background:none!important;border:0!important;box-shadow:none!important;padding:0!important;margin:8px 0!important;border-radius:0!important}
+#g8app#g8app#g8app .gccuiConsequenceQuiet{font:400 13px/1.45 var(--vx-body)!important;color:var(--gcc-muted)!important;margin:0!important}
+/* Knockout previews use their real component, not the league fixture selector. */
+#g8app#g8app#g8app .gccuiFinals .gccuiKnockoutFixture>.gccuiVersus{display:none!important}
+#g8app#g8app#g8app .gccuiFinals .gccuiKnockoutFixture{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
+#g8app#g8app#g8app .gccuiFinals .gccuiKnockoutSide{border:1px solid var(--gcc-line)!important;border-radius:10px!important;padding:16px!important;min-height:88px}
+#g8app#g8app#g8app .gccuiFinals .gccuiKnockoutSide h2{font:800 22px/1.15 var(--vx-display)!important;letter-spacing:.02em!important}
+@media(max-width:760px){#g8app#g8app#g8app .gccuiFinals .gccuiKnockoutFixture{grid-template-columns:1fr!important}}
+/* Release/trade consequences share the current surface hierarchy. */
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8consequences>div{background:var(--gcc-raised)!important;border:1px solid var(--gcc-line)!important;border-radius:8px!important;color:var(--gcc-text)!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8consequences>div>span{font:600 13px/1.4 var(--vx-body)!important;color:var(--gcc-muted)!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8consequences>div>strong{font-family:var(--vx-display)!important;font-size:30px!important;line-height:1.15!important;color:var(--gcc-text)!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8decisionwarning{background:var(--gcc-inset)!important;border:1px solid var(--gcc-line)!important;border-left:3px solid #d4b66d!important;color:var(--gcc-text)!important;font:600 14px/1.5 var(--vx-body)!important;text-align:left!important}
+/* Foundation screens retain the same palette through their child surfaces. */
+#g8app#g8app#g8app .g8careerintro .g8careerformat{background:var(--gcc-inset)!important;border-color:var(--gcc-line)!important;color:var(--gcc-muted)!important}
+#g8app#g8app#g8app .g8days>span{background:var(--gcc-inset)!important;border-color:var(--gcc-line)!important;color:var(--gcc-muted)!important}
+#g8app#g8app#g8app .g8days>span.active{background:var(--gcc-raised)!important;border-color:var(--vx-ink)!important;color:var(--gcc-text)!important;box-shadow:inset 0 -3px var(--vx-ink)}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8clubmark{background:var(--gcc-inset)!important;border-color:var(--gcc-line)!important}
+
+/* Tie-break result: keep the deciding scores aligned with the result panels. */
+#g8app#g8app#g8app .g8superover{background:var(--gcc-inset)!important;color:var(--gcc-text)!important;border:1px solid var(--gcc-line)!important;border-left:3px solid #f0c15a!important;border-radius:10px;padding:18px}
+#g8app#g8app#g8app .g8superover .g8eyebrow{color:#f6d98a!important;margin:0 0 12px}
+#g8app#g8app#g8app .g8superover .g8tieblock{padding:0 0 12px;margin:0 0 12px;border-bottom:1px solid var(--gcc-line)}
+#g8app#g8app#g8app .g8superover .g8tieblock h3{font-family:var(--vx-display);font-size:18px;margin:0 0 10px}
+#g8app#g8app#g8app .g8superover .g8statrow{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:4px 16px;padding:8px 0;border:0}
+#g8app#g8app#g8app .g8superover .g8statrow b{text-align:left;font-size:15px}
+#g8app#g8app#g8app .g8superover .g8statrow>span{text-align:right;font-size:16px;font-weight:700;font-variant-numeric:tabular-nums}
+#g8app#g8app#g8app .g8superover .g8fine{color:var(--gcc-muted)!important;font-size:13px;line-height:1.5;margin:0 0 10px}
+#g8app#g8app#g8app .g8superover>.g8fine:last-child{margin-bottom:0}
+
+/* Annual development uses the same surfaces and numeric alignment as squad reports. */
+#g8app#g8app#g8app .g8annualdevelopment .g8developmentrow{background:var(--gcc-inset)!important;color:var(--gcc-text)!important;border:1px solid var(--gcc-line)!important;border-radius:8px;padding:14px!important;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 12px;margin:12px 0}
+#g8app#g8app#g8app .g8annualdevelopment .g8developmentidentity{min-width:0}
+#g8app#g8app#g8app .g8annualdevelopment .g8developmentidentity b{display:block;font-size:16px;line-height:1.35}
+#g8app#g8app#g8app .g8annualdevelopment .g8developmentidentity>span{display:block;color:var(--gcc-muted);font-size:13px;line-height:1.4;margin-top:4px}
+#g8app#g8app#g8app .g8annualdevelopment .g8developmentoverall{font-size:20px;line-height:1.35;font-variant-numeric:tabular-nums;white-space:nowrap;align-self:start}
+#g8app#g8app#g8app .g8annualdevelopment .g8skillchanges{grid-column:1/-1;list-style:none;padding:0;margin:0}
+#g8app#g8app#g8app .g8annualdevelopment .g8skillchanges>li{display:grid;grid-template-columns:minmax(0,1fr) 3ch 8ch;align-items:baseline;gap:8px;padding:8px 0!important;background:transparent!important;border:0!important;border-bottom:1px solid var(--gcc-line)!important;border-radius:0!important}
+#g8app#g8app#g8app .g8annualdevelopment .g8skillchanges>li>span{min-width:0;font-size:14px}
+#g8app#g8app#g8app .g8annualdevelopment .g8skillchanges>li>:is(b,small){text-align:right;font-variant-numeric:tabular-nums;font-size:13px;white-space:nowrap}
+#g8app#g8app#g8app .g8annualdevelopment .g8skillchanges>li>small{color:var(--gcc-muted)}
+#g8app#g8app#g8app .g8annualdevelopment .g8skillrest{grid-column:1/-1;background:transparent!important;border:0!important;margin:0!important}
+#g8app#g8app#g8app .g8annualdevelopment .g8skillrest>summary{font-size:13px;min-height:36px;padding:8px 0}

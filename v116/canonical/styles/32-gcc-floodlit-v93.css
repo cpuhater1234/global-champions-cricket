@@ -1,0 +1,73 @@
+
+/* ==========================================================================
+   GCC VISUAL LAYER v9.3 patch (for Playtest 72)
+   1. Manage squad: navy rows, role-coloured edge, display-font names,
+      rating plates, and a quiet "Review release" instead of 15 alarm buttons.
+   2. Short/landscape screens: compact header so content gets the screen.
+   Additive. Presentation only. Place after the existing visual block.
+   ========================================================================== */
+
+/* 1 ─ Manage squad */
+#g8app#g8app#g8app .g8manageworkspace{
+  background:linear-gradient(180deg,rgba(19,40,64,.55),rgba(9,20,32,.92))!important;
+  border:1px solid var(--gcc-line)!important;border-radius:14px;box-shadow:0 24px 50px -34px #000}
+#g8app#g8app#g8app .g8managementlist{display:grid;gap:.55rem}
+#g8app#g8app#g8app .g8role-BAT{--rc:#e2b368}
+#g8app#g8app#g8app .g8role-BOWL{--rc:#b79aff}
+#g8app#g8app#g8app .g8role-AR{--rc:#f09a7a}
+#g8app#g8app#g8app .g8role-WK-BAT{--rc:#6fd0e0}
+#g8app#g8app#g8app .g8managerow{
+  background:linear-gradient(90deg,color-mix(in srgb,var(--rc,#8ab4d8) 13%,#0d1c2c),#0b1826 58%)!important;
+  border:1px solid var(--gcc-line)!important;border-left:4px solid var(--rc,#8ab4d8)!important;border-bottom-color:var(--gcc-line)!important;
+  border-radius:10px;padding:.75rem 1rem!important;align-items:center;
+  transition:transform .18s var(--vx-ease),border-color .18s,box-shadow .18s}
+#g8app#g8app#g8app .g8managerow:hover{transform:translateY(-1px);border-color:var(--rc,#8ab4d8)!important;
+  box-shadow:0 14px 26px -18px var(--rc,#8ab4d8)}
+#g8app#g8app#g8app .g8managerow .g8nameandrating b{font-family:var(--vx-display)!important;font-size:1.45rem;
+  font-weight:700;letter-spacing:.01em;line-height:1.05}
+#g8app#g8app#g8app .g8managerow .g8rowrating{
+  font-family:var(--vx-display)!important;font-size:1.55rem;font-weight:800;line-height:1;min-width:2.7rem;text-align:center;
+  padding:.25rem .45rem;border-radius:8px!important;border:1px solid var(--rc,#8ab4d8)!important;
+  background:linear-gradient(180deg,color-mix(in srgb,var(--rc,#8ab4d8) 24%,#0d1c2c),#0a1522)!important;font-variant-numeric:tabular-nums}
+#g8app#g8app#g8app .g8managerow small{color:var(--gcc-muted)!important}
+#g8app#g8app#g8app .g8managerow .g8squadpulse span{
+  background:rgba(255,255,255,.05)!important;border:1px solid var(--gcc-line)!important;color:var(--gcc-muted)!important;
+  border-radius:99px;padding:.1rem .55rem;font-weight:700;letter-spacing:.04em}
+#g8app#g8app#g8app .g8managerow .g8squadpulse>.g8pulsealert{
+  background:#4a3210!important;border:1px solid #e2b368!important;color:#ffe0a8!important}
+#g8app#g8app#g8app .g8managerow .g8squadpulse>.g8pulsepromise{
+  background:#33301b!important;border:1px solid #d4b66c!important;color:#f6e4ad!important}
+#g8app#g8app#g8app .g8managerow .g8managescoutcue{color:var(--vx-ink)!important;font-weight:600}
+/* actions: trade is a normal secondary; release review is deliberately quiet until you reach for it */
+#g8app#g8app#g8app .g8manageactions .g8button{min-height:44px!important}
+#g8app#g8app#g8app .g8manageactions .g8danger{
+  background:transparent!important;color:#ffb3bd!important;border:1px solid rgba(255,120,140,.38)!important;box-shadow:none!important}
+#g8app#g8app#g8app .g8manageactions .g8danger:hover:enabled,
+#g8app#g8app#g8app .g8manageactions .g8danger:focus-visible{
+  background:#8c2438!important;color:#fff!important;border-color:#ff7b92!important}
+#g8app#g8app#g8app .g8squadfilters select{background:#07131e!important;border:1px solid var(--gcc-line)!important;border-radius:8px}
+
+/* 2 ─ Short screens (landscape phones): the header must not eat the screen */
+@media (max-height:520px){
+  #g8hud#g8hud#g8hud{padding:4px 12px!important;display:grid!important;grid-template-columns:auto minmax(0,1fr) auto;gap:4px 12px!important}
+  #g8hud#g8hud#g8hud>.g8hudclub{display:contents!important}
+  #g8hud#g8hud#g8hud .g8brand{grid-column:1;grid-row:1}
+  #g8hud#g8hud#g8hud>.g8hudclub>div{grid-column:2;grid-row:1;min-width:0}
+  #g8hud#g8hud#g8hud>nav[aria-label="Game menu"]{grid-column:3;grid-row:1}
+  #g8hud#g8hud#g8hud>.g8careernav{grid-column:1/-1;grid-row:2}
+  #g8hud#g8hud#g8hud .g8headerslogan{display:none!important}
+  #g8hud#g8hud#g8hud nav{min-height:0!important;margin:0}
+  #g8app#g8app#g8app .g8careernav{padding:.15rem 0 0!important}
+  #g8app#g8app#g8app .g8careernav .g8navitem{padding:.3rem .8rem!important;font-size:.95rem!important;min-height:44px!important}
+  #g8app#g8app#g8app .g8careernav .g8navitem.selected::after,
+  #g8app#g8app#g8app .g8careernav .g8navitem[aria-current="page"]::after{bottom:-2px}
+}
+
+/* Respect reduced motion after all preceding visual rules, including hover lift. */
+@media (prefers-reduced-motion:reduce){
+  #g8app#g8app#g8app *,#g8app#g8app#g8app *::before,#g8app#g8app#g8app *::after,
+  #g8dialog#g8dialog#g8dialog *,#g8dialog#g8dialog#g8dialog *::before,#g8dialog#g8dialog#g8dialog *::after{
+    animation:none!important;transition:none!important}
+  #g8app#g8app#g8app .g8managerow:hover{transform:none!important}
+}
+

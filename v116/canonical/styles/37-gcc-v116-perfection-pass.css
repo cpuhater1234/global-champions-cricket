@@ -1,0 +1,81 @@
+
+/* v116 perfection pass — preserve-mode, visual/interaction only. */
+/* Recruitment: make the empty wire feel intentional and keep its geometry stable. */
+#g8app#g8app#g8app .gccQuietWire{display:grid;place-items:center;min-height:210px!important;padding:1.4rem!important;text-align:center;border:1px solid var(--gcc-line)!important;border-radius:8px;background:linear-gradient(135deg,rgba(126,224,238,.06),rgba(255,255,255,.015))!important}
+#g8app#g8app#g8app .gccQuietWire>div{max-width:34ch}
+#g8app#g8app#g8app .gccQuietWire strong{display:block;font-family:var(--vx-display)!important;font-size:1.25rem;letter-spacing:.04em;text-transform:uppercase;color:#eaf1ff}
+#g8app#g8app#g8app .gccQuietWire span{display:block;margin-top:.45rem;color:#9ab8c1;font-size:.9rem;line-height:1.5}
+#g8app#g8app#g8app .gccQuietWire em{display:inline-block;margin-top:.9rem;padding:.35rem .6rem;border:1px solid #426877;border-radius:999px;color:#7fe0ee;font-size:.72rem;font-style:normal;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+/* Draft: make the two-step Scout -> Pick model visually unmistakable. */
+#g8app#g8app#g8app .gccuiPlayer{transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
+#g8app#g8app#g8app .gccuiPlayer:hover{transform:translateY(-2px);border-color:#7fe0ee!important;box-shadow:0 10px 24px -18px #7fe0ee,0 0 0 1px rgba(127,224,238,.25)}
+#g8app#g8app#g8app .gccuiPlayerScout:focus-visible,#g8app#g8app#g8app .gccuiScoutAction:focus-visible,#g8app#g8app#g8app .gccuiPlayer [data-action="draftPlayer"]:focus-visible{outline:3px solid #f7b27c!important;outline-offset:-3px!important}
+#g8app#g8app#g8app .gccuiScoutAction{font-weight:800!important;letter-spacing:.04em;color:#bcecf2!important;white-space:nowrap!important}
+#g8app#g8app#g8app .gccuiPlayer footer button{white-space:nowrap!important;min-width:0!important}
+#g8app#g8app#g8app .gccuiNeedsStrip{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 .8rem;padding:.65rem .7rem;border:1px solid var(--gcc-line);border-left:3px solid #f7b27c;border-radius:7px;background:rgba(127,224,238,.055)}
+#g8app#g8app#g8app .gccuiNeedsStrip>span{display:inline-flex;align-items:center;gap:.35rem;padding:.3rem .48rem;border:1px solid rgba(255,255,255,.13);border-radius:999px;color:#a9cfd7;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+#g8app#g8app#g8app .gccuiNeedsStrip>span.is-ready{border-color:rgba(122,214,155,.55);color:#9df0b5;background:rgba(61,220,151,.08)}
+#g8app#g8app#g8app .gccuiNeedsStrip>span.is-open{border-color:rgba(247,178,124,.6);color:#ffd0ac;background:rgba(247,178,124,.08)}
+/* Result headlines should preserve meaning on narrow screens rather than form a wall of caps. */
+#g8app#g8app#g8app .gccuiScorecard>h2{max-width:32ch!important;overflow-wrap:anywhere!important;text-wrap:balance!important}
+@media(max-width:700px){
+ #g8app#g8app#g8app .gccuiPlayer footer{display:grid!important;grid-template-columns:1fr 1fr;gap:.45rem!important}
+ #g8app#g8app#g8app .gccuiPlayer footer button{min-width:0!important;width:100%!important}
+ #g8app#g8app#g8app .gccuiNeedsStrip{gap:.3rem;padding:.55rem}
+ #g8app#g8app#g8app .gccuiNeedsStrip>span{font-size:.66rem;padding:.28rem .4rem}
+}
+
+/* v116.1 dossier polish: keep the scouting report coherent across themes and viewport sizes. */
+#g8dialog[data-prompt="player"] .gccuiProfileViews .g8button[aria-pressed="true"]{
+  background:#67d9e6!important;
+  color:#08202a!important;
+  border-color:#67d9e6!important;
+  
+  box-shadow:0 0 0 2px rgba(103,217,230,.28)!important;
+}
+#g8dialog[data-prompt="player"] .gccuiProfileOverview .g8scoutoutlook{
+  align-self:stretch;
+  background:var(--gcc-raised)!important;
+  border:1px solid var(--gcc-line)!important;
+  border-top:2px solid var(--gcc-accent,#67d9e6)!important;
+  border-radius:8px!important;
+  padding:14px 16px!important;
+  min-height:100%;
+  box-sizing:border-box;
+}
+#g8dialog[data-prompt="player"] .gccuiProfileOverview .g8scoutoutlook>h3{
+  margin:0 0 10px!important;
+  color:var(--gcc-text,#eef5fa)!important;
+  font-size:12px!important;
+  letter-spacing:.12em!important;
+  text-transform:uppercase!important;
+}
+#g8dialog[data-prompt="player"] .gccuiProfileOverview .g8scoutoutlook .g8developmentbadge{
+  margin:0 0 12px!important;
+  padding:0 0 12px!important;
+  border-bottom:1px solid var(--gcc-line)!important;
+}
+#g8dialog[data-prompt="player"] .gccuiProfileOverview .g8gccrecord{
+  margin-top:14px!important;
+  padding-top:12px!important;
+  border-top:1px solid var(--gcc-line)!important;
+}
+#g8dialog[data-prompt="player"] .gccuiProfileOverview .g8gccrecord>h3{
+  color:var(--gcc-text,#eef5fa)!important;
+  font-size:12px!important;
+  letter-spacing:.12em!important;
+  text-transform:uppercase!important;
+}
+@media(max-width:760px){
+  #g8dialog[data-prompt="player"]{width:calc(100% - 24px)!important;max-width:none!important;max-height:calc(100dvh - 24px)!important;margin:auto!important;border-radius:10px!important}
+  #g8dialog[data-prompt="player"] .g8modalhead{padding:12px!important;gap:10px!important}
+  #g8dialog[data-prompt="player"] .g8modalbody{padding:12px!important}
+  #g8dialog[data-prompt="player"] .gccuiDossierIdentity h3{font-size:16px!important;line-height:1.15!important}
+  #g8dialog[data-prompt="player"] .gccuiDossierRating{font-size:23px!important}
+  #g8dialog[data-prompt="player"] .gccuiProfileViews .g8button{min-height:44px!important;font-size:13px!important}
+  #g8dialog[data-prompt="player"] .gccuiProfileOverview .g8scoutoutlook{min-height:0;padding:12px!important}
+}
+
+/* v116.2 captaincy board: a compact broadcast decision surface before each user match. */
+.gccuiCaptaincyLayer{margin:18px 0 0;padding:16px;border:1px solid var(--gcc-line);border-top:3px solid var(--gcc-action,#67d9e6);border-radius:10px;background:var(--gcc-panel);color:var(--gcc-text)}
+.gccuiCaptaincyLayer header{margin-bottom:12px}.gccuiCaptaincyLayer h3{margin:4px 0 5px;font-size:20px}.gccuiCaptaincyLayer header p,.gccuiCaptaincyHint{margin:0;color:var(--gcc-muted);font-size:13px;line-height:1.5}.gccuiCaptaincyGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.gccuiCaptaincyGrid label{display:grid;gap:7px;min-width:0}.gccuiCaptaincyGrid label>span{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gcc-text,#eef5fa)}.gccuiCaptaincyGrid select{width:100%;min-height:44px;padding:8px 10px;border:1px solid var(--gcc-line);border-radius:6px;background:var(--gcc-inset);color:var(--gcc-text);font:600 13px var(--vx-body,system-ui);cursor:pointer}.gccuiCaptaincyGrid select:focus-visible{outline:3px solid #ffc45b;outline-offset:2px}.gccuiCaptaincyHint{margin-top:10px;font-size:12px}@media(max-width:760px){.gccuiCaptaincyGrid{grid-template-columns:1fr}.gccuiCaptaincyLayer{padding:13px}.gccuiCaptaincyLayer h3{font-size:18px}}

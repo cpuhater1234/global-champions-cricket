@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "sha256": "c45684a540d098ec35beeb8a959995e88292bccded4ce1314390140d1e7720ab",
+  "bytes": 6655156,
+  "changed_bodies": [],
+  "reference_parity": "BYTE_IDENTICAL",
+  "manifest_parity": "BYTE_IDENTICAL",
+  "styles": 17,
+  "scripts": 22,
+  "scope": "QA review candidate only; main/frozen release not promoted",
+  "negative_guards": [
+    "wrong reference",
+    "strict CSS drift",
+    "unacknowledged runtime drift"
+  ],
+  "css_edit_build": "PASS",
+  "native_evidence_run": 43339252905,
+  "legacy_v8_parity": "NOT_CLAIMED",
+  "cascade_consolidation": "SEPARATE_TASK"
+}

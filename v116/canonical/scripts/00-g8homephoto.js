@@ -1,0 +1,1 @@
+(()=>{const choices=["CSK","MI","RR","KKR","RCB","DC","SIX","THU","STA","REN","SCO","STR","HEA","HUR","SUR","LAN","YOR","NOT","SOM","HAM","PBKS","SRH","GT","LSG","DER","DUR","ESS","GLA","GLO","KEN","LEI","MID","NOR","SUS","WAR","WOR"];window.GCC8_HOME_PHOTO={abbr:choices[Math.floor(Math.random()*choices.length)]};})();
