@@ -1,0 +1,90 @@
+name: GCC draft card density review
+on:
+  push:
+    branches: [work/v116-candidate-acceptance]
+    paths: ['qa/v116_draft_card_density_candidate.py', 'qa/v116_draft_card_density_audit.cjs', '.github/workflows/v116-draft-card-density-review.yml']
+concurrency:
+  group: gcc-draft-card-density-review
+  cancel-in-progress: true
+permissions:
+  contents: write
+jobs:
+  capture:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser
+        run: |
+          if [ -f /etc/apt/apt-mirrors.txt ]; then
+            sudo sed -i 's|http://azure.archive.ubuntu.com/ubuntu|https://archive.ubuntu.com/ubuntu|g' /etc/apt/apt-mirrors.txt
+          fi
+          pip install playwright pillow
+          python -m playwright install --with-deps chromium
+          npm install --no-save --no-package-lock playwright
+      - uses: actions/cache/restore@v4
+        with:
+          path: qa/results/whole-ui-career
+          key: gcc-ui-career-79a2fbfe-seed101-v1-${{ hashFiles('qa/structural-risk/career-run.mjs', 'qa/offline_game_host.mjs') }}
+      - name: Compose pinned review build and actual career checkpoints
+        env:
+          GCC8_TEST_BUILD: qa/results/xi-density/baseline.html
+          GCC8_TEST_REPORT_DIR: qa/results/whole-ui-career
+          GCC8_TEST_SEED: '101'
+          GCC8_TEST_LAST_YEAR: '2009'
+          GCC8_TEST_SCOREBOOKS: '1'
+        run: |
+          python qa/v116_trade_density_candidate.py --output qa/results/xi-density/baseline.html --report qa/results/xi-density/baseline.json
+          python qa/v116_draft_card_density_candidate.py --output qa/results/xi-density/candidate.html --report qa/results/xi-density/build.json
+          sha256sum qa/results/xi-density/candidate.html
+          if [ ! -f qa/results/whole-ui-career/checkpoint-2009.json ]; then node qa/structural-risk/career-run.mjs; fi
+      - name: Capture disposable native journeys
+        id: capture
+        continue-on-error: true
+        env:
+          GCC8_BASELINE_BUILD: qa/results/xi-density/baseline.html
+          GCC8_TEST_BUILD: qa/results/xi-density/candidate.html
+          GCC8_BROWSER_CAREER_DIR: qa/results/whole-ui-career
+          GCC8_CARD_DIR: qa/results/draft-card-density-native
+        run: |
+          GCC8_CHROMIUM="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')" node qa/v116_draft_card_density_audit.cjs
+      - name: Save authorised disposable test screenshots
+        if: always()
+        run: |
+          python - <<'PYSAVE'
+          import json,shutil
+          from pathlib import Path
+          from PIL import Image
+          src=Path('qa/results/draft-card-density-native'); dst=Path('docs/release/visual-review/draft-card-density/${{ github.run_id }}')
+          dst.mkdir(parents=True,exist_ok=True)
+          if (src/'report.json').exists():
+              shutil.copyfile(src/'report.json',dst/'report.json')
+              r=json.loads((src/'report.json').read_text()); print(json.dumps({**r,'states':len(r['states'])}))
+          for f in src.glob('*.png'):
+              im=Image.open(f).convert('RGB')
+              # Preserve actual pixels up to a bounded long-page height, with no resize.
+              im.crop((0,0,im.width,min(im.height,8000))).save(dst/(f.stem+'.jpg'),quality=88,optimize=True)
+          PYSAVE
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/release/visual-review/draft-card-density
+          if ! git diff --cached --quiet; then
+            git commit -m 'QA: preserve authorised disposable career visual evidence'
+            published=0
+            for attempt in 1 2 3; do
+              git pull --rebase origin work/v116-candidate-acceptance
+              if git push origin HEAD:refs/heads/work/v116-candidate-acceptance; then published=1; break; fi
+            done
+            test "$published" = 1
+          fi
+      - name: Require capture outcome
+        if: always()
+        env:
+          CAPTURE_OUTCOME: ${{ steps.capture.outcome }}
+        run: test "$CAPTURE_OUTCOME" = success
