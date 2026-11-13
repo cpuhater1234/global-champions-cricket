@@ -1,0 +1,932 @@
+{
+  "sha256": "c8990d219359ce23f697db136d47e44673427167cec0bae83638e61ceb5909a0",
+  "zoom": [
+    {
+      "physical": 1440,
+      "metrics": {
+        "innerWidth": 720,
+        "outerWidth": 1440,
+        "innerHeight": 456,
+        "devicePixelRatio": 2,
+        "visualScale": 1
+      },
+      "verified": true
+    },
+    {
+      "physical": 640,
+      "metrics": {
+        "innerWidth": 320,
+        "outerWidth": 640,
+        "innerHeight": 456,
+        "devicePixelRatio": 2,
+        "visualScale": 1
+      },
+      "verified": true
+    }
+  ],
+  "screens": [
+    {
+      "name": "zoom200-home-720",
+      "scroller": "document",
+      "viewportCssHeight": 456,
+      "stickyCss": 0,
+      "overlapCss": 92,
+      "geometry": {
+        "innerWidth": 720,
+        "innerHeight": 456,
+        "outerWidth": 1440,
+        "devicePixelRatio": 2,
+        "scrollWidth": 720,
+        "scrollHeight": 1246,
+        "issues": [],
+        "issueCount": 0
+      },
+      "segments": [
+        {
+          "file": "zoom200-home-720-part01.png",
+          "size": {
+            "width": 1440,
+            "height": 913
+          },
+          "expect": {
+            "width": 1440,
+            "height": 912
+          },
+          "scrollTop": 0,
+          "scrollX": 0
+        },
+        {
+          "file": "zoom200-home-720-part02.png",
+          "size": {
+            "width": 1440,
+            "height": 913
+          },
+          "expect": {
+            "width": 1440,
+            "height": 912
+          },
+          "scrollTop": 364,
+          "scrollX": 0
+        },
+        {
+          "file": "zoom200-home-720-part03.png",
+          "size": {
+            "width": 1440,
+            "height": 913
+          },
+          "expect": {
+            "width": 1440,
+            "height": 912
+          },
+          "scrollTop": 728,
+          "scrollX": 0
+        },
+        {
+          "file": "zoom200-home-720-part04.png",
+          "size": {
+            "width": 1440,
+            "height": 913
+          },
+          "expect": {
+            "width": 1440,
+            "height": 912
+          },
+          "scrollTop": 789.5,
+          "scrollX": 0
+        }
+      ],
+      "reachedEnd": true
+    },
+    {
+      "name": "zoom200-matchday-720",
+      "scroller": "document",
+      "viewportCssHeight": 456,
+      "stickyCss": 0,
+      "overlapCss": 92,
+      "geometry": {
+        "innerWidth": 720,
+        "innerHeight": 456,
+        "outerWidth": 1440,
+        "devicePixelRatio": 2,
+        "scrollWidth": 720,
+        "scrollHeight": 1475,
+        "issues": [],
+        "issueCount": 0
+      },
+      "segments": [
+        {
+          "file": "zoom200-matchday-720-part01.png",
+          "size": {
+            "width": 1440,
+            "height": 913
+          },
+          "expect": {
+            "width": 1440,
+            "height": 912
+          },
+          "scrollTop": 0,
+          "scrollX": 0
+        },
+        {
+          "file": "zoom200-matchday-720-part02.png",
+          "size": {
+            "width": 1440,
+            "height": 913
+          },
+          "expect": {
+            "width": 1440,
+            "height": 912
+          },
+          "scrollTop": 364,
+          "scrollX": 0
+        },
+        {
+          "file": "zoom200-matchday-720-part03.png",
+          "size": {
+            "width": 1440,
+            "height": 913
+          },
+          "expect": {
+            "width": 1440,
+            "height": 912
+          },
+          "scrollTop": 728,
+          "scrollX": 0
+        },
+        {
+          "file": "zoom200-matchday-720-part04.png",
+          "size": {
+            "width": 1440,
+            "height": 913
+          },
+          "expect": {
+            "width": 1440,
+            "height": 912
+          },
+          "scrollTop": 1018.5,
+          "scrollX": 0
+        }
+      ],
+      "reachedEnd": true
+    },
+    {
+      "name": "zoom200-player-720",
+      "scroller": "dialog",
+      "viewportCssHeight": 431,
+      "stickyCss": 177.890625,
+      "overlapCss": 51.109375,
+      "geometry": {
+        "innerWidth": 720,
+        "innerHeight": 456,
+        "outerWidth": 1440,
+        "devicePixelRatio": 2,
+        "scrollWidth": 720,
+        "scrollHeight": 1475,
+        "issues": [],
+        "issueCount": 0
+      },
+      "segments": [
+        {
+          "file": "zoom200-player-720-part01.png",
+          "size": {
+            "width": 1440,
+            "height": 913
+          },
+          "expect": {
+            "width": 1440,
+            "height": 912
+          },
+          "scrollTop": 0,
+          "scrollX": 0
+        },
+        {
+          "file": "zoom200-player-720-part02.png",
+          "size": {
+            "width": 1440,
+            "height": 913
+          },
+          "expect": {
+            "width": 1440,
+            "height": 912
+          },
+          "scrollTop": 87,
+          "scrollX": 0
+        }
+      ],
+      "reachedEnd": true
+    },
+    {
+      "name": "zoom200-home-320",
+      "scroller": "document",
+      "viewportCssHeight": 456,
+      "stickyCss": 0,
+      "overlapCss": 92,
+      "geometry": {
+        "innerWidth": 320,
+        "innerHeight": 456,
+        "outerWidth": 640,
+        "devicePixelRatio": 2,
+        "scrollWidth": 320,
+        "scrollHeight": 1007,
+        "issues": [],
+        "issueCount": 0
+      },
+      "segments": [
+        {
+          "file": "zoom200-home-320-part01.png",
+          "size": {
+            "width": 640,
+            "height": 913
+          },
+          "expect": {
+            "width": 640,
+            "height": 912
+          },
+          "scrollTop": 0,
+          "scrollX": 0
+        },
+        {
+          "file": "zoom200-home-320-part02.png",
+          "size": {
+            "width": 640,
+            "height": 913
+          },
+          "expect": {
+            "width": 640,
+            "height": 912
+          },
+          "scrollTop": 364,
+          "scrollX": 0
+        },
+        {
+          "file": "zoom200-home-320-part03.png",
+          "size": {
+            "width": 640,
+            "height": 913
+          },
+          "expect": {
+            "width": 640,
+            "height": 912
+          },
+          "scrollTop": 550.5,
+          "scrollX": 0
+        }
+      ],
+      "reachedEnd": true
+    },
+    {
+      "name": "zoom200-matchday-320",
+      "scroller": "document",
+      "viewportCssHeight": 456,
+      "stickyCss": 0,
+      "overlapCss": 92,
+      "geometry": {
+        "innerWidth": 320,
+        "innerHeight": 456,
+        "outerWidth": 640,
+        "devicePixelRatio": 2,
+        "scrollWidth": 320,
+        "scrollHeight": 2058,
+        "issues": [],
+        "issueCount": 0
+      },
+      "segments": [
+        {
+          "file": "zoom200-matchday-320-part01.png",
+          "size": {
+            "width": 640,
+            "height": 913
+          },
+          "expect": {
+            "width": 640,
+            "height": 912
+          },
+          "scrollTop": 0,
+          "scrollX": 0
+        },
+        {
+          "file": "zoom200-matchday-320-part02.png",
+          "size": {
+            "width": 640,
+            "height": 913
+          },
+          "expect": {
+            "width": 640,
+            "height": 912
+          },
+          "scrollTop": 364,
+          "scrollX": 0
+        },
+        {
+          "file": "zoom200-matchday-320-part03.png",
+          "size": {
+            "width": 640,
+            "height": 913
+          },
+          "expect": {
+            "width": 640,
+            "height": 912
+          },
+          "scrollTop": 728,
+          "scrollX": 0
+        },
+        {
+          "file": "zoom200-matchday-320-part04.png",
+          "size": {
+            "width": 640,
+            "height": 913
+          },
+          "expect": {
+            "width": 640,
+            "height": 912
+          },
+          "scrollTop": 1092,
+          "scrollX": 0
+        },
+        {
+          "file": "zoom200-matchday-320-part05.png",
+          "size": {
+            "width": 640,
+            "height": 913
+          },
+          "expect": {
+            "width": 640,
+            "height": 912
+          },
+          "scrollTop": 1456,
+          "scrollX": 0
+        },
+        {
+          "file": "zoom200-matchday-320-part06.png",
+          "size": {
+            "width": 640,
+            "height": 913
+          },
+          "expect": {
+            "width": 640,
+            "height": 912
+          },
+          "scrollTop": 1601.5,
+          "scrollX": 0
+        }
+      ],
+      "reachedEnd": true
+    },
+    {
+      "name": "zoom200-player-320",
+      "scroller": "dialog",
+      "viewportCssHeight": 431,
+      "stickyCss": 253.59375,
+      "overlapCss": 36.40625,
+      "geometry": {
+        "innerWidth": 320,
+        "innerHeight": 456,
+        "outerWidth": 640,
+        "devicePixelRatio": 2,
+        "scrollWidth": 320,
+        "scrollHeight": 2058,
+        "issues": [],
+        "issueCount": 0
+      },
+      "segments": [
+        {
+          "file": "zoom200-player-320-part01.png",
+          "size": {
+            "width": 640,
+            "height": 913
+          },
+          "expect": {
+            "width": 640,
+            "height": 912
+          },
+          "scrollTop": 0,
+          "scrollX": 0
+        },
+        {
+          "file": "zoom200-player-320-part02.png",
+          "size": {
+            "width": 640,
+            "height": 913
+          },
+          "expect": {
+            "width": 640,
+            "height": 912
+          },
+          "scrollTop": 141,
+          "scrollX": 0
+        },
+        {
+          "file": "zoom200-player-320-part03.png",
+          "size": {
+            "width": 640,
+            "height": 913
+          },
+          "expect": {
+            "width": 640,
+            "height": 912
+          },
+          "scrollTop": 205,
+          "scrollX": 0
+        }
+      ],
+      "reachedEnd": true
+    }
+  ],
+  "observations": [
+    {
+      "id": "native 200% zoom active at 1440px physical (CSS 720px)",
+      "result": "PASS",
+      "detail": {
+        "innerWidth": 720,
+        "outerWidth": 1440,
+        "innerHeight": 456,
+        "devicePixelRatio": 2,
+        "visualScale": 1
+      }
+    },
+    {
+      "id": "zoom200-home-720 part 1 captures the complete zoomed viewport",
+      "result": "PASS",
+      "detail": {
+        "size": {
+          "width": 1440,
+          "height": 913
+        },
+        "expect": {
+          "width": 1440,
+          "height": 912
+        }
+      }
+    },
+    {
+      "id": "zoom200-home-720 part 2 captures the complete zoomed viewport",
+      "result": "PASS",
+      "detail": {
+        "size": {
+          "width": 1440,
+          "height": 913
+        },
+        "expect": {
+          "width": 1440,
+          "height": 912
+        }
+      }
+    },
+    {
+      "id": "zoom200-home-720 part 3 captures the complete zoomed viewport",
+      "result": "PASS",
+      "detail": {
+        "size": {
+          "width": 1440,
+          "height": 913
+        },
+        "expect": {
+          "width": 1440,
+          "height": 912
+        }
+      }
+    },
+    {
+      "id": "zoom200-home-720 part 4 captures the complete zoomed viewport",
+      "result": "PASS",
+      "detail": {
+        "size": {
+          "width": 1440,
+          "height": 913
+        },
+        "expect": {
+          "width": 1440,
+          "height": 912
+        }
+      }
+    },
+    {
+      "id": "zoom200-home-720 no horizontal page overflow",
+      "result": "PASS",
+      "detail": {
+        "width": 720,
+        "scrollWidth": 720
+      }
+    },
+    {
+      "id": "zoom200-home-720 vertical scrolling reaches the end of content",
+      "result": "PASS",
+      "detail": {
+        "top": 789.5,
+        "height": 1246
+      }
+    },
+    {
+      "id": "zoom200-home-720 no clipped or offscreen text/controls",
+      "result": "PASS",
+      "detail": {
+        "issues": []
+      }
+    },
+    {
+      "id": "zoom200-matchday-720 part 1 captures the complete zoomed viewport",
+      "result": "PASS",
+      "detail": {
+        "size": {
+          "width": 1440,
+          "height": 913
+        },
+        "expect": {
+          "width": 1440,
+          "height": 912
+        }
+      }
+    },
+    {
+      "id": "zoom200-matchday-720 part 2 captures the complete zoomed viewport",
+      "result": "PASS",
+      "detail": {
+        "size": {
+          "width": 1440,
+          "height": 913
+        },
+        "expect": {
+          "width": 1440,
+          "height": 912
+        }
+      }
+    },
+    {
+      "id": "zoom200-matchday-720 part 3 captures the complete zoomed viewport",
+      "result": "PASS",
+      "detail": {
+        "size": {
+          "width": 1440,
+          "height": 913
+        },
+        "expect": {
+          "width": 1440,
+          "height": 912
+        }
+      }
+    },
+    {
+      "id": "zoom200-matchday-720 part 4 captures the complete zoomed viewport",
+      "result": "PASS",
+      "detail": {
+        "size": {
+          "width": 1440,
+          "height": 913
+        },
+        "expect": {
+          "width": 1440,
+          "height": 912
+        }
+      }
+    },
+    {
+      "id": "zoom200-matchday-720 no horizontal page overflow",
+      "result": "PASS",
+      "detail": {
+        "width": 720,
+        "scrollWidth": 720
+      }
+    },
+    {
+      "id": "zoom200-matchday-720 vertical scrolling reaches the end of content",
+      "result": "PASS",
+      "detail": {
+        "top": 1018.5,
+        "height": 1475
+      }
+    },
+    {
+      "id": "zoom200-matchday-720 no clipped or offscreen text/controls",
+      "result": "PASS",
+      "detail": {
+        "issues": []
+      }
+    },
+    {
+      "id": "zoom200-player-720 part 1 captures the complete zoomed viewport",
+      "result": "PASS",
+      "detail": {
+        "size": {
+          "width": 1440,
+          "height": 913
+        },
+        "expect": {
+          "width": 1440,
+          "height": 912
+        }
+      }
+    },
+    {
+      "id": "zoom200-player-720 part 2 captures the complete zoomed viewport",
+      "result": "PASS",
+      "detail": {
+        "size": {
+          "width": 1440,
+          "height": 913
+        },
+        "expect": {
+          "width": 1440,
+          "height": 912
+        }
+      }
+    },
+    {
+      "id": "zoom200-player-720 no horizontal page overflow",
+      "result": "PASS",
+      "detail": {
+        "width": 720,
+        "scrollWidth": 720
+      }
+    },
+    {
+      "id": "zoom200-player-720 vertical scrolling reaches the end of content",
+      "result": "PASS",
+      "detail": {
+        "top": 87,
+        "height": 518
+      }
+    },
+    {
+      "id": "zoom200-player-720 no clipped or offscreen text/controls",
+      "result": "PASS",
+      "detail": {
+        "issues": []
+      }
+    },
+    {
+      "id": "zoom200-player-720 keyboard focus indicator visible",
+      "result": "PASS",
+      "detail": {
+        "text": "Close Andre Nel",
+        "focusVisible": true,
+        "outlineWidth": 3,
+        "inViewport": true
+      }
+    },
+    {
+      "id": "native 200% zoom active at 640px physical (CSS 320px)",
+      "result": "PASS",
+      "detail": {
+        "innerWidth": 320,
+        "outerWidth": 640,
+        "innerHeight": 456,
+        "devicePixelRatio": 2,
+        "visualScale": 1
+      }
+    },
+    {
+      "id": "zoom200-home-320 part 1 captures the complete zoomed viewport",
+      "result": "PASS",
+      "detail": {
+        "size": {
+          "width": 640,
+          "height": 913
+        },
+        "expect": {
+          "width": 640,
+          "height": 912
+        }
+      }
+    },
+    {
+      "id": "zoom200-home-320 part 2 captures the complete zoomed viewport",
+      "result": "PASS",
+      "detail": {
+        "size": {
+          "width": 640,
+          "height": 913
+        },
+        "expect": {
+          "width": 640,
+          "height": 912
+        }
+      }
+    },
+    {
+      "id": "zoom200-home-320 part 3 captures the complete zoomed viewport",
+      "result": "PASS",
+      "detail": {
+        "size": {
+          "width": 640,
+          "height": 913
+        },
+        "expect": {
+          "width": 640,
+          "height": 912
+        }
+      }
+    },
+    {
+      "id": "zoom200-home-320 no horizontal page overflow",
+      "result": "PASS",
+      "detail": {
+        "width": 320,
+        "scrollWidth": 320
+      }
+    },
+    {
+      "id": "zoom200-home-320 vertical scrolling reaches the end of content",
+      "result": "PASS",
+      "detail": {
+        "top": 550.5,
+        "height": 1007
+      }
+    },
+    {
+      "id": "zoom200-home-320 no clipped or offscreen text/controls",
+      "result": "PASS",
+      "detail": {
+        "issues": []
+      }
+    },
+    {
+      "id": "zoom200-matchday-320 part 1 captures the complete zoomed viewport",
+      "result": "PASS",
+      "detail": {
+        "size": {
+          "width": 640,
+          "height": 913
+        },
+        "expect": {
+          "width": 640,
+          "height": 912
+        }
+      }
+    },
+    {
+      "id": "zoom200-matchday-320 part 2 captures the complete zoomed viewport",
+      "result": "PASS",
+      "detail": {
+        "size": {
+          "width": 640,
+          "height": 913
+        },
+        "expect": {
+          "width": 640,
+          "height": 912
+        }
+      }
+    },
+    {
+      "id": "zoom200-matchday-320 part 3 captures the complete zoomed viewport",
+      "result": "PASS",
+      "detail": {
+        "size": {
+          "width": 640,
+          "height": 913
+        },
+        "expect": {
+          "width": 640,
+          "height": 912
+        }
+      }
+    },
+    {
+      "id": "zoom200-matchday-320 part 4 captures the complete zoomed viewport",
+      "result": "PASS",
+      "detail": {
+        "size": {
+          "width": 640,
+          "height": 913
+        },
+        "expect": {
+          "width": 640,
+          "height": 912
+        }
+      }
+    },
+    {
+      "id": "zoom200-matchday-320 part 5 captures the complete zoomed viewport",
+      "result": "PASS",
+      "detail": {
+        "size": {
+          "width": 640,
+          "height": 913
+        },
+        "expect": {
+          "width": 640,
+          "height": 912
+        }
+      }
+    },
+    {
+      "id": "zoom200-matchday-320 part 6 captures the complete zoomed viewport",
+      "result": "PASS",
+      "detail": {
+        "size": {
+          "width": 640,
+          "height": 913
+        },
+        "expect": {
+          "width": 640,
+          "height": 912
+        }
+      }
+    },
+    {
+      "id": "zoom200-matchday-320 no horizontal page overflow",
+      "result": "PASS",
+      "detail": {
+        "width": 320,
+        "scrollWidth": 320
+      }
+    },
+    {
+      "id": "zoom200-matchday-320 vertical scrolling reaches the end of content",
+      "result": "PASS",
+      "detail": {
+        "top": 1601.5,
+        "height": 2058
+      }
+    },
+    {
+      "id": "zoom200-matchday-320 no clipped or offscreen text/controls",
+      "result": "PASS",
+      "detail": {
+        "issues": []
+      }
+    },
+    {
+      "id": "zoom200-player-320 part 1 captures the complete zoomed viewport",
+      "result": "PASS",
+      "detail": {
+        "size": {
+          "width": 640,
+          "height": 913
+        },
+        "expect": {
+          "width": 640,
+          "height": 912
+        }
+      }
+    },
+    {
+      "id": "zoom200-player-320 part 2 captures the complete zoomed viewport",
+      "result": "PASS",
+      "detail": {
+        "size": {
+          "width": 640,
+          "height": 913
+        },
+        "expect": {
+          "width": 640,
+          "height": 912
+        }
+      }
+    },
+    {
+      "id": "zoom200-player-320 part 3 captures the complete zoomed viewport",
+      "result": "PASS",
+      "detail": {
+        "size": {
+          "width": 640,
+          "height": 913
+        },
+        "expect": {
+          "width": 640,
+          "height": 912
+        }
+      }
+    },
+    {
+      "id": "zoom200-player-320 no horizontal page overflow",
+      "result": "PASS",
+      "detail": {
+        "width": 320,
+        "scrollWidth": 320
+      }
+    },
+    {
+      "id": "zoom200-player-320 vertical scrolling reaches the end of content",
+      "result": "PASS",
+      "detail": {
+        "top": 205,
+        "height": 635
+      }
+    },
+    {
+      "id": "zoom200-player-320 no clipped or offscreen text/controls",
+      "result": "PASS",
+      "detail": {
+        "issues": []
+      }
+    },
+    {
+      "id": "zoom200-player-320 keyboard focus indicator visible",
+      "result": "PASS",
+      "detail": {
+        "text": "Close Andre Nel",
+        "focusVisible": true,
+        "outlineWidth": 3,
+        "inViewport": true
+      }
+    }
+  ],
+  "findings": [],
+  "errors": [],
+  "runtimeErrors": [],
+  "limits": [
+    "Chromium only. Automated geometry checks plus captured images for human inspection; visual sign-off requires the images to be reviewed."
+  ],
+  "status": "PASS"
+}

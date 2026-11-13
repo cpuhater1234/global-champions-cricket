@@ -2,12 +2,43 @@
 
 13 November2026. Working branch: `work/v116-candidate-acceptance`. The `v116` branch reports dated11November describe the frozen release and early signing experiment; they are historical evidence, not the current candidate acceptance record.
 
+## Latest: edited accessibility candidate (13 November 2026), HOLD / unpromoted
+
+New candidate SHA-256 `c8990d219359ce23f697db136d47e44673427167cec0bae83638e61ceb5909a0` (6,655,238 bytes), built with:
+
+```sh
+python qa/v116_canonical_source.py build --source v116/canonical \
+  --output qa/results/GCC_v116_accessibility_review.html \
+  --report qa/results/GCC_v116_accessibility_build.json
+```
+
+Change: two CSS declarations in the existing compact owner `styles/31-gcc-floodlit-visual.css`; changed bodies = `styles/31` only; all 22 scripts byte-identical to frozen v116. `manifest.json` deliberately still records the c45684a5… snapshot, so `--check-manifest` fails until this candidate is reviewed and recorded. Details and evidence: [V116_ACCESSIBILITY_GATE.md](V116_ACCESSIBILITY_GATE.md#follow-up-edited-accessibility-candidate-13-november-2026).
+
+| Gate item | Result | Limits |
+|---|---|---|
+| 1. 320px Season record overlap | Fixed. Label/value text boxes separate at 320/360/390; no horizontal overflow | Chromium only |
+| 2. Fixtures keyboard focus | Fixed. Tab and Shift+Tab at 320/360: every nav control and full ring visible, unobscured, page not shifted. Existing gate: 0 findings | Chromium only; short landscape screens not covered |
+| 3. Live-score speech | **Not tested** (no screen reader in the sandbox). No code change | Blocks promotion |
+| 4. 200% zoom | Recaptured unclipped at CSS 720/320: Home, Matchday, player dialog; 44/44 checks; captures inspected | Single reviewer; Chromium only |
+| 5. Rebuild / SHA | Done; CI workflow pinned to the new hash | Old saved reports are not evidence for this file |
+
+Gameplay and save/reload were not re-run because no runtime body changed. That rests on the build report and the frozen-script comparison, not on a new gameplay run.
+
+### Real screen-reader protocol (to be run by a person)
+
+1. Record OS, browser and screen-reader versions (NVDA + Chrome on Windows, or VoiceOver + Safari on macOS).
+2. Open the exact `c8990d219359…` build, start a disposable career, prepare the match preview and press Watch match.
+3. Listen through at least 6 deliveries. For each, write down what was spoken against the visible score, wickets and overs. Note anything delayed, missing, duplicated, or so frequent it is unusable.
+4. Pause and resume with the keyboard and confirm announcements stop and restart.
+5. If there is a defect, fix it in the live-score script owner by keeping one stable status region and updating only its text; rebuild with `--allow-runtime-changes`, run gameplay and save/reload checks, and repeat steps 1–4.
+
 ## Artifact identities
 
 | Role | File | SHA256 |
 |---|---|---|
 | Frozen rollback reference | `GCC_v116_release (1).html` | `b27cf0b4c7e6e4e7a78eaa5c80154dfd0f70657ce9f774dd405505e97e82c6d0` |
-| Current review candidate | `GCC_v116_Draft_Cards_Review.html` | `c45684a540d098ec35beeb8a959995e88292bccded4ce1314390140d1e7720ab` |
+| Previous review candidate (recorded manifest snapshot) | `GCC_v116_Draft_Cards_Review.html` | `c45684a540d098ec35beeb8a959995e88292bccded4ce1314390140d1e7720ab` |
+| **Current edited accessibility candidate (HOLD)** | `GCC_v116_accessibility_review.html` | `c8990d219359ce23f697db136d47e44673427167cec0bae83638e61ceb5909a0` |
 
 Current candidate size:6,655,156bytes. It is not a stable release or tag. Main and frozen release have not been promoted or overwritten. All22 script bodies compare byte-identically with frozen v116; changes are in existing style bodies.17 style blocks remain, with deliberate cascade consolidation still separate.
 

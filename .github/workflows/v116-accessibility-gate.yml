@@ -2,9 +2,12 @@ name: GCC current candidate accessibility gate
 on:
   push:
     branches: [work/v116-candidate-acceptance]
-    paths: ['qa/v116_accessibility_gate.cjs', '.github/workflows/v116-accessibility-gate.yml']
+    paths: ['qa/v116_accessibility_gate.cjs', 'qa/v116_narrow_focus_layout.cjs', 'qa/v116_zoom200_capture.cjs', 'v116/canonical/styles/**', '.github/workflows/v116-accessibility-gate.yml']
 permissions:
   contents: write
+env:
+  # Edited, unpromoted accessibility candidate built from v116/canonical (CSS-only change to styles/31). Not the recorded manifest snapshot.
+  CANDIDATE_SHA256: c8990d219359ce23f697db136d47e44673427167cec0bae83638e61ceb5909a0
 concurrency:
   group: gcc-current-candidate-accessibility
   cancel-in-progress: true
@@ -28,24 +31,31 @@ jobs:
           pip install playwright pillow
           python -m playwright install --with-deps chromium
           npm install --no-save --no-package-lock playwright
-      - name: Build current candidate from canonical source
+      - name: Build edited candidate from canonical source
         run: |
-          python qa/v116_canonical_source.py build --source v116/canonical --output qa/results/current-safety/candidate.html --check-manifest --report qa/results/current-safety/build.json
+          python qa/v116_canonical_source.py build --source v116/canonical --output qa/results/current-safety/candidate.html --report qa/results/current-safety/build.json
           python - <<'PY'
           import json,hashlib
           from pathlib import Path
-          r=json.loads(Path('qa/results/current-safety/build.json').read_text());assert r['sha256']=='c45684a540d098ec35beeb8a959995e88292bccded4ce1314390140d1e7720ab'
+          import os
+          r=json.loads(Path('qa/results/current-safety/build.json').read_text());assert r['sha256']==os.environ['CANDIDATE_SHA256'],r['sha256'];assert r['changed_bodies']==['styles/31-gcc-floodlit-visual.css'],r['changed_bodies']
           from qa.v116_source_reconciliation import BLOCK,RELEASE
           a=list(BLOCK.finditer(RELEASE.read_bytes()));b=list(BLOCK.finditer(Path('qa/results/current-safety/candidate.html').read_bytes()))
           assert [m[3] for m in a if m[1]==b'script']==[m[3] for m in b if m[1]==b'script']
-          print('PASS: all22 script bodies identical to frozen v116; exact current candidate pinned')
+          print('PASS: all22 script bodies identical to frozen v116; edited candidate pinned')
           PY
       - uses: actions/cache/restore@v4
         with:
           path: qa/results/whole-ui-career
           key: gcc-ui-career-79a2fbfe-seed101-v1-${{ hashFiles('qa/structural-risk/career-run.mjs', 'qa/offline_game_host.mjs') }}
-      - name: Require existing disposable checkpoint without rerunning career acceptance
-        run: test -f qa/results/whole-ui-career/checkpoint-2009.json
+      - name: Require disposable checkpoint (regenerate seed-101 seasons to 2009 only if the cache is missing)
+        env:
+          GCC8_TEST_BUILD: qa/results/current-safety/candidate.html
+          GCC8_TEST_REPORT_DIR: qa/results/whole-ui-career
+          GCC8_TEST_LAST_YEAR: '2009'
+        run: |
+          if [ ! -f qa/results/whole-ui-career/checkpoint-2009.json ]; then node qa/structural-risk/career-run.mjs > /dev/null; fi
+          test -f qa/results/whole-ui-career/checkpoint-2009.json
       - name: Diagnose exact candidate accessibility and tablet usability
         id: audit
         continue-on-error: true
@@ -53,8 +63,29 @@ jobs:
           GCC8_TEST_BUILD: qa/results/current-safety/candidate.html
           GCC8_BROWSER_CAREER_DIR: qa/results/whole-ui-career
           GCC8_A11Y_DIR: qa/results/accessibility-gate
+          GCC8_EXPECT_SHA256: ${{ env.CANDIDATE_SHA256 }}
         run: |
           GCC8_CHROMIUM="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')" node qa/v116_accessibility_gate.cjs
+      - name: Focused Season record overlap and career-navigation Tab/Shift+Tab focus (320/360/390px)
+        id: narrow
+        continue-on-error: true
+        env:
+          GCC8_TEST_BUILD: qa/results/current-safety/candidate.html
+          GCC8_BROWSER_CAREER_DIR: qa/results/whole-ui-career
+          GCC8_NARROW_DIR: qa/results/accessibility-gate/narrow-focus-layout
+          GCC8_EXPECT_SHA256: ${{ env.CANDIDATE_SHA256 }}
+        run: |
+          GCC8_CHROMIUM="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')" node qa/v116_narrow_focus_layout.cjs
+      - name: Native 200% zoom unclipped viewport captures (CSS 720px and 320px)
+        id: zoom
+        continue-on-error: true
+        env:
+          GCC8_TEST_BUILD: qa/results/current-safety/candidate.html
+          GCC8_BROWSER_CAREER_DIR: qa/results/whole-ui-career
+          GCC8_ZOOM_DIR: qa/results/accessibility-gate/zoom200-unclipped
+          GCC8_EXPECT_SHA256: ${{ env.CANDIDATE_SHA256 }}
+        run: |
+          GCC8_CHROMIUM="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')" node qa/v116_zoom200_capture.cjs
       - name: Preserve accessibility diagnostic evidence
         if: always()
         run: |
@@ -76,7 +107,7 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add docs/release/accessibility-gate
           if ! git diff --cached --quiet; then
-            git commit -m 'Preserve exact candidate accessibility diagnostic and promotion decision'
+            git commit -m 'Preserve edited candidate accessibility diagnostic; promotion remains HOLD'
             published=0
             for attempt in 1 2 3; do
               git pull --rebase origin work/v116-candidate-acceptance
@@ -88,13 +119,20 @@ jobs:
         if: always()
         env:
           AUDIT: ${{ steps.audit.outcome }}
+          NARROW: ${{ steps.narrow.outcome }}
+          ZOOM: ${{ steps.zoom.outcome }}
         run: |
           test "$AUDIT" = success
+          test "$NARROW" = success
+          test "$ZOOM" = success
           python - <<'PY'
           import json
           from pathlib import Path
           r=json.loads(Path('qa/results/accessibility-gate/report.json').read_text())
-          assert r['sha256']=='c45684a540d098ec35beeb8a959995e88292bccded4ce1314390140d1e7720ab'
+          import os
+          assert r['sha256']==os.environ['CANDIDATE_SHA256']
           assert r['automation_status']=='PASS'
+          for sub in ['narrow-focus-layout','zoom200-unclipped']:
+              q=json.loads(Path('qa/results/accessibility-gate/'+sub+'/report.json').read_text());assert q['sha256']==os.environ['CANDIDATE_SHA256'] and q['status']=='PASS',(sub,q['status'])
           print('Diagnostic completed. Promotion decision:',r['promotion'])
           PY

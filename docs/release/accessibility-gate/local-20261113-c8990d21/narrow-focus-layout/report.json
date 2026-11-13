@@ -1,0 +1,6613 @@
+{
+  "sha256": "c8990d219359ce23f697db136d47e44673427167cec0bae83638e61ceb5909a0",
+  "observations": [
+    {
+      "id": "matchday 320 no document horizontal overflow",
+      "result": "PASS",
+      "detail": {
+        "width": 320,
+        "scroll": 320
+      }
+    },
+    {
+      "id": "matchday 320 League position label/value do not intersect",
+      "result": "PASS",
+      "detail": {
+        "label": "League position",
+        "value": "–",
+        "labelBox": {
+          "x": 27,
+          "y": 185.390625,
+          "width": 75.3125,
+          "height": 33,
+          "right": 102.3125,
+          "bottom": 218.390625,
+          "lines": 2
+        },
+        "valueBox": {
+          "x": 27,
+          "y": 222.421875,
+          "width": 11.953125,
+          "height": 36,
+          "right": 38.953125,
+          "bottom": 258.421875,
+          "lines": 1
+        },
+        "noteBox": {
+          "x": 27,
+          "y": 262.390625,
+          "width": 85.6875,
+          "height": 15,
+          "right": 112.6875,
+          "bottom": 277.390625,
+          "lines": 1
+        },
+        "tile": {
+          "x": 13,
+          "y": 176.390625,
+          "width": 147,
+          "height": 111.796875,
+          "right": 160,
+          "bottom": 288.1875
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 30.4,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 320 League position value/note do not intersect",
+      "result": "PASS",
+      "detail": {
+        "label": "League position",
+        "value": "–",
+        "labelBox": {
+          "x": 27,
+          "y": 185.390625,
+          "width": 75.3125,
+          "height": 33,
+          "right": 102.3125,
+          "bottom": 218.390625,
+          "lines": 2
+        },
+        "valueBox": {
+          "x": 27,
+          "y": 222.421875,
+          "width": 11.953125,
+          "height": 36,
+          "right": 38.953125,
+          "bottom": 258.421875,
+          "lines": 1
+        },
+        "noteBox": {
+          "x": 27,
+          "y": 262.390625,
+          "width": 85.6875,
+          "height": 15,
+          "right": 112.6875,
+          "bottom": 277.390625,
+          "lines": 1
+        },
+        "tile": {
+          "x": 13,
+          "y": 176.390625,
+          "width": 147,
+          "height": 111.796875,
+          "right": 160,
+          "bottom": 288.1875
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 30.4,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 320 League position readable and contained",
+      "result": "PASS",
+      "detail": {
+        "label": "League position",
+        "value": "–",
+        "labelBox": {
+          "x": 27,
+          "y": 185.390625,
+          "width": 75.3125,
+          "height": 33,
+          "right": 102.3125,
+          "bottom": 218.390625,
+          "lines": 2
+        },
+        "valueBox": {
+          "x": 27,
+          "y": 222.421875,
+          "width": 11.953125,
+          "height": 36,
+          "right": 38.953125,
+          "bottom": 258.421875,
+          "lines": 1
+        },
+        "noteBox": {
+          "x": 27,
+          "y": 262.390625,
+          "width": 85.6875,
+          "height": 15,
+          "right": 112.6875,
+          "bottom": 277.390625,
+          "lines": 1
+        },
+        "tile": {
+          "x": 13,
+          "y": 176.390625,
+          "width": 147,
+          "height": 111.796875,
+          "right": 160,
+          "bottom": 288.1875
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 30.4,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 320 Season record label/value do not intersect",
+      "result": "PASS",
+      "detail": {
+        "label": "Season record",
+        "value": "0-0",
+        "labelBox": {
+          "x": 174,
+          "y": 185.390625,
+          "width": 63.140625,
+          "height": 33,
+          "right": 237.140625,
+          "bottom": 218.390625,
+          "lines": 2
+        },
+        "valueBox": {
+          "x": 174,
+          "y": 222.421875,
+          "width": 42.765625,
+          "height": 36,
+          "right": 216.765625,
+          "bottom": 258.421875,
+          "lines": 1
+        },
+        "noteBox": {
+          "x": 174,
+          "y": 262.390625,
+          "width": 79.640625,
+          "height": 15,
+          "right": 253.640625,
+          "bottom": 277.390625,
+          "lines": 1
+        },
+        "tile": {
+          "x": 160,
+          "y": 176.390625,
+          "width": 147,
+          "height": 111.796875,
+          "right": 307,
+          "bottom": 288.1875
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 30.4,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 320 Season record value/note do not intersect",
+      "result": "PASS",
+      "detail": {
+        "label": "Season record",
+        "value": "0-0",
+        "labelBox": {
+          "x": 174,
+          "y": 185.390625,
+          "width": 63.140625,
+          "height": 33,
+          "right": 237.140625,
+          "bottom": 218.390625,
+          "lines": 2
+        },
+        "valueBox": {
+          "x": 174,
+          "y": 222.421875,
+          "width": 42.765625,
+          "height": 36,
+          "right": 216.765625,
+          "bottom": 258.421875,
+          "lines": 1
+        },
+        "noteBox": {
+          "x": 174,
+          "y": 262.390625,
+          "width": 79.640625,
+          "height": 15,
+          "right": 253.640625,
+          "bottom": 277.390625,
+          "lines": 1
+        },
+        "tile": {
+          "x": 160,
+          "y": 176.390625,
+          "width": 147,
+          "height": 111.796875,
+          "right": 307,
+          "bottom": 288.1875
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 30.4,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 320 Season record readable and contained",
+      "result": "PASS",
+      "detail": {
+        "label": "Season record",
+        "value": "0-0",
+        "labelBox": {
+          "x": 174,
+          "y": 185.390625,
+          "width": 63.140625,
+          "height": 33,
+          "right": 237.140625,
+          "bottom": 218.390625,
+          "lines": 2
+        },
+        "valueBox": {
+          "x": 174,
+          "y": 222.421875,
+          "width": 42.765625,
+          "height": 36,
+          "right": 216.765625,
+          "bottom": 258.421875,
+          "lines": 1
+        },
+        "noteBox": {
+          "x": 174,
+          "y": 262.390625,
+          "width": 79.640625,
+          "height": 15,
+          "right": 253.640625,
+          "bottom": 277.390625,
+          "lines": 1
+        },
+        "tile": {
+          "x": 160,
+          "y": 176.390625,
+          "width": 147,
+          "height": 111.796875,
+          "right": 307,
+          "bottom": 288.1875
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 30.4,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 320 Net run rate label/value do not intersect",
+      "result": "PASS",
+      "detail": {
+        "label": "Net run rate",
+        "value": "–",
+        "labelBox": {
+          "x": 27,
+          "y": 297.1875,
+          "width": 112.9375,
+          "height": 15,
+          "right": 139.9375,
+          "bottom": 312.1875,
+          "lines": 1
+        },
+        "valueBox": {
+          "x": 27,
+          "y": 316.21875,
+          "width": 11.953125,
+          "height": 36,
+          "right": 38.953125,
+          "bottom": 352.21875,
+          "lines": 1
+        },
+        "noteBox": {
+          "x": 27,
+          "y": 356.1875,
+          "width": 78.84375,
+          "height": 31.796875,
+          "right": 105.84375,
+          "bottom": 387.984375,
+          "lines": 2
+        },
+        "tile": {
+          "x": 13,
+          "y": 288.1875,
+          "width": 147,
+          "height": 126.59375,
+          "right": 160,
+          "bottom": 414.78125
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 30.4,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 320 Net run rate value/note do not intersect",
+      "result": "PASS",
+      "detail": {
+        "label": "Net run rate",
+        "value": "–",
+        "labelBox": {
+          "x": 27,
+          "y": 297.1875,
+          "width": 112.9375,
+          "height": 15,
+          "right": 139.9375,
+          "bottom": 312.1875,
+          "lines": 1
+        },
+        "valueBox": {
+          "x": 27,
+          "y": 316.21875,
+          "width": 11.953125,
+          "height": 36,
+          "right": 38.953125,
+          "bottom": 352.21875,
+          "lines": 1
+        },
+        "noteBox": {
+          "x": 27,
+          "y": 356.1875,
+          "width": 78.84375,
+          "height": 31.796875,
+          "right": 105.84375,
+          "bottom": 387.984375,
+          "lines": 2
+        },
+        "tile": {
+          "x": 13,
+          "y": 288.1875,
+          "width": 147,
+          "height": 126.59375,
+          "right": 160,
+          "bottom": 414.78125
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 30.4,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 320 Net run rate readable and contained",
+      "result": "PASS",
+      "detail": {
+        "label": "Net run rate",
+        "value": "–",
+        "labelBox": {
+          "x": 27,
+          "y": 297.1875,
+          "width": 112.9375,
+          "height": 15,
+          "right": 139.9375,
+          "bottom": 312.1875,
+          "lines": 1
+        },
+        "valueBox": {
+          "x": 27,
+          "y": 316.21875,
+          "width": 11.953125,
+          "height": 36,
+          "right": 38.953125,
+          "bottom": 352.21875,
+          "lines": 1
+        },
+        "noteBox": {
+          "x": 27,
+          "y": 356.1875,
+          "width": 78.84375,
+          "height": 31.796875,
+          "right": 105.84375,
+          "bottom": 387.984375,
+          "lines": 2
+        },
+        "tile": {
+          "x": 13,
+          "y": 288.1875,
+          "width": 147,
+          "height": 126.59375,
+          "right": 160,
+          "bottom": 414.78125
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 30.4,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 320 Recent form label/value do not intersect",
+      "result": "PASS",
+      "detail": {
+        "label": "Recent form",
+        "value": "First match ahead",
+        "labelBox": {
+          "x": 174,
+          "y": 297.1875,
+          "width": 110.453125,
+          "height": 15,
+          "right": 284.453125,
+          "bottom": 312.1875,
+          "lines": 1
+        },
+        "valueBox": {
+          "x": 174,
+          "y": 319.1875,
+          "width": 119,
+          "height": 48,
+          "right": 293,
+          "bottom": 367.1875,
+          "lines": 3
+        },
+        "noteBox": {
+          "x": 174,
+          "y": 372.1875,
+          "width": 89.609375,
+          "height": 31.796875,
+          "right": 263.609375,
+          "bottom": 403.984375,
+          "lines": 2
+        },
+        "tile": {
+          "x": 160,
+          "y": 288.1875,
+          "width": 147,
+          "height": 126.59375,
+          "right": 307,
+          "bottom": 414.78125
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 15,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 320 Recent form value/note do not intersect",
+      "result": "PASS",
+      "detail": {
+        "label": "Recent form",
+        "value": "First match ahead",
+        "labelBox": {
+          "x": 174,
+          "y": 297.1875,
+          "width": 110.453125,
+          "height": 15,
+          "right": 284.453125,
+          "bottom": 312.1875,
+          "lines": 1
+        },
+        "valueBox": {
+          "x": 174,
+          "y": 319.1875,
+          "width": 119,
+          "height": 48,
+          "right": 293,
+          "bottom": 367.1875,
+          "lines": 3
+        },
+        "noteBox": {
+          "x": 174,
+          "y": 372.1875,
+          "width": 89.609375,
+          "height": 31.796875,
+          "right": 263.609375,
+          "bottom": 403.984375,
+          "lines": 2
+        },
+        "tile": {
+          "x": 160,
+          "y": 288.1875,
+          "width": 147,
+          "height": 126.59375,
+          "right": 307,
+          "bottom": 414.78125
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 15,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 320 Recent form readable and contained",
+      "result": "PASS",
+      "detail": {
+        "label": "Recent form",
+        "value": "First match ahead",
+        "labelBox": {
+          "x": 174,
+          "y": 297.1875,
+          "width": 110.453125,
+          "height": 15,
+          "right": 284.453125,
+          "bottom": 312.1875,
+          "lines": 1
+        },
+        "valueBox": {
+          "x": 174,
+          "y": 319.1875,
+          "width": 119,
+          "height": 48,
+          "right": 293,
+          "bottom": 367.1875,
+          "lines": 3
+        },
+        "noteBox": {
+          "x": 174,
+          "y": 372.1875,
+          "width": 89.609375,
+          "height": 31.796875,
+          "right": 263.609375,
+          "bottom": 403.984375,
+          "lines": 2
+        },
+        "tile": {
+          "x": 160,
+          "y": 288.1875,
+          "width": 147,
+          "height": 126.59375,
+          "right": 307,
+          "bottom": 414.78125
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 15,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 320 Season record tile present",
+      "result": "PASS",
+      "detail": {}
+    },
+    {
+      "id": "matchday 360 no document horizontal overflow",
+      "result": "PASS",
+      "detail": {
+        "width": 360,
+        "scroll": 360
+      }
+    },
+    {
+      "id": "matchday 360 League position label/value do not intersect",
+      "result": "PASS",
+      "detail": {
+        "label": "League position",
+        "value": "–",
+        "labelBox": {
+          "x": 27,
+          "y": 185.390625,
+          "width": 75.3125,
+          "height": 33,
+          "right": 102.3125,
+          "bottom": 218.390625,
+          "lines": 2
+        },
+        "valueBox": {
+          "x": 27,
+          "y": 222.421875,
+          "width": 11.953125,
+          "height": 36,
+          "right": 38.953125,
+          "bottom": 258.421875,
+          "lines": 1
+        },
+        "noteBox": {
+          "x": 27,
+          "y": 262.390625,
+          "width": 85.6875,
+          "height": 15,
+          "right": 112.6875,
+          "bottom": 277.390625,
+          "lines": 1
+        },
+        "tile": {
+          "x": 13,
+          "y": 176.390625,
+          "width": 167,
+          "height": 111.796875,
+          "right": 180,
+          "bottom": 288.1875
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 30.4,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 360 League position value/note do not intersect",
+      "result": "PASS",
+      "detail": {
+        "label": "League position",
+        "value": "–",
+        "labelBox": {
+          "x": 27,
+          "y": 185.390625,
+          "width": 75.3125,
+          "height": 33,
+          "right": 102.3125,
+          "bottom": 218.390625,
+          "lines": 2
+        },
+        "valueBox": {
+          "x": 27,
+          "y": 222.421875,
+          "width": 11.953125,
+          "height": 36,
+          "right": 38.953125,
+          "bottom": 258.421875,
+          "lines": 1
+        },
+        "noteBox": {
+          "x": 27,
+          "y": 262.390625,
+          "width": 85.6875,
+          "height": 15,
+          "right": 112.6875,
+          "bottom": 277.390625,
+          "lines": 1
+        },
+        "tile": {
+          "x": 13,
+          "y": 176.390625,
+          "width": 167,
+          "height": 111.796875,
+          "right": 180,
+          "bottom": 288.1875
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 30.4,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 360 League position readable and contained",
+      "result": "PASS",
+      "detail": {
+        "label": "League position",
+        "value": "–",
+        "labelBox": {
+          "x": 27,
+          "y": 185.390625,
+          "width": 75.3125,
+          "height": 33,
+          "right": 102.3125,
+          "bottom": 218.390625,
+          "lines": 2
+        },
+        "valueBox": {
+          "x": 27,
+          "y": 222.421875,
+          "width": 11.953125,
+          "height": 36,
+          "right": 38.953125,
+          "bottom": 258.421875,
+          "lines": 1
+        },
+        "noteBox": {
+          "x": 27,
+          "y": 262.390625,
+          "width": 85.6875,
+          "height": 15,
+          "right": 112.6875,
+          "bottom": 277.390625,
+          "lines": 1
+        },
+        "tile": {
+          "x": 13,
+          "y": 176.390625,
+          "width": 167,
+          "height": 111.796875,
+          "right": 180,
+          "bottom": 288.1875
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 30.4,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 360 Season record label/value do not intersect",
+      "result": "PASS",
+      "detail": {
+        "label": "Season record",
+        "value": "0-0",
+        "labelBox": {
+          "x": 194,
+          "y": 185.390625,
+          "width": 130.9375,
+          "height": 15,
+          "right": 324.9375,
+          "bottom": 200.390625,
+          "lines": 1
+        },
+        "valueBox": {
+          "x": 194,
+          "y": 204.421875,
+          "width": 42.765625,
+          "height": 36,
+          "right": 236.765625,
+          "bottom": 240.421875,
+          "lines": 1
+        },
+        "noteBox": {
+          "x": 194,
+          "y": 244.390625,
+          "width": 79.640625,
+          "height": 15,
+          "right": 273.640625,
+          "bottom": 259.390625,
+          "lines": 1
+        },
+        "tile": {
+          "x": 180,
+          "y": 176.390625,
+          "width": 167,
+          "height": 111.796875,
+          "right": 347,
+          "bottom": 288.1875
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 30.4,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 360 Season record value/note do not intersect",
+      "result": "PASS",
+      "detail": {
+        "label": "Season record",
+        "value": "0-0",
+        "labelBox": {
+          "x": 194,
+          "y": 185.390625,
+          "width": 130.9375,
+          "height": 15,
+          "right": 324.9375,
+          "bottom": 200.390625,
+          "lines": 1
+        },
+        "valueBox": {
+          "x": 194,
+          "y": 204.421875,
+          "width": 42.765625,
+          "height": 36,
+          "right": 236.765625,
+          "bottom": 240.421875,
+          "lines": 1
+        },
+        "noteBox": {
+          "x": 194,
+          "y": 244.390625,
+          "width": 79.640625,
+          "height": 15,
+          "right": 273.640625,
+          "bottom": 259.390625,
+          "lines": 1
+        },
+        "tile": {
+          "x": 180,
+          "y": 176.390625,
+          "width": 167,
+          "height": 111.796875,
+          "right": 347,
+          "bottom": 288.1875
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 30.4,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 360 Season record readable and contained",
+      "result": "PASS",
+      "detail": {
+        "label": "Season record",
+        "value": "0-0",
+        "labelBox": {
+          "x": 194,
+          "y": 185.390625,
+          "width": 130.9375,
+          "height": 15,
+          "right": 324.9375,
+          "bottom": 200.390625,
+          "lines": 1
+        },
+        "valueBox": {
+          "x": 194,
+          "y": 204.421875,
+          "width": 42.765625,
+          "height": 36,
+          "right": 236.765625,
+          "bottom": 240.421875,
+          "lines": 1
+        },
+        "noteBox": {
+          "x": 194,
+          "y": 244.390625,
+          "width": 79.640625,
+          "height": 15,
+          "right": 273.640625,
+          "bottom": 259.390625,
+          "lines": 1
+        },
+        "tile": {
+          "x": 180,
+          "y": 176.390625,
+          "width": 167,
+          "height": 111.796875,
+          "right": 347,
+          "bottom": 288.1875
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 30.4,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 360 Net run rate label/value do not intersect",
+      "result": "PASS",
+      "detail": {
+        "label": "Net run rate",
+        "value": "–",
+        "labelBox": {
+          "x": 27,
+          "y": 297.1875,
+          "width": 112.9375,
+          "height": 15,
+          "right": 139.9375,
+          "bottom": 312.1875,
+          "lines": 1
+        },
+        "valueBox": {
+          "x": 27,
+          "y": 316.21875,
+          "width": 11.953125,
+          "height": 36,
+          "right": 38.953125,
+          "bottom": 352.21875,
+          "lines": 1
+        },
+        "noteBox": {
+          "x": 27,
+          "y": 356.1875,
+          "width": 78.84375,
+          "height": 31.796875,
+          "right": 105.84375,
+          "bottom": 387.984375,
+          "lines": 2
+        },
+        "tile": {
+          "x": 13,
+          "y": 288.1875,
+          "width": 167,
+          "height": 110.59375,
+          "right": 180,
+          "bottom": 398.78125
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 30.4,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 360 Net run rate value/note do not intersect",
+      "result": "PASS",
+      "detail": {
+        "label": "Net run rate",
+        "value": "–",
+        "labelBox": {
+          "x": 27,
+          "y": 297.1875,
+          "width": 112.9375,
+          "height": 15,
+          "right": 139.9375,
+          "bottom": 312.1875,
+          "lines": 1
+        },
+        "valueBox": {
+          "x": 27,
+          "y": 316.21875,
+          "width": 11.953125,
+          "height": 36,
+          "right": 38.953125,
+          "bottom": 352.21875,
+          "lines": 1
+        },
+        "noteBox": {
+          "x": 27,
+          "y": 356.1875,
+          "width": 78.84375,
+          "height": 31.796875,
+          "right": 105.84375,
+          "bottom": 387.984375,
+          "lines": 2
+        },
+        "tile": {
+          "x": 13,
+          "y": 288.1875,
+          "width": 167,
+          "height": 110.59375,
+          "right": 180,
+          "bottom": 398.78125
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 30.4,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 360 Net run rate readable and contained",
+      "result": "PASS",
+      "detail": {
+        "label": "Net run rate",
+        "value": "–",
+        "labelBox": {
+          "x": 27,
+          "y": 297.1875,
+          "width": 112.9375,
+          "height": 15,
+          "right": 139.9375,
+          "bottom": 312.1875,
+          "lines": 1
+        },
+        "valueBox": {
+          "x": 27,
+          "y": 316.21875,
+          "width": 11.953125,
+          "height": 36,
+          "right": 38.953125,
+          "bottom": 352.21875,
+          "lines": 1
+        },
+        "noteBox": {
+          "x": 27,
+          "y": 356.1875,
+          "width": 78.84375,
+          "height": 31.796875,
+          "right": 105.84375,
+          "bottom": 387.984375,
+          "lines": 2
+        },
+        "tile": {
+          "x": 13,
+          "y": 288.1875,
+          "width": 167,
+          "height": 110.59375,
+          "right": 180,
+          "bottom": 398.78125
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 30.4,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 360 Recent form label/value do not intersect",
+      "result": "PASS",
+      "detail": {
+        "label": "Recent form",
+        "value": "First match ahead",
+        "labelBox": {
+          "x": 194,
+          "y": 297.1875,
+          "width": 110.453125,
+          "height": 15,
+          "right": 304.453125,
+          "bottom": 312.1875,
+          "lines": 1
+        },
+        "valueBox": {
+          "x": 194,
+          "y": 323.1875,
+          "width": 134.234375,
+          "height": 24,
+          "right": 328.234375,
+          "bottom": 347.1875,
+          "lines": 2
+        },
+        "noteBox": {
+          "x": 194,
+          "y": 356.1875,
+          "width": 89.609375,
+          "height": 31.796875,
+          "right": 283.609375,
+          "bottom": 387.984375,
+          "lines": 2
+        },
+        "tile": {
+          "x": 180,
+          "y": 288.1875,
+          "width": 167,
+          "height": 110.59375,
+          "right": 347,
+          "bottom": 398.78125
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 15,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 360 Recent form value/note do not intersect",
+      "result": "PASS",
+      "detail": {
+        "label": "Recent form",
+        "value": "First match ahead",
+        "labelBox": {
+          "x": 194,
+          "y": 297.1875,
+          "width": 110.453125,
+          "height": 15,
+          "right": 304.453125,
+          "bottom": 312.1875,
+          "lines": 1
+        },
+        "valueBox": {
+          "x": 194,
+          "y": 323.1875,
+          "width": 134.234375,
+          "height": 24,
+          "right": 328.234375,
+          "bottom": 347.1875,
+          "lines": 2
+        },
+        "noteBox": {
+          "x": 194,
+          "y": 356.1875,
+          "width": 89.609375,
+          "height": 31.796875,
+          "right": 283.609375,
+          "bottom": 387.984375,
+          "lines": 2
+        },
+        "tile": {
+          "x": 180,
+          "y": 288.1875,
+          "width": 167,
+          "height": 110.59375,
+          "right": 347,
+          "bottom": 398.78125
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 15,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 360 Recent form readable and contained",
+      "result": "PASS",
+      "detail": {
+        "label": "Recent form",
+        "value": "First match ahead",
+        "labelBox": {
+          "x": 194,
+          "y": 297.1875,
+          "width": 110.453125,
+          "height": 15,
+          "right": 304.453125,
+          "bottom": 312.1875,
+          "lines": 1
+        },
+        "valueBox": {
+          "x": 194,
+          "y": 323.1875,
+          "width": 134.234375,
+          "height": 24,
+          "right": 328.234375,
+          "bottom": 347.1875,
+          "lines": 2
+        },
+        "noteBox": {
+          "x": 194,
+          "y": 356.1875,
+          "width": 89.609375,
+          "height": 31.796875,
+          "right": 283.609375,
+          "bottom": 387.984375,
+          "lines": 2
+        },
+        "tile": {
+          "x": 180,
+          "y": 288.1875,
+          "width": 167,
+          "height": 110.59375,
+          "right": 347,
+          "bottom": 398.78125
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 15,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 360 Season record tile present",
+      "result": "PASS",
+      "detail": {}
+    },
+    {
+      "id": "matchday 390 no document horizontal overflow",
+      "result": "PASS",
+      "detail": {
+        "width": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "id": "matchday 390 League position label/value do not intersect",
+      "result": "PASS",
+      "detail": {
+        "label": "League position",
+        "value": "–",
+        "labelBox": {
+          "x": 27,
+          "y": 185.390625,
+          "width": 140.875,
+          "height": 15,
+          "right": 167.875,
+          "bottom": 200.390625,
+          "lines": 1
+        },
+        "valueBox": {
+          "x": 27,
+          "y": 204.421875,
+          "width": 11.953125,
+          "height": 36,
+          "right": 38.953125,
+          "bottom": 240.421875,
+          "lines": 1
+        },
+        "noteBox": {
+          "x": 27,
+          "y": 244.390625,
+          "width": 85.6875,
+          "height": 15,
+          "right": 112.6875,
+          "bottom": 259.390625,
+          "lines": 1
+        },
+        "tile": {
+          "x": 13,
+          "y": 176.390625,
+          "width": 182,
+          "height": 93.796875,
+          "right": 195,
+          "bottom": 270.1875
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 30.4,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 390 League position value/note do not intersect",
+      "result": "PASS",
+      "detail": {
+        "label": "League position",
+        "value": "–",
+        "labelBox": {
+          "x": 27,
+          "y": 185.390625,
+          "width": 140.875,
+          "height": 15,
+          "right": 167.875,
+          "bottom": 200.390625,
+          "lines": 1
+        },
+        "valueBox": {
+          "x": 27,
+          "y": 204.421875,
+          "width": 11.953125,
+          "height": 36,
+          "right": 38.953125,
+          "bottom": 240.421875,
+          "lines": 1
+        },
+        "noteBox": {
+          "x": 27,
+          "y": 244.390625,
+          "width": 85.6875,
+          "height": 15,
+          "right": 112.6875,
+          "bottom": 259.390625,
+          "lines": 1
+        },
+        "tile": {
+          "x": 13,
+          "y": 176.390625,
+          "width": 182,
+          "height": 93.796875,
+          "right": 195,
+          "bottom": 270.1875
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 30.4,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 390 League position readable and contained",
+      "result": "PASS",
+      "detail": {
+        "label": "League position",
+        "value": "–",
+        "labelBox": {
+          "x": 27,
+          "y": 185.390625,
+          "width": 140.875,
+          "height": 15,
+          "right": 167.875,
+          "bottom": 200.390625,
+          "lines": 1
+        },
+        "valueBox": {
+          "x": 27,
+          "y": 204.421875,
+          "width": 11.953125,
+          "height": 36,
+          "right": 38.953125,
+          "bottom": 240.421875,
+          "lines": 1
+        },
+        "noteBox": {
+          "x": 27,
+          "y": 244.390625,
+          "width": 85.6875,
+          "height": 15,
+          "right": 112.6875,
+          "bottom": 259.390625,
+          "lines": 1
+        },
+        "tile": {
+          "x": 13,
+          "y": 176.390625,
+          "width": 182,
+          "height": 93.796875,
+          "right": 195,
+          "bottom": 270.1875
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 30.4,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 390 Season record label/value do not intersect",
+      "result": "PASS",
+      "detail": {
+        "label": "Season record",
+        "value": "0-0",
+        "labelBox": {
+          "x": 209,
+          "y": 185.390625,
+          "width": 130.9375,
+          "height": 15,
+          "right": 339.9375,
+          "bottom": 200.390625,
+          "lines": 1
+        },
+        "valueBox": {
+          "x": 209,
+          "y": 204.421875,
+          "width": 42.765625,
+          "height": 36,
+          "right": 251.765625,
+          "bottom": 240.421875,
+          "lines": 1
+        },
+        "noteBox": {
+          "x": 209,
+          "y": 244.390625,
+          "width": 79.640625,
+          "height": 15,
+          "right": 288.640625,
+          "bottom": 259.390625,
+          "lines": 1
+        },
+        "tile": {
+          "x": 195,
+          "y": 176.390625,
+          "width": 182,
+          "height": 93.796875,
+          "right": 377,
+          "bottom": 270.1875
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 30.4,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 390 Season record value/note do not intersect",
+      "result": "PASS",
+      "detail": {
+        "label": "Season record",
+        "value": "0-0",
+        "labelBox": {
+          "x": 209,
+          "y": 185.390625,
+          "width": 130.9375,
+          "height": 15,
+          "right": 339.9375,
+          "bottom": 200.390625,
+          "lines": 1
+        },
+        "valueBox": {
+          "x": 209,
+          "y": 204.421875,
+          "width": 42.765625,
+          "height": 36,
+          "right": 251.765625,
+          "bottom": 240.421875,
+          "lines": 1
+        },
+        "noteBox": {
+          "x": 209,
+          "y": 244.390625,
+          "width": 79.640625,
+          "height": 15,
+          "right": 288.640625,
+          "bottom": 259.390625,
+          "lines": 1
+        },
+        "tile": {
+          "x": 195,
+          "y": 176.390625,
+          "width": 182,
+          "height": 93.796875,
+          "right": 377,
+          "bottom": 270.1875
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 30.4,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 390 Season record readable and contained",
+      "result": "PASS",
+      "detail": {
+        "label": "Season record",
+        "value": "0-0",
+        "labelBox": {
+          "x": 209,
+          "y": 185.390625,
+          "width": 130.9375,
+          "height": 15,
+          "right": 339.9375,
+          "bottom": 200.390625,
+          "lines": 1
+        },
+        "valueBox": {
+          "x": 209,
+          "y": 204.421875,
+          "width": 42.765625,
+          "height": 36,
+          "right": 251.765625,
+          "bottom": 240.421875,
+          "lines": 1
+        },
+        "noteBox": {
+          "x": 209,
+          "y": 244.390625,
+          "width": 79.640625,
+          "height": 15,
+          "right": 288.640625,
+          "bottom": 259.390625,
+          "lines": 1
+        },
+        "tile": {
+          "x": 195,
+          "y": 176.390625,
+          "width": 182,
+          "height": 93.796875,
+          "right": 377,
+          "bottom": 270.1875
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 30.4,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 390 Net run rate label/value do not intersect",
+      "result": "PASS",
+      "detail": {
+        "label": "Net run rate",
+        "value": "–",
+        "labelBox": {
+          "x": 27,
+          "y": 279.1875,
+          "width": 112.9375,
+          "height": 15,
+          "right": 139.9375,
+          "bottom": 294.1875,
+          "lines": 1
+        },
+        "valueBox": {
+          "x": 27,
+          "y": 298.21875,
+          "width": 11.953125,
+          "height": 36,
+          "right": 38.953125,
+          "bottom": 334.21875,
+          "lines": 1
+        },
+        "noteBox": {
+          "x": 27,
+          "y": 338.1875,
+          "width": 139.78125,
+          "height": 15,
+          "right": 166.78125,
+          "bottom": 353.1875,
+          "lines": 1
+        },
+        "tile": {
+          "x": 13,
+          "y": 270.1875,
+          "width": 182,
+          "height": 93.796875,
+          "right": 195,
+          "bottom": 363.984375
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 30.4,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 390 Net run rate value/note do not intersect",
+      "result": "PASS",
+      "detail": {
+        "label": "Net run rate",
+        "value": "–",
+        "labelBox": {
+          "x": 27,
+          "y": 279.1875,
+          "width": 112.9375,
+          "height": 15,
+          "right": 139.9375,
+          "bottom": 294.1875,
+          "lines": 1
+        },
+        "valueBox": {
+          "x": 27,
+          "y": 298.21875,
+          "width": 11.953125,
+          "height": 36,
+          "right": 38.953125,
+          "bottom": 334.21875,
+          "lines": 1
+        },
+        "noteBox": {
+          "x": 27,
+          "y": 338.1875,
+          "width": 139.78125,
+          "height": 15,
+          "right": 166.78125,
+          "bottom": 353.1875,
+          "lines": 1
+        },
+        "tile": {
+          "x": 13,
+          "y": 270.1875,
+          "width": 182,
+          "height": 93.796875,
+          "right": 195,
+          "bottom": 363.984375
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 30.4,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 390 Net run rate readable and contained",
+      "result": "PASS",
+      "detail": {
+        "label": "Net run rate",
+        "value": "–",
+        "labelBox": {
+          "x": 27,
+          "y": 279.1875,
+          "width": 112.9375,
+          "height": 15,
+          "right": 139.9375,
+          "bottom": 294.1875,
+          "lines": 1
+        },
+        "valueBox": {
+          "x": 27,
+          "y": 298.21875,
+          "width": 11.953125,
+          "height": 36,
+          "right": 38.953125,
+          "bottom": 334.21875,
+          "lines": 1
+        },
+        "noteBox": {
+          "x": 27,
+          "y": 338.1875,
+          "width": 139.78125,
+          "height": 15,
+          "right": 166.78125,
+          "bottom": 353.1875,
+          "lines": 1
+        },
+        "tile": {
+          "x": 13,
+          "y": 270.1875,
+          "width": 182,
+          "height": 93.796875,
+          "right": 195,
+          "bottom": 363.984375
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 30.4,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 390 Recent form label/value do not intersect",
+      "result": "PASS",
+      "detail": {
+        "label": "Recent form",
+        "value": "First match ahead",
+        "labelBox": {
+          "x": 209,
+          "y": 279.1875,
+          "width": 110.453125,
+          "height": 15,
+          "right": 319.453125,
+          "bottom": 294.1875,
+          "lines": 1
+        },
+        "valueBox": {
+          "x": 209,
+          "y": 305.1875,
+          "width": 134.234375,
+          "height": 24,
+          "right": 343.234375,
+          "bottom": 329.1875,
+          "lines": 2
+        },
+        "noteBox": {
+          "x": 209,
+          "y": 338.1875,
+          "width": 141.3125,
+          "height": 15,
+          "right": 350.3125,
+          "bottom": 353.1875,
+          "lines": 1
+        },
+        "tile": {
+          "x": 195,
+          "y": 270.1875,
+          "width": 182,
+          "height": 93.796875,
+          "right": 377,
+          "bottom": 363.984375
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 15,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 390 Recent form value/note do not intersect",
+      "result": "PASS",
+      "detail": {
+        "label": "Recent form",
+        "value": "First match ahead",
+        "labelBox": {
+          "x": 209,
+          "y": 279.1875,
+          "width": 110.453125,
+          "height": 15,
+          "right": 319.453125,
+          "bottom": 294.1875,
+          "lines": 1
+        },
+        "valueBox": {
+          "x": 209,
+          "y": 305.1875,
+          "width": 134.234375,
+          "height": 24,
+          "right": 343.234375,
+          "bottom": 329.1875,
+          "lines": 2
+        },
+        "noteBox": {
+          "x": 209,
+          "y": 338.1875,
+          "width": 141.3125,
+          "height": 15,
+          "right": 350.3125,
+          "bottom": 353.1875,
+          "lines": 1
+        },
+        "tile": {
+          "x": 195,
+          "y": 270.1875,
+          "width": 182,
+          "height": 93.796875,
+          "right": 377,
+          "bottom": 363.984375
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 15,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 390 Recent form readable and contained",
+      "result": "PASS",
+      "detail": {
+        "label": "Recent form",
+        "value": "First match ahead",
+        "labelBox": {
+          "x": 209,
+          "y": 279.1875,
+          "width": 110.453125,
+          "height": 15,
+          "right": 319.453125,
+          "bottom": 294.1875,
+          "lines": 1
+        },
+        "valueBox": {
+          "x": 209,
+          "y": 305.1875,
+          "width": 134.234375,
+          "height": 24,
+          "right": 343.234375,
+          "bottom": 329.1875,
+          "lines": 2
+        },
+        "noteBox": {
+          "x": 209,
+          "y": 338.1875,
+          "width": 141.3125,
+          "height": 15,
+          "right": 350.3125,
+          "bottom": 353.1875,
+          "lines": 1
+        },
+        "tile": {
+          "x": 195,
+          "y": 270.1875,
+          "width": 182,
+          "height": 93.796875,
+          "right": 377,
+          "bottom": 363.984375
+        },
+        "labelValueIntersect": false,
+        "valueNoteIntersect": false,
+        "contained": true,
+        "labelFont": 12,
+        "valueFont": 15,
+        "labelVisible": true,
+        "valueVisible": true,
+        "labelClipped": false
+      }
+    },
+    {
+      "id": "matchday 390 Season record tile present",
+      "result": "PASS",
+      "detail": {}
+    },
+    {
+      "id": "nav 320 Tab Matchday focus indicator rendered",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Matchday",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 25.59375,
+          "y": 101,
+          "width": 101.96875,
+          "height": 44,
+          "right": 127.5625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 20.59375,
+          "y": 96,
+          "right": 132.5625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Tab Matchday control and focus ring fully visible",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Matchday",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 25.59375,
+          "y": 101,
+          "width": 101.96875,
+          "height": 44,
+          "right": 127.5625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 20.59375,
+          "y": 96,
+          "right": 132.5625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Tab Matchday unobscured",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Matchday",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 25.59375,
+          "y": 101,
+          "width": 101.96875,
+          "height": 44,
+          "right": 127.5625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 20.59375,
+          "y": 96,
+          "right": 132.5625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Tab Matchday page did not shift horizontally",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Matchday",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 25.59375,
+          "y": 101,
+          "width": 101.96875,
+          "height": 44,
+          "right": 127.5625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 20.59375,
+          "y": 96,
+          "right": 132.5625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Tab My XI focus indicator rendered",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "My XI",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 129.15625,
+          "y": 101,
+          "width": 68.875,
+          "height": 44,
+          "right": 198.03125,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 124.15625,
+          "y": 96,
+          "right": 203.03125,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Tab My XI control and focus ring fully visible",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "My XI",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 129.15625,
+          "y": 101,
+          "width": 68.875,
+          "height": 44,
+          "right": 198.03125,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 124.15625,
+          "y": 96,
+          "right": 203.03125,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Tab My XI unobscured",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "My XI",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 129.15625,
+          "y": 101,
+          "width": 68.875,
+          "height": 44,
+          "right": 198.03125,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 124.15625,
+          "y": 96,
+          "right": 203.03125,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Tab My XI page did not shift horizontally",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "My XI",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 129.15625,
+          "y": 101,
+          "width": 68.875,
+          "height": 44,
+          "right": 198.03125,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 124.15625,
+          "y": 96,
+          "right": 203.03125,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Tab Ladder focus indicator rendered",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Ladder",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 120.625,
+          "y": 101,
+          "width": 78.625,
+          "height": 44,
+          "right": 199.25,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 115.625,
+          "y": 96,
+          "right": 204.25,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 79,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Tab Ladder control and focus ring fully visible",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Ladder",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 120.625,
+          "y": 101,
+          "width": 78.625,
+          "height": 44,
+          "right": 199.25,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 115.625,
+          "y": 96,
+          "right": 204.25,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 79,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Tab Ladder unobscured",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Ladder",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 120.625,
+          "y": 101,
+          "width": 78.625,
+          "height": 44,
+          "right": 199.25,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 115.625,
+          "y": 96,
+          "right": 204.25,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 79,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Tab Ladder page did not shift horizontally",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Ladder",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 120.625,
+          "y": 101,
+          "width": 78.625,
+          "height": 44,
+          "right": 199.25,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 115.625,
+          "y": 96,
+          "right": 204.25,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 79,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Tab Fixtures focus indicator rendered",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Fixtures",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 140.84375,
+          "y": 101,
+          "width": 87.71875,
+          "height": 44,
+          "right": 228.5625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 135.84375,
+          "y": 96,
+          "right": 233.5625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 139,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Tab Fixtures control and focus ring fully visible",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Fixtures",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 140.84375,
+          "y": 101,
+          "width": 87.71875,
+          "height": 44,
+          "right": 228.5625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 135.84375,
+          "y": 96,
+          "right": 233.5625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 139,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Tab Fixtures unobscured",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Fixtures",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 140.84375,
+          "y": 101,
+          "width": 87.71875,
+          "height": 44,
+          "right": 228.5625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 135.84375,
+          "y": 96,
+          "right": 233.5625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 139,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Tab Fixtures page did not shift horizontally",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Fixtures",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 140.84375,
+          "y": 101,
+          "width": 87.71875,
+          "height": 44,
+          "right": 228.5625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 135.84375,
+          "y": 96,
+          "right": 233.5625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 139,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Tab Stats focus indicator rendered",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Stats",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 230.15625,
+          "y": 101,
+          "width": 64.6875,
+          "height": 44,
+          "right": 294.84375,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 225.15625,
+          "y": 96,
+          "right": 299.84375,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 139,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Tab Stats control and focus ring fully visible",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Stats",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 230.15625,
+          "y": 101,
+          "width": 64.6875,
+          "height": 44,
+          "right": 294.84375,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 225.15625,
+          "y": 96,
+          "right": 299.84375,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 139,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Tab Stats unobscured",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Stats",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 230.15625,
+          "y": 101,
+          "width": 64.6875,
+          "height": 44,
+          "right": 294.84375,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 225.15625,
+          "y": 96,
+          "right": 299.84375,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 139,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Tab Stats page did not shift horizontally",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Stats",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 230.15625,
+          "y": 101,
+          "width": 64.6875,
+          "height": 44,
+          "right": 294.84375,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 225.15625,
+          "y": 96,
+          "right": 299.84375,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 139,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 forward Tab visits every nav button in order",
+      "result": "PASS",
+      "detail": {
+        "fwd": [
+          "Matchday",
+          "My XI",
+          "Ladder",
+          "Fixtures",
+          "Stats"
+        ],
+        "labels": [
+          "Matchday",
+          "My XI",
+          "Ladder",
+          "Fixtures",
+          "Stats"
+        ]
+      }
+    },
+    {
+      "id": "nav 320 Shift+Tab Stats focus indicator rendered",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Stats",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 230.15625,
+          "y": 101,
+          "width": 64.6875,
+          "height": 44,
+          "right": 294.84375,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 225.15625,
+          "y": 96,
+          "right": 299.84375,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 139,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Shift+Tab Stats control and focus ring fully visible",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Stats",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 230.15625,
+          "y": 101,
+          "width": 64.6875,
+          "height": 44,
+          "right": 294.84375,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 225.15625,
+          "y": 96,
+          "right": 299.84375,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 139,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Shift+Tab Stats unobscured",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Stats",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 230.15625,
+          "y": 101,
+          "width": 64.6875,
+          "height": 44,
+          "right": 294.84375,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 225.15625,
+          "y": 96,
+          "right": 299.84375,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 139,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Shift+Tab Stats page did not shift horizontally",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Stats",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 230.15625,
+          "y": 101,
+          "width": 64.6875,
+          "height": 44,
+          "right": 294.84375,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 225.15625,
+          "y": 96,
+          "right": 299.84375,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 139,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Shift+Tab Fixtures focus indicator rendered",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Fixtures",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 140.84375,
+          "y": 101,
+          "width": 87.71875,
+          "height": 44,
+          "right": 228.5625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 135.84375,
+          "y": 96,
+          "right": 233.5625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 139,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Shift+Tab Fixtures control and focus ring fully visible",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Fixtures",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 140.84375,
+          "y": 101,
+          "width": 87.71875,
+          "height": 44,
+          "right": 228.5625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 135.84375,
+          "y": 96,
+          "right": 233.5625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 139,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Shift+Tab Fixtures unobscured",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Fixtures",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 140.84375,
+          "y": 101,
+          "width": 87.71875,
+          "height": 44,
+          "right": 228.5625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 135.84375,
+          "y": 96,
+          "right": 233.5625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 139,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Shift+Tab Fixtures page did not shift horizontally",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Fixtures",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 140.84375,
+          "y": 101,
+          "width": 87.71875,
+          "height": 44,
+          "right": 228.5625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 135.84375,
+          "y": 96,
+          "right": 233.5625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 139,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Shift+Tab Ladder focus indicator rendered",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Ladder",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 60.625,
+          "y": 101,
+          "width": 78.625,
+          "height": 44,
+          "right": 139.25,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 55.625,
+          "y": 96,
+          "right": 144.25,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 139,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Shift+Tab Ladder control and focus ring fully visible",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Ladder",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 60.625,
+          "y": 101,
+          "width": 78.625,
+          "height": 44,
+          "right": 139.25,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 55.625,
+          "y": 96,
+          "right": 144.25,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 139,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Shift+Tab Ladder unobscured",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Ladder",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 60.625,
+          "y": 101,
+          "width": 78.625,
+          "height": 44,
+          "right": 139.25,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 55.625,
+          "y": 96,
+          "right": 144.25,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 139,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Shift+Tab Ladder page did not shift horizontally",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Ladder",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 60.625,
+          "y": 101,
+          "width": 78.625,
+          "height": 44,
+          "right": 139.25,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 55.625,
+          "y": 96,
+          "right": 144.25,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 139,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Shift+Tab My XI focus indicator rendered",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "My XI",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 125.15625,
+          "y": 101,
+          "width": 68.875,
+          "height": 44,
+          "right": 194.03125,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 120.15625,
+          "y": 96,
+          "right": 199.03125,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 4,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Shift+Tab My XI control and focus ring fully visible",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "My XI",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 125.15625,
+          "y": 101,
+          "width": 68.875,
+          "height": 44,
+          "right": 194.03125,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 120.15625,
+          "y": 96,
+          "right": 199.03125,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 4,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Shift+Tab My XI unobscured",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "My XI",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 125.15625,
+          "y": 101,
+          "width": 68.875,
+          "height": 44,
+          "right": 194.03125,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 120.15625,
+          "y": 96,
+          "right": 199.03125,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 4,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Shift+Tab My XI page did not shift horizontally",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "My XI",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 125.15625,
+          "y": 101,
+          "width": 68.875,
+          "height": 44,
+          "right": 194.03125,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 120.15625,
+          "y": 96,
+          "right": 199.03125,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 4,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Shift+Tab Matchday focus indicator rendered",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Matchday",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 25.59375,
+          "y": 101,
+          "width": 101.96875,
+          "height": 44,
+          "right": 127.5625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 20.59375,
+          "y": 96,
+          "right": 132.5625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Shift+Tab Matchday control and focus ring fully visible",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Matchday",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 25.59375,
+          "y": 101,
+          "width": 101.96875,
+          "height": 44,
+          "right": 127.5625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 20.59375,
+          "y": 96,
+          "right": 132.5625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Shift+Tab Matchday unobscured",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Matchday",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 25.59375,
+          "y": 101,
+          "width": 101.96875,
+          "height": 44,
+          "right": 127.5625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 20.59375,
+          "y": 96,
+          "right": 132.5625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 Shift+Tab Matchday page did not shift horizontally",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Matchday",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 25.59375,
+          "y": 101,
+          "width": 101.96875,
+          "height": 44,
+          "right": 127.5625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 20.59375,
+          "y": 96,
+          "right": 132.5625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 304,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 427,
+        "navClientWidth": 288,
+        "pageScrollX": 0,
+        "docScrollWidth": 320
+      }
+    },
+    {
+      "id": "nav 320 reverse Shift+Tab visits every nav button in order",
+      "result": "PASS",
+      "detail": {
+        "back": [
+          "Stats",
+          "Fixtures",
+          "Ladder",
+          "My XI",
+          "Matchday"
+        ],
+        "labels": [
+          "Matchday",
+          "My XI",
+          "Ladder",
+          "Fixtures",
+          "Stats"
+        ]
+      }
+    },
+    {
+      "id": "nav 360 Tab Matchday focus indicator rendered",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Matchday",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 26.796875,
+          "y": 101,
+          "width": 101.96875,
+          "height": 44,
+          "right": 128.765625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 21.796875,
+          "y": 96,
+          "right": 133.765625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Tab Matchday control and focus ring fully visible",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Matchday",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 26.796875,
+          "y": 101,
+          "width": 101.96875,
+          "height": 44,
+          "right": 128.765625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 21.796875,
+          "y": 96,
+          "right": 133.765625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Tab Matchday unobscured",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Matchday",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 26.796875,
+          "y": 101,
+          "width": 101.96875,
+          "height": 44,
+          "right": 128.765625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 21.796875,
+          "y": 96,
+          "right": 133.765625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Tab Matchday page did not shift horizontally",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Matchday",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 26.796875,
+          "y": 101,
+          "width": 101.96875,
+          "height": 44,
+          "right": 128.765625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 21.796875,
+          "y": 96,
+          "right": 133.765625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Tab My XI focus indicator rendered",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "My XI",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 130.359375,
+          "y": 101,
+          "width": 68.875,
+          "height": 44,
+          "right": 199.234375,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 125.359375,
+          "y": 96,
+          "right": 204.234375,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Tab My XI control and focus ring fully visible",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "My XI",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 130.359375,
+          "y": 101,
+          "width": 68.875,
+          "height": 44,
+          "right": 199.234375,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 125.359375,
+          "y": 96,
+          "right": 204.234375,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Tab My XI unobscured",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "My XI",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 130.359375,
+          "y": 101,
+          "width": 68.875,
+          "height": 44,
+          "right": 199.234375,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 125.359375,
+          "y": 96,
+          "right": 204.234375,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Tab My XI page did not shift horizontally",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "My XI",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 130.359375,
+          "y": 101,
+          "width": 68.875,
+          "height": 44,
+          "right": 199.234375,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 125.359375,
+          "y": 96,
+          "right": 204.234375,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Tab Ladder focus indicator rendered",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Ladder",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 200.828125,
+          "y": 101,
+          "width": 78.625,
+          "height": 44,
+          "right": 279.453125,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 195.828125,
+          "y": 96,
+          "right": 284.453125,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Tab Ladder control and focus ring fully visible",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Ladder",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 200.828125,
+          "y": 101,
+          "width": 78.625,
+          "height": 44,
+          "right": 279.453125,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 195.828125,
+          "y": 96,
+          "right": 284.453125,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Tab Ladder unobscured",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Ladder",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 200.828125,
+          "y": 101,
+          "width": 78.625,
+          "height": 44,
+          "right": 279.453125,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 195.828125,
+          "y": 96,
+          "right": 284.453125,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Tab Ladder page did not shift horizontally",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Ladder",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 200.828125,
+          "y": 101,
+          "width": 78.625,
+          "height": 44,
+          "right": 279.453125,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 195.828125,
+          "y": 96,
+          "right": 284.453125,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Tab Fixtures focus indicator rendered",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Fixtures",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 179.046875,
+          "y": 101,
+          "width": 87.71875,
+          "height": 44,
+          "right": 266.765625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 174.046875,
+          "y": 96,
+          "right": 271.765625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 102,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Tab Fixtures control and focus ring fully visible",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Fixtures",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 179.046875,
+          "y": 101,
+          "width": 87.71875,
+          "height": 44,
+          "right": 266.765625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 174.046875,
+          "y": 96,
+          "right": 271.765625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 102,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Tab Fixtures unobscured",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Fixtures",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 179.046875,
+          "y": 101,
+          "width": 87.71875,
+          "height": 44,
+          "right": 266.765625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 174.046875,
+          "y": 96,
+          "right": 271.765625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 102,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Tab Fixtures page did not shift horizontally",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Fixtures",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 179.046875,
+          "y": 101,
+          "width": 87.71875,
+          "height": 44,
+          "right": 266.765625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 174.046875,
+          "y": 96,
+          "right": 271.765625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 102,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Tab Stats focus indicator rendered",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Stats",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 268.359375,
+          "y": 101,
+          "width": 64.6875,
+          "height": 44,
+          "right": 333.046875,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 263.359375,
+          "y": 96,
+          "right": 338.046875,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 102,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Tab Stats control and focus ring fully visible",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Stats",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 268.359375,
+          "y": 101,
+          "width": 64.6875,
+          "height": 44,
+          "right": 333.046875,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 263.359375,
+          "y": 96,
+          "right": 338.046875,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 102,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Tab Stats unobscured",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Stats",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 268.359375,
+          "y": 101,
+          "width": 64.6875,
+          "height": 44,
+          "right": 333.046875,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 263.359375,
+          "y": 96,
+          "right": 338.046875,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 102,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Tab Stats page did not shift horizontally",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Stats",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 268.359375,
+          "y": 101,
+          "width": 64.6875,
+          "height": 44,
+          "right": 333.046875,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 263.359375,
+          "y": 96,
+          "right": 338.046875,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 102,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 forward Tab visits every nav button in order",
+      "result": "PASS",
+      "detail": {
+        "fwd": [
+          "Matchday",
+          "My XI",
+          "Ladder",
+          "Fixtures",
+          "Stats"
+        ],
+        "labels": [
+          "Matchday",
+          "My XI",
+          "Ladder",
+          "Fixtures",
+          "Stats"
+        ]
+      }
+    },
+    {
+      "id": "nav 360 Shift+Tab Stats focus indicator rendered",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Stats",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 268.359375,
+          "y": 101,
+          "width": 64.6875,
+          "height": 44,
+          "right": 333.046875,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 263.359375,
+          "y": 96,
+          "right": 338.046875,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 102,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Shift+Tab Stats control and focus ring fully visible",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Stats",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 268.359375,
+          "y": 101,
+          "width": 64.6875,
+          "height": 44,
+          "right": 333.046875,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 263.359375,
+          "y": 96,
+          "right": 338.046875,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 102,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Shift+Tab Stats unobscured",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Stats",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 268.359375,
+          "y": 101,
+          "width": 64.6875,
+          "height": 44,
+          "right": 333.046875,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 263.359375,
+          "y": 96,
+          "right": 338.046875,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 102,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Shift+Tab Stats page did not shift horizontally",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Stats",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 268.359375,
+          "y": 101,
+          "width": 64.6875,
+          "height": 44,
+          "right": 333.046875,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 263.359375,
+          "y": 96,
+          "right": 338.046875,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 102,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Shift+Tab Fixtures focus indicator rendered",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Fixtures",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 179.046875,
+          "y": 101,
+          "width": 87.71875,
+          "height": 44,
+          "right": 266.765625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 174.046875,
+          "y": 96,
+          "right": 271.765625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 102,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Shift+Tab Fixtures control and focus ring fully visible",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Fixtures",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 179.046875,
+          "y": 101,
+          "width": 87.71875,
+          "height": 44,
+          "right": 266.765625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 174.046875,
+          "y": 96,
+          "right": 271.765625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 102,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Shift+Tab Fixtures unobscured",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Fixtures",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 179.046875,
+          "y": 101,
+          "width": 87.71875,
+          "height": 44,
+          "right": 266.765625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 174.046875,
+          "y": 96,
+          "right": 271.765625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 102,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Shift+Tab Fixtures page did not shift horizontally",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Fixtures",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 179.046875,
+          "y": 101,
+          "width": 87.71875,
+          "height": 44,
+          "right": 266.765625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 174.046875,
+          "y": 96,
+          "right": 271.765625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 102,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Shift+Tab Ladder focus indicator rendered",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Ladder",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 98.828125,
+          "y": 101,
+          "width": 78.625,
+          "height": 44,
+          "right": 177.453125,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 93.828125,
+          "y": 96,
+          "right": 182.453125,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 102,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Shift+Tab Ladder control and focus ring fully visible",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Ladder",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 98.828125,
+          "y": 101,
+          "width": 78.625,
+          "height": 44,
+          "right": 177.453125,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 93.828125,
+          "y": 96,
+          "right": 182.453125,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 102,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Shift+Tab Ladder unobscured",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Ladder",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 98.828125,
+          "y": 101,
+          "width": 78.625,
+          "height": 44,
+          "right": 177.453125,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 93.828125,
+          "y": 96,
+          "right": 182.453125,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 102,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Shift+Tab Ladder page did not shift horizontally",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Ladder",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 98.828125,
+          "y": 101,
+          "width": 78.625,
+          "height": 44,
+          "right": 177.453125,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 93.828125,
+          "y": 96,
+          "right": 182.453125,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 102,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Shift+Tab My XI focus indicator rendered",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "My XI",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 130.359375,
+          "y": 101,
+          "width": 68.875,
+          "height": 44,
+          "right": 199.234375,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 125.359375,
+          "y": 96,
+          "right": 204.234375,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Shift+Tab My XI control and focus ring fully visible",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "My XI",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 130.359375,
+          "y": 101,
+          "width": 68.875,
+          "height": 44,
+          "right": 199.234375,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 125.359375,
+          "y": 96,
+          "right": 204.234375,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Shift+Tab My XI unobscured",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "My XI",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 130.359375,
+          "y": 101,
+          "width": 68.875,
+          "height": 44,
+          "right": 199.234375,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 125.359375,
+          "y": 96,
+          "right": 204.234375,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Shift+Tab My XI page did not shift horizontally",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "My XI",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 130.359375,
+          "y": 101,
+          "width": 68.875,
+          "height": 44,
+          "right": 199.234375,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 125.359375,
+          "y": 96,
+          "right": 204.234375,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Shift+Tab Matchday focus indicator rendered",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Matchday",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 26.796875,
+          "y": 101,
+          "width": 101.96875,
+          "height": 44,
+          "right": 128.765625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 21.796875,
+          "y": 96,
+          "right": 133.765625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Shift+Tab Matchday control and focus ring fully visible",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Matchday",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 26.796875,
+          "y": 101,
+          "width": 101.96875,
+          "height": 44,
+          "right": 128.765625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 21.796875,
+          "y": 96,
+          "right": 133.765625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Shift+Tab Matchday unobscured",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Matchday",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 26.796875,
+          "y": 101,
+          "width": 101.96875,
+          "height": 44,
+          "right": 128.765625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 21.796875,
+          "y": 96,
+          "right": 133.765625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 Shift+Tab Matchday page did not shift horizontally",
+      "result": "PASS",
+      "detail": {
+        "tag": "BUTTON",
+        "text": "Matchday",
+        "focusVisible": true,
+        "outline": "rgb(127, 224, 238) solid 3px",
+        "outlineWidth": 3,
+        "outlineOffset": 2,
+        "rect": {
+          "x": 26.796875,
+          "y": 101,
+          "width": 101.96875,
+          "height": 44,
+          "right": 128.765625,
+          "bottom": 145
+        },
+        "ring": {
+          "x": 21.796875,
+          "y": 96,
+          "right": 133.765625,
+          "bottom": 150
+        },
+        "clip": {
+          "x": 16,
+          "y": 94,
+          "right": 344,
+          "bottom": 151.390625
+        },
+        "controlInViewport": true,
+        "ringInClip": true,
+        "unobscured": true,
+        "inNav": true,
+        "navScrollLeft": 0,
+        "navScrollWidth": 430,
+        "navClientWidth": 328,
+        "pageScrollX": 0,
+        "docScrollWidth": 360
+      }
+    },
+    {
+      "id": "nav 360 reverse Shift+Tab visits every nav button in order",
+      "result": "PASS",
+      "detail": {
+        "back": [
+          "Stats",
+          "Fixtures",
+          "Ladder",
+          "My XI",
+          "Matchday"
+        ],
+        "labels": [
+          "Matchday",
+          "My XI",
+          "Ladder",
+          "Fixtures",
+          "Stats"
+        ]
+      }
+    }
+  ],
+  "findings": [],
+  "errors": [],
+  "runtimeErrors": [],
+  "ribbon": [
+    {
+      "width": 320,
+      "scrollWidth": 320,
+      "tiles": [
+        {
+          "label": "League position",
+          "value": "–",
+          "labelBox": {
+            "x": 27,
+            "y": 185.390625,
+            "width": 75.3125,
+            "height": 33,
+            "right": 102.3125,
+            "bottom": 218.390625,
+            "lines": 2
+          },
+          "valueBox": {
+            "x": 27,
+            "y": 222.421875,
+            "width": 11.953125,
+            "height": 36,
+            "right": 38.953125,
+            "bottom": 258.421875,
+            "lines": 1
+          },
+          "noteBox": {
+            "x": 27,
+            "y": 262.390625,
+            "width": 85.6875,
+            "height": 15,
+            "right": 112.6875,
+            "bottom": 277.390625,
+            "lines": 1
+          },
+          "tile": {
+            "x": 13,
+            "y": 176.390625,
+            "width": 147,
+            "height": 111.796875,
+            "right": 160,
+            "bottom": 288.1875
+          },
+          "labelValueIntersect": false,
+          "valueNoteIntersect": false,
+          "contained": true,
+          "labelFont": 12,
+          "valueFont": 30.4,
+          "labelVisible": true,
+          "valueVisible": true,
+          "labelClipped": false
+        },
+        {
+          "label": "Season record",
+          "value": "0-0",
+          "labelBox": {
+            "x": 174,
+            "y": 185.390625,
+            "width": 63.140625,
+            "height": 33,
+            "right": 237.140625,
+            "bottom": 218.390625,
+            "lines": 2
+          },
+          "valueBox": {
+            "x": 174,
+            "y": 222.421875,
+            "width": 42.765625,
+            "height": 36,
+            "right": 216.765625,
+            "bottom": 258.421875,
+            "lines": 1
+          },
+          "noteBox": {
+            "x": 174,
+            "y": 262.390625,
+            "width": 79.640625,
+            "height": 15,
+            "right": 253.640625,
+            "bottom": 277.390625,
+            "lines": 1
+          },
+          "tile": {
+            "x": 160,
+            "y": 176.390625,
+            "width": 147,
+            "height": 111.796875,
+            "right": 307,
+            "bottom": 288.1875
+          },
+          "labelValueIntersect": false,
+          "valueNoteIntersect": false,
+          "contained": true,
+          "labelFont": 12,
+          "valueFont": 30.4,
+          "labelVisible": true,
+          "valueVisible": true,
+          "labelClipped": false
+        },
+        {
+          "label": "Net run rate",
+          "value": "–",
+          "labelBox": {
+            "x": 27,
+            "y": 297.1875,
+            "width": 112.9375,
+            "height": 15,
+            "right": 139.9375,
+            "bottom": 312.1875,
+            "lines": 1
+          },
+          "valueBox": {
+            "x": 27,
+            "y": 316.21875,
+            "width": 11.953125,
+            "height": 36,
+            "right": 38.953125,
+            "bottom": 352.21875,
+            "lines": 1
+          },
+          "noteBox": {
+            "x": 27,
+            "y": 356.1875,
+            "width": 78.84375,
+            "height": 31.796875,
+            "right": 105.84375,
+            "bottom": 387.984375,
+            "lines": 2
+          },
+          "tile": {
+            "x": 13,
+            "y": 288.1875,
+            "width": 147,
+            "height": 126.59375,
+            "right": 160,
+            "bottom": 414.78125
+          },
+          "labelValueIntersect": false,
+          "valueNoteIntersect": false,
+          "contained": true,
+          "labelFont": 12,
+          "valueFont": 30.4,
+          "labelVisible": true,
+          "valueVisible": true,
+          "labelClipped": false
+        },
+        {
+          "label": "Recent form",
+          "value": "First match ahead",
+          "labelBox": {
+            "x": 174,
+            "y": 297.1875,
+            "width": 110.453125,
+            "height": 15,
+            "right": 284.453125,
+            "bottom": 312.1875,
+            "lines": 1
+          },
+          "valueBox": {
+            "x": 174,
+            "y": 319.1875,
+            "width": 119,
+            "height": 48,
+            "right": 293,
+            "bottom": 367.1875,
+            "lines": 3
+          },
+          "noteBox": {
+            "x": 174,
+            "y": 372.1875,
+            "width": 89.609375,
+            "height": 31.796875,
+            "right": 263.609375,
+            "bottom": 403.984375,
+            "lines": 2
+          },
+          "tile": {
+            "x": 160,
+            "y": 288.1875,
+            "width": 147,
+            "height": 126.59375,
+            "right": 307,
+            "bottom": 414.78125
+          },
+          "labelValueIntersect": false,
+          "valueNoteIntersect": false,
+          "contained": true,
+          "labelFont": 12,
+          "valueFont": 15,
+          "labelVisible": true,
+          "valueVisible": true,
+          "labelClipped": false
+        }
+      ]
+    },
+    {
+      "width": 360,
+      "scrollWidth": 360,
+      "tiles": [
+        {
+          "label": "League position",
+          "value": "–",
+          "labelBox": {
+            "x": 27,
+            "y": 185.390625,
+            "width": 75.3125,
+            "height": 33,
+            "right": 102.3125,
+            "bottom": 218.390625,
+            "lines": 2
+          },
+          "valueBox": {
+            "x": 27,
+            "y": 222.421875,
+            "width": 11.953125,
+            "height": 36,
+            "right": 38.953125,
+            "bottom": 258.421875,
+            "lines": 1
+          },
+          "noteBox": {
+            "x": 27,
+            "y": 262.390625,
+            "width": 85.6875,
+            "height": 15,
+            "right": 112.6875,
+            "bottom": 277.390625,
+            "lines": 1
+          },
+          "tile": {
+            "x": 13,
+            "y": 176.390625,
+            "width": 167,
+            "height": 111.796875,
+            "right": 180,
+            "bottom": 288.1875
+          },
+          "labelValueIntersect": false,
+          "valueNoteIntersect": false,
+          "contained": true,
+          "labelFont": 12,
+          "valueFont": 30.4,
+          "labelVisible": true,
+          "valueVisible": true,
+          "labelClipped": false
+        },
+        {
+          "label": "Season record",
+          "value": "0-0",
+          "labelBox": {
+            "x": 194,
+            "y": 185.390625,
+            "width": 130.9375,
+            "height": 15,
+            "right": 324.9375,
+            "bottom": 200.390625,
+            "lines": 1
+          },
+          "valueBox": {
+            "x": 194,
+            "y": 204.421875,
+            "width": 42.765625,
+            "height": 36,
+            "right": 236.765625,
+            "bottom": 240.421875,
+            "lines": 1
+          },
+          "noteBox": {
+            "x": 194,
+            "y": 244.390625,
+            "width": 79.640625,
+            "height": 15,
+            "right": 273.640625,
+            "bottom": 259.390625,
+            "lines": 1
+          },
+          "tile": {
+            "x": 180,
+            "y": 176.390625,
+            "width": 167,
+            "height": 111.796875,
+            "right": 347,
+            "bottom": 288.1875
+          },
+          "labelValueIntersect": false,
+          "valueNoteIntersect": false,
+          "contained": true,
+          "labelFont": 12,
+          "valueFont": 30.4,
+          "labelVisible": true,
+          "valueVisible": true,
+          "labelClipped": false
+        },
+        {
+          "label": "Net run rate",
+          "value": "–",
+          "labelBox": {
+            "x": 27,
+            "y": 297.1875,
+            "width": 112.9375,
+            "height": 15,
+            "right": 139.9375,
+            "bottom": 312.1875,
+            "lines": 1
+          },
+          "valueBox": {
+            "x": 27,
+            "y": 316.21875,
+            "width": 11.953125,
+            "height": 36,
+            "right": 38.953125,
+            "bottom": 352.21875,
+            "lines": 1
+          },
+          "noteBox": {
+            "x": 27,
+            "y": 356.1875,
+            "width": 78.84375,
+            "height": 31.796875,
+            "right": 105.84375,
+            "bottom": 387.984375,
+            "lines": 2
+          },
+          "tile": {
+            "x": 13,
+            "y": 288.1875,
+            "width": 167,
+            "height": 110.59375,
+            "right": 180,
+            "bottom": 398.78125
+          },
+          "labelValueIntersect": false,
+          "valueNoteIntersect": false,
+          "contained": true,
+          "labelFont": 12,
+          "valueFont": 30.4,
+          "labelVisible": true,
+          "valueVisible": true,
+          "labelClipped": false
+        },
+        {
+          "label": "Recent form",
+          "value": "First match ahead",
+          "labelBox": {
+            "x": 194,
+            "y": 297.1875,
+            "width": 110.453125,
+            "height": 15,
+            "right": 304.453125,
+            "bottom": 312.1875,
+            "lines": 1
+          },
+          "valueBox": {
+            "x": 194,
+            "y": 323.1875,
+            "width": 134.234375,
+            "height": 24,
+            "right": 328.234375,
+            "bottom": 347.1875,
+            "lines": 2
+          },
+          "noteBox": {
+            "x": 194,
+            "y": 356.1875,
+            "width": 89.609375,
+            "height": 31.796875,
+            "right": 283.609375,
+            "bottom": 387.984375,
+            "lines": 2
+          },
+          "tile": {
+            "x": 180,
+            "y": 288.1875,
+            "width": 167,
+            "height": 110.59375,
+            "right": 347,
+            "bottom": 398.78125
+          },
+          "labelValueIntersect": false,
+          "valueNoteIntersect": false,
+          "contained": true,
+          "labelFont": 12,
+          "valueFont": 15,
+          "labelVisible": true,
+          "valueVisible": true,
+          "labelClipped": false
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "tiles": [
+        {
+          "label": "League position",
+          "value": "–",
+          "labelBox": {
+            "x": 27,
+            "y": 185.390625,
+            "width": 140.875,
+            "height": 15,
+            "right": 167.875,
+            "bottom": 200.390625,
+            "lines": 1
+          },
+          "valueBox": {
+            "x": 27,
+            "y": 204.421875,
+            "width": 11.953125,
+            "height": 36,
+            "right": 38.953125,
+            "bottom": 240.421875,
+            "lines": 1
+          },
+          "noteBox": {
+            "x": 27,
+            "y": 244.390625,
+            "width": 85.6875,
+            "height": 15,
+            "right": 112.6875,
+            "bottom": 259.390625,
+            "lines": 1
+          },
+          "tile": {
+            "x": 13,
+            "y": 176.390625,
+            "width": 182,
+            "height": 93.796875,
+            "right": 195,
+            "bottom": 270.1875
+          },
+          "labelValueIntersect": false,
+          "valueNoteIntersect": false,
+          "contained": true,
+          "labelFont": 12,
+          "valueFont": 30.4,
+          "labelVisible": true,
+          "valueVisible": true,
+          "labelClipped": false
+        },
+        {
+          "label": "Season record",
+          "value": "0-0",
+          "labelBox": {
+            "x": 209,
+            "y": 185.390625,
+            "width": 130.9375,
+            "height": 15,
+            "right": 339.9375,
+            "bottom": 200.390625,
+            "lines": 1
+          },
+          "valueBox": {
+            "x": 209,
+            "y": 204.421875,
+            "width": 42.765625,
+            "height": 36,
+            "right": 251.765625,
+            "bottom": 240.421875,
+            "lines": 1
+          },
+          "noteBox": {
+            "x": 209,
+            "y": 244.390625,
+            "width": 79.640625,
+            "height": 15,
+            "right": 288.640625,
+            "bottom": 259.390625,
+            "lines": 1
+          },
+          "tile": {
+            "x": 195,
+            "y": 176.390625,
+            "width": 182,
+            "height": 93.796875,
+            "right": 377,
+            "bottom": 270.1875
+          },
+          "labelValueIntersect": false,
+          "valueNoteIntersect": false,
+          "contained": true,
+          "labelFont": 12,
+          "valueFont": 30.4,
+          "labelVisible": true,
+          "valueVisible": true,
+          "labelClipped": false
+        },
+        {
+          "label": "Net run rate",
+          "value": "–",
+          "labelBox": {
+            "x": 27,
+            "y": 279.1875,
+            "width": 112.9375,
+            "height": 15,
+            "right": 139.9375,
+            "bottom": 294.1875,
+            "lines": 1
+          },
+          "valueBox": {
+            "x": 27,
+            "y": 298.21875,
+            "width": 11.953125,
+            "height": 36,
+            "right": 38.953125,
+            "bottom": 334.21875,
+            "lines": 1
+          },
+          "noteBox": {
+            "x": 27,
+            "y": 338.1875,
+            "width": 139.78125,
+            "height": 15,
+            "right": 166.78125,
+            "bottom": 353.1875,
+            "lines": 1
+          },
+          "tile": {
+            "x": 13,
+            "y": 270.1875,
+            "width": 182,
+            "height": 93.796875,
+            "right": 195,
+            "bottom": 363.984375
+          },
+          "labelValueIntersect": false,
+          "valueNoteIntersect": false,
+          "contained": true,
+          "labelFont": 12,
+          "valueFont": 30.4,
+          "labelVisible": true,
+          "valueVisible": true,
+          "labelClipped": false
+        },
+        {
+          "label": "Recent form",
+          "value": "First match ahead",
+          "labelBox": {
+            "x": 209,
+            "y": 279.1875,
+            "width": 110.453125,
+            "height": 15,
+            "right": 319.453125,
+            "bottom": 294.1875,
+            "lines": 1
+          },
+          "valueBox": {
+            "x": 209,
+            "y": 305.1875,
+            "width": 134.234375,
+            "height": 24,
+            "right": 343.234375,
+            "bottom": 329.1875,
+            "lines": 2
+          },
+          "noteBox": {
+            "x": 209,
+            "y": 338.1875,
+            "width": 141.3125,
+            "height": 15,
+            "right": 350.3125,
+            "bottom": 353.1875,
+            "lines": 1
+          },
+          "tile": {
+            "x": 195,
+            "y": 270.1875,
+            "width": 182,
+            "height": 93.796875,
+            "right": 377,
+            "bottom": 363.984375
+          },
+          "labelValueIntersect": false,
+          "valueNoteIntersect": false,
+          "contained": true,
+          "labelFont": 12,
+          "valueFont": 15,
+          "labelVisible": true,
+          "valueVisible": true,
+          "labelClipped": false
+        }
+      ]
+    }
+  ],
+  "focus": [
+    {
+      "width": 320,
+      "dir": "Tab",
+      "tag": "BUTTON",
+      "text": "Matchday",
+      "focusVisible": true,
+      "outline": "rgb(127, 224, 238) solid 3px",
+      "outlineWidth": 3,
+      "outlineOffset": 2,
+      "rect": {
+        "x": 25.59375,
+        "y": 101,
+        "width": 101.96875,
+        "height": 44,
+        "right": 127.5625,
+        "bottom": 145
+      },
+      "ring": {
+        "x": 20.59375,
+        "y": 96,
+        "right": 132.5625,
+        "bottom": 150
+      },
+      "clip": {
+        "x": 16,
+        "y": 94,
+        "right": 304,
+        "bottom": 151.390625
+      },
+      "controlInViewport": true,
+      "ringInClip": true,
+      "unobscured": true,
+      "inNav": true,
+      "navScrollLeft": 0,
+      "navScrollWidth": 427,
+      "navClientWidth": 288,
+      "pageScrollX": 0,
+      "docScrollWidth": 320
+    },
+    {
+      "width": 320,
+      "dir": "Tab",
+      "tag": "BUTTON",
+      "text": "My XI",
+      "focusVisible": true,
+      "outline": "rgb(127, 224, 238) solid 3px",
+      "outlineWidth": 3,
+      "outlineOffset": 2,
+      "rect": {
+        "x": 129.15625,
+        "y": 101,
+        "width": 68.875,
+        "height": 44,
+        "right": 198.03125,
+        "bottom": 145
+      },
+      "ring": {
+        "x": 124.15625,
+        "y": 96,
+        "right": 203.03125,
+        "bottom": 150
+      },
+      "clip": {
+        "x": 16,
+        "y": 94,
+        "right": 304,
+        "bottom": 151.390625
+      },
+      "controlInViewport": true,
+      "ringInClip": true,
+      "unobscured": true,
+      "inNav": true,
+      "navScrollLeft": 0,
+      "navScrollWidth": 427,
+      "navClientWidth": 288,
+      "pageScrollX": 0,
+      "docScrollWidth": 320
+    },
+    {
+      "width": 320,
+      "dir": "Tab",
+      "tag": "BUTTON",
+      "text": "Ladder",
+      "focusVisible": true,
+      "outline": "rgb(127, 224, 238) solid 3px",
+      "outlineWidth": 3,
+      "outlineOffset": 2,
+      "rect": {
+        "x": 120.625,
+        "y": 101,
+        "width": 78.625,
+        "height": 44,
+        "right": 199.25,
+        "bottom": 145
+      },
+      "ring": {
+        "x": 115.625,
+        "y": 96,
+        "right": 204.25,
+        "bottom": 150
+      },
+      "clip": {
+        "x": 16,
+        "y": 94,
+        "right": 304,
+        "bottom": 151.390625
+      },
+      "controlInViewport": true,
+      "ringInClip": true,
+      "unobscured": true,
+      "inNav": true,
+      "navScrollLeft": 79,
+      "navScrollWidth": 427,
+      "navClientWidth": 288,
+      "pageScrollX": 0,
+      "docScrollWidth": 320
+    },
+    {
+      "width": 320,
+      "dir": "Tab",
+      "tag": "BUTTON",
+      "text": "Fixtures",
+      "focusVisible": true,
+      "outline": "rgb(127, 224, 238) solid 3px",
+      "outlineWidth": 3,
+      "outlineOffset": 2,
+      "rect": {
+        "x": 140.84375,
+        "y": 101,
+        "width": 87.71875,
+        "height": 44,
+        "right": 228.5625,
+        "bottom": 145
+      },
+      "ring": {
+        "x": 135.84375,
+        "y": 96,
+        "right": 233.5625,
+        "bottom": 150
+      },
+      "clip": {
+        "x": 16,
+        "y": 94,
+        "right": 304,
+        "bottom": 151.390625
+      },
+      "controlInViewport": true,
+      "ringInClip": true,
+      "unobscured": true,
+      "inNav": true,
+      "navScrollLeft": 139,
+      "navScrollWidth": 427,
+      "navClientWidth": 288,
+      "pageScrollX": 0,
+      "docScrollWidth": 320
+    },
+    {
+      "width": 320,
+      "dir": "Tab",
+      "tag": "BUTTON",
+      "text": "Stats",
+      "focusVisible": true,
+      "outline": "rgb(127, 224, 238) solid 3px",
+      "outlineWidth": 3,
+      "outlineOffset": 2,
+      "rect": {
+        "x": 230.15625,
+        "y": 101,
+        "width": 64.6875,
+        "height": 44,
+        "right": 294.84375,
+        "bottom": 145
+      },
+      "ring": {
+        "x": 225.15625,
+        "y": 96,
+        "right": 299.84375,
+        "bottom": 150
+      },
+      "clip": {
+        "x": 16,
+        "y": 94,
+        "right": 304,
+        "bottom": 151.390625
+      },
+      "controlInViewport": true,
+      "ringInClip": true,
+      "unobscured": true,
+      "inNav": true,
+      "navScrollLeft": 139,
+      "navScrollWidth": 427,
+      "navClientWidth": 288,
+      "pageScrollX": 0,
+      "docScrollWidth": 320
+    },
+    {
+      "width": 320,
+      "dir": "Shift+Tab",
+      "tag": "BUTTON",
+      "text": "Stats",
+      "focusVisible": true,
+      "outline": "rgb(127, 224, 238) solid 3px",
+      "outlineWidth": 3,
+      "outlineOffset": 2,
+      "rect": {
+        "x": 230.15625,
+        "y": 101,
+        "width": 64.6875,
+        "height": 44,
+        "right": 294.84375,
+        "bottom": 145
+      },
+      "ring": {
+        "x": 225.15625,
+        "y": 96,
+        "right": 299.84375,
+        "bottom": 150
+      },
+      "clip": {
+        "x": 16,
+        "y": 94,
+        "right": 304,
+        "bottom": 151.390625
+      },
+      "controlInViewport": true,
+      "ringInClip": true,
+      "unobscured": true,
+      "inNav": true,
+      "navScrollLeft": 139,
+      "navScrollWidth": 427,
+      "navClientWidth": 288,
+      "pageScrollX": 0,
+      "docScrollWidth": 320
+    },
+    {
+      "width": 320,
+      "dir": "Shift+Tab",
+      "tag": "BUTTON",
+      "text": "Fixtures",
+      "focusVisible": true,
+      "outline": "rgb(127, 224, 238) solid 3px",
+      "outlineWidth": 3,
+      "outlineOffset": 2,
+      "rect": {
+        "x": 140.84375,
+        "y": 101,
+        "width": 87.71875,
+        "height": 44,
+        "right": 228.5625,
+        "bottom": 145
+      },
+      "ring": {
+        "x": 135.84375,
+        "y": 96,
+        "right": 233.5625,
+        "bottom": 150
+      },
+      "clip": {
+        "x": 16,
+        "y": 94,
+        "right": 304,
+        "bottom": 151.390625
+      },
+      "controlInViewport": true,
+      "ringInClip": true,
+      "unobscured": true,
+      "inNav": true,
+      "navScrollLeft": 139,
+      "navScrollWidth": 427,
+      "navClientWidth": 288,
+      "pageScrollX": 0,
+      "docScrollWidth": 320
+    },
+    {
+      "width": 320,
+      "dir": "Shift+Tab",
+      "tag": "BUTTON",
+      "text": "Ladder",
+      "focusVisible": true,
+      "outline": "rgb(127, 224, 238) solid 3px",
+      "outlineWidth": 3,
+      "outlineOffset": 2,
+      "rect": {
+        "x": 60.625,
+        "y": 101,
+        "width": 78.625,
+        "height": 44,
+        "right": 139.25,
+        "bottom": 145
+      },
+      "ring": {
+        "x": 55.625,
+        "y": 96,
+        "right": 144.25,
+        "bottom": 150
+      },
+      "clip": {
+        "x": 16,
+        "y": 94,
+        "right": 304,
+        "bottom": 151.390625
+      },
+      "controlInViewport": true,
+      "ringInClip": true,
+      "unobscured": true,
+      "inNav": true,
+      "navScrollLeft": 139,
+      "navScrollWidth": 427,
+      "navClientWidth": 288,
+      "pageScrollX": 0,
+      "docScrollWidth": 320
+    },
+    {
+      "width": 320,
+      "dir": "Shift+Tab",
+      "tag": "BUTTON",
+      "text": "My XI",
+      "focusVisible": true,
+      "outline": "rgb(127, 224, 238) solid 3px",
+      "outlineWidth": 3,
+      "outlineOffset": 2,
+      "rect": {
+        "x": 125.15625,
+        "y": 101,
+        "width": 68.875,
+        "height": 44,
+        "right": 194.03125,
+        "bottom": 145
+      },
+      "ring": {
+        "x": 120.15625,
+        "y": 96,
+        "right": 199.03125,
+        "bottom": 150
+      },
+      "clip": {
+        "x": 16,
+        "y": 94,
+        "right": 304,
+        "bottom": 151.390625
+      },
+      "controlInViewport": true,
+      "ringInClip": true,
+      "unobscured": true,
+      "inNav": true,
+      "navScrollLeft": 4,
+      "navScrollWidth": 427,
+      "navClientWidth": 288,
+      "pageScrollX": 0,
+      "docScrollWidth": 320
+    },
+    {
+      "width": 320,
+      "dir": "Shift+Tab",
+      "tag": "BUTTON",
+      "text": "Matchday",
+      "focusVisible": true,
+      "outline": "rgb(127, 224, 238) solid 3px",
+      "outlineWidth": 3,
+      "outlineOffset": 2,
+      "rect": {
+        "x": 25.59375,
+        "y": 101,
+        "width": 101.96875,
+        "height": 44,
+        "right": 127.5625,
+        "bottom": 145
+      },
+      "ring": {
+        "x": 20.59375,
+        "y": 96,
+        "right": 132.5625,
+        "bottom": 150
+      },
+      "clip": {
+        "x": 16,
+        "y": 94,
+        "right": 304,
+        "bottom": 151.390625
+      },
+      "controlInViewport": true,
+      "ringInClip": true,
+      "unobscured": true,
+      "inNav": true,
+      "navScrollLeft": 0,
+      "navScrollWidth": 427,
+      "navClientWidth": 288,
+      "pageScrollX": 0,
+      "docScrollWidth": 320
+    },
+    {
+      "width": 360,
+      "dir": "Tab",
+      "tag": "BUTTON",
+      "text": "Matchday",
+      "focusVisible": true,
+      "outline": "rgb(127, 224, 238) solid 3px",
+      "outlineWidth": 3,
+      "outlineOffset": 2,
+      "rect": {
+        "x": 26.796875,
+        "y": 101,
+        "width": 101.96875,
+        "height": 44,
+        "right": 128.765625,
+        "bottom": 145
+      },
+      "ring": {
+        "x": 21.796875,
+        "y": 96,
+        "right": 133.765625,
+        "bottom": 150
+      },
+      "clip": {
+        "x": 16,
+        "y": 94,
+        "right": 344,
+        "bottom": 151.390625
+      },
+      "controlInViewport": true,
+      "ringInClip": true,
+      "unobscured": true,
+      "inNav": true,
+      "navScrollLeft": 0,
+      "navScrollWidth": 430,
+      "navClientWidth": 328,
+      "pageScrollX": 0,
+      "docScrollWidth": 360
+    },
+    {
+      "width": 360,
+      "dir": "Tab",
+      "tag": "BUTTON",
+      "text": "My XI",
+      "focusVisible": true,
+      "outline": "rgb(127, 224, 238) solid 3px",
+      "outlineWidth": 3,
+      "outlineOffset": 2,
+      "rect": {
+        "x": 130.359375,
+        "y": 101,
+        "width": 68.875,
+        "height": 44,
+        "right": 199.234375,
+        "bottom": 145
+      },
+      "ring": {
+        "x": 125.359375,
+        "y": 96,
+        "right": 204.234375,
+        "bottom": 150
+      },
+      "clip": {
+        "x": 16,
+        "y": 94,
+        "right": 344,
+        "bottom": 151.390625
+      },
+      "controlInViewport": true,
+      "ringInClip": true,
+      "unobscured": true,
+      "inNav": true,
+      "navScrollLeft": 0,
+      "navScrollWidth": 430,
+      "navClientWidth": 328,
+      "pageScrollX": 0,
+      "docScrollWidth": 360
+    },
+    {
+      "width": 360,
+      "dir": "Tab",
+      "tag": "BUTTON",
+      "text": "Ladder",
+      "focusVisible": true,
+      "outline": "rgb(127, 224, 238) solid 3px",
+      "outlineWidth": 3,
+      "outlineOffset": 2,
+      "rect": {
+        "x": 200.828125,
+        "y": 101,
+        "width": 78.625,
+        "height": 44,
+        "right": 279.453125,
+        "bottom": 145
+      },
+      "ring": {
+        "x": 195.828125,
+        "y": 96,
+        "right": 284.453125,
+        "bottom": 150
+      },
+      "clip": {
+        "x": 16,
+        "y": 94,
+        "right": 344,
+        "bottom": 151.390625
+      },
+      "controlInViewport": true,
+      "ringInClip": true,
+      "unobscured": true,
+      "inNav": true,
+      "navScrollLeft": 0,
+      "navScrollWidth": 430,
+      "navClientWidth": 328,
+      "pageScrollX": 0,
+      "docScrollWidth": 360
+    },
+    {
+      "width": 360,
+      "dir": "Tab",
+      "tag": "BUTTON",
+      "text": "Fixtures",
+      "focusVisible": true,
+      "outline": "rgb(127, 224, 238) solid 3px",
+      "outlineWidth": 3,
+      "outlineOffset": 2,
+      "rect": {
+        "x": 179.046875,
+        "y": 101,
+        "width": 87.71875,
+        "height": 44,
+        "right": 266.765625,
+        "bottom": 145
+      },
+      "ring": {
+        "x": 174.046875,
+        "y": 96,
+        "right": 271.765625,
+        "bottom": 150
+      },
+      "clip": {
+        "x": 16,
+        "y": 94,
+        "right": 344,
+        "bottom": 151.390625
+      },
+      "controlInViewport": true,
+      "ringInClip": true,
+      "unobscured": true,
+      "inNav": true,
+      "navScrollLeft": 102,
+      "navScrollWidth": 430,
+      "navClientWidth": 328,
+      "pageScrollX": 0,
+      "docScrollWidth": 360
+    },
+    {
+      "width": 360,
+      "dir": "Tab",
+      "tag": "BUTTON",
+      "text": "Stats",
+      "focusVisible": true,
+      "outline": "rgb(127, 224, 238) solid 3px",
+      "outlineWidth": 3,
+      "outlineOffset": 2,
+      "rect": {
+        "x": 268.359375,
+        "y": 101,
+        "width": 64.6875,
+        "height": 44,
+        "right": 333.046875,
+        "bottom": 145
+      },
+      "ring": {
+        "x": 263.359375,
+        "y": 96,
+        "right": 338.046875,
+        "bottom": 150
+      },
+      "clip": {
+        "x": 16,
+        "y": 94,
+        "right": 344,
+        "bottom": 151.390625
+      },
+      "controlInViewport": true,
+      "ringInClip": true,
+      "unobscured": true,
+      "inNav": true,
+      "navScrollLeft": 102,
+      "navScrollWidth": 430,
+      "navClientWidth": 328,
+      "pageScrollX": 0,
+      "docScrollWidth": 360
+    },
+    {
+      "width": 360,
+      "dir": "Shift+Tab",
+      "tag": "BUTTON",
+      "text": "Stats",
+      "focusVisible": true,
+      "outline": "rgb(127, 224, 238) solid 3px",
+      "outlineWidth": 3,
+      "outlineOffset": 2,
+      "rect": {
+        "x": 268.359375,
+        "y": 101,
+        "width": 64.6875,
+        "height": 44,
+        "right": 333.046875,
+        "bottom": 145
+      },
+      "ring": {
+        "x": 263.359375,
+        "y": 96,
+        "right": 338.046875,
+        "bottom": 150
+      },
+      "clip": {
+        "x": 16,
+        "y": 94,
+        "right": 344,
+        "bottom": 151.390625
+      },
+      "controlInViewport": true,
+      "ringInClip": true,
+      "unobscured": true,
+      "inNav": true,
+      "navScrollLeft": 102,
+      "navScrollWidth": 430,
+      "navClientWidth": 328,
+      "pageScrollX": 0,
+      "docScrollWidth": 360
+    },
+    {
+      "width": 360,
+      "dir": "Shift+Tab",
+      "tag": "BUTTON",
+      "text": "Fixtures",
+      "focusVisible": true,
+      "outline": "rgb(127, 224, 238) solid 3px",
+      "outlineWidth": 3,
+      "outlineOffset": 2,
+      "rect": {
+        "x": 179.046875,
+        "y": 101,
+        "width": 87.71875,
+        "height": 44,
+        "right": 266.765625,
+        "bottom": 145
+      },
+      "ring": {
+        "x": 174.046875,
+        "y": 96,
+        "right": 271.765625,
+        "bottom": 150
+      },
+      "clip": {
+        "x": 16,
+        "y": 94,
+        "right": 344,
+        "bottom": 151.390625
+      },
+      "controlInViewport": true,
+      "ringInClip": true,
+      "unobscured": true,
+      "inNav": true,
+      "navScrollLeft": 102,
+      "navScrollWidth": 430,
+      "navClientWidth": 328,
+      "pageScrollX": 0,
+      "docScrollWidth": 360
+    },
+    {
+      "width": 360,
+      "dir": "Shift+Tab",
+      "tag": "BUTTON",
+      "text": "Ladder",
+      "focusVisible": true,
+      "outline": "rgb(127, 224, 238) solid 3px",
+      "outlineWidth": 3,
+      "outlineOffset": 2,
+      "rect": {
+        "x": 98.828125,
+        "y": 101,
+        "width": 78.625,
+        "height": 44,
+        "right": 177.453125,
+        "bottom": 145
+      },
+      "ring": {
+        "x": 93.828125,
+        "y": 96,
+        "right": 182.453125,
+        "bottom": 150
+      },
+      "clip": {
+        "x": 16,
+        "y": 94,
+        "right": 344,
+        "bottom": 151.390625
+      },
+      "controlInViewport": true,
+      "ringInClip": true,
+      "unobscured": true,
+      "inNav": true,
+      "navScrollLeft": 102,
+      "navScrollWidth": 430,
+      "navClientWidth": 328,
+      "pageScrollX": 0,
+      "docScrollWidth": 360
+    },
+    {
+      "width": 360,
+      "dir": "Shift+Tab",
+      "tag": "BUTTON",
+      "text": "My XI",
+      "focusVisible": true,
+      "outline": "rgb(127, 224, 238) solid 3px",
+      "outlineWidth": 3,
+      "outlineOffset": 2,
+      "rect": {
+        "x": 130.359375,
+        "y": 101,
+        "width": 68.875,
+        "height": 44,
+        "right": 199.234375,
+        "bottom": 145
+      },
+      "ring": {
+        "x": 125.359375,
+        "y": 96,
+        "right": 204.234375,
+        "bottom": 150
+      },
+      "clip": {
+        "x": 16,
+        "y": 94,
+        "right": 344,
+        "bottom": 151.390625
+      },
+      "controlInViewport": true,
+      "ringInClip": true,
+      "unobscured": true,
+      "inNav": true,
+      "navScrollLeft": 0,
+      "navScrollWidth": 430,
+      "navClientWidth": 328,
+      "pageScrollX": 0,
+      "docScrollWidth": 360
+    },
+    {
+      "width": 360,
+      "dir": "Shift+Tab",
+      "tag": "BUTTON",
+      "text": "Matchday",
+      "focusVisible": true,
+      "outline": "rgb(127, 224, 238) solid 3px",
+      "outlineWidth": 3,
+      "outlineOffset": 2,
+      "rect": {
+        "x": 26.796875,
+        "y": 101,
+        "width": 101.96875,
+        "height": 44,
+        "right": 128.765625,
+        "bottom": 145
+      },
+      "ring": {
+        "x": 21.796875,
+        "y": 96,
+        "right": 133.765625,
+        "bottom": 150
+      },
+      "clip": {
+        "x": 16,
+        "y": 94,
+        "right": 344,
+        "bottom": 151.390625
+      },
+      "controlInViewport": true,
+      "ringInClip": true,
+      "unobscured": true,
+      "inNav": true,
+      "navScrollLeft": 0,
+      "navScrollWidth": 430,
+      "navClientWidth": 328,
+      "pageScrollX": 0,
+      "docScrollWidth": 360
+    }
+  ],
+  "limits": [
+    "Chromium only. Layout and focus geometry checks; not a screen-reader or full visual sign-off."
+  ],
+  "status": "PASS"
+}

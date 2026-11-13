@@ -518,11 +518,11 @@
 #g8app#g8app#g8app .g8careernav .g8navitem{flex:0 0 auto}
 @media (max-width:700px){
   #g8hud#g8hud#g8hud .g8headerslogan{font-size:.85rem}
-  #g8app#g8app#g8app .g8careernav{padding-inline:3vw;gap:.1rem}
+  #g8app#g8app#g8app .g8careernav{padding-inline:3vw;gap:.1rem;padding-bottom:.4rem;scroll-padding-inline:7rem}
   #g8app#g8app#g8app .g8careernav .g8navitem{font-size:.95rem;padding:.5rem .7rem!important;letter-spacing:.06em}
   #g8app#g8app #g8stage .gccBrandWordmark{font-size:clamp(1.7rem,8.4vw,2.5rem)!important;overflow-wrap:normal}
   #g8app#g8app #g8stage .gccuiCampaignRibbon{grid-template-columns:repeat(2,minmax(0,1fr))}
-  #g8app#g8app #g8stage .gccuiCampaignRibbon>div{border-bottom:1px solid var(--gcc-line)!important}
+  #g8app#g8app #g8stage .gccuiCampaignRibbon>div{border-bottom:1px solid var(--gcc-line)!important;grid-template-rows:auto auto auto}
   #g8app#g8app #g8stage .gccuiCampaignRibbon>div:nth-child(2n){border-right:0!important}
   #g8app#g8app #g8stage .gccuiCampaignRibbon>div>strong{font-size:1.9rem!important}
   #g8app#g8app #g8stage .gccuiFixtureClub b{font-size:1.45rem!important}

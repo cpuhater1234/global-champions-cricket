@@ -1,0 +1,164 @@
+{
+  "sha256": "c8990d219359ce23f697db136d47e44673427167cec0bae83638e61ceb5909a0",
+  "findings": [],
+  "errors": [],
+  "runtimeErrors": [],
+  "live": {
+    "records": [
+      {
+        "text": "Mumbai Indians: 0 for 0 after 0.0 overs. Setting the target.",
+        "instance": 1,
+        "key": "delivery-0-0",
+        "role": "status",
+        "atomic": "true",
+        "hidden": false
+      },
+      {
+        "text": "Mumbai Indians: 0 for 1 after 0.1 overs. Setting the target.",
+        "instance": 2,
+        "key": "delivery-0-2",
+        "role": "status",
+        "atomic": "true",
+        "hidden": false
+      },
+      {
+        "text": "Mumbai Indians: 4 for 1 after 0.2 overs. Setting the target.",
+        "instance": 3,
+        "key": "delivery-0-3",
+        "role": "status",
+        "atomic": "true",
+        "hidden": false
+      },
+      {
+        "text": "Mumbai Indians: 5 for 1 after 0.2 overs. Setting the target.",
+        "instance": 4,
+        "key": "delivery-0-4",
+        "role": "status",
+        "atomic": "true",
+        "hidden": false
+      },
+      {
+        "text": "Mumbai Indians: 9 for 1 after 0.3 overs. Setting the target.",
+        "instance": 5,
+        "key": "delivery-0-5",
+        "role": "status",
+        "atomic": "true",
+        "hidden": false
+      },
+      {
+        "text": "Mumbai Indians: 9 for 1 after 0.4 overs. Setting the target.",
+        "instance": 6,
+        "key": "delivery-0-6",
+        "role": "status",
+        "atomic": "true",
+        "hidden": false
+      },
+      {
+        "text": "Mumbai Indians: 9 for 1 after 0.5 overs. Setting the target.",
+        "instance": 7,
+        "key": "delivery-0-7",
+        "role": "status",
+        "atomic": "true",
+        "hidden": false
+      }
+    ],
+    "sr": "Mumbai Indians: 9 for 1 after 0.5 overs. Setting the target.",
+    "visibleScore": "9/1",
+    "visibleTeam": "Mumbai Indians",
+    "ax": {
+      "role": "status",
+      "ignored": false,
+      "properties": [
+        {
+          "name": "live",
+          "value": {
+            "type": "token",
+            "value": "polite"
+          }
+        },
+        {
+          "name": "atomic",
+          "value": {
+            "type": "boolean",
+            "value": true
+          }
+        },
+        {
+          "name": "relevant",
+          "value": {
+            "type": "tokenList",
+            "value": "additions text"
+          }
+        }
+      ],
+      "text": "Mumbai Indians: 9 for 1 after 0.5 overs. Setting the target. Mumbai Indians: 9 for 1 after 0.5 overs. Setting the target. 0.5 \u00b7 LATEST DELIVERY 0.5 \u00b7 LATEST DELIVERY Morne Morkel to Younis Khan: dot ball. Morne Morkel to Younis Khan: dot ball. Morne Morkel to Younis Khan: dot ball."
+    },
+    "distinctRegionInstances": 7,
+    "spokenAT": "NOT_TESTED",
+    "regionReplacementRisk": true
+  },
+  "tablet": {
+    "controls": [
+      {
+        "text": "Resume signing",
+        "width": 151.890625,
+        "height": 62,
+        "scrollWidth": 150,
+        "clientWidth": 150
+      },
+      {
+        "text": "Speed 1\u00d7",
+        "width": 151.890625,
+        "height": 44,
+        "scrollWidth": 150,
+        "clientWidth": 150
+      },
+      {
+        "text": "Skip to end",
+        "width": 311.78125,
+        "height": 44,
+        "scrollWidth": 310,
+        "clientWidth": 310
+      }
+    ],
+    "unequalHeights": true,
+    "labelsFit": true,
+    "classification": "DEFER_COSMETIC_IF_NO_RECORDED_USABILITY_OBSTRUCTION"
+  },
+  "zoom": [
+    {
+      "physical": 1440,
+      "metrics": {
+        "innerWidth": 720,
+        "outerWidth": 1440,
+        "devicePixelRatio": 2,
+        "visualScale": 1
+      },
+      "verified": true
+    },
+    {
+      "physical": 640,
+      "metrics": {
+        "innerWidth": 320,
+        "outerWidth": 640,
+        "devicePixelRatio": 2,
+        "visualScale": 1
+      },
+      "verified": true
+    }
+  ],
+  "limits": [
+    "Chromium DOM/AX and keyboard automation do not certify actual NVDA/JAWS/VoiceOver speech, every browser or the full career horizon.",
+    "Existing checkpoint is used only to reach relevant screens; save/reload acceptance is not rerun."
+  ],
+  "productChanged": false,
+  "automation_status": "PASS",
+  "promotion": "HOLD",
+  "promotionReasons": [
+    "Actual screen-reader spoken output has not been certified.",
+    "Live status container is replaced during score updates; assistive-technology interoperability requires explicit verification."
+  ],
+  "states": 33,
+  "focus_checks": 105,
+  "observations": 1018
+}

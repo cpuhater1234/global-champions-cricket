@@ -41,3 +41,31 @@ Machine evidence: [summary](accessibility-gate/43346413874/summary.json), [full 
 ## Promotion decision and next work
 
 **Do not promote.** Retain frozen v116 as rollback. Next focused work is narrow career-navigation focus visibility and the320px Season record tile, followed by actual screen-reader speech verification and reliable zoomed visual evidence. Do not broaden this into archive/offseason density, mobile draft redesign, cricket logic or cascade consolidation. The tablet height inconsistency remains cosmetic/deferred. Source/build parity was freshly checked locally:17 styles,22 scripts, no changed bodies,6,655,156bytes, exact c456 hash.
+
+
+## Follow-up: edited accessibility candidate, 13 November 2026
+
+Candidate: `GCC_v116_accessibility_review.html`, built from `v116/canonical` on `work/v116-candidate-acceptance`  
+SHA-256: `c8990d219359ce23f697db136d47e44673427167cec0bae83638e61ceb5909a0` (6,655,238 bytes)  
+Disposition: **HOLD, unpromoted.** Frozen v116 and main untouched. No new download.
+
+### Change (CSS only, one owner)
+
+`v116/canonical/styles/31-gcc-floodlit-visual.css`, existing `@media (max-width:700px)` block of the "22 ─ Small screens" owner. Two declarations changed; no other body changed. All 22 script bodies remain byte-identical to frozen v116, so no `--allow-runtime-changes` build was used and no engine/save behaviour changed.
+
+1. **Season record tile.** Root cause: `10-gcc-decision-ui` fixes the first tile row at `18px`; at 320px the label wraps to two lines and overflowed into the value row. The compact tile rule now adds `grid-template-rows:auto auto auto`, so label, value and note each get natural height. No fixed heights, absolute positioning or override block. The same defect affected League position at 320/360px and is fixed by the same rule.
+2. **Career navigation focus.** Root cause, measured: Chromium does not scroll a horizontally scrolling container when a newly focused child is already partly visible, so Tab left Fixtures at x279.8–367.6 inside a 16–304px scrollport. Separately, `overflow-x:auto` clips vertical overflow, so the 3px + 2px-offset focus ring was cut off 5px at the bottom of every nav button. The compact nav rule now adds `scroll-padding-inline:7rem` (wider than the widest nav button, so any partly clipped button falls entirely in the padded band and gets scrolled into view) and `padding-bottom:.4rem` (room for the full ring). Fixtures is not hidden and keyboard order is unchanged.
+
+### Evidence (local Chromium run against the exact rebuilt file)
+
+Evidence folder: [accessibility-gate/local-20261113-c8990d21](accessibility-gate/local-20261113-c8990d21/). The CI workflow `v116-accessibility-gate.yml` now pins this hash and reruns all three harnesses on push; its run supersedes this local record when it lands.
+
+- **Focused harness** `qa/v116_narrow_focus_layout.cjs`: 126/126 PASS. At 320/360/390px, label and value text rectangles (measured from text line boxes, not the grid-cell box) do not intersect for all four tiles, text is contained and unclipped, and there is no document horizontal overflow. At 320px Season record now wraps to two lines (y185–218) with the 0-0 value below it (y222–258). Real Tab from the HUD Menu into the nav, then Shift+Tab back, at 320 and 360px: every nav button visited in order, focus ring rendered, control and full ring inside the nav scrollport and viewport, unobscured at its left/centre/right points, no horizontal page scroll. Fixtures after Tab at 320px: x140.8–228.6, ring 135.8–233.6 inside 16–304 (bottom 150 inside 151.4). Screenshots inspected.
+- **Existing gate harness** `qa/v116_accessibility_gate.cjs` (only change: expected hash comes from `GCC8_EXPECT_SHA256`): automation PASS, 33 states, 105 focus observations, 1,018 observations, **0 findings** (previous run: 3 focus-visibility findings, including the 360/390px initial Matchday focus observations). Dialog Enter/Escape/restore, live Pause/Resume and 768px signing triage unchanged.
+- **200% zoom** `qa/v116_zoom200_capture.cjs`: native zoom verified (CSS 720px at 1440 physical, CSS 320px at 640 physical, DPR 2). Root cause of the earlier clipping: Playwright `page.screenshot()` computes its clip in CSS pixels and ignores browser zoom, so it captured the top-left quarter. The new harness uses CDP `Page.captureScreenshot` without a clip, asserts every image is innerWidth×DPR by innerHeight×DPR (±1 device px rounding), and scrolls in overlapping steps (20% overlap, measured below any sticky header) until the end is reached. 22 unresized, uncropped viewport captures of Home, Matchday and the player dialog at both widths; 44/44 PASS: no horizontal overflow, scrolling reaches the end of each page and dialog, no clipped or offscreen text/controls (visually hidden accessible titles excluded), and dialog keyboard focus ring visible. All captures were inspected; no clipped text, controls, score content or focus indicators were seen. Observation, not a clip: at CSS 320px the sticky player header uses about 58% of the dialog height, leaving about 178 CSS px for scrolling content.
+
+### Not done / still blocking promotion
+
+- **Real screen-reader speech: NOT TESTED.** The sandbox has no NVDA/JAWS/VoiceOver. Chromium still exposes one polite/atomic status, but the region instance changes on every update (7 instances for 7 messages). No live-score code was changed, because no speech defect has been reproduced. This must be run by a person on Windows (NVDA + Chrome) or macOS (VoiceOver + Safari) using the protocol in the handoff.
+- **Visual sign-off** of the zoom captures above is by this reviewer only; there is no independent whole-game approval.
+- Untested: short landscape screens (`max-height:520px`) keep an existing `!important` nav padding owner, so the bottom 5px of the nav focus ring may still be clipped there; Firefox and Safari focus scrolling with `scroll-padding`; widths other than 320/360/390 for the new focus assertions.
