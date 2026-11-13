@@ -6,7 +6,7 @@
 
 The user explicitly excluded actual screen-reader speech testing from scope. It is **not a promotion blocker** and no installation or manual speech test is required. Historical HOLD explanations below record the prior scope and are superseded by this instruction. Speech support remains unverified; no accessibility certification is claimed.
 
-Archive density pass is now staged, pending focused native results and visual review. Base is c8990d21…5909a0. Only archive selectors in existing styles/10 are edited: more compact header and season rows; phone year and Open season share a row with result text below. Offseason and gameplay remain separate. Candidate SHA-256 ae4b362bbd67d4d5c4ad4fea18c831508bfffddc516dc29c8801c89529ba05f1 (6,656,187bytes). It remains unpromoted while this new visual candidate is reviewed. Frozen v116 and main are not being edited.
+Archive density pass is now staged, pending focused native results and visual review. Base is c8990d21…5909a0. Only archive selectors in existing styles/10 are edited: more compact header and season rows; phone year and Open season share a row with result text below. Offseason and gameplay remain separate. Candidate SHA-256 297302580de76f464e47bf9e153646264a46a1d7fe09958ec6aabb01141b37e9 (6,656,214bytes). It remains unpromoted while this new visual candidate is reviewed. Frozen v116 and main are not being edited.
 
 ## Latest: edited accessibility candidate (13 November 2026), HOLD / unpromoted
 

@@ -6,8 +6,8 @@ on:
 permissions:
   contents: write
 env:
-  # Edited, unpromoted accessibility candidate built from v116/canonical (CSS-only change to styles/31). Not the recorded manifest snapshot.
-  CANDIDATE_SHA256: ae4b362bbd67d4d5c4ad4fea18c831508bfffddc516dc29c8801c89529ba05f1
+  # Paired archive candidate; original manifest snapshot intentionally retained.
+  CANDIDATE_SHA256: 297302580de76f464e47bf9e153646264a46a1d7fe09958ec6aabb01141b37e9
 concurrency:
   group: gcc-archive-density
   cancel-in-progress: true
@@ -45,7 +45,7 @@ jobs:
           from qa.v116_source_reconciliation import BLOCK
           a=Path('qa/results/archive-before.html').read_bytes();b=Path('qa/results/archive-after.html').read_bytes()
           assert sha256(a).hexdigest()=='c8990d219359ce23f697db136d47e44673427167cec0bae83638e61ceb5909a0'
-          assert sha256(b).hexdigest()=='ae4b362bbd67d4d5c4ad4fea18c831508bfffddc516dc29c8801c89529ba05f1'
+          assert sha256(b).hexdigest()=='297302580de76f464e47bf9e153646264a46a1d7fe09958ec6aabb01141b37e9'
           aa=list(BLOCK.finditer(a));bb=list(BLOCK.finditer(b))
           assert [m[3] for m in aa if m[1]==b'script']==[m[3] for m in bb if m[1]==b'script']
           changed=[i for i,(x,y) in enumerate(zip(aa,bb)) if x[3]!=y[3]];assert changed==[10],changed

@@ -4,6 +4,6 @@ Scope: compact archive header and season cards only. Keep existing content, resu
 
 Alternatives considered: a full archive table would require markup changes and a different phone presentation; reducing font sizes would sacrifice readability. The bounded CSS layout preserves the existing game composition and controls. Offseason summary/development density is a separate pass.
 
-Base: c8990d219359ce23f697db136d47e44673427167cec0bae83638e61ceb5909a0. Candidate: ae4b362bbd67d4d5c4ad4fea18c831508bfffddc516dc29c8801c89529ba05f1.17style/22script inventory retained; all runtime bodies identical.
+Base: c8990d219359ce23f697db136d47e44673427167cec0bae83638e61ceb5909a0. Candidate: 297302580de76f464e47bf9e153646264a46a1d7fe09958ec6aabb01141b37e9.17style/22script inventory retained; all runtime bodies identical.
 
 Verification plan: paired baseline/candidate archive, season-detail modal and adjacent offseason/manage screens at320/390/768/1440px, using existing actual2009/2019 checkpoints. Confirm all years and text retained, archive opening leaves critical career state unchanged, controls fit, phone rows are shorter, and adjacent offseason geometry stays unchanged. No gameplay/save/career acceptance rerun. Native evidence and visual review pending. Candidate unpromoted; main and frozen rollback untouched. Spoken screen-reader output is excluded by the user's later instruction.
