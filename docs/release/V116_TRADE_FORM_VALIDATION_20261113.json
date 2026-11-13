@@ -1,0 +1,27 @@
+{
+  "failures": [],
+  "errors": [],
+  "omissions": [
+    {
+      "label": "before",
+      "scope": "selected draft picks",
+      "reason": "Actual full retained roster has no owned draft slot; optional pick fields captured but selected-pick package not fabricated"
+    },
+    {
+      "label": "after",
+      "scope": "selected draft picks",
+      "reason": "Actual full retained roster has no owned draft slot; optional pick fields captured but selected-pick package not fabricated"
+    }
+  ],
+  "scope": "Actual2009 checkpoint legally progresses through market, lottery and early season in disposable contexts. No offer confirmed, no user save.",
+  "status": "PASS",
+  "baseline_sha256": "7e3d9fb9c24876f76946029013103c79f6ce54e079f507dcd5d69e6a1351c128",
+  "candidate_sha256": "689438d0fcec9fdb0840935fd75f7d4d2cdbef6a94337cd74ef32d876a033504",
+  "states_count": 120,
+  "run_id": 43337856145,
+  "workflow": "PASS",
+  "scripts_unchanged": 22,
+  "styles": 17,
+  "new_stylesheets": 0,
+  "maintained_source_parity": "UNVERIFIED"
+}
