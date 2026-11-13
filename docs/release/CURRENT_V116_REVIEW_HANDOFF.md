@@ -2,6 +2,10 @@
 
 13 November2026. Working branch: `work/v116-candidate-acceptance`. The `v116` branch reports dated11November describe the frozen release and early signing experiment; they are historical evidence, not the current candidate acceptance record.
 
+## Staged live-score header correction
+
+After the user opened Mobile Draft Review (d9f497f1…bef54af4), a read-only renderer diagnostic reproduced unequal live-score header/score alignment with long actual club names. CSS trial passed60 layouts. Candidate1260a9eb4e7ee2d39e60180c307d9ed73b5190396b5e0bbdb4b98421f765b66a (6,657,136bytes) is staged for exact native/raster verification; only existing owner10 differs from the delivered reference, all22scripts unchanged. [Live header review](V116_LIVE_HEADER_REVIEW.md). The user's delivered/opened file is unchanged; no additional download yet. No stable promotion.
+
 ## Current mobile draft review build
 
 Mobile draft chrome/companion pass is complete for its bounded scope. Final run43403856003 passed104 paired states with0 findings/errors. Base98a664ca…e4b230; candidate SHA-256d9f497f1c58c2637f686b8e0a2bb9dff6a6ed75846142b0aa466cbd9bef54af4 (6,656,949bytes). Only existing CSS owner10 differs from the offseason base. Squad/Speed share a narrow row; enabled Skip keeps its own row; header/filters use less space; narrow squad role counts use two columns. Main companion and Analysis/League picks remain accessible. [Mobile draft review](V116_MOBILE_DRAFT_REVIEW.md). Playable review copy: GCC_v116_Mobile_Draft_Review.html at the exact hash above, bundling archive/offseason/mobile draft passes. No stable promotion. Next: user review, then long club names and live-match header alignment.

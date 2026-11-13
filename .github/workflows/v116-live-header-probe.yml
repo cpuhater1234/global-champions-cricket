@@ -1,4 +1,4 @@
-name: GCC live header diagnostic
+name: GCC live header verification
 on:
   push:
     branches: [work/v116-candidate-acceptance]
@@ -7,7 +7,7 @@ permissions:
   contents: write
 env:
   # Paired archive candidate; original manifest snapshot intentionally retained.
-  CANDIDATE_SHA256: d9f497f1c58c2637f686b8e0a2bb9dff6a6ed75846142b0aa466cbd9bef54af4
+  CANDIDATE_SHA256: 1260a9eb4e7ee2d39e60180c307d9ed73b5190396b5e0bbdb4b98421f765b66a
 concurrency:
   group: gcc-live-header-probe
   cancel-in-progress: true
@@ -41,6 +41,7 @@ jobs:
         env:
           GCC8_TEST_BUILD: qa/results/live-header-probe.html
           GCC8_LIVE_DIR: qa/results/live-header-probe
+          GCC8_VERIFY_LIVE: "1"
         run: |
           GCC8_CHROMIUM="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')" node qa/v116_live_header_probe.cjs
       - name: Preserve diagnostic evidence
