@@ -7,7 +7,7 @@ permissions:
   contents: write
 env:
   # Paired archive candidate; original manifest snapshot intentionally retained.
-  CANDIDATE_SHA256: 3a504c7d11f542c0d8d7e11e6f93fc798f9ede4f5cb54f7c1d95fba1cc1b1898
+  CANDIDATE_SHA256: d9f497f1c58c2637f686b8e0a2bb9dff6a6ed75846142b0aa466cbd9bef54af4
 concurrency:
   group: gcc-mobile-draft
   cancel-in-progress: true
@@ -45,7 +45,7 @@ jobs:
           from qa.v116_source_reconciliation import BLOCK
           a=Path('qa/results/mobile-draft-before.html').read_bytes();b=Path('qa/results/mobile-draft-after.html').read_bytes()
           assert sha256(a).hexdigest()=='98a664ca2f125a54a4f72454d685dd08dbea698eb48d206367ee1a1a7ee4b230'
-          assert sha256(b).hexdigest()=='3a504c7d11f542c0d8d7e11e6f93fc798f9ede4f5cb54f7c1d95fba1cc1b1898'
+          assert sha256(b).hexdigest()=='d9f497f1c58c2637f686b8e0a2bb9dff6a6ed75846142b0aa466cbd9bef54af4'
           aa=list(BLOCK.finditer(a));bb=list(BLOCK.finditer(b))
           assert [m[3] for m in aa if m[1]==b'script']==[m[3] for m in bb if m[1]==b'script']
           changed=[i for i,(x,y) in enumerate(zip(aa,bb)) if x[3]!=y[3]];assert changed==[10],changed

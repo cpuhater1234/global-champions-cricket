@@ -4,7 +4,7 @@
 
 ## Current staged mobile draft review
 
-Mobile draft chrome/companion pass is staged for focused native and image review. Base98a664ca…e4b230; candidate SHA-2563a504c7d11f542c0d8d7e11e6f93fc798f9ede4f5cb54f7c1d95fba1cc1b1898 (6,656,881bytes). Only existing CSS owner10 differs from the offseason base. Squad/Speed share a narrow row; enabled Skip keeps its own row; header/filters use less space; narrow squad role counts use two columns. Main companion and Analysis/League picks remain accessible. [Mobile draft review](V116_MOBILE_DRAFT_REVIEW.md). No stable promotion or download.
+Mobile draft chrome/companion pass is staged for focused native and image review. Base98a664ca…e4b230; candidate SHA-256d9f497f1c58c2637f686b8e0a2bb9dff6a6ed75846142b0aa466cbd9bef54af4 (6,656,949bytes). Only existing CSS owner10 differs from the offseason base. Squad/Speed share a narrow row; enabled Skip keeps its own row; header/filters use less space; narrow squad role counts use two columns. Main companion and Analysis/League picks remain accessible. [Mobile draft review](V116_MOBILE_DRAFT_REVIEW.md). No stable promotion or download.
 
 ## Current offseason review candidate
 

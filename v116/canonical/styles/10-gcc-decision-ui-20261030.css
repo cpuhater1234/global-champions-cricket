@@ -241,7 +241,7 @@
  #g8app .gccuiDraft .gccuiHeadingIcon{flex-basis:36px;height:36px}
  #g8app .gccuiDraft .gccuiTurnActions>.gccuiMobileSquad{display:inline-flex!important}
  #g8app .gccuiDraft .gccuiTurnActions{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px!important}
- #g8app .gccuiDraft .gccuiTurnActions>.g8button{min-width:0;min-height:44px!important;white-space:normal!important}
+ #g8app .gccuiDraft .gccuiTurnActions>.g8button{min-width:0;min-height:44px!important;white-space:normal!important;padding:8px 10px!important;align-self:stretch!important;height:100%}
  #g8app .gccuiDraft .gccuiTurnActions>[data-action=skipPick]{grid-column:1/-1}
  #g8app .gccui.gccuiDraft .gccuiFilters{padding:10px;gap:8px}
  #g8app .gccui.gccuiDraft .gccuiFilters label{gap:4px}
