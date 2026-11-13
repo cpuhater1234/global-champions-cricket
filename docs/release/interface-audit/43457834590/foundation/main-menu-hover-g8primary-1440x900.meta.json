@@ -1,0 +1,184 @@
+{
+  "terms": [],
+  "brokenWords": [],
+  "textOverflow": [],
+  "managementLayout": null,
+  "ownership": [
+    {
+      "element": "DIV.g8actions g8welcomeactions",
+      "text": "Start new careerChoose your club · 2008",
+      "computed": {
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif",
+        "size": "16px",
+        "line": "24px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "color": "rgb(237, 241, 245)",
+        "padding": "0px",
+        "gap": "10px",
+        "display": "grid",
+        "columns": "582.812px",
+        "minWidth": "auto",
+        "width": "582.812px"
+      },
+      "sources": [
+        "(base inline)",
+        "gcc-charcoal-20261030",
+        "gcc-composition-20261107"
+      ],
+      "matches": [
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8actions",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "flex",
+              "important": ""
+            },
+            {
+              "property": "align-items",
+              "value": "center",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8hero .g8actions",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "padding-bottom",
+              "value": "0.5rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8welcomepanel > .g8welcomeactions",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "flex",
+              "important": ""
+            },
+            {
+              "property": "align-items",
+              "value": "stretch",
+              "important": ""
+            },
+            {
+              "property": "width",
+              "value": "100%",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8actions",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "flex",
+              "important": ""
+            },
+            {
+              "property": "align-items",
+              "value": "center",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8app .g8welcomeactions",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "grid",
+              "important": "important"
+            },
+            {
+              "property": "grid-template-columns",
+              "value": "1fr",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 13,
+            "id": "gcc-composition-20261107"
+          },
+          "selector": "#g8app#g8app#g8app .g8hero .g8welcomeactions",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "width",
+              "value": "100%",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "0px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0px",
+              "important": "important"
+            },
+            {
+              "property": "display",
+              "value": "grid",
+              "important": "important"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "box": {
+        "x": 104.1875,
+        "y": 514.984375,
+        "width": 582.8125,
+        "height": 72.796875
+      },
+      "buttons": [
+        {
+          "text": "Start new careerChoose your club · 2008",
+          "x": 104.1875,
+          "y": 514.984375,
+          "width": 582.8125,
+          "height": 72.796875
+        }
+      ]
+    }
+  ],
+  "copy": "A NEW ORDER IN CRICKET · 2008–2026\nGLOBAL CHAMPIONS\nCRICKET\n\nA Saudi-backed breakaway challenges cricket’s old order. Eight clubs join. The world’s players choose sides. One club is yours to build.\n\n8 clubs · 15-player draft · 19 seasons\n\nStart new career\nChoose your club · 2008\nWACA Ground\nWACA Ground · Home of Perth Scorchers\nPhoto: Edelmand · Public domain",
+  "disclaimer": "Matched active media/supports declarations plus computed styles. Container-query matches remain candidates; no automatic winner attribution or defect count from duplication alone."
+}
