@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "html": "/home/runner/work/global-champions-cricket/global-champions-cricket/qa/results/current-safety/candidate.html",
+  "sha256": "c45684a540d098ec35beeb8a959995e88292bccded4ce1314390140d1e7720ab",
+  "mode": "http",
+  "native_storage_checked": true,
+  "runs": [
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "plan": {
+        "powerplay": "attack",
+        "middle": "control",
+        "death": "matchup"
+      },
+      "opened": true,
+      "values": {
+        "powerplay": "attack",
+        "middle": "control",
+        "death": "matchup"
+      },
+      "metrics": {
+        "view": "season",
+        "dialog": true,
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "boardHeight": 471.265625
+      },
+      "result": {
+        "view": "result",
+        "captaincy": {
+          "powerplay": "attack",
+          "middle": "control",
+          "death": "matchup"
+        },
+        "home": 137,
+        "away": 143,
+        "homeW": 7,
+        "awayW": 0,
+        "saveLength": 2
+      },
+      "reloaded": {
+        "view": "result",
+        "captaincy": {
+          "powerplay": "attack",
+          "middle": "control",
+          "death": "matchup"
+        },
+        "storageKeys": 2,
+        "club": "KKR",
+        "round": 1,
+        "year": 2008,
+        "xi": [
+          3,
+          41,
+          85,
+          26,
+          15,
+          25,
+          16,
+          63,
+          165,
+          178,
+          42
+        ],
+        "results": 1
+      },
+      "screenshots": "/home/runner/work/global-champions-cricket/global-champions-cricket/qa/results/current-safety/gameplay/case_0/captaincy_390_attack_control_matchup.png",
+      "errors": [],
+      "console": [],
+      "storage_mode": "http"
+    }
+  ],
+  "note": "Two independent newly drafted careers; differing final scores alone are not controlled tactical causality."
+}

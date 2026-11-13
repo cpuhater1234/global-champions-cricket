@@ -1,0 +1,1416 @@
+{
+  "status": "PASS",
+  "sha256": "c45684a540d098ec35beeb8a959995e88292bccded4ce1314390140d1e7720ab",
+  "states": [
+    {
+      "name": "initial",
+      "view": "recruit",
+      "width": 320,
+      "scrollWidth": 320,
+      "strip": {
+        "x": 12,
+        "y": 285.390625,
+        "width": 296,
+        "height": 70.78125
+      },
+      "days": [
+        {
+          "text": "Day 1",
+          "active": false,
+          "scrollWidth": 52,
+          "clientWidth": 52,
+          "x": 12,
+          "y": 285.390625,
+          "width": 54.078125,
+          "height": 70.78125
+        },
+        {
+          "text": "Day 2",
+          "active": false,
+          "scrollWidth": 52,
+          "clientWidth": 52,
+          "x": 72.46875,
+          "y": 285.390625,
+          "width": 54.09375,
+          "height": 70.78125
+        },
+        {
+          "text": "Day 3",
+          "active": false,
+          "scrollWidth": 52,
+          "clientWidth": 52,
+          "x": 132.953125,
+          "y": 285.390625,
+          "width": 54.078125,
+          "height": 70.78125
+        },
+        {
+          "text": "Day 4",
+          "active": false,
+          "scrollWidth": 52,
+          "clientWidth": 52,
+          "x": 193.421875,
+          "y": 285.390625,
+          "width": 54.09375,
+          "height": 70.78125
+        },
+        {
+          "text": "Day 5",
+          "active": false,
+          "scrollWidth": 52,
+          "clientWidth": 52,
+          "x": 253.90625,
+          "y": 285.390625,
+          "width": 54.09375,
+          "height": 70.78125
+        }
+      ],
+      "controls": [
+        {
+          "text": "Start signings",
+          "scrollWidth": 258,
+          "clientWidth": 258,
+          "x": 30,
+          "y": 480.546875,
+          "width": 260,
+          "height": 44
+        },
+        {
+          "text": "Speed 1×",
+          "scrollWidth": 124,
+          "clientWidth": 124,
+          "x": 30,
+          "y": 532.546875,
+          "width": 126,
+          "height": 44
+        },
+        {
+          "text": "Skip to end",
+          "scrollWidth": 124,
+          "clientWidth": 124,
+          "x": 164,
+          "y": 532.546875,
+          "width": 126,
+          "height": 44
+        }
+      ],
+      "running": false,
+      "started": false,
+      "complete": false,
+      "dayResolved": 0
+    },
+    {
+      "name": "during",
+      "view": "recruit",
+      "width": 320,
+      "scrollWidth": 320,
+      "strip": {
+        "x": 12,
+        "y": 285.390625,
+        "width": 296,
+        "height": 70.78125
+      },
+      "days": [
+        {
+          "text": "Day 1",
+          "active": true,
+          "scrollWidth": 52,
+          "clientWidth": 52,
+          "x": 12,
+          "y": 285.390625,
+          "width": 54.078125,
+          "height": 70.78125
+        },
+        {
+          "text": "Day 2",
+          "active": false,
+          "scrollWidth": 52,
+          "clientWidth": 52,
+          "x": 72.46875,
+          "y": 285.390625,
+          "width": 54.09375,
+          "height": 70.78125
+        },
+        {
+          "text": "Day 3",
+          "active": false,
+          "scrollWidth": 52,
+          "clientWidth": 52,
+          "x": 132.953125,
+          "y": 285.390625,
+          "width": 54.078125,
+          "height": 70.78125
+        },
+        {
+          "text": "Day 4",
+          "active": false,
+          "scrollWidth": 52,
+          "clientWidth": 52,
+          "x": 193.421875,
+          "y": 285.390625,
+          "width": 54.09375,
+          "height": 70.78125
+        },
+        {
+          "text": "Day 5",
+          "active": false,
+          "scrollWidth": 52,
+          "clientWidth": 52,
+          "x": 253.90625,
+          "y": 285.390625,
+          "width": 54.09375,
+          "height": 70.78125
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume signing",
+          "scrollWidth": 258,
+          "clientWidth": 258,
+          "x": 30,
+          "y": 480.546875,
+          "width": 260,
+          "height": 44
+        },
+        {
+          "text": "Speed 1×",
+          "scrollWidth": 124,
+          "clientWidth": 124,
+          "x": 30,
+          "y": 532.546875,
+          "width": 126,
+          "height": 44
+        },
+        {
+          "text": "Skip to end",
+          "scrollWidth": 124,
+          "clientWidth": 124,
+          "x": 164,
+          "y": 532.546875,
+          "width": 126,
+          "height": 44
+        }
+      ],
+      "running": false,
+      "started": true,
+      "complete": false,
+      "dayResolved": 1
+    },
+    {
+      "name": "complete",
+      "view": "recruit",
+      "width": 320,
+      "scrollWidth": 320,
+      "strip": {
+        "x": 12,
+        "y": 285.390625,
+        "width": 296,
+        "height": 70.78125
+      },
+      "days": [
+        {
+          "text": "Day 1",
+          "active": false,
+          "scrollWidth": 52,
+          "clientWidth": 52,
+          "x": 12,
+          "y": 285.390625,
+          "width": 54.078125,
+          "height": 70.78125
+        },
+        {
+          "text": "Day 2",
+          "active": false,
+          "scrollWidth": 52,
+          "clientWidth": 52,
+          "x": 72.46875,
+          "y": 285.390625,
+          "width": 54.09375,
+          "height": 70.78125
+        },
+        {
+          "text": "Day 3",
+          "active": false,
+          "scrollWidth": 52,
+          "clientWidth": 52,
+          "x": 132.953125,
+          "y": 285.390625,
+          "width": 54.078125,
+          "height": 70.78125
+        },
+        {
+          "text": "Day 4",
+          "active": false,
+          "scrollWidth": 52,
+          "clientWidth": 52,
+          "x": 193.421875,
+          "y": 285.390625,
+          "width": 54.09375,
+          "height": 70.78125
+        },
+        {
+          "text": "Day 5",
+          "active": true,
+          "scrollWidth": 52,
+          "clientWidth": 52,
+          "x": 253.90625,
+          "y": 285.390625,
+          "width": 54.09375,
+          "height": 70.78125
+        }
+      ],
+      "controls": [
+        {
+          "text": "Draft-order draw",
+          "scrollWidth": 258,
+          "clientWidth": 258,
+          "x": 30,
+          "y": 480.546875,
+          "width": 260,
+          "height": 44
+        }
+      ],
+      "running": false,
+      "started": true,
+      "complete": true,
+      "dayResolved": 49
+    },
+    {
+      "name": "initial",
+      "view": "recruit",
+      "width": 360,
+      "scrollWidth": 360,
+      "strip": {
+        "x": 12,
+        "y": 261.390625,
+        "width": 336,
+        "height": 46.78125
+      },
+      "days": [
+        {
+          "text": "Day 1",
+          "active": false,
+          "scrollWidth": 60,
+          "clientWidth": 60,
+          "x": 12,
+          "y": 261.390625,
+          "width": 62.078125,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 2",
+          "active": false,
+          "scrollWidth": 60,
+          "clientWidth": 60,
+          "x": 80.46875,
+          "y": 261.390625,
+          "width": 62.09375,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 3",
+          "active": false,
+          "scrollWidth": 60,
+          "clientWidth": 60,
+          "x": 148.953125,
+          "y": 261.390625,
+          "width": 62.078125,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 4",
+          "active": false,
+          "scrollWidth": 60,
+          "clientWidth": 60,
+          "x": 217.421875,
+          "y": 261.390625,
+          "width": 62.09375,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 5",
+          "active": false,
+          "scrollWidth": 60,
+          "clientWidth": 60,
+          "x": 285.90625,
+          "y": 261.390625,
+          "width": 62.09375,
+          "height": 46.78125
+        }
+      ],
+      "controls": [
+        {
+          "text": "Start signings",
+          "scrollWidth": 298,
+          "clientWidth": 298,
+          "x": 30,
+          "y": 432.546875,
+          "width": 300,
+          "height": 44
+        },
+        {
+          "text": "Speed 1×",
+          "scrollWidth": 144,
+          "clientWidth": 144,
+          "x": 30,
+          "y": 484.546875,
+          "width": 146,
+          "height": 44
+        },
+        {
+          "text": "Skip to end",
+          "scrollWidth": 144,
+          "clientWidth": 144,
+          "x": 184,
+          "y": 484.546875,
+          "width": 146,
+          "height": 44
+        }
+      ],
+      "running": false,
+      "started": false,
+      "complete": false,
+      "dayResolved": 0
+    },
+    {
+      "name": "during",
+      "view": "recruit",
+      "width": 360,
+      "scrollWidth": 360,
+      "strip": {
+        "x": 12,
+        "y": 261.390625,
+        "width": 336,
+        "height": 46.78125
+      },
+      "days": [
+        {
+          "text": "Day 1",
+          "active": true,
+          "scrollWidth": 60,
+          "clientWidth": 60,
+          "x": 12,
+          "y": 261.390625,
+          "width": 62.078125,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 2",
+          "active": false,
+          "scrollWidth": 60,
+          "clientWidth": 60,
+          "x": 80.46875,
+          "y": 261.390625,
+          "width": 62.09375,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 3",
+          "active": false,
+          "scrollWidth": 60,
+          "clientWidth": 60,
+          "x": 148.953125,
+          "y": 261.390625,
+          "width": 62.078125,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 4",
+          "active": false,
+          "scrollWidth": 60,
+          "clientWidth": 60,
+          "x": 217.421875,
+          "y": 261.390625,
+          "width": 62.09375,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 5",
+          "active": false,
+          "scrollWidth": 60,
+          "clientWidth": 60,
+          "x": 285.90625,
+          "y": 261.390625,
+          "width": 62.09375,
+          "height": 46.78125
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume signing",
+          "scrollWidth": 298,
+          "clientWidth": 298,
+          "x": 30,
+          "y": 432.546875,
+          "width": 300,
+          "height": 44
+        },
+        {
+          "text": "Speed 1×",
+          "scrollWidth": 144,
+          "clientWidth": 144,
+          "x": 30,
+          "y": 484.546875,
+          "width": 146,
+          "height": 44
+        },
+        {
+          "text": "Skip to end",
+          "scrollWidth": 144,
+          "clientWidth": 144,
+          "x": 184,
+          "y": 484.546875,
+          "width": 146,
+          "height": 44
+        }
+      ],
+      "running": false,
+      "started": true,
+      "complete": false,
+      "dayResolved": 1
+    },
+    {
+      "name": "complete",
+      "view": "recruit",
+      "width": 360,
+      "scrollWidth": 360,
+      "strip": {
+        "x": 12,
+        "y": 261.390625,
+        "width": 336,
+        "height": 46.78125
+      },
+      "days": [
+        {
+          "text": "Day 1",
+          "active": false,
+          "scrollWidth": 60,
+          "clientWidth": 60,
+          "x": 12,
+          "y": 261.390625,
+          "width": 62.078125,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 2",
+          "active": false,
+          "scrollWidth": 60,
+          "clientWidth": 60,
+          "x": 80.46875,
+          "y": 261.390625,
+          "width": 62.09375,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 3",
+          "active": false,
+          "scrollWidth": 60,
+          "clientWidth": 60,
+          "x": 148.953125,
+          "y": 261.390625,
+          "width": 62.078125,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 4",
+          "active": false,
+          "scrollWidth": 60,
+          "clientWidth": 60,
+          "x": 217.421875,
+          "y": 261.390625,
+          "width": 62.09375,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 5",
+          "active": true,
+          "scrollWidth": 60,
+          "clientWidth": 60,
+          "x": 285.90625,
+          "y": 261.390625,
+          "width": 62.09375,
+          "height": 46.78125
+        }
+      ],
+      "controls": [
+        {
+          "text": "Draft-order draw",
+          "scrollWidth": 298,
+          "clientWidth": 298,
+          "x": 30,
+          "y": 432.546875,
+          "width": 300,
+          "height": 44
+        }
+      ],
+      "running": false,
+      "started": true,
+      "complete": true,
+      "dayResolved": 50
+    },
+    {
+      "name": "initial",
+      "view": "recruit",
+      "width": 390,
+      "scrollWidth": 390,
+      "strip": {
+        "x": 12,
+        "y": 261.390625,
+        "width": 366,
+        "height": 46.78125
+      },
+      "days": [
+        {
+          "text": "Day 1",
+          "active": false,
+          "scrollWidth": 66,
+          "clientWidth": 66,
+          "x": 12,
+          "y": 261.390625,
+          "width": 68.078125,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 2",
+          "active": false,
+          "scrollWidth": 66,
+          "clientWidth": 66,
+          "x": 86.46875,
+          "y": 261.390625,
+          "width": 68.09375,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 3",
+          "active": false,
+          "scrollWidth": 66,
+          "clientWidth": 66,
+          "x": 160.953125,
+          "y": 261.390625,
+          "width": 68.078125,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 4",
+          "active": false,
+          "scrollWidth": 66,
+          "clientWidth": 66,
+          "x": 235.421875,
+          "y": 261.390625,
+          "width": 68.09375,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 5",
+          "active": false,
+          "scrollWidth": 66,
+          "clientWidth": 66,
+          "x": 309.90625,
+          "y": 261.390625,
+          "width": 68.09375,
+          "height": 46.78125
+        }
+      ],
+      "controls": [
+        {
+          "text": "Start signings",
+          "scrollWidth": 328,
+          "clientWidth": 328,
+          "x": 30,
+          "y": 432.546875,
+          "width": 330,
+          "height": 44
+        },
+        {
+          "text": "Speed 1×",
+          "scrollWidth": 159,
+          "clientWidth": 159,
+          "x": 30,
+          "y": 484.546875,
+          "width": 161,
+          "height": 44
+        },
+        {
+          "text": "Skip to end",
+          "scrollWidth": 159,
+          "clientWidth": 159,
+          "x": 199,
+          "y": 484.546875,
+          "width": 161,
+          "height": 44
+        }
+      ],
+      "running": false,
+      "started": false,
+      "complete": false,
+      "dayResolved": 0
+    },
+    {
+      "name": "during",
+      "view": "recruit",
+      "width": 390,
+      "scrollWidth": 390,
+      "strip": {
+        "x": 12,
+        "y": 261.390625,
+        "width": 366,
+        "height": 46.78125
+      },
+      "days": [
+        {
+          "text": "Day 1",
+          "active": true,
+          "scrollWidth": 66,
+          "clientWidth": 66,
+          "x": 12,
+          "y": 261.390625,
+          "width": 68.078125,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 2",
+          "active": false,
+          "scrollWidth": 66,
+          "clientWidth": 66,
+          "x": 86.46875,
+          "y": 261.390625,
+          "width": 68.09375,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 3",
+          "active": false,
+          "scrollWidth": 66,
+          "clientWidth": 66,
+          "x": 160.953125,
+          "y": 261.390625,
+          "width": 68.078125,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 4",
+          "active": false,
+          "scrollWidth": 66,
+          "clientWidth": 66,
+          "x": 235.421875,
+          "y": 261.390625,
+          "width": 68.09375,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 5",
+          "active": false,
+          "scrollWidth": 66,
+          "clientWidth": 66,
+          "x": 309.90625,
+          "y": 261.390625,
+          "width": 68.09375,
+          "height": 46.78125
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume signing",
+          "scrollWidth": 328,
+          "clientWidth": 328,
+          "x": 30,
+          "y": 432.546875,
+          "width": 330,
+          "height": 44
+        },
+        {
+          "text": "Speed 1×",
+          "scrollWidth": 159,
+          "clientWidth": 159,
+          "x": 30,
+          "y": 484.546875,
+          "width": 161,
+          "height": 44
+        },
+        {
+          "text": "Skip to end",
+          "scrollWidth": 159,
+          "clientWidth": 159,
+          "x": 199,
+          "y": 484.546875,
+          "width": 161,
+          "height": 44
+        }
+      ],
+      "running": false,
+      "started": true,
+      "complete": false,
+      "dayResolved": 1
+    },
+    {
+      "name": "complete",
+      "view": "recruit",
+      "width": 390,
+      "scrollWidth": 390,
+      "strip": {
+        "x": 12,
+        "y": 261.390625,
+        "width": 366,
+        "height": 46.78125
+      },
+      "days": [
+        {
+          "text": "Day 1",
+          "active": false,
+          "scrollWidth": 66,
+          "clientWidth": 66,
+          "x": 12,
+          "y": 261.390625,
+          "width": 68.078125,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 2",
+          "active": false,
+          "scrollWidth": 66,
+          "clientWidth": 66,
+          "x": 86.46875,
+          "y": 261.390625,
+          "width": 68.09375,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 3",
+          "active": false,
+          "scrollWidth": 66,
+          "clientWidth": 66,
+          "x": 160.953125,
+          "y": 261.390625,
+          "width": 68.078125,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 4",
+          "active": false,
+          "scrollWidth": 66,
+          "clientWidth": 66,
+          "x": 235.421875,
+          "y": 261.390625,
+          "width": 68.09375,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 5",
+          "active": true,
+          "scrollWidth": 66,
+          "clientWidth": 66,
+          "x": 309.90625,
+          "y": 261.390625,
+          "width": 68.09375,
+          "height": 46.78125
+        }
+      ],
+      "controls": [
+        {
+          "text": "Draft-order draw",
+          "scrollWidth": 328,
+          "clientWidth": 328,
+          "x": 30,
+          "y": 432.546875,
+          "width": 330,
+          "height": 44
+        }
+      ],
+      "running": false,
+      "started": true,
+      "complete": true,
+      "dayResolved": 53
+    },
+    {
+      "name": "initial",
+      "view": "recruit",
+      "width": 768,
+      "scrollWidth": 768,
+      "strip": {
+        "x": 23.03125,
+        "y": 338.4375,
+        "width": 721.9375,
+        "height": 46.78125
+      },
+      "days": [
+        {
+          "text": "Day 1",
+          "active": false,
+          "scrollWidth": 137,
+          "clientWidth": 137,
+          "x": 23.03125,
+          "y": 338.4375,
+          "width": 139.265625,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 2",
+          "active": false,
+          "scrollWidth": 137,
+          "clientWidth": 137,
+          "x": 168.6875,
+          "y": 338.4375,
+          "width": 139.28125,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 3",
+          "active": false,
+          "scrollWidth": 137,
+          "clientWidth": 137,
+          "x": 314.359375,
+          "y": 338.4375,
+          "width": 139.265625,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 4",
+          "active": false,
+          "scrollWidth": 137,
+          "clientWidth": 137,
+          "x": 460.015625,
+          "y": 338.4375,
+          "width": 139.28125,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 5",
+          "active": false,
+          "scrollWidth": 137,
+          "clientWidth": 137,
+          "x": 605.6875,
+          "y": 338.4375,
+          "width": 139.28125,
+          "height": 46.78125
+        }
+      ],
+      "controls": [
+        {
+          "text": "Start signings",
+          "scrollWidth": 150,
+          "clientWidth": 150,
+          "x": 42.625,
+          "y": 511.1875,
+          "width": 151.890625,
+          "height": 44
+        },
+        {
+          "text": "Speed 1×",
+          "scrollWidth": 150,
+          "clientWidth": 150,
+          "x": 202.515625,
+          "y": 511.1875,
+          "width": 151.890625,
+          "height": 44
+        },
+        {
+          "text": "Skip to end",
+          "scrollWidth": 310,
+          "clientWidth": 310,
+          "x": 42.625,
+          "y": 563.1875,
+          "width": 311.78125,
+          "height": 44
+        }
+      ],
+      "running": false,
+      "started": false,
+      "complete": false,
+      "dayResolved": 0
+    },
+    {
+      "name": "during",
+      "view": "recruit",
+      "width": 768,
+      "scrollWidth": 768,
+      "strip": {
+        "x": 23.03125,
+        "y": 338.4375,
+        "width": 721.9375,
+        "height": 46.78125
+      },
+      "days": [
+        {
+          "text": "Day 1",
+          "active": true,
+          "scrollWidth": 137,
+          "clientWidth": 137,
+          "x": 23.03125,
+          "y": 338.4375,
+          "width": 139.265625,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 2",
+          "active": false,
+          "scrollWidth": 137,
+          "clientWidth": 137,
+          "x": 168.6875,
+          "y": 338.4375,
+          "width": 139.28125,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 3",
+          "active": false,
+          "scrollWidth": 137,
+          "clientWidth": 137,
+          "x": 314.359375,
+          "y": 338.4375,
+          "width": 139.265625,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 4",
+          "active": false,
+          "scrollWidth": 137,
+          "clientWidth": 137,
+          "x": 460.015625,
+          "y": 338.4375,
+          "width": 139.28125,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 5",
+          "active": false,
+          "scrollWidth": 137,
+          "clientWidth": 137,
+          "x": 605.6875,
+          "y": 338.4375,
+          "width": 139.28125,
+          "height": 46.78125
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume signing",
+          "scrollWidth": 150,
+          "clientWidth": 150,
+          "x": 42.625,
+          "y": 511.1875,
+          "width": 151.890625,
+          "height": 62
+        },
+        {
+          "text": "Speed 1×",
+          "scrollWidth": 150,
+          "clientWidth": 150,
+          "x": 202.515625,
+          "y": 511.1875,
+          "width": 151.890625,
+          "height": 44
+        },
+        {
+          "text": "Skip to end",
+          "scrollWidth": 310,
+          "clientWidth": 310,
+          "x": 42.625,
+          "y": 581.1875,
+          "width": 311.78125,
+          "height": 44
+        }
+      ],
+      "running": false,
+      "started": true,
+      "complete": false,
+      "dayResolved": 1
+    },
+    {
+      "name": "complete",
+      "view": "recruit",
+      "width": 768,
+      "scrollWidth": 768,
+      "strip": {
+        "x": 23.03125,
+        "y": 338.4375,
+        "width": 721.9375,
+        "height": 46.78125
+      },
+      "days": [
+        {
+          "text": "Day 1",
+          "active": false,
+          "scrollWidth": 137,
+          "clientWidth": 137,
+          "x": 23.03125,
+          "y": 338.4375,
+          "width": 139.265625,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 2",
+          "active": false,
+          "scrollWidth": 137,
+          "clientWidth": 137,
+          "x": 168.6875,
+          "y": 338.4375,
+          "width": 139.28125,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 3",
+          "active": false,
+          "scrollWidth": 137,
+          "clientWidth": 137,
+          "x": 314.359375,
+          "y": 338.4375,
+          "width": 139.265625,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 4",
+          "active": false,
+          "scrollWidth": 137,
+          "clientWidth": 137,
+          "x": 460.015625,
+          "y": 338.4375,
+          "width": 139.28125,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 5",
+          "active": true,
+          "scrollWidth": 137,
+          "clientWidth": 137,
+          "x": 605.6875,
+          "y": 338.4375,
+          "width": 139.28125,
+          "height": 46.78125
+        }
+      ],
+      "controls": [
+        {
+          "text": "Draft-order draw",
+          "scrollWidth": 310,
+          "clientWidth": 310,
+          "x": 42.625,
+          "y": 511.1875,
+          "width": 311.78125,
+          "height": 44
+        }
+      ],
+      "running": false,
+      "started": true,
+      "complete": true,
+      "dayResolved": 56
+    },
+    {
+      "name": "initial",
+      "view": "recruit",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "strip": {
+        "x": 83.1875,
+        "y": 284.765625,
+        "width": 1273.625,
+        "height": 46.78125
+      },
+      "days": [
+        {
+          "text": "Day 1",
+          "active": false,
+          "scrollWidth": 248,
+          "clientWidth": 248,
+          "x": 83.1875,
+          "y": 284.765625,
+          "width": 249.609375,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 2",
+          "active": false,
+          "scrollWidth": 248,
+          "clientWidth": 248,
+          "x": 339.1875,
+          "y": 284.765625,
+          "width": 249.625,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 3",
+          "active": false,
+          "scrollWidth": 248,
+          "clientWidth": 248,
+          "x": 595.203125,
+          "y": 284.765625,
+          "width": 249.609375,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 4",
+          "active": false,
+          "scrollWidth": 248,
+          "clientWidth": 248,
+          "x": 851.203125,
+          "y": 284.765625,
+          "width": 249.609375,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 5",
+          "active": false,
+          "scrollWidth": 248,
+          "clientWidth": 248,
+          "x": 1107.203125,
+          "y": 284.765625,
+          "width": 249.609375,
+          "height": 46.78125
+        }
+      ],
+      "controls": [
+        {
+          "text": "Start signings",
+          "scrollWidth": 189,
+          "clientWidth": 189,
+          "x": 102.78125,
+          "y": 457.515625,
+          "width": 190.53125,
+          "height": 44
+        },
+        {
+          "text": "Speed 1×",
+          "scrollWidth": 189,
+          "clientWidth": 189,
+          "x": 301.3125,
+          "y": 457.515625,
+          "width": 190.546875,
+          "height": 44
+        },
+        {
+          "text": "Skip to end",
+          "scrollWidth": 189,
+          "clientWidth": 189,
+          "x": 499.859375,
+          "y": 457.515625,
+          "width": 190.546875,
+          "height": 44
+        }
+      ],
+      "running": false,
+      "started": false,
+      "complete": false,
+      "dayResolved": 0
+    },
+    {
+      "name": "during",
+      "view": "recruit",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "strip": {
+        "x": 83.1875,
+        "y": 284.765625,
+        "width": 1273.625,
+        "height": 46.78125
+      },
+      "days": [
+        {
+          "text": "Day 1",
+          "active": true,
+          "scrollWidth": 248,
+          "clientWidth": 248,
+          "x": 83.1875,
+          "y": 284.765625,
+          "width": 249.609375,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 2",
+          "active": false,
+          "scrollWidth": 248,
+          "clientWidth": 248,
+          "x": 339.1875,
+          "y": 284.765625,
+          "width": 249.625,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 3",
+          "active": false,
+          "scrollWidth": 248,
+          "clientWidth": 248,
+          "x": 595.203125,
+          "y": 284.765625,
+          "width": 249.609375,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 4",
+          "active": false,
+          "scrollWidth": 248,
+          "clientWidth": 248,
+          "x": 851.203125,
+          "y": 284.765625,
+          "width": 249.609375,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 5",
+          "active": false,
+          "scrollWidth": 248,
+          "clientWidth": 248,
+          "x": 1107.203125,
+          "y": 284.765625,
+          "width": 249.609375,
+          "height": 46.78125
+        }
+      ],
+      "controls": [
+        {
+          "text": "Resume signing",
+          "scrollWidth": 189,
+          "clientWidth": 189,
+          "x": 102.78125,
+          "y": 457.515625,
+          "width": 190.53125,
+          "height": 44
+        },
+        {
+          "text": "Speed 1×",
+          "scrollWidth": 189,
+          "clientWidth": 189,
+          "x": 301.3125,
+          "y": 457.515625,
+          "width": 190.546875,
+          "height": 44
+        },
+        {
+          "text": "Skip to end",
+          "scrollWidth": 189,
+          "clientWidth": 189,
+          "x": 499.859375,
+          "y": 457.515625,
+          "width": 190.546875,
+          "height": 44
+        }
+      ],
+      "running": false,
+      "started": true,
+      "complete": false,
+      "dayResolved": 1
+    },
+    {
+      "name": "complete",
+      "view": "recruit",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "strip": {
+        "x": 83.1875,
+        "y": 284.765625,
+        "width": 1273.625,
+        "height": 46.78125
+      },
+      "days": [
+        {
+          "text": "Day 1",
+          "active": false,
+          "scrollWidth": 248,
+          "clientWidth": 248,
+          "x": 83.1875,
+          "y": 284.765625,
+          "width": 249.609375,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 2",
+          "active": false,
+          "scrollWidth": 248,
+          "clientWidth": 248,
+          "x": 339.1875,
+          "y": 284.765625,
+          "width": 249.625,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 3",
+          "active": false,
+          "scrollWidth": 248,
+          "clientWidth": 248,
+          "x": 595.203125,
+          "y": 284.765625,
+          "width": 249.609375,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 4",
+          "active": false,
+          "scrollWidth": 248,
+          "clientWidth": 248,
+          "x": 851.203125,
+          "y": 284.765625,
+          "width": 249.609375,
+          "height": 46.78125
+        },
+        {
+          "text": "Day 5",
+          "active": true,
+          "scrollWidth": 248,
+          "clientWidth": 248,
+          "x": 1107.203125,
+          "y": 284.765625,
+          "width": 249.609375,
+          "height": 46.78125
+        }
+      ],
+      "controls": [
+        {
+          "text": "Draft-order draw",
+          "scrollWidth": 586,
+          "clientWidth": 586,
+          "x": 102.78125,
+          "y": 457.515625,
+          "width": 587.625,
+          "height": 44
+        }
+      ],
+      "running": false,
+      "started": true,
+      "complete": true,
+      "dayResolved": 50
+    }
+  ],
+  "failures": [],
+  "errors": [],
+  "reloads": [
+    {
+      "width": 320,
+      "club": "GT",
+      "year": 2008,
+      "day": 1,
+      "dayResolved": 1,
+      "identityPreserved": true
+    },
+    {
+      "width": 360,
+      "club": "DUR",
+      "year": 2008,
+      "day": 1,
+      "dayResolved": 1,
+      "identityPreserved": true
+    },
+    {
+      "width": 390,
+      "club": "LEI",
+      "year": 2008,
+      "day": 1,
+      "dayResolved": 1,
+      "identityPreserved": true
+    },
+    {
+      "width": 768,
+      "club": "HEA",
+      "year": 2008,
+      "day": 1,
+      "dayResolved": 1,
+      "identityPreserved": true
+    },
+    {
+      "width": 1440,
+      "club": "MI",
+      "year": 2008,
+      "day": 1,
+      "dayResolved": 1,
+      "identityPreserved": true
+    }
+  ],
+  "note": "Day indicators are noninteractive spans, not selectable day buttons. Actual timed signing is run, paused, durably saved, reloaded and continued."
+}
