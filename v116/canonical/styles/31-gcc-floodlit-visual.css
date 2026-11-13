@@ -444,6 +444,7 @@
 #g8app#g8app#g8app .gccuiScorecard{background:linear-gradient(180deg,var(--gcc-raised),var(--gcc-panel))!important;
   border:1px solid var(--gcc-line)!important;border-top:4px solid var(--vx-glow)!important;border-radius:14px!important;
   box-shadow:0 30px 60px -36px #000}
+@media(min-width:1401px){#g8app#g8app#g8app .gccuiFinals .g8finals .gccuiScoreSide>header h3{font-size:clamp(1rem,1.3vw,1.2rem)!important;letter-spacing:0}}
 #g8app#g8app#g8app .gccuiFinals .g8finals>.gccuiScorecard>h2{font-size:clamp(1.35rem,1.8vw,1.65rem)!important;line-height:1.25!important}
 #g8app#g8app#g8app .gccuiScorecard.gccuiWon{border-top-color:#3ddc97!important;box-shadow:0 30px 60px -36px #000,0 0 90px -40px #1fcf80}
 #g8app#g8app#g8app .gccuiScorecard.gccuiLost{border-top-color:#ff5a76!important;box-shadow:0 30px 60px -36px #000,0 0 90px -44px #ff3d5e}

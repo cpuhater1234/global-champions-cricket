@@ -451,7 +451,7 @@
 @media(max-width:600px){#g8app .gccuiFinalActions{display:grid;grid-template-columns:1fr;width:100%}}
 /* Nested semi-final scores must not split the total from its wickets. */
 #g8app .gccui .gccuiScoreSide strong{white-space:nowrap!important}
-@media(min-width:1401px){#g8app .gccuiFinals .g8finals:has(>.gccuiScorecard){grid-template-rows:auto auto auto auto}#g8app .gccuiFinals .g8finals>.gccuiScorecard{display:grid;grid-template-rows:subgrid;grid-row:span 4;row-gap:0;align-self:stretch;container-type:normal!important}}
+@media(min-width:1401px){#g8app .gccuiFinals .g8finals:has(>.gccuiScorecard){grid-template-rows:auto auto auto auto}#g8app .gccuiFinals .g8finals>.gccuiScorecard{display:grid;grid-template-rows:subgrid;grid-row:span 4;row-gap:0;align-self:stretch;container-type:normal!important}#g8app .gccuiFinals .g8finals .gccuiScoreTeams{grid-template-rows:auto auto;row-gap:0}#g8app .gccuiFinals .g8finals .gccuiScoreSide{display:grid;grid-template-rows:subgrid;grid-row:1/span 2}#g8app .gccuiFinals .g8finals .gccuiScoreSide:first-child{grid-column:1}#g8app .gccuiFinals .g8finals .gccuiScoreSide:last-child{grid-column:3}#g8app .gccuiFinals .g8finals .gccuiScoreTeams>.gccuiVersus{grid-column:2;grid-row:1/span 2}}
 #g8app .gccuiFinals .g8finals .gccuiScoreSide>div{grid-template-columns:minmax(0,1fr)!important}
 #g8app .gccuiFinals .g8finals .gccuiScoreSide>div>span{grid-column:1!important}
 @media(max-width:1400px){#g8app .gccuiFinals .g8finals{grid-template-columns:1fr!important}}
