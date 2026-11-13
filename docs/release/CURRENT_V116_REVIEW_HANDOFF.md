@@ -6,9 +6,9 @@
 
 The user explicitly excluded actual screen-reader speech testing from scope. It is **not a promotion blocker** and no installation or manual speech test is required. Historical HOLD explanations below record the prior scope and are superseded by this instruction. Speech support remains unverified; no accessibility certification is claimed.
 
-Archive density pass is now staged, pending focused native results and visual review. Base is c8990d21…5909a0. Only archive selectors in existing styles/10 are edited: more compact header and season rows; phone year and Open season share a row with result text below. Offseason and gameplay remain separate. Candidate SHA-256 297302580de76f464e47bf9e153646264a46a1d7fe09958ec6aabb01141b37e9 (6,656,214bytes). It remains unpromoted while this new visual candidate is reviewed. Frozen v116 and main are not being edited.
+Archive density pass is complete for its bounded QA scope. [Final run43398872443](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/43398872443) passed64 paired states with0 findings/errors; see [archive review](V116_ARCHIVE_DENSITY_REVIEW.md). Base is c8990d21…5909a0. Only archive selectors in existing styles/10 are edited: more compact header and season rows; phone year and Open season share a row with result text below. Offseason and gameplay remain separate. Candidate SHA-256 297302580de76f464e47bf9e153646264a46a1d7fe09958ec6aabb01141b37e9 (6,656,214bytes). It remains an unpromoted review candidate; the archive-specific gate passed. Next focused visual pass: offseason overview/development density. Frozen v116 and main are not being edited.
 
-## Latest: edited accessibility candidate (13 November 2026), HOLD / unpromoted
+## Previous c899 accessibility candidate (historical HOLD scope)
 
 New candidate SHA-256 `c8990d219359ce23f697db136d47e44673427167cec0bae83638e61ceb5909a0` (6,655,238 bytes), built with:
 
@@ -29,14 +29,6 @@ Change: two CSS declarations in the existing compact owner `styles/31-gcc-floodl
 | 5. Rebuild / SHA | Done; CI workflow pinned to the new hash | Old saved reports are not evidence for this file |
 
 Gameplay and save/reload were not re-run because no runtime body changed. That rests on the build report and the frozen-script comparison, not on a new gameplay run.
-
-### Real screen-reader protocol (to be run by a person)
-
-1. Record OS, browser and screen-reader versions (NVDA + Chrome on Windows, or VoiceOver + Safari on macOS).
-2. Open the exact `c8990d219359…` build, start a disposable career, prepare the match preview and press Watch match.
-3. Listen through at least 6 deliveries. For each, write down what was spoken against the visible score, wickets and overs. Note anything delayed, missing, duplicated, or so frequent it is unusable.
-4. Pause and resume with the keyboard and confirm announcements stop and restart.
-5. If there is a defect, fix it in the live-score script owner by keeping one stable status region and updating only its text; rebuild with `--allow-runtime-changes`, run gameplay and save/reload checks, and repeat steps 1–4.
 
 ## Artifact identities
 
