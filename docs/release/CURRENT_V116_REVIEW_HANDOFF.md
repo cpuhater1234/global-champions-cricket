@@ -2,6 +2,10 @@
 
 13 November2026. Working branch: `work/v116-candidate-acceptance`. The `v116` branch reports dated11November describe the frozen release and early signing experiment; they are historical evidence, not the current candidate acceptance record.
 
+## Current delivered match review build
+
+Match-surface pass uses six background declarations in existing styles/31 to align neutral match panels with shared charcoal tokens. Exact candidate aa9930f0ea7f008ce46970a034dff7488ade5729c2f8369fb435b765b2338d47 (6,657,146 bytes), delivered as GCC_v116_Match_Review.html, includes the previous live-header correction. Native run43419478973 passed36 states/292 checks, zero findings/errors;32 visible surface instances matched tokens. Phone and desktop live/result samples inspected. Over-history background is source-verified only because absent at paused capture points. All22 scripts unchanged from prior candidate. Existing user-opened d9f497f1 remains untouched. Frozen/main untouched; no stable promotion. [Match surface review](V116_MATCH_SURFACE_REVIEW.md).
+
 ## Native match-flow verification
 
 Exact staged candidate 9e1fec325f6d5dc08e16b79ce4cf2019e2c4aa0872d076a283cf1b1a70a01601 passed native run43413945533: 36 states, 260 checks, zero findings/errors. Natural playback reached the second innings; native Pause/Resume, Speed, Skip, result, keyboard scorebook, scroll-end/focus restoration and return to the next fixture passed at320/390/768/1440px. Sampled320px raster review found no additional layout defect. No product changes, new download or promotion. User-opened d9f497f1 remains unchanged. [Match-flow review](V116_MATCH_FLOW_REVIEW.md).
