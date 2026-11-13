@@ -1,0 +1,23 @@
+{
+  "status": "BOUNDED_UI_PASS_REVIEW_ONLY",
+  "candidate_sha256": "af1e36b9c6b43fb914823e5949fa53d4ad22c82fec69f350b56472940a5ab322",
+  "candidate_bytes": 6658064,
+  "changed_blocks": [
+    9,
+    10,
+    23,
+    26,
+    27,
+    29,
+    31
+  ],
+  "unchanged_runtime_bodies": 18,
+  "native_run": 43460180335,
+  "native_states": 460,
+  "native_failures": 0,
+  "broken_word_flags": 0,
+  "remaining_visual_work": [
+    "320px analysis tile density"
+  ],
+  "promotion": "HOLD"
+}

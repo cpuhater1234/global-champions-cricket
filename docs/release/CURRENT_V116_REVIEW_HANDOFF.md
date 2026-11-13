@@ -1,20 +1,10 @@
 # Current v116 review candidate handoff
 
+## Latest secondary UI review, 13 November 2026
+
+GCC_v116_Secondary_Review.html, af1e36b9c6b43fb914823e5949fa53d4ad22c82fec69f350b56472940a5ab322, 6,658,064 bytes. Final run 43460180335 passed 460 states with zero failures/word-break flags. See [secondary review](V116_SECONDARY_OWNER_REVIEW.md) for exact scope and limits. Review only; promotion HOLD. Narrow analysis density remains. Career record/automatic club flow remains separate, native verification pending. Frozen v116/main untouched; Finals Review remains rollback.
+
 13 November2026. Working branch: `work/v116-candidate-acceptance`. The `v116` branch reports dated11November describe the frozen release and early signing experiment; they are historical evidence, not the current candidate acceptance record.
-
-## Delivered finals review and external review reconciliation
-
-14November2026. Current staged source candidate f0b75473b15d2548c8b676c8c2c483df75d08559ca3f72ef46f3019225808005 (6,658,204bytes). Native run43439420803 passed48states/806checks, zero findings/errors. Historical finals presentation reconstructed from actual2009/2019/2025 results at320/390/768/1440. Paired desktop semi-final result and inner score rows align; long club words stay intact; phase disclosures now44px minimum. All22scripts and all48screen texts unchanged. Sampled desktop/phone image review complete. Delivered as GCC_v116_Finals_Review.html at the exact hash above after user requested the bundle. No stable promotion. Opened Match Review aa9930f0 remains untouched. [Finals review](V116_FINALS_PRESENTATION_REVIEW.md).
-
-External transcript and GitHub issues2/3 reconciled against active QA branch. Useful identity/guardrail direction retained; frozen-branch claims of no screenshot evidence or untested signing/mobile work are not applied to current QA. No bulk cleanup, breakpoint collapse, save-key rename, engine change or repeated closed acceptance. Consolidated deterministic raster gate remains separate follow-up work. [Reconciliation](V116_EXTERNAL_REVIEW_RECONCILIATION_20261114.md).
-
-## Current delivered match review build
-
-Match-surface pass uses six background declarations in existing styles/31 to align neutral match panels with shared charcoal tokens. Exact candidate aa9930f0ea7f008ce46970a034dff7488ade5729c2f8369fb435b765b2338d47 (6,657,146 bytes), delivered as GCC_v116_Match_Review.html, includes the previous live-header correction. Native run43419478973 passed36 states/292 checks, zero findings/errors;32 visible surface instances matched tokens. Phone and desktop live/result samples inspected. Over-history background is source-verified only because absent at paused capture points. All22 scripts unchanged from prior candidate. Existing user-opened d9f497f1 remains untouched. Frozen/main untouched; no stable promotion. [Match surface review](V116_MATCH_SURFACE_REVIEW.md).
-
-## Native match-flow verification
-
-Exact staged candidate 9e1fec325f6d5dc08e16b79ce4cf2019e2c4aa0872d076a283cf1b1a70a01601 passed native run43413945533: 36 states, 260 checks, zero findings/errors. Natural playback reached the second innings; native Pause/Resume, Speed, Skip, result, keyboard scorebook, scroll-end/focus restoration and return to the next fixture passed at320/390/768/1440px. Sampled320px raster review found no additional layout defect. No product changes, new download or promotion. User-opened d9f497f1 remains unchanged. [Match-flow review](V116_MATCH_FLOW_REVIEW.md).
 
 ## Verified live-score header source candidate
 
