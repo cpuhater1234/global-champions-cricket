@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "sha256": "f0b75473b15d2548c8b676c8c2c483df75d08559ca3f72ef46f3019225808005",
+  "run": 43439420803,
+  "baselineRun": 43433943161,
+  "states": 48,
+  "checks": 806,
+  "findings": [],
+  "errors": [],
+  "scoreRowOffsets": [
+    {
+      "name": "2009-semis-1440",
+      "type": "paired semifinal score-row offset",
+      "pixels": 0
+    },
+    {
+      "name": "2019-semis-1440",
+      "type": "paired semifinal score-row offset",
+      "pixels": 0
+    },
+    {
+      "name": "2025-semis-1440",
+      "type": "paired semifinal score-row offset",
+      "pixels": 0
+    }
+  ],
+  "allScreenTextPreserved": true,
+  "scope": "Historical finals stage reconstruction from real completed checkpoints. Presentation only; no live finals transition, persistence or whole-career acceptance.",
+  "limits": "Historical stage reconstruction; not newly played finals transitions; Chromium only; no Super Over fixture. Header/disclosure CSS only; no stable promotion."
+}
