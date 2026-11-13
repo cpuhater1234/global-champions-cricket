@@ -1,0 +1,7615 @@
+{
+  "sha256": "aa9930f0ea7f008ce46970a034dff7488ade5729c2f8369fb435b765b2338d47",
+  "scope": "Fresh legal draft/manual XI/one round; natural delivery playback through innings boundary, native Pause/Resume/Speed/Skip, result/scorebook/return. Not engine-balance, save/reload or whole-career acceptance.",
+  "states": [
+    {
+      "name": "matchday-before-320",
+      "surfaces": [],
+      "width": 320,
+      "docWidth": 320,
+      "docHeight": 1770,
+      "view": "season",
+      "modal": null,
+      "controls": [
+        {
+          "text": "Review XI",
+          "action": "editXI",
+          "scrollWidth": 125,
+          "clientWidth": 125,
+          "x": 29,
+          "y": 524.609375,
+          "right": 156,
+          "bottom": 576.609375,
+          "width": 127,
+          "height": 52
+        },
+        {
+          "text": "Watch match",
+          "action": "watchNext",
+          "scrollWidth": 125,
+          "clientWidth": 125,
+          "x": 164,
+          "y": 524.609375,
+          "right": 291,
+          "bottom": 576.609375,
+          "width": 127,
+          "height": 52
+        },
+        {
+          "text": "Match preview",
+          "action": "prepare",
+          "scrollWidth": 173,
+          "clientWidth": 173,
+          "x": 29,
+          "y": 1526.921875,
+          "right": 203.734375,
+          "bottom": 1570.921875,
+          "width": 174.734375,
+          "height": 44
+        },
+        {
+          "text": "Ground & conditions+",
+          "scrollWidth": 231,
+          "clientWidth": 231,
+          "x": 44.390625,
+          "y": 1598.921875,
+          "right": 275.609375,
+          "bottom": 1649.3125,
+          "width": 231.21875,
+          "height": 50.390625
+        },
+        {
+          "text": "Season format+",
+          "scrollWidth": 231,
+          "clientWidth": 231,
+          "x": 44.390625,
+          "y": 1663.3125,
+          "right": 275.609375,
+          "bottom": 1713.703125,
+          "width": 231.21875,
+          "height": 50.390625
+        }
+      ],
+      "live": [],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "matchday-before-390",
+      "surfaces": [],
+      "width": 390,
+      "docWidth": 390,
+      "docHeight": 1646,
+      "view": "season",
+      "modal": null,
+      "controls": [
+        {
+          "text": "Review XI",
+          "action": "editXI",
+          "scrollWidth": 160,
+          "clientWidth": 160,
+          "x": 29,
+          "y": 449.8125,
+          "right": 191,
+          "bottom": 495.8125,
+          "width": 162,
+          "height": 46
+        },
+        {
+          "text": "Watch match",
+          "action": "watchNext",
+          "scrollWidth": 160,
+          "clientWidth": 160,
+          "x": 199,
+          "y": 449.8125,
+          "right": 361,
+          "bottom": 495.8125,
+          "width": 162,
+          "height": 46
+        },
+        {
+          "text": "Match preview",
+          "action": "prepare",
+          "scrollWidth": 173,
+          "clientWidth": 173,
+          "x": 29,
+          "y": 1403.234375,
+          "right": 203.734375,
+          "bottom": 1447.234375,
+          "width": 174.734375,
+          "height": 44
+        },
+        {
+          "text": "Ground & conditions+",
+          "scrollWidth": 301,
+          "clientWidth": 301,
+          "x": 44.390625,
+          "y": 1475.234375,
+          "right": 345.609375,
+          "bottom": 1525.625,
+          "width": 301.21875,
+          "height": 50.390625
+        },
+        {
+          "text": "Season format+",
+          "scrollWidth": 301,
+          "clientWidth": 301,
+          "x": 44.390625,
+          "y": 1539.625,
+          "right": 345.609375,
+          "bottom": 1590.015625,
+          "width": 301.21875,
+          "height": 50.390625
+        }
+      ],
+      "live": [],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "matchday-before-768",
+      "surfaces": [],
+      "width": 768,
+      "docWidth": 768,
+      "docHeight": 1190,
+      "view": "season",
+      "modal": null,
+      "controls": [
+        {
+          "text": "Review XI",
+          "action": "editXI",
+          "scrollWidth": 188,
+          "clientWidth": 188,
+          "x": 40.03125,
+          "y": 424.21875,
+          "right": 230,
+          "bottom": 468.21875,
+          "width": 189.96875,
+          "height": 44
+        },
+        {
+          "text": "Watch match",
+          "action": "watchNext",
+          "scrollWidth": 188,
+          "clientWidth": 188,
+          "x": 238,
+          "y": 424.21875,
+          "right": 427.96875,
+          "bottom": 468.21875,
+          "width": 189.96875,
+          "height": 44
+        },
+        {
+          "text": "Match preview",
+          "action": "prepare",
+          "scrollWidth": 173,
+          "clientWidth": 173,
+          "x": 340.796875,
+          "y": 923.546875,
+          "right": 515.53125,
+          "bottom": 967.546875,
+          "width": 174.734375,
+          "height": 44
+        },
+        {
+          "text": "Ground & conditions+",
+          "scrollWidth": 356,
+          "clientWidth": 356,
+          "x": 356.1875,
+          "y": 995.546875,
+          "right": 712.578125,
+          "bottom": 1045.9375,
+          "width": 356.390625,
+          "height": 50.390625
+        },
+        {
+          "text": "Season format+",
+          "scrollWidth": 356,
+          "clientWidth": 356,
+          "x": 356.1875,
+          "y": 1059.9375,
+          "right": 712.578125,
+          "bottom": 1110.328125,
+          "width": 356.390625,
+          "height": 50.390625
+        }
+      ],
+      "live": [],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "matchday-before-1440",
+      "surfaces": [],
+      "width": 1440,
+      "docWidth": 1440,
+      "docHeight": 957,
+      "view": "season",
+      "modal": null,
+      "controls": [
+        {
+          "text": "Review XI",
+          "action": "editXI",
+          "scrollWidth": 134,
+          "clientWidth": 134,
+          "x": 549.125,
+          "y": 266.296875,
+          "right": 685.15625,
+          "bottom": 310.296875,
+          "width": 136.03125,
+          "height": 44
+        },
+        {
+          "text": "Watch match",
+          "action": "watchNext",
+          "scrollWidth": 160,
+          "clientWidth": 160,
+          "x": 693.15625,
+          "y": 266.296875,
+          "right": 855.5,
+          "bottom": 310.296875,
+          "width": 162.34375,
+          "height": 44
+        },
+        {
+          "text": "Match preview",
+          "action": "prepare",
+          "scrollWidth": 173,
+          "clientWidth": 173,
+          "x": 1165.078125,
+          "y": 689.75,
+          "right": 1339.8125,
+          "bottom": 733.75,
+          "width": 174.734375,
+          "height": 44
+        },
+        {
+          "text": "Ground & conditions+",
+          "scrollWidth": 687,
+          "clientWidth": 687,
+          "x": 637.015625,
+          "y": 761.75,
+          "right": 1324.421875,
+          "bottom": 812.140625,
+          "width": 687.40625,
+          "height": 50.390625
+        },
+        {
+          "text": "Season format+",
+          "scrollWidth": 687,
+          "clientWidth": 687,
+          "x": 637.015625,
+          "y": 826.140625,
+          "right": 1324.421875,
+          "bottom": 876.53125,
+          "width": 687.40625,
+          "height": 50.390625
+        }
+      ],
+      "live": [],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "match-preview-320",
+      "surfaces": [],
+      "width": 320,
+      "docWidth": 320,
+      "docHeight": 1770,
+      "view": "season",
+      "modal": "prepare",
+      "controls": [
+        {
+          "text": "Close Match preview",
+          "action": "close",
+          "scrollWidth": 40,
+          "clientWidth": 40,
+          "x": 247,
+          "y": 29,
+          "right": 291,
+          "bottom": 73,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "text": "Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+          "scrollWidth": 230,
+          "clientWidth": 230,
+          "x": 43,
+          "y": 822.296875,
+          "right": 277,
+          "bottom": 866.296875,
+          "width": 234,
+          "height": 44
+        },
+        {
+          "text": "Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+          "scrollWidth": 230,
+          "clientWidth": 230,
+          "x": 43,
+          "y": 901.296875,
+          "right": 277,
+          "bottom": 945.296875,
+          "width": 234,
+          "height": 44
+        },
+        {
+          "text": "Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+          "scrollWidth": 230,
+          "clientWidth": 230,
+          "x": 43,
+          "y": 980.296875,
+          "right": 277,
+          "bottom": 1024.296875,
+          "width": 234,
+          "height": 44
+        },
+        {
+          "text": "Play the match",
+          "action": "playMatch",
+          "scrollWidth": 260,
+          "clientWidth": 260,
+          "x": 29,
+          "y": 1150.234375,
+          "right": 291,
+          "bottom": 1194.234375,
+          "width": 262,
+          "height": 44
+        },
+        {
+          "text": "Change XI",
+          "action": "editXI",
+          "scrollWidth": 260,
+          "clientWidth": 260,
+          "x": 29,
+          "y": 1206.234375,
+          "right": 291,
+          "bottom": 1250.234375,
+          "width": 262,
+          "height": 44
+        },
+        {
+          "text": "Your starting XI+",
+          "scrollWidth": 231,
+          "clientWidth": 231,
+          "x": 43.390625,
+          "y": 1266.234375,
+          "right": 276.609375,
+          "bottom": 1318.625,
+          "width": 233.21875,
+          "height": 52.390625
+        },
+        {
+          "text": "Ground & conditions+",
+          "scrollWidth": 231,
+          "clientWidth": 231,
+          "x": 43.390625,
+          "y": 1334.625,
+          "right": 276.609375,
+          "bottom": 1387.015625,
+          "width": 233.21875,
+          "height": 52.390625
+        },
+        {
+          "text": "Compare the two XIs+",
+          "scrollWidth": 231,
+          "clientWidth": 231,
+          "x": 43.390625,
+          "y": 1403.015625,
+          "right": 276.609375,
+          "bottom": 1455.40625,
+          "width": 233.21875,
+          "height": 52.390625
+        }
+      ],
+      "live": [],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "match-preview-390",
+      "surfaces": [],
+      "width": 390,
+      "docWidth": 390,
+      "docHeight": 1646,
+      "view": "season",
+      "modal": "prepare",
+      "controls": [
+        {
+          "text": "Close Match preview",
+          "action": "close",
+          "scrollWidth": 40,
+          "clientWidth": 40,
+          "x": 317,
+          "y": 29,
+          "right": 361,
+          "bottom": 73,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "text": "Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+          "scrollWidth": 300,
+          "clientWidth": 300,
+          "x": 43,
+          "y": 801.296875,
+          "right": 347,
+          "bottom": 845.296875,
+          "width": 304,
+          "height": 44
+        },
+        {
+          "text": "Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+          "scrollWidth": 300,
+          "clientWidth": 300,
+          "x": 43,
+          "y": 880.296875,
+          "right": 347,
+          "bottom": 924.296875,
+          "width": 304,
+          "height": 44
+        },
+        {
+          "text": "Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+          "scrollWidth": 300,
+          "clientWidth": 300,
+          "x": 43,
+          "y": 959.296875,
+          "right": 347,
+          "bottom": 1003.296875,
+          "width": 304,
+          "height": 44
+        },
+        {
+          "text": "Play the match",
+          "action": "playMatch",
+          "scrollWidth": 330,
+          "clientWidth": 330,
+          "x": 29,
+          "y": 1110.046875,
+          "right": 361,
+          "bottom": 1154.046875,
+          "width": 332,
+          "height": 44
+        },
+        {
+          "text": "Change XI",
+          "action": "editXI",
+          "scrollWidth": 330,
+          "clientWidth": 330,
+          "x": 29,
+          "y": 1166.046875,
+          "right": 361,
+          "bottom": 1210.046875,
+          "width": 332,
+          "height": 44
+        },
+        {
+          "text": "Your starting XI+",
+          "scrollWidth": 301,
+          "clientWidth": 301,
+          "x": 43.390625,
+          "y": 1226.046875,
+          "right": 346.609375,
+          "bottom": 1278.4375,
+          "width": 303.21875,
+          "height": 52.390625
+        },
+        {
+          "text": "Ground & conditions+",
+          "scrollWidth": 301,
+          "clientWidth": 301,
+          "x": 43.390625,
+          "y": 1294.4375,
+          "right": 346.609375,
+          "bottom": 1346.828125,
+          "width": 303.21875,
+          "height": 52.390625
+        },
+        {
+          "text": "Compare the two XIs+",
+          "scrollWidth": 301,
+          "clientWidth": 301,
+          "x": 43.390625,
+          "y": 1362.828125,
+          "right": 346.609375,
+          "bottom": 1415.21875,
+          "width": 303.21875,
+          "height": 52.390625
+        }
+      ],
+      "live": [],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "match-preview-768",
+      "surfaces": [],
+      "width": 768,
+      "docWidth": 768,
+      "docHeight": 1190,
+      "view": "season",
+      "modal": "prepare",
+      "controls": [
+        {
+          "text": "Close Match preview",
+          "action": "close",
+          "scrollWidth": 40,
+          "clientWidth": 40,
+          "x": 689,
+          "y": 31,
+          "right": 733,
+          "bottom": 75,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "text": "Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+          "scrollWidth": 211,
+          "clientWidth": 211,
+          "x": 52,
+          "y": 597.46875,
+          "right": 266.65625,
+          "bottom": 641.46875,
+          "width": 214.65625,
+          "height": 44
+        },
+        {
+          "text": "Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+          "scrollWidth": 211,
+          "clientWidth": 211,
+          "x": 276.65625,
+          "y": 597.46875,
+          "right": 491.328125,
+          "bottom": 641.46875,
+          "width": 214.671875,
+          "height": 44
+        },
+        {
+          "text": "Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+          "scrollWidth": 211,
+          "clientWidth": 211,
+          "x": 501.328125,
+          "y": 597.46875,
+          "right": 716,
+          "bottom": 641.46875,
+          "width": 214.671875,
+          "height": 44
+        },
+        {
+          "text": "Play the match",
+          "action": "playMatch",
+          "scrollWidth": 341,
+          "clientWidth": 341,
+          "x": 35,
+          "y": 732.03125,
+          "right": 378,
+          "bottom": 776.03125,
+          "width": 343,
+          "height": 44
+        },
+        {
+          "text": "Change XI",
+          "action": "editXI",
+          "scrollWidth": 341,
+          "clientWidth": 341,
+          "x": 390,
+          "y": 732.03125,
+          "right": 733,
+          "bottom": 776.03125,
+          "width": 343,
+          "height": 44
+        },
+        {
+          "text": "Your starting XI+",
+          "scrollWidth": 667,
+          "clientWidth": 667,
+          "x": 49.390625,
+          "y": 792.03125,
+          "right": 718.609375,
+          "bottom": 844.421875,
+          "width": 669.21875,
+          "height": 52.390625
+        },
+        {
+          "text": "Ground & conditions+",
+          "scrollWidth": 667,
+          "clientWidth": 667,
+          "x": 49.390625,
+          "y": 860.421875,
+          "right": 718.609375,
+          "bottom": 912.8125,
+          "width": 669.21875,
+          "height": 52.390625
+        },
+        {
+          "text": "Compare the two XIs+",
+          "scrollWidth": 667,
+          "clientWidth": 667,
+          "x": 49.390625,
+          "y": 928.8125,
+          "right": 718.609375,
+          "bottom": 981.203125,
+          "width": 669.21875,
+          "height": 52.390625
+        }
+      ],
+      "live": [],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "match-preview-1440",
+      "surfaces": [],
+      "width": 1440,
+      "docWidth": 1440,
+      "docHeight": 957,
+      "view": "season",
+      "modal": "prepare",
+      "controls": [
+        {
+          "text": "Close Match preview",
+          "action": "close",
+          "scrollWidth": 40,
+          "clientWidth": 40,
+          "x": 1101,
+          "y": 31,
+          "right": 1145,
+          "bottom": 75,
+          "width": 44,
+          "height": 44
+        },
+        {
+          "text": "Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+          "scrollWidth": 261,
+          "clientWidth": 261,
+          "x": 312,
+          "y": 577.96875,
+          "right": 577.328125,
+          "bottom": 621.96875,
+          "width": 265.328125,
+          "height": 44
+        },
+        {
+          "text": "Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+          "scrollWidth": 261,
+          "clientWidth": 261,
+          "x": 587.328125,
+          "y": 577.96875,
+          "right": 852.65625,
+          "bottom": 621.96875,
+          "width": 265.328125,
+          "height": 44
+        },
+        {
+          "text": "Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+          "scrollWidth": 261,
+          "clientWidth": 261,
+          "x": 862.65625,
+          "y": 577.96875,
+          "right": 1128,
+          "bottom": 621.96875,
+          "width": 265.34375,
+          "height": 44
+        },
+        {
+          "text": "Play the match",
+          "action": "playMatch",
+          "scrollWidth": 417,
+          "clientWidth": 417,
+          "x": 295,
+          "y": 693.34375,
+          "right": 714,
+          "bottom": 737.34375,
+          "width": 419,
+          "height": 44
+        },
+        {
+          "text": "Change XI",
+          "action": "editXI",
+          "scrollWidth": 417,
+          "clientWidth": 417,
+          "x": 726,
+          "y": 693.34375,
+          "right": 1145,
+          "bottom": 737.34375,
+          "width": 419,
+          "height": 44
+        },
+        {
+          "text": "Your starting XI+",
+          "scrollWidth": 819,
+          "clientWidth": 819,
+          "x": 309.390625,
+          "y": 753.34375,
+          "right": 1130.609375,
+          "bottom": 805.734375,
+          "width": 821.21875,
+          "height": 52.390625
+        },
+        {
+          "text": "Ground & conditions+",
+          "scrollWidth": 819,
+          "clientWidth": 819,
+          "x": 309.390625,
+          "y": 821.734375,
+          "right": 1130.609375,
+          "bottom": 874.125,
+          "width": 821.21875,
+          "height": 52.390625
+        },
+        {
+          "text": "Compare the two XIs+",
+          "scrollWidth": 819,
+          "clientWidth": 819,
+          "x": 309.390625,
+          "y": 890.125,
+          "right": 1130.609375,
+          "bottom": 942.515625,
+          "width": 821.21875,
+          "height": 52.390625
+        }
+      ],
+      "live": [],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "pre-match-320",
+      "surfaces": [],
+      "width": 320,
+      "docWidth": 320,
+      "docHeight": 900,
+      "view": "matchReveal",
+      "modal": null,
+      "frame": 0,
+      "controls": [
+        {
+          "text": "Start match",
+          "action": "startPlayback",
+          "scrollWidth": 168,
+          "clientWidth": 168,
+          "x": 51.390625,
+          "y": 655.390625,
+          "right": 221.390625,
+          "bottom": 703.390625,
+          "width": 170,
+          "height": 48
+        },
+        {
+          "text": "Show result",
+          "action": "matchSkip",
+          "scrollWidth": 168,
+          "clientWidth": 168,
+          "x": 51.390625,
+          "y": 715.390625,
+          "right": 221.390625,
+          "bottom": 763.390625,
+          "width": 170,
+          "height": 48
+        }
+      ],
+      "live": [],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "pre-match-390",
+      "surfaces": [],
+      "width": 390,
+      "docWidth": 390,
+      "docHeight": 900,
+      "view": "matchReveal",
+      "modal": null,
+      "frame": 0,
+      "controls": [
+        {
+          "text": "Start match",
+          "action": "startPlayback",
+          "scrollWidth": 168,
+          "clientWidth": 168,
+          "x": 51.390625,
+          "y": 643.390625,
+          "right": 221.390625,
+          "bottom": 691.390625,
+          "width": 170,
+          "height": 48
+        },
+        {
+          "text": "Show result",
+          "action": "matchSkip",
+          "scrollWidth": 168,
+          "clientWidth": 168,
+          "x": 51.390625,
+          "y": 703.390625,
+          "right": 221.390625,
+          "bottom": 751.390625,
+          "width": 170,
+          "height": 48
+        }
+      ],
+      "live": [],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "pre-match-768",
+      "surfaces": [],
+      "width": 768,
+      "docWidth": 768,
+      "docHeight": 954,
+      "view": "matchReveal",
+      "modal": null,
+      "frame": 0,
+      "controls": [
+        {
+          "text": "Start match",
+          "action": "startPlayback",
+          "scrollWidth": 148,
+          "clientWidth": 148,
+          "x": 264.421875,
+          "y": 645.375,
+          "right": 414.421875,
+          "bottom": 693.375,
+          "width": 150,
+          "height": 48
+        },
+        {
+          "text": "Show result",
+          "action": "matchSkip",
+          "scrollWidth": 148,
+          "clientWidth": 148,
+          "x": 426.421875,
+          "y": 645.375,
+          "right": 576.421875,
+          "bottom": 693.375,
+          "width": 150,
+          "height": 48
+        }
+      ],
+      "live": [],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "pre-match-1440",
+      "surfaces": [],
+      "width": 1440,
+      "docWidth": 1440,
+      "docHeight": 900,
+      "view": "matchReveal",
+      "modal": null,
+      "frame": 0,
+      "controls": [
+        {
+          "text": "Start match",
+          "action": "startPlayback",
+          "scrollWidth": 148,
+          "clientWidth": 148,
+          "x": 517.25,
+          "y": 603.4375,
+          "right": 667.25,
+          "bottom": 651.4375,
+          "width": 150,
+          "height": 48
+        },
+        {
+          "text": "Show result",
+          "action": "matchSkip",
+          "scrollWidth": 148,
+          "clientWidth": 148,
+          "x": 679.25,
+          "y": 603.4375,
+          "right": 829.25,
+          "bottom": 651.4375,
+          "width": 150,
+          "height": 48
+        }
+      ],
+      "live": [],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "live-first-innings-320",
+      "surfaces": [
+        {
+          "class": "gccui gccuiLiveScoreboard",
+          "background": "rgba(0, 0, 0, 0)",
+          "image": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+          "expected": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+          "ok": true
+        },
+        {
+          "class": "g8playbackcontrols",
+          "background": "rgb(23, 27, 32)",
+          "image": "none",
+          "expected": "rgb(23, 27, 32)",
+          "ok": true
+        },
+        {
+          "class": "gcc-livegrid",
+          "background": "rgb(23, 27, 32)",
+          "image": "none",
+          "expected": "rgb(23, 27, 32)",
+          "ok": true
+        }
+      ],
+      "width": 320,
+      "docWidth": 320,
+      "docHeight": 1456,
+      "view": "matchReveal",
+      "modal": null,
+      "frame": 6,
+      "controls": [
+        {
+          "text": "Resume",
+          "action": "matchRun",
+          "scrollWidth": 121,
+          "clientWidth": 121,
+          "x": 27.390625,
+          "y": 599.203125,
+          "right": 150.09375,
+          "bottom": 643.203125,
+          "width": 122.703125,
+          "height": 44
+        },
+        {
+          "text": "Speed 8×",
+          "action": "matchSpeed",
+          "scrollWidth": 133,
+          "clientWidth": 133,
+          "x": 158.09375,
+          "y": 599.203125,
+          "right": 292.609375,
+          "bottom": 643.203125,
+          "width": 134.515625,
+          "height": 44
+        },
+        {
+          "text": "Skip to result",
+          "action": "matchSkip",
+          "scrollWidth": 263,
+          "clientWidth": 263,
+          "x": 27.390625,
+          "y": 651.203125,
+          "right": 292.609375,
+          "bottom": 695.203125,
+          "width": 265.21875,
+          "height": 44
+        }
+      ],
+      "live": [
+        {
+          "name": "Worcestershire Rapids",
+          "header": {
+            "x": 30,
+            "y": 181.125,
+            "right": 155,
+            "bottom": 313.4375,
+            "width": 125,
+            "height": 132.3125
+          },
+          "score": {
+            "x": 42,
+            "y": 333.4375,
+            "right": 143,
+            "bottom": 373.4375,
+            "width": 101,
+            "height": 40
+          },
+          "note": {
+            "x": 42,
+            "y": 380.4375,
+            "right": 143,
+            "bottom": 414.03125,
+            "width": 101,
+            "height": 33.59375
+          }
+        },
+        {
+          "name": "Mumbai Indians",
+          "header": {
+            "x": 165,
+            "y": 181.125,
+            "right": 290,
+            "bottom": 313.4375,
+            "width": 125,
+            "height": 132.3125
+          },
+          "score": {
+            "x": 177,
+            "y": 333.4375,
+            "right": 278,
+            "bottom": 373.4375,
+            "width": 101,
+            "height": 40
+          },
+          "note": {
+            "x": 177,
+            "y": 380.4375,
+            "right": 278,
+            "bottom": 397.234375,
+            "width": 101,
+            "height": 16.796875
+          }
+        }
+      ],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "live-first-innings-390",
+      "surfaces": [
+        {
+          "class": "gccui gccuiLiveScoreboard",
+          "background": "rgba(0, 0, 0, 0)",
+          "image": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+          "expected": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+          "ok": true
+        },
+        {
+          "class": "g8playbackcontrols",
+          "background": "rgb(23, 27, 32)",
+          "image": "none",
+          "expected": "rgb(23, 27, 32)",
+          "ok": true
+        },
+        {
+          "class": "gcc-livegrid",
+          "background": "rgb(23, 27, 32)",
+          "image": "none",
+          "expected": "rgb(23, 27, 32)",
+          "ok": true
+        }
+      ],
+      "width": 390,
+      "docWidth": 390,
+      "docHeight": 1357,
+      "view": "matchReveal",
+      "modal": null,
+      "frame": 6,
+      "controls": [
+        {
+          "text": "Resume",
+          "action": "matchRun",
+          "scrollWidth": 156,
+          "clientWidth": 156,
+          "x": 27.390625,
+          "y": 526.640625,
+          "right": 185.09375,
+          "bottom": 570.640625,
+          "width": 157.703125,
+          "height": 44
+        },
+        {
+          "text": "Speed 8×",
+          "action": "matchSpeed",
+          "scrollWidth": 168,
+          "clientWidth": 168,
+          "x": 193.09375,
+          "y": 526.640625,
+          "right": 362.609375,
+          "bottom": 570.640625,
+          "width": 169.515625,
+          "height": 44
+        },
+        {
+          "text": "Skip to result",
+          "action": "matchSkip",
+          "scrollWidth": 333,
+          "clientWidth": 333,
+          "x": 27.390625,
+          "y": 578.640625,
+          "right": 362.609375,
+          "bottom": 622.640625,
+          "width": 335.21875,
+          "height": 44
+        }
+      ],
+      "live": [
+        {
+          "name": "Worcestershire Rapids",
+          "header": {
+            "x": 30,
+            "y": 157.125,
+            "right": 190,
+            "bottom": 274.46875,
+            "width": 160,
+            "height": 117.34375
+          },
+          "score": {
+            "x": 42,
+            "y": 294.46875,
+            "right": 178,
+            "bottom": 334.46875,
+            "width": 136,
+            "height": 40
+          },
+          "note": {
+            "x": 42,
+            "y": 341.46875,
+            "right": 178,
+            "bottom": 358.265625,
+            "width": 136,
+            "height": 16.796875
+          }
+        },
+        {
+          "name": "Mumbai Indians",
+          "header": {
+            "x": 200,
+            "y": 157.125,
+            "right": 360,
+            "bottom": 274.46875,
+            "width": 160,
+            "height": 117.34375
+          },
+          "score": {
+            "x": 212,
+            "y": 294.46875,
+            "right": 348,
+            "bottom": 334.46875,
+            "width": 136,
+            "height": 40
+          },
+          "note": {
+            "x": 212,
+            "y": 341.46875,
+            "right": 348,
+            "bottom": 358.265625,
+            "width": 136,
+            "height": 16.796875
+          }
+        }
+      ],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "live-first-innings-768",
+      "surfaces": [
+        {
+          "class": "gccui gccuiLiveScoreboard",
+          "background": "rgba(0, 0, 0, 0)",
+          "image": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+          "expected": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+          "ok": true
+        },
+        {
+          "class": "g8playbackcontrols",
+          "background": "rgb(23, 27, 32)",
+          "image": "none",
+          "expected": "rgb(23, 27, 32)",
+          "ok": true
+        },
+        {
+          "class": "gcc-livegrid",
+          "background": "rgb(23, 27, 32)",
+          "image": "none",
+          "expected": "rgb(23, 27, 32)",
+          "ok": true
+        }
+      ],
+      "width": 768,
+      "docWidth": 768,
+      "docHeight": 1092,
+      "view": "matchReveal",
+      "modal": null,
+      "frame": 6,
+      "controls": [
+        {
+          "text": "Resume",
+          "action": "matchRun",
+          "scrollWidth": 91,
+          "clientWidth": 91,
+          "x": 384.90625,
+          "y": 532.703125,
+          "right": 477.46875,
+          "bottom": 576.703125,
+          "width": 92.5625,
+          "height": 44
+        },
+        {
+          "text": "Speed 8×",
+          "action": "matchSpeed",
+          "scrollWidth": 102,
+          "clientWidth": 102,
+          "x": 485.46875,
+          "y": 532.703125,
+          "right": 589.84375,
+          "bottom": 576.703125,
+          "width": 104.375,
+          "height": 44
+        },
+        {
+          "text": "Skip to result",
+          "action": "matchSkip",
+          "scrollWidth": 130,
+          "clientWidth": 130,
+          "x": 597.84375,
+          "y": 532.703125,
+          "right": 729.578125,
+          "bottom": 576.703125,
+          "width": 131.734375,
+          "height": 44
+        }
+      ],
+      "live": [
+        {
+          "name": "Worcestershire Rapids",
+          "header": {
+            "x": 41.03125,
+            "y": 226.453125,
+            "right": 376,
+            "bottom": 300.125,
+            "width": 334.96875,
+            "height": 73.671875
+          },
+          "score": {
+            "x": 57.03125,
+            "y": 314.125,
+            "right": 360,
+            "bottom": 371.71875,
+            "width": 302.96875,
+            "height": 57.59375
+          },
+          "note": {
+            "x": 57.03125,
+            "y": 378.71875,
+            "right": 360,
+            "bottom": 395.515625,
+            "width": 302.96875,
+            "height": 16.796875
+          }
+        },
+        {
+          "name": "Mumbai Indians",
+          "header": {
+            "x": 392,
+            "y": 226.453125,
+            "right": 726.96875,
+            "bottom": 300.125,
+            "width": 334.96875,
+            "height": 73.671875
+          },
+          "score": {
+            "x": 408,
+            "y": 314.125,
+            "right": 710.96875,
+            "bottom": 371.71875,
+            "width": 302.96875,
+            "height": 57.59375
+          },
+          "note": {
+            "x": 408,
+            "y": 378.71875,
+            "right": 710.96875,
+            "bottom": 395.515625,
+            "width": 302.96875,
+            "height": 16.796875
+          }
+        }
+      ],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "live-first-innings-1440",
+      "surfaces": [
+        {
+          "class": "gccui gccuiLiveScoreboard",
+          "background": "rgba(0, 0, 0, 0)",
+          "image": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+          "expected": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+          "ok": true
+        },
+        {
+          "class": "g8playbackcontrols",
+          "background": "rgb(23, 27, 32)",
+          "image": "none",
+          "expected": "rgb(23, 27, 32)",
+          "ok": true
+        },
+        {
+          "class": "gcc-livegrid",
+          "background": "rgb(23, 27, 32)",
+          "image": "none",
+          "expected": "rgb(23, 27, 32)",
+          "ok": true
+        }
+      ],
+      "width": 1440,
+      "docWidth": 1440,
+      "docHeight": 1019,
+      "view": "matchReveal",
+      "modal": null,
+      "frame": 6,
+      "controls": [
+        {
+          "text": "Resume",
+          "action": "matchRun",
+          "scrollWidth": 91,
+          "clientWidth": 91,
+          "x": 996.75,
+          "y": 464.703125,
+          "right": 1089.3125,
+          "bottom": 508.703125,
+          "width": 92.5625,
+          "height": 44
+        },
+        {
+          "text": "Speed 8×",
+          "action": "matchSpeed",
+          "scrollWidth": 102,
+          "clientWidth": 102,
+          "x": 1097.3125,
+          "y": 464.703125,
+          "right": 1201.6875,
+          "bottom": 508.703125,
+          "width": 104.375,
+          "height": 44
+        },
+        {
+          "text": "Skip to result",
+          "action": "matchSkip",
+          "scrollWidth": 130,
+          "clientWidth": 130,
+          "x": 1209.6875,
+          "y": 464.703125,
+          "right": 1341.421875,
+          "bottom": 508.703125,
+          "width": 131.734375,
+          "height": 44
+        }
+      ],
+      "live": [
+        {
+          "name": "Worcestershire Rapids",
+          "header": {
+            "x": 101.1875,
+            "y": 158.453125,
+            "right": 712,
+            "bottom": 232.125,
+            "width": 610.8125,
+            "height": 73.671875
+          },
+          "score": {
+            "x": 117.1875,
+            "y": 246.125,
+            "right": 696,
+            "bottom": 303.71875,
+            "width": 578.8125,
+            "height": 57.59375
+          },
+          "note": {
+            "x": 117.1875,
+            "y": 310.71875,
+            "right": 696,
+            "bottom": 327.515625,
+            "width": 578.8125,
+            "height": 16.796875
+          }
+        },
+        {
+          "name": "Mumbai Indians",
+          "header": {
+            "x": 728,
+            "y": 158.453125,
+            "right": 1338.8125,
+            "bottom": 232.125,
+            "width": 610.8125,
+            "height": 73.671875
+          },
+          "score": {
+            "x": 744,
+            "y": 246.125,
+            "right": 1322.8125,
+            "bottom": 303.71875,
+            "width": 578.8125,
+            "height": 57.59375
+          },
+          "note": {
+            "x": 744,
+            "y": 310.71875,
+            "right": 1322.8125,
+            "bottom": 327.515625,
+            "width": 578.8125,
+            "height": 16.796875
+          }
+        }
+      ],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "live-second-innings-320",
+      "surfaces": [
+        {
+          "class": "gccui gccuiLiveScoreboard",
+          "background": "rgba(0, 0, 0, 0)",
+          "image": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+          "expected": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+          "ok": true
+        },
+        {
+          "class": "g8playbackcontrols",
+          "background": "rgb(23, 27, 32)",
+          "image": "none",
+          "expected": "rgb(23, 27, 32)",
+          "ok": true
+        },
+        {
+          "class": "gcc-livegrid",
+          "background": "rgb(23, 27, 32)",
+          "image": "none",
+          "expected": "rgb(23, 27, 32)",
+          "ok": true
+        }
+      ],
+      "width": 320,
+      "docWidth": 320,
+      "docHeight": 1448,
+      "view": "matchReveal",
+      "modal": null,
+      "frame": 63,
+      "controls": [
+        {
+          "text": "Resume",
+          "action": "matchRun",
+          "scrollWidth": 121,
+          "clientWidth": 121,
+          "x": 27.390625,
+          "y": 617.390625,
+          "right": 150.09375,
+          "bottom": 661.390625,
+          "width": 122.703125,
+          "height": 44
+        },
+        {
+          "text": "Speed 8×",
+          "action": "matchSpeed",
+          "scrollWidth": 133,
+          "clientWidth": 133,
+          "x": 158.09375,
+          "y": 617.390625,
+          "right": 292.609375,
+          "bottom": 661.390625,
+          "width": 134.515625,
+          "height": 44
+        },
+        {
+          "text": "Skip to result",
+          "action": "matchSkip",
+          "scrollWidth": 263,
+          "clientWidth": 263,
+          "x": 27.390625,
+          "y": 669.390625,
+          "right": 292.609375,
+          "bottom": 713.390625,
+          "width": 265.21875,
+          "height": 44
+        }
+      ],
+      "live": [
+        {
+          "name": "Worcestershire Rapids",
+          "header": {
+            "x": 30,
+            "y": 181.125,
+            "right": 156.96875,
+            "bottom": 313.4375,
+            "width": 126.96875,
+            "height": 132.3125
+          },
+          "score": {
+            "x": 42,
+            "y": 333.4375,
+            "right": 144.96875,
+            "bottom": 373.4375,
+            "width": 102.96875,
+            "height": 40
+          },
+          "note": {
+            "x": 42,
+            "y": 380.4375,
+            "right": 144.96875,
+            "bottom": 397.234375,
+            "width": 102.96875,
+            "height": 16.796875
+          }
+        },
+        {
+          "name": "Mumbai Indians",
+          "header": {
+            "x": 165,
+            "y": 181.125,
+            "right": 290,
+            "bottom": 313.4375,
+            "width": 125,
+            "height": 132.3125
+          },
+          "score": {
+            "x": 177,
+            "y": 333.4375,
+            "right": 278,
+            "bottom": 373.4375,
+            "width": 101,
+            "height": 40
+          },
+          "note": {
+            "x": 177,
+            "y": 380.4375,
+            "right": 278,
+            "bottom": 414.03125,
+            "width": 101,
+            "height": 33.59375
+          }
+        }
+      ],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "live-second-innings-390",
+      "surfaces": [
+        {
+          "class": "gccui gccuiLiveScoreboard",
+          "background": "rgba(0, 0, 0, 0)",
+          "image": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+          "expected": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+          "ok": true
+        },
+        {
+          "class": "g8playbackcontrols",
+          "background": "rgb(23, 27, 32)",
+          "image": "none",
+          "expected": "rgb(23, 27, 32)",
+          "ok": true
+        },
+        {
+          "class": "gcc-livegrid",
+          "background": "rgb(23, 27, 32)",
+          "image": "none",
+          "expected": "rgb(23, 27, 32)",
+          "ok": true
+        }
+      ],
+      "width": 390,
+      "docWidth": 390,
+      "docHeight": 1357,
+      "view": "matchReveal",
+      "modal": null,
+      "frame": 63,
+      "controls": [
+        {
+          "text": "Resume",
+          "action": "matchRun",
+          "scrollWidth": 156,
+          "clientWidth": 156,
+          "x": 27.390625,
+          "y": 526.640625,
+          "right": 185.09375,
+          "bottom": 570.640625,
+          "width": 157.703125,
+          "height": 44
+        },
+        {
+          "text": "Speed 8×",
+          "action": "matchSpeed",
+          "scrollWidth": 168,
+          "clientWidth": 168,
+          "x": 193.09375,
+          "y": 526.640625,
+          "right": 362.609375,
+          "bottom": 570.640625,
+          "width": 169.515625,
+          "height": 44
+        },
+        {
+          "text": "Skip to result",
+          "action": "matchSkip",
+          "scrollWidth": 333,
+          "clientWidth": 333,
+          "x": 27.390625,
+          "y": 578.640625,
+          "right": 362.609375,
+          "bottom": 622.640625,
+          "width": 335.21875,
+          "height": 44
+        }
+      ],
+      "live": [
+        {
+          "name": "Worcestershire Rapids",
+          "header": {
+            "x": 30,
+            "y": 157.125,
+            "right": 190,
+            "bottom": 274.46875,
+            "width": 160,
+            "height": 117.34375
+          },
+          "score": {
+            "x": 42,
+            "y": 294.46875,
+            "right": 178,
+            "bottom": 334.46875,
+            "width": 136,
+            "height": 40
+          },
+          "note": {
+            "x": 42,
+            "y": 341.46875,
+            "right": 178,
+            "bottom": 358.265625,
+            "width": 136,
+            "height": 16.796875
+          }
+        },
+        {
+          "name": "Mumbai Indians",
+          "header": {
+            "x": 200,
+            "y": 157.125,
+            "right": 360,
+            "bottom": 274.46875,
+            "width": 160,
+            "height": 117.34375
+          },
+          "score": {
+            "x": 212,
+            "y": 294.46875,
+            "right": 348,
+            "bottom": 334.46875,
+            "width": 136,
+            "height": 40
+          },
+          "note": {
+            "x": 212,
+            "y": 341.46875,
+            "right": 348,
+            "bottom": 358.265625,
+            "width": 136,
+            "height": 16.796875
+          }
+        }
+      ],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "live-second-innings-768",
+      "surfaces": [
+        {
+          "class": "gccui gccuiLiveScoreboard",
+          "background": "rgba(0, 0, 0, 0)",
+          "image": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+          "expected": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+          "ok": true
+        },
+        {
+          "class": "g8playbackcontrols",
+          "background": "rgb(23, 27, 32)",
+          "image": "none",
+          "expected": "rgb(23, 27, 32)",
+          "ok": true
+        },
+        {
+          "class": "gcc-livegrid",
+          "background": "rgb(23, 27, 32)",
+          "image": "none",
+          "expected": "rgb(23, 27, 32)",
+          "ok": true
+        }
+      ],
+      "width": 768,
+      "docWidth": 768,
+      "docHeight": 1087,
+      "view": "matchReveal",
+      "modal": null,
+      "frame": 63,
+      "controls": [
+        {
+          "text": "Resume",
+          "action": "matchRun",
+          "scrollWidth": 91,
+          "clientWidth": 91,
+          "x": 384.90625,
+          "y": 532.703125,
+          "right": 477.46875,
+          "bottom": 576.703125,
+          "width": 92.5625,
+          "height": 44
+        },
+        {
+          "text": "Speed 8×",
+          "action": "matchSpeed",
+          "scrollWidth": 102,
+          "clientWidth": 102,
+          "x": 485.46875,
+          "y": 532.703125,
+          "right": 589.84375,
+          "bottom": 576.703125,
+          "width": 104.375,
+          "height": 44
+        },
+        {
+          "text": "Skip to result",
+          "action": "matchSkip",
+          "scrollWidth": 130,
+          "clientWidth": 130,
+          "x": 597.84375,
+          "y": 532.703125,
+          "right": 729.578125,
+          "bottom": 576.703125,
+          "width": 131.734375,
+          "height": 44
+        }
+      ],
+      "live": [
+        {
+          "name": "Worcestershire Rapids",
+          "header": {
+            "x": 41.03125,
+            "y": 226.453125,
+            "right": 376,
+            "bottom": 300.125,
+            "width": 334.96875,
+            "height": 73.671875
+          },
+          "score": {
+            "x": 57.03125,
+            "y": 314.125,
+            "right": 360,
+            "bottom": 371.71875,
+            "width": 302.96875,
+            "height": 57.59375
+          },
+          "note": {
+            "x": 57.03125,
+            "y": 378.71875,
+            "right": 360,
+            "bottom": 395.515625,
+            "width": 302.96875,
+            "height": 16.796875
+          }
+        },
+        {
+          "name": "Mumbai Indians",
+          "header": {
+            "x": 392,
+            "y": 226.453125,
+            "right": 726.96875,
+            "bottom": 300.125,
+            "width": 334.96875,
+            "height": 73.671875
+          },
+          "score": {
+            "x": 408,
+            "y": 314.125,
+            "right": 710.96875,
+            "bottom": 371.71875,
+            "width": 302.96875,
+            "height": 57.59375
+          },
+          "note": {
+            "x": 408,
+            "y": 378.71875,
+            "right": 710.96875,
+            "bottom": 395.515625,
+            "width": 302.96875,
+            "height": 16.796875
+          }
+        }
+      ],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "live-second-innings-1440",
+      "surfaces": [
+        {
+          "class": "gccui gccuiLiveScoreboard",
+          "background": "rgba(0, 0, 0, 0)",
+          "image": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+          "expected": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+          "ok": true
+        },
+        {
+          "class": "g8playbackcontrols",
+          "background": "rgb(23, 27, 32)",
+          "image": "none",
+          "expected": "rgb(23, 27, 32)",
+          "ok": true
+        },
+        {
+          "class": "gcc-livegrid",
+          "background": "rgb(23, 27, 32)",
+          "image": "none",
+          "expected": "rgb(23, 27, 32)",
+          "ok": true
+        }
+      ],
+      "width": 1440,
+      "docWidth": 1440,
+      "docHeight": 1019,
+      "view": "matchReveal",
+      "modal": null,
+      "frame": 63,
+      "controls": [
+        {
+          "text": "Resume",
+          "action": "matchRun",
+          "scrollWidth": 91,
+          "clientWidth": 91,
+          "x": 996.75,
+          "y": 464.703125,
+          "right": 1089.3125,
+          "bottom": 508.703125,
+          "width": 92.5625,
+          "height": 44
+        },
+        {
+          "text": "Speed 8×",
+          "action": "matchSpeed",
+          "scrollWidth": 102,
+          "clientWidth": 102,
+          "x": 1097.3125,
+          "y": 464.703125,
+          "right": 1201.6875,
+          "bottom": 508.703125,
+          "width": 104.375,
+          "height": 44
+        },
+        {
+          "text": "Skip to result",
+          "action": "matchSkip",
+          "scrollWidth": 130,
+          "clientWidth": 130,
+          "x": 1209.6875,
+          "y": 464.703125,
+          "right": 1341.421875,
+          "bottom": 508.703125,
+          "width": 131.734375,
+          "height": 44
+        }
+      ],
+      "live": [
+        {
+          "name": "Worcestershire Rapids",
+          "header": {
+            "x": 101.1875,
+            "y": 158.453125,
+            "right": 712,
+            "bottom": 232.125,
+            "width": 610.8125,
+            "height": 73.671875
+          },
+          "score": {
+            "x": 117.1875,
+            "y": 246.125,
+            "right": 696,
+            "bottom": 303.71875,
+            "width": 578.8125,
+            "height": 57.59375
+          },
+          "note": {
+            "x": 117.1875,
+            "y": 310.71875,
+            "right": 696,
+            "bottom": 327.515625,
+            "width": 578.8125,
+            "height": 16.796875
+          }
+        },
+        {
+          "name": "Mumbai Indians",
+          "header": {
+            "x": 728,
+            "y": 158.453125,
+            "right": 1338.8125,
+            "bottom": 232.125,
+            "width": 610.8125,
+            "height": 73.671875
+          },
+          "score": {
+            "x": 744,
+            "y": 246.125,
+            "right": 1322.8125,
+            "bottom": 303.71875,
+            "width": 578.8125,
+            "height": 57.59375
+          },
+          "note": {
+            "x": 744,
+            "y": 310.71875,
+            "right": 1322.8125,
+            "bottom": 327.515625,
+            "width": 578.8125,
+            "height": 16.796875
+          }
+        }
+      ],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "match-result-320",
+      "surfaces": [
+        {
+          "class": "gccui gccuiScorecard gccuiLost",
+          "background": "rgba(0, 0, 0, 0)",
+          "image": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+          "expected": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+          "ok": true
+        },
+        {
+          "class": "gcc-worm",
+          "background": "rgb(23, 27, 32)",
+          "image": "none",
+          "expected": "rgb(23, 27, 32)",
+          "ok": true
+        }
+      ],
+      "width": 320,
+      "docWidth": 320,
+      "docHeight": 1839,
+      "view": "result",
+      "modal": null,
+      "controls": [
+        {
+          "text": "Scorebook",
+          "action": "resultScorecard",
+          "scrollWidth": 142,
+          "clientWidth": 142,
+          "x": 12,
+          "y": 266.421875,
+          "right": 156,
+          "bottom": 310.421875,
+          "width": 144,
+          "height": 44
+        },
+        {
+          "text": "Next match",
+          "action": "matchday",
+          "scrollWidth": 142,
+          "clientWidth": 142,
+          "x": 164,
+          "y": 266.421875,
+          "right": 308,
+          "bottom": 310.421875,
+          "width": 144,
+          "height": 44
+        }
+      ],
+      "live": [],
+      "scorePieces": [
+        {
+          "text": "45/10",
+          "x": 46,
+          "y": 697.390625,
+          "right": 196.25,
+          "bottom": 754.390625,
+          "width": 150.25,
+          "height": 57,
+          "card": {
+            "x": 29,
+            "y": 596.796875,
+            "right": 291,
+            "bottom": 794.890625,
+            "width": 262,
+            "height": 198.09375
+          }
+        },
+        {
+          "text": "Batted first",
+          "x": 208.25,
+          "y": 736.390625,
+          "right": 274,
+          "bottom": 754.390625,
+          "width": 65.75,
+          "height": 18,
+          "card": {
+            "x": 29,
+            "y": 596.796875,
+            "right": 291,
+            "bottom": 794.890625,
+            "width": 262,
+            "height": 198.09375
+          }
+        },
+        {
+          "text": "8.0 overs",
+          "x": 46,
+          "y": 760.390625,
+          "right": 274,
+          "bottom": 779.890625,
+          "width": 228,
+          "height": 19.5,
+          "card": {
+            "x": 29,
+            "y": 596.796875,
+            "right": 291,
+            "bottom": 794.890625,
+            "width": 262,
+            "height": 198.09375
+          }
+        },
+        {
+          "text": "46/4",
+          "x": 46,
+          "y": 915.109375,
+          "right": 172.71875,
+          "bottom": 972.109375,
+          "width": 126.71875,
+          "height": 57,
+          "card": {
+            "x": 29,
+            "y": 824.109375,
+            "right": 291,
+            "bottom": 1012.609375,
+            "width": 262,
+            "height": 188.5
+          }
+        },
+        {
+          "text": "Target reached",
+          "x": 184.71875,
+          "y": 954.109375,
+          "right": 274,
+          "bottom": 972.109375,
+          "width": 89.28125,
+          "height": 18,
+          "card": {
+            "x": 29,
+            "y": 824.109375,
+            "right": 291,
+            "bottom": 1012.609375,
+            "width": 262,
+            "height": 188.5
+          }
+        },
+        {
+          "text": "8.1 overs",
+          "x": 46,
+          "y": 978.109375,
+          "right": 274,
+          "bottom": 997.609375,
+          "width": 228,
+          "height": 19.5,
+          "card": {
+            "x": 29,
+            "y": 824.109375,
+            "right": 291,
+            "bottom": 1012.609375,
+            "width": 262,
+            "height": 188.5
+          }
+        }
+      ],
+      "scrollRegions": []
+    },
+    {
+      "name": "match-result-390",
+      "surfaces": [
+        {
+          "class": "gccui gccuiScorecard gccuiLost",
+          "background": "rgba(0, 0, 0, 0)",
+          "image": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+          "expected": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+          "ok": true
+        },
+        {
+          "class": "gcc-worm",
+          "background": "rgb(23, 27, 32)",
+          "image": "none",
+          "expected": "rgb(23, 27, 32)",
+          "ok": true
+        }
+      ],
+      "width": 390,
+      "docWidth": 390,
+      "docHeight": 1764,
+      "view": "result",
+      "modal": null,
+      "controls": [
+        {
+          "text": "Scorebook",
+          "action": "resultScorecard",
+          "scrollWidth": 177,
+          "clientWidth": 177,
+          "x": 12,
+          "y": 242.421875,
+          "right": 191,
+          "bottom": 286.421875,
+          "width": 179,
+          "height": 44
+        },
+        {
+          "text": "Next match",
+          "action": "matchday",
+          "scrollWidth": 177,
+          "clientWidth": 177,
+          "x": 199,
+          "y": 242.421875,
+          "right": 378,
+          "bottom": 286.421875,
+          "width": 179,
+          "height": 44
+        }
+      ],
+      "live": [],
+      "scorePieces": [
+        {
+          "text": "45/10",
+          "x": 46,
+          "y": 663.796875,
+          "right": 266.25,
+          "bottom": 720.796875,
+          "width": 220.25,
+          "height": 57,
+          "card": {
+            "x": 29,
+            "y": 572.796875,
+            "right": 361,
+            "bottom": 761.296875,
+            "width": 332,
+            "height": 188.5
+          }
+        },
+        {
+          "text": "Batted first",
+          "x": 278.25,
+          "y": 702.796875,
+          "right": 344,
+          "bottom": 720.796875,
+          "width": 65.75,
+          "height": 18,
+          "card": {
+            "x": 29,
+            "y": 572.796875,
+            "right": 361,
+            "bottom": 761.296875,
+            "width": 332,
+            "height": 188.5
+          }
+        },
+        {
+          "text": "8.0 overs",
+          "x": 46,
+          "y": 726.796875,
+          "right": 344,
+          "bottom": 746.296875,
+          "width": 298,
+          "height": 19.5,
+          "card": {
+            "x": 29,
+            "y": 572.796875,
+            "right": 361,
+            "bottom": 761.296875,
+            "width": 332,
+            "height": 188.5
+          }
+        },
+        {
+          "text": "46/4",
+          "x": 46,
+          "y": 881.515625,
+          "right": 242.71875,
+          "bottom": 938.515625,
+          "width": 196.71875,
+          "height": 57,
+          "card": {
+            "x": 29,
+            "y": 790.515625,
+            "right": 361,
+            "bottom": 979.015625,
+            "width": 332,
+            "height": 188.5
+          }
+        },
+        {
+          "text": "Target reached",
+          "x": 254.71875,
+          "y": 920.515625,
+          "right": 344,
+          "bottom": 938.515625,
+          "width": 89.28125,
+          "height": 18,
+          "card": {
+            "x": 29,
+            "y": 790.515625,
+            "right": 361,
+            "bottom": 979.015625,
+            "width": 332,
+            "height": 188.5
+          }
+        },
+        {
+          "text": "8.1 overs",
+          "x": 46,
+          "y": 944.515625,
+          "right": 344,
+          "bottom": 964.015625,
+          "width": 298,
+          "height": 19.5,
+          "card": {
+            "x": 29,
+            "y": 790.515625,
+            "right": 361,
+            "bottom": 979.015625,
+            "width": 332,
+            "height": 188.5
+          }
+        }
+      ],
+      "scrollRegions": []
+    },
+    {
+      "name": "match-result-768",
+      "surfaces": [
+        {
+          "class": "gccui gccuiScorecard gccuiLost",
+          "background": "rgba(0, 0, 0, 0)",
+          "image": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+          "expected": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+          "ok": true
+        },
+        {
+          "class": "gcc-worm",
+          "background": "rgb(23, 27, 32)",
+          "image": "none",
+          "expected": "rgb(23, 27, 32)",
+          "ok": true
+        }
+      ],
+      "width": 768,
+      "docWidth": 768,
+      "docHeight": 1563,
+      "view": "result",
+      "modal": null,
+      "controls": [
+        {
+          "text": "Scorebook",
+          "action": "resultScorecard",
+          "scrollWidth": 142,
+          "clientWidth": 142,
+          "x": 473.96875,
+          "y": 243.90625,
+          "right": 617.890625,
+          "bottom": 287.90625,
+          "width": 143.921875,
+          "height": 44
+        },
+        {
+          "text": "Next match",
+          "action": "matchday",
+          "scrollWidth": 117,
+          "clientWidth": 117,
+          "x": 625.890625,
+          "y": 243.90625,
+          "right": 744.96875,
+          "bottom": 287.90625,
+          "width": 119.078125,
+          "height": 44
+        }
+      ],
+      "live": [],
+      "scorePieces": [
+        {
+          "text": "45/10",
+          "x": 63.03125,
+          "y": 607.59375,
+          "right": 263.25,
+          "bottom": 678.59375,
+          "width": 200.21875,
+          "height": 71,
+          "card": {
+            "x": 44.03125,
+            "y": 503,
+            "right": 360,
+            "bottom": 723.09375,
+            "width": 315.96875,
+            "height": 220.09375
+          }
+        },
+        {
+          "text": "Batted first",
+          "x": 275.25,
+          "y": 660.59375,
+          "right": 341,
+          "bottom": 678.59375,
+          "width": 65.75,
+          "height": 18,
+          "card": {
+            "x": 44.03125,
+            "y": 503,
+            "right": 360,
+            "bottom": 723.09375,
+            "width": 315.96875,
+            "height": 220.09375
+          }
+        },
+        {
+          "text": "8.0 overs",
+          "x": 63.03125,
+          "y": 684.59375,
+          "right": 341,
+          "bottom": 704.09375,
+          "width": 277.96875,
+          "height": 19.5,
+          "card": {
+            "x": 44.03125,
+            "y": 503,
+            "right": 360,
+            "bottom": 723.09375,
+            "width": 315.96875,
+            "height": 220.09375
+          }
+        },
+        {
+          "text": "46/4",
+          "x": 427,
+          "y": 598,
+          "right": 603.6875,
+          "bottom": 669,
+          "width": 176.6875,
+          "height": 71,
+          "card": {
+            "x": 408,
+            "y": 503,
+            "right": 723.96875,
+            "bottom": 723.09375,
+            "width": 315.96875,
+            "height": 220.09375
+          }
+        },
+        {
+          "text": "Target reached",
+          "x": 615.6875,
+          "y": 651,
+          "right": 704.96875,
+          "bottom": 669,
+          "width": 89.28125,
+          "height": 18,
+          "card": {
+            "x": 408,
+            "y": 503,
+            "right": 723.96875,
+            "bottom": 723.09375,
+            "width": 315.96875,
+            "height": 220.09375
+          }
+        },
+        {
+          "text": "8.1 overs",
+          "x": 427,
+          "y": 675,
+          "right": 704.96875,
+          "bottom": 694.5,
+          "width": 277.96875,
+          "height": 19.5,
+          "card": {
+            "x": 408,
+            "y": 503,
+            "right": 723.96875,
+            "bottom": 723.09375,
+            "width": 315.96875,
+            "height": 220.09375
+          }
+        }
+      ],
+      "scrollRegions": []
+    },
+    {
+      "name": "match-result-1440",
+      "surfaces": [
+        {
+          "class": "gccui gccuiScorecard gccuiLost",
+          "background": "rgba(0, 0, 0, 0)",
+          "image": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+          "expected": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+          "ok": true
+        },
+        {
+          "class": "gcc-worm",
+          "background": "rgb(23, 27, 32)",
+          "image": "none",
+          "expected": "rgb(23, 27, 32)",
+          "ok": true
+        }
+      ],
+      "width": 1440,
+      "docWidth": 1440,
+      "docHeight": 1711,
+      "view": "result",
+      "modal": null,
+      "controls": [
+        {
+          "text": "Scorebook",
+          "action": "resultScorecard",
+          "scrollWidth": 142,
+          "clientWidth": 142,
+          "x": 1085.8125,
+          "y": 164.171875,
+          "right": 1229.734375,
+          "bottom": 208.171875,
+          "width": 143.921875,
+          "height": 44
+        },
+        {
+          "text": "Next match",
+          "action": "matchday",
+          "scrollWidth": 117,
+          "clientWidth": 117,
+          "x": 1237.734375,
+          "y": 164.171875,
+          "right": 1356.8125,
+          "bottom": 208.171875,
+          "width": 119.078125,
+          "height": 44
+        }
+      ],
+      "live": [],
+      "scorePieces": [
+        {
+          "text": "45/10",
+          "x": 123.1875,
+          "y": 566.125,
+          "right": 586.25,
+          "bottom": 637.125,
+          "width": 463.0625,
+          "height": 71,
+          "card": {
+            "x": 104.1875,
+            "y": 471.125,
+            "right": 683,
+            "bottom": 681.625,
+            "width": 578.8125,
+            "height": 210.5
+          }
+        },
+        {
+          "text": "Batted first",
+          "x": 598.25,
+          "y": 619.125,
+          "right": 664,
+          "bottom": 637.125,
+          "width": 65.75,
+          "height": 18,
+          "card": {
+            "x": 104.1875,
+            "y": 471.125,
+            "right": 683,
+            "bottom": 681.625,
+            "width": 578.8125,
+            "height": 210.5
+          }
+        },
+        {
+          "text": "8.0 overs",
+          "x": 123.1875,
+          "y": 643.125,
+          "right": 664,
+          "bottom": 662.625,
+          "width": 540.8125,
+          "height": 19.5,
+          "card": {
+            "x": 104.1875,
+            "y": 471.125,
+            "right": 683,
+            "bottom": 681.625,
+            "width": 578.8125,
+            "height": 210.5
+          }
+        },
+        {
+          "text": "46/4",
+          "x": 776,
+          "y": 566.125,
+          "right": 1215.53125,
+          "bottom": 637.125,
+          "width": 439.53125,
+          "height": 71,
+          "card": {
+            "x": 757,
+            "y": 471.125,
+            "right": 1335.8125,
+            "bottom": 681.625,
+            "width": 578.8125,
+            "height": 210.5
+          }
+        },
+        {
+          "text": "Target reached",
+          "x": 1227.53125,
+          "y": 619.125,
+          "right": 1316.8125,
+          "bottom": 637.125,
+          "width": 89.28125,
+          "height": 18,
+          "card": {
+            "x": 757,
+            "y": 471.125,
+            "right": 1335.8125,
+            "bottom": 681.625,
+            "width": 578.8125,
+            "height": 210.5
+          }
+        },
+        {
+          "text": "8.1 overs",
+          "x": 776,
+          "y": 643.125,
+          "right": 1316.8125,
+          "bottom": 662.625,
+          "width": 540.8125,
+          "height": 19.5,
+          "card": {
+            "x": 757,
+            "y": 471.125,
+            "right": 1335.8125,
+            "bottom": 681.625,
+            "width": 578.8125,
+            "height": 210.5
+          }
+        }
+      ],
+      "scrollRegions": []
+    },
+    {
+      "name": "scorebook-top-320",
+      "surfaces": [],
+      "width": 320,
+      "docWidth": 320,
+      "docHeight": 1839,
+      "view": "result",
+      "modal": "scorecard",
+      "controls": [
+        {
+          "text": "Close Match scorecard",
+          "action": "close",
+          "scrollWidth": 40,
+          "clientWidth": 40,
+          "x": 247,
+          "y": 29,
+          "right": 291,
+          "bottom": 73,
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "live": [],
+      "scorePieces": [],
+      "scrollRegions": [
+        {
+          "class": "g8tablewrap",
+          "scrollWidth": 278,
+          "clientWidth": 258,
+          "x": 30,
+          "y": 212.25,
+          "right": 290,
+          "bottom": 1520.1875,
+          "width": 260,
+          "height": 1307.9375
+        },
+        {
+          "class": "g8tablewrap",
+          "scrollWidth": 271,
+          "clientWidth": 258,
+          "x": 30,
+          "y": 2164.359375,
+          "right": 290,
+          "bottom": 2924.296875,
+          "width": 260,
+          "height": 759.9375
+        }
+      ]
+    },
+    {
+      "name": "scorebook-bottom-320",
+      "surfaces": [],
+      "width": 320,
+      "docWidth": 320,
+      "docHeight": 1839,
+      "view": "result",
+      "modal": "scorecard",
+      "controls": [
+        {
+          "text": "Close Match scorecard",
+          "action": "close",
+          "scrollWidth": 40,
+          "clientWidth": 40,
+          "x": 247,
+          "y": 29,
+          "right": 291,
+          "bottom": 73,
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "live": [],
+      "scorePieces": [],
+      "scrollRegions": [
+        {
+          "class": "g8tablewrap",
+          "scrollWidth": 278,
+          "clientWidth": 258,
+          "x": 30,
+          "y": -2366.75,
+          "right": 290,
+          "bottom": -1058.8125,
+          "width": 260,
+          "height": 1307.9375
+        },
+        {
+          "class": "g8tablewrap",
+          "scrollWidth": 271,
+          "clientWidth": 258,
+          "x": 30,
+          "y": -414.640625,
+          "right": 290,
+          "bottom": 345.296875,
+          "width": 260,
+          "height": 759.9375
+        }
+      ]
+    },
+    {
+      "name": "scorebook-top-390",
+      "surfaces": [],
+      "width": 390,
+      "docWidth": 390,
+      "docHeight": 1764,
+      "view": "result",
+      "modal": "scorecard",
+      "controls": [
+        {
+          "text": "Close Match scorecard",
+          "action": "close",
+          "scrollWidth": 40,
+          "clientWidth": 40,
+          "x": 317,
+          "y": 29,
+          "right": 361,
+          "bottom": 73,
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "live": [],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "scorebook-bottom-390",
+      "surfaces": [],
+      "width": 390,
+      "docWidth": 390,
+      "docHeight": 1764,
+      "view": "result",
+      "modal": "scorecard",
+      "controls": [
+        {
+          "text": "Close Match scorecard",
+          "action": "close",
+          "scrollWidth": 40,
+          "clientWidth": 40,
+          "x": 317,
+          "y": 29,
+          "right": 361,
+          "bottom": 73,
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "live": [],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "scorebook-top-768",
+      "surfaces": [],
+      "width": 768,
+      "docWidth": 768,
+      "docHeight": 1563,
+      "view": "result",
+      "modal": "scorecard",
+      "controls": [
+        {
+          "text": "Close Match scorecard",
+          "action": "close",
+          "scrollWidth": 40,
+          "clientWidth": 40,
+          "x": 677.953125,
+          "y": 31,
+          "right": 721.953125,
+          "bottom": 75,
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "live": [],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "scorebook-bottom-768",
+      "surfaces": [],
+      "width": 768,
+      "docWidth": 768,
+      "docHeight": 1563,
+      "view": "result",
+      "modal": "scorecard",
+      "controls": [
+        {
+          "text": "Close Match scorecard",
+          "action": "close",
+          "scrollWidth": 40,
+          "clientWidth": 40,
+          "x": 677.953125,
+          "y": 31,
+          "right": 721.953125,
+          "bottom": 75,
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "live": [],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "scorebook-top-1440",
+      "surfaces": [],
+      "width": 1440,
+      "docWidth": 1440,
+      "docHeight": 1711,
+      "view": "result",
+      "modal": "scorecard",
+      "controls": [
+        {
+          "text": "Close Match scorecard",
+          "action": "close",
+          "scrollWidth": 40,
+          "clientWidth": 40,
+          "x": 1128,
+          "y": 31,
+          "right": 1172,
+          "bottom": 75,
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "live": [],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "scorebook-bottom-1440",
+      "surfaces": [],
+      "width": 1440,
+      "docWidth": 1440,
+      "docHeight": 1711,
+      "view": "result",
+      "modal": "scorecard",
+      "controls": [
+        {
+          "text": "Close Match scorecard",
+          "action": "close",
+          "scrollWidth": 40,
+          "clientWidth": 40,
+          "x": 1128,
+          "y": 31,
+          "right": 1172,
+          "bottom": 75,
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "live": [],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "matchday-after-320",
+      "surfaces": [],
+      "width": 320,
+      "docWidth": 320,
+      "docHeight": 1884,
+      "view": "season",
+      "modal": null,
+      "controls": [
+        {
+          "text": "Review XI",
+          "action": "editXI",
+          "scrollWidth": 125,
+          "clientWidth": 125,
+          "x": 29,
+          "y": 508.609375,
+          "right": 156,
+          "bottom": 560.609375,
+          "width": 127,
+          "height": 52
+        },
+        {
+          "text": "Watch match",
+          "action": "watchNext",
+          "scrollWidth": 125,
+          "clientWidth": 125,
+          "x": 164,
+          "y": 508.609375,
+          "right": 291,
+          "bottom": 560.609375,
+          "width": 127,
+          "height": 52
+        },
+        {
+          "text": "View result",
+          "action": "result",
+          "scrollWidth": 145,
+          "clientWidth": 145,
+          "x": 29,
+          "y": 1448.515625,
+          "right": 176.46875,
+          "bottom": 1492.515625,
+          "width": 147.46875,
+          "height": 44
+        },
+        {
+          "text": "Match preview",
+          "action": "prepare",
+          "scrollWidth": 173,
+          "clientWidth": 173,
+          "x": 29,
+          "y": 1577.3125,
+          "right": 203.734375,
+          "bottom": 1621.3125,
+          "width": 174.734375,
+          "height": 44
+        },
+        {
+          "text": "Ground & conditions+",
+          "scrollWidth": 231,
+          "clientWidth": 231,
+          "x": 44.390625,
+          "y": 1649.3125,
+          "right": 275.609375,
+          "bottom": 1699.703125,
+          "width": 231.21875,
+          "height": 50.390625
+        },
+        {
+          "text": "Season analysis+",
+          "scrollWidth": 231,
+          "clientWidth": 231,
+          "x": 44.390625,
+          "y": 1713.703125,
+          "right": 275.609375,
+          "bottom": 1764.09375,
+          "width": 231.21875,
+          "height": 50.390625
+        },
+        {
+          "text": "Wickets and scoring context",
+          "scrollWidth": 229,
+          "clientWidth": 229,
+          "x": 45.390625,
+          "y": 2065.71875,
+          "right": 274.609375,
+          "bottom": 2129.6875,
+          "width": 229.21875,
+          "height": 63.96875
+        },
+        {
+          "text": "Season format+",
+          "scrollWidth": 231,
+          "clientWidth": 231,
+          "x": 44.390625,
+          "y": 1778.09375,
+          "right": 275.609375,
+          "bottom": 1828.484375,
+          "width": 231.21875,
+          "height": 50.390625
+        }
+      ],
+      "live": [],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "matchday-after-390",
+      "surfaces": [],
+      "width": 390,
+      "docWidth": 390,
+      "docHeight": 1778,
+      "view": "season",
+      "modal": null,
+      "controls": [
+        {
+          "text": "Review XI",
+          "action": "editXI",
+          "scrollWidth": 160,
+          "clientWidth": 160,
+          "x": 29,
+          "y": 449.8125,
+          "right": 191,
+          "bottom": 495.8125,
+          "width": 162,
+          "height": 46
+        },
+        {
+          "text": "Watch match",
+          "action": "watchNext",
+          "scrollWidth": 160,
+          "clientWidth": 160,
+          "x": 199,
+          "y": 449.8125,
+          "right": 361,
+          "bottom": 495.8125,
+          "width": 162,
+          "height": 46
+        },
+        {
+          "text": "View result",
+          "action": "result",
+          "scrollWidth": 145,
+          "clientWidth": 145,
+          "x": 29,
+          "y": 1341.828125,
+          "right": 176.46875,
+          "bottom": 1385.828125,
+          "width": 147.46875,
+          "height": 44
+        },
+        {
+          "text": "Match preview",
+          "action": "prepare",
+          "scrollWidth": 173,
+          "clientWidth": 173,
+          "x": 29,
+          "y": 1470.625,
+          "right": 203.734375,
+          "bottom": 1514.625,
+          "width": 174.734375,
+          "height": 44
+        },
+        {
+          "text": "Ground & conditions+",
+          "scrollWidth": 301,
+          "clientWidth": 301,
+          "x": 44.390625,
+          "y": 1542.625,
+          "right": 345.609375,
+          "bottom": 1593.015625,
+          "width": 301.21875,
+          "height": 50.390625
+        },
+        {
+          "text": "Season analysis+",
+          "scrollWidth": 301,
+          "clientWidth": 301,
+          "x": 44.390625,
+          "y": 1607.015625,
+          "right": 345.609375,
+          "bottom": 1657.40625,
+          "width": 301.21875,
+          "height": 50.390625
+        },
+        {
+          "text": "Wickets and scoring context",
+          "scrollWidth": 299,
+          "clientWidth": 299,
+          "x": 45.390625,
+          "y": 1940,
+          "right": 344.609375,
+          "bottom": 1984,
+          "width": 299.21875,
+          "height": 44
+        },
+        {
+          "text": "Season format+",
+          "scrollWidth": 301,
+          "clientWidth": 301,
+          "x": 44.390625,
+          "y": 1671.40625,
+          "right": 345.609375,
+          "bottom": 1721.796875,
+          "width": 301.21875,
+          "height": 50.390625
+        }
+      ],
+      "live": [],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "matchday-after-768",
+      "surfaces": [],
+      "width": 768,
+      "docWidth": 768,
+      "docHeight": 1255,
+      "view": "season",
+      "modal": null,
+      "controls": [
+        {
+          "text": "Review XI",
+          "action": "editXI",
+          "scrollWidth": 188,
+          "clientWidth": 188,
+          "x": 40.03125,
+          "y": 424.625,
+          "right": 230,
+          "bottom": 468.625,
+          "width": 189.96875,
+          "height": 44
+        },
+        {
+          "text": "Watch match",
+          "action": "watchNext",
+          "scrollWidth": 188,
+          "clientWidth": 188,
+          "x": 238,
+          "y": 424.625,
+          "right": 427.96875,
+          "bottom": 468.625,
+          "width": 189.96875,
+          "height": 44
+        },
+        {
+          "text": "View result",
+          "action": "result",
+          "scrollWidth": 145,
+          "clientWidth": 145,
+          "x": 40.03125,
+          "y": 1066.71875,
+          "right": 187.5,
+          "bottom": 1110.71875,
+          "width": 147.46875,
+          "height": 44
+        },
+        {
+          "text": "Match preview",
+          "action": "prepare",
+          "scrollWidth": 173,
+          "clientWidth": 173,
+          "x": 340.796875,
+          "y": 923.953125,
+          "right": 515.53125,
+          "bottom": 967.953125,
+          "width": 174.734375,
+          "height": 44
+        },
+        {
+          "text": "Ground & conditions+",
+          "scrollWidth": 356,
+          "clientWidth": 356,
+          "x": 356.1875,
+          "y": 995.953125,
+          "right": 712.578125,
+          "bottom": 1046.34375,
+          "width": 356.390625,
+          "height": 50.390625
+        },
+        {
+          "text": "Season analysis+",
+          "scrollWidth": 356,
+          "clientWidth": 356,
+          "x": 356.1875,
+          "y": 1060.34375,
+          "right": 712.578125,
+          "bottom": 1110.734375,
+          "width": 356.390625,
+          "height": 50.390625
+        },
+        {
+          "text": "Wickets and scoring context",
+          "scrollWidth": 354,
+          "clientWidth": 354,
+          "x": 357.1875,
+          "y": 1393.328125,
+          "right": 711.578125,
+          "bottom": 1437.328125,
+          "width": 354.390625,
+          "height": 44
+        },
+        {
+          "text": "Season format+",
+          "scrollWidth": 356,
+          "clientWidth": 356,
+          "x": 356.1875,
+          "y": 1124.734375,
+          "right": 712.578125,
+          "bottom": 1175.125,
+          "width": 356.390625,
+          "height": 50.390625
+        }
+      ],
+      "live": [],
+      "scorePieces": [],
+      "scrollRegions": []
+    },
+    {
+      "name": "matchday-after-1440",
+      "surfaces": [],
+      "width": 1440,
+      "docWidth": 1440,
+      "docHeight": 1021,
+      "view": "season",
+      "modal": null,
+      "controls": [
+        {
+          "text": "Review XI",
+          "action": "editXI",
+          "scrollWidth": 134,
+          "clientWidth": 134,
+          "x": 549.125,
+          "y": 266.703125,
+          "right": 685.15625,
+          "bottom": 310.703125,
+          "width": 136.03125,
+          "height": 44
+        },
+        {
+          "text": "Watch match",
+          "action": "watchNext",
+          "scrollWidth": 160,
+          "clientWidth": 160,
+          "x": 693.15625,
+          "y": 266.703125,
+          "right": 855.5,
+          "bottom": 310.703125,
+          "width": 162.34375,
+          "height": 44
+        },
+        {
+          "text": "View result",
+          "action": "result",
+          "scrollWidth": 145,
+          "clientWidth": 145,
+          "x": 100.1875,
+          "y": 849.328125,
+          "right": 247.65625,
+          "bottom": 893.328125,
+          "width": 147.46875,
+          "height": 44
+        },
+        {
+          "text": "Match preview",
+          "action": "prepare",
+          "scrollWidth": 173,
+          "clientWidth": 173,
+          "x": 1165.078125,
+          "y": 690.15625,
+          "right": 1339.8125,
+          "bottom": 734.15625,
+          "width": 174.734375,
+          "height": 44
+        },
+        {
+          "text": "Ground & conditions+",
+          "scrollWidth": 687,
+          "clientWidth": 687,
+          "x": 637.015625,
+          "y": 762.15625,
+          "right": 1324.421875,
+          "bottom": 812.546875,
+          "width": 687.40625,
+          "height": 50.390625
+        },
+        {
+          "text": "Season analysis+",
+          "scrollWidth": 687,
+          "clientWidth": 687,
+          "x": 637.015625,
+          "y": 826.546875,
+          "right": 1324.421875,
+          "bottom": 876.9375,
+          "width": 687.40625,
+          "height": 50.390625
+        },
+        {
+          "text": "Wickets and scoring context",
+          "scrollWidth": 685,
+          "clientWidth": 685,
+          "x": 638.015625,
+          "y": 1057.546875,
+          "right": 1323.421875,
+          "bottom": 1101.546875,
+          "width": 685.40625,
+          "height": 44
+        },
+        {
+          "text": "Season format+",
+          "scrollWidth": 687,
+          "clientWidth": 687,
+          "x": 637.015625,
+          "y": 890.9375,
+          "right": 1324.421875,
+          "bottom": 941.328125,
+          "width": 687.40625,
+          "height": 50.390625
+        }
+      ],
+      "live": [],
+      "scorePieces": [],
+      "scrollRegions": []
+    }
+  ],
+  "checks": [
+    {
+      "id": "fresh legal draft reaches manual XI",
+      "ok": true,
+      "detail": {}
+    },
+    {
+      "id": "matchday-before-320 document containment",
+      "ok": true,
+      "detail": 320
+    },
+    {
+      "id": "matchday-before-320 control label fits Review XI",
+      "ok": true,
+      "detail": {
+        "text": "Review XI",
+        "action": "editXI",
+        "scrollWidth": 125,
+        "clientWidth": 125,
+        "x": 29,
+        "y": 524.609375,
+        "right": 156,
+        "bottom": 576.609375,
+        "width": 127,
+        "height": 52
+      }
+    },
+    {
+      "id": "matchday-before-320 control label fits Watch match",
+      "ok": true,
+      "detail": {
+        "text": "Watch match",
+        "action": "watchNext",
+        "scrollWidth": 125,
+        "clientWidth": 125,
+        "x": 164,
+        "y": 524.609375,
+        "right": 291,
+        "bottom": 576.609375,
+        "width": 127,
+        "height": 52
+      }
+    },
+    {
+      "id": "matchday-before-320 control label fits Match preview",
+      "ok": true,
+      "detail": {
+        "text": "Match preview",
+        "action": "prepare",
+        "scrollWidth": 173,
+        "clientWidth": 173,
+        "x": 29,
+        "y": 1526.921875,
+        "right": 203.734375,
+        "bottom": 1570.921875,
+        "width": 174.734375,
+        "height": 44
+      }
+    },
+    {
+      "id": "matchday-before-320 control label fits Ground & conditions+",
+      "ok": true,
+      "detail": {
+        "text": "Ground & conditions+",
+        "scrollWidth": 231,
+        "clientWidth": 231,
+        "x": 44.390625,
+        "y": 1598.921875,
+        "right": 275.609375,
+        "bottom": 1649.3125,
+        "width": 231.21875,
+        "height": 50.390625
+      }
+    },
+    {
+      "id": "matchday-before-320 control label fits Season format+",
+      "ok": true,
+      "detail": {
+        "text": "Season format+",
+        "scrollWidth": 231,
+        "clientWidth": 231,
+        "x": 44.390625,
+        "y": 1663.3125,
+        "right": 275.609375,
+        "bottom": 1713.703125,
+        "width": 231.21875,
+        "height": 50.390625
+      }
+    },
+    {
+      "id": "matchday-before-390 document containment",
+      "ok": true,
+      "detail": 390
+    },
+    {
+      "id": "matchday-before-390 control label fits Review XI",
+      "ok": true,
+      "detail": {
+        "text": "Review XI",
+        "action": "editXI",
+        "scrollWidth": 160,
+        "clientWidth": 160,
+        "x": 29,
+        "y": 449.8125,
+        "right": 191,
+        "bottom": 495.8125,
+        "width": 162,
+        "height": 46
+      }
+    },
+    {
+      "id": "matchday-before-390 control label fits Watch match",
+      "ok": true,
+      "detail": {
+        "text": "Watch match",
+        "action": "watchNext",
+        "scrollWidth": 160,
+        "clientWidth": 160,
+        "x": 199,
+        "y": 449.8125,
+        "right": 361,
+        "bottom": 495.8125,
+        "width": 162,
+        "height": 46
+      }
+    },
+    {
+      "id": "matchday-before-390 control label fits Match preview",
+      "ok": true,
+      "detail": {
+        "text": "Match preview",
+        "action": "prepare",
+        "scrollWidth": 173,
+        "clientWidth": 173,
+        "x": 29,
+        "y": 1403.234375,
+        "right": 203.734375,
+        "bottom": 1447.234375,
+        "width": 174.734375,
+        "height": 44
+      }
+    },
+    {
+      "id": "matchday-before-390 control label fits Ground & conditions+",
+      "ok": true,
+      "detail": {
+        "text": "Ground & conditions+",
+        "scrollWidth": 301,
+        "clientWidth": 301,
+        "x": 44.390625,
+        "y": 1475.234375,
+        "right": 345.609375,
+        "bottom": 1525.625,
+        "width": 301.21875,
+        "height": 50.390625
+      }
+    },
+    {
+      "id": "matchday-before-390 control label fits Season format+",
+      "ok": true,
+      "detail": {
+        "text": "Season format+",
+        "scrollWidth": 301,
+        "clientWidth": 301,
+        "x": 44.390625,
+        "y": 1539.625,
+        "right": 345.609375,
+        "bottom": 1590.015625,
+        "width": 301.21875,
+        "height": 50.390625
+      }
+    },
+    {
+      "id": "matchday-before-768 document containment",
+      "ok": true,
+      "detail": 768
+    },
+    {
+      "id": "matchday-before-768 control label fits Review XI",
+      "ok": true,
+      "detail": {
+        "text": "Review XI",
+        "action": "editXI",
+        "scrollWidth": 188,
+        "clientWidth": 188,
+        "x": 40.03125,
+        "y": 424.21875,
+        "right": 230,
+        "bottom": 468.21875,
+        "width": 189.96875,
+        "height": 44
+      }
+    },
+    {
+      "id": "matchday-before-768 control label fits Watch match",
+      "ok": true,
+      "detail": {
+        "text": "Watch match",
+        "action": "watchNext",
+        "scrollWidth": 188,
+        "clientWidth": 188,
+        "x": 238,
+        "y": 424.21875,
+        "right": 427.96875,
+        "bottom": 468.21875,
+        "width": 189.96875,
+        "height": 44
+      }
+    },
+    {
+      "id": "matchday-before-768 control label fits Match preview",
+      "ok": true,
+      "detail": {
+        "text": "Match preview",
+        "action": "prepare",
+        "scrollWidth": 173,
+        "clientWidth": 173,
+        "x": 340.796875,
+        "y": 923.546875,
+        "right": 515.53125,
+        "bottom": 967.546875,
+        "width": 174.734375,
+        "height": 44
+      }
+    },
+    {
+      "id": "matchday-before-768 control label fits Ground & conditions+",
+      "ok": true,
+      "detail": {
+        "text": "Ground & conditions+",
+        "scrollWidth": 356,
+        "clientWidth": 356,
+        "x": 356.1875,
+        "y": 995.546875,
+        "right": 712.578125,
+        "bottom": 1045.9375,
+        "width": 356.390625,
+        "height": 50.390625
+      }
+    },
+    {
+      "id": "matchday-before-768 control label fits Season format+",
+      "ok": true,
+      "detail": {
+        "text": "Season format+",
+        "scrollWidth": 356,
+        "clientWidth": 356,
+        "x": 356.1875,
+        "y": 1059.9375,
+        "right": 712.578125,
+        "bottom": 1110.328125,
+        "width": 356.390625,
+        "height": 50.390625
+      }
+    },
+    {
+      "id": "matchday-before-1440 document containment",
+      "ok": true,
+      "detail": 1440
+    },
+    {
+      "id": "matchday-before-1440 control label fits Review XI",
+      "ok": true,
+      "detail": {
+        "text": "Review XI",
+        "action": "editXI",
+        "scrollWidth": 134,
+        "clientWidth": 134,
+        "x": 549.125,
+        "y": 266.296875,
+        "right": 685.15625,
+        "bottom": 310.296875,
+        "width": 136.03125,
+        "height": 44
+      }
+    },
+    {
+      "id": "matchday-before-1440 control label fits Watch match",
+      "ok": true,
+      "detail": {
+        "text": "Watch match",
+        "action": "watchNext",
+        "scrollWidth": 160,
+        "clientWidth": 160,
+        "x": 693.15625,
+        "y": 266.296875,
+        "right": 855.5,
+        "bottom": 310.296875,
+        "width": 162.34375,
+        "height": 44
+      }
+    },
+    {
+      "id": "matchday-before-1440 control label fits Match preview",
+      "ok": true,
+      "detail": {
+        "text": "Match preview",
+        "action": "prepare",
+        "scrollWidth": 173,
+        "clientWidth": 173,
+        "x": 1165.078125,
+        "y": 689.75,
+        "right": 1339.8125,
+        "bottom": 733.75,
+        "width": 174.734375,
+        "height": 44
+      }
+    },
+    {
+      "id": "matchday-before-1440 control label fits Ground & conditions+",
+      "ok": true,
+      "detail": {
+        "text": "Ground & conditions+",
+        "scrollWidth": 687,
+        "clientWidth": 687,
+        "x": 637.015625,
+        "y": 761.75,
+        "right": 1324.421875,
+        "bottom": 812.140625,
+        "width": 687.40625,
+        "height": 50.390625
+      }
+    },
+    {
+      "id": "matchday-before-1440 control label fits Season format+",
+      "ok": true,
+      "detail": {
+        "text": "Season format+",
+        "scrollWidth": 687,
+        "clientWidth": 687,
+        "x": 637.015625,
+        "y": 826.140625,
+        "right": 1324.421875,
+        "bottom": 876.53125,
+        "width": 687.40625,
+        "height": 50.390625
+      }
+    },
+    {
+      "id": "match-preview-320 document containment",
+      "ok": true,
+      "detail": 320
+    },
+    {
+      "id": "match-preview-320 control label fits Close Match preview",
+      "ok": true,
+      "detail": {
+        "text": "Close Match preview",
+        "action": "close",
+        "scrollWidth": 40,
+        "clientWidth": 40,
+        "x": 247,
+        "y": 29,
+        "right": 291,
+        "bottom": 73,
+        "width": 44,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-preview-320 control label fits Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+      "ok": true,
+      "detail": {
+        "text": "Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+        "scrollWidth": 230,
+        "clientWidth": 230,
+        "x": 43,
+        "y": 822.296875,
+        "right": 277,
+        "bottom": 866.296875,
+        "width": 234,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-preview-320 control label fits Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+      "ok": true,
+      "detail": {
+        "text": "Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+        "scrollWidth": 230,
+        "clientWidth": 230,
+        "x": 43,
+        "y": 901.296875,
+        "right": 277,
+        "bottom": 945.296875,
+        "width": 234,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-preview-320 control label fits Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+      "ok": true,
+      "detail": {
+        "text": "Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+        "scrollWidth": 230,
+        "clientWidth": 230,
+        "x": 43,
+        "y": 980.296875,
+        "right": 277,
+        "bottom": 1024.296875,
+        "width": 234,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-preview-320 control label fits Play the match",
+      "ok": true,
+      "detail": {
+        "text": "Play the match",
+        "action": "playMatch",
+        "scrollWidth": 260,
+        "clientWidth": 260,
+        "x": 29,
+        "y": 1150.234375,
+        "right": 291,
+        "bottom": 1194.234375,
+        "width": 262,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-preview-320 control label fits Change XI",
+      "ok": true,
+      "detail": {
+        "text": "Change XI",
+        "action": "editXI",
+        "scrollWidth": 260,
+        "clientWidth": 260,
+        "x": 29,
+        "y": 1206.234375,
+        "right": 291,
+        "bottom": 1250.234375,
+        "width": 262,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-preview-320 control label fits Your starting XI+",
+      "ok": true,
+      "detail": {
+        "text": "Your starting XI+",
+        "scrollWidth": 231,
+        "clientWidth": 231,
+        "x": 43.390625,
+        "y": 1266.234375,
+        "right": 276.609375,
+        "bottom": 1318.625,
+        "width": 233.21875,
+        "height": 52.390625
+      }
+    },
+    {
+      "id": "match-preview-320 control label fits Ground & conditions+",
+      "ok": true,
+      "detail": {
+        "text": "Ground & conditions+",
+        "scrollWidth": 231,
+        "clientWidth": 231,
+        "x": 43.390625,
+        "y": 1334.625,
+        "right": 276.609375,
+        "bottom": 1387.015625,
+        "width": 233.21875,
+        "height": 52.390625
+      }
+    },
+    {
+      "id": "match-preview-320 control label fits Compare the two XIs+",
+      "ok": true,
+      "detail": {
+        "text": "Compare the two XIs+",
+        "scrollWidth": 231,
+        "clientWidth": 231,
+        "x": 43.390625,
+        "y": 1403.015625,
+        "right": 276.609375,
+        "bottom": 1455.40625,
+        "width": 233.21875,
+        "height": 52.390625
+      }
+    },
+    {
+      "id": "match-preview-390 document containment",
+      "ok": true,
+      "detail": 390
+    },
+    {
+      "id": "match-preview-390 control label fits Close Match preview",
+      "ok": true,
+      "detail": {
+        "text": "Close Match preview",
+        "action": "close",
+        "scrollWidth": 40,
+        "clientWidth": 40,
+        "x": 317,
+        "y": 29,
+        "right": 361,
+        "bottom": 73,
+        "width": 44,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-preview-390 control label fits Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+      "ok": true,
+      "detail": {
+        "text": "Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+        "scrollWidth": 300,
+        "clientWidth": 300,
+        "x": 43,
+        "y": 801.296875,
+        "right": 347,
+        "bottom": 845.296875,
+        "width": 304,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-preview-390 control label fits Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+      "ok": true,
+      "detail": {
+        "text": "Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+        "scrollWidth": 300,
+        "clientWidth": 300,
+        "x": 43,
+        "y": 880.296875,
+        "right": 347,
+        "bottom": 924.296875,
+        "width": 304,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-preview-390 control label fits Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+      "ok": true,
+      "detail": {
+        "text": "Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+        "scrollWidth": 300,
+        "clientWidth": 300,
+        "x": 43,
+        "y": 959.296875,
+        "right": 347,
+        "bottom": 1003.296875,
+        "width": 304,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-preview-390 control label fits Play the match",
+      "ok": true,
+      "detail": {
+        "text": "Play the match",
+        "action": "playMatch",
+        "scrollWidth": 330,
+        "clientWidth": 330,
+        "x": 29,
+        "y": 1110.046875,
+        "right": 361,
+        "bottom": 1154.046875,
+        "width": 332,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-preview-390 control label fits Change XI",
+      "ok": true,
+      "detail": {
+        "text": "Change XI",
+        "action": "editXI",
+        "scrollWidth": 330,
+        "clientWidth": 330,
+        "x": 29,
+        "y": 1166.046875,
+        "right": 361,
+        "bottom": 1210.046875,
+        "width": 332,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-preview-390 control label fits Your starting XI+",
+      "ok": true,
+      "detail": {
+        "text": "Your starting XI+",
+        "scrollWidth": 301,
+        "clientWidth": 301,
+        "x": 43.390625,
+        "y": 1226.046875,
+        "right": 346.609375,
+        "bottom": 1278.4375,
+        "width": 303.21875,
+        "height": 52.390625
+      }
+    },
+    {
+      "id": "match-preview-390 control label fits Ground & conditions+",
+      "ok": true,
+      "detail": {
+        "text": "Ground & conditions+",
+        "scrollWidth": 301,
+        "clientWidth": 301,
+        "x": 43.390625,
+        "y": 1294.4375,
+        "right": 346.609375,
+        "bottom": 1346.828125,
+        "width": 303.21875,
+        "height": 52.390625
+      }
+    },
+    {
+      "id": "match-preview-390 control label fits Compare the two XIs+",
+      "ok": true,
+      "detail": {
+        "text": "Compare the two XIs+",
+        "scrollWidth": 301,
+        "clientWidth": 301,
+        "x": 43.390625,
+        "y": 1362.828125,
+        "right": 346.609375,
+        "bottom": 1415.21875,
+        "width": 303.21875,
+        "height": 52.390625
+      }
+    },
+    {
+      "id": "match-preview-768 document containment",
+      "ok": true,
+      "detail": 768
+    },
+    {
+      "id": "match-preview-768 control label fits Close Match preview",
+      "ok": true,
+      "detail": {
+        "text": "Close Match preview",
+        "action": "close",
+        "scrollWidth": 40,
+        "clientWidth": 40,
+        "x": 689,
+        "y": 31,
+        "right": 733,
+        "bottom": 75,
+        "width": 44,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-preview-768 control label fits Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+      "ok": true,
+      "detail": {
+        "text": "Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+        "scrollWidth": 211,
+        "clientWidth": 211,
+        "x": 52,
+        "y": 597.46875,
+        "right": 266.65625,
+        "bottom": 641.46875,
+        "width": 214.65625,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-preview-768 control label fits Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+      "ok": true,
+      "detail": {
+        "text": "Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+        "scrollWidth": 211,
+        "clientWidth": 211,
+        "x": 276.65625,
+        "y": 597.46875,
+        "right": 491.328125,
+        "bottom": 641.46875,
+        "width": 214.671875,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-preview-768 control label fits Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+      "ok": true,
+      "detail": {
+        "text": "Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+        "scrollWidth": 211,
+        "clientWidth": 211,
+        "x": 501.328125,
+        "y": 597.46875,
+        "right": 716,
+        "bottom": 641.46875,
+        "width": 214.671875,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-preview-768 control label fits Play the match",
+      "ok": true,
+      "detail": {
+        "text": "Play the match",
+        "action": "playMatch",
+        "scrollWidth": 341,
+        "clientWidth": 341,
+        "x": 35,
+        "y": 732.03125,
+        "right": 378,
+        "bottom": 776.03125,
+        "width": 343,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-preview-768 control label fits Change XI",
+      "ok": true,
+      "detail": {
+        "text": "Change XI",
+        "action": "editXI",
+        "scrollWidth": 341,
+        "clientWidth": 341,
+        "x": 390,
+        "y": 732.03125,
+        "right": 733,
+        "bottom": 776.03125,
+        "width": 343,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-preview-768 control label fits Your starting XI+",
+      "ok": true,
+      "detail": {
+        "text": "Your starting XI+",
+        "scrollWidth": 667,
+        "clientWidth": 667,
+        "x": 49.390625,
+        "y": 792.03125,
+        "right": 718.609375,
+        "bottom": 844.421875,
+        "width": 669.21875,
+        "height": 52.390625
+      }
+    },
+    {
+      "id": "match-preview-768 control label fits Ground & conditions+",
+      "ok": true,
+      "detail": {
+        "text": "Ground & conditions+",
+        "scrollWidth": 667,
+        "clientWidth": 667,
+        "x": 49.390625,
+        "y": 860.421875,
+        "right": 718.609375,
+        "bottom": 912.8125,
+        "width": 669.21875,
+        "height": 52.390625
+      }
+    },
+    {
+      "id": "match-preview-768 control label fits Compare the two XIs+",
+      "ok": true,
+      "detail": {
+        "text": "Compare the two XIs+",
+        "scrollWidth": 667,
+        "clientWidth": 667,
+        "x": 49.390625,
+        "y": 928.8125,
+        "right": 718.609375,
+        "bottom": 981.203125,
+        "width": 669.21875,
+        "height": 52.390625
+      }
+    },
+    {
+      "id": "match-preview-1440 document containment",
+      "ok": true,
+      "detail": 1440
+    },
+    {
+      "id": "match-preview-1440 control label fits Close Match preview",
+      "ok": true,
+      "detail": {
+        "text": "Close Match preview",
+        "action": "close",
+        "scrollWidth": 40,
+        "clientWidth": 40,
+        "x": 1101,
+        "y": 31,
+        "right": 1145,
+        "bottom": 75,
+        "width": 44,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-preview-1440 control label fits Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+      "ok": true,
+      "detail": {
+        "text": "Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+        "scrollWidth": 261,
+        "clientWidth": 261,
+        "x": 312,
+        "y": 577.96875,
+        "right": 577.328125,
+        "bottom": 621.96875,
+        "width": 265.328125,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-preview-1440 control label fits Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+      "ok": true,
+      "detail": {
+        "text": "Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+        "scrollWidth": 261,
+        "clientWidth": 261,
+        "x": 587.328125,
+        "y": 577.96875,
+        "right": 852.65625,
+        "bottom": 621.96875,
+        "width": 265.328125,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-preview-1440 control label fits Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+      "ok": true,
+      "detail": {
+        "text": "Matchups · play the readControl · squeeze the rateAttack · hunt wickets",
+        "scrollWidth": 261,
+        "clientWidth": 261,
+        "x": 862.65625,
+        "y": 577.96875,
+        "right": 1128,
+        "bottom": 621.96875,
+        "width": 265.34375,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-preview-1440 control label fits Play the match",
+      "ok": true,
+      "detail": {
+        "text": "Play the match",
+        "action": "playMatch",
+        "scrollWidth": 417,
+        "clientWidth": 417,
+        "x": 295,
+        "y": 693.34375,
+        "right": 714,
+        "bottom": 737.34375,
+        "width": 419,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-preview-1440 control label fits Change XI",
+      "ok": true,
+      "detail": {
+        "text": "Change XI",
+        "action": "editXI",
+        "scrollWidth": 417,
+        "clientWidth": 417,
+        "x": 726,
+        "y": 693.34375,
+        "right": 1145,
+        "bottom": 737.34375,
+        "width": 419,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-preview-1440 control label fits Your starting XI+",
+      "ok": true,
+      "detail": {
+        "text": "Your starting XI+",
+        "scrollWidth": 819,
+        "clientWidth": 819,
+        "x": 309.390625,
+        "y": 753.34375,
+        "right": 1130.609375,
+        "bottom": 805.734375,
+        "width": 821.21875,
+        "height": 52.390625
+      }
+    },
+    {
+      "id": "match-preview-1440 control label fits Ground & conditions+",
+      "ok": true,
+      "detail": {
+        "text": "Ground & conditions+",
+        "scrollWidth": 819,
+        "clientWidth": 819,
+        "x": 309.390625,
+        "y": 821.734375,
+        "right": 1130.609375,
+        "bottom": 874.125,
+        "width": 821.21875,
+        "height": 52.390625
+      }
+    },
+    {
+      "id": "match-preview-1440 control label fits Compare the two XIs+",
+      "ok": true,
+      "detail": {
+        "text": "Compare the two XIs+",
+        "scrollWidth": 819,
+        "clientWidth": 819,
+        "x": 309.390625,
+        "y": 890.125,
+        "right": 1130.609375,
+        "bottom": 942.515625,
+        "width": 821.21875,
+        "height": 52.390625
+      }
+    },
+    {
+      "id": "pre-match-320 document containment",
+      "ok": true,
+      "detail": 320
+    },
+    {
+      "id": "pre-match-320 control label fits Start match",
+      "ok": true,
+      "detail": {
+        "text": "Start match",
+        "action": "startPlayback",
+        "scrollWidth": 168,
+        "clientWidth": 168,
+        "x": 51.390625,
+        "y": 655.390625,
+        "right": 221.390625,
+        "bottom": 703.390625,
+        "width": 170,
+        "height": 48
+      }
+    },
+    {
+      "id": "pre-match-320 control label fits Show result",
+      "ok": true,
+      "detail": {
+        "text": "Show result",
+        "action": "matchSkip",
+        "scrollWidth": 168,
+        "clientWidth": 168,
+        "x": 51.390625,
+        "y": 715.390625,
+        "right": 221.390625,
+        "bottom": 763.390625,
+        "width": 170,
+        "height": 48
+      }
+    },
+    {
+      "id": "pre-match-32044px primary control Show result",
+      "ok": true,
+      "detail": {
+        "text": "Show result",
+        "action": "matchSkip",
+        "scrollWidth": 168,
+        "clientWidth": 168,
+        "x": 51.390625,
+        "y": 715.390625,
+        "right": 221.390625,
+        "bottom": 763.390625,
+        "width": 170,
+        "height": 48
+      }
+    },
+    {
+      "id": "pre-match-390 document containment",
+      "ok": true,
+      "detail": 390
+    },
+    {
+      "id": "pre-match-390 control label fits Start match",
+      "ok": true,
+      "detail": {
+        "text": "Start match",
+        "action": "startPlayback",
+        "scrollWidth": 168,
+        "clientWidth": 168,
+        "x": 51.390625,
+        "y": 643.390625,
+        "right": 221.390625,
+        "bottom": 691.390625,
+        "width": 170,
+        "height": 48
+      }
+    },
+    {
+      "id": "pre-match-390 control label fits Show result",
+      "ok": true,
+      "detail": {
+        "text": "Show result",
+        "action": "matchSkip",
+        "scrollWidth": 168,
+        "clientWidth": 168,
+        "x": 51.390625,
+        "y": 703.390625,
+        "right": 221.390625,
+        "bottom": 751.390625,
+        "width": 170,
+        "height": 48
+      }
+    },
+    {
+      "id": "pre-match-39044px primary control Show result",
+      "ok": true,
+      "detail": {
+        "text": "Show result",
+        "action": "matchSkip",
+        "scrollWidth": 168,
+        "clientWidth": 168,
+        "x": 51.390625,
+        "y": 703.390625,
+        "right": 221.390625,
+        "bottom": 751.390625,
+        "width": 170,
+        "height": 48
+      }
+    },
+    {
+      "id": "pre-match-768 document containment",
+      "ok": true,
+      "detail": 768
+    },
+    {
+      "id": "pre-match-768 control label fits Start match",
+      "ok": true,
+      "detail": {
+        "text": "Start match",
+        "action": "startPlayback",
+        "scrollWidth": 148,
+        "clientWidth": 148,
+        "x": 264.421875,
+        "y": 645.375,
+        "right": 414.421875,
+        "bottom": 693.375,
+        "width": 150,
+        "height": 48
+      }
+    },
+    {
+      "id": "pre-match-768 control label fits Show result",
+      "ok": true,
+      "detail": {
+        "text": "Show result",
+        "action": "matchSkip",
+        "scrollWidth": 148,
+        "clientWidth": 148,
+        "x": 426.421875,
+        "y": 645.375,
+        "right": 576.421875,
+        "bottom": 693.375,
+        "width": 150,
+        "height": 48
+      }
+    },
+    {
+      "id": "pre-match-76844px primary control Show result",
+      "ok": true,
+      "detail": {
+        "text": "Show result",
+        "action": "matchSkip",
+        "scrollWidth": 148,
+        "clientWidth": 148,
+        "x": 426.421875,
+        "y": 645.375,
+        "right": 576.421875,
+        "bottom": 693.375,
+        "width": 150,
+        "height": 48
+      }
+    },
+    {
+      "id": "pre-match-1440 document containment",
+      "ok": true,
+      "detail": 1440
+    },
+    {
+      "id": "pre-match-1440 control label fits Start match",
+      "ok": true,
+      "detail": {
+        "text": "Start match",
+        "action": "startPlayback",
+        "scrollWidth": 148,
+        "clientWidth": 148,
+        "x": 517.25,
+        "y": 603.4375,
+        "right": 667.25,
+        "bottom": 651.4375,
+        "width": 150,
+        "height": 48
+      }
+    },
+    {
+      "id": "pre-match-1440 control label fits Show result",
+      "ok": true,
+      "detail": {
+        "text": "Show result",
+        "action": "matchSkip",
+        "scrollWidth": 148,
+        "clientWidth": 148,
+        "x": 679.25,
+        "y": 603.4375,
+        "right": 829.25,
+        "bottom": 651.4375,
+        "width": 150,
+        "height": 48
+      }
+    },
+    {
+      "id": "pre-match-144044px primary control Show result",
+      "ok": true,
+      "detail": {
+        "text": "Show result",
+        "action": "matchSkip",
+        "scrollWidth": 148,
+        "clientWidth": 148,
+        "x": 679.25,
+        "y": 603.4375,
+        "right": 829.25,
+        "bottom": 651.4375,
+        "width": 150,
+        "height": 48
+      }
+    },
+    {
+      "id": "native keyboard Pause stops presentation",
+      "ok": true,
+      "detail": {}
+    },
+    {
+      "id": "live-first-innings-320 document containment",
+      "ok": true,
+      "detail": 320
+    },
+    {
+      "id": "live-first-innings-320 control label fits Resume",
+      "ok": true,
+      "detail": {
+        "text": "Resume",
+        "action": "matchRun",
+        "scrollWidth": 121,
+        "clientWidth": 121,
+        "x": 27.390625,
+        "y": 599.203125,
+        "right": 150.09375,
+        "bottom": 643.203125,
+        "width": 122.703125,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-first-innings-32044px primary control Resume",
+      "ok": true,
+      "detail": {
+        "text": "Resume",
+        "action": "matchRun",
+        "scrollWidth": 121,
+        "clientWidth": 121,
+        "x": 27.390625,
+        "y": 599.203125,
+        "right": 150.09375,
+        "bottom": 643.203125,
+        "width": 122.703125,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-first-innings-320 control label fits Speed 8×",
+      "ok": true,
+      "detail": {
+        "text": "Speed 8×",
+        "action": "matchSpeed",
+        "scrollWidth": 133,
+        "clientWidth": 133,
+        "x": 158.09375,
+        "y": 599.203125,
+        "right": 292.609375,
+        "bottom": 643.203125,
+        "width": 134.515625,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-first-innings-32044px primary control Speed 8×",
+      "ok": true,
+      "detail": {
+        "text": "Speed 8×",
+        "action": "matchSpeed",
+        "scrollWidth": 133,
+        "clientWidth": 133,
+        "x": 158.09375,
+        "y": 599.203125,
+        "right": 292.609375,
+        "bottom": 643.203125,
+        "width": 134.515625,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-first-innings-320 control label fits Skip to result",
+      "ok": true,
+      "detail": {
+        "text": "Skip to result",
+        "action": "matchSkip",
+        "scrollWidth": 263,
+        "clientWidth": 263,
+        "x": 27.390625,
+        "y": 651.203125,
+        "right": 292.609375,
+        "bottom": 695.203125,
+        "width": 265.21875,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-first-innings-32044px primary control Skip to result",
+      "ok": true,
+      "detail": {
+        "text": "Skip to result",
+        "action": "matchSkip",
+        "scrollWidth": 263,
+        "clientWidth": 263,
+        "x": 27.390625,
+        "y": 651.203125,
+        "right": 292.609375,
+        "bottom": 695.203125,
+        "width": 265.21875,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-first-innings-320 live rows align in real playback",
+      "ok": true,
+      "detail": [
+        {
+          "name": "Worcestershire Rapids",
+          "header": {
+            "x": 30,
+            "y": 181.125,
+            "right": 155,
+            "bottom": 313.4375,
+            "width": 125,
+            "height": 132.3125
+          },
+          "score": {
+            "x": 42,
+            "y": 333.4375,
+            "right": 143,
+            "bottom": 373.4375,
+            "width": 101,
+            "height": 40
+          },
+          "note": {
+            "x": 42,
+            "y": 380.4375,
+            "right": 143,
+            "bottom": 414.03125,
+            "width": 101,
+            "height": 33.59375
+          }
+        },
+        {
+          "name": "Mumbai Indians",
+          "header": {
+            "x": 165,
+            "y": 181.125,
+            "right": 290,
+            "bottom": 313.4375,
+            "width": 125,
+            "height": 132.3125
+          },
+          "score": {
+            "x": 177,
+            "y": 333.4375,
+            "right": 278,
+            "bottom": 373.4375,
+            "width": 101,
+            "height": 40
+          },
+          "note": {
+            "x": 177,
+            "y": 380.4375,
+            "right": 278,
+            "bottom": 397.234375,
+            "width": 101,
+            "height": 16.796875
+          }
+        }
+      ]
+    },
+    {
+      "id": "live-first-innings-320 neutral match surface gccui gccuiLiveScoreboard",
+      "ok": true,
+      "detail": {
+        "class": "gccui gccuiLiveScoreboard",
+        "background": "rgba(0, 0, 0, 0)",
+        "image": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+        "expected": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+        "ok": true
+      }
+    },
+    {
+      "id": "live-first-innings-320 neutral match surface g8playbackcontrols",
+      "ok": true,
+      "detail": {
+        "class": "g8playbackcontrols",
+        "background": "rgb(23, 27, 32)",
+        "image": "none",
+        "expected": "rgb(23, 27, 32)",
+        "ok": true
+      }
+    },
+    {
+      "id": "live-first-innings-320 neutral match surface gcc-livegrid",
+      "ok": true,
+      "detail": {
+        "class": "gcc-livegrid",
+        "background": "rgb(23, 27, 32)",
+        "image": "none",
+        "expected": "rgb(23, 27, 32)",
+        "ok": true
+      }
+    },
+    {
+      "id": "live-first-innings-390 document containment",
+      "ok": true,
+      "detail": 390
+    },
+    {
+      "id": "live-first-innings-390 control label fits Resume",
+      "ok": true,
+      "detail": {
+        "text": "Resume",
+        "action": "matchRun",
+        "scrollWidth": 156,
+        "clientWidth": 156,
+        "x": 27.390625,
+        "y": 526.640625,
+        "right": 185.09375,
+        "bottom": 570.640625,
+        "width": 157.703125,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-first-innings-39044px primary control Resume",
+      "ok": true,
+      "detail": {
+        "text": "Resume",
+        "action": "matchRun",
+        "scrollWidth": 156,
+        "clientWidth": 156,
+        "x": 27.390625,
+        "y": 526.640625,
+        "right": 185.09375,
+        "bottom": 570.640625,
+        "width": 157.703125,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-first-innings-390 control label fits Speed 8×",
+      "ok": true,
+      "detail": {
+        "text": "Speed 8×",
+        "action": "matchSpeed",
+        "scrollWidth": 168,
+        "clientWidth": 168,
+        "x": 193.09375,
+        "y": 526.640625,
+        "right": 362.609375,
+        "bottom": 570.640625,
+        "width": 169.515625,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-first-innings-39044px primary control Speed 8×",
+      "ok": true,
+      "detail": {
+        "text": "Speed 8×",
+        "action": "matchSpeed",
+        "scrollWidth": 168,
+        "clientWidth": 168,
+        "x": 193.09375,
+        "y": 526.640625,
+        "right": 362.609375,
+        "bottom": 570.640625,
+        "width": 169.515625,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-first-innings-390 control label fits Skip to result",
+      "ok": true,
+      "detail": {
+        "text": "Skip to result",
+        "action": "matchSkip",
+        "scrollWidth": 333,
+        "clientWidth": 333,
+        "x": 27.390625,
+        "y": 578.640625,
+        "right": 362.609375,
+        "bottom": 622.640625,
+        "width": 335.21875,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-first-innings-39044px primary control Skip to result",
+      "ok": true,
+      "detail": {
+        "text": "Skip to result",
+        "action": "matchSkip",
+        "scrollWidth": 333,
+        "clientWidth": 333,
+        "x": 27.390625,
+        "y": 578.640625,
+        "right": 362.609375,
+        "bottom": 622.640625,
+        "width": 335.21875,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-first-innings-390 live rows align in real playback",
+      "ok": true,
+      "detail": [
+        {
+          "name": "Worcestershire Rapids",
+          "header": {
+            "x": 30,
+            "y": 157.125,
+            "right": 190,
+            "bottom": 274.46875,
+            "width": 160,
+            "height": 117.34375
+          },
+          "score": {
+            "x": 42,
+            "y": 294.46875,
+            "right": 178,
+            "bottom": 334.46875,
+            "width": 136,
+            "height": 40
+          },
+          "note": {
+            "x": 42,
+            "y": 341.46875,
+            "right": 178,
+            "bottom": 358.265625,
+            "width": 136,
+            "height": 16.796875
+          }
+        },
+        {
+          "name": "Mumbai Indians",
+          "header": {
+            "x": 200,
+            "y": 157.125,
+            "right": 360,
+            "bottom": 274.46875,
+            "width": 160,
+            "height": 117.34375
+          },
+          "score": {
+            "x": 212,
+            "y": 294.46875,
+            "right": 348,
+            "bottom": 334.46875,
+            "width": 136,
+            "height": 40
+          },
+          "note": {
+            "x": 212,
+            "y": 341.46875,
+            "right": 348,
+            "bottom": 358.265625,
+            "width": 136,
+            "height": 16.796875
+          }
+        }
+      ]
+    },
+    {
+      "id": "live-first-innings-390 neutral match surface gccui gccuiLiveScoreboard",
+      "ok": true,
+      "detail": {
+        "class": "gccui gccuiLiveScoreboard",
+        "background": "rgba(0, 0, 0, 0)",
+        "image": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+        "expected": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+        "ok": true
+      }
+    },
+    {
+      "id": "live-first-innings-390 neutral match surface g8playbackcontrols",
+      "ok": true,
+      "detail": {
+        "class": "g8playbackcontrols",
+        "background": "rgb(23, 27, 32)",
+        "image": "none",
+        "expected": "rgb(23, 27, 32)",
+        "ok": true
+      }
+    },
+    {
+      "id": "live-first-innings-390 neutral match surface gcc-livegrid",
+      "ok": true,
+      "detail": {
+        "class": "gcc-livegrid",
+        "background": "rgb(23, 27, 32)",
+        "image": "none",
+        "expected": "rgb(23, 27, 32)",
+        "ok": true
+      }
+    },
+    {
+      "id": "live-first-innings-768 document containment",
+      "ok": true,
+      "detail": 768
+    },
+    {
+      "id": "live-first-innings-768 control label fits Resume",
+      "ok": true,
+      "detail": {
+        "text": "Resume",
+        "action": "matchRun",
+        "scrollWidth": 91,
+        "clientWidth": 91,
+        "x": 384.90625,
+        "y": 532.703125,
+        "right": 477.46875,
+        "bottom": 576.703125,
+        "width": 92.5625,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-first-innings-76844px primary control Resume",
+      "ok": true,
+      "detail": {
+        "text": "Resume",
+        "action": "matchRun",
+        "scrollWidth": 91,
+        "clientWidth": 91,
+        "x": 384.90625,
+        "y": 532.703125,
+        "right": 477.46875,
+        "bottom": 576.703125,
+        "width": 92.5625,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-first-innings-768 control label fits Speed 8×",
+      "ok": true,
+      "detail": {
+        "text": "Speed 8×",
+        "action": "matchSpeed",
+        "scrollWidth": 102,
+        "clientWidth": 102,
+        "x": 485.46875,
+        "y": 532.703125,
+        "right": 589.84375,
+        "bottom": 576.703125,
+        "width": 104.375,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-first-innings-76844px primary control Speed 8×",
+      "ok": true,
+      "detail": {
+        "text": "Speed 8×",
+        "action": "matchSpeed",
+        "scrollWidth": 102,
+        "clientWidth": 102,
+        "x": 485.46875,
+        "y": 532.703125,
+        "right": 589.84375,
+        "bottom": 576.703125,
+        "width": 104.375,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-first-innings-768 control label fits Skip to result",
+      "ok": true,
+      "detail": {
+        "text": "Skip to result",
+        "action": "matchSkip",
+        "scrollWidth": 130,
+        "clientWidth": 130,
+        "x": 597.84375,
+        "y": 532.703125,
+        "right": 729.578125,
+        "bottom": 576.703125,
+        "width": 131.734375,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-first-innings-76844px primary control Skip to result",
+      "ok": true,
+      "detail": {
+        "text": "Skip to result",
+        "action": "matchSkip",
+        "scrollWidth": 130,
+        "clientWidth": 130,
+        "x": 597.84375,
+        "y": 532.703125,
+        "right": 729.578125,
+        "bottom": 576.703125,
+        "width": 131.734375,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-first-innings-768 live rows align in real playback",
+      "ok": true,
+      "detail": [
+        {
+          "name": "Worcestershire Rapids",
+          "header": {
+            "x": 41.03125,
+            "y": 226.453125,
+            "right": 376,
+            "bottom": 300.125,
+            "width": 334.96875,
+            "height": 73.671875
+          },
+          "score": {
+            "x": 57.03125,
+            "y": 314.125,
+            "right": 360,
+            "bottom": 371.71875,
+            "width": 302.96875,
+            "height": 57.59375
+          },
+          "note": {
+            "x": 57.03125,
+            "y": 378.71875,
+            "right": 360,
+            "bottom": 395.515625,
+            "width": 302.96875,
+            "height": 16.796875
+          }
+        },
+        {
+          "name": "Mumbai Indians",
+          "header": {
+            "x": 392,
+            "y": 226.453125,
+            "right": 726.96875,
+            "bottom": 300.125,
+            "width": 334.96875,
+            "height": 73.671875
+          },
+          "score": {
+            "x": 408,
+            "y": 314.125,
+            "right": 710.96875,
+            "bottom": 371.71875,
+            "width": 302.96875,
+            "height": 57.59375
+          },
+          "note": {
+            "x": 408,
+            "y": 378.71875,
+            "right": 710.96875,
+            "bottom": 395.515625,
+            "width": 302.96875,
+            "height": 16.796875
+          }
+        }
+      ]
+    },
+    {
+      "id": "live-first-innings-768 neutral match surface gccui gccuiLiveScoreboard",
+      "ok": true,
+      "detail": {
+        "class": "gccui gccuiLiveScoreboard",
+        "background": "rgba(0, 0, 0, 0)",
+        "image": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+        "expected": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+        "ok": true
+      }
+    },
+    {
+      "id": "live-first-innings-768 neutral match surface g8playbackcontrols",
+      "ok": true,
+      "detail": {
+        "class": "g8playbackcontrols",
+        "background": "rgb(23, 27, 32)",
+        "image": "none",
+        "expected": "rgb(23, 27, 32)",
+        "ok": true
+      }
+    },
+    {
+      "id": "live-first-innings-768 neutral match surface gcc-livegrid",
+      "ok": true,
+      "detail": {
+        "class": "gcc-livegrid",
+        "background": "rgb(23, 27, 32)",
+        "image": "none",
+        "expected": "rgb(23, 27, 32)",
+        "ok": true
+      }
+    },
+    {
+      "id": "live-first-innings-1440 document containment",
+      "ok": true,
+      "detail": 1440
+    },
+    {
+      "id": "live-first-innings-1440 control label fits Resume",
+      "ok": true,
+      "detail": {
+        "text": "Resume",
+        "action": "matchRun",
+        "scrollWidth": 91,
+        "clientWidth": 91,
+        "x": 996.75,
+        "y": 464.703125,
+        "right": 1089.3125,
+        "bottom": 508.703125,
+        "width": 92.5625,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-first-innings-144044px primary control Resume",
+      "ok": true,
+      "detail": {
+        "text": "Resume",
+        "action": "matchRun",
+        "scrollWidth": 91,
+        "clientWidth": 91,
+        "x": 996.75,
+        "y": 464.703125,
+        "right": 1089.3125,
+        "bottom": 508.703125,
+        "width": 92.5625,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-first-innings-1440 control label fits Speed 8×",
+      "ok": true,
+      "detail": {
+        "text": "Speed 8×",
+        "action": "matchSpeed",
+        "scrollWidth": 102,
+        "clientWidth": 102,
+        "x": 1097.3125,
+        "y": 464.703125,
+        "right": 1201.6875,
+        "bottom": 508.703125,
+        "width": 104.375,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-first-innings-144044px primary control Speed 8×",
+      "ok": true,
+      "detail": {
+        "text": "Speed 8×",
+        "action": "matchSpeed",
+        "scrollWidth": 102,
+        "clientWidth": 102,
+        "x": 1097.3125,
+        "y": 464.703125,
+        "right": 1201.6875,
+        "bottom": 508.703125,
+        "width": 104.375,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-first-innings-1440 control label fits Skip to result",
+      "ok": true,
+      "detail": {
+        "text": "Skip to result",
+        "action": "matchSkip",
+        "scrollWidth": 130,
+        "clientWidth": 130,
+        "x": 1209.6875,
+        "y": 464.703125,
+        "right": 1341.421875,
+        "bottom": 508.703125,
+        "width": 131.734375,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-first-innings-144044px primary control Skip to result",
+      "ok": true,
+      "detail": {
+        "text": "Skip to result",
+        "action": "matchSkip",
+        "scrollWidth": 130,
+        "clientWidth": 130,
+        "x": 1209.6875,
+        "y": 464.703125,
+        "right": 1341.421875,
+        "bottom": 508.703125,
+        "width": 131.734375,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-first-innings-1440 live rows align in real playback",
+      "ok": true,
+      "detail": [
+        {
+          "name": "Worcestershire Rapids",
+          "header": {
+            "x": 101.1875,
+            "y": 158.453125,
+            "right": 712,
+            "bottom": 232.125,
+            "width": 610.8125,
+            "height": 73.671875
+          },
+          "score": {
+            "x": 117.1875,
+            "y": 246.125,
+            "right": 696,
+            "bottom": 303.71875,
+            "width": 578.8125,
+            "height": 57.59375
+          },
+          "note": {
+            "x": 117.1875,
+            "y": 310.71875,
+            "right": 696,
+            "bottom": 327.515625,
+            "width": 578.8125,
+            "height": 16.796875
+          }
+        },
+        {
+          "name": "Mumbai Indians",
+          "header": {
+            "x": 728,
+            "y": 158.453125,
+            "right": 1338.8125,
+            "bottom": 232.125,
+            "width": 610.8125,
+            "height": 73.671875
+          },
+          "score": {
+            "x": 744,
+            "y": 246.125,
+            "right": 1322.8125,
+            "bottom": 303.71875,
+            "width": 578.8125,
+            "height": 57.59375
+          },
+          "note": {
+            "x": 744,
+            "y": 310.71875,
+            "right": 1322.8125,
+            "bottom": 327.515625,
+            "width": 578.8125,
+            "height": 16.796875
+          }
+        }
+      ]
+    },
+    {
+      "id": "live-first-innings-1440 neutral match surface gccui gccuiLiveScoreboard",
+      "ok": true,
+      "detail": {
+        "class": "gccui gccuiLiveScoreboard",
+        "background": "rgba(0, 0, 0, 0)",
+        "image": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+        "expected": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+        "ok": true
+      }
+    },
+    {
+      "id": "live-first-innings-1440 neutral match surface g8playbackcontrols",
+      "ok": true,
+      "detail": {
+        "class": "g8playbackcontrols",
+        "background": "rgb(23, 27, 32)",
+        "image": "none",
+        "expected": "rgb(23, 27, 32)",
+        "ok": true
+      }
+    },
+    {
+      "id": "live-first-innings-1440 neutral match surface gcc-livegrid",
+      "ok": true,
+      "detail": {
+        "class": "gcc-livegrid",
+        "background": "rgb(23, 27, 32)",
+        "image": "none",
+        "expected": "rgb(23, 27, 32)",
+        "ok": true
+      }
+    },
+    {
+      "id": "actual match contains two delivery innings",
+      "ok": true,
+      "detail": {}
+    },
+    {
+      "id": "natural playback reaches second innings",
+      "ok": true,
+      "detail": {}
+    },
+    {
+      "id": "live-second-innings-320 document containment",
+      "ok": true,
+      "detail": 320
+    },
+    {
+      "id": "live-second-innings-320 control label fits Resume",
+      "ok": true,
+      "detail": {
+        "text": "Resume",
+        "action": "matchRun",
+        "scrollWidth": 121,
+        "clientWidth": 121,
+        "x": 27.390625,
+        "y": 617.390625,
+        "right": 150.09375,
+        "bottom": 661.390625,
+        "width": 122.703125,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-second-innings-32044px primary control Resume",
+      "ok": true,
+      "detail": {
+        "text": "Resume",
+        "action": "matchRun",
+        "scrollWidth": 121,
+        "clientWidth": 121,
+        "x": 27.390625,
+        "y": 617.390625,
+        "right": 150.09375,
+        "bottom": 661.390625,
+        "width": 122.703125,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-second-innings-320 control label fits Speed 8×",
+      "ok": true,
+      "detail": {
+        "text": "Speed 8×",
+        "action": "matchSpeed",
+        "scrollWidth": 133,
+        "clientWidth": 133,
+        "x": 158.09375,
+        "y": 617.390625,
+        "right": 292.609375,
+        "bottom": 661.390625,
+        "width": 134.515625,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-second-innings-32044px primary control Speed 8×",
+      "ok": true,
+      "detail": {
+        "text": "Speed 8×",
+        "action": "matchSpeed",
+        "scrollWidth": 133,
+        "clientWidth": 133,
+        "x": 158.09375,
+        "y": 617.390625,
+        "right": 292.609375,
+        "bottom": 661.390625,
+        "width": 134.515625,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-second-innings-320 control label fits Skip to result",
+      "ok": true,
+      "detail": {
+        "text": "Skip to result",
+        "action": "matchSkip",
+        "scrollWidth": 263,
+        "clientWidth": 263,
+        "x": 27.390625,
+        "y": 669.390625,
+        "right": 292.609375,
+        "bottom": 713.390625,
+        "width": 265.21875,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-second-innings-32044px primary control Skip to result",
+      "ok": true,
+      "detail": {
+        "text": "Skip to result",
+        "action": "matchSkip",
+        "scrollWidth": 263,
+        "clientWidth": 263,
+        "x": 27.390625,
+        "y": 669.390625,
+        "right": 292.609375,
+        "bottom": 713.390625,
+        "width": 265.21875,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-second-innings-320 live rows align in real playback",
+      "ok": true,
+      "detail": [
+        {
+          "name": "Worcestershire Rapids",
+          "header": {
+            "x": 30,
+            "y": 181.125,
+            "right": 156.96875,
+            "bottom": 313.4375,
+            "width": 126.96875,
+            "height": 132.3125
+          },
+          "score": {
+            "x": 42,
+            "y": 333.4375,
+            "right": 144.96875,
+            "bottom": 373.4375,
+            "width": 102.96875,
+            "height": 40
+          },
+          "note": {
+            "x": 42,
+            "y": 380.4375,
+            "right": 144.96875,
+            "bottom": 397.234375,
+            "width": 102.96875,
+            "height": 16.796875
+          }
+        },
+        {
+          "name": "Mumbai Indians",
+          "header": {
+            "x": 165,
+            "y": 181.125,
+            "right": 290,
+            "bottom": 313.4375,
+            "width": 125,
+            "height": 132.3125
+          },
+          "score": {
+            "x": 177,
+            "y": 333.4375,
+            "right": 278,
+            "bottom": 373.4375,
+            "width": 101,
+            "height": 40
+          },
+          "note": {
+            "x": 177,
+            "y": 380.4375,
+            "right": 278,
+            "bottom": 414.03125,
+            "width": 101,
+            "height": 33.59375
+          }
+        }
+      ]
+    },
+    {
+      "id": "live-second-innings-320 neutral match surface gccui gccuiLiveScoreboard",
+      "ok": true,
+      "detail": {
+        "class": "gccui gccuiLiveScoreboard",
+        "background": "rgba(0, 0, 0, 0)",
+        "image": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+        "expected": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+        "ok": true
+      }
+    },
+    {
+      "id": "live-second-innings-320 neutral match surface g8playbackcontrols",
+      "ok": true,
+      "detail": {
+        "class": "g8playbackcontrols",
+        "background": "rgb(23, 27, 32)",
+        "image": "none",
+        "expected": "rgb(23, 27, 32)",
+        "ok": true
+      }
+    },
+    {
+      "id": "live-second-innings-320 neutral match surface gcc-livegrid",
+      "ok": true,
+      "detail": {
+        "class": "gcc-livegrid",
+        "background": "rgb(23, 27, 32)",
+        "image": "none",
+        "expected": "rgb(23, 27, 32)",
+        "ok": true
+      }
+    },
+    {
+      "id": "live-second-innings-390 document containment",
+      "ok": true,
+      "detail": 390
+    },
+    {
+      "id": "live-second-innings-390 control label fits Resume",
+      "ok": true,
+      "detail": {
+        "text": "Resume",
+        "action": "matchRun",
+        "scrollWidth": 156,
+        "clientWidth": 156,
+        "x": 27.390625,
+        "y": 526.640625,
+        "right": 185.09375,
+        "bottom": 570.640625,
+        "width": 157.703125,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-second-innings-39044px primary control Resume",
+      "ok": true,
+      "detail": {
+        "text": "Resume",
+        "action": "matchRun",
+        "scrollWidth": 156,
+        "clientWidth": 156,
+        "x": 27.390625,
+        "y": 526.640625,
+        "right": 185.09375,
+        "bottom": 570.640625,
+        "width": 157.703125,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-second-innings-390 control label fits Speed 8×",
+      "ok": true,
+      "detail": {
+        "text": "Speed 8×",
+        "action": "matchSpeed",
+        "scrollWidth": 168,
+        "clientWidth": 168,
+        "x": 193.09375,
+        "y": 526.640625,
+        "right": 362.609375,
+        "bottom": 570.640625,
+        "width": 169.515625,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-second-innings-39044px primary control Speed 8×",
+      "ok": true,
+      "detail": {
+        "text": "Speed 8×",
+        "action": "matchSpeed",
+        "scrollWidth": 168,
+        "clientWidth": 168,
+        "x": 193.09375,
+        "y": 526.640625,
+        "right": 362.609375,
+        "bottom": 570.640625,
+        "width": 169.515625,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-second-innings-390 control label fits Skip to result",
+      "ok": true,
+      "detail": {
+        "text": "Skip to result",
+        "action": "matchSkip",
+        "scrollWidth": 333,
+        "clientWidth": 333,
+        "x": 27.390625,
+        "y": 578.640625,
+        "right": 362.609375,
+        "bottom": 622.640625,
+        "width": 335.21875,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-second-innings-39044px primary control Skip to result",
+      "ok": true,
+      "detail": {
+        "text": "Skip to result",
+        "action": "matchSkip",
+        "scrollWidth": 333,
+        "clientWidth": 333,
+        "x": 27.390625,
+        "y": 578.640625,
+        "right": 362.609375,
+        "bottom": 622.640625,
+        "width": 335.21875,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-second-innings-390 live rows align in real playback",
+      "ok": true,
+      "detail": [
+        {
+          "name": "Worcestershire Rapids",
+          "header": {
+            "x": 30,
+            "y": 157.125,
+            "right": 190,
+            "bottom": 274.46875,
+            "width": 160,
+            "height": 117.34375
+          },
+          "score": {
+            "x": 42,
+            "y": 294.46875,
+            "right": 178,
+            "bottom": 334.46875,
+            "width": 136,
+            "height": 40
+          },
+          "note": {
+            "x": 42,
+            "y": 341.46875,
+            "right": 178,
+            "bottom": 358.265625,
+            "width": 136,
+            "height": 16.796875
+          }
+        },
+        {
+          "name": "Mumbai Indians",
+          "header": {
+            "x": 200,
+            "y": 157.125,
+            "right": 360,
+            "bottom": 274.46875,
+            "width": 160,
+            "height": 117.34375
+          },
+          "score": {
+            "x": 212,
+            "y": 294.46875,
+            "right": 348,
+            "bottom": 334.46875,
+            "width": 136,
+            "height": 40
+          },
+          "note": {
+            "x": 212,
+            "y": 341.46875,
+            "right": 348,
+            "bottom": 358.265625,
+            "width": 136,
+            "height": 16.796875
+          }
+        }
+      ]
+    },
+    {
+      "id": "live-second-innings-390 neutral match surface gccui gccuiLiveScoreboard",
+      "ok": true,
+      "detail": {
+        "class": "gccui gccuiLiveScoreboard",
+        "background": "rgba(0, 0, 0, 0)",
+        "image": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+        "expected": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+        "ok": true
+      }
+    },
+    {
+      "id": "live-second-innings-390 neutral match surface g8playbackcontrols",
+      "ok": true,
+      "detail": {
+        "class": "g8playbackcontrols",
+        "background": "rgb(23, 27, 32)",
+        "image": "none",
+        "expected": "rgb(23, 27, 32)",
+        "ok": true
+      }
+    },
+    {
+      "id": "live-second-innings-390 neutral match surface gcc-livegrid",
+      "ok": true,
+      "detail": {
+        "class": "gcc-livegrid",
+        "background": "rgb(23, 27, 32)",
+        "image": "none",
+        "expected": "rgb(23, 27, 32)",
+        "ok": true
+      }
+    },
+    {
+      "id": "live-second-innings-768 document containment",
+      "ok": true,
+      "detail": 768
+    },
+    {
+      "id": "live-second-innings-768 control label fits Resume",
+      "ok": true,
+      "detail": {
+        "text": "Resume",
+        "action": "matchRun",
+        "scrollWidth": 91,
+        "clientWidth": 91,
+        "x": 384.90625,
+        "y": 532.703125,
+        "right": 477.46875,
+        "bottom": 576.703125,
+        "width": 92.5625,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-second-innings-76844px primary control Resume",
+      "ok": true,
+      "detail": {
+        "text": "Resume",
+        "action": "matchRun",
+        "scrollWidth": 91,
+        "clientWidth": 91,
+        "x": 384.90625,
+        "y": 532.703125,
+        "right": 477.46875,
+        "bottom": 576.703125,
+        "width": 92.5625,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-second-innings-768 control label fits Speed 8×",
+      "ok": true,
+      "detail": {
+        "text": "Speed 8×",
+        "action": "matchSpeed",
+        "scrollWidth": 102,
+        "clientWidth": 102,
+        "x": 485.46875,
+        "y": 532.703125,
+        "right": 589.84375,
+        "bottom": 576.703125,
+        "width": 104.375,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-second-innings-76844px primary control Speed 8×",
+      "ok": true,
+      "detail": {
+        "text": "Speed 8×",
+        "action": "matchSpeed",
+        "scrollWidth": 102,
+        "clientWidth": 102,
+        "x": 485.46875,
+        "y": 532.703125,
+        "right": 589.84375,
+        "bottom": 576.703125,
+        "width": 104.375,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-second-innings-768 control label fits Skip to result",
+      "ok": true,
+      "detail": {
+        "text": "Skip to result",
+        "action": "matchSkip",
+        "scrollWidth": 130,
+        "clientWidth": 130,
+        "x": 597.84375,
+        "y": 532.703125,
+        "right": 729.578125,
+        "bottom": 576.703125,
+        "width": 131.734375,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-second-innings-76844px primary control Skip to result",
+      "ok": true,
+      "detail": {
+        "text": "Skip to result",
+        "action": "matchSkip",
+        "scrollWidth": 130,
+        "clientWidth": 130,
+        "x": 597.84375,
+        "y": 532.703125,
+        "right": 729.578125,
+        "bottom": 576.703125,
+        "width": 131.734375,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-second-innings-768 live rows align in real playback",
+      "ok": true,
+      "detail": [
+        {
+          "name": "Worcestershire Rapids",
+          "header": {
+            "x": 41.03125,
+            "y": 226.453125,
+            "right": 376,
+            "bottom": 300.125,
+            "width": 334.96875,
+            "height": 73.671875
+          },
+          "score": {
+            "x": 57.03125,
+            "y": 314.125,
+            "right": 360,
+            "bottom": 371.71875,
+            "width": 302.96875,
+            "height": 57.59375
+          },
+          "note": {
+            "x": 57.03125,
+            "y": 378.71875,
+            "right": 360,
+            "bottom": 395.515625,
+            "width": 302.96875,
+            "height": 16.796875
+          }
+        },
+        {
+          "name": "Mumbai Indians",
+          "header": {
+            "x": 392,
+            "y": 226.453125,
+            "right": 726.96875,
+            "bottom": 300.125,
+            "width": 334.96875,
+            "height": 73.671875
+          },
+          "score": {
+            "x": 408,
+            "y": 314.125,
+            "right": 710.96875,
+            "bottom": 371.71875,
+            "width": 302.96875,
+            "height": 57.59375
+          },
+          "note": {
+            "x": 408,
+            "y": 378.71875,
+            "right": 710.96875,
+            "bottom": 395.515625,
+            "width": 302.96875,
+            "height": 16.796875
+          }
+        }
+      ]
+    },
+    {
+      "id": "live-second-innings-768 neutral match surface gccui gccuiLiveScoreboard",
+      "ok": true,
+      "detail": {
+        "class": "gccui gccuiLiveScoreboard",
+        "background": "rgba(0, 0, 0, 0)",
+        "image": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+        "expected": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+        "ok": true
+      }
+    },
+    {
+      "id": "live-second-innings-768 neutral match surface g8playbackcontrols",
+      "ok": true,
+      "detail": {
+        "class": "g8playbackcontrols",
+        "background": "rgb(23, 27, 32)",
+        "image": "none",
+        "expected": "rgb(23, 27, 32)",
+        "ok": true
+      }
+    },
+    {
+      "id": "live-second-innings-768 neutral match surface gcc-livegrid",
+      "ok": true,
+      "detail": {
+        "class": "gcc-livegrid",
+        "background": "rgb(23, 27, 32)",
+        "image": "none",
+        "expected": "rgb(23, 27, 32)",
+        "ok": true
+      }
+    },
+    {
+      "id": "live-second-innings-1440 document containment",
+      "ok": true,
+      "detail": 1440
+    },
+    {
+      "id": "live-second-innings-1440 control label fits Resume",
+      "ok": true,
+      "detail": {
+        "text": "Resume",
+        "action": "matchRun",
+        "scrollWidth": 91,
+        "clientWidth": 91,
+        "x": 996.75,
+        "y": 464.703125,
+        "right": 1089.3125,
+        "bottom": 508.703125,
+        "width": 92.5625,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-second-innings-144044px primary control Resume",
+      "ok": true,
+      "detail": {
+        "text": "Resume",
+        "action": "matchRun",
+        "scrollWidth": 91,
+        "clientWidth": 91,
+        "x": 996.75,
+        "y": 464.703125,
+        "right": 1089.3125,
+        "bottom": 508.703125,
+        "width": 92.5625,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-second-innings-1440 control label fits Speed 8×",
+      "ok": true,
+      "detail": {
+        "text": "Speed 8×",
+        "action": "matchSpeed",
+        "scrollWidth": 102,
+        "clientWidth": 102,
+        "x": 1097.3125,
+        "y": 464.703125,
+        "right": 1201.6875,
+        "bottom": 508.703125,
+        "width": 104.375,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-second-innings-144044px primary control Speed 8×",
+      "ok": true,
+      "detail": {
+        "text": "Speed 8×",
+        "action": "matchSpeed",
+        "scrollWidth": 102,
+        "clientWidth": 102,
+        "x": 1097.3125,
+        "y": 464.703125,
+        "right": 1201.6875,
+        "bottom": 508.703125,
+        "width": 104.375,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-second-innings-1440 control label fits Skip to result",
+      "ok": true,
+      "detail": {
+        "text": "Skip to result",
+        "action": "matchSkip",
+        "scrollWidth": 130,
+        "clientWidth": 130,
+        "x": 1209.6875,
+        "y": 464.703125,
+        "right": 1341.421875,
+        "bottom": 508.703125,
+        "width": 131.734375,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-second-innings-144044px primary control Skip to result",
+      "ok": true,
+      "detail": {
+        "text": "Skip to result",
+        "action": "matchSkip",
+        "scrollWidth": 130,
+        "clientWidth": 130,
+        "x": 1209.6875,
+        "y": 464.703125,
+        "right": 1341.421875,
+        "bottom": 508.703125,
+        "width": 131.734375,
+        "height": 44
+      }
+    },
+    {
+      "id": "live-second-innings-1440 live rows align in real playback",
+      "ok": true,
+      "detail": [
+        {
+          "name": "Worcestershire Rapids",
+          "header": {
+            "x": 101.1875,
+            "y": 158.453125,
+            "right": 712,
+            "bottom": 232.125,
+            "width": 610.8125,
+            "height": 73.671875
+          },
+          "score": {
+            "x": 117.1875,
+            "y": 246.125,
+            "right": 696,
+            "bottom": 303.71875,
+            "width": 578.8125,
+            "height": 57.59375
+          },
+          "note": {
+            "x": 117.1875,
+            "y": 310.71875,
+            "right": 696,
+            "bottom": 327.515625,
+            "width": 578.8125,
+            "height": 16.796875
+          }
+        },
+        {
+          "name": "Mumbai Indians",
+          "header": {
+            "x": 728,
+            "y": 158.453125,
+            "right": 1338.8125,
+            "bottom": 232.125,
+            "width": 610.8125,
+            "height": 73.671875
+          },
+          "score": {
+            "x": 744,
+            "y": 246.125,
+            "right": 1322.8125,
+            "bottom": 303.71875,
+            "width": 578.8125,
+            "height": 57.59375
+          },
+          "note": {
+            "x": 744,
+            "y": 310.71875,
+            "right": 1322.8125,
+            "bottom": 327.515625,
+            "width": 578.8125,
+            "height": 16.796875
+          }
+        }
+      ]
+    },
+    {
+      "id": "live-second-innings-1440 neutral match surface gccui gccuiLiveScoreboard",
+      "ok": true,
+      "detail": {
+        "class": "gccui gccuiLiveScoreboard",
+        "background": "rgba(0, 0, 0, 0)",
+        "image": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+        "expected": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+        "ok": true
+      }
+    },
+    {
+      "id": "live-second-innings-1440 neutral match surface g8playbackcontrols",
+      "ok": true,
+      "detail": {
+        "class": "g8playbackcontrols",
+        "background": "rgb(23, 27, 32)",
+        "image": "none",
+        "expected": "rgb(23, 27, 32)",
+        "ok": true
+      }
+    },
+    {
+      "id": "live-second-innings-1440 neutral match surface gcc-livegrid",
+      "ok": true,
+      "detail": {
+        "class": "gcc-livegrid",
+        "background": "rgb(23, 27, 32)",
+        "image": "none",
+        "expected": "rgb(23, 27, 32)",
+        "ok": true
+      }
+    },
+    {
+      "id": "native Speed cycles",
+      "ok": true,
+      "detail": {}
+    },
+    {
+      "id": "native Skip reaches result",
+      "ok": true,
+      "detail": {}
+    },
+    {
+      "id": "match-result-320 document containment",
+      "ok": true,
+      "detail": 320
+    },
+    {
+      "id": "match-result-320 control label fits Scorebook",
+      "ok": true,
+      "detail": {
+        "text": "Scorebook",
+        "action": "resultScorecard",
+        "scrollWidth": 142,
+        "clientWidth": 142,
+        "x": 12,
+        "y": 266.421875,
+        "right": 156,
+        "bottom": 310.421875,
+        "width": 144,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-result-32044px primary control Scorebook",
+      "ok": true,
+      "detail": {
+        "text": "Scorebook",
+        "action": "resultScorecard",
+        "scrollWidth": 142,
+        "clientWidth": 142,
+        "x": 12,
+        "y": 266.421875,
+        "right": 156,
+        "bottom": 310.421875,
+        "width": 144,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-result-320 control label fits Next match",
+      "ok": true,
+      "detail": {
+        "text": "Next match",
+        "action": "matchday",
+        "scrollWidth": 142,
+        "clientWidth": 142,
+        "x": 164,
+        "y": 266.421875,
+        "right": 308,
+        "bottom": 310.421875,
+        "width": 144,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-result-32044px primary control Next match",
+      "ok": true,
+      "detail": {
+        "text": "Next match",
+        "action": "matchday",
+        "scrollWidth": 142,
+        "clientWidth": 142,
+        "x": 164,
+        "y": 266.421875,
+        "right": 308,
+        "bottom": 310.421875,
+        "width": 144,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-result-320 result score/overs contained 45/10",
+      "ok": true,
+      "detail": {
+        "text": "45/10",
+        "x": 46,
+        "y": 697.390625,
+        "right": 196.25,
+        "bottom": 754.390625,
+        "width": 150.25,
+        "height": 57,
+        "card": {
+          "x": 29,
+          "y": 596.796875,
+          "right": 291,
+          "bottom": 794.890625,
+          "width": 262,
+          "height": 198.09375
+        }
+      }
+    },
+    {
+      "id": "match-result-320 result score/overs contained Batted first",
+      "ok": true,
+      "detail": {
+        "text": "Batted first",
+        "x": 208.25,
+        "y": 736.390625,
+        "right": 274,
+        "bottom": 754.390625,
+        "width": 65.75,
+        "height": 18,
+        "card": {
+          "x": 29,
+          "y": 596.796875,
+          "right": 291,
+          "bottom": 794.890625,
+          "width": 262,
+          "height": 198.09375
+        }
+      }
+    },
+    {
+      "id": "match-result-320 result score/overs contained 8.0 overs",
+      "ok": true,
+      "detail": {
+        "text": "8.0 overs",
+        "x": 46,
+        "y": 760.390625,
+        "right": 274,
+        "bottom": 779.890625,
+        "width": 228,
+        "height": 19.5,
+        "card": {
+          "x": 29,
+          "y": 596.796875,
+          "right": 291,
+          "bottom": 794.890625,
+          "width": 262,
+          "height": 198.09375
+        }
+      }
+    },
+    {
+      "id": "match-result-320 result score/overs contained 46/4",
+      "ok": true,
+      "detail": {
+        "text": "46/4",
+        "x": 46,
+        "y": 915.109375,
+        "right": 172.71875,
+        "bottom": 972.109375,
+        "width": 126.71875,
+        "height": 57,
+        "card": {
+          "x": 29,
+          "y": 824.109375,
+          "right": 291,
+          "bottom": 1012.609375,
+          "width": 262,
+          "height": 188.5
+        }
+      }
+    },
+    {
+      "id": "match-result-320 result score/overs contained Target reached",
+      "ok": true,
+      "detail": {
+        "text": "Target reached",
+        "x": 184.71875,
+        "y": 954.109375,
+        "right": 274,
+        "bottom": 972.109375,
+        "width": 89.28125,
+        "height": 18,
+        "card": {
+          "x": 29,
+          "y": 824.109375,
+          "right": 291,
+          "bottom": 1012.609375,
+          "width": 262,
+          "height": 188.5
+        }
+      }
+    },
+    {
+      "id": "match-result-320 result score/overs contained 8.1 overs",
+      "ok": true,
+      "detail": {
+        "text": "8.1 overs",
+        "x": 46,
+        "y": 978.109375,
+        "right": 274,
+        "bottom": 997.609375,
+        "width": 228,
+        "height": 19.5,
+        "card": {
+          "x": 29,
+          "y": 824.109375,
+          "right": 291,
+          "bottom": 1012.609375,
+          "width": 262,
+          "height": 188.5
+        }
+      }
+    },
+    {
+      "id": "match-result-320 neutral match surface gccui gccuiScorecard gccuiLost",
+      "ok": true,
+      "detail": {
+        "class": "gccui gccuiScorecard gccuiLost",
+        "background": "rgba(0, 0, 0, 0)",
+        "image": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+        "expected": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+        "ok": true
+      }
+    },
+    {
+      "id": "match-result-320 neutral match surface gcc-worm",
+      "ok": true,
+      "detail": {
+        "class": "gcc-worm",
+        "background": "rgb(23, 27, 32)",
+        "image": "none",
+        "expected": "rgb(23, 27, 32)",
+        "ok": true
+      }
+    },
+    {
+      "id": "match-result-390 document containment",
+      "ok": true,
+      "detail": 390
+    },
+    {
+      "id": "match-result-390 control label fits Scorebook",
+      "ok": true,
+      "detail": {
+        "text": "Scorebook",
+        "action": "resultScorecard",
+        "scrollWidth": 177,
+        "clientWidth": 177,
+        "x": 12,
+        "y": 242.421875,
+        "right": 191,
+        "bottom": 286.421875,
+        "width": 179,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-result-39044px primary control Scorebook",
+      "ok": true,
+      "detail": {
+        "text": "Scorebook",
+        "action": "resultScorecard",
+        "scrollWidth": 177,
+        "clientWidth": 177,
+        "x": 12,
+        "y": 242.421875,
+        "right": 191,
+        "bottom": 286.421875,
+        "width": 179,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-result-390 control label fits Next match",
+      "ok": true,
+      "detail": {
+        "text": "Next match",
+        "action": "matchday",
+        "scrollWidth": 177,
+        "clientWidth": 177,
+        "x": 199,
+        "y": 242.421875,
+        "right": 378,
+        "bottom": 286.421875,
+        "width": 179,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-result-39044px primary control Next match",
+      "ok": true,
+      "detail": {
+        "text": "Next match",
+        "action": "matchday",
+        "scrollWidth": 177,
+        "clientWidth": 177,
+        "x": 199,
+        "y": 242.421875,
+        "right": 378,
+        "bottom": 286.421875,
+        "width": 179,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-result-390 result score/overs contained 45/10",
+      "ok": true,
+      "detail": {
+        "text": "45/10",
+        "x": 46,
+        "y": 663.796875,
+        "right": 266.25,
+        "bottom": 720.796875,
+        "width": 220.25,
+        "height": 57,
+        "card": {
+          "x": 29,
+          "y": 572.796875,
+          "right": 361,
+          "bottom": 761.296875,
+          "width": 332,
+          "height": 188.5
+        }
+      }
+    },
+    {
+      "id": "match-result-390 result score/overs contained Batted first",
+      "ok": true,
+      "detail": {
+        "text": "Batted first",
+        "x": 278.25,
+        "y": 702.796875,
+        "right": 344,
+        "bottom": 720.796875,
+        "width": 65.75,
+        "height": 18,
+        "card": {
+          "x": 29,
+          "y": 572.796875,
+          "right": 361,
+          "bottom": 761.296875,
+          "width": 332,
+          "height": 188.5
+        }
+      }
+    },
+    {
+      "id": "match-result-390 result score/overs contained 8.0 overs",
+      "ok": true,
+      "detail": {
+        "text": "8.0 overs",
+        "x": 46,
+        "y": 726.796875,
+        "right": 344,
+        "bottom": 746.296875,
+        "width": 298,
+        "height": 19.5,
+        "card": {
+          "x": 29,
+          "y": 572.796875,
+          "right": 361,
+          "bottom": 761.296875,
+          "width": 332,
+          "height": 188.5
+        }
+      }
+    },
+    {
+      "id": "match-result-390 result score/overs contained 46/4",
+      "ok": true,
+      "detail": {
+        "text": "46/4",
+        "x": 46,
+        "y": 881.515625,
+        "right": 242.71875,
+        "bottom": 938.515625,
+        "width": 196.71875,
+        "height": 57,
+        "card": {
+          "x": 29,
+          "y": 790.515625,
+          "right": 361,
+          "bottom": 979.015625,
+          "width": 332,
+          "height": 188.5
+        }
+      }
+    },
+    {
+      "id": "match-result-390 result score/overs contained Target reached",
+      "ok": true,
+      "detail": {
+        "text": "Target reached",
+        "x": 254.71875,
+        "y": 920.515625,
+        "right": 344,
+        "bottom": 938.515625,
+        "width": 89.28125,
+        "height": 18,
+        "card": {
+          "x": 29,
+          "y": 790.515625,
+          "right": 361,
+          "bottom": 979.015625,
+          "width": 332,
+          "height": 188.5
+        }
+      }
+    },
+    {
+      "id": "match-result-390 result score/overs contained 8.1 overs",
+      "ok": true,
+      "detail": {
+        "text": "8.1 overs",
+        "x": 46,
+        "y": 944.515625,
+        "right": 344,
+        "bottom": 964.015625,
+        "width": 298,
+        "height": 19.5,
+        "card": {
+          "x": 29,
+          "y": 790.515625,
+          "right": 361,
+          "bottom": 979.015625,
+          "width": 332,
+          "height": 188.5
+        }
+      }
+    },
+    {
+      "id": "match-result-390 neutral match surface gccui gccuiScorecard gccuiLost",
+      "ok": true,
+      "detail": {
+        "class": "gccui gccuiScorecard gccuiLost",
+        "background": "rgba(0, 0, 0, 0)",
+        "image": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+        "expected": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+        "ok": true
+      }
+    },
+    {
+      "id": "match-result-390 neutral match surface gcc-worm",
+      "ok": true,
+      "detail": {
+        "class": "gcc-worm",
+        "background": "rgb(23, 27, 32)",
+        "image": "none",
+        "expected": "rgb(23, 27, 32)",
+        "ok": true
+      }
+    },
+    {
+      "id": "match-result-768 document containment",
+      "ok": true,
+      "detail": 768
+    },
+    {
+      "id": "match-result-768 control label fits Scorebook",
+      "ok": true,
+      "detail": {
+        "text": "Scorebook",
+        "action": "resultScorecard",
+        "scrollWidth": 142,
+        "clientWidth": 142,
+        "x": 473.96875,
+        "y": 243.90625,
+        "right": 617.890625,
+        "bottom": 287.90625,
+        "width": 143.921875,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-result-76844px primary control Scorebook",
+      "ok": true,
+      "detail": {
+        "text": "Scorebook",
+        "action": "resultScorecard",
+        "scrollWidth": 142,
+        "clientWidth": 142,
+        "x": 473.96875,
+        "y": 243.90625,
+        "right": 617.890625,
+        "bottom": 287.90625,
+        "width": 143.921875,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-result-768 control label fits Next match",
+      "ok": true,
+      "detail": {
+        "text": "Next match",
+        "action": "matchday",
+        "scrollWidth": 117,
+        "clientWidth": 117,
+        "x": 625.890625,
+        "y": 243.90625,
+        "right": 744.96875,
+        "bottom": 287.90625,
+        "width": 119.078125,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-result-76844px primary control Next match",
+      "ok": true,
+      "detail": {
+        "text": "Next match",
+        "action": "matchday",
+        "scrollWidth": 117,
+        "clientWidth": 117,
+        "x": 625.890625,
+        "y": 243.90625,
+        "right": 744.96875,
+        "bottom": 287.90625,
+        "width": 119.078125,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-result-768 result score/overs contained 45/10",
+      "ok": true,
+      "detail": {
+        "text": "45/10",
+        "x": 63.03125,
+        "y": 607.59375,
+        "right": 263.25,
+        "bottom": 678.59375,
+        "width": 200.21875,
+        "height": 71,
+        "card": {
+          "x": 44.03125,
+          "y": 503,
+          "right": 360,
+          "bottom": 723.09375,
+          "width": 315.96875,
+          "height": 220.09375
+        }
+      }
+    },
+    {
+      "id": "match-result-768 result score/overs contained Batted first",
+      "ok": true,
+      "detail": {
+        "text": "Batted first",
+        "x": 275.25,
+        "y": 660.59375,
+        "right": 341,
+        "bottom": 678.59375,
+        "width": 65.75,
+        "height": 18,
+        "card": {
+          "x": 44.03125,
+          "y": 503,
+          "right": 360,
+          "bottom": 723.09375,
+          "width": 315.96875,
+          "height": 220.09375
+        }
+      }
+    },
+    {
+      "id": "match-result-768 result score/overs contained 8.0 overs",
+      "ok": true,
+      "detail": {
+        "text": "8.0 overs",
+        "x": 63.03125,
+        "y": 684.59375,
+        "right": 341,
+        "bottom": 704.09375,
+        "width": 277.96875,
+        "height": 19.5,
+        "card": {
+          "x": 44.03125,
+          "y": 503,
+          "right": 360,
+          "bottom": 723.09375,
+          "width": 315.96875,
+          "height": 220.09375
+        }
+      }
+    },
+    {
+      "id": "match-result-768 result score/overs contained 46/4",
+      "ok": true,
+      "detail": {
+        "text": "46/4",
+        "x": 427,
+        "y": 598,
+        "right": 603.6875,
+        "bottom": 669,
+        "width": 176.6875,
+        "height": 71,
+        "card": {
+          "x": 408,
+          "y": 503,
+          "right": 723.96875,
+          "bottom": 723.09375,
+          "width": 315.96875,
+          "height": 220.09375
+        }
+      }
+    },
+    {
+      "id": "match-result-768 result score/overs contained Target reached",
+      "ok": true,
+      "detail": {
+        "text": "Target reached",
+        "x": 615.6875,
+        "y": 651,
+        "right": 704.96875,
+        "bottom": 669,
+        "width": 89.28125,
+        "height": 18,
+        "card": {
+          "x": 408,
+          "y": 503,
+          "right": 723.96875,
+          "bottom": 723.09375,
+          "width": 315.96875,
+          "height": 220.09375
+        }
+      }
+    },
+    {
+      "id": "match-result-768 result score/overs contained 8.1 overs",
+      "ok": true,
+      "detail": {
+        "text": "8.1 overs",
+        "x": 427,
+        "y": 675,
+        "right": 704.96875,
+        "bottom": 694.5,
+        "width": 277.96875,
+        "height": 19.5,
+        "card": {
+          "x": 408,
+          "y": 503,
+          "right": 723.96875,
+          "bottom": 723.09375,
+          "width": 315.96875,
+          "height": 220.09375
+        }
+      }
+    },
+    {
+      "id": "match-result-768 neutral match surface gccui gccuiScorecard gccuiLost",
+      "ok": true,
+      "detail": {
+        "class": "gccui gccuiScorecard gccuiLost",
+        "background": "rgba(0, 0, 0, 0)",
+        "image": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+        "expected": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+        "ok": true
+      }
+    },
+    {
+      "id": "match-result-768 neutral match surface gcc-worm",
+      "ok": true,
+      "detail": {
+        "class": "gcc-worm",
+        "background": "rgb(23, 27, 32)",
+        "image": "none",
+        "expected": "rgb(23, 27, 32)",
+        "ok": true
+      }
+    },
+    {
+      "id": "match-result-1440 document containment",
+      "ok": true,
+      "detail": 1440
+    },
+    {
+      "id": "match-result-1440 control label fits Scorebook",
+      "ok": true,
+      "detail": {
+        "text": "Scorebook",
+        "action": "resultScorecard",
+        "scrollWidth": 142,
+        "clientWidth": 142,
+        "x": 1085.8125,
+        "y": 164.171875,
+        "right": 1229.734375,
+        "bottom": 208.171875,
+        "width": 143.921875,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-result-144044px primary control Scorebook",
+      "ok": true,
+      "detail": {
+        "text": "Scorebook",
+        "action": "resultScorecard",
+        "scrollWidth": 142,
+        "clientWidth": 142,
+        "x": 1085.8125,
+        "y": 164.171875,
+        "right": 1229.734375,
+        "bottom": 208.171875,
+        "width": 143.921875,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-result-1440 control label fits Next match",
+      "ok": true,
+      "detail": {
+        "text": "Next match",
+        "action": "matchday",
+        "scrollWidth": 117,
+        "clientWidth": 117,
+        "x": 1237.734375,
+        "y": 164.171875,
+        "right": 1356.8125,
+        "bottom": 208.171875,
+        "width": 119.078125,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-result-144044px primary control Next match",
+      "ok": true,
+      "detail": {
+        "text": "Next match",
+        "action": "matchday",
+        "scrollWidth": 117,
+        "clientWidth": 117,
+        "x": 1237.734375,
+        "y": 164.171875,
+        "right": 1356.8125,
+        "bottom": 208.171875,
+        "width": 119.078125,
+        "height": 44
+      }
+    },
+    {
+      "id": "match-result-1440 result score/overs contained 45/10",
+      "ok": true,
+      "detail": {
+        "text": "45/10",
+        "x": 123.1875,
+        "y": 566.125,
+        "right": 586.25,
+        "bottom": 637.125,
+        "width": 463.0625,
+        "height": 71,
+        "card": {
+          "x": 104.1875,
+          "y": 471.125,
+          "right": 683,
+          "bottom": 681.625,
+          "width": 578.8125,
+          "height": 210.5
+        }
+      }
+    },
+    {
+      "id": "match-result-1440 result score/overs contained Batted first",
+      "ok": true,
+      "detail": {
+        "text": "Batted first",
+        "x": 598.25,
+        "y": 619.125,
+        "right": 664,
+        "bottom": 637.125,
+        "width": 65.75,
+        "height": 18,
+        "card": {
+          "x": 104.1875,
+          "y": 471.125,
+          "right": 683,
+          "bottom": 681.625,
+          "width": 578.8125,
+          "height": 210.5
+        }
+      }
+    },
+    {
+      "id": "match-result-1440 result score/overs contained 8.0 overs",
+      "ok": true,
+      "detail": {
+        "text": "8.0 overs",
+        "x": 123.1875,
+        "y": 643.125,
+        "right": 664,
+        "bottom": 662.625,
+        "width": 540.8125,
+        "height": 19.5,
+        "card": {
+          "x": 104.1875,
+          "y": 471.125,
+          "right": 683,
+          "bottom": 681.625,
+          "width": 578.8125,
+          "height": 210.5
+        }
+      }
+    },
+    {
+      "id": "match-result-1440 result score/overs contained 46/4",
+      "ok": true,
+      "detail": {
+        "text": "46/4",
+        "x": 776,
+        "y": 566.125,
+        "right": 1215.53125,
+        "bottom": 637.125,
+        "width": 439.53125,
+        "height": 71,
+        "card": {
+          "x": 757,
+          "y": 471.125,
+          "right": 1335.8125,
+          "bottom": 681.625,
+          "width": 578.8125,
+          "height": 210.5
+        }
+      }
+    },
+    {
+      "id": "match-result-1440 result score/overs contained Target reached",
+      "ok": true,
+      "detail": {
+        "text": "Target reached",
+        "x": 1227.53125,
+        "y": 619.125,
+        "right": 1316.8125,
+        "bottom": 637.125,
+        "width": 89.28125,
+        "height": 18,
+        "card": {
+          "x": 757,
+          "y": 471.125,
+          "right": 1335.8125,
+          "bottom": 681.625,
+          "width": 578.8125,
+          "height": 210.5
+        }
+      }
+    },
+    {
+      "id": "match-result-1440 result score/overs contained 8.1 overs",
+      "ok": true,
+      "detail": {
+        "text": "8.1 overs",
+        "x": 776,
+        "y": 643.125,
+        "right": 1316.8125,
+        "bottom": 662.625,
+        "width": 540.8125,
+        "height": 19.5,
+        "card": {
+          "x": 757,
+          "y": 471.125,
+          "right": 1335.8125,
+          "bottom": 681.625,
+          "width": 578.8125,
+          "height": 210.5
+        }
+      }
+    },
+    {
+      "id": "match-result-1440 neutral match surface gccui gccuiScorecard gccuiLost",
+      "ok": true,
+      "detail": {
+        "class": "gccui gccuiScorecard gccuiLost",
+        "background": "rgba(0, 0, 0, 0)",
+        "image": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+        "expected": "linear-gradient(rgb(34, 41, 48), rgb(23, 27, 32))",
+        "ok": true
+      }
+    },
+    {
+      "id": "match-result-1440 neutral match surface gcc-worm",
+      "ok": true,
+      "detail": {
+        "class": "gcc-worm",
+        "background": "rgb(23, 27, 32)",
+        "image": "none",
+        "expected": "rgb(23, 27, 32)",
+        "ok": true
+      }
+    },
+    {
+      "id": "scorebook-top-320 document containment",
+      "ok": true,
+      "detail": 320
+    },
+    {
+      "id": "scorebook-top-320 control label fits Close Match scorecard",
+      "ok": true,
+      "detail": {
+        "text": "Close Match scorecard",
+        "action": "close",
+        "scrollWidth": 40,
+        "clientWidth": 40,
+        "x": 247,
+        "y": 29,
+        "right": 291,
+        "bottom": 73,
+        "width": 44,
+        "height": 44
+      }
+    },
+    {
+      "id": "scorebook vertical end reachable 320",
+      "ok": true,
+      "detail": {
+        "needed": true,
+        "reached": true,
+        "scrollHeight": 3453,
+        "clientHeight": 874
+      }
+    },
+    {
+      "id": "scorebook-bottom-320 document containment",
+      "ok": true,
+      "detail": 320
+    },
+    {
+      "id": "scorebook-bottom-320 control label fits Close Match scorecard",
+      "ok": true,
+      "detail": {
+        "text": "Close Match scorecard",
+        "action": "close",
+        "scrollWidth": 40,
+        "clientWidth": 40,
+        "x": 247,
+        "y": 29,
+        "right": 291,
+        "bottom": 73,
+        "width": 44,
+        "height": 44
+      }
+    },
+    {
+      "id": "scorebook Escape returns focus 320",
+      "ok": true,
+      "detail": {}
+    },
+    {
+      "id": "scorebook read-only 320",
+      "ok": true,
+      "detail": {}
+    },
+    {
+      "id": "scorebook-top-390 document containment",
+      "ok": true,
+      "detail": 390
+    },
+    {
+      "id": "scorebook-top-390 control label fits Close Match scorecard",
+      "ok": true,
+      "detail": {
+        "text": "Close Match scorecard",
+        "action": "close",
+        "scrollWidth": 40,
+        "clientWidth": 40,
+        "x": 317,
+        "y": 29,
+        "right": 361,
+        "bottom": 73,
+        "width": 44,
+        "height": 44
+      }
+    },
+    {
+      "id": "scorebook vertical end reachable 390",
+      "ok": true,
+      "detail": {
+        "needed": true,
+        "reached": true,
+        "scrollHeight": 2834,
+        "clientHeight": 874
+      }
+    },
+    {
+      "id": "scorebook-bottom-390 document containment",
+      "ok": true,
+      "detail": 390
+    },
+    {
+      "id": "scorebook-bottom-390 control label fits Close Match scorecard",
+      "ok": true,
+      "detail": {
+        "text": "Close Match scorecard",
+        "action": "close",
+        "scrollWidth": 40,
+        "clientWidth": 40,
+        "x": 317,
+        "y": 29,
+        "right": 361,
+        "bottom": 73,
+        "width": 44,
+        "height": 44
+      }
+    },
+    {
+      "id": "scorebook Escape returns focus 390",
+      "ok": true,
+      "detail": {}
+    },
+    {
+      "id": "scorebook read-only 390",
+      "ok": true,
+      "detail": {}
+    },
+    {
+      "id": "scorebook-top-768 document containment",
+      "ok": true,
+      "detail": 768
+    },
+    {
+      "id": "scorebook-top-768 control label fits Close Match scorecard",
+      "ok": true,
+      "detail": {
+        "text": "Close Match scorecard",
+        "action": "close",
+        "scrollWidth": 40,
+        "clientWidth": 40,
+        "x": 677.953125,
+        "y": 31,
+        "right": 721.953125,
+        "bottom": 75,
+        "width": 44,
+        "height": 44
+      }
+    },
+    {
+      "id": "scorebook vertical end reachable 768",
+      "ok": true,
+      "detail": {
+        "needed": true,
+        "reached": true,
+        "scrollHeight": 2581,
+        "clientHeight": 874
+      }
+    },
+    {
+      "id": "scorebook-bottom-768 document containment",
+      "ok": true,
+      "detail": 768
+    },
+    {
+      "id": "scorebook-bottom-768 control label fits Close Match scorecard",
+      "ok": true,
+      "detail": {
+        "text": "Close Match scorecard",
+        "action": "close",
+        "scrollWidth": 40,
+        "clientWidth": 40,
+        "x": 677.953125,
+        "y": 31,
+        "right": 721.953125,
+        "bottom": 75,
+        "width": 44,
+        "height": 44
+      }
+    },
+    {
+      "id": "scorebook Escape returns focus 768",
+      "ok": true,
+      "detail": {}
+    },
+    {
+      "id": "scorebook read-only 768",
+      "ok": true,
+      "detail": {}
+    },
+    {
+      "id": "scorebook-top-1440 document containment",
+      "ok": true,
+      "detail": 1440
+    },
+    {
+      "id": "scorebook-top-1440 control label fits Close Match scorecard",
+      "ok": true,
+      "detail": {
+        "text": "Close Match scorecard",
+        "action": "close",
+        "scrollWidth": 40,
+        "clientWidth": 40,
+        "x": 1128,
+        "y": 31,
+        "right": 1172,
+        "bottom": 75,
+        "width": 44,
+        "height": 44
+      }
+    },
+    {
+      "id": "scorebook vertical end reachable 1440",
+      "ok": true,
+      "detail": {
+        "needed": true,
+        "reached": true,
+        "scrollHeight": 2530,
+        "clientHeight": 874
+      }
+    },
+    {
+      "id": "scorebook-bottom-1440 document containment",
+      "ok": true,
+      "detail": 1440
+    },
+    {
+      "id": "scorebook-bottom-1440 control label fits Close Match scorecard",
+      "ok": true,
+      "detail": {
+        "text": "Close Match scorecard",
+        "action": "close",
+        "scrollWidth": 40,
+        "clientWidth": 40,
+        "x": 1128,
+        "y": 31,
+        "right": 1172,
+        "bottom": 75,
+        "width": 44,
+        "height": 44
+      }
+    },
+    {
+      "id": "scorebook Escape returns focus 1440",
+      "ok": true,
+      "detail": {}
+    },
+    {
+      "id": "scorebook read-only 1440",
+      "ok": true,
+      "detail": {}
+    },
+    {
+      "id": "Next match returns to matchday without playing round2",
+      "ok": true,
+      "detail": {}
+    },
+    {
+      "id": "matchday return preserves cricket ledger",
+      "ok": true,
+      "detail": {}
+    },
+    {
+      "id": "matchday-after-320 document containment",
+      "ok": true,
+      "detail": 320
+    },
+    {
+      "id": "matchday-after-320 control label fits Review XI",
+      "ok": true,
+      "detail": {
+        "text": "Review XI",
+        "action": "editXI",
+        "scrollWidth": 125,
+        "clientWidth": 125,
+        "x": 29,
+        "y": 508.609375,
+        "right": 156,
+        "bottom": 560.609375,
+        "width": 127,
+        "height": 52
+      }
+    },
+    {
+      "id": "matchday-after-320 control label fits Watch match",
+      "ok": true,
+      "detail": {
+        "text": "Watch match",
+        "action": "watchNext",
+        "scrollWidth": 125,
+        "clientWidth": 125,
+        "x": 164,
+        "y": 508.609375,
+        "right": 291,
+        "bottom": 560.609375,
+        "width": 127,
+        "height": 52
+      }
+    },
+    {
+      "id": "matchday-after-320 control label fits View result",
+      "ok": true,
+      "detail": {
+        "text": "View result",
+        "action": "result",
+        "scrollWidth": 145,
+        "clientWidth": 145,
+        "x": 29,
+        "y": 1448.515625,
+        "right": 176.46875,
+        "bottom": 1492.515625,
+        "width": 147.46875,
+        "height": 44
+      }
+    },
+    {
+      "id": "matchday-after-320 control label fits Match preview",
+      "ok": true,
+      "detail": {
+        "text": "Match preview",
+        "action": "prepare",
+        "scrollWidth": 173,
+        "clientWidth": 173,
+        "x": 29,
+        "y": 1577.3125,
+        "right": 203.734375,
+        "bottom": 1621.3125,
+        "width": 174.734375,
+        "height": 44
+      }
+    },
+    {
+      "id": "matchday-after-320 control label fits Ground & conditions+",
+      "ok": true,
+      "detail": {
+        "text": "Ground & conditions+",
+        "scrollWidth": 231,
+        "clientWidth": 231,
+        "x": 44.390625,
+        "y": 1649.3125,
+        "right": 275.609375,
+        "bottom": 1699.703125,
+        "width": 231.21875,
+        "height": 50.390625
+      }
+    },
+    {
+      "id": "matchday-after-320 control label fits Season analysis+",
+      "ok": true,
+      "detail": {
+        "text": "Season analysis+",
+        "scrollWidth": 231,
+        "clientWidth": 231,
+        "x": 44.390625,
+        "y": 1713.703125,
+        "right": 275.609375,
+        "bottom": 1764.09375,
+        "width": 231.21875,
+        "height": 50.390625
+      }
+    },
+    {
+      "id": "matchday-after-320 control label fits Wickets and scoring context",
+      "ok": true,
+      "detail": {
+        "text": "Wickets and scoring context",
+        "scrollWidth": 229,
+        "clientWidth": 229,
+        "x": 45.390625,
+        "y": 2065.71875,
+        "right": 274.609375,
+        "bottom": 2129.6875,
+        "width": 229.21875,
+        "height": 63.96875
+      }
+    },
+    {
+      "id": "matchday-after-320 control label fits Season format+",
+      "ok": true,
+      "detail": {
+        "text": "Season format+",
+        "scrollWidth": 231,
+        "clientWidth": 231,
+        "x": 44.390625,
+        "y": 1778.09375,
+        "right": 275.609375,
+        "bottom": 1828.484375,
+        "width": 231.21875,
+        "height": 50.390625
+      }
+    },
+    {
+      "id": "matchday-after-390 document containment",
+      "ok": true,
+      "detail": 390
+    },
+    {
+      "id": "matchday-after-390 control label fits Review XI",
+      "ok": true,
+      "detail": {
+        "text": "Review XI",
+        "action": "editXI",
+        "scrollWidth": 160,
+        "clientWidth": 160,
+        "x": 29,
+        "y": 449.8125,
+        "right": 191,
+        "bottom": 495.8125,
+        "width": 162,
+        "height": 46
+      }
+    },
+    {
+      "id": "matchday-after-390 control label fits Watch match",
+      "ok": true,
+      "detail": {
+        "text": "Watch match",
+        "action": "watchNext",
+        "scrollWidth": 160,
+        "clientWidth": 160,
+        "x": 199,
+        "y": 449.8125,
+        "right": 361,
+        "bottom": 495.8125,
+        "width": 162,
+        "height": 46
+      }
+    },
+    {
+      "id": "matchday-after-390 control label fits View result",
+      "ok": true,
+      "detail": {
+        "text": "View result",
+        "action": "result",
+        "scrollWidth": 145,
+        "clientWidth": 145,
+        "x": 29,
+        "y": 1341.828125,
+        "right": 176.46875,
+        "bottom": 1385.828125,
+        "width": 147.46875,
+        "height": 44
+      }
+    },
+    {
+      "id": "matchday-after-390 control label fits Match preview",
+      "ok": true,
+      "detail": {
+        "text": "Match preview",
+        "action": "prepare",
+        "scrollWidth": 173,
+        "clientWidth": 173,
+        "x": 29,
+        "y": 1470.625,
+        "right": 203.734375,
+        "bottom": 1514.625,
+        "width": 174.734375,
+        "height": 44
+      }
+    },
+    {
+      "id": "matchday-after-390 control label fits Ground & conditions+",
+      "ok": true,
+      "detail": {
+        "text": "Ground & conditions+",
+        "scrollWidth": 301,
+        "clientWidth": 301,
+        "x": 44.390625,
+        "y": 1542.625,
+        "right": 345.609375,
+        "bottom": 1593.015625,
+        "width": 301.21875,
+        "height": 50.390625
+      }
+    },
+    {
+      "id": "matchday-after-390 control label fits Season analysis+",
+      "ok": true,
+      "detail": {
+        "text": "Season analysis+",
+        "scrollWidth": 301,
+        "clientWidth": 301,
+        "x": 44.390625,
+        "y": 1607.015625,
+        "right": 345.609375,
+        "bottom": 1657.40625,
+        "width": 301.21875,
+        "height": 50.390625
+      }
+    },
+    {
+      "id": "matchday-after-390 control label fits Wickets and scoring context",
+      "ok": true,
+      "detail": {
+        "text": "Wickets and scoring context",
+        "scrollWidth": 299,
+        "clientWidth": 299,
+        "x": 45.390625,
+        "y": 1940,
+        "right": 344.609375,
+        "bottom": 1984,
+        "width": 299.21875,
+        "height": 44
+      }
+    },
+    {
+      "id": "matchday-after-390 control label fits Season format+",
+      "ok": true,
+      "detail": {
+        "text": "Season format+",
+        "scrollWidth": 301,
+        "clientWidth": 301,
+        "x": 44.390625,
+        "y": 1671.40625,
+        "right": 345.609375,
+        "bottom": 1721.796875,
+        "width": 301.21875,
+        "height": 50.390625
+      }
+    },
+    {
+      "id": "matchday-after-768 document containment",
+      "ok": true,
+      "detail": 768
+    },
+    {
+      "id": "matchday-after-768 control label fits Review XI",
+      "ok": true,
+      "detail": {
+        "text": "Review XI",
+        "action": "editXI",
+        "scrollWidth": 188,
+        "clientWidth": 188,
+        "x": 40.03125,
+        "y": 424.625,
+        "right": 230,
+        "bottom": 468.625,
+        "width": 189.96875,
+        "height": 44
+      }
+    },
+    {
+      "id": "matchday-after-768 control label fits Watch match",
+      "ok": true,
+      "detail": {
+        "text": "Watch match",
+        "action": "watchNext",
+        "scrollWidth": 188,
+        "clientWidth": 188,
+        "x": 238,
+        "y": 424.625,
+        "right": 427.96875,
+        "bottom": 468.625,
+        "width": 189.96875,
+        "height": 44
+      }
+    },
+    {
+      "id": "matchday-after-768 control label fits View result",
+      "ok": true,
+      "detail": {
+        "text": "View result",
+        "action": "result",
+        "scrollWidth": 145,
+        "clientWidth": 145,
+        "x": 40.03125,
+        "y": 1066.71875,
+        "right": 187.5,
+        "bottom": 1110.71875,
+        "width": 147.46875,
+        "height": 44
+      }
+    },
+    {
+      "id": "matchday-after-768 control label fits Match preview",
+      "ok": true,
+      "detail": {
+        "text": "Match preview",
+        "action": "prepare",
+        "scrollWidth": 173,
+        "clientWidth": 173,
+        "x": 340.796875,
+        "y": 923.953125,
+        "right": 515.53125,
+        "bottom": 967.953125,
+        "width": 174.734375,
+        "height": 44
+      }
+    },
+    {
+      "id": "matchday-after-768 control label fits Ground & conditions+",
+      "ok": true,
+      "detail": {
+        "text": "Ground & conditions+",
+        "scrollWidth": 356,
+        "clientWidth": 356,
+        "x": 356.1875,
+        "y": 995.953125,
+        "right": 712.578125,
+        "bottom": 1046.34375,
+        "width": 356.390625,
+        "height": 50.390625
+      }
+    },
+    {
+      "id": "matchday-after-768 control label fits Season analysis+",
+      "ok": true,
+      "detail": {
+        "text": "Season analysis+",
+        "scrollWidth": 356,
+        "clientWidth": 356,
+        "x": 356.1875,
+        "y": 1060.34375,
+        "right": 712.578125,
+        "bottom": 1110.734375,
+        "width": 356.390625,
+        "height": 50.390625
+      }
+    },
+    {
+      "id": "matchday-after-768 control label fits Wickets and scoring context",
+      "ok": true,
+      "detail": {
+        "text": "Wickets and scoring context",
+        "scrollWidth": 354,
+        "clientWidth": 354,
+        "x": 357.1875,
+        "y": 1393.328125,
+        "right": 711.578125,
+        "bottom": 1437.328125,
+        "width": 354.390625,
+        "height": 44
+      }
+    },
+    {
+      "id": "matchday-after-768 control label fits Season format+",
+      "ok": true,
+      "detail": {
+        "text": "Season format+",
+        "scrollWidth": 356,
+        "clientWidth": 356,
+        "x": 356.1875,
+        "y": 1124.734375,
+        "right": 712.578125,
+        "bottom": 1175.125,
+        "width": 356.390625,
+        "height": 50.390625
+      }
+    },
+    {
+      "id": "matchday-after-1440 document containment",
+      "ok": true,
+      "detail": 1440
+    },
+    {
+      "id": "matchday-after-1440 control label fits Review XI",
+      "ok": true,
+      "detail": {
+        "text": "Review XI",
+        "action": "editXI",
+        "scrollWidth": 134,
+        "clientWidth": 134,
+        "x": 549.125,
+        "y": 266.703125,
+        "right": 685.15625,
+        "bottom": 310.703125,
+        "width": 136.03125,
+        "height": 44
+      }
+    },
+    {
+      "id": "matchday-after-1440 control label fits Watch match",
+      "ok": true,
+      "detail": {
+        "text": "Watch match",
+        "action": "watchNext",
+        "scrollWidth": 160,
+        "clientWidth": 160,
+        "x": 693.15625,
+        "y": 266.703125,
+        "right": 855.5,
+        "bottom": 310.703125,
+        "width": 162.34375,
+        "height": 44
+      }
+    },
+    {
+      "id": "matchday-after-1440 control label fits View result",
+      "ok": true,
+      "detail": {
+        "text": "View result",
+        "action": "result",
+        "scrollWidth": 145,
+        "clientWidth": 145,
+        "x": 100.1875,
+        "y": 849.328125,
+        "right": 247.65625,
+        "bottom": 893.328125,
+        "width": 147.46875,
+        "height": 44
+      }
+    },
+    {
+      "id": "matchday-after-1440 control label fits Match preview",
+      "ok": true,
+      "detail": {
+        "text": "Match preview",
+        "action": "prepare",
+        "scrollWidth": 173,
+        "clientWidth": 173,
+        "x": 1165.078125,
+        "y": 690.15625,
+        "right": 1339.8125,
+        "bottom": 734.15625,
+        "width": 174.734375,
+        "height": 44
+      }
+    },
+    {
+      "id": "matchday-after-1440 control label fits Ground & conditions+",
+      "ok": true,
+      "detail": {
+        "text": "Ground & conditions+",
+        "scrollWidth": 687,
+        "clientWidth": 687,
+        "x": 637.015625,
+        "y": 762.15625,
+        "right": 1324.421875,
+        "bottom": 812.546875,
+        "width": 687.40625,
+        "height": 50.390625
+      }
+    },
+    {
+      "id": "matchday-after-1440 control label fits Season analysis+",
+      "ok": true,
+      "detail": {
+        "text": "Season analysis+",
+        "scrollWidth": 687,
+        "clientWidth": 687,
+        "x": 637.015625,
+        "y": 826.546875,
+        "right": 1324.421875,
+        "bottom": 876.9375,
+        "width": 687.40625,
+        "height": 50.390625
+      }
+    },
+    {
+      "id": "matchday-after-1440 control label fits Wickets and scoring context",
+      "ok": true,
+      "detail": {
+        "text": "Wickets and scoring context",
+        "scrollWidth": 685,
+        "clientWidth": 685,
+        "x": 638.015625,
+        "y": 1057.546875,
+        "right": 1323.421875,
+        "bottom": 1101.546875,
+        "width": 685.40625,
+        "height": 44
+      }
+    },
+    {
+      "id": "matchday-after-1440 control label fits Season format+",
+      "ok": true,
+      "detail": {
+        "text": "Season format+",
+        "scrollWidth": 687,
+        "clientWidth": 687,
+        "x": 637.015625,
+        "y": 890.9375,
+        "right": 1324.421875,
+        "bottom": 941.328125,
+        "width": 687.40625,
+        "height": 50.390625
+      }
+    }
+  ],
+  "findings": [],
+  "errors": [],
+  "scroll": [
+    {
+      "width": 320,
+      "needed": true,
+      "reached": true,
+      "scrollHeight": 3453,
+      "clientHeight": 874
+    },
+    {
+      "width": 390,
+      "needed": true,
+      "reached": true,
+      "scrollHeight": 2834,
+      "clientHeight": 874
+    },
+    {
+      "width": 768,
+      "needed": true,
+      "reached": true,
+      "scrollHeight": 2581,
+      "clientHeight": 874
+    },
+    {
+      "width": 1440,
+      "needed": true,
+      "reached": true,
+      "scrollHeight": 2530,
+      "clientHeight": 874
+    }
+  ],
+  "status": "PASS"
+}
