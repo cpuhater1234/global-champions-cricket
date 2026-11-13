@@ -374,7 +374,7 @@
 
 /* 16 ─ Live scoreboard */
 #g8app#g8app#g8app .g8ballarena{border:0!important;background:none!important;box-shadow:none!important}
-#g8app#g8app#g8app .gccuiLiveScoreboard{background:linear-gradient(180deg,rgba(19,40,64,.8),rgba(7,19,30,.96))!important;
+#g8app#g8app#g8app .gccuiLiveScoreboard{background:linear-gradient(180deg,var(--gcc-raised),var(--gcc-panel))!important;
   border:1px solid var(--gcc-line)!important;border-radius:14px!important;padding:1rem!important;
   box-shadow:0 24px 50px -30px #000}
 #g8app#g8app#g8app .gccuiLivePhase{white-space:nowrap;font-family:var(--vx-display)!important;font-size:1.05rem!important;font-weight:700!important;
@@ -395,11 +395,11 @@
 #g8app#g8app#g8app .gccuiLiveOrder{color:var(--gcc-muted)!important}
 #g8app#g8app#g8app .gccuiLiveEquation{background:rgba(255,255,255,.05)!important;border-left:4px solid var(--vx-glow)!important;
   font-weight:700;border-radius:0 6px 6px 0}
-#g8app#g8app#g8app .g8playbackcontrols{background:rgba(7,19,30,.85)!important;border:1px solid var(--gcc-line)!important;
+#g8app#g8app#g8app .g8playbackcontrols{background:var(--gcc-panel)!important;border:1px solid var(--gcc-line)!important;
   border-radius:10px!important;padding:.6rem .9rem!important;margin-block:.8rem}
 #g8app#g8app#g8app .g8playbackcontrols>span{font-family:var(--vx-display);letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#7ef0a8}
 #g8app#g8app#g8app .gcc-livegrid{border:1px solid var(--gcc-line);border-radius:12px;overflow:hidden;
-  background:rgba(7,19,30,.7)!important}
+  background:var(--gcc-panel)!important}
 #g8app#g8app#g8app .gcc-delivery,#g8app#g8app#g8app .gcc-crease{background:none!important;border-color:var(--gcc-line)!important}
 
 /* 17 ─ The ball-by-ball "moment": bigger, and it reacts to fours, sixes, wickets */
@@ -435,13 +435,13 @@
 #g8app#g8app#g8app .gcc-bowler strong{font-family:var(--vx-display);font-size:2rem}
 /* Keep changing live statistics aligned across proportional and display faces. */
 #g8app#g8app#g8app .gcc-crease :is(td,td b),#g8app#g8app#g8app .gcc-bowler :is(strong,strong small){font-variant-numeric:tabular-nums}
-#g8app#g8app#g8app .gcc-history{background:rgba(7,19,30,.7)!important;border:1px solid var(--gcc-line)!important;border-radius:12px;overflow:hidden}
+#g8app#g8app#g8app .gcc-history{background:var(--gcc-panel)!important;border:1px solid var(--gcc-line)!important;border-radius:12px;overflow:hidden}
 #g8app#g8app#g8app .gcc-history>*{background-color:transparent!important}
 #g8app#g8app#g8app .gcc-history .g8overrow,#g8app#g8app#g8app .gcc-history article,#g8app#g8app#g8app .gcc-history li{background:rgba(255,255,255,.04)!important;
   border:1px solid var(--gcc-line)!important;border-radius:8px}
 
 /* 18 ─ Result screen */
-#g8app#g8app#g8app .gccuiScorecard{background:linear-gradient(180deg,rgba(19,40,64,.75),rgba(7,19,30,.97))!important;
+#g8app#g8app#g8app .gccuiScorecard{background:linear-gradient(180deg,var(--gcc-raised),var(--gcc-panel))!important;
   border:1px solid var(--gcc-line)!important;border-top:4px solid var(--vx-glow)!important;border-radius:14px!important;
   box-shadow:0 30px 60px -36px #000}
 #g8app#g8app#g8app .gccuiScorecard.gccuiWon{border-top-color:#3ddc97!important;box-shadow:0 30px 60px -36px #000,0 0 90px -40px #1fcf80}
@@ -466,7 +466,7 @@
 #g8app#g8app#g8app .gcc-award h2{margin:0!important;font-family:var(--vx-display)!important;font-size:22px!important;line-height:1.2;font-weight:700;text-transform:uppercase}
 #g8app#g8app#g8app .gcc-award strong{font-family:var(--vx-display);font-size:22px;color:#f6d98a;text-align:right;white-space:normal}
 @media(max-width:600px){#g8app#g8app#g8app .gcc-award{grid-template-columns:minmax(0,1fr) auto;gap:6px 12px;padding:12px!important}#g8app#g8app#g8app .gcc-award>.g8eyebrow{grid-column:1/-1}#g8app#g8app#g8app .gcc-award h2{font-size:20px!important}}
-#g8app#g8app#g8app .gcc-worm{background:rgba(7,19,30,.75)!important;border:1px solid var(--gcc-line)!important;border-radius:12px!important}
+#g8app#g8app#g8app .gcc-worm{background:var(--gcc-panel)!important;border:1px solid var(--gcc-line)!important;border-radius:12px!important}
 #g8app#g8app#g8app .gccuiResultTop .g8button{white-space:nowrap}
 
 /* 19 ─ Give the "v" medallion room (the base layout only reserves 20px) */
