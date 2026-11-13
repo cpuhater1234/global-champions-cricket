@@ -2,6 +2,10 @@
 
 13 November2026. Working branch: `work/v116-candidate-acceptance`. The `v116` branch reports dated11November describe the frozen release and early signing experiment; they are historical evidence, not the current candidate acceptance record.
 
+## Native match-flow verification
+
+Exact staged candidate 9e1fec325f6d5dc08e16b79ce4cf2019e2c4aa0872d076a283cf1b1a70a01601 passed native run43413945533: 36 states, 260 checks, zero findings/errors. Natural playback reached the second innings; native Pause/Resume, Speed, Skip, result, keyboard scorebook, scroll-end/focus restoration and return to the next fixture passed at320/390/768/1440px. Sampled320px raster review found no additional layout defect. No product changes, new download or promotion. User-opened d9f497f1 remains unchanged. [Match-flow review](V116_MATCH_FLOW_REVIEW.md).
+
 ## Verified live-score header source candidate
 
 After the user opened Mobile Draft Review (d9f497f1…bef54af4), a read-only renderer diagnostic reproduced unequal live-score header/score alignment with long actual club names. CSS trial passed60 layouts. Exact final candidate passed60 renderer cases in run43406907121, including added checks that club words stay intact. Candidate9e1fec325f6d5dc08e16b79ce4cf2019e2c4aa0872d076a283cf1b1a70a01601 (6,657,151bytes) has passed bounded exact native/raster verification; only existing owners10/31 differ from the delivered reference, all22scripts unchanged. [Live header review](V116_LIVE_HEADER_REVIEW.md). The user's delivered/opened file remains Mobile Draft Review d9f497f1…bef54af4; the verified header correction is staged for the next review bundle. No additional download in this pass. No stable promotion.

@@ -1,7 +1,21 @@
 # Match playback, results and scorebook integration review
 
-Exact source candidate9e1fec325f6d5dc08e16b79ce4cf2019e2c4aa0872d076a283cf1b1a70a01601. No product change staged in this audit.
+Exact candidate SHA-256: `9e1fec325f6d5dc08e16b79ce4cf2019e2c4aa0872d076a283cf1b1a70a01601` (6,657,151 bytes).
 
-Use a fresh disposable foundation career, legally draft15players, select11 manually and play one real round. Pause/resume/speed/skip controls are exercised through native UI; natural delivery playback reaches the second innings before Skip to result. Capture matchday, preview, pre-match, both innings, result, scorebook top/bottom and returned matchday at320/390/768/1440px. Check actual live header rows, control labels/44px targets, result score/overs containment, scorebook scrolling and focus restoration, and cricket-ledger identity through read-only scorebook/return actions.
+[Native run 43413945533](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/43413945533) passed: **36 captured states, 260 checks, zero findings and zero runner/page errors**. Evidence is in [match-flow-review/43413945533](match-flow-review/43413945533). No product code changed during this audit.
 
-This closes the integration gap left by the pure scoreboard renderer fixtures. No full-career, save/reload, storage-failure or engine-balance acceptance is rerun. The user's opened d9f497f1 Mobile Draft Review and career are not used. Native results and bounded image review pending. Any fix must follow a reproduced usability/readability issue, in its existing CSS owner. No automatic promotion or new download.
+## Verified scope
+
+A disposable foundation career legally drafted 15 players, selected a legal XI through the existing controls and played Worcestershire Rapids versus Mumbai Indians. Native delivery playback reached the second innings before using Skip to result. Pause/Resume, Speed and Skip worked. This was not natural playback through the final ball.
+
+Matchday, preview, pre-match, both innings, result, scorebook top/bottom and returned matchday were captured at 320, 390, 768 and 1440px. Checks covered document containment, control labels and 44px targets, aligned live header rows, result score/overs containment and scorebook scrolling. The scorebook's vertical end was reachable at all four widths. Its intended horizontal table scrolling remains available.
+
+Keyboard scorebook opening, Escape closure and opener focus restoration passed. Read-only scorebook and return actions preserved the cricket ledger. Next match returned to the next fixture (displayed Round 2; internal round index 1) with 11 selected players, without playing that round.
+
+Bounded image review inspected the 320px second-innings screen, result, scorebook top and bottom, and returned matchday. These samples showed readable scores and controls, usable table scrolling and no new overlap requiring a CSS change. Automated coverage is broader than this sampled raster review.
+
+## Identity and limits
+
+The exact-hash guard passed in CI. The user's opened Mobile Draft Review (`d9f497f1…bef54af4`) and career were not used or changed. The live-header correction stays staged for the next review bundle; no new download or stable promotion follows from this audit. Frozen v116 and main remain untouched.
+
+This covers one real fixture in Chromium at four widths. It does not repeat full-career, save/reload, storage-failure or engine-balance acceptance. The historical canonical manifest has not been refreshed; strict manifest parity is not claimed.
