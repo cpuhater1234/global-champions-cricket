@@ -4,7 +4,7 @@
 
 ## Current staged offseason visual candidate
 
-Offseason overview/development density pass is staged for focused native and raster review. Base is archive candidate29730258…1b37e9; staged SHA-25643861f74249975c287b45bc5136d1f68d5518f42522ee69ef9341c518a5e8fc1 (6,656,470bytes). Only existing CSS owners10/31 change. All22 runtime bodies unchanged. See [offseason review](V116_OFFSEASON_DENSITY_REVIEW.md). No stable promotion or new download in this staging step.
+Offseason overview/development density pass is staged for focused native and raster review. Base is archive candidate29730258…1b37e9; staged SHA-25698a664ca2f125a54a4f72454d685dd08dbea698eb48d206367ee1a1a7ee4b230 (6,656,487bytes). Only existing CSS owners10/31 change. All22 runtime bodies unchanged. See [offseason review](V116_OFFSEASON_DENSITY_REVIEW.md). No stable promotion or new download in this staging step.
 
 ## User scope update and next visual candidate
 

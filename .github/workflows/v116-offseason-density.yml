@@ -7,7 +7,7 @@ permissions:
   contents: write
 env:
   # Paired archive candidate; original manifest snapshot intentionally retained.
-  CANDIDATE_SHA256: 43861f74249975c287b45bc5136d1f68d5518f42522ee69ef9341c518a5e8fc1
+  CANDIDATE_SHA256: 98a664ca2f125a54a4f72454d685dd08dbea698eb48d206367ee1a1a7ee4b230
 concurrency:
   group: gcc-offseason-density
   cancel-in-progress: true
@@ -45,7 +45,7 @@ jobs:
           from qa.v116_source_reconciliation import BLOCK
           a=Path('qa/results/offseason-before.html').read_bytes();b=Path('qa/results/offseason-after.html').read_bytes()
           assert sha256(a).hexdigest()=='297302580de76f464e47bf9e153646264a46a1d7fe09958ec6aabb01141b37e9'
-          assert sha256(b).hexdigest()=='43861f74249975c287b45bc5136d1f68d5518f42522ee69ef9341c518a5e8fc1'
+          assert sha256(b).hexdigest()=='98a664ca2f125a54a4f72454d685dd08dbea698eb48d206367ee1a1a7ee4b230'
           aa=list(BLOCK.finditer(a));bb=list(BLOCK.finditer(b))
           assert [m[3] for m in aa if m[1]==b'script']==[m[3] for m in bb if m[1]==b'script']
           changed=[i for i,(x,y) in enumerate(zip(aa,bb)) if x[3]!=y[3]];assert changed==[10,31],changed
