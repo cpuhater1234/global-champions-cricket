@@ -1,0 +1,2019 @@
+{
+  "terms": [],
+  "brokenWords": [],
+  "ownership": [
+    {
+      "element": "SECTION.g8sheet",
+      "text": "SEMI-FINAL 1 · Bellerive OvalHURHomeHobart HurricanesvSTAAwayMelbourne StarsWinner advance",
+      "computed": {
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif",
+        "size": "15px",
+        "line": "22.5px",
+        "bg": "rgb(23, 27, 32)",
+        "image": "none",
+        "color": "rgb(237, 241, 245)",
+        "padding": "16px",
+        "gap": "normal",
+        "display": "block",
+        "columns": "none",
+        "minWidth": "0px",
+        "width": "366px"
+      },
+      "sources": [
+        "(base inline)",
+        "gcc-charcoal-20261030",
+        "gcc-decision-ui-20261030",
+        "gcc-floodlit-visual"
+      ],
+      "matches": [
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "var(--ink)",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "1.5rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1.5rem",
+              "important": ""
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8hero > *, .g8heading > *, .g8signing > *, .g8selection > *, .g8trade > *, .g8finals > *, .g8matcharena > *, .g8statrow > *, .g8slot > div, .g8squadrow > div, .g8roster li > div, .g8seasonbook > *",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet, .g8player, .g8club",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "var(--ink)",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "1.25rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1.25rem",
+              "important": ""
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet, #g8dialog .g8sheet",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-color",
+              "value": "rgb(41, 43, 40)",
+              "important": ""
+            },
+            {
+              "property": "background-image",
+              "value": "none",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet, #g8dialog .g8sheet",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(43, 48, 44)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet, #g8dialog .g8sheet",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(48, 51, 47)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet, #g8dialog .g8sheet, .g8teamworkspace.g8compactwork > .g8sheet",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8stage :is(.g8sheet, .g8draftaside)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(23, 36, 60)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 4,
+            "id": "(base inline)"
+          },
+          "selector": "#g8stage .g8sheet, #g8stage .g8fixturehero, #g8stage .g8nextstep, #g8stage .g8fixturecard, #g8stage .g8rulenote, #g8stage .g8decisionbar",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(37, 44, 52)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(246, 247, 250)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8app :is(.g8sheet, .g8draftaside, .g8decisionbar, .g8selectionground, .g8teamworkspace, .g8signingpanel, .g8liveboard, .g8matcharena, .g8seasonbook, .g8reviewsummary, .g8careerrecord, .g8playerdetail, .g8dressingroom, .g8relationship), #g8dialog",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "color",
+              "value": "var(--gcc-text)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8app .g8finals .g8sheet",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "22px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "22px",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8app .gccuiCampaign :is(.g8heading, .g8sheet, .g8annualhero, .g8reviewsummary, .g8fixturehero)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8app .gccuiFinals .g8finals > .g8sheet",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "16px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "16px",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8stage#g8stage#g8stage :is(.g8sheet, .gccuiAllowance, .gccuiFixture, .gccuiMatchPreparation, .gccuiLatestResult, .gccuiMatchLinks, .gccuiSummary, .g8dressingroom, .g8reviewsummary, .g8development, .g8teamread)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app .g8sheet, #g8app#g8app#g8app .g8tablewrap",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": "important"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "H2.",
+      "text": "Hobart Hurricanes",
+      "computed": {
+        "font": "\"Barlow Condensed\", Oswald, \"Roboto Condensed\", \"Arial Narrow\", Impact, \"Arial Black\", sans-serif",
+        "size": "22px",
+        "line": "25.3px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "color": "rgb(255, 255, 255)",
+        "padding": "0px",
+        "gap": "normal",
+        "display": "block",
+        "columns": "none",
+        "minWidth": "0px",
+        "width": "175.5px"
+      },
+      "sources": [
+        "(base inline)",
+        "gcc-decision-ui-20261030",
+        "gcc-floodlit-visual"
+      ],
+      "matches": [
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h1, h2, h3",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h1, h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--display)",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "400",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "2rem",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.15",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h1, h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--display)",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "900",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.06",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "normal",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "1.7rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "1.25rem",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8app :is(p, small, label, summary, h1, h2, h3, h4, .g8eyebrow)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8app .gccui :is(h1, h2, h3)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.2",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "var(--ui-text)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8app .gccui h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "20px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8app .gccuiKnockoutSide h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "color",
+              "value": "inherit",
+              "important": "important"
+            },
+            {
+              "property": "font-size",
+              "value": "18px",
+              "important": "important"
+            },
+            {
+              "property": "line-height",
+              "value": "1.2",
+              "important": "important"
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "normal",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app h1, #g8app#g8app#g8app h2, #g8app#g8app#g8app .g8eyebrow, #g8app#g8app#g8app .gccuiKicker, #g8app#g8app#g8app .g8arenaheader, #g8app#g8app#g8app .g8clubwatermark, #g8app#g8app#g8app .g8badge, #g8app#g8app#g8app .gccBrandWordmark, #g8app#g8app#g8app .g8leagueformat strong, #g8app#g8app#g8app .gccuiRating, #g8app#g8app#g8app .gccuiPlayerOverall small",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--vx-display)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8stage#g8stage#g8stage h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app .gccuiFinals .gccuiKnockoutSide h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "font-size",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "line-height",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "font-family",
+              "value": "",
+              "important": "important"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "H2.",
+      "text": "Melbourne Stars",
+      "computed": {
+        "font": "\"Barlow Condensed\", Oswald, \"Roboto Condensed\", \"Arial Narrow\", Impact, \"Arial Black\", sans-serif",
+        "size": "22px",
+        "line": "25.3px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "color": "rgb(255, 255, 255)",
+        "padding": "0px",
+        "gap": "normal",
+        "display": "block",
+        "columns": "none",
+        "minWidth": "0px",
+        "width": "156.938px"
+      },
+      "sources": [
+        "(base inline)",
+        "gcc-decision-ui-20261030",
+        "gcc-floodlit-visual"
+      ],
+      "matches": [
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h1, h2, h3",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h1, h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--display)",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "400",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "2rem",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.15",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h1, h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--display)",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "900",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.06",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "normal",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "1.7rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "1.25rem",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8app :is(p, small, label, summary, h1, h2, h3, h4, .g8eyebrow)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8app .gccui :is(h1, h2, h3)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.2",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "var(--ui-text)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8app .gccui h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "20px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8app .gccuiKnockoutSide h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "color",
+              "value": "inherit",
+              "important": "important"
+            },
+            {
+              "property": "font-size",
+              "value": "18px",
+              "important": "important"
+            },
+            {
+              "property": "line-height",
+              "value": "1.2",
+              "important": "important"
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "normal",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app h1, #g8app#g8app#g8app h2, #g8app#g8app#g8app .g8eyebrow, #g8app#g8app#g8app .gccuiKicker, #g8app#g8app#g8app .g8arenaheader, #g8app#g8app#g8app .g8clubwatermark, #g8app#g8app#g8app .g8badge, #g8app#g8app#g8app .gccBrandWordmark, #g8app#g8app#g8app .g8leagueformat strong, #g8app#g8app#g8app .gccuiRating, #g8app#g8app#g8app .gccuiPlayerOverall small",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--vx-display)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8stage#g8stage#g8stage h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app .gccuiFinals .gccuiKnockoutSide h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "font-size",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "line-height",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "font-family",
+              "value": "",
+              "important": "important"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "SECTION.g8sheet",
+      "text": "SEMI-FINAL 2 · Bristol County GroundGLOHomeGloucestershirevDCAwayDelhi CapitalsWinner adva",
+      "computed": {
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif",
+        "size": "15px",
+        "line": "22.5px",
+        "bg": "rgb(23, 27, 32)",
+        "image": "none",
+        "color": "rgb(237, 241, 245)",
+        "padding": "16px",
+        "gap": "normal",
+        "display": "block",
+        "columns": "none",
+        "minWidth": "0px",
+        "width": "366px"
+      },
+      "sources": [
+        "(base inline)",
+        "gcc-charcoal-20261030",
+        "gcc-decision-ui-20261030",
+        "gcc-floodlit-visual"
+      ],
+      "matches": [
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "var(--ink)",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "1.5rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1.5rem",
+              "important": ""
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8hero > *, .g8heading > *, .g8signing > *, .g8selection > *, .g8trade > *, .g8finals > *, .g8matcharena > *, .g8statrow > *, .g8slot > div, .g8squadrow > div, .g8roster li > div, .g8seasonbook > *",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet, .g8player, .g8club",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "var(--ink)",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "1.25rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1.25rem",
+              "important": ""
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet, #g8dialog .g8sheet",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-color",
+              "value": "rgb(41, 43, 40)",
+              "important": ""
+            },
+            {
+              "property": "background-image",
+              "value": "none",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet, #g8dialog .g8sheet",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(43, 48, 44)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet, #g8dialog .g8sheet",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(48, 51, 47)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet, #g8dialog .g8sheet, .g8teamworkspace.g8compactwork > .g8sheet",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8stage :is(.g8sheet, .g8draftaside)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(23, 36, 60)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 4,
+            "id": "(base inline)"
+          },
+          "selector": "#g8stage .g8sheet, #g8stage .g8fixturehero, #g8stage .g8nextstep, #g8stage .g8fixturecard, #g8stage .g8rulenote, #g8stage .g8decisionbar",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(37, 44, 52)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(246, 247, 250)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8app :is(.g8sheet, .g8draftaside, .g8decisionbar, .g8selectionground, .g8teamworkspace, .g8signingpanel, .g8liveboard, .g8matcharena, .g8seasonbook, .g8reviewsummary, .g8careerrecord, .g8playerdetail, .g8dressingroom, .g8relationship), #g8dialog",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "color",
+              "value": "var(--gcc-text)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8app .g8finals .g8sheet",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "22px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "22px",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8app .gccuiCampaign :is(.g8heading, .g8sheet, .g8annualhero, .g8reviewsummary, .g8fixturehero)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8app .gccuiFinals .g8finals > .g8sheet",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "16px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "16px",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8stage#g8stage#g8stage :is(.g8sheet, .gccuiAllowance, .gccuiFixture, .gccuiMatchPreparation, .gccuiLatestResult, .gccuiMatchLinks, .gccuiSummary, .g8dressingroom, .g8reviewsummary, .g8development, .g8teamread)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app .g8sheet, #g8app#g8app#g8app .g8tablewrap",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": "important"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "H2.",
+      "text": "Gloucestershire",
+      "computed": {
+        "font": "\"Barlow Condensed\", Oswald, \"Roboto Condensed\", \"Arial Narrow\", Impact, \"Arial Black\", sans-serif",
+        "size": "22px",
+        "line": "25.3px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "color": "rgb(17, 17, 17)",
+        "padding": "0px",
+        "gap": "normal",
+        "display": "block",
+        "columns": "none",
+        "minWidth": "0px",
+        "width": "154.625px"
+      },
+      "sources": [
+        "(base inline)",
+        "gcc-decision-ui-20261030",
+        "gcc-floodlit-visual"
+      ],
+      "matches": [
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h1, h2, h3",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h1, h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--display)",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "400",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "2rem",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.15",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h1, h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--display)",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "900",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.06",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "normal",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "1.7rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "1.25rem",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8app :is(p, small, label, summary, h1, h2, h3, h4, .g8eyebrow)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8app .gccui :is(h1, h2, h3)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.2",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "var(--ui-text)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8app .gccui h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "20px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8app .gccuiKnockoutSide h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "color",
+              "value": "inherit",
+              "important": "important"
+            },
+            {
+              "property": "font-size",
+              "value": "18px",
+              "important": "important"
+            },
+            {
+              "property": "line-height",
+              "value": "1.2",
+              "important": "important"
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "normal",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app h1, #g8app#g8app#g8app h2, #g8app#g8app#g8app .g8eyebrow, #g8app#g8app#g8app .gccuiKicker, #g8app#g8app#g8app .g8arenaheader, #g8app#g8app#g8app .g8clubwatermark, #g8app#g8app#g8app .g8badge, #g8app#g8app#g8app .gccBrandWordmark, #g8app#g8app#g8app .g8leagueformat strong, #g8app#g8app#g8app .gccuiRating, #g8app#g8app#g8app .gccuiPlayerOverall small",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--vx-display)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8stage#g8stage#g8stage h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app .gccuiFinals .gccuiKnockoutSide h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "font-size",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "line-height",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "font-family",
+              "value": "",
+              "important": "important"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "H2.",
+      "text": "Delhi Capitals",
+      "computed": {
+        "font": "\"Barlow Condensed\", Oswald, \"Roboto Condensed\", \"Arial Narrow\", Impact, \"Arial Black\", sans-serif",
+        "size": "22px",
+        "line": "25.3px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "color": "rgb(255, 255, 255)",
+        "padding": "0px",
+        "gap": "normal",
+        "display": "block",
+        "columns": "none",
+        "minWidth": "0px",
+        "width": "133.109px"
+      },
+      "sources": [
+        "(base inline)",
+        "gcc-decision-ui-20261030",
+        "gcc-floodlit-visual"
+      ],
+      "matches": [
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h1, h2, h3",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h1, h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--display)",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "400",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "2rem",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.15",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h1, h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--display)",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "900",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.06",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "normal",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "1.7rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "1.25rem",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8app :is(p, small, label, summary, h1, h2, h3, h4, .g8eyebrow)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8app .gccui :is(h1, h2, h3)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.2",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "var(--ui-text)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8app .gccui h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "20px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8app .gccuiKnockoutSide h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "color",
+              "value": "inherit",
+              "important": "important"
+            },
+            {
+              "property": "font-size",
+              "value": "18px",
+              "important": "important"
+            },
+            {
+              "property": "line-height",
+              "value": "1.2",
+              "important": "important"
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "normal",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app h1, #g8app#g8app#g8app h2, #g8app#g8app#g8app .g8eyebrow, #g8app#g8app#g8app .gccuiKicker, #g8app#g8app#g8app .g8arenaheader, #g8app#g8app#g8app .g8clubwatermark, #g8app#g8app#g8app .g8badge, #g8app#g8app#g8app .gccBrandWordmark, #g8app#g8app#g8app .g8leagueformat strong, #g8app#g8app#g8app .gccuiRating, #g8app#g8app#g8app .gccuiPlayerOverall small",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--vx-display)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8stage#g8stage#g8stage h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app .gccuiFinals .gccuiKnockoutSide h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "font-size",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "line-height",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "font-family",
+              "value": "",
+              "important": "important"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "actions": [],
+  "copy": "2026 · FINALS\nTHE SEMI-FINALS\nWatch the semi-finals\nSEMI-FINAL 1 · BELLERIVE OVAL\nHUR\nHOME\nHOBART HURRICANES\nSTA\nAWAY\nMELBOURNE STARS\n\nWinner advances to the Grand Final.\n\nSEMI-FINAL 2 · BRISTOL COUNTY GROUND\nGLO\nHOME\nGLOUCESTERSHIRE\nDC\nAWAY\nDELHI CAPITALS\n\nWinner advances to the Grand Final.\n\nYour club is watching. Follow the remaining contenders to the title.",
+  "disclaimer": "Matched active media/supports declarations plus computed styles. Container-query matches remain candidates; no automatic winner attribution or defect count from duplication alone."
+}

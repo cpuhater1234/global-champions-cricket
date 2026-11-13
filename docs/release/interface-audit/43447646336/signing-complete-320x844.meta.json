@@ -1,0 +1,1534 @@
+{
+  "terms": [],
+  "brokenWords": [],
+  "ownership": [
+    {
+      "element": "H2.g8signingtitle",
+      "text": "The draft pool is ready.",
+      "computed": {
+        "font": "\"Barlow Condensed\", Oswald, \"Roboto Condensed\", \"Arial Narrow\", Impact, \"Arial Black\", sans-serif",
+        "size": "26px",
+        "line": "31.2px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "color": "rgb(242, 247, 249)",
+        "padding": "0px 4.68px 0px 0px",
+        "gap": "normal",
+        "display": "block",
+        "columns": "none",
+        "minWidth": "0px",
+        "width": "260px"
+      },
+      "sources": [
+        "(base inline)",
+        "gcc-decision-ui-20261030",
+        "gcc-floodlit-visual"
+      ],
+      "matches": [
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h1, h2, h3",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h1, h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--display)",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "400",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "2rem",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.15",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signingtitle",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "clamp(2.5rem, 4.2vw, 4.5rem)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(245, 255, 224)",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.08",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signingtitle",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "2.2em",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signingtitle",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "2.3em",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signingtitle",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "3.4em",
+              "important": ""
+            },
+            {
+              "property": "display",
+              "value": "flex",
+              "important": ""
+            },
+            {
+              "property": "align-items",
+              "value": "center",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signingtitle",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "3.4em",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h1, h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--display)",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "900",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.06",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "normal",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "1.7rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signingtitle",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "block",
+              "important": ""
+            },
+            {
+              "property": "min-height",
+              "value": "0px",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "2.3rem",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "900",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.05",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "normal",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signingtitle",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "2rem",
+              "important": ""
+            },
+            {
+              "property": "min-height",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8app :is(p, small, label, summary, h1, h2, h3, h4, .g8eyebrow)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signing .g8signingtitle",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "1.65rem",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.3",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(242, 247, 249)",
+              "important": ""
+            },
+            {
+              "property": "min-height",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8stage .g8heading h1, #g8stage .g8signingtitle, #g8dialog .g8modalhead h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--display)",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "900",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.2",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            },
+            {
+              "property": "max-width",
+              "value": "100%",
+              "important": ""
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8stage .g8signingtitle",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "clamp(1.5rem, 2.2vw, 2rem)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8app .g8windowpanel .g8signingtitle",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": "important"
+            },
+            {
+              "property": "font-size",
+              "value": "26px",
+              "important": "important"
+            },
+            {
+              "property": "line-height",
+              "value": "1.2",
+              "important": "important"
+            },
+            {
+              "property": "font-family",
+              "value": "Arial, Helvetica, sans-serif",
+              "important": "important"
+            },
+            {
+              "property": "min-height",
+              "value": "0px",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app h1, #g8app#g8app#g8app h2, #g8app#g8app#g8app .g8eyebrow, #g8app#g8app#g8app .gccuiKicker, #g8app#g8app#g8app .g8arenaheader, #g8app#g8app#g8app .g8clubwatermark, #g8app#g8app#g8app .g8badge, #g8app#g8app#g8app .gccBrandWordmark, #g8app#g8app#g8app .g8leagueformat strong, #g8app#g8app#g8app .gccuiRating, #g8app#g8app#g8app .gccuiPlayerOverall small",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--vx-display)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8stage#g8stage#g8stage h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": "important"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "DIV.g8actions g8signingactions",
+      "text": "Draft-order draw",
+      "computed": {
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif",
+        "size": "16px",
+        "line": "24px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "color": "rgb(237, 241, 245)",
+        "padding": "0px",
+        "gap": "8px",
+        "display": "grid",
+        "columns": "126px 126px",
+        "minWidth": "0px",
+        "width": "260px"
+      },
+      "sources": [
+        "(base inline)",
+        "gcc-decision-ui-20261030"
+      ],
+      "matches": [
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8actions",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "flex",
+              "important": ""
+            },
+            {
+              "property": "align-items",
+              "value": "center",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signing .g8actions",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "116px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signing .g8actions",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "112px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signing .g8actions",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "align-items",
+              "value": "flex-start",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signing .g8actions",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signing .g8signingactions",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "flex",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "0.9rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8actions",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "flex",
+              "important": ""
+            },
+            {
+              "property": "align-items",
+              "value": "center",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8app .g8windowpanel .g8signingactions",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "flex",
+              "important": "important"
+            },
+            {
+              "property": "padding-top",
+              "value": "0px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0px",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8app .g8windowpanel .g8signingactions",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "grid-template-columns",
+              "value": "repeat(2, minmax(0px, 1fr))",
+              "important": ""
+            },
+            {
+              "property": "display",
+              "value": "grid",
+              "important": "important"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "SECTION.g8sheet g8wirepanel",
+      "text": "Signing wireLatest firstLEAGUE UPDATEUPDATESigning window closed159 players entered the GC",
+      "computed": {
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif",
+        "size": "16px",
+        "line": "24px",
+        "bg": "rgb(23, 27, 32)",
+        "image": "none",
+        "color": "rgb(237, 241, 245)",
+        "padding": "17.6px",
+        "gap": "13.6px",
+        "display": "flex",
+        "columns": "none",
+        "minWidth": "0px",
+        "width": "296px"
+      },
+      "sources": [
+        "(base inline)",
+        "gcc-charcoal-20261030",
+        "gcc-decision-ui-20261030",
+        "gcc-floodlit-visual",
+        "gcc-cleanup-pass"
+      ],
+      "matches": [
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "var(--ink)",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "1.5rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1.5rem",
+              "important": ""
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8hero > *, .g8heading > *, .g8signing > *, .g8selection > *, .g8trade > *, .g8finals > *, .g8matcharena > *, .g8statrow > *, .g8slot > div, .g8squadrow > div, .g8roster li > div, .g8seasonbook > *",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet, .g8player, .g8club",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "var(--ink)",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "1.25rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1.25rem",
+              "important": ""
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8wirepanel",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(35, 37, 35)",
+              "important": ""
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet, #g8dialog .g8sheet",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-color",
+              "value": "rgb(41, 43, 40)",
+              "important": ""
+            },
+            {
+              "property": "background-image",
+              "value": "none",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8wirepanel",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(41, 43, 40)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet, #g8dialog .g8sheet",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(43, 48, 44)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet, #g8dialog .g8sheet",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(48, 51, 47)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet, #g8dialog .g8sheet, .g8teamworkspace.g8compactwork > .g8sheet",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8windowpanel, .g8wirepanel",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signing > .g8windowpanel, .g8signing > .g8wirepanel",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "width",
+              "value": "100%",
+              "important": ""
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "1.1rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1.1rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8wirepanel",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "flex",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signing > .g8wirepanel",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "16rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8stage :is(.g8windowpanel, .g8wirepanel), #g8stage .g8signing > section:first-child",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(25, 32, 55)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8stage :is(.g8sheet, .g8draftaside)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(23, 36, 60)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8stage :is(.g8windowpanel, .g8wirepanel), #g8stage .g8signing > section:first-child",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(23, 36, 60)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 4,
+            "id": "(base inline)"
+          },
+          "selector": "#g8stage .g8sheet, #g8stage .g8fixturehero, #g8stage .g8nextstep, #g8stage .g8fixturecard, #g8stage .g8rulenote, #g8stage .g8decisionbar",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(37, 44, 52)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(246, 247, 250)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8app :is(.g8sheet, .g8draftaside, .g8decisionbar, .g8selectionground, .g8teamworkspace, .g8signingpanel, .g8liveboard, .g8matcharena, .g8seasonbook, .g8reviewsummary, .g8careerrecord, .g8playerdetail, .g8dressingroom, .g8relationship), #g8dialog",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "color",
+              "value": "var(--gcc-text)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8app .g8wirepanel",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8stage#g8stage#g8stage :is(.g8sheet, .gccuiAllowance, .gccuiFixture, .gccuiMatchPreparation, .gccuiLatestResult, .gccuiMatchLinks, .gccuiSummary, .g8dressingroom, .g8reviewsummary, .g8development, .g8teamread)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app .g8sheet, #g8app#g8app#g8app .g8tablewrap",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 15,
+            "id": "gcc-cleanup-pass"
+          },
+          "selector": "#g8app#g8app#g8app .g8wirepanel",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "0px",
+              "important": "important"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "H2.",
+      "text": "Signing wire",
+      "computed": {
+        "font": "\"Barlow Condensed\", Oswald, \"Roboto Condensed\", \"Arial Narrow\", Impact, \"Arial Black\", sans-serif",
+        "size": "18.4px",
+        "line": "25.76px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "color": "rgb(237, 241, 245)",
+        "padding": "0px 3.312px 0px 0px",
+        "gap": "normal",
+        "display": "block",
+        "columns": "none",
+        "minWidth": "0px",
+        "width": "99.9375px"
+      },
+      "sources": [
+        "(base inline)",
+        "gcc-charcoal-20261030",
+        "gcc-floodlit-visual"
+      ],
+      "matches": [
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h1, h2, h3",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h1, h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--display)",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "400",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "2rem",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.15",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h1, h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--display)",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "900",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.06",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "normal",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "1.7rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "1.25rem",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8app :is(p, small, label, summary, h1, h2, h3, h4, .g8eyebrow)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8wirehead h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "color",
+              "value": "rgb(234, 241, 255)",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "1.15rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8wirehead h2, .g8wirehead > span",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "color",
+              "value": "var(--g8-paper-ink)",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.4",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8stage :is(.g8careersteps, .g8sectionhead, .g8wirehead, .g8clock, .g8annualhero, .g8matchsummary) h2, #g8stage .g8result > h2, #g8stage :is(.g8analysissection, .g8coveragehead, .g8draftsubhead, .g8draftverdict, .g8scoutability, .g8gccrecord, .g8playerphases, .g8departureguide, .g8draftscore, .g8development, .g8listdepartures, .g8nextchapter, .g8compare, .g8groundinterpretation, .g8weatherread) h",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--display)",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "800",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.4",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8app :is(.g8windowhead, .g8wirehead) :is(h2, span)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "color",
+              "value": "var(--gcc-text)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app h1, #g8app#g8app#g8app h2, #g8app#g8app#g8app .g8eyebrow, #g8app#g8app#g8app .gccuiKicker, #g8app#g8app#g8app .g8arenaheader, #g8app#g8app#g8app .g8clubwatermark, #g8app#g8app#g8app .g8badge, #g8app#g8app#g8app .gccBrandWordmark, #g8app#g8app#g8app .g8leagueformat strong, #g8app#g8app#g8app .gccuiRating, #g8app#g8app#g8app .gccuiPlayerOverall small",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--vx-display)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8stage#g8stage#g8stage h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": "important"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "box": {
+        "x": 30,
+        "y": 480.546875,
+        "width": 260,
+        "height": 44
+      },
+      "buttons": [
+        {
+          "text": "Draft-order draw",
+          "x": 30,
+          "y": 480.546875,
+          "width": 260,
+          "height": 44
+        }
+      ]
+    }
+  ],
+  "copy": "2008 · RECRUITMENT\nLeague signings\n\nFive days to shape the player pool\n\nDay 1\nDay 2\nDay 3\nDay 4\nDay 5\nWindow closed\nThe draft pool is ready.\nDraft-order draw\n159\nCommitted to GCC\n111\nDeclined the invitation\nNEXT UP\nDraw your draft position\n\nThe eight clubs will draft from the players who committed.\n\nSIGNING WIRE\nLatest first\nLEAGUE UPDATE\nUPDATE\nSigning window closed\n\n159 players entered the GCC draft pool. 111 declined.\n\nLEAGUE UPDATE\nUPDATE\nDay 5 complete\n\nLast calls. 35 players enter before the deadline and 15 stay outside GCC.\n\nPLAYER DECISION\nSIGNED\nTino Best\n\nWI · PACE · NEW BALL\n\nPLAYER DECISION\nSIGNED\nPeter Trego\n\nENG · FINISHER · PACE\n\nPLAYER DECISION\nSIGNED\nShahid Nazir\n\nPAK · PACE · NEW BALL\n\nPLAYER DECISION\nSIGNED\nRikki Clarke\n\nENG · PACE\n\nPLAYER DECISION\nSIGNED\nMarcus North\n\nAUS · MIDDLE ORDER\n\nPLAYER DECISION\nSIGNED\nRana Naved-ul-Hasan\n\nPAK · PACE · MIDDLE OVERS · DEATH\n\nPLAYER DECISION\nSIGNED\nCameron White\n\nAUS · MIDDLE ORDER\n\nPLAYER DECISION\nSIGNED\nFarveez Maharoof\n\nSL · PACE\n\nPLAYER DECISION\nDECLINED\nJerome Taylor\n\nWI · PACE · NEW BALL\n\nPLAYER DECISION\nSIGNED\nHeath Streak\n\nZIM · PACE\n\nPLAYER DECISION\nDECLINED\nRavi Bopara\n\nENG · TOP ORDER · PACE\n\nPLAYER DECISION\nSIGNED\nAdam Gilchrist\n\nAUS · OPENER\n\nPLAYER DECISION\nSIGNED\nMohammad Sami\n\nPAK · PACE · NEW BALL\n\nPLAYER DECISION\nSIGNED\nGraham Napier\n\nENG · PACE\n\nPLAYER DECISION\nSIGNED\nIan Harvey\n\nAUS · PACE\n\nPLAYER DECISION\nSIGNED\nHarbhajan Singh\n\nIND · SPIN · MIDDLE OVERS\n\nPLAYER DECISION\nDECLINED\nSanath Jayasuriya\n\nSL · OPENER\n\nPLAYER DECISION\nSIGNED\nBrendon McCullum\n\nNZ · OPENER\n\nPLAYER DECISION\nSIGNED\nShaun Pollock\n\nSA · PACE · DEATH · NEW BALL\n\nPLAYER DECISION\nDECLINED\nDwayne Bravo\n\nWI · FINISHER · PACE · DEATH\n\nPLAYER DECISION\nSIGNED\nStuart Clark\n\nAUS · PACE · NEW BALL\n\nPLAYER DECISION\nSIGNED\nFaf du Plessis\n\nSA · TOP ORDER\n\nPLAYER DECISION\nSIGNED\nBrad Hogg\n\nAUS · SPIN · MIDDLE OVERS\n\nPLAYER DECISION\nSIGNED\nSreesanth\n\nIND · PACE\n\nPLAYER DECISION\nSIGNED\nKevin Pietersen\n\nENG · TOP ORDER · FINISHER\n\nPLAYER DECISION\nDECLINED\nAndrew Flintoff\n\nENG · PACE · NEW BALL · MIDDLE OVERS\n\nPLAYER DECISION\nSIGNED\nNiall O'Brien\n\nIRE · TOP ORDER\n\nPLAYER DECISION\nDECLINED\nWilliam Porterfield\n\nIRE · OPENER\n\nPLAYER DECISION\nDECLINED\nWriddhiman Saha\n\nIND · OPENER\n\nPLAYER DECISION\nSIGNED\nMorne van Wyk\n\nSA · OPENER\n\nPLAYER DECISION\nSIGNED\nMushfiqur Rahim\n\nBAN · TOP ORDER\n\nPLAYER DECISION\nSIGNED\nDoug Bollinger\n\nAUS · PACE · NEW BALL\n\nPLAYER DECISION\nDECLINED\nWayne Parnell\n\nSA · PACE\n\nPLAYER DECISION\nSIGNED\nFidel Edwards\n\nWI · PACE · NEW BALL\n\nPLAYER DECISION\nSIGNED\nUmar Gul\n\nPAK · PACE · DEATH · NEW BALL\n\nPLAYER DECISION\nSIGNED\nShoaib Akhtar\n\nPAK · PACE · NEW BALL · DEATH\n\nPLAYER DECISION\nSIGNED\nPragyan Ojha\n\nIND · SPIN\n\nPLAYER DECISION\nSIGNED\nAftab Ahmed\n\nBAN · TOP ORDER\n\nPLAYER DECISION\nDECLINED\nDinesh Karthik\n\nIND · MIDDLE ORDER\n\nPLAYER DECISION\nDECLINED\nRyan Sidebottom\n\nENG · PACE\n\nPLAYER DECISION\nSIGNED\nPhil Mustard\n\nENG · OPENER\n\nPLAYER DECISION\nDECLINED\nSohail Tanvir\n\nPAK · PACE · DEATH · MIDDLE OVERS\n\nPLAYER DECISION\nSIGNED\nAmbati Rayudu\n\nIND · TOP ORDER\n\nPLAYER DECISION\nDECLINED\nJames Anderson\n\nENG · PACE · NEW BALL\n\nPLAYER DECISION\nDECLINED\nSuresh Raina\n\nIND · TOP ORDER\n\nPLAYER DECISION\nDECLINED\nAndre Nel\n\nSA · PACE · NEW BALL\n\nPLAYER DECISION\nDECLINED\nScott Styris\n\nNZ · PACE\n\nPLAYER DECISION\nSIGNED\nRyan ten Doeschate\n\nNED · FINISHER · PACE\n\nPLAYER DECISION\nSIGNED\nRavindra Jadeja\n\nIND · SPIN\n\nPLAYER DECISION\nSIGNED\nJP Duminy\n\nSA · MIDDLE ORDER\n\nLEAGUE UPDATE\nUPDATE\nDay 4 complete\n\nOne day left. 32 players enter today and 25 decline.\n\nPLAYER DECISION\nSIGNED\nChamara Silva\n\nSL · TOP ORDER\n\nPLAYER DECISION\nDECLINED\nAdil Rashid\n\nENG · SPIN · MIDDLE OVERS\n\nPLAYER DECISION\nDECLINED\nNuwan Kulasekara\n\nSL · PACE · NEW BALL\n\nPLAYER DECISION\nSIGNED\nMichael Clarke\n\nAUS · TOP ORDER\n\nPLAYER DECISION\nDECLINED\nYusuf Pathan\n\nIND · SPIN · MIDDLE OVERS\n\nPLAYER DECISION\nSIGNED\nImran Farhat\n\nPAK · OPENER\n\nPLAYER DECISION\nSIGNED\nKieron Pollard\n\nWI · PACE\n\nPLAYER DECISION\nDECLINED\nAndrew Strauss\n\nENG · OPENER\n\nPLAYER DECISION\nSIGNED\nLendl Simmons\n\nWI · OPENER\n\nPLAYER DECISION\nSIGNED\nUpul Tharanga\n\nSL · OPENER\n\nPLAYER DECISION\nDECLINED\nEoin Morgan\n\nENG · MIDDLE ORDER\n\nPLAYER DECISION\nDECLINED\nVirender Sehwag\n\nIND · OPENER\n\nPLAYER DECISION\nDECLINED\nTamim Iqbal\n\nBAN · OPENER\n\nPLAYER DECISION\nSIGNED\nMorne Morkel\n\nSA · PACE · NEW BALL · DEATH\n\nPLAYER DECISION\nSIGNED\nHamilton Masakadza\n\nZIM · OPENER\n\nPLAYER DECISION\nSIGNED\nOwais Shah\n\nENG · TOP ORDER\n\nPLAYER DECISION\nSIGNED\nMichael Kasprowicz\n\nAUS · PACE\n\nPLAYER DECISION\nDECLINED\nKumar Sangakkara\n\nSL · TOP ORDER\n\nPLAYER DECISION\nDECLINED\nChris Jordan\n\nENG · PACE\n\nPLAYER DECISION\nDECLINED\nZaheer Khan\n\nIND · PACE · NEW BALL · DEATH\n\nPLAYER DECISION\nSIGNED\nMohammad Ashraful\n\nBAN · TOP ORDER\n\nPLAYER DECISION\nSIGNED\nGraeme Swann\n\nENG · SPIN · MIDDLE OVERS\n\nPLAYER DECISION\nDECLINED\nIshant Sharma\n\nIND · PACE\n\nPLAYER DECISION\nDECLINED\nBrendan Taylor\n\nZIM · TOP ORDER\n\nPLAYER DECISION\nSIGNED\nShane Warne\n\nAUS · SPIN · MIDDLE OVERS\n\nPLAYER DECISION\nDECLINED\nDirk Nannes\n\nAUS · PACE · DEATH · MIDDLE OVERS\n\nPLAYER DECISION\nSIGNED\nVinay Kumar\n\nIND · PACE",
+  "disclaimer": "Matched active media/supports declarations plus computed styles. Container-query matches remain candidates; no automatic winner attribution or defect count from duplication alone."
+}

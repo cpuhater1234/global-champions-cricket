@@ -1,0 +1,143 @@
+{
+  "terms": [],
+  "brokenWords": [],
+  "ownership": [
+    {
+      "element": "DIV.g8actions g8drawstable",
+      "text": "Resume revealResume revealSpeed 1×Reveal allEnter the draft room",
+      "computed": {
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif",
+        "size": "16px",
+        "line": "24px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "color": "rgb(237, 241, 245)",
+        "padding": "0px",
+        "gap": "12px",
+        "display": "grid",
+        "columns": "1245.62px",
+        "minWidth": "0px",
+        "width": "1245.62px"
+      },
+      "sources": [
+        "(base inline)",
+        "gcc-composition-20261107"
+      ],
+      "matches": [
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8actions",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "flex",
+              "important": ""
+            },
+            {
+              "property": "align-items",
+              "value": "center",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8drawcontrols .g8actions",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8actions",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "flex",
+              "important": ""
+            },
+            {
+              "property": "align-items",
+              "value": "center",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8stage .g8drawstable",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "grid",
+              "important": ""
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 13,
+            "id": "gcc-composition-20261107"
+          },
+          "selector": "#g8app#g8app#g8app .g8drawcontrols > .g8drawstable",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "width",
+              "value": "100%",
+              "important": ""
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            },
+            {
+              "property": "display",
+              "value": "grid",
+              "important": "important"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "box": {
+        "x": 97.1875,
+        "y": 433.421875,
+        "width": 1245.625,
+        "height": 44
+      },
+      "buttons": []
+    }
+  ],
+  "copy": "2008 · FOUNDATION DRAW\nDraft order\nSNAKE DRAFT\nThe order reverses each round.\n\nA fresh order is drawn every year, regardless of league finish. No point tanking in the GCC.\n\nTHE DRAFT ORDER\n\n8 of 8 revealed · Draw complete\n\nEnter the draft room\nPick\n1\nREN\nMELBOURNE RENEGADES\nPick\n2\nDC\nDELHI CAPITALS\nPick\n3\nSIX\nSYDNEY SIXERS\nPick\n4\nMID\nMIDDLESEX\nPick\n5\nGT\nGUJARAT TITANS\nYOUR CLUB\nPick\n6\nNOR\nNORTHAMPTONSHIRE STEELBACKS\nPick\n7\nSTR\nADELAIDE STRIKERS\nPick\n8\nPBKS\nPUNJAB KINGS",
+  "disclaimer": "Matched active media/supports declarations plus computed styles. Container-query matches remain candidates; no automatic winner attribution or defect count from duplication alone."
+}

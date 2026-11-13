@@ -1,0 +1,2904 @@
+{
+  "terms": [],
+  "brokenWords": [],
+  "ownership": [
+    {
+      "element": "H2.g8signingtitle",
+      "text": "Five days. A new league.",
+      "computed": {
+        "font": "\"Barlow Condensed\", Oswald, \"Roboto Condensed\", \"Arial Narrow\", Impact, \"Arial Black\", sans-serif",
+        "size": "26px",
+        "line": "31.2px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "color": "rgb(242, 247, 249)",
+        "padding": "0px 4.68px 0px 0px",
+        "gap": "normal",
+        "display": "block",
+        "columns": "none",
+        "minWidth": "0px",
+        "width": "330px"
+      },
+      "sources": [
+        "(base inline)",
+        "gcc-decision-ui-20261030",
+        "gcc-floodlit-visual"
+      ],
+      "matches": [
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h1, h2, h3",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h1, h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--display)",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "400",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "2rem",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.15",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signingtitle",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "clamp(2.5rem, 4.2vw, 4.5rem)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(245, 255, 224)",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.08",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signingtitle",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "2.2em",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signingtitle",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "2.3em",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signingtitle",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "3.4em",
+              "important": ""
+            },
+            {
+              "property": "display",
+              "value": "flex",
+              "important": ""
+            },
+            {
+              "property": "align-items",
+              "value": "center",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signingtitle",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "3.4em",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h1, h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--display)",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "900",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.06",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "normal",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "1.7rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signingtitle",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "block",
+              "important": ""
+            },
+            {
+              "property": "min-height",
+              "value": "0px",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "2.3rem",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "900",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.05",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "normal",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signingtitle",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "2rem",
+              "important": ""
+            },
+            {
+              "property": "min-height",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8app :is(p, small, label, summary, h1, h2, h3, h4, .g8eyebrow)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signing .g8signingtitle",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "1.65rem",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.3",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(242, 247, 249)",
+              "important": ""
+            },
+            {
+              "property": "min-height",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8stage .g8heading h1, #g8stage .g8signingtitle, #g8dialog .g8modalhead h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--display)",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "900",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.2",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            },
+            {
+              "property": "max-width",
+              "value": "100%",
+              "important": ""
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8stage .g8signingtitle",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "clamp(1.5rem, 2.2vw, 2rem)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8app .g8windowpanel .g8signingtitle",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": "important"
+            },
+            {
+              "property": "font-size",
+              "value": "26px",
+              "important": "important"
+            },
+            {
+              "property": "line-height",
+              "value": "1.2",
+              "important": "important"
+            },
+            {
+              "property": "font-family",
+              "value": "Arial, Helvetica, sans-serif",
+              "important": "important"
+            },
+            {
+              "property": "min-height",
+              "value": "0px",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app h1, #g8app#g8app#g8app h2, #g8app#g8app#g8app .g8eyebrow, #g8app#g8app#g8app .gccuiKicker, #g8app#g8app#g8app .g8arenaheader, #g8app#g8app#g8app .g8clubwatermark, #g8app#g8app#g8app .g8badge, #g8app#g8app#g8app .gccBrandWordmark, #g8app#g8app#g8app .g8leagueformat strong, #g8app#g8app#g8app .gccuiRating, #g8app#g8app#g8app .gccuiPlayerOverall small",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--vx-display)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8stage#g8stage#g8stage h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": "important"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "DIV.g8actions g8signingactions",
+      "text": "Start signingsSpeed 1×Skip to end",
+      "computed": {
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif",
+        "size": "16px",
+        "line": "24px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "color": "rgb(237, 241, 245)",
+        "padding": "0px",
+        "gap": "8px",
+        "display": "grid",
+        "columns": "161px 161px",
+        "minWidth": "0px",
+        "width": "330px"
+      },
+      "sources": [
+        "(base inline)",
+        "gcc-decision-ui-20261030"
+      ],
+      "matches": [
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8actions",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "flex",
+              "important": ""
+            },
+            {
+              "property": "align-items",
+              "value": "center",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signing .g8actions",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "116px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signing .g8actions",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "112px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signing .g8actions",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "align-items",
+              "value": "flex-start",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signing .g8actions",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signing .g8signingactions",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "flex",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "0.9rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8actions",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "flex",
+              "important": ""
+            },
+            {
+              "property": "align-items",
+              "value": "center",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8app .g8windowpanel .g8signingactions",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "flex",
+              "important": "important"
+            },
+            {
+              "property": "padding-top",
+              "value": "0px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0px",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8app .g8windowpanel .g8signingactions",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "grid-template-columns",
+              "value": "repeat(2, minmax(0px, 1fr))",
+              "important": ""
+            },
+            {
+              "property": "display",
+              "value": "grid",
+              "important": "important"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "BUTTON.g8button g8ghost",
+      "text": "Speed 1×",
+      "computed": {
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif",
+        "size": "16px",
+        "line": "20px",
+        "bg": "rgba(255, 255, 255, 0.043)",
+        "image": "none",
+        "color": "rgb(237, 241, 245)",
+        "padding": "10px 14px",
+        "gap": "6.4px",
+        "display": "flex",
+        "columns": "none",
+        "minWidth": "0px",
+        "width": "161px"
+      },
+      "sources": [
+        "(base inline)",
+        "gcc-charcoal-20261030",
+        "gcc-decision-ui-20261030",
+        "gcc-floodlit-visual"
+      ],
+      "matches": [
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "button, input, select",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "inherit",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "inherit",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "inherit",
+              "important": ""
+            },
+            {
+              "property": "font-family",
+              "value": "inherit",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "inline-flex",
+              "important": ""
+            },
+            {
+              "property": "align-items",
+              "value": "center",
+              "important": ""
+            },
+            {
+              "property": "min-height",
+              "value": "46px",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "0.75rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0.75rem",
+              "important": ""
+            },
+            {
+              "property": "background-image",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "var(--ink)",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "800",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.25",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8ghost",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(19, 43, 64)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(224, 240, 237)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "max-width",
+              "value": "100%",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(49, 51, 48)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(239, 245, 251)",
+              "important": ""
+            },
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "0.7rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0.7rem",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.3",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8ghost",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "transparent",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(234, 241, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8app .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "max-width",
+              "value": "100%",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signingactions > .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8ghost, .g8actions > .g8button:not(.g8primary):not(.g8danger):not(.g8continueclub)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-color",
+              "value": "rgb(55, 57, 54)",
+              "important": ""
+            },
+            {
+              "property": "background-image",
+              "value": "none",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(234, 241, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button.g8ghost, .g8button.g8small:not(.g8primary):not(.g8danger)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(73, 76, 67)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.4",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "0.65rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0.65rem",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button.g8ghost, .g8button.g8small:not(.g8primary):not(.g8danger)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(41, 53, 91)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8app .g8button.g8ghost, #g8app .g8button.g8small:not(.g8primary):not(.g8danger)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(34, 45, 76)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8app .g8button.g8ghost, #g8app .g8button.g8small:not(.g8primary):not(.g8danger)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(34, 59, 112)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(255, 255, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 4,
+            "id": "(base inline)"
+          },
+          "selector": "#g8stage .g8button.g8ghost",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(48, 57, 69)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(255, 255, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8app .g8button, #g8dialog .g8button, #g8app .g8utilitymenu summary",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            },
+            {
+              "property": "background-image",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "color",
+              "value": "var(--gcc-text)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8app .g8button, #g8dialog .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.25",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "15px",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "11px",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "11px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8app .g8windowpanel .g8signingactions > .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": "important"
+            },
+            {
+              "property": "padding-top",
+              "value": "8px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "8px",
+              "important": "important"
+            },
+            {
+              "property": "font-size",
+              "value": "14px",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8app .g8windowpanel .g8signingactions > .g8button",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "width",
+              "value": "100%",
+              "important": ""
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app, #g8app#g8app#g8app button, #g8app#g8app#g8app input, #g8app#g8app#g8app select",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--vx-body)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": ""
+            },
+            {
+              "property": "font-family",
+              "value": "var(--vx-body)",
+              "important": "important"
+            },
+            {
+              "property": "font-size",
+              "value": "1rem",
+              "important": "important"
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": "important"
+            },
+            {
+              "property": "line-height",
+              "value": "1.25",
+              "important": "important"
+            },
+            {
+              "property": "padding-top",
+              "value": "10px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "10px",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app .g8button:not(.g8primary)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "rgba(255, 255, 255, 0.043)",
+              "important": "important"
+            },
+            {
+              "property": "color",
+              "value": "var(--gcc-text)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "max-width",
+              "value": "100%",
+              "important": ""
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "BUTTON.g8button g8ghost",
+      "text": "Skip to end",
+      "computed": {
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif",
+        "size": "16px",
+        "line": "20px",
+        "bg": "rgba(255, 255, 255, 0.043)",
+        "image": "none",
+        "color": "rgb(237, 241, 245)",
+        "padding": "10px 14px",
+        "gap": "6.4px",
+        "display": "flex",
+        "columns": "none",
+        "minWidth": "0px",
+        "width": "161px"
+      },
+      "sources": [
+        "(base inline)",
+        "gcc-charcoal-20261030",
+        "gcc-decision-ui-20261030",
+        "gcc-floodlit-visual"
+      ],
+      "matches": [
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "button, input, select",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "inherit",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "inherit",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "inherit",
+              "important": ""
+            },
+            {
+              "property": "font-family",
+              "value": "inherit",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "inline-flex",
+              "important": ""
+            },
+            {
+              "property": "align-items",
+              "value": "center",
+              "important": ""
+            },
+            {
+              "property": "min-height",
+              "value": "46px",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "0.75rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0.75rem",
+              "important": ""
+            },
+            {
+              "property": "background-image",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "var(--ink)",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "800",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.25",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8ghost",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(19, 43, 64)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(224, 240, 237)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "max-width",
+              "value": "100%",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(49, 51, 48)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(239, 245, 251)",
+              "important": ""
+            },
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "0.7rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0.7rem",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.3",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8ghost",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "transparent",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(234, 241, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8app .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "max-width",
+              "value": "100%",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signingactions > .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8ghost, .g8actions > .g8button:not(.g8primary):not(.g8danger):not(.g8continueclub)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-color",
+              "value": "rgb(55, 57, 54)",
+              "important": ""
+            },
+            {
+              "property": "background-image",
+              "value": "none",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(234, 241, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button.g8ghost, .g8button.g8small:not(.g8primary):not(.g8danger)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(73, 76, 67)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.4",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "0.65rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0.65rem",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button.g8ghost, .g8button.g8small:not(.g8primary):not(.g8danger)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(41, 53, 91)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8app .g8button.g8ghost, #g8app .g8button.g8small:not(.g8primary):not(.g8danger)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(34, 45, 76)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8app .g8button.g8ghost, #g8app .g8button.g8small:not(.g8primary):not(.g8danger)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(34, 59, 112)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(255, 255, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 4,
+            "id": "(base inline)"
+          },
+          "selector": "#g8stage .g8button.g8ghost",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(48, 57, 69)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(255, 255, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8app .g8button, #g8dialog .g8button, #g8app .g8utilitymenu summary",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            },
+            {
+              "property": "background-image",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "color",
+              "value": "var(--gcc-text)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8app .g8button, #g8dialog .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.25",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "15px",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "11px",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "11px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8app .g8windowpanel .g8signingactions > .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": "important"
+            },
+            {
+              "property": "padding-top",
+              "value": "8px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "8px",
+              "important": "important"
+            },
+            {
+              "property": "font-size",
+              "value": "14px",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8app .g8windowpanel .g8signingactions > .g8button",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "width",
+              "value": "100%",
+              "important": ""
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app, #g8app#g8app#g8app button, #g8app#g8app#g8app input, #g8app#g8app#g8app select",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--vx-body)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": ""
+            },
+            {
+              "property": "font-family",
+              "value": "var(--vx-body)",
+              "important": "important"
+            },
+            {
+              "property": "font-size",
+              "value": "1rem",
+              "important": "important"
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": "important"
+            },
+            {
+              "property": "line-height",
+              "value": "1.25",
+              "important": "important"
+            },
+            {
+              "property": "padding-top",
+              "value": "10px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "10px",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app .g8button:not(.g8primary)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "rgba(255, 255, 255, 0.043)",
+              "important": "important"
+            },
+            {
+              "property": "color",
+              "value": "var(--gcc-text)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "max-width",
+              "value": "100%",
+              "important": ""
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "SECTION.g8sheet g8wirepanel",
+      "text": "Signing wireLatest firstTHE WIRE IS QUIETPlayer commitments will appear here as the five-d",
+      "computed": {
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif",
+        "size": "16px",
+        "line": "24px",
+        "bg": "rgb(23, 27, 32)",
+        "image": "none",
+        "color": "rgb(237, 241, 245)",
+        "padding": "17.6px",
+        "gap": "13.6px",
+        "display": "flex",
+        "columns": "none",
+        "minWidth": "0px",
+        "width": "366px"
+      },
+      "sources": [
+        "(base inline)",
+        "gcc-charcoal-20261030",
+        "gcc-decision-ui-20261030",
+        "gcc-floodlit-visual",
+        "gcc-cleanup-pass"
+      ],
+      "matches": [
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "var(--ink)",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "1.5rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1.5rem",
+              "important": ""
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8hero > *, .g8heading > *, .g8signing > *, .g8selection > *, .g8trade > *, .g8finals > *, .g8matcharena > *, .g8statrow > *, .g8slot > div, .g8squadrow > div, .g8roster li > div, .g8seasonbook > *",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet, .g8player, .g8club",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "var(--ink)",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "1.25rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1.25rem",
+              "important": ""
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8wirepanel",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(35, 37, 35)",
+              "important": ""
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet, #g8dialog .g8sheet",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-color",
+              "value": "rgb(41, 43, 40)",
+              "important": ""
+            },
+            {
+              "property": "background-image",
+              "value": "none",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8wirepanel",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(41, 43, 40)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet, #g8dialog .g8sheet",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(43, 48, 44)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet, #g8dialog .g8sheet",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(48, 51, 47)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet, #g8dialog .g8sheet, .g8teamworkspace.g8compactwork > .g8sheet",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8windowpanel, .g8wirepanel",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signing > .g8windowpanel, .g8signing > .g8wirepanel",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "width",
+              "value": "100%",
+              "important": ""
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "1.1rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1.1rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8wirepanel",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "flex",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8signing > .g8wirepanel",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "16rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8stage :is(.g8windowpanel, .g8wirepanel), #g8stage .g8signing > section:first-child",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(25, 32, 55)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8stage :is(.g8sheet, .g8draftaside)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(23, 36, 60)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8stage :is(.g8windowpanel, .g8wirepanel), #g8stage .g8signing > section:first-child",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(23, 36, 60)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 4,
+            "id": "(base inline)"
+          },
+          "selector": "#g8stage .g8sheet, #g8stage .g8fixturehero, #g8stage .g8nextstep, #g8stage .g8fixturecard, #g8stage .g8rulenote, #g8stage .g8decisionbar",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(37, 44, 52)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(246, 247, 250)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8app :is(.g8sheet, .g8draftaside, .g8decisionbar, .g8selectionground, .g8teamworkspace, .g8signingpanel, .g8liveboard, .g8matcharena, .g8seasonbook, .g8reviewsummary, .g8careerrecord, .g8playerdetail, .g8dressingroom, .g8relationship), #g8dialog",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "color",
+              "value": "var(--gcc-text)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8app .g8wirepanel",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8stage#g8stage#g8stage :is(.g8sheet, .gccuiAllowance, .gccuiFixture, .gccuiMatchPreparation, .gccuiLatestResult, .gccuiMatchLinks, .gccuiSummary, .g8dressingroom, .g8reviewsummary, .g8development, .g8teamread)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app .g8sheet, #g8app#g8app#g8app .g8tablewrap",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 15,
+            "id": "gcc-cleanup-pass"
+          },
+          "selector": "#g8app#g8app#g8app .g8wirepanel",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "0px",
+              "important": "important"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "H2.",
+      "text": "Signing wire",
+      "computed": {
+        "font": "\"Barlow Condensed\", Oswald, \"Roboto Condensed\", \"Arial Narrow\", Impact, \"Arial Black\", sans-serif",
+        "size": "18.4px",
+        "line": "25.76px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "color": "rgb(237, 241, 245)",
+        "padding": "0px 3.312px 0px 0px",
+        "gap": "normal",
+        "display": "block",
+        "columns": "none",
+        "minWidth": "0px",
+        "width": "99.9375px"
+      },
+      "sources": [
+        "(base inline)",
+        "gcc-charcoal-20261030",
+        "gcc-floodlit-visual"
+      ],
+      "matches": [
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h1, h2, h3",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h1, h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--display)",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "400",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "2rem",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.15",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h1, h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--display)",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "900",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.06",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "normal",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "1.7rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8sheet h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "1.25rem",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8app :is(p, small, label, summary, h1, h2, h3, h4, .g8eyebrow)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8wirehead h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "color",
+              "value": "rgb(234, 241, 255)",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "1.15rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8wirehead h2, .g8wirehead > span",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "color",
+              "value": "var(--g8-paper-ink)",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.4",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8stage :is(.g8careersteps, .g8sectionhead, .g8wirehead, .g8clock, .g8annualhero, .g8matchsummary) h2, #g8stage .g8result > h2, #g8stage :is(.g8analysissection, .g8coveragehead, .g8draftsubhead, .g8draftverdict, .g8scoutability, .g8gccrecord, .g8playerphases, .g8departureguide, .g8draftscore, .g8development, .g8listdepartures, .g8nextchapter, .g8compare, .g8groundinterpretation, .g8weatherread) h",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--display)",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "800",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.4",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8app :is(.g8windowhead, .g8wirehead) :is(h2, span)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "color",
+              "value": "var(--gcc-text)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app h1, #g8app#g8app#g8app h2, #g8app#g8app#g8app .g8eyebrow, #g8app#g8app#g8app .gccuiKicker, #g8app#g8app#g8app .g8arenaheader, #g8app#g8app#g8app .g8clubwatermark, #g8app#g8app#g8app .g8badge, #g8app#g8app#g8app .gccBrandWordmark, #g8app#g8app#g8app .g8leagueformat strong, #g8app#g8app#g8app .gccuiRating, #g8app#g8app#g8app .gccuiPlayerOverall small",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--vx-display)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8stage#g8stage#g8stage h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": "important"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "box": {
+        "x": 30,
+        "y": 432.546875,
+        "width": 330,
+        "height": 96
+      },
+      "buttons": [
+        {
+          "text": "Start signings",
+          "x": 30,
+          "y": 432.546875,
+          "width": 330,
+          "height": 44
+        },
+        {
+          "text": "Speed 1×",
+          "x": 30,
+          "y": 484.546875,
+          "width": 161,
+          "height": 44
+        },
+        {
+          "text": "Skip to end",
+          "x": 199,
+          "y": 484.546875,
+          "width": 161,
+          "height": 44
+        }
+      ]
+    }
+  ],
+  "copy": "2008 · RECRUITMENT\nLeague signings\n\nFive days to shape the player pool\n\nDay 1\nDay 2\nDay 3\nDay 4\nDay 5\nReady to open\nFive days. A new league.\nStart signings\nSpeed 1×\nSkip to end\n0\nCommitted to GCC\n0\nDeclined the invitation\nTHE SIGNING WINDOW\nThe invitations are out\n\nFollow the commitments as players decide whether to join GCC.\n\nSIGNING WIRE\nLatest first\nTHE WIRE IS QUIET\nPlayer commitments will appear here as the five-day window unfolds.\nSTART SIGNINGS TO OPEN THE FEED",
+  "disclaimer": "Matched active media/supports declarations plus computed styles. Container-query matches remain candidates; no automatic winner attribution or defect count from duplication alone."
+}

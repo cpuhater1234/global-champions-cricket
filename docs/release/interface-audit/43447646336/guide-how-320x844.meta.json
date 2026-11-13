@@ -1,0 +1,4827 @@
+{
+  "terms": [],
+  "brokenWords": [],
+  "ownership": [
+    {
+      "element": "H2.",
+      "text": "How to play",
+      "computed": {
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif",
+        "size": "21px",
+        "line": "27.3px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "color": "rgb(237, 241, 245)",
+        "padding": "0px 3.78px 0px 0px",
+        "gap": "normal",
+        "display": "block",
+        "columns": "none",
+        "minWidth": "0px",
+        "width": "206px"
+      },
+      "sources": [
+        "(base inline)",
+        "gcc-charcoal-20261030",
+        "gcc-decision-ui-20261030",
+        "gcc-floodlit-visual"
+      ],
+      "matches": [
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h1, h2, h3",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h1, h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--display)",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "400",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "2rem",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.15",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button > span, .g8slot b, .g8slot small, .g8squadrow b, .g8squadrow small, .g8roster li b, .g8roster li small, .g8fixturecard h3, .g8statrow > span, .g8seasonbook h3, #g8dialog h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog .g8modalhead h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "line-height",
+              "value": "1.2",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog *",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog .g8modalhead h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "clamp(1rem, 5cqi, 2rem)",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "normal",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h1, h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--display)",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "900",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.06",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "normal",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "1.7rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8modalhead h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "1.5rem",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.2",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(243, 248, 252)",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "normal",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8modalhead h2",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "1.3rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog .g8modalhead h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8app :is(p, small, label, summary, h1, h2, h3, h4, .g8eyebrow)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog .g8modalhead h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "color",
+              "value": "var(--g8-paper-ink)",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "1.4rem",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.3",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8stage .g8heading h1, #g8stage .g8signingtitle, #g8dialog .g8modalhead h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--display)",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "900",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.2",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            },
+            {
+              "property": "max-width",
+              "value": "100%",
+              "important": ""
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog .g8modalhead h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "clamp(1.3rem, 2vw, 1.7rem)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8app :is(.g8startingxi, .g8bench) > header h2, #g8dialog .g8modalhead h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "color",
+              "value": "var(--gcc-text)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8app :is(.g8relationship, .g8dressingroom) :is(h2, h3, strong, b, dd), #g8dialog :is(h2, h3, dd)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "color",
+              "value": "var(--gcc-text)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8dialog .g8modalhead h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "24px",
+              "important": "important"
+            },
+            {
+              "property": "line-height",
+              "value": "1.2",
+              "important": "important"
+            },
+            {
+              "property": "font-family",
+              "value": "Arial, Helvetica, sans-serif",
+              "important": "important"
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8dialog .g8modalhead h2",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "22px",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8dialog#g8dialog#g8dialog:where([data-prompt=\"how\"], [data-prompt=\"howItWorks\"], [data-prompt=\"breakawayStory\"]) .g8modalhead h2",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "inherit",
+              "important": "important"
+            },
+            {
+              "property": "font-size",
+              "value": "21px",
+              "important": "important"
+            },
+            {
+              "property": "font-weight",
+              "value": "650",
+              "important": "important"
+            },
+            {
+              "property": "line-height",
+              "value": "1.3",
+              "important": "important"
+            },
+            {
+              "property": "color",
+              "value": "var(--guide-text)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app h1, #g8app#g8app#g8app h2, #g8app#g8app#g8app .g8eyebrow, #g8app#g8app#g8app .gccuiKicker, #g8app#g8app#g8app .g8arenaheader, #g8app#g8app#g8app .g8clubwatermark, #g8app#g8app#g8app .g8badge, #g8app#g8app#g8app .gccBrandWordmark, #g8app#g8app#g8app .g8leagueformat strong, #g8app#g8app#g8app .gccuiRating, #g8app#g8app#g8app .gccuiPlayerOverall small",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--vx-display)",
+              "important": "important"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "DIV.g8modalbody",
+      "text": "YOUR FIRST SEASONFrom the draft to the final.Build your squad, name your XI and take your ",
+      "computed": {
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif",
+        "size": "15px",
+        "line": "22.5px",
+        "bg": "rgb(23, 27, 32)",
+        "image": "none",
+        "color": "rgb(237, 241, 245)",
+        "padding": "18px 16px",
+        "gap": "normal",
+        "display": "block",
+        "columns": "none",
+        "minWidth": "0px",
+        "width": "298px"
+      },
+      "sources": [
+        "(base inline)",
+        "gcc-bulletproof-styles",
+        "gcc-charcoal-20261030",
+        "gcc-decision-ui-20261030"
+      ],
+      "matches": [
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8modalbody",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "1.25rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1.25rem",
+              "important": ""
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8modalbody",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog *",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8modalbody",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(30, 32, 30)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(234, 241, 255)",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "1.25rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1.25rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8modalbody",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8modalbody",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "12px",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "12px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8modalbody",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(41, 43, 40)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8modalbody",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(43, 48, 44)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8modalbody",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(28, 36, 62)",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "1.2rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1.2rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8modalhead, .g8modalbody",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1rem",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog .g8modalbody:has(> .g8guide)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(25, 34, 60)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog, #g8dialog .g8modalbody",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(24, 32, 54)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog .g8modalbody:has(> .g8guide)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(24, 32, 55)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 2,
+            "id": "gcc-bulletproof-styles"
+          },
+          "selector": "#g8dialog .g8modalbody",
+          "conditions": [
+            "(max-width: 480px)"
+          ],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "12px",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "12px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8dialog .g8modalbody",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "color",
+              "value": "var(--gcc-text)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8dialog .g8modalbody",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "22px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "22px",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8dialog .g8modalbody",
+          "conditions": [
+            "(max-width: 760px)"
+          ],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "16px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "16px",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8dialog#g8dialog#g8dialog:where([data-prompt=\"how\"], [data-prompt=\"howItWorks\"], [data-prompt=\"breakawayStory\"]) .g8modalbody",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "0px",
+              "important": "important"
+            },
+            {
+              "property": "padding-top",
+              "value": "24px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "24px",
+              "important": "important"
+            },
+            {
+              "property": "background-image",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8dialog#g8dialog#g8dialog:where([data-prompt=\"how\"], [data-prompt=\"howItWorks\"], [data-prompt=\"breakawayStory\"]) .g8modalbody",
+          "conditions": [
+            "(max-width: 650px)"
+          ],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "18px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "18px",
+              "important": "important"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "SUMMARY.",
+      "text": "Retirements, releases & draft picks+",
+      "computed": {
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif",
+        "size": "14px",
+        "line": "21px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "color": "rgb(237, 241, 245)",
+        "padding": "12px 0px",
+        "gap": "12px",
+        "display": "flex",
+        "columns": "none",
+        "minWidth": "0px",
+        "width": "266px"
+      },
+      "sources": [
+        "(base inline)",
+        "gcc-charcoal-20261030",
+        "gcc-decision-ui-20261030"
+      ],
+      "matches": [
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog *",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8disclosure > summary",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "flex",
+              "important": ""
+            },
+            {
+              "property": "align-items",
+              "value": "center",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "min-height",
+              "value": "52px",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(234, 241, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8app :is(p, small, label, summary, h1, h2, h3, h4, .g8eyebrow)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8guiderules > .g8disclosure > summary",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.5",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "0.8rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0.8rem",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8disclosure > summary",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "0.8rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0.8rem",
+              "important": ""
+            },
+            {
+              "property": "min-height",
+              "value": "48px",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.5",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog .g8guiderules > .g8disclosure > summary",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "0.9rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0.9rem",
+              "important": ""
+            },
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(99, 71, 47)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            },
+            {
+              "property": "min-height",
+              "value": "52px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8stage :is(.g8disclosure, .g8moredata) > summary, #g8dialog :is(.g8disclosure, .g8moredata) > summary",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "800",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.4",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog .g8guiderules > .g8disclosure, #g8dialog .g8guiderules > .g8disclosure > summary, #g8dialog .g8guidefooter .g8button.g8ghost",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(48, 59, 61)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8app :is(.g8disclosure, .g8pickguide) > summary",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "48px",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "15px",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "var(--gcc-text)",
+              "important": "important"
+            },
+            {
+              "property": "padding-top",
+              "value": "14px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "14px",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8dialog#g8dialog#g8dialog .g8guide :is(h3, p, summary, button)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "inherit",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8dialog#g8dialog#g8dialog .g8guiderules .g8disclosure > summary",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "flex",
+              "important": "important"
+            },
+            {
+              "property": "align-items",
+              "value": "center",
+              "important": "important"
+            },
+            {
+              "property": "min-height",
+              "value": "52px",
+              "important": "important"
+            },
+            {
+              "property": "padding-top",
+              "value": "12px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "12px",
+              "important": "important"
+            },
+            {
+              "property": "background-image",
+              "value": "none",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "initial",
+              "important": "important"
+            },
+            {
+              "property": "color",
+              "value": "var(--guide-text)",
+              "important": "important"
+            },
+            {
+              "property": "font-size",
+              "value": "14px",
+              "important": "important"
+            },
+            {
+              "property": "line-height",
+              "value": "1.5",
+              "important": "important"
+            },
+            {
+              "property": "font-weight",
+              "value": "600",
+              "important": "important"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "SUMMARY.",
+      "text": "Trading rules+",
+      "computed": {
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif",
+        "size": "14px",
+        "line": "21px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "color": "rgb(237, 241, 245)",
+        "padding": "12px 0px",
+        "gap": "12px",
+        "display": "flex",
+        "columns": "none",
+        "minWidth": "0px",
+        "width": "266px"
+      },
+      "sources": [
+        "(base inline)",
+        "gcc-charcoal-20261030",
+        "gcc-decision-ui-20261030"
+      ],
+      "matches": [
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog *",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8disclosure > summary",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "flex",
+              "important": ""
+            },
+            {
+              "property": "align-items",
+              "value": "center",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "min-height",
+              "value": "52px",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(234, 241, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8app :is(p, small, label, summary, h1, h2, h3, h4, .g8eyebrow)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8guiderules > .g8disclosure > summary",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.5",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "0.8rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0.8rem",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8disclosure > summary",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "0.8rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0.8rem",
+              "important": ""
+            },
+            {
+              "property": "min-height",
+              "value": "48px",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.5",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog .g8guiderules > .g8disclosure > summary",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "0.9rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0.9rem",
+              "important": ""
+            },
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(99, 71, 47)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            },
+            {
+              "property": "min-height",
+              "value": "52px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8stage :is(.g8disclosure, .g8moredata) > summary, #g8dialog :is(.g8disclosure, .g8moredata) > summary",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "800",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.4",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog .g8guiderules > .g8disclosure, #g8dialog .g8guiderules > .g8disclosure > summary, #g8dialog .g8guidefooter .g8button.g8ghost",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(48, 59, 61)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8app :is(.g8disclosure, .g8pickguide) > summary",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "48px",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "15px",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "var(--gcc-text)",
+              "important": "important"
+            },
+            {
+              "property": "padding-top",
+              "value": "14px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "14px",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8dialog#g8dialog#g8dialog .g8guide :is(h3, p, summary, button)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "inherit",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8dialog#g8dialog#g8dialog .g8guiderules .g8disclosure > summary",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "flex",
+              "important": "important"
+            },
+            {
+              "property": "align-items",
+              "value": "center",
+              "important": "important"
+            },
+            {
+              "property": "min-height",
+              "value": "52px",
+              "important": "important"
+            },
+            {
+              "property": "padding-top",
+              "value": "12px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "12px",
+              "important": "important"
+            },
+            {
+              "property": "background-image",
+              "value": "none",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "initial",
+              "important": "important"
+            },
+            {
+              "property": "color",
+              "value": "var(--guide-text)",
+              "important": "important"
+            },
+            {
+              "property": "font-size",
+              "value": "14px",
+              "important": "important"
+            },
+            {
+              "property": "line-height",
+              "value": "1.5",
+              "important": "important"
+            },
+            {
+              "property": "font-weight",
+              "value": "600",
+              "important": "important"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "SUMMARY.",
+      "text": "Ties, saves & career length+",
+      "computed": {
+        "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif",
+        "size": "14px",
+        "line": "21px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "color": "rgb(237, 241, 245)",
+        "padding": "12px 0px",
+        "gap": "12px",
+        "display": "flex",
+        "columns": "none",
+        "minWidth": "0px",
+        "width": "266px"
+      },
+      "sources": [
+        "(base inline)",
+        "gcc-charcoal-20261030",
+        "gcc-decision-ui-20261030"
+      ],
+      "matches": [
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog *",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8disclosure > summary",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "flex",
+              "important": ""
+            },
+            {
+              "property": "align-items",
+              "value": "center",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "min-height",
+              "value": "52px",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(234, 241, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8app :is(p, small, label, summary, h1, h2, h3, h4, .g8eyebrow)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            },
+            {
+              "property": "overflow-wrap",
+              "value": "anywhere",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8guiderules > .g8disclosure > summary",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-size",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.5",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "0.8rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0.8rem",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8disclosure > summary",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "0.8rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0.8rem",
+              "important": ""
+            },
+            {
+              "property": "min-height",
+              "value": "48px",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.5",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog .g8guiderules > .g8disclosure > summary",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "0.9rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0.9rem",
+              "important": ""
+            },
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(99, 71, 47)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            },
+            {
+              "property": "min-height",
+              "value": "52px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8stage :is(.g8disclosure, .g8moredata) > summary, #g8dialog :is(.g8disclosure, .g8moredata) > summary",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "800",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.4",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog .g8guiderules > .g8disclosure, #g8dialog .g8guiderules > .g8disclosure > summary, #g8dialog .g8guidefooter .g8button.g8ghost",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(48, 59, 61)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8app :is(.g8disclosure, .g8pickguide) > summary",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "48px",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "15px",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "var(--gcc-text)",
+              "important": "important"
+            },
+            {
+              "property": "padding-top",
+              "value": "14px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "14px",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8dialog#g8dialog#g8dialog .g8guide :is(h3, p, summary, button)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "inherit",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8dialog#g8dialog#g8dialog .g8guiderules .g8disclosure > summary",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "flex",
+              "important": "important"
+            },
+            {
+              "property": "align-items",
+              "value": "center",
+              "important": "important"
+            },
+            {
+              "property": "min-height",
+              "value": "52px",
+              "important": "important"
+            },
+            {
+              "property": "padding-top",
+              "value": "12px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "12px",
+              "important": "important"
+            },
+            {
+              "property": "background-image",
+              "value": "none",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "initial",
+              "important": "important"
+            },
+            {
+              "property": "color",
+              "value": "var(--guide-text)",
+              "important": "important"
+            },
+            {
+              "property": "font-size",
+              "value": "14px",
+              "important": "important"
+            },
+            {
+              "property": "line-height",
+              "value": "1.5",
+              "important": "important"
+            },
+            {
+              "property": "font-weight",
+              "value": "600",
+              "important": "important"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "BUTTON.g8button g8ghost g8guidecurrent",
+      "text": "How to play",
+      "computed": {
+        "font": "Inter, system-ui, sans-serif",
+        "size": "12px",
+        "line": "16.8px",
+        "bg": "rgb(37, 47, 55)",
+        "image": "none",
+        "color": "rgb(167, 217, 227)",
+        "padding": "8px 3px",
+        "gap": "4px",
+        "display": "flex",
+        "columns": "none",
+        "minWidth": "0px",
+        "width": "87.3281px"
+      },
+      "sources": [
+        "(base inline)",
+        "gcc-charcoal-20261030",
+        "gcc-decision-ui-20261030",
+        "gcc-floodlit-visual",
+        "gcc-visual-pass",
+        "gcc-cleanup-pass"
+      ],
+      "matches": [
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "button, input, select",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "inherit",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "inherit",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "inherit",
+              "important": ""
+            },
+            {
+              "property": "font-family",
+              "value": "inherit",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "inline-flex",
+              "important": ""
+            },
+            {
+              "property": "align-items",
+              "value": "center",
+              "important": ""
+            },
+            {
+              "property": "min-height",
+              "value": "46px",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "0.75rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0.75rem",
+              "important": ""
+            },
+            {
+              "property": "background-image",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "var(--ink)",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "800",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.25",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8ghost",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(19, 43, 64)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(224, 240, 237)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "max-width",
+              "value": "100%",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog *",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "max-width",
+              "value": "100%",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(49, 51, 48)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(239, 245, 251)",
+              "important": ""
+            },
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "0.7rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0.7rem",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.3",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8ghost",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "transparent",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(234, 241, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8app .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "max-width",
+              "value": "100%",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8ghost, .g8actions > .g8button:not(.g8primary):not(.g8danger):not(.g8continueclub)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-color",
+              "value": "rgb(55, 57, 54)",
+              "important": ""
+            },
+            {
+              "property": "background-image",
+              "value": "none",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(234, 241, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button.g8ghost, .g8button.g8small:not(.g8primary):not(.g8danger)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(73, 76, 67)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog .g8guidefooter .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "0.55rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0.55rem",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "0.95rem",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.4",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog .g8guidefooter .g8guidecurrent:disabled",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(31, 40, 68)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.4",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "0.65rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0.65rem",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button.g8ghost, .g8button.g8small:not(.g8primary):not(.g8danger)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(41, 53, 91)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog .g8guidefooter .g8button.g8ghost",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(99, 71, 47)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog .g8guidefooter .g8guidecurrent:disabled",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(29, 38, 64)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8app .g8button.g8ghost, #g8app .g8button.g8small:not(.g8primary):not(.g8danger)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(34, 45, 76)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog .g8guiderules > .g8disclosure, #g8dialog .g8guiderules > .g8disclosure > summary, #g8dialog .g8guidefooter .g8button.g8ghost",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(48, 59, 61)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8app .g8button.g8ghost, #g8app .g8button.g8small:not(.g8primary):not(.g8danger)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(34, 59, 112)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(255, 255, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8app .g8button, #g8dialog .g8button, #g8app .g8utilitymenu summary",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            },
+            {
+              "property": "background-image",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "color",
+              "value": "var(--gcc-text)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8app .g8button[aria-current=\"page\"]",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "color",
+              "value": "var(--gcc-accent-ink)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8app .g8button, #g8dialog .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.25",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "15px",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "11px",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "11px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8dialog#g8dialog#g8dialog .g8guidefooter .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "inline-flex",
+              "important": "important"
+            },
+            {
+              "property": "align-items",
+              "value": "center",
+              "important": "important"
+            },
+            {
+              "property": "width",
+              "value": "auto",
+              "important": "important"
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": "important"
+            },
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": "important"
+            },
+            {
+              "property": "padding-top",
+              "value": "8px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "8px",
+              "important": "important"
+            },
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "transparent",
+              "important": "important"
+            },
+            {
+              "property": "color",
+              "value": "var(--guide-muted)",
+              "important": "important"
+            },
+            {
+              "property": "font-weight",
+              "value": "500",
+              "important": "important"
+            },
+            {
+              "property": "font-size",
+              "value": "13px",
+              "important": "important"
+            },
+            {
+              "property": "line-height",
+              "value": "1.4",
+              "important": "important"
+            },
+            {
+              "property": "font-family",
+              "value": "Inter, system-ui, sans-serif",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8dialog#g8dialog#g8dialog .g8guidefooter nav .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "transparent",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8dialog#g8dialog#g8dialog .g8guidefooter .g8guidecurrent:disabled",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(37, 47, 55)",
+              "important": "important"
+            },
+            {
+              "property": "color",
+              "value": "var(--guide-accent)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8dialog#g8dialog#g8dialog .g8guidefooter nav .g8button",
+          "conditions": [
+            "(max-width: 650px)"
+          ],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "8px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "8px",
+              "important": "important"
+            },
+            {
+              "property": "font-size",
+              "value": "12px",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app, #g8app#g8app#g8app button, #g8app#g8app#g8app input, #g8app#g8app#g8app select",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--vx-body)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": ""
+            },
+            {
+              "property": "font-family",
+              "value": "var(--vx-body)",
+              "important": "important"
+            },
+            {
+              "property": "font-size",
+              "value": "1rem",
+              "important": "important"
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": "important"
+            },
+            {
+              "property": "line-height",
+              "value": "1.25",
+              "important": "important"
+            },
+            {
+              "property": "padding-top",
+              "value": "10px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "10px",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app .g8button:not(.g8primary)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "rgba(255, 255, 255, 0.043)",
+              "important": "important"
+            },
+            {
+              "property": "color",
+              "value": "var(--gcc-text)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "max-width",
+              "value": "100%",
+              "important": ""
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app .g8button:is(.selected, [aria-pressed=\"true\"], [aria-current=\"page\"]), #g8hud#g8hud#g8hud .g8button:is(.selected, [aria-pressed=\"true\"], [aria-current=\"page\"]), #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=\"how\"], [data-prompt=\"howItWorks\"], [data-prompt=\"breakawayStory\"])) .g8button:is(.selected, [aria-pressed=\"true\"], [aria-current=\"page\"])",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "color",
+              "value": "var(--gcc-accent-ink)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 14,
+            "id": "gcc-visual-pass"
+          },
+          "selector": "button:disabled, .g8button:disabled",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "color",
+              "value": "rgb(157, 176, 199)",
+              "important": "important"
+            },
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "rgba(255, 255, 255, 0.043)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 15,
+            "id": "gcc-cleanup-pass"
+          },
+          "selector": "#g8dialog#g8dialog#g8dialog :is(input, select, button, textarea)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--vx-body,Arial,sans-serif)",
+              "important": "important"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "BUTTON.g8button g8ghost ",
+      "text": "How it works",
+      "computed": {
+        "font": "Inter, system-ui, sans-serif",
+        "size": "12px",
+        "line": "16.8px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "color": "rgb(237, 241, 245)",
+        "padding": "8px 3px",
+        "gap": "4px",
+        "display": "flex",
+        "columns": "none",
+        "minWidth": "0px",
+        "width": "87.3281px"
+      },
+      "sources": [
+        "(base inline)",
+        "gcc-charcoal-20261030",
+        "gcc-decision-ui-20261030",
+        "gcc-floodlit-visual",
+        "gcc-cleanup-pass"
+      ],
+      "matches": [
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "button, input, select",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "inherit",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "inherit",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "inherit",
+              "important": ""
+            },
+            {
+              "property": "font-family",
+              "value": "inherit",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "inline-flex",
+              "important": ""
+            },
+            {
+              "property": "align-items",
+              "value": "center",
+              "important": ""
+            },
+            {
+              "property": "min-height",
+              "value": "46px",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "0.75rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0.75rem",
+              "important": ""
+            },
+            {
+              "property": "background-image",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "var(--ink)",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "800",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.25",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8ghost",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(19, 43, 64)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(224, 240, 237)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "max-width",
+              "value": "100%",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog *",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "max-width",
+              "value": "100%",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(49, 51, 48)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(239, 245, 251)",
+              "important": ""
+            },
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "0.7rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0.7rem",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.3",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8ghost",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "transparent",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(234, 241, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8app .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "max-width",
+              "value": "100%",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8ghost, .g8actions > .g8button:not(.g8primary):not(.g8danger):not(.g8continueclub)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-color",
+              "value": "rgb(55, 57, 54)",
+              "important": ""
+            },
+            {
+              "property": "background-image",
+              "value": "none",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(234, 241, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button.g8ghost, .g8button.g8small:not(.g8primary):not(.g8danger)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(73, 76, 67)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog .g8guidefooter .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "0.55rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0.55rem",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "0.95rem",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.4",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.4",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "0.65rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0.65rem",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button.g8ghost, .g8button.g8small:not(.g8primary):not(.g8danger)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(41, 53, 91)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog .g8guidefooter .g8button.g8ghost",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(99, 71, 47)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8app .g8button.g8ghost, #g8app .g8button.g8small:not(.g8primary):not(.g8danger)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(34, 45, 76)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog .g8guiderules > .g8disclosure, #g8dialog .g8guiderules > .g8disclosure > summary, #g8dialog .g8guidefooter .g8button.g8ghost",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(48, 59, 61)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8app .g8button.g8ghost, #g8app .g8button.g8small:not(.g8primary):not(.g8danger)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(34, 59, 112)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(255, 255, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8app .g8button, #g8dialog .g8button, #g8app .g8utilitymenu summary",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            },
+            {
+              "property": "background-image",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "color",
+              "value": "var(--gcc-text)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8app .g8button, #g8dialog .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.25",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "15px",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "11px",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "11px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8dialog#g8dialog#g8dialog .g8guidefooter .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "inline-flex",
+              "important": "important"
+            },
+            {
+              "property": "align-items",
+              "value": "center",
+              "important": "important"
+            },
+            {
+              "property": "width",
+              "value": "auto",
+              "important": "important"
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": "important"
+            },
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": "important"
+            },
+            {
+              "property": "padding-top",
+              "value": "8px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "8px",
+              "important": "important"
+            },
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "transparent",
+              "important": "important"
+            },
+            {
+              "property": "color",
+              "value": "var(--guide-muted)",
+              "important": "important"
+            },
+            {
+              "property": "font-weight",
+              "value": "500",
+              "important": "important"
+            },
+            {
+              "property": "font-size",
+              "value": "13px",
+              "important": "important"
+            },
+            {
+              "property": "line-height",
+              "value": "1.4",
+              "important": "important"
+            },
+            {
+              "property": "font-family",
+              "value": "Inter, system-ui, sans-serif",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8dialog#g8dialog#g8dialog .g8guidefooter nav .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "transparent",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8dialog#g8dialog#g8dialog .g8guidefooter nav .g8button",
+          "conditions": [
+            "(max-width: 650px)"
+          ],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "8px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "8px",
+              "important": "important"
+            },
+            {
+              "property": "font-size",
+              "value": "12px",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app, #g8app#g8app#g8app button, #g8app#g8app#g8app input, #g8app#g8app#g8app select",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--vx-body)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": ""
+            },
+            {
+              "property": "font-family",
+              "value": "var(--vx-body)",
+              "important": "important"
+            },
+            {
+              "property": "font-size",
+              "value": "1rem",
+              "important": "important"
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": "important"
+            },
+            {
+              "property": "line-height",
+              "value": "1.25",
+              "important": "important"
+            },
+            {
+              "property": "padding-top",
+              "value": "10px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "10px",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app .g8button:not(.g8primary)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "rgba(255, 255, 255, 0.043)",
+              "important": "important"
+            },
+            {
+              "property": "color",
+              "value": "var(--gcc-text)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "max-width",
+              "value": "100%",
+              "important": ""
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 15,
+            "id": "gcc-cleanup-pass"
+          },
+          "selector": "#g8dialog#g8dialog#g8dialog :is(input, select, button, textarea)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--vx-body,Arial,sans-serif)",
+              "important": "important"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "BUTTON.g8button g8ghost ",
+      "text": "The breakaway story",
+      "computed": {
+        "font": "Inter, system-ui, sans-serif",
+        "size": "12px",
+        "line": "16.8px",
+        "bg": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "color": "rgb(237, 241, 245)",
+        "padding": "8px 3px",
+        "gap": "4px",
+        "display": "flex",
+        "columns": "none",
+        "minWidth": "0px",
+        "width": "87.3438px"
+      },
+      "sources": [
+        "(base inline)",
+        "gcc-charcoal-20261030",
+        "gcc-decision-ui-20261030",
+        "gcc-floodlit-visual",
+        "gcc-cleanup-pass"
+      ],
+      "matches": [
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "button, input, select",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "inherit",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "inherit",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "inherit",
+              "important": ""
+            },
+            {
+              "property": "font-family",
+              "value": "inherit",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "inline-flex",
+              "important": ""
+            },
+            {
+              "property": "align-items",
+              "value": "center",
+              "important": ""
+            },
+            {
+              "property": "min-height",
+              "value": "46px",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "0.75rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0.75rem",
+              "important": ""
+            },
+            {
+              "property": "background-image",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "var(--ink)",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "800",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.25",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8ghost",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(19, 43, 64)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(224, 240, 237)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "max-width",
+              "value": "100%",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog *",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "max-width",
+              "value": "100%",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(49, 51, 48)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(239, 245, 251)",
+              "important": ""
+            },
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "0.7rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0.7rem",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "1rem",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.3",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8ghost",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "transparent",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(234, 241, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8app .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "max-width",
+              "value": "100%",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8ghost, .g8actions > .g8button:not(.g8primary):not(.g8danger):not(.g8continueclub)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-color",
+              "value": "rgb(55, 57, 54)",
+              "important": ""
+            },
+            {
+              "property": "background-image",
+              "value": "none",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(234, 241, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button.g8ghost, .g8button.g8small:not(.g8primary):not(.g8danger)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(73, 76, 67)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog .g8guidefooter .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "0.55rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0.55rem",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "0.95rem",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.4",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.4",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "0.65rem",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "0.65rem",
+              "important": ""
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": ".g8button.g8ghost, .g8button.g8small:not(.g8primary):not(.g8danger)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(41, 53, 91)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog .g8guidefooter .g8button.g8ghost",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(99, 71, 47)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8app .g8button.g8ghost, #g8app .g8button.g8small:not(.g8primary):not(.g8danger)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(34, 45, 76)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8dialog .g8guiderules > .g8disclosure, #g8dialog .g8guiderules > .g8disclosure > summary, #g8dialog .g8guidefooter .g8button.g8ghost",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(48, 59, 61)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(241, 245, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 0,
+            "id": "(base inline)"
+          },
+          "selector": "#g8app .g8button.g8ghost, #g8app .g8button.g8small:not(.g8primary):not(.g8danger)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": ""
+            },
+            {
+              "property": "background-color",
+              "value": "rgb(34, 59, 112)",
+              "important": ""
+            },
+            {
+              "property": "color",
+              "value": "rgb(255, 255, 255)",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8app .g8button, #g8dialog .g8button, #g8app .g8utilitymenu summary",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": ""
+            },
+            {
+              "property": "background-image",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "",
+              "important": "important"
+            },
+            {
+              "property": "color",
+              "value": "var(--gcc-text)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 8,
+            "id": "gcc-charcoal-20261030"
+          },
+          "selector": "#g8app .g8button, #g8dialog .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": ""
+            },
+            {
+              "property": "line-height",
+              "value": "1.25",
+              "important": ""
+            },
+            {
+              "property": "font-size",
+              "value": "15px",
+              "important": ""
+            },
+            {
+              "property": "padding-top",
+              "value": "11px",
+              "important": ""
+            },
+            {
+              "property": "padding-bottom",
+              "value": "11px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8dialog#g8dialog#g8dialog .g8guidefooter .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "display",
+              "value": "inline-flex",
+              "important": "important"
+            },
+            {
+              "property": "align-items",
+              "value": "center",
+              "important": "important"
+            },
+            {
+              "property": "width",
+              "value": "auto",
+              "important": "important"
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": "important"
+            },
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": "important"
+            },
+            {
+              "property": "padding-top",
+              "value": "8px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "8px",
+              "important": "important"
+            },
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "transparent",
+              "important": "important"
+            },
+            {
+              "property": "color",
+              "value": "var(--guide-muted)",
+              "important": "important"
+            },
+            {
+              "property": "font-weight",
+              "value": "500",
+              "important": "important"
+            },
+            {
+              "property": "font-size",
+              "value": "13px",
+              "important": "important"
+            },
+            {
+              "property": "line-height",
+              "value": "1.4",
+              "important": "important"
+            },
+            {
+              "property": "font-family",
+              "value": "Inter, system-ui, sans-serif",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8dialog#g8dialog#g8dialog .g8guidefooter nav .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "transparent",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 9,
+            "id": "gcc-decision-ui-20261030"
+          },
+          "selector": "#g8dialog#g8dialog#g8dialog .g8guidefooter nav .g8button",
+          "conditions": [
+            "(max-width: 650px)"
+          ],
+          "declarations": [
+            {
+              "property": "padding-top",
+              "value": "8px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "8px",
+              "important": "important"
+            },
+            {
+              "property": "font-size",
+              "value": "12px",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app, #g8app#g8app#g8app button, #g8app#g8app#g8app input, #g8app#g8app#g8app select",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--vx-body)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "min-height",
+              "value": "44px",
+              "important": ""
+            },
+            {
+              "property": "font-family",
+              "value": "var(--vx-body)",
+              "important": "important"
+            },
+            {
+              "property": "font-size",
+              "value": "1rem",
+              "important": "important"
+            },
+            {
+              "property": "font-weight",
+              "value": "700",
+              "important": "important"
+            },
+            {
+              "property": "line-height",
+              "value": "1.25",
+              "important": "important"
+            },
+            {
+              "property": "padding-top",
+              "value": "10px",
+              "important": "important"
+            },
+            {
+              "property": "padding-bottom",
+              "value": "10px",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app .g8button:not(.g8primary)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "background-image",
+              "value": "initial",
+              "important": "important"
+            },
+            {
+              "property": "background-color",
+              "value": "rgba(255, 255, 255, 0.043)",
+              "important": "important"
+            },
+            {
+              "property": "color",
+              "value": "var(--gcc-text)",
+              "important": "important"
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 11,
+            "id": "gcc-floodlit-visual"
+          },
+          "selector": "#g8app#g8app#g8app .g8button",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "max-width",
+              "value": "100%",
+              "important": ""
+            },
+            {
+              "property": "min-width",
+              "value": "0px",
+              "important": ""
+            }
+          ]
+        },
+        {
+          "source": {
+            "sheetIndex": 15,
+            "id": "gcc-cleanup-pass"
+          },
+          "selector": "#g8dialog#g8dialog#g8dialog :is(input, select, button, textarea)",
+          "conditions": [],
+          "declarations": [
+            {
+              "property": "font-family",
+              "value": "var(--vx-body,Arial,sans-serif)",
+              "important": "important"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "actions": [],
+  "copy": "How to play\n×\nYOUR FIRST SEASON\nFrom the draft to the final.\n\nBuild your squad, name your XI and take your club through the season.\n\n1\nChoose your club\n\nRead the home-ground conditions and choose one of the eight clubs.\n\n2\nWatch league signings\n\nThe five-day window decides who enters the league. These players join the draft pool, not your club. Use speed or skip to move ahead.\n\n3\nDraft your fifteen\n\nScout a player by opening their card, then select Pick. The order reverses each round. Your home ground and the jobs players can fill matter.\n\n4\nName your XI\n\nSelect eleven from your squad. Use the arrows beside selected players to set the batting order; use Swap to change the side.\n\n5\nPlay the season\n\nPlay fourteen league matches. Follow the over-by-over feed or skip to the result. The top four reach two semi-finals and a Grand Final.\n\n6\nBuild again\n\nYour squad carries over. Review retirements and development, make any optional changes, then draft the vacancies and name your next XI.\n\nRetirements, releases & draft picks\n+\nTrading rules\n+\nTies, saves & career length\n+\nHow to play\nHow it works\nThe breakaway story\nBack to game",
+  "disclaimer": "Matched active media/supports declarations plus computed styles. Container-query matches remain candidates; no automatic winner attribution or defect count from duplication alone."
+}
