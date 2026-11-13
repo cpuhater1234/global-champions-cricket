@@ -7,7 +7,7 @@ permissions:
   contents: write
 env:
   # Paired archive candidate; original manifest snapshot intentionally retained.
-  CANDIDATE_SHA256: 1260a9eb4e7ee2d39e60180c307d9ed73b5190396b5e0bbdb4b98421f765b66a
+  CANDIDATE_SHA256: 9e1fec325f6d5dc08e16b79ce4cf2019e2c4aa0872d076a283cf1b1a70a01601
 concurrency:
   group: gcc-live-header-probe
   cancel-in-progress: true
