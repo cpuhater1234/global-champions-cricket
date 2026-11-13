@@ -2,6 +2,10 @@
 
 13 November2026. Working branch: `work/v116-candidate-acceptance`. The `v116` branch reports dated11November describe the frozen release and early signing experiment; they are historical evidence, not the current candidate acceptance record.
 
+## Current staged mobile draft review
+
+Mobile draft chrome/companion pass is staged for focused native and image review. Base98a664ca…e4b230; candidate SHA-2563a504c7d11f542c0d8d7e11e6f93fc798f9ede4f5cb54f7c1d95fba1cc1b1898 (6,656,881bytes). Only existing CSS owner10 differs from the offseason base. Squad/Speed share a narrow row; enabled Skip keeps its own row; header/filters use less space; narrow squad role counts use two columns. Main companion and Analysis/League picks remain accessible. [Mobile draft review](V116_MOBILE_DRAFT_REVIEW.md). No stable promotion or download.
+
 ## Current offseason review candidate
 
 Offseason overview/development density pass is complete for its bounded scope. [Final run43401126905](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/43401126905) passed60 paired states with0 findings/errors. Base is archive candidate29730258…1b37e9; current SHA-25698a664ca2f125a54a4f72454d685dd08dbea698eb48d206367ee1a1a7ee4b230 (6,656,487bytes). Only existing CSS owners10/31 change. All22 runtime bodies unchanged. See [offseason review](V116_OFFSEASON_DENSITY_REVIEW.md). Phone overviews save98–141px; tablets save365px. Additional skills remain available and expanded cards do not stretch their neighbours. No stable promotion or new download. Next: mobile draft chrome/companion layout.

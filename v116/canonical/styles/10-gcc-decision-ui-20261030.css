@@ -236,11 +236,15 @@
  #g8app .gccui .gccuiTurn{grid-template-columns:44px minmax(0,1fr);padding:16px;gap:12px;margin-bottom:16px}
  #g8app .gccui .gccuiTurnMark .g8badge{width:44px;height:44px;min-width:44px;font-size:12px}
  #g8app .gccui .gccuiTurnActions{grid-column:1/-1;justify-content:stretch}
- #g8app .gccuiDraft .gccuiTurn{grid-template-columns:44px minmax(0,1fr);padding:12px;margin-bottom:12px}
- #g8app .gccuiDraft .gccuiHeading{padding-bottom:8px;margin-bottom:10px}
+ #g8app .gccuiDraft .gccuiTurn{grid-template-columns:44px minmax(0,1fr);padding:10px;margin-bottom:8px;gap:8px}
+ #g8app .gccuiDraft .gccuiHeading{padding-bottom:6px;margin-bottom:6px}
  #g8app .gccuiDraft .gccuiHeadingIcon{flex-basis:36px;height:36px}
  #g8app .gccuiDraft .gccuiTurnActions>.gccuiMobileSquad{display:inline-flex!important}
- #g8app .gccuiDraft .gccuiTurnActions>.g8button{flex:1 1 130px!important}
+ #g8app .gccuiDraft .gccuiTurnActions{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px!important}
+ #g8app .gccuiDraft .gccuiTurnActions>.g8button{min-width:0;min-height:44px!important;white-space:normal!important}
+ #g8app .gccuiDraft .gccuiTurnActions>[data-action=skipPick]{grid-column:1/-1}
+ #g8app .gccui.gccuiDraft .gccuiFilters{padding:10px;gap:8px}
+ #g8app .gccui.gccuiDraft .gccuiFilters label{gap:4px}
  #g8app .gccuiDraft .gccuiTurnActions>[data-action=skipPick]:disabled{display:none!important}
 
  #g8app .gccui .gccuiTurnActions>.g8button{flex:1}
@@ -926,7 +930,7 @@
 
 /* Scout is clipped by its card: keep the complete focus ring inside its bounds. */
 #g8app .gccui .gccuiPlayerScout:focus-visible{outline-offset:-4px}
-@media(max-width:380px){#g8dialog .gccuiDraftSquadReport .gccuiRoleCoverage>div{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:380px){#g8dialog .gccuiDraftSquadReport .gccuiRoleCoverage>div{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 12px}}
 
 /* Macro/micro review: compact desktop context, atomic club identity. */
 #g8app #g8hud .g8hudclub>.g8badge{box-sizing:border-box!important;padding:0!important;white-space:nowrap!important;overflow-wrap:normal!important;word-break:normal!important;font-size:12px!important;line-height:1!important;flex-shrink:0!important;align-items:center;justify-content:center}

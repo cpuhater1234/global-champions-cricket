@@ -1,0 +1,95 @@
+name: GCC mobile draft review
+on:
+  push:
+    branches: [work/v116-candidate-acceptance]
+    paths: ['qa/v116_mobile_draft.cjs', '.github/workflows/v116-mobile-draft.yml']
+permissions:
+  contents: write
+env:
+  # Paired archive candidate; original manifest snapshot intentionally retained.
+  CANDIDATE_SHA256: 3a504c7d11f542c0d8d7e11e6f93fc798f9ede4f5cb54f7c1d95fba1cc1b1898
+concurrency:
+  group: gcc-mobile-draft
+  cancel-in-progress: true
+jobs:
+  acceptance:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install native browser
+        run: |
+          if [ -f /etc/apt/apt-mirrors.txt ]; then
+            sudo sed -i 's|http://azure.archive.ubuntu.com/ubuntu|https://archive.ubuntu.com/ubuntu|g' /etc/apt/apt-mirrors.txt
+          fi
+          pip install playwright pillow
+          python -m playwright install --with-deps chromium
+          npm install --no-save --no-package-lock playwright
+      - name: Build pinned before and after candidates
+        run: |
+          mkdir -p /tmp/mobile-draft-before
+          git archive 03b0da7b786d4f75dee3d23c1c40b6ab5d8f10af v116/canonical | tar -x -C /tmp/mobile-draft-before
+          python qa/v116_canonical_source.py build --source /tmp/mobile-draft-before/v116/canonical --output qa/results/mobile-draft-before.html
+          python qa/v116_canonical_source.py build --source v116/canonical --output qa/results/mobile-draft-after.html
+          python - <<'CHECK'
+          from pathlib import Path
+          from hashlib import sha256
+          from qa.v116_source_reconciliation import BLOCK
+          a=Path('qa/results/mobile-draft-before.html').read_bytes();b=Path('qa/results/mobile-draft-after.html').read_bytes()
+          assert sha256(a).hexdigest()=='98a664ca2f125a54a4f72454d685dd08dbea698eb48d206367ee1a1a7ee4b230'
+          assert sha256(b).hexdigest()=='3a504c7d11f542c0d8d7e11e6f93fc798f9ede4f5cb54f7c1d95fba1cc1b1898'
+          aa=list(BLOCK.finditer(a));bb=list(BLOCK.finditer(b))
+          assert [m[3] for m in aa if m[1]==b'script']==[m[3] for m in bb if m[1]==b'script']
+          changed=[i for i,(x,y) in enumerate(zip(aa,bb)) if x[3]!=y[3]];assert changed==[10],changed
+          print('Only existing mobile draft CSS owner10 changed;22 runtime bodies unchanged')
+          CHECK
+      - uses: actions/cache/restore@v4
+        with:
+          path: qa/results/whole-ui-career
+          key: gcc-ui-career-79a2fbfe-seed101-v1-${{ hashFiles('qa/structural-risk/career-run.mjs', 'qa/offline_game_host.mjs') }}
+      - name: Require existing checkpoints without rerunning career acceptance
+        run: |
+          test -f qa/results/whole-ui-career/checkpoint-2025.json
+      - name: Paired mobile draft and companion controls
+        id: audit
+        continue-on-error: true
+        env:
+          GCC8_BASE_BUILD: qa/results/mobile-draft-before.html
+          GCC8_TEST_BUILD: qa/results/mobile-draft-after.html
+          GCC8_MOBILE_DRAFT_DIR: qa/results/mobile-draft
+          GCC8_BROWSER_CAREER_DIR: qa/results/whole-ui-career
+        run: |
+          GCC8_CHROMIUM="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')" node qa/v116_mobile_draft.cjs
+      - name: Preserve bounded review evidence
+        if: always()
+        run: |
+          python - <<'SAVE'
+          from pathlib import Path
+          from PIL import Image
+          import shutil
+          src=Path('qa/results/mobile-draft');dst=Path('docs/release/mobile-draft/${{ github.run_id }}');dst.mkdir(parents=True,exist_ok=True)
+          for f in src.glob('*.json'):shutil.copyfile(f,dst/f.name)
+          for f in src.glob('*.png'):
+              im=Image.open(f).convert('RGB');im.save(dst/f.with_suffix('.jpg').name,quality=88,optimize=True)
+          SAVE
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/release/mobile-draft
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record paired mobile draft review evidence'
+            git pull --rebase origin work/v116-candidate-acceptance
+            git push origin HEAD:refs/heads/work/v116-candidate-acceptance
+          fi
+      - name: Require focused checks
+        if: always()
+        env:
+          AUDIT: ${{ steps.audit.outcome }}
+        run: test "$AUDIT" = success
