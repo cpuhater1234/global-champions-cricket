@@ -43,8 +43,14 @@ This supplies a safe, repeatable path for the staged candidate. It does **not** 
 - Player reports:90 paired states, run43336190086; all three tabs, narrow header and rating/close separation.
 - Earlier reveal/decision and XI/analysis passes are recorded in their release review documents. These do not substitute for exact-current persistence checks.
 
+## Accessibility gate and promotion decision
+
+The exact c45684a5…e7720ab candidate has now undergone the next bounded accessibility diagnostic. See [V116_ACCESSIBILITY_GATE.md](V116_ACCESSIBILITY_GATE.md) for evidence, diagnostic corrections, confirmed findings and limits. **Promotion remains HOLD**. No product body changed and no new build download is required.
+
+The 768px signing-button height difference is visible but cosmetic in the tested state: labels fit, minimum height44px, keyboard Resume/Pause works, focus is visible/unobscured. Deferred without a patch. Final native diagnostic [43346413874](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/43346413874) completed33 states/105 focus observations without runner/page errors. Actual320px Tab traversal leaves Fixtures partly offscreen;360/390px initial-focus observations also need triage. A separate confirmed320px Matchday readability defect is the Season record label overlapping its value. Live-score text updates and is exposed as polite/atomic in Chromium, but the status container is replaced each update; actual spoken announcements remain unverified.200% native zoom was activated, but zoomed raster capture clips and does not provide complete visual signoff.
+
 ## Next gates
 
-Exact-current focused acceptance is now recorded. Before resuming broader polish, retest historical accessibility concerns on this candidate: live-score announcement behavior, narrow layout and actual enlarged-text behavior. Those are verification questions, not confirmed v116 defects. No new feature or cricket-simulation change is justified without a specific reproduced problem.
+Exact-current focused acceptance is now recorded. Before promotion, resolve or explicitly accept the narrow navigation focus visibility and confirmed narrow-screen readability findings and complete live-announcement assistive-technology verification plus reliable zoomed visual review. The bounded diagnostic does not certify every browser, storage failure mode or full career horizon. No new feature or cricket-simulation change is justified without a specific reproduced problem.
 
 Remaining visual work includes archive/offseason summary density, mobile draft chrome/companion, long-club-name live alignment, remaining match-specific surfaces and separately verified cascade consolidation. The previous71/100 whole-interface assessment is not rescored by individual component tests. No independent whole-game final visual approval is claimed.
