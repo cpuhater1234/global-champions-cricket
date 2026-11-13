@@ -675,13 +675,13 @@
 #g8app#g8app#g8app .g8superover>.g8fine:last-child{margin-bottom:0}
 
 /* Annual development uses the same surfaces and numeric alignment as squad reports. */
-#g8app#g8app#g8app .g8annualdevelopment .g8developmentrow{background:var(--gcc-inset)!important;color:var(--gcc-text)!important;border:1px solid var(--gcc-line)!important;border-radius:8px;padding:14px!important;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 12px;margin:12px 0}
+#g8app#g8app#g8app .g8annualdevelopment .g8developmentrow{background:var(--gcc-inset)!important;color:var(--gcc-text)!important;border:1px solid var(--gcc-line)!important;border-radius:8px;padding:12px!important;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 12px;margin:6px 0}
 #g8app#g8app#g8app .g8annualdevelopment .g8developmentidentity{min-width:0}
 #g8app#g8app#g8app .g8annualdevelopment .g8developmentidentity b{display:block;font-size:16px;line-height:1.35}
 #g8app#g8app#g8app .g8annualdevelopment .g8developmentidentity>span{display:block;color:var(--gcc-muted);font-size:13px;line-height:1.4;margin-top:4px}
 #g8app#g8app#g8app .g8annualdevelopment .g8developmentoverall{font-size:20px;line-height:1.35;font-variant-numeric:tabular-nums;white-space:nowrap;align-self:start}
 #g8app#g8app#g8app .g8annualdevelopment .g8skillchanges{grid-column:1/-1;list-style:none;padding:0;margin:0}
-#g8app#g8app#g8app .g8annualdevelopment .g8skillchanges>li{display:grid;grid-template-columns:minmax(0,1fr) 3ch 8ch;align-items:baseline;gap:8px;padding:8px 0!important;background:transparent!important;border:0!important;border-bottom:1px solid var(--gcc-line)!important;border-radius:0!important}
+#g8app#g8app#g8app .g8annualdevelopment .g8skillchanges>li{display:grid;grid-template-columns:minmax(0,1fr) 3ch 8ch;align-items:baseline;gap:8px;padding:6px 0!important;background:transparent!important;border:0!important;border-bottom:1px solid var(--gcc-line)!important;border-radius:0!important}
 #g8app#g8app#g8app .g8annualdevelopment .g8skillchanges>li>span{min-width:0;font-size:14px}
 #g8app#g8app#g8app .g8annualdevelopment .g8skillchanges>li>:is(b,small){text-align:right;font-variant-numeric:tabular-nums;font-size:13px;white-space:nowrap}
 #g8app#g8app#g8app .g8annualdevelopment .g8skillchanges>li>small{color:var(--gcc-muted)}

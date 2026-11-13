@@ -697,8 +697,8 @@
 #g8app .gccuiCareer .g8annualhero{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px 24px;align-items:start;border-top:4px solid var(--ui-team)!important;padding:20px!important;background:var(--gcc-panel)!important}
 #g8app .gccuiCareer :is(.gccuiOffseasonSummary,.gccuiOffseasonIssues,.gccuiOffseasonActions){min-width:0}
 #g8app .gccuiCareer .gccuiOffseasonSummary>.g8eyebrow{font-size:12px!important;line-height:1.4!important;margin:0 0 6px!important}
-#g8app .gccuiCareer .gccuiOffseasonSummary>h2{max-width:none!important;font-size:24px!important;line-height:1.25!important;margin:0 0 14px!important;font-style:normal!important;text-transform:none!important}
-#g8app .gccuiCareer .g8annualbrief{display:block!important;width:100%!important;max-width:none!important;margin:0 0 12px!important;padding:12px 0!important;background:transparent!important;box-shadow:none!important}
+#g8app .gccuiCareer .gccuiOffseasonSummary>h2{max-width:none!important;font-size:24px!important;line-height:1.25!important;margin:0 0 8px!important;font-style:normal!important;text-transform:none!important}
+#g8app .gccuiCareer .g8annualbrief{display:block!important;width:100%!important;max-width:none!important;margin:0 0 8px!important;padding:8px 0!important;background:transparent!important;box-shadow:none!important}
 #g8app .gccuiCareer .g8annualbrief .g8metrics{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;width:100%!important;max-width:none!important;gap:0!important;margin:0!important;padding:0!important}
 #g8app .gccuiCareer .g8annualbrief .g8metrics>div{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;min-width:0!important;width:auto!important;max-width:none!important;padding:0 8px!important;text-align:center!important}
 #g8app .gccuiCareer .g8annualbrief .g8metrics strong{font-size:30px!important;line-height:1.15!important}
@@ -713,11 +713,11 @@
 #g8app .gccuiCareer .gccuiOffseasonIssues .g8decisionline>div{min-width:0}
 #g8app .gccuiCareer .gccuiOffseasonIssues .g8decisionline :is(strong,span,small){display:block!important;white-space:normal!important;text-align:left!important;font-size:14px!important;line-height:1.45!important}
 #g8app .gccuiCareer .gccuiOffseasonIssues .g8button{min-height:44px!important;margin:0!important;font-size:14px!important}
-#g8app .gccuiCareer .gccuiOffseasonActions{grid-column:1/-1;border-top:1px solid var(--gcc-line);padding-top:16px}
+#g8app .gccuiCareer .gccuiOffseasonActions{grid-column:1/-1;border-top:1px solid var(--gcc-line);padding-top:12px}
 #g8app .gccuiCareer .gccuiOffseasonActions>.g8actions{display:flex!important;flex-wrap:wrap!important;gap:10px!important;margin:0!important}
 #g8app .gccuiCareer .gccuiOffseasonActions .g8button{min-height:44px!important;font-size:14px!important;width:auto!important}
 #g8app .gccuiCareer .gccuiOffseasonActions .g8primary{background:var(--ui-team)!important;color:var(--club-ink,#171717)!important;border-color:var(--ui-team)!important}
-#g8app .gccuiCareer .gccuiOffseasonActions>.g8fine{display:block;margin-top:10px!important;font-size:14px!important;line-height:1.5!important}
+#g8app .gccuiCareer .gccuiOffseasonActions>.g8fine{display:block;margin-top:8px!important;font-size:14px!important;line-height:1.5!important}
 /* No issue content means no vacant right-hand column. */
 #g8app .gccuiCareer .g8annualhero:not(:has(.gccuiOffseasonIssues .g8dressingroom)){grid-template-columns:minmax(0,1fr)}
 #g8app .gccuiCareer .gccuiOffseasonIssues:empty{display:none}
@@ -733,9 +733,10 @@
  #g8app .gccuiCareer .g8annualhero{grid-template-columns:minmax(0,1fr);gap:16px;padding:16px!important}
  #g8app .gccuiCareer .gccuiOffseasonSummary>h2{font-size:22px!important}
  #g8app .gccuiCareer .g8annualdevelopment{padding:16px!important}
- #g8app .gccuiCareer .g8annualdevelopment .g8development{grid-template-columns:minmax(0,1fr)}
+ #g8app .gccuiCareer .g8annualdevelopment .g8development{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media(max-width:600px){
+ #g8app .gccuiCareer .g8annualdevelopment .g8development{grid-template-columns:minmax(0,1fr)}
  #g8app .gccuiCareer .gccuiOffseasonActions>.g8actions{display:grid!important;grid-template-columns:minmax(0,1fr)!important}
  #g8app .gccuiCareer .gccuiOffseasonActions .g8button{width:100%!important}
  #g8app .gccuiCareer .gccuiOffseasonIssues .g8decisionline{grid-template-columns:minmax(0,1fr)!important;gap:8px!important}
@@ -1260,6 +1261,7 @@ html:has(#g8dialog[open]){overflow:hidden}
 
 /* Native Build48 inspection: place squad decisions ahead of supporting rules. */
 #g8app .gccuiCareer .g8annualhero{grid-template-columns:minmax(0,1fr)!important;gap:12px!important}
+#g8app .gccuiCareer .g8annualhero:has(>.gccuiOffseasonSummary){gap:8px!important;padding:16px!important}
 #g8app .gccuiCareer :is(.gccuiOffseasonSummary,.gccuiOffseasonIssues,.gccuiOffseasonActions){grid-column:1/-1}
 #g8app .gccuiCareer .gccuiOffseasonIssues .gccuiSquadDecisions{margin:0!important}
 #g8app .gccuiCareer .gccuiSquadDecisions.has-alert{border-left:3px solid #d8af57!important}
@@ -1278,8 +1280,8 @@ html:has(#g8dialog[open]){overflow:hidden}
  #g8app .gccuiCareer:has(.g8manageworkspace)>.g8heading .g8actions{margin-top:4px!important}
  #g8app .gccuiCareer .g8annualbrief{padding:8px 0!important;margin-bottom:8px!important}
  #g8app .gccuiCareer .gccuiOffseasonSummary>h2{margin-bottom:8px!important}
- #g8app .gccuiCareer .gccuiOffseasonActions .g8actions{display:grid!important;grid-template-columns:1fr 1fr!important;gap:8px!important}
- #g8app .gccuiCareer .gccuiOffseasonActions .g8actions>.g8button{font-size:13px!important;line-height:1.4!important;white-space:normal!important;min-height:48px!important;padding:8px!important;width:100%!important}
+ #g8app .gccuiCareer .gccuiOffseasonActions .g8actions{display:grid!important;grid-template-columns:1fr 1fr!important;gap:8px!important;align-items:stretch!important}
+ #g8app .gccuiCareer .gccuiOffseasonActions .g8actions>.g8button{height:100%!important;font-size:13px!important;line-height:1.4!important;white-space:normal!important;min-height:48px!important;padding:8px!important;width:100%!important}
 }
 
 /* Context for assistive navigation without another visible trade panel. */
