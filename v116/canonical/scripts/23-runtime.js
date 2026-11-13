@@ -22,8 +22,8 @@
  const chip=p=>btn(p.name,'inspect',[p.id],'g8rolechip'+(injury(p)?.status==='OUT'?' g8unavailable':''));
  X.teamRead=(squad=false)=>{
   const ps=squad?roster():G.state.xi.map(G.byId).filter(Boolean),fit=ps.filter(p=>injury(p)?.status!=='OUT'),profile=squad?X.squadProfile():X.profile();
-  const cover=fit.length<11?(squad?'Projection incomplete':'XI incomplete'):(squad?'Projected XI ready':'XI selected');
-  const row=(key,label)=>{const value=Math.round(profile[key]||0);return `<div class="g8analysisrow" data-matchup="${key}"><span>${esc(label)}</span><strong style="--rating-color:${X.ratingTone(value)}">${value}</strong></div>`;};
+  const cover=fit.length<11?(squad?'Fewer than eleven available':'XI incomplete'):(squad?'Projected XI ready':'XI selected');
+  const row=(key,label)=>{const value=Math.round(profile[key]||0);return `<div class="g8analysisrow" data-matchup="${key}"><span>${esc(label)}</span><strong style="--rating-color:${fit.length?X.ratingTone(value):'#a5b7c3'}">${fit.length?value:'—'}</strong></div>`;};
   const section=(label,keys)=>`<section class="g8analysissection"><h3>${X.icon(label==='Batting'?'cricket':label==='Bowling'?'cricket-ball':'stumps')}${label}</h3><div class="g8analysistiles">${X.phases.filter(([key])=>keys.includes(key)).map(([k,l])=>row(k,l)).join('')}</div></section>`;
   return `<section class="g8teamread g8roleboard g8simpleanalysis"><div class="g8roleboardhead"><span class="g8eyebrow">${squad?'PROJECTED XI · FROM YOUR SQUAD':'YOUR XI'}</span><div class="g8teamrating" style="--rating-color:${fit.length?X.ratingTone(profile.overall):'#c4d7e5'}"><strong>${fit.length?Math.round(profile.overall):'—'}</strong><span>Overall</span></div><b class="g8coverread">${cover}</b></div><div class="g8analysisgrid">${section('Batting',['powerplayBat','middleBat','finishing','battingResources'])}${section('Bowling',['newBall','middleBowl','death','bowlingResources'])}${section('Team balance',['keeping','fielding','roleFit','chemistry'])}</div></section>`;
  };

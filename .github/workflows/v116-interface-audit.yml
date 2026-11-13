@@ -7,7 +7,7 @@ permissions:
   contents: write
 env:
   # Exact six-background match-surface candidate.
-  CANDIDATE_SHA256: 1dff92ee444b2aadd97658badc8c1db6b53a9f824f6fa95fb47ad7e0894346e6
+  CANDIDATE_SHA256: af1e36b9c6b43fb914823e5949fa53d4ad22c82fec69f350b56472940a5ab322
 concurrency:
   group: gcc-interface-audit
   cancel-in-progress: true
@@ -47,6 +47,17 @@ jobs:
           test -f qa/results/whole-ui-career/checkpoint-2019.json
           test -f qa/results/whole-ui-career/checkpoint-2025.json
           test -f qa/results/whole-ui-career/checkpoint-2026.json
+      - name: Check UI controls and empty analysis against reference
+        env:
+          GCC8_BASE_BUILD: qa/results/interface-before.html
+          GCC8_TEST_BUILD: qa/results/interface-audit.html
+          GCC8_BROWSER_CAREER_DIR: qa/results/whole-ui-career
+        run: |
+          mkdir -p /tmp/interface-before
+          git archive ebf0ee3119c40b3d8f07c38a8ebf978622c8062b v116/canonical | tar -x -C /tmp/interface-before
+          python qa/v116_canonical_source.py build --source /tmp/interface-before/v116/canonical --output qa/results/interface-before.html
+          node qa/v116_secondary_markup_check.mjs
+          node qa/v116_secondary_analysis_check.mjs
       - name: Audit main screens, secondary panels and terminology
         env:
           GCC8_TEST_BUILD: qa/results/interface-audit.html

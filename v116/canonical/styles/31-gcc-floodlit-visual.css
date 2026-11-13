@@ -268,7 +268,7 @@
 #g8app#g8app#g8app .gccuiPlayerStatsTable .g8table tr>:first-child{box-shadow:2px 0 var(--gcc-line)!important}
 /* Conditions: one header, one scale, no legacy band-value chip. */
 #g8app#g8app#g8app .g8conditionread>div:first-child,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8conditionread>div:first-child{flex-direction:row!important;align-items:baseline!important;justify-content:space-between!important;text-align:left!important;gap:8px!important;flex-wrap:wrap}
-#g8app#g8app#g8app .g8conditionread>div:first-child>b,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8conditionread>div:first-child>b{font:700 15px/1.35 var(--vx-body)!important;color:var(--gcc-text)!important}
+#g8app#g8app#g8app .g8conditionread>div:first-child>b,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8conditionread>div:first-child>b{color:var(--gcc-text)!important}
 #g8app#g8app#g8app .g8conditionread>div:first-child>strong,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8conditionread>div:first-child>strong{background:none!important;border:0!important;border-radius:0!important;padding:0!important;box-shadow:none!important;font:600 13px/1.4 var(--vx-body)!important;color:var(--gcc-muted)!important;overflow-wrap:normal!important}
 #g8app#g8app#g8app .g8conditionends,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8conditionends{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:4px!important;font:400 12px/1.4 var(--vx-body)!important;color:var(--gcc-muted)!important}
 #g8app#g8app#g8app .g8conditionends>:nth-child(2),#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8conditionends>:nth-child(2){text-align:center}
@@ -489,8 +489,8 @@
 #g8app#g8app#g8app .g8table tr.mine :is(td,th){background:color-mix(in srgb,var(--vx-glow) 26%,#0c1a28)!important;font-weight:800;color:#fff}
 #g8app#g8app#g8app .g8table tr.mine>:first-child{box-shadow:inset 4px 0 var(--vx-glow);color:#fff}
 #g8app#g8app#g8app .g8ladder tbody tr:nth-child(4) :is(td,th){border-bottom:2px dashed #3ddc97!important}
-#g8app#g8app#g8app .g8teamlabel{border-radius:4px!important;font-family:var(--vx-display)!important;font-weight:800;font-size:1.05rem!important;
-  letter-spacing:.05em;text-transform:uppercase;padding:.2rem .65rem!important;
+#g8app#g8app#g8app .g8teamlabel{border-radius:4px!important;font-family:var(--vx-display)!important;font-weight:800;font-size:1.05rem;
+  letter-spacing:.05em;text-transform:uppercase;padding:.2rem .65rem;
   box-shadow:0 0 0 1px rgba(255,255,255,.18) inset}
 #g8app#g8app#g8app .g8tabs{gap:.4rem}
 #g8app#g8app#g8app .g8tabs .g8button{font-family:var(--vx-body)!important;letter-spacing:0;text-transform:none;font-size:1.05rem}
