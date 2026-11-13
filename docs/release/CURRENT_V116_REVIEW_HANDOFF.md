@@ -2,15 +2,15 @@
 
 13 November2026. Working branch: `work/v116-candidate-acceptance`. The `v116` branch reports dated11November describe the frozen release and early signing experiment; they are historical evidence, not the current candidate acceptance record.
 
-## Current staged offseason visual candidate
+## Current offseason review candidate
 
-Offseason overview/development density pass is staged for focused native and raster review. Base is archive candidate29730258…1b37e9; staged SHA-25698a664ca2f125a54a4f72454d685dd08dbea698eb48d206367ee1a1a7ee4b230 (6,656,487bytes). Only existing CSS owners10/31 change. All22 runtime bodies unchanged. See [offseason review](V116_OFFSEASON_DENSITY_REVIEW.md). No stable promotion or new download in this staging step.
+Offseason overview/development density pass is complete for its bounded scope. [Final run43401126905](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/43401126905) passed60 paired states with0 findings/errors. Base is archive candidate29730258…1b37e9; current SHA-25698a664ca2f125a54a4f72454d685dd08dbea698eb48d206367ee1a1a7ee4b230 (6,656,487bytes). Only existing CSS owners10/31 change. All22 runtime bodies unchanged. See [offseason review](V116_OFFSEASON_DENSITY_REVIEW.md). Phone overviews save98–141px; tablets save365px. Additional skills remain available and expanded cards do not stretch their neighbours. No stable promotion or new download. Next: mobile draft chrome/companion layout.
 
 ## User scope update and next visual candidate
 
 The user explicitly excluded actual screen-reader speech testing from scope. It is **not a promotion blocker** and no installation or manual speech test is required. Historical HOLD explanations below record the prior scope and are superseded by this instruction. Speech support remains unverified; no accessibility certification is claimed.
 
-Archive density pass is complete for its bounded QA scope. [Final run43398872443](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/43398872443) passed64 paired states with0 findings/errors; see [archive review](V116_ARCHIVE_DENSITY_REVIEW.md). Base is c8990d21…5909a0. Only archive selectors in existing styles/10 are edited: more compact header and season rows; phone year and Open season share a row with result text below. Offseason and gameplay remain separate. Candidate SHA-256 297302580de76f464e47bf9e153646264a46a1d7fe09958ec6aabb01141b37e9 (6,656,214bytes). It remains an unpromoted review candidate; the archive-specific gate passed. Next focused visual pass: offseason overview/development density. Frozen v116 and main are not being edited.
+Archive density pass is complete for its bounded QA scope. [Final run43398872443](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/43398872443) passed64 paired states with0 findings/errors; see [archive review](V116_ARCHIVE_DENSITY_REVIEW.md). Base is c8990d21…5909a0. Only archive selectors in existing styles/10 are edited: more compact header and season rows; phone year and Open season share a row with result text below. Offseason and gameplay remain separate. Candidate SHA-256 297302580de76f464e47bf9e153646264a46a1d7fe09958ec6aabb01141b37e9 (6,656,214bytes). It remains an unpromoted review candidate; the archive-specific gate passed. The offseason pass is documented above; next is mobile draft chrome/companion layout. Frozen v116 and main are not being edited.
 
 ## Previous c899 accessibility candidate (historical HOLD scope)
 
