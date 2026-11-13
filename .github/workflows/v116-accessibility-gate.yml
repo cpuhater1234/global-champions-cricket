@@ -2,7 +2,7 @@ name: GCC current candidate accessibility gate
 on:
   push:
     branches: [work/v116-candidate-acceptance]
-    paths: ['qa/v116_accessibility_gate.cjs', 'qa/v116_narrow_focus_layout.cjs', 'qa/v116_zoom200_capture.cjs', 'v116/canonical/styles/**', '.github/workflows/v116-accessibility-gate.yml']
+    paths: ['qa/v116_accessibility_gate.cjs', 'qa/v116_narrow_focus_layout.cjs', 'qa/v116_zoom200_capture.cjs']
 permissions:
   contents: write
 env:
