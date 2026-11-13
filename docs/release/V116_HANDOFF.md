@@ -1,5 +1,10 @@
 # GCC v116 — stable playable release handoff
 
+## Current QA candidate update · 13 November 2026
+
+The current review candidate is on `work/v116-candidate-acceptance`. Read [CURRENT_V116_REVIEW_HANDOFF.md](CURRENT_V116_REVIEW_HANDOFF.md) for its exact checksum, signing-state/native persistence acceptance, reproducible canonical source path and remaining gates. The frozen-release evidence below is historical and remains valid only for its named artifact/scenario. This update does not promote main or overwrite frozen v116.
+
+
 Status updated 11 November 2026: **v116 is the frozen stable playable release artifact.** This handoff records the controlled release decision, tested evidence and remaining engineering limits. No GitHub Release/tag has been created, and the old `main` game code has not been merged.
 
 ## 11 November 2026 verification update
