@@ -1,0 +1,100 @@
+name: GCC current candidate accessibility gate
+on:
+  push:
+    branches: [work/v116-candidate-acceptance]
+    paths: ['qa/v116_accessibility_gate.cjs', '.github/workflows/v116-accessibility-gate.yml']
+permissions:
+  contents: write
+concurrency:
+  group: gcc-current-candidate-accessibility
+  cancel-in-progress: true
+jobs:
+  acceptance:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install native browser
+        run: |
+          if [ -f /etc/apt/apt-mirrors.txt ]; then
+            sudo sed -i 's|http://azure.archive.ubuntu.com/ubuntu|https://archive.ubuntu.com/ubuntu|g' /etc/apt/apt-mirrors.txt
+          fi
+          pip install playwright pillow
+          python -m playwright install --with-deps chromium
+          npm install --no-save --no-package-lock playwright
+      - name: Build current candidate from canonical source
+        run: |
+          python qa/v116_canonical_source.py build --source v116/canonical --output qa/results/current-safety/candidate.html --check-manifest --report qa/results/current-safety/build.json
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          r=json.loads(Path('qa/results/current-safety/build.json').read_text());assert r['sha256']=='c45684a540d098ec35beeb8a959995e88292bccded4ce1314390140d1e7720ab'
+          from qa.v116_source_reconciliation import BLOCK,RELEASE
+          a=list(BLOCK.finditer(RELEASE.read_bytes()));b=list(BLOCK.finditer(Path('qa/results/current-safety/candidate.html').read_bytes()))
+          assert [m[3] for m in a if m[1]==b'script']==[m[3] for m in b if m[1]==b'script']
+          print('PASS: all22 script bodies identical to frozen v116; exact current candidate pinned')
+          PY
+      - uses: actions/cache/restore@v4
+        with:
+          path: qa/results/whole-ui-career
+          key: gcc-ui-career-79a2fbfe-seed101-v1-${{ hashFiles('qa/structural-risk/career-run.mjs', 'qa/offline_game_host.mjs') }}
+      - name: Require existing disposable checkpoint without rerunning career acceptance
+        run: test -f qa/results/whole-ui-career/checkpoint-2009.json
+      - name: Diagnose exact candidate accessibility and tablet usability
+        id: audit
+        continue-on-error: true
+        env:
+          GCC8_TEST_BUILD: qa/results/current-safety/candidate.html
+          GCC8_BROWSER_CAREER_DIR: qa/results/whole-ui-career
+          GCC8_A11Y_DIR: qa/results/accessibility-gate
+        run: |
+          GCC8_CHROMIUM="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')" node qa/v116_accessibility_gate.cjs
+      - name: Preserve accessibility diagnostic evidence
+        if: always()
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json,shutil
+          from PIL import Image
+          src=Path('qa/results/accessibility-gate');dst=Path('docs/release/accessibility-gate/${{ github.run_id }}');dst.mkdir(parents=True,exist_ok=True)
+          for f in src.rglob('*.json'):
+              target=dst/f.relative_to(src);target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(f,target)
+          for f in src.rglob('*.png'):
+              target=dst/f.relative_to(src).with_suffix('.jpg');target.parent.mkdir(parents=True,exist_ok=True);im=Image.open(f).convert('RGB');im.crop((0,0,im.width,min(8000,im.height))).save(target,quality=88,optimize=True)
+          p=src/'report.json';r=json.loads(p.read_text()) if p.exists() else {'automation_status':'NOT_COMPLETED','promotion':'HOLD'}
+          summary={k:v for k,v in r.items() if k not in ['states','focus','observations']}
+          summary.update(states=len(r.get('states',[])),focus_checks=len(r.get('focus',[])),observations=len(r.get('observations',[])))
+          (dst/'summary.json').write_text(json.dumps(summary,indent=2)+'\n');print(json.dumps(summary))
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/release/accessibility-gate
+          if ! git diff --cached --quiet; then
+            git commit -m 'Preserve exact candidate accessibility diagnostic and promotion decision'
+            published=0
+            for attempt in 1 2 3; do
+              git pull --rebase origin work/v116-candidate-acceptance
+              if git push origin HEAD:refs/heads/work/v116-candidate-acceptance; then published=1; break; fi
+            done
+            test "$published" = 1
+          fi
+      - name: Require completed diagnostic; do not equate automation completion with promotion
+        if: always()
+        env:
+          AUDIT: ${{ steps.audit.outcome }}
+        run: |
+          test "$AUDIT" = success
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('qa/results/accessibility-gate/report.json').read_text())
+          assert r['sha256']=='c45684a540d098ec35beeb8a959995e88292bccded4ce1314390140d1e7720ab'
+          assert r['automation_status']=='PASS'
+          print('Diagnostic completed. Promotion decision:',r['promotion'])
+          PY
