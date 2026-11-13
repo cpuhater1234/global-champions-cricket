@@ -1,0 +1,67 @@
+name: GCC canonical candidate source parity
+on:
+  push:
+    branches: [work/v116-candidate-acceptance]
+    paths: ['qa/v116_canonical_source.py', '.github/workflows/v116-canonical-source-review.yml']
+permissions:
+  contents: write
+concurrency:
+  group: gcc-canonical-source-review
+  cancel-in-progress: true
+jobs:
+  parity:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Reproduce the natively validated candidate
+        run: |
+          python qa/v116_draft_card_density_candidate.py --output qa/results/canonical-reference.html --report qa/results/canonical-reference.json
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          p=Path('qa/results/canonical-reference.html'); h=hashlib.sha256(p.read_bytes()).hexdigest()
+          r=json.loads(Path('docs/release/visual-review/draft-card-density/43339252905/report.json').read_text())
+          assert r['status']=='PASS' and r['candidate_sha256']==h=='c45684a540d098ec35beeb8a959995e88292bccded4ce1314390140d1e7720ab'
+          PY
+      - name: Extract and rebuild the same bytes
+        run: |
+          python qa/v116_canonical_source.py extract --input qa/results/canonical-reference.html --source v116/canonical
+          python qa/v116_canonical_source.py build --source v116/canonical --output qa/results/canonical-rebuilt.html --reference qa/results/canonical-reference.html --check-manifest --report docs/release/V116_CANONICAL_SOURCE_VALIDATION_20261113.json
+          python - <<'PY'
+          import sys,tempfile,shutil,json
+          from pathlib import Path
+          sys.path.insert(0,'qa')
+          from v116_canonical_source import build
+          src=Path('v116/canonical'); report=Path('docs/release/V116_CANONICAL_SOURCE_VALIDATION_20261113.json'); r=json.loads(report.read_text())
+          checks=[]
+          with tempfile.TemporaryDirectory() as tmp:
+              root=Path(tmp); copy=root/'source';shutil.copytree(src,copy); m=json.loads((copy/'manifest.json').read_text()); out=root/'out.html'
+              def reject(name,fn):
+                  try:fn()
+                  except ValueError:checks.append(name)
+                  else:raise AssertionError('Guard accepted '+name)
+              reject('wrong reference',lambda:build(copy,out,Path('GCC_v116_release (1).html'),True))
+              css=copy/next(e['path'] for e in m['blocks'] if e['kind']=='style'); original=css.read_bytes();css.write_bytes(original+b'\n/* test edit */')
+              reject('strict CSS drift',lambda:build(copy,out,strict=True));normal=build(copy,out);assert normal['changed_bodies'];css.write_bytes(original)
+              js=copy/next(e['path'] for e in m['blocks'] if e['kind']=='script');js.write_bytes(js.read_bytes()+b'\n/* test edit */')
+              reject('unacknowledged runtime drift',lambda:build(copy,out))
+          r.update(negative_guards=checks,css_edit_build='PASS',native_evidence_run=43339252905,legacy_v8_parity='NOT_CLAIMED',cascade_consolidation='SEPARATE_TASK')
+          report.write_text(json.dumps(r,indent=2)+'\n');print(json.dumps(r))
+          PY
+      - name: Preserve canonical candidate source
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add v116/canonical docs/release/V116_CANONICAL_SOURCE_VALIDATION_20261113.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Preserve byte-identical canonical source for validated v116 review candidate'
+            published=0
+            for attempt in 1 2 3; do
+              git pull --rebase origin work/v116-candidate-acceptance
+              if git push origin HEAD:refs/heads/work/v116-candidate-acceptance; then published=1; break; fi
+            done
+            test "$published" = 1
+          fi
