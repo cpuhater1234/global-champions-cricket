@@ -1,0 +1,649 @@
+{
+  "sha256": "c45684a540d098ec35beeb8a959995e88292bccded4ce1314390140d1e7720ab",
+  "findings": [
+    {
+      "id": "guide-keyboard-320 Tab 6 keyboard stays in active surface",
+      "severity": "blocking",
+      "detail": {
+        "tag": "BODY",
+        "text": "window.GCC8_MEDIA={\"stadium\":\"data:image/webp;base64,UklGRlajAQBXRUJQVlA4IEqjAQAwdAadASoABcADPnk6mEm",
+        "inDialog": false,
+        "inert": false,
+        "focusVisible": false,
+        "outline": "rgb(237, 241, 245) none 3px",
+        "outlineWidth": 3,
+        "shadow": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 320,
+          "height": 1019.671875
+        },
+        "inViewport": true,
+        "hit": "P:",
+        "unobscured": true
+      }
+    },
+    {
+      "id": "guide-keyboard-320 Tab 6 focus indicator is rendered",
+      "severity": "blocking",
+      "detail": {
+        "tag": "BODY",
+        "text": "window.GCC8_MEDIA={\"stadium\":\"data:image/webp;base64,UklGRlajAQBXRUJQVlA4IEqjAQAwdAadASoABcADPnk6mEm",
+        "inDialog": false,
+        "inert": false,
+        "focusVisible": false,
+        "outline": "rgb(237, 241, 245) none 3px",
+        "outlineWidth": 3,
+        "shadow": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 320,
+          "height": 1019.671875
+        },
+        "inViewport": true,
+        "hit": "P:",
+        "unobscured": true
+      }
+    },
+    {
+      "id": "guide-keyboard-1440 Tab 6 keyboard stays in active surface",
+      "severity": "blocking",
+      "detail": {
+        "tag": "BODY",
+        "text": "window.GCC8_MEDIA={\"stadium\":\"data:image/webp;base64,UklGRlajAQBXRUJQVlA4IEqjAQAwdAadASoABcADPnk6mEm",
+        "inDialog": false,
+        "inert": false,
+        "focusVisible": false,
+        "outline": "rgb(237, 241, 245) none 3px",
+        "outlineWidth": 3,
+        "shadow": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 914
+        },
+        "inViewport": true,
+        "hit": "DIV:g8guidegrid",
+        "unobscured": true
+      }
+    },
+    {
+      "id": "guide-keyboard-1440 Tab 6 focus indicator is rendered",
+      "severity": "blocking",
+      "detail": {
+        "tag": "BODY",
+        "text": "window.GCC8_MEDIA={\"stadium\":\"data:image/webp;base64,UklGRlajAQBXRUJQVlA4IEqjAQAwdAadASoABcADPnk6mEm",
+        "inDialog": false,
+        "inert": false,
+        "focusVisible": false,
+        "outline": "rgb(237, 241, 245) none 3px",
+        "outlineWidth": 3,
+        "shadow": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 914
+        },
+        "inViewport": true,
+        "hit": "DIV:g8guidegrid",
+        "unobscured": true
+      }
+    },
+    {
+      "id": "player-keyboard-320 Tab 7 keyboard stays in active surface",
+      "severity": "blocking",
+      "detail": {
+        "tag": "BODY",
+        "text": "window.GCC8_MEDIA={\"stadium\":\"data:image/webp;base64,UklGRlajAQBXRUJQVlA4IEqjAQAwdAadASoABcADPnk6mEm",
+        "inDialog": false,
+        "inert": false,
+        "focusVisible": false,
+        "outline": "rgb(237, 241, 245) none 3px",
+        "outlineWidth": 3,
+        "shadow": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 320,
+          "height": 2728.421875
+        },
+        "inViewport": true,
+        "hit": "DIALOG:",
+        "unobscured": true
+      }
+    },
+    {
+      "id": "player-keyboard-320 Tab 7 focus indicator is rendered",
+      "severity": "blocking",
+      "detail": {
+        "tag": "BODY",
+        "text": "window.GCC8_MEDIA={\"stadium\":\"data:image/webp;base64,UklGRlajAQBXRUJQVlA4IEqjAQAwdAadASoABcADPnk6mEm",
+        "inDialog": false,
+        "inert": false,
+        "focusVisible": false,
+        "outline": "rgb(237, 241, 245) none 3px",
+        "outlineWidth": 3,
+        "shadow": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 320,
+          "height": 2728.421875
+        },
+        "inViewport": true,
+        "hit": "DIALOG:",
+        "unobscured": true
+      }
+    },
+    {
+      "id": "player-keyboard-1440 Tab 6 keyboard stays in active surface",
+      "severity": "blocking",
+      "detail": {
+        "tag": "BODY",
+        "text": "window.GCC8_MEDIA={\"stadium\":\"data:image/webp;base64,UklGRlajAQBXRUJQVlA4IEqjAQAwdAadASoABcADPnk6mEm",
+        "inDialog": false,
+        "inert": false,
+        "focusVisible": false,
+        "outline": "rgb(237, 241, 245) none 3px",
+        "outlineWidth": 3,
+        "shadow": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1353.140625
+        },
+        "inViewport": true,
+        "hit": "STRONG:",
+        "unobscured": true
+      }
+    },
+    {
+      "id": "player-keyboard-1440 Tab 6 focus indicator is rendered",
+      "severity": "blocking",
+      "detail": {
+        "tag": "BODY",
+        "text": "window.GCC8_MEDIA={\"stadium\":\"data:image/webp;base64,UklGRlajAQBXRUJQVlA4IEqjAQAwdAadASoABcADPnk6mEm",
+        "inDialog": false,
+        "inert": false,
+        "focusVisible": false,
+        "outline": "rgb(237, 241, 245) none 3px",
+        "outlineWidth": 3,
+        "shadow": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1353.140625
+        },
+        "inViewport": true,
+        "hit": "STRONG:",
+        "unobscured": true
+      }
+    },
+    {
+      "id": "player-keyboard-1440 reverse wrap keyboard stays in active surface",
+      "severity": "blocking",
+      "detail": {
+        "tag": "BODY",
+        "text": "window.GCC8_MEDIA={\"stadium\":\"data:image/webp;base64,UklGRlajAQBXRUJQVlA4IEqjAQAwdAadASoABcADPnk6mEm",
+        "inDialog": false,
+        "inert": false,
+        "focusVisible": false,
+        "outline": "rgb(237, 241, 245) none 3px",
+        "outlineWidth": 3,
+        "shadow": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1353.140625
+        },
+        "inViewport": true,
+        "hit": "STRONG:",
+        "unobscured": true
+      }
+    },
+    {
+      "id": "player-keyboard-1440 reverse wrap focus indicator is rendered",
+      "severity": "blocking",
+      "detail": {
+        "tag": "BODY",
+        "text": "window.GCC8_MEDIA={\"stadium\":\"data:image/webp;base64,UklGRlajAQBXRUJQVlA4IEqjAQAwdAadASoABcADPnk6mEm",
+        "inDialog": false,
+        "inert": false,
+        "focusVisible": false,
+        "outline": "rgb(237, 241, 245) none 3px",
+        "outlineWidth": 3,
+        "shadow": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1353.140625
+        },
+        "inViewport": true,
+        "hit": "STRONG:",
+        "unobscured": true
+      }
+    },
+    {
+      "id": "matchday-320 control text/bounds",
+      "severity": "blocking",
+      "detail": {
+        "width": 320,
+        "control": {
+          "text": "Fixtures",
+          "scrollWidth": 86,
+          "clientWidth": 86,
+          "x": 279.84375,
+          "y": 101,
+          "width": 87.71875,
+          "height": 44
+        }
+      }
+    },
+    {
+      "id": "matchday-320 control text/bounds",
+      "severity": "blocking",
+      "detail": {
+        "width": 320,
+        "control": {
+          "text": "Stats",
+          "scrollWidth": 63,
+          "clientWidth": 63,
+          "x": 369.15625,
+          "y": 101,
+          "width": 64.6875,
+          "height": 44
+        }
+      }
+    },
+    {
+      "id": "matchday-360 control text/bounds",
+      "severity": "blocking",
+      "detail": {
+        "width": 360,
+        "control": {
+          "text": "Fixtures",
+          "scrollWidth": 86,
+          "clientWidth": 86,
+          "x": 281.046875,
+          "y": 101,
+          "width": 87.71875,
+          "height": 44
+        }
+      }
+    },
+    {
+      "id": "matchday-360 control text/bounds",
+      "severity": "blocking",
+      "detail": {
+        "width": 360,
+        "control": {
+          "text": "Stats",
+          "scrollWidth": 63,
+          "clientWidth": 63,
+          "x": 370.359375,
+          "y": 101,
+          "width": 64.6875,
+          "height": 44
+        }
+      }
+    },
+    {
+      "id": "matchday-390 control text/bounds",
+      "severity": "blocking",
+      "detail": {
+        "width": 390,
+        "control": {
+          "text": "Stats",
+          "scrollWidth": 63,
+          "clientWidth": 63,
+          "x": 371.25,
+          "y": 101,
+          "width": 64.6875,
+          "height": 44
+        }
+      }
+    },
+    {
+      "id": "trade-keyboard-320 Tab 7 keyboard stays in active surface",
+      "severity": "blocking",
+      "detail": {
+        "tag": "BODY",
+        "text": "window.GCC8_MEDIA={\"stadium\":\"data:image/webp;base64,UklGRlajAQBXRUJQVlA4IEqjAQAwdAadASoABcADPnk6mEm",
+        "inDialog": false,
+        "inert": false,
+        "focusVisible": false,
+        "outline": "rgb(237, 241, 245) none 3px",
+        "outlineWidth": 3,
+        "shadow": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 320,
+          "height": 2083.546875
+        },
+        "inViewport": true,
+        "hit": "DIALOG:",
+        "unobscured": true
+      }
+    },
+    {
+      "id": "trade-keyboard-320 Tab 7 focus indicator is rendered",
+      "severity": "blocking",
+      "detail": {
+        "tag": "BODY",
+        "text": "window.GCC8_MEDIA={\"stadium\":\"data:image/webp;base64,UklGRlajAQBXRUJQVlA4IEqjAQAwdAadASoABcADPnk6mEm",
+        "inDialog": false,
+        "inert": false,
+        "focusVisible": false,
+        "outline": "rgb(237, 241, 245) none 3px",
+        "outlineWidth": 3,
+        "shadow": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 320,
+          "height": 2083.546875
+        },
+        "inViewport": true,
+        "hit": "DIALOG:",
+        "unobscured": true
+      }
+    },
+    {
+      "id": "trade-keyboard-1440 Tab 7 keyboard stays in active surface",
+      "severity": "blocking",
+      "detail": {
+        "tag": "BODY",
+        "text": "window.GCC8_MEDIA={\"stadium\":\"data:image/webp;base64,UklGRlajAQBXRUJQVlA4IEqjAQAwdAadASoABcADPnk6mEm",
+        "inDialog": false,
+        "inert": false,
+        "focusVisible": false,
+        "outline": "rgb(237, 241, 245) none 3px",
+        "outlineWidth": 3,
+        "shadow": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1001.625
+        },
+        "inViewport": true,
+        "hit": "DIV:g8trade g8tradepackage",
+        "unobscured": true
+      }
+    },
+    {
+      "id": "trade-keyboard-1440 Tab 7 focus indicator is rendered",
+      "severity": "blocking",
+      "detail": {
+        "tag": "BODY",
+        "text": "window.GCC8_MEDIA={\"stadium\":\"data:image/webp;base64,UklGRlajAQBXRUJQVlA4IEqjAQAwdAadASoABcADPnk6mEm",
+        "inDialog": false,
+        "inert": false,
+        "focusVisible": false,
+        "outline": "rgb(237, 241, 245) none 3px",
+        "outlineWidth": 3,
+        "shadow": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1001.625
+        },
+        "inViewport": true,
+        "hit": "DIV:g8trade g8tradepackage",
+        "unobscured": true
+      }
+    },
+    {
+      "id": "trade-keyboard-1440 reverse wrap keyboard stays in active surface",
+      "severity": "blocking",
+      "detail": {
+        "tag": "BODY",
+        "text": "window.GCC8_MEDIA={\"stadium\":\"data:image/webp;base64,UklGRlajAQBXRUJQVlA4IEqjAQAwdAadASoABcADPnk6mEm",
+        "inDialog": false,
+        "inert": false,
+        "focusVisible": false,
+        "outline": "rgb(237, 241, 245) none 3px",
+        "outlineWidth": 3,
+        "shadow": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1001.625
+        },
+        "inViewport": true,
+        "hit": "DIV:g8trade g8tradepackage",
+        "unobscured": true
+      }
+    },
+    {
+      "id": "trade-keyboard-1440 reverse wrap focus indicator is rendered",
+      "severity": "blocking",
+      "detail": {
+        "tag": "BODY",
+        "text": "window.GCC8_MEDIA={\"stadium\":\"data:image/webp;base64,UklGRlajAQBXRUJQVlA4IEqjAQAwdAadASoABcADPnk6mEm",
+        "inDialog": false,
+        "inert": false,
+        "focusVisible": false,
+        "outline": "rgb(237, 241, 245) none 3px",
+        "outlineWidth": 3,
+        "shadow": "none",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 1001.625
+        },
+        "inViewport": true,
+        "hit": "DIV:g8trade g8tradepackage",
+        "unobscured": true
+      }
+    },
+    {
+      "id": "zoom200-player-1440 Tab 6 keyboard stays in active surface",
+      "severity": "blocking",
+      "detail": {
+        "tag": "BODY",
+        "text": "window.GCC8_MEDIA={\"stadium\":\"data:image/webp;base64,UklGRlajAQBXRUJQVlA4IEqjAQAwdAadASoABcADPnk6mEm",
+        "inDialog": false,
+        "inert": false,
+        "focusVisible": false,
+        "outline": "rgb(237, 241, 245) none 3px",
+        "outlineWidth": 3,
+        "shadow": "none",
+        "rect": {
+          "x": 0,
+          "y": -672,
+          "width": 720,
+          "height": 1474.859375
+        },
+        "inViewport": true,
+        "hit": "H3:",
+        "unobscured": true
+      }
+    },
+    {
+      "id": "zoom200-player-1440 Tab 6 focus indicator is rendered",
+      "severity": "blocking",
+      "detail": {
+        "tag": "BODY",
+        "text": "window.GCC8_MEDIA={\"stadium\":\"data:image/webp;base64,UklGRlajAQBXRUJQVlA4IEqjAQAwdAadASoABcADPnk6mEm",
+        "inDialog": false,
+        "inert": false,
+        "focusVisible": false,
+        "outline": "rgb(237, 241, 245) none 3px",
+        "outlineWidth": 3,
+        "shadow": "none",
+        "rect": {
+          "x": 0,
+          "y": -672,
+          "width": 720,
+          "height": 1474.859375
+        },
+        "inViewport": true,
+        "hit": "H3:",
+        "unobscured": true
+      }
+    },
+    {
+      "id": "zoom200-matchday-640 control text/bounds",
+      "severity": "blocking",
+      "detail": {
+        "width": 320,
+        "control": {
+          "text": "Fixtures",
+          "scrollWidth": 86,
+          "clientWidth": 86,
+          "x": 267.390625,
+          "y": 59.3984375,
+          "width": 87.8671875,
+          "height": 44
+        }
+      }
+    },
+    {
+      "id": "zoom200-matchday-640 control text/bounds",
+      "severity": "blocking",
+      "detail": {
+        "width": 320,
+        "control": {
+          "text": "Stats",
+          "scrollWidth": 64,
+          "clientWidth": 64,
+          "x": 356.8515625,
+          "y": 59.3984375,
+          "width": 65.90625,
+          "height": 44
+        }
+      }
+    },
+    {
+      "id": "zoom200-player-640 Tab 6 keyboard stays in active surface",
+      "severity": "blocking",
+      "detail": {
+        "tag": "BODY",
+        "text": "window.GCC8_MEDIA={\"stadium\":\"data:image/webp;base64,UklGRlajAQBXRUJQVlA4IEqjAQAwdAadASoABcADPnk6mEm",
+        "inDialog": false,
+        "inert": false,
+        "focusVisible": false,
+        "outline": "rgb(237, 241, 245) none 3px",
+        "outlineWidth": 3,
+        "shadow": "none",
+        "rect": {
+          "x": 0,
+          "y": -1000.5,
+          "width": 320,
+          "height": 2040.0546875
+        },
+        "inViewport": true,
+        "hit": "HEADER:g8modalhead gccuiProfileHead",
+        "unobscured": true
+      }
+    },
+    {
+      "id": "zoom200-player-640 Tab 6 focus indicator is rendered",
+      "severity": "blocking",
+      "detail": {
+        "tag": "BODY",
+        "text": "window.GCC8_MEDIA={\"stadium\":\"data:image/webp;base64,UklGRlajAQBXRUJQVlA4IEqjAQAwdAadASoABcADPnk6mEm",
+        "inDialog": false,
+        "inert": false,
+        "focusVisible": false,
+        "outline": "rgb(237, 241, 245) none 3px",
+        "outlineWidth": 3,
+        "shadow": "none",
+        "rect": {
+          "x": 0,
+          "y": -1000.5,
+          "width": 320,
+          "height": 2040.0546875
+        },
+        "inViewport": true,
+        "hit": "HEADER:g8modalhead gccuiProfileHead",
+        "unobscured": true
+      }
+    }
+  ],
+  "errors": [
+    {
+      "scope": "XI Matchday player and trade keyboard",
+      "error": "Error: Rejected playMatch Prepare the next match first.\n    at call (/home/runner/work/global-champions-cricket/global-champions-cricket/qa/v116_accessibility_gate.cjs:8:185)\n    at async /home/runner/work/global-champions-cricket/global-champions-cricket/qa/v116_accessibility_gate.cjs:19:53\n    at async section (/home/runner/work/global-champions-cricket/global-champions-cricket/qa/v116_accessibility_gate.cjs:7:36)\n    at async /home/runner/work/global-champions-cricket/global-champions-cricket/qa/v116_accessibility_gate.cjs:18:1"
+    }
+  ],
+  "runtimeErrors": [],
+  "live": null,
+  "tablet": {
+    "controls": [
+      {
+        "text": "Resume signing",
+        "width": 151.890625,
+        "height": 62,
+        "scrollWidth": 150,
+        "clientWidth": 150
+      },
+      {
+        "text": "Speed 1\u00d7",
+        "width": 151.890625,
+        "height": 44,
+        "scrollWidth": 150,
+        "clientWidth": 150
+      },
+      {
+        "text": "Skip to end",
+        "width": 311.78125,
+        "height": 44,
+        "scrollWidth": 310,
+        "clientWidth": 310
+      }
+    ],
+    "unequalHeights": true,
+    "labelsFit": true,
+    "classification": "DEFER_COSMETIC_IF_NO_RECORDED_USABILITY_OBSTRUCTION"
+  },
+  "zoom": [
+    {
+      "physical": 1440,
+      "metrics": {
+        "innerWidth": 720,
+        "outerWidth": 1440,
+        "devicePixelRatio": 2,
+        "visualScale": 1
+      },
+      "verified": true
+    },
+    {
+      "physical": 640,
+      "metrics": {
+        "innerWidth": 320,
+        "outerWidth": 640,
+        "devicePixelRatio": 2,
+        "visualScale": 1
+      },
+      "verified": true
+    }
+  ],
+  "limits": [
+    "Chromium DOM/AX and keyboard automation do not certify actual NVDA/JAWS/VoiceOver speech, every browser or the full career horizon.",
+    "Existing checkpoint is used only to reach relevant screens; save/reload acceptance is not rerun."
+  ],
+  "productChanged": false,
+  "automation_status": "FAIL",
+  "promotion": "HOLD",
+  "promotionReasons": [
+    "Actual screen-reader spoken output has not been certified.",
+    "Reproduced accessibility findings require triage."
+  ],
+  "states": 28,
+  "focus_checks": 89,
+  "observations": 936
+}
