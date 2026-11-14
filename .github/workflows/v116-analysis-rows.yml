@@ -2,7 +2,7 @@ name: GCC focused analysis rows review
 on:
   push:
     branches: [work/v116-candidate-acceptance]
-    paths: ['.github/workflows/v116-analysis-rows.yml']
+    paths: ['.github/workflows/v116-analysis-rows.yml', 'qa/v116_analysis_rows_audit.cjs']
 permissions:
   contents: write
 env:
