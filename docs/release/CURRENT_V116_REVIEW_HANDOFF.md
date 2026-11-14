@@ -1,5 +1,9 @@
 # Current v116 review candidate handoff
 
+## Parallel Cline optimisation review, 15 November 2026
+
+Read-only reconciliation found perf/optimized-assets-v116 at e9be5d4 starts from frozen v116, not this current candidate. Keep work separate and port its packaging transformation onto current canonical source before combining; do not replace current HTML with older optimized output. Full uncompressed package is 5,797,877 bytes versus frozen input 6,635,097: 12.618% reduction; 50% claim applies to HTML alone. PowerShell script rewrites references but requires existing committed asset files and does not extract them itself. No load-time improvement or combined-candidate acceptance claimed. See [optimisation reconciliation](V116_CLINE_OPTIMISATION_RECONCILIATION.md). Current opened Guide Sections Review identity and prior acceptance remain unchanged. No download, product edit, merge or stable promotion in this coordination pass.
+
 ## Latest game-guide section review, 15 November 2026
 
 GCC_v116_Guide_Sections_Review.html, SHA-256 196515c5a170633c1e6abcca259798a5bb7bb7686cc4545124663651efc95f35, 6,664,981 bytes. Groups unchanged How to play and How it works topics under compact chapter labels. Existing CSS10 and runtime29 guide markup/helper only; 21 other runtime bodies unchanged. All guidance, rules, numbering and actions preserved. Run 43613118506 PASS: 32 paired states at 1440/768/390/320, zero failures, including expanded rules, footer navigation, close and return focus. Desktop and phone captures inspected. Desktop How to play is 42px taller for clearer hierarchy; no universal density improvement claimed. See [guide section review](V116_GUIDE_SECTIONS_REVIEW.md). Unpromoted; Development Review ad874945 remains rollback. Frozen v116/main untouched. Local active source qa/workspaces/career-integrated/canonical; remote v116/canonical on work/v116-candidate-acceptance. Broader visual completion and inactive comparison entrypoint remain separate.
