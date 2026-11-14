@@ -1,5 +1,9 @@
 # Current v116 review candidate handoff
 
+## Verified shared analysis rows, 14 November 2026
+
+Staged candidate 5c4bbca8873cd3e94bb1a62ac7a9a344edfc94a72848d8f373a6d15d43091fa2 (6,658,693 bytes). Only existing CSS owner 10 differs from delivered Secondary Review; all 22 runtime scripts identical. Run 43582518510 passed 20 targeted states including expanded offseason panels; zero failures. Draft and offseason 320px rasters inspected. See [analysis rows review](V116_ANALYSIS_ROWS_REVIEW.md). User-opened Secondary Review remains unchanged; no additional download yet. Unpromoted. Next: remove remaining nested analysis/summary visual chrome, then reconcile isolated career-record/club-flow feature.
+
 ## Latest secondary UI review, 13 November 2026
 
 GCC_v116_Secondary_Review.html, af1e36b9c6b43fb914823e5949fa53d4ad22c82fec69f350b56472940a5ab322, 6,658,064 bytes. Final run 43460180335 passed 460 states with zero failures/word-break flags. See [secondary review](V116_SECONDARY_OWNER_REVIEW.md) for exact scope and limits. Review only; promotion HOLD. Narrow analysis density remains. Career record/automatic club flow remains separate, native verification pending. Frozen v116/main untouched; Finals Review remains rollback.
