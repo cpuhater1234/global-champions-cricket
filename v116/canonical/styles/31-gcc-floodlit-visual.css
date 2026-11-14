@@ -194,7 +194,7 @@
 #g8app#g8app#g8app .g8primary:focus-visible,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8primary:focus-visible{clip-path:none!important;outline:3px solid #7fe0ee!important;outline-offset:3px}
 #g8stage#g8stage#g8stage :is(.g8heading,.gccuiTurn):focus-within{clip-path:none!important}
 /* Retain semantic success/medical/warning colours and the authored club fills. */
-#g8stage#g8stage#g8stage :is(.g8sheet,.gccuiAllowance,.gccuiFixture,.gccuiMatchPreparation,.gccuiLatestResult,.gccuiMatchLinks,.gccuiSummary,.g8dressingroom,.g8reviewsummary,.g8development,.g8teamread){background:linear-gradient(155deg,var(--gcc-raised),var(--gcc-panel) 60%)!important;border-color:var(--gcc-line)!important}
+#g8stage#g8stage#g8stage :is(.g8sheet,.gccuiAllowance,.gccuiFixture,.gccuiMatchPreparation,.gccuiLatestResult,.gccuiMatchLinks,.gccuiSummary,.g8dressingroom,.g8reviewsummary,.g8development,.g8teamread:not(.g8simpleanalysis)){background:linear-gradient(155deg,var(--gcc-raised),var(--gcc-panel) 60%)!important;border-color:var(--gcc-line)!important}
 /* Squad update: the decision surface owns club identity; supporting detail is inset. */
 #g8stage#g8stage#g8stage .g8annualhero{background:linear-gradient(120deg,color-mix(in srgb,var(--gcc-accent) 16%,var(--gcc-raised)),var(--gcc-panel) 72%)!important;border-color:var(--gcc-line)!important;border-top-color:var(--vx-signal)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 18px 40px -26px #000!important}
 #g8stage#g8stage#g8stage :is(.g8annualdevelopment,.g8departureguide){background:var(--gcc-inset)!important;border-color:var(--gcc-line)!important}
@@ -219,7 +219,7 @@
 }
 #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8button{font-family:var(--vx-body)!important;font-size:1rem!important;font-weight:700!important;line-height:1.25!important;letter-spacing:0!important;text-transform:none!important;min-height:44px;padding:10px 14px!important;border:1px solid var(--gcc-line)!important;border-radius:8px!important;clip-path:none!important;box-shadow:none!important}
 #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8button:not(.g8primary){background:var(--gcc-raised)!important;color:var(--gcc-text)!important}
-#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) :is(.g8tradeplayer,.g8tradeimpact,.g8recordstats>div,.gccuiProfilePanel,.g8give,.g8receive,.g8teamread,.g8development,.g8developmentrow,.g8skillchanges>li){background:var(--gcc-panel)!important;border-color:var(--gcc-line)!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) :is(.g8tradeplayer,.g8tradeimpact,.g8recordstats>div,.gccuiProfilePanel,.g8give,.g8receive,.g8teamread:not(.g8simpleanalysis),.g8development,.g8developmentrow,.g8skillchanges>li){background:var(--gcc-panel)!important;border-color:var(--gcc-line)!important}
 #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8modalbody>.g8actions:last-child{background:var(--gcc-inset)!important;border-color:var(--gcc-line)!important}
 #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) :is(input,select){background:var(--gcc-inset)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
 @media(max-width:760px){
@@ -256,7 +256,7 @@
 
 /* Shared secondary surfaces complete the Floodlit palette without changing status colours. */
 #g8app#g8app#g8app .gccui,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])){--ui-panel:var(--gcc-panel);--ui-inset:var(--gcc-inset);--ui-line:var(--gcc-line);--ui-rule:var(--gcc-line);--ui-text:var(--gcc-text);--ui-muted:var(--gcc-muted)}
-#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) :is(.g8concernreason,.g8commitmentchoice,.g8coverread){background:var(--gcc-raised)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) :is(.g8concernreason,.g8commitmentchoice,.g8coverread:not(.g8simpleanalysis .g8coverread)){background:var(--gcc-raised)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
 #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8concernreason{border-left:3px solid var(--gcc-accent)!important;padding:12px 14px!important;margin:12px 0!important}
 #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8concernreason b{color:var(--gcc-text)!important;font-weight:700}
 #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) :is(.g8commitmentchoice>p,.g8commitmentoptions>p,.g8rotationconversation>p){color:var(--gcc-muted)!important}

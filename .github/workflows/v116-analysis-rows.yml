@@ -7,7 +7,7 @@ permissions:
   contents: write
 env:
   # Exact six-background match-surface candidate.
-  CANDIDATE_SHA256: 5c4bbca8873cd3e94bb1a62ac7a9a344edfc94a72848d8f373a6d15d43091fa2
+  CANDIDATE_SHA256: b8f34a5d48836a5157f245a1ca8c0c72101d74a947eeaaa9b69576190beeff2a
 concurrency:
   group: gcc-analysis-rows
   cancel-in-progress: true
