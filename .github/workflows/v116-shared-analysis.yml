@@ -2,7 +2,7 @@ name: GCC shared XI analysis ownership review
 on:
   push:
     branches: [work/v116-candidate-acceptance]
-    paths: ['.github/workflows/v116-shared-analysis.yml', 'qa/v116_shared_analysis_native.cjs']
+    paths: ['.github/workflows/v116-shared-analysis.yml', 'qa/v116_shared_analysis_native.cjs', 'qa/v116_draft_rating_strip_native.cjs']
 permissions:
   contents: write
 env:
