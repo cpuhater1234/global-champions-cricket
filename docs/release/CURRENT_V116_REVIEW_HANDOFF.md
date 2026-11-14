@@ -1,5 +1,11 @@
 # Current v116 review candidate handoff
 
+## Latest development/filter review, 15 November 2026
+
+GCC_v116_Development_Review.html, SHA-256 ad874945a2995adb59921738df7cb14403aa11fbf3ce5a38e273153baa319e39,6,664,126bytes. Based on Shared Analysis Reviewa522817b. Development reports now use plain aligned player/skill-change rows and unboxed disclosures across offseason/XI. Draft filters respond to actual pool container width, retaining complete role/sort captions. Final run43611608686 PASS:44states, zero failures; final phone/tablet/desktop captures inspected. Only existing CSS09/10/31 differ; all22runtime bodies identical. See [development/filter review](V116_DEVELOPMENT_FILTERS_REVIEW.md). Unpromoted, previous Shared Analysis Review is rollback. User approved follow-up CSS/QA/workflow/handoff corrections for this UI pass after automatic upload-review blocks; authorized uploads succeeded.
+
+Local active source remains qa/workspaces/career-integrated/canonical; repo active source v116/canonical on work/v116-candidate-acceptance. Frozen v116/main untouched. Do not claim all historical stylesheets or all UI surfaces are finished. Comparison helper reachability and wider guide/content organisation remain separate follow-ups.
+
 ## Latest shared XI analysis review, 14 November 2026
 
 GCC_v116_Shared_Analysis_Review.html, SHA-256 a522817bd41de2a1153e62c9701bf415cd5a4e773f265bf43ba1979ccc8620d5,6,662,969bytes. Builds on Interface Review0a1c8a2a. Removes19duplicate teamAnalysis rules; shared analysis owner10 now governs draft/offseason/XI, with intrinsic200px columns. Only CSS10 differs; all22runtime bodies identical. Final run43590169905 passed10paired XI states and16draft-card role/width states, zero failures/errors. All12XI ratings/colours/groups/XI IDs preserved. Desktop/tablet analysis157.63px shorter; phone50.19px taller for readable single-column rows. Final tablet/phone analysis and keeper card captures inspected. See [shared analysis review](V116_SHARED_XI_ANALYSIS_REVIEW.md). Review only, unpromoted; prior Interface Review is rollback. Local working source remains qa/workspaces/career-integrated/canonical; do not build older local v116/canonical feature checkpoint.
