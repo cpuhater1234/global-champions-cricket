@@ -694,7 +694,7 @@
 #g8dialog[data-prompt=player] .g8ordereditor>span{font-size:13px;font-weight:700}
 #g8dialog[data-prompt=player] .g8ordereditor .g8actions{margin:0!important;gap:6px}
 #g8dialog[data-prompt=player] .g8ordereditor .g8button{min-height:44px!important;padding:8px 12px!important}
-#g8dialog[data-prompt=player] .gccuiProfilePanel{min-width:0;background:transparent;border:0;box-shadow:none}
+#g8dialog[data-prompt=player] .gccuiProfilePanel,#g8dialog[data-prompt=player] .g8playerdetail{min-width:0;background:transparent;border:0;box-shadow:none}
 #g8dialog[data-prompt=player] .gccuiProfileOverview{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:20px 24px;align-items:start}
 #g8dialog[data-prompt=player] .gccuiProfileOverview>.g8playerdetail{display:contents!important}
 #g8dialog[data-prompt=player] .gccuiProfileOverview .g8scoutability{margin:0!important;min-width:0;padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important}
