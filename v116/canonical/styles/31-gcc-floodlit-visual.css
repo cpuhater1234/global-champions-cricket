@@ -207,7 +207,7 @@
 #g8app#g8app#g8app .g8button.gccuiStatPlayer{background:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;transform:none!important;letter-spacing:normal!important;padding:8px 0!important;font-family:var(--vx-body)!important}
 #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])){background:var(--gcc-inset)!important;border-color:var(--gcc-line)!important;color:var(--gcc-text)!important}
 #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) :is(.g8modalhead,.gccuiDossierRail){background:var(--gcc-panel)!important;border-color:var(--gcc-line)!important}
-#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) :is(h2,h3,.g8eyebrow){font-family:var(--vx-display)!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) :is(h2,h3,.g8eyebrow):not(:where([data-prompt=club] .g8briefhead *)){font-family:var(--vx-display)!important}
 #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8modalhead h2{font-size:30px!important;line-height:1.05!important;font-weight:800!important;text-transform:uppercase!important}
 #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) :is(button,input,select){font-family:var(--vx-body)!important}
 /* Compact scorebook cells fit phone widths without a near-empty horizontal scroll. */

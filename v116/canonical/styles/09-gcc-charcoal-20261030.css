@@ -56,7 +56,7 @@ html body,#g8app{background-color:var(--gcc-ground)!important;color:var(--gcc-te
 #g8app .g8seasoncomplete{background:var(--gcc-panel)!important;border:2px solid var(--gcc-line)!important;border-top:4px solid var(--gcc-accent)!important}
 #g8app :is(.g8sectionhead,.g8xicommand,.g8selectioncount,.g8xirating),#g8dialog :is(.g8analysisoverall,.g8developmentbadge){background:var(--gcc-raised)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
 #g8app .g8sectionhead{background:var(--gcc-raised)!important;border-bottom:2px solid var(--gcc-accent)!important}
-#g8app :is(.g8disclosure,.g8rulenote,.g8conditionread,.g8groundinterpretation,.g8weatherread,.g8scoutsummary,.g8scoutability,.g8scoutoutlook,.g8analysissection),#g8dialog :is(.g8disclosure,.g8rulenote,.g8conditionread,.g8groundinterpretation,.g8weatherread,.g8scoutsummary,.g8scoutability,.g8scoutoutlook,.g8analysissection){background:var(--gcc-panel)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
+#g8app :is(.g8disclosure,.g8rulenote,.g8conditionread,.g8groundinterpretation,.g8weatherread,.g8scoutsummary,.g8scoutability,.g8scoutoutlook,.g8analysissection),#g8dialog :is(.g8disclosure,.g8rulenote,.g8conditionread:not(:where([data-prompt=club] .g8conditionread)),.g8groundinterpretation,.g8weatherread,.g8scoutsummary,.g8scoutability,.g8scoutoutlook,.g8analysissection){background:var(--gcc-panel)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
 /* Pick labels sit on shared dark panels, not on club-coloured badges. */
 #g8app .g8orderrank{color:var(--gcc-text)}
 /* Rule-note titles must not retain the frozen light-theme ink. */
@@ -252,80 +252,43 @@ html body,#g8app{background-color:var(--gcc-ground)!important;color:var(--gcc-te
 
 
 
-/* --- Club Guide | composed decision surface (charcoal owner) --- */
-/* Compact on purpose: preserve every piece of scouting information but remove dead space. */
-#g8dialog#g8dialog#g8dialog:has(.g8clubbrief){width:min(52rem,calc(100vw - 1.5rem))!important;max-width:calc(100vw - 1.5rem)!important}
-#g8dialog:has(.g8clubbrief) .g8modalbody{display:flex!important;flex-direction:column!important;gap:.75rem!important;padding:.85rem 1rem .25rem!important;background:transparent!important;container-type:inline-size;container-name:clubguide}
-/* Club identity: one concise crest-and-metadata band with its actual scouting voice directly below. */
-#g8dialog#g8dialog#g8dialog .g8clubidentitypanel{display:grid!important;grid-template-columns:auto minmax(0,1fr)!important;grid-template-rows:auto auto!important;align-items:center!important;gap:0!important;margin:0!important;padding:0!important;min-height:0!important;border:1px solid var(--gcc-line,#5f635d)!important;border-left:3px solid var(--club-accent,#ed7547)!important;border-radius:9px!important;background:color-mix(in srgb,var(--club-accent,#ed7547) 8%,#171d26)!important;box-shadow:none!important;overflow:hidden!important}
-#g8dialog#g8dialog#g8dialog .g8clubidentitypanel .g8clubmark{grid-column:1!important;grid-row:1!important;padding:.6rem .5rem .6rem .75rem!important;margin:0!important;min-width:0!important;border:0!important;background:transparent!important;align-self:center!important}
-#g8dialog#g8dialog#g8dialog .g8clubidentitypanel .g8badge{min-width:61px!important;min-height:2.65rem!important;width:max-content!important;height:auto!important;padding:.27rem .42rem!important;box-sizing:content-box!important;border-radius:7px!important;font-size:1rem!important;white-space:nowrap!important;overflow-wrap:normal!important;word-break:normal!important;box-shadow:none!important}
-#g8dialog#g8dialog#g8dialog .g8clubmetastrip{grid-column:2!important;grid-row:1!important;display:flex!important;align-items:center!important;flex-wrap:wrap!important;gap:.25rem .75rem!important;margin:0!important;padding:.65rem .75rem .65rem .3rem!important;background:transparent!important;border:0!important;min-width:0!important}
-#g8dialog#g8dialog#g8dialog .g8clubmetastrip>span{display:inline-block!important;padding:0!important;border:0!important;min-width:0!important;background:none!important;color:var(--gcc-text,#eef5fa)!important;font-size:.86rem!important;font-weight:700!important;line-height:1.35!important;letter-spacing:0!important}
-#g8dialog#g8dialog#g8dialog .g8clubmetastrip>span+span{border-left:1px solid var(--gcc-line,#5f635d)!important;padding-left:.75rem!important}
-#g8dialog#g8dialog#g8dialog .g8clubmetastrip>span+span::before{content:none!important}
-#g8dialog#g8dialog#g8dialog .g8clubidentitytext{grid-column:1/-1!important;grid-row:2!important;margin:0!important;padding:.62rem .82rem!important;border-top:1px solid var(--gcc-line,#5f635d)!important;background:transparent!important;color:var(--gcc-muted,#a5b7c3)!important;font-size:.9rem!important;line-height:1.4!important;max-width:none!important}
-/* Two editorial briefs with exact shared head/body tracks. */
-#g8dialog#g8dialog#g8dialog .g8clubbrief{display:grid!important;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)!important;grid-template-rows:auto 1fr!important;align-items:stretch!important;gap:.8rem!important;padding:0!important;margin:0!important;border:0!important;background:none!important;box-shadow:none!important;min-width:0!important}
-#g8dialog#g8dialog#g8dialog .g8clubbrief>.g8sheet{display:grid!important;grid-template-columns:minmax(0,1fr)!important;grid-template-rows:auto 1fr!important;align-self:stretch!important;grid-row:1/span 2!important;margin:0!important;padding:0!important;border:1px solid var(--gcc-line,#5f635d)!important;border-radius:9px!important;overflow:hidden!important;background:#171d26!important;box-shadow:none!important;color:var(--gcc-text,#eef5fa)!important;color-scheme:dark!important;min-width:0!important}
-#g8dialog#g8dialog#g8dialog .g8clubbrief>.g8sheet:first-child{grid-column:1!important}
-#g8dialog#g8dialog#g8dialog .g8clubbrief>.g8sheet:last-child{grid-column:2!important}
-#g8dialog#g8dialog#g8dialog .g8clubbrief .g8briefhead{display:flex!important;flex-direction:column!important;justify-content:center!important;gap:.2rem!important;grid-row:1!important;margin:0!important;padding:.65rem .85rem!important;border:0!important;border-bottom:1px solid var(--gcc-line,#5f635d)!important;background:#202936!important;min-width:0!important}
-#g8dialog#g8dialog#g8dialog .g8clubbrief .g8briefhead .g8eyebrow{margin:0!important;color:color-mix(in srgb,var(--club-accent,#ed7547) 40%,#fff)!important;font-size:.75rem!important;line-height:1.35!important;letter-spacing:.095em!important;font-weight:800!important}
-#g8dialog#g8dialog#g8dialog .g8clubbrief .g8briefhead h3{margin:0!important;font:800 1.07rem/1.25 Arial,Helvetica,sans-serif!important;text-transform:none!important;letter-spacing:-.01em!important;color:var(--gcc-text,#eef5fa)!important}
-#g8dialog#g8dialog#g8dialog .g8clubbrief .g8briefbody{display:flex!important;flex-direction:column!important;gap:.5rem!important;grid-row:2!important;margin:0!important;padding:.8rem .85rem!important;border:0!important;background:none!important;min-width:0!important}
-#g8dialog#g8dialog#g8dialog .g8clubbrief .g8groundtrait{display:block!important;align-self:stretch!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important;color:var(--gcc-text,#eef5fa)!important;font-size:.88rem!important;font-weight:800!important;line-height:1.35!important}
-#g8dialog#g8dialog#g8dialog .g8clubbrief .g8briefbody>p{margin:0!important;color:var(--gcc-muted,#a5b7c3)!important;font-size:.9rem!important;line-height:1.42!important;max-width:none!important}
-/* Three actual condition readings in one compact aligned scorecard.  No duplicate blocks. */
-#g8dialog#g8dialog#g8dialog .g8clubbrief .g8groundbands{display:flex!important;flex-direction:column!important;gap:0!important;margin:.1rem 0 0!important;padding:0!important;border:1px solid var(--gcc-line,#5f635d)!important;border-radius:7px!important;overflow:hidden!important;background:#141b24!important;min-width:0!important}
-#g8dialog#g8dialog#g8dialog .g8clubbrief .g8groundbands>.g8conditionread{display:grid!important;grid-template-columns:minmax(0,6.6rem) minmax(0,1fr)!important;grid-template-rows:auto auto!important;align-items:center!important;gap:.1rem .55rem!important;min-height:62px!important;margin:0!important;padding:.47rem .65rem!important;border:0!important;border-bottom:1px solid var(--gcc-line,#5f635d)!important;border-left:2px solid var(--club-accent,#ed7547)!important;border-radius:0!important;background:none!important;box-shadow:none!important;min-width:0!important}
-#g8dialog#g8dialog#g8dialog .g8clubbrief .g8groundbands>.g8conditionread:last-child{border-bottom:0!important}
-#g8dialog#g8dialog#g8dialog .g8conditionread>div:first-child{grid-column:1!important;grid-row:1/span 2!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:.12rem!important;margin:0!important;min-width:0!important}
-#g8dialog#g8dialog#g8dialog .g8conditionread b{font-size:.85rem!important;line-height:1.3!important;color:var(--gcc-text,#eef5fa)!important;font-weight:800!important}
-#g8dialog#g8dialog#g8dialog .g8conditionread strong{font-size:.79rem!important;line-height:1.3!important;color:var(--gcc-muted,#a5b7c3)!important;font-weight:600!important}
-#g8dialog#g8dialog#g8dialog .g8conditionread .g8conditiongauge{grid-column:2!important;grid-row:1!important;align-self:end!important;width:100%!important;height:9px!important;margin:0!important;border:1px solid #63818b!important;border-radius:4px!important;min-width:0!important}
-#g8dialog#g8dialog#g8dialog .g8conditionread .g8conditiongauge>span{top:-4px!important;height:15px!important}
-#g8dialog#g8dialog#g8dialog .g8conditionread .g8conditionends{grid-column:2!important;grid-row:2!important;display:flex!important;justify-content:space-between!important;align-items:start!important;gap:2px!important;width:100%!important;margin:0!important;font-size:.75rem!important;line-height:1.2!important;color:var(--gcc-muted,#a5b7c3)!important}
-#g8dialog#g8dialog#g8dialog .g8conditionends>span{font-size:inherit!important;white-space:nowrap!important}
-/* The three cricket decisions absorb their share of the height, instead of leaving an empty lower half. */
-#g8dialog#g8dialog#g8dialog .g8clubplan .g8briefbody{height:100%!important}
-#g8dialog#g8dialog#g8dialog .g8clubpriorities{display:flex!important;flex-direction:column!important;justify-content:space-between!important;flex:1!important;list-style:none!important;gap:0!important;margin:0!important;padding:0!important;min-height:0!important}
-#g8dialog#g8dialog#g8dialog .g8clubpriorities>li{display:grid!important;grid-template-columns:1.4rem minmax(0,1fr)!important;gap:.55rem!important;align-items:start!important;flex:1 0 auto!important;margin:0!important;padding:.55rem 0!important;border:0!important;border-top:1px solid var(--gcc-line,#5f635d)!important;background:none!important;box-shadow:none!important;min-width:0!important}
-#g8dialog#g8dialog#g8dialog .g8clubpriorities>li:first-child{border-top:0!important;padding-top:0!important}
-#g8dialog#g8dialog#g8dialog .g8clubpriorities>li:last-child{padding-bottom:0!important}
-#g8dialog#g8dialog#g8dialog .g8clubpriorities .g8prioritynumber{display:block!important;min-width:0!important;width:auto!important;height:auto!important;padding:0!important;margin:0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;color:#f2f7fc!important;font:900 1.15rem/1.2 Arial,Helvetica,sans-serif!important;text-align:left!important}
-#g8dialog#g8dialog#g8dialog .g8clubpriorities strong{display:block!important;margin:0 0 .16rem!important;font-size:.91rem!important;line-height:1.3!important;color:var(--gcc-text,#eef5fa)!important;font-weight:800!important}
-#g8dialog#g8dialog#g8dialog .g8clubpriorities p{margin:0!important;font-size:.89rem!important;line-height:1.39!important;color:var(--gcc-muted,#a5b7c3)!important}
-/* Action remains permanently available on narrow screens; clear separation from the last reading. */
-#g8dialog#g8dialog#g8dialog .g8clubconfirm{position:sticky!important;bottom:0!important;z-index:5!important;display:grid!important;grid-template-columns:1fr!important;flex-shrink:0!important;margin:0!important;padding:.55rem 0 .6rem!important;border:0!important;border-top:1px solid var(--gcc-line,#5f635d)!important;background:#0a1827!important;box-shadow:0 -8px 14px -12px #000!important}
-#g8dialog#g8dialog#g8dialog .g8clubconfirm .g8primary{width:100%!important;min-height:49px!important;margin:0!important;font-size:.95rem!important;background:var(--gcc-accent)!important;background-image:none!important;color:var(--gcc-accent-ink)!important;border-color:var(--gcc-accent)!important;box-shadow:none!important}
-/* Shared header track guarantees both panel bodies start on the same horizontal line. */
-@supports(grid-template-rows:subgrid){
- #g8dialog#g8dialog#g8dialog .g8clubbrief{grid-template-rows:auto 1fr!important}
- #g8dialog#g8dialog#g8dialog .g8clubbrief>.g8sheet{grid-row:1/span 2!important;grid-template-rows:subgrid!important}
- #g8dialog#g8dialog#g8dialog .g8clubbrief .g8briefhead{grid-row:1!important}
- #g8dialog#g8dialog#g8dialog .g8clubbrief .g8briefbody{grid-row:2!important}
-}
+/* Club guide: one component owner, with plain sections and compact condition rows. */
+#g8dialog[data-prompt=club]{width:min(800px,calc(100vw - 24px))!important;max-width:calc(100vw - 24px)!important}
+#g8dialog[data-prompt=club] .g8modalbody{display:flex;flex-direction:column;gap:16px;padding:16px 18px 0;background:transparent;container-type:inline-size;container-name:clubguide}
+#g8dialog[data-prompt=club] .g8clubidentitypanel{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:10px 12px;margin:0;padding:0 0 14px;min-height:0;border:0;border-bottom:1px solid var(--gcc-line);border-radius:0;background:transparent;box-shadow:none}
+#g8dialog[data-prompt=club] .g8clubmark{grid-column:1;grid-row:1;margin:0;padding:0;border:0;background:none}
+#g8dialog[data-prompt=club] .g8clubmark .g8badge{width:48px;min-width:48px;height:48px;min-height:48px;padding:4px;font-size:13px;box-sizing:border-box;border-radius:6px;box-shadow:none}
+#g8dialog[data-prompt=club] .g8clubmetastrip{grid-column:2;grid-row:1;display:flex;flex-wrap:wrap;gap:4px 10px;margin:0;padding:0;border:0;background:transparent;min-width:0}
+#g8dialog[data-prompt=club] .g8clubmetastrip>span{display:inline;padding:0;border:0;background:none;font-size:13px;line-height:1.4;font-weight:600;color:var(--gcc-text)}
+#g8dialog[data-prompt=club] .g8clubmetastrip>span+span:before{content:'·';margin-right:10px;color:var(--gcc-muted)}
+#g8dialog[data-prompt=club] .g8clubidentitytext{grid-column:1/-1;grid-row:2;margin:0;padding:0;border:0;background:none;font-size:13px;line-height:1.5;color:var(--gcc-muted);max-width:none}
+#g8dialog[data-prompt=club] .g8clubbrief{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:start;gap:24px;margin:0;padding:0;border:0;background:none;box-shadow:none;min-width:0}
+#g8dialog[data-prompt=club] .g8clubbrief>.g8sheet{display:block;grid-column:auto;grid-row:auto;align-self:start;margin:0;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;min-width:0}
+#g8dialog[data-prompt=club] .g8briefhead{display:flex;flex-direction:column;gap:5px;margin:0 0 10px;padding:0;border:0;background:none;min-width:0}
+#g8dialog[data-prompt=club] .g8briefhead .g8eyebrow{margin:0;font-family:var(--vx-body)!important;font-size:11px;line-height:1.4;letter-spacing:.09em;color:var(--gcc-muted);font-weight:700}
+#g8dialog[data-prompt=club] .g8briefhead h3{margin:0;font-family:var(--vx-body)!important;font-size:17px;line-height:1.35;letter-spacing:0;text-transform:none;font-style:normal;font-weight:700;color:var(--gcc-text);overflow-wrap:normal;word-break:normal}
+#g8dialog[data-prompt=club] .g8briefbody{display:flex;flex-direction:column;gap:10px;margin:0;padding:0;border:0;background:none;min-width:0}
+#g8dialog[data-prompt=club] .g8briefbody>.g8groundtrait{display:block;align-self:start;width:auto;margin:0;padding:0;border:0;border-radius:0;background:transparent;color:var(--gcc-text);font-size:13px;font-weight:600;line-height:1.4}
+#g8dialog[data-prompt=club] .g8briefbody>p{margin:0;font-size:13px;line-height:1.5;color:var(--gcc-muted);max-width:none}
+#g8dialog[data-prompt=club] .g8groundbands{display:flex;flex-direction:column;gap:0;margin:0;padding:0;border:0;border-radius:0;background:transparent;overflow:visible}
+#g8dialog[data-prompt=club] .g8groundbands>.g8conditionread{display:grid;grid-template-columns:minmax(0,1fr) minmax(100px,1fr);grid-template-rows:auto auto;align-items:center;gap:3px 12px;min-height:55px;margin:0;padding:9px 0;border:0;border-bottom:1px solid var(--gcc-line);border-radius:0;background:transparent;box-shadow:none;min-width:0}
+#g8dialog[data-prompt=club] .g8clubbrief .g8conditionread>div:first-child{grid-column:1;grid-row:1/span 2;display:flex;flex-direction:column;gap:2px;min-width:0}
+#g8dialog[data-prompt=club] .g8clubbrief .g8conditionread b{font-size:13px;line-height:1.35;font-weight:600;color:var(--gcc-text);overflow-wrap:normal;word-break:normal}
+#g8dialog[data-prompt=club] .g8clubbrief .g8conditionread strong{font-size:12px;line-height:1.35;font-weight:400;color:var(--gcc-muted)}
+#g8dialog[data-prompt=club] .g8clubbrief .g8conditiongauge{grid-column:2;grid-row:1;align-self:end;width:100%;height:6px;margin:0;border:0;border-radius:3px;min-width:0}
+#g8dialog[data-prompt=club] .g8clubbrief .g8conditiongauge>span{top:-3px;height:12px}
+#g8dialog[data-prompt=club] .g8clubbrief .g8conditionends{grid-column:2;grid-row:2;display:flex;justify-content:space-between;gap:2px;margin:0;font-size:10px;line-height:1.3;color:var(--gcc-muted)}
+#g8dialog[data-prompt=club] .g8clubbrief .g8conditionends>span{font-size:inherit;white-space:nowrap}
+#g8dialog[data-prompt=club] .g8clubpriorities{display:flex;flex-direction:column;justify-content:start;gap:0;list-style:none;margin:0;padding:0;min-height:0}
+#g8dialog[data-prompt=club] .g8clubpriorities>li{display:grid;grid-template-columns:18px minmax(0,1fr);align-items:start;gap:8px;flex:none;margin:0;padding:12px 0;border:0;border-bottom:1px solid var(--gcc-line);background:none;min-width:0}
+#g8dialog[data-prompt=club] .g8clubpriorities>li:first-child{padding-top:0}
+#g8dialog[data-prompt=club] .g8prioritynumber{display:block;width:auto;height:auto;min-width:0;margin:0;padding:0;border:0;border-radius:0;background:none;font:600 13px/1.4 var(--vx-body);color:var(--gcc-muted);box-shadow:none}
+#g8dialog[data-prompt=club] .g8clubpriorities strong{display:block;margin:0 0 4px;font-size:13px;line-height:1.4;font-weight:600;color:var(--gcc-text)}
+#g8dialog[data-prompt=club] .g8clubpriorities p{margin:0;font-size:13px;line-height:1.5;color:var(--gcc-muted)}
+#g8dialog[data-prompt=club] .g8clubconfirm{position:sticky;bottom:0;z-index:5;display:flex;flex-shrink:0;margin:0;padding:12px 0;border:0;border-top:1px solid var(--gcc-line);background:var(--gcc-inset);box-shadow:none}
+#g8dialog[data-prompt=club] .g8clubconfirm .g8primary{width:100%;min-height:48px;margin:0;background:var(--gcc-accent)!important;color:var(--gcc-accent-ink)!important;border-color:var(--gcc-accent)!important;box-shadow:none}
 @container clubguide (max-width:34rem){
- #g8dialog#g8dialog#g8dialog .g8clubbrief{grid-template-columns:minmax(0,1fr)!important;grid-template-rows:auto auto!important}
- #g8dialog#g8dialog#g8dialog .g8clubbrief>.g8sheet,
- #g8dialog#g8dialog#g8dialog .g8clubbrief>.g8sheet:first-child,
- #g8dialog#g8dialog#g8dialog .g8clubbrief>.g8sheet:last-child{grid-column:1!important;grid-row:auto!important;grid-template-rows:auto 1fr!important}
- #g8dialog#g8dialog#g8dialog .g8clubbrief .g8briefhead,#g8dialog#g8dialog#g8dialog .g8clubbrief .g8briefbody{grid-row:auto!important}
+ #g8dialog[data-prompt=club] .g8clubbrief{grid-template-columns:minmax(0,1fr);gap:20px}
+ #g8dialog[data-prompt=club] .g8clubplan{padding-top:16px;border-top:1px solid var(--gcc-line)}
 }
-@container clubguide (max-width:27rem){
- /* Keep the crest beside metadata as long as the real text fits; wrap rather than force three tall lines. */
- #g8dialog#g8dialog#g8dialog .g8clubmetastrip{gap:.3rem .65rem!important}
- #g8dialog#g8dialog#g8dialog .g8clubmetastrip>span+span{border-left:0!important;padding-left:0!important}
- #g8dialog#g8dialog#g8dialog .g8clubmetastrip>span+span::before{content:'·'!important;display:inline!important;margin:0 .25rem 0 0!important;color:var(--gcc-muted,#a5b7c3)!important}
-}
-@container clubguide (max-width:19rem){
- #g8dialog#g8dialog#g8dialog .g8clubidentitypanel{grid-template-columns:auto minmax(0,1fr)!important;grid-template-rows:auto auto!important}
- #g8dialog#g8dialog#g8dialog .g8clubmetastrip{display:flex!important;flex-wrap:wrap!important;padding:.5rem .5rem .5rem .15rem!important;gap:.2rem .35rem!important}
- #g8dialog#g8dialog#g8dialog .g8clubmetastrip>span{font-size:.75rem!important}
- #g8dialog#g8dialog#g8dialog .g8clubidentitypanel .g8clubmark{padding:.48rem .2rem .48rem .5rem!important}
- #g8dialog#g8dialog#g8dialog .g8clubidentitypanel .g8badge{min-width:48px!important;font-size:.83rem!important;padding:.25rem!important}
- #g8dialog#g8dialog#g8dialog .g8clubbrief .g8groundbands>.g8conditionread{grid-template-columns:minmax(0,5.8rem) minmax(0,1fr)!important;padding:.45rem!important;gap:.1rem .35rem!important}
- #g8dialog#g8dialog#g8dialog .g8conditionread .g8conditionends{font-size:.72rem!important}
- #g8dialog#g8dialog#g8dialog .g8conditionends>span:nth-child(2){display:none!important}
-}
+@container clubguide (max-width:20rem){#g8dialog[data-prompt=club] .g8clubbrief .g8conditionends>span:nth-child(2){display:none}}
