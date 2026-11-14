@@ -1,0 +1,1695 @@
+{
+  "build": "/home/runner/work/global-champions-cricket/global-champions-cricket/qa/results/interface-audit.html",
+  "sha256": "5c4bbca8873cd3e94bb1a62ac7a9a344edfc94a72848d8f373a6d15d43091fa2",
+  "screenshots": [
+    {
+      "file": "draft-analysis-1440x900.png",
+      "name": "draft-analysis",
+      "provenance": "fresh legal controller journey",
+      "view": "draft",
+      "modal": "draftDetail",
+      "year": 2008,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "document": {
+        "width": 1440,
+        "height": 1596
+      },
+      "horizontalOverflow": false,
+      "root": {
+        "x": 245,
+        "y": 145.953125,
+        "width": 950,
+        "height": 608.09375,
+        "right": 1195,
+        "bottom": 754.046875
+      },
+      "audit": {
+        "metadataFile": "draft-analysis-1440x900.meta.json",
+        "terms": [
+          "Role fit",
+          "Cohesion"
+        ],
+        "brokenWords": []
+      },
+      "modalSegments": []
+    },
+    {
+      "file": "draft-analysis-768x900.png",
+      "name": "draft-analysis",
+      "provenance": "fresh legal controller journey",
+      "view": "draft",
+      "modal": "draftDetail",
+      "year": 2008,
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "document": {
+        "width": 768,
+        "height": 3866
+      },
+      "horizontalOverflow": false,
+      "root": {
+        "x": 23.046875,
+        "y": 145.953125,
+        "width": 721.90625,
+        "height": 608.09375,
+        "right": 744.953125,
+        "bottom": 754.046875
+      },
+      "audit": {
+        "metadataFile": "draft-analysis-768x900.meta.json",
+        "terms": [
+          "Role fit",
+          "Cohesion"
+        ],
+        "brokenWords": []
+      },
+      "modalSegments": []
+    },
+    {
+      "file": "draft-analysis-390x844.png",
+      "name": "draft-analysis",
+      "provenance": "fresh legal controller journey",
+      "view": "draft",
+      "modal": "draftDetail",
+      "year": 2008,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "width": 390,
+        "height": 4511
+      },
+      "horizontalOverflow": false,
+      "root": {
+        "x": 12,
+        "y": 12,
+        "width": 366,
+        "height": 820,
+        "right": 378,
+        "bottom": 832
+      },
+      "audit": {
+        "metadataFile": "draft-analysis-390x844.meta.json",
+        "terms": [
+          "Role fit",
+          "Cohesion"
+        ],
+        "brokenWords": []
+      },
+      "modalSegments": []
+    },
+    {
+      "file": "draft-analysis-320x844.png",
+      "name": "draft-analysis",
+      "provenance": "fresh legal controller journey",
+      "view": "draft",
+      "modal": "draftDetail",
+      "year": 2008,
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "document": {
+        "width": 320,
+        "height": 4658
+      },
+      "horizontalOverflow": false,
+      "root": {
+        "x": 12,
+        "y": 12,
+        "width": 296,
+        "height": 820,
+        "right": 308,
+        "bottom": 832
+      },
+      "audit": {
+        "metadataFile": "draft-analysis-320x844.meta.json",
+        "terms": [
+          "Role fit",
+          "Cohesion"
+        ],
+        "brokenWords": []
+      },
+      "modalSegments": [
+        "draft-analysis-320-dialog-0.png",
+        "draft-analysis-320-dialog-1.png"
+      ],
+      "modalSegmentsComplete": true
+    },
+    {
+      "file": "XI-analysis-dialog-1440x900.png",
+      "name": "XI-analysis-dialog",
+      "provenance": "fresh legal controller journey",
+      "view": "team",
+      "modal": "teamAnalysis",
+      "year": 2008,
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "document": {
+        "width": 1440,
+        "height": 1341
+      },
+      "horizontalOverflow": false,
+      "root": {
+        "x": 245,
+        "y": 126.8125,
+        "width": 950,
+        "height": 646.359375,
+        "right": 1195,
+        "bottom": 773.171875
+      },
+      "audit": {
+        "metadataFile": "XI-analysis-dialog-1440x900.meta.json",
+        "terms": [
+          "Role fit",
+          "Cohesion"
+        ],
+        "brokenWords": []
+      },
+      "modalSegments": []
+    },
+    {
+      "file": "XI-analysis-dialog-768x900.png",
+      "name": "XI-analysis-dialog",
+      "provenance": "fresh legal controller journey",
+      "view": "team",
+      "modal": "teamAnalysis",
+      "year": 2008,
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "document": {
+        "width": 768,
+        "height": 2068
+      },
+      "horizontalOverflow": false,
+      "root": {
+        "x": 23.046875,
+        "y": 126.8125,
+        "width": 721.90625,
+        "height": 646.359375,
+        "right": 744.953125,
+        "bottom": 773.171875
+      },
+      "audit": {
+        "metadataFile": "XI-analysis-dialog-768x900.meta.json",
+        "terms": [
+          "Role fit",
+          "Cohesion"
+        ],
+        "brokenWords": []
+      },
+      "modalSegments": []
+    },
+    {
+      "file": "XI-analysis-dialog-390x844.png",
+      "name": "XI-analysis-dialog",
+      "provenance": "fresh legal controller journey",
+      "view": "team",
+      "modal": "teamAnalysis",
+      "year": 2008,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "width": 390,
+        "height": 1968
+      },
+      "horizontalOverflow": false,
+      "root": {
+        "x": 12,
+        "y": 12,
+        "width": 366,
+        "height": 820,
+        "right": 378,
+        "bottom": 832
+      },
+      "audit": {
+        "metadataFile": "XI-analysis-dialog-390x844.meta.json",
+        "terms": [
+          "Role fit",
+          "Cohesion"
+        ],
+        "brokenWords": []
+      },
+      "modalSegments": []
+    },
+    {
+      "file": "XI-analysis-dialog-320x844.png",
+      "name": "XI-analysis-dialog",
+      "provenance": "fresh legal controller journey",
+      "view": "team",
+      "modal": "teamAnalysis",
+      "year": 2008,
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "document": {
+        "width": 320,
+        "height": 2036
+      },
+      "horizontalOverflow": false,
+      "root": {
+        "x": 12,
+        "y": 12,
+        "width": 296,
+        "height": 820,
+        "right": 308,
+        "bottom": 832
+      },
+      "audit": {
+        "metadataFile": "XI-analysis-dialog-320x844.meta.json",
+        "terms": [
+          "Role fit",
+          "Cohesion"
+        ],
+        "brokenWords": []
+      },
+      "modalSegments": [
+        "XI-analysis-dialog-320-dialog-0.png",
+        "XI-analysis-dialog-320-dialog-1.png"
+      ],
+      "modalSegmentsComplete": true
+    }
+  ],
+  "failures": [],
+  "omissions": [
+    {
+      "section": "foundation trade form",
+      "reason": "Trading is intentionally unavailable in 2008; actual later-year trade forms are captured from career checkpoints."
+    },
+    {
+      "section": "2009-review-player-management",
+      "reason": "Management is not offered from completed-season review; covered from the legal offseason route."
+    },
+    {
+      "section": "2010 annual draft",
+      "reason": "This actual checkpoint has no roster vacancies; starting the annual draft legitimately advances past the draft."
+    },
+    {
+      "section": "2019-review-player-management",
+      "reason": "Management is not offered from completed-season review; covered from the legal offseason route."
+    },
+    {
+      "section": "2020 annual draft",
+      "reason": "This actual checkpoint has no roster vacancies; starting the annual draft legitimately advances past the draft."
+    },
+    {
+      "section": "2025-review-player-management",
+      "reason": "Management is not offered from completed-season review; covered from the legal offseason route."
+    },
+    {
+      "section": "2026-review-player-management",
+      "reason": "Management is not offered from completed-season review; covered from the legal offseason route."
+    },
+    {
+      "section": "audit limits",
+      "reason": "No claim of exhaustive combinatorial coverage: every player, filter, modal variant, injury/trade outcome and delivery frame is not enumerated. Failures above explicitly identify blocked journeys."
+    }
+  ],
+  "actions": [
+    {
+      "action": "how",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "home"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "home"
+    },
+    {
+      "action": "howItWorks",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "home"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "home"
+    },
+    {
+      "action": "breakawayStory",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "home"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "home"
+    },
+    {
+      "action": "play",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "story"
+    },
+    {
+      "action": "world",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "leagueDraw"
+    },
+    {
+      "action": "revealAll",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "leagueDraw"
+    },
+    {
+      "action": "clubs",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "clubs"
+    },
+    {
+      "action": "club",
+      "args": [
+        0
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "clubs"
+    },
+    {
+      "action": "confirmClub",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "recruit"
+    },
+    {
+      "action": "signingRun",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "recruit"
+    },
+    {
+      "action": "signingRun",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "recruit"
+    },
+    {
+      "action": "signingSkip",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "recruit"
+    },
+    {
+      "action": "draftDraw",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "draftDraw"
+    },
+    {
+      "action": "revealAll",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "draftDraw"
+    },
+    {
+      "action": "beginDraft",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "draft"
+    },
+    {
+      "action": "skipPick",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "draft"
+    },
+    {
+      "action": "draftSquad",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "draft"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "draft"
+    },
+    {
+      "action": "draftDetail",
+      "args": [
+        "analysis"
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "draft"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "draft"
+    },
+    {
+      "action": "draftDetail",
+      "args": [
+        "picks"
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "draft"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "draft"
+    },
+    {
+      "action": "skipPick",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "draft"
+    },
+    {
+      "action": "inspect",
+      "args": [
+        3
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "draft"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "draft"
+    },
+    {
+      "action": "draftPlayer",
+      "args": [
+        3
+      ],
+      "ok": true,
+      "feedback": "Kumar Sangakkara joins your squad.",
+      "view": "draft"
+    },
+    {
+      "action": "skipPick",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "draft"
+    },
+    {
+      "action": "draftPlayer",
+      "args": [
+        88
+      ],
+      "ok": true,
+      "feedback": "Shane Bond joins your squad.",
+      "view": "draft"
+    },
+    {
+      "action": "skipPick",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "draft"
+    },
+    {
+      "action": "draftPlayer",
+      "args": [
+        141
+      ],
+      "ok": true,
+      "feedback": "Shane Warne joins your squad.",
+      "view": "draft"
+    },
+    {
+      "action": "skipPick",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "draft"
+    },
+    {
+      "action": "draftPlayer",
+      "args": [
+        90
+      ],
+      "ok": true,
+      "feedback": "Zaheer Khan joins your squad.",
+      "view": "draft"
+    },
+    {
+      "action": "skipPick",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "draft"
+    },
+    {
+      "action": "draftPlayer",
+      "args": [
+        63
+      ],
+      "ok": true,
+      "feedback": "Andrew Symonds joins your squad.",
+      "view": "draft"
+    },
+    {
+      "action": "skipPick",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "draft"
+    },
+    {
+      "action": "draftPlayer",
+      "args": [
+        112
+      ],
+      "ok": true,
+      "feedback": "Steve Harmison joins your squad.",
+      "view": "draft"
+    },
+    {
+      "action": "skipPick",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "draft"
+    },
+    {
+      "action": "draftPlayer",
+      "args": [
+        138
+      ],
+      "ok": true,
+      "feedback": "Dirk Nannes joins your squad.",
+      "view": "draft"
+    },
+    {
+      "action": "skipPick",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "draft"
+    },
+    {
+      "action": "draftPlayer",
+      "args": [
+        15
+      ],
+      "ok": true,
+      "feedback": "Ricky Ponting joins your squad.",
+      "view": "draft"
+    },
+    {
+      "action": "skipPick",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "draft"
+    },
+    {
+      "action": "draftPlayer",
+      "args": [
+        25
+      ],
+      "ok": true,
+      "feedback": "Shivnarine Chanderpaul joins your squad.",
+      "view": "draft"
+    },
+    {
+      "action": "skipPick",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "draft"
+    },
+    {
+      "action": "draftPlayer",
+      "args": [
+        21
+      ],
+      "ok": true,
+      "feedback": "Mahela Jayawardene joins your squad.",
+      "view": "draft"
+    },
+    {
+      "action": "skipPick",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "draft"
+    },
+    {
+      "action": "draftPlayer",
+      "args": [
+        178
+      ],
+      "ok": true,
+      "feedback": "Marcus Trescothick joins your squad.",
+      "view": "draft"
+    },
+    {
+      "action": "skipPick",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "draft"
+    },
+    {
+      "action": "draftPlayer",
+      "args": [
+        263
+      ],
+      "ok": true,
+      "feedback": "Murray Goodwin joins your squad.",
+      "view": "draft"
+    },
+    {
+      "action": "skipPick",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "draft"
+    },
+    {
+      "action": "draftPlayer",
+      "args": [
+        111
+      ],
+      "ok": true,
+      "feedback": "Ryan Sidebottom joins your squad.",
+      "view": "draft"
+    },
+    {
+      "action": "skipPick",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "draft"
+    },
+    {
+      "action": "draftPlayer",
+      "args": [
+        133
+      ],
+      "ok": true,
+      "feedback": "Andre Nel joins your squad.",
+      "view": "draft"
+    },
+    {
+      "action": "skipPick",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "draft"
+    },
+    {
+      "action": "draftPlayer",
+      "args": [
+        77
+      ],
+      "ok": true,
+      "feedback": "Squad confirmed. Review your opening XI.",
+      "view": "team"
+    },
+    {
+      "action": "team",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "team"
+    },
+    {
+      "action": "clearXI",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "team"
+    },
+    {
+      "action": "select",
+      "args": [
+        3
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "team"
+    },
+    {
+      "action": "select",
+      "args": [
+        88
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "team"
+    },
+    {
+      "action": "select",
+      "args": [
+        141
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "team"
+    },
+    {
+      "action": "select",
+      "args": [
+        90
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "team"
+    },
+    {
+      "action": "select",
+      "args": [
+        63
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "team"
+    },
+    {
+      "action": "select",
+      "args": [
+        112
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "team"
+    },
+    {
+      "action": "select",
+      "args": [
+        15
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "team"
+    },
+    {
+      "action": "select",
+      "args": [
+        25
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "team"
+    },
+    {
+      "action": "select",
+      "args": [
+        21
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "team"
+    },
+    {
+      "action": "select",
+      "args": [
+        178
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "team"
+    },
+    {
+      "action": "select",
+      "args": [
+        77
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "team"
+    },
+    {
+      "action": "teamPane",
+      "args": [
+        "squad"
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "team"
+    },
+    {
+      "action": "teamPane",
+      "args": [
+        "xi"
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "team"
+    },
+    {
+      "action": "teamAnalysis",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "team"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "team"
+    },
+    {
+      "action": "swapSelected",
+      "args": [
+        3
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "team"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "team"
+    },
+    {
+      "action": "lodge",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "season"
+    },
+    {
+      "action": "seasonTab",
+      "args": [
+        "ladder"
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "season"
+    },
+    {
+      "action": "seasonTab",
+      "args": [
+        "fixtures"
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "season"
+    },
+    {
+      "action": "seasonTab",
+      "args": [
+        "players"
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "season"
+    },
+    {
+      "action": "seasonTab",
+      "args": [
+        "leaguePlayers"
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "season"
+    },
+    {
+      "action": "seasonTab",
+      "args": [
+        "matchday"
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "season"
+    },
+    {
+      "action": "prepare",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "season"
+    },
+    {
+      "action": "playMatch",
+      "args": [
+        1
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "matchReveal"
+    },
+    {
+      "action": "startPlayback",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "matchReveal"
+    },
+    {
+      "action": "matchSpeed",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "matchReveal"
+    },
+    {
+      "action": "matchSpeed",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "matchReveal"
+    },
+    {
+      "action": "matchSpeed",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "matchReveal"
+    },
+    {
+      "action": "matchRun",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "matchReveal"
+    },
+    {
+      "action": "matchRun",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "matchReveal"
+    },
+    {
+      "action": "matchRun",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "matchReveal"
+    },
+    {
+      "action": "matchSkip",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "result"
+    },
+    {
+      "action": "matchday",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "season"
+    },
+    {
+      "action": "continue",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "review"
+    },
+    {
+      "action": "inspect",
+      "args": [
+        87
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "review"
+    },
+    {
+      "action": "playerTab",
+      "args": [
+        "skills"
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "review"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "review"
+    },
+    {
+      "action": "averages",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "review"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "review"
+    },
+    {
+      "action": "archive",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "archive"
+    },
+    {
+      "action": "archiveSeason",
+      "args": [
+        2009
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "archive"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "archive"
+    },
+    {
+      "action": "archiveBack",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "review"
+    },
+    {
+      "action": "offseason",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "offseasonPane",
+      "args": [
+        "players"
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "inspect",
+      "args": [
+        8
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "playerTab",
+      "args": [
+        "management"
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "release",
+      "args": [
+        209
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "offseasonPane",
+      "args": [
+        "overview"
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "trade",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "reviewList",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "annualDraw",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "revealAll",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "annualDraft",
+      "args": [],
+      "ok": true,
+      "feedback": "Squad confirmed. Review your opening XI.",
+      "view": "team"
+    },
+    {
+      "action": "continue",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "review"
+    },
+    {
+      "action": "inspect",
+      "args": [
+        1037
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "review"
+    },
+    {
+      "action": "playerTab",
+      "args": [
+        "skills"
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "review"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "review"
+    },
+    {
+      "action": "averages",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "review"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "review"
+    },
+    {
+      "action": "archive",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "archive"
+    },
+    {
+      "action": "archiveSeason",
+      "args": [
+        2019
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "archive"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "archive"
+    },
+    {
+      "action": "archiveBack",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "review"
+    },
+    {
+      "action": "offseason",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "offseasonPane",
+      "args": [
+        "players"
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "inspect",
+      "args": [
+        8
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "playerTab",
+      "args": [
+        "management"
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "release",
+      "args": [
+        8
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "offseasonPane",
+      "args": [
+        "overview"
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "trade",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "reviewList",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "annualDraw",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "revealAll",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "annualDraft",
+      "args": [],
+      "ok": true,
+      "feedback": "Squad confirmed. Review your opening XI.",
+      "view": "team"
+    },
+    {
+      "action": "continue",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "review"
+    },
+    {
+      "action": "inspect",
+      "args": [
+        1028
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "review"
+    },
+    {
+      "action": "playerTab",
+      "args": [
+        "skills"
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "review"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "review"
+    },
+    {
+      "action": "averages",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "review"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "review"
+    },
+    {
+      "action": "archive",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "archive"
+    },
+    {
+      "action": "archiveSeason",
+      "args": [
+        2025
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "archive"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "archive"
+    },
+    {
+      "action": "archiveBack",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "review"
+    },
+    {
+      "action": "offseason",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "offseasonPane",
+      "args": [
+        "players"
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "inspect",
+      "args": [
+        1037
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "playerTab",
+      "args": [
+        "management"
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "release",
+      "args": [
+        1
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "offseasonPane",
+      "args": [
+        "overview"
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "trade",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "reviewList",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "annualDraw",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "revealAll",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "annualDraft",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "skipPick",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "dynasty"
+    },
+    {
+      "action": "continue",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "review"
+    },
+    {
+      "action": "inspect",
+      "args": [
+        1028
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "review"
+    },
+    {
+      "action": "playerTab",
+      "args": [
+        "skills"
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "review"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "review"
+    },
+    {
+      "action": "averages",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "review"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "review"
+    },
+    {
+      "action": "archive",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "archive"
+    },
+    {
+      "action": "archiveSeason",
+      "args": [
+        2026
+      ],
+      "ok": true,
+      "feedback": "",
+      "view": "archive"
+    },
+    {
+      "action": "close",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "archive"
+    },
+    {
+      "action": "archiveBack",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "review"
+    },
+    {
+      "action": "finishCareer",
+      "args": [],
+      "ok": true,
+      "feedback": "",
+      "view": "legacy"
+    }
+  ],
+  "scope": "Fresh legal controller journey and actual completed career checkpoints, in private disposable browser storage. Historical finals stages explicitly reconstructed from real finalists/results. External requests blocked. Geometry observations are screening signals, not visual certification."
+}
