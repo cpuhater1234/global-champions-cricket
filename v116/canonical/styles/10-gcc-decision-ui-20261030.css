@@ -1120,8 +1120,10 @@ html:has(#g8dialog[open]){overflow:hidden}
 #g8app .g8careerintro .g8careerlaunch>.g8actions{margin-top:10px!important;gap:10px}
 #g8app .g8careerintro .g8careerlaunch .g8button{min-height:44px!important;font-size:14px!important;padding:10px 14px!important}
 #g8app :is(.g8invitationgrid,.g8clubchooser) .g8franchise,#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubbody{background:var(--gcc-panel)!important;border-color:var(--gcc-line)!important}
-#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground{background:var(--gcc-raised)!important;border-color:var(--gcc-line)!important;border-left-color:var(--accent)!important}
-#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground .g8icon{color:var(--gcc-muted)!important}
+#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground{display:flex;align-items:center;min-height:44px;margin-top:auto;padding:4px 0;background:transparent!important;border:0!important;border-radius:0;box-shadow:none}
+#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground>div{display:flex;align-items:center;gap:8px;min-width:0}
+#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground strong{font-size:13px;line-height:1.4;font-weight:600;overflow-wrap:normal;word-break:normal}
+#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground .g8icon{display:block!important;color:var(--gcc-muted)!important}
 #g8dialog[data-prompt=club] .g8briefhead h3{font-size:18px!important;line-height:1.35!important;letter-spacing:-.015em!important;text-transform:none!important;font-style:normal!important}
 #g8app .g8windowpanel .g8signingtitle{font:700 26px/1.2 Arial,Helvetica,sans-serif!important;text-transform:none!important;letter-spacing:-.02em!important;margin:12px 0!important;min-height:0!important}
 #g8app .g8windowpanel .g8signingactions{display:flex!important;gap:8px!important;flex-wrap:wrap!important;margin:14px 0 16px!important;padding:0!important;border-top:0!important}

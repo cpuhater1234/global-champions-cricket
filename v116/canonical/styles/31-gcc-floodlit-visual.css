@@ -133,8 +133,7 @@
 #g8stage#g8stage#g8stage .g8club:not(.g8ordercard) h3{font-family:var(--vx-display)!important;font-size:1.65rem;font-weight:700;
   text-transform:uppercase;letter-spacing:.03em;line-height:1.05}
 #g8stage#g8stage#g8stage .g8clublocation{color:var(--gcc-muted)!important;letter-spacing:.1em;text-transform:uppercase;font-size:.8rem}
-#g8stage#g8stage#g8stage .g8clubground{background:rgba(0,0,0,.28)!important;border:1px solid var(--gcc-line)!important;
-  border-left:3px solid var(--accent,var(--vx-glow))!important;border-radius:6px}
+/* Club ground rows are owned by the club-card component in decision-ui. */
 
 /* 9 ─ Draft / XI: panels, player cards, big glowing ratings */
 #g8stage#g8stage#g8stage .gccuiPanel,#g8stage#g8stage#g8stage .gccuiSquad,#g8stage#g8stage#g8stage .g8panel,#g8stage#g8stage#g8stage .g8card{
