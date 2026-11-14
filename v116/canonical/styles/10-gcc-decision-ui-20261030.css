@@ -838,22 +838,24 @@
   scrollbar-color:#4b5662 transparent
 }
 #g8dialog#g8dialog#g8dialog .g8guide{max-width:none!important;min-width:0!important;color:var(--guide-text)!important}
-#g8dialog#g8dialog#g8dialog .g8guide :is(h3,p,summary,button){font-family:inherit!important;font-style:normal!important;letter-spacing:normal!important;text-transform:none!important;text-shadow:none!important}
+#g8dialog#g8dialog#g8dialog .g8guide :is(h3,h4,p,summary,button){font-family:inherit!important;font-style:normal!important;letter-spacing:normal!important;text-transform:none!important;text-shadow:none!important}
 #g8dialog#g8dialog#g8dialog .g8guideintro{
   background:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;
-  padding:0 0 22px!important;margin:0!important;text-align:left!important
+  padding:0 0 16px!important;margin:0!important;text-align:left!important
 }
 #g8dialog#g8dialog#g8dialog .g8guideintro>.g8eyebrow{display:block!important;margin:0 0 6px!important;font:600 11px/1.5 Inter,system-ui,sans-serif!important;letter-spacing:.1em!important;color:var(--guide-muted)!important;text-transform:uppercase!important}
 #g8dialog#g8dialog#g8dialog .g8guideintro>h3{margin:0 0 8px!important;font-size:25px!important;line-height:1.25!important;font-weight:650!important;letter-spacing:-.025em!important;color:var(--guide-text)!important;text-align:left!important}
 #g8dialog#g8dialog#g8dialog .g8guideintro>p{margin:0!important;max-width:68ch!important;font-size:14px!important;line-height:1.6!important;font-weight:400!important;color:var(--guide-muted)!important;text-align:left!important}
 #g8dialog#g8dialog#g8dialog .g8guideintro>.g8storyopening{margin-top:14px!important;padding-top:14px!important;border-top:1px solid var(--guide-line)!important}
 #g8dialog#g8dialog#g8dialog .g8guidegrid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:0 32px!important;width:100%!important;max-width:none!important;padding:0!important;margin:0!important}
-#g8dialog#g8dialog#g8dialog .g8guidecard{min-width:0!important;background:none!important;border:0!important;border-top:1px solid var(--guide-line)!important;border-radius:0!important;box-shadow:none!important;padding:16px 0!important;margin:0!important}
+#g8dialog#g8dialog#g8dialog .g8guidecard{min-width:0!important;background:none!important;border:0!important;border-top:1px solid var(--guide-line)!important;border-radius:0!important;box-shadow:none!important;padding:12px 0!important;margin:0!important}
 #g8dialog#g8dialog#g8dialog .g8guidecardhead{display:flex!important;align-items:center!important;gap:10px!important;margin:0 0 7px!important;min-width:0!important}
-#g8dialog#g8dialog#g8dialog .g8guidecardhead>h3{margin:0!important;min-width:0!important;color:var(--guide-text)!important;font-size:15px!important;line-height:1.4!important;font-weight:650!important;text-align:left!important}
+#g8dialog#g8dialog#g8dialog .g8guidecardhead>:is(h3,h4){margin:0!important;min-width:0!important;color:var(--guide-text)!important;font-size:15px!important;line-height:1.4!important;font-weight:650!important;text-align:left!important}
 #g8dialog#g8dialog#g8dialog .g8guidecardhead>.g8icon{width:22px!important;height:22px!important;flex:0 0 22px!important;color:var(--guide-muted)!important;opacity:1!important}
 #g8dialog#g8dialog#g8dialog .g8guidenumber{display:inline-grid!important;place-items:center!important;flex:0 0 22px!important;width:22px!important;min-width:22px!important;height:22px!important;min-height:22px!important;padding:0!important;border:1px solid #4b606b!important;border-radius:50%!important;background:transparent!important;color:var(--guide-accent)!important;font:600 11px/1 Inter,system-ui,sans-serif!important;box-shadow:none!important}
-#g8dialog#g8dialog#g8dialog .g8guidecard>p{margin:0 0 0 32px!important;color:var(--guide-muted)!important;font-size:14px!important;line-height:1.65!important;font-weight:400!important;max-width:64ch!important}
+#g8dialog#g8dialog#g8dialog .g8guidecard>p{margin:0 0 0 32px!important;color:var(--guide-muted)!important;font-size:14px!important;line-height:1.55!important;font-weight:400!important;max-width:64ch!important}
+#g8dialog#g8dialog#g8dialog .g8guidechapter+.g8guidechapter{margin-top:10px}
+#g8dialog#g8dialog#g8dialog .g8guide .g8guidechaptertitle{margin:0 0 8px!important;font-size:12px!important;line-height:1.4!important;font-weight:700!important;letter-spacing:.06em!important;text-transform:uppercase!important;color:var(--guide-muted)!important}
 #g8dialog#g8dialog#g8dialog .g8guiderules{margin-top:12px!important}
 #g8dialog#g8dialog#g8dialog .g8guiderules .g8disclosure{margin:0!important;padding:0!important;background:none!important;border:0!important;border-top:1px solid var(--guide-line)!important;border-radius:0!important;box-shadow:none!important}
 #g8dialog#g8dialog#g8dialog .g8guiderules .g8disclosure>summary{display:flex!important;align-items:center!important;gap:12px!important;min-height:52px!important;padding:12px 0!important;margin:0!important;border:0!important;border-radius:0!important;background:none!important;color:var(--guide-text)!important;font-size:14px!important;line-height:1.5!important;font-weight:600!important;text-decoration:none!important}
@@ -862,7 +864,7 @@
 #g8dialog#g8dialog#g8dialog .g8guiderules .g8rulegrid{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:0!important;padding:0!important;margin:0!important}
 #g8dialog#g8dialog#g8dialog .g8guiderules .g8rulegrid>.g8guidecard{display:grid!important;grid-template-columns:190px minmax(0,1fr)!important;align-items:start!important;gap:24px!important;padding:16px 0!important;border-top:1px solid #2c343d!important}
 #g8dialog#g8dialog#g8dialog .g8guiderules .g8guidecardhead{margin:0!important;align-items:flex-start!important}
-#g8dialog#g8dialog#g8dialog .g8guiderules .g8guidecardhead>h3{font-size:14px!important;line-height:1.55!important}
+#g8dialog#g8dialog#g8dialog .g8guiderules .g8guidecardhead>:is(h3,h4){font-size:14px!important;line-height:1.55!important}
 #g8dialog#g8dialog#g8dialog .g8guiderules .g8guidecard>p{margin:0!important;font-size:14px!important;line-height:1.65!important}
 #g8dialog#g8dialog#g8dialog .g8storychapters{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:0!important}
 #g8dialog#g8dialog#g8dialog .g8storychapters>.g8guidecard:first-child{border-top:0!important}
