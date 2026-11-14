@@ -1,0 +1,88 @@
+name: GCC paired ratings and menu review
+on:
+  push:
+    branches: [work/v116-candidate-acceptance]
+    paths: ['.github/workflows/v116-ratings-menu.yml', 'qa/v116_ratings_menu_native.cjs']
+permissions:
+  contents: write
+env:
+  # Exact six-background match-surface candidate.
+  CANDIDATE_SHA256: 3b9a6bf4650a16db408a20317eda78d451cdae8220d7b2873a47c731d5b9ae2c
+concurrency:
+  group: gcc-ratings-menu
+  cancel-in-progress: true
+jobs:
+  acceptance:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install native browser
+        run: |
+          if [ -f /etc/apt/apt-mirrors.txt ]; then
+            sudo sed -i 's|http://azure.archive.ubuntu.com/ubuntu|https://archive.ubuntu.com/ubuntu|g' /etc/apt/apt-mirrors.txt
+          fi
+          pip install playwright pillow
+          python -m playwright install --with-deps chromium
+          npm install --no-save --no-package-lock playwright
+      - name: Build exact review candidate
+        run: |
+          python qa/v116_canonical_source.py build --source v116/canonical --allow-runtime-changes --output qa/results/interface-audit.html
+          sha256sum qa/results/interface-audit.html
+          mkdir -p /tmp/guide-before
+          git archive fd175eb55e86be50dc7927f1018def66d12666fd v116/canonical | tar -x -C /tmp/guide-before
+          python qa/v116_canonical_source.py build --source /tmp/guide-before/v116/canonical --allow-runtime-changes --output qa/results/guide-before.html
+      - uses: actions/cache/restore@v4
+        with:
+          path: qa/results/whole-ui-career
+          key: gcc-ui-career-79a2fbfe-seed101-v1-${{ hashFiles('qa/structural-risk/career-run.mjs', 'qa/offline_game_host.mjs') }}
+      - name: Require existing checkpoints
+        run: |
+          test -f qa/results/whole-ui-career/checkpoint-2009.json
+          test -f qa/results/whole-ui-career/checkpoint-2019.json
+          test -f qa/results/whole-ui-career/checkpoint-2025.json
+          test -f qa/results/whole-ui-career/checkpoint-2026.json
+      - name: Check points and club flow
+        env:
+          GCC8_TEST_BUILD: qa/results/interface-audit.html
+        run: |
+          node qa/v116_career_points_test.cjs
+          node qa/v116_club_flow_test.mjs
+      - name: Audit main screens, secondary panels and terminology
+        env:
+          GCC8_TEST_BUILD: qa/results/interface-audit.html
+          GCC8_WHOLE_UI_DIR: qa/results/interface-audit
+          GCC8_REQUIRE_OWNER_FIX: '1'
+          GCC8_BASELINE_BUILD: qa/results/guide-before.html
+          GCC8_BROWSER_CAREER_DIR: qa/results/whole-ui-career
+        run: |
+          GCC8_CHROMIUM="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')" node qa/v116_ratings_menu_native.cjs
+      - name: Preserve diagnostic evidence
+        if: always()
+        run: |
+          python - <<'SAVE'
+          from pathlib import Path
+          from PIL import Image
+          import shutil
+          src=Path('qa/results/ratings-menu-native');dst=Path('docs/release/ratings-menu/${{ github.run_id }}');dst.mkdir(parents=True,exist_ok=True)
+          for f in src.glob('*.json'):
+              folder=dst if f.name=='manifest.json' else dst/(f.name[:4] if f.name[:4].isdigit() else 'foundation');folder.mkdir(parents=True,exist_ok=True);shutil.copyfile(f,folder/f.name)
+          for f in src.glob('*.png'):
+              folder=dst/(f.name[:4] if f.name[:4].isdigit() else 'foundation');folder.mkdir(parents=True,exist_ok=True);Image.open(f).convert('RGB').save(folder/f.with_suffix('.jpg').name,quality=88,optimize=True)
+          SAVE
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/release/ratings-menu
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record paired ratings and utility-menu evidence'
+            git pull --rebase origin work/v116-candidate-acceptance
+            git push origin HEAD:refs/heads/work/v116-candidate-acceptance
+          fi
