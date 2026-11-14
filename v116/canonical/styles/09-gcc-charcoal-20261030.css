@@ -10,7 +10,7 @@ html body,#g8app{background-color:var(--gcc-ground)!important;color:var(--gcc-te
 #g8app .g8brand{background:var(--gcc-panel)!important;color:var(--gcc-text)!important;border:2px solid var(--gcc-line)!important;box-shadow:none!important}
 #g8app .g8heading{background:var(--gcc-raised)!important;border:2px solid var(--gcc-line)!important;border-left:7px solid var(--gcc-accent)!important;box-shadow:none!important}
 #g8app .g8heading h1,#g8app .g8heading p{color:var(--gcc-text)!important}
-#g8app :is(.g8sheet,.g8draftaside,.g8decisionbar,.g8selectionground,.g8teamworkspace,.g8signingpanel,.g8liveboard,.g8matcharena,.g8seasonbook,.g8reviewsummary,.g8careerrecord,.g8playerdetail,.g8dressingroom,.g8relationship),#g8dialog{background:var(--gcc-panel)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important;box-shadow:none!important}
+#g8app :is(.g8sheet:not(:where([data-prompt=club] .g8sheet)),.g8draftaside,.g8decisionbar,.g8selectionground,.g8teamworkspace,.g8signingpanel,.g8liveboard,.g8matcharena,.g8seasonbook,.g8reviewsummary,.g8careerrecord,.g8playerdetail,.g8dressingroom,.g8relationship),#g8dialog{background:var(--gcc-panel)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important;box-shadow:none!important}
 #g8app :is(.g8draftaside,.g8dressingroom,.g8relationship){border-top:4px solid var(--gcc-accent)!important;border-left-width:2px!important}
 #g8app :is(.g8startingxi,.g8bench,.g8slot,.g8squadrow,.g8decisionbar,.g8clock,.g8drawcontrols,.g8matchcontrols,.g8moredata,.g8read,.g8summarytiles>div),#g8dialog :is(.g8read,.g8statrow,.g8playercontext>div){background:var(--gcc-raised)!important;border-color:var(--gcc-line)!important;color:var(--gcc-text)!important}
 #g8app :is(.g8startingxi,.g8bench)>header,#g8app :is(.g8startingxi,.g8bench)>h2,#g8dialog .g8modalhead{background:var(--gcc-raised)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
@@ -56,7 +56,7 @@ html body,#g8app{background-color:var(--gcc-ground)!important;color:var(--gcc-te
 #g8app .g8seasoncomplete{background:var(--gcc-panel)!important;border:2px solid var(--gcc-line)!important;border-top:4px solid var(--gcc-accent)!important}
 #g8app :is(.g8sectionhead,.g8xicommand,.g8selectioncount,.g8xirating),#g8dialog :is(.g8analysisoverall,.g8developmentbadge){background:var(--gcc-raised)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
 #g8app .g8sectionhead{background:var(--gcc-raised)!important;border-bottom:2px solid var(--gcc-accent)!important}
-#g8app :is(.g8disclosure,.g8rulenote,.g8conditionread,.g8groundinterpretation,.g8weatherread,.g8scoutsummary,.g8scoutability,.g8scoutoutlook,.g8analysissection),#g8dialog :is(.g8disclosure,.g8rulenote,.g8conditionread:not(:where([data-prompt=club] .g8conditionread)),.g8groundinterpretation,.g8weatherread,.g8scoutsummary,.g8scoutability,.g8scoutoutlook,.g8analysissection){background:var(--gcc-panel)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
+#g8app :is(.g8disclosure,.g8rulenote,.g8conditionread:not(:where([data-prompt=club] .g8conditionread)),.g8groundinterpretation,.g8weatherread,.g8scoutsummary,.g8scoutability,.g8scoutoutlook,.g8analysissection),#g8dialog :is(.g8disclosure,.g8rulenote,.g8conditionread:not(:where([data-prompt=club] .g8conditionread)),.g8groundinterpretation,.g8weatherread,.g8scoutsummary,.g8scoutability,.g8scoutoutlook,.g8analysissection){background:var(--gcc-panel)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
 /* Pick labels sit on shared dark panels, not on club-coloured badges. */
 #g8app .g8orderrank{color:var(--gcc-text)}
 /* Rule-note titles must not retain the frozen light-theme ink. */
@@ -226,13 +226,6 @@ html body,#g8app{background-color:var(--gcc-ground)!important;color:var(--gcc-te
  #g8app .g8search select{width:100%!important;min-width:0!important}
 }
 /* Foundation screens use the same neutral framing as the career. */
-#g8dialog .g8clubidentitypanel{background:var(--gcc-panel)!important;border-color:var(--gcc-line)!important;border-top:4px solid var(--club-accent,#ed7547)!important}
-#g8dialog .g8clubmetastrip{background:var(--gcc-raised)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
-#g8dialog .g8clubmetastrip span{color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
-#g8dialog .g8clubbrief .g8briefhead{background:var(--gcc-raised)!important;border-bottom:2px solid var(--gcc-line)!important;padding:16px!important}
-#g8dialog .g8clubbrief .g8briefhead :is(h3,.g8eyebrow){color:var(--gcc-text)!important}
-#g8dialog .g8clubbrief .g8groundtrait{background:var(--gcc-raised)!important;border-color:var(--gcc-line)!important;color:var(--gcc-text)!important}
-#g8dialog .g8clubpriorities li{border-color:var(--gcc-line)!important}
 #g8app .g8windowpanel{background:var(--gcc-panel)!important;border:2px solid var(--gcc-line)!important;border-top:5px solid var(--club-accent,#ed7547)!important}
 #g8app :is(.g8windowhead,.g8wirehead){background:var(--gcc-raised)!important;color:var(--gcc-text)!important;border:0!important;border-bottom:2px solid var(--gcc-line)!important}
 #g8app :is(.g8windowhead,.g8wirehead) :is(h2,span){color:var(--gcc-text)!important}
