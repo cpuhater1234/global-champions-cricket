@@ -1,0 +1,9 @@
+# Shared analysis summary and surfaces
+
+Candidate SHA-256 b8f34a5d48836a5157f245a1ca8c0c72101d74a947eeaaa9b69576190beeff2a, 6,660,175 bytes. Review-only on work/v116-candidate-acceptance. Native run 43583054824 PASS: exact candidate hash, 20 targeted states at 1440/768/390/320px, zero failures.
+
+Baseline for this pass is verified row candidate 5c4bbca8873cd3e94bb1a62ac7a9a344edfc94a72848d8f373a6d15d43091fa2. Relative to delivered Secondary Review af1e36b9c6b43fb914823e5949fa53d4ad22c82fec69f350b56472940a5ab322, only existing CSS bodies 10/31 differ. All 22 runtime bodies byte-identical; no new stylesheet.
+
+Root causes: base shared analysis still used a vertical overall rating plaque and legacy discipline frames; generic triple-ID surface rules repainted shared analysis root/status. Existing XI prompt-specific rules did not govern draft/offseason. Fix existing component owner 10: compact two-column summary, quieter status, transparent discipline sections and aligned left headings, retaining verified compact label/value rows. Remove shared analysis root/status from generic owner 31 paint selectors so component rules govern.
+
+Checks: four viewport widths, existing draft/XI contexts and real completed-career offseason checkpoints. Preserve all 12 metrics; enforce compact shared summary <=120px, transparent unframed discipline sections, <=64px shared rows, existing word/overflow checks. User career untouched. Final 320px draft dialog and expanded 2010 offseason rasters inspected: compact overall summary, no nested discipline boxes, aligned label/value rows, intact Powerplay/Wicketkeeping labels. No exhaustive whole-game aesthetic certification. Source is staged for the next consolidated review bundle; user-opened Secondary Review remains unchanged. Frozen v116 and main unchanged by this pass; separate career-record/club-flow branch excluded.
