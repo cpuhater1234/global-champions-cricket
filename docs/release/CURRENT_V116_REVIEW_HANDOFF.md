@@ -1,5 +1,9 @@
 # Current v116 review candidate handoff
 
+## Latest game-guide section review, 15 November 2026
+
+GCC_v116_Guide_Sections_Review.html, SHA-256 196515c5a170633c1e6abcca259798a5bb7bb7686cc4545124663651efc95f35, 6,664,981 bytes. Groups unchanged How to play and How it works topics under compact chapter labels. Existing CSS10 and runtime29 guide markup/helper only; 21 other runtime bodies unchanged. All guidance, rules, numbering and actions preserved. Run 43613118506 PASS: 32 paired states at 1440/768/390/320, zero failures, including expanded rules, footer navigation, close and return focus. Desktop and phone captures inspected. Desktop How to play is 42px taller for clearer hierarchy; no universal density improvement claimed. See [guide section review](V116_GUIDE_SECTIONS_REVIEW.md). Unpromoted; Development Review ad874945 remains rollback. Frozen v116/main untouched. Local active source qa/workspaces/career-integrated/canonical; remote v116/canonical on work/v116-candidate-acceptance. Broader visual completion and inactive comparison entrypoint remain separate.
+
 ## Latest development/filter review, 15 November 2026
 
 GCC_v116_Development_Review.html, SHA-256 ad874945a2995adb59921738df7cb14403aa11fbf3ce5a38e273153baa319e39,6,664,126bytes. Based on Shared Analysis Reviewa522817b. Development reports now use plain aligned player/skill-change rows and unboxed disclosures across offseason/XI. Draft filters respond to actual pool container width, retaining complete role/sort captions. Final run43611608686 PASS:44states, zero failures; final phone/tablet/desktop captures inspected. Only existing CSS09/10/31 differ; all22runtime bodies identical. See [development/filter review](V116_DEVELOPMENT_FILTERS_REVIEW.md). Unpromoted, previous Shared Analysis Review is rollback. User approved follow-up CSS/QA/workflow/handoff corrections for this UI pass after automatic upload-review blocks; authorized uploads succeeded.
