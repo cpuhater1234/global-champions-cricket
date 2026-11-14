@@ -352,7 +352,11 @@
 #g8dialog[data-prompt=teamAnalysis] .g8analysisgrid{grid-template-columns:minmax(0,1fr)!important;gap:12px!important;align-items:start}
 #g8dialog[data-prompt=teamAnalysis] .g8analysissection{display:block!important}
 #g8dialog[data-prompt=teamAnalysis] .g8analysistiles{grid-template-columns:repeat(4,minmax(0,1fr))!important;grid-template-rows:none!important;grid-auto-rows:minmax(76px,auto);height:auto!important}
-:is(#g8dialog,#g8app) .g8simpleanalysis .g8analysistiles{grid-template-columns:repeat(auto-fit,minmax(min(100%,110px),1fr));grid-template-rows:none;grid-auto-rows:minmax(76px,auto);height:auto}
+/* Draft/offseason analysis: readable compact rows in the existing shared component. */
+:is(#g8dialog,#g8app) .g8simpleanalysis .g8analysistiles{grid-template-columns:minmax(0,1fr);grid-template-rows:none;grid-auto-rows:auto;height:auto;gap:0}
+:is(#g8dialog,#g8app) .g8simpleanalysis .g8analysisrow{flex-direction:row;align-items:center;justify-content:space-between;min-height:44px;padding:8px 0!important;gap:12px;text-align:left;background:transparent!important;border:0!important;border-bottom:1px solid var(--gcc-line)!important;border-radius:0!important}
+:is(#g8dialog,#g8app) .g8simpleanalysis .g8analysisrow>span{justify-content:flex-start;min-height:0;flex:1}
+:is(#g8dialog,#g8app) .g8simpleanalysis .g8analysisrow>strong{flex:none;font-size:22px;line-height:1.2;border:0;padding:0;min-width:2ch;text-align:right}
 @media(max-width:1000px){#g8dialog[data-prompt=teamAnalysis] .g8analysisgrid{grid-template-columns:minmax(0,1fr)!important}#g8dialog[data-prompt=teamAnalysis] .g8analysistiles{grid-template-columns:repeat(4,minmax(0,1fr))!important}}
 @media(max-width:600px){#g8dialog[data-prompt=teamAnalysis] .g8analysistiles{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 #g8dialog[data-prompt=teamAnalysis] .g8analysissection{padding:8px!important}
