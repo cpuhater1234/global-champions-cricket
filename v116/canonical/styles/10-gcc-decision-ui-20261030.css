@@ -360,10 +360,10 @@
 #g8app .gccuiClubLegends b>small{display:block;font:500 12px/1.4 var(--vx-body);color:var(--gcc-muted)}
 #g8app .gccuiLegacyBest>strong{font-family:var(--vx-display);font-size:32px;line-height:1.2}
 #g8app .gccuiLegacyBest>p{margin:6px 0 0;color:var(--gcc-muted)}
-#g8app .gccuiLegacyVenue .g8venueframe{height:220px}
-#g8app .gccuiLegacyVenue .g8stadiumphoto{width:100%;height:100%;object-fit:cover}
+#g8app .gccuiLegacyVenue .g8venueframe{position:relative;display:block;width:100%;height:220px}
+#g8app .gccuiLegacyVenue .g8stadiumphoto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 @media(max-width:900px){#g8app .gccuiLegacyRecord{grid-template-columns:repeat(3,minmax(0,1fr))}#g8app .gccuiLegacyRecord>div:nth-child(4){border-left:0}#g8app .gccuiLegacyRecord>div:nth-child(n+4){border-top:1px solid var(--gcc-line)}}
-@media(max-width:600px){#g8app .gccuiLegacyHero{grid-template-columns:minmax(0,1fr);gap:16px;padding:16px}#g8app .gccuiCareerPoints{border-top:1px solid var(--gcc-line);padding-top:12px;text-align:left}#g8app .gccuiCareerPoints>strong{font-size:64px}#g8app .gccuiLegacyHero .g8actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}#g8app .gccuiLegacyHero .g8button{min-width:0;padding:10px 8px}#g8app .gccuiLegacyColumns{grid-template-columns:minmax(0,1fr)}#g8app .gccuiClubLegends>li{gap:8px}#g8app .gccuiClubLegends strong{font-size:15px}#g8app .gccuiLegacyRecord>div{padding:12px 10px}}
+@media(max-width:600px){#g8app .gccuiLegacyRecord{grid-template-columns:repeat(2,minmax(0,1fr))}#g8app .gccuiLegacyRecord>div:nth-child(n){border-left:0;border-top:1px solid var(--gcc-line)}#g8app .gccuiLegacyRecord>div:nth-child(even){border-left:1px solid var(--gcc-line)}#g8app .gccuiLegacyRecord>div:nth-child(-n+2){border-top:0}#g8app .gccuiLegacyRecord span{overflow-wrap:normal;word-break:normal}#g8app .gccuiLegacyHero{grid-template-columns:minmax(0,1fr);gap:16px;padding:16px}#g8app .gccuiCareerPoints{border-top:1px solid var(--gcc-line);padding-top:12px;text-align:left}#g8app .gccuiCareerPoints>strong{font-size:64px}#g8app .gccuiLegacyHero .g8actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}#g8app .gccuiLegacyHero .g8button{min-width:0;padding:10px 8px}#g8app .gccuiLegacyColumns{grid-template-columns:minmax(0,1fr)}#g8app .gccuiClubLegends>li{gap:8px}#g8app .gccuiClubLegends strong{font-size:15px}#g8app .gccuiLegacyRecord>div{padding:12px 10px}}
 /* Player popup: grouped identity and compact ability comparisons. */
 #g8dialog[data-prompt=player]{width:min(840px,calc(100vw - 24px))!important}
 #g8dialog[data-prompt=player] .g8modalhead{padding:12px 18px!important}
