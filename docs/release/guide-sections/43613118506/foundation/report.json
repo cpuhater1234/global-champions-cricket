@@ -1,0 +1,3241 @@
+{
+  "states": [
+    {
+      "kind": "before",
+      "name": "how",
+      "width": 1440,
+      "prompt": "how",
+      "cards": [
+        {
+          "title": "Choose your club",
+          "copy": "Read the home-ground conditions and choose one of the eight clubs.",
+          "number": "1",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Watch league signings",
+          "copy": "The five-day window decides who enters the league. These players join the draft pool, not your club. Use speed or skip to move ahead.",
+          "number": "2",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Draft your fifteen",
+          "copy": "Scout a player by opening their card, then select Pick. The order reverses each round. Your home ground and the jobs players can fill matter.",
+          "number": "3",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Name your XI",
+          "copy": "Select eleven from your squad. Use the arrows beside selected players to set the batting order; use Swap to change the side.",
+          "number": "4",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Play the season",
+          "copy": "Play fourteen league matches. Follow the over-by-over feed or skip to the result. The top four reach two semi-finals and a Grand Final.",
+          "number": "5",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build again",
+          "copy": "Your squad carries over. Review retirements and development, make any optional changes, then draft the vacancies and name your next XI.",
+          "number": "6",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Who stays",
+          "copy": "Players stay automatically unless they retire, are traded out or you confirm a release. You can release at most two players, subject to the departure allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "The departure allowance",
+          "copy": "Retirements are uncapped. They use the four-departure allowance before optional releases and outgoing trades. Three retirements leave room for one voluntary departure; four or more leave none. Incoming players do not restore the allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Fill the vacancies",
+          "copy": "A fresh draft order is drawn each year, regardless of league finish. Draft back to fifteen players. Supplementary picks fill remaining vacancies at the end, continuing the snake order.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Windows & limits",
+          "copy": "No trades in 2008. From 2009, each club can complete two trades per season. The in-season window closes when Round 3 is complete; offseason trading closes when the draft begins.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build a deal",
+          "copy": "Each side can include up to two players and two picks. Only owned Round 1 and Round 2 picks can be traded, after the offseason order draw. In-season deals exchange equal numbers of players, with no picks.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Super Overs",
+          "copy": "A tied match goes to a simplified Super Over: six legal balls or two wickets. Tied Super Overs repeat. The game selects the batters and bowler from each XI; tie-break figures stay separate from season statistics.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Your career",
+          "copy": "Play from 2008 through the final season in 2026. Progress autosaves in this browser. If a save warning appears, keep the game open. There are no wages or salary cap to manage.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [
+        "Retirements, releases & draft picks+",
+        "Trading rules+",
+        "Ties, saves & career length+"
+      ],
+      "chapters": [],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 794,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "before",
+      "name": "how",
+      "width": 768,
+      "prompt": "how",
+      "cards": [
+        {
+          "title": "Choose your club",
+          "copy": "Read the home-ground conditions and choose one of the eight clubs.",
+          "number": "1",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Watch league signings",
+          "copy": "The five-day window decides who enters the league. These players join the draft pool, not your club. Use speed or skip to move ahead.",
+          "number": "2",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Draft your fifteen",
+          "copy": "Scout a player by opening their card, then select Pick. The order reverses each round. Your home ground and the jobs players can fill matter.",
+          "number": "3",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Name your XI",
+          "copy": "Select eleven from your squad. Use the arrows beside selected players to set the batting order; use Swap to change the side.",
+          "number": "4",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Play the season",
+          "copy": "Play fourteen league matches. Follow the over-by-over feed or skip to the result. The top four reach two semi-finals and a Grand Final.",
+          "number": "5",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build again",
+          "copy": "Your squad carries over. Review retirements and development, make any optional changes, then draft the vacancies and name your next XI.",
+          "number": "6",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Who stays",
+          "copy": "Players stay automatically unless they retire, are traded out or you confirm a release. You can release at most two players, subject to the departure allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "The departure allowance",
+          "copy": "Retirements are uncapped. They use the four-departure allowance before optional releases and outgoing trades. Three retirements leave room for one voluntary departure; four or more leave none. Incoming players do not restore the allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Fill the vacancies",
+          "copy": "A fresh draft order is drawn each year, regardless of league finish. Draft back to fifteen players. Supplementary picks fill remaining vacancies at the end, continuing the snake order.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Windows & limits",
+          "copy": "No trades in 2008. From 2009, each club can complete two trades per season. The in-season window closes when Round 3 is complete; offseason trading closes when the draft begins.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build a deal",
+          "copy": "Each side can include up to two players and two picks. Only owned Round 1 and Round 2 picks can be traded, after the offseason order draw. In-season deals exchange equal numbers of players, with no picks.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Super Overs",
+          "copy": "A tied match goes to a simplified Super Over: six legal balls or two wickets. Tied Super Overs repeat. The game selects the batters and bowler from each XI; tie-break figures stay separate from season statistics.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Your career",
+          "copy": "Play from 2008 through the final season in 2026. Progress autosaves in this browser. If a save warning appears, keep the game open. There are no wages or salary cap to manage.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [
+        "Retirements, releases & draft picks+",
+        "Trading rules+",
+        "Ties, saves & career length+"
+      ],
+      "chapters": [],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 1026,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "before",
+      "name": "how",
+      "width": 390,
+      "prompt": "how",
+      "cards": [
+        {
+          "title": "Choose your club",
+          "copy": "Read the home-ground conditions and choose one of the eight clubs.",
+          "number": "1",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Watch league signings",
+          "copy": "The five-day window decides who enters the league. These players join the draft pool, not your club. Use speed or skip to move ahead.",
+          "number": "2",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Draft your fifteen",
+          "copy": "Scout a player by opening their card, then select Pick. The order reverses each round. Your home ground and the jobs players can fill matter.",
+          "number": "3",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Name your XI",
+          "copy": "Select eleven from your squad. Use the arrows beside selected players to set the batting order; use Swap to change the side.",
+          "number": "4",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Play the season",
+          "copy": "Play fourteen league matches. Follow the over-by-over feed or skip to the result. The top four reach two semi-finals and a Grand Final.",
+          "number": "5",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build again",
+          "copy": "Your squad carries over. Review retirements and development, make any optional changes, then draft the vacancies and name your next XI.",
+          "number": "6",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Who stays",
+          "copy": "Players stay automatically unless they retire, are traded out or you confirm a release. You can release at most two players, subject to the departure allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "The departure allowance",
+          "copy": "Retirements are uncapped. They use the four-departure allowance before optional releases and outgoing trades. Three retirements leave room for one voluntary departure; four or more leave none. Incoming players do not restore the allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Fill the vacancies",
+          "copy": "A fresh draft order is drawn each year, regardless of league finish. Draft back to fifteen players. Supplementary picks fill remaining vacancies at the end, continuing the snake order.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Windows & limits",
+          "copy": "No trades in 2008. From 2009, each club can complete two trades per season. The in-season window closes when Round 3 is complete; offseason trading closes when the draft begins.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build a deal",
+          "copy": "Each side can include up to two players and two picks. Only owned Round 1 and Round 2 picks can be traded, after the offseason order draw. In-season deals exchange equal numbers of players, with no picks.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Super Overs",
+          "copy": "A tied match goes to a simplified Super Over: six legal balls or two wickets. Tied Super Overs repeat. The game selects the batters and bowler from each XI; tie-break figures stay separate from season statistics.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Your career",
+          "copy": "Play from 2008 through the final season in 2026. Progress autosaves in this browser. If a save warning appears, keep the game open. There are no wages or salary cap to manage.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [
+        "Retirements, releases & draft picks+",
+        "Trading rules+",
+        "Ties, saves & career length+"
+      ],
+      "chapters": [],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 1302,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "before",
+      "name": "how",
+      "width": 320,
+      "prompt": "how",
+      "cards": [
+        {
+          "title": "Choose your club",
+          "copy": "Read the home-ground conditions and choose one of the eight clubs.",
+          "number": "1",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Watch league signings",
+          "copy": "The five-day window decides who enters the league. These players join the draft pool, not your club. Use speed or skip to move ahead.",
+          "number": "2",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Draft your fifteen",
+          "copy": "Scout a player by opening their card, then select Pick. The order reverses each round. Your home ground and the jobs players can fill matter.",
+          "number": "3",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Name your XI",
+          "copy": "Select eleven from your squad. Use the arrows beside selected players to set the batting order; use Swap to change the side.",
+          "number": "4",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Play the season",
+          "copy": "Play fourteen league matches. Follow the over-by-over feed or skip to the result. The top four reach two semi-finals and a Grand Final.",
+          "number": "5",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build again",
+          "copy": "Your squad carries over. Review retirements and development, make any optional changes, then draft the vacancies and name your next XI.",
+          "number": "6",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Who stays",
+          "copy": "Players stay automatically unless they retire, are traded out or you confirm a release. You can release at most two players, subject to the departure allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "The departure allowance",
+          "copy": "Retirements are uncapped. They use the four-departure allowance before optional releases and outgoing trades. Three retirements leave room for one voluntary departure; four or more leave none. Incoming players do not restore the allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Fill the vacancies",
+          "copy": "A fresh draft order is drawn each year, regardless of league finish. Draft back to fifteen players. Supplementary picks fill remaining vacancies at the end, continuing the snake order.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Windows & limits",
+          "copy": "No trades in 2008. From 2009, each club can complete two trades per season. The in-season window closes when Round 3 is complete; offseason trading closes when the draft begins.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build a deal",
+          "copy": "Each side can include up to two players and two picks. Only owned Round 1 and Round 2 picks can be traded, after the offseason order draw. In-season deals exchange equal numbers of players, with no picks.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Super Overs",
+          "copy": "A tied match goes to a simplified Super Over: six legal balls or two wickets. Tied Super Overs repeat. The game selects the batters and bowler from each XI; tie-break figures stay separate from season statistics.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Your career",
+          "copy": "Play from 2008 through the final season in 2026. Progress autosaves in this browser. If a save warning appears, keep the game open. There are no wages or salary cap to manage.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [
+        "Retirements, releases & draft picks+",
+        "Trading rules+",
+        "Ties, saves & career length+"
+      ],
+      "chapters": [],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 1449,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "before",
+      "name": "how-expanded",
+      "width": 1440,
+      "prompt": "how",
+      "cards": [
+        {
+          "title": "Choose your club",
+          "copy": "Read the home-ground conditions and choose one of the eight clubs.",
+          "number": "1",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Watch league signings",
+          "copy": "The five-day window decides who enters the league. These players join the draft pool, not your club. Use speed or skip to move ahead.",
+          "number": "2",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Draft your fifteen",
+          "copy": "Scout a player by opening their card, then select Pick. The order reverses each round. Your home ground and the jobs players can fill matter.",
+          "number": "3",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Name your XI",
+          "copy": "Select eleven from your squad. Use the arrows beside selected players to set the batting order; use Swap to change the side.",
+          "number": "4",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Play the season",
+          "copy": "Play fourteen league matches. Follow the over-by-over feed or skip to the result. The top four reach two semi-finals and a Grand Final.",
+          "number": "5",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build again",
+          "copy": "Your squad carries over. Review retirements and development, make any optional changes, then draft the vacancies and name your next XI.",
+          "number": "6",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Who stays",
+          "copy": "Players stay automatically unless they retire, are traded out or you confirm a release. You can release at most two players, subject to the departure allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "The departure allowance",
+          "copy": "Retirements are uncapped. They use the four-departure allowance before optional releases and outgoing trades. Three retirements leave room for one voluntary departure; four or more leave none. Incoming players do not restore the allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Fill the vacancies",
+          "copy": "A fresh draft order is drawn each year, regardless of league finish. Draft back to fifteen players. Supplementary picks fill remaining vacancies at the end, continuing the snake order.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Windows & limits",
+          "copy": "No trades in 2008. From 2009, each club can complete two trades per season. The in-season window closes when Round 3 is complete; offseason trading closes when the draft begins.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build a deal",
+          "copy": "Each side can include up to two players and two picks. Only owned Round 1 and Round 2 picks can be traded, after the offseason order draw. In-season deals exchange equal numbers of players, with no picks.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Super Overs",
+          "copy": "A tied match goes to a simplified Super Over: six legal balls or two wickets. Tied Super Overs repeat. The game selects the batters and bowler from each XI; tie-break figures stay separate from season statistics.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Your career",
+          "copy": "Play from 2008 through the final season in 2026. Progress autosaves in this browser. If a save warning appears, keep the game open. There are no wages or salary cap to manage.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [
+        "Retirements, releases & draft picks+",
+        "Trading rules+",
+        "Ties, saves & career length+"
+      ],
+      "chapters": [],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 1511,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "before",
+      "name": "how-expanded",
+      "width": 768,
+      "prompt": "how",
+      "cards": [
+        {
+          "title": "Choose your club",
+          "copy": "Read the home-ground conditions and choose one of the eight clubs.",
+          "number": "1",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Watch league signings",
+          "copy": "The five-day window decides who enters the league. These players join the draft pool, not your club. Use speed or skip to move ahead.",
+          "number": "2",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Draft your fifteen",
+          "copy": "Scout a player by opening their card, then select Pick. The order reverses each round. Your home ground and the jobs players can fill matter.",
+          "number": "3",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Name your XI",
+          "copy": "Select eleven from your squad. Use the arrows beside selected players to set the batting order; use Swap to change the side.",
+          "number": "4",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Play the season",
+          "copy": "Play fourteen league matches. Follow the over-by-over feed or skip to the result. The top four reach two semi-finals and a Grand Final.",
+          "number": "5",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build again",
+          "copy": "Your squad carries over. Review retirements and development, make any optional changes, then draft the vacancies and name your next XI.",
+          "number": "6",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Who stays",
+          "copy": "Players stay automatically unless they retire, are traded out or you confirm a release. You can release at most two players, subject to the departure allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "The departure allowance",
+          "copy": "Retirements are uncapped. They use the four-departure allowance before optional releases and outgoing trades. Three retirements leave room for one voluntary departure; four or more leave none. Incoming players do not restore the allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Fill the vacancies",
+          "copy": "A fresh draft order is drawn each year, regardless of league finish. Draft back to fifteen players. Supplementary picks fill remaining vacancies at the end, continuing the snake order.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Windows & limits",
+          "copy": "No trades in 2008. From 2009, each club can complete two trades per season. The in-season window closes when Round 3 is complete; offseason trading closes when the draft begins.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build a deal",
+          "copy": "Each side can include up to two players and two picks. Only owned Round 1 and Round 2 picks can be traded, after the offseason order draw. In-season deals exchange equal numbers of players, with no picks.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Super Overs",
+          "copy": "A tied match goes to a simplified Super Over: six legal balls or two wickets. Tied Super Overs repeat. The game selects the batters and bowler from each XI; tie-break figures stay separate from season statistics.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Your career",
+          "copy": "Play from 2008 through the final season in 2026. Progress autosaves in this browser. If a save warning appears, keep the game open. There are no wages or salary cap to manage.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [
+        "Retirements, releases & draft picks+",
+        "Trading rules+",
+        "Ties, saves & career length+"
+      ],
+      "chapters": [],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 1835,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "before",
+      "name": "how-expanded",
+      "width": 390,
+      "prompt": "how",
+      "cards": [
+        {
+          "title": "Choose your club",
+          "copy": "Read the home-ground conditions and choose one of the eight clubs.",
+          "number": "1",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Watch league signings",
+          "copy": "The five-day window decides who enters the league. These players join the draft pool, not your club. Use speed or skip to move ahead.",
+          "number": "2",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Draft your fifteen",
+          "copy": "Scout a player by opening their card, then select Pick. The order reverses each round. Your home ground and the jobs players can fill matter.",
+          "number": "3",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Name your XI",
+          "copy": "Select eleven from your squad. Use the arrows beside selected players to set the batting order; use Swap to change the side.",
+          "number": "4",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Play the season",
+          "copy": "Play fourteen league matches. Follow the over-by-over feed or skip to the result. The top four reach two semi-finals and a Grand Final.",
+          "number": "5",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build again",
+          "copy": "Your squad carries over. Review retirements and development, make any optional changes, then draft the vacancies and name your next XI.",
+          "number": "6",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Who stays",
+          "copy": "Players stay automatically unless they retire, are traded out or you confirm a release. You can release at most two players, subject to the departure allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "The departure allowance",
+          "copy": "Retirements are uncapped. They use the four-departure allowance before optional releases and outgoing trades. Three retirements leave room for one voluntary departure; four or more leave none. Incoming players do not restore the allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Fill the vacancies",
+          "copy": "A fresh draft order is drawn each year, regardless of league finish. Draft back to fifteen players. Supplementary picks fill remaining vacancies at the end, continuing the snake order.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Windows & limits",
+          "copy": "No trades in 2008. From 2009, each club can complete two trades per season. The in-season window closes when Round 3 is complete; offseason trading closes when the draft begins.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build a deal",
+          "copy": "Each side can include up to two players and two picks. Only owned Round 1 and Round 2 picks can be traded, after the offseason order draw. In-season deals exchange equal numbers of players, with no picks.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Super Overs",
+          "copy": "A tied match goes to a simplified Super Over: six legal balls or two wickets. Tied Super Overs repeat. The game selects the batters and bowler from each XI; tie-break figures stay separate from season statistics.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Your career",
+          "copy": "Play from 2008 through the final season in 2026. Progress autosaves in this browser. If a save warning appears, keep the game open. There are no wages or salary cap to manage.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [
+        "Retirements, releases & draft picks+",
+        "Trading rules+",
+        "Ties, saves & career length+"
+      ],
+      "chapters": [],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 2483,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "before",
+      "name": "how-expanded",
+      "width": 320,
+      "prompt": "how",
+      "cards": [
+        {
+          "title": "Choose your club",
+          "copy": "Read the home-ground conditions and choose one of the eight clubs.",
+          "number": "1",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Watch league signings",
+          "copy": "The five-day window decides who enters the league. These players join the draft pool, not your club. Use speed or skip to move ahead.",
+          "number": "2",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Draft your fifteen",
+          "copy": "Scout a player by opening their card, then select Pick. The order reverses each round. Your home ground and the jobs players can fill matter.",
+          "number": "3",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Name your XI",
+          "copy": "Select eleven from your squad. Use the arrows beside selected players to set the batting order; use Swap to change the side.",
+          "number": "4",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Play the season",
+          "copy": "Play fourteen league matches. Follow the over-by-over feed or skip to the result. The top four reach two semi-finals and a Grand Final.",
+          "number": "5",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build again",
+          "copy": "Your squad carries over. Review retirements and development, make any optional changes, then draft the vacancies and name your next XI.",
+          "number": "6",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Who stays",
+          "copy": "Players stay automatically unless they retire, are traded out or you confirm a release. You can release at most two players, subject to the departure allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "The departure allowance",
+          "copy": "Retirements are uncapped. They use the four-departure allowance before optional releases and outgoing trades. Three retirements leave room for one voluntary departure; four or more leave none. Incoming players do not restore the allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Fill the vacancies",
+          "copy": "A fresh draft order is drawn each year, regardless of league finish. Draft back to fifteen players. Supplementary picks fill remaining vacancies at the end, continuing the snake order.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Windows & limits",
+          "copy": "No trades in 2008. From 2009, each club can complete two trades per season. The in-season window closes when Round 3 is complete; offseason trading closes when the draft begins.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build a deal",
+          "copy": "Each side can include up to two players and two picks. Only owned Round 1 and Round 2 picks can be traded, after the offseason order draw. In-season deals exchange equal numbers of players, with no picks.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Super Overs",
+          "copy": "A tied match goes to a simplified Super Over: six legal balls or two wickets. Tied Super Overs repeat. The game selects the batters and bowler from each XI; tie-break figures stay separate from season statistics.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Your career",
+          "copy": "Play from 2008 through the final season in 2026. Progress autosaves in this browser. If a save warning appears, keep the game open. There are no wages or salary cap to manage.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [
+        "Retirements, releases & draft picks+",
+        "Trading rules+",
+        "Ties, saves & career length+"
+      ],
+      "chapters": [],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 2814,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "before",
+      "name": "howItWorks",
+      "width": 1440,
+      "prompt": "howItWorks",
+      "cards": [
+        {
+          "title": "Read the player’s job",
+          "copy": "Overall summarises current ability. Batting position and detailed skills help you judge a particular job. Team ratings describe the XI, not a predicted score.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Make selection count",
+          "copy": "Your eleven and batting order matter. A keeper, enough credible bowling and batters suited to their positions give the side options. There is no fixed XI recipe.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Read the ground",
+          "copy": "Pace and carry, spin and grip, boundary size and match conditions change the contest. A side built for one ground may need a different balance elsewhere.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Allow for uncertainty",
+          "copy": "Matches are simulated delivery by delivery. Ability, form, conditions and the match situation influence outcomes. A stronger side has an advantage, not a guarantee.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Use the scorebook",
+          "copy": "The feed shows each over and the key moments. Open the scorebook for the full result. Look for patterns across matches before judging a player or changing your plan.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Think beyond this season",
+          "copy": "Players develop, age and retire. Skills can change even when overall stays level. Scouting outlooks are estimates; development reports show the changes that have happened.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [],
+      "chapters": [],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "howItWorks",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 692,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "before",
+      "name": "howItWorks",
+      "width": 768,
+      "prompt": "howItWorks",
+      "cards": [
+        {
+          "title": "Read the player’s job",
+          "copy": "Overall summarises current ability. Batting position and detailed skills help you judge a particular job. Team ratings describe the XI, not a predicted score.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Make selection count",
+          "copy": "Your eleven and batting order matter. A keeper, enough credible bowling and batters suited to their positions give the side options. There is no fixed XI recipe.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Read the ground",
+          "copy": "Pace and carry, spin and grip, boundary size and match conditions change the contest. A side built for one ground may need a different balance elsewhere.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Allow for uncertainty",
+          "copy": "Matches are simulated delivery by delivery. Ability, form, conditions and the match situation influence outcomes. A stronger side has an advantage, not a guarantee.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Use the scorebook",
+          "copy": "The feed shows each over and the key moments. Open the scorebook for the full result. Look for patterns across matches before judging a player or changing your plan.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Think beyond this season",
+          "copy": "Players develop, age and retire. Skills can change even when overall stays level. Scouting outlooks are estimates; development reports show the changes that have happened.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [],
+      "chapters": [],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "howItWorks",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 947,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "before",
+      "name": "howItWorks",
+      "width": 390,
+      "prompt": "howItWorks",
+      "cards": [
+        {
+          "title": "Read the player’s job",
+          "copy": "Overall summarises current ability. Batting position and detailed skills help you judge a particular job. Team ratings describe the XI, not a predicted score.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Make selection count",
+          "copy": "Your eleven and batting order matter. A keeper, enough credible bowling and batters suited to their positions give the side options. There is no fixed XI recipe.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Read the ground",
+          "copy": "Pace and carry, spin and grip, boundary size and match conditions change the contest. A side built for one ground may need a different balance elsewhere.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Allow for uncertainty",
+          "copy": "Matches are simulated delivery by delivery. Ability, form, conditions and the match situation influence outcomes. A stronger side has an advantage, not a guarantee.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Use the scorebook",
+          "copy": "The feed shows each over and the key moments. Open the scorebook for the full result. Look for patterns across matches before judging a player or changing your plan.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Think beyond this season",
+          "copy": "Players develop, age and retire. Skills can change even when overall stays level. Scouting outlooks are estimates; development reports show the changes that have happened.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [],
+      "chapters": [],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "howItWorks",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 1313,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "before",
+      "name": "howItWorks",
+      "width": 320,
+      "prompt": "howItWorks",
+      "cards": [
+        {
+          "title": "Read the player’s job",
+          "copy": "Overall summarises current ability. Batting position and detailed skills help you judge a particular job. Team ratings describe the XI, not a predicted score.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Make selection count",
+          "copy": "Your eleven and batting order matter. A keeper, enough credible bowling and batters suited to their positions give the side options. There is no fixed XI recipe.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Read the ground",
+          "copy": "Pace and carry, spin and grip, boundary size and match conditions change the contest. A side built for one ground may need a different balance elsewhere.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Allow for uncertainty",
+          "copy": "Matches are simulated delivery by delivery. Ability, form, conditions and the match situation influence outcomes. A stronger side has an advantage, not a guarantee.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Use the scorebook",
+          "copy": "The feed shows each over and the key moments. Open the scorebook for the full result. Look for patterns across matches before judging a player or changing your plan.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Think beyond this season",
+          "copy": "Players develop, age and retire. Skills can change even when overall stays level. Scouting outlooks are estimates; development reports show the changes that have happened.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [],
+      "chapters": [],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "howItWorks",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 1539,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "before",
+      "name": "breakawayStory",
+      "width": 1440,
+      "prompt": "breakawayStory",
+      "cards": [
+        {
+          "title": "Five days to choose a side",
+          "copy": "The established competitions still have their pull. So does the promise of a new stage. For five days, players decide whether to enter the breakaway. Until the window closes, nobody knows how strong the draft pool will be.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build an eleven worth watching",
+          "copy": "Fifteen places in your squad. Seven rivals reading the same board. The opener, the death bowler, the keeper: every pick shapes the side. A famous name is only a start. Your ground, your balance and your XI decide what follows.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Make the years count",
+          "copy": "Fourteen league matches lead to the finals. Beyond them, players develop, veterans retire and the next draft brings another judgement call. From 2008 to the final season in 2026, the challenge is to build a club that lasts.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [],
+      "chapters": [],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 763,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "before",
+      "name": "breakawayStory",
+      "width": 768,
+      "prompt": "breakawayStory",
+      "cards": [
+        {
+          "title": "Five days to choose a side",
+          "copy": "The established competitions still have their pull. So does the promise of a new stage. For five days, players decide whether to enter the breakaway. Until the window closes, nobody knows how strong the draft pool will be.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build an eleven worth watching",
+          "copy": "Fifteen places in your squad. Seven rivals reading the same board. The opener, the death bowler, the keeper: every pick shapes the side. A famous name is only a start. Your ground, your balance and your XI decide what follows.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Make the years count",
+          "copy": "Fourteen league matches lead to the finals. Beyond them, players develop, veterans retire and the next draft brings another judgement call. From 2008 to the final season in 2026, the challenge is to build a club that lasts.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [],
+      "chapters": [],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 763,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "before",
+      "name": "breakawayStory",
+      "width": 390,
+      "prompt": "breakawayStory",
+      "cards": [
+        {
+          "title": "Five days to choose a side",
+          "copy": "The established competitions still have their pull. So does the promise of a new stage. For five days, players decide whether to enter the breakaway. Until the window closes, nobody knows how strong the draft pool will be.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build an eleven worth watching",
+          "copy": "Fifteen places in your squad. Seven rivals reading the same board. The opener, the death bowler, the keeper: every pick shapes the side. A famous name is only a start. Your ground, your balance and your XI decide what follows.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Make the years count",
+          "copy": "Fourteen league matches lead to the finals. Beyond them, players develop, veterans retire and the next draft brings another judgement call. From 2008 to the final season in 2026, the challenge is to build a club that lasts.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [],
+      "chapters": [],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 1090,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "before",
+      "name": "breakawayStory",
+      "width": 320,
+      "prompt": "breakawayStory",
+      "cards": [
+        {
+          "title": "Five days to choose a side",
+          "copy": "The established competitions still have their pull. So does the promise of a new stage. For five days, players decide whether to enter the breakaway. Until the window closes, nobody knows how strong the draft pool will be.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build an eleven worth watching",
+          "copy": "Fifteen places in your squad. Seven rivals reading the same board. The opener, the death bowler, the keeper: every pick shapes the side. A famous name is only a start. Your ground, your balance and your XI decide what follows.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Make the years count",
+          "copy": "Fourteen league matches lead to the finals. Beyond them, players develop, veterans retire and the next draft brings another judgement call. From 2008 to the final season in 2026, the challenge is to build a club that lasts.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [],
+      "chapters": [],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 1245,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "after",
+      "name": "how",
+      "width": 1440,
+      "prompt": "how",
+      "cards": [
+        {
+          "title": "Choose your club",
+          "copy": "Read the home-ground conditions and choose one of the eight clubs.",
+          "number": "1",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Watch league signings",
+          "copy": "The five-day window decides who enters the league. These players join the draft pool, not your club. Use speed or skip to move ahead.",
+          "number": "2",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Draft your fifteen",
+          "copy": "Scout a player by opening their card, then select Pick. The order reverses each round. Your home ground and the jobs players can fill matter.",
+          "number": "3",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Name your XI",
+          "copy": "Select eleven from your squad. Use the arrows beside selected players to set the batting order; use Swap to change the side.",
+          "number": "4",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Play the season",
+          "copy": "Play fourteen league matches. Follow the over-by-over feed or skip to the result. The top four reach two semi-finals and a Grand Final.",
+          "number": "5",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build again",
+          "copy": "Your squad carries over. Review retirements and development, make any optional changes, then draft the vacancies and name your next XI.",
+          "number": "6",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Who stays",
+          "copy": "Players stay automatically unless they retire, are traded out or you confirm a release. You can release at most two players, subject to the departure allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "The departure allowance",
+          "copy": "Retirements are uncapped. They use the four-departure allowance before optional releases and outgoing trades. Three retirements leave room for one voluntary departure; four or more leave none. Incoming players do not restore the allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Fill the vacancies",
+          "copy": "A fresh draft order is drawn each year, regardless of league finish. Draft back to fifteen players. Supplementary picks fill remaining vacancies at the end, continuing the snake order.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Windows & limits",
+          "copy": "No trades in 2008. From 2009, each club can complete two trades per season. The in-season window closes when Round 3 is complete; offseason trading closes when the draft begins.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build a deal",
+          "copy": "Each side can include up to two players and two picks. Only owned Round 1 and Round 2 picks can be traded, after the offseason order draw. In-season deals exchange equal numbers of players, with no picks.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Super Overs",
+          "copy": "A tied match goes to a simplified Super Over: six legal balls or two wickets. Tied Super Overs repeat. The game selects the batters and bowler from each XI; tie-break figures stay separate from season statistics.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Your career",
+          "copy": "Play from 2008 through the final season in 2026. Progress autosaves in this browser. If a save warning appears, keep the game open. There are no wages or salary cap to manage.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [
+        "Retirements, releases & draft picks+",
+        "Trading rules+",
+        "Ties, saves & career length+"
+      ],
+      "chapters": [
+        "Build your side",
+        "The season and beyond",
+        "League rules"
+      ],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 836,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "after",
+      "name": "how",
+      "width": 768,
+      "prompt": "how",
+      "cards": [
+        {
+          "title": "Choose your club",
+          "copy": "Read the home-ground conditions and choose one of the eight clubs.",
+          "number": "1",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Watch league signings",
+          "copy": "The five-day window decides who enters the league. These players join the draft pool, not your club. Use speed or skip to move ahead.",
+          "number": "2",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Draft your fifteen",
+          "copy": "Scout a player by opening their card, then select Pick. The order reverses each round. Your home ground and the jobs players can fill matter.",
+          "number": "3",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Name your XI",
+          "copy": "Select eleven from your squad. Use the arrows beside selected players to set the batting order; use Swap to change the side.",
+          "number": "4",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Play the season",
+          "copy": "Play fourteen league matches. Follow the over-by-over feed or skip to the result. The top four reach two semi-finals and a Grand Final.",
+          "number": "5",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build again",
+          "copy": "Your squad carries over. Review retirements and development, make any optional changes, then draft the vacancies and name your next XI.",
+          "number": "6",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Who stays",
+          "copy": "Players stay automatically unless they retire, are traded out or you confirm a release. You can release at most two players, subject to the departure allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "The departure allowance",
+          "copy": "Retirements are uncapped. They use the four-departure allowance before optional releases and outgoing trades. Three retirements leave room for one voluntary departure; four or more leave none. Incoming players do not restore the allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Fill the vacancies",
+          "copy": "A fresh draft order is drawn each year, regardless of league finish. Draft back to fifteen players. Supplementary picks fill remaining vacancies at the end, continuing the snake order.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Windows & limits",
+          "copy": "No trades in 2008. From 2009, each club can complete two trades per season. The in-season window closes when Round 3 is complete; offseason trading closes when the draft begins.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build a deal",
+          "copy": "Each side can include up to two players and two picks. Only owned Round 1 and Round 2 picks can be traded, after the offseason order draw. In-season deals exchange equal numbers of players, with no picks.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Super Overs",
+          "copy": "A tied match goes to a simplified Super Over: six legal balls or two wickets. Tied Super Overs repeat. The game selects the batters and bowler from each XI; tie-break figures stay separate from season statistics.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Your career",
+          "copy": "Play from 2008 through the final season in 2026. Progress autosaves in this browser. If a save warning appears, keep the game open. There are no wages or salary cap to manage.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [
+        "Retirements, releases & draft picks+",
+        "Trading rules+",
+        "Ties, saves & career length+"
+      ],
+      "chapters": [
+        "Build your side",
+        "The season and beyond",
+        "League rules"
+      ],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 1041,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "after",
+      "name": "how",
+      "width": 390,
+      "prompt": "how",
+      "cards": [
+        {
+          "title": "Choose your club",
+          "copy": "Read the home-ground conditions and choose one of the eight clubs.",
+          "number": "1",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Watch league signings",
+          "copy": "The five-day window decides who enters the league. These players join the draft pool, not your club. Use speed or skip to move ahead.",
+          "number": "2",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Draft your fifteen",
+          "copy": "Scout a player by opening their card, then select Pick. The order reverses each round. Your home ground and the jobs players can fill matter.",
+          "number": "3",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Name your XI",
+          "copy": "Select eleven from your squad. Use the arrows beside selected players to set the batting order; use Swap to change the side.",
+          "number": "4",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Play the season",
+          "copy": "Play fourteen league matches. Follow the over-by-over feed or skip to the result. The top four reach two semi-finals and a Grand Final.",
+          "number": "5",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build again",
+          "copy": "Your squad carries over. Review retirements and development, make any optional changes, then draft the vacancies and name your next XI.",
+          "number": "6",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Who stays",
+          "copy": "Players stay automatically unless they retire, are traded out or you confirm a release. You can release at most two players, subject to the departure allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "The departure allowance",
+          "copy": "Retirements are uncapped. They use the four-departure allowance before optional releases and outgoing trades. Three retirements leave room for one voluntary departure; four or more leave none. Incoming players do not restore the allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Fill the vacancies",
+          "copy": "A fresh draft order is drawn each year, regardless of league finish. Draft back to fifteen players. Supplementary picks fill remaining vacancies at the end, continuing the snake order.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Windows & limits",
+          "copy": "No trades in 2008. From 2009, each club can complete two trades per season. The in-season window closes when Round 3 is complete; offseason trading closes when the draft begins.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build a deal",
+          "copy": "Each side can include up to two players and two picks. Only owned Round 1 and Round 2 picks can be traded, after the offseason order draw. In-season deals exchange equal numbers of players, with no picks.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Super Overs",
+          "copy": "A tied match goes to a simplified Super Over: six legal balls or two wickets. Tied Super Overs repeat. The game selects the batters and bowler from each XI; tie-break figures stay separate from season statistics.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Your career",
+          "copy": "Play from 2008 through the final season in 2026. Progress autosaves in this browser. If a save warning appears, keep the game open. There are no wages or salary cap to manage.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [
+        "Retirements, releases & draft picks+",
+        "Trading rules+",
+        "Ties, saves & career length+"
+      ],
+      "chapters": [
+        "Build your side",
+        "The season and beyond",
+        "League rules"
+      ],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 1305,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "after",
+      "name": "how",
+      "width": 320,
+      "prompt": "how",
+      "cards": [
+        {
+          "title": "Choose your club",
+          "copy": "Read the home-ground conditions and choose one of the eight clubs.",
+          "number": "1",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Watch league signings",
+          "copy": "The five-day window decides who enters the league. These players join the draft pool, not your club. Use speed or skip to move ahead.",
+          "number": "2",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Draft your fifteen",
+          "copy": "Scout a player by opening their card, then select Pick. The order reverses each round. Your home ground and the jobs players can fill matter.",
+          "number": "3",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Name your XI",
+          "copy": "Select eleven from your squad. Use the arrows beside selected players to set the batting order; use Swap to change the side.",
+          "number": "4",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Play the season",
+          "copy": "Play fourteen league matches. Follow the over-by-over feed or skip to the result. The top four reach two semi-finals and a Grand Final.",
+          "number": "5",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build again",
+          "copy": "Your squad carries over. Review retirements and development, make any optional changes, then draft the vacancies and name your next XI.",
+          "number": "6",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Who stays",
+          "copy": "Players stay automatically unless they retire, are traded out or you confirm a release. You can release at most two players, subject to the departure allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "The departure allowance",
+          "copy": "Retirements are uncapped. They use the four-departure allowance before optional releases and outgoing trades. Three retirements leave room for one voluntary departure; four or more leave none. Incoming players do not restore the allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Fill the vacancies",
+          "copy": "A fresh draft order is drawn each year, regardless of league finish. Draft back to fifteen players. Supplementary picks fill remaining vacancies at the end, continuing the snake order.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Windows & limits",
+          "copy": "No trades in 2008. From 2009, each club can complete two trades per season. The in-season window closes when Round 3 is complete; offseason trading closes when the draft begins.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build a deal",
+          "copy": "Each side can include up to two players and two picks. Only owned Round 1 and Round 2 picks can be traded, after the offseason order draw. In-season deals exchange equal numbers of players, with no picks.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Super Overs",
+          "copy": "A tied match goes to a simplified Super Over: six legal balls or two wickets. Tied Super Overs repeat. The game selects the batters and bowler from each XI; tie-break figures stay separate from season statistics.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Your career",
+          "copy": "Play from 2008 through the final season in 2026. Progress autosaves in this browser. If a save warning appears, keep the game open. There are no wages or salary cap to manage.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [
+        "Retirements, releases & draft picks+",
+        "Trading rules+",
+        "Ties, saves & career length+"
+      ],
+      "chapters": [
+        "Build your side",
+        "The season and beyond",
+        "League rules"
+      ],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 1444,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "after",
+      "name": "how-expanded",
+      "width": 1440,
+      "prompt": "how",
+      "cards": [
+        {
+          "title": "Choose your club",
+          "copy": "Read the home-ground conditions and choose one of the eight clubs.",
+          "number": "1",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Watch league signings",
+          "copy": "The five-day window decides who enters the league. These players join the draft pool, not your club. Use speed or skip to move ahead.",
+          "number": "2",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Draft your fifteen",
+          "copy": "Scout a player by opening their card, then select Pick. The order reverses each round. Your home ground and the jobs players can fill matter.",
+          "number": "3",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Name your XI",
+          "copy": "Select eleven from your squad. Use the arrows beside selected players to set the batting order; use Swap to change the side.",
+          "number": "4",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Play the season",
+          "copy": "Play fourteen league matches. Follow the over-by-over feed or skip to the result. The top four reach two semi-finals and a Grand Final.",
+          "number": "5",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build again",
+          "copy": "Your squad carries over. Review retirements and development, make any optional changes, then draft the vacancies and name your next XI.",
+          "number": "6",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Who stays",
+          "copy": "Players stay automatically unless they retire, are traded out or you confirm a release. You can release at most two players, subject to the departure allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "The departure allowance",
+          "copy": "Retirements are uncapped. They use the four-departure allowance before optional releases and outgoing trades. Three retirements leave room for one voluntary departure; four or more leave none. Incoming players do not restore the allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Fill the vacancies",
+          "copy": "A fresh draft order is drawn each year, regardless of league finish. Draft back to fifteen players. Supplementary picks fill remaining vacancies at the end, continuing the snake order.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Windows & limits",
+          "copy": "No trades in 2008. From 2009, each club can complete two trades per season. The in-season window closes when Round 3 is complete; offseason trading closes when the draft begins.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build a deal",
+          "copy": "Each side can include up to two players and two picks. Only owned Round 1 and Round 2 picks can be traded, after the offseason order draw. In-season deals exchange equal numbers of players, with no picks.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Super Overs",
+          "copy": "A tied match goes to a simplified Super Over: six legal balls or two wickets. Tied Super Overs repeat. The game selects the batters and bowler from each XI; tie-break figures stay separate from season statistics.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Your career",
+          "copy": "Play from 2008 through the final season in 2026. Progress autosaves in this browser. If a save warning appears, keep the game open. There are no wages or salary cap to manage.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [
+        "Retirements, releases & draft picks+",
+        "Trading rules+",
+        "Ties, saves & career length+"
+      ],
+      "chapters": [
+        "Build your side",
+        "The season and beyond",
+        "League rules"
+      ],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 1553,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "after",
+      "name": "how-expanded",
+      "width": 768,
+      "prompt": "how",
+      "cards": [
+        {
+          "title": "Choose your club",
+          "copy": "Read the home-ground conditions and choose one of the eight clubs.",
+          "number": "1",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Watch league signings",
+          "copy": "The five-day window decides who enters the league. These players join the draft pool, not your club. Use speed or skip to move ahead.",
+          "number": "2",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Draft your fifteen",
+          "copy": "Scout a player by opening their card, then select Pick. The order reverses each round. Your home ground and the jobs players can fill matter.",
+          "number": "3",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Name your XI",
+          "copy": "Select eleven from your squad. Use the arrows beside selected players to set the batting order; use Swap to change the side.",
+          "number": "4",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Play the season",
+          "copy": "Play fourteen league matches. Follow the over-by-over feed or skip to the result. The top four reach two semi-finals and a Grand Final.",
+          "number": "5",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build again",
+          "copy": "Your squad carries over. Review retirements and development, make any optional changes, then draft the vacancies and name your next XI.",
+          "number": "6",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Who stays",
+          "copy": "Players stay automatically unless they retire, are traded out or you confirm a release. You can release at most two players, subject to the departure allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "The departure allowance",
+          "copy": "Retirements are uncapped. They use the four-departure allowance before optional releases and outgoing trades. Three retirements leave room for one voluntary departure; four or more leave none. Incoming players do not restore the allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Fill the vacancies",
+          "copy": "A fresh draft order is drawn each year, regardless of league finish. Draft back to fifteen players. Supplementary picks fill remaining vacancies at the end, continuing the snake order.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Windows & limits",
+          "copy": "No trades in 2008. From 2009, each club can complete two trades per season. The in-season window closes when Round 3 is complete; offseason trading closes when the draft begins.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build a deal",
+          "copy": "Each side can include up to two players and two picks. Only owned Round 1 and Round 2 picks can be traded, after the offseason order draw. In-season deals exchange equal numbers of players, with no picks.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Super Overs",
+          "copy": "A tied match goes to a simplified Super Over: six legal balls or two wickets. Tied Super Overs repeat. The game selects the batters and bowler from each XI; tie-break figures stay separate from season statistics.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Your career",
+          "copy": "Play from 2008 through the final season in 2026. Progress autosaves in this browser. If a save warning appears, keep the game open. There are no wages or salary cap to manage.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [
+        "Retirements, releases & draft picks+",
+        "Trading rules+",
+        "Ties, saves & career length+"
+      ],
+      "chapters": [
+        "Build your side",
+        "The season and beyond",
+        "League rules"
+      ],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 1850,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "after",
+      "name": "how-expanded",
+      "width": 390,
+      "prompt": "how",
+      "cards": [
+        {
+          "title": "Choose your club",
+          "copy": "Read the home-ground conditions and choose one of the eight clubs.",
+          "number": "1",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Watch league signings",
+          "copy": "The five-day window decides who enters the league. These players join the draft pool, not your club. Use speed or skip to move ahead.",
+          "number": "2",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Draft your fifteen",
+          "copy": "Scout a player by opening their card, then select Pick. The order reverses each round. Your home ground and the jobs players can fill matter.",
+          "number": "3",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Name your XI",
+          "copy": "Select eleven from your squad. Use the arrows beside selected players to set the batting order; use Swap to change the side.",
+          "number": "4",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Play the season",
+          "copy": "Play fourteen league matches. Follow the over-by-over feed or skip to the result. The top four reach two semi-finals and a Grand Final.",
+          "number": "5",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build again",
+          "copy": "Your squad carries over. Review retirements and development, make any optional changes, then draft the vacancies and name your next XI.",
+          "number": "6",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Who stays",
+          "copy": "Players stay automatically unless they retire, are traded out or you confirm a release. You can release at most two players, subject to the departure allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "The departure allowance",
+          "copy": "Retirements are uncapped. They use the four-departure allowance before optional releases and outgoing trades. Three retirements leave room for one voluntary departure; four or more leave none. Incoming players do not restore the allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Fill the vacancies",
+          "copy": "A fresh draft order is drawn each year, regardless of league finish. Draft back to fifteen players. Supplementary picks fill remaining vacancies at the end, continuing the snake order.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Windows & limits",
+          "copy": "No trades in 2008. From 2009, each club can complete two trades per season. The in-season window closes when Round 3 is complete; offseason trading closes when the draft begins.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build a deal",
+          "copy": "Each side can include up to two players and two picks. Only owned Round 1 and Round 2 picks can be traded, after the offseason order draw. In-season deals exchange equal numbers of players, with no picks.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Super Overs",
+          "copy": "A tied match goes to a simplified Super Over: six legal balls or two wickets. Tied Super Overs repeat. The game selects the batters and bowler from each XI; tie-break figures stay separate from season statistics.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Your career",
+          "copy": "Play from 2008 through the final season in 2026. Progress autosaves in this browser. If a save warning appears, keep the game open. There are no wages or salary cap to manage.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [
+        "Retirements, releases & draft picks+",
+        "Trading rules+",
+        "Ties, saves & career length+"
+      ],
+      "chapters": [
+        "Build your side",
+        "The season and beyond",
+        "League rules"
+      ],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 2485,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "after",
+      "name": "how-expanded",
+      "width": 320,
+      "prompt": "how",
+      "cards": [
+        {
+          "title": "Choose your club",
+          "copy": "Read the home-ground conditions and choose one of the eight clubs.",
+          "number": "1",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Watch league signings",
+          "copy": "The five-day window decides who enters the league. These players join the draft pool, not your club. Use speed or skip to move ahead.",
+          "number": "2",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Draft your fifteen",
+          "copy": "Scout a player by opening their card, then select Pick. The order reverses each round. Your home ground and the jobs players can fill matter.",
+          "number": "3",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Name your XI",
+          "copy": "Select eleven from your squad. Use the arrows beside selected players to set the batting order; use Swap to change the side.",
+          "number": "4",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Play the season",
+          "copy": "Play fourteen league matches. Follow the over-by-over feed or skip to the result. The top four reach two semi-finals and a Grand Final.",
+          "number": "5",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build again",
+          "copy": "Your squad carries over. Review retirements and development, make any optional changes, then draft the vacancies and name your next XI.",
+          "number": "6",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Who stays",
+          "copy": "Players stay automatically unless they retire, are traded out or you confirm a release. You can release at most two players, subject to the departure allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "The departure allowance",
+          "copy": "Retirements are uncapped. They use the four-departure allowance before optional releases and outgoing trades. Three retirements leave room for one voluntary departure; four or more leave none. Incoming players do not restore the allowance.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Fill the vacancies",
+          "copy": "A fresh draft order is drawn each year, regardless of league finish. Draft back to fifteen players. Supplementary picks fill remaining vacancies at the end, continuing the snake order.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Windows & limits",
+          "copy": "No trades in 2008. From 2009, each club can complete two trades per season. The in-season window closes when Round 3 is complete; offseason trading closes when the draft begins.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build a deal",
+          "copy": "Each side can include up to two players and two picks. Only owned Round 1 and Round 2 picks can be traded, after the offseason order draw. In-season deals exchange equal numbers of players, with no picks.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Super Overs",
+          "copy": "A tied match goes to a simplified Super Over: six legal balls or two wickets. Tied Super Overs repeat. The game selects the batters and bowler from each XI; tie-break figures stay separate from season statistics.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Your career",
+          "copy": "Play from 2008 through the final season in 2026. Progress autosaves in this browser. If a save warning appears, keep the game open. There are no wages or salary cap to manage.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [
+        "Retirements, releases & draft picks+",
+        "Trading rules+",
+        "Ties, saves & career length+"
+      ],
+      "chapters": [
+        "Build your side",
+        "The season and beyond",
+        "League rules"
+      ],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 2809,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "after",
+      "name": "howItWorks",
+      "width": 1440,
+      "prompt": "howItWorks",
+      "cards": [
+        {
+          "title": "Read the player’s job",
+          "copy": "Overall summarises current ability. Batting position and detailed skills help you judge a particular job. Team ratings describe the XI, not a predicted score.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Make selection count",
+          "copy": "Your eleven and batting order matter. A keeper, enough credible bowling and batters suited to their positions give the side options. There is no fixed XI recipe.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Read the ground",
+          "copy": "Pace and carry, spin and grip, boundary size and match conditions change the contest. A side built for one ground may need a different balance elsewhere.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Allow for uncertainty",
+          "copy": "Matches are simulated delivery by delivery. Ability, form, conditions and the match situation influence outcomes. A stronger side has an advantage, not a guarantee.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Use the scorebook",
+          "copy": "The feed shows each over and the key moments. Open the scorebook for the full result. Look for patterns across matches before judging a player or changing your plan.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Think beyond this season",
+          "copy": "Players develop, age and retire. Skills can change even when overall stays level. Scouting outlooks are estimates; development reports show the changes that have happened.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [],
+      "chapters": [
+        "Your players",
+        "Match conditions",
+        "Across the seasons"
+      ],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "howItWorks",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 742,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "after",
+      "name": "howItWorks",
+      "width": 768,
+      "prompt": "howItWorks",
+      "cards": [
+        {
+          "title": "Read the player’s job",
+          "copy": "Overall summarises current ability. Batting position and detailed skills help you judge a particular job. Team ratings describe the XI, not a predicted score.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Make selection count",
+          "copy": "Your eleven and batting order matter. A keeper, enough credible bowling and batters suited to their positions give the side options. There is no fixed XI recipe.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Read the ground",
+          "copy": "Pace and carry, spin and grip, boundary size and match conditions change the contest. A side built for one ground may need a different balance elsewhere.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Allow for uncertainty",
+          "copy": "Matches are simulated delivery by delivery. Ability, form, conditions and the match situation influence outcomes. A stronger side has an advantage, not a guarantee.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Use the scorebook",
+          "copy": "The feed shows each over and the key moments. Open the scorebook for the full result. Look for patterns across matches before judging a player or changing your plan.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Think beyond this season",
+          "copy": "Players develop, age and retire. Skills can change even when overall stays level. Scouting outlooks are estimates; development reports show the changes that have happened.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [],
+      "chapters": [
+        "Your players",
+        "Match conditions",
+        "Across the seasons"
+      ],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "howItWorks",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 969,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "after",
+      "name": "howItWorks",
+      "width": 390,
+      "prompt": "howItWorks",
+      "cards": [
+        {
+          "title": "Read the player’s job",
+          "copy": "Overall summarises current ability. Batting position and detailed skills help you judge a particular job. Team ratings describe the XI, not a predicted score.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Make selection count",
+          "copy": "Your eleven and batting order matter. A keeper, enough credible bowling and batters suited to their positions give the side options. There is no fixed XI recipe.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Read the ground",
+          "copy": "Pace and carry, spin and grip, boundary size and match conditions change the contest. A side built for one ground may need a different balance elsewhere.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Allow for uncertainty",
+          "copy": "Matches are simulated delivery by delivery. Ability, form, conditions and the match situation influence outcomes. A stronger side has an advantage, not a guarantee.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Use the scorebook",
+          "copy": "The feed shows each over and the key moments. Open the scorebook for the full result. Look for patterns across matches before judging a player or changing your plan.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Think beyond this season",
+          "copy": "Players develop, age and retire. Skills can change even when overall stays level. Scouting outlooks are estimates; development reports show the changes that have happened.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [],
+      "chapters": [
+        "Your players",
+        "Match conditions",
+        "Across the seasons"
+      ],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "howItWorks",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 1319,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "after",
+      "name": "howItWorks",
+      "width": 320,
+      "prompt": "howItWorks",
+      "cards": [
+        {
+          "title": "Read the player’s job",
+          "copy": "Overall summarises current ability. Batting position and detailed skills help you judge a particular job. Team ratings describe the XI, not a predicted score.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Make selection count",
+          "copy": "Your eleven and batting order matter. A keeper, enough credible bowling and batters suited to their positions give the side options. There is no fixed XI recipe.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Read the ground",
+          "copy": "Pace and carry, spin and grip, boundary size and match conditions change the contest. A side built for one ground may need a different balance elsewhere.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Allow for uncertainty",
+          "copy": "Matches are simulated delivery by delivery. Ability, form, conditions and the match situation influence outcomes. A stronger side has an advantage, not a guarantee.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Use the scorebook",
+          "copy": "The feed shows each over and the key moments. Open the scorebook for the full result. Look for patterns across matches before judging a player or changing your plan.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Think beyond this season",
+          "copy": "Players develop, age and retire. Skills can change even when overall stays level. Scouting outlooks are estimates; development reports show the changes that have happened.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [],
+      "chapters": [
+        "Your players",
+        "Match conditions",
+        "Across the seasons"
+      ],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "howItWorks",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 1536,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "after",
+      "name": "breakawayStory",
+      "width": 1440,
+      "prompt": "breakawayStory",
+      "cards": [
+        {
+          "title": "Five days to choose a side",
+          "copy": "The established competitions still have their pull. So does the promise of a new stage. For five days, players decide whether to enter the breakaway. Until the window closes, nobody knows how strong the draft pool will be.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build an eleven worth watching",
+          "copy": "Fifteen places in your squad. Seven rivals reading the same board. The opener, the death bowler, the keeper: every pick shapes the side. A famous name is only a start. Your ground, your balance and your XI decide what follows.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Make the years count",
+          "copy": "Fourteen league matches lead to the finals. Beyond them, players develop, veterans retire and the next draft brings another judgement call. From 2008 to the final season in 2026, the challenge is to build a club that lasts.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [],
+      "chapters": [],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 720,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "after",
+      "name": "breakawayStory",
+      "width": 768,
+      "prompt": "breakawayStory",
+      "cards": [
+        {
+          "title": "Five days to choose a side",
+          "copy": "The established competitions still have their pull. So does the promise of a new stage. For five days, players decide whether to enter the breakaway. Until the window closes, nobody knows how strong the draft pool will be.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build an eleven worth watching",
+          "copy": "Fifteen places in your squad. Seven rivals reading the same board. The opener, the death bowler, the keeper: every pick shapes the side. A famous name is only a start. Your ground, your balance and your XI decide what follows.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Make the years count",
+          "copy": "Fourteen league matches lead to the finals. Beyond them, players develop, veterans retire and the next draft brings another judgement call. From 2008 to the final season in 2026, the challenge is to build a club that lasts.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [],
+      "chapters": [],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 720,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "after",
+      "name": "breakawayStory",
+      "width": 390,
+      "prompt": "breakawayStory",
+      "cards": [
+        {
+          "title": "Five days to choose a side",
+          "copy": "The established competitions still have their pull. So does the promise of a new stage. For five days, players decide whether to enter the breakaway. Until the window closes, nobody knows how strong the draft pool will be.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build an eleven worth watching",
+          "copy": "Fifteen places in your squad. Seven rivals reading the same board. The opener, the death bowler, the keeper: every pick shapes the side. A famous name is only a start. Your ground, your balance and your XI decide what follows.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Make the years count",
+          "copy": "Fourteen league matches lead to the finals. Beyond them, players develop, veterans retire and the next draft brings another judgement call. From 2008 to the final season in 2026, the challenge is to build a club that lasts.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [],
+      "chapters": [],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 1037,
+      "overflow": false,
+      "close": 44
+    },
+    {
+      "kind": "after",
+      "name": "breakawayStory",
+      "width": 320,
+      "prompt": "breakawayStory",
+      "cards": [
+        {
+          "title": "Five days to choose a side",
+          "copy": "The established competitions still have their pull. So does the promise of a new stage. For five days, players decide whether to enter the breakaway. Until the window closes, nobody knows how strong the draft pool will be.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Build an eleven worth watching",
+          "copy": "Fifteen places in your squad. Seven rivals reading the same board. The opener, the death bowler, the keeper: every pick shapes the side. A famous name is only a start. Your ground, your balance and your XI decide what follows.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "title": "Make the years count",
+          "copy": "Fourteen league matches lead to the finals. Beyond them, players develop, veterans retire and the next draft brings another judgement call. From 2008 to the final season in 2026, the challenge is to build a club that lasts.",
+          "number": "",
+          "bg": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "rules": [],
+      "chapters": [],
+      "controls": [
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "how",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false,
+          null
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          true,
+          "page"
+        ],
+        [
+          "close",
+          "[]",
+          false,
+          null
+        ]
+      ],
+      "bodyHeight": 1185,
+      "overflow": false,
+      "close": 44
+    }
+  ],
+  "failures": [],
+  "scope": "Paired home-menu guide dialogs; all guide copy/rules and actions preserved; disposable storage",
+  "before_sha256": "ad874945a2995adb59921738df7cb14403aa11fbf3ce5a38e273153baa319e39",
+  "after_sha256": "196515c5a170633c1e6abcca259798a5bb7bb7686cc4545124663651efc95f35",
+  "status": "PASS"
+}
