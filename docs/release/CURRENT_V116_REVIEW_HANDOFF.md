@@ -1,5 +1,9 @@
 # Current v116 review candidate handoff
 
+## Delivered career-record review, 14 November 2026
+
+GCC_v116_Career_Record_Review.html, SHA-256 32d28ef2b6e59b150e6f7319dd85199772a238aa966fc9fe2ad52aa8c18fd800, 6,671,221 bytes. Integrates approved uncapped career points/club-only records/honours and automatic eight-club reveal completion with latest verified analysis UI. Native run 43585178498: 20 states, 55 checks, zero failures. Ending reload/ledger preservation, timed/manual/skip/restored reveal, focus and retained club/draft confirmations verified. Mobile and desktop ending rasters inspected; phone word breaks/venue fill corrected before delivery. See [integration review](V116_CAREER_INTEGRATED_REVIEW.md). Review only, not stable. Frozen v116/main untouched. Accounts/global rankings not implemented; 1000+ rarity uncalibrated. Deferred record-display choices: alphabetical tied leader; Best season uses title then wins. Previous Secondary Review remains rollback.
+
 ## Verified shared analysis summary, 14 November 2026
 
 Candidate b8f34a5d48836a5157f245a1ca8c0c72101d74a947eeaaa9b69576190beeff2a (6,660,175 bytes). Run 43583054824 passed 20 targeted states at four widths, zero failures. Mobile draft/offseason rasters inspected. Compact summary and plain discipline headings replace nested analysis boxes. Only CSS owners 10/31 differ from delivered Secondary Review, all 22 scripts identical. See [summary review](V116_ANALYSIS_SUMMARY_REVIEW.md). Staged for next consolidated bundle; no additional download yet, unpromoted. Next: reconcile isolated career-record/club-flow feature carefully with this verified UI source, then native feature verification.
