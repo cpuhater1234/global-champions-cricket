@@ -1,0 +1,2222 @@
+{
+  "states": [
+    {
+      "kind": "before",
+      "name": "scout",
+      "width": 1440,
+      "overflow": false,
+      "rows": [
+        {
+          "label": "Batting",
+          "value": "92",
+          "height": 57.1875,
+          "trackY": 276.875,
+          "trackBottom": 282.875,
+          "trackWidth": 530.09375,
+          "labelY": 247.890625,
+          "color": "rgb(148, 197, 132)"
+        },
+        {
+          "label": "Bowling",
+          "value": "22",
+          "height": 57.1875,
+          "trackY": 334.0625,
+          "trackBottom": 340.0625,
+          "trackWidth": 530.09375,
+          "labelY": 305.078125,
+          "color": "rgb(237, 154, 118)"
+        },
+        {
+          "label": "Fielding",
+          "value": "92",
+          "height": 57.1875,
+          "trackY": 391.25,
+          "trackBottom": 397.25,
+          "trackWidth": 530.09375,
+          "labelY": 362.265625,
+          "color": "rgb(148, 197, 132)"
+        }
+      ],
+      "commands": [
+        [
+          "close",
+          "[]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"overview\"]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"skills\"]",
+          false
+        ],
+        [
+          "draftPlayer",
+          "[18]",
+          false
+        ]
+      ],
+      "groups": [],
+      "panels": [
+        {
+          "bg": "rgb(23, 27, 32)",
+          "border": "0px"
+        }
+      ],
+      "buttons": [
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 170,
+          "h": 44
+        },
+        {
+          "w": 170,
+          "h": 44
+        },
+        {
+          "w": 185,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "kind": "before",
+      "name": "scout",
+      "width": 768,
+      "overflow": false,
+      "rows": [
+        {
+          "label": "Batting",
+          "value": "92",
+          "height": 57.1875,
+          "trackY": 276.875,
+          "trackBottom": 282.875,
+          "trackWidth": 350.5625,
+          "labelY": 247.890625,
+          "color": "rgb(148, 197, 132)"
+        },
+        {
+          "label": "Bowling",
+          "value": "22",
+          "height": 57.1875,
+          "trackY": 334.0625,
+          "trackBottom": 340.0625,
+          "trackWidth": 350.5625,
+          "labelY": 305.078125,
+          "color": "rgb(237, 154, 118)"
+        },
+        {
+          "label": "Fielding",
+          "value": "92",
+          "height": 57.1875,
+          "trackY": 391.25,
+          "trackBottom": 397.25,
+          "trackWidth": 350.5625,
+          "labelY": 362.265625,
+          "color": "rgb(148, 197, 132)"
+        }
+      ],
+      "commands": [
+        [
+          "close",
+          "[]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"overview\"]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"skills\"]",
+          false
+        ],
+        [
+          "draftPlayer",
+          "[18]",
+          false
+        ]
+      ],
+      "groups": [],
+      "panels": [
+        {
+          "bg": "rgb(23, 27, 32)",
+          "border": "0px"
+        }
+      ],
+      "buttons": [
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 170,
+          "h": 44
+        },
+        {
+          "w": 170,
+          "h": 44
+        },
+        {
+          "w": 185,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "kind": "before",
+      "name": "scout",
+      "width": 390,
+      "overflow": false,
+      "rows": [
+        {
+          "label": "Batting",
+          "value": "92",
+          "height": 57.1875,
+          "trackY": 332.875,
+          "trackBottom": 338.875,
+          "trackWidth": 330,
+          "labelY": 303.890625,
+          "color": "rgb(148, 197, 132)"
+        },
+        {
+          "label": "Bowling",
+          "value": "22",
+          "height": 57.1875,
+          "trackY": 390.0625,
+          "trackBottom": 396.0625,
+          "trackWidth": 330,
+          "labelY": 361.078125,
+          "color": "rgb(237, 154, 118)"
+        },
+        {
+          "label": "Fielding",
+          "value": "92",
+          "height": 57.1875,
+          "trackY": 447.25,
+          "trackBottom": 453.25,
+          "trackWidth": 330,
+          "labelY": 418.265625,
+          "color": "rgb(148, 197, 132)"
+        }
+      ],
+      "commands": [
+        [
+          "close",
+          "[]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"overview\"]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"skills\"]",
+          false
+        ],
+        [
+          "draftPlayer",
+          "[18]",
+          false
+        ]
+      ],
+      "groups": [],
+      "panels": [
+        {
+          "bg": "rgb(23, 27, 32)",
+          "border": "0px"
+        }
+      ],
+      "buttons": [
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 161,
+          "h": 44
+        },
+        {
+          "w": 161,
+          "h": 44
+        },
+        {
+          "w": 185,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "kind": "before",
+      "name": "scout",
+      "width": 320,
+      "overflow": false,
+      "rows": [
+        {
+          "label": "Batting",
+          "value": "92",
+          "height": 57.1875,
+          "trackY": 364.375,
+          "trackBottom": 370.375,
+          "trackWidth": 260,
+          "labelY": 335.390625,
+          "color": "rgb(148, 197, 132)"
+        },
+        {
+          "label": "Bowling",
+          "value": "22",
+          "height": 57.1875,
+          "trackY": 421.5625,
+          "trackBottom": 427.5625,
+          "trackWidth": 260,
+          "labelY": 392.578125,
+          "color": "rgb(237, 154, 118)"
+        },
+        {
+          "label": "Fielding",
+          "value": "92",
+          "height": 57.1875,
+          "trackY": 478.75,
+          "trackBottom": 484.75,
+          "trackWidth": 260,
+          "labelY": 449.765625,
+          "color": "rgb(148, 197, 132)"
+        }
+      ],
+      "commands": [
+        [
+          "close",
+          "[]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"overview\"]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"skills\"]",
+          false
+        ],
+        [
+          "draftPlayer",
+          "[18]",
+          false
+        ]
+      ],
+      "groups": [],
+      "panels": [
+        {
+          "bg": "rgb(23, 27, 32)",
+          "border": "0px"
+        }
+      ],
+      "buttons": [
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 126,
+          "h": 44
+        },
+        {
+          "w": 126,
+          "h": 44
+        },
+        {
+          "w": 185,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "kind": "before",
+      "name": "attributes",
+      "width": 1440,
+      "overflow": false,
+      "rows": [
+        {
+          "label": "Against pace",
+          "value": "94",
+          "height": 60.78125,
+          "trackY": 353.09375,
+          "trackBottom": 358.6875,
+          "trackWidth": 496,
+          "labelY": 322.703125,
+          "color": "rgb(142, 198, 135)"
+        },
+        {
+          "label": "Against spin",
+          "value": "89",
+          "height": 61.78125,
+          "trackY": 414.875,
+          "trackBottom": 420.46875,
+          "trackWidth": 496,
+          "labelY": 384.484375,
+          "color": "rgb(158, 195, 128)"
+        },
+        {
+          "label": "Shot control",
+          "value": "91",
+          "height": 61.78125,
+          "trackY": 476.65625,
+          "trackBottom": 482.25,
+          "trackWidth": 496,
+          "labelY": 446.265625,
+          "color": "rgb(151, 197, 131)"
+        },
+        {
+          "label": "Power hitting",
+          "value": "89",
+          "height": 60.78125,
+          "trackY": 353.09375,
+          "trackBottom": 358.6875,
+          "trackWidth": 496,
+          "labelY": 322.703125,
+          "color": "rgb(158, 195, 128)"
+        },
+        {
+          "label": "Running between wickets",
+          "value": "89",
+          "height": 61.78125,
+          "trackY": 414.875,
+          "trackBottom": 420.46875,
+          "trackWidth": 496,
+          "labelY": 384.484375,
+          "color": "rgb(158, 195, 128)"
+        },
+        {
+          "label": "Finishing",
+          "value": "89",
+          "height": 61.78125,
+          "trackY": 476.65625,
+          "trackBottom": 482.25,
+          "trackWidth": 496,
+          "labelY": 446.265625,
+          "color": "rgb(158, 195, 128)"
+        },
+        {
+          "label": "Temperament",
+          "value": "96",
+          "height": 60.78125,
+          "trackY": 601.828125,
+          "trackBottom": 607.421875,
+          "trackWidth": 496,
+          "labelY": 571.4375,
+          "color": "rgb(136, 199, 138)"
+        },
+        {
+          "label": "Leadership",
+          "value": "85",
+          "height": 61.78125,
+          "trackY": 663.609375,
+          "trackBottom": 669.203125,
+          "trackWidth": 496,
+          "labelY": 633.21875,
+          "color": "rgb(170, 193, 123)"
+        }
+      ],
+      "commands": [
+        [
+          "close",
+          "[]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"overview\"]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"skills\"]",
+          false
+        ],
+        [
+          "draftPlayer",
+          "[18]",
+          false
+        ]
+      ],
+      "groups": [],
+      "panels": [
+        {
+          "bg": "rgb(23, 27, 32)",
+          "border": "0px"
+        },
+        {
+          "bg": "rgb(23, 27, 32)",
+          "border": "1px"
+        }
+      ],
+      "buttons": [
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 170,
+          "h": 44
+        },
+        {
+          "w": 170,
+          "h": 44
+        },
+        {
+          "w": 185,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "kind": "before",
+      "name": "attributes",
+      "width": 768,
+      "overflow": false,
+      "rows": [
+        {
+          "label": "Against pace",
+          "value": "94",
+          "height": 60.78125,
+          "trackY": 353.09375,
+          "trackBottom": 358.6875,
+          "trackWidth": 324.625,
+          "labelY": 322.703125,
+          "color": "rgb(142, 198, 135)"
+        },
+        {
+          "label": "Against spin",
+          "value": "89",
+          "height": 61.78125,
+          "trackY": 414.875,
+          "trackBottom": 420.46875,
+          "trackWidth": 324.625,
+          "labelY": 384.484375,
+          "color": "rgb(158, 195, 128)"
+        },
+        {
+          "label": "Shot control",
+          "value": "91",
+          "height": 61.78125,
+          "trackY": 476.65625,
+          "trackBottom": 482.25,
+          "trackWidth": 324.625,
+          "labelY": 446.265625,
+          "color": "rgb(151, 197, 131)"
+        },
+        {
+          "label": "Power hitting",
+          "value": "89",
+          "height": 60.78125,
+          "trackY": 353.09375,
+          "trackBottom": 358.6875,
+          "trackWidth": 324.640625,
+          "labelY": 322.703125,
+          "color": "rgb(158, 195, 128)"
+        },
+        {
+          "label": "Running between wickets",
+          "value": "89",
+          "height": 61.78125,
+          "trackY": 414.875,
+          "trackBottom": 420.46875,
+          "trackWidth": 324.640625,
+          "labelY": 384.484375,
+          "color": "rgb(158, 195, 128)"
+        },
+        {
+          "label": "Finishing",
+          "value": "89",
+          "height": 61.78125,
+          "trackY": 476.65625,
+          "trackBottom": 482.25,
+          "trackWidth": 324.640625,
+          "labelY": 446.265625,
+          "color": "rgb(158, 195, 128)"
+        },
+        {
+          "label": "Temperament",
+          "value": "96",
+          "height": 60.78125,
+          "trackY": 601.828125,
+          "trackBottom": 607.421875,
+          "trackWidth": 324.625,
+          "labelY": 571.4375,
+          "color": "rgb(136, 199, 138)"
+        },
+        {
+          "label": "Leadership",
+          "value": "85",
+          "height": 61.78125,
+          "trackY": 663.609375,
+          "trackBottom": 669.203125,
+          "trackWidth": 324.625,
+          "labelY": 633.21875,
+          "color": "rgb(170, 193, 123)"
+        }
+      ],
+      "commands": [
+        [
+          "close",
+          "[]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"overview\"]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"skills\"]",
+          false
+        ],
+        [
+          "draftPlayer",
+          "[18]",
+          false
+        ]
+      ],
+      "groups": [],
+      "panels": [
+        {
+          "bg": "rgb(23, 27, 32)",
+          "border": "0px"
+        },
+        {
+          "bg": "rgb(23, 27, 32)",
+          "border": "1px"
+        }
+      ],
+      "buttons": [
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 170,
+          "h": 44
+        },
+        {
+          "w": 170,
+          "h": 44
+        },
+        {
+          "w": 185,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "kind": "before",
+      "name": "attributes",
+      "width": 390,
+      "overflow": false,
+      "rows": [
+        {
+          "label": "Against pace",
+          "value": "94",
+          "height": 60.78125,
+          "trackY": 409.09375,
+          "trackBottom": 414.6875,
+          "trackWidth": 300,
+          "labelY": 378.703125,
+          "color": "rgb(142, 198, 135)"
+        },
+        {
+          "label": "Against spin",
+          "value": "89",
+          "height": 61.78125,
+          "trackY": 470.875,
+          "trackBottom": 476.46875,
+          "trackWidth": 300,
+          "labelY": 440.484375,
+          "color": "rgb(158, 195, 128)"
+        },
+        {
+          "label": "Shot control",
+          "value": "91",
+          "height": 61.78125,
+          "trackY": 532.65625,
+          "trackBottom": 538.25,
+          "trackWidth": 300,
+          "labelY": 502.265625,
+          "color": "rgb(151, 197, 131)"
+        },
+        {
+          "label": "Power hitting",
+          "value": "89",
+          "height": 60.78125,
+          "trackY": 657.828125,
+          "trackBottom": 663.421875,
+          "trackWidth": 300,
+          "labelY": 627.4375,
+          "color": "rgb(158, 195, 128)"
+        },
+        {
+          "label": "Running between wickets",
+          "value": "89",
+          "height": 61.78125,
+          "trackY": 719.609375,
+          "trackBottom": 725.203125,
+          "trackWidth": 300,
+          "labelY": 689.21875,
+          "color": "rgb(158, 195, 128)"
+        },
+        {
+          "label": "Finishing",
+          "value": "89",
+          "height": 61.78125,
+          "trackY": 781.390625,
+          "trackBottom": 786.984375,
+          "trackWidth": 300,
+          "labelY": 751,
+          "color": "rgb(158, 195, 128)"
+        },
+        {
+          "label": "Temperament",
+          "value": "96",
+          "height": 60.78125,
+          "trackY": 906.5625,
+          "trackBottom": 912.15625,
+          "trackWidth": 300,
+          "labelY": 876.171875,
+          "color": "rgb(136, 199, 138)"
+        },
+        {
+          "label": "Leadership",
+          "value": "85",
+          "height": 61.78125,
+          "trackY": 968.34375,
+          "trackBottom": 973.9375,
+          "trackWidth": 300,
+          "labelY": 937.953125,
+          "color": "rgb(170, 193, 123)"
+        }
+      ],
+      "commands": [
+        [
+          "close",
+          "[]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"overview\"]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"skills\"]",
+          false
+        ],
+        [
+          "draftPlayer",
+          "[18]",
+          false
+        ]
+      ],
+      "groups": [],
+      "panels": [
+        {
+          "bg": "rgb(23, 27, 32)",
+          "border": "0px"
+        },
+        {
+          "bg": "rgb(23, 27, 32)",
+          "border": "1px"
+        }
+      ],
+      "buttons": [
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 161,
+          "h": 44
+        },
+        {
+          "w": 161,
+          "h": 44
+        },
+        {
+          "w": 185,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "kind": "before",
+      "name": "attributes",
+      "width": 320,
+      "overflow": false,
+      "rows": [
+        {
+          "label": "Against pace",
+          "value": "94",
+          "height": 60.78125,
+          "trackY": 440.59375,
+          "trackBottom": 446.1875,
+          "trackWidth": 230,
+          "labelY": 410.203125,
+          "color": "rgb(142, 198, 135)"
+        },
+        {
+          "label": "Against spin",
+          "value": "89",
+          "height": 61.78125,
+          "trackY": 502.375,
+          "trackBottom": 507.96875,
+          "trackWidth": 230,
+          "labelY": 471.984375,
+          "color": "rgb(158, 195, 128)"
+        },
+        {
+          "label": "Shot control",
+          "value": "91",
+          "height": 61.78125,
+          "trackY": 564.15625,
+          "trackBottom": 569.75,
+          "trackWidth": 230,
+          "labelY": 533.765625,
+          "color": "rgb(151, 197, 131)"
+        },
+        {
+          "label": "Power hitting",
+          "value": "89",
+          "height": 60.78125,
+          "trackY": 689.328125,
+          "trackBottom": 694.921875,
+          "trackWidth": 230,
+          "labelY": 658.9375,
+          "color": "rgb(158, 195, 128)"
+        },
+        {
+          "label": "Running between wickets",
+          "value": "89",
+          "height": 61.78125,
+          "trackY": 751.109375,
+          "trackBottom": 756.703125,
+          "trackWidth": 230,
+          "labelY": 720.71875,
+          "color": "rgb(158, 195, 128)"
+        },
+        {
+          "label": "Finishing",
+          "value": "89",
+          "height": 61.78125,
+          "trackY": 812.890625,
+          "trackBottom": 818.484375,
+          "trackWidth": 230,
+          "labelY": 782.5,
+          "color": "rgb(158, 195, 128)"
+        },
+        {
+          "label": "Temperament",
+          "value": "96",
+          "height": 60.78125,
+          "trackY": 938.0625,
+          "trackBottom": 943.65625,
+          "trackWidth": 230,
+          "labelY": 907.671875,
+          "color": "rgb(136, 199, 138)"
+        },
+        {
+          "label": "Leadership",
+          "value": "85",
+          "height": 61.78125,
+          "trackY": 999.84375,
+          "trackBottom": 1005.4375,
+          "trackWidth": 230,
+          "labelY": 969.453125,
+          "color": "rgb(170, 193, 123)"
+        }
+      ],
+      "commands": [
+        [
+          "close",
+          "[]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"overview\"]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"skills\"]",
+          false
+        ],
+        [
+          "draftPlayer",
+          "[18]",
+          false
+        ]
+      ],
+      "groups": [],
+      "panels": [
+        {
+          "bg": "rgb(23, 27, 32)",
+          "border": "0px"
+        },
+        {
+          "bg": "rgb(23, 27, 32)",
+          "border": "1px"
+        }
+      ],
+      "buttons": [
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 126,
+          "h": 44
+        },
+        {
+          "w": 126,
+          "h": 44
+        },
+        {
+          "w": 185,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "kind": "before",
+      "name": "menu",
+      "width": 1440,
+      "overflow": false,
+      "rows": [],
+      "commands": [
+        [
+          "archive",
+          "[]",
+          true
+        ],
+        [
+          "how",
+          "[]",
+          false
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false
+        ]
+      ],
+      "groups": [],
+      "panels": [],
+      "buttons": [
+        {
+          "w": 265.21875,
+          "h": 44
+        },
+        {
+          "w": 265.21875,
+          "h": 44
+        },
+        {
+          "w": 265.21875,
+          "h": 44
+        },
+        {
+          "w": 265.21875,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "kind": "before",
+      "name": "menu",
+      "width": 768,
+      "overflow": false,
+      "rows": [],
+      "commands": [
+        [
+          "archive",
+          "[]",
+          true
+        ],
+        [
+          "how",
+          "[]",
+          false
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false
+        ]
+      ],
+      "groups": [],
+      "panels": [],
+      "buttons": [
+        {
+          "w": 265.21875,
+          "h": 44
+        },
+        {
+          "w": 265.21875,
+          "h": 44
+        },
+        {
+          "w": 265.21875,
+          "h": 44
+        },
+        {
+          "w": 265.21875,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "kind": "before",
+      "name": "menu",
+      "width": 390,
+      "overflow": false,
+      "rows": [],
+      "commands": [
+        [
+          "archive",
+          "[]",
+          true
+        ],
+        [
+          "how",
+          "[]",
+          false
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false
+        ]
+      ],
+      "groups": [],
+      "panels": [],
+      "buttons": [
+        {
+          "w": 265.21875,
+          "h": 44
+        },
+        {
+          "w": 265.21875,
+          "h": 44
+        },
+        {
+          "w": 265.21875,
+          "h": 44
+        },
+        {
+          "w": 265.21875,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "kind": "before",
+      "name": "menu",
+      "width": 320,
+      "overflow": false,
+      "rows": [],
+      "commands": [
+        [
+          "archive",
+          "[]",
+          true
+        ],
+        [
+          "how",
+          "[]",
+          false
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false
+        ]
+      ],
+      "groups": [],
+      "panels": [],
+      "buttons": [
+        {
+          "w": 265.21875,
+          "h": 44
+        },
+        {
+          "w": 265.21875,
+          "h": 44
+        },
+        {
+          "w": 265.21875,
+          "h": 44
+        },
+        {
+          "w": 265.21875,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "kind": "after",
+      "name": "scout",
+      "width": 1440,
+      "overflow": false,
+      "rows": [
+        {
+          "label": "Batting",
+          "value": "91",
+          "height": 62,
+          "trackY": 279.6875,
+          "trackBottom": 285.6875,
+          "trackWidth": 530.09375,
+          "labelY": 249.890625,
+          "color": "rgb(151, 197, 131)"
+        },
+        {
+          "label": "Bowling",
+          "value": "23",
+          "height": 62,
+          "trackY": 341.6875,
+          "trackBottom": 347.6875,
+          "trackWidth": 530.09375,
+          "labelY": 311.890625,
+          "color": "rgb(237, 154, 118)"
+        },
+        {
+          "label": "Fielding",
+          "value": "93",
+          "height": 62,
+          "trackY": 403.6875,
+          "trackBottom": 409.6875,
+          "trackWidth": 530.09375,
+          "labelY": 373.890625,
+          "color": "rgb(145, 198, 134)"
+        }
+      ],
+      "commands": [
+        [
+          "close",
+          "[]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"overview\"]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"skills\"]",
+          false
+        ],
+        [
+          "draftPlayer",
+          "[41]",
+          false
+        ]
+      ],
+      "groups": [],
+      "panels": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "border": "0px"
+        }
+      ],
+      "buttons": [
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 170,
+          "h": 44
+        },
+        {
+          "w": 170,
+          "h": 44
+        },
+        {
+          "w": 166,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "kind": "after",
+      "name": "scout",
+      "width": 768,
+      "overflow": false,
+      "rows": [
+        {
+          "label": "Batting",
+          "value": "91",
+          "height": 62,
+          "trackY": 279.6875,
+          "trackBottom": 285.6875,
+          "trackWidth": 350.5625,
+          "labelY": 249.890625,
+          "color": "rgb(151, 197, 131)"
+        },
+        {
+          "label": "Bowling",
+          "value": "23",
+          "height": 62,
+          "trackY": 341.6875,
+          "trackBottom": 347.6875,
+          "trackWidth": 350.5625,
+          "labelY": 311.890625,
+          "color": "rgb(237, 154, 118)"
+        },
+        {
+          "label": "Fielding",
+          "value": "93",
+          "height": 62,
+          "trackY": 403.6875,
+          "trackBottom": 409.6875,
+          "trackWidth": 350.5625,
+          "labelY": 373.890625,
+          "color": "rgb(145, 198, 134)"
+        }
+      ],
+      "commands": [
+        [
+          "close",
+          "[]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"overview\"]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"skills\"]",
+          false
+        ],
+        [
+          "draftPlayer",
+          "[41]",
+          false
+        ]
+      ],
+      "groups": [],
+      "panels": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "border": "0px"
+        }
+      ],
+      "buttons": [
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 170,
+          "h": 44
+        },
+        {
+          "w": 170,
+          "h": 44
+        },
+        {
+          "w": 166,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "kind": "after",
+      "name": "scout",
+      "width": 390,
+      "overflow": false,
+      "rows": [
+        {
+          "label": "Batting",
+          "value": "91",
+          "height": 62,
+          "trackY": 355.28125,
+          "trackBottom": 361.28125,
+          "trackWidth": 330,
+          "labelY": 325.484375,
+          "color": "rgb(151, 197, 131)"
+        },
+        {
+          "label": "Bowling",
+          "value": "23",
+          "height": 62,
+          "trackY": 417.28125,
+          "trackBottom": 423.28125,
+          "trackWidth": 330,
+          "labelY": 387.484375,
+          "color": "rgb(237, 154, 118)"
+        },
+        {
+          "label": "Fielding",
+          "value": "93",
+          "height": 62,
+          "trackY": 479.28125,
+          "trackBottom": 485.28125,
+          "trackWidth": 330,
+          "labelY": 449.484375,
+          "color": "rgb(145, 198, 134)"
+        }
+      ],
+      "commands": [
+        [
+          "close",
+          "[]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"overview\"]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"skills\"]",
+          false
+        ],
+        [
+          "draftPlayer",
+          "[41]",
+          false
+        ]
+      ],
+      "groups": [],
+      "panels": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "border": "0px"
+        }
+      ],
+      "buttons": [
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 161,
+          "h": 44
+        },
+        {
+          "w": 161,
+          "h": 44
+        },
+        {
+          "w": 166,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "kind": "after",
+      "name": "scout",
+      "width": 320,
+      "overflow": false,
+      "rows": [
+        {
+          "label": "Batting",
+          "value": "91",
+          "height": 62,
+          "trackY": 359.390625,
+          "trackBottom": 365.390625,
+          "trackWidth": 260,
+          "labelY": 329.59375,
+          "color": "rgb(151, 197, 131)"
+        },
+        {
+          "label": "Bowling",
+          "value": "23",
+          "height": 62,
+          "trackY": 421.390625,
+          "trackBottom": 427.390625,
+          "trackWidth": 260,
+          "labelY": 391.59375,
+          "color": "rgb(237, 154, 118)"
+        },
+        {
+          "label": "Fielding",
+          "value": "93",
+          "height": 62,
+          "trackY": 483.390625,
+          "trackBottom": 489.390625,
+          "trackWidth": 260,
+          "labelY": 453.59375,
+          "color": "rgb(145, 198, 134)"
+        }
+      ],
+      "commands": [
+        [
+          "close",
+          "[]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"overview\"]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"skills\"]",
+          false
+        ],
+        [
+          "draftPlayer",
+          "[41]",
+          false
+        ]
+      ],
+      "groups": [],
+      "panels": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "border": "0px"
+        }
+      ],
+      "buttons": [
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 126,
+          "h": 44
+        },
+        {
+          "w": 126,
+          "h": 44
+        },
+        {
+          "w": 166,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "kind": "after",
+      "name": "attributes",
+      "width": 1440,
+      "overflow": false,
+      "rows": [
+        {
+          "label": "Against pace",
+          "value": "91",
+          "height": 62,
+          "trackY": 338.90625,
+          "trackBottom": 344.90625,
+          "trackWidth": 511,
+          "labelY": 307.703125,
+          "color": "rgb(151, 197, 131)"
+        },
+        {
+          "label": "Against spin",
+          "value": "89",
+          "height": 62,
+          "trackY": 400.90625,
+          "trackBottom": 406.90625,
+          "trackWidth": 511,
+          "labelY": 369.703125,
+          "color": "rgb(158, 195, 128)"
+        },
+        {
+          "label": "Shot control",
+          "value": "91",
+          "height": 62,
+          "trackY": 462.90625,
+          "trackBottom": 468.90625,
+          "trackWidth": 511,
+          "labelY": 431.703125,
+          "color": "rgb(151, 197, 131)"
+        },
+        {
+          "label": "Power hitting",
+          "value": "87",
+          "height": 62,
+          "trackY": 338.90625,
+          "trackBottom": 344.90625,
+          "trackWidth": 511,
+          "labelY": 307.703125,
+          "color": "rgb(164, 194, 125)"
+        },
+        {
+          "label": "Running between wickets",
+          "value": "88",
+          "height": 62,
+          "trackY": 400.90625,
+          "trackBottom": 406.90625,
+          "trackWidth": 511,
+          "labelY": 369.703125,
+          "color": "rgb(161, 195, 127)"
+        },
+        {
+          "label": "Finishing",
+          "value": "92",
+          "height": 62,
+          "trackY": 462.90625,
+          "trackBottom": 468.90625,
+          "trackWidth": 511,
+          "labelY": 431.703125,
+          "color": "rgb(148, 197, 132)"
+        },
+        {
+          "label": "Temperament",
+          "value": "99",
+          "height": 62,
+          "trackY": 589.296875,
+          "trackBottom": 595.296875,
+          "trackWidth": 511,
+          "labelY": 558.09375,
+          "color": "rgb(126, 201, 142)"
+        },
+        {
+          "label": "Leadership",
+          "value": "91",
+          "height": 62,
+          "trackY": 651.296875,
+          "trackBottom": 657.296875,
+          "trackWidth": 511,
+          "labelY": 620.09375,
+          "color": "rgb(151, 197, 131)"
+        }
+      ],
+      "commands": [
+        [
+          "close",
+          "[]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"overview\"]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"skills\"]",
+          false
+        ],
+        [
+          "draftPlayer",
+          "[41]",
+          false
+        ]
+      ],
+      "groups": [],
+      "panels": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "border": "0px"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "border": "0px"
+        }
+      ],
+      "buttons": [
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 170,
+          "h": 44
+        },
+        {
+          "w": 170,
+          "h": 44
+        },
+        {
+          "w": 166,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "kind": "after",
+      "name": "attributes",
+      "width": 768,
+      "overflow": false,
+      "rows": [
+        {
+          "label": "Against pace",
+          "value": "91",
+          "height": 62,
+          "trackY": 338.90625,
+          "trackBottom": 344.90625,
+          "trackWidth": 339.625,
+          "labelY": 307.703125,
+          "color": "rgb(151, 197, 131)"
+        },
+        {
+          "label": "Against spin",
+          "value": "89",
+          "height": 62,
+          "trackY": 400.90625,
+          "trackBottom": 406.90625,
+          "trackWidth": 339.625,
+          "labelY": 369.703125,
+          "color": "rgb(158, 195, 128)"
+        },
+        {
+          "label": "Shot control",
+          "value": "91",
+          "height": 62,
+          "trackY": 462.90625,
+          "trackBottom": 468.90625,
+          "trackWidth": 339.625,
+          "labelY": 431.703125,
+          "color": "rgb(151, 197, 131)"
+        },
+        {
+          "label": "Power hitting",
+          "value": "87",
+          "height": 62,
+          "trackY": 338.90625,
+          "trackBottom": 344.90625,
+          "trackWidth": 339.640625,
+          "labelY": 307.703125,
+          "color": "rgb(164, 194, 125)"
+        },
+        {
+          "label": "Running between wickets",
+          "value": "88",
+          "height": 62,
+          "trackY": 400.90625,
+          "trackBottom": 406.90625,
+          "trackWidth": 339.640625,
+          "labelY": 369.703125,
+          "color": "rgb(161, 195, 127)"
+        },
+        {
+          "label": "Finishing",
+          "value": "92",
+          "height": 62,
+          "trackY": 462.90625,
+          "trackBottom": 468.90625,
+          "trackWidth": 339.640625,
+          "labelY": 431.703125,
+          "color": "rgb(148, 197, 132)"
+        },
+        {
+          "label": "Temperament",
+          "value": "99",
+          "height": 62,
+          "trackY": 589.296875,
+          "trackBottom": 595.296875,
+          "trackWidth": 339.625,
+          "labelY": 558.09375,
+          "color": "rgb(126, 201, 142)"
+        },
+        {
+          "label": "Leadership",
+          "value": "91",
+          "height": 62,
+          "trackY": 651.296875,
+          "trackBottom": 657.296875,
+          "trackWidth": 339.625,
+          "labelY": 620.09375,
+          "color": "rgb(151, 197, 131)"
+        }
+      ],
+      "commands": [
+        [
+          "close",
+          "[]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"overview\"]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"skills\"]",
+          false
+        ],
+        [
+          "draftPlayer",
+          "[41]",
+          false
+        ]
+      ],
+      "groups": [],
+      "panels": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "border": "0px"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "border": "0px"
+        }
+      ],
+      "buttons": [
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 170,
+          "h": 44
+        },
+        {
+          "w": 170,
+          "h": 44
+        },
+        {
+          "w": 166,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "kind": "after",
+      "name": "attributes",
+      "width": 390,
+      "overflow": false,
+      "rows": [
+        {
+          "label": "Against pace",
+          "value": "91",
+          "height": 62,
+          "trackY": 414.5,
+          "trackBottom": 420.5,
+          "trackWidth": 330,
+          "labelY": 383.296875,
+          "color": "rgb(151, 197, 131)"
+        },
+        {
+          "label": "Against spin",
+          "value": "89",
+          "height": 62,
+          "trackY": 476.5,
+          "trackBottom": 482.5,
+          "trackWidth": 330,
+          "labelY": 445.296875,
+          "color": "rgb(158, 195, 128)"
+        },
+        {
+          "label": "Shot control",
+          "value": "91",
+          "height": 62,
+          "trackY": 538.5,
+          "trackBottom": 544.5,
+          "trackWidth": 330,
+          "labelY": 507.296875,
+          "color": "rgb(151, 197, 131)"
+        },
+        {
+          "label": "Power hitting",
+          "value": "87",
+          "height": 62,
+          "trackY": 664.890625,
+          "trackBottom": 670.890625,
+          "trackWidth": 330,
+          "labelY": 633.6875,
+          "color": "rgb(164, 194, 125)"
+        },
+        {
+          "label": "Running between wickets",
+          "value": "88",
+          "height": 62,
+          "trackY": 726.890625,
+          "trackBottom": 732.890625,
+          "trackWidth": 330,
+          "labelY": 695.6875,
+          "color": "rgb(161, 195, 127)"
+        },
+        {
+          "label": "Finishing",
+          "value": "92",
+          "height": 62,
+          "trackY": 788.890625,
+          "trackBottom": 794.890625,
+          "trackWidth": 330,
+          "labelY": 757.6875,
+          "color": "rgb(148, 197, 132)"
+        },
+        {
+          "label": "Temperament",
+          "value": "99",
+          "height": 62,
+          "trackY": 915.28125,
+          "trackBottom": 921.28125,
+          "trackWidth": 330,
+          "labelY": 884.078125,
+          "color": "rgb(126, 201, 142)"
+        },
+        {
+          "label": "Leadership",
+          "value": "91",
+          "height": 62,
+          "trackY": 977.28125,
+          "trackBottom": 983.28125,
+          "trackWidth": 330,
+          "labelY": 946.078125,
+          "color": "rgb(151, 197, 131)"
+        }
+      ],
+      "commands": [
+        [
+          "close",
+          "[]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"overview\"]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"skills\"]",
+          false
+        ],
+        [
+          "draftPlayer",
+          "[41]",
+          false
+        ]
+      ],
+      "groups": [],
+      "panels": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "border": "0px"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "border": "0px"
+        }
+      ],
+      "buttons": [
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 161,
+          "h": 44
+        },
+        {
+          "w": 161,
+          "h": 44
+        },
+        {
+          "w": 166,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "kind": "after",
+      "name": "attributes",
+      "width": 320,
+      "overflow": false,
+      "rows": [
+        {
+          "label": "Against pace",
+          "value": "91",
+          "height": 62,
+          "trackY": 418.609375,
+          "trackBottom": 424.609375,
+          "trackWidth": 260,
+          "labelY": 387.40625,
+          "color": "rgb(151, 197, 131)"
+        },
+        {
+          "label": "Against spin",
+          "value": "89",
+          "height": 62,
+          "trackY": 480.609375,
+          "trackBottom": 486.609375,
+          "trackWidth": 260,
+          "labelY": 449.40625,
+          "color": "rgb(158, 195, 128)"
+        },
+        {
+          "label": "Shot control",
+          "value": "91",
+          "height": 62,
+          "trackY": 542.609375,
+          "trackBottom": 548.609375,
+          "trackWidth": 260,
+          "labelY": 511.40625,
+          "color": "rgb(151, 197, 131)"
+        },
+        {
+          "label": "Power hitting",
+          "value": "87",
+          "height": 62,
+          "trackY": 669,
+          "trackBottom": 675,
+          "trackWidth": 260,
+          "labelY": 637.796875,
+          "color": "rgb(164, 194, 125)"
+        },
+        {
+          "label": "Running between wickets",
+          "value": "88",
+          "height": 62,
+          "trackY": 731,
+          "trackBottom": 737,
+          "trackWidth": 260,
+          "labelY": 699.796875,
+          "color": "rgb(161, 195, 127)"
+        },
+        {
+          "label": "Finishing",
+          "value": "92",
+          "height": 62,
+          "trackY": 793,
+          "trackBottom": 799,
+          "trackWidth": 260,
+          "labelY": 761.796875,
+          "color": "rgb(148, 197, 132)"
+        },
+        {
+          "label": "Temperament",
+          "value": "99",
+          "height": 62,
+          "trackY": 919.390625,
+          "trackBottom": 925.390625,
+          "trackWidth": 260,
+          "labelY": 888.1875,
+          "color": "rgb(126, 201, 142)"
+        },
+        {
+          "label": "Leadership",
+          "value": "91",
+          "height": 62,
+          "trackY": 981.390625,
+          "trackBottom": 987.390625,
+          "trackWidth": 260,
+          "labelY": 950.1875,
+          "color": "rgb(151, 197, 131)"
+        }
+      ],
+      "commands": [
+        [
+          "close",
+          "[]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"overview\"]",
+          false
+        ],
+        [
+          "playerTab",
+          "[\"skills\"]",
+          false
+        ],
+        [
+          "draftPlayer",
+          "[41]",
+          false
+        ]
+      ],
+      "groups": [],
+      "panels": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "border": "0px"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "border": "0px"
+        }
+      ],
+      "buttons": [
+        {
+          "w": 44,
+          "h": 44
+        },
+        {
+          "w": 126,
+          "h": 44
+        },
+        {
+          "w": 126,
+          "h": 44
+        },
+        {
+          "w": 166,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "kind": "after",
+      "name": "menu",
+      "width": 1440,
+      "overflow": false,
+      "rows": [],
+      "commands": [
+        [
+          "archive",
+          "[]",
+          true
+        ],
+        [
+          "how",
+          "[]",
+          false
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false
+        ]
+      ],
+      "groups": [
+        "Your club",
+        "Game guide"
+      ],
+      "panels": [],
+      "buttons": [
+        {
+          "w": 265.21875,
+          "h": 44
+        },
+        {
+          "w": 265.21875,
+          "h": 44
+        },
+        {
+          "w": 265.21875,
+          "h": 44
+        },
+        {
+          "w": 265.21875,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "kind": "after",
+      "name": "menu",
+      "width": 768,
+      "overflow": false,
+      "rows": [],
+      "commands": [
+        [
+          "archive",
+          "[]",
+          true
+        ],
+        [
+          "how",
+          "[]",
+          false
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false
+        ]
+      ],
+      "groups": [
+        "Your club",
+        "Game guide"
+      ],
+      "panels": [],
+      "buttons": [
+        {
+          "w": 265.21875,
+          "h": 44
+        },
+        {
+          "w": 265.21875,
+          "h": 44
+        },
+        {
+          "w": 265.21875,
+          "h": 44
+        },
+        {
+          "w": 265.21875,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "kind": "after",
+      "name": "menu",
+      "width": 390,
+      "overflow": false,
+      "rows": [],
+      "commands": [
+        [
+          "archive",
+          "[]",
+          true
+        ],
+        [
+          "how",
+          "[]",
+          false
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false
+        ]
+      ],
+      "groups": [
+        "Your club",
+        "Game guide"
+      ],
+      "panels": [],
+      "buttons": [
+        {
+          "w": 265.21875,
+          "h": 44
+        },
+        {
+          "w": 265.21875,
+          "h": 44
+        },
+        {
+          "w": 265.21875,
+          "h": 44
+        },
+        {
+          "w": 265.21875,
+          "h": 44
+        }
+      ]
+    },
+    {
+      "kind": "after",
+      "name": "menu",
+      "width": 320,
+      "overflow": false,
+      "rows": [],
+      "commands": [
+        [
+          "archive",
+          "[]",
+          true
+        ],
+        [
+          "how",
+          "[]",
+          false
+        ],
+        [
+          "howItWorks",
+          "[]",
+          false
+        ],
+        [
+          "breakawayStory",
+          "[]",
+          false
+        ]
+      ],
+      "groups": [
+        "Your club",
+        "Game guide"
+      ],
+      "panels": [],
+      "buttons": [
+        {
+          "w": 265.21875,
+          "h": 44
+        },
+        {
+          "w": 265.21875,
+          "h": 44
+        },
+        {
+          "w": 265.21875,
+          "h": 44
+        },
+        {
+          "w": 265.21875,
+          "h": 44
+        }
+      ]
+    }
+  ],
+  "failures": [
+    "same actions/arguments/states scout-1440",
+    "same ratings/colours scout-1440",
+    "same actions/arguments/states scout-768",
+    "same ratings/colours scout-768",
+    "same actions/arguments/states scout-390",
+    "same ratings/colours scout-390",
+    "same actions/arguments/states scout-320",
+    "same ratings/colours scout-320",
+    "same actions/arguments/states attributes-1440",
+    "same ratings/colours attributes-1440",
+    "same actions/arguments/states attributes-768",
+    "same ratings/colours attributes-768",
+    "same actions/arguments/states attributes-390",
+    "same ratings/colours attributes-390",
+    "same actions/arguments/states attributes-320",
+    "same ratings/colours attributes-320"
+  ],
+  "scope": "Paired disposable draft scout/attribute/menu layout check, no user career",
+  "before_sha256": "bea762f6b2bf19850c5534a1c3546c46cdb1e75f965deedffea6bbc03c8e5f09",
+  "after_sha256": "3b9a6bf4650a16db408a20317eda78d451cdae8220d7b2873a47c731d5b9ae2c",
+  "status": "FAIL"
+}
