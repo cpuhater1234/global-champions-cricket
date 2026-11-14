@@ -2,7 +2,7 @@ name: GCC integrated career record and club flow
 on:
   push:
     branches: [work/v116-candidate-acceptance]
-    paths: ['.github/workflows/v116-career-integrated.yml', 'qa/v116_career_native.cjs']
+    paths: ['.github/workflows/v116-career-integrated.yml', 'qa/v116_career_native.cjs', 'qa/v116_club_flow_test.mjs', 'qa/v116_career_points_test.cjs']
 permissions:
   contents: write
 env:

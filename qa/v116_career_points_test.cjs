@@ -1,0 +1,10 @@
+const assert=require('node:assert/strict'),fs=require('fs'),vm=require('vm');
+const src=fs.readFileSync('v116/canonical/scripts/20-runtime.js','utf8'),start=src.indexOf('function careerPoints(d)'),end=src.indexOf('function managerScore()',start);assert(start>=0&&end>start,'pure career points model exists');const score=vm.runInNewContext('('+src.slice(start,end).trim()+')');
+const season=(year,wins=7,position=5,finish='none')=>({year,wins,played:14,userPosition:position,title:finish==='title',grandFinal:['title','runner'].includes(finish),finals:finish!=='none'});
+const d=history=>({history});const empty=score(d([]));assert.equal(empty.total,0);assert.equal(empty.rows.reduce((n,r)=>n+r.points,0),0);
+const one=score(d([season(2008,10,1,'title')]));assert.equal(one.total,84);assert.equal(score(d([season(2008,10,1,'runner')])).total,54);assert.equal(score(d([season(2008,10,1,'semi')])).total,42);
+const two=score(d([season(2008,10,1,'title'),season(2009,10,1,'title')]));assert.equal(two.total,180);assert.equal(two.rows.reduce((n,r)=>n+r.points,0),two.total);assert.equal(score(d([season(2008,10,1,'title'),season(2010,10,1,'title')])).total,168);
+const dominant=Array.from({length:19},(_,i)=>season(2008+i,14,1,'title'));assert(score(d(dominant)).total>1000,'no hard1000cap');assert(score(d(dominant)).total>score(d(dominant.slice(0,18))).total);
+assert.equal(score(d([season(2008),season(2008)])).total,score(d([season(2008)])).total,'duplicate years not counted twice');assert.equal(score(d([season(2007),season(2027)])).total,0,'outside career excluded');assert.equal(score(d([{...season(2008),wins:-3}])).total,0);
+const raw=JSON.stringify(dominant);score(d(dominant));assert.equal(JSON.stringify(dominant),raw,'read-only');assert.equal(score({...d([season(2008)]),playerCareer:{1:{runs:999999,wickets:99999}}}).total,score(d([season(2008)])).total,'player stats cannot farm points');
+console.log('PASS career points: sum, weights, progress,1000+, duplicates, bounds, purity and no stat farming');
