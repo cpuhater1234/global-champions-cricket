@@ -395,7 +395,7 @@
 :is(#g8dialog,#g8app) .g8simpleanalysis .g8analysissection{display:block;padding:0!important;background:transparent!important;border:0!important;border-radius:0;box-shadow:none}
 :is(#g8dialog,#g8app) .g8simpleanalysis .g8analysissection h3{justify-content:flex-start;margin:0 0 6px;padding:0 0 8px!important;border:0!important;font-size:15px!important;text-align:left;font-style:normal}
 
-:is(#g8dialog,#g8app) .g8simpleanalysis .g8analysisgrid{grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:20px;align-items:start}
+:is(#g8dialog,#g8app) .g8simpleanalysis .g8analysisgrid{grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:20px;align-items:start}
 :is(#g8dialog,#g8app) .g8simpleanalysis .g8analysistiles{grid-template-columns:minmax(0,1fr);grid-template-rows:none;grid-auto-rows:auto;height:auto;gap:0}
 :is(#g8dialog,#g8app) .g8simpleanalysis .g8analysisrow{flex-direction:row;align-items:center;justify-content:space-between;min-height:44px;padding:8px 0!important;gap:12px;text-align:left;background:transparent!important;border:0!important;border-bottom:1px solid var(--gcc-line)!important;border-radius:0!important}
 :is(#g8dialog,#g8app) .g8simpleanalysis .g8analysisrow>span{justify-content:flex-start;min-height:0;flex:1}

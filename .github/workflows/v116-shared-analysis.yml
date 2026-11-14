@@ -7,7 +7,7 @@ permissions:
   contents: write
 env:
   # Exact six-background match-surface candidate.
-  CANDIDATE_SHA256: 7b063ff02c92648377cfb7ec83f02e1e3fda5292336931947dd1c60807c51744
+  CANDIDATE_SHA256: a522817bd41de2a1153e62c9701bf415cd5a4e773f265bf43ba1979ccc8620d5
 concurrency:
   group: gcc-shared-analysis
   cancel-in-progress: true
@@ -66,6 +66,7 @@ jobs:
           GCC8_BROWSER_CAREER_DIR: qa/results/whole-ui-career
         run: |
           GCC8_CHROMIUM="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')" node qa/v116_shared_analysis_native.cjs
+          node qa/v116_draft_rating_strip_native.cjs
       - name: Preserve diagnostic evidence
         if: always()
         run: |
@@ -78,6 +79,9 @@ jobs:
               folder=dst if f.name=='manifest.json' else dst/(f.name[:4] if f.name[:4].isdigit() else 'foundation');folder.mkdir(parents=True,exist_ok=True);shutil.copyfile(f,folder/f.name)
           for f in src.glob('*.png'):
               folder=dst/(f.name[:4] if f.name[:4].isdigit() else 'foundation');folder.mkdir(parents=True,exist_ok=True);Image.open(f).convert('RGB').save(folder/f.with_suffix('.jpg').name,quality=88,optimize=True)
+          src=Path('qa/results/draft-ratings-native');folder=dst/'draft-cards';folder.mkdir(parents=True,exist_ok=True)
+          for f in src.glob('*.json'):shutil.copyfile(f,folder/f.name)
+          for f in src.glob('*.png'):Image.open(f).convert('RGB').save(folder/f.with_suffix('.jpg').name,quality=88,optimize=True)
           SAVE
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
