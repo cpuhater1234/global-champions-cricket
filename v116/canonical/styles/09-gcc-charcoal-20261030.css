@@ -270,7 +270,7 @@ html body,#g8app{background-color:var(--gcc-ground)!important;color:var(--gcc-te
 #g8dialog[data-prompt=club] .g8clubbrief .g8conditionread strong{font-size:12px;line-height:1.35;font-weight:400;color:var(--gcc-muted)}
 #g8dialog[data-prompt=club] .g8clubbrief .g8conditiongauge{grid-column:2;grid-row:1;align-self:end;width:100%;height:6px;margin:0;border:0;border-radius:3px;min-width:0}
 #g8dialog[data-prompt=club] .g8clubbrief .g8conditiongauge>span{top:-3px;height:12px}
-#g8dialog[data-prompt=club] .g8clubbrief .g8conditionends{grid-column:2;grid-row:2;display:flex;justify-content:space-between;gap:2px;margin:0;font-size:10px;line-height:1.3;color:var(--gcc-muted)}
+#g8dialog[data-prompt=club] .g8clubbrief .g8conditionends{grid-column:2;grid-row:2;display:flex;justify-content:space-between;gap:2px;margin:0;font-size:11px;line-height:1.4;color:var(--gcc-muted)}
 #g8dialog[data-prompt=club] .g8clubbrief .g8conditionends>span{font-size:inherit;white-space:nowrap}
 #g8dialog[data-prompt=club] .g8clubpriorities{display:flex;flex-direction:column;justify-content:start;gap:0;list-style:none;margin:0;padding:0;min-height:0}
 #g8dialog[data-prompt=club] .g8clubpriorities>li{display:grid;grid-template-columns:18px minmax(0,1fr);align-items:start;gap:8px;flex:none;margin:0;padding:12px 0;border:0;border-bottom:1px solid var(--gcc-line);background:none;min-width:0}
