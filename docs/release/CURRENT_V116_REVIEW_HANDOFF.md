@@ -1,5 +1,11 @@
 # Current v116 review candidate handoff
 
+## Latest combined interface review, 14 November 2026
+
+GCC_v116_Interface_Review.html, SHA-256 0a1c8a2a8ba09bfdb2385aa20e085b53638854ef297fdfb55819e90ec9269c46, 6,665,551 bytes. Includes all prior career-record/club-card work plus club-guide ownership cleanup, shared player scout/attribute rating spacing, transparent nested rating wrappers, and Your club/Game guide utility-menu sections. Guide run43587359397 passed32paired states; final ratings/menu run43588418168 passed24paired states at four widths, zero failures. Final mobile captures inspected. See [club guide](V116_CLUB_GUIDE_REVIEW.md) and [ratings/menu](V116_RATINGS_MENU_REVIEW.md). Relative to Club Cards Review only CSS09/10/31 and runtime29 header-menu markup differ;21other runtime bodies byte-identical. Frozen v116/main untouched, unpromoted. Club Cards Review remains rollback.
+
+Remaining visual work is not certified complete: inspect other grouped-rating contexts (draft cards, comparisons, XI/team balance and phase groups), and review the content organisation inside the How to play/How it works dialogs separately from the now-grouped utility dropdown. User reports faint fills/tight bars across game; continue tracing real winning CSS before edits, not adding blanket global overrides. Existing17stylesheets still retain historical rules; no claim of global consolidation.
+
 ## Delivered compact club cards, 14 November 2026
 
 GCC_v116_Club_Cards_Review.html: 4b167b19fe092c28f4183497a7522072f289812955890228e37b2a7fa550e01e, 6,671,554 bytes. Builds on Career Record Review. Club cards use compact icon/short-ground-name rows; trait paragraph removed from cards, full details remain in guide. Removed conflicting owner31 ground panel rule; existing owner10 owns row. Native run 43585943796 passed eight grid states/four widths plus guide checks. All phone ground rows 44px, aligned bottom spacing, no failures. Mobile/desktop/tablet captures inspected. Only CSS10/31 and card renderer27 differ; 21 other runtime bodies unchanged. See [club-card review](V116_CLUB_CARD_GROUNDS_REVIEW.md). Not promoted; prior Career Record Review is rollback.
