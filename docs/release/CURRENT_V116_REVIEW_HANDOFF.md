@@ -1,5 +1,9 @@
 # Current v116 review candidate handoff
 
+## Delivered compact club cards, 14 November 2026
+
+GCC_v116_Club_Cards_Review.html: 4b167b19fe092c28f4183497a7522072f289812955890228e37b2a7fa550e01e, 6,671,554 bytes. Builds on Career Record Review. Club cards use compact icon/short-ground-name rows; trait paragraph removed from cards, full details remain in guide. Removed conflicting owner31 ground panel rule; existing owner10 owns row. Native run 43585943796 passed eight grid states/four widths plus guide checks. All phone ground rows 44px, aligned bottom spacing, no failures. Mobile/desktop/tablet captures inspected. Only CSS10/31 and card renderer27 differ; 21 other runtime bodies unchanged. See [club-card review](V116_CLUB_CARD_GROUNDS_REVIEW.md). Not promoted; prior Career Record Review is rollback.
+
 ## Delivered career-record review, 14 November 2026
 
 GCC_v116_Career_Record_Review.html, SHA-256 32d28ef2b6e59b150e6f7319dd85199772a238aa966fc9fe2ad52aa8c18fd800, 6,671,221 bytes. Integrates approved uncapped career points/club-only records/honours and automatic eight-club reveal completion with latest verified analysis UI. Native run 43585178498: 20 states, 55 checks, zero failures. Ending reload/ledger preservation, timed/manual/skip/restored reveal, focus and retained club/draft confirmations verified. Mobile and desktop ending rasters inspected; phone word breaks/venue fill corrected before delivery. See [integration review](V116_CAREER_INTEGRATED_REVIEW.md). Review only, not stable. Frozen v116/main untouched. Accounts/global rankings not implemented; 1000+ rarity uncalibrated. Deferred record-display choices: alphabetical tied leader; Best season uses title then wins. Previous Secondary Review remains rollback.
