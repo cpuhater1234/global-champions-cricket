@@ -1,5 +1,13 @@
 # Current v116 review candidate handoff
 
+## Current Squad Decisions review bundle, 15 November 2026
+
+New download GCC_v116_Squad_Decisions_Review.html, SHA-25654f140e0e590b2d26f924f96437d8549afe2bb944beb9748ca8b5f4e797d18e6,6,674,433bytes. Delivered file libfile_ba2bdc83c30481919792ff0a4bdce2ef. Bundles selected trade-player summary cleanup and squad retention/release prompt cleanup below. Opened tab still Trade Surfaces ca504e3e until user downloads/opens this file. Keep that prior downloaded build as rollback. No new source changes for packaging; fresh rebuild exactly matches verified54f candidate. All22 scripts unchanged from ca504e3e. Candidate remains unpromoted; frozen v116/main/perf untouched.
+
+Evidence is scoped:24 paired selected-player states on51b (run43708285088), then24 exact54f squad-decision states including real cancellation/release/draw and focus/layout (run43709887537). Do not describe this as48 newly rerun exact-bundle states. Later CSS changes are confined to separate prompt selectors/exclusions. [Bundle record](V116_SQUAD_DECISIONS_BUNDLE.md). Broader engine/storage acceptance not repeated.
+
+Next: user opens/reviews bundle, then bounded remaining-component audit. Source-only check found draftComplete still listed as a layout marker while completeDraft transitions directly to the team room; no deletion made from grep alone. Legacy finalCut remains unmodified/unverified. Cline's separate local gameplay-authenticity file still has reported prefix corruption; no observed syntax/runtime success or commit, and no modification to that unseen file here.
+
 ## Staged squad decision dialogs, 15 November 2026
 
 Latest staged source54f140e0e590b2d26f924f96437d8549afe2bb944beb9748ca8b5f4e797d18e6,6,674,433bytes, includes prior selected trade-player cleanup. User-opened build remains Trade Surfaces ca504e3e. No new download or promotion; frozen v116/main/perf untouched.
