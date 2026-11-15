@@ -1,0 +1,57 @@
+name: GCC saved-career confirmation
+on:
+  push:
+    branches: [work/v116-candidate-acceptance]
+    paths: ['.github/workflows/v116-fresh-dialog.yml', 'qa/v116_fresh_dialog_native.cjs', 'qa/v116_fresh_dialog_guard.py']
+permissions:
+  contents: read
+env:
+  CANDIDATE_SHA256: c3b669679378535d4b5f0de8e9e182d6c74c97448ad467c285c7207b742336c1
+jobs:
+  acceptance:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build exact candidate and base
+        run: |
+          mkdir -p /tmp/trade-before
+          git archive 3c6b7205099e7ab04555404182453afc460467ef v116/canonical | tar -x -C /tmp/trade-before
+          python qa/v116_canonical_source.py build --source /tmp/trade-before/v116/canonical --allow-runtime-changes --output qa/results/trade-before.html
+          python qa/v116_canonical_source.py build --source v116/canonical --allow-runtime-changes --output qa/results/trade-candidate.html --report qa/results/trade-gate-build.json
+          python qa/v116_fresh_dialog_guard.py --before qa/results/trade-before.html --after qa/results/trade-candidate.html
+          python qa/v116_engine_integrity.py --source v116/canonical --html qa/results/trade-candidate.html --self-test --report qa/results/trade-gate-pins.json
+      - uses: actions/cache/restore@v4
+        with:
+          path: qa/results/whole-ui-career
+          key: gcc-ui-career-79a2fbfe-seed101-v1-${{ hashFiles('qa/structural-risk/career-run.mjs', 'qa/offline_game_host.mjs') }}
+          restore-keys: gcc-ui-career-79a2fbfe-seed101-v1-
+      - name: Install native browser
+        run: |
+          if [ -f /etc/apt/apt-mirrors.txt ]; then
+            sudo sed -i 's|http://azure.archive.ubuntu.com/ubuntu|https://archive.ubuntu.com/ubuntu|g' /etc/apt/apt-mirrors.txt
+          fi
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+      - name: Check native review, keyboard and accepted result
+        env:
+          GCC8_TEST_BUILD: qa/results/trade-candidate.html
+          GCC8_BASELINE_BUILD: qa/results/trade-before.html
+          GCC8_BROWSER_CAREER_DIR: qa/results/whole-ui-career
+        run: node qa/v116_fresh_dialog_native.cjs
+      - name: Upload evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fresh-dialog
+          path: |
+            qa/results/trade-gate-*.json
+            qa/results/fresh-dialog-native

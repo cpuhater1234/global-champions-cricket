@@ -1120,19 +1120,19 @@ html:has(#g8dialog[open]){overflow:hidden}
 #g8dialog:is([data-prompt=tradeComplete],[data-prompt=tradeResult],[data-prompt=release]) .g8consequences>div>strong{font:600 18px/1.4 var(--vx-body)!important;color:var(--gcc-text)!important;text-transform:none!important;overflow-wrap:normal!important;word-break:normal!important;min-width:0}
 @media(max-width:480px){#g8dialog:is([data-prompt=tradeComplete],[data-prompt=tradeResult],[data-prompt=release]) .g8consequences>div{grid-template-columns:minmax(0,1fr);gap:4px}}
 /* Retention and release decisions read as short, aligned squad instructions. */
-#g8dialog:is([data-prompt=listReview],[data-prompt=release]) .g8modalhead{grid-template-columns:minmax(0,1fr) 44px!important;text-align:left!important}
-#g8dialog:is([data-prompt=listReview],[data-prompt=release]) .g8modalhead::before{display:none!important}
-#g8dialog:is([data-prompt=listReview],[data-prompt=release]) .g8modalhead>div{grid-column:1!important;text-align:left!important}
-#g8dialog:is([data-prompt=listReview],[data-prompt=release]) .g8modalhead h2{text-align:left!important}
-#g8dialog:is([data-prompt=listReview],[data-prompt=release]) .g8dialogclose{grid-column:2!important;position:static!important}
-#g8dialog:is([data-prompt=listReview],[data-prompt=release]) .g8modalbody>p{text-align:left!important;font-size:14px!important;line-height:1.55!important;max-width:none!important;margin:0 0 12px!important}
+#g8dialog:is([data-prompt=listReview],[data-prompt=release],[data-prompt=fresh]) .g8modalhead{grid-template-columns:minmax(0,1fr) 44px!important;text-align:left!important}
+#g8dialog:is([data-prompt=listReview],[data-prompt=release],[data-prompt=fresh]) .g8modalhead::before{display:none!important}
+#g8dialog:is([data-prompt=listReview],[data-prompt=release],[data-prompt=fresh]) .g8modalhead>div{grid-column:1!important;text-align:left!important}
+#g8dialog:is([data-prompt=listReview],[data-prompt=release],[data-prompt=fresh]) .g8modalhead h2{text-align:left!important}
+#g8dialog:is([data-prompt=listReview],[data-prompt=release],[data-prompt=fresh]) .g8dialogclose{grid-column:2!important;position:static!important}
+#g8dialog:is([data-prompt=listReview],[data-prompt=release],[data-prompt=fresh]) .g8modalbody>p{text-align:left!important;font-size:14px!important;line-height:1.55!important;max-width:none!important;margin:0 0 12px!important}
 #g8dialog[data-prompt=listReview] .g8rulenote{background:transparent!important;border:0!important;border-block:1px solid var(--gcc-line)!important;border-radius:0!important;box-shadow:none!important;margin:12px 0!important;padding:12px 0!important}
 #g8dialog[data-prompt=listReview] .g8rulenote>strong{font:600 15px/1.5 var(--vx-body)!important}
 #g8dialog[data-prompt=listReview] .g8rulenote>p{font:400 14px/1.55 var(--vx-body)!important;margin:6px 0 0!important}
 #g8dialog[data-prompt=release] .g8consequences{text-align:left!important}
 #g8dialog[data-prompt=release] .g8consequences strong{font-variant-numeric:tabular-nums;white-space:nowrap!important}
-#g8dialog:is([data-prompt=listReview],[data-prompt=release]) .g8modalbody>.g8actions:last-child{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;align-items:stretch!important;gap:10px!important;margin:14px 0 0!important}
-@media(max-width:480px){#g8dialog:is([data-prompt=listReview],[data-prompt=release]) .g8modalbody>.g8actions:last-child{grid-template-columns:minmax(0,1fr)!important}}
+#g8dialog:is([data-prompt=listReview],[data-prompt=release],[data-prompt=fresh]) .g8modalbody>.g8actions:last-child{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;align-items:stretch!important;gap:10px!important;margin:14px 0 0!important}
+@media(max-width:480px){#g8dialog:is([data-prompt=listReview],[data-prompt=release],[data-prompt=fresh]) .g8modalbody>.g8actions:last-child{grid-template-columns:minmax(0,1fr)!important}}
 /* Temporary injury cover uses readable player summaries, not draft-era slabs. */
 #g8dialog[data-prompt=cover] .g8board{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important;align-items:stretch}
 #g8dialog[data-prompt=cover] .g8board>.g8player{display:flex;flex-direction:column;gap:8px;min-width:0;min-height:0!important;height:auto!important;margin:0!important;padding:12px!important;background:var(--gcc-panel)!important;border:1px solid var(--gcc-line)!important;border-radius:6px!important;box-shadow:none!important}
