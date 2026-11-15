@@ -30,7 +30,7 @@ For the reviewed wording differential, first build the previous source snapshot,
 node qa/v116_integrity.mjs --baseline previous.html
 ```
 
-The ten-change copy guard is specific to the a4743f84 baseline and e58d2b82 candidate. Do not apply that historical differential to later unrelated UI work. Optional full career coverage is explicit rather than repeated by default:
+The ten-change copy guard is historical and specific to the a4743f84 baseline and e58d2b82 candidate. Do not apply that historical differential to later UI work, including the trade-review gate candidate. Run the default suite without --baseline for current source; use the separate trade-review commands in docs/release/V116_TRADE_REVIEW_GATE.md for that differential. Optional full career coverage is explicit rather than repeated by default:
 
 ```sh
 node qa/v116_integrity.mjs --full-career
@@ -54,3 +54,5 @@ Pins live in `qa/fixtures/v116_engine_pins.json`. There is deliberately no autom
 - `captaincy_layer_v116.py` is a native save/reload smoke test. Its default hash is frozen; a current candidate requires `--no-hash-check` plus separately verified exact candidate identity.
 
 The career fixture driver now skips its obsolete Choose club action when the automatic transition has already happened. No game rules or assertions were removed.
+
+Current pin revision: trade-review candidate 4410cf19. Only owners26/29 were repinned after three exact reviewed presentation/controller replacements; all nine remaining owner hashes retained. See docs/release/V116_TRADE_REVIEW_GATE.md.

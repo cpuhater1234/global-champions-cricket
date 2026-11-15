@@ -1,8 +1,8 @@
-"""Prove the complete HTML differs only by reviewed, exact copy substitutions."""
+"""Prove the complete HTML differs only by reviewed, exact substitutions."""
 import argparse,json,re
 from pathlib import Path
-p=argparse.ArgumentParser(description=__doc__);p.add_argument('--before',type=Path,required=True);p.add_argument('--after',type=Path,required=True);a=p.parse_args()
-pairs=json.loads((Path(__file__).parent/'v116_copy_replacements.json').read_text())
+p=argparse.ArgumentParser(description=__doc__);p.add_argument('--before',type=Path,required=True);p.add_argument('--after',type=Path,required=True);p.add_argument('--replacements',type=Path,default=Path(__file__).parent/'v116_copy_replacements.json');a=p.parse_args()
+pairs=json.loads(a.replacements.read_text())
 changes={int(k[:2]):v for k,v in pairs.items()};raw=a.before.read_bytes();blocks=list(re.finditer(rb'<(style|script)\b([^>]*)>(.*?)</\1\s*>',raw,re.I|re.S));assert len(blocks)==39
 expected=bytearray();cursor=0;count=0
 for i,m in enumerate(blocks):
@@ -13,5 +13,5 @@ for i,m in enumerate(blocks):
    assert body.count(old.encode())==1,(i,old)
    body=body.replace(old.encode(),new.encode());count+=1
  expected.extend(raw[cursor:m.start(3)]);expected.extend(body);cursor=m.end(3)
-expected.extend(raw[cursor:]);assert bytes(expected)==a.after.read_bytes(),'Unapproved change outside exact copy replacements'
-print(json.dumps(dict(status='PASS',copy_replacements=count,changed_script_owners=sorted(changes),all_other_bytes_identical=True)))
+expected.extend(raw[cursor:]);assert bytes(expected)==a.after.read_bytes(),'Unapproved change outside exact reviewed replacements'
+print(json.dumps(dict(status='PASS',reviewed_replacements=count,changed_script_owners=sorted(changes),all_other_bytes_identical=True)))

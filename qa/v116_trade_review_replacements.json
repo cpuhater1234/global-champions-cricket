@@ -1,0 +1,18 @@
+{
+  "26-runtime.js": [
+    [
+      "A previous commitment was not met",
+      "A previous promise was not kept"
+    ]
+  ],
+  "29-runtime.js": [
+    [
+      "btn('Confirm and send offer','confirmTrade',[],'g8primary')",
+      "btn('Confirm and send offer','confirmTrade',[],'g8primary',!!read.packageProblem(deal))"
+    ],
+    [
+      "assert(JSON.stringify(deal)===JSON.stringify(tradeDeal())&&tradeValid(),'The package changed. Review the trade again.');ui.tradeReview=null;",
+      "assert(JSON.stringify(deal)===JSON.stringify(tradeDeal())&&tradeValid(),'The package changed. Review the trade again.');const problem=read.packageProblem(deal);assert(!problem,problem);ui.tradeReview=null;"
+    ]
+  ]
+}

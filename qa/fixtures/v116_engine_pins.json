@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "baseline_candidate_sha256": "e58d2b82eb88f5e118b0c676365c9d1f9a9953c27b60c3643fc0d889400dc171",
+  "baseline_candidate_sha256": "4410cf1969981e0ac7d8fe00c452628d63fc5b307928051e7c4c5c12f9ad5098",
   "scope": "Exact critical core/data/AI/dynasty/management/controller owner bytes. Owners26/29 deliberately include presentation, so reviewed copy changes also require explicit pin review. Not empirical calibration or native persistence certification.",
   "files": [
     {
@@ -60,13 +60,13 @@
     {
       "path": "scripts/26-runtime.js",
       "block_index": 26,
-      "sha256": "8dcce5866924aca91cacba1a9f96ab530e457d8c2cb2c47fd9316f5a5df0c120",
+      "sha256": "db3c2ec4c78aa39216809f11f8dd900e53f0e5c6f2f71db9af78f54aad605d9f",
       "role": "management decisions and connected presentation"
     },
     {
       "path": "scripts/29-runtime.js",
       "block_index": 29,
-      "sha256": "bb4776528a8245c5bf957f022d4f0816fedb3c1bd7ecab4d5bc16974211ebd77",
+      "sha256": "9f2289b1b65e9b0252ad32a70603d3d3028a19c641aae7e1582df8ede89474d1",
       "role": "controller bindings and connected presentation"
     }
   ]
