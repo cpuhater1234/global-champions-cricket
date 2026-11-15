@@ -496,9 +496,8 @@
 #g8app#g8app#g8app .g8seasonread{color:var(--gcc-muted)}
 
 /* 21 ─ Squad / XI rows */
-#g8app#g8app #g8stage .gccuiBenchRow,#g8app#g8app #g8stage .gccuiOrderRow{transition:background .15s,box-shadow .15s}
-#g8app#g8app #g8stage .gccuiBenchRow:hover,#g8app#g8app #g8stage .gccuiOrderRow:hover{background:rgba(255,255,255,.06)!important;
-  box-shadow:inset 3px 0 var(--vx-glow)}
+#g8app#g8app #g8stage .gccuiBenchRow,#g8app#g8app #g8stage .gccuiOrderRow{transition:box-shadow .15s}
+#g8app#g8app #g8stage .gccuiBenchRow:hover,#g8app#g8app #g8stage .gccuiOrderRow:hover{box-shadow:inset 3px 0 var(--vx-glow)}
 #g8app#g8app #g8stage .gccuiOverall strong,#g8app#g8app #g8stage .gccuiOrderRow .gccuiRating,#g8app#g8app #g8stage .gccuiBenchRow .gccuiRating{
   font-family:var(--vx-display)!important;font-size:1.9rem!important;font-weight:800;line-height:1}
 #g8app#g8app #g8stage .gccuiOrderNumber{font-family:var(--vx-display)!important;font-size:1.5rem;font-weight:700;color:var(--vx-ink)}

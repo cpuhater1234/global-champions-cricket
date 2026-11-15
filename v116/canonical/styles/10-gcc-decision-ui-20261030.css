@@ -104,8 +104,7 @@
 #g8app .gccuiSelectionGrid>.gccuiXI{grid-area:xi}
 #g8app .gccuiSelectionGrid>.gccuiTeamDetails{grid-area:details}
 #g8app .gccui .gccuiOrder{list-style:none;padding:0!important;display:block}
-#g8app .gccui .gccuiOrderRow{display:grid;grid-template-columns:28px minmax(0,1fr) 36px auto;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--ui-rule);background:var(--gcc-panel);min-height:90px}
-#g8app .gccui .gccuiOrderRow:nth-child(even),#g8app .gccui .gccuiBenchRow:nth-child(even){background:var(--gcc-raised)}
+#g8app .gccui .gccuiOrderRow{display:grid;grid-template-columns:28px minmax(0,1fr) 36px auto;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--ui-rule);background:transparent;min-height:90px}
 #g8app .gccui .gccuiOrderNumber{font-size:15px;font-weight:700;text-align:center;color:var(--ui-muted);font-variant-numeric:tabular-nums}
 #g8app .gccui .gccuiRosterName{display:flex;flex-direction:column;gap:6px;text-align:left;color:var(--ui-text);background:transparent;border:0;padding:0;min-width:0;cursor:pointer;width:100%}
 #g8app .gccui .gccuiRosterName b{font-size:15px;line-height:1.25;overflow-wrap:anywhere;font-weight:700}
@@ -115,7 +114,7 @@
 #g8app .gccui .gccuiArrows{display:flex;gap:8px}
 #g8app .gccui .gccuiArrows .g8button{padding:8px!important;min-width:44px;width:44px;min-height:44px}
 #g8app .gccui .gccuiOrderRow>.gccuiRating,#g8app .gccui .gccuiBenchRow>.gccuiRating{font-size:22px}
-#g8app .gccui .gccuiBenchRow{display:grid;grid-template-columns:24px minmax(0,1fr) 36px auto;gap:12px;align-items:center;min-height:90px;padding:14px 16px;border-bottom:1px solid var(--ui-rule);background:var(--gcc-panel)}
+#g8app .gccui .gccuiBenchRow{display:grid;grid-template-columns:24px minmax(0,1fr) 36px auto;gap:12px;align-items:center;min-height:90px;padding:14px 16px;border-bottom:1px solid var(--ui-rule);background:transparent}
 #g8app .gccui .gccuiRoleIcon{color:var(--ui-muted)}
 #g8app .gccui .gccuiOrderHint{padding:14px 20px;border-bottom:1px solid var(--ui-rule);font-size:12px;color:var(--ui-muted)}
 #g8app .gccui .gccuiOrderTools{padding:16px}
