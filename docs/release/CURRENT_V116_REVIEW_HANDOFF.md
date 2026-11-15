@@ -1,5 +1,15 @@
 # Current v116 review candidate handoff
 
+## Staged selected trade-player summaries, 15 November 2026
+
+User confirmed Trade Surfaces ca504e3e open. Staged source51b12abf41677fe3c86d6f484fda173d983b49b3989956936553d83c33fc5a37,6,672,181bytes. No standalone download; opened build remains ca504e3e. Unpromoted; frozen v116/main/perf untouched.
+
+Existing owner10 now owns plain selected trade-player summaries:16px body names/rating,13px role/facts,44px Scout. Owner31 excludes their paint and names from both shared heading rules. Only CSS10/31 differ; all22 scripts and every other HTML byte identical to ca504e3e. Engine pins unchanged and source/embedded negative probes pass.
+
+[Final run43708285088](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/43708285088) PASS24 paired captures across one-pair/two-pair/Scout return at1440/768/390/320; zero failures. All text/options/selections/actions/disabled states retained; actual Scout roundtrip retains selections, roster/XI/year/round/transactions unchanged. Computed plain paint/body fonts verified; no measured text clipping or horizontal overflow,44px controls. Summaries save71.6px atdesktop and116.8–122.9px at320. Desktop/320px screenshots inspected. Artifact14158784522 retains captures subject to retention. Diagnostic43708078937 caught the second shared heading rule before final correction. [Review](V116_TRADE_PLAYER_SUMMARIES_REVIEW.md), [report](V116_TRADE_PLAYER_SUMMARIES_NATIVE_REPORT.json). Broad engine acceptance not repeated for identical scripts; not universal keyboard/browser/storage certification.
+
+Live browser discovered current Trade Surfaces URL, but claim/inspection returnedHTTP401; no user-career interactions. Evidence uses disposable native contexts. Next: continue bounded component audit and bundle staged CSS with the next substantive review.
+
 ## Current Trade Surfaces review bundle, 15 November 2026
 
 Playable review: GCC_v116_Trade_Surfaces_Review.html, SHA-256ca504e3e20d3594913fa1ca44e1800e8a069aeb0771124c80ba5583ef5c4f9ff,6,670,100bytes. Bundles e58d terminology,4410 trade-confirmation guard and current visual ownership/deduplication pass. Saved review file libfile_42de9fd9d4888191b1c91f18349c7913. User's currently open tab still points to Matchday Details a4743f84 until they download/open this review; do not claim the live tab updated. That prior delivered build remains rollback. Unpromoted; frozen v116/main/perf untouched.
