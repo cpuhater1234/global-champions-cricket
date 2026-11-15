@@ -1,5 +1,15 @@
 # Current v116 review candidate handoff
 
+## Current Trade Surfaces review bundle, 15 November 2026
+
+Playable review: GCC_v116_Trade_Surfaces_Review.html, SHA-256ca504e3e20d3594913fa1ca44e1800e8a069aeb0771124c80ba5583ef5c4f9ff,6,670,100bytes. Bundles e58d terminology,4410 trade-confirmation guard and current visual ownership/deduplication pass. Saved review file libfile_42de9fd9d4888191b1c91f18349c7913. User's currently open tab still points to Matchday Details a4743f84 until they download/open this review; do not claim the live tab updated. That prior delivered build remains rollback. Unpromoted; frozen v116/main/perf untouched.
+
+Confirmed cascade conflict: shared owner31 triple-ID dialog rule repainted tradeReview's impact component after owner10 made it plain. Generic owner31 now excludes that component and trade result consequence rows; owner10 owns them. Two obsolete result notice fill rules removed from owner01. Runtime29 only omits the redundant short keeper warning when the full engine keeper reason is already shown. Exact guard:CSS01/10/31 and one render condition;21 other scripts/all remaining bytes identical to4410. Only owner29 pin explicitly updated; ten other pins retained. Trade validation/valuation/counters/simulation unchanged.
+
+[Run43706421582](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/43706421582) PASS:32 paired states at1440/768/390/320, blocked/legal review plus real accepted/declined results. Actions/text except duplicate sentence/values preserved; paint assertions prove plain impact/status/rows and18px result names. Blocked/accepted/declined critical career-state checks pass; focused enabled actions visible; no horizontal overflow or sub44px captured controls. At320px blocked readout saves103.6px and legal readout29.8px.320px blocked/accepted/declined and1440px accepted viewports inspected. Artifact14158875589 retains screenshots subject to retention. Core pins/mutation probes, exact source guard, management differential and accepted-trade VM differential pass. Broad season/native storage acceptance not repeated. [Review](V116_TRADE_SURFACES_REVIEW.md), [native report](V116_TRADE_SURFACES_NATIVE_REPORT.json).
+
+Next: user visual review of bundled build, then resume bounded audit of remaining components. No claim of whole-game visual completion or universal browser/storage certification.
+
 ## Staged trade-review gate, 15 November 2026
 
 Latest staged canonical candidate:4410cf1969981e0ac7d8fe00c452628d63fc5b307928051e7c4c5c12f9ad5098 (6,667,664bytes), on top of e58d copy pass below. Opened/downloaded build stays Matchday Details Review a4743f84; no separate download or stable promotion. Frozen v116/main/perf branch remain untouched.

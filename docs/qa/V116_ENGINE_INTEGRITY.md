@@ -56,3 +56,5 @@ Pins live in `qa/fixtures/v116_engine_pins.json`. There is deliberately no autom
 The career fixture driver now skips its obsolete Choose club action when the automatic transition has already happened. No game rules or assertions were removed.
 
 Current pin revision: trade-review candidate 4410cf19. Only owners26/29 were repinned after three exact reviewed presentation/controller replacements; all nine remaining owner hashes retained. See docs/release/V116_TRADE_REVIEW_GATE.md.
+
+Latest pin revision: Trade Surfaces ca504e3e. Owner29 repinned for one duplicate-warning display condition; other ten pins retained. Default integrity command remains valid; historical --baseline copy guard remains scoped to its documented old pair.
