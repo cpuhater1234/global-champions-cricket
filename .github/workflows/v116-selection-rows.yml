@@ -7,7 +7,7 @@ permissions:
   contents: read
 env:
   # Exact selection-row CSS-only candidate.
-  CANDIDATE_SHA256: 9b9b7550c88b33220e26d419b10773e312cf8279eedd408eb71170691e3ff1e7
+  CANDIDATE_SHA256: 76abca374125bf6b55464905f91983a2ba24563b420f064a000a48c858c0e0c9
 concurrency:
   group: gcc-selection-rows
   cancel-in-progress: true
