@@ -1,0 +1,5 @@
+const fs=require('fs'),assert=require('node:assert/strict');
+const before=JSON.parse(fs.readFileSync('qa/results/scorebook-before/report.json')),after=JSON.parse(fs.readFileSync('qa/results/scorebook-native/report.json'));
+assert.equal(before.status,'PASS');assert.equal(after.status,'PASS');assert.equal(before.states.length,4);assert.equal(after.states.length,4);
+const comparisons=after.states.map((s,i)=>{const b=before.states[i];assert.equal(s.width,b.width);assert.equal(s.text,b.text);assert.deepEqual(s.rows.map(r=>r.map(c=>c.text)),b.rows.map(r=>r.map(c=>c.text)));assert(s.table.height<b.table.height,'record table must become shorter');return {width:s.width,rows:s.rows.length-1,beforeHeight:b.table.height,afterHeight:s.table.height,savedHeight:b.table.height-s.table.height}});
+const report={status:'PASS',before:before.sha256,after:after.sha256,comparisons,scope:'Exact records and four-width density comparison; no gameplay changes'};fs.writeFileSync('qa/results/scorebook-comparison.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report));

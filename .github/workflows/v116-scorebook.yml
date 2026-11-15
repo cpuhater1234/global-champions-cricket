@@ -6,7 +6,7 @@ on:
 permissions:
   contents: read
 env:
-  CANDIDATE_SHA256: 6ac517839dec9656bff5cbeafc979eb2cecc94a073f40c4ad51e32343c7875af
+  CANDIDATE_SHA256: 776d6933f6dfe44ce264a0f2d9db6a9387fe3c641ecfc63e5d980137867bcae6
 jobs:
   acceptance:
     runs-on: ubuntu-24.04
@@ -24,7 +24,7 @@ jobs:
       - name: Build exact candidate and base
         run: |
           mkdir -p /tmp/trade-before
-          git archive 45ddd8efed3ed9c611828df72510037dec5994de v116/canonical | tar -x -C /tmp/trade-before
+          git archive c5cd5fafad31f638d1e2f9fb33320febdd7d6265 v116/canonical | tar -x -C /tmp/trade-before
           python qa/v116_canonical_source.py build --source /tmp/trade-before/v116/canonical --allow-runtime-changes --output qa/results/trade-before.html
           python qa/v116_canonical_source.py build --source v116/canonical --allow-runtime-changes --output qa/results/trade-candidate.html --report qa/results/trade-gate-build.json
           python qa/v116_swap_choices_guard.py --before qa/results/trade-before.html --after qa/results/trade-candidate.html
@@ -52,7 +52,10 @@ jobs:
           GCC8_TEST_BUILD: qa/results/trade-candidate.html
           GCC8_BASELINE_BUILD: qa/results/trade-before.html
           GCC8_COVER_FIXTURE: qa/results/cover-fixture.json
-        run: node qa/v116_scorebook_native.cjs
+        run: |
+          GCC8_TEST_BUILD=qa/results/trade-before.html CANDIDATE_SHA256=6ac517839dec9656bff5cbeafc979eb2cecc94a073f40c4ad51e32343c7875af GCC8_SCOREBOOK_OUT=qa/results/scorebook-before node qa/v116_scorebook_native.cjs
+          GCC8_EXPECT_FLAT=1 node qa/v116_scorebook_native.cjs
+          node qa/v116_scorebook_compare.cjs
       - name: Upload evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -61,4 +64,6 @@ jobs:
           path: |
             qa/results/trade-gate-*.json
             qa/results/scorebook-native
+            qa/results/scorebook-before
+            qa/results/scorebook-comparison.json
             qa/results/cover-fixture*.json
