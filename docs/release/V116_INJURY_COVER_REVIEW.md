@@ -11,3 +11,10 @@ Final read-only run43715308658 PASS8 before/after captures across1440/768/390/32
 Initial run43714630427 passed8 paired states and real signing, but screenshot inspection revealed an inherited blue header fill and legacy child grid placement that squeezed gauges into the label column. Component ownership now explicitly resets that fill and positions label/track/value on one row; role minimum height is removed. Added header-paint and usable aligned gauge geometry assertions. Initiald61a5f8c is superseded; final rerun is recorded below.
 
 Intermediate43715108850 failed only the newly added header-paint assertion: a missing separator made the background-reset declaration invalid. That separator is corrected. Gauge geometry, text/colour/ARIA, containment and signing checks passed in the intermediate run. No known-bad intermediate build was delivered. Final0531f193 rerun passed as recorded above.
+
+## Delivered review copy
+
+GCC_v116_Injury_Cover_Review.html at the final0531f193 hash above; saved review file libfile_e9de3fc8ce308191b691a7376fbd3ea6. No new product changes for packaging. Source rebuild reproduced the exact verified hash; CSS10/31-only guard passed. Prior opened Squad Decisions54f remains rollback. No promotion.
+
+Follow-up source audit found generic playerCard is called in draft mode by poolBoard and non-draft mode by cover; no current command exposes a standalone undrafted modal. Its remaining Scout-return metadata was left intact. No cover-style expansion into modern draft or arrival renderers.
+

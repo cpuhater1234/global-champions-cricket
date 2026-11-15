@@ -1,5 +1,13 @@
 # Current v116 review candidate handoff
 
+## Current Injury Cover review download, 15 November 2026
+
+GCC_v116_Injury_Cover_Review.html, SHA-2560531f19348e34d9e7b06e4a40b62a7bf01bbf3dca424e487d885f6a64d7dbb1f,6,677,250bytes. Saved review copy libfile_e9de3fc8ce308191b691a7376fbd3ea6. Fresh canonical rebuild and exact CSS-owner byte guard pass; this is the same candidate verified below, no new product edits for packaging. User-opened tab remains Squad Decisions54f140e0 until new file is downloaded/opened. Preserve54f as prior delivered rollback; frozen v116/main/perf untouched. Review only, unpromoted.
+
+Includes scoped injury-cover summaries: plain header/rating, body-font names, aligned ability gauges and shorter cards. All22 scripts unchanged from54f; all other bytes except CSS10/31 identical. Exact native run43715308658 passed8 before/after captures at4widths with18 options each, actual cover signing and unchanged XI/state outcome. Scope/limitations/evidence in [injury cover review](V116_INJURY_COVER_REVIEW.md). Previously closed broad gameplay/storage checks not repeated.
+
+Additional source audit: active generic playerCard calls are draft mode in poolBoard and non-draft in cover. The separate undrafted/available-player modal is no longer exposed by a current command; undrafted survives in Scout-return metadata. No feature resurrected or hooks deleted from source grep alone. Modern draft/arrivals renderers remain separate. Next:user opens/reviews this bundle, then remaining real-scenario/component audit. No whole-game visual completion claim.
+
 ## Staged injury-cover summaries, 15 November 2026
 
 Latest staged source0531f19348e34d9e7b06e4a40b62a7bf01bbf3dca424e487d885f6a64d7dbb1f,6,677,250bytes. Opened build remains Squad Decisions54f140e0; no new standalone download or promotion. Frozen v116/main/perf untouched.
