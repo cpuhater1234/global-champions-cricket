@@ -1,5 +1,13 @@
 # Current v116 review candidate handoff
 
+## Latest combined Matchday supporting reads review, 15 November 2026
+
+GCC_v116_Matchday_Details_Review.html, SHA-256a4743f8487e7dc4f702d153251cd94517c6cffdba5f132833535db582b2c3999,6,667,569bytes. Bundles prior staged stationary-button hover correction with plain Season analysis/context/Season format content and readable comparison rows. Generic owners09/31 exclude these Matchday nested panels; existing owner10 owns the component. Single display heading expression in runtime22 now uses correct MATCH/MATCHES and SEASON SO FAR; exact byte guard proves only that display replacement,21other runtime bodies unchanged. No controller/save/simulation edits. Real14-match checkpoint verifies plural and unchanged remaining markup.
+
+Final read-only native run43700956551 PASS:16paired states, zero failures at1440/768/390/320. Legal disposable2010 one-match scorebook; all guidance except heading, actions, form markers/colours and four comparison values/colours preserved. Wrappers plain/no gradient/no border, comparison rows contained, disclosure targets44px+, actual scorebook/career state unchanged by inspection. Desktop/320px analysis/context/format viewport captures inspected. See [details review](V116_MATCHDAY_DETAILS_REVIEW.md) and [exact report](V116_MATCHDAY_DETAILS_NATIVE_REPORT.json). Artifact14156466434 retains screenshots subject to retention. Diagnostic43700430744 and intermediate43700670990 recorded actual paint and identified1 MATCHES before final correction.
+
+Delivered rollback is Preview Header Review18e0cb75. The separate button-motion-only candidate is no longer a pending standalone download; its fix is included here, with prior normal/reduced-motion evidence retained. Frozen v116/main/Cline perf branch untouched; unpromoted. No whole-game certification. Continue current-source terminology/remaining component audit separately; quiet Matchday dressing-room copy still uses commitments while player controls use promises.
+
 ## Staged primary-button hover correction and Cline clarification, 15 November 2026
 
 User-delivered/opened build remains GCC_v116_Preview_Header_Review.html, SHA-25618e0cb75b25cfc5298419009edd29525c04e3a26d7e4f98405a8ea5856aa6adc. No new download this pass. Canonical source now includes staged button-motion candidate SHA-256bef10eecd83346a9cc4d2961a51d670c20f342fe4a6ae4f90d9cd2b2ab052fef,6,665,976bytes, for the next combined review bundle.
