@@ -178,8 +178,8 @@
 #g8app .gccuiTableView .gccuiHeadingIcon{flex-basis:44px;height:44px}
 #g8app .gccuiTableView .g8table caption{font-size:13px!important;text-transform:none!important;letter-spacing:0!important;padding:0 0 12px!important;color:var(--gcc-muted)!important;text-align:left!important}
 #g8app .gccuiTableView .g8table tbody :is(th,td){background:transparent!important;border-color:#56646c!important;padding:13px 12px!important;color:#f1f4f5!important;font-size:14px!important}
-#g8app .gccuiTableView .g8table tbody tr:nth-child(odd){background:var(--gcc-panel)!important}
-#g8app .gccuiTableView .g8table tbody tr:nth-child(even){background:var(--gcc-raised)!important}
+#g8app .gccuiTableView .g8table tbody tr:nth-child(odd):not(:where(.gccuiPlayerStatsTable,.gccuiPlayerStatsTable *)){background:var(--gcc-panel)!important}
+#g8app .gccuiTableView .g8table tbody tr:nth-child(even):not(:where(.gccuiPlayerStatsTable,.gccuiPlayerStatsTable *)){background:var(--gcc-raised)!important}
 #g8app .gccuiTableView .g8table tbody tr.mine{background:#393939!important;box-shadow:none!important}
 #g8app .gccuiTableView .g8table tbody tr.mine>:first-child{box-shadow:inset 4px 0 var(--club-accent,#ed7547)}
 #g8app .gccuiTableView .g8table :is(th,td):not(:first-child){text-align:center;font-variant-numeric:tabular-nums}
@@ -1073,7 +1073,7 @@ html:has(#g8dialog[open]){overflow:hidden}
 #g8app .gccuiTableView .g8ladder tbody :is(th,td){padding:6px 8px!important;font-size:14px!important;line-height:1.4!important;border-color:var(--ui-rule)!important}
 #g8app .gccuiTableView .g8ladder thead th{padding:8px!important;font-size:12px!important;line-height:1.4!important}
 
-#g8app .gccuiTableView .g8tablewrap{padding:16px!important}
+#g8app .gccuiTableView .g8tablewrap:not(:where(.gccuiPlayerStatsTable,.gccuiPlayerStatsTable *)){padding:16px!important}
 
 /* Text must wrap inside the launcher column, even when page overflow is clipped. */
 #g8app .gccBrandWordmark{min-width:0;white-space:normal!important;overflow-wrap:normal!important;word-break:normal!important}
