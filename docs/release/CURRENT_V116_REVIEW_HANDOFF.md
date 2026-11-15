@@ -1,5 +1,9 @@
 # Current v116 review candidate handoff
 
+## Staged archived scorebook correction, 16 November 2026
+
+User has opened XI Replacement Review6ac517839dec9656bff5cbeafc979eb2cecc94a073f40c4ad51e32343c7875af. Its download/open cycle is complete; no new download needed this pass. New staged candidate776d6933f6dfe44ce264a0f2d9db6a9387fe3c641ecfc63e5d980137867bcae6 (6,680,040bytes) changes only existing CSS10/31: narrower720px archived scorebook, flat neutral table/rows, quiet column rule and compact spacing. All22scripts and every other byte identical to open6ac517. Native run43731648573 PASS8 before/after captures at1440/768/390/320, zero failures, all16 actual2009 records preserved, keyboard/Escape/complete compared career unchanged. Height reduced73–113px. Exact pins PASS; desktop/phone screenshots inspected. [Scorebook evidence](V116_SCOREBOOK_REVIEW.md). Stage for next review bundle, no stable promotion. Frozen v116/main/perf untouched.
+
 ## Current XI Replacement review, 16 November 2026
 
 GCC_v116_XI_Replacement_Review.html, SHA-256 6ac517839dec9656bff5cbeafc979eb2cecc94a073f40c4ad51e32343c7875af, 6,679,124 bytes; saved review copy libfile_819b82fd6ab481918160b358ea06cca7. Supersedes Career Confirmation for download; that c3b669 file remains the user's open build and rollback. Only CSS10/31 differ, all22 scripts and every other byte identical. Compact flat manual XI replacement rows and a bounded560px dialog; original choices/ratings/actions retained. Native run43730753716 PASS8 captures/four widths, zero failures, keyboard focus, cancellation, actual same-position swap and identical resulting full dynasty. [Exact review and diagnostic evidence](V116_SWAP_CHOICES_REVIEW.md). Engine pins PASS. Review only; frozen v116/main/perf untouched, no stable promotion.
