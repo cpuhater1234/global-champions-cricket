@@ -1,5 +1,15 @@
 # Current v116 review candidate handoff
 
+## Staged trade-review gate, 15 November 2026
+
+Latest staged canonical candidate:4410cf1969981e0ac7d8fe00c452628d63fc5b307928051e7c4c5c12f9ad5098 (6,667,664bytes), on top of e58d copy pass below. Opened/downloaded build stays Matchday Details Review a4743f84; no separate download or stable promotion. Frozen v116/main/perf branch remain untouched.
+
+Confirmed defect: actual last-keeper package displayed the existing engine rejection while offering an enabled Confirm and send offer. Owner29 now uses that same packageProblem result to disable confirmation and guard direct dispatch before clearing the review. Edit remains available with chosen players retained. Legal offers retain identical accepted outcome, resulting roster, counters and complete dynasty state. Core trade rules/valuation/simulation untouched. Owner26 context now says A previous promise was not kept. Exact three-replacement source guard proves every other byte identical to e58d. Only owner26/29 pins explicitly updated, other nine retained.
+
+[Read-only run43705287128](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/43705287128) PASS:regression RED on e58d then GREEN on4410; source/embedded pins and mutation probes; management outcome differential;24 paired native captures across blocked review, legal review and accepted result at1440/768/390/320. Zero failures; keyboard reaches Edit for blocked/Confirm for legal, controls visible with focus styling, no horizontal overflow or sub44px captured controls.320px viewport screenshots inspected; long reviews scroll internally. Actual2009 checkpoint legally enters2010 market; all careers disposable. Artifact14158442184 retains screenshots. [Review and exact scope](V116_TRADE_REVIEW_GATE.md). Broad season/storage acceptance not repeated for this bounded change.
+
+Next: continue component audit, including trade review's duplicated last-keeper explanation/large warning treatment and result surfaces as a separate visual pass. The single contextual promise wording flagged below is now resolved. Do not reopen historical source or delete state/responsive CSS without a reproduced issue.
+
 ## Staged wording and reproducible integrity suite, 15 November 2026
 
 Opened build remains Matchday Details Review a4743f8487e7dc4f702d153251cd94517c6cffdba5f132833535db582b2c3999. Staged candidate is e58d2b82eb88f5e118b0c676365c9d1f9a9953c27b60c3643fc0d889400dc171, 6,667,573 bytes. Ten exact display-string changes in owners26/28/29 standardise promises, season labels and explicit trade items; complete HTML guard proves every other byte identical. No separate download or stable promotion.
