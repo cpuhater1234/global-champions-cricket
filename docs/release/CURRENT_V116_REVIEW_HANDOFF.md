@@ -1,5 +1,13 @@
 # Current v116 review candidate handoff
 
+## Current Career Confirmation review download, 16 November 2026
+
+GCC_v116_Career_Confirmation_Review.html, SHA-256c3b669679378535d4b5f0de8e9e182d6c74c97448ad467c285c7207b742336c1,6,677,410bytes. Saved review copy libfile_7e1f02d58fc081919726bc561ab1547f. Fresh canonical build exactly reproduces the already verified staged candidate; only CSS10 differs from prior Injury Cover0531, all22 scripts and all remaining bytes identical. No new product edits or broad test repetition for packaging. User-opened tab remains Injury Cover0531 until new file is downloaded/opened. Preserve that prior delivered file as rollback. Frozen v116/main/perf untouched; unpromoted review.
+
+Includes the saved-career confirmation layout verified by run43718364872 below:4width before/after capture, Keep/close/Continue preservation, retained stored backup through introduction, actual explicit fresh-world result matching baseline. Existing injury-cover and previous UI fixes retained. [Confirmation review](V116_FRESH_DIALOG_REVIEW.md). Next:user opens review build, then bounded remaining-component audit.
+
+External QA repair remains separate: ZIP GCC_QA_Script_Repair.zip (libfile_1bd315136ff08191b9b44031579377df) contains repaired3031byte helper5bba45da4dfb01b4812e83989563ea9bad021155cf8a83374f1d6b4d80ae5bf7. Original uploaded identity libfile_1edd4ccfe3088191840ce202c793f9f3 version1. Syntax and9 --self-test checks pass, direct run intentionally exits2 INCOMPLETE_AUDIT because no audit runner existed in uploaded source. User relayed another old-prefix report from Cline; instructed replacing its local file with the repaired ZIP version and running actual checks. No perf-branch commit or complete gameplay authenticity claim.
+
 ## Staged saved-career confirmation, 16 November 2026
 
 Latest staged sourcec3b669679378535d4b5f0de8e9e182d6c74c97448ad467c285c7207b742336c1,6,677,410bytes. Opened build remains Injury Cover0531f193. No new standalone game download or stable promotion; frozen v116/main/perf untouched.
