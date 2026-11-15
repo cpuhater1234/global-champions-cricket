@@ -1,5 +1,11 @@
 # Current v116 review candidate handoff
 
+## Current XI Replacement review, 16 November 2026
+
+GCC_v116_XI_Replacement_Review.html, SHA-256 6ac517839dec9656bff5cbeafc979eb2cecc94a073f40c4ad51e32343c7875af, 6,679,124 bytes; saved review copy libfile_819b82fd6ab481918160b358ea06cca7. Supersedes Career Confirmation for download; that c3b669 file remains the user's open build and rollback. Only CSS10/31 differ, all22 scripts and every other byte identical. Compact flat manual XI replacement rows and a bounded560px dialog; original choices/ratings/actions retained. Native run43730753716 PASS8 captures/four widths, zero failures, keyboard focus, cancellation, actual same-position swap and identical resulting full dynasty. [Exact review and diagnostic evidence](V116_SWAP_CHOICES_REVIEW.md). Engine pins PASS. Review only; frozen v116/main/perf untouched, no stable promotion.
+
+External QA recovery: user has now actually copied the repaired helper from Downloads to the original perf checkout, run node --check successfully, and reported all9 helper self-tests PASS. Backup made before copying. Encoding repair is closed; complete gameplay authenticity audit remains incomplete and separate. Do not repeat recovery/copy attempts or mistake this helper test for engine certification.
+
 ## Current Career Confirmation review download, 16 November 2026
 
 GCC_v116_Career_Confirmation_Review.html, SHA-256c3b669679378535d4b5f0de8e9e182d6c74c97448ad467c285c7207b742336c1,6,677,410bytes. Saved review copy libfile_7e1f02d58fc081919726bc561ab1547f. Fresh canonical build exactly reproduces the already verified staged candidate; only CSS10 differs from prior Injury Cover0531, all22 scripts and all remaining bytes identical. No new product edits or broad test repetition for packaging. User-opened tab remains Injury Cover0531 until new file is downloaded/opened. Preserve that prior delivered file as rollback. Frozen v116/main/perf untouched; unpromoted review.
