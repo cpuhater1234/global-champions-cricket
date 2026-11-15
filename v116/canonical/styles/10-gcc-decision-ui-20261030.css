@@ -288,7 +288,11 @@
  #g8app .gccui .gccuiScoreContext{align-items:flex-start;flex-direction:column;gap:8px}
  #g8app .gccui .gccuiScoreSide>div{padding:14px 16px}
  #g8app .gccui .gccuiScoreSide strong{font-size:42px}
- #g8dialog[data-prompt=prepare] .g8previewteams{grid-template-columns:minmax(0,1fr)!important;gap:10px!important}
+ #g8dialog[data-prompt=prepare] .g8previewteams{grid-template-columns:minmax(0,1fr)!important;grid-template-rows:minmax(0,1fr) auto minmax(0,1fr);gap:8px!important}
+ #g8dialog[data-prompt=prepare] .g8previewside{grid-template-columns:34px minmax(0,1fr)!important;gap:4px 10px!important;padding:10px!important;min-height:64px!important}
+ #g8dialog[data-prompt=prepare] .g8previewside>.g8badge{width:32px!important;height:32px!important;min-width:32px!important;font-size:11px!important}
+ #g8dialog[data-prompt=prepare] .g8previewside h3{font-size:16px!important;overflow-wrap:normal!important;word-break:normal}
+ #g8dialog[data-prompt=prepare] .g8previewversus{font-size:13px;line-height:16px;height:16px}
  #g8dialog[data-prompt=prepare] .g8previewvenue{grid-template-columns:minmax(0,1fr)!important}
  #g8dialog[data-prompt=prepare] .g8previewvenue>span:last-child{grid-column:1;grid-row:auto;justify-self:start}
 }
