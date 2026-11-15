@@ -1129,6 +1129,7 @@ html:has(#g8dialog[open]){overflow:hidden}
 #g8dialog[data-prompt=listReview] .g8rulenote{background:transparent!important;border:0!important;border-block:1px solid var(--gcc-line)!important;border-radius:0!important;box-shadow:none!important;margin:12px 0!important;padding:12px 0!important}
 #g8dialog[data-prompt=listReview] .g8rulenote>strong{font:600 15px/1.5 var(--vx-body)!important}
 #g8dialog[data-prompt=listReview] .g8rulenote>p{font:400 14px/1.55 var(--vx-body)!important;margin:6px 0 0!important}
+#g8dialog[data-prompt=release] .g8consequences{text-align:left!important}
 #g8dialog[data-prompt=release] .g8consequences strong{font-variant-numeric:tabular-nums;white-space:nowrap!important}
 #g8dialog:is([data-prompt=listReview],[data-prompt=release]) .g8modalbody>.g8actions:last-child{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;align-items:stretch!important;gap:10px!important;margin:14px 0 0!important}
 @media(max-width:480px){#g8dialog:is([data-prompt=listReview],[data-prompt=release]) .g8modalbody>.g8actions:last-child{grid-template-columns:minmax(0,1fr)!important}}
