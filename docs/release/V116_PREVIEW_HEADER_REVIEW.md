@@ -1,0 +1,9 @@
+# Narrow match preview club header
+
+Candidate GCC_v116_Preview_Header_Review.html, SHA-25618e0cb75b25cfc5298419009edd29525c04e3a26d7e4f98405a8ea5856aa6adc,6,665,988bytes. Based on Preview Venue Review5e913f91. Review only, unpromoted.
+
+Exact earlier320px capture shows two104px club cards plus a standalone versus row consuming much of the first viewport. Existing owner10 already stacks club cards at480px, but retains desktop min-height104px/padding16px/badge46px. Existing narrow block now owns compact equal-height club rows: minimum64px,padding10px,badge32px,16px name text with normal word breaks;16px versus row and8px gaps. Full names, home/away/user markers, club colours and badges unchanged. Wider header rules untouched.
+
+Only CSS10 differs from Preview Venue Review; all22runtime bodies identical. No new stylesheet or gameplay/save change. Read-only native run43691185276 PASS:32paired screen states plus2synthetic long-name probes, zero failures. Verified scope:32paired main/disclosure/preview states at1440/768/390/320, all guidance/actions/ratings/captaincy/venue states retained; compare header height/colours/containment/equal rows, wider geometry unchanged. Two additional synthetic long-name layout probes use Royal Challengers Bengaluru and Northamptonshire only as label stress cases, not actual simulated fixtures. User career untouched; no match played. Actual phone club header height254.39→160px at320/390 (94.39px saved); long-name probe255.89→200px. Wider1440/768 header height unchanged. Final320px preview inspected: both club identities, markers and colours retained; captaincy controls appear earlier. Exact native report retained alongside this document. Screenshot evidence in workflow artifact subject to retention.
+
+Previous Preview Venue Review remains rollback. Frozen v116/main and Cline perf branch untouched. See separate Cline visual review triage; broad historical restyling was not applied.
