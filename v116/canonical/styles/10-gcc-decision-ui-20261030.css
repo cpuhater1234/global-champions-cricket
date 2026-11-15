@@ -506,6 +506,15 @@
 #g8dialog[data-prompt=trade] .g8tradepackage select{margin-top:5px!important;font-size:14px!important}
 #g8dialog[data-prompt=trade] .g8dialogcontext{font-size:13px!important;line-height:1.5!important}
 @media(max-width:600px){#g8dialog[data-prompt=trade] .gccTradePartner>label{grid-template-columns:1fr;gap:6px}}
+/* A selected trade player is a compact scouting summary inside its package. */
+#g8dialog[data-prompt=trade] .g8tradeplayer{display:grid!important;grid-template-columns:minmax(0,1fr) auto;gap:6px 10px;margin:8px 0!important;padding:10px 0!important;background:transparent!important;border:0!important;border-bottom:1px solid var(--gcc-line)!important;border-radius:0!important;box-shadow:none!important;min-width:0}
+#g8dialog[data-prompt=trade] .g8tradeplayer>.g8nameandrating{grid-column:1/-1;display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:0!important;border:0!important;background:transparent!important;min-width:0}
+#g8dialog[data-prompt=trade] .g8tradeplayer h3{font:600 16px/1.4 var(--vx-body)!important;letter-spacing:0!important;text-transform:none!important;margin:0!important;padding:0!important;overflow-wrap:normal!important;word-break:normal!important;min-width:0}
+#g8dialog[data-prompt=trade] .g8tradeplayer .g8rowrating{font:700 16px/1.4 var(--vx-body)!important;min-width:0!important;width:auto!important;height:auto!important;padding:0!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;flex-shrink:0}
+#g8dialog[data-prompt=trade] .g8tradeplayer>.g8cricketrole{grid-column:1/-1;font:400 13px/1.5 var(--vx-body)!important;color:var(--gcc-muted)!important;margin:0!important;padding:0!important}
+#g8dialog[data-prompt=trade] .g8tradefacts{display:flex!important;align-content:center;align-items:center;flex-wrap:wrap;gap:4px 12px;min-width:0;margin:0!important;padding:0!important}
+#g8dialog[data-prompt=trade] .g8tradefacts>span{font:500 13px/1.45 var(--vx-body)!important;color:var(--gcc-muted)!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;min-height:0!important;padding:0!important}
+#g8dialog[data-prompt=trade] .g8tradeplayer>.g8button{align-self:center;margin:0!important}
 /* Keep the trade decision available while reviewing a long package. */
 #g8dialog:is([data-prompt=trade],[data-prompt=tradeReview]) .g8modalbody>.g8actions:last-child{position:sticky!important;bottom:0!important;z-index:3!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;align-items:stretch!important;padding:12px 0!important;margin:14px 0 0!important;border-top:1px solid var(--gcc-line)!important}
 #g8dialog:is([data-prompt=trade],[data-prompt=tradeReview]) .g8modalbody>.g8actions:last-child>.g8button{width:100%!important;min-height:46px!important;align-self:stretch!important}
