@@ -1133,6 +1133,18 @@ html:has(#g8dialog[open]){overflow:hidden}
 #g8dialog[data-prompt=release] .g8consequences strong{font-variant-numeric:tabular-nums;white-space:nowrap!important}
 #g8dialog:is([data-prompt=listReview],[data-prompt=release]) .g8modalbody>.g8actions:last-child{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;align-items:stretch!important;gap:10px!important;margin:14px 0 0!important}
 @media(max-width:480px){#g8dialog:is([data-prompt=listReview],[data-prompt=release]) .g8modalbody>.g8actions:last-child{grid-template-columns:minmax(0,1fr)!important}}
+/* Temporary injury cover uses readable player summaries, not draft-era slabs. */
+#g8dialog[data-prompt=cover] .g8board{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important;align-items:stretch}
+#g8dialog[data-prompt=cover] .g8board>.g8player{display:flex;flex-direction:column;gap:8px;min-width:0;min-height:0!important;height:auto!important;margin:0!important;padding:12px!important;background:var(--gcc-panel)!important;border:1px solid var(--gcc-line)!important;border-radius:6px!important;box-shadow:none!important}
+#g8dialog[data-prompt=cover] .g8playerhead{display:flex;align-items:baseline;justify-content:space-between;gap:12px;min-height:0!important;margin:0!important;padding:0!important}
+#g8dialog[data-prompt=cover] .g8playerhead small{font:500 12px/1.5 var(--vx-body)!important;color:var(--gcc-muted)!important}
+#g8dialog[data-prompt=cover] .g8player h3{font:600 16px/1.4 var(--vx-body)!important;letter-spacing:0!important;text-transform:none!important;margin:4px 0 0!important;padding:0!important;word-break:normal!important;overflow-wrap:normal!important}
+#g8dialog[data-prompt=cover] .g8rating{font:700 16px/1.4 var(--vx-body)!important;min-width:0!important;min-height:0!important;width:auto!important;height:auto!important;padding:0!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+#g8dialog[data-prompt=cover] .g8player>:is(.g8cricketrole,.g8fine){font:400 13px/1.5 var(--vx-body)!important;color:var(--gcc-muted)!important;margin:0!important;padding:0!important}
+#g8dialog[data-prompt=cover] .g8abilitybars{display:grid;gap:10px!important;margin:2px 0!important;padding:0!important;background:transparent!important;border:0!important}
+#g8dialog[data-prompt=cover] .g8abilitybar{grid-template-columns:60px minmax(0,1fr) 24px!important;gap:8px!important;min-height:22px!important;font-size:13px!important;background:transparent!important;border:0!important;padding:0!important}
+#g8dialog[data-prompt=cover] .g8player>.g8button{width:100%;margin: auto 0 0!important;min-height:44px}
+@media(max-width:600px){#g8dialog[data-prompt=cover] .g8board{grid-template-columns:minmax(0,1fr)!important}}
 /* Report-view names stay atomic; narrow phones get an intentional second row. */
 #g8dialog[data-prompt=player] .gccuiProfileViews .g8button>span{white-space:nowrap!important;overflow-wrap:normal!important;word-break:normal!important}
 @media(max-width:760px){
