@@ -1,5 +1,15 @@
 # Current v116 review candidate handoff
 
+## Staged wording and reproducible integrity suite, 15 November 2026
+
+Opened build remains Matchday Details Review a4743f8487e7dc4f702d153251cd94517c6cffdba5f132833535db582b2c3999. Staged candidate is e58d2b82eb88f5e118b0c676365c9d1f9a9953c27b60c3643fc0d889400dc171, 6,667,573 bytes. Ten exact display-string changes in owners26/28/29 standardise promises, season labels and explicit trade items; complete HTML guard proves every other byte identical. No separate download or stable promotion.
+
+[Read-only CI run43704433012](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/43704433012) PASS: 970 foundation-season assertions, 9,107 seeded delivery assertions, management kept/broken/rejection baseline differential, eleven source/embedded critical-owner pins with three mutation probes, and24 paired native captures across Matchday/Management/trade review at1440/768/390/320. Zero native failures, unchanged actions/options/selections and critical state; no trade sent. Trade review includes the existing last-keeper warning; this pass does not certify submission validity. Artifact14157419451 retains screenshots; exact reports are checked in. 320px viewports inspected.
+
+Cline handoff: [engine source paths, commands and scope](../qa/V116_ENGINE_INTEGRITY.md). From repo root run `node qa/v116_integrity.mjs`. Pins: `qa/v116_engine_integrity.py` and `qa/fixtures/v116_engine_pins.json`; no automatic refresh. Existing foundation harness only skips obsolete Choose club action once automatic transition has occurred. No simulation/rating changes. Native storage durability, empirical calibration and optional full19-season acceptance are not newly certified. [Copy review](V116_COPY_CONSISTENCY_REVIEW.md). Frozen v116/main/perf branch untouched.
+
+Next: continue bounded component/copy audits; owner26 still has a separate contextual 'A previous commitment was not met' line for a future focused pass. Do not infer whole-game terminology or visual completion from this ten-change pass. Bundle staged work with the next substantive playable review.
+
 ## Latest combined Matchday supporting reads review, 15 November 2026
 
 GCC_v116_Matchday_Details_Review.html, SHA-256a4743f8487e7dc4f702d153251cd94517c6cffdba5f132833535db582b2c3999,6,667,569bytes. Bundles prior staged stationary-button hover correction with plain Season analysis/context/Season format content and readable comparison rows. Generic owners09/31 exclude these Matchday nested panels; existing owner10 owns the component. Single display heading expression in runtime22 now uses correct MATCH/MATCHES and SEASON SO FAR; exact byte guard proves only that display replacement,21other runtime bodies unchanged. No controller/save/simulation edits. Real14-match checkpoint verifies plural and unchanged remaining markup.

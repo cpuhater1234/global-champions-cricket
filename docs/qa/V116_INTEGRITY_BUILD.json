@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "sha256": "e58d2b82eb88f5e118b0c676365c9d1f9a9953c27b60c3643fc0d889400dc171",
+  "bytes": 6667573,
+  "changed_bodies": [
+    "styles/01-base.css",
+    "styles/09-gcc-charcoal-20261030.css",
+    "styles/10-gcc-decision-ui-20261030.css",
+    "scripts/20-runtime.js",
+    "scripts/22-runtime.js",
+    "scripts/23-runtime.js",
+    "scripts/26-runtime.js",
+    "scripts/27-runtime.js",
+    "scripts/28-runtime.js",
+    "scripts/29-runtime.js",
+    "styles/31-gcc-floodlit-visual.css"
+  ],
+  "reference_parity": "NOT_REQUESTED",
+  "manifest_parity": "NOT_REQUESTED",
+  "styles": 17,
+  "scripts": 22,
+  "scope": "QA review candidate only; main/frozen release not promoted"
+}

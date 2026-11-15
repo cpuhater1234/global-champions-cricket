@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "steps": [
+    {
+      "name": "Build exact canonical candidate",
+      "status": "PASS"
+    },
+    {
+      "name": "Exact reviewed copy-only source guard",
+      "status": "PASS"
+    },
+    {
+      "name": "Verify source/embedded pins and negative probes",
+      "status": "PASS"
+    },
+    {
+      "name": "Generate a real completed 2008 fixture",
+      "status": "PASS"
+    },
+    {
+      "name": "Prepare provenance-recorded foundation fixture",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing seeded delivery arithmetic/endpoints suite",
+      "status": "PASS"
+    },
+    {
+      "name": "Promise outcomes/rejections and optional baseline comparison",
+      "status": "PASS"
+    }
+  ],
+  "build": "qa/results/v116-integrity/candidate.html",
+  "scope": "Byte integrity, real2008 fixture, seeded delivery arithmetic/endpoints, management decisions; native storage and visual checks are separate."
+}

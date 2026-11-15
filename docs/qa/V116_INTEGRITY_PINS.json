@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "pinned_files": [
+    "scripts/12-runtime.js",
+    "scripts/13-runtime.js",
+    "scripts/14-runtime.js",
+    "scripts/15-runtime.js",
+    "scripts/16-runtime.js",
+    "scripts/17-runtime.js",
+    "scripts/18-runtime.js",
+    "scripts/19-runtime.js",
+    "scripts/20-runtime.js",
+    "scripts/26-runtime.js",
+    "scripts/29-runtime.js"
+  ],
+  "html_sha256": "e58d2b82eb88f5e118b0c676365c9d1f9a9953c27b60c3643fc0d889400dc171",
+  "self_tests": [
+    "modified core source rejected",
+    "CSS-only HTML edit accepted",
+    "modified embedded core rejected"
+  ],
+  "scope": "Exact critical core/data/AI/dynasty/management/controller owner bytes. Owners26/29 deliberately include presentation, so reviewed copy changes also require explicit pin review. Not empirical calibration or native persistence certification."
+}
