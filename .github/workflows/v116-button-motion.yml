@@ -6,8 +6,8 @@ on:
 permissions:
   contents: read
 env:
-  # Current exact candidate; reproduce primary hover motion discrepancy first.
-  CANDIDATE_SHA256: 18e0cb75b25cfc5298419009edd29525c04e3a26d7e4f98405a8ea5856aa6adc
+  # Exact staged stationary dialog-hover candidate.
+  CANDIDATE_SHA256: bef10eecd83346a9cc4d2961a51d670c20f342fe4a6ae4f90d9cd2b2ab052fef
 concurrency:
   group: gcc-button-motion
   cancel-in-progress: true

@@ -230,7 +230,7 @@
 }
 /* Dialog confirmations use the same sports treatment as the main game. */
 #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8button.g8primary{min-width:0;max-width:100%;white-space:normal!important}
-#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8button.g8primary:hover:enabled{transform:translateY(-2px)!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8button.g8primary:hover:enabled{transform:none!important}
 
 
 #g8app#g8app#g8app .gccui{--ui-rule:var(--gcc-line)}
