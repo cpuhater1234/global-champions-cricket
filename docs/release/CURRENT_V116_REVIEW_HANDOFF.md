@@ -1,5 +1,17 @@
 # Current v116 review candidate handoff
 
+## Staged injury-cover summaries, 15 November 2026
+
+Latest staged source0531f19348e34d9e7b06e4a40b62a7bf01bbf3dca424e487d885f6a64d7dbb1f,6,677,250bytes. Opened build remains Squad Decisions54f140e0; no new standalone download or promotion. Frozen v116/main/perf untouched.
+
+Real fixture producer uses legal progression from end2009 through offseason/draft/manual XI and one2010 match:Matthew Hayden becomes eligible for cover after Round1,18 options. No fabricated injury flags. Existing owner10 now owns compact neutral cover cards, plain header/rating,16px body names,13px role/form, correctly aligned single-row ability gauges,10px ability spacing and44px sign actions. Owner31 heading rules exclude only cover-card names. Two columns attablet/desktop,one below600px. Only CSS10/31 differ from delivered54f; exact guard proves22 scripts/all other HTML bytes identical. Engine pins unchanged.
+
+[Final run43715308658](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/43715308658) PASS8 before/after captures at1440/768/390/320,18 options each. Text/actions/ability values,ARIA,colours/percentage widths preserved. Plain paint/body fonts/aligned usable gauges/44px buttons/no measured text clipping/no horizontal overflow verified. Close preserves full critical career; actual signing produces identical roster/dynasty, XI unchanged. Card heights419.25→249.39px desktop;443.25–467.25→249.39px at320. Phone/desktop screenshots inspected. Artifact14162621241 retains screenshots, actual fixture and producer/fixture hash provenance subject to retention. [Review](V116_INJURY_COVER_REVIEW.md), [native report](V116_INJURY_COVER_NATIVE_REPORT.json). No universal keyboard/browser/storage certification; broad engine acceptance not repeated.
+
+Evidence history:43714630427 passed scoped data/signing checks but screenshots exposed inherited header paint/gauge child placement. Intermediate43715108850 caught a missing CSS separator via the added header-paint assertion; corrected before final pass. No intermediate delivered. Next:continue bounded remaining-component audit and bundle staged CSS at next substantive review.
+
+Cline external file still unverified: user supplied header confirms first3 comments valid and fourth line malformed. Advised terminal line-array index3 replacement with clean comment, backup/candidate node--check before replacing original. No actual repaired file/runtime success observed; leave its untracked perf-branch work separate.
+
 ## Current Squad Decisions review bundle, 15 November 2026
 
 New download GCC_v116_Squad_Decisions_Review.html, SHA-25654f140e0e590b2d26f924f96437d8549afe2bb944beb9748ca8b5f4e797d18e6,6,674,433bytes. Delivered file libfile_ba2bdc83c30481919792ff0a4bdce2ef. Bundles selected trade-player summary cleanup and squad retention/release prompt cleanup below. Opened tab still Trade Surfaces ca504e3e until user downloads/opens this file. Keep that prior downloaded build as rollback. No new source changes for packaging; fresh rebuild exactly matches verified54f candidate. All22 scripts unchanged from ca504e3e. Candidate remains unpromoted; frozen v116/main/perf untouched.
