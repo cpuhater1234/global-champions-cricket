@@ -6,7 +6,7 @@ on:
 permissions:
   contents: read
 env:
-  CANDIDATE_SHA256: 8c62252bc3046596681a0e82ec20412ebb5c4ac352b0c4ae975704e91da4ad79
+  CANDIDATE_SHA256: 6ac517839dec9656bff5cbeafc979eb2cecc94a073f40c4ad51e32343c7875af
 jobs:
   acceptance:
     runs-on: ubuntu-24.04
