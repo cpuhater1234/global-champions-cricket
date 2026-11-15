@@ -1097,6 +1097,19 @@ html:has(#g8dialog[open]){overflow:hidden}
 #g8dialog:is([data-prompt=trade],[data-prompt=tradeReview]) .g8tradeeffects strong{text-align:center}
 #g8dialog:is([data-prompt=trade],[data-prompt=tradeReview]) .g8tradeeffects small{font-size:13px!important;line-height:1.4!important;text-align:right;white-space:nowrap}
 @media(max-width:760px){#g8dialog[data-prompt=tradeReview] .g8exchangereview>span{min-height:28px;border-block:1px solid var(--gcc-line)}}
+/* Trade decisions use a plain readout; result names share aligned rows. */
+#g8dialog[data-prompt=tradeReview] .g8tradeimpact>.g8offerread{margin:0 0 10px!important;padding:0!important;border:0!important;background:transparent!important;font:600 14px/1.5 var(--vx-body)!important;color:var(--gcc-text)!important}
+#g8dialog[data-prompt=tradeReview] .g8tradeimpact>.g8offerread>b{font:inherit!important}
+#g8dialog[data-prompt=tradeComplete]{--gcc-trade-status:#8ecfbc}
+#g8dialog[data-prompt=tradeResult]{--gcc-trade-status:#e4acb4}
+#g8dialog:is([data-prompt=tradeComplete],[data-prompt=tradeResult]) .g8modalhead :is(div,h2){text-align:left!important}
+#g8dialog:is([data-prompt=tradeComplete],[data-prompt=tradeResult]) #g8tradeReply{background:transparent!important;border:0!important;border-left:2px solid var(--gcc-trade-status)!important;border-radius:0!important;box-shadow:none!important;padding:8px 12px!important;margin:0 0 16px!important;color:var(--gcc-text)!important;font:600 15px/1.5 var(--vx-body)!important}
+#g8dialog:is([data-prompt=tradeComplete],[data-prompt=tradeResult]) .g8consequences{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:0!important;padding:0!important;margin:0 0 14px!important;border-block:1px solid var(--gcc-line)}
+#g8dialog:is([data-prompt=tradeComplete],[data-prompt=tradeResult]) .g8consequences>div{display:grid;grid-template-columns:minmax(120px,.7fr) minmax(0,1fr);align-items:baseline;gap:6px 16px;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:12px 0!important;min-width:0}
+#g8dialog:is([data-prompt=tradeComplete],[data-prompt=tradeResult]) .g8consequences>div+div{border-top:1px solid var(--gcc-line)!important}
+#g8dialog:is([data-prompt=tradeComplete],[data-prompt=tradeResult]) .g8consequences>div>span{font:600 13px/1.4 var(--vx-body)!important;color:var(--gcc-muted)!important}
+#g8dialog:is([data-prompt=tradeComplete],[data-prompt=tradeResult]) .g8consequences>div>strong{font:600 18px/1.4 var(--vx-body)!important;color:var(--gcc-text)!important;text-transform:none!important;overflow-wrap:normal!important;word-break:normal!important;min-width:0}
+@media(max-width:480px){#g8dialog:is([data-prompt=tradeComplete],[data-prompt=tradeResult]) .g8consequences>div{grid-template-columns:minmax(0,1fr);gap:4px}}
 /* Report-view names stay atomic; narrow phones get an intentional second row. */
 #g8dialog[data-prompt=player] .gccuiProfileViews .g8button>span{white-space:nowrap!important;overflow-wrap:normal!important;word-break:normal!important}
 @media(max-width:760px){

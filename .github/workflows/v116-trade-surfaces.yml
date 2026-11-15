@@ -1,0 +1,65 @@
+name: GCC trade surface ownership review
+on:
+  push:
+    branches: [work/v116-candidate-acceptance]
+    paths: ['.github/workflows/v116-trade-surfaces.yml', 'qa/v116_trade_surfaces_native.cjs', 'qa/v116_trade_surfaces_guard.py']
+permissions:
+  contents: read
+env:
+  CANDIDATE_SHA256: ca504e3e20d3594913fa1ca44e1800e8a069aeb0771124c80ba5583ef5c4f9ff
+jobs:
+  acceptance:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build exact candidate and base
+        run: |
+          mkdir -p /tmp/trade-before
+          git archive 7ad0366ae70cc5afd41728e136dc4c38024e03d3 v116/canonical | tar -x -C /tmp/trade-before
+          python qa/v116_canonical_source.py build --source /tmp/trade-before/v116/canonical --allow-runtime-changes --output qa/results/trade-before.html
+          python qa/v116_canonical_source.py build --source v116/canonical --allow-runtime-changes --output qa/results/trade-candidate.html --report qa/results/trade-gate-build.json
+          python qa/v116_trade_surfaces_guard.py --before qa/results/trade-before.html --after qa/results/trade-candidate.html
+          python qa/v116_engine_integrity.py --source v116/canonical --html qa/results/trade-candidate.html --self-test --report qa/results/trade-gate-pins.json
+      - uses: actions/cache/restore@v4
+        with:
+          path: qa/results/whole-ui-career
+          key: gcc-ui-career-79a2fbfe-seed101-v1-${{ hashFiles('qa/structural-risk/career-run.mjs', 'qa/offline_game_host.mjs') }}
+          restore-keys: gcc-ui-career-79a2fbfe-seed101-v1-
+      - name: Check blocked and legal offers plus management outcomes
+        env:
+          GCC8_TEST_BUILD: qa/results/trade-candidate.html
+          GCC8_BASELINE_BUILD: qa/results/trade-before.html
+        run: |
+          test -f qa/results/whole-ui-career/checkpoint-2009.json
+          node qa/v116_trade_review_gate.mjs > qa/results/trade-gate-vm.json
+          node qa/v116_copy_consistency_test.mjs
+      - name: Install native browser
+        run: |
+          if [ -f /etc/apt/apt-mirrors.txt ]; then
+            sudo sed -i 's|http://azure.archive.ubuntu.com/ubuntu|https://archive.ubuntu.com/ubuntu|g' /etc/apt/apt-mirrors.txt
+          fi
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+      - name: Check native review, keyboard and accepted result
+        env:
+          GCC8_TEST_BUILD: qa/results/trade-candidate.html
+          GCC8_BASELINE_BUILD: qa/results/trade-before.html
+          GCC8_BROWSER_CAREER_DIR: qa/results/whole-ui-career
+        run: node qa/v116_trade_surfaces_native.cjs
+      - name: Upload evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: trade-surfaces
+          path: |
+            qa/results/trade-gate-*.json
+            qa/results/trade-surfaces-native

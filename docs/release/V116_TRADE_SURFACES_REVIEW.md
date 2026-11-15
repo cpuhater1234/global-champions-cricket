@@ -1,0 +1,9 @@
+# Trade surfaces review, 15 November 2026
+
+Base4410cf1969981e0ac7d8fe00c452628d63fc5b307928051e7c4c5c12f9ad5098; candidate ca504e3e20d3594913fa1ca44e1800e8a069aeb0771124c80ba5583ef5c4f9ff, 6,670,100 bytes. Candidate branch only; frozen v116/main/perf untouched. Review candidate, no stable promotion.
+
+The shared owner31 triple-ID dialog surface selector was repainting tradeReview's g8tradeimpact after owner10 made it transparent. That generic selector now excludes this component. Existing owner10 owns its plain summary/readout. Trade-complete/result consequence rows are similarly excluded from three generic owner31 rules and owned by owner10. Two old green/red tradeReply fill rules were removed from base owner01; owner10 supplies plain status text with a narrow green/red accent. Result names use readable18px body type in joined, aligned rows rather than30px display-type cards. At480px and below labels sit above names.
+
+Runtime29 has one presentation-only condition: the extra short keeper warning is omitted only when the engine reason already begins with the full user-squad keeper rejection. Full engine reason and all other warnings remain. Vacant-squad/other-reason keeper notices retain their existing condition. Trade validation, counters, valuation and simulation unchanged. Only owner29 pin reviewed/updated, ten other pins retained. Exact source guard bounds changes to CSS owners01/10/31 and that one render condition; all21 other runtime bodies and all remaining bytes identical.
+
+VM blocked/direct-dispatch/accepted trade regression passes against4410, including identical accepted final markup and complete dynasty state. Eleven critical source/embedded pins and mutation probes pass. Native paired review/result/keyboard and rendered ownership checks pending. Broad season/storage acceptance not repeated.

@@ -1,0 +1,8 @@
+{
+  "29-runtime.js": [
+    [
+      "${keeper?'<p class=\"g8decisionwarning\">You would lose your last recognised wicketkeeper.</p>':''}",
+      "${keeper&&!problem?.startsWith('Your full squad must retain a recognised wicketkeeper.')?'<p class=\"g8decisionwarning\">You would lose your last recognised wicketkeeper.</p>':''}"
+    ]
+  ]
+}

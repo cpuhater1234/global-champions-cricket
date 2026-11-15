@@ -2320,8 +2320,6 @@ html,body{background:#191c1a}
 #g8dialog .g8clubplan>.g8briefbody{min-height:0}
 #g8stage .g8result.g8win,#g8stage .g8reviewsummary.g8titlewon{background:#124d35;background-image:none;border-color:#4c9a72;color:#fff}
 #g8stage .g8result.g8loss{background:#6e2039;background-image:none;border-color:#bb6b82;color:#fff}
-#g8dialog[data-prompt="tradeComplete"] #g8tradeReply{background:#135138;border-color:#4a9770;color:#fff}
-#g8dialog[data-prompt="tradeResult"] #g8tradeReply{background:#6e2039;border-color:#bb6b82;color:#fff}
 #g8stage .g8windowclosed .g8windowstatus{background:#135138;border-color:#4a9770;color:#fff}
 /* Illustration sits in the colour field; header text owns the layer above it. */
 #g8app .g8recruitcard .g8candidateidentity{position:relative;isolation:isolate;overflow:hidden;box-shadow:inset 0 1px 0 #ffffff24}
