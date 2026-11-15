@@ -1419,6 +1419,14 @@ html:has(#g8dialog[open]){overflow:hidden}
 /* Context for assistive navigation without another visible trade panel. */
 .gccuiScreenReader{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip-path:inset(50%)!important;white-space:nowrap!important;border:0!important}
 
+/* Four-column league leaders keep cricket labels intact on phones. */
+#g8app .gccuiTableView .g8finals>.g8tablewrap .g8table{width:100%!important;min-width:0!important;table-layout:fixed}
+#g8app .gccuiTableView .g8finals>.g8tablewrap .g8table thead th{font:600 12px/1.4 var(--vx-body)!important;padding:8px 4px!important;letter-spacing:normal!important;text-transform:none!important}
+#g8app .gccuiTableView .g8finals>.g8tablewrap .g8table :is(th,td):nth-child(1){width:42%;overflow-wrap:normal;word-break:normal}
+#g8app .gccuiTableView .g8finals>.g8tablewrap .g8table :is(th,td):nth-child(2){width:10%}
+#g8app .gccuiTableView .g8finals>.g8tablewrap .g8table :is(th,td):nth-child(3){width:22%}
+#g8app .gccuiTableView .g8finals>.g8tablewrap .g8table :is(th,td):nth-child(4){width:26%}
+
 /* Season records own their scroll edge and neutral table surface. */
 #g8app .gccuiPlayerStatsTable{padding:0!important;background:var(--gcc-panel)!important;border:0!important;border-radius:0!important;box-shadow:none!important}
 #g8app .gccuiPlayerStatsTable .g8table caption{padding:10px 12px!important;text-align:left!important;font:400 13px/1.5 var(--vx-body)!important;text-transform:none!important;letter-spacing:normal!important}
