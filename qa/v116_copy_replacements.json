@@ -1,0 +1,48 @@
+{
+  "26-runtime.js": [
+    [
+      "Honour your current commitment before explaining rotation.",
+      "Honour your current promise before explaining rotation."
+    ],
+    [
+      "Finish your current commitment first.",
+      "Honour your current promise first."
+    ],
+    [
+      "This commitment does not match the player\u2019s role.",
+      "This promise does not match the player\u2019s role."
+    ],
+    [
+      "you kept your commitment. Trust has strengthened.",
+      "you kept your promise. Trust has strengthened."
+    ],
+    [
+      "your commitment was not met. Trust has fallen.",
+      "your promise was not kept. Trust has fallen."
+    ],
+    [
+      "${q.broken} commitment${q.broken===1?' was':'s were'} not met.",
+      "${q.broken} promise${q.broken===1?' was':'s were'} not kept."
+    ]
+  ],
+  "28-runtime.js": [
+    [
+      "No current injuries, role concerns or commitments to review.",
+      "No current injuries, role concerns or selection promises to review."
+    ],
+    [
+      "aria-label=\"Campaign overview\"",
+      "aria-label=\"Season overview\""
+    ],
+    [
+      "<strong>A new campaign</strong>",
+      "<strong>A new season</strong>"
+    ]
+  ],
+  "29-runtime.js": [
+    [
+      "The listed assets change clubs immediately.",
+      "The listed players and draft picks change clubs immediately."
+    ]
+  ]
+}

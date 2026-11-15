@@ -120,7 +120,7 @@ function finishSeason(){
  observe();check(X.ui.view==='review',`season review: year ${s.year}, view ${X.ui.view}, hidden ${X.screen()}, position ${s.regularSeasonPosition}, XI issue ${context.GCC8_ENGINE_READ.xiProblem()}`);check(s.dynasty.history.some(h=>h.year===s.year),'current season archived');
 }
 check(X.ui.view==='home','starts at title');check(!X.dispatch('playMatch',[1]),'guarded out of stage');
-doIt('play');doIt('world');for(let i=0;i<8;i++)doIt('revealClub');doIt('clubs');doIt('club',Number(process.env.GCC8_TEST_CLUB||0));doIt('confirmClub');
+doIt('play');doIt('world');for(let i=0;i<8;i++)doIt('revealClub');if(X.ui.view==='leagueDraw')doIt('clubs');doIt('club',Number(process.env.GCC8_TEST_CLUB||0));doIt('confirmClub');
 check(!X.dispatch('draftDraw'),'signing cannot be bypassed with unfinished state');
 doIt('signingRun');check(s.recruit.running,'signing clock begins');for(let i=0;i<12;i++)host.advance(250);check(s.recruit.feedSeq>1,'real signing callbacks progress');doIt('signingRun');check(!s.recruit.running,'pause signing');doIt('signingSkip');doIt('draftDraw');doIt('revealAll');doIt('beginDraft');
 for(let guard=0;s.pickIndex<120&&guard<40;guard++){

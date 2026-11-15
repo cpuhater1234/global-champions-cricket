@@ -1,0 +1,15 @@
+import fs from 'node:fs';import path from 'node:path';import {spawnSync} from 'node:child_process';
+const args=process.argv.slice(2),option=(k,d)=>args.includes(k)?args[args.indexOf(k)+1]:d;
+if(args.includes('--help')){console.log('node qa/v116_integrity.mjs [--source v116/canonical] [--baseline previous.html] [--out qa/results/v116-integrity] [--full-career]');process.exit(0)}
+const source=option('--source','v116/canonical'),out=option('--out','qa/results/v116-integrity'),baseline=option('--baseline',null),python=process.env.GCC8_PYTHON||'python';fs.mkdirSync(out,{recursive:true});const build=path.join(out,'candidate.html'),steps=[];
+function run(name,cmd,argv,env={}){console.log(name);const r=spawnSync(cmd,argv,{env:{...process.env,...env},stdio:'inherit'});steps.push({name,status:r.status===0?'PASS':'FAIL'});if(r.error)console.error(r.error.message);if(r.status!==0){fs.writeFileSync(path.join(out,'suite.json'),JSON.stringify({status:'FAIL',steps},null,2));process.exit(r.status||1)}}
+run('Build exact canonical candidate',python,['qa/v116_canonical_source.py','build','--source',source,'--allow-runtime-changes','--output',build,'--report',path.join(out,'build.json')]);
+if(baseline)run('Exact reviewed copy-only source guard',python,['qa/v116_copy_source_guard.py','--before',baseline,'--after',build]);
+run('Verify source/embedded pins and negative probes',python,['qa/v116_engine_integrity.py','--source',source,'--html',build,'--self-test','--report',path.join(out,'pins.json')]);
+const shared={GCC8_TEST_BUILD:build},foundation=path.join(out,'foundation'),fixtures=path.join(out,'fixtures');
+run('Generate a real completed 2008 fixture',process.execPath,['qa/structural-risk/career-run.mjs'],{...shared,GCC8_TEST_REPORT_DIR:foundation,GCC8_TEST_LAST_YEAR:'2008',GCC8_TEST_SEED:'101',GCC8_TEST_KEEP_FINAL_SAVE:'1'});
+run('Prepare provenance-recorded foundation fixture',process.execPath,['qa/v8_prepare_fixtures.mjs','--foundation-only'],{...shared,GCC8_FOUNDATION_SAVE:path.join(foundation,'v8_final_save.json'),GCC8_FIXTURE_DIR:fixtures,GCC8_FIXTURE_PRODUCER_SHA256:JSON.parse(fs.readFileSync(path.join(out,'build.json'),'utf8')).sha256});
+run('Existing seeded delivery arithmetic/endpoints suite',process.execPath,['qa/v8_delivery_engine_test.mjs'],{...shared,GCC8_FIXTURE_DIR:fixtures});
+run('Promise outcomes/rejections and optional baseline comparison',process.execPath,['qa/v116_copy_consistency_test.mjs'],{...shared,GCC8_BASELINE_BUILD:baseline||build});
+if(args.includes('--full-career'))run('Optional 19-season career acceptance',process.execPath,['qa/structural-risk/career-run.mjs'],{...shared,GCC8_TEST_REPORT_DIR:path.join(out,'full-career'),GCC8_TEST_LAST_YEAR:'2026',GCC8_TEST_SEED:'101',GCC8_TEST_SCOREBOOKS:'1'});
+fs.writeFileSync(path.join(out,'suite.json'),JSON.stringify({status:'PASS',steps,build,scope:'Byte integrity, real2008 fixture, seeded delivery arithmetic/endpoints, management decisions; native storage and visual checks are separate.'},null,2)+'\n');console.log('PASS: v116 integrity suite');
