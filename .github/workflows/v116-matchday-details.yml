@@ -6,8 +6,8 @@ on:
 permissions:
   contents: read
 env:
-  # Exact staged baseline; diagnose live season-analysis panels first.
-  CANDIDATE_SHA256: bef10eecd83346a9cc4d2961a51d670c20f342fe4a6ae4f90d9cd2b2ab052fef
+  # Exact matchday details candidate; includes staged stationary hover fix.
+  CANDIDATE_SHA256: 3db6ccaf51b1eb3e0061d3b8106ecc13b32f7662c9ec854225a961cc68e4ffac
 concurrency:
   group: gcc-matchday-details
   cancel-in-progress: true
@@ -54,7 +54,7 @@ jobs:
         env:
           GCC8_TEST_BUILD: qa/results/interface-audit.html
           GCC8_WHOLE_UI_DIR: qa/results/interface-audit
-          GCC8_EXPECT_SECTION_FIX: '0'
+          GCC8_EXPECT_SECTION_FIX: '1'
           GCC8_REQUIRE_OWNER_FIX: '1'
           GCC8_BASELINE_BUILD: qa/results/guide-before.html
           GCC8_ANALYSIS_DIR: qa/results/shared-analysis-native

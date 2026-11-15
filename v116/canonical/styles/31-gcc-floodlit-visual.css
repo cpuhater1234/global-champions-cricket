@@ -193,7 +193,7 @@
 #g8app#g8app#g8app .g8primary:focus-visible,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8primary:focus-visible{clip-path:none!important;outline:3px solid #7fe0ee!important;outline-offset:3px}
 #g8stage#g8stage#g8stage :is(.g8heading,.gccuiTurn):focus-within{clip-path:none!important}
 /* Retain semantic success/medical/warning colours and the authored club fills. */
-#g8stage#g8stage#g8stage :is(.g8sheet,.gccuiAllowance,.gccuiFixture,.gccuiMatchPreparation,.gccuiLatestResult,.gccuiMatchLinks,.gccuiSummary,.g8dressingroom,.g8reviewsummary,.g8teamread:not(.g8simpleanalysis)){background:linear-gradient(155deg,var(--gcc-raised),var(--gcc-panel) 60%)!important;border-color:var(--gcc-line)!important}
+#g8stage#g8stage#g8stage :is(.g8sheet:not(:where(.gccuiMatchdayInfo .g8seasonread)),.gccuiAllowance,.gccuiFixture,.gccuiMatchPreparation,.gccuiLatestResult,.gccuiMatchLinks,.gccuiSummary,.g8dressingroom,.g8reviewsummary,.g8teamread:not(.g8simpleanalysis)){background:linear-gradient(155deg,var(--gcc-raised),var(--gcc-panel) 60%)!important;border-color:var(--gcc-line)!important}
 /* Squad update: the decision surface owns club identity; supporting detail is inset. */
 #g8stage#g8stage#g8stage .g8annualhero{background:linear-gradient(120deg,color-mix(in srgb,var(--gcc-accent) 16%,var(--gcc-raised)),var(--gcc-panel) 72%)!important;border-color:var(--gcc-line)!important;border-top-color:var(--vx-signal)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 18px 40px -26px #000!important}
 #g8stage#g8stage#g8stage :is(.g8annualdevelopment,.g8departureguide){background:var(--gcc-inset)!important;border-color:var(--gcc-line)!important}
@@ -472,7 +472,7 @@
   #g8app#g8app#g8app .gccuiScoreTeams{grid-template-columns:minmax(0,1fr) 46px minmax(0,1fr)}}
 
 /* 20 ─ Tables (ladder, stats): navy headers, own-club row lit, finals cut-line */
-#g8app#g8app#g8app .g8sheet:not(:where([data-prompt=club] .g8sheet)),#g8app#g8app#g8app .g8tablewrap{background:var(--gcc-panel)!important;
+#g8app#g8app#g8app .g8sheet:not(:where([data-prompt=club] .g8sheet,.gccuiMatchdayInfo .g8seasonread)),#g8app#g8app#g8app .g8tablewrap{background:var(--gcc-panel)!important;
   border:1px solid var(--gcc-line)!important;border-radius:12px!important;box-shadow:0 18px 40px -28px #000}
 #g8app#g8app#g8app .g8table{border-collapse:separate;border-spacing:0}
 #g8app#g8app#g8app .g8table caption{color:var(--gcc-muted)}

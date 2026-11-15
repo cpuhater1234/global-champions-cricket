@@ -644,6 +644,17 @@
 #g8app .gccuiMatchdayInfo>.gccuiPanelHead h2{font-size:16px}
 #g8app .gccuiMatchdayInfo>div{padding:0 16px 14px}
 #g8app .gccuiMatchdayInfo details{margin:12px 0 0!important}
+/* Matchday support reads inherit the disclosure surface instead of nesting panels. */
+#g8app .gccuiMatchdayInfo .g8seasonread{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+#g8app .gccuiMatchdayInfo .g8seasonread .g8compare h3{font:700 15px/1.4 var(--vx-body);text-transform:none;letter-spacing:0;margin:0 0 12px}
+#g8app .gccuiMatchdayInfo .g8seasonread .g8comparebars{gap:12px}
+#g8app .gccuiMatchdayInfo .g8seasonread .g8comparebars>div{grid-template-columns:74px minmax(0,1fr) auto;min-height:32px;gap:10px;font-size:14px;font-weight:600}
+#g8app .gccuiMatchdayInfo .g8seasonread .g8moredata{background:transparent!important;border:0!important;border-top:1px solid var(--gcc-line)!important;border-radius:0!important;padding:0!important;box-shadow:none!important}
+#g8app .gccuiMatchdayInfo .g8seasonread .g8moredata>summary{display:flex;align-items:center;min-height:44px;padding:10px 0;margin:0;font-size:14px;line-height:1.4}
+#g8app .gccuiMatchdayInfo .g8seasonread .g8moredata p{margin:0 0 12px;font-size:14px;line-height:1.55;font-weight:400}
+#g8app .gccuiMatchdayInfo .g8rulenote{background:transparent!important;border:0!important;border-radius:0;padding:12px 0;margin:0;box-shadow:none}
+#g8app .gccuiMatchdayInfo .g8rulenote p{font-size:14px;line-height:1.55}
+
 #g8app .gccuiTradeEntry{padding:0}
 @media(max-width:900px){#g8app .gccuiCampaignRibbon>div{padding:10px 12px}#g8app .gccuiCampaignRibbon>div>small{font-size:12px}#g8app .gccuiCommandCentre .gccuiFixtureActions{align-items:flex-start;flex-direction:column}#g8app .gccuiCommandCentre .gccuiFixtureActions>div{width:100%;display:grid;grid-template-columns:1fr 1fr}#g8app .gccuiCommandCentre .gccuiVenue{grid-template-columns:140px minmax(0,1fr)}}
 @media(max-width:600px){#g8app .gccuiCampaignRibbon{grid-template-columns:repeat(2,minmax(0,1fr));margin-bottom:12px}#g8app .gccuiCampaignRibbon>div{padding:10px 12px;border-bottom:1px solid #5c5c5c}#g8app .gccuiCampaignRibbon>div:nth-child(even){border-right:0}#g8app .gccuiCampaignRibbon>div:nth-child(n+3){border-bottom:0}#g8app .gccuiCampaignRibbon strong{font-size:22px}#g8app .gccuiCampaignForm{gap:4px}#g8app .gccuiCampaignForm>span{width:23px;height:28px;flex-basis:23px;font-size:15px}#g8app .gccuiCommandCentre .gccuiVenue{grid-template-columns:80px minmax(0,1fr);padding:12px;gap:12px}#g8app .gccuiCommandCentre .gccuiVenuePhoto .g8stadium{height:80px!important}#g8app .gccuiCommandCentre .gccuiVenue h1{font-size:22px}#g8app .gccuiCommandCentre .gccuiFixtureTeams{padding:12px;grid-template-columns:1fr;gap:8px}#g8app .gccuiCommandCentre .gccuiFixtureClub{padding:12px}#g8app .gccuiCommandCentre .gccuiFixtureActions{padding:12px}#g8app .gccuiCommandCentre .gccuiFixtureActions>p{font-size:12px}#g8app .gccuiCommandCentre .gccuiFixtureActions .g8button{min-height:46px!important}#g8app .gccuiMatchdayLower{grid-template-columns:1fr;gap:14px;margin-top:14px}}
