@@ -6,8 +6,8 @@ on:
 permissions:
   contents: read
 env:
-  # Exact current match preparation diagnostic.
-  CANDIDATE_SHA256: 76abca374125bf6b55464905f91983a2ba24563b420f064a000a48c858c0e0c9
+  # Exact comparison-row CSS-only candidate.
+  CANDIDATE_SHA256: 4bbf983144b846b8cc0cb5b674917c87bcaa021c6f74b20da98cadb5075fea2e
 concurrency:
   group: gcc-match-prep
   cancel-in-progress: true
@@ -54,6 +54,7 @@ jobs:
         env:
           GCC8_TEST_BUILD: qa/results/interface-audit.html
           GCC8_WHOLE_UI_DIR: qa/results/interface-audit
+          GCC8_EXPECT_PREP_FIX: '1'
           GCC8_REQUIRE_OWNER_FIX: '1'
           GCC8_BASELINE_BUILD: qa/results/guide-before.html
           GCC8_ANALYSIS_DIR: qa/results/shared-analysis-native
