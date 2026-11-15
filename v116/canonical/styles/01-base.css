@@ -219,7 +219,7 @@
 .g8duelbars{display:grid;gap:12px;margin-top:12px}
 .g8duelbars>div{display:grid;grid-template-columns:4ch minmax(0,1fr) 3ch;align-items:center;gap:.75rem}
 .g8duelbars>div:nth-child(2) .g8strengthtrack>span{background:#397f9a}
-.g8edge{padding:0;border:0;border-radius:0;background:transparent;color:#315568;font-size:12px;line-height:1.4;white-space:nowrap}
+.g8edge{padding:0;border:0;border-radius:0;background:transparent;color:#315568;font-size:13px;line-height:1.4;white-space:nowrap}
 .g8edge-you{background:transparent;color:#174d36}.g8edge-them{background:transparent;color:#7f4023}
 
 .g8livefixture{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:1rem 0;color:#e4f1e7;font-size:1.1rem}
@@ -774,7 +774,7 @@ p,small,.g8fine{font-weight:400;line-height:1.5}small,.g8fine{font-size:1rem;col
 .g8latestmetrics b{line-height:1.3;text-align:right;font-variant-numeric:tabular-nums}
 .g8draftroster .g8squadgroup h3>span:first-child{min-width:0;overflow-wrap:anywhere}
 /* Every standalone filled surface has a visible edge. Nested structural wrappers stay quiet. */
-:is(.g8rowrating,.g8rating,.g8days span,.g8wire,.g8stamp,.g8formstrip span,.g8compareidentities>section,.g8tags span,.g8read,.g8summarytiles>div,.g8phasecards>div,.g8phasecontest,.g8job,.g8jobplayer,.g8phasechip,.g8profilechip,.g8consequences>div,.g8tradefacts span,.g8latestmetrics>div,.g8developmentbadge,.g8clubheader small,.g8attributes span,.g8slot>span,.g8score strong,.g8fixturecard,.g8overplan>div,.g8revealScore,.g8groundtrait,.g8groundbands>div,.g8clubcompetition,.g8draftadvice,.g8superover,.g8roleboard,.g8roleboard .g8rolechip,.g8squadgroup,.g8spotlight,.g8teamrating,.g8windowbanner,.g8retentionread,.g8nextchapter,.g8development,.g8pickhistory article,.g8edge,.g8balltrail>span,.g8squadplaces>span,.g8releaseallowance,.g8playerstate,.g8tradepackage>section,.g8tradeimpact){border-width:1px;border-style:solid;border-color:#5f635d;box-sizing:border-box}
+:is(.g8rowrating,.g8rating,.g8days span,.g8wire,.g8stamp,.g8formstrip span,.g8compareidentities>section,.g8tags span,.g8read,.g8summarytiles>div,.g8phasecards>div,.g8phasecontest,.g8job,.g8jobplayer,.g8phasechip,.g8profilechip,.g8consequences>div,.g8tradefacts span,.g8latestmetrics>div,.g8developmentbadge,.g8clubheader small,.g8attributes span,.g8slot>span,.g8score strong,.g8fixturecard,.g8overplan>div,.g8revealScore,.g8groundtrait,.g8groundbands>div,.g8clubcompetition,.g8draftadvice,.g8superover,.g8roleboard,.g8roleboard .g8rolechip,.g8squadgroup,.g8spotlight,.g8teamrating,.g8windowbanner,.g8retentionread,.g8nextchapter,.g8development,.g8pickhistory article,.g8balltrail>span,.g8squadplaces>span,.g8releaseallowance,.g8playerstate,.g8tradepackage>section,.g8tradeimpact){border-width:1px;border-style:solid;border-color:#5f635d;box-sizing:border-box}
 .g8latestmetrics>div,.g8compareidentities>section{border-color:#6d716b}
 .g8stamp,.g8formstrip .won{border-color:#475d9f}.g8stamp.declined,.g8formstrip .lost{border-color:#926176}
 .g8developmentbadge{border-color:#eaf1ff}

@@ -7,7 +7,7 @@ permissions:
   contents: read
 env:
   # Exact comparison-row CSS-only candidate.
-  CANDIDATE_SHA256: 4bbf983144b846b8cc0cb5b674917c87bcaa021c6f74b20da98cadb5075fea2e
+  CANDIDATE_SHA256: 4e5d7623458aa490d48104090dcda4812aad512effd71dabaaefa25af05122f8
 concurrency:
   group: gcc-match-prep
   cancel-in-progress: true
