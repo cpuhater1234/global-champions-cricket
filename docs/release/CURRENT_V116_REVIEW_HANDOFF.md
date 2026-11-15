@@ -1,5 +1,17 @@
 # Current v116 review candidate handoff
 
+## Staged squad decision dialogs, 15 November 2026
+
+Latest staged source54f140e0e590b2d26f924f96437d8549afe2bb944beb9748ca8b5f4e797d18e6,6,674,433bytes, includes prior selected trade-player cleanup. User-opened build remains Trade Surfaces ca504e3e. No new download or promotion; frozen v116/main/perf untouched.
+
+Retention listReview and release now use left-aligned title/copy, plain annual-draw subsection, joined18px release consequence rows and consistent actions. Existing owner10 owns the components; owner09 note paint excludes listReview and owner31 consequence paint/fonts exclude release. Empty header spacer removed only for these prompts. CSS09/10/31 only versus51b; all22 scripts and every other HTML byte identical; engine pins unchanged. finalCut/oversized legacy prompt remains unmodified.
+
+[Final run43709887537](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/43709887537) PASS24 paired states:full retention, eligible release, vacant retention at1440/768/390/320. Exact copy/actions/fields preserved; computed left alignment/plain surfaces/18px values/44px controls verified. Tab reaches first decision with visible focus inside viewport. Back/Keep preserve critical career state; actual release creates a vacancy and subsequent actual draw/full dynasty match baseline. At320px body saves162px full retention,102px release,136px vacant retention. Final320px full/vacant/release and1440px release captures inspected. Artifact14160550344 retains evidence subject to retention. Initial43709586338 passed bounded checks but screenshot review caught inherited centred counters; explicit component alignment and assertion added before final run. [Review](V116_SQUAD_DECISIONS_REVIEW.md), [report](V116_SQUAD_DECISIONS_NATIVE_REPORT.json). Disposable fixture careers only; not all browser/keyboard/scroll/storage certification. Broad engine acceptance not repeated for identical scripts.
+
+External Cline item: qa/v116_gameplay_authenticity.mjs was absent on both active/perf remote branches when checked; Cline reports uncommitted local prefix corruption and a now-added statistics return. PowerShell backup/candidate-parse/UTF8 repair instructions supplied in chat, not executed here. Do not claim syntax/runtime authenticity tests pass until actual repaired file and outputs are available; do not commit the known-corrupt file.
+
+Next: continue bounded remaining-dialog audit and bundle staged work at the next substantive playable review.
+
 ## Staged selected trade-player summaries, 15 November 2026
 
 User confirmed Trade Surfaces ca504e3e open. Staged source51b12abf41677fe3c86d6f484fda173d983b49b3989956936553d83c33fc5a37,6,672,181bytes. No standalone download; opened build remains ca504e3e. Unpromoted; frozen v116/main/perf untouched.
