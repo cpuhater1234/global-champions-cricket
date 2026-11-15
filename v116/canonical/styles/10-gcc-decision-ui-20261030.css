@@ -383,7 +383,7 @@
 #g8dialog[data-prompt=player] .g8scoutability .g8abilitybar{padding:12px 0!important;row-gap:8px!important;border-top:0!important}
 #g8dialog[data-prompt=player] .g8scoutability .g8abilitybar>span{font-size:14px!important;font-weight:700!important}
 #g8dialog[data-prompt=player] .g8scoutability .g8abilitybar>b{font-size:20px!important;line-height:1.2!important}
-#g8dialog[data-prompt=player] .g8scoutability .g8abilitytrack{height:6px!important}
+#g8dialog[data-prompt=player] .g8scoutability .g8abilitytrack{height:10px!important;border-radius:5px}
 @media(max-width:600px){#g8dialog[data-prompt=player] .g8scoutsummary>.g8nameandrating{flex-direction:row!important;align-items:center!important;gap:12px!important}#g8dialog[data-prompt=player] .g8scoutsummary h3{font-size:16px!important}#g8dialog[data-prompt=player] .g8scoutsummary .g8scoutmeta{gap:4px!important;margin-top:6px!important;flex-wrap:wrap!important}#g8dialog[data-prompt=player] .g8scoutsummary .g8scoutmeta>span{font-size:12px!important;padding:4px 6px!important}#g8dialog[data-prompt=player] .g8scoutability .g8skillgrid{gap:0 16px!important}#g8dialog[data-prompt=player] .g8modalbody{padding:12px!important}#g8dialog[data-prompt=player] .g8ordereditor .g8actions{width:auto!important}}
 /* Team analysis: one summary strip above three comparable disciplines. */
 #g8dialog[data-prompt=teamAnalysis] .g8modalhead{padding:12px 18px!important}
@@ -721,7 +721,7 @@
 #g8dialog[data-prompt=player] .gccuiFullSkills .g8abilitybar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 12px;margin:0;padding:12px 0;border:0;background:transparent}
 #g8dialog[data-prompt=player] .gccuiFullSkills .g8abilitybar>span{grid-column:1;grid-row:1;overflow-wrap:normal;word-break:normal}
 #g8dialog[data-prompt=player] .gccuiFullSkills .g8abilitybar>b{grid-column:2;grid-row:1;align-self:center}
-#g8dialog[data-prompt=player] .gccuiFullSkills .g8abilitytrack{grid-column:1/-1;grid-row:2;height:6px}
+#g8dialog[data-prompt=player] .gccuiFullSkills .g8abilitytrack{grid-column:1/-1;grid-row:2;height:10px;border-radius:5px}
 
 #g8dialog[data-prompt=player] .g8playerphases .g8phasetile{padding:8px 0;background:transparent;border:0;border-radius:0}
 #g8dialog[data-prompt=player] .g8playerphases .g8phasetile>span{font-size:13px;overflow-wrap:normal;word-break:normal}
