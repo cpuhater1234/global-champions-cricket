@@ -106,7 +106,7 @@
 #g8app .gccui .gccuiOrder{list-style:none;padding:0!important;display:block}
 #g8app .gccui .gccuiOrderRow{display:grid;grid-template-columns:28px minmax(0,1fr) 36px auto;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--ui-rule);background:transparent;min-height:90px}
 #g8app .gccui .gccuiOrderNumber{font-size:15px;font-weight:700;text-align:center;color:var(--ui-muted);font-variant-numeric:tabular-nums}
-#g8app .gccui .gccuiRosterName{display:flex;flex-direction:column;gap:6px;text-align:left;color:var(--ui-text);background:transparent;border:0;padding:0;min-width:0;cursor:pointer;width:100%}
+#g8app .gccui .gccuiRosterName{display:flex;flex-direction:column;gap:6px;text-align:left;color:var(--ui-text);background:transparent;border:0;padding:0;min-width:0;cursor:pointer;width:100%;min-height:44px;justify-content:center}
 #g8app .gccui .gccuiRosterName b{font-size:15px;line-height:1.25;overflow-wrap:anywhere;font-weight:700}
 #g8app .gccui .gccuiRosterName small{font-size:12px;line-height:1.4;color:var(--ui-muted)}
 #g8app .gccui .gccuiRosterName .g8squadpulse{margin:0;padding:0;display:flex;gap:4px;flex-wrap:wrap}
