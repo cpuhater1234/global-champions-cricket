@@ -281,7 +281,6 @@
 #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .gccuiIdentityText>h3{font:400 14px/1.4 var(--vx-body)!important;letter-spacing:normal!important;text-transform:none!important;color:var(--gcc-muted)!important}
 #g8app#g8app#g8app .gccuiPlayerScout:focus-visible{outline-offset:-4px!important}
 #g8app#g8app#g8app .g8table :is(td,th),#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8table :is(td,th){border-color:var(--gcc-line)!important}
-#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8previewvenue>span:last-child{background:var(--gcc-inset)!important;border-color:var(--gcc-line)!important;color:var(--gcc-muted)!important}
 #g8hud#g8hud#g8hud .g8headerslogan span{color:var(--vx-signal)!important}
 @media(max-width:600px){#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .gccuiIdentityText #g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory]))Title{font-size:24px!important}}
 @media(max-width:480px){#g8app#g8app#g8app .gccuiSelection .gccuiOrderRow{grid-template-columns:18px minmax(0,1fr) 30px!important}#g8app#g8app#g8app .gccuiSelection .gccuiRosterActions{grid-column:2/-1!important;justify-content:flex-start!important}}

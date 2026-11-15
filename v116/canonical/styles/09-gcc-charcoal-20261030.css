@@ -64,7 +64,7 @@ html body,#g8app{background-color:var(--gcc-ground)!important;color:var(--gcc-te
 #g8app .g8analysisrow,#g8dialog .g8analysisrow{background:var(--gcc-raised)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
 #g8dialog .g8scoutsummary .g8scoutmeta>span{background:var(--gcc-raised)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
 #g8dialog .g8development>.g8eyebrow{background:var(--gcc-raised)!important;color:#eacb93!important;border-left:4px solid var(--gcc-accent);padding:8px 12px}
-#g8dialog .g8previewvenue{background:var(--gcc-raised)!important;border:2px solid var(--gcc-line)!important;color:var(--gcc-text)!important}
+#g8dialog .g8previewvenue{background:transparent!important;border:0!important;border-radius:0;box-shadow:none;color:var(--gcc-text)!important}
 #g8dialog .g8previewvenue :is(h3,p,span,.g8eyebrow){color:var(--gcc-text)!important}
 #g8dialog .g8previewvenue .g8weatherchip{background:var(--gcc-raised)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
 #g8app .g8matchhub,#g8app .g8hubvenue,#g8app .g8hubground,#g8app .g8hubactions{background:var(--gcc-panel)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}

@@ -190,11 +190,11 @@
 #g8dialog[data-prompt=prepare] .g8previewside>.g8badge{grid-row:1/3!important;width:46px!important;height:46px!important;min-width:46px!important;margin:0!important;font-size:13px!important}
 #g8dialog[data-prompt=prepare] .g8previewside h3{font-size:19px!important;line-height:1.25!important;margin:0!important}
 #g8dialog[data-prompt=prepare] .g8previewside>span:last-child{grid-column:2!important;font-size:12px!important;margin:0!important}
-#g8dialog[data-prompt=prepare] .g8previewvenue{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;text-align:left!important;gap:8px 16px;padding:16px!important}
+#g8dialog[data-prompt=prepare] .g8previewvenue{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;text-align:left!important;gap:8px 16px;padding:14px 0!important}
 #g8dialog[data-prompt=prepare] .g8previewvenue>.g8eyebrow{grid-column:1/-1!important;display:flex;align-items:center;gap:8px;font-size:12px!important}
 #g8dialog[data-prompt=prepare] .g8previewvenue h3{grid-column:1;font-size:21px!important;margin:0!important}
 #g8dialog[data-prompt=prepare] .g8previewvenue p{grid-column:1;margin:0!important;font-size:13px!important}
-#g8dialog[data-prompt=prepare] .g8previewvenue>span:last-child{grid-column:2;grid-row:2/4;align-self:center;border:1px solid #7c888d!important;background:#3b454b;padding:10px 14px!important;border-radius:4px;font-size:13px!important}
+#g8dialog[data-prompt=prepare] .g8previewvenue>span:last-child{grid-column:2;grid-row:2/4;align-self:center;border:0!important;background:transparent!important;padding:0!important;border-radius:0;font-size:13px!important;color:var(--gcc-muted)!important}
 #g8dialog .gcc-scoreinnings{background:var(--gcc-raised)!important;border:1px solid #75838a!important;border-radius:6px;overflow:hidden;margin-bottom:20px}
 #g8dialog .gcc-scoreinnings>header{background:#343e44!important;padding:16px 18px!important;border:0!important;border-bottom:1px solid #78868d!important;align-items:center;gap:8px}
 #g8dialog .gcc-scoreinnings>header h2{font-size:21px!important;line-height:1.25!important;margin:0!important}

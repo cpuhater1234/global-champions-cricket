@@ -1,0 +1,69 @@
+name: GCC preview venue review
+on:
+  push:
+    branches: [work/v116-candidate-acceptance]
+    paths: ['.github/workflows/v116-preview-venue.yml', 'qa/v116_preview_venue_native.cjs']
+permissions:
+  contents: read
+env:
+  # Exact venue UI and one-phrase cricket copy candidate.
+  CANDIDATE_SHA256: 5e913f91efea5aa2b744b8cb6cfa556591322cb6c43d3e9afbc453789af14238
+concurrency:
+  group: gcc-preview-venue
+  cancel-in-progress: true
+jobs:
+  acceptance:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install native browser
+        run: |
+          if [ -f /etc/apt/apt-mirrors.txt ]; then
+            sudo sed -i 's|http://azure.archive.ubuntu.com/ubuntu|https://archive.ubuntu.com/ubuntu|g' /etc/apt/apt-mirrors.txt
+          fi
+          pip install playwright pillow
+          python -m playwright install --with-deps chromium
+          npm install --no-save --no-package-lock playwright
+      - name: Build exact review candidate
+        run: |
+          python qa/v116_canonical_source.py build --source v116/canonical --allow-runtime-changes --output qa/results/interface-audit.html
+          sha256sum qa/results/interface-audit.html
+          mkdir -p /tmp/guide-before
+          git archive ad0d75ac584aeede61acdc572d7b88e148fbfa1b v116/canonical | tar -x -C /tmp/guide-before
+          python qa/v116_canonical_source.py build --source /tmp/guide-before/v116/canonical --allow-runtime-changes --output qa/results/guide-before.html
+      - uses: actions/cache/restore@v4
+        with:
+          path: qa/results/whole-ui-career
+          key: gcc-ui-career-79a2fbfe-seed101-v1-${{ hashFiles('qa/structural-risk/career-run.mjs', 'qa/offline_game_host.mjs') }}
+      - name: Require existing checkpoints
+        run: |
+          test -f qa/results/whole-ui-career/checkpoint-2009.json
+          test -f qa/results/whole-ui-career/checkpoint-2019.json
+          test -f qa/results/whole-ui-career/checkpoint-2025.json
+          test -f qa/results/whole-ui-career/checkpoint-2026.json
+      - name: Check match preparation and comparisons
+        env:
+          GCC8_TEST_BUILD: qa/results/interface-audit.html
+          GCC8_WHOLE_UI_DIR: qa/results/interface-audit
+          GCC8_EXPECT_PREP_FIX: '1'
+          GCC8_REQUIRE_OWNER_FIX: '1'
+          GCC8_BASELINE_BUILD: qa/results/guide-before.html
+          GCC8_ANALYSIS_DIR: qa/results/shared-analysis-native
+          GCC8_BROWSER_CAREER_DIR: qa/results/whole-ui-career
+        run: |
+          GCC8_CHROMIUM="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')" node qa/v116_preview_venue_native.cjs
+      - name: Upload diagnostic evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: preview-venue-native
+          path: qa/results/preview-venue-native
