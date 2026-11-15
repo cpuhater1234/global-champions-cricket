@@ -1,0 +1,3945 @@
+Warning: truncated output (original token count: 72479)
+Total output lines: 11787
+
+{
+  "states": [
+    {
+      "kind": "before",
+      "name": "xi",
+      "width": 1440,
+      "copy": "2010 · Mumbai IndiansName your XI11/11Selected80XI ratingView analysisLodge XIVenue & conditionsHOME GROUNDWankhede StadiumPace and powerBench · 4Starting XI · 11Bench4 playersInzamam-ul-HaqTop orderWants a move76OVRSwapAndrew HallLower order · Pace bowlingWants a move77OVRSwapMuttiah MuralitharanSpin bowlerWants a move84OVRSwapMatthew HaydenOpenerFinding rhythm80OVRSwapStarting XIBatting orderSelect a name to scout. Use the arrows to change the order.1Brad HodgeTop orderIn form79OVRSwap2Younis KhanTop order78OVRSwap3Mohammad YousufTop order85OVRSwap4Andrew SymondsMiddle order · Pace & spin bowling82OVRSwap5Matt PriorMiddle order · Keeper80OVRSwap6Azhar MahmoodLower order · Pace bowling77OVRSwap7Rana Naved-ul-HasanPace bowlerFinding rhythm81OVRSwap8Shoaib AkhtarPace bowlerIn form83OVRSwap9Steve HarmisonPace bowler80OVRSwap10Brett LeePace bowlerIn form87OVRSwap11Andre NelPace bowlerWants a move83OVRSwapOrder & selection tools+Natural orderClear XIIN THE DRESSING ROOMSquad decisionsAndre NelWants a moveUnresolved transfer requestReview playerInzamam-ul-HaqWants a moveUnresolved transfer requestReview playerAndrew HallWants a moveUnresolved transfer requestReview player1 more squad decision+Muttiah MuralitharanWants a moveUnresolved transfer requestReview playerSelection essentials+Choose roles, not just ratingsBatting order affects performance. Open a player to see their batting position and detailed skills; select a name in your XI to change their place.Cover a full inningsChoose a recognised keeper and an attack suited to the contest. Part-time bowlers can contribute; judge their skills, roles and the conditions alongside your main bowlers.Read the conditionsThe preview uses the match venue and weather. Your home ground is not used for every fixture. Ratings describe ability, not a predicted score or a guaranteed win.",
+      "actions": [
+        [
+          "teamAnalysis",
+          "[]",
+          false
+        ],
+        [
+          "lodge",
+          "[]",
+          false
+        ],
+        [
+          "teamPane",
+          "[\"squad\"]",
+          false
+        ],
+        [
+          "teamPane",
+          "[\"xi\"]",
+          false
+        ],
+        [
+          "inspect",
+          "[209]",
+          false
+        ],
+        [
+          "swapIn",
+          "[209]",
+          false
+        ],
+        [
+          "inspect",
+          "[219]",
+          false
+        ],
+        [
+          "swapIn",
+          "[219]",
+          false
+        ],
+        [
+          "inspect",
+          "[87]",
+          false
+        ],
+        [
+          "swapIn",
+          "[87]",
+          false
+        ],
+        [
+          "inspect",
+          "[16]",
+          false
+        ],
+        [
+          "swapIn",
+          "[16]",
+          false
+        ],
+        [
+          "inspect",
+          "[165]",
+          false
+        ],
+        [
+          "move",
+          "[165,-1]",
+          true
+        ],
+        [
+          "move",
+          "[165,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[165]",
+          false
+        ],
+        [
+          "inspect",
+          "[204]",
+          false
+        ],
+        [
+          "move",
+          "[204,-1]",
+          false
+        ],
+        [
+          "move",
+          "[204,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[204]",
+          false
+        ],
+        [
+          "inspect",
+          "[26]",
+          false
+        ],
+        [
+          "move",
+          "[26,-1]",
+          false
+        ],
+        [
+          "move",
+          "[26,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[26]",
+          false
+        ],
+        [
+          "inspect",
+          "[63]",
+          false
+        ],
+        [
+          "move",
+          "[63,-1]",
+          false
+        ],
+        [
+          "move",
+          "[63,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[63]",
+          false
+        ],
+        [
+          "inspect",
+          "[8]",
+          false
+        ],
+        [
+          "move",
+          "[8,-1]",
+          false
+        ],
+        [
+          "move",
+          "[8,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[8]",
+          false
+        ],
+        [
+          "inspect",
+          "[77]",
+          false
+        ],
+        [
+          "move",
+          "[77,-1]",
+          false
+        ],
+        [
+          "move",
+          "[77,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[77]",
+          false
+        ],
+        [
+          "inspect",
+          "[210]",
+          false
+        ],
+        [
+          "move",
+          "[210,-1]",
+          false
+        ],
+        [
+          "move",
+          "[210,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[210]",
+          false
+        ],
+        [
+          "inspect",
+          "[94]",
+          false
+        ],
+        [
+          "move",
+          "[94,-1]",
+          false
+        ],
+        [
+          "move",
+          "[94,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[94]",
+          false
+        ],
+        [
+          "inspect",
+          "[112]",
+          false
+        ],
+        [
+          "move",
+          "[112,-1]",
+          false
+        ],
+        [
+          "move",
+          "[112,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[112]",
+          false
+        ],
+        [
+          "inspect",
+          "[85]",
+          false
+        ],
+        [
+          "move",
+          "[85,-1]",
+          false
+        ],
+        [
+          "move",
+          "[85,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[85]",
+          false
+        ],
+        [
+          "inspect",
+          "[133]",
+          false
+        ],
+        [
+          "move",
+          "[133,-1]",
+          false
+        ],
+        [
+          "move",
+          "[133,1]",
+          true
+        ],
+        [
+          "swapSelected",
+          "[133]",
+          false
+        ],
+        [
+          "naturalOrder",
+          "[]",
+          false
+        ],
+        [
+          "clearXI",
+          "[]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[133]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[209]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[219]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[87]",
+          false
+        ]
+      ],
+      "overflow": false,
+      "prompt": null,
+      "rows": [
+        {
+          "class": "gccuiBenchRow g8role-BAT",
+          "text": "Inzamam-ul-HaqTop orderWants a move76OVRSwap",
+          "background": "rgb(34, 41, 48)",
+          "height": 82.078125,
+          "contained": true
+        },
+        {
+          "class": "gccuiBenchRow g8role-AR",
+          "text": "Andrew HallLower order · Pace bowlingWants a move77OVRSwap",
+          "background": "rgb(23, 27, 32)",
+          "height": 82.078125,
+          "contained": true
+        },
+        {
+          "class": "gccuiBenchRow g8role-BOWL",
+          "text": "Muttiah MuralitharanSpin bowlerWants a move84OVRSwap",
+          "background": "rgb(34, 41, 48)",
+          "height": 82.078125,
+          "contained": true
+        },
+        {
+          "class": "gccuiBenchRow g8role-BAT",
+          "text": "Matthew HaydenOpenerFinding rhythm80OVRSwap",
+          "background": "rgb(23, 27, 32)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BAT",
+          "text": "1Brad HodgeTop orderIn form79OVRSwap",
+          "background": "rgb(23, 27, 32)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BAT",
+          "text": "2Younis KhanTop order78OVRSwap",
+          "background": "rgb(34, 41, 48)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BAT",
+          "text": "3Mohammad YousufTop order85OVRSwap",
+          "background": "rgb(23, 27, 32)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-AR",
+          "text": "4Andrew SymondsMiddle order · Pace & spin bowling82OVRSwap",
+          "background": "rgb(34, 41, 48)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-WK-BAT",
+          "text": "5Matt PriorMiddle order · Keeper80OVRSwap",
+          "background": "rgb(23, 27, 32)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-AR",
+          "text": "6Azhar MahmoodLower order · Pace bowling77OVRSwap",
+          "background": "rgb(34, 41, 48)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "7Rana Naved-ul-HasanPace bowlerFinding rhythm81OVRSwap",
+          "background": "rgb(23, 27, 32)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "8Shoaib AkhtarPace bowlerIn form83OVRSwap",
+          "background": "rgb(34, 41, 48)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "9Steve HarmisonPace bowler80OVRSwap",
+          "background": "rgb(23, 27, 32)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "10Brett LeePace bowlerIn form87OVRSwap",
+          "background": "rgb(34, 41, 48)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "11Andre NelPace bowlerWants a move83OVRSwap",
+          "background": "rgb(23, 27, 32)",
+          "height": 82.078125,
+          "contained": true
+        }
+      ],
+      "controls": [
+        {
+          "name": "Scout Inzamam-ul-Haq",
+          "height": 65.078125,
+          "disabled": false
+        },
+        {
+          "name": "Swap into XI: Inzamam-ul-Haq",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Scout Andrew Hall",
+          "height": 65.078125,
+          "disabled": false
+        },
+        {
+          "name": "Swap into XI: Andrew Hall",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Scout Muttiah Muralitharan",
+          "height": 65.078125,
+          "disabled": false
+        },
+        {
+          "name": "Swap into XI: Muttiah Muralitharan",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Scout Matthew Hayden",
+          "height": 57.078125,
+          "disabled": false
+        },
+        {
+          "name": "Swap into XI: Matthew Hayden",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Brad Hodge",
+          "height": 57.078125,
+          "disabled": false
+        },
+        {
+          "name": "Move Brad Hodge up the batting order",
+          "height": 44,
+          "disabled": true
+        },
+        {
+          "name": "Move Brad Hodge down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Brad Hodge in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Younis Khan",
+          "height": 38.546875,
+          "disabled": false
+        },
+        {
+          "name": "Move Younis Khan up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Younis Khan down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Younis Khan in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Mohammad Yousuf",
+          "height": 38.546875,
+          "disabled": false
+        },
+        {
+          "name": "Move Mohammad Yousuf up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Mohammad Yousuf down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Mohammad Yousuf in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Andrew Symonds",
+          "height": 38.546875,
+          "disabled": false
+        },
+        {
+          "name": "Move Andrew Symonds up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Andrew Symonds down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Andrew Symonds in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Matt Prior",
+          "height": 38.546875,
+          "disabled": false
+        },
+        {
+          "name": "Move Matt Prior up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Matt Prior down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Matt Prior in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Azhar Mahmood",
+          "height": 38.546875,
+          "disabled": false
+        },
+        {
+          "name": "Move Azhar Mahmood up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Azhar Mahmood down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Azhar Mahmood in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Rana Naved-ul-Hasan",
+          "height": 57.078125,
+          "disabled": false
+        },
+        {
+          "name": "Move Rana Naved-ul-Hasan up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Rana Naved-ul-Hasan down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Rana Naved-ul-Hasan in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Shoaib Akhtar",
+          "height": 57.078125,
+          "disabled": false
+        },
+        {
+          "name": "Move Shoaib Akhtar up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Shoaib Akhtar down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Shoaib Akhtar in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Steve Harmison",
+          "height": 38.546875,
+          "disabled": false
+        },
+        {
+          "name": "Move Steve Harmison up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Steve Harmison down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Steve Harmison in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Brett Lee",
+          "height": 57.078125,
+          "disabled": false
+        },
+        {
+          "name": "Move Brett Lee up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Brett Lee down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Brett Lee in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Andre Nel",
+          "height": 65.078125,
+          "disabled": false
+        },
+        {
+          "name": "Move Andre Nel up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Andre Nel down the batting order",
+          "height": 44,
+          "disabled": true
+        },
+        {
+          "name": "Replace Andre Nel in the XI",
+          "height": 44,
+          "disabled": false
+        }
+      ],
+      "ids": [
+        "[165]",
+        "[204]",
+        "[26]",
+        "[63]",
+        "[8]",
+        "[77]",
+        "[210]",
+        "[94]",
+        "[112]",
+        "[85]",
+        "[133]"
+      ],
+      "hover": {
+        "bg": "rgba(255, 255, 255, 0.06)",
+        "shadow": "rgb(0, 75, 160) 3px 0px 0px 0px inset"
+      }
+    },
+    {
+      "kind": "before",
+      "name": "xi",
+      "width": 768,
+      "copy": "2010 · Mumbai IndiansName your XI11/11Selected80XI ratingView analysisLodge XIVenue & conditionsHOME GROUNDWankhede StadiumPace and powerBench · 4Starting XI · 11Bench4 playersInzamam-ul-HaqTop orderWants a move76OVRSwapAndrew HallLower order · Pace bowlingWants a move77OVRSwapMuttiah MuralitharanSpin bowlerWants a move84OVRSwapMatthew HaydenOpenerFinding rhythm80OVRSwapStarting XIBatting orderSelect a name to scout. Use the arrows to change the order.1Brad HodgeTop orderIn form79OVRSwap2Younis KhanTop order78OVRSwap3Mohammad YousufTop order85OVRSwap4Andrew SymondsMiddle order · Pace & spin bowling82OVRSwap5Matt PriorMiddle order · Keeper80OVRSwap6Azhar MahmoodLower order · Pace bowling77OVRSwap7Rana Naved-ul-HasanPace bowlerFinding rhythm81OVRSwap8Shoaib AkhtarPace bowlerIn form83OVRSwap9Steve HarmisonPace bowler80OVRSwap10Brett LeePace bowlerIn form87OVRSwap11Andre NelPace bowlerWants a move83OVRSwapOrder & selection tools+Natural orderClear XIIN THE DRESSING ROOMSquad decisionsAndre NelWants a moveUnresolved transfer requestReview playerInzamam-ul-HaqWants a moveUnresolved transfer requestReview playerAndrew HallWants a moveUnresolved transfer requestReview player1 more squad decision+Muttiah MuralitharanWants a moveUnresolved transfer requestReview playerSelection essentials+Choose roles, not just ratingsBatting order affects performance. Open a player to see their batting position and detailed skills; select a name in your XI to change their place.Cover a full inningsChoose a recognised keeper and an attack suited to the contest. Part-time bowlers can contribute; judge their skills, roles and the conditions alongside your main bowlers.Read the conditionsThe preview uses the match venue and weather. Your home ground is not used for every fixture. Ratings describe ability, not a predicted score or a guaranteed win.",
+      "actions": [
+        [
+          "teamAnalysis",
+          "[]",
+          false
+        ],
+        [
+          "lodge",
+          "[]",
+          false
+        ],
+        [
+          "teamPane",
+          "[\"squad\"]",
+          false
+        ],
+        [
+          "teamPane",
+          "[\"xi\"]",
+          false
+        ],
+        [
+          "inspect",
+          "[209]",
+          false
+        ],
+        [
+          "swapIn",
+          "[209]",
+          false
+        ],
+        [
+          "inspect",
+          "[219]",
+          false
+        ],
+        [
+          "swapIn",
+          "[219]",
+          false
+        ],
+        [
+          "inspect",
+          "[87]",
+          false
+        ],
+        [
+          "swapIn",
+          "[87]",
+          false
+        ],
+        [
+          "inspect",
+          "[16]",
+          false
+        ],
+        [
+          "swapIn",
+          "[16]",
+          false
+        ],
+        [
+          "inspect",
+          "[165]",
+          false
+        ],
+        [
+          "move",
+          "[165,-1]",
+          true
+        ],
+        [
+          "move",
+          "[165,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[165]",
+          false
+        ],
+        [
+          "inspect",
+          "[204]",
+          false
+        ],
+        [
+          "move",
+          "[204,-1]",
+          false
+        ],
+        [
+          "move",
+          "[204,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[204]",
+          false
+        ],
+        [
+          "inspect",
+          "[26]",
+          false
+        ],
+        [
+          "move",
+          "[26,-1]",
+          false
+        ],
+        [
+          "move",
+          "[26,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[26]",
+          false
+        ],
+        [
+          "inspect",
+          "[63]",
+          false
+        ],
+        [
+          "move",
+          "[63,-1]",
+          false
+        ],
+        [
+          "move",
+          "[63,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[63]",
+          false
+        ],
+        [
+          "inspect",
+          "[8]",
+          false
+        ],
+        [
+          "move",
+          "[8,-1]",
+          false
+        ],
+        [
+          "move",
+          "[8,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[8]",
+          false
+        ],
+        [
+          "inspect",
+          "[77]",
+          false
+        ],
+        [
+          "move",
+          "[77,-1]",
+          false
+        ],
+        [
+          "move",
+          "[77,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[77]",
+          false
+        ],
+        [
+          "inspect",
+          "[210]",
+          false
+        ],
+        [
+          "move",
+          "[210,-1]",
+          false
+        ],
+        [
+          "move",
+          "[210,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[210]",
+          false
+        ],
+        [
+          "inspect",
+          "[94]",
+          false
+        ],
+        [
+          "move",
+          "[94,-1]",
+          false
+        ],
+        [
+          "move",
+          "[94,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[94]",
+          false
+        ],
+        [
+          "inspect",
+          "[112]",
+          false
+        ],
+        [
+          "move",
+          "[112,-1]",
+          false
+        ],
+        [
+          "move",
+          "[112,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[112]",
+          false
+        ],
+        [
+          "inspect",
+          "[85]",
+          false
+        ],
+        [
+          "move",
+          "[85,-1]",
+          false
+        ],
+        [
+          "move",
+          "[85,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[85]",
+          false
+        ],
+        [
+          "inspect",
+          "[133]",
+          false
+        ],
+        [
+          "move",
+          "[133,-1]",
+          false
+        ],
+        [
+          "move",
+          "[133,1]",
+          true
+        ],
+        [
+          "swapSelected",
+          "[133]",
+          false
+        ],
+        [
+          "naturalOrder",
+          "[]",
+          false
+        ],
+        [
+          "clearXI",
+          "[]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[133]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[209]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[219]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[87]",
+          false
+        ]
+      ],
+      "overflow": false,
+      "prompt": null,
+      "rows": [
+        {
+          "class": "gccuiOrderRow g8role-BAT",
+          "text": "1Brad HodgeTop orderIn form79OVRSwap",
+          "background": "rgb(23, 27, 32)",
+          "height": 128.078125,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BAT",
+          "text": "2Younis KhanTop order78OVRSwap",
+          "background": "rgb(34, 41, 48)",
+          "height": 117.59375,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BAT",
+          "text": "3Mohammad YousufTop order85OVRSwap",
+          "background": "rgb(23, 27, 32)",
+          "height": 117.59375,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-AR",
+          "text": "4Andrew SymondsMiddle order · Pace & spin bowling82OVRSwap",
+          "background": "rgb(34, 41, 48)",
+          "height": 117.59375,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-WK-BAT",
+          "text": "5Matt PriorMiddle order · Keeper80OVRSwap",
+          "background": "rgb(23, 27, 32)",
+          "height": 117.59375,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-AR",
+          "text": "6Azhar MahmoodLower order · Pace bowling77OVRSwap",
+          "background": "rgb(34, 41, 48)",
+          "height": 117.59375,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "7Rana Naved-ul-HasanPace bowlerFinding rhythm81OVRSwap",
+          "background": "rgb(23, 27, 32)",
+          "height": 128.078125,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "8Shoaib AkhtarPace bowlerIn form83OVRSwap",
+          "background": "rgb(34, 41, 48)",
+          "height": 128.078125,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "9Steve HarmisonPace bowler80OVRSwap",
+          "background": "rgb(23, 27, 32)",
+          "height": 117.59375,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "10Brett LeePace bowlerIn form87OVRSwap",
+          "background": "rgb(34, 41, 48)",
+          "height": 128.078125,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "11Andre NelPace bowlerWants a move83OVRSwap",
+          "background": "rgb(23, 27, 32)",
+          "height": 136.078125,
+          "contained": true
+        }
+      ],
+      "controls": [
+        {
+          "name": "Edit Brad Hodge",
+          "height": 57.078125,
+          "disabled": false
+        },
+        {
+          "name": "Move Brad Hodge up the batting order",
+          "height": 44,
+          "disabled": true
+        },
+        {
+          "name": "Move Brad Hodge down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Brad Hodge in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Younis Khan",
+          "height": 38.546875,
+          "disabled": false
+        },
+        {
+          "name": "Move Younis Khan up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Younis Khan down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Younis Khan in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Mohammad Yousuf",
+          "height": 38.546875,
+          "disabled": false
+        },
+        {
+          "name": "Move Mohammad Yousuf up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Mohammad Yousuf down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Mohammad Yousuf in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Andrew Symonds",
+          "height": 38.546875,
+          "disabled": false
+        },
+        {
+          "name": "Move Andrew Symonds up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Andrew Symonds down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Andrew Symonds in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Matt Prior",
+          "height": 38.546875,
+          "disabled": false
+        },
+        {
+          "name": "Move Matt Prior up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Matt Prior down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Matt Prior in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Azhar Mahmood",
+          "height": 38.546875,
+          "disabled": false
+        },
+        {
+          "name": "Move Azhar Mahmood up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Azhar Mahmood down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Azhar Mahmood in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Rana Naved-ul-Hasan",
+          "height": 57.078125,
+          "disabled": false
+        },
+        {
+          "name": "Move Rana Naved-ul-Hasan up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Rana Naved-ul-Hasan down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Rana Naved-ul-Hasan in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Shoaib Akhtar",
+          "height": 57.078125,
+          "disabled": false
+        },
+        {
+          "name": "Move Shoaib Akhtar up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Shoaib Akhtar down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Shoaib Akhtar in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Steve Harmison",
+          "height": 38.546875,
+          "disabled": false
+        },
+        {
+          "name": "Move Steve Harmison up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Steve Harmison down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Steve Harmison in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Brett Lee",
+          "height": 57.078125,
+          "disabled": false
+        },
+        {
+          "name": "Move Brett Lee up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Brett Lee down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Brett Lee in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Andre Nel",
+          "height": 65.078125,
+          "disabled": false
+        },
+        {
+          "name": "Move Andre Nel up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Andre Nel down the batting order",
+          "height": 44,
+          "disabled": true
+        },
+        {
+          "name": "Replace Andre Nel in the XI",
+          "height": 44,
+          "disabled": false
+        }
+      ],
+      "ids": [
+        "[165]",
+        "[204]",
+        "[26]",
+        "[63]",
+        "[8]",
+        "[77]",
+        "[210]",
+        "[94]",
+        "[112]",
+        "[85]",
+        "[133]"
+      ],
+      "hover": {
+        "bg": "rgba(255, 255, 255, 0.06)",
+        "shadow": "rgb(0, 75, 160) 3px 0px 0px 0px inset"
+      }
+    },
+    {
+      "kind": "before",
+      "name": "xi",
+      "width": 390,
+      "copy": "2010 · Mumbai IndiansName your XI11/11Selected80XI ratingView analysisLodge XIVenue & conditionsHOME GROUNDWankhede StadiumPace and powerBench · 4Starting XI · 11Bench4 playersInzamam-ul-HaqTop orderWants a move76OVRSwapAndrew HallLower order · Pace bowlingWants a move77OVRSwapMuttiah MuralitharanSpin bowlerWants a move84OVRSwapMatthew HaydenOpenerFinding rhythm80OVRSwapStarting XIBatting orderSelect a name to scout. Use the arrows to change the order.1Brad HodgeTop orderIn form79OVRSwap2Younis KhanTop order78OVRSwap3Mohammad YousufTop order85OVRSwap4Andrew SymondsMiddle order · Pace & spin bowling82OVRSwap5Matt PriorMiddle order · Keeper80OVRSwap6Azhar MahmoodLower order · Pace bowling77OVRSwap7Rana Naved-ul-HasanPace bowlerFinding rhythm81OVRSwap8Shoaib AkhtarPace bowlerIn form83OVRSwap9Steve HarmisonPace bowler80OVRSwap10Brett LeePace bowlerIn form87OVRSwap11Andre NelPace bowlerWants a move83OVRSwapOrder & selection tools+Natural orderClear XIIN THE DRESSING ROOMSquad decisionsAndre NelWants a moveUnresolved transfer requestReview playerInzamam-ul-HaqWants a moveUnresolved transfer requestReview playerAndrew HallWants a moveUnresolved transfer requestReview player1 more squad decision+Muttiah MuralitharanWants a moveUnresolved transfer requestReview playerSelection essentials+Choose roles, not just ratingsBatting order affects performance. Open a player to see their batting position and detailed skills; select a name in your XI to change their place.Cover a full inningsChoose a recognised keeper and an attack suited to the contest. Part-time bowlers can contribute; judge their skills, roles and the conditions alongside your main bowlers.Read the conditionsThe preview uses the match venue and weather. Your home ground is not used for every fixture. Ratings describe ability, not a predicted score or a guaranteed win.",
+      "actions": [
+        [
+          "teamAnalysis",
+          "[]",
+          false
+        ],
+        [
+          "lodge",
+          "[]",
+          false
+        ],
+        [
+          "teamPane",
+          "[\"squad\"]",
+          false
+        ],
+        [
+          "teamPane",
+          "[\"xi\"]",
+          false
+        ],
+        [
+          "inspect",
+          "[209]",
+          false
+        ],
+        [
+          "swapIn",
+          "[209]",
+          false
+        ],
+        [
+          "inspect",
+          "[219]",
+          false
+        ],
+        [
+          "swapIn",
+          "[219]",
+          false
+        ],
+        [
+          "inspect",
+          "[87]",
+          false
+        ],
+        [
+          "swapIn",
+          "[87]",
+          false
+        ],
+        [
+          "inspect",
+          "[16]",
+          false
+        ],
+        [
+          "swapIn",
+          "[16]",
+          false
+        ],
+        [
+          "inspect",
+          "[165]",
+          false
+        ],
+        [
+          "move",
+          "[165,-1]",
+          true
+        ],
+        [
+          "move",
+          "[165,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[165]",
+          false
+        ],
+        [
+          "inspect",
+          "[204]",
+          false
+        ],
+        [
+          "move",
+          "[204,-1]",
+          false
+        ],
+        [
+          "move",
+          "[204,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[204]",
+          false
+        ],
+        [
+          "inspect",
+          "[26]",
+          false
+        ],
+        [
+          "move",
+          "[26,-1]",
+          false
+        ],
+        [
+          "move",
+          "[26,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[26]",
+          false
+        ],
+        [
+          "inspect",
+          "[63]",
+          false
+        ],
+        [
+          "move",
+          "[63,-1]",
+          false
+        ],
+        [
+          "move",
+          "[63,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[63]",
+          false
+        ],
+        [
+          "inspect",
+          "[8]",
+          false
+        ],
+        [
+          "move",
+          "[8,-1]",
+          false
+        ],
+        [
+          "move",
+          "[8,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[8]",
+          false
+        ],
+        [
+          "inspect",
+          "[77]",
+          false
+        ],
+        [
+          "move",
+          "[77,-1]",
+          false
+        ],
+        [
+          "move",
+          "[77,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[77]",
+          false
+        ],
+        [
+          "inspect",
+          "[210]",
+          false
+        ],
+        [
+          "move",
+          "[210,-1]",
+          false
+        ],
+        [
+          "move",
+          "[210,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[210]",
+          false
+        ],
+        [
+          "inspect",
+          "[94]",
+          false
+        ],
+        [
+          "move",
+          "[94,-1]",
+          false
+        ],
+        [
+          "move",
+          "[94,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[94]",
+          false
+        ],
+        [
+          "inspect",
+          "[112]",
+          false
+        ],
+        [
+          "move",
+          "[112,-1]",
+          false
+        ],
+        [
+          "move",
+          "[112,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[112]",
+          false
+        ],
+        [
+          "inspect",
+          "[85]",
+          false
+        ],
+        [
+          "move",
+          "[85,-1]",
+          false
+        ],
+        [
+          "move",
+          "[85,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[85]",
+          false
+        ],
+        [
+          "inspect",
+          "[133]",
+          false
+        ],
+        [
+          "move",
+          "[133,-1]",
+          false
+        ],
+        [
+          "move",
+          "[133,1]",
+          true
+        ],
+        [
+          "swapSelected",
+          "[133]",
+          false
+        ],
+        [
+          "naturalOrder",
+          "[]",
+          false
+        ],
+        [
+          "clearXI",
+          "[]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[133]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[209]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[219]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[87]",
+          false
+        ]
+      ],
+      "overflow": false,
+      "prompt": null,
+      "rows": [
+        {
+          "class": "gccuiOrderRow g8role-BAT",
+          "text": "1Brad HodgeTop orderIn form79OVRSwap",
+          "background": "rgb(23, 27, 32)",
+          "height": 129.75,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BAT",
+          "text": "2Younis KhanTop order78OVRSwap",
+          "background": "rgb(34, 41, 48)",
+          "height": 119.59375,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BAT",
+          "text": "3Mohammad YousufTop order85OVRSwap",
+          "background": "rgb(23, 27, 32)",
+          "height": 119.59375,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-AR",
+          "text": "4Andrew SymondsMiddle order · Pace & spin bowling82OVRSwap",
+          "background": "rgb(34, 41, 48)",
+          "height": 119.59375,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-WK-BAT",
+          "text": "5Matt PriorMiddle order · Keeper80OVRSwap",
+          "background": "rgb(23, 27, 32)",
+          "height": 119.59375,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-AR",
+          "text": "6Azhar MahmoodLower order · Pace bowling77OVRSwap",
+          "background": "rgb(34, 41, 48)",
+          "height": 119.59375,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "7Rana Naved-ul-HasanPace bowlerFinding rhythm81OVRSwap",
+          "background": "rgb(23, 27, 32)",
+          "height": 129.75,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "8Shoaib AkhtarPace bowlerIn form83OVRSwap",
+          "background": "rgb(34, 41, 48)",
+          "height": 129.75,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "9Steve HarmisonPace bowler80OVRSwap",
+          "background": "rgb(23, 27, 32)",
+          "height": 119.59375,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "10Brett LeePace bowlerIn form87OVRSwap",
+          "background": "rgb(34, 41, 48)",
+          "height": 129.75,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "11Andre NelPace bowlerWants a move83OVRSwap",
+          "background": "rgb(23, 27, 32)",
+          "height": 137.75,
+          "contained": true
+        }
+      ],
+      "controls": [
+        {
+          "name": "Edit Brad Hodge",
+          "height": 56.75,
+          "disabled": false
+        },
+        {
+          "name": "Move Brad Hodge up the batting order",
+          "height": 44,
+          "disabled": true
+        },
+        {
+          "name": "Move Brad Hodge down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Brad Hodge in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Younis Khan",
+          "height": 37.34375,
+          "disabled": false
+        },
+        {
+          "name": "Move Younis Khan up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Younis Khan down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Younis Khan in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Mohammad Yousuf",
+          "height": 37.34375,
+          "disabled": false
+        },
+        {
+          "name": "Move Mohammad Yousuf up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Mohammad Yousuf down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Mohammad Yousuf in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Andrew Symonds",
+          "height": 37.34375,
+          "disabled": false
+        },
+        {
+          "name": "Move Andrew Symonds up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Andrew Symonds down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Andrew Symonds in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Matt Prior",
+          "height": 37.34375,
+          "disabled": false
+        },
+        {
+          "name": "Move Matt Prior up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Matt Prior down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Matt Prior in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Azhar Mahmood",
+          "height": 37.34375,
+          "disabled": false
+        },
+        {
+          "name": "Move Azhar Mahmood up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Azhar Mahmood down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Azhar Mahmood in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Rana Naved-ul-Hasan",
+          "height": 56.75,
+          "disabled": false
+        },
+        {
+          "name": "Move Rana Naved-ul-Hasan up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Rana Naved-ul-Hasan down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Rana Naved-ul-Hasan in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Shoaib Akhtar",
+          "height": 56.75,
+          "disabled": false
+        },
+        {
+          "name": "Move Shoaib Akhtar up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Shoaib Akhtar down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Shoaib Akhtar in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Steve Harmison",
+          "height": 37.34375,
+          "disabled": false
+        },
+        {
+          "name": "Move Steve Harmison up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Steve Harmison down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Steve Harmison in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Brett Lee",
+          "height": 56.75,
+          "disabled": false
+        },
+        {
+          "name": "Move Brett Lee up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Brett Lee down the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Brett Lee in the XI",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Edit Andre Nel",
+          "height": 64.75,
+          "disabled": false
+        },
+        {
+          "name": "Move Andre Nel up the batting order",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Move Andre Nel down the batting order",
+          "height": 44,
+          "disabled": true
+        },
+        {
+          "name": "Replace Andre Nel in the XI",
+          "height": 44,
+          "disabled": false
+        }
+      ],
+      "ids": [
+        "[165]",
+        "[204]",
+        "[26]",
+        "[63]",
+        "[8]",
+        "[77]",
+        "[210]",
+        "[94]",
+        "[112]",
+        "[85]",
+        "[133]"
+      ],
+      "hover": {
+        "bg": "rgba(255, 255, 255, 0.06)",
+        "shadow": "rgb(0, 75, 160) 3px 0px 0px 0px inset"
+      }
+    },
+    {
+      "kind": "before",
+      "name": "xi",
+      "width": 320,
+      "copy": "2010 · Mumbai IndiansName your XI11/11Selected80XI ratingView analysisLodge XIVenue & conditionsHOME GROUNDWankhede StadiumPace and powerBench · 4Starting XI · 11Bench4 playersInzamam-ul-HaqTop orderWants a move76OVRSwapAndrew HallLower order · Pace bowlingWants a move77OVRSwapMuttiah MuralitharanSpin bowlerWants a move84OVRSwapMatthew HaydenOpenerFinding rhythm80OVRSwapStarting XIBatting orderSelect a name to scout. Use the arrows to change the order.1Brad HodgeTop orderIn form79OVRSwap2Younis KhanTop order78OVRSwap3Mohammad YousufTop order85OVRSwap4Andrew SymondsMiddle order · Pace & spin bowling82OVRSwap5Matt PriorMiddle order · Keeper80OVRSwap6Azhar MahmoodLower order · Pace bowling77OVRSwap7Rana Naved-ul-HasanPace bowlerFinding rhythm81OVRSwap8Shoaib AkhtarPace bowlerIn form83OVRSwap9Steve HarmisonPace bowler80OVRSwap10Brett LeePace bowlerIn form87OVRSwap11Andre NelPace bowlerWants a move83OVRSwapOrder & selection tools+Natural orderClear XIIN THE DRESSING ROOMSquad decisionsAndre NelWants a moveUnresolved transfer requestReview playerInzamam-ul-HaqWants a moveUnresolved transfer requestReview playerAndrew HallWants a moveUnresolved transfer requestReview player1 more squad decision+Muttiah MuralitharanWants a moveUnresolved transfer requestReview playerSelection essentials+Choose roles, not just ratingsBatting order affects performance. Open a player to see their batting position and detailed skills; select a name in your XI to change their place.Cover a full inningsChoose a recognised keeper and an attack suited to the contest. Part-time bowlers can contribute; judge their skills, roles and the conditions alongside your main bowlers.Read the conditionsThe preview uses the match …47479 tokens truncated…"inspect",
+          "[94]",
+          false
+        ],
+        [
+          "move",
+          "[94,-1]",
+          false
+        ],
+        [
+          "move",
+          "[94,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[94]",
+          false
+        ],
+        [
+          "inspect",
+          "[112]",
+          false
+        ],
+        [
+          "move",
+          "[112,-1]",
+          false
+        ],
+        [
+          "move",
+          "[112,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[112]",
+          false
+        ],
+        [
+          "inspect",
+          "[85]",
+          false
+        ],
+        [
+          "move",
+          "[85,-1]",
+          false
+        ],
+        [
+          "move",
+          "[85,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[85]",
+          false
+        ],
+        [
+          "inspect",
+          "[133]",
+          false
+        ],
+        [
+          "move",
+          "[133,-1]",
+          false
+        ],
+        [
+          "move",
+          "[133,1]",
+          true
+        ],
+        [
+          "swapSelected",
+          "[133]",
+          false
+        ],
+        [
+          "naturalOrder",
+          "[]",
+          false
+        ],
+        [
+          "clearXI",
+          "[]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[133]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[209]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[219]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[87]",
+          false
+        ]
+      ],
+      "overflow": false,
+      "prompt": null,
+      "rows": [
+        {
+          "class": "gccuiBenchRow g8role-BAT",
+          "text": "Inzamam-ul-HaqTop orderWants a move76OVRSwap",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 81.75,
+          "contained": true
+        },
+        {
+          "class": "gccuiBenchRow g8role-AR",
+          "text": "Andrew HallLower order · Pace bowlingWants a move77OVRSwap",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 81.75,
+          "contained": true
+        },
+        {
+          "class": "gccuiBenchRow g8role-BOWL",
+          "text": "Muttiah MuralitharanSpin bowlerWants a move84OVRSwap",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 81.75,
+          "contained": true
+        },
+        {
+          "class": "gccuiBenchRow g8role-BAT",
+          "text": "Matthew HaydenOpenerFinding rhythm80OVRSwap",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 76,
+          "contained": true
+        }
+      ],
+      "controls": [
+        {
+          "name": "Scout Inzamam-ul-Haq",
+          "height": 64.75,
+          "disabled": false
+        },
+        {
+          "name": "Swap into XI: Inzamam-ul-Haq",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Scout Andrew Hall",
+          "height": 64.75,
+          "disabled": false
+        },
+        {
+          "name": "Swap into XI: Andrew Hall",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Scout Muttiah Muralitharan",
+          "height": 64.75,
+          "disabled": false
+        },
+        {
+          "name": "Swap into XI: Muttiah Muralitharan",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Scout Matthew Hayden",
+          "height": 56.75,
+          "disabled": false
+        },
+        {
+          "name": "Swap into XI: Matthew Hayden",
+          "height": 44,
+          "disabled": false
+        }
+      ],
+      "ids": [
+        "[165]",
+        "[204]",
+        "[26]",
+        "[63]",
+        "[8]",
+        "[77]",
+        "[210]",
+        "[94]",
+        "[112]",
+        "[85]",
+        "[133]"
+      ],
+      "hover": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "shadow": "rgb(0, 75, 160) 3px 0px 0px 0px inset"
+      }
+    },
+    {
+      "kind": "after",
+      "name": "bench",
+      "width": 320,
+      "copy": "2010 · Mumbai IndiansName your XI11/11Selected80XI ratingView analysisLodge XIVenue & conditionsHOME GROUNDWankhede StadiumPace and powerBench · 4Starting XI · 11Bench4 playersInzamam-ul-HaqTop orderWants a move76OVRSwapAndrew HallLower order · Pace bowlingWants a move77OVRSwapMuttiah MuralitharanSpin bowlerWants a move84OVRSwapMatthew HaydenOpenerFinding rhythm80OVRSwapStarting XIBatting orderSelect a name to scout. Use the arrows to change the order.1Brad HodgeTop orderIn form79OVRSwap2Younis KhanTop order78OVRSwap3Mohammad YousufTop order85OVRSwap4Andrew SymondsMiddle order · Pace & spin bowling82OVRSwap5Matt PriorMiddle order · Keeper80OVRSwap6Azhar MahmoodLower order · Pace bowling77OVRSwap7Rana Naved-ul-HasanPace bowlerFinding rhythm81OVRSwap8Shoaib AkhtarPace bowlerIn form83OVRSwap9Steve HarmisonPace bowler80OVRSwap10Brett LeePace bowlerIn form87OVRSwap11Andre NelPace bowlerWants a move83OVRSwapOrder & selection tools+Natural orderClear XIIN THE DRESSING ROOMSquad decisionsAndre NelWants a moveUnresolved transfer requestReview playerInzamam-ul-HaqWants a moveUnresolved transfer requestReview playerAndrew HallWants a moveUnresolved transfer requestReview player1 more squad decision+Muttiah MuralitharanWants a moveUnresolved transfer requestReview playerSelection essentials+Choose roles, not just ratingsBatting order affects performance. Open a player to see their batting position and detailed skills; select a name in your XI to change their place.Cover a full inningsChoose a recognised keeper and an attack suited to the contest. Part-time bowlers can contribute; judge their skills, roles and the conditions alongside your main bowlers.Read the conditionsThe preview uses the match venue and weather. Your home ground is not used for every fixture. Ratings describe ability, not a predicted score or a guaranteed win.",
+      "actions": [
+        [
+          "teamAnalysis",
+          "[]",
+          false
+        ],
+        [
+          "lodge",
+          "[]",
+          false
+        ],
+        [
+          "teamPane",
+          "[\"squad\"]",
+          false
+        ],
+        [
+          "teamPane",
+          "[\"xi\"]",
+          false
+        ],
+        [
+          "inspect",
+          "[209]",
+          false
+        ],
+        [
+          "swapIn",
+          "[209]",
+          false
+        ],
+        [
+          "inspect",
+          "[219]",
+          false
+        ],
+        [
+          "swapIn",
+          "[219]",
+          false
+        ],
+        [
+          "inspect",
+          "[87]",
+          false
+        ],
+        [
+          "swapIn",
+          "[87]",
+          false
+        ],
+        [
+          "inspect",
+          "[16]",
+          false
+        ],
+        [
+          "swapIn",
+          "[16]",
+          false
+        ],
+        [
+          "inspect",
+          "[165]",
+          false
+        ],
+        [
+          "move",
+          "[165,-1]",
+          true
+        ],
+        [
+          "move",
+          "[165,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[165]",
+          false
+        ],
+        [
+          "inspect",
+          "[204]",
+          false
+        ],
+        [
+          "move",
+          "[204,-1]",
+          false
+        ],
+        [
+          "move",
+          "[204,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[204]",
+          false
+        ],
+        [
+          "inspect",
+          "[26]",
+          false
+        ],
+        [
+          "move",
+          "[26,-1]",
+          false
+        ],
+        [
+          "move",
+          "[26,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[26]",
+          false
+        ],
+        [
+          "inspect",
+          "[63]",
+          false
+        ],
+        [
+          "move",
+          "[63,-1]",
+          false
+        ],
+        [
+          "move",
+          "[63,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[63]",
+          false
+        ],
+        [
+          "inspect",
+          "[8]",
+          false
+        ],
+        [
+          "move",
+          "[8,-1]",
+          false
+        ],
+        [
+          "move",
+          "[8,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[8]",
+          false
+        ],
+        [
+          "inspect",
+          "[77]",
+          false
+        ],
+        [
+          "move",
+          "[77,-1]",
+          false
+        ],
+        [
+          "move",
+          "[77,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[77]",
+          false
+        ],
+        [
+          "inspect",
+          "[210]",
+          false
+        ],
+        [
+          "move",
+          "[210,-1]",
+          false
+        ],
+        [
+          "move",
+          "[210,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[210]",
+          false
+        ],
+        [
+          "inspect",
+          "[94]",
+          false
+        ],
+        [
+          "move",
+          "[94,-1]",
+          false
+        ],
+        [
+          "move",
+          "[94,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[94]",
+          false
+        ],
+        [
+          "inspect",
+          "[112]",
+          false
+        ],
+        [
+          "move",
+          "[112,-1]",
+          false
+        ],
+        [
+          "move",
+          "[112,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[112]",
+          false
+        ],
+        [
+          "inspect",
+          "[85]",
+          false
+        ],
+        [
+          "move",
+          "[85,-1]",
+          false
+        ],
+        [
+          "move",
+          "[85,1]",
+          false
+        ],
+        [
+          "swapSelected",
+          "[85]",
+          false
+        ],
+        [
+          "inspect",
+          "[133]",
+          false
+        ],
+        [
+          "move",
+          "[133,-1]",
+          false
+        ],
+        [
+          "move",
+          "[133,1]",
+          true
+        ],
+        [
+          "swapSelected",
+          "[133]",
+          false
+        ],
+        [
+          "naturalOrder",
+          "[]",
+          false
+        ],
+        [
+          "clearXI",
+          "[]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[133]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[209]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[219]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[87]",
+          false
+        ]
+      ],
+      "overflow": false,
+      "prompt": null,
+      "rows": [
+        {
+          "class": "gccuiBenchRow g8role-BAT",
+          "text": "Inzamam-ul-HaqTop orderWants a move76OVRSwap",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 100.5,
+          "contained": true
+        },
+        {
+          "class": "gccuiBenchRow g8role-AR",
+          "text": "Andrew HallLower order · Pace bowlingWants a move77OVRSwap",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 97.34375,
+          "contained": true
+        },
+        {
+          "class": "gccuiBenchRow g8role-BOWL",
+          "text": "Muttiah MuralitharanSpin bowlerWants a move84OVRSwap",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 100.5,
+          "contained": true
+        },
+        {
+          "class": "gccuiBenchRow g8role-BAT",
+          "text": "Matthew HaydenOpenerFinding rhythm80OVRSwap",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 92.5,
+          "contained": true
+        }
+      ],
+      "controls": [
+        {
+          "name": "Scout Inzamam-ul-Haq",
+          "height": 83.5,
+          "disabled": false
+        },
+        {
+          "name": "Swap into XI: Inzamam-ul-Haq",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Scout Andrew Hall",
+          "height": 80.34375,
+          "disabled": false
+        },
+        {
+          "name": "Swap into XI: Andrew Hall",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Scout Muttiah Muralitharan",
+          "height": 83.5,
+          "disabled": false
+        },
+        {
+          "name": "Swap into XI: Muttiah Muralitharan",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Scout Matthew Hayden",
+          "height": 75.5,
+          "disabled": false
+        },
+        {
+          "name": "Swap into XI: Matthew Hayden",
+          "height": 44,
+          "disabled": false
+        }
+      ],
+      "ids": [
+        "[165]",
+        "[204]",
+        "[26]",
+        "[63]",
+        "[8]",
+        "[77]",
+        "[210]",
+        "[94]",
+        "[112]",
+        "[85]",
+        "[133]"
+      ],
+      "hover": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "shadow": "rgb(0, 75, 160) 3px 0px 0px 0px inset"
+      }
+    },
+    {
+      "kind": "after",
+      "name": "swapping",
+      "width": 1440,
+      "copy": "2010 · Mumbai IndiansName your XI11/11Selected80XI ratingView analysisLodge XIVenue & conditionsHOME GROUNDWankhede StadiumPace and powerBench · 4Starting XI · 11Bench4 playersInzamam-ul-HaqTop orderWants a move76OVRSwapAndrew HallLower order · Pace bowlingWants a move77OVRSwapMuttiah MuralitharanSpin bowlerWants a move84OVRSwapMatthew HaydenOpenerFinding rhythm80OVRSwapStarting XIBatting orderInzamam-ul-Haq is coming in.Choose who they replace.Cancel swap1Brad HodgeTop orderIn form79OVR2Younis KhanTop order78OVR3Mohammad YousufTop order85OVR4Andrew SymondsMiddle order · Pace & spin bowling82OVR5Matt PriorMiddle order · Keeper80OVR6Azhar MahmoodLower order · Pace bowling77OVR7Rana Naved-ul-HasanPace bowlerFinding rhythm81OVR8Shoaib AkhtarPace bowlerIn form83OVR9Steve HarmisonPace bowler80OVR10Brett LeePace bowlerIn form87OVR11Andre NelPace bowlerWants a move83OVROrder & selection tools+Natural orderClear XIIN THE DRESSING ROOMSquad decisionsAndre NelWants a moveUnresolved transfer requestReview playerInzamam-ul-HaqWants a moveUnresolved transfer requestReview playerAndrew HallWants a moveUnresolved transfer requestReview player1 more squad decision+Muttiah MuralitharanWants a moveUnresolved transfer requestReview playerSelection essentials+Choose roles, not just ratingsBatting order affects performance. Open a player to see their batting position and detailed skills; select a name in your XI to change their place.Cover a full inningsChoose a recognised keeper and an attack suited to the contest. Part-time bowlers can contribute; judge their skills, roles and the conditions alongside your main bowlers.Read the conditionsThe preview uses the match venue and weather. Your home ground is not used for every fixture. Ratings describe ability, not a predicted score or a guaranteed win.",
+      "actions": [
+        [
+          "teamAnalysis",
+          "[]",
+          true
+        ],
+        [
+          "lodge",
+          "[]",
+          true
+        ],
+        [
+          "teamPane",
+          "[\"squad\"]",
+          true
+        ],
+        [
+          "teamPane",
+          "[\"xi\"]",
+          false
+        ],
+        [
+          "inspect",
+          "[209]",
+          false
+        ],
+        [
+          "swapIn",
+          "[209]",
+          true
+        ],
+        [
+          "inspect",
+          "[219]",
+          false
+        ],
+        [
+          "swapIn",
+          "[219]",
+          true
+        ],
+        [
+          "inspect",
+          "[87]",
+          false
+        ],
+        [
+          "swapIn",
+          "[87]",
+          true
+        ],
+        [
+          "inspect",
+          "[16]",
+          false
+        ],
+        [
+          "swapIn",
+          "[16]",
+          true
+        ],
+        [
+          "cancelSwap",
+          "[]",
+          false
+        ],
+        [
+          "swapOut",
+          "[165]",
+          false
+        ],
+        [
+          "swapOut",
+          "[204]",
+          false
+        ],
+        [
+          "swapOut",
+          "[26]",
+          false
+        ],
+        [
+          "swapOut",
+          "[63]",
+          false
+        ],
+        [
+          "swapOut",
+          "[8]",
+          false
+        ],
+        [
+          "swapOut",
+          "[77]",
+          false
+        ],
+        [
+          "swapOut",
+          "[210]",
+          false
+        ],
+        [
+          "swapOut",
+          "[94]",
+          false
+        ],
+        [
+          "swapOut",
+          "[112]",
+          false
+        ],
+        [
+          "swapOut",
+          "[85]",
+          false
+        ],
+        [
+          "swapOut",
+          "[133]",
+          false
+        ],
+        [
+          "naturalOrder",
+          "[]",
+          true
+        ],
+        [
+          "clearXI",
+          "[]",
+          true
+        ],
+        [
+          "manageInspect",
+          "[133]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[209]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[219]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[87]",
+          false
+        ]
+      ],
+      "overflow": false,
+      "prompt": {
+        "background": "rgba(0, 0, 0, 0)",
+        "buttonHeight": 44,
+        "text": "Inzamam-ul-Haq is coming in.Choose who they replace.Cancel swap"
+      },
+      "rows": [
+        {
+          "class": "gccuiBenchRow g8role-BAT",
+          "text": "Inzamam-ul-HaqTop orderWants a move76OVRSwap",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 82.078125,
+          "contained": true
+        },
+        {
+          "class": "gccuiBenchRow g8role-AR",
+          "text": "Andrew HallLower order · Pace bowlingWants a move77OVRSwap",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 82.078125,
+          "contained": true
+        },
+        {
+          "class": "gccuiBenchRow g8role-BOWL",
+          "text": "Muttiah MuralitharanSpin bowlerWants a move84OVRSwap",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 82.078125,
+          "contained": true
+        },
+        {
+          "class": "gccuiBenchRow g8role-BAT",
+          "text": "Matthew HaydenOpenerFinding rhythm80OVRSwap",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BAT",
+          "text": "1Brad HodgeTop orderIn form79OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BAT",
+          "text": "2Younis KhanTop order78OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BAT",
+          "text": "3Mohammad YousufTop order85OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-AR",
+          "text": "4Andrew SymondsMiddle order · Pace & spin bowling82OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-WK-BAT",
+          "text": "5Matt PriorMiddle order · Keeper80OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-AR",
+          "text": "6Azhar MahmoodLower order · Pace bowling77OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "7Rana Naved-ul-HasanPace bowlerFinding rhythm81OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "8Shoaib AkhtarPace bowlerIn form83OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "9Steve HarmisonPace bowler80OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "10Brett LeePace bowlerIn form87OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 89,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "11Andre NelPace bowlerWants a move83OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 89,
+          "contained": true
+        }
+      ],
+      "controls": [
+        {
+          "name": "Scout Inzamam-ul-Haq",
+          "height": 65.078125,
+          "disabled": false
+        },
+        {
+          "name": "Swap into XI: Inzamam-ul-Haq",
+          "height": 44,
+          "disabled": true
+        },
+        {
+          "name": "Scout Andrew Hall",
+          "height": 65.078125,
+          "disabled": false
+        },
+        {
+          "name": "Swap into XI: Andrew Hall",
+          "height": 44,
+          "disabled": true
+        },
+        {
+          "name": "Scout Muttiah Muralitharan",
+          "height": 65.078125,
+          "disabled": false
+        },
+        {
+          "name": "Swap into XI: Muttiah Muralitharan",
+          "height": 44,
+          "disabled": true
+        },
+        {
+          "name": "Scout Matthew Hayden",
+          "height": 57.078125,
+          "disabled": false
+        },
+        {
+          "name": "Swap into XI: Matthew Hayden",
+          "height": 44,
+          "disabled": true
+        },
+        {
+          "name": "Replace Brad Hodge",
+          "height": 57.078125,
+          "disabled": false
+        },
+        {
+          "name": "Replace Younis Khan",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Mohammad Yousuf",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Andrew Symonds",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Matt Prior",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Azhar Mahmood",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Rana Naved-ul-Hasan",
+          "height": 57.078125,
+          "disabled": false
+        },
+        {
+          "name": "Replace Shoaib Akhtar",
+          "height": 57.078125,
+          "disabled": false
+        },
+        {
+          "name": "Replace Steve Harmison",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Brett Lee",
+          "height": 57.078125,
+          "disabled": false
+        },
+        {
+          "name": "Replace Andre Nel",
+          "height": 65.078125,
+          "disabled": false
+        }
+      ],
+      "ids": [
+        "[165]",
+        "[204]",
+        "[26]",
+        "[63]",
+        "[8]",
+        "[77]",
+        "[210]",
+        "[94]",
+        "[112]",
+        "[85]",
+        "[133]"
+      ],
+      "hover": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "shadow": "rgb(0, 75, 160) 3px 0px 0px 0px inset"
+      }
+    },
+    {
+      "kind": "after",
+      "name": "swapping",
+      "width": 768,
+      "copy": "2010 · Mumbai IndiansName your XI11/11Selected80XI ratingView analysisLodge XIVenue & conditionsHOME GROUNDWankhede StadiumPace and powerBench · 4Starting XI · 11Bench4 playersInzamam-ul-HaqTop orderWants a move76OVRSwapAndrew HallLower order · Pace bowlingWants a move77OVRSwapMuttiah MuralitharanSpin bowlerWants a move84OVRSwapMatthew HaydenOpenerFinding rhythm80OVRSwapStarting XIBatting orderInzamam-ul-Haq is coming in.Choose who they replace.Cancel swap1Brad HodgeTop orderIn form79OVR2Younis KhanTop order78OVR3Mohammad YousufTop order85OVR4Andrew SymondsMiddle order · Pace & spin bowling82OVR5Matt PriorMiddle order · Keeper80OVR6Azhar MahmoodLower order · Pace bowling77OVR7Rana Naved-ul-HasanPace bowlerFinding rhythm81OVR8Shoaib AkhtarPace bowlerIn form83OVR9Steve HarmisonPace bowler80OVR10Brett LeePace bowlerIn form87OVR11Andre NelPace bowlerWants a move83OVROrder & selection tools+Natural orderClear XIIN THE DRESSING ROOMSquad decisionsAndre NelWants a moveUnresolved transfer requestReview playerInzamam-ul-HaqWants a moveUnresolved transfer requestReview playerAndrew HallWants a moveUnresolved transfer requestReview player1 more squad decision+Muttiah MuralitharanWants a moveUnresolved transfer requestReview playerSelection essentials+Choose roles, not just ratingsBatting order affects performance. Open a player to see their batting position and detailed skills; select a name in your XI to change their place.Cover a full inningsChoose a recognised keeper and an attack suited to the contest. Part-time bowlers can contribute; judge their skills, roles and the conditions alongside your main bowlers.Read the conditionsThe preview uses the match venue and weather. Your home ground is not used for every fixture. Ratings describe ability, not a predicted score or a guaranteed win.",
+      "actions": [
+        [
+          "teamAnalysis",
+          "[]",
+          true
+        ],
+        [
+          "lodge",
+          "[]",
+          true
+        ],
+        [
+          "teamPane",
+          "[\"squad\"]",
+          true
+        ],
+        [
+          "teamPane",
+          "[\"xi\"]",
+          false
+        ],
+        [
+          "inspect",
+          "[209]",
+          false
+        ],
+        [
+          "swapIn",
+          "[209]",
+          true
+        ],
+        [
+          "inspect",
+          "[219]",
+          false
+        ],
+        [
+          "swapIn",
+          "[219]",
+          true
+        ],
+        [
+          "inspect",
+          "[87]",
+          false
+        ],
+        [
+          "swapIn",
+          "[87]",
+          true
+        ],
+        [
+          "inspect",
+          "[16]",
+          false
+        ],
+        [
+          "swapIn",
+          "[16]",
+          true
+        ],
+        [
+          "cancelSwap",
+          "[]",
+          false
+        ],
+        [
+          "swapOut",
+          "[165]",
+          false
+        ],
+        [
+          "swapOut",
+          "[204]",
+          false
+        ],
+        [
+          "swapOut",
+          "[26]",
+          false
+        ],
+        [
+          "swapOut",
+          "[63]",
+          false
+        ],
+        [
+          "swapOut",
+          "[8]",
+          false
+        ],
+        [
+          "swapOut",
+          "[77]",
+          false
+        ],
+        [
+          "swapOut",
+          "[210]",
+          false
+        ],
+        [
+          "swapOut",
+          "[94]",
+          false
+        ],
+        [
+          "swapOut",
+          "[112]",
+          false
+        ],
+        [
+          "swapOut",
+          "[85]",
+          false
+        ],
+        [
+          "swapOut",
+          "[133]",
+          false
+        ],
+        [
+          "naturalOrder",
+          "[]",
+          true
+        ],
+        [
+          "clearXI",
+          "[]",
+          true
+        ],
+        [
+          "manageInspect",
+          "[133]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[209]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[219]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[87]",
+          false
+        ]
+      ],
+      "overflow": false,
+      "prompt": {
+        "background": "rgba(0, 0, 0, 0)",
+        "buttonHeight": 44,
+        "text": "Inzamam-ul-Haq is coming in.Choose who they replace.Cancel swap"
+      },
+      "rows": [
+        {
+          "class": "gccuiOrderRow g8role-BAT",
+          "text": "1Brad HodgeTop orderIn form79OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BAT",
+          "text": "2Younis KhanTop order78OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BAT",
+          "text": "3Mohammad YousufTop order85OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-AR",
+          "text": "4Andrew SymondsMiddle order · Pace & spin bowling82OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-WK-BAT",
+          "text": "5Matt PriorMiddle order · Keeper80OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-AR",
+          "text": "6Azhar MahmoodLower order · Pace bowling77OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "7Rana Naved-ul-HasanPace bowlerFinding rhythm81OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "8Shoaib AkhtarPace bowlerIn form83OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "9Steve HarmisonPace bowler80OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 76,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "10Brett LeePace bowlerIn form87OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 89,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "11Andre NelPace bowlerWants a move83OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 89,
+          "contained": true
+        }
+      ],
+      "controls": [
+        {
+          "name": "Replace Brad Hodge",
+          "height": 57.078125,
+          "disabled": false
+        },
+        {
+          "name": "Replace Younis Khan",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Mohammad Yousuf",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Andrew Symonds",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Matt Prior",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Azhar Mahmood",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Rana Naved-ul-Hasan",
+          "height": 57.078125,
+          "disabled": false
+        },
+        {
+          "name": "Replace Shoaib Akhtar",
+          "height": 57.078125,
+          "disabled": false
+        },
+        {
+          "name": "Replace Steve Harmison",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Brett Lee",
+          "height": 57.078125,
+          "disabled": false
+        },
+        {
+          "name": "Replace Andre Nel",
+          "height": 65.078125,
+          "disabled": false
+        }
+      ],
+      "ids": [
+        "[165]",
+        "[204]",
+        "[26]",
+        "[63]",
+        "[8]",
+        "[77]",
+        "[210]",
+        "[94]",
+        "[112]",
+        "[85]",
+        "[133]"
+      ],
+      "hover": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "shadow": "rgb(0, 75, 160) 3px 0px 0px 0px inset"
+      }
+    },
+    {
+      "kind": "after",
+      "name": "swapping",
+      "width": 390,
+      "copy": "2010 · Mumbai IndiansName your XI11/11Selected80XI ratingView analysisLodge XIVenue & conditionsHOME GROUNDWankhede StadiumPace and powerBench · 4Starting XI · 11Bench4 playersInzamam-ul-HaqTop orderWants a move76OVRSwapAndrew HallLower order · Pace bowlingWants a move77OVRSwapMuttiah MuralitharanSpin bowlerWants a move84OVRSwapMatthew HaydenOpenerFinding rhythm80OVRSwapStarting XIBatting orderInzamam-ul-Haq is coming in.Choose who they replace.Cancel swap1Brad HodgeTop orderIn form79OVR2Younis KhanTop order78OVR3Mohammad YousufTop order85OVR4Andrew SymondsMiddle order · Pace & spin bowling82OVR5Matt PriorMiddle order · Keeper80OVR6Azhar MahmoodLower order · Pace bowling77OVR7Rana Naved-ul-HasanPace bowlerFinding rhythm81OVR8Shoaib AkhtarPace bowlerIn form83OVR9Steve HarmisonPace bowler80OVR10Brett LeePace bowlerIn form87OVR11Andre NelPace bowlerWants a move83OVROrder & selection tools+Natural orderClear XIIN THE DRESSING ROOMSquad decisionsAndre NelWants a moveUnresolved transfer requestReview playerInzamam-ul-HaqWants a moveUnresolved transfer requestReview playerAndrew HallWants a moveUnresolved transfer requestReview player1 more squad decision+Muttiah MuralitharanWants a moveUnresolved transfer requestReview playerSelection essentials+Choose roles, not just ratingsBatting order affects performance. Open a player to see their batting position and detailed skills; select a name in your XI to change their place.Cover a full inningsChoose a recognised keeper and an attack suited to the contest. Part-time bowlers can contribute; judge their skills, roles and the conditions alongside your main bowlers.Read the conditionsThe preview uses the match venue and weather. Your home ground is not used for every fixture. Ratings describe ability, not a predicted score or a guaranteed win.",
+      "actions": [
+        [
+          "teamAnalysis",
+          "[]",
+          true
+        ],
+        [
+          "lodge",
+          "[]",
+          true
+        ],
+        [
+          "teamPane",
+          "[\"squad\"]",
+          true
+        ],
+        [
+          "teamPane",
+          "[\"xi\"]",
+          false
+        ],
+        [
+          "inspect",
+          "[209]",
+          false
+        ],
+        [
+          "swapIn",
+          "[209]",
+          true
+        ],
+        [
+          "inspect",
+          "[219]",
+          false
+        ],
+        [
+          "swapIn",
+          "[219]",
+          true
+        ],
+        [
+          "inspect",
+          "[87]",
+          false
+        ],
+        [
+          "swapIn",
+          "[87]",
+          true
+        ],
+        [
+          "inspect",
+          "[16]",
+          false
+        ],
+        [
+          "swapIn",
+          "[16]",
+          true
+        ],
+        [
+          "cancelSwap",
+          "[]",
+          false
+        ],
+        [
+          "swapOut",
+          "[165]",
+          false
+        ],
+        [
+          "swapOut",
+          "[204]",
+          false
+        ],
+        [
+          "swapOut",
+          "[26]",
+          false
+        ],
+        [
+          "swapOut",
+          "[63]",
+          false
+        ],
+        [
+          "swapOut",
+          "[8]",
+          false
+        ],
+        [
+          "swapOut",
+          "[77]",
+          false
+        ],
+        [
+          "swapOut",
+          "[210]",
+          false
+        ],
+        [
+          "swapOut",
+          "[94]",
+          false
+        ],
+        [
+          "swapOut",
+          "[112]",
+          false
+        ],
+        [
+          "swapOut",
+          "[85]",
+          false
+        ],
+        [
+          "swapOut",
+          "[133]",
+          false
+        ],
+        [
+          "naturalOrder",
+          "[]",
+          true
+        ],
+        [
+          "clearXI",
+          "[]",
+          true
+        ],
+        [
+          "manageInspect",
+          "[133]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[209]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[219]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[87]",
+          false
+        ]
+      ],
+      "overflow": false,
+      "prompt": {
+        "background": "rgba(0, 0, 0, 0)",
+        "buttonHeight": 44,
+        "text": "Inzamam-ul-Haq is coming in.Choose who they replace.Cancel swap"
+      },
+      "rows": [
+        {
+          "class": "gccuiOrderRow g8role-BAT",
+          "text": "1Brad HodgeTop orderIn form79OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 77.75,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BAT",
+          "text": "2Younis KhanTop order78OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 67.59375,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BAT",
+          "text": "3Mohammad YousufTop order85OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 67.59375,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-AR",
+          "text": "4Andrew SymondsMiddle order · Pace & spin bowling82OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 67.59375,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-WK-BAT",
+          "text": "5Matt PriorMiddle order · Keeper80OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 67.59375,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-AR",
+          "text": "6Azhar MahmoodLower order · Pace bowling77OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 67.59375,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "7Rana Naved-ul-HasanPace bowlerFinding rhythm81OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 77.75,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "8Shoaib AkhtarPace bowlerIn form83OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 77.75,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "9Steve HarmisonPace bowler80OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 67.59375,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "10Brett LeePace bowlerIn form87OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 77.75,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "11Andre NelPace bowlerWants a move83OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 85.75,
+          "contained": true
+        }
+      ],
+      "controls": [
+        {
+          "name": "Replace Brad Hodge",
+          "height": 56.75,
+          "disabled": false
+        },
+        {
+          "name": "Replace Younis Khan",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Mohammad Yousuf",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Andrew Symonds",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Matt Prior",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Azhar Mahmood",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Rana Naved-ul-Hasan",
+          "height": 56.75,
+          "disabled": false
+        },
+        {
+          "name": "Replace Shoaib Akhtar",
+          "height": 56.75,
+          "disabled": false
+        },
+        {
+          "name": "Replace Steve Harmison",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Brett Lee",
+          "height": 56.75,
+          "disabled": false
+        },
+        {
+          "name": "Replace Andre Nel",
+          "height": 64.75,
+          "disabled": false
+        }
+      ],
+      "ids": [
+        "[165]",
+        "[204]",
+        "[26]",
+        "[63]",
+        "[8]",
+        "[77]",
+        "[210]",
+        "[94]",
+        "[112]",
+        "[85]",
+        "[133]"
+      ],
+      "hover": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "shadow": "rgb(0, 75, 160) 3px 0px 0px 0px inset"
+      }
+    },
+    {
+      "kind": "after",
+      "name": "swapping",
+      "width": 320,
+      "copy": "2010 · Mumbai IndiansName your XI11/11Selected80XI ratingView analysisLodge XIVenue & conditionsHOME GROUNDWankhede StadiumPace and powerBench · 4Starting XI · 11Bench4 playersInzamam-ul-HaqTop orderWants a move76OVRSwapAndrew HallLower order · Pace bowlingWants a move77OVRSwapMuttiah MuralitharanSpin bowlerWants a move84OVRSwapMatthew HaydenOpenerFinding rhythm80OVRSwapStarting XIBatting orderInzamam-ul-Haq is coming in.Choose who they replace.Cancel swap1Brad HodgeTop orderIn form79OVR2Younis KhanTop order78OVR3Mohammad YousufTop order85OVR4Andrew SymondsMiddle order · Pace & spin bowling82OVR5Matt PriorMiddle order · Keeper80OVR6Azhar MahmoodLower order · Pace bowling77OVR7Rana Naved-ul-HasanPace bowlerFinding rhythm81OVR8Shoaib AkhtarPace bowlerIn form83OVR9Steve HarmisonPace bowler80OVR10Brett LeePace bowlerIn form87OVR11Andre NelPace bowlerWants a move83OVROrder & selection tools+Natural orderClear XIIN THE DRESSING ROOMSquad decisionsAndre NelWants a moveUnresolved transfer requestReview playerInzamam-ul-HaqWants a moveUnresolved transfer requestReview playerAndrew HallWants a moveUnresolved transfer requestReview player1 more squad decision+Muttiah MuralitharanWants a moveUnresolved transfer requestReview playerSelection essentials+Choose roles, not just ratingsBatting order affects performance. Open a player to see their batting position and detailed skills; select a name in your XI to change their place.Cover a full inningsChoose a recognised keeper and an attack suited to the contest. Part-time bowlers can contribute; judge their skills, roles and the conditions alongside your main bowlers.Read the conditionsThe preview uses the match venue and weather. Your home ground is not used for every fixture. Ratings describe ability, not a predicted score or a guaranteed win.",
+      "actions": [
+        [
+          "teamAnalysis",
+          "[]",
+          true
+        ],
+        [
+          "lodge",
+          "[]",
+          true
+        ],
+        [
+          "teamPane",
+          "[\"squad\"]",
+          true
+        ],
+        [
+          "teamPane",
+          "[\"xi\"]",
+          false
+        ],
+        [
+          "inspect",
+          "[209]",
+          false
+        ],
+        [
+          "swapIn",
+          "[209]",
+          true
+        ],
+        [
+          "inspect",
+          "[219]",
+          false
+        ],
+        [
+          "swapIn",
+          "[219]",
+          true
+        ],
+        [
+          "inspect",
+          "[87]",
+          false
+        ],
+        [
+          "swapIn",
+          "[87]",
+          true
+        ],
+        [
+          "inspect",
+          "[16]",
+          false
+        ],
+        [
+          "swapIn",
+          "[16]",
+          true
+        ],
+        [
+          "cancelSwap",
+          "[]",
+          false
+        ],
+        [
+          "swapOut",
+          "[165]",
+          false
+        ],
+        [
+          "swapOut",
+          "[204]",
+          false
+        ],
+        [
+          "swapOut",
+          "[26]",
+          false
+        ],
+        [
+          "swapOut",
+          "[63]",
+          false
+        ],
+        [
+          "swapOut",
+          "[8]",
+          false
+        ],
+        [
+          "swapOut",
+          "[77]",
+          false
+        ],
+        [
+          "swapOut",
+          "[210]",
+          false
+        ],
+        [
+          "swapOut",
+          "[94]",
+          false
+        ],
+        [
+          "swapOut",
+          "[112]",
+          false
+        ],
+        [
+          "swapOut",
+          "[85]",
+          false
+        ],
+        [
+          "swapOut",
+          "[133]",
+          false
+        ],
+        [
+          "naturalOrder",
+          "[]",
+          true
+        ],
+        [
+          "clearXI",
+          "[]",
+          true
+        ],
+        [
+          "manageInspect",
+          "[133]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[209]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[219]",
+          false
+        ],
+        [
+          "manageInspect",
+          "[87]",
+          false
+        ]
+      ],
+      "overflow": false,
+      "prompt": {
+        "background": "rgba(0, 0, 0, 0)",
+        "buttonHeight": 44,
+        "text": "Inzamam-ul-Haq is coming in.Choose who they replace.Cancel swap"
+      },
+      "rows": [
+        {
+          "class": "gccuiOrderRow g8role-BAT",
+          "text": "1Brad HodgeTop orderIn form79OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 77.75,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BAT",
+          "text": "2Younis KhanTop order78OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 67.59375,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BAT",
+          "text": "3Mohammad YousufTop order85OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 67.59375,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-AR",
+          "text": "4Andrew SymondsMiddle order · Pace & spin bowling82OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 67.59375,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-WK-BAT",
+          "text": "5Matt PriorMiddle order · Keeper80OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 67.59375,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-AR",
+          "text": "6Azhar MahmoodLower order · Pace bowling77OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 67.59375,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "7Rana Naved-ul-HasanPace bowlerFinding rhythm81OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 77.75,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "8Shoaib AkhtarPace bowlerIn form83OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 77.75,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "9Steve HarmisonPace bowler80OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 67.59375,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "10Brett LeePace bowlerIn form87OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 77.75,
+          "contained": true
+        },
+        {
+          "class": "gccuiOrderRow g8role-BOWL",
+          "text": "11Andre NelPace bowlerWants a move83OVR",
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 85.75,
+          "contained": true
+        }
+      ],
+      "controls": [
+        {
+          "name": "Replace Brad Hodge",
+          "height": 56.75,
+          "disabled": false
+        },
+        {
+          "name": "Replace Younis Khan",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Mohammad Yousuf",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Andrew Symonds",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Matt Prior",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Azhar Mahmood",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Rana Naved-ul-Hasan",
+          "height": 56.75,
+          "disabled": false
+        },
+        {
+          "name": "Replace Shoaib Akhtar",
+          "height": 56.75,
+          "disabled": false
+        },
+        {
+          "name": "Replace Steve Harmison",
+          "height": 44,
+          "disabled": false
+        },
+        {
+          "name": "Replace Brett Lee",
+          "height": 56.75,
+          "disabled": false
+        },
+        {
+          "name": "Replace Andre Nel",
+          "height": 64.75,
+          "disabled": false
+        }
+      ],
+      "ids": [
+        "[165]",
+        "[204]",
+        "[26]",
+        "[63]",
+        "[8]",
+        "[77]",
+        "[210]",
+        "[94]",
+        "[112]",
+        "[85]",
+        "[133]"
+      ],
+      "hover": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "shadow": "rgb(0, 75, 160) 3px 0px 0px 0px inset"
+      }
+    }
+  ],
+  "failures": [],
+  "scope": "Paired disposable legal2009 offseason draft/manual XI, both selection panes, swap/cancel and batting-order controls; no user save",
+  "before_sha256": "2c7c9c1edaef7fa67a15122097f33b928fc50e02019f1e6badf929336dd1be4c",
+  "after_sha256": "76abca374125bf6b55464905f91983a2ba24563b420f064a000a48c858c0e0c9",
+  "status": "PASS"
+}
