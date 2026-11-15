@@ -1,5 +1,19 @@
 # Current v116 review candidate handoff
 
+## Staged saved-career confirmation, 16 November 2026
+
+Latest staged sourcec3b669679378535d4b5f0de8e9e182d6c74c97448ad467c285c7207b742336c1,6,677,410bytes. Opened build remains Injury Cover0531f193. No new standalone game download or stable promotion; frozen v116/main/perf untouched.
+
+Existing owner10 decision-layout selector now includes fresh: left-aligned title/copy, no empty header spacer, consistent action sizing. Only CSS10 differs from0531; exact guard proves22 scripts/all other HTML bytes identical. Engine pins unchanged and mutation probes pass. [Run43718364872](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/43718364872) PASS8 before/after captures at1440/768/390/320; wording/actions retained,44px targets/no overflow/visible first focus on Keep career. Actual Keep/close/Continue preserve captured career data. Explicit restart introduction retains stored backup until world creation; actual new2008 reveal outcome identical. Phone/desktop captures inspected. Artifact14162844213 subject to retention. [Review](V116_FRESH_DIALOG_REVIEW.md), [report](V116_FRESH_DIALOG_NATIVE_REPORT.json). Alternate story-recovery prompt not separately reached; not universal storage/browser certification. No broad engine acceptance rerun.
+
+## Uploaded Cline script recovered with explicit limits
+
+User finally uploaded original2070byte qa/v116_gameplay_authenticity.mjs. It was mixed UTF8/UTF16LE throughout the code, not just a header/BOM. Roots array malformed/unclosed, min/max undefined, closing function brace absent, and no audit runner present. Actual recovered function was describe, not the longer reported name. Repaired UTF8 helper/configuration is3031bytes, SHA-2565bba45da4dfb01b4812e83989563ea9bad021155cf8a83374f1d6b4d80ae5bf7. Download/Library file libfile_1edd4ccfe3088191840ce202c793f9f3 version1. Original local upload preserved; perf branch untouched.
+
+node --check exits0; --self-test exits0 with9 helper checks. Direct run exits2 INCOMPLETE_AUDIT deliberately. Floor-index percentiles retained; min/max/return/braces restored; compatibility alias added; eight-club path expression reconstructed0..7 and marked unverified. No game sampling/authenticity runner was recoverable. Do not claim a full gameplay audit passed or commit this as a complete audit. [Recovery record](../qa/V116_AUTHENTICITY_UPLOAD_RECOVERY.md). Existing canonical integrity entry point remains separate with documented limits.
+
+Next:continue bounded remaining-component audit; current game stays open, confirmation layout staged for next substantive bundle.
+
 ## Current Injury Cover review download, 15 November 2026
 
 GCC_v116_Injury_Cover_Review.html, SHA-2560531f19348e34d9e7b06e4a40b62a7bf01bbf3dca424e487d885f6a64d7dbb1f,6,677,250bytes. Saved review copy libfile_e9de3fc8ce308191b691a7376fbd3ea6. Fresh canonical rebuild and exact CSS-owner byte guard pass; this is the same candidate verified below, no new product edits for packaging. User-opened tab remains Squad Decisions54f140e0 until new file is downloaded/opened. Preserve54f as prior delivered rollback; frozen v116/main/perf untouched. Review only, unpromoted.

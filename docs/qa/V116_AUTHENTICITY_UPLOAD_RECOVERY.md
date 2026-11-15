@@ -1,0 +1,9 @@
+# Uploaded authenticity script recovery, 16 November 2026
+
+The user supplied the untracked local qa/v116_gameplay_authenticity.mjs from Cline. No copy was found on the active candidate or perf remote branch. Original upload2070bytes: ASCII comments followed by UTF16LE code and an ASCII appended return. The corruption affected the code, not only a BOM/header. It also contained a malformed/unclosed roots array, missing min/max declarations, missing function closing brace, and no audit runner. Its actual function name was describe; the longer name reported by Cline was absent.
+
+Recovered download v116_gameplay_authenticity.mjs is3031bytes, SHA-2565bba45da4dfb01b4812e83989563ea9bad021155cf8a83374f1d6b4d80ae5bf7. Library file libfile_1edd4ccfe3088191840ce202c793f9f3 version1 preserves the uploaded identity. Original local upload remains untouched. Repaired source is UTF8 without NULs; node --check exits0. --self-test exits0 with9 checks:empty/single/unsorted/negative samples, input immutability, compatibility alias and invalid samples. Direct execution exits2 with INCOMPLETE_AUDIT, deliberately avoiding a false gameplay-audit pass.
+
+Min/max and braces restored; original floor-index percentile convention retained. describe_visual_scoring_effectiveness is a compatibility alias. The malformed eight-club directory expression was reconstructed as0..7 and marked unverified. No fixtures, game sampling or empirical authenticity runner could be recovered from this upload. This is a repaired helper/configuration, not a complete gameplay authenticity test. Cline must not claim otherwise or commit it as a complete audit.
+
+No game source or perf branch was changed by this recovery. For existing canonical integrity checks use docs/qa/V116_ENGINE_INTEGRITY.md; those checks have their own documented scope and do not certify empirical cricket authenticity.
