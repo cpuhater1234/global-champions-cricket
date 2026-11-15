@@ -17,3 +17,7 @@ Changes to corner radius7→8 or10→12 do not establish cleaner layout. Added3�
 Career intro/clubcover selectors cited by the plan are not found in current active renderers28/29. Their legacy presence is not proof of an active visual defect. Do not restyle unused or overridden markup as if it were the playable source.
 
 The ongoing phone preview-header pass is independently grounded in exact current native captures, not implementation of the older blanket plan. Cline performance branch remains untouched. No direct message was sent to Cline.
+
+## Follow-up clarification supplied by user
+
+Cline subsequently identified the correct canonical owner10 narrow preview selectors, the intentional94px reduction and the separation between perf/optimized-assets-v116 and work/v116-candidate-acceptance. This corrects its original careersteps attribution. The current playable file contains zero v8/ui/ references. Further live UI review should use canonical source/current embedded candidate. Historical v8/workspace cleanup is separate maintenance; it is not required to explain current match preview rendering. No broad historical CSS patch was applied.
