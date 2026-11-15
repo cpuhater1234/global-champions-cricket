@@ -7,7 +7,7 @@ permissions:
   contents: read
 env:
   # Exact matchday details candidate; includes staged stationary hover fix.
-  CANDIDATE_SHA256: 3db6ccaf51b1eb3e0061d3b8106ecc13b32f7662c9ec854225a961cc68e4ffac
+  CANDIDATE_SHA256: a4743f8487e7dc4f702d153251cd94517c6cffdba5f132833535db582b2c3999
 concurrency:
   group: gcc-matchday-details
   cancel-in-progress: true
