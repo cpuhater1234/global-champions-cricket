@@ -1,0 +1,37 @@
+name: GCC guide and menu visual review
+on:
+  push:
+    branches: [work/v116-candidate-acceptance]
+    paths: ['.github/workflows/v116-guide-menu-polish.yml', 'qa/v116_guide_menu_native.cjs', 'qa/v116_guide_menu_guard.py']
+permissions:
+  contents: read
+jobs:
+  review:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Build baseline and candidate
+        run: |
+          mkdir -p /tmp/guide-menu-before
+          git archive c2ea997a57d557ab64b54bf170d3de2362c844ce v116/canonical | tar -x -C /tmp/guide-menu-before
+          python qa/v116_canonical_source.py build --source /tmp/guide-menu-before/v116/canonical --allow-runtime-changes --output qa/results/guide-menu-before.html
+          python qa/v116_canonical_source.py build --source v116/canonical --allow-runtime-changes --output qa/results/guide-menu-after.html
+      - name: Install native browser
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+      - name: Capture paired club guide
+        env:
+          GCC8_BASELINE_BUILD: qa/results/guide-menu-before.html
+          GCC8_TEST_BUILD: qa/results/guide-menu-after.html
+          CANDIDATE_SHA256: a196081b22960520c4c8f23c7053828198c2a2a3b693bba8dde3a6999dc6c13a
+        run: node qa/v116_club_guide_native.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: guide-menu-polish
+          path: qa/results/club-guide-native
