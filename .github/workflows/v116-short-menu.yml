@@ -6,7 +6,7 @@ on:
 permissions:
   contents: read
 env:
-  CANDIDATE_SHA256: 06e92365056a411309609434654d841e9cabd920b655549d4d4bd79c632c8e00
+  CANDIDATE_SHA256: 9d9f5313fd53ae1794329d846e9cafdefd23929d47c2a069e571df9c344b9dd3
 jobs:
   acceptance:
     runs-on: ubuntu-24.04
@@ -24,10 +24,10 @@ jobs:
       - name: Build exact candidate and base
         run: |
           mkdir -p /tmp/trade-before
-          git archive 226548088c9228a79d6fb19a063a66b25c780e32 v116/canonical | tar -x -C /tmp/trade-before
+          git archive d92f3898c26f30289064fb0f7e745c45897772bc v116/canonical | tar -x -C /tmp/trade-before
           python qa/v116_canonical_source.py build --source /tmp/trade-before/v116/canonical --allow-runtime-changes --output qa/results/trade-before.html
           python qa/v116_canonical_source.py build --source v116/canonical --allow-runtime-changes --output qa/results/trade-candidate.html --report qa/results/trade-gate-build.json
-          python qa/v116_swap_choices_guard.py --before qa/results/trade-before.html --after qa/results/trade-candidate.html
+          python qa/v116_short_menu_guard.py --before qa/results/trade-before.html --after qa/results/trade-candidate.html
           python qa/v116_engine_integrity.py --source v116/canonical --html qa/results/trade-candidate.html --self-test --report qa/results/trade-gate-pins.json
       - uses: actions/cache/restore@v4
         with:
@@ -52,7 +52,10 @@ jobs:
           GCC8_TEST_BUILD: qa/results/trade-candidate.html
           GCC8_BASELINE_BUILD: qa/results/trade-before.html
           GCC8_COVER_FIXTURE: qa/results/cover-fixture.json
-        run: node qa/v116_short_menu_native.cjs
+        run: |
+          GCC8_TEST_BUILD=qa/results/trade-before.html CANDIDATE_SHA256=06e92365056a411309609434654d841e9cabd920b655549d4d4bd79c632c8e00 GCC8_MENU_OUT=qa/results/short-menu-before node qa/v116_short_menu_native.cjs || test -f qa/results/short-menu-before/report.json
+          GCC8_EXPECT_COMPACT=1 node qa/v116_short_menu_native.cjs
+          node qa/v116_short_menu_compare.cjs
       - name: Upload evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -61,4 +64,6 @@ jobs:
           path: |
             qa/results/trade-gate-*.json
             qa/results/short-menu-native
+            qa/results/short-menu-before
+            qa/results/short-menu-comparison.json
             qa/results/cover-fixture*.json

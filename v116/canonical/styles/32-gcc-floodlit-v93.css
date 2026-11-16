@@ -51,6 +51,7 @@
 @media (max-height:520px){
   #g8hud#g8hud#g8hud{padding:4px 12px!important;display:grid!important;grid-template-columns:auto minmax(0,1fr) auto;gap:4px 12px!important}
   #g8hud#g8hud#g8hud>.g8hudclub{display:contents!important}
+  #g8hud#g8hud#g8hud>.g8hudclub>.g8badge{display:none!important}
   #g8hud#g8hud#g8hud .g8brand{grid-column:1;grid-row:1}
   #g8hud#g8hud#g8hud>.g8hudclub>div{grid-column:2;grid-row:1;min-width:0}
   #g8hud#g8hud#g8hud>nav[aria-label="Game menu"]{grid-column:3;grid-row:1}
@@ -58,6 +59,7 @@
   #g8hud#g8hud#g8hud .g8headerslogan{display:none!important}
   #g8hud#g8hud#g8hud nav{min-height:0!important;margin:0}
   #g8app#g8app#g8app .g8careernav{padding:.15rem 0 0!important}
+  #g8app#g8app#g8app :is(.g8careernav .g8navitem,.g8utilitymenu .g8button):focus-visible{outline-offset:-3px!important}
   #g8app#g8app#g8app .g8careernav .g8navitem{padding:.3rem .8rem!important;font-size:.95rem!important;min-height:44px!important}
   #g8app#g8app#g8app .g8careernav .g8navitem.selected::after,
   #g8app#g8app#g8app .g8careernav .g8navitem[aria-current="page"]::after{bottom:-2px}

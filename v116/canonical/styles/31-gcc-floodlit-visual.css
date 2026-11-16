@@ -535,7 +535,7 @@
 }
 
 /* Short viewports must be able to scroll the full header out of the way. */
-@media(max-height:500px){#g8hud#g8hud#g8hud{position:static}}
+@media(max-height:500px){#g8hud#g8hud#g8hud{position:relative}}
 
 /* 23 ─ Dialogs (scout report, club guide, how-to-play, scorebook) */
 #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])){border:1px solid var(--gcc-line)!important;border-radius:16px!important;overflow-x:hidden;overflow-y:auto;
