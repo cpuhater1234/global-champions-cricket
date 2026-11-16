@@ -1408,8 +1408,9 @@ html:has(#g8dialog[open]){overflow:hidden}
 #g8app .gccuiAllowance>strong{grid-column:1;grid-row:1;display:block;font-size:14px!important;line-height:1.5!important;font-weight:600}
 #g8app .gccuiAllowance>span{grid-column:1;grid-row:2;display:block;font-size:13px!important;line-height:1.5!important;margin:0;color:var(--gcc-muted)}
 #g8app .gccuiAllowance>.g8disclosure{grid-column:2;grid-row:1/span 2;align-self:center;margin:0!important;border:0!important;background:none!important}
-#g8app .gccuiAllowance>.g8disclosure>summary{display:flex;align-items:center;gap:8px;padding:8px 0!important;min-height:44px;font-size:13px!important;line-height:1.4;white-space:normal}
+#g8app .gccuiAllowance>.g8disclosure>summary{display:flex;align-items:center;gap:8px;padding:8px 0!important;min-height:44px;font-size:13px!important;line-height:1.4;white-space:normal;border:0!important;border-radius:0!important;background:none!important;box-shadow:none!important}
 #g8app .gccuiAllowance>.g8disclosure[open]{grid-column:1/-1;grid-row:3;align-self:stretch}
+@media(max-width:480px){#g8app .gccuiAllowance{grid-template-columns:minmax(0,1fr);gap:2px}#g8app .gccuiAllowance>.g8disclosure{grid-column:1;grid-row:3;justify-self:start}}
 @media(max-width:600px){#g8app .gccuiCareer:has(.g8manageworkspace)>.g8heading{grid-template-columns:minmax(0,1fr)}#g8app .gccuiCareer:has(.g8manageworkspace)>.g8heading h1{font-size:24px!important}}
 #g8app .gccuiManageContinue{padding:16px 0;margin:12px 0;border-top:1px solid var(--gcc-line)}
 @media(max-width:760px){

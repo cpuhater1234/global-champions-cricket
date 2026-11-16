@@ -50,7 +50,7 @@
 #g8hud#g8hud#g8hud summary:hover{border-color:var(--vx-glow)!important}
 
 /* 4 ─ Headings: big, condensed, uppercase, broadcast-title feel */
-#g8stage#g8stage#g8stage h1{font-weight:800!important;text-transform:uppercase;letter-spacing:.015em;line-height:.98;
+#g8stage#g8stage#g8stage h1:not(:where(.gccuiCareer:has(.g8manageworkspace)>.g8heading h1)){font-weight:800!important;text-transform:uppercase;letter-spacing:.015em;line-height:.98;
   font-size:clamp(2.4rem,4.4vw,4rem)!important}
 #g8stage#g8stage#g8stage h2{font-weight:700!important;text-transform:uppercase;letter-spacing:.03em}
 #g8stage#g8stage#g8stage .g8eyebrow,#g8stage#g8stage#g8stage .gccuiKicker{font-weight:700!important;letter-spacing:.2em!important;
@@ -530,7 +530,7 @@
   #g8app#g8app#g8app .gccuiScoreSide>div>strong{font-size:3.2rem!important}
   #g8app#g8app #g8stage .gccuiOrderNumber{font-size:1.15rem;min-width:1.6ch;white-space:nowrap}
   #g8app#g8app #g8stage .gccuiPlayerOverall strong{font-size:2.1rem!important}
-  #g8app#g8app #g8stage h1{font-size:clamp(2rem,9vw,2.6rem)!important}
+  #g8app#g8app #g8stage h1:not(:where(.gccuiCareer:has(.g8manageworkspace)>.g8heading h1)){font-size:clamp(2rem,9vw,2.6rem)!important}
   #g8app#g8app #g8stage .g8heading,#g8app#g8app #g8stage .gccuiTurn{clip-path:none}
 }
 
