@@ -1399,17 +1399,20 @@ html:has(#g8dialog[open]){overflow:hidden}
 #g8app .gccuiCareer .gccuiSquadDecisions.has-alert{border-left:3px solid #d8af57!important}
 #g8app .gccuiCareer .gccuiSquadDecisions>summary{white-space:normal!important;line-height:1.45!important;padding:12px 16px!important}
 #g8app .gccuiBriefUnavailable{margin:0!important;padding:4px 2px!important;font-size:13px!important;line-height:1.45!important;color:var(--gcc-muted)!important}
-#g8app .gccuiAllowance{margin:12px 0!important;padding:12px 16px!important;border:1px solid var(--gcc-line);border-left:3px solid var(--ui-team);background:var(--gcc-panel)}
-#g8app .gccuiAllowance>strong{display:block;font-size:16px!important;line-height:1.4!important}
-#g8app .gccuiAllowance>span{display:block;font-size:13px!important;line-height:1.45!important;margin-top:3px}
-#g8app .gccuiAllowance>.g8disclosure{margin:8px 0 0!important;border:0!important;background:none!important}
-#g8app .gccuiAllowance>.g8disclosure>summary{padding:8px 0!important;min-height:44px;font-size:14px!important}
+/* Management introduction: one heading, followed by a compact factual allowance. */
+#g8app .gccuiCareer:has(.g8manageworkspace)>.g8heading{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;padding:0 0 16px!important;margin:0!important;gap:12px!important;border:0!important;border-radius:0;background:none!important;clip-path:none;box-shadow:none!important}
+#g8app .gccuiCareer:has(.g8manageworkspace)>.g8heading h1{font-family:var(--vx-body)!important;font-size:28px!important;line-height:1.2!important;letter-spacing:-.025em;margin:6px 0 0!important}
+#g8app .gccuiCareer:has(.g8manageworkspace)>.g8heading p{font-size:14px!important;line-height:1.5!important;margin:8px 0 0!important;color:var(--gcc-muted)!important}
+#g8app .gccuiCareer:has(.g8manageworkspace)>.g8heading .g8actions{margin:0!important;padding:0;align-self:start}
+#g8app .gccuiAllowance{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:2px 16px;margin:0 0 20px!important;padding:12px 0!important;border:0;border-top:1px solid var(--gcc-line);border-bottom:1px solid var(--gcc-line);background:none;box-shadow:none}
+#g8app .gccuiAllowance>strong{grid-column:1;grid-row:1;display:block;font-size:14px!important;line-height:1.5!important;font-weight:600}
+#g8app .gccuiAllowance>span{grid-column:1;grid-row:2;display:block;font-size:13px!important;line-height:1.5!important;margin:0;color:var(--gcc-muted)}
+#g8app .gccuiAllowance>.g8disclosure{grid-column:2;grid-row:1/span 2;align-self:center;margin:0!important;border:0!important;background:none!important}
+#g8app .gccuiAllowance>.g8disclosure>summary{display:flex;align-items:center;gap:8px;padding:8px 0!important;min-height:44px;font-size:13px!important;line-height:1.4;white-space:normal}
+#g8app .gccuiAllowance>.g8disclosure[open]{grid-column:1/-1;grid-row:3;align-self:stretch}
+@media(max-width:600px){#g8app .gccuiCareer:has(.g8manageworkspace)>.g8heading{grid-template-columns:minmax(0,1fr)}#g8app .gccuiCareer:has(.g8manageworkspace)>.g8heading h1{font-size:24px!important}}
 #g8app .gccuiManageContinue{padding:16px 0;margin:12px 0;border-top:1px solid var(--gcc-line)}
 @media(max-width:760px){
- #g8app .gccuiCareer:has(.g8manageworkspace)>.g8heading{padding:14px!important;gap:8px!important}
- #g8app .gccuiCareer:has(.g8manageworkspace)>.g8heading h1{font-size:24px!important;line-height:1.2!important}
- #g8app .gccuiCareer:has(.g8manageworkspace)>.g8heading p{font-size:14px!important;line-height:1.4!important;margin-top:6px!important}
- #g8app .gccuiCareer:has(.g8manageworkspace)>.g8heading .g8actions{margin-top:4px!important}
  #g8app .gccuiCareer .g8annualbrief{padding:8px 0!important;margin-bottom:8px!important}
  #g8app .gccuiCareer .gccuiOffseasonSummary>h2{margin-bottom:8px!important}
  #g8app .gccuiCareer .gccuiOffseasonActions .g8actions{display:grid!important;grid-template-columns:1fr 1fr!important;gap:8px!important;align-items:stretch!important}
@@ -1481,8 +1484,15 @@ html:has(#g8dialog[open]){overflow:hidden}
 @container draft-pool (max-width:650px){#g8app .gccui.gccuiDraft .gccuiFilters{grid-template-columns:minmax(0,1fr) minmax(210px,1fr)}#g8app .gccui.gccuiDraft .gccuiFilters>label:first-child{grid-column:1/-1}}
 @container draft-pool (max-width:430px){#g8app .gccui.gccuiDraft .gccuiFilters{grid-template-columns:minmax(0,1fr)}}
 
-/* Utility menu content is grouped by purpose; existing menu/button owners retain their paint. */
-#g8hud .gccuiMenuGroup{display:grid;gap:6px;margin:0;padding:0}
-#g8hud .gccuiMenuGroup+.gccuiMenuGroup{margin-top:6px;padding-top:12px;border-top:1px solid var(--gcc-line)}
-#g8hud .gccuiMenuLabel{margin:0 0 2px;font-size:11px;line-height:1.4;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gcc-muted)}
-#g8hud .gccuiMenuGroup>.g8button{width:100%;margin:0;min-height:44px;justify-content:flex-start;white-space:normal}
+/* Utility menu: one panel, quiet list rows and clear group labels. */
+#g8hud .g8utilitymenu>div{padding:8px!important;gap:0!important;background:var(--gcc-panel)!important;border:1px solid var(--gcc-line)!important;border-radius:10px!important;box-shadow:0 16px 36px -16px #000}
+#g8hud .gccuiMenuGroup{display:grid;gap:2px;margin:0;padding:0}
+#g8hud .gccuiMenuGroup+.gccuiMenuGroup{margin-top:8px;padding-top:8px;border-top:1px solid var(--gcc-line)}
+#g8hud .gccuiMenuLabel{margin:0;padding:8px 10px 6px;font:600 11px/1.4 var(--vx-body);letter-spacing:.08em;text-transform:uppercase;color:var(--gcc-muted)}
+#g8hud .gccuiMenuGroup>.g8button{display:grid;grid-template-columns:20px minmax(0,1fr);align-items:center;gap:12px;width:100%;margin:0;padding:11px 10px!important;min-height:44px;box-sizing:border-box;justify-content:start;text-align:left;font:600 14px/1.5 var(--vx-body)!important;letter-spacing:0;text-transform:none;white-space:normal;border:0!important;border-radius:6px!important;background:transparent!important;color:var(--gcc-text)!important;box-shadow:none!important;transform:none!important;clip-path:none}
+#g8hud .gccuiMenuGroup>.g8button>:first-child:not(span){width:20px;height:20px;min-width:20px;opacity:.75}
+#g8hud .gccuiMenuGroup>.g8button>span{min-width:0}
+#g8hud .gccuiMenuGroup>.g8button:hover:enabled{background:var(--gcc-raised)!important;color:var(--gcc-text)!important}
+#g8hud .gccuiMenuGroup>.g8button:focus-visible{outline:2px solid var(--gcc-accent)!important;outline-offset:-2px!important;background:var(--gcc-raised)!important}
+#g8hud .gccuiMenuGroup>.g8button:disabled{opacity:.45;cursor:default}
+

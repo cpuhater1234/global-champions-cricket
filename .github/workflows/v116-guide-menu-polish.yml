@@ -2,7 +2,7 @@ name: GCC guide and menu visual review
 on:
   push:
     branches: [work/v116-candidate-acceptance]
-    paths: ['.github/workflows/v116-guide-menu-polish.yml', 'qa/v116_guide_menu_native.cjs', 'qa/v116_guide_menu_guard.py']
+    paths: ['.github/workflows/v116-guide-menu-polish.yml', 'qa/v116_guide_menu_native.cjs', 'qa/v116_guide_menu_guard.py', 'qa/v116_management_intro_native.cjs']
 permissions:
   contents: read
 jobs:
@@ -20,6 +20,21 @@ jobs:
           git archive c2ea997a57d557ab64b54bf170d3de2362c844ce v116/canonical | tar -x -C /tmp/guide-menu-before
           python qa/v116_canonical_source.py build --source /tmp/guide-menu-before/v116/canonical --allow-runtime-changes --output qa/results/guide-menu-before.html
           python qa/v116_canonical_source.py build --source v116/canonical --allow-runtime-changes --output qa/results/guide-menu-after.html
+      - name: Verify CSS-only scope and engine pins
+        run: |
+          python qa/v116_guide_menu_guard.py --before qa/results/guide-menu-before.html --after qa/results/guide-menu-after.html
+          python qa/v116_engine_integrity.py --source v116/canonical --html qa/results/guide-menu-after.html --self-test --report qa/results/guide-menu-pins.json
+      - uses: actions/cache/restore@v4
+        with:
+          path: qa/results/whole-ui-career
+          key: gcc-ui-career-79a2fbfe-seed101-v1-${{ hashFiles('qa/structural-risk/career-run.mjs', 'qa/offline_game_host.mjs') }}
+          restore-keys: gcc-ui-career-79a2fbfe-seed101-v1-
+      - name: Generate genuine active-career fixture
+        env:
+          GCC8_TEST_BUILD: qa/results/guide-menu-before.html
+          GCC8_BROWSER_CAREER_DIR: qa/results/whole-ui-career
+          GCC8_COVER_FIXTURE: qa/results/guide-menu-cover.json
+        run: node qa/v116_injury_cover_fixture.mjs > qa/results/guide-menu-cover-provenance.json
       - name: Install native browser
         run: |
           npm install --no-save --no-package-lock playwright
@@ -28,10 +43,28 @@ jobs:
         env:
           GCC8_BASELINE_BUILD: qa/results/guide-menu-before.html
           GCC8_TEST_BUILD: qa/results/guide-menu-after.html
-          CANDIDATE_SHA256: a196081b22960520c4c8f23c7053828198c2a2a3b693bba8dde3a6999dc6c13a
+          CANDIDATE_SHA256: 2f7056e19cdb74ef9b1b9f3a02632bd97485de5570fa80afaca0de841e01874e
         run: node qa/v116_club_guide_native.cjs
+      - name: Menu keyboard, focus and guide journeys
+        env:
+          GCC8_TEST_BUILD: qa/results/guide-menu-after.html
+          CANDIDATE_SHA256: 2f7056e19cdb74ef9b1b9f3a02632bd97485de5570fa80afaca0de841e01874e
+          GCC8_COVER_FIXTURE: qa/results/guide-menu-cover.json
+          GCC8_EXPECT_QUIET_MENU: '1'
+        run: node qa/v116_guide_menu_native.cjs
+      - name: Paired management heading and rules
+        env:
+          GCC8_BASELINE_BUILD: qa/results/guide-menu-before.html
+          GCC8_TEST_BUILD: qa/results/guide-menu-after.html
+          CANDIDATE_SHA256: 2f7056e19cdb74ef9b1b9f3a02632bd97485de5570fa80afaca0de841e01874e
+          GCC8_BROWSER_CAREER_DIR: qa/results/whole-ui-career
+        run: node qa/v116_management_intro_native.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: guide-menu-polish
-          path: qa/results/club-guide-native
+          path: |
+            qa/results/club-guide-native
+            qa/results/guide-menu-native
+            qa/results/management-intro-native
+            qa/results/guide-menu-*.json
