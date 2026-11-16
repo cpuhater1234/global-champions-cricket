@@ -9,7 +9,7 @@
  X.hasSave=()=>!!s.dynasty?.started||X.hasStoredSave()||!!read.recoveryInfo?.();
  let feedbackTimer=null,saveWarning='',pendingRecoveryFeedback=null,exitGuardAttached=false;
  const recoveryNotice=()=>'';
- const saveStatusInner=()=>read.savePending?.()?`<div class="g8savepending ${read.saveSlow?.()?'g8saveslow':'g8savecompact'}" role="status">${read.saveSlow?.()?'Saving is taking longer. Keep the game open.':'Saving'}</div>`:saveWarning?`<div class="g8savewarning" role="status"><strong>Progress not saved</strong><span>${esc(saveWarning)}</span></div>`:recoveryNotice()?`<div class="g8savepending" role="status">${esc(recoveryNotice())}</div>`:s.dynasty&&!read.saveSuspended?.()&&read.saveSucceeded?.()?`<span class="g8saved" role="status">Saved</span>`:'';
+ const saveStatusInner=()=>read.savePending?.()?`<div class="g8savepending ${read.saveSlow?.()?'g8saveslow':'g8savecompact'}" role="status">${read.saveSlow?.()?'Saving is taking longer. Keep the game open.':'Saving'}</div>`:saveWarning?`<div class="g8savewarning" role="status"><strong>Progress not saved</strong><span>${esc(saveWarning)}</span></div>`:recoveryNotice()?`<div class="g8savepending" role="status">${esc(recoveryNotice())}</div>`:s.dynasty&&!ui.newCareer&&!read.saveSuspended?.()&&read.saveSucceeded?.()?`<span class="g8saved" role="status">Saved</span>`:'';
  const saveStatus=()=>{const inner=saveStatusInner();return `<div id="g8saveStatus" class="g8savestatus" ${inner?'':'hidden'}>${inner}</div>`;};
  function warnUnsavedExit(event){event.preventDefault();event.returnValue='';}
  function refreshSaveStatus(ok=read.saveSucceeded?.()){
