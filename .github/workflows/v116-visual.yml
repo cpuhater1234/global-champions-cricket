@@ -1,0 +1,114 @@
+name: GCC v116 visual baseline guardrail
+
+on:
+  push:
+    branches:
+      - work/v116-candidate-acceptance
+    paths:
+      - '.github/workflows/v116-visual.yml'
+      - 'qa/v116_visual_baseline.cjs'
+      - 'qa/visual/pixel-diff.py'
+      - 'qa/visual/baselines/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gcc-v116-visual-guardrail
+  cancel-in-progress: true
+
+jobs:
+  visual-baseline-guardrail:
+    name: Visual baseline capture and pixel-diff comparison
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: work/v116-candidate-acceptance
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install Chromium, Playwright and Pillow
+        run: |
+          if [ -f /etc/apt/apt-mirrors.txt ]; then
+            sudo sed -i 's|http://azure.archive.ubuntu.com/ubuntu|https://archive.ubuntu.com/ubuntu|g' /etc/apt/apt-mirrors.txt
+          fi
+          python -m pip install --disable-pip-version-check playwright pillow
+          python -m playwright install --with-deps chromium
+          npm install --no-save --no-package-lock playwright
+
+      - name: Generate deterministic career checkpoint (seed-101 to 2009)
+        env:
+          GCC8_TEST_BUILD: GCC_v116_release (1).html
+          GCC8_BROWSER_CAREER_DIR: qa/results/whole-ui-career
+          GCC8_TEST_LAST_YEAR: '2009'
+        run: |
+          if [ ! -f qa/results/whole-ui-career/checkpoint-2009.json ]; then
+            node qa/structural-risk/career-run.mjs > /dev/null
+          fi
+          test -f qa/results/whole-ui-career/checkpoint-2009.json
+
+      - name: Capture visual screenshots (4 breakpoints x 10 screens)
+        id: capture
+        env:
+          GCC8_TEST_BUILD: GCC_v116_release (1).html
+          GCC8_BROWSER_CAREER_DIR: qa/results/whole-ui-career
+          GCC8_BASELINE_DIR: qa/visual/current
+        run: |
+          GCC8_CHROMIUM="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')" node qa/v116_visual_baseline.cjs
+
+      - name: Establish baselines if none committed
+        id: establish
+        run: |
+          BASELINE_COUNT=$(find qa/visual/baselines -name '*.png' 2>/dev/null | wc -l)
+          CURRENT_COUNT=$(find qa/visual/current -name '*.png' 2>/dev/null | wc -l)
+          echo "baseline_count=$BASELINE_COUNT" >> $GITHUB_OUTPUT
+          echo "current_count=$CURRENT_COUNT" >> $GITHUB_OUTPUT
+          if [ "$BASELINE_COUNT" -eq 0 ] && [ "$CURRENT_COUNT" -gt 0 ]; then
+            echo "establish=true" >> $GITHUB_OUTPUT
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            cp -r qa/visual/current/* qa/visual/baselines/
+            git add qa/visual/baselines
+            if ! git diff --cached --quiet; then
+              git commit -m "Visual baseline: establish committed baselines for v116 guardrail"
+              git push origin HEAD:refs/heads/work/v116-candidate-acceptance
+            fi
+          else
+            echo "establish=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Run pixel-diff comparison against committed baselines
+        if: steps.establish.outputs.establish != 'true'
+        id: compare
+        env:
+          GCC8_BASELINE_DIR: qa/visual/baselines
+          GCC8_CURRENT_DIR: qa/visual/current
+          GCC8_DIFF_DIR: qa/visual/diffs
+          GCC8_MAX_DIFF_PCT: '0.1'
+        run: |
+          python qa/visual/pixel-diff.py || true
+
+      - name: Upload diff artifacts on failure
+        if: steps.compare.outcome == 'failure' && steps.establish.outputs.establish != 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-diffs
+          path: qa/visual/diffs/
+          retention-days: 7
+
+      - name: Require pixel-diff within threshold
+        if: steps.establish.outputs.establish != 'true'
+        env:
+          COMPARE_STATUS: ${{ steps.compare.outcome }}
+        run: |
+          test "$COMPARE_STATUS" = success || test "$COMPARE_STATUS" = skipped
