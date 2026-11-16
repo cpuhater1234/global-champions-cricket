@@ -267,7 +267,7 @@ html body,#g8app{background-color:var(--gcc-ground)!important;color:var(--gcc-te
 #g8dialog[data-prompt=club] .g8briefbody>p{margin:0;font-size:14px;line-height:1.5;color:var(--gcc-muted);max-width:none}
 #g8dialog[data-prompt=club] .g8groundbands{display:flex;flex-direction:column;gap:0;margin:0;padding:0;border:0;border-radius:0;background:transparent;overflow:visible}
 #g8dialog[data-prompt=club] .g8groundbands>.g8conditionread{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto;align-items:center;gap:7px;min-height:0;margin:0;padding:12px 0;border:0;border-bottom:1px solid var(--gcc-line);border-radius:0;background:transparent;box-shadow:none;min-width:0}
-#g8dialog[data-prompt=club] .g8clubbrief .g8conditionread>div:first-child{grid-column:1;grid-row:1;display:flex;flex-direction:row;align-items:baseline;justify-content:space-between;gap:8px;min-width:0}
+#g8dialog[data-prompt=club] .g8clubbrief .g8conditionread>div:first-child{grid-column:1;grid-row:1;display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto;align-items:baseline;gap:8px;min-width:0}
 #g8dialog[data-prompt=club] .g8clubbrief .g8conditionread b{font-size:13px;line-height:1.35;font-weight:600;color:var(--gcc-text);overflow-wrap:normal;word-break:normal}
 #g8dialog[data-prompt=club] .g8clubbrief .g8conditionread strong{font-size:13px;line-height:1.35;font-weight:500;color:var(--gcc-text);text-align:right}
 #g8dialog[data-prompt=club] .g8clubbrief .g8conditiongauge{grid-column:1;grid-row:2;align-self:center;width:100%;height:6px;margin:0;border:0;border-radius:3px;min-width:0;background:var(--gcc-line)}

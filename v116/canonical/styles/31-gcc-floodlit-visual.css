@@ -22,7 +22,7 @@
   --vx-ease:cubic-bezier(.2,.75,.2,1);
 }
 #g8app#g8app#g8app,#g8app#g8app#g8app button,#g8app#g8app#g8app input,#g8app#g8app#g8app select{font-family:var(--vx-body)!important}
-#g8app#g8app#g8app h1,#g8app#g8app#g8app h2:not(:where([data-prompt=club] h2)),#g8app#g8app#g8app .g8eyebrow:not(:where([data-prompt=club] .g8briefhead .g8eyebrow)),#g8app#g8app#g8app .gccuiKicker,#g8app#g8app#g8app .g8arenaheader,
+#g8app#g8app#g8app h1:not(:where(.gccuiCareer:has(.g8manageworkspace)>.g8heading h1)),#g8app#g8app#g8app h2:not(:where([data-prompt=club] h2)),#g8app#g8app#g8app .g8eyebrow:not(:where([data-prompt=club] .g8briefhead .g8eyebrow)),#g8app#g8app#g8app .gccuiKicker,#g8app#g8app#g8app .g8arenaheader,
 #g8app#g8app#g8app .g8clubwatermark,#g8app#g8app#g8app .g8badge,#g8app#g8app#g8app .gccBrandWordmark,
 #g8app#g8app#g8app .g8leagueformat strong,#g8app#g8app#g8app .gccuiRating,#g8app#g8app#g8app .gccuiPlayerOverall small{
   font-family:var(--vx-display)!important}
@@ -544,7 +544,7 @@
 #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) h2:not(:where([data-prompt=club] h2)),#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) h1{font-family:var(--vx-display)!important;font-weight:800!important;text-transform:uppercase;
   letter-spacing:.03em;font-size:clamp(1.6rem,2.6vw,2.2rem)}
 #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) h3:not(:where([data-prompt=club] .g8briefhead h3,.g8development>h3,[data-prompt=trade] .g8tradeplayer h3,[data-prompt=cover] .g8player h3)){font-family:var(--vx-display)!important;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
-#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8eyebrow,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .gccuiKicker{color:var(--vx-ink)!important}
+#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8eyebrow:not(:where([data-prompt=club] .g8briefhead .g8eyebrow)),#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .gccuiKicker{color:var(--vx-ink)!important}
 #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .gccuiRating,#g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) [class*="overall"] strong{font-family:var(--vx-display)!important;font-weight:800}
 #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) summary:not(:where(.gccuiManagementContext>summary,.gccuiOptionalPromises>summary,.g8development summary)){background:var(--gcc-raised)!important;color:var(--gcc-text)!important;
   border:1px solid var(--gcc-line)!important;border-radius:8px;font-weight:700;letter-spacing:.03em}

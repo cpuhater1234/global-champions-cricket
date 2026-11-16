@@ -1485,6 +1485,7 @@ html:has(#g8dialog[open]){overflow:hidden}
 @container draft-pool (max-width:430px){#g8app .gccui.gccuiDraft .gccuiFilters{grid-template-columns:minmax(0,1fr)}}
 
 /* Utility menu: one panel, quiet list rows and clear group labels. */
+#g8hud .g8careernav .g8navitem:focus-visible{outline-offset:-3px!important}
 #g8hud .g8utilitymenu>div{padding:8px!important;gap:0!important;background:var(--gcc-panel)!important;border:1px solid var(--gcc-line)!important;border-radius:10px!important;box-shadow:0 16px 36px -16px #000}
 #g8hud .gccuiMenuGroup{display:grid;gap:2px;margin:0;padding:0}
 #g8hud .gccuiMenuGroup+.gccuiMenuGroup{margin-top:8px;padding-top:8px;border-top:1px solid var(--gcc-line)}
