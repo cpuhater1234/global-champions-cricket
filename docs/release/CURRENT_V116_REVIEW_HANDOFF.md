@@ -1,5 +1,13 @@
 # Current v116 review candidate handoff
 
+## Current Squad Rhythm review download, 16 November 2026
+
+GCC_v116_Squad_Rhythm_Review.html, SHA-256a196081b22960520c4c8f23c7053828198c2a2a3b693bba8dde3a6999dc6c13a,6,683,580bytes. Saved copy libfile_9795e4bb025481918e41f0f03ac8536b. Bundles prior draft-needs correction plus management-row hierarchy and preview actions. User-opened file remains Rating/HUD2edd until download/open confirmed; preserve it as rollback. Direct guard: only existing CSS01/31/32/37 differ from2edd, all22scripts/every other byte identical,17stylesheets retained. Engine/controller/source pins PASS. Frozen v116/main/perf untouched; no stable promotion.
+
+Management final43838294949 PASS56states (28paired layouts): five role filters and XI/bench at four widths, names/roles/ratings/statuses/actions/ARIA/disabled flags preserved; all management rows shorter, first320px row311.94→184.63px. Preview actions44px/14px, aligned16px names/22px ratings, neutral rows/quiet preview actions. Existing concern/promise tags kept. Actual trade/release previews close with compared career unchanged; real XI keyboard profile/Escape returns row focus. XI/bench geometry unchanged. Source32 short-HUD/reduced-motion suffix byte-identical. [Evidence/limits](V116_SQUAD_SPACING_REVIEW.md). Initial QA failure was a missing captured radius field, corrected in test only; candidatea196 hash unchanged. Desktop/phone/long-row captures inspected.
+
+This is a bounded row improvement, not whole-game final approval. Top-level legacy management heading/allowance chrome, long mobile draft filter stack and remaining secondary surfaces still need evidence-led prioritisation. Do not revive inactive comparison bars or restart repaired-helper encoding work. Next: user opens combined review, then prioritize a current visible issue and consolidate the UI audit backlog before more one-component downloads.
+
 ## Staged quieter draft needs, 16 November 2026
 
 User has opened Rating/HUD Review2eddc625a42583fb8d83957dd215e16791f302742c0f5d9f26db9e052102af79; delivery/open cycle complete. New staged canonicalfd2391fdcaed0062c37b6464b67a004e6eb86dfb6708d6f9fb57a134bb6eb6ff (6,683,588bytes) edits only existing CSS37 needs-strip rules: plain12px readiness counters, no outer tinted/orange-edged frame or pill fills/borders, quiet separator, consistent spacing. Existing five counters/classes/tooltips and readiness text colours retained. Filters, numeric draft cards and mobile squad geometry unchanged. Exact guard: CSS37 only, all22scripts/every other byte identical; critical engine/controller pins PASS. Frozen v116/main/perf untouched, no stable promotion/download.
