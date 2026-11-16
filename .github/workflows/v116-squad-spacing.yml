@@ -2,11 +2,11 @@ name: GCC squad action spacing audit
 on:
   push:
     branches: [work/v116-candidate-acceptance]
-    paths: ['.github/workflows/v116-squad-spacing.yml', 'qa/v116_squad_spacing_native.cjs']
+    paths: ['.github/workflows/v116-squad-spacing.yml', 'qa/v116_squad_spacing_native.cjs', 'qa/v116_squad_spacing_compare.cjs', 'qa/v116_squad_spacing_guard.py']
 permissions:
   contents: read
 env:
-  CANDIDATE_SHA256: fd2391fdcaed0062c37b6464b67a004e6eb86dfb6708d6f9fb57a134bb6eb6ff
+  CANDIDATE_SHA256: a196081b22960520c4c8f23c7053828198c2a2a3b693bba8dde3a6999dc6c13a
 jobs:
   acceptance:
     runs-on: ubuntu-24.04
@@ -23,16 +23,20 @@ jobs:
           node-version: '22'
       - name: Build exact candidate and verify pins
         run: |
+          mkdir -p /tmp/squad-spacing-before
+          git archive eac12800214571cdac64093971f1029f3d4196e5 v116/canonical | tar -x -C /tmp/squad-spacing-before
+          python qa/v116_canonical_source.py build --source /tmp/squad-spacing-before/v116/canonical --allow-runtime-changes --output qa/results/squad-spacing-before.html
           python qa/v116_canonical_source.py build --source v116/canonical --allow-runtime-changes --output qa/results/trade-candidate.html --report qa/results/trade-gate-build.json
+          python qa/v116_squad_spacing_guard.py --before qa/results/squad-spacing-before.html --after qa/results/trade-candidate.html
           python qa/v116_engine_integrity.py --source v116/canonical --html qa/results/trade-candidate.html --self-test --report qa/results/trade-gate-pins.json
       - uses: actions/cache/restore@v4
         with:
           path: qa/results/whole-ui-career
           key: gcc-ui-career-79a2fbfe-seed101-v1-${{ hashFiles('qa/structural-risk/career-run.mjs', 'qa/offline_game_host.mjs') }}
           restore-keys: gcc-ui-career-79a2fbfe-seed101-v1-
-      - name: Generate genuine injury fixture from baseline
+      - name: Generate genuine active-career fixture from baseline
         env:
-          GCC8_TEST_BUILD: qa/results/trade-candidate.html
+          GCC8_TEST_BUILD: qa/results/squad-spacing-before.html
           GCC8_BROWSER_CAREER_DIR: qa/results/whole-ui-career
           GCC8_COVER_FIXTURE: qa/results/cover-fixture.json
         run: node qa/v116_injury_cover_fixture.mjs > qa/results/cover-fixture-provenance.json
@@ -48,7 +52,10 @@ jobs:
           GCC8_TEST_BUILD: qa/results/trade-candidate.html
           GCC8_BROWSER_CAREER_DIR: qa/results/whole-ui-career
           GCC8_COVER_FIXTURE: qa/results/cover-fixture.json
-        run: node qa/v116_squad_spacing_native.cjs
+        run: |
+          GCC8_TEST_BUILD=qa/results/squad-spacing-before.html CANDIDATE_SHA256=fd2391fdcaed0062c37b6464b67a004e6eb86dfb6708d6f9fb57a134bb6eb6ff GCC8_SQUAD_OUT=qa/results/squad-spacing-before node qa/v116_squad_spacing_native.cjs
+          GCC8_EXPECT_QUIET_MANAGE=1 node qa/v116_squad_spacing_native.cjs
+          node qa/v116_squad_spacing_compare.cjs
       - name: Upload evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -57,4 +64,6 @@ jobs:
           path: |
             qa/results/trade-gate-*.json
             qa/results/squad-spacing-native
+            qa/results/squad-spacing-before
+            qa/results/squad-spacing-comparison.json
             qa/results/cover-fixture*.json

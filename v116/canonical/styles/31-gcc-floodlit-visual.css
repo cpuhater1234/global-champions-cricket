@@ -68,16 +68,16 @@
 #g8stage#g8stage#g8stage .gccuiHeadingIcon{border-color:var(--vx-glow)!important;color:var(--vx-glow)!important}
 
 /* 6 ─ Buttons: lit primary, glass secondary */
-#g8app#g8app#g8app .g8button:not(:where([data-prompt=swapSelected] .g8swapchoice)){
+#g8app#g8app#g8app .g8button:not(:where([data-prompt=swapSelected] .g8swapchoice)):not(:where(.g8manageactions .g8button)){
   font-family:var(--vx-body)!important;font-size:1rem!important;font-weight:700!important;
   line-height:1.25!important;letter-spacing:0!important;text-transform:none!important;
   min-height:44px;padding:10px 14px!important;box-sizing:border-box;
   border:1px solid var(--gcc-line)!important;border-radius:8px!important;clip-path:none!important;
   box-shadow:none!important;white-space:normal!important;
 }
-#g8app#g8app#g8app .g8button:not(.g8primary):not(:where([data-prompt=swapSelected] .g8swapchoice)){
+#g8app#g8app#g8app .g8button:not(.g8primary):not(:where([data-prompt=swapSelected] .g8swapchoice)):not(:where(.g8manageactions .g8button)){
   background:rgba(255,255,255,.045)!important;color:var(--gcc-text)!important}
-#g8app#g8app#g8app .g8button:not(.g8primary):hover:enabled:not(:where([data-prompt=swapSelected] .g8swapchoice)){
+#g8app#g8app#g8app .g8button:not(.g8primary):hover:enabled:not(:where([data-prompt=swapSelected] .g8swapchoice)):not(:where(.g8manageactions .g8button)){
   background:rgba(255,255,255,.09)!important;border-color:var(--vx-glow)!important;transform:none}
 
 #g8app#g8app#g8app .g8primary:hover:enabled{transform:none;filter:brightness(1.08) saturate(1.1)}
