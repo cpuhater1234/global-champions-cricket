@@ -14,3 +14,6 @@
 #g8hud .g8hudidentity>#g8saveStatus:has(.g8savewarning,.g8savepending:not(.g8savecompact)){grid-column:1/-1;grid-row:3;width:100%;margin-top:6px}
 #g8hud>#g8saveStatus{flex:1 0 100%;grid-column:1/-1;width:100%}
 #g8saveStatus .g8savepending:not(.g8savecompact){padding:.5rem .75rem;color:#d3ddcf;font-size:1rem;font-weight:700}
+
+#g8hud #g8saveStatus .g8savewarning>strong{white-space:normal;overflow:visible;text-overflow:clip;max-width:none;overflow-wrap:normal;word-break:normal;font-size:14px;line-height:1.4}
+#g8hud:has(#g8saveStatus .g8savewarning,#g8saveStatus .g8saveslow){align-items:start!important}
