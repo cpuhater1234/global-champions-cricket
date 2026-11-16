@@ -2,11 +2,11 @@ name: GCC draft spacing audit
 on:
   push:
     branches: [work/v116-candidate-acceptance]
-    paths: ['.github/workflows/v116-draft-spacing.yml', 'qa/v116_draft_spacing_native.cjs']
+    paths: ['.github/workflows/v116-draft-spacing.yml', 'qa/v116_draft_spacing_native.cjs', 'qa/v116_draft_spacing_compare.cjs', 'qa/v116_draft_spacing_guard.py']
 permissions:
   contents: read
 env:
-  CANDIDATE_SHA256: 2eddc625a42583fb8d83957dd215e16791f302742c0f5d9f26db9e052102af79
+  CANDIDATE_SHA256: a1d5347384bba7cbd0eb81df8dd3540b53c8f15fd6b4bdb5ce154f5c73bdfa7f
 jobs:
   acceptance:
     runs-on: ubuntu-24.04
@@ -23,7 +23,11 @@ jobs:
           node-version: '22'
       - name: Build exact candidate and verify engine pins
         run: |
+          mkdir -p /tmp/draft-spacing-before
+          git archive f559040d91baf714481ac197611dbb525dce9238 v116/canonical | tar -x -C /tmp/draft-spacing-before
+          python qa/v116_canonical_source.py build --source /tmp/draft-spacing-before/v116/canonical --allow-runtime-changes --output qa/results/draft-spacing-before.html
           python qa/v116_canonical_source.py build --source v116/canonical --allow-runtime-changes --output qa/results/trade-candidate.html --report qa/results/trade-gate-build.json
+          python qa/v116_draft_spacing_guard.py --before qa/results/draft-spacing-before.html --after qa/results/trade-candidate.html
           python qa/v116_engine_integrity.py --source v116/canonical --html qa/results/trade-candidate.html --self-test --report qa/results/trade-gate-pins.json
       - name: Install native browser
         run: |
@@ -35,7 +39,10 @@ jobs:
       - name: Check native review, keyboard and accepted result
         env:
           GCC8_TEST_BUILD: qa/results/trade-candidate.html
-        run: node qa/v116_draft_spacing_native.cjs
+        run: |
+          GCC8_TEST_BUILD=qa/results/draft-spacing-before.html CANDIDATE_SHA256=2eddc625a42583fb8d83957dd215e16791f302742c0f5d9f26db9e052102af79 GCC8_DRAFT_OUT=qa/results/draft-spacing-before node qa/v116_draft_spacing_native.cjs
+          GCC8_EXPECT_QUIET_NEEDS=1 node qa/v116_draft_spacing_native.cjs
+          node qa/v116_draft_spacing_compare.cjs
       - name: Upload evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -44,3 +51,5 @@ jobs:
           path: |
             qa/results/trade-gate-*.json
             qa/results/draft-spacing-native
+            qa/results/draft-spacing-before
+            qa/results/draft-spacing-comparison.json

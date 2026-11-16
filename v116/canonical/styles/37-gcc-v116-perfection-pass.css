@@ -12,17 +12,17 @@
 #g8app#g8app#g8app .gccuiPlayerScout:focus-visible,#g8app#g8app#g8app .gccuiScoutAction:focus-visible,#g8app#g8app#g8app .gccuiPlayer [data-action="draftPlayer"]:focus-visible{outline:3px solid #f7b27c!important;outline-offset:-3px!important}
 #g8app#g8app#g8app .gccuiScoutAction{font-weight:800!important;letter-spacing:.04em;color:#bcecf2!important;white-space:nowrap!important}
 #g8app#g8app#g8app .gccuiPlayer footer button{white-space:nowrap!important;min-width:0!important}
-#g8app#g8app#g8app .gccuiNeedsStrip{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 .8rem;padding:.65rem .7rem;border:1px solid var(--gcc-line);border-left:3px solid #f7b27c;border-radius:7px;background:rgba(127,224,238,.055)}
-#g8app#g8app#g8app .gccuiNeedsStrip>span{display:inline-flex;align-items:center;gap:.35rem;padding:.3rem .48rem;border:1px solid rgba(255,255,255,.13);border-radius:999px;color:#a9cfd7;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
-#g8app#g8app#g8app .gccuiNeedsStrip>span.is-ready{border-color:rgba(122,214,155,.55);color:#9df0b5;background:rgba(61,220,151,.08)}
-#g8app#g8app#g8app .gccuiNeedsStrip>span.is-open{border-color:rgba(247,178,124,.6);color:#ffd0ac;background:rgba(247,178,124,.08)}
+#g8app#g8app#g8app .gccuiNeedsStrip{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0;padding:12px 16px;border:0;border-bottom:1px solid var(--gcc-line);border-radius:0;background:transparent}
+#g8app#g8app#g8app .gccuiNeedsStrip>span{display:inline-flex;align-items:center;padding:4px 0;border:0;border-radius:0;background:transparent;color:#a9cfd7;font:600 12px/1.4 var(--vx-body);font-variant-numeric:tabular-nums;letter-spacing:normal;text-transform:uppercase;white-space:nowrap}
+#g8app#g8app#g8app .gccuiNeedsStrip>span.is-ready{color:#9df0b5}
+#g8app#g8app#g8app .gccuiNeedsStrip>span.is-open{color:#ffd0ac}
 /* Result headlines should preserve meaning on narrow screens rather than form a wall of caps. */
 #g8app#g8app#g8app .gccuiScorecard>h2{max-width:32ch!important;overflow-wrap:anywhere!important;text-wrap:balance!important}
 @media(max-width:700px){
  #g8app#g8app#g8app .gccuiPlayer footer{display:grid!important;grid-template-columns:1fr 1fr;gap:.45rem!important}
  #g8app#g8app#g8app .gccuiPlayer footer button{min-width:0!important;width:100%!important}
- #g8app#g8app#g8app .gccuiNeedsStrip{gap:.3rem;padding:.55rem}
- #g8app#g8app#g8app .gccuiNeedsStrip>span{font-size:.66rem;padding:.28rem .4rem}
+ #g8app#g8app#g8app .gccuiNeedsStrip{gap:8px 12px;padding:12px 14px}
+ #g8app#g8app#g8app .gccuiNeedsStrip>span{font-size:12px;padding:4px 0}
 }
 
 /* v116.1 dossier polish: keep the scouting report coherent across themes and viewport sizes. */
