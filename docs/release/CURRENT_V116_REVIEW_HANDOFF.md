@@ -1,5 +1,13 @@
 # Current v116 review candidate handoff
 
+## Staged quieter draft needs, 16 November 2026
+
+User has opened Rating/HUD Review2eddc625a42583fb8d83957dd215e16791f302742c0f5d9f26db9e052102af79; delivery/open cycle complete. New staged canonicalfd2391fdcaed0062c37b6464b67a004e6eb86dfb6708d6f9fb57a134bb6eb6ff (6,683,588bytes) edits only existing CSS37 needs-strip rules: plain12px readiness counters, no outer tinted/orange-edged frame or pill fills/borders, quiet separator, consistent spacing. Existing five counters/classes/tooltips and readiness text colours retained. Filters, numeric draft cards and mobile squad geometry unchanged. Exact guard: CSS37 only, all22scripts/every other byte identical; critical engine/controller pins PASS. Frozen v116/main/perf untouched, no stable promotion/download.
+
+Real foundation draft0/5/11 selections ×five filters×four widths plusmobile squads: final43784215600 PASS132states (66paired layouts). Every displayed role/rating/control/filter/needs/coverage/mobile squad datum retained. Roster/seed/draft order/picks/cursor/compared dynasty checkpoint hashes identical before/after. Desktop needs strip86.89→49.80px;320phone77.95→49.80px;768narrow companion saves4.30px;390adds3.42px for larger12px type. First triala1d534 rejected for320wrap, corrected with2px less mobile gap while keeping larger type. [Exact evidence](V116_DRAFT_SPACING_REVIEW.md). Desktop raster inspected; phone below-fold strip fit verified by native geometry, not falsely claimed as visible in top-of-page capture.
+
+No blanket new bars or clipped two-column phone selects added. Full-caption phone filters remain vertically long and need a separate structural-density pass if pursued. Role coverage meters show counts out of15, distinct from player-ability bars. Next: My XI/manage secondary-action rhythm and selected-player row spacing, then group a worthwhile review bundle; keep current Rating/HUD file open/rollback.
+
 ## Current Rating/HUD review download, 16 November 2026
 
 GCC_v116_Rating_HUD_Review.html, SHA-2562eddc625a42583fb8d83957dd215e16791f302742c0f5d9f26db9e052102af79,6,683,716bytes. Saved copy libfile_467c7f1894fc81918a18f6eb2596b958. Bundles the verified short-landscape HUD/menu, cover-track consistency and current phase-rating dialog correction. User-opened build remains Readability06e923 until download/open confirmed; keep that file as rollback. Direct packaging guard: only existing CSS01/09/10/31/32 differ from06e923; all22scripts/every other byte identical,17style blocks unchanged. Exact critical pins PASS. No stable promotion; frozen v116/main/perf untouched.
