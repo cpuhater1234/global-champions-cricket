@@ -281,7 +281,15 @@ small,.g8fine,p,td,option{font-weight:600}
 .g8tradepackage label{margin:.8rem 0}.g8tradepackage select{width:100%;min-width:0;white-space:normal;font-weight:700}.g8tradeplayer h3{font-size:1.2rem;margin:0}.g8tradeplayer{border-top:1px solid #b7cdc0;padding-top:1rem}.g8tradeplayer .g8nameandrating{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem}.g8tradeplayer .g8nameandrating h3{min-width:0;overflow-wrap:anywhere}.g8tradeplayer .g8rowrating{flex-shrink:0;font-size:1.5rem}.g8tradeplayer .g8abilitybar{grid-template-columns:5.1rem minmax(2.5rem,1fr) 2rem}.g8tradeplayer .g8cricketrole{min-height:0;margin:.7rem 0}.g8tradeempty{padding:1.5rem .5rem;border:2px dashed #b2c6bb;border-radius:5px;text-align:center;color:#3c6370}
 .g8tradeimpact{margin:1.2rem 0;padding:1rem;border:2px solid #547a87;border-radius:7px;background:#e7efdb}.g8tradeimpact .g8eyebrow{color:#345d69}.g8offerread{padding:.65rem 0;border-top:1px solid #acc3b3}.g8decisionwarning{padding:.8rem 1rem;background:#fff0d3;border-left:5px solid #b66f36;border-radius:4px;color:#624323!important;font-weight:800}
 .g8consequences{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1rem 0}.g8consequences>div{display:flex;flex-direction:column;gap:.6rem;border:2px solid #a9c5b4;border-radius:6px;padding:1rem;background:#e5efce;min-width:0}.g8consequences strong{font-size:1.6rem;font-weight:900;overflow-wrap:anywhere}
-.g8phaseoptions .g8statrow{display:block}.g8phaseoptions .g8abilitybar{margin-top:.5rem}
+/* Phase-rating options share the dossier's label/value and full-width-track hierarchy. */
+#g8dialog[data-prompt=info]:has(.g8phaseoptions){width:min(600px,calc(100vw - 24px))!important}
+.g8phaseoptions .g8statrow{display:block;padding:12px 0;border:0;border-bottom:1px solid var(--gcc-line);background:transparent!important}
+.g8phaseoptions .g8statrow>b{font:600 16px/1.4 var(--vx-body);text-align:left;overflow-wrap:normal;word-break:normal}
+.g8phaseoptions .g8abilitybar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 12px;margin-top:8px}
+.g8phaseoptions .g8abilitybar>span{grid-column:1;grid-row:1;font:400 13px/1.4 var(--vx-body);color:var(--gcc-muted);text-align:left}
+.g8phaseoptions .g8abilitybar>b{grid-column:2;grid-row:1;align-self:center;font:700 16px/1.4 var(--vx-body);font-variant-numeric:tabular-nums;text-align:right}
+.g8phaseoptions .g8abilitybar>.g8abilitytrack{grid-column:1/-1;grid-row:2;width:100%;height:10px;border-radius:5px}
+
 @media(max-width:1250px){.g8offseasonlayout{grid-template-columns:1fr}.g8managerow{grid-template-columns:minmax(0,1fr) auto}.g8manageactions{max-width:17rem}}
 @media(max-width:800px){.g8skillgrid,.g8impactgrid,.g8seasoncomparison,.g8tradepackage{grid-template-columns:1fr}.g8managerow{grid-template-columns:1fr}.g8manageactions{max-width:none;justify-content:flex-start}.g8squadplaces{grid-template-columns:repeat(5,minmax(0,1fr));max-width:24rem}.g8windowaction{flex-basis:100%}.g8consequences{grid-template-columns:1fr}.g8comparebars>div{grid-template-columns:5rem minmax(2rem,1fr) auto}.g8tradeplayer .g8abilitybar{grid-template-columns:5.1rem minmax(2rem,1fr) 2rem}}
 
