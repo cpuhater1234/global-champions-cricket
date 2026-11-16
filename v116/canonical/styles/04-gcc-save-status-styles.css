@@ -1,3 +1,16 @@
 
-#g8saveStatus { flex: 1 0 100%; width: 100%; }
-#g8saveStatus .g8savepending { padding: .5rem .75rem; color: #d3ddcf; font-size: 1rem; font-weight: 700; }
+/* Routine persistence is an inline club indicator; warnings keep their full message. */
+#g8hud .g8hudidentity{display:grid!important;grid-template-columns:minmax(0,1fr) auto;align-items:baseline!important;gap:2px 8px!important;min-width:0}
+#g8hud .g8hudidentity>strong{grid-column:1;grid-row:1;min-width:0}
+#g8hud .g8hudidentity>small{grid-column:1/-1;grid-row:2;font-size:14px!important;line-height:1.4}
+#g8hud .g8hudidentity>#g8saveStatus{grid-column:2;grid-row:1;min-width:0;width:auto;flex:none}
+#g8hud #g8saveStatus:has(.g8savecompact,.g8saved){margin:0;padding:0;border:0;background:none}
+#g8hud #g8saveStatus :is(.g8savecompact,.g8saved){display:block;margin:0;padding:0;color:var(--gcc-muted,#b8c6d0);font:500 11px/1.5 var(--vx-body,system-ui);white-space:nowrap}
+@media(max-width:480px){
+ #g8hud .g8hudidentity>strong{grid-column:1/-1;grid-row:1;font-size:14px!important;line-height:1.4}
+ #g8hud .g8hudidentity>small{grid-column:1;grid-row:2;font-size:13px!important}
+ #g8hud .g8hudidentity>#g8saveStatus{grid-column:2;grid-row:2}
+}
+#g8hud .g8hudidentity>#g8saveStatus:has(.g8savewarning,.g8savepending:not(.g8savecompact)){grid-column:1/-1;grid-row:3;width:100%;margin-top:6px}
+#g8hud>#g8saveStatus{flex:1 0 100%;grid-column:1/-1;width:100%}
+#g8saveStatus .g8savepending:not(.g8savecompact){padding:.5rem .75rem;color:#d3ddcf;font-size:1rem;font-weight:700}

@@ -52,11 +52,7 @@
   #g8hud#g8hud#g8hud>.g8careernav{grid-column:1/-1;grid-row:2}
   #g8hud#g8hud#g8hud .g8headerslogan{display:none!important}
   #g8hud#g8hud#g8hud nav{min-height:0!important;margin:0}
-  #g8app#g8app#g8app .g8careernav{padding:.15rem 0 0!important}
-  #g8app#g8app#g8app :is(.g8careernav .g8navitem,.g8utilitymenu .g8button):focus-visible{outline-offset:-3px!important}
-  #g8app#g8app#g8app .g8careernav .g8navitem{padding:.3rem .8rem!important;font-size:.95rem!important;min-height:44px!important}
-  #g8app#g8app#g8app .g8careernav .g8navitem.selected::after,
-  #g8app#g8app#g8app .g8careernav .g8navitem[aria-current="page"]::after{bottom:-2px}
+  #g8app#g8app#g8app .g8utilitymenu .g8button:focus-visible{outline-offset:-3px!important}
 }
 
 /* Respect reduced motion after all preceding visual rules, including hover lift. */

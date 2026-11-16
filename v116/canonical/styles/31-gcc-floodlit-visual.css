@@ -68,16 +68,16 @@
 #g8stage#g8stage#g8stage .gccuiHeadingIcon{border-color:var(--vx-glow)!important;color:var(--vx-glow)!important}
 
 /* 6 ─ Buttons: lit primary, glass secondary */
-#g8app#g8app#g8app .g8button:not(:where([data-prompt=swapSelected] .g8swapchoice)):not(:where(.g8manageactions .g8button,.gccuiMenuGroup>.g8button)){
+#g8app#g8app#g8app .g8button:not(:where([data-prompt=swapSelected] .g8swapchoice)):not(:where(.g8manageactions .g8button,.gccuiMenuGroup>.g8button,.g8careernav>.g8navitem)){
   font-family:var(--vx-body)!important;font-size:1rem!important;font-weight:700!important;
   line-height:1.25!important;letter-spacing:0!important;text-transform:none!important;
   min-height:44px;padding:10px 14px!important;box-sizing:border-box;
   border:1px solid var(--gcc-line)!important;border-radius:8px!important;clip-path:none!important;
   box-shadow:none!important;white-space:normal!important;
 }
-#g8app#g8app#g8app .g8button:not(.g8primary):not(:where([data-prompt=swapSelected] .g8swapchoice)):not(:where(.g8manageactions .g8button,.gccuiMenuGroup>.g8button)){
+#g8app#g8app#g8app .g8button:not(.g8primary):not(:where([data-prompt=swapSelected] .g8swapchoice)):not(:where(.g8manageactions .g8button,.gccuiMenuGroup>.g8button,.g8careernav>.g8navitem)){
   background:rgba(255,255,255,.045)!important;color:var(--gcc-text)!important}
-#g8app#g8app#g8app .g8button:not(.g8primary):hover:enabled:not(:where([data-prompt=swapSelected] .g8swapchoice)):not(:where(.g8manageactions .g8button,.gccuiMenuGroup>.g8button)){
+#g8app#g8app#g8app .g8button:not(.g8primary):hover:enabled:not(:where([data-prompt=swapSelected] .g8swapchoice)):not(:where(.g8manageactions .g8button,.gccuiMenuGroup>.g8button,.g8careernav>.g8navitem)){
   background:rgba(255,255,255,.09)!important;border-color:var(--vx-glow)!important;transform:none}
 
 #g8app#g8app#g8app .g8primary:hover:enabled{transform:none;filter:brightness(1.08) saturate(1.1)}
@@ -508,13 +508,8 @@
 
 /* 22 ─ Small screens */
 #g8hud#g8hud#g8hud .g8hudclub{min-width:0}
-#g8app#g8app#g8app .g8careernav{overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}
-#g8app#g8app#g8app .g8careernav::-webkit-scrollbar{display:none}
-#g8app#g8app#g8app .g8careernav .g8navitem{flex:0 0 auto}
 @media (max-width:700px){
   #g8hud#g8hud#g8hud .g8headerslogan{font-size:.85rem}
-  #g8app#g8app#g8app .g8careernav{padding-inline:3vw;gap:.1rem;padding-bottom:.4rem;scroll-padding-inline:7rem}
-  #g8app#g8app#g8app .g8careernav .g8navitem{font-size:.95rem;padding:.5rem .7rem!important;letter-spacing:.06em}
   #g8app#g8app #g8stage .gccBrandWordmark{font-size:clamp(1.7rem,8.4vw,2.5rem)!important;overflow-wrap:normal}
   #g8app#g8app #g8stage .gccuiCampaignRibbon{grid-template-columns:repeat(2,minmax(0,1fr))}
   #g8app#g8app #g8stage .gccuiCampaignRibbon>div{border-bottom:1px solid var(--gcc-line)!important;grid-template-rows:auto auto auto}

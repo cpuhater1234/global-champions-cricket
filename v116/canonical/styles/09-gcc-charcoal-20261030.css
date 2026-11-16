@@ -19,7 +19,7 @@ html body,#g8app{background-color:var(--gcc-ground)!important;color:var(--gcc-te
 #g8app :is(.g8relationship,.g8dressingroom) :is(h2,h3,strong,b,dd),#g8dialog :is(h2,h3,dd){color:var(--gcc-text)!important}
 #g8app .g8button,#g8dialog .g8button,#g8app .g8utilitymenu summary{background:var(--gcc-raised)!important;color:var(--gcc-text)!important;border:2px solid var(--gcc-line)!important;border-radius:4px;box-shadow:none!important;font-weight:700}
 #g8app .g8button.g8primary,#g8dialog .g8button.g8primary{background:var(--gcc-accent)!important;color:var(--gcc-accent-ink)!important;border-color:var(--gcc-accent)!important}
-#g8app .g8button[aria-pressed=true],#g8app .g8careernav .active{background:var(--gcc-accent)!important;color:var(--gcc-accent-ink)!important;border-color:var(--gcc-accent)!important}
+#g8app .g8button[aria-pressed=true]{background:var(--gcc-accent)!important;color:var(--gcc-accent-ink)!important;border-color:var(--gcc-accent)!important}
 #g8app .g8button:hover:not(:disabled),#g8dialog .g8button:hover:not(:disabled){filter:brightness(1.12);transform:translateY(-1px);outline:1px solid #d7ddc6;outline-offset:1px}
 #g8app .g8button:disabled,#g8dialog .g8button:disabled{opacity:.5;filter:none;transform:none}
 #g8app :is(button,input,select,summary):focus-visible,#g8dialog :is(button,input,select,summary):focus-visible{outline:3px solid #ffd27b!important;outline-offset:3px}

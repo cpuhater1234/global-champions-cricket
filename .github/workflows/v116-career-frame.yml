@@ -1,0 +1,60 @@
+name: GCC career frame review
+on:
+  push:
+    branches: [work/v116-candidate-acceptance]
+    paths: ['.github/workflows/v116-career-frame.yml', 'qa/v116_career_frame_native.cjs', 'qa/v116_career_frame_guard.py', 'qa/v116_career_frame_compare.cjs']
+permissions:
+  contents: read
+env:
+  CANDIDATE_SHA256: 09f9b6d3503e3d37fcce3a2e39f961cb056d5c0f674244d00d2da4b7da4163eb
+jobs:
+  acceptance:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Build exact baseline and candidate
+        run: |
+          mkdir -p /tmp/frame-before
+          git archive 046e8eae3db97f73002038e4d5a02d4ea9c56d53 v116/canonical | tar -x -C /tmp/frame-before
+          python qa/v116_canonical_source.py build --source /tmp/frame-before/v116/canonical --allow-runtime-changes --output qa/results/frame-before.html
+          python qa/v116_canonical_source.py build --source v116/canonical --allow-runtime-changes --output qa/results/frame-after.html
+          python qa/v116_career_frame_guard.py --before qa/results/frame-before.html --after qa/results/frame-after.html
+          python qa/v116_engine_integrity.py --source v116/canonical --html qa/results/frame-after.html --self-test --report qa/results/frame-pins.json
+      - uses: actions/cache/restore@v4
+        with:
+          path: qa/results/whole-ui-career
+          key: gcc-ui-career-79a2fbfe-seed101-v1-${{ hashFiles('qa/structural-risk/career-run.mjs', 'qa/offline_game_host.mjs') }}
+          restore-keys: gcc-ui-career-79a2fbfe-seed101-v1-
+      - name: Generate genuine fixture from baseline
+        env:
+          GCC8_TEST_BUILD: qa/results/frame-before.html
+          GCC8_BROWSER_CAREER_DIR: qa/results/whole-ui-career
+          GCC8_COVER_FIXTURE: qa/results/frame-cover.json
+        run: node qa/v116_injury_cover_fixture.mjs > qa/results/frame-cover-provenance.json
+      - name: Install native browser
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+      - name: Paired navigation and actual save/reload journeys
+        env:
+          GCC8_TEST_BUILD: qa/results/frame-after.html
+          GCC8_COVER_FIXTURE: qa/results/frame-cover.json
+          GCC8_EXPECT_FRAME: '1'
+          GCC8_EXPECT_COMPACT: '1'
+          GCC8_EXPECT_QUIET_MENU: '1'
+        run: |
+          GCC8_TEST_BUILD=qa/results/frame-before.html CANDIDATE_SHA256=f10014e8f7572185bbc033932c6f1ee249d0e41ebe42d1023ce90c3bb74d60cf GCC8_EXPECT_FRAME=0 GCC8_MENU_OUT=qa/results/frame-before node qa/v116_career_frame_native.cjs
+          GCC8_MENU_OUT=qa/results/frame-after node qa/v116_career_frame_native.cjs
+          node qa/v116_career_frame_compare.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: career-frame
+          path: |
+            qa/results/frame-before
+            qa/results/frame-after
+            qa/results/frame-*.json
