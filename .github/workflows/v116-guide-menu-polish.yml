@@ -43,14 +43,14 @@ jobs:
         env:
           GCC8_BASELINE_BUILD: qa/results/guide-menu-before.html
           GCC8_TEST_BUILD: qa/results/guide-menu-after.html
-          CANDIDATE_SHA256: 7ae615014ab92ff5e1c2ab833c806f959085214766f38b79027222c39845adc0
+          CANDIDATE_SHA256: f10014e8f7572185bbc033932c6f1ee249d0e41ebe42d1023ce90c3bb74d60cf
           GCC8_EXPECT_POLISHED_GUIDE: '1'
         run: node qa/v116_club_guide_native.cjs
       - name: Menu keyboard, focus and guide journeys
         if: ${{ !cancelled() }}
         env:
           GCC8_TEST_BUILD: qa/results/guide-menu-after.html
-          CANDIDATE_SHA256: 7ae615014ab92ff5e1c2ab833c806f959085214766f38b79027222c39845adc0
+          CANDIDATE_SHA256: f10014e8f7572185bbc033932c6f1ee249d0e41ebe42d1023ce90c3bb74d60cf
           GCC8_COVER_FIXTURE: qa/results/guide-menu-cover.json
           GCC8_EXPECT_QUIET_MENU: '1'
         run: node qa/v116_guide_menu_native.cjs
@@ -59,7 +59,7 @@ jobs:
         env:
           GCC8_BASELINE_BUILD: qa/results/guide-menu-before.html
           GCC8_TEST_BUILD: qa/results/guide-menu-after.html
-          CANDIDATE_SHA256: 7ae615014ab92ff5e1c2ab833c806f959085214766f38b79027222c39845adc0
+          CANDIDATE_SHA256: f10014e8f7572185bbc033932c6f1ee249d0e41ebe42d1023ce90c3bb74d60cf
           GCC8_BROWSER_CAREER_DIR: qa/results/whole-ui-career
         run: node qa/v116_management_intro_native.cjs
       - uses: actions/upload-artifact@v4

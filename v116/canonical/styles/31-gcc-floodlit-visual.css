@@ -222,7 +222,7 @@
 #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) .g8modalbody>.g8actions:last-child{background:var(--gcc-inset)!important;border-color:var(--gcc-line)!important}
 #g8dialog#g8dialog#g8dialog:not(:where([data-prompt=how],[data-prompt=howItWorks],[data-prompt=breakawayStory])) :is(input,select){background:var(--gcc-inset)!important;color:var(--gcc-text)!important;border-color:var(--gcc-line)!important}
 @media(max-width:760px){
- #g8stage#g8stage#g8stage h1{font-size:clamp(1.8rem,8vw,2.5rem)!important;line-height:1.02!important}
+ #g8stage#g8stage#g8stage h1:not(:where(.gccuiCareer:has(.g8manageworkspace)>.g8heading h1)){font-size:clamp(1.8rem,8vw,2.5rem)!important;line-height:1.02!important}
  #g8stage#g8stage#g8stage .gccBrandWordmark{font-size:clamp(2.4rem,10vw,3.5rem)!important}
 }
 @media(prefers-reduced-motion:reduce){
