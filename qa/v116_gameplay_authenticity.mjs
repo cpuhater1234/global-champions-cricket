@@ -47,7 +47,9 @@ function selfTest() {
   assert.throws(() => describe([NaN]), /finite numbers/);
   assert.throws(() => describe([Infinity]), /finite numbers/);
   assert.throws(() => describe('1,2'), /array/);
-  console.log(JSON.stringify({ status: 'PASS', checks: 9, scope: 'Recovered statistics helper only; no gameplay authenticity certification.' }));
+  assert.deepEqual(describe([5, 5, 5, 5]), { min: 5, max: 5, mean: 5, p10: 5, p25: 5, p75: 5, p90: 5 });
+  assert.deepEqual(describe([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]), { min: 1, max: 10, mean: 5.5, p10: 2, p25: 3, p75: 8, p90: 10 });
+  console.log(JSON.stringify({ status: 'PASS', checks: 11, scope: 'Recovered statistics helper only; no gameplay authenticity certification.' }));
 }
 
 const direct = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
