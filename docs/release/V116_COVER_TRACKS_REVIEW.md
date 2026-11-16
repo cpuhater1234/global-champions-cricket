@@ -1,0 +1,11 @@
+# Injury-cover track consistency, 16 November 2026
+
+Base staged HUD candidate9d9f5313fd53ae1794329d846e9cafdefd23929d47c2a069e571df9c344b9dd3 (6,682,797bytes). Candidate6a546be0a86b21a40f59a193327733e1cbf31d4a1e325f907ab74a345a8fd0c3 (6,682,798bytes). User-opened Readability06e923 remains intact and rollback; no new download this pass. Frozen v116/main/perf untouched; review only, unpromoted.
+
+Live shared-bar inventory identified cover as an actual remaining6px ability-track surface. Draft cards use numeric tiles; hidden trade bars and an unbound comparison renderer do not justify a blanket global style patch. See V116_RATING_COMPONENT_INVENTORY.md. Existing cover rows are22px high with10px spacing and a three-column label/track/value grid, so thicker tracks fit without making cards taller.
+
+Change: only the existing CSS10 cover-scoped track height6px→10px. No extra stylesheet, new override rule, grid/padding/label/value change, recolouring, engine/runtime or menu change. Exact guard versus9d9 PASS: only CSS10 differs, all22scripts/every other byte identical. Critical source/controller pins and negative self-tests PASS.
+
+Native run43779046325 PASS8 paired states at1440/768/390/320 using a genuine2010 Round1 injury fixture and18eligible cover candidates. Every card retains exact labels, actions/disabled states, rating numbers, ARIA, semantic colours and inline fill percentages. Every track measures10px; rows retain usable track widths, aligned labels/values and10px spacing. All18card heights remain identical to baseline at each width. All signing controls remain44px; text and dialog containment pass. Closing preserves the complete compared career; actual signing yields the same replacement mapping, roster/counters/full compared dynasty on both builds and leaves the manual XI unchanged. Candidate320px raster inspected.
+
+Artifact14187084516 ZIP SHA-2562e479c7c362ad0c2a09c99e5fb91110c02b4ad14de93ceaa3908798083fbb206 verified before extraction. This is bounded Chromium cover verification; not every role/card/browser, storage failure or full-career certification. Existing exact HUD verification carries forward byte-identically except the unrelated cover-only declaration.
