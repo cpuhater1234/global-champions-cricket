@@ -16,7 +16,7 @@
 /* Draft-specific density keeps the first decision near the top of the viewport. */
 #g8app:has(.gccuiDraft) #g8hud{padding:10px 16px!important;min-height:0!important}
 #g8app:has(.gccuiDraft) .g8hudclub{flex-wrap:nowrap!important;gap:10px!important}
-#g8app:has(.gccuiDraft) .g8hudclub>div{min-width:0!important;width:auto!important}
+/* Club text sizing is owned by the inline HUD identity component. */
 #g8app:has(.gccuiDraft) .g8brand{width:48px!important;min-width:48px!important;height:48px!important}
 #g8app:has(.gccuiDraft) .gccBrandMini{width:40px!important;height:40px!important;flex-basis:40px!important}
 #g8app:has(.gccuiDraft) .g8hudclub>.g8badge{width:36px!important;height:36px!important;min-width:36px!important}
