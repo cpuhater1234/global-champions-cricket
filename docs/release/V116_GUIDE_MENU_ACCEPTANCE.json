@@ -1,0 +1,219 @@
+{
+  "status": "PASS",
+  "candidate": "GCC_v116_Club_Menu_Review.html",
+  "sha256": "f10014e8f7572185bbc033932c6f1ee249d0e41ebe42d1023ce90c3bb74d60cf",
+  "bytes": 6687615,
+  "baseline": "a196081b22960520c4c8f23c7053828198c2a2a3b693bba8dde3a6999dc6c13a",
+  "run_id": 43844773611,
+  "artifact_id": 14213864773,
+  "artifact_zip_sha256": "ae4d6b166b32be2a2ffae42a34a223bbe23e7a852018aaf47694dbb43064b9ff",
+  "club_states": 32,
+  "career_menu_states": 10,
+  "home_menu_states": 3,
+  "management_states": 16,
+  "guide_bottom_checks": [
+    {
+      "kind": "before",
+      "key": "MI-320",
+      "dialogScroll": 254,
+      "lastTop": 623.9375,
+      "lastBottom": 729.625,
+      "headBottom": 91,
+      "footerTop": 745.625
+    },
+    {
+      "kind": "before",
+      "key": "SRH-320",
+      "dialogScroll": 234,
+      "lastTop": 624.328125,
+      "lastBottom": 730.015625,
+      "headBottom": 115.59375,
+      "footerTop": 746.015625
+    },
+    {
+      "kind": "before",
+      "key": "LSG-320",
+      "dialogScroll": 258,
+      "lastTop": 644.125,
+      "lastBottom": 730.3125,
+      "headBottom": 115.59375,
+      "footerTop": 746.3125
+    },
+    {
+      "kind": "before",
+      "key": "PBKS-320",
+      "dialogScroll": 209,
+      "lastTop": 644.234375,
+      "lastBottom": 730.421875,
+      "headBottom": 91,
+      "footerTop": 746.421875
+    },
+    {
+      "kind": "after",
+      "key": "MI-320",
+      "dialogScroll": 335,
+      "lastTop": 613.5625,
+      "lastBottom": 730.15625,
+      "headBottom": 82,
+      "footerTop": 746.15625
+    },
+    {
+      "kind": "after",
+      "key": "SRH-320",
+      "dialogScroll": 303,
+      "lastTop": 613.859375,
+      "lastBottom": 730.453125,
+      "headBottom": 93,
+      "footerTop": 746.453125
+    },
+    {
+      "kind": "after",
+      "key": "LSG-320",
+      "dialogScroll": 328,
+      "lastTop": 613.15625,
+      "lastBottom": 729.75,
+      "headBottom": 93,
+      "footerTop": 745.75
+    },
+    {
+      "kind": "after",
+      "key": "PBKS-320",
+      "dialogScroll": 271,
+      "lastTop": 634.859375,
+      "lastBottom": 730.453125,
+      "headBottom": 82,
+      "footerTop": 746.453125
+    }
+  ],
+  "management_geometry": [
+    {
+      "kind": "before",
+      "width": 1440,
+      "rules_open": false,
+      "first_player_y": 557.109375,
+      "title_font": "43.2px",
+      "allowance_height": 124.234375
+    },
+    {
+      "kind": "before",
+      "width": 1440,
+      "rules_open": true,
+      "first_player_y": 758.890625,
+      "title_font": "43.2px",
+      "allowance_height": 326.015625
+    },
+    {
+      "kind": "before",
+      "width": 768,
+      "rules_open": false,
+      "first_player_y": 606.140625,
+      "title_font": "30.4px",
+      "allowance_height": 124.234375
+    },
+    {
+      "kind": "before",
+      "width": 768,
+      "rules_open": true,
+      "first_player_y": 855.921875,
+      "title_font": "30.4px",
+      "allowance_height": 374.015625
+    },
+    {
+      "kind": "before",
+      "width": 390,
+      "rules_open": false,
+      "first_player_y": 600.921875,
+      "title_font": "30.4px",
+      "allowance_height": 124.234375
+    },
+    {
+      "kind": "before",
+      "width": 390,
+      "rules_open": true,
+      "first_player_y": 1037.890625,
+      "title_font": "30.4px",
+      "allowance_height": 561.203125
+    },
+    {
+      "kind": "before",
+      "width": 320,
+      "rules_open": false,
+      "first_player_y": 600.921875,
+      "title_font": "30.4px",
+      "allowance_height": 124.234375
+    },
+    {
+      "kind": "before",
+      "width": 320,
+      "rules_open": true,
+      "first_player_y": 1178.28125,
+      "title_font": "30.4px",
+      "allowance_height": 701.59375
+    },
+    {
+      "kind": "after",
+      "width": 1440,
+      "rules_open": false,
+      "first_player_y": 457.09375,
+      "title_font": "28px",
+      "allowance_height": 72
+    },
+    {
+      "kind": "after",
+      "width": 1440,
+      "rules_open": true,
+      "first_player_y": 703.375,
+      "title_font": "28px",
+      "allowance_height": 318.28125
+    },
+    {
+      "kind": "after",
+      "width": 768,
+      "rules_open": false,
+      "first_player_y": 520.453125,
+      "title_font": "28px",
+      "allowance_height": 72
+    },
+    {
+      "kind": "after",
+      "width": 768,
+      "rules_open": true,
+      "first_player_y": 814.734375,
+      "title_font": "28px",
+      "allowance_height": 366.28125
+    },
+    {
+      "kind": "after",
+      "width": 390,
+      "rules_open": false,
+      "first_player_y": 563.796875,
+      "title_font": "24px",
+      "allowance_height": 116.5
+    },
+    {
+      "kind": "after",
+      "width": 390,
+      "rules_open": true,
+      "first_player_y": 976.765625,
+      "title_font": "24px",
+      "allowance_height": 529.46875
+    },
+    {
+      "kind": "after",
+      "width": 320,
+      "rules_open": false,
+      "first_player_y": 563.796875,
+      "title_font": "24px",
+      "allowance_height": 116.5
+    },
+    {
+      "kind": "after",
+      "width": 320,
+      "rules_open": true,
+      "first_player_y": 1024.765625,
+      "title_font": "24px",
+      "allowance_height": 577.46875
+    }
+  ],
+  "scope": "Bounded native Chromium visual/control acceptance; no gameplay changes, no stable promotion, no all-browser/storage-failure/speech/full-career certification."
+}

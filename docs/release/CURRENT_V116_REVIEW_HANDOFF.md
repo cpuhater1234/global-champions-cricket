@@ -1,5 +1,11 @@
 # Current v116 review candidate handoff
 
+## Current Club/Menu review, 16 November 2026
+
+GCC_v116_Club_Menu_Review.html, SHA-256 f10014e8f7572185bbc033932c6f1ee249d0e41ebe42d1023ce90c3bb74d60cf, 6,687,615 bytes. Existing owners09/10/31 only; all22 scripts and all other HTML bytes unchanged relative to opened Squad Rhythm a196081. Club-guide title/section/condition hierarchy, quiet purpose-grouped menu rows, compact management introduction and contained nav focus. Exact native run43844160463 passed32 paired club-guide states,10 career menus plus3 Home menus,16 paired management closed/open states; final scroll-port run43844773611 also passed, including all8 paired320px bottom checks. Saved copy libfile_a3022a02e4b881918f8b5c67b183f77c. See [guide/menu review](V116_GUIDE_MENU_POLISH_REVIEW.md) for exact evidence, rejected iterations and limits.
+
+The user confirmed downloading/opening Squad Rhythm a196081; it remains the opened rollback until this new file is downloaded/opened. Their live Home showed Lucknow2010. Existing career was not reset. Frozen v116/main/perf untouched; review only, unpromoted. Cline's repaired statistics-helper9self-tests remain separate from gameplay authenticity certification.
+
 ## Current Squad Rhythm review download, 16 November 2026
 
 GCC_v116_Squad_Rhythm_Review.html, SHA-256a196081b22960520c4c8f23c7053828198c2a2a3b693bba8dde3a6999dc6c13a,6,683,580bytes. Saved copy libfile_9795e4bb025481918e41f0f03ac8536b. Bundles prior draft-needs correction plus management-row hierarchy and preview actions. User-opened file remains Rating/HUD2edd until download/open confirmed; preserve it as rollback. Direct guard: only existing CSS01/31/32/37 differ from2edd, all22scripts/every other byte identical,17stylesheets retained. Engine/controller/source pins PASS. Frozen v116/main/perf untouched; no stable promotion.
