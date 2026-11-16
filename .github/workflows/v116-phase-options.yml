@@ -1,0 +1,64 @@
+name: GCC phase rating options audit
+on:
+  push:
+    branches: [work/v116-candidate-acceptance]
+    paths: ['.github/workflows/v116-phase-options.yml', 'qa/v116_phase_options_native.cjs']
+permissions:
+  contents: read
+env:
+  CANDIDATE_SHA256: 6a546be0a86b21a40f59a193327733e1cbf31d4a1e325f907ab74a345a8fd0c3
+jobs:
+  acceptance:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build exact candidate and base
+        run: |
+          mkdir -p /tmp/trade-before
+          git archive c6e69d0749029cefb61b00fbae7ad607b6d5c211 v116/canonical | tar -x -C /tmp/trade-before
+          python qa/v116_canonical_source.py build --source /tmp/trade-before/v116/canonical --allow-runtime-changes --output qa/results/trade-before.html
+          python qa/v116_canonical_source.py build --source v116/canonical --allow-runtime-changes --output qa/results/trade-candidate.html --report qa/results/trade-gate-build.json
+          python qa/v116_scout_tracks_guard.py --before qa/results/trade-before.html --after qa/results/trade-candidate.html
+          python qa/v116_engine_integrity.py --source v116/canonical --html qa/results/trade-candidate.html --self-test --report qa/results/trade-gate-pins.json
+      - uses: actions/cache/restore@v4
+        with:
+          path: qa/results/whole-ui-career
+          key: gcc-ui-career-79a2fbfe-seed101-v1-${{ hashFiles('qa/structural-risk/career-run.mjs', 'qa/offline_game_host.mjs') }}
+          restore-keys: gcc-ui-career-79a2fbfe-seed101-v1-
+      - name: Generate genuine injury fixture from baseline
+        env:
+          GCC8_TEST_BUILD: qa/results/trade-before.html
+          GCC8_BROWSER_CAREER_DIR: qa/results/whole-ui-career
+          GCC8_COVER_FIXTURE: qa/results/cover-fixture.json
+        run: node qa/v116_injury_cover_fixture.mjs > qa/results/cover-fixture-provenance.json
+      - name: Install native browser
+        run: |
+          if [ -f /etc/apt/apt-mirrors.txt ]; then
+            sudo sed -i 's|http://azure.archive.ubuntu.com/ubuntu|https://archive.ubuntu.com/ubuntu|g' /etc/apt/apt-mirrors.txt
+          fi
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+      - name: Check native review, keyboard and accepted result
+        env:
+          GCC8_TEST_BUILD: qa/results/trade-candidate.html
+          GCC8_BASELINE_BUILD: qa/results/trade-before.html
+          GCC8_COVER_FIXTURE: qa/results/cover-fixture.json
+        run: node qa/v116_phase_options_native.cjs
+      - name: Upload evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase-options
+          path: |
+            qa/results/trade-gate-*.json
+            qa/results/phase-options-native
+            qa/results/cover-fixture*.json
