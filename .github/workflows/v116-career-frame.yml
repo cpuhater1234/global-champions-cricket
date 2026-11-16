@@ -48,8 +48,19 @@ jobs:
           GCC8_EXPECT_QUIET_MENU: '1'
         run: |
           GCC8_TEST_BUILD=qa/results/frame-before.html CANDIDATE_SHA256=f10014e8f7572185bbc033932c6f1ee249d0e41ebe42d1023ce90c3bb74d60cf GCC8_EXPECT_FRAME=0 GCC8_MENU_OUT=qa/results/frame-before node qa/v116_career_frame_native.cjs
-          GCC8_MENU_OUT=qa/results/frame-after node qa/v116_career_frame_native.cjs
-          node qa/v116_career_frame_compare.cjs
+      - name: Candidate navigation, save status and reload
+        if: ${{ !cancelled() }}
+        env:
+          GCC8_TEST_BUILD: qa/results/frame-after.html
+          GCC8_COVER_FIXTURE: qa/results/frame-cover.json
+          GCC8_EXPECT_FRAME: '1'
+          GCC8_EXPECT_COMPACT: '1'
+          GCC8_EXPECT_QUIET_MENU: '1'
+          GCC8_MENU_OUT: qa/results/frame-after
+        run: node qa/v116_career_frame_native.cjs
+      - name: Compare accepted navigation and header geometry
+        if: ${{ !cancelled() }}
+        run: node qa/v116_career_frame_compare.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
