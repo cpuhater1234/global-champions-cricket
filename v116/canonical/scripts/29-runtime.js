@@ -305,6 +305,7 @@
  };
  document.addEventListener('click',event=>{if(!event.target.closest?.('.g8utilitymenu'))closeUtilityMenu();});
  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&hud.querySelector('.g8utilitymenu[open]')){closeUtilityMenu(true);event.preventDefault();}});
+ hud.addEventListener('focusin',event=>{const item=event.target.closest?.('.g8careernav>.g8navitem');if(!item)return;const nav=item.parentElement,r=item.getBoundingClientRect(),p=nav.getBoundingClientRect(),delta=r.left<p.left?r.left-p.left:r.right>p.right?r.right-p.right:0;if(delta)nav.scrollLeft+=delta;});
  document.getElementById('g8app').addEventListener('click',event=>{let b=event.target.closest?.('button[data-action]');if(!b){const card=event.target.closest?.('.g8directpick');if(card&&!event.target.closest('.g8candidatechoice'))b=card.querySelector('.g8candidate');}if(!b||b.disabled)return;if(b.dataset.action==='draftPlayer'&&event.detail>1){event.preventDefault();return;}if(b.matches('.g8candidate'))b.focus({preventScroll:true});X.dispatch(b.dataset.action,JSON.parse(b.dataset.args||'[]'));});
  document.getElementById('g8app').addEventListener('input',event=>{
   const el=event.target,key=el.dataset?.input;if(!key)return;

@@ -18,4 +18,4 @@ assert old==new,'controller differs outside reviewed HUD fragments'
 strip=lambda d:rx.sub(lambda m:m[0][:m.start(3)-m.start()]+b'BODY'+m[0][m.end(3)-m.start():],d)
 assert strip(b)==strip(n)
 assert bs[37][3]==ns[37][3],'needs strip changed'
-print(json.dumps({'status':'PASS','changed_blocks':changed,'unchanged_scripts':21,'controller_scope':'save-status markup and HUD placement only; exact fragments checked','before':hashlib.sha256(b).hexdigest(),'after':hashlib.sha256(n).hexdigest()}))
+print(json.dumps({'status':'PASS','changed_blocks':changed,'unchanged_scripts':21,'controller_scope':'save-status/HUD markup and horizontal-only nav focus listener; exact fragments checked','before':hashlib.sha256(b).hexdigest(),'after':hashlib.sha256(n).hexdigest()}))
