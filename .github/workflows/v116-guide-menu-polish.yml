@@ -2,7 +2,7 @@ name: GCC guide and menu visual review
 on:
   push:
     branches: [work/v116-candidate-acceptance]
-    paths: ['.github/workflows/v116-guide-menu-polish.yml', 'qa/v116_guide_menu_native.cjs', 'qa/v116_guide_menu_guard.py', 'qa/v116_management_intro_native.cjs']
+    paths: ['.github/workflows/v116-guide-menu-polish.yml', 'qa/v116_guide_menu_native.cjs', 'qa/v116_guide_menu_guard.py', 'qa/v116_management_intro_native.cjs', 'qa/v116_club_guide_native.cjs']
 permissions:
   contents: read
 jobs:
