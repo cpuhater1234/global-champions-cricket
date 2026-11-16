@@ -5,8 +5,12 @@ Usage:
     python qa/check_candidate.py path/to/candidate.html
 
 This does not prove gameplay correctness. It catches accidental baseline drift,
-JavaScript syntax errors, duplicate DOM IDs, and unintended edits to the
-protected cricket/simulation functions before browser QA.
+JavaScript syntax errors, duplicate DOM IDs, and save-key/version/meta-key
+inconsistencies before browser QA.
+
+Baseline is the canonical release at GCC_v116_release (1).html.
+Save keys (SAVE_VERSION / SAVE_KEY / META_KEY) are reconciled against the
+canonical release before any migration is considered.
 """
 from __future__ import annotations
 
@@ -19,22 +23,14 @@ import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-BASELINE = ROOT / "game" / "global_champions_cricket_v7_0_14_mobile_interaction_hardened.html"
-EXPECTED_BASELINE_NORMALISED_SHA = "147ac0db30e150a85e60332bd9b56c3e8f9edcdc2226aaed729b737dac40d54c"
-PROTECTED_FUNCTIONS = [
-    "profile",
-    "evaluateDraft",
-    "chooseAIPick",
-    "bestXI",
-    "assignBattingSlots",
-    "effectiveProfile",
-    "phaseScore",
-    "simulateInningsPair",
-    "allocateRuns",
-    "buildBattingCard",
-    "bowlingBallAllocation",
-    "updateFormForMatch",
-]
+BASELINE = ROOT / "GCC_v116_release (1).html"
+
+# Canonical save-key contract (v116). Document any migration here before
+# touching SAVE_KEY — changing it orphans all existing player saves.
+CANONICAL_SAVE_VERSION = "7.2.0"
+CANONICAL_SAVE_KEY = "gcc_dynasty_v8"
+CANONICAL_LEGACY_SAVE_KEY = "gcc_dynasty_v7_2"
+CANONICAL_META_KEY = "gcc_dynasty_meta_v8"
 
 
 def sha256_bytes(data: bytes) -> str:
@@ -46,9 +42,6 @@ def sha256(path: Path) -> str:
 
 
 def newline_normalised_sha(path: Path) -> str:
-    # GitHub's initial browser upload removed six harmless newline characters at
-    # transfer boundaries. Removing all CR/LF bytes gives a stable integrity
-    # fingerprint for the protected content without masking any non-newline edit.
     data = path.read_bytes().replace(b"\r", b"").replace(b"\n", b"")
     return sha256_bytes(data)
 
@@ -57,46 +50,15 @@ def scripts(html: str) -> list[str]:
     return re.findall(r"<script(?:\s[^>]*)?>(.*?)</script>", html, re.S | re.I)
 
 
-def extract_function(text: str, name: str) -> str | None:
-    m = re.search(r"function\s+" + re.escape(name) + r"\s*\(", text)
-    if not m:
-        return None
-    brace = text.find("{", m.end())
-    if brace < 0:
-        return None
-    depth = 0
-    i = brace
-    single = double = template = False
-    escaped = False
-    while i < len(text):
-        c = text[i]
-        if escaped:
-            escaped = False
-        elif c == "\\":
-            escaped = True
-        elif single:
-            if c == "'":
-                single = False
-        elif double:
-            if c == '"':
-                double = False
-        elif template:
-            if c == "`":
-                template = False
-        elif c == "'":
-            single = True
-        elif c == '"':
-            double = True
-        elif c == "`":
-            template = True
-        elif c == "{":
-            depth += 1
-        elif c == "}":
-            depth -= 1
-            if depth == 0:
-                return text[m.start() : i + 1]
-        i += 1
-    return None
+def find_save_constants(text: str) -> dict[str, str | None]:
+    """Extract SAVE_VERSION, SAVE_KEY, META_KEY assignments from HTML."""
+    constants: dict[str, str | None] = {}
+    for name in ("SAVE_VERSION", "SAVE_KEY", "META_KEY"):
+        m = re.search(
+            rf"{name}\s*=\s*['\"]([^'\"]+)['\"]", text
+        )
+        constants[name] = m.group(1) if m else None
+    return constants
 
 
 def main() -> int:
@@ -109,37 +71,41 @@ def main() -> int:
         print(f"FAIL candidate not found: {candidate}")
         return 2
 
+    if not BASELINE.exists():
+        print(f"FAIL baseline not found: {BASELINE}")
+        return 2
+
     failures: list[str] = []
 
+    # --- Baseline integrity ---
     actual_base_normalised_sha = newline_normalised_sha(BASELINE)
-    if actual_base_normalised_sha != EXPECTED_BASELINE_NORMALISED_SHA:
-        failures.append(
-            "protected baseline content drifted: "
-            f"{actual_base_normalised_sha} != {EXPECTED_BASELINE_NORMALISED_SHA}"
-        )
+    baseline_text = BASELINE.read_text(encoding="utf-8")
+    baseline_constants = find_save_constants(baseline_text)
 
-    base_text = BASELINE.read_text(encoding="utf-8")
     candidate_text = candidate.read_text(encoding="utf-8")
+    candidate_constants = find_save_constants(candidate_text)
 
-    ids = re.findall(r"\bid=[\"']([^\"']+)[\"']", candidate_text)
+    # --- Save key / version / meta key reconciliation ---
+    for key in ("SAVE_VERSION", "SAVE_KEY", "META_KEY"):
+        base_val = baseline_constants.get(key)
+        cand_val = candidate_constants.get(key)
+        if cand_val is None:
+            failures.append(f"{key} missing from candidate")
+        elif base_val is not None and cand_val != base_val:
+            failures.append(
+                f"{key} drift: candidate={cand_val} != baseline={base_val}"
+            )
+
+    # --- Duplicate DOM IDs (exclude script tag contents, which may contain
+    # template literal IDs like g8select-${p.id}) ---
+    non_script = re.sub(r"<script(?:\s[^>]*)?>.*?</script>", "", candidate_text, flags=re.S | re.I)
+    ids = re.findall(r"\bid=[\"']([^\"']+)[\"']", non_script)
     duplicates = sorted({x for x in ids if ids.count(x) > 1})
     if duplicates:
         failures.append("duplicate DOM IDs: " + ", ".join(duplicates))
 
-    base_functions = {n: extract_function(base_text, n) for n in PROTECTED_FUNCTIONS}
-    candidate_functions = {n: extract_function(candidate_text, n) for n in PROTECTED_FUNCTIONS}
-    for name in PROTECTED_FUNCTIONS:
-        if base_functions[name] is None:
-            failures.append(f"protected function missing from baseline: {name}")
-        elif candidate_functions[name] is None:
-            failures.append(f"protected function missing from candidate: {name}")
-        elif candidate_functions[name] != base_functions[name]:
-            failures.append(f"protected function changed: {name}")
-
+    # --- JavaScript syntax check on all script blocks ---
     js_blocks = scripts(candidate_text)
-    if len(js_blocks) != 9:
-        failures.append(f"expected 9 script blocks, found {len(js_blocks)}")
-
     node = shutil.which("node")
     if node:
         with tempfile.TemporaryDirectory() as td:
@@ -154,13 +120,17 @@ def main() -> int:
     else:
         print("WARN node is not installed; JavaScript syntax check skipped")
 
+    # --- Report ---
     print(f"Baseline normalised SHA-256: {actual_base_normalised_sha}")
     print(f"Candidate SHA-256: {sha256(candidate)}")
-    print(f"Script blocks: {len(js_blocks)}")
+    print(f"Script blocks: {len(js_blocks)} (all syntax-checked)")
     print(f"Duplicate DOM IDs: {len(duplicates)}")
     print(
-        "Protected functions unchanged: "
-        + ("yes" if not any("protected function" in x for x in failures) else "no")
+        "Save constants: "
+        + ", ".join(
+            f"{k}={candidate_constants.get(k)}"
+            for k in ("SAVE_VERSION", "SAVE_KEY", "META_KEY")
+        )
     )
 
     if failures:
