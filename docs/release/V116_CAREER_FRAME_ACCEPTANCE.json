@@ -1,0 +1,562 @@
+{
+  "status": "PASS",
+  "before": "f10014e8f7572185bbc033932c6f1ee249d0e41ebe42d1023ce90c3bb74d60cf",
+  "after": "552e9462fe5531bbe5fab60a3bd9f892c994eabad2d597cc117fa1bdb753f649",
+  "states": [
+    {
+      "width": 1440,
+      "height": 900,
+      "beforeHud": 121,
+      "afterHud": 118
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "beforeHud": 121,
+      "afterHud": 118
+    },
+    {
+      "width": 960,
+      "height": 900,
+      "beforeHud": 207,
+      "afterHud": 172
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "beforeHud": 207,
+      "afterHud": 172
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "beforeHud": 159.390625,
+      "afterHud": 118
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "beforeHud": 159.390625,
+      "afterHud": 118
+    },
+    {
+      "width": 320,
+      "height": 844,
+      "beforeHud": 159.390625,
+      "afterHud": 118
+    },
+    {
+      "width": 568,
+      "height": 320,
+      "beforeHud": 109.390625,
+      "afterHud": 110
+    },
+    {
+      "width": 640,
+      "height": 360,
+      "beforeHud": 109.390625,
+      "afterHud": 110
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "beforeHud": 109.390625,
+      "afterHud": 110
+    },
+    {
+      "width": 1024,
+      "height": 520,
+      "beforeHud": 109.390625,
+      "afterHud": 110
+    },
+    {
+      "width": 1440,
+      "height": 520,
+      "beforeHud": 109.390625,
+      "afterHud": 110
+    }
+  ],
+  "actualNavigationJourneys": 24,
+  "longNameCases": 12,
+  "savePresentationStates": 20,
+  "actualReload": {
+    "passed": true,
+    "scope": "Native acknowledged persistence and cricket-state comparison; warning/slow/conflict states are presentation fixtures, not storage-failure certification"
+  },
+  "scope": "Same menu commands and navigation selection; shorter portrait header, native persistence round trip. Failure/slow/conflict cases test presentation only.",
+  "run_id": 43851423306,
+  "artifact_id": 14217234561,
+  "artifact_zip_sha256": "6cb6182986b9596b235d095378bf79cc1ab5b47bb6e938ce8e534bf4e2c3fa0e",
+  "bytes": 6689029,
+  "script_scope": {
+    "unchanged": 21,
+    "changed_owner": 29,
+    "exact_presentation_fragments": 4,
+    "needs_owner37_unchanged": true
+  },
+  "presentation_metadata_excluded": [
+    "dynasty.v8UI",
+    "dynasty.lastScreen",
+    "dynasty.saveStamp"
+  ],
+  "save_states": [
+    {
+      "width": 1440,
+      "mode": "pending",
+      "text": "Saving",
+      "hidden": false,
+      "height": 16.5,
+      "x": 266.1875,
+      "right": 308.1875,
+      "header": 118,
+      "role": "status",
+      "overflow": false,
+      "compact": true,
+      "clipped": false
+    },
+    {
+      "width": 1440,
+      "mode": "slow",
+      "text": "Saving is taking longer. Keep the game open.",
+      "hidden": false,
+      "height": 40,
+      "x": 131.1875,
+      "right": 500.1875,
+      "header": 163.59375,
+      "role": "status",
+      "overflow": false,
+      "compact": false,
+      "clipped": false
+    },
+    {
+      "width": 1440,
+      "mode": "failed",
+      "text": "Progress not saved\nQA presentation fixture: storage unavailable.",
+      "hidden": false,
+      "height": 72,
+      "x": 131.1875,
+      "right": 484.1875,
+      "header": 195.59375,
+      "role": "status",
+      "overflow": false,
+      "compact": false,
+      "clipped": false
+    },
+    {
+      "width": 1440,
+      "mode": "conflict",
+      "text": "Progress not saved\nAnother open game saved newer progress. Return home and choose Continue to load it.",
+      "hidden": false,
+      "height": 72,
+      "x": 131.1875,
+      "right": 795.1875,
+      "header": 195.59375,
+      "role": "status",
+      "overflow": false,
+      "compact": false,
+      "clipped": false
+    },
+    {
+      "width": 1440,
+      "mode": "suspended",
+      "text": "",
+      "hidden": true,
+      "height": 0,
+      "x": 0,
+      "right": 0,
+      "header": 118,
+      "overflow": false,
+      "compact": false,
+      "clipped": false
+    },
+    {
+      "width": 768,
+      "mode": "pending",
+      "text": "Saving",
+      "hidden": false,
+      "height": 16.5,
+      "x": 207,
+      "right": 249,
+      "header": 172,
+      "role": "status",
+      "overflow": false,
+      "compact": true,
+      "clipped": false
+    },
+    {
+      "width": 768,
+      "mode": "slow",
+      "text": "Saving is taking longer. Keep the game open.",
+      "hidden": false,
+      "height": 40,
+      "x": 72,
+      "right": 441,
+      "header": 217.59375,
+      "role": "status",
+      "overflow": false,
+      "compact": false,
+      "clipped": false
+    },
+    {
+      "width": 768,
+      "mode": "failed",
+      "text": "Progress not saved\nQA presentation fixture: storage unavailable.",
+      "hidden": false,
+      "height": 72,
+      "x": 72,
+      "right": 425,
+      "header": 249.59375,
+      "role": "status",
+      "overflow": false,
+      "compact": false,
+      "clipped": false
+    },
+    {
+      "width": 768,
+      "mode": "conflict",
+      "text": "Progress not saved\nAnother open game saved newer progress. Return home and choose Continue to load it.",
+      "hidden": false,
+      "height": 93.609375,
+      "x": 72,
+      "right": 675.359375,
+      "header": 271.203125,
+      "role": "status",
+      "overflow": false,
+      "compact": false,
+      "clipped": false
+    },
+    {
+      "width": 768,
+      "mode": "suspended",
+      "text": "",
+      "hidden": true,
+      "height": 0,
+      "x": 0,
+      "right": 0,
+      "header": 172,
+      "overflow": false,
+      "compact": false,
+      "clipped": false
+    },
+    {
+      "width": 390,
+      "mode": "pending",
+      "text": "Saving",
+      "hidden": false,
+      "height": 16.5,
+      "x": 173,
+      "right": 215,
+      "header": 118,
+      "role": "status",
+      "overflow": false,
+      "compact": true,
+      "clipped": false
+    },
+    {
+      "width": 390,
+      "mode": "slow",
+      "text": "Saving is taking longer. Keep the game open.",
+      "hidden": false,
+      "height": 64,
+      "x": 72,
+      "right": 297.359375,
+      "header": 181.78125,
+      "role": "status",
+      "overflow": false,
+      "compact": false,
+      "clipped": false
+    },
+    {
+      "width": 390,
+      "mode": "failed",
+      "text": "Progress not saved\nQA presentation fixture: storage unavailable.",
+      "hidden": false,
+      "height": 93.609375,
+      "x": 72,
+      "right": 297.359375,
+      "header": 211.390625,
+      "role": "status",
+      "overflow": false,
+      "compact": false,
+      "clipped": false
+    },
+    {
+      "width": 390,
+      "mode": "conflict",
+      "text": "Progress not saved\nAnother open game saved newer progress. Return home and choose Continue to load it.",
+      "hidden": false,
+      "height": 136.828125,
+      "x": 72,
+      "right": 297.359375,
+      "header": 254.609375,
+      "role": "status",
+      "overflow": false,
+      "compact": false,
+      "clipped": false
+    },
+    {
+      "width": 390,
+      "mode": "suspended",
+      "text": "",
+      "hidden": true,
+      "height": 0,
+      "x": 0,
+      "right": 0,
+      "header": 118,
+      "overflow": false,
+      "compact": false,
+      "clipped": false
+    },
+    {
+      "width": 320,
+      "mode": "pending",
+      "text": "Saving",
+      "hidden": false,
+      "height": 16.5,
+      "x": 173,
+      "right": 215,
+      "header": 118,
+      "role": "status",
+      "overflow": false,
+      "compact": true,
+      "clipped": false
+    },
+    {
+      "width": 320,
+      "mode": "slow",
+      "text": "Saving is taking longer. Keep the game open.",
+      "hidden": false,
+      "height": 88,
+      "x": 72,
+      "right": 227.359375,
+      "header": 205.78125,
+      "role": "status",
+      "overflow": false,
+      "compact": false,
+      "clipped": false
+    },
+    {
+      "width": 320,
+      "mode": "failed",
+      "text": "Progress not saved\nQA presentation fixture: storage unavailable.",
+      "hidden": false,
+      "height": 134.8125,
+      "x": 72,
+      "right": 227.359375,
+      "header": 252.59375,
+      "role": "status",
+      "overflow": false,
+      "compact": false,
+      "clipped": false
+    },
+    {
+      "width": 320,
+      "mode": "conflict",
+      "text": "Progress not saved\nAnother open game saved newer progress. Return home and choose Continue to load it.",
+      "hidden": false,
+      "height": 221.25,
+      "x": 72,
+      "right": 227.359375,
+      "header": 339.03125,
+      "role": "status",
+      "overflow": false,
+      "compact": false,
+      "clipped": false
+    },
+    {
+      "width": 320,
+      "mode": "suspended",
+      "text": "",
+      "hidden": true,
+      "height": 0,
+      "x": 0,
+      "right": 0,
+      "header": 118,
+      "overflow": false,
+      "compact": false,
+      "clipped": false
+    }
+  ],
+  "long_names": [
+    {
+      "width": 1440,
+      "name": "Royal Challengers Bengaluru",
+      "clipped": false,
+      "broken": [],
+      "title": {
+        "x": 131.1875,
+        "right": 364.1875
+      },
+      "status": {
+        "x": 372.1875,
+        "right": 414.1875
+      },
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "name": "Northamptonshire Steelbacks",
+      "clipped": false,
+      "broken": [],
+      "title": {
+        "x": 131.1875,
+        "right": 372.1875
+      },
+      "status": {
+        "x": 380.1875,
+        "right": 422.1875
+      },
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "name": "Kolkata Knight Riders",
+      "clipped": false,
+      "broken": [],
+      "title": {
+        "x": 131.1875,
+        "right": 304.1875
+      },
+      "status": {
+        "x": 312.1875,
+        "right": 354.1875
+      },
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "name": "Royal Challengers Bengaluru",
+      "clipped": false,
+      "broken": [],
+      "title": {
+        "x": 72,
+        "right": 305
+      },
+      "status": {
+        "x": 313,
+        "right": 355
+      },
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "name": "Northamptonshire Steelbacks",
+      "clipped": false,
+      "broken": [],
+      "title": {
+        "x": 72,
+        "right": 313
+      },
+      "status": {
+        "x": 321,
+        "right": 363
+      },
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "name": "Kolkata Knight Riders",
+      "clipped": false,
+      "broken": [],
+      "title": {
+        "x": 72,
+        "right": 245
+      },
+      "status": {
+        "x": 253,
+        "right": 295
+      },
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "name": "Royal Challengers Bengaluru",
+      "clipped": false,
+      "broken": [],
+      "title": {
+        "x": 72,
+        "right": 271
+      },
+      "status": {
+        "x": 229,
+        "right": 271
+      },
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "name": "Northamptonshire Steelbacks",
+      "clipped": false,
+      "broken": [],
+      "title": {
+        "x": 72,
+        "right": 281
+      },
+      "status": {
+        "x": 239,
+        "right": 281
+      },
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "name": "Kolkata Knight Riders",
+      "clipped": false,
+      "broken": [],
+      "title": {
+        "x": 72,
+        "right": 223
+      },
+      "status": {
+        "x": 181,
+        "right": 223
+      },
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "name": "Royal Challengers Bengaluru",
+      "clipped": false,
+      "broken": [],
+      "title": {
+        "x": 72,
+        "right": 227.359375
+      },
+      "status": {
+        "x": 185.359375,
+        "right": 227.359375
+      },
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "name": "Northamptonshire Steelbacks",
+      "clipped": false,
+      "broken": [],
+      "title": {
+        "x": 72,
+        "right": 227.359375
+      },
+      "status": {
+        "x": 185.359375,
+        "right": 227.359375
+      },
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "name": "Kolkata Knight Riders",
+      "clipped": false,
+      "broken": [],
+      "title": {
+        "x": 72,
+        "right": 223
+      },
+      "status": {
+        "x": 181,
+        "right": 223
+      },
+      "overflow": false
+    }
+  ]
+}
