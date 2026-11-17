@@ -41,7 +41,23 @@ case 'preview':await runFoundation();await call('prepare');break;
 case 'live':{await runFoundation();await call('prepare');const round=await page.evaluate(()=>GCC8.G.state.round+1);await call('playMatch',round);break;}
 case 'innings-break':await runFoundation().catch(()=>{});await tryCall('matchSkip');await tryCall('matchday');await call('prepare').catch(()=>{});await tryCall('playMatch',await page.evaluate(()=>GCC8.G.state.round+1));await tryCall('matchday');break;
 case 'result':await runFoundation().catch(()=>{});await call('prepare').catch(()=>{});await tryCall('playMatch',await page.evaluate(()=>GCC8.G.state.round+1));await tryCall('matchSkip');await call('matchday');await call('result').catch(async()=>{await tryCall('matchday');await tryCall('result');});break;
-case 'archive':await call('archive');break;
+case 'archive':{
+  // archive asserts s.dynasty.history.length — a career-season must be completed first.
+  // Play one match to completion via the runFoundation path, then postseason to archive it.
+  await runFoundation().catch(()=>{});
+  if(await tryCall('prepare')){
+    await tryCall('playMatch',await page.evaluate(()=>GCC8.G.state.round+1));
+    await tryCall('matchSkip');
+    await tryCall('matchday');
+    await tryCall('result');
+    for(let n=0;n<16&&await page.evaluate(()=>GCC8.G.state.round<14);n++){
+      await tryCall('prepare');await tryCall('playMatch',await page.evaluate(()=>GCC8.G.state.round+1));await tryCall('matchSkip');await tryCall('matchday');await tryCall('result');await tryCall('matchday');
+    }
+    await tryCall('matchday');await tryCall('postSeason');
+  }
+  if(!(await tryCall('archive')))throw Error('archive: dynasty history still empty after season simulation');
+  break;
+}
 default:throw Error('Unknown screen '+screen);
 }
 };

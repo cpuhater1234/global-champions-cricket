@@ -9,6 +9,9 @@ node_modules/
 # Browser/visual QA output
 qa/output/
 qa/screenshots/
+qa/visual/current/
+qa/visual/current-candidate/
+qa/visual/diffs/
 # Generated candidate HTML, saved careers, screenshots and review gallery.
 # The QA reports are reproducible and must not clutter the Git tree.
 qa/results/

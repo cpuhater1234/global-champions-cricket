@@ -54,6 +54,12 @@ Full report: `qa/results/v116_gameplay_authenticity_report.json` (not committed;
 - Re-run native acceptance (`captaincy_layer_v116.py --html qa/candidates/v116-authenticity-candidate.html --no-hash-check`)
 - Re-run static guardrails (`qa/check_candidate.py`, `qa/check_phase2_items.py`)
 - Re-run career durability (`qa/structural-risk/career-run.mjs`)
-- `qa/v116_visual_baseline.cjs` navigateTo was rewritten to the real dispatch flow
-  but still needs one clean end-to-end capture run
+- `qa/v116_visual_baseline.cjs` navigateTo rewritten to the real dispatch flow; harness
+  now captures all 40 screens cleanly and archive works (season simulated first)
+
+## Visual guardrail
+
+Committed baselines established from the candidate captures (40 PNGs in `qa/visual/baselines/`).
+Pixel-diff vs fresh captures: PASS 40/40 at 0.1% threshold (2026-11-17).
+Re-run: capture with `qa/v116_visual_baseline.cjs` then `python qa/visual/pixel-diff.py`.
 - Multi-seed confirmation of the official audit numbers (report above is 1 seed)
