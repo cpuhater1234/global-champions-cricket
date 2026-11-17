@@ -67,9 +67,14 @@ that claim does not generalize.
 
 ## Outstanding before promotion
 
-- **AO residual (~17% vs 15% band) unresolved.** Next untested lever: the
-  release chase-wicket bonus `Math.min(.55,chasePressure*.42)`, which lifts
-  `expectedWickets` while chasing — cutting it should reduce chase collapses.
+- **AO residual (~17% vs 15% band) unresolved — chase-bonus lever ruled out.**
+  Bonus sweep (`qa/scratch_bonus_sweep.mjs`, 2026-11-17): bonus 0.00/0.15/0.30/
+  0.42(release) all leave AO at 17.2–18.7 across 3 seeds; CW stays ~49–50
+  throughout. Three levers (baseline, dampen, bonus) now proven unable to move
+  audit-AO. The residual is structural in the chase innings model under
+  accumulated season state — fixing it means touching the chase model itself,
+  not constants.
+- CW fix is solid and shipped in this candidate: 50.1 avg across seeds.
 - Native acceptance, static guardrails and career durability passed on an
   earlier build; re-run on the final candidate before promotion
 - Visual guardrail: 40 committed baselines + PASS pixel-diff (qa/visual/baselines/,)
