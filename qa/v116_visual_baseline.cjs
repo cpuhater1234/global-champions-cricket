@@ -25,18 +25,22 @@ const report={sha256:sha,screens:[],breakpoints:[360,390,768,1440],observations:
 let page;
 const record=(ok,id,detail={})=>{report.observations.push({id,result:ok?'PASS':'FAIL',detail});if(!ok)report.findings.push({id,detail});};
 const call=async(a,...args)=>{const r=await page.evaluate(([a,args])=>({ok:GCC8.dispatch(a,args),feedback:document.querySelector('#g8feedback')?.textContent}),[a,args]);if(!r.ok)throw Error('Rejected '+a+' '+r.feedback);};
-const prepareXI=async()=>{await call('continue');await call('offseason');await call('cpuMarket');await call('annualDraw');await call('revealAll');await call('annualDraft');for(let n=0;n<30&&await page.evaluate(()=>GCC8.G.state.dynasty.offseason?.phase==='draft');n++){await call('skipPick');if(!await page.evaluate(()=>GCC8.G.state.dynasty.offseason?.phase==='draft'))break;const id=await page.evaluate(()=>{const r=GCC8.roster(),p=GCC8.pool(true);return(p.find(x=>x.keeping>=65&&!r.some(y=>y.keeping>=65))||p.find(x=>x.maxOvers>=4&&r.filter(y=>y.maxOvers>=4).length<6)||p[0])?.id;});await call('draftPlayer',id);}await call('lodgeList');await call('annualTeam');const ids=await page.evaluate(()=>{const r=GCC8.roster().filter(p=>GCC8.G.state.dynasty.injuries?.[p.id]?.status!=='OUT'),best=GCC8.G.bestXI(r),k=r.find(p=>p.keeping>=65);if(k&&!best.some(p=>p.keeping>=65))best[best.map((p,i)=>({p,i})).sort((a,b)=>a.p.overall-b.p.overall)[0].i]=k;return best.map(p=>p.id);});await call('clearXI');for(const id of ids)await call('select',id);await call('teamPane','xi');};
+const tryCall=async(a,...args)=>{const r=await page.evaluate(([a,args])=>({ok:GCC8.dispatch(a,args),feedback:document.querySelector('#g8feedback')?.textContent}),[a,args]);return r.ok;};
+const freshCareer=async()=>{await tryCall('continue');await tryCall('home');if(await tryCall('play')){await call('fresh');await call('world');await call('revealAll');await call('clubs');await call('club',0);await call('confirmClub');}else{await tryCall('close');await call('home');if(await tryCall('play')){await call('fresh');await call('world');await call('revealAll');await call('clubs');await call('club',0);await call('confirmClub');}}};
+const runFoundation=async()=>{await freshCareer();await call('signingRun');await call('signingSkip');await call('draftDraw');await call('revealAll');await call('beginDraft');for(let n=0;n<300;n++){if(await page.evaluate(()=>GCC8.G.state.pickIndex>=120))break;await tryCall('skipPick');if(await page.evaluate(()=>GCC8.G.state.pickIndex>=120))break;const id=await page.evaluate(()=>{const r=GCC8.roster(),p=GCC8.pool();return((!r.some(x=>x.keeping>=65))&&p.find(x=>x.keeping>=65)||p.find(x=>x.maxOvers>=4)||p[0])?.id;});if(!await tryCall('draftPlayer',id))break;}await call('team');await call('clearXI');const ids=await page.evaluate(()=>{const r=GCC8.roster(),k=r.find(p=>p.keeping>=65)||r[0],bow=r.filter(p=>p.id!==k.id&&p.maxOvers>=4).slice(0,5),bat=r.filter(p=>p.id!==k.id&&!bow.includes(p)).slice(0,5);return[k,...bow,...bat].map(p=>p.id);});for(const id of ids)await call('select',id);await call('lodge');};
+const prepareXI=async()=>{await call('home');if(await tryCall('play')){await call('fresh');await call('world');await call('revealAll');await call('clubs');await call('club',0);await call('confirmClub');await call('signingRun');await call('signingSkip');await call('draftDraw');await call('revealAll');await call('beginDraft');for(let n=0;n<300;n++){if(await page.evaluate(()=>GCC8.G.state.pickIndex>=120))break;await tryCall('skipPick');if(await page.evaluate(()=>GCC8.G.state.pickIndex>=120))break;const id=await page.evaluate(()=>{const r=GCC8.roster(),p=GCC8.pool();return((!r.some(x=>x.keeping>=65))&&p.find(x=>x.keeping>=65)||p.find(x=>x.maxOvers>=4)||p[0])?.id;});if(!await tryCall('draftPlayer',id))break;}await call('team');}await call('clearXI');const ids=await page.evaluate(()=>{const r=GCC8.roster().filter(p=>GCC8.G.state.dynasty.injuries?.[p.id]?.status!=='OUT'),best=GCC8.G.bestXI(r),k=r.find(p=>p.keeping>=65);if(k&&!best.some(p=>p.keeping>=65))best[best.map((p,i)=>({p,i})).sort((a,b)=>a.p.overall-b.p.overall)[0].i]=k;return best.map(p=>p.id);});await call('clearXI');for(const id of ids)await call('select',id);await call('teamPane','xi');};
+const toRecruit=async()=>{if(await tryCall('club',0))await call('confirmClub');else if(await tryCall('fresh')){await call('world');await call('revealAll');await call('clubs');await call('club',0);await call('confirmClub');}};
 const navigateTo=async(screen)=>{
 switch(screen){
-case 'home':await call('world');break;
-case 'club-select':await call('clubs');break;
-case 'draft':await call('draft');break;
+case 'home':await call('home');break;
+case 'club-select':await call('home');if(await tryCall('play')){await call('fresh');await call('world');await call('revealAll');}await call('clubs');break;
+case 'draft':await runFoundation();break;
 case 'xi':await prepareXI();await call('teamPane','xi');break;
-case 'signing':await call('signingRun');break;
-case 'preview':await call('preview');break;
-case 'live':await call('play');await call('lodge');break;
-case 'innings-break':await call('play');await call('lodge');await call('inningsBreak');break;
-case 'result':await call('play');await call('lodge');await call('matchResult');break;
+case 'signing':await freshCareer();await call('signingRun');break;
+case 'preview':await runFoundation();await call('prepare');break;
+case 'live':{await runFoundation();await call('prepare');const round=await page.evaluate(()=>GCC8.G.state.round+1);await call('playMatch',round);break;}
+case 'innings-break':await runFoundation().catch(()=>{});await tryCall('matchSkip');await tryCall('matchday');await call('prepare').catch(()=>{});await tryCall('playMatch',await page.evaluate(()=>GCC8.G.state.round+1));await tryCall('matchday');break;
+case 'result':await runFoundation().catch(()=>{});await call('prepare').catch(()=>{});await tryCall('playMatch',await page.evaluate(()=>GCC8.G.state.round+1));await tryCall('matchSkip');await call('matchday');await call('result').catch(async()=>{await tryCall('matchday');await tryCall('result');});break;
 case 'archive':await call('archive');break;
 default:throw Error('Unknown screen '+screen);
 }
