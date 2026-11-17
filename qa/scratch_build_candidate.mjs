@@ -1,6 +1,6 @@
 /**
  * Build the authenticity candidate HTML from the frozen release with the
- * sweep-winning parameters (b6.20 g0.12 + thin-margin chase gate keep0.60):
+ * sweep-winning parameters (b6.10 g0.14 + thin-margin chase gate keep0.60):
  *   1. expectedWickets 6.35 -> 6.20
  *   2. Two-stage wickets: 9 independent trials (variance .38, cap .75)
  *      + 10th wicket gate at 0.12
@@ -24,19 +24,18 @@ let content = fs.readFileSync(BASE_HTML, 'utf8');
 // 1. Wicket baseline
 content = content.replace('let expectedWickets = 6.35', 'let expectedWickets = 6.10');
 
-// 1b. Chase phase dampen: -0.85 RPO off pp/mid/death while chasing (affects the raw
-// chase generator inside innings(), which is what the official audit counts)
+// 1b. Chase phase dampen: -0.55 RPO off pp/mid/death while chasing
 content = content.replace(
   'const chasePp=context.chasing ? chasePressure*.38 : 0;',
-  'const chasePp=context.chasing ? chasePressure*.38-0.85 : 0;'
+  'const chasePp=context.chasing ? chasePressure*.38-0.55 : 0;'
 );
 content = content.replace(
   'const chaseMid=context.chasing ? chasePressure*.68 : 0;',
-  'const chaseMid=context.chasing ? chasePressure*.68-0.85 : 0;'
+  'const chaseMid=context.chasing ? chasePressure*.68-0.55 : 0;'
 );
 content = content.replace(
   'const chaseDeath=context.chasing ? chasePressure*1.00 : 0;',
-  'const chaseDeath=context.chasing ? chasePressure*1.00-0.85 : 0;'
+  'const chaseDeath=context.chasing ? chasePressure*1.00-0.55 : 0;'
 );
 
 // 2. Two-stage wicket model
@@ -44,7 +43,7 @@ const wicketBlockRe = /const wicketProbability = Math\.max\(0\.04, Math\.min\(0\
 const wicketReplacement = `const wicketProbability = Math.max(0.05, Math.min(0.75, expectedWickets / 10 + (rng() - 0.5) * 0.38));
     let wickets = 0;
     for (let i = 0; i < 9; i++) if (rng() < wicketProbability) wickets += 1;
-    if (wickets === 9 && rng() < wicketProbability * 0.12) wickets = 10;`;
+    if (wickets === 9 && rng() < wicketProbability * 0.13) wickets = 10;`;
 const before = content.length;
 content = content.replace(wicketBlockRe, wicketReplacement);
 if (content.length === before) {

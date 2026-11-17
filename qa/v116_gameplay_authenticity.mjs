@@ -298,8 +298,14 @@ export async function runFullAudit(htmlPath = DEFAULT_HTML, seedCount = SEED_COU
 
   const htmlArg = process.argv.slice(2).find(a => !a.startsWith('--'));
   if (htmlArg) console.log(` Artifact override: ${htmlArg}\n`);
+  const seedArg = process.argv.find(a => a.startsWith('--seed='));
+  const auditSeed = seedArg ? Number(seedArg.split('=')[1]) : 8301;
+  if (seedArg) console.log(` Seed override: ${auditSeed}\n`);
+  const matchArg = process.argv.find(a => a.startsWith('--matches='));
+  const matchCount = matchArg ? Number(matchArg.split('=')[1]) : seedCount;
+  if (matchArg) console.log(` Matches override: ${matchCount}\n`);
   const startTime = Date.now();
-  const host = loadLogicGame(htmlArg || htmlPath, 8301);
+  const host = loadLogicGame(htmlArg || htmlPath, auditSeed);
   const G = host.G;
   const dispatch = host.context.GCC8.dispatch;
   const R = host.context.GCC_RATINGS;
@@ -321,8 +327,8 @@ export async function runFullAudit(htmlPath = DEFAULT_HTML, seedCount = SEED_COU
   console.log(`      Confidence: ${JSON.stringify(ratingsAudit.confidenceBands)}`);
   console.log(`      Discrepancies / Bounds issues: ${ratingsAudit.issuesCount}`);
 
-  console.log(`\n[2/3] Simulating ${seedCount} Matches (${seedCount * 2} Innings) through Engine...`);
-  const engineAudit = auditMatchEngine(matchAudit, G.state.league, seedCount);
+  console.log(`\n[2/3] Simulating ${matchCount} Matches (${matchCount * 2} Innings) through Engine...`);
+  const engineAudit = auditMatchEngine(matchAudit, G.state.league, matchCount);
 
   console.log(`      Mean 1st Innings: ${engineAudit.firstInnings.mean.toFixed(1)} (p10: ${engineAudit.firstInnings.p10}, p90: ${engineAudit.firstInnings.p90})`);
   console.log(`      Overall Run Rate: ${engineAudit.overallRunRate.mean.toFixed(2)} RPO`);
@@ -343,7 +349,8 @@ export async function runFullAudit(htmlPath = DEFAULT_HTML, seedCount = SEED_COU
 
   const report = {
     timestamp: new Date().toISOString(),
-    htmlPath,
+    htmlPath: htmlArg || htmlPath,
+    seed: auditSeed,
     durationMs: Date.now() - startTime,
     ratingsAudit,
     engineAudit,
@@ -352,7 +359,8 @@ export async function runFullAudit(htmlPath = DEFAULT_HTML, seedCount = SEED_COU
 
   const outDir = path.resolve('qa/results');
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
-  const outPath = path.join(outDir, 'v116_gameplay_authenticity_report.json');
+  const htmlTag = htmlArg ? path.basename(htmlArg).replace(/[^a-z0-9]+/gi, '-').replace(/-+$/, '').toLowerCase() : 'release';
+  const outPath = path.join(outDir, `v116_gameplay_authenticity_report-${htmlTag}-seed${auditSeed}-m${matchCount}.json`);
   fs.writeFileSync(outPath, JSON.stringify(report, null, 2));
   console.log(`\nFull report written to: ${outPath}`);
 
