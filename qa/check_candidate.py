@@ -81,6 +81,7 @@ def main() -> int:
     actual_base_normalised_sha = newline_normalised_sha(BASELINE)
     baseline_text = BASELINE.read_text(encoding="utf-8")
     baseline_constants = find_save_constants(baseline_text)
+    baseline_script_count = len(scripts(baseline_text))
 
     candidate_text = candidate.read_text(encoding="utf-8")
     candidate_constants = find_save_constants(candidate_text)
@@ -106,6 +107,10 @@ def main() -> int:
 
     # --- JavaScript syntax check on all script blocks ---
     js_blocks = scripts(candidate_text)
+    if len(js_blocks) != baseline_script_count:
+        failures.append(
+            f"script block drift: candidate={len(js_blocks)} != baseline={baseline_script_count}"
+        )
     node = shutil.which("node")
     if node:
         with tempfile.TemporaryDirectory() as td:
@@ -123,7 +128,7 @@ def main() -> int:
     # --- Report ---
     print(f"Baseline normalised SHA-256: {actual_base_normalised_sha}")
     print(f"Candidate SHA-256: {sha256(candidate)}")
-    print(f"Script blocks: {len(js_blocks)} (all syntax-checked)")
+    print(f"Script blocks: {len(js_blocks)} (baseline={baseline_script_count}, all syntax-checked)")
     print(f"Duplicate DOM IDs: {len(duplicates)}")
     print(
         "Save constants: "
