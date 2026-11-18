@@ -28,7 +28,7 @@
 - Canonical v116 source tree
 
 ### `docs/`
-- `release/` — Current v116 release handoff and review docs
+- `release/` — Current v116 release handoff and review docs; **V117_HANDOFF.md** — gameplay-calibrated successor candidate
 - `qa/` — QA review documentation
 - `archive/` — Historical archive docs (GCC_V8_HANDOFF_HISTORY.md)
 - `history/` — Non-release v7.x/v8.x docs moved from `docs/` root
