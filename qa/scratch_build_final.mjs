@@ -1,12 +1,14 @@
 /**
- * Build the FINAL authenticity candidate: current candidate params
- * (baseline 6.10, gate 0.13, variance 0.38, dampen -0.55, thin-margin gate 0.60)
- * PLUS the chase-hazard pressure surgery at MULT=0.15.
- * Winning cell: AO 14.2 avg (13.7/13.8/15.0 all in band), CW 48.9 avg (all in band).
+ * Build the authenticity candidate from the frozen v116 release.
+ * Gameplay: baseline 6.10, gate 0.13, variance 0.38, dampen -0.55,
+ * thin-margin gate 0.60, chase-hazard pressure multiplier 0.00.
+ * Cards: one stadium row on club reveal and club selection. Full ground
+ * name and trait stay in the club guide.
  * Run: node qa/scratch_build_final.mjs
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -67,6 +69,31 @@ const PRESSURE_ANCHOR = '(1+Math.max(0,pressure)*.65)';
 if (!content.includes(PRESSURE_ANCHOR)) { console.error('PATCH FAILED - pressure anchor'); process.exit(1); }
 content = content.replace(PRESSURE_ANCHOR, `(1+Math.max(0,pressure)*${MULT.toFixed(2)})`);
 
+// 6. Club reveal / selection cards: one consistent stadium row.
+// Full ground name and trait stay in the club guide.
+content = content.replace(
+  '<div class="g8clubground"><div>${X.icon(\'building-stadium\')}<strong>${esc(c.ground)}</strong></div><p>${esc(c.trait)}</p></div>',
+  '<div class="g8clubground" title="${esc(c.ground)}"><div>${X.icon(\'building-stadium\')}<strong>${esc(cardGround(c))}</strong></div></div>'
+);
+content = content.replace(
+  'return `<article data-key="club-${i}"',
+  ' const cardGround=c=>({SRH:\'Rajiv Gandhi Stadium\',LSG:\'Ekana Stadium\',PBKS:\'Mullanpur Stadium\'})[c.abbr]||c.ground;\n return `<article data-key="club-${i}"'
+);
+const oldGroundCss = `#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground{background:var(--gcc-raised)!important;border-color:var(--gcc-line)!important;border-left-color:var(--accent)!important}
+#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground .g8icon{color:var(--gcc-muted)!important}`;
+const newGroundCss = `#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground{display:flex;align-items:center;min-height:44px;margin-top:auto;padding:4px 0;background:transparent!important;border:0!important;border-radius:0;box-shadow:none}
+#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground>div{display:flex;align-items:center;gap:8px;min-width:0}
+#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground strong{font-size:13px;line-height:1.4;font-weight:600;overflow-wrap:normal;word-break:normal}
+#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground .g8icon{display:block!important;color:var(--gcc-muted)!important}`;
+if (!content.includes(oldGroundCss)) { console.error('PATCH FAILED - club ground css'); process.exit(1); }
+content = content.replace(oldGroundCss, newGroundCss);
+
 fs.writeFileSync(OUT_HTML, content);
+const candidateHtml = path.join(__dirname, 'candidates', 'v116-authenticity-candidate.html');
+fs.writeFileSync(candidateHtml, content);
+const sha = crypto.createHash('sha256').update(content).digest('hex').toUpperCase();
+fs.writeFileSync(path.join(__dirname, 'candidates', 'CANDIDATE_SHA256.txt'), sha + '\n');
 console.log(`Final candidate written: ${OUT_HTML}`);
+console.log(`Published candidate: ${candidateHtml}`);
+console.log(`SHA-256 ${sha}`);
 console.log(`Params: baseline=${BASELINE} gate=${GATE} variance=${VARIANCE} dampen=-${DAMPEN} pressureMult=${MULT} marginGate=0.60`);
