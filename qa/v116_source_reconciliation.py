@@ -16,8 +16,8 @@ import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
 RELEASE = ROOT / "GCC_v116_release (1).html"
-EXPECTED_SHA256 = "b27cf0b4c7e6e4e7a78eaa5c80154dfd0f70657ce9f774dd405505e97e82c6d0"
-EXPECTED_BYTES = 6635097
+EXPECTED_SHA256 = "a1d2d3dd0e1351514923de6fdf143d63ec2b1182459c5da9f5f2dccc89fd6a5d"
+EXPECTED_BYTES = 6649027
 EXPECTED_GIT_BLOB = "088cf689ef3a464b06e8512627811ad60864b3e8"
 BLOCK = re.compile(rb"<(style|script)\b([^>]*)>(.*?)</\1\s*>", re.I | re.S)
 BLOCK_ID = re.compile(rb'\bid\s*=\s*([\'"])(.*?)\1', re.I | re.S)

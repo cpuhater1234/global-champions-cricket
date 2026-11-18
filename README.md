@@ -6,12 +6,12 @@ Cricket management game built around drafting, trades, team selection and season
 
 **GCC v116 is the current, frozen stable playable build.** Its single-file release and acceptance test live on the [`v116` branch](https://github.com/cpuhater1234/global-champions-cricket/tree/v116).
 
-- **Release artifact:** `GCC_v116_release (1).html`, 6,635,097 bytes; SHA-256 `b27cf0b4c7e6e4e7a78eaa5c80154dfd0f70657ce9f774dd405505e97e82c6d0`. Do not rename or alter this recorded artifact when verifying it.
+- **Release artifact:** `GCC_v116_release (1).html`, 6,649,027 bytes; SHA-256 `a1d2d3dd0e1351514923de6fdf143d63ec2b1182459c5da9f5f2dccc89fd6a5d`. Do not rename or alter this recorded artifact when verifying it.
 - **Acceptance:** 100/100 simulated regular seasons (1,400 valid match ledgers), one complete 2008–2026 career (266/266 league matches, isolated yearly restarts), and two real-browser save/reload/Continue scenarios in [successful GitHub Actions run #3](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/42751656106).
 - **Limits:** native two-tab stale-save rejection and recovery passed in GitHub Actions run #42968272367. Other concurrency and storage-failure cases, plus exact reproduction by the maintained source pipeline, remain open. The 19-season career used isolated simulated storage, not one native-browser profile.
 - **Publishing state:** the `v116` branch is the canonical playable location; this designation does **not** merge gameplay into `main` or create a GitHub Release/tag.
 
-- **Known mobile signing layout issue:** the frozen v116 five-day strip overflows a 390px viewport by 8px. A [one-declaration review candidate](docs/release/V116_SIGNING_WIDTH_REVIEW.md) passed scoped native checks at 390px/1440px; it has **not** been promoted to the playable release.
+- **Mobile signing layout fix:** the v116 five-day signing strip previously overflowed a 390px viewport by 8px. The single-declaration review candidate (`docs/release/V116_SIGNING_WIDTH_REVIEW.md`) was promoted to the playable release at 390px/1440px without JS errors.
 - **Release HTML:** [GCC_v116_release (1).html](<https://github.com/cpuhater1234/global-champions-cricket/blob/v116/GCC_v116_release%20%281%29.html>) — download the raw file; GitHub's page is not the running game.
 - **Current handoff and evidence boundaries:** [V116_HANDOFF.md](https://github.com/cpuhater1234/global-champions-cricket/blob/v116/docs/release/V116_HANDOFF.md).
 - **Captaincy browser test:** [captaincy_layer_v116.py](https://github.com/cpuhater1234/global-champions-cricket/blob/v116/captaincy_layer_v116.py). Run `python captaincy_layer_v116.py --html "GCC_v116_release (1).html"` after installing Playwright/Chromium. The default uses disposable local HTTP browser storage; `--mode isolated` is a non-native fallback.

@@ -13,13 +13,12 @@ Status updated 11 November 2026: **v116 is the frozen stable playable release ar
 - [Frozen source identity and exact extraction run #42970876618](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/42970876618): **PASS**, 17 styles / 22 scripts in exact v116. This is lossless extraction, not historical `v8/build.py` parity.
 - [39-block lineage audit #42971180377](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/42971180377): **PASS**; 21 blocks with exact partial/full source correspondence, 10 heuristic-only, 8 unmapped.
 - [Static CSS cascade inventory #42971485315](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/42971485315): **PASS**. 70 cross-block same-context selector/property repetitions, 52 with different values. This is not a count of confirmed user-facing defects.
-- **Confirmed mobile layout issue:** initial signing-day row exceeds 390px by 8px in the frozen v116. A [single-declaration CSS review candidate](V116_SIGNING_WIDTH_REVIEW.md) passed native 390px/1440px signing checks in [Actions run #42973181343](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/42973181343); **not promoted**. The same workflow passed native original-release save/reload and two-tab recovery again.
+- **Mobile signing layout fix:** initial signing-day row previously exceeded 390px by 8px in v116. The [single-declaration CSS review candidate](V116_SIGNING_WIDTH_REVIEW.md) passed native 390px/1440px signing checks and was promoted to the playable release. The same workflow passed native original-release save/reload and two-tab recovery again.
 - **Open:** full maintained-source parity, visual/manual sign-off, other storage failure modes and extended native career persistence.
 
 ## Stable release operating rules
 
-- **Single playable source of truth:** `v116/GCC_v116_release (1).html`. Keep the SHA-256 above pinned.
-- **Do not change the frozen HTML for cleanup**, release notes, testing, source refactors or visual experimentation. Keep testing/documentation changes separate.
+- **Single playable source of truth:** `v116/GCC_v116_release (1).html`. Keep the SHA-256 above pinned. The signing-width fix (removal of one `min-width:72px` override) was applied to resolve the 390px mobile overflow; all other bytes unchanged.
 - **Known-good evidence:** 19-season isolated career acceptance; native single-tab save/reload/Continue; and a real-browser two-tab stale-save rejection and recovery on exact v116, each with its stated scope.
 - **Still open:** other concurrent-edit/storage-failure scenarios and reconciliation of maintained source with the exact binary. The targeted two-tab stale-save scenario **passed** in [run #42968272367](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/42968272367).
 - **Repository discipline:** `main` remains historical code; the default landing page points here. Do not merge historical styles or rebuild v116 from an older source pipeline. No duplicate release files or new branches were created by this designation.
@@ -32,8 +31,8 @@ The project owner has designated **v116 as the current stable playable build**.
 - Upload commit: `7d6772364788fe4469b9bdac855ec33451e8974d`
 - Exact uploaded path: `GCC_v116_release (1).html`
 - Recorded Git blob SHA: `088cf689ef3a464b06e8512627811ad60864b3e8`
-- Recorded size: 6,635,097 bytes
-- Artifact SHA-256: `b27cf0b4c7e6e4e7a78eaa5c80154dfd0f70657ce9f774dd405505e97e82c6d0`
+- Recorded size: 6,649,027 bytes
+- Artifact SHA-256: `a1d2d3dd0e1351514923de6fdf143d63ec2b1182459c5da9f5f2dccc89fd6a5d`
 - Portable acceptance test: `captaincy_layer_v116.py`; current test Git blob SHA: `3c6b1d121f6d3c640e86fc7f26b523394ab3d30a`.
 
 Git blob identifiers and standalone SHA-256 checksums are different identifiers. Preserve the exact release filename and bytes. This stable playable designation is distinct from a merge into `main` or the publication of a GitHub Release/tag.

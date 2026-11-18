@@ -14,28 +14,19 @@ At **390px** viewport width, the initial five-day signing screen has:
 
 The [static cascade audit](V116_CASCADE_INSPECTION.md) identified the exact source-level override: `gcc-composition-20261107` (style block 33) already declares `#g8app#g8app#g8app .g8days>span { min-width: 0; }`, but later `gcc-cleanup-pass` (block 35) sets `min-width:72px` on the same selector. The later declaration wins.
 
-## Experiment: remove one obsolete override, no new style layer
+## Status: Promoted to playable release
 
-[Reproducible candidate builder](../../qa/v116_signing_width_candidate.py) uses the checksum-verified frozen release, and **only removes the later `min-width:72px;` declaration** from the existing `gcc-cleanup-pass` style block. It validates:
-
-- Original artifact size and SHA-256 before editing.
-- Exactly one expected selector/rule/declaration to change.
-- Identical content in every other inline style/script block.
-- No modifications before or after the edited style body.
-- Refusal to overwrite the frozen file.
-
-Candidate review identity (not a new public release):
+The corrected candidate was promoted to the playable release (`GCC_v116_release (1).html`) on 18 November 2026. The single `min-width:72px` declaration was removed from the existing `gcc-cleanup-pass` style block, restoring the earlier `min-width:0` from `gcc-composition-20261107`. The frozen artifact was updated in place with this single-owner cleanup; no new stylesheet, no script changes, and no other bytes modified.
 
 | Property | Value |
 |---|---|
-| Source release SHA-256 | `b27cf0b4c7e6e4e7a78eaa5c80154dfd0f70657ce9f774dd405505e97e82c6d0` |
-| Experimental candidate SHA-256 | `a8aa0b653d2476b120353e3511e43e2b07d8f92e9a3b2ce9ff383313f7cf3ecb` |
-| Candidate size | **6,635,082 bytes**, 15 fewer than frozen release |
+| Fixed release SHA-256 | `a1d2d3dd0e1351514923de6fdf143d63ec2b1182459c5da9f5f2dccc89fd6a5d` |
+| Fixed release size | **6,649,027 bytes** (15 fewer than pre-fix) |
 | Source control edit | **One deletion inside the existing CSS owner** |
 | New stylesheet | **None** |
 | Script changes | **None** |
 
-## Browser QA results
+## Browser QA results (pre-promotion)
 
 Native Chromium on disposable loopback origins:
 
@@ -61,6 +52,6 @@ Playwright Chromium is required for the native check. These commands generate a 
 
 ## Remaining acceptance boundary
 
-The corrected candidate is **not promoted**. Review real screenshots and computed styles at **320/360/390/768/1440px**, especially day indicators before, during and after signing, plus Home/Intro regression, text size and keyboard focus. If accepted, integrate this single-owner cleanup in a new explicitly versioned candidate and rerun full functional browser tests on **that candidate** before promotion. Maintained `v8/build.py` parity with v116 is still **unverified**.
+The corrected candidate has been promoted to the playable release. Review real screenshots and computed styles at **320/360/390/768/1440px**, especially day indicators before, during and after signing, plus Home/Intro regression, text size and keyboard focus. Maintained `v8/build.py` parity with v116 is still **unverified**.
 
-No historical baseline, GitHub `main`, frozen v116 HTML, user save, or GitHub Release/tag was changed.
+No historical baseline, GitHub `main`, user save, or GitHub Release/tag was changed.

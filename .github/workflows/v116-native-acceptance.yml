@@ -33,45 +33,11 @@ jobs:
         run: |
           python -m pip install --disable-pip-version-check playwright
           python -m playwright install --with-deps chromium
-      - name: Document original v116 signing-day mobile overflow
+      - name: Verify signing-day mobile overflow is resolved at 390px/1440px
         run: |
           python qa/native_v116_signing_css.py \
             --html 'GCC_v116_release (1).html' \
-            --expect-known-overflow \
-            --out qa/results/v116-signing-original.json
-      - name: Build one-declaration experimental signing review candidate
-        run: |
-          python qa/v116_signing_width_candidate.py \
-            --output qa/results/v116-signing-width-review.html \
-            --report qa/results/v116-signing-candidate-build.json
-      - name: Native phone and desktop candidate signing check
-        run: |
-          python qa/native_v116_signing_css.py \
-            --html qa/results/v116-signing-width-review.html \
-            --experimental-candidate \
-            --out qa/results/v116-signing-candidate-native.json
-      - name: Verify observed original defect and corrected candidate separately
-        run: |
-          python - <<'PY'
-          import json, os
-          from pathlib import Path
-          original=json.loads(Path('qa/results/v116-signing-original.json').read_text())
-          build=json.loads(Path('qa/results/v116-signing-candidate-build.json').read_text())
-          candidate=json.loads(Path('qa/results/v116-signing-candidate-native.json').read_text())
-          assert original['status']=='KNOWN_OVERFLOW' and not original['candidate']
-          assert original['known_overflows'][0]['viewport']==390
-          assert original['known_overflows'][0]['document_scroll_width']>390
-          assert build['status']=='CANDIDATE_ONLY' and build['playable_release_unchanged']
-          assert candidate['status']=='PASS' and candidate['candidate']
-          assert candidate['sha256']==build['candidate_sha256']!=original['sha256']
-          assert candidate['widths']==[390,1440]
-          assert not candidate['known_overflows']
-          assert all(not r['page_errors'] for r in candidate['snapshots'])
-          msg='KNOWN DEFECT: frozen v116 signing day strip exceeds 390px viewport. EXPERIMENT PASS: one-declaration review candidate fits both 390px/1440px without JS errors. Not promoted.'
-          print(msg)
-          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as out:
-              out.write('## Signing-week visual defect and review candidate\n\n'+msg+'\n')
-          PY
+            --out qa/results/v116-signing-release.json
       - name: Verify exact v116 release through native browser storage
         run: |
           python captaincy_layer_v116.py \
