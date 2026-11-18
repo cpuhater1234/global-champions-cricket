@@ -180,7 +180,7 @@ for (const [from, to] of copyFixes) {
   content = content.replace(from, to);
 }
 if (!content.includes('id="gcc-standard"')) {
-  content = content.replace('</body>', `<style id="gcc-standard">
+  content = content.replace('</body></html>', `<style id="gcc-standard">
 #g8app .g8board .g8player,#g8app .g8contract .g8player,#g8app .g8recruitcard,#g8app .g8draftplayer{min-height:0!important;height:auto!important}
 #g8app .g8playerhead{min-height:0!important}
 #g8app :is(.gccuiRating,.g8rowrating,.g8table td,.g8table th,.g8analysisrow>strong,.g8teamrating strong),
@@ -194,7 +194,8 @@ if (!content.includes('id="gcc-standard"')) {
 #g8app .gccuiRoleCoverage h3{font-size:12px!important;letter-spacing:.08em!important;text-transform:uppercase!important;font-weight:800!important;color:var(--gcc-muted)!important}
 #g8app .gccuiPlayers .gccuiPlayer:hover,#g8app .gccuiPickedPlayer:hover,#g8app .g8squadmember:hover{transform:none!important;box-shadow:none!important}
 #g8app .g8managerow,#g8app .gccuiPickedPlayer,#g8app .gccuiBenchRow{min-height:0!important}
-</style>\n</body>`);
+</style>
+</body></html>`);
 }
 
 fs.writeFileSync(OUT_HTML, content);
