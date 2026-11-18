@@ -209,7 +209,7 @@ patchOnce('xi header',
 );
 patchOnce('selection line',
   "journal=()=>E.clean(s.dynasty?.v8Stories,identify());",
-  "journal=()=>E.clean(s.dynasty?.v8Stories,identify());\n X.selectionLine=()=>{try{const e=[...journal().events].reverse().find(x=>x.year===s.year&&x.club===own());if(!e?.arc?.incumbent?.name||!e?.arc?.challenger?.name)return '';return e.arc.incumbent.name+' or '+e.arc.challenger.name+'.';}catch(err){return ''}};"
+  "journal=()=>E.clean(s.dynasty?.v8Stories,identify());\n X.selectionLine=()=>{try{const events=journal().events.filter(x=>x.year===s.year&&x.club===own()),e=events.at(-1);if(!e?.arc?.incumbent?.name||!e?.arc?.challenger?.name||events.filter(x=>x.arcId===e.arcId).length>=3)return '';return e.arc.incumbent.name+' or '+e.arc.challenger.name+'.';}catch(err){return ''}};"
 );
 patchOnce('one result question',
   "const decision=consequences;",
@@ -261,6 +261,10 @@ patchOnce('toss line',
   '<h2>${esc(X.battingOrderNote(r))}</h2><footer',
   '<h2>${esc(X.battingOrderNote(r))}</h2>${call?`<p class="gccuiOpenQuestion" role="status">${esc(call)}</p>`:\'\'}<footer'
 );
+patchOnce('live toss once',
+  '<p class="gccuiLiveOrder">${esc(X.battingOrderNote(r))}</p>',
+  ''
+);
 if (!content.includes('id="gcc-standard"')) {
   content = content.replace('</body></html>', `<style id="gcc-standard">
 #g8app .g8board .g8player,#g8app .g8contract .g8player,#g8app .g8recruitcard,#g8app .g8draftplayer{min-height:0!important;height:auto!important}
@@ -291,6 +295,8 @@ if (!content.includes('id="gcc-standard"')) {
 #g8app .gccuiSelectionHeader>.gccuiOpenQuestion{display:block;grid-column:1/-1;margin:0}
 #g8app .g8managescoutcue{display:none!important}
 #g8app .g8roster li{align-items:center;padding:8px 0}
+#g8app .gccuiCoinStage{display:none!important}
+#g8stage[data-view="matchReveal"]>.gccuiOpenQuestion{margin:16px 16px 0}
 </style>
 </body></html>`);
 }
