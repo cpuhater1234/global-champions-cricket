@@ -62,8 +62,8 @@ content = content.replace(
 );
 const oldGroundCss = `#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground{background:var(--gcc-raised)!important;border-color:var(--gcc-line)!important;border-left-color:var(--accent)!important}
 #g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground .g8icon{color:var(--gcc-muted)!important}`;
-const newGroundCss = `#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground{display:flex;align-items:center;justify-content:center;min-height:46px;margin-top:8px;padding:0 12px;text-align:center}
-#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground>div{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-width:0}
+const newGroundCss = `#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground{display:flex;align-items:center;justify-content:flex-start;min-height:0;margin-top:2px;padding:0;background:transparent!important;border:0!important;box-shadow:none;text-align:left}
+#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground>div{display:flex;align-items:center;justify-content:flex-start;gap:8px;width:auto;min-width:0}
 #g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground strong{font-size:13px;line-height:1.4;font-weight:600;overflow-wrap:normal;word-break:normal}
 #g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground .g8icon{display:block!important;color:var(--gcc-muted)!important}`;
 if (!content.includes(oldGroundCss)) { console.error('PATCH FAILED - club ground css'); process.exit(1); }
@@ -194,6 +194,16 @@ if (!content.includes('id="gcc-standard"')) {
 #g8app .gccuiRoleCoverage h3{font-size:12px!important;letter-spacing:.08em!important;text-transform:uppercase!important;font-weight:800!important;color:var(--gcc-muted)!important}
 #g8app .gccuiPlayers .gccuiPlayer:hover,#g8app .gccuiPickedPlayer:hover,#g8app .g8squadmember:hover{transform:none!important;box-shadow:none!important}
 #g8app .g8managerow,#g8app .gccuiPickedPlayer,#g8app .gccuiBenchRow{min-height:0!important}
+#g8stage#g8stage#g8stage :is(.g8invitationgrid,.g8clubchooser) .g8clubground{display:flex!important;align-items:center!important;justify-content:flex-start!important;min-height:0!important;height:auto!important;margin:2px 0 0!important;padding:0!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;text-align:left!important}
+#g8stage#g8stage#g8stage :is(.g8invitationgrid,.g8clubchooser) .g8clubground>div{display:flex!important;align-items:center!important;justify-content:flex-start!important;width:auto!important;gap:8px!important;margin:0!important}
+#g8stage#g8stage#g8stage :is(.g8invitationgrid,.g8clubchooser) .g8clubground .g8icon{display:block!important;width:16px!important;height:16px!important;flex:0 0 16px!important;margin:0!important;color:var(--gcc-muted)!important}
+#g8stage#g8stage#g8stage :is(.g8invitationgrid,.g8clubchooser) .g8clubground strong{text-align:left!important;font-size:14px!important;font-weight:600!important;line-height:1.2!important}
+#g8stage#g8stage#g8stage .g8invitationgrid .gccuiClubMeta{display:none!important}
+#g8stage#g8stage#g8stage .g8invitationgrid .g8clubbody h3{min-height:0!important}
+#g8app#g8app#g8app .gccuiPlayers .gccuiPlayer{grid-template-columns:minmax(0,1fr) auto!important;min-height:0!important}
+#g8app#g8app#g8app .gccuiPlayers .gccuiPlayerSkills,#g8app#g8app#g8app .gccuiPlayers .gccuiPlayerBio{display:none!important}
+#g8dialog#g8dialog#g8dialog .g8clubidentitypanel{display:flex!important;flex-wrap:wrap!important;align-items:center!important;gap:8px 10px!important;margin:0 0 8px!important;padding:0!important;min-height:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
+#g8dialog#g8dialog#g8dialog .g8clubidentitytext{flex:1 0 100%!important;margin:0!important;font-size:14px!important;line-height:1.4!important}
 </style>
 </body></html>`);
 }
