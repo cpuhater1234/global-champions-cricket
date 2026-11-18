@@ -223,6 +223,18 @@ patchOnce('name the side',
   "bind('matchday',['result'],()=>{ui.seasonTab='matchday';G.go('season');setView('season');});",
   "bind('matchday',['result'],()=>{ui.seasonTab='matchday';G.go('season');setView('season');});\n bind('nameSide',['result'],()=>{ui.teamPane='xi';ui.teamReturn='season';setView('team');});"
 );
+patchOnce('final list row',
+  "const rosterList=()=>`<ol class=\"g8roster\">${roster().map(p=>`<li><div><b>${esc(p.name)} <span class=\"g8rowrating\" aria-label=\"Current player rating ${p.overall}\">${p.overall}</span></b><small>${esc(X.roleLine(p))} · ${esc(p.country)}</small></div>${btn('Scout','inspect',[p.id],'g8small')}</li>`).join('')}</ol>`;",
+  "const rosterList=()=>{const cutting=s.dynasty?.offseason?.phase==='cuts'&&roster().length>15;return `<ol class=\"g8roster\">${roster().map(p=>`<li><div><b>${esc(p.name)} <span class=\"g8rowrating\" aria-label=\"Current player rating ${p.overall}\">${p.overall}</span></b><small>${esc(X.roleLine(p))}</small></div>${cutting?btn('Release','finalCut',[p.id],'g8small').replace('type=\"button\"',`type=\"button\" aria-label=\"Release ${esc(p.name)}\"`):btn('Scout','inspect',[p.id],'g8small')}</li>`).join('')}</ol>`};"
+);
+patchOnce('release on the row',
+  "${roster().length>15?roster().map(p=>btn(`Release ${p.name}`,'finalCut',[p.id],'g8danger')).join(''):''}",
+  ""
+);
+patchOnce('squad row role',
+  "<small>${p.birthYear?'Age '+(s.year-p.birthYear)+' · ':''}${esc(X.roleLine(p))}</small>${X.managementTag(p)}",
+  "<small>${esc(X.roleLine(p))}</small>${X.managementTag(p)}"
+);
 if (!content.includes('id="gcc-standard"')) {
   content = content.replace('</body></html>', `<style id="gcc-standard">
 #g8app .g8board .g8player,#g8app .g8contract .g8player,#g8app .g8recruitcard,#g8app .g8draftplayer{min-height:0!important;height:auto!important}
@@ -251,6 +263,8 @@ if (!content.includes('id="gcc-standard"')) {
 #g8app .gccuiResultTop{flex-wrap:wrap}
 #g8app .gccuiOpenQuestion{flex:1 0 100%;margin:8px 0 0;font-size:16px;line-height:24px;font-weight:600;color:var(--gcc-text,#eef5fa)}
 #g8app .gccuiSelectionHeader>.gccuiOpenQuestion{display:block;grid-column:1/-1;margin:0}
+#g8app .g8managescoutcue{display:none!important}
+#g8app .g8roster li{align-items:center;padding:8px 0}
 </style>
 </body></html>`);
 }
