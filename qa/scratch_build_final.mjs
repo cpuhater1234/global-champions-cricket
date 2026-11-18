@@ -235,6 +235,32 @@ patchOnce('squad row role',
   "<small>${p.birthYear?'Age '+(s.year-p.birthYear)+' · ':''}${esc(X.roleLine(p))}</small>${X.managementTag(p)}",
   "<small>${esc(X.roleLine(p))}</small>${X.managementTag(p)}"
 );
+{
+  const start = content.indexOf('X.storyLive=()=>');
+  const end = content.indexOf('};', start);
+  if (start < 0 || end < 0 || end - start > 1200) { console.error('PATCH FAILED - story live'); process.exit(1); }
+  const repl = [
+    "X.thisSelection=()=>{try{const r=X.ui?.result;if(!r||!s.results.includes(r))return '';const e=journal().events.find(e=>e.year===s.year&&e.round===r.round&&e.club===own());if(!e?.arc)return '';if(e.selection==='backed'&&e.arc.incumbent?.name)return 'You kept '+e.arc.incumbent.name+'.';if(e.selection==='challenger'&&e.arc.challenger?.name)return e.arc.challenger.name+' has the chance.';if(e.arc.incumbent?.name&&e.arc.challenger?.name)return e.arc.incumbent.name+' or '+e.arc.challenger.name+'.';return '';}catch(err){return ''}};",
+    " X.storyLive=()=>{const line=X.thisSelection();return line?'<p class=\"gccuiOpenQuestion\" role=\"status\">'+esc(line)+'</p>':'';};",
+  ].join('\n');
+  content = content.slice(0, start) + repl + content.slice(end + 2);
+}
+patchOnce('record selection',
+  'const managementContext=X.managementBefore();closeDialog();',
+  'const managementContext=X.managementBefore(),storyContext=X.storyBefore?.()||null;closeDialog();'
+);
+patchOnce('save selection',
+  'X.managementAfter(managementContext,ui.result);beginMatch(ui.result);',
+  'X.managementAfter(managementContext,ui.result);try{X.storyAfter?.(storyContext,ui.result);}catch(err){}beginMatch(ui.result);'
+);
+patchOnce('toss sentence',
+  'const r=ui.result;return `<div class="gccui gccuiPreMatch">',
+  'const r=ui.result,call=X.thisSelection?.()||\'\';return `<div class="gccui gccuiPreMatch">'
+);
+patchOnce('toss line',
+  '<h2>${esc(X.battingOrderNote(r))}</h2><footer',
+  '<h2>${esc(X.battingOrderNote(r))}</h2>${call?`<p class="gccuiOpenQuestion" role="status">${esc(call)}</p>`:\'\'}<footer'
+);
 if (!content.includes('id="gcc-standard"')) {
   content = content.replace('</body></html>', `<style id="gcc-standard">
 #g8app .g8board .g8player,#g8app .g8contract .g8player,#g8app .g8recruitcard,#g8app .g8draftplayer{min-height:0!important;height:auto!important}
