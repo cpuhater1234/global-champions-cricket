@@ -86,8 +86,8 @@ content = content.replace(
   '#g8stage#g8stage#g8stage .g8homestadium .g8stadiumphoto{animation:vx-ken 24s ease-in-out infinite alternate!important;object-fit:cover!important;object-position:center center!important;transform-origin:center center!important}'
 );
 
-content = content.replace("return{fx,c,text:`${fav?`${fav==='SPIN'?'Spin':'Pace'} has the stronger conditions rating.`:'No clear pace or spin advantage in the conditions ratings.'} ${options.length} regular ${fav?fav.toLowerCase()+' ':''}bowling option${options.length===1?'':'s'} in your XI.${bench?' '+bench.name+' is fit on the bench.':''}`};};", "const count=options.length,kind=fav==='SPIN'?'spinner':fav==='PACE'?'seamer':'bowler',pitch=fav==='SPIN'?'The pitch should help the spinners.':fav==='PACE'?'The pitch should help the seamers.':'Nothing in the pitch particularly suits seam or spin.',named=count===0?`No specialist ${kind} is named.`:`${count===1?'One':count} specialist ${kind}${count===1?' is':'s are'} named.`;return{fx,c,text:`${pitch} ${named}${bench?` ${bench.name} is available.`:''}`};};");
-if (content.split("const count=options.length,kind=fav==='SPIN'?'spinner':fav==='PACE'?'seamer':'bowler',pitch=fav==='SPIN'?'The pitch should help the spinners.':fav==='PACE'?'The pitch should help the seamers.':'Nothing in the pitch particularly suits seam or spin.',named=count===0?`No specialist ${kind} is named.`:`${count===1?'One':count} specialist ${kind}${count===1?' is':'s are'} named.`;return{fx,c,text:`${pitch} ${named}${bench?` ${bench.name} is available.`:''}`};};").length !== 2) { console.error('PATCH FAILED - conditions wording'); process.exit(1); }
+content = content.replace("return{fx,c,text:`${fav?`${fav==='SPIN'?'Spin':'Pace'} has the stronger conditions rating.`:'No clear pace or spin advantage in the conditions ratings.'} ${options.length} regular ${fav?fav.toLowerCase()+' ':''}bowling option${options.length===1?'':'s'} in your XI.${bench?' '+bench.name+' is fit on the bench.':''}`};};", "const count=options.length,kind=fav==='SPIN'?'spinner':fav==='PACE'?'seamer':'bowler',pitch=fav==='SPIN'?'The pitch should help the spinners.':fav==='PACE'?'The pitch should help the seamers.':'Nothing in the pitch particularly suits seam or spin.',named=count===0?`No ${kind} is named.`:`${count===1?'One':count} ${kind}${count===1?' is':'s are'} named.`;return{fx,c,text:`${pitch} ${named}${bench?` ${bench.name} is available.`:''}`};};");
+if (content.split("const count=options.length,kind=fav==='SPIN'?'spinner':fav==='PACE'?'seamer':'bowler',pitch=fav==='SPIN'?'The pitch should help the spinners.':fav==='PACE'?'The pitch should help the seamers.':'Nothing in the pitch particularly suits seam or spin.',named=count===0?`No ${kind} is named.`:`${count===1?'One':count} ${kind}${count===1?' is':'s are'} named.`;return{fx,c,text:`${pitch} ${named}${bench?` ${bench.name} is available.`:''}`};};").length !== 2) { console.error('PATCH FAILED - conditions wording'); process.exit(1); }
 content = content.replace(
   'function draftNeeds(root){\n   const companion',
   'function draftNeeds(){}\nfunction unusedDraftNeeds(root){\n   const companion'
@@ -161,6 +161,41 @@ content = content.replace(
 }`
 );
 
+
+
+const copyFixes = [
+  ["`A regular ${R.bowlingStyle(p)==='SPIN'?'spin':'pace'} bowling option.`", "`${R.bowlingStyle(p)==='SPIN'?'Spin bowler.':'Seam bowler.'}`"],
+  ["type==='Batting specialist'?null:type.replace(' bowler','')+' option'", "type==='Batting specialist'?null:'Bowls '+type.replace(' bowler','').toLowerCase()"],
+  ["'Emergency bowling option'", "'Not a frontline bowler'"],
+  ["Counts show options, not targets. Players can cover several roles.", "A player can count in more than one role."],
+  ["Best available XI from your squad", "Best XI from this squad"],
+  ["`Projection from ${available} player${available===1?'':'s'}`", "`From ${available} player${available===1?'':'s'} so far`"],
+  ["Use the grip with a specialist spinner and accurate middle-overs bowling.", "Use the grip with your spinner, and bowl accurately through the middle overs."],
+  ["Scout the batting and bowling options before making changes.", "Scout batters and bowlers before you change the squad."],
+  ["Your squad needs a recognised keeper and enough bowling options.", "Your squad needs a keeper and enough bowlers."],
+  ["Keep batting and bowling options across the phases, with variation and flexibility rather than one narrow plan.", "Keep batters and bowlers for every phase, with variation rather than one narrow plan."],
+];
+for (const [from, to] of copyFixes) {
+  if (!content.includes(from)) { console.error('PATCH FAILED - copy: ' + from.slice(0, 60)); process.exit(1); }
+  content = content.replace(from, to);
+}
+if (!content.includes('id="gcc-standard"')) {
+  content = content.replace('</body>', `<style id="gcc-standard">
+#g8app .g8board .g8player,#g8app .g8contract .g8player,#g8app .g8recruitcard,#g8app .g8draftplayer{min-height:0!important;height:auto!important}
+#g8app .g8playerhead{min-height:0!important}
+#g8app :is(.gccuiRating,.g8rowrating,.g8table td,.g8table th,.g8analysisrow>strong,.g8teamrating strong),
+#g8dialog :is(.gccuiRating,.g8rowrating,.g8table td,.g8table th,.g8analysisrow>strong,.g8teamrating strong){font-variant-numeric:tabular-nums}
+#g8app .g8conditionbrief,#g8app .g8selectionground p{margin:2px 0 0!important;max-width:68ch;font-size:14px!important;line-height:1.45!important;color:var(--gcc-muted,#a9b7c0)!important}
+#g8app .gccuiCompanion>:not(.gccuiClubHead){margin:10px!important;max-width:calc(100% - 20px)!important}
+#g8app .gccui .gccuiClubHead{padding:12px 14px!important;gap:10px!important}
+#g8app .gccui .gccuiClubHead h2{font-size:18px!important}
+#g8app .gccui .gccuiClubHead p{margin-top:2px!important}
+#g8app .gccuiRoleCoverage>header{margin:0 0 8px!important;padding:0!important;border:0!important}
+#g8app .gccuiRoleCoverage h3{font-size:12px!important;letter-spacing:.08em!important;text-transform:uppercase!important;font-weight:800!important;color:var(--gcc-muted)!important}
+#g8app .gccuiPlayers .gccuiPlayer:hover,#g8app .gccuiPickedPlayer:hover,#g8app .g8squadmember:hover{transform:none!important;box-shadow:none!important}
+#g8app .g8managerow,#g8app .gccuiPickedPlayer,#g8app .gccuiBenchRow{min-height:0!important}
+</style>\n</body>`);
+}
 
 fs.writeFileSync(OUT_HTML, content);
 const candidateHtml = path.join(__dirname, 'candidates', 'v116-authenticity-candidate.html');
