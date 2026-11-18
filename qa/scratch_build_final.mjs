@@ -179,6 +179,38 @@ for (const [from, to] of copyFixes) {
   if (!content.includes(from)) { console.error('PATCH FAILED - copy: ' + from.slice(0, 60)); process.exit(1); }
   content = content.replace(from, to);
 }
+function patchOnce(label, from, to) {
+  if (!content.includes(from)) { console.error('PATCH FAILED - ' + label); process.exit(1); }
+  content = content.replace(from, to);
+}
+patchOnce('commitment',
+  'const X=window.GCC8,{G,ui,esc,btn,badge,R}=X,s=G.state;',
+  "const X=window.GCC8,{G,ui,esc,btn,badge,R}=X,s=G.state;\n X.nextCommitment=()=>{try{const fx=G.nextUserFixture();if(!fx||!s.userClub)return '';const problem=X.read?.xiProblem?.()||'';if(problem){const out=/^(.*) is out\\./.exec(problem);if(out)return out[1]+' is out.';if(/wicketkeeper/i.test(problem))return 'No keeper is named.';if(/duplicate/i.test(problem))return 'The XI lists the same player twice.';if(/no longer on the list/i.test(problem))return 'A selected player has left the squad.';return 'The XI is short.';}const opp=fx.home.abbr===s.userClub.abbr?fx.away:fx.home;const ground=G.matchGroundForFixture(fx);const place=ground?.ground||fx.home.ground||'the next ground';const spin=Number(ground?.conditions?.spin)||0,pace=Number(ground?.conditions?.pace)||0;if(spin>=3&&spin>pace)return 'The pitch at '+place+' should help the spinners.';if(pace>=3&&pace>spin)return 'The pitch at '+place+' should help the seamers.';return opp.name+' are next, at '+place+'.';}catch(e){return ''}};"
+);
+patchOnce('result path',
+  "X.views.result=()=>{const html=result(),r=ui.result,regular=s.results.includes(r),next=regular?G.nextUserFixture():null,back=btn(regular?(next?'Next match':'League wrap-up'):'Back to finals',regular?'matchday':'finalsReturn',[],'g8primary')",
+  "X.views.result=()=>{const html=result(),r=ui.result,regular=s.results.includes(r),next=regular?G.nextUserFixture():null,openQ=regular&&next?(X.nextCommitment()||''):'',back=openQ?btn('Name the side','nameSide',[],'g8primary'):btn(regular?(next?'Next match':'League wrap-up'):'Back to finals',regular?'matchday':'finalsReturn',[],'g8primary')"
+);
+patchOnce('strip old result button',
+  "body=body.replace(book,'').replace(back,'');",
+  "const legacyBack=btn(regular?(next?'Next match':'League wrap-up'):'Back to finals',regular?'matchday':'finalsReturn',[],'g8primary');body=body.replace(book,'').replace(legacyBack,'').replace(back,'');"
+);
+patchOnce('result question',
+  '<div class="gccuiResultActions">${book}${back}</div></div>${body}</div>',
+  '<div class="gccuiResultActions">${book}${back}</div>${openQ?`<p class="gccuiOpenQuestion" role="status">${esc(openQ)}</p>`:\'\'}</div>${body}</div>'
+);
+patchOnce('xi question',
+  "X.views.team=()=>{\n  const roster=X.roster()",
+  "X.views.team=()=>{\n  const openQ=ui.teamReturn==='finals'?'':(X.nextCommitment()||''),roster=X.roster()"
+);
+patchOnce('xi header',
+  "<div class=\"gccuiSelectionHeader\">${title(`${s.year} · ${s.userClub.name}`,'Name your XI','','stumps')}<section class=\"gccuiSelectionStatus\"",
+  "<div class=\"gccuiSelectionHeader\">${title(`${s.year} · ${s.userClub.name}`,'Name your XI','','stumps')}${openQ?`<p class=\"gccuiOpenQuestion\" role=\"status\">${esc(openQ)}</p>`:''}<section class=\"gccuiSelectionStatus\""
+);
+patchOnce('name the side',
+  "bind('matchday',['result'],()=>{ui.seasonTab='matchday';G.go('season');setView('season');});",
+  "bind('matchday',['result'],()=>{ui.seasonTab='matchday';G.go('season');setView('season');});\n bind('nameSide',['result'],()=>{ui.teamPane='xi';ui.teamReturn='season';setView('team');});"
+);
 if (!content.includes('id="gcc-standard"')) {
   content = content.replace('</body></html>', `<style id="gcc-standard">
 #g8app .g8board .g8player,#g8app .g8contract .g8player,#g8app .g8recruitcard,#g8app .g8draftplayer{min-height:0!important;height:auto!important}
@@ -204,6 +236,9 @@ if (!content.includes('id="gcc-standard"')) {
 #g8app#g8app#g8app .gccuiPlayers .gccuiPlayerSkills,#g8app#g8app#g8app .gccuiPlayers .gccuiPlayerBio{display:none!important}
 #g8dialog#g8dialog#g8dialog .g8clubidentitypanel{display:flex!important;flex-wrap:wrap!important;align-items:center!important;gap:8px 10px!important;margin:0 0 8px!important;padding:0!important;min-height:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
 #g8dialog#g8dialog#g8dialog .g8clubidentitytext{flex:1 0 100%!important;margin:0!important;font-size:14px!important;line-height:1.4!important}
+#g8app .gccuiResultTop{flex-wrap:wrap}
+#g8app .gccuiOpenQuestion{flex:1 0 100%;margin:8px 0 0;font-size:16px;line-height:24px;font-weight:600;color:var(--gcc-text,#eef5fa)}
+#g8app .gccuiSelectionHeader>.gccuiOpenQuestion{display:block;grid-column:1/-1;margin:0}
 </style>
 </body></html>`);
 }
