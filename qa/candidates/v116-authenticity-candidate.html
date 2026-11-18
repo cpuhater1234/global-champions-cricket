@@ -1585,7 +1585,7 @@ html,body{background:#191c1a}
 .g8scoutoutlook h3{color:#f1f5ff;font-size:1.25rem;margin:0 0 .45rem}
 .g8scoutoutlook p,.g8scoutoutlook .g8eyebrow{color:#f1f5ff}
 .g8scoutoutlook .g8eyebrow{font-size:.7rem;letter-spacing:.08em;margin-bottom:.3rem}
-.g8gccrecord{background:#f1f5ff;color:#1e2742;border:1px solid #f1f5ff;border-radius:8px;padding:.9rem;margin:.8rem 0}
+.g8gccrecord{background:transparent;color:inherit;border:0;border-top:1px solid var(--gcc-line,#5f635d);border-radius:0;padding:.75rem 0 0;margin:.8rem 0 0}
 .g8gccrecord h3{color:#1e2742;font-size:1.05rem;margin:0}
 .g8gccrecord p.g8recordempty{color:#2c3961;margin:.6rem 0 0;line-height:1.5;font-size:.95rem}
 .g8recordyear{display:block;margin-top:.3rem;font-size:.85rem;color:#2d3b65}
@@ -2859,15 +2859,15 @@ html body,#g8app{background-color:var(--gcc-ground)!important;color:var(--gcc-te
 /* Compact on purpose: preserve every piece of scouting information but remove dead space. */
 #g8dialog#g8dialog#g8dialog:has(.g8clubbrief){width:min(52rem,calc(100vw - 1.5rem))!important;max-width:calc(100vw - 1.5rem)!important}
 #g8dialog:has(.g8clubbrief) .g8modalbody{display:flex!important;flex-direction:column!important;gap:.75rem!important;padding:.85rem 1rem .25rem!important;background:transparent!important;container-type:inline-size;container-name:clubguide}
-/* Club identity: one concise crest-and-metadata band with its actual scouting voice directly below. */
-#g8dialog#g8dialog#g8dialog .g8clubidentitypanel{display:grid!important;grid-template-columns:auto minmax(0,1fr)!important;grid-template-rows:auto auto!important;align-items:center!important;gap:0!important;margin:0!important;padding:0!important;min-height:0!important;border:1px solid var(--gcc-line,#5f635d)!important;border-left:3px solid var(--club-accent,#ed7547)!important;border-radius:9px!important;background:color-mix(in srgb,var(--club-accent,#ed7547) 8%,#171d26)!important;box-shadow:none!important;overflow:hidden!important}
-#g8dialog#g8dialog#g8dialog .g8clubidentitypanel .g8clubmark{grid-column:1!important;grid-row:1!important;padding:.6rem .5rem .6rem .75rem!important;margin:0!important;min-width:0!important;border:0!important;background:transparent!important;align-self:center!important}
+/* Club identity: crest, one meta line, one sentence. No second band. */
+#g8dialog#g8dialog#g8dialog .g8clubidentitypanel{display:grid!important;grid-template-columns:auto minmax(0,1fr)!important;grid-template-rows:auto auto!important;align-items:center!important;column-gap:12px!important;row-gap:2px!important;margin:0 0 10px!important;padding:8px 12px!important;min-height:0!important;border:1px solid var(--gcc-line,#5f635d)!important;border-left:3px solid var(--club-accent,#ed7547)!important;border-radius:9px!important;background:color-mix(in srgb,var(--club-accent,#ed7547) 7%,#171d26)!important;box-shadow:none!important;overflow:hidden!important}
+#g8dialog#g8dialog#g8dialog .g8clubidentitypanel .g8clubmark{grid-column:1!important;grid-row:1 / span 2!important;padding:0!important;margin:0!important;min-width:0!important;border:0!important;background:transparent!important;align-self:center!important}
 #g8dialog#g8dialog#g8dialog .g8clubidentitypanel .g8badge{min-width:61px!important;min-height:2.65rem!important;width:max-content!important;height:auto!important;padding:.27rem .42rem!important;box-sizing:content-box!important;border-radius:7px!important;font-size:1rem!important;white-space:nowrap!important;overflow-wrap:normal!important;word-break:normal!important;box-shadow:none!important}
-#g8dialog#g8dialog#g8dialog .g8clubmetastrip{grid-column:2!important;grid-row:1!important;display:flex!important;align-items:center!important;flex-wrap:wrap!important;gap:.25rem .75rem!important;margin:0!important;padding:.65rem .75rem .65rem .3rem!important;background:transparent!important;border:0!important;min-width:0!important}
-#g8dialog#g8dialog#g8dialog .g8clubmetastrip>span{display:inline-block!important;padding:0!important;border:0!important;min-width:0!important;background:none!important;color:var(--gcc-text,#eef5fa)!important;font-size:.86rem!important;font-weight:700!important;line-height:1.35!important;letter-spacing:0!important}
-#g8dialog#g8dialog#g8dialog .g8clubmetastrip>span+span{border-left:1px solid var(--gcc-line,#5f635d)!important;padding-left:.75rem!important}
-#g8dialog#g8dialog#g8dialog .g8clubmetastrip>span+span::before{content:none!important}
-#g8dialog#g8dialog#g8dialog .g8clubidentitytext{grid-column:1/-1!important;grid-row:2!important;margin:0!important;padding:.62rem .82rem!important;border-top:1px solid var(--gcc-line,#5f635d)!important;background:transparent!important;color:var(--gcc-muted,#a5b7c3)!important;font-size:.9rem!important;line-height:1.4!important;max-width:none!important}
+#g8dialog#g8dialog#g8dialog .g8clubmetastrip{grid-column:2!important;grid-row:1!important;display:flex!important;align-items:center!important;flex-wrap:wrap!important;gap:0 .35rem!important;margin:0!important;padding:0!important;background:transparent!important;border:0!important;min-width:0!important}
+#g8dialog#g8dialog#g8dialog .g8clubmetastrip>span{display:inline!important;padding:0!important;border:0!important;min-width:0!important;background:none!important;color:var(--gcc-muted,#a5b7c3)!important;font-size:12px!important;font-weight:700!important;line-height:1.3!important;letter-spacing:.04em!important;text-transform:uppercase!important}
+#g8dialog#g8dialog#g8dialog .g8clubmetastrip>span+span{border:0!important;padding:0!important}
+#g8dialog#g8dialog#g8dialog .g8clubmetastrip>span+span::before{content:"·"!important;margin:0 .35rem 0 0!important;color:var(--gcc-muted,#a5b7c3)!important}
+#g8dialog#g8dialog#g8dialog .g8clubidentitytext{grid-column:2!important;grid-row:2!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important;color:var(--gcc-text,#eef5fa)!important;font-size:15px!important;line-height:1.35!important;max-width:none!important}
 /* Two editorial briefs with exact shared head/body tracks. */
 #g8dialog#g8dialog#g8dialog .g8clubbrief{display:grid!important;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)!important;grid-template-rows:auto 1fr!important;align-items:stretch!important;gap:.8rem!important;padding:0!important;margin:0!important;border:0!important;background:none!important;box-shadow:none!important;min-width:0!important}
 #g8dialog#g8dialog#g8dialog .g8clubbrief>.g8sheet{display:grid!important;grid-template-columns:minmax(0,1fr)!important;grid-template-rows:auto 1fr!important;align-self:stretch!important;grid-row:1/span 2!important;margin:0!important;padding:0!important;border:1px solid var(--gcc-line,#5f635d)!important;border-radius:9px!important;overflow:hidden!important;background:#171d26!important;box-shadow:none!important;color:var(--gcc-text,#eef5fa)!important;color-scheme:dark!important;min-width:0!important}
@@ -2894,14 +2894,16 @@ html body,#g8app{background-color:var(--gcc-ground)!important;color:var(--gcc-te
 #g8dialog#g8dialog#g8dialog .g8clubbrief{align-items:start!important}
 #g8dialog#g8dialog#g8dialog .g8clubplan{height:auto!important}
 #g8dialog#g8dialog#g8dialog .g8clubplan .g8briefbody{height:auto!important}
-#g8dialog#g8dialog#g8dialog .g8clubplan .g8briefhead{margin-bottom:10px!important}
+#g8dialog#g8dialog#g8dialog .g8clubplan{margin-top:-8px!important}
+#g8dialog#g8dialog#g8dialog .g8clubplan .g8briefhead{margin-bottom:6px!important}
 #g8dialog#g8dialog#g8dialog .g8clubpriorities{display:grid!important;gap:8px!important;margin:0!important;padding:0!important;list-style:none!important;flex:none!important;justify-content:start!important}
-#g8dialog#g8dialog#g8dialog .g8clubpriorities>li{display:grid!important;grid-template-columns:22px minmax(0,1fr)!important;gap:8px!important;align-items:start!important;flex:none!important;margin:0!important;padding:8px 10px!important;border:1px solid var(--gcc-line,#5f635d)!important;border-radius:8px!important;background:rgba(255,255,255,.035)!important;box-shadow:none!important;min-width:0!important}
-#g8dialog#g8dialog#g8dialog .g8clubpriorities>li:first-child{border-top:1px solid var(--gcc-line,#5f635d)!important;padding-top:8px!important}
-#g8dialog#g8dialog#g8dialog .g8clubpriorities>li:last-child{padding-bottom:8px!important}
-#g8dialog#g8dialog#g8dialog .g8clubpriorities .g8prioritynumber{display:grid!important;place-items:center!important;width:22px!important;height:22px!important;min-width:22px!important;padding:0!important;margin:0!important;border-radius:5px!important;background:rgba(127,224,238,.16)!important;box-shadow:none!important;color:#d7f6fb!important;font:800 12px/1 Arial,Helvetica,sans-serif!important;text-align:center!important}
-#g8dialog#g8dialog#g8dialog .g8clubpriorities strong{display:block!important;margin:0 0 2px!important;font-size:14px!important;line-height:1.3!important;color:var(--gcc-text,#eef5fa)!important;font-weight:800!important}
-#g8dialog#g8dialog#g8dialog .g8clubpriorities p{margin:0!important;font-size:13px!important;line-height:1.35!important;color:var(--gcc-muted,#a5b7c3)!important}
+#g8dialog#g8dialog#g8dialog .g8clubpriorities>li{display:grid!important;grid-template-columns:28px minmax(0,1fr)!important;gap:10px!important;align-items:center!important;flex:none!important;margin:0!important;padding:10px 12px!important;border:1px solid var(--gcc-line,#5f635d)!important;border-radius:8px!important;background:rgba(255,255,255,.035)!important;box-shadow:none!important;min-width:0!important}
+#g8dialog#g8dialog#g8dialog .g8clubpriorities>li:first-child{border-top:1px solid var(--gcc-line,#5f635d)!important;padding-top:10px!important}
+#g8dialog#g8dialog#g8dialog .g8clubpriorities>li:last-child{padding-bottom:10px!important}
+#g8dialog#g8dialog#g8dialog .g8clubpriorities .g8prioritynumber{display:grid!important;place-items:center!important;align-self:center!important;width:28px!important;height:28px!important;min-width:28px!important;padding:0!important;margin:0!important;border-radius:6px!important;background:rgba(127,224,238,.16)!important;box-shadow:none!important;color:#d7f6fb!important;font:800 14px/1 Arial,Helvetica,sans-serif!important;text-align:center!important}
+#g8dialog#g8dialog#g8dialog .g8clubpriorities li>div{min-width:0!important;display:flex!important;flex-direction:column!important;justify-content:center!important}
+#g8dialog#g8dialog#g8dialog .g8clubpriorities strong{display:block!important;margin:0 0 2px!important;font-size:16px!important;line-height:1.25!important;color:var(--gcc-text,#eef5fa)!important;font-weight:800!important}
+#g8dialog#g8dialog#g8dialog .g8clubpriorities p{margin:0!important;font-size:15px!important;line-height:1.35!important;color:var(--gcc-muted,#a5b7c3)!important}
 /* Action remains permanently available on narrow screens; clear separation from the last reading. */
 #g8dialog#g8dialog#g8dialog .g8clubconfirm{position:sticky!important;bottom:0!important;z-index:5!important;display:grid!important;grid-template-columns:1fr!important;flex-shrink:0!important;margin:0!important;padding:.55rem 0 .6rem!important;border:0!important;border-top:1px solid var(--gcc-line,#5f635d)!important;background:#0a1827!important;box-shadow:0 -8px 14px -12px #000!important}
 #g8dialog#g8dialog#g8dialog .g8clubconfirm .g8primary{width:100%!important;min-height:49px!important;margin:0!important;font-size:.95rem!important;background:var(--gcc-accent)!important;background-image:none!important;color:var(--gcc-accent-ink)!important;border-color:var(--gcc-accent)!important;box-shadow:none!important}
@@ -11260,7 +11262,7 @@ function validSave(save){
  };
  X.playerRecord=p=>{
   const current=s.playerSeasonStats?.[p.id],history=[...(s.dynasty?.history||[])].sort((a,b)=>b.year-a.year).find(h=>Number(h.playerStats?.[p.id]?.matches)>0),record=Number(current?.matches)>0?{year:s.year,stats:current}:history?{year:history.year,stats:history.playerStats[p.id]}:null;
-  return `<section class="g8gccrecord"><h3>${X.icon('cricket-ball')}GCC record</h3>${record?`<span class="g8recordyear">${record.year} season</span><div class="g8recordstats">${[['Matches',record.stats.matches],['Runs',record.stats.runs],['Wickets',record.stats.wickets]].map(([label,n])=>`<div><strong>${Number(n||0)}</strong><span>${label}</span></div>`).join('')}</div>`:'<p class="g8recordempty">No GCC appearances recorded.</p>'}</section>`;
+  return record?`<section class="g8gccrecord"><h3>${X.icon('cricket-ball')}GCC record</h3><span class="g8recordyear">${record.year} season</span><div class="g8recordstats">${[['Matches',record.stats.matches],['Runs',record.stats.runs],['Wickets',record.stats.wickets]].map(([label,n])=>`<div><strong>${Number(n||0)}</strong><span>${label}</span></div>`).join('')}</div></section>`:'';
  };
  X.playerPhases=p=>{
   const group=(title,icon,values)=>`<section><h3>${X.icon(icon)}${title}</h3><div>${values.map(([label,n])=>`<div class="g8phasetile"><span>${label}</span><strong style="--rating-color:${X.ratingTone(n)}">${Math.round(n)}</strong></div>`).join('')}</div></section>`;
@@ -12083,7 +12085,7 @@ function validSave(save){
  };
  X.playerRecord=p=>{
   const {totals:t,years,latest}=X.playerCareerRecord(p),tiles=rows=>`<div class="g8recordstats">${rows.map(([label,value])=>`<div><strong>${X.esc(value)}</strong><span>${X.esc(label)}</span></div>`).join('')}</div>`;
-  if(!latest)return `<section class="g8gccrecord"><h3>${X.icon('cricket-ball')}GCC record</h3><p class="g8recordempty">No GCC appearances recorded.</p></section>`;
+  if(!latest)return '';
   const st=latest.stats,span=years.length===1?String(years[0]):`${years[0]}–${years.at(-1)}`;
   return `<section class="g8gccrecord"><h3>${X.icon('cricket-ball')}GCC record</h3><span class="g8recordyear">${latest.year} season${latest.year!==s.year?' · most recent':''}</span>${tiles([['Matches',st.matches||0],['Runs',st.runs||0],['Wickets',st.wickets||0]])}<span class="g8recordyear gccuiCareerLabel">GCC career · ${span}</span>${tiles([['Matches',t.matches],['Runs',t.runs],['Wickets',t.wickets]])}<details class="gccuiCareerRates"><summary>Career averages & scoring</summary>${tiles([['Batting average',t.outs?(t.runs/t.outs).toFixed(2):'–'],['Strike rate',t.balls?(100*t.runs/t.balls).toFixed(1):'–'],['Economy',t.bowlBalls?(6*t.runsConceded/t.bowlBalls).toFixed(2):'–']])}<p class="g8fine">GCC matches only. Batting average uses dismissals; economy uses legal bowling balls.</p></details></section>`;
  };
@@ -13873,21 +13875,21 @@ p,li{text-wrap:pretty}
   box-shadow:0 0 0 2px rgba(103,217,230,.28)!important;
 }
 #g8dialog[data-prompt="player"] .gccuiProfileOverview .g8scoutoutlook{
-  align-self:stretch;
-  background:linear-gradient(145deg,rgba(20,48,63,.72),rgba(10,27,40,.72))!important;
-  border:1px solid var(--gcc-line)!important;
-  border-top:2px solid var(--gcc-accent,#67d9e6)!important;
-  border-radius:8px!important;
-  padding:14px 16px!important;
-  min-height:100%;
+  align-self:start;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  padding:0!important;
+  min-height:0!important;
   box-sizing:border-box;
 }
 #g8dialog[data-prompt="player"] .gccuiProfileOverview .g8scoutoutlook>h3{
-  margin:0 0 10px!important;
-  color:var(--gcc-accent,#67d9e6)!important;
-  font-size:12px!important;
-  letter-spacing:.12em!important;
-  text-transform:uppercase!important;
+  margin:2px 0 0!important;
+  color:var(--gcc-text,#eef5fa)!important;
+  font-size:16px!important;
+  letter-spacing:0!important;
+  text-transform:none!important;
+  line-height:1.3!important;
 }
 #g8dialog[data-prompt="player"] .gccuiProfileOverview .g8scoutoutlook .g8developmentbadge{
   margin:0 0 12px!important;
