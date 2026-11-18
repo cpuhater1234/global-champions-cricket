@@ -2890,15 +2890,18 @@ html body,#g8app{background-color:var(--gcc-ground)!important;color:var(--gcc-te
 #g8dialog#g8dialog#g8dialog .g8conditionread .g8conditiongauge>span{top:-4px!important;height:15px!important}
 #g8dialog#g8dialog#g8dialog .g8conditionread .g8conditionends{grid-column:2!important;grid-row:2!important;display:flex!important;justify-content:space-between!important;align-items:start!important;gap:2px!important;width:100%!important;margin:0!important;font-size:.75rem!important;line-height:1.2!important;color:var(--gcc-muted,#a5b7c3)!important}
 #g8dialog#g8dialog#g8dialog .g8conditionends>span{font-size:inherit!important;white-space:nowrap!important}
-/* The three cricket decisions absorb their share of the height, instead of leaving an empty lower half. */
-#g8dialog#g8dialog#g8dialog .g8clubplan .g8briefbody{height:100%!important}
-#g8dialog#g8dialog#g8dialog .g8clubpriorities{display:flex!important;flex-direction:column!important;justify-content:space-between!important;flex:1!important;list-style:none!important;gap:0!important;margin:0!important;padding:0!important;min-height:0!important}
-#g8dialog#g8dialog#g8dialog .g8clubpriorities>li{display:grid!important;grid-template-columns:1.4rem minmax(0,1fr)!important;gap:.55rem!important;align-items:start!important;flex:1 0 auto!important;margin:0!important;padding:.55rem 0!important;border:0!important;border-top:1px solid var(--gcc-line,#5f635d)!important;background:none!important;box-shadow:none!important;min-width:0!important}
-#g8dialog#g8dialog#g8dialog .g8clubpriorities>li:first-child{border-top:0!important;padding-top:0!important}
-#g8dialog#g8dialog#g8dialog .g8clubpriorities>li:last-child{padding-bottom:0!important}
-#g8dialog#g8dialog#g8dialog .g8clubpriorities .g8prioritynumber{display:block!important;min-width:0!important;width:auto!important;height:auto!important;padding:0!important;margin:0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;color:#f2f7fc!important;font:900 1.15rem/1.2 Arial,Helvetica,sans-serif!important;text-align:left!important}
-#g8dialog#g8dialog#g8dialog .g8clubpriorities strong{display:block!important;margin:0 0 .16rem!important;font-size:.91rem!important;line-height:1.3!important;color:var(--gcc-text,#eef5fa)!important;font-weight:800!important}
-#g8dialog#g8dialog#g8dialog .g8clubpriorities p{margin:0!important;font-size:.89rem!important;line-height:1.39!important;color:var(--gcc-muted,#a5b7c3)!important}
+/* Build your side is a tight plan. Do not stretch the three notes to the ground column. */
+#g8dialog#g8dialog#g8dialog .g8clubbrief{align-items:start!important}
+#g8dialog#g8dialog#g8dialog .g8clubplan{height:auto!important}
+#g8dialog#g8dialog#g8dialog .g8clubplan .g8briefbody{height:auto!important}
+#g8dialog#g8dialog#g8dialog .g8clubplan .g8briefhead{margin-bottom:10px!important}
+#g8dialog#g8dialog#g8dialog .g8clubpriorities{display:grid!important;gap:8px!important;margin:0!important;padding:0!important;list-style:none!important;flex:none!important;justify-content:start!important}
+#g8dialog#g8dialog#g8dialog .g8clubpriorities>li{display:grid!important;grid-template-columns:22px minmax(0,1fr)!important;gap:8px!important;align-items:start!important;flex:none!important;margin:0!important;padding:8px 10px!important;border:1px solid var(--gcc-line,#5f635d)!important;border-radius:8px!important;background:rgba(255,255,255,.035)!important;box-shadow:none!important;min-width:0!important}
+#g8dialog#g8dialog#g8dialog .g8clubpriorities>li:first-child{border-top:1px solid var(--gcc-line,#5f635d)!important;padding-top:8px!important}
+#g8dialog#g8dialog#g8dialog .g8clubpriorities>li:last-child{padding-bottom:8px!important}
+#g8dialog#g8dialog#g8dialog .g8clubpriorities .g8prioritynumber{display:grid!important;place-items:center!important;width:22px!important;height:22px!important;min-width:22px!important;padding:0!important;margin:0!important;border-radius:5px!important;background:rgba(127,224,238,.16)!important;box-shadow:none!important;color:#d7f6fb!important;font:800 12px/1 Arial,Helvetica,sans-serif!important;text-align:center!important}
+#g8dialog#g8dialog#g8dialog .g8clubpriorities strong{display:block!important;margin:0 0 2px!important;font-size:14px!important;line-height:1.3!important;color:var(--gcc-text,#eef5fa)!important;font-weight:800!important}
+#g8dialog#g8dialog#g8dialog .g8clubpriorities p{margin:0!important;font-size:13px!important;line-height:1.35!important;color:var(--gcc-muted,#a5b7c3)!important}
 /* Action remains permanently available on narrow screens; clear separation from the last reading. */
 #g8dialog#g8dialog#g8dialog .g8clubconfirm{position:sticky!important;bottom:0!important;z-index:5!important;display:grid!important;grid-template-columns:1fr!important;flex-shrink:0!important;margin:0!important;padding:.55rem 0 .6rem!important;border:0!important;border-top:1px solid var(--gcc-line,#5f635d)!important;background:#0a1827!important;box-shadow:0 -8px 14px -12px #000!important}
 #g8dialog#g8dialog#g8dialog .g8clubconfirm .g8primary{width:100%!important;min-height:49px!important;margin:0!important;font-size:.95rem!important;background:var(--gcc-accent)!important;background-image:none!important;color:var(--gcc-accent-ink)!important;border-color:var(--gcc-accent)!important;box-shadow:none!important}
@@ -3890,8 +3893,10 @@ html:has(#g8dialog[open]){overflow:hidden}
 #g8app .g8careerintro .g8careerlaunch>.g8actions{margin-top:10px!important;gap:10px}
 #g8app .g8careerintro .g8careerlaunch .g8button{min-height:44px!important;font-size:14px!important;padding:10px 14px!important}
 #g8app :is(.g8invitationgrid,.g8clubchooser) .g8franchise,#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubbody{background:var(--gcc-panel)!important;border-color:var(--gcc-line)!important}
-#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground{background:var(--gcc-raised)!important;border-color:var(--gcc-line)!important;border-left-color:var(--accent)!important}
-#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground .g8icon{color:var(--gcc-muted)!important}
+#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground{display:flex;align-items:center;min-height:44px;margin-top:auto;padding:4px 0;background:transparent!important;border:0!important;border-radius:0;box-shadow:none}
+#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground>div{display:flex;align-items:center;gap:8px;min-width:0}
+#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground strong{font-size:13px;line-height:1.4;font-weight:600;overflow-wrap:normal;word-break:normal}
+#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground .g8icon{display:block!important;color:var(--gcc-muted)!important}
 #g8dialog[data-prompt=club] .g8briefhead h3{font-size:18px!important;line-height:1.35!important;letter-spacing:-.015em!important;text-transform:none!important;font-style:normal!important}
 #g8app .g8windowpanel .g8signingtitle{font:700 26px/1.2 Arial,Helvetica,sans-serif!important;text-transform:none!important;letter-spacing:-.02em!important;margin:12px 0!important;min-height:0!important}
 #g8app .g8windowpanel .g8signingactions{display:flex!important;gap:8px!important;flex-wrap:wrap!important;margin:14px 0 16px!important;padding:0!important;border-top:0!important}
@@ -8578,16 +8583,7 @@ function installModalInteraction() {
   }
 
   function resolveChase(firstInnings, chasePotential) {
-    if(chasePotential.deliveryVersion===1){
-      const tgt=firstInnings.total+1;
-      if(chasePotential.total<=tgt+3&&rng()>=0.60){
-        const balls=120;
-        const wickets=Math.min(9,(chasePotential.wickets||6)+1);
-        return {...chasePotential,total:tgt-1,wickets,balls,chased:false,
-          pp:Math.round((chasePotential.pp||0)*balls/120),mid:Math.round((chasePotential.mid||0)*balls/120),death:Math.round((chasePotential.death||0)*balls/120)};
-      }
-      return chasePotential;
-    }
+    if(chasePotential.deliveryVersion===1)return chasePotential;
     const target = firstInnings.total + 1;
     if (chasePotential.total < target) return chasePotential;
     const ratio = Math.max(.18, Math.min(.995, target / Math.max(target,chasePotential.total)));
@@ -11794,7 +11790,8 @@ function validSave(save){
  const club=a=>s.league.find(c=>c.abbr===a);
  const clubCard=(c,i,choose=false)=>{
   const selected=choose&&ui.modal==='club'&&s.selectedClub===i,story=X.clubStory(c),action=choose?btn('Club guide','club',[i],selected?'g8primary':'',false,`g8club-${i}`).replace('type="button"',`type="button" aria-pressed="${selected}" aria-label="${esc(selected?'Selected club: '+c.name+'. Open club guide':'Open club guide for '+c.name)}"`):`<div class="g8clubcommit">${X.icon('shield-check')}<span>COMMITTED TO GCC</span></div>`;
-  return `<article data-key="club-${i}" style="--accent:${esc(c.c)};--club-ink:${esc(X.clubInk(c))};--club-secondary:${esc(c.a||'#7fe0ee')}" class="g8club g8franchise ${choose?'g8selectable':''} ${selected?'selected':''}"><div class="g8clubcover"><span class="g8clubwatermark" aria-hidden="true">${esc(c.abbr)}</span>${badge(c)}<div class="g8clubticket"><span class="g8clubcompetition">${esc(c.league)}</span><span class="g8clubentry">${selected?'YOUR SELECTION':`CLUB ${i+1}`}</span></div></div><div class="g8clubbody"><div class="g8clublocation">${esc(story.city)} · ${esc(c.displayRegion||c.region)}</div><h3>${esc(c.name)}</h3><div class="gccuiClubMeta">${esc(c.league)} · ${esc(c.displayRegion||c.region)}</div><div class="g8clubground"><div>${X.icon('building-stadium')}<strong>${esc(c.ground)}</strong></div><p>${esc(c.trait)}</p></div><div class="g8clubcardaction">${action}</div></div></article>`;
+   const cardGround=c=>({SRH:'Rajiv Gandhi Stadium',LSG:'Ekana Stadium',PBKS:'Mullanpur Stadium'})[c.abbr]||c.ground;
+ return `<article data-key="club-${i}" style="--accent:${esc(c.c)};--club-ink:${esc(X.clubInk(c))};--club-secondary:${esc(c.a||'#7fe0ee')}" class="g8club g8franchise ${choose?'g8selectable':''} ${selected?'selected':''}"><div class="g8clubcover"><span class="g8clubwatermark" aria-hidden="true">${esc(c.abbr)}</span>${badge(c)}<div class="g8clubticket"><span class="g8clubcompetition">${esc(c.league)}</span><span class="g8clubentry">${selected?'YOUR SELECTION':`CLUB ${i+1}`}</span></div></div><div class="g8clubbody"><div class="g8clublocation">${esc(story.city)} · ${esc(c.displayRegion||c.region)}</div><h3>${esc(c.name)}</h3><div class="gccuiClubMeta">${esc(c.league)} · ${esc(c.displayRegion||c.region)}</div><div class="g8clubground" title="${esc(c.ground)}"><div>${X.icon('building-stadium')}<strong>${esc(cardGround(c))}</strong></div></div><div class="g8clubcardaction">${action}</div></div></article>`;
  };
  const rosterList=()=>`<ol class="g8roster">${roster().map(p=>`<li><div><b>${esc(p.name)} <span class="g8rowrating" aria-label="Current player rating ${p.overall}">${p.overall}</span></b><small>${esc(X.roleLine(p))} · ${esc(p.country)}</small></div>${btn('Scout','inspect',[p.id],'g8small')}</li>`).join('')}</ol>`;
  v.home=()=>{const saved=X.hasSave();let resume=s;if(!s.dynasty?.started){try{resume=JSON.parse(localStorage.getItem('gcc_dynasty_v8')||localStorage.getItem('gcc_dynasty_v7_2')||'null')?.state||s;}catch{resume=s;}}const resumeTeam=resume.league?.find(c=>c.abbr===resume.userClub?.abbr)||resume.userClub;const resumeClub=window.GCC8_BLAST_NAMES[resume.userClub?.abbr]||resume.userClub?.name,resumeYear=Number(resume.year);const resumeNote=resumeClub&&Number.isInteger(resumeYear)&&resumeYear>=2008&&resumeYear<=2026?`${esc(resumeClub)} · ${resumeYear} season`:'Saved career';const newCareer=primary=>`<button type="button" class="g8button ${primary?'g8primary':'g8ghost'}" data-action="play" data-args="[]"><span class="g8continuelabel">Start new career</span><span class="g8resumemeta">Choose your club · 2008</span></button>`;return `<section class="g8hero"><div class="g8welcomepanel"><span class="g8gccsignature" aria-hidden="true">GCC</span><span class="g8panelart" aria-hidden="true">${X.icon('cricket-ball')}</span><span class="g8eyebrow">A new order in cricket · 2008–2026</span><h1 class="gccBrandTitle"><button type="button" class="gccBrandStart" data-action="play" data-args="[]" aria-label="Start a Global Champions Cricket career"><svg class="gccBrandHero" viewBox="0 0 1222 1287" role="img" aria-label="Global Champions Cricket"><use href="#gcc-brand-crest"></use></svg></button><span class="gccBrandWordmark">Global Champions<br>Cricket</span></h1><p>A Saudi-backed breakaway challenges cricket’s old order. Eight clubs join. The world’s players choose sides. One club is yours to build.</p><p class="g8leagueformat" aria-label="League format">8 clubs · 15-player draft · 19 seasons</p><div class="g8actions g8welcomeactions">${saved?`<button type="button" class="g8button g8primary g8continueclub" data-action="continue" style="--resumeclub:${esc(resumeTeam?.c||'#ed7547')};--resumetext:${esc(X.clubInk(resumeTeam))};--gcc-accent:var(--resumeclub);--gcc-accent-ink:var(--resumetext);--club-ink:var(--resumetext)"><span class="g8continuelabel">Continue career</span><span class="g8resumemeta">${resumeNote}</span></button>`+newCareer(false):newCareer(true)}</div></div><div class="g8heroart"><div class="g8arenaheader"><span class="g8arenatitle"><span>THE GLOBAL ARENA</span></span><span>T20 CRICKET</span></div>${X.homeStadium()} <p>FIFTEEN IN THE SQUAD. ELEVEN ON THE FIELD. ONE CHAMPION.</p></div></section>`;};
