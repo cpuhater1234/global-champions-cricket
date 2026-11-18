@@ -36,7 +36,7 @@ case 'home':await call('home');break;
 case 'club-select':await call('home');if(await tryCall('play')){await call('fresh');await call('world');await call('revealAll');}await call('clubs');break;
 case 'draft':await runFoundation();break;
 case 'xi':await prepareXI();await call('teamPane','xi');break;
-case 'signing':await freshCareer();await call('signingRun');break;
+case 'signing':await freshCareer();await call('signingRun');await page.waitForTimeout(2500);await call('signingRun');break; // run the ticker briefly so a few decisions land, then pause: same window state every run
 case 'preview':await runFoundation();await call('prepare');break;
 case 'live':{await runFoundation();await call('prepare');const round=await page.evaluate(()=>GCC8.G.state.round+1);await call('playMatch',round);break;}
 case 'innings-break':await runFoundation().catch(()=>{});await tryCall('matchSkip');await tryCall('matchday');await call('prepare').catch(()=>{});await tryCall('playMatch',await page.evaluate(()=>GCC8.G.state.round+1));await tryCall('matchday');break;
@@ -54,6 +54,18 @@ case 'archive':{
       await tryCall('prepare');await tryCall('playMatch',await page.evaluate(()=>GCC8.G.state.round+1));await tryCall('matchSkip');await tryCall('matchday');await tryCall('result');await tryCall('matchday');
     }
     await tryCall('matchday');await tryCall('postSeason');
+    // proceedPostSeason only reaches openSeasonReview when the club finishes outside the top 4;
+    // if it is in finals contention it diverts to the finals screen and archiveSeason never runs.
+    // openSeasonReview is exposed on G and is the call that invokes archiveSeason() -> history.
+    await page.evaluate(()=>GCC8.G.openSeasonReview?.());
+  }
+  if(!(await tryCall('archive'))){
+    // season arc can stall if a match ends unconcluded (draw/DLS edge); play more rounds to force history
+    for(let n=0;n<20&&!(await page.evaluate(()=>GCC8.G.state.dynasty.history.length>0));n++){
+      await tryCall('prepare');await tryCall('playMatch',await page.evaluate(()=>GCC8.G.state.round+1));await tryCall('matchSkip');await tryCall('matchday');await tryCall('result');await tryCall('matchday');await tryCall('postSeason');
+      await page.evaluate(()=>GCC8.G.openSeasonReview?.());
+    }
+    await tryCall('archive');
   }
   if(!(await tryCall('archive')))throw Error('archive: dynasty history still empty after season simulation');
   break;

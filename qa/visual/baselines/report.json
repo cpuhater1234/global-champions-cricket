@@ -1,0 +1,634 @@
+{
+  "sha256": "685a145f7e20733ebe3d47f808a9622f8a90c40da155c1ed8314b970503c6ce6",
+  "screens": [
+    {
+      "name": "home-360x844",
+      "screen": "home",
+      "width": 360,
+      "height": 844,
+      "path": "qa\\visual\\baselines\\home-360x844.png",
+      "bytes": 268791
+    },
+    {
+      "name": "home-390x844",
+      "screen": "home",
+      "width": 390,
+      "height": 844,
+      "path": "qa\\visual\\baselines\\home-390x844.png",
+      "bytes": 284747
+    },
+    {
+      "name": "home-768x1024",
+      "screen": "home",
+      "width": 768,
+      "height": 1024,
+      "path": "qa\\visual\\baselines\\home-768x1024.png",
+      "bytes": 491864
+    },
+    {
+      "name": "home-1440x900",
+      "screen": "home",
+      "width": 1440,
+      "height": 900,
+      "path": "qa\\visual\\baselines\\home-1440x900.png",
+      "bytes": 799308
+    },
+    {
+      "name": "club-select-360x844",
+      "screen": "club-select",
+      "width": 360,
+      "height": 844,
+      "path": "qa\\visual\\baselines\\club-select-360x844.png",
+      "bytes": 152427
+    },
+    {
+      "name": "club-select-390x844",
+      "screen": "club-select",
+      "width": 390,
+      "height": 844,
+      "path": "qa\\visual\\baselines\\club-select-390x844.png",
+      "bytes": 157608
+    },
+    {
+      "name": "club-select-768x1024",
+      "screen": "club-select",
+      "width": 768,
+      "height": 1024,
+      "path": "qa\\visual\\baselines\\club-select-768x1024.png",
+      "bytes": 271018
+    },
+    {
+      "name": "club-select-1440x900",
+      "screen": "club-select",
+      "width": 1440,
+      "height": 900,
+      "path": "qa\\visual\\baselines\\club-select-1440x900.png",
+      "bytes": 441742
+    },
+    {
+      "name": "draft-360x844",
+      "screen": "draft",
+      "width": 360,
+      "height": 844,
+      "path": "qa\\visual\\baselines\\draft-360x844.png",
+      "bytes": 151144
+    },
+    {
+      "name": "draft-390x844",
+      "screen": "draft",
+      "width": 390,
+      "height": 844,
+      "path": "qa\\visual\\baselines\\draft-390x844.png",
+      "bytes": 156545
+    },
+    {
+      "name": "draft-768x1024",
+      "screen": "draft",
+      "width": 768,
+      "height": 1024,
+      "path": "qa\\visual\\baselines\\draft-768x1024.png",
+      "bytes": 290806
+    },
+    {
+      "name": "draft-1440x900",
+      "screen": "draft",
+      "width": 1440,
+      "height": 900,
+      "path": "qa\\visual\\baselines\\draft-1440x900.png",
+      "bytes": 424924
+    },
+    {
+      "name": "xi-360x844",
+      "screen": "xi",
+      "width": 360,
+      "height": 844,
+      "path": "qa\\visual\\baselines\\xi-360x844.png",
+      "bytes": 128750
+    },
+    {
+      "name": "xi-390x844",
+      "screen": "xi",
+      "width": 390,
+      "height": 844,
+      "path": "qa\\visual\\baselines\\xi-390x844.png",
+      "bytes": 132125
+    },
+    {
+      "name": "xi-768x1024",
+      "screen": "xi",
+      "width": 768,
+      "height": 1024,
+      "path": "qa\\visual\\baselines\\xi-768x1024.png",
+      "bytes": 184578
+    },
+    {
+      "name": "xi-1440x900",
+      "screen": "xi",
+      "width": 1440,
+      "height": 900,
+      "path": "qa\\visual\\baselines\\xi-1440x900.png",
+      "bytes": 358039
+    },
+    {
+      "name": "signing-360x844",
+      "screen": "signing",
+      "width": 360,
+      "height": 844,
+      "path": "qa\\visual\\baselines\\signing-360x844.png",
+      "bytes": 114145
+    },
+    {
+      "name": "signing-390x844",
+      "screen": "signing",
+      "width": 390,
+      "height": 844,
+      "path": "qa\\visual\\baselines\\signing-390x844.png",
+      "bytes": 119473
+    },
+    {
+      "name": "signing-768x1024",
+      "screen": "signing",
+      "width": 768,
+      "height": 1024,
+      "path": "qa\\visual\\baselines\\signing-768x1024.png",
+      "bytes": 256513
+    },
+    {
+      "name": "signing-1440x900",
+      "screen": "signing",
+      "width": 1440,
+      "height": 900,
+      "path": "qa\\visual\\baselines\\signing-1440x900.png",
+      "bytes": 347758
+    },
+    {
+      "name": "preview-360x844",
+      "screen": "preview",
+      "width": 360,
+      "height": 844,
+      "path": "qa\\visual\\baselines\\preview-360x844.png",
+      "bytes": 81134
+    },
+    {
+      "name": "preview-390x844",
+      "screen": "preview",
+      "width": 390,
+      "height": 844,
+      "path": "qa\\visual\\baselines\\preview-390x844.png",
+      "bytes": 84356
+    },
+    {
+      "name": "preview-768x1024",
+      "screen": "preview",
+      "width": 768,
+      "height": 1024,
+      "path": "qa\\visual\\baselines\\preview-768x1024.png",
+      "bytes": 176063
+    },
+    {
+      "name": "preview-1440x900",
+      "screen": "preview",
+      "width": 1440,
+      "height": 900,
+      "path": "qa\\visual\\baselines\\preview-1440x900.png",
+      "bytes": 259004
+    },
+    {
+      "name": "live-360x844",
+      "screen": "live",
+      "width": 360,
+      "height": 844,
+      "path": "qa\\visual\\baselines\\live-360x844.png",
+      "bytes": 165598
+    },
+    {
+      "name": "live-390x844",
+      "screen": "live",
+      "width": 390,
+      "height": 844,
+      "path": "qa\\visual\\baselines\\live-390x844.png",
+      "bytes": 173796
+    },
+    {
+      "name": "live-768x1024",
+      "screen": "live",
+      "width": 768,
+      "height": 1024,
+      "path": "qa\\visual\\baselines\\live-768x1024.png",
+      "bytes": 266980
+    },
+    {
+      "name": "live-1440x900",
+      "screen": "live",
+      "width": 1440,
+      "height": 900,
+      "path": "qa\\visual\\baselines\\live-1440x900.png",
+      "bytes": 442571
+    },
+    {
+      "name": "innings-break-360x844",
+      "screen": "innings-break",
+      "width": 360,
+      "height": 844,
+      "path": "qa\\visual\\baselines\\innings-break-360x844.png",
+      "bytes": 152957
+    },
+    {
+      "name": "innings-break-390x844",
+      "screen": "innings-break",
+      "width": 390,
+      "height": 844,
+      "path": "qa\\visual\\baselines\\innings-break-390x844.png",
+      "bytes": 158729
+    },
+    {
+      "name": "innings-break-768x1024",
+      "screen": "innings-break",
+      "width": 768,
+      "height": 1024,
+      "path": "qa\\visual\\baselines\\innings-break-768x1024.png",
+      "bytes": 260286
+    },
+    {
+      "name": "innings-break-1440x900",
+      "screen": "innings-break",
+      "width": 1440,
+      "height": 900,
+      "path": "qa\\visual\\baselines\\innings-break-1440x900.png",
+      "bytes": 437869
+    },
+    {
+      "name": "result-360x844",
+      "screen": "result",
+      "width": 360,
+      "height": 844,
+      "path": "qa\\visual\\baselines\\result-360x844.png",
+      "bytes": 150844
+    },
+    {
+      "name": "result-390x844",
+      "screen": "result",
+      "width": 390,
+      "height": 844,
+      "path": "qa\\visual\\baselines\\result-390x844.png",
+      "bytes": 153614
+    },
+    {
+      "name": "result-768x1024",
+      "screen": "result",
+      "width": 768,
+      "height": 1024,
+      "path": "qa\\visual\\baselines\\result-768x1024.png",
+      "bytes": 291338
+    },
+    {
+      "name": "result-1440x900",
+      "screen": "result",
+      "width": 1440,
+      "height": 900,
+      "path": "qa\\visual\\baselines\\result-1440x900.png",
+      "bytes": 434637
+    }
+  ],
+  "breakpoints": [
+    360,
+    390,
+    768,
+    1440
+  ],
+  "observations": [
+    {
+      "id": "capture home-360x844",
+      "result": "PASS",
+      "detail": {
+        "width": 360,
+        "height": 844,
+        "bytes": 268791
+      }
+    },
+    {
+      "id": "capture home-390x844",
+      "result": "PASS",
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "bytes": 284747
+      }
+    },
+    {
+      "id": "capture home-768x1024",
+      "result": "PASS",
+      "detail": {
+        "width": 768,
+        "height": 1024,
+        "bytes": 491864
+      }
+    },
+    {
+      "id": "capture home-1440x900",
+      "result": "PASS",
+      "detail": {
+        "width": 1440,
+        "height": 900,
+        "bytes": 799308
+      }
+    },
+    {
+      "id": "capture club-select-360x844",
+      "result": "PASS",
+      "detail": {
+        "width": 360,
+        "height": 844,
+        "bytes": 152427
+      }
+    },
+    {
+      "id": "capture club-select-390x844",
+      "result": "PASS",
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "bytes": 157608
+      }
+    },
+    {
+      "id": "capture club-select-768x1024",
+      "result": "PASS",
+      "detail": {
+        "width": 768,
+        "height": 1024,
+        "bytes": 271018
+      }
+    },
+    {
+      "id": "capture club-select-1440x900",
+      "result": "PASS",
+      "detail": {
+        "width": 1440,
+        "height": 900,
+        "bytes": 441742
+      }
+    },
+    {
+      "id": "capture draft-360x844",
+      "result": "PASS",
+      "detail": {
+        "width": 360,
+        "height": 844,
+        "bytes": 151144
+      }
+    },
+    {
+      "id": "capture draft-390x844",
+      "result": "PASS",
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "bytes": 156545
+      }
+    },
+    {
+      "id": "capture draft-768x1024",
+      "result": "PASS",
+      "detail": {
+        "width": 768,
+        "height": 1024,
+        "bytes": 290806
+      }
+    },
+    {
+      "id": "capture draft-1440x900",
+      "result": "PASS",
+      "detail": {
+        "width": 1440,
+        "height": 900,
+        "bytes": 424924
+      }
+    },
+    {
+      "id": "capture xi-360x844",
+      "result": "PASS",
+      "detail": {
+        "width": 360,
+        "height": 844,
+        "bytes": 128750
+      }
+    },
+    {
+      "id": "capture xi-390x844",
+      "result": "PASS",
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "bytes": 132125
+      }
+    },
+    {
+      "id": "capture xi-768x1024",
+      "result": "PASS",
+      "detail": {
+        "width": 768,
+        "height": 1024,
+        "bytes": 184578
+      }
+    },
+    {
+      "id": "capture xi-1440x900",
+      "result": "PASS",
+      "detail": {
+        "width": 1440,
+        "height": 900,
+        "bytes": 358039
+      }
+    },
+    {
+      "id": "capture signing-360x844",
+      "result": "PASS",
+      "detail": {
+        "width": 360,
+        "height": 844,
+        "bytes": 114145
+      }
+    },
+    {
+      "id": "capture signing-390x844",
+      "result": "PASS",
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "bytes": 119473
+      }
+    },
+    {
+      "id": "capture signing-768x1024",
+      "result": "PASS",
+      "detail": {
+        "width": 768,
+        "height": 1024,
+        "bytes": 256513
+      }
+    },
+    {
+      "id": "capture signing-1440x900",
+      "result": "PASS",
+      "detail": {
+        "width": 1440,
+        "height": 900,
+        "bytes": 347758
+      }
+    },
+    {
+      "id": "capture preview-360x844",
+      "result": "PASS",
+      "detail": {
+        "width": 360,
+        "height": 844,
+        "bytes": 81134
+      }
+    },
+    {
+      "id": "capture preview-390x844",
+      "result": "PASS",
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "bytes": 84356
+      }
+    },
+    {
+      "id": "capture preview-768x1024",
+      "result": "PASS",
+      "detail": {
+        "width": 768,
+        "height": 1024,
+        "bytes": 176063
+      }
+    },
+    {
+      "id": "capture preview-1440x900",
+      "result": "PASS",
+      "detail": {
+        "width": 1440,
+        "height": 900,
+        "bytes": 259004
+      }
+    },
+    {
+      "id": "capture live-360x844",
+      "result": "PASS",
+      "detail": {
+        "width": 360,
+        "height": 844,
+        "bytes": 165598
+      }
+    },
+    {
+      "id": "capture live-390x844",
+      "result": "PASS",
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "bytes": 173796
+      }
+    },
+    {
+      "id": "capture live-768x1024",
+      "result": "PASS",
+      "detail": {
+        "width": 768,
+        "height": 1024,
+        "bytes": 266980
+      }
+    },
+    {
+      "id": "capture live-1440x900",
+      "result": "PASS",
+      "detail": {
+        "width": 1440,
+        "height": 900,
+        "bytes": 442571
+      }
+    },
+    {
+      "id": "capture innings-break-360x844",
+      "result": "PASS",
+      "detail": {
+        "width": 360,
+        "height": 844,
+        "bytes": 152957
+      }
+    },
+    {
+      "id": "capture innings-break-390x844",
+      "result": "PASS",
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "bytes": 158729
+      }
+    },
+    {
+      "id": "capture innings-break-768x1024",
+      "result": "PASS",
+      "detail": {
+        "width": 768,
+        "height": 1024,
+        "bytes": 260286
+      }
+    },
+    {
+      "id": "capture innings-break-1440x900",
+      "result": "PASS",
+      "detail": {
+        "width": 1440,
+        "height": 900,
+        "bytes": 437869
+      }
+    },
+    {
+      "id": "capture result-360x844",
+      "result": "PASS",
+      "detail": {
+        "width": 360,
+        "height": 844,
+        "bytes": 150844
+      }
+    },
+    {
+      "id": "capture result-390x844",
+      "result": "PASS",
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "bytes": 153614
+      }
+    },
+    {
+      "id": "capture result-768x1024",
+      "result": "PASS",
+      "detail": {
+        "width": 768,
+        "height": 1024,
+        "bytes": 291338
+      }
+    },
+    {
+      "id": "capture result-1440x900",
+      "result": "PASS",
+      "detail": {
+        "width": 1440,
+        "height": 900,
+        "bytes": 434637
+      }
+    }
+  ],
+  "findings": [],
+  "errors": [
+    "Error: archive: dynasty history still empty after season simulation\n    at navigateTo (C:\\Users\\tomis\\Documents\\gcc-v116-ui\\qa\\v116_visual_baseline.cjs:58:40)\n    at async C:\\Users\\tomis\\Documents\\gcc-v116-ui\\qa\\v116_visual_baseline.cjs:84:1"
+  ],
+  "runtimeErrors": [],
+  "limits": [
+    "Chromium only. Deterministic synthetic save; offline (external image requests aborted)."
+  ],
+  "status": "ERROR"
+}
