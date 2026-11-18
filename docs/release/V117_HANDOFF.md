@@ -9,7 +9,7 @@ artifact, pinned SHA-256, reproducible build, deliberate owner promotion decisio
 
 - Branch: `v117` (created from `work/local-v116-ui` gameplay-calibration history)
 - Exact artifact: `qa/candidates/v116-authenticity-candidate.html`
-- Artifact SHA-256: recorded in `qa/candidates/CANDIDATE_SHA256.txt`
+- Artifact SHA-256: `229F0804B41D72D61458F0D0EC50D866011A70F9FC592C803EC37470D8B9A874`
 - Reproducible build: `node qa/scratch_build_final.mjs` (from the frozen v116 release HTML; do not hand-edit)
 - Provenance and full tuning history: `qa/candidates/README.md`
 
@@ -22,24 +22,30 @@ Two benchmarks failed on frozen v116 and are fixed here (official audit runner,
 |---|---|---|---|
 | Chase Win Rate | 59.0% ❌ HIGH | **52.9 avg ✅** (48.3–55.0 across 5 seeds) | 46–55 |
 | All-Out Innings | 26.0% ❌ HIGH | **14.7 avg ✅** (13.5–15.7 across 5 seeds) | 8–15 |
-| Wickets/Innings | 6.12 ✅ | 5.9 ✅ | 5.6–7.0 |
+| Wickets/Innings | 6.12 ✅ | 5.7 ✅ | 5.6–7.0 |
 | All other benchmarks | PASS (unchanged ranges) | — |
 
 Per-seed detail and measurement pitfalls: `qa/candidates/README.md`.
 
-### The five patches (all documented in `qa/candidates/README.md`)
+### The four patches (all documented in `qa/candidates/README.md`)
 
 1. Wicket baseline 6.35 → 6.10
 2. Two-stage wicket model — 9 independent trials + conditional 10th wicket (0.13)
 3. Chase phase dampen −0.55 RPO (powerplay/middle/death)
-4. Thin-margin chase gate in `resolveChase` (win by ≤3 runs succeeds p=0.60, else last-over collapse)
-5. **Chase-hazard pressure surgery**: `(1+max(0,pressure)*.65)` → `(1+max(0,pressure)*.00)` —
+4. **Chase-hazard pressure surgery**: `(1+max(0,pressure)*.65)` → `(1+max(0,pressure)*.00)` —
    removes the chase-only systematic collapse bias. Dose-response verified
    (MULT 0.65→AO 17.2, 0.30→15.5, 0.15→15.0, 0.00→14.3).
 
+The thin-margin chase rewrite has been removed. It changed the innings total after
+the balls were played, so `validResult` rejected the save and Continue Career failed.
+Delivery chases now keep the innings that was played. Re-audited on this file
+(5 seeds × 300, official runner) with dampen left at 0.55: the table above is unchanged,
+because that runner already scored the raw innings. Wickets per innings on this
+re-run averaged 5.7. Seed 8313 remains the all-out outlier at 15.7%.
+
 ### Realism / uniformity statement
 
-Patch 5 rescales hazard magnitude only; per-ball hazard clamps, batter–bowler `edge`,
+The hazard surgery rescales hazard magnitude only; per-ball hazard clamps, batter–bowler `edge`,
 ground conditions and streak dynamics are untouched. Empirical variance check: seed
 spread on AO is ±0.9 across five independent drafts, and one outlier seed (8313,
 +0.7 over ceiling) demonstrates draft-luck seasons still occur. Mismatches and upsets
@@ -56,9 +62,9 @@ ruled-out levers). Assessed as acceptable for a playable release; flagged for v1
 
 - Native save/reload (`captaincy_layer_v116.py`, HTTP mode): **PASS**, both scenarios
 - Static guardrails (`qa/check_candidate.py`, `qa/check_phase2_items.py`): **PASS**
-- Career durability (`qa/structural-risk/career-run.mjs`): **PASS** — 1,750 checks, 0 errors
-- Visual regression: **PASS** — 40/40 screens captured, committed pixel-diff baselines,
-  ≤0.1% threshold
+- Career durability (`qa/structural-risk/career-run.mjs`, through 2010): **PASS** — 2,683 checks, `"errors": []`
+- Visual regression: the 40/40 baselines predate the stadium-row and Build your side
+  layout on this file. Recapture before treating them as current.
 - Gameplay authenticity: **PASS** — all 11 benchmarks in band on average, multi-seed
 
 ## Release-process position (per v116 governance)
