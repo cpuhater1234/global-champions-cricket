@@ -1,14 +1,15 @@
 # v116 Authenticity Candidate
 
 `v116-authenticity-candidate.html` — gameplay-tuned build derived from the frozen
-release `GCC_v116_release (1).html` (SHA-256 pinned in `BASELINE_SHA256.txt`).
+release `GCC_v116_release (1).html` (SHA-256 `b27cf0b4c7e6e4e7a78eaa5c80154dfd0f70657ce9f774dd405505e97e82c6d0`).
+`BASELINE_SHA256.txt` is the older v7.0.14 fingerprint and is not this base.
 
 **Do not edit by hand.** Regenerate with `node qa/scratch_build_final.mjs`.
 
 ## Audit status (multi-seed, official runner at 300 matches)
 
 Final parameters: baseline 6.10, wicket gate 0.13 (variance 0.38), chase dampen −0.55,
-thin-margin chase gate p=0.60, **chase-hazard pressure multiplier 0.65 → 0.00**.
+**chase-hazard pressure multiplier 0.65 → 0.00**. There is no post-match chase rewrite.
 
 | Seed | All-Out (8–15) | Chase Win (46–55) |
 |---|---|---|
@@ -26,7 +27,7 @@ variance, not flatness — mismatch results, ground conditions and per-ball haza
 streaks are preserved by the surgery design (hazard magnitude rescaled,
 distribution shape untouched).
 
-## The surgery (patch 5)
+## The hazard surgery
 
 The release ball engine inflates wicket hazard while chasing behind the rate:
 
@@ -47,14 +48,20 @@ MULT 0.65→AO 17.2, 0.30→15.5, 0.15→15.0, 0.00→14.3
 2. Two-stage wicket model — 9 independent trials (variance .38, cap .75)
    + conditional 10th wicket at 0.13
 3. Chase phase dampen −0.55 RPO on powerplay/middle/death while chasing
-4. Thin-margin chase gate in `resolveChase`: a raw winning chase that would win
-   by ≤3 runs succeeds with p=0.60; otherwise it becomes a last-over collapse
-   (falls 1 short, +1 wicket, overs exhausted, NOT all out)
+
+The thin-margin chase gate has been removed. It rewrote a finished chase after the
+balls had been played, so the scorecard and the save could not add up. `resolveChase`
+now returns a delivery innings unchanged. The official audit calls `innings` directly,
+not `resolveChase`, which is why this table is the same as the previous five-patch
+audit and is now what a played match actually records. Re-measured 18 November 2026
+on this file, five seeds, 300 matches. Dampen stayed at 0.55 because both bands were
+already inside range.
 
 ## Structural notes (verified in-engine)
 
-- `resolveChase` fast-paths on `deliveryVersion===1` and returns the raw innings;
-  `simulateInningsPair` derives the winner from that return value
+- `resolveChase` returns a `deliveryVersion===1` innings unchanged.
+  `simulateInningsPair` derives the winner from that return value, so the result
+  and the delivery ledger are the same innings.
 - Margin census (`qa/scratch_margin_census.mjs`): every raw winning chase clears
   the target by ≤5 runs (47% by exactly 1) — fixed margin thresholds can't
   discriminate; probabilistic gates are the only lever that scales
@@ -83,7 +90,5 @@ MULT 0.65→AO 17.2, 0.30→15.5, 0.15→15.0, 0.00→14.3
 
 - Native save/reload (`captaincy_layer_v116.py`): **PASS**, both scenarios
 - Static guardrails (`check_candidate.py`, `check_phase2_items.py`): **PASS**
-- Career durability (`career-run.mjs`): **PASS**, 1750 checks, 0 errors, 2 seasons
-- Visual capture: **PASS** 40/40; pixel-diff baselines re-established from this
-  build (content diffs vs pre-surgery captures were club-crest/procedural
-  renders, not layout regressions — verified on diff images)
+- Career durability (`career-run.mjs`, `GCC8_TEST_LAST_YEAR=2010`): **PASS**, 2,683 checks, `"errors": []`, seasons 2008–2010, cold Continue at every checkpoint
+- Visual capture: the committed 40/40 baselines predate the stadium-row and Build your side layout in this file. Recapture before treating them as current.
