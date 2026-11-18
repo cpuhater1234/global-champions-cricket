@@ -66,6 +66,9 @@ ruled-out levers). Assessed as acceptable for a playable release; flagged for v1
 - This is a branch-designated artifact, not yet merged to `main` and not yet tagged —
   matching how v116 itself was first designated.
 - `main` remains historical code; no merge has been made.
+- **Recommended gate before promotion:** a manual playtest per
+  `docs/release/V117_PLAYTEST_CHECKLIST.md` (~20 min). The audit proves
+  distributions; play proves feel. Both passing → owner promotion is well-founded.
 - Promotion decision (v117 replacing v116 as the stable playable build, GitHub
   Release/tag creation, default-branch entry point) is an **owner decision**, per
   `docs/release/V116_HANDOFF.md` release-process rules.
