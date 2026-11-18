@@ -4,6 +4,7 @@
  * thin-margin gate 0.60, chase-hazard pressure multiplier 0.00.
  * Cards: one stadium row on club reveal and club selection. Full ground
  * name and trait stay in the club guide.
+ * Build your side stays a tight plan and is not stretched to the ground column.
  * Run: node qa/scratch_build_final.mjs
  */
 import fs from 'node:fs';
@@ -19,58 +20,26 @@ const BASELINE = 6.10, GATE = 0.13, VARIANCE = 0.38, DAMPEN = 0.55, MULT = 0.00;
 
 let content = fs.readFileSync(BASE_HTML, 'utf8');
 
-// 1. Wicket baseline
 content = content.replace('let expectedWickets = 6.35', `let expectedWickets = ${BASELINE.toFixed(2)}`);
+content = content.replace('const chasePp=context.chasing ? chasePressure*.38 : 0;', `const chasePp=context.chasing ? chasePressure*.38-${DAMPEN.toFixed(2)} : 0;`);
+content = content.replace('const chaseMid=context.chasing ? chasePressure*.68 : 0;', `const chaseMid=context.chasing ? chasePressure*.68-${DAMPEN.toFixed(2)} : 0;`);
+content = content.replace('const chaseDeath=context.chasing ? chasePressure*1.00 : 0;', `const chaseDeath=context.chasing ? chasePressure*1.00-${DAMPEN.toFixed(2)} : 0;`);
 
-// 2. Chase phase dampen
-content = content.replace(
-  'const chasePp=context.chasing ? chasePressure*.38 : 0;',
-  `const chasePp=context.chasing ? chasePressure*.38-${DAMPEN.toFixed(2)} : 0;`
-);
-content = content.replace(
-  'const chaseMid=context.chasing ? chasePressure*.68 : 0;',
-  `const chaseMid=context.chasing ? chasePressure*.68-${DAMPEN.toFixed(2)} : 0;`
-);
-content = content.replace(
-  'const chaseDeath=context.chasing ? chasePressure*1.00 : 0;',
-  `const chaseDeath=context.chasing ? chasePressure*1.00-${DAMPEN.toFixed(2)} : 0;`
-);
-
-// 3. Two-stage wicket model
 const wicketBlockRe = /const wicketProbability = Math\.max\(0\.04, Math\.min\(0\.96, expectedWickets \/ 10 \+ \(rng\(\) - 0\.5\) \* 0\.90\)\);\r?\n\s*let wickets = 0;\r?\n\s*for \(let i = 0; i < 10; i\+\+\) if \(rng\(\) < wicketProbability\) wickets \+= 1;/;
-const wicketReplacement = `const wicketProbability = Math.max(0.05, Math.min(0.75, expectedWickets / 10 + (rng() - 0.5) * ${VARIANCE}));
-    let wickets = 0;
-    for (let i = 0; i < 9; i++) if (rng() < wicketProbability) wickets += 1;
-    if (wickets === 9 && rng() < wicketProbability * ${GATE}) wickets = 10;`;
+const wicketReplacement = `const wicketProbability = Math.max(0.05, Math.min(0.75, expectedWickets / 10 + (rng() - 0.5) * ${VARIANCE}));\n    let wickets = 0;\n    for (let i = 0; i < 9; i++) if (rng() < wicketProbability) wickets += 1;\n    if (wickets === 9 && rng() < wicketProbability * ${GATE}) wickets = 10;`;
 const before = content.length;
 content = content.replace(wicketBlockRe, wicketReplacement);
 if (content.length === before) { console.error('PATCH FAILED - wicket block'); process.exit(1); }
 
-// 4. Thin-margin chase gate
 const anchor = 'if(chasePotential.deliveryVersion===1)return chasePotential;';
-const gateCode = `if(chasePotential.deliveryVersion===1){
-      const tgt=firstInnings.total+1;
-      if(chasePotential.total<=tgt+3&&rng()>=0.60){
-        const balls=120;
-        const wickets=Math.min(9,(chasePotential.wickets||6)+1);
-        return {...chasePotential,total:tgt-1,wickets,balls,chased:false,
-          pp:Math.round((chasePotential.pp||0)*balls/120),mid:Math.round((chasePotential.mid||0)*balls/120),death:Math.round((chasePotential.death||0)*balls/120)};
-      }
-      return chasePotential;
-    }`;
+const gateCode = `if(chasePotential.deliveryVersion===1){\n      const tgt=firstInnings.total+1;\n      if(chasePotential.total<=tgt+3&&rng()>=0.60){\n        const balls=120;\n        const wickets=Math.min(9,(chasePotential.wickets||6)+1);\n        return {...chasePotential,total:tgt-1,wickets,balls,chased:false,\n          pp:Math.round((chasePotential.pp||0)*balls/120),mid:Math.round((chasePotential.mid||0)*balls/120),death:Math.round((chasePotential.death||0)*balls/120)};\n      }\n      return chasePotential;\n    }`;
 if (!content.includes(anchor)) { console.error('PATCH FAILED - resolveChase anchor'); process.exit(1); }
 content = content.replace(anchor, gateCode);
 
-// 5. Chase-hazard pressure surgery (the AO fix): release inflates wicket hazard
-// while chasing behind the rate by up to (1+pressure*.65); flattening to *.00
-// removes the systematic chase-collapse bias while keeping per-ball variance,
-// edge-based mismatches and ground conditions intact.
 const PRESSURE_ANCHOR = '(1+Math.max(0,pressure)*.65)';
 if (!content.includes(PRESSURE_ANCHOR)) { console.error('PATCH FAILED - pressure anchor'); process.exit(1); }
 content = content.replace(PRESSURE_ANCHOR, `(1+Math.max(0,pressure)*${MULT.toFixed(2)})`);
 
-// 6. Club reveal / selection cards: one consistent stadium row.
-// Full ground name and trait stay in the club guide.
 content = content.replace(
   '<div class="g8clubground"><div>${X.icon(\'building-stadium\')}<strong>${esc(c.ground)}</strong></div><p>${esc(c.trait)}</p></div>',
   '<div class="g8clubground" title="${esc(c.ground)}"><div>${X.icon(\'building-stadium\')}<strong>${esc(cardGround(c))}</strong></div></div>'
@@ -79,14 +48,15 @@ content = content.replace(
   'return `<article data-key="club-${i}"',
   ' const cardGround=c=>({SRH:\'Rajiv Gandhi Stadium\',LSG:\'Ekana Stadium\',PBKS:\'Mullanpur Stadium\'})[c.abbr]||c.ground;\n return `<article data-key="club-${i}"'
 );
-const oldGroundCss = `#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground{background:var(--gcc-raised)!important;border-color:var(--gcc-line)!important;border-left-color:var(--accent)!important}
-#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground .g8icon{color:var(--gcc-muted)!important}`;
-const newGroundCss = `#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground{display:flex;align-items:center;min-height:44px;margin-top:auto;padding:4px 0;background:transparent!important;border:0!important;border-radius:0;box-shadow:none}
-#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground>div{display:flex;align-items:center;gap:8px;min-width:0}
-#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground strong{font-size:13px;line-height:1.4;font-weight:600;overflow-wrap:normal;word-break:normal}
-#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground .g8icon{display:block!important;color:var(--gcc-muted)!important}`;
+const oldGroundCss = `#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground{background:var(--gcc-raised)!important;border-color:var(--gcc-line)!important;border-left-color:var(--accent)!important}\n#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground .g8icon{color:var(--gcc-muted)!important}`;
+const newGroundCss = `#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground{display:flex;align-items:center;min-height:44px;margin-top:auto;padding:4px 0;background:transparent!important;border:0!important;border-radius:0;box-shadow:none}\n#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground>div{display:flex;align-items:center;gap:8px;min-width:0}\n#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground strong{font-size:13px;line-height:1.4;font-weight:600;overflow-wrap:normal;word-break:normal}\n#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubground .g8icon{display:block!important;color:var(--gcc-muted)!important}`;
 if (!content.includes(oldGroundCss)) { console.error('PATCH FAILED - club ground css'); process.exit(1); }
 content = content.replace(oldGroundCss, newGroundCss);
+
+const oldPlan = '/* The three cricket decisions absorb their share of the height, instead of leaving an empty lower half. */\n#g8dialog#g8dialog#g8dialog .g8clubplan .g8briefbody{height:100%!important}\n#g8dialog#g8dialog#g8dialog .g8clubpriorities{display:flex!important;flex-direction:column!important;justify-content:space-between!important;flex:1!important;list-style:none!important;gap:0!important;margin:0!important;padding:0!important;min-height:0!important}\n#g8dialog#g8dialog#g8dialog .g8clubpriorities>li{display:grid!important;grid-template-columns:1.4rem minmax(0,1fr)!important;gap:.55rem!important;align-items:start!important;flex:1 0 auto!important;margin:0!important;padding:.55rem 0!important;border:0!important;border-top:1px solid var(--gcc-line,#5f635d)!important;background:none!important;box-shadow:none!important;min-width:0!important}\n#g8dialog#g8dialog#g8dialog .g8clubpriorities>li:first-child{border-top:0!important;padding-top:0!important}\n#g8dialog#g8dialog#g8dialog .g8clubpriorities>li:last-child{padding-bottom:0!important}\n#g8dialog#g8dialog#g8dialog .g8clubpriorities .g8prioritynumber{display:block!important;min-width:0!important;width:auto!important;height:auto!important;padding:0!important;margin:0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;color:#f2f7fc!important;font:900 1.15rem/1.2 Arial,Helvetica,sans-serif!important;text-align:left!important}\n#g8dialog#g8dialog#g8dialog .g8clubpriorities strong{display:block!important;margin:0 0 .16rem!important;font-size:.91rem!important;line-height:1.3!important;color:var(--gcc-text,#eef5fa)!important;font-weight:800!important}\n#g8dialog#g8dialog#g8dialog .g8clubpriorities p{margin:0!important;font-size:.89rem!important;line-height:1.39!important;color:var(--gcc-muted,#a5b7c3)!important}\n';
+const newPlan = '/* Build your side is a tight plan. Do not stretch the three notes to the ground column. */\n#g8dialog#g8dialog#g8dialog .g8clubbrief{align-items:start!important}\n#g8dialog#g8dialog#g8dialog .g8clubplan{height:auto!important}\n#g8dialog#g8dialog#g8dialog .g8clubplan .g8briefbody{height:auto!important}\n#g8dialog#g8dialog#g8dialog .g8clubplan .g8briefhead{margin-bottom:10px!important}\n#g8dialog#g8dialog#g8dialog .g8clubpriorities{display:grid!important;gap:8px!important;margin:0!important;padding:0!important;list-style:none!important;flex:none!important;justify-content:start!important}\n#g8dialog#g8dialog#g8dialog .g8clubpriorities>li{display:grid!important;grid-template-columns:22px minmax(0,1fr)!important;gap:8px!important;align-items:start!important;flex:none!important;margin:0!important;padding:8px 10px!important;border:1px solid var(--gcc-line,#5f635d)!important;border-radius:8px!important;background:rgba(255,255,255,.035)!important;box-shadow:none!important;min-width:0!important}\n#g8dialog#g8dialog#g8dialog .g8clubpriorities>li:first-child{border-top:1px solid var(--gcc-line,#5f635d)!important;padding-top:8px!important}\n#g8dialog#g8dialog#g8dialog .g8clubpriorities>li:last-child{padding-bottom:8px!important}\n#g8dialog#g8dialog#g8dialog .g8clubpriorities .g8prioritynumber{display:grid!important;place-items:center!important;width:22px!important;height:22px!important;min-width:22px!important;padding:0!important;margin:0!important;border-radius:5px!important;background:rgba(127,224,238,.16)!important;box-shadow:none!important;color:#d7f6fb!important;font:800 12px/1 Arial,Helvetica,sans-serif!important;text-align:center!important}\n#g8dialog#g8dialog#g8dialog .g8clubpriorities strong{display:block!important;margin:0 0 2px!important;font-size:14px!important;line-height:1.3!important;color:var(--gcc-text,#eef5fa)!important;font-weight:800!important}\n#g8dialog#g8dialog#g8dialog .g8clubpriorities p{margin:0!important;font-size:13px!important;line-height:1.35!important;color:var(--gcc-muted,#a5b7c3)!important}\n';
+if (!content.includes(oldPlan)) { console.error('PATCH FAILED - build your side'); process.exit(1); }
+content = content.replace(oldPlan, newPlan);
 
 fs.writeFileSync(OUT_HTML, content);
 const candidateHtml = path.join(__dirname, 'candidates', 'v116-authenticity-candidate.html');
