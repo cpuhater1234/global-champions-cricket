@@ -185,7 +185,7 @@ function patchOnce(label, from, to) {
 }
 patchOnce('commitment',
   'const X=window.GCC8,{G,ui,esc,btn,badge,R}=X,s=G.state;',
-  "const X=window.GCC8,{G,ui,esc,btn,badge,R}=X,s=G.state;\n X.nextCommitment=()=>{try{const fx=G.nextUserFixture();if(!fx||!s.userClub)return '';const problem=X.read?.xiProblem?.()||'';if(problem){const out=/^(.*) is out\\./.exec(problem);if(out)return out[1]+' is out.';if(/wicketkeeper/i.test(problem))return 'No keeper is named.';if(/duplicate/i.test(problem))return 'The XI lists the same player twice.';if(/no longer on the list/i.test(problem))return 'A selected player has left the squad.';return 'The XI is short.';}const opp=fx.home.abbr===s.userClub.abbr?fx.away:fx.home;const ground=G.matchGroundForFixture(fx);const place=ground?.ground||fx.home.ground||'the next ground';const spin=Number(ground?.conditions?.spin)||0,pace=Number(ground?.conditions?.pace)||0;if(spin>=3&&spin>pace)return 'The pitch at '+place+' should help the spinners.';if(pace>=3&&pace>spin)return 'The pitch at '+place+' should help the seamers.';return opp.name+' are next, at '+place+'.';}catch(e){return ''}};"
+  "const X=window.GCC8,{G,ui,esc,btn,badge,R}=X,s=G.state;\n X.nextCommitment=()=>{try{const fx=G.nextUserFixture();if(!fx||!s.userClub)return '';const problem=X.read?.xiProblem?.()||'';if(problem){const out=/^(.*) is out\\./.exec(problem);if(out)return out[1]+' is out.';if(/wicketkeeper/i.test(problem))return 'No keeper is named.';if(/duplicate/i.test(problem))return 'The XI lists the same player twice.';if(/no longer on the list/i.test(problem))return 'A selected player has left the squad.';return 'The XI is short.';}const person=X.selectionLine?.()||'';if(person)return person;const opp=fx.home.abbr===s.userClub.abbr?fx.away:fx.home;const ground=G.matchGroundForFixture(fx);const place=ground?.ground||fx.home.ground||'the next ground';const spin=Number(ground?.conditions?.spin)||0,pace=Number(ground?.conditions?.pace)||0;if(spin>=3&&spin>pace)return 'The pitch at '+place+' should help the spinners.';if(pace>=3&&pace>spin)return 'The pitch at '+place+' should help the seamers.';return opp.name+' are next, at '+place+'.';}catch(e){return ''}};"
 );
 patchOnce('result path',
   "X.views.result=()=>{const html=result(),r=ui.result,regular=s.results.includes(r),next=regular?G.nextUserFixture():null,back=btn(regular?(next?'Next match':'League wrap-up'):'Back to finals',regular?'matchday':'finalsReturn',[],'g8primary')",
@@ -206,6 +206,18 @@ patchOnce('xi question',
 patchOnce('xi header',
   "<div class=\"gccuiSelectionHeader\">${title(`${s.year} · ${s.userClub.name}`,'Name your XI','','stumps')}<section class=\"gccuiSelectionStatus\"",
   "<div class=\"gccuiSelectionHeader\">${title(`${s.year} · ${s.userClub.name}`,'Name your XI','','stumps')}${openQ?`<p class=\"gccuiOpenQuestion\" role=\"status\">${esc(openQ)}</p>`:''}<section class=\"gccuiSelectionStatus\""
+);
+patchOnce('selection line',
+  "journal=()=>E.clean(s.dynasty?.v8Stories,identify());",
+  "journal=()=>E.clean(s.dynasty?.v8Stories,identify());\n X.selectionLine=()=>{try{const e=[...journal().events].reverse().find(x=>x.year===s.year&&x.club===own());if(!e?.arc?.incumbent?.name||!e?.arc?.challenger?.name)return '';return e.arc.incumbent.name+' or '+e.arc.challenger.name+'.';}catch(err){return ''}};"
+);
+patchOnce('one result question',
+  "const decision=consequences;",
+  "const decision=openQ?'':consequences;"
+);
+patchOnce('match hold',
+  "X.matchDelay=(m,r)=>{if(m?.presentationVersion!==3)return [1500,750,375][m?.speedIndex||0];const next=X.deliveryFrames(r)[X.matchProgress(m)];return [700,350,175,88][m.speedIndex||0]*(next?.kind==='notice'?1.8:1);};",
+  "X.matchDelay=(m,r)=>{if(m?.presentationVersion!==3)return [1500,750,375][m?.speedIndex||0];const next=X.deliveryFrames(r)[X.matchProgress(m)],base=[700,350,175,88][m.speedIndex||0];let weight=1;if(next?.kind==='notice')weight=1.8;else if(next?.event){const e=next.event,ballsLeft=next.target==null?null:Math.max(0,120-(Number(e.balls)||0)),runsLeft=next.target==null?null:Math.max(0,next.target-(Number(e.total)||0)),close=ballsLeft!=null&&runsLeft!=null&&ballsLeft<=12&&runsLeft<=18,death=e.phase==='death'||Number(e.over)>=16,boundary=Number(e.runs)>=4;if(e.wicket&&(close||death))weight=2.6;else if(e.wicket)weight=2.1;else if(close&&boundary)weight=2.4;else if(close)weight=1.7;else if(death&&boundary)weight=1.6;}return Math.round(base*weight);};"
 );
 patchOnce('name the side',
   "bind('matchday',['result'],()=>{ui.seasonTab='matchday';G.go('season');setView('season');});",
