@@ -46,7 +46,34 @@
  X.matchBeatCount=r=>X.hasBallLog(r)?X.deliveryFrames(r).length:legacyCount(r);
  X.matchProgress=m=>m?.presentationVersion===3?Math.max(0,Math.floor(Number(m.count)||0)):legacyProgress(m);
  X.matchBeat=(m,r)=>m?.presentationVersion===3?(X.deliveryFrames(r)[Math.max(0,X.matchProgress(m)-1)]?.text||'Every delivery counts.'):legacyBeat(m,r);
- X.matchDelay=(m,r)=>{if(m?.presentationVersion!==3)return [1500,750,375][m?.speedIndex||0];const next=X.deliveryFrames(r)[X.matchProgress(m)];return [700,350,175,88][m.speedIndex||0]*(next?.kind==='notice'?1.8:1);};
+ X.matchDelay=(m,r)=>{
+    if(m?.presentationVersion!==3)return [1500,750,375][m?.speedIndex||0];
+    const frames=X.deliveryFrames(r),idx=X.matchProgress(m);
+    const next=frames[idx];
+    if(!next)return [700,350,175,88][m.speedIndex||0];
+    const base=[700,350,175,88][m.speedIndex||0];
+    if(next.kind==='notice')return base*1.8;
+    const d=next.event;
+    if(!d)return base;
+    const isWicket=!!d.wicket;
+    const isBoundary=d.batRuns===4||d.batRuns===6;
+    let isDeath=false, isTightChase=false;
+    if(next.innings!==null && next.innings!==undefined){
+      const inn=d.tie?null:r.scorecard.innings[next.innings];
+      if(inn){
+        const deliveries=inn.deliveries||[];
+        const currentBall=d.balls||deliveries.length;
+        const ballsLeft=Math.max(0,120-currentBall);
+        isDeath=ballsLeft<=30;
+        if(next.target && next.target>0){
+          const runsNeeded=next.target-(d.total||0);
+          isTightChase=runsNeeded<=18 && ballsLeft<=12;
+        }
+      }
+    }
+    const betTest=isWicket || (isWicket&&(isDeath||isTightChase)) || (isBoundary&&(isDeath||isTightChase));
+    return betTest ? base*2.5 : base;
+  };
  X.overRows=log=>{
   const rows=[];for(const d of log){let row=rows.at(-1);if(!row||row.over!==d.over){row={over:d.over,events:[],runs:0,wickets:0,legal:0,total:0,lost:0};rows.push(row);}row.events.push(d);row.runs+=Number(d.runs||0);row.wickets+=Number(!!d.wicket);row.legal+=d.legal===false?0:1;row.total=d.total;row.lost=d.wickets;}return rows;
  };

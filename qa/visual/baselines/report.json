@@ -1,5 +1,5 @@
 {
-  "sha256": "685a145f7e20733ebe3d47f808a9622f8a90c40da155c1ed8314b970503c6ce6",
+  "sha256": "a1d2d3dd0e1351514923de6fdf143d63ec2b1182459c5da9f5f2dccc89fd6a5d",
   "screens": [
     {
       "name": "home-360x844",
@@ -15,7 +15,7 @@
       "width": 390,
       "height": 844,
       "path": "qa\\visual\\baselines\\home-390x844.png",
-      "bytes": 284747
+      "bytes": 284798
     },
     {
       "name": "home-768x1024",
@@ -23,7 +23,7 @@
       "width": 768,
       "height": 1024,
       "path": "qa\\visual\\baselines\\home-768x1024.png",
-      "bytes": 491864
+      "bytes": 491938
     },
     {
       "name": "home-1440x900",
@@ -31,7 +31,7 @@
       "width": 1440,
       "height": 900,
       "path": "qa\\visual\\baselines\\home-1440x900.png",
-      "bytes": 799308
+      "bytes": 799110
     },
     {
       "name": "club-select-360x844",
@@ -39,7 +39,7 @@
       "width": 360,
       "height": 844,
       "path": "qa\\visual\\baselines\\club-select-360x844.png",
-      "bytes": 152427
+      "bytes": 152429
     },
     {
       "name": "club-select-390x844",
@@ -135,7 +135,7 @@
       "width": 360,
       "height": 844,
       "path": "qa\\visual\\baselines\\signing-360x844.png",
-      "bytes": 114145
+      "bytes": 113314
     },
     {
       "name": "signing-390x844",
@@ -143,7 +143,7 @@
       "width": 390,
       "height": 844,
       "path": "qa\\visual\\baselines\\signing-390x844.png",
-      "bytes": 119473
+      "bytes": 121170
     },
     {
       "name": "signing-768x1024",
@@ -151,7 +151,7 @@
       "width": 768,
       "height": 1024,
       "path": "qa\\visual\\baselines\\signing-768x1024.png",
-      "bytes": 256513
+      "bytes": 247727
     },
     {
       "name": "signing-1440x900",
@@ -159,7 +159,7 @@
       "width": 1440,
       "height": 900,
       "path": "qa\\visual\\baselines\\signing-1440x900.png",
-      "bytes": 347758
+      "bytes": 337746
     },
     {
       "name": "preview-360x844",
@@ -287,7 +287,39 @@
       "width": 1440,
       "height": 900,
       "path": "qa\\visual\\baselines\\result-1440x900.png",
-      "bytes": 434637
+      "bytes": 434636
+    },
+    {
+      "name": "archive-360x844",
+      "screen": "archive",
+      "width": 360,
+      "height": 844,
+      "path": "qa\\visual\\baselines\\archive-360x844.png",
+      "bytes": 123366
+    },
+    {
+      "name": "archive-390x844",
+      "screen": "archive",
+      "width": 390,
+      "height": 844,
+      "path": "qa\\visual\\baselines\\archive-390x844.png",
+      "bytes": 126175
+    },
+    {
+      "name": "archive-768x1024",
+      "screen": "archive",
+      "width": 768,
+      "height": 1024,
+      "path": "qa\\visual\\baselines\\archive-768x1024.png",
+      "bytes": 227526
+    },
+    {
+      "name": "archive-1440x900",
+      "screen": "archive",
+      "width": 1440,
+      "height": 900,
+      "path": "qa\\visual\\baselines\\archive-1440x900.png",
+      "bytes": 347012
     }
   ],
   "breakpoints": [
@@ -312,7 +344,7 @@
       "detail": {
         "width": 390,
         "height": 844,
-        "bytes": 284747
+        "bytes": 284798
       }
     },
     {
@@ -321,7 +353,7 @@
       "detail": {
         "width": 768,
         "height": 1024,
-        "bytes": 491864
+        "bytes": 491938
       }
     },
     {
@@ -330,7 +362,7 @@
       "detail": {
         "width": 1440,
         "height": 900,
-        "bytes": 799308
+        "bytes": 799110
       }
     },
     {
@@ -339,7 +371,7 @@
       "detail": {
         "width": 360,
         "height": 844,
-        "bytes": 152427
+        "bytes": 152429
       }
     },
     {
@@ -447,7 +479,7 @@
       "detail": {
         "width": 360,
         "height": 844,
-        "bytes": 114145
+        "bytes": 113314
       }
     },
     {
@@ -456,7 +488,7 @@
       "detail": {
         "width": 390,
         "height": 844,
-        "bytes": 119473
+        "bytes": 121170
       }
     },
     {
@@ -465,7 +497,7 @@
       "detail": {
         "width": 768,
         "height": 1024,
-        "bytes": 256513
+        "bytes": 247727
       }
     },
     {
@@ -474,7 +506,7 @@
       "detail": {
         "width": 1440,
         "height": 900,
-        "bytes": 347758
+        "bytes": 337746
       }
     },
     {
@@ -618,17 +650,51 @@
       "detail": {
         "width": 1440,
         "height": 900,
-        "bytes": 434637
+        "bytes": 434636
+      }
+    },
+    {
+      "id": "capture archive-360x844",
+      "result": "PASS",
+      "detail": {
+        "width": 360,
+        "height": 844,
+        "bytes": 123366
+      }
+    },
+    {
+      "id": "capture archive-390x844",
+      "result": "PASS",
+      "detail": {
+        "width": 390,
+        "height": 844,
+        "bytes": 126175
+      }
+    },
+    {
+      "id": "capture archive-768x1024",
+      "result": "PASS",
+      "detail": {
+        "width": 768,
+        "height": 1024,
+        "bytes": 227526
+      }
+    },
+    {
+      "id": "capture archive-1440x900",
+      "result": "PASS",
+      "detail": {
+        "width": 1440,
+        "height": 900,
+        "bytes": 347012
       }
     }
   ],
   "findings": [],
-  "errors": [
-    "Error: archive: dynasty history still empty after season simulation\n    at navigateTo (C:\\Users\\tomis\\Documents\\gcc-v116-ui\\qa\\v116_visual_baseline.cjs:58:40)\n    at async C:\\Users\\tomis\\Documents\\gcc-v116-ui\\qa\\v116_visual_baseline.cjs:84:1"
-  ],
+  "errors": [],
   "runtimeErrors": [],
   "limits": [
     "Chromium only. Deterministic synthetic save; offline (external image requests aborted)."
   ],
-  "status": "ERROR"
+  "status": "PASS"
 }

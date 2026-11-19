@@ -1,6 +1,8 @@
 /* Translate the existing cricket model into jobs, without guessing handedness or a spin subtype. */
 (() => {
  const X=window.GCC8,{G,R,esc,btn,roster,injury}=X;
+ X.annualRoleName=p=>({BAT:'Batter','WK-BAT':'Wicketkeeper-batter',AR:'All-rounder',BOWL:'Bowler'})[p.role]||p.role;
+ X.tradeValue=p=>{const age=G.state.year-(p.birthYear||1990),prime=age<=29?7:age<=33?4:age<=36?0:-5,form=(p.form||0)*2.2,runway=Math.max(1,38-age+1)*1.15,injuryPenalty=injury(p.id)?.status==='OUT'?-7:injury(p.id)?.status==='MANAGING'?-2:0,ground=0;return Math.round((p.overall||65)*.55+(X.projectedValue?X.projectedValue(p):p.overall)*.35+prime+form+runway*.35+injuryPenalty+ground)};
  X.battingJob=p=>({OPEN:'Opener',TOP:'Top order',MIDDLE:'Middle order',LOWER:'Lower order',TAIL:'Tail end'}[R.battingRoleBand(p)]||'Middle order');
  X.bowlingType=p=>({PACE:'Pace bowler',SPIN:'Spin bowler',DUAL:'Pace & spin'}[R.bowlingStyle(p)]||'Batting specialist');
  X.allRounderJobs=p=>X.battingJob(p)+' · '+({PACE:'Pace bowling',SPIN:'Spin bowling',DUAL:'Pace & spin bowling'}[R.bowlingStyle(p)]||'Bowling type unavailable');
@@ -47,7 +49,7 @@
  };
  X.squadRoster=()=>{
   const groups=[['BAT','Batters'],['BOWL','Bowlers'],['AR','All-rounders'],['WK-BAT','Wicketkeepers']];
-  return `<div class="g8dressingroom">${groups.map(([role,label])=>{const players=roster().filter(p=>p.role===role);return players.length?`<section class="g8squadgroup g8role-${role}"><h3><span>${label}</span><span class="g8groupcount">${players.length}</span></h3>${players.map(p=>`<div class="g8squadmember"><button type="button" class="g8button g8squadscout" data-action="inspect" data-args="${esc(JSON.stringify([p.id]))}" aria-label="Scout ${esc(p.name)}, current rating ${p.overall}"><span class="g8selectedidentity"><span class="g8selectedname">${esc(p.name)}</span><span class="g8selectedcontext">${esc(p.country)} · Age ${G.state.year-p.birthYear}</span></span><b class="g8selectedrating" aria-label="Overall ability ${p.overall} out of 99">${p.overall}</b><span class="g8selectedcue">Scout player →</span></button></div>`).join('')}</section>`:'';}).join('')}</div>`;
+  return `<div class="g8dressingroom">${groups.map(([role,label])=>{const players=roster().filter(p=>p.role===role);return players.length?`<section class="g8squadgroup g8role-${role}"><h3><span>${label}</span><span class="g8groupcount">${players.length}</span></h3>${players.map(p=>`<div class="g8squadmember"><div class="g8squadrow"><span class="g8squadname">${esc(p.name)}</span><span class="g8squadrole">${annualRoleName(p)}</span><strong class="g8squadvalue">${tradeValue(p)}</strong></div><div class="g8squadactions"><button type="button" class="g8button g8squadtrade" data-action="openTradeCentre" data-args="${esc(JSON.stringify([false]))}" aria-label="Trade ${esc(p.name)}">TRADE</button><button type="button" class="g8button g8squadrelease" data-action="releaseContractPlayer" data-args="${esc(JSON.stringify([p.id]))}" aria-label="Release ${esc(p.name)}">RELEASE</button></div></div>`).join('')}</section>`:'';}).join('')}</div>`;
  };
 })();
 
