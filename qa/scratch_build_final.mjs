@@ -19,6 +19,8 @@ const OUT_HTML = path.join(__dirname, 'results', 'v116-authenticity-candidate.ht
 
 const BASELINE = 6.10, GATE = 0.13, VARIANCE = 0.38, DAMPEN = 0.55, MULT = 0.00;
 
+// Frozen release uses CRLF line endings; builder string literals use \n.
+
 let content = fs.readFileSync(BASE_HTML, 'utf8');
 
 content = content.replace('let expectedWickets = 6.35', `let expectedWickets = ${BASELINE.toFixed(2)}`);

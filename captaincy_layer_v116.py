@@ -148,6 +148,14 @@ def run_plan(browser, vp, plan):
         assert click_action(pg,'playMatch'), 'playMatch action missing'
         print('TEST: playMatch returned',flush=True)
         pg.wait_for_timeout(900)
+        # v117: winning the toss opens the Bat/Field chooser; the match waits there.
+        if pg.evaluate("()=>document.querySelector('#g8stage')?.dataset.view") != 'matchReveal':
+            if pg.locator('button:has-text("Bat")').count():
+                pg.locator('button:has-text("Bat")').first.click()
+                pg.wait_for_timeout(400)
+            elif pg.locator('button:has-text("Field")').count():
+                pg.locator('button:has-text("Field")').first.click()
+                pg.wait_for_timeout(400)
         assert pg.evaluate("()=>document.querySelector('#g8stage')?.dataset.view")=='matchReveal', 'match reveal not reached'
         print('TEST: matchReveal reached',flush=True)
         assert click_action(pg,'matchSkip'), 'matchSkip action missing'
