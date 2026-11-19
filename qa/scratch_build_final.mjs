@@ -303,6 +303,39 @@ if (!content.includes('id="gcc-standard"')) {
 #g8app .g8roster li{align-items:center;padding:8px 0}
 #g8app .gccuiCoinStage{display:none!important}
 #g8stage[data-view="matchReveal"]>.gccuiOpenQuestion{margin:16px 16px 0}
+
+#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubbody{display:flex!important;flex-direction:column!important;align-items:center!important;text-align:center!important;min-height:0!important}
+#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubbody h3{min-height:0!important;font-size:15px!important;line-height:1.3!important;margin:0!important}
+#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clublocation{min-height:0!important;font-size:12px!important;line-height:1.3!important;color:var(--gcc-muted)!important;margin:2px 0 0!important}
+#g8app :is(.g8invitationgrid,.g8clubchooser) .g8clubcardaction{margin-top:.65rem!important}
+
+#g8app .gccuiPlayers .gccuiPlayer::before{display:none!important}
+#g8app .gccuiPlayers .gccuiPlayer{border-top-color:var(--role-edge)!important}
+
+#g8dialog .g8analysissection{background:rgba(255,255,255,.035)!important;border:1px solid var(--gcc-line)!important;border-radius:10px!important}
+#g8dialog .g8scoutability{background:rgba(255,255,255,.035)!important;border:1px solid var(--gcc-line)!important;border-radius:10px!important}
+#g8dialog .g8scoutability>*{border-radius:8px!important}
+
+#g8dialog[data-prompt="player"] .gccuiProfileOverview .g8scoutoutlook{font-size:15px!important;line-height:1.5!important;padding:8px 0 0!important;max-width:60ch!important}
+#g8dialog[data-prompt="player"] .g8skillgrid{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:8px!important}
+
+.g8analysistiles{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))!important;gap:12px!important}
+.g8analysissection{padding:12px!important}
+.g8analysisrow{display:flex!important;justify-content:space-between!important;align-items:center!important;padding:6px 0!important;border-bottom:1px solid var(--gcc-line)!important}
+.g8analysisrow:last-child{border-bottom:0!important}
+.g8analysisrow>strong{font-size:13px!important}
+.g8roleboardhead{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:12px!important;margin:8px 0 12px!important;padding:0!important;border:0!important}
+.g8roleboardhead>div{display:flex!important;align-items:center!important;gap:8px!important}
+
+.xi-essentials{margin-top:0!important;padding-top:0!important}
+.xi-essentials>*:first-child{margin-top:0!important}
+
+.gccuiSelectionHeader{display:grid!important;grid-template-columns:1fr auto!important;align-items:end!important;gap:12px!important}
+.gccuiSelectionHeader>h2{margin:0!important}
+.team-command-bar{display:flex!important;align-items:center!important;gap:8px!important;flex-wrap:wrap!important}
+
+.gccuiLiveOrder{margin-top:12px!important}
+.gccuiLiveBalls{margin-top:8px!important}
 </style>
 </body></html>`);
 }
