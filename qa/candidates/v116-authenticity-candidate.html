@@ -3274,29 +3274,26 @@ html body,#g8app{background-color:var(--gcc-ground)!important;color:var(--gcc-te
 #g8dialog[data-prompt=player] .g8scoutability .g8abilitybar>b{font-size:20px!important;line-height:1.2!important}
 #g8dialog[data-prompt=player] .g8scoutability .g8abilitytrack{height:6px!important}
 @media(max-width:600px){#g8dialog[data-prompt=player] .g8scoutsummary>.g8nameandrating{flex-direction:row!important;align-items:center!important;gap:12px!important}#g8dialog[data-prompt=player] .g8scoutsummary h3{font-size:16px!important}#g8dialog[data-prompt=player] .g8scoutsummary .g8scoutmeta{gap:4px!important;margin-top:6px!important;flex-wrap:wrap!important}#g8dialog[data-prompt=player] .g8scoutsummary .g8scoutmeta>span{font-size:12px!important;padding:4px 6px!important}#g8dialog[data-prompt=player] .g8scoutability .g8skillgrid{gap:0 16px!important}#g8dialog[data-prompt=player] .g8modalbody{padding:12px!important}#g8dialog[data-prompt=player] .g8ordereditor .g8actions{width:auto!important}}
-/* Team analysis: one score, then three short columns. */
-#g8dialog#g8dialog[data-prompt=teamAnalysis]{width:min(860px,calc(100vw - 24px))!important}
-#g8dialog#g8dialog[data-prompt=teamAnalysis] .g8modalhead{padding:14px 18px!important}
-#g8dialog#g8dialog[data-prompt=teamAnalysis] .g8modalhead h2{font-size:22px!important}
-#g8dialog#g8dialog[data-prompt=teamAnalysis] .g8modalbody{padding:16px 18px 18px!important}
-#g8dialog#g8dialog[data-prompt=teamAnalysis] .g8teamread{padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important}
-#g8dialog#g8dialog[data-prompt=teamAnalysis] .g8roleboardhead{display:grid!important;grid-template-columns:auto minmax(0,1fr)!important;align-items:center!important;gap:2px 16px!important;padding:0 0 14px!important;margin:0 0 14px!important;border-bottom:1px solid var(--gcc-line)!important;text-align:left!important;flex-wrap:nowrap!important}
-#g8dialog#g8dialog[data-prompt=teamAnalysis] .g8teamrating{display:block!important;width:auto!important;min-width:0!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
-#g8dialog#g8dialog[data-prompt=teamAnalysis] .g8teamrating strong{display:block!important;font-size:52px!important;line-height:.85!important;font-weight:800!important;color:var(--rating-color)!important}
-#g8dialog#g8dialog[data-prompt=teamAnalysis] .g8teamrating>span{display:none!important}
-#g8dialog#g8dialog[data-prompt=teamAnalysis] .g8analysislead{display:flex!important;flex-direction:column!important;gap:3px!important;min-width:0!important}
-#g8dialog#g8dialog[data-prompt=teamAnalysis] .g8analysislead>.g8eyebrow{margin:0!important;font-size:12px!important;letter-spacing:.08em!important;text-transform:uppercase!important;color:var(--gcc-muted)!important}
-#g8dialog#g8dialog[data-prompt=teamAnalysis] .g8coverread{width:auto!important;flex:none!important;margin:0!important;text-align:left!important;font-size:16px!important;font-weight:700!important;color:var(--gcc-text)!important}
-#g8dialog#g8dialog[data-prompt=teamAnalysis] .g8analysisgrid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important;align-items:stretch!important}
-#g8dialog#g8dialog[data-prompt=teamAnalysis] .g8analysissection{display:block!important;margin:0!important;padding:12px 14px!important;border:1px solid var(--gcc-line)!important;border-radius:8px!important;background:rgba(255,255,255,.03)!important}
-#g8dialog#g8dialog[data-prompt=teamAnalysis] .g8analysissection h3{display:block!important;margin:0 0 4px!important;padding:0 0 8px!important;border-bottom:1px solid var(--gcc-line)!important;font-size:12px!important;font-style:normal!important;font-weight:800!important;letter-spacing:.08em!important;text-transform:uppercase!important;color:var(--gcc-muted)!important}
-#g8dialog#g8dialog[data-prompt=teamAnalysis] .g8analysistiles{display:flex!important;flex-direction:column!important;height:auto!important;gap:0!important;grid-template-columns:none!important;grid-template-rows:none!important}
-#g8dialog#g8dialog[data-prompt=teamAnalysis] .g8analysisrow{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;align-items:center!important;gap:10px!important;min-height:0!important;height:auto!important;margin:0!important;padding:8px 0!important;border:0!important;border-bottom:1px solid rgba(255,255,255,.06)!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;text-align:left!important}
-#g8dialog#g8dialog[data-prompt=teamAnalysis] .g8analysisrow:last-child{border-bottom:0!important}
-#g8dialog#g8dialog[data-prompt=teamAnalysis] .g8analysisrow>span{display:block!important;min-height:0!important;font-size:14px!important;font-weight:700!important;line-height:1.3!important;text-align:left!important;color:var(--gcc-text)!important}
-#g8dialog#g8dialog[data-prompt=teamAnalysis] .g8analysisrow>strong{display:inline-flex!important;align-items:center!important;gap:8px!important;font-size:18px!important;font-weight:800!important;line-height:1!important;border:0!important;padding:0!important}
-#g8dialog#g8dialog[data-prompt=teamAnalysis] .g8analysisrow>strong::before{content:"";width:22px;height:3px;border-radius:2px;background:var(--rating-color)}
-@media(max-width:760px){#g8dialog#g8dialog[data-prompt=teamAnalysis] .g8analysisgrid{grid-template-columns:1fr!important}}
+/* Team analysis: one summary strip above three comparable disciplines. */
+#g8dialog[data-prompt=teamAnalysis] .g8modalhead{padding:12px 18px!important}
+#g8dialog[data-prompt=teamAnalysis] .g8modalhead h2{font-size:24px!important}
+#g8dialog[data-prompt=teamAnalysis] .g8teamread{padding:14px!important}
+#g8dialog[data-prompt=teamAnalysis] .g8roleboardhead{display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:space-between!important;gap:16px!important;padding:0 0 14px!important;margin:0!important;text-align:left!important}
+#g8dialog[data-prompt=teamAnalysis] .g8roleboardhead>.g8eyebrow{margin:0!important;font-size:14px!important}
+#g8dialog[data-prompt=teamAnalysis] .g8teamrating{display:flex!important;flex-direction:row!important;align-items:center!important;gap:10px!important;width:auto!important;min-width:0!important;padding:8px 14px!important;margin:0!important}
+#g8dialog[data-prompt=teamAnalysis] .g8teamrating strong{font-size:38px!important;line-height:1.1!important}
+#g8dialog[data-prompt=teamAnalysis] .g8coverread{font-size:13px!important}
+#g8dialog[data-prompt=teamAnalysis] .g8analysisgrid{grid-template-columns:minmax(0,1fr)!important;gap:12px!important;align-items:start}
+#g8dialog[data-prompt=teamAnalysis] .g8analysissection{display:block!important}
+#g8dialog[data-prompt=teamAnalysis] .g8analysistiles{grid-template-columns:repeat(4,minmax(0,1fr))!important;grid-template-rows:none!important;grid-auto-rows:minmax(88px,auto);height:auto!important}
+@media(max-width:1000px){#g8dialog[data-prompt=teamAnalysis] .g8analysisgrid{grid-template-columns:minmax(0,1fr)!important}#g8dialog[data-prompt=teamAnalysis] .g8analysistiles{grid-template-columns:repeat(4,minmax(0,1fr))!important}}
+@media(max-width:600px){#g8dialog[data-prompt=teamAnalysis] .g8analysistiles{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+#g8dialog[data-prompt=teamAnalysis] .g8analysissection{padding:12px!important}
+#g8dialog[data-prompt=teamAnalysis] .g8analysissection h3{font-size:15px!important;justify-content:flex-start!important;font-style:normal!important}
+#g8dialog[data-prompt=teamAnalysis] .g8analysisrow{min-height:88px!important;padding:10px 8px!important}
+#g8dialog[data-prompt=teamAnalysis] .g8analysisrow>span{font-size:13px!important;line-height:1.35!important;overflow-wrap:normal!important;word-break:normal!important;hyphens:none!important}
+#g8dialog[data-prompt=teamAnalysis] .g8analysisrow>strong{font-size:28px!important}
+@media(max-width:600px){#g8dialog[data-prompt=teamAnalysis] .g8roleboardhead{flex-wrap:wrap!important;gap:8px!important}#g8dialog[data-prompt=teamAnalysis] .g8coverread{flex-basis:100%;text-align:left!important}}
 /* Tables and schedule: visible selection, complete columns, aligned club rows. */
 #g8app .gccuiTableView .g8tabs .g8button.selected{background:var(--gcc-accent)!important;color:var(--gcc-accent-ink,#171717)!important;border-color:var(--gcc-accent)!important}
 #g8app .gccuiTableView .g8finals .g8table{min-width:0!important;width:100%!important}
@@ -11466,10 +11463,9 @@ function validSave(save){
  X.teamRead=(squad=false)=>{
   const ps=squad?roster():G.state.xi.map(G.byId).filter(Boolean),fit=ps.filter(p=>injury(p)?.status!=='OUT'),profile=squad?X.squadProfile():X.profile();
   const cover=fit.length<11?(squad?'Projection incomplete':'XI incomplete'):(squad?'Projected XI ready':'XI selected');
-  const names={powerplayBat:'Powerplay',middleBat:'Middle overs',finishing:'Death',battingResources:'Depth',newBall:'New ball',middleBowl:'Middle overs',death:'Death',bowlingResources:'Depth',keeping:'Keeping',fielding:'Fielding',roleFit:'Role fit',chemistry:'Cohesion'};
   const row=(key,label)=>{const value=Math.round(profile[key]||0);return `<div class="g8analysisrow" data-matchup="${key}"><span>${esc(label)}</span><strong style="--rating-color:${X.ratingTone(value)}">${value}</strong></div>`;};
-  const section=(label,keys)=>`<section class="g8analysissection"><h3>${label}</h3><div class="g8analysistiles">${keys.map(k=>row(k,names[k])).join('')}</div></section>`;
-  return `<section class="g8teamread g8roleboard g8simpleanalysis"><div class="g8roleboardhead"><div class="g8teamrating" style="--rating-color:${fit.length?X.ratingTone(profile.overall):'#c4d7e5'}"><strong>${fit.length?Math.round(profile.overall):'—'}</strong><span>Overall</span></div><div class="g8analysislead"><span class="g8eyebrow">${squad?'Projected XI':'Your XI'}</span><b class="g8coverread">${cover}</b></div></div><div class="g8analysisgrid">${section('Batting',['powerplayBat','middleBat','finishing','battingResources'])}${section('Bowling',['newBall','middleBowl','death','bowlingResources'])}${section('Balance',['keeping','fielding','roleFit','chemistry'])}</div></section>`;
+  const section=(label,keys)=>`<section class="g8analysissection"><h3>${X.icon(label==='Batting'?'cricket':label==='Bowling'?'cricket-ball':'stumps')}${label}</h3><div class="g8analysistiles">${X.phases.filter(([key])=>keys.includes(key)).map(([k,l])=>row(k,l)).join('')}</div></section>`;
+  return `<section class="g8teamread g8roleboard g8simpleanalysis"><div class="g8roleboardhead"><span class="g8eyebrow">${squad?'PROJECTED XI · FROM YOUR SQUAD':'YOUR XI'}</span><div class="g8teamrating" style="--rating-color:${fit.length?X.ratingTone(profile.overall):'#c4d7e5'}"><strong>${fit.length?Math.round(profile.overall):'—'}</strong><span>Overall</span></div><b class="g8coverread">${cover}</b></div><div class="g8analysisgrid">${section('Batting',['powerplayBat','middleBat','finishing','battingResources'])}${section('Bowling',['newBall','middleBowl','death','bowlingResources'])}${section('Team balance',['keeping','fielding','roleFit','chemistry'])}</div></section>`;
  };
  X.draftRead=()=>{
   const ps=roster(),fit=ps.filter(p=>injury(p)?.status!=='OUT'),n=ps.length,slots=Math.max(0,15-n),profile=X.squadProfile();
@@ -11738,7 +11734,7 @@ function validSave(save){
  X.storyPanel=(selection=false)=>{const arc=X.storyPreview();if(!arc)return '';const es=journal().events.filter(e=>e.arcId===arc.id),total=arc.returns.reduce((n,b)=>n+b.runs,0),inc=G.byId(arc.incumbent.id),chall=G.byId(arc.challenger.id),back=s.xi.includes(inc.id),alt=s.xi.includes(chall.id),title=es.length?'The selection story continues.':'Back your regular—or open the door?',copy=es.length?`${es.at(-1).copy} There is another selection to make.`:`${inc.name} has made ${arc.returns.map(b=>b.runs).join(', ')} in his last three innings—${total} runs, dismissed each time. ${chall.name} is a fit ${X.battingJob(chall).toLowerCase()} option on the bench.`,read=back&&alt?'Both are in your current XI.':back?`${inc.name} is in your current XI.`:alt?`${chall.name} is in your current XI.`:'Neither is in your current XI.';return frame('DRESSING ROOM · SELECTION',title,copy,`<div class="g8storydecision"><span>${esc(read)}</span>${selection?'':btn('Review the two options','editXI',[],'g8ghost')}</div>`);};
  X.storyResult=r=>{if(!s.results.includes(r))return '';const e=journal().events.find(e=>e.year===s.year&&e.round===r?.round&&e.club===own());if(!e)return '';const count=journal().events.filter(x=>x.arcId===e.arcId&&x.round<=e.round).length;return frame('YOUR SELECTION · THE NEXT CHAPTER',e.title,e.copy,count===3?'<p class="g8storyfoot">Three fixtures have followed that selection question. Their performances are in the scorebook; the next decision is yours.</p>':'','g8storyresult');};
  X.thisSelection=()=>{try{const r=X.ui?.result;if(!r||!s.results.includes(r))return '';const e=journal().events.find(e=>e.year===s.year&&e.round===r.round&&e.club===own());if(!e?.arc)return '';if(e.selection==='backed'&&e.arc.incumbent?.name)return 'You kept '+e.arc.incumbent.name+'.';if(e.selection==='challenger'&&e.arc.challenger?.name)return e.arc.challenger.name+' has the chance.';if(e.arc.incumbent?.name&&e.arc.challenger?.name)return e.arc.incumbent.name+' or '+e.arc.challenger.name+'.';return '';}catch(err){return ''}};
- X.storyLive=()=>{const line=X.thisSelection();return line?`<p class="gccuiOpenQuestion" role="status">${esc(line)}</p>`:'';};
+ X.storyLive=()=>{const line=X.thisSelection();return line?'<p class="gccuiOpenQuestion" role="status">'+esc(line)+'</p>':'';};
  X.storyConditions=c=>{const managing=X.roster().filter(p=>s.xi.includes(p.id)&&X.injury(p)?.status==='MANAGING');return `${c?.weather?.label||''}${c?.trait?' · '+c.trait:''}${managing.length?` · Managing ${managing.map(p=>p.name).join(', ')}`:''}`;};
 })();
 (()=>{const X=window.GCC8;if(!X)return;const{G,esc,btn,badge}=X;X.storyFixture=(fx,c,problem)=>{const own=G.state.userClub.abbr,side=club=>`<div class="g8hubclub" style="background:${esc(club.c)};color:${esc(X.clubInk(club))}">${badge(club)}<strong>${esc(club.name)}</strong><small>${club.abbr===fx.home.abbr?'HOME':'AWAY'}${club.abbr===own?' · YOUR CLUB':''}</small></div>`;return `<section class="g8matchhub" aria-label="Next cricket match"><header><div class="g8hubground" aria-hidden="true">${X.stadium(fx.home)}</div><div><span class="g8eyebrow">${G.state.year} · ROUND ${G.state.round+1}</span><h1>${esc(fx.home.ground)}</h1><p>${fx.home.abbr===own?'Your home crowd.':'On the road.'}</p></div></header><div class="g8hubteams">${side(fx.home)}<span class="g8hubversus">v</span>${side(fx.away)}</div><p class="g8hubconditions">${X.icon('cricket-ball')}${esc(X.storyConditions(c)||fx.home.trait)}</p><footer><p>${problem?esc(problem):`XI named · ${Math.round(X.profile().overall)} overall`}</p><div class="g8actions">${!problem?btn('Review XI','editXI',[],'g8ghost'):''}${btn(problem?'Choose XI':'Watch match',problem?'editXI':'watchNext',[],'g8primary')}</div></footer></section>${X.storyPanel()}`;};})();
@@ -11962,30 +11958,7 @@ function validSave(save){
 /* Presentation only. Existing commands own every state change. */
 (()=>{
  const X=window.GCC8,{G,ui,esc,btn,badge,R}=X,s=G.state;
- X.nextCommitment=()=>{
-  try{
-   const fx=G.nextUserFixture();
-   if(!fx||!s.userClub)return '';
-   const problem=X.read?.xiProblem?.()||'';
-   if(problem){
-    const out=/^(.*) is out\./.exec(problem);
-    if(out)return out[1]+' is out.';
-    if(/wicketkeeper/i.test(problem))return 'No keeper is named.';
-    if(/duplicate/i.test(problem))return 'The XI lists the same player twice.';
-    if(/no longer on the list/i.test(problem))return 'A selected player has left the squad.';
-    return 'The XI is short.';
-   }
-   const person=X.selectionLine?.()||'';
-   if(person)return person;
-   const opp=fx.home.abbr===s.userClub.abbr?fx.away:fx.home;
-   const ground=G.matchGroundForFixture(fx);
-   const place=ground?.ground||fx.home.ground||'the next ground';
-   const spin=Number(ground?.conditions?.spin)||0,pace=Number(ground?.conditions?.pace)||0;
-   if(spin>=3&&spin>pace)return `The pitch at ${place} should help the spinners.`;
-   if(pace>=3&&pace>spin)return `The pitch at ${place} should help the seamers.`;
-   return `${opp.name} are next, at ${place}.`;
-  }catch(e){return ''}
- };
+ X.nextCommitment=()=>{try{const fx=G.nextUserFixture();if(!fx||!s.userClub)return '';const problem=X.read?.xiProblem?.()||'';if(problem){const out=/^(.*) is out\./.exec(problem);if(out)return out[1]+' is out.';if(/wicketkeeper/i.test(problem))return 'No keeper is named.';if(/duplicate/i.test(problem))return 'The XI lists the same player twice.';if(/no longer on the list/i.test(problem))return 'A selected player has left the squad.';return 'The XI is short.';}const person=X.selectionLine?.()||'';if(person)return person;const opp=fx.home.abbr===s.userClub.abbr?fx.away:fx.home;const ground=G.matchGroundForFixture(fx);const place=ground?.ground||fx.home.ground||'the next ground';const spin=Number(ground?.conditions?.spin)||0,pace=Number(ground?.conditions?.pace)||0;if(spin>=3&&spin>pace)return 'The pitch at '+place+' should help the spinners.';if(pace>=3&&pace>spin)return 'The pitch at '+place+' should help the seamers.';return opp.name+' are next, at '+place+'.';}catch(e){return ''}};
  const assetNames={gloves:'keeper',keeper:'keeper','all-rounder':'allrounder','building-stadium':'stadium'};
  X.approvedIcon=name=>assetNames[name]?`<svg class="g8icon gccuiIcon gccuiApprovedIcon" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true" focusable="false"><use href="#gcc-approved-${assetNames[name]}"></use></svg>`:null;
  X.designIcon=name=>X.icon(name).replace('class="g8icon"','class="g8icon gccuiIcon"');
@@ -12392,6 +12365,7 @@ function validSave(save){
  function pitchLine(home,round){const ground=G.matchGroundForFixture({home,away:home,round}),place=ground?.ground||home?.ground||'This ground',spin=Number(ground?.conditions?.spin)||0,pace=Number(ground?.conditions?.pace)||0;if(spin>=3&&spin>pace)return 'The pitch at '+place+' should help the spinners.';if(pace>=3&&pace>spin)return 'The pitch at '+place+' should help the seamers.';return place+'.';}
  function askToss(home,round){closeDialog();modal('You won the toss',`<p class="gccuiOpenQuestion">${esc(pitchLine(home,round))}</p><div class="g8actions">${btn('Bat','tossBat',[],'g8primary')}${btn('Field','tossField',[],'g8ghost')}</div>`);}
  function playRound(round,captaincy=null,tossDecision=null){assert(!read.xiProblem(),read.xiProblem());const fx=G.nextUserFixture();assert(fx&&round===s.round+1,'The regular season is finished.');const id='league-'+round;let pending=s.pendingToss;if(!pending||pending.id!==id){pending={id,round,kind:'league',winner:G.drawToss(fx.home,fx.away),captaincy};s.pendingToss=pending;save();}else if(captaincy)pending.captaincy=captaincy;if(pending.winner===s.userClub.abbr&&tossDecision!=='bat'&&tossDecision!=='bowl'){askToss(fx.home,round);return;}const decision=pending.winner===s.userClub.abbr?tossDecision:opponentInnings(fx.home,round);const plan=Object.fromEntries(['powerplay','middle','death'].map(k=>[k,['attack','control','matchup'].includes(pending.captaincy?.[k])?pending.captaincy[k]:'matchup']));const managementContext=X.managementBefore(),storyContext=X.storyBefore?.()||null;closeDialog();G.playNextRound(false,true,plan,{winner:pending.winner,decision});assert(s.round===round,'The match could not be played.');s.pendingToss=null;ui.result=s.results.at(-1);X.managementAfter(managementContext,ui.result);try{X.storyAfter?.(storyContext,ui.result);}catch(err){}beginMatch(ui.result);}
+
  bind('watchNext',['season'],()=>{assert(!ui.modal,'Close the current decision first.');assert(G.nextUserFixture(),'The regular season is finished.');playRound(s.round+1);});
  bind('tossBat',['season','finals'],()=>finishToss('bat'));
  bind('tossField',['season','finals'],()=>finishToss('bowl'));
@@ -12404,6 +12378,7 @@ function validSave(save){
  bind('postSeason',['season'],()=>{assert(s.round===14,'Finish the regular season first.');if(s.regularSeasonPosition<=4&&read.xiProblem()){ui.teamReturn='season';G.go('team');setView('team');announce('Review availability and name your finals XI.');return;}G.proceedPostSeason();setView(X.screen());if(ui.view==='review')read.archive();});
  function playFinal(){assert(['ready','gf-ready'].includes(s.finals?.stage),'The next finals match is not ready.');const f=s.finals,pairs=f.stage==='ready'?[[f.top[0],f.top[3]],[f.top[1],f.top[2]]]:[[f.gfPair.home,f.gfPair.away]],pair=pairs.find(p=>p.some(c=>c.abbr===s.userClub.abbr));const id=f.stage==='ready'?'semi':'final';let pending=s.pendingToss;if(pair&&(!pending||pending.id!==id)){pending={id,kind:'final',winner:G.drawToss(pair[0],pair[1])};s.pendingToss=pending;save();}if(pair&&pending.winner===s.userClub.abbr&&!ui.tossDecision){askToss(pair[0],f.stage==='ready'?15:16);return;}const decision=pair&&pending.winner===s.userClub.abbr?ui.tossDecision:pair?opponentInnings(pair[0],f.stage==='ready'?15:16):null;ui.tossDecision=null;const stageBefore=f.stage,managementContext=X.managementBefore();G.simulateFinals(decision?{winner:pending.winner,decision}:null);assert(s.finals.stage!==stageBefore,'Review your XI before the finals match.');s.pendingToss=null;const r=s.finals.stage==='semis'?s.finals.semis.find(r=>[r.home.abbr,r.away.abbr].includes(own()))||s.finals.semis[0]:s.finals.gf;X.managementAfter(managementContext,r);beginMatch(r,'finals');}
  bind('simulateFinals',['finals'],()=>playFinal());
+
  bind('advanceFinals',['finals'],()=>{assert(s.finals?.stage==='semis','Play the semi-finals first.');G.advanceFinals();});
  bind('finalsReturn',['result'],()=>setView('finals'));
  bind('review',['finals'],()=>{assert(s.finals?.stage==='done','Finish the Grand Final first.');G.openSeasonReview();read.archive();setView('review');});
@@ -14006,6 +13981,7 @@ p,li{text-wrap:pretty}
  #g8app#g8app#g8app .gccuiPlayers .gccuiPlayer>footer{display:flex!important}
  #g8app#g8app#g8app .gccuiPlayers .gccuiPlayer>footer button{width:auto!important}
 }
+
 </style>
 <script id="gcc-v116-perfection-behaviour">
 (()=>{
@@ -14022,13 +13998,23 @@ p,li{text-wrap:pretty}
    }
  }
  function draftNeeds(){}
+function unusedDraftNeeds(root){
+   const companion=root.querySelector('.gccuiCompanion');
+   if(!companion||companion.querySelector('.gccuiNeedsStrip')) return;
+   const meters=[...companion.querySelectorAll('[role="meter"]')];
+   const find=(word)=>{const m=meters.find(x=>new RegExp(word,'i').test(x.getAttribute('aria-label')||''));return Number(m?.getAttribute('aria-valuenow')||0)};
+   const keeper=find('Keeper'),openers=find('Opener'),pace=find('Pace'),spin=find('Spin');
+   const items=[['WK',keeper,keeper>0],['OPEN',openers,openers>0],['PACE',pace,pace>0],['SPIN',spin,spin>0],['MIX',pace+spin,pace+spin>=3]];
+   const strip=document.createElement('div');strip.className='gccuiNeedsStrip';strip.setAttribute('aria-label','Squad needs');
+   for(const [label,count,ready] of items){const el=document.createElement('span');el.className=ready?'is-ready':'is-open';el.textContent=`${label} ${count}`;el.title=ready?`${label} covered`:`${label} still needed`;strip.appendChild(el)}
+   const head=companion.querySelector('.gccuiClubHead');if(head) head.after(strip);else companion.prepend(strip);
+ }
  function decorate(){const root=stage();if(!root)return;quietRecruitWire(root);draftNeeds(root)}
  function boot(){decorate();const root=stage();if(!root||root.__gccV116Observer)return;let queued=false;const o=new MutationObserver(()=>{if(queued)return;queued=true;queueMicrotask(()=>{queued=false;decorate()})});o.observe(root,{childList:true,subtree:true});root.__gccV116Observer=o}
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
 })();
 </script>
 <style id="gcc-standard">
-/* The standard: one sentence of cricket, rows for people, numbers in columns, no empty card height. Hub and XI picker stay as they are. */
 #g8app .g8board .g8player,#g8app .g8contract .g8player,#g8app .g8recruitcard,#g8app .g8draftplayer{min-height:0!important;height:auto!important}
 #g8app .g8playerhead{min-height:0!important}
 #g8app :is(.gccuiRating,.g8rowrating,.g8table td,.g8table th,.g8analysisrow>strong,.g8teamrating strong),
