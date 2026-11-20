@@ -1,0 +1,67 @@
+name: Verify and build v117 club cards
+on:
+  push:
+    branches: [work/v117-club-cards]
+    paths: ['.github/workflows/v117-club-cards-review.yml']
+permissions:
+  contents: write
+jobs:
+  review:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: |
+          mkdir -p qa/results
+          node qa/scratch_build_final.mjs
+          cp qa/candidates/v116-authenticity-candidate.html PLAY_v117.html
+          echo '0fab41962a487ac91862be64969cf67aa04a6924efdc4ef73c79b0c385c86bc0  PLAY_v117.html' | sha256sum -c
+      - name: Publish verified review build
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add PLAY_v117.html qa/candidates/v116-authenticity-candidate.html qa/candidates/CANDIDATE_SHA256.txt
+          git commit -m 'Rebuild playable v117 club-card candidate'
+          git push origin HEAD:refs/heads/work/v117-club-cards
+      - name: Install Chromium
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Verify reveal and club selection at four widths
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from playwright.sync_api import sync_playwright
+
+          with sync_playwright() as p:
+              browser = p.chromium.launch()
+              page = browser.new_page(reduced_motion='reduce')
+              page.route('http**/*', lambda route: route.abort())
+              page.goto(Path('PLAY_v117.html').resolve().as_uri())
+              page.wait_for_function('!!window.GCC8?.dispatch')
+              page.evaluate("GCC8.dispatch('play', [])")
+              page.evaluate("GCC8.dispatch('world', [])")
+              page.locator('.g8invitationgrid').wait_for()
+
+              def check_widths(grid, usable=False):
+                  for width in (320, 390, 768, 1440):
+                      page.set_viewport_size(dict(width=width, height=900))
+                      assert page.evaluate('document.documentElement.scrollWidth <= innerWidth + 2'), width
+                      assert page.locator(grid + ' .g8franchise').count() == 8, width
+                      assert page.locator(grid).evaluate(
+                          "el => getComputedStyle(el).gridAutoRows === 'auto'"
+                      ), width
+                      if usable:
+                          buttons = page.locator(grid + ' .g8clubcardaction .g8button')
+                          assert buttons.count() > 0
+                          assert all(button.bounding_box()['height'] >= 44 for button in buttons.all()), width
+                      print(grid, width, 'passed', flush=True)
+
+              check_widths('.g8invitationgrid')
+              page.evaluate("GCC8.dispatch('revealAll', [])")
+              page.locator('.g8clubchooser').wait_for(timeout=30000)
+              check_widths('.g8clubchooser', usable=True)
+          PY
