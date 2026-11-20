@@ -14079,6 +14079,11 @@ function unusedDraftNeeds(root){
 .gccuiLiveOrder{margin-top:12px!important}
 .gccuiLiveBalls{margin-top:8px!important}
 
+/* Size each row to its own cards. The sealed reserve uses the same card
+   geometry, so revealing a club does not resize the row. */
+#g8stage#g8stage#g8stage :is(.g8invitationgrid,.g8clubchooser){grid-auto-rows:auto!important}
+#g8stage#g8stage#g8stage .g8invitationgrid .g8revealreserve{height:100%}
+#g8stage#g8stage#g8stage .g8invitationgrid .g8revealreserve>.g8franchise{height:100%!important}
 #g8stage#g8stage#g8stage :is(.g8invitationgrid,.g8clubchooser) :is(.g8club,.g8sealed){min-height:0!important;height:auto!important}
 #g8stage#g8stage#g8stage :is(.g8invitationgrid,.g8clubchooser) .g8franchise{display:flex!important;flex-direction:column!important;align-items:stretch!important;min-height:0!important;padding:0!important;gap:0!important;border:1px solid color-mix(in srgb,var(--accent) 32%,var(--gcc-line))!important;border-radius:14px!important;overflow:hidden!important;background:linear-gradient(180deg,var(--gcc-raised),var(--gcc-panel))!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 18px 36px -22px rgba(0,0,0,.9)!important;transform:none!important;transition:border-color .2s var(--vx-ease),box-shadow .2s var(--vx-ease)!important}
 #g8stage#g8stage#g8stage .g8clubchooser .g8franchise:hover{border-color:color-mix(in srgb,var(--accent) 65%,var(--gcc-line))!important}
@@ -14094,10 +14099,10 @@ function unusedDraftNeeds(root){
 #g8stage#g8stage#g8stage :is(.g8invitationgrid,.g8clubchooser) .g8clubground .g8icon{width:14px!important;height:14px!important;flex:0 0 14px!important;color:color-mix(in srgb,var(--accent) 55%,var(--gcc-text))!important}
 #g8stage#g8stage#g8stage :is(.g8invitationgrid,.g8clubchooser) .g8clubground strong{font-size:13px!important;font-weight:600!important;line-height:1.25!important;text-align:center!important;color:var(--gcc-text)!important}
 #g8stage#g8stage#g8stage :is(.g8invitationgrid,.g8clubchooser) .g8clubcardaction{display:flex!important;justify-content:center!important;width:100%!important;margin:auto 0 0!important;padding:12px 0 0!important}
-#g8stage#g8stage#g8stage :is(.g8invitationgrid,.g8clubchooser) :is(.g8clubcardaction .g8button,.g8clubcommit){display:flex!important;align-items:center!important;justify-content:center!important;gap:8px!important;width:100%!important;min-height:42px!important;margin:0!important;padding:0 16px!important;border-radius:10px!important;font-family:var(--vx-display)!important;font-size:15px!important;font-weight:700!important;letter-spacing:.1em!important;text-transform:uppercase!important;color:var(--gcc-text)!important}
+#g8stage#g8stage#g8stage :is(.g8invitationgrid,.g8clubchooser) :is(.g8clubcardaction .g8button,.g8clubcommit){display:flex!important;align-items:center!important;justify-content:center!important;gap:8px!important;width:100%!important;min-height:44px!important;margin:0!important;padding:0 12px!important;border-radius:10px!important;font-family:var(--vx-display)!important;font-size:15px!important;font-weight:700!important;letter-spacing:.1em!important;text-transform:uppercase!important;color:var(--gcc-text)!important}
 #g8stage#g8stage#g8stage :is(.g8invitationgrid,.g8clubchooser) .g8clubcardaction .g8button{border:1px solid color-mix(in srgb,var(--accent) 45%,var(--gcc-line))!important;background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.02))!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.08)!important;transform:none!important;transition:background .18s var(--vx-ease),border-color .18s var(--vx-ease)!important}
 #g8stage#g8stage#g8stage :is(.g8invitationgrid,.g8clubchooser) .g8clubcardaction .g8button:hover{border-color:color-mix(in srgb,var(--accent) 80%,transparent)!important;background:color-mix(in srgb,var(--accent) 24%,transparent)!important}
-#g8stage#g8stage#g8stage :is(.g8invitationgrid,.g8clubchooser) .g8clubcardaction .g8button:focus-visible{outline:2px solid var(--vx-signal)!important;outline-offset:2px!important}
+#g8stage#g8stage#g8stage :is(.g8invitationgrid,.g8clubchooser) .g8clubcardaction .g8button:focus-visible{outline:2px solid var(--vx-signal)!important;outline-offset:-4px!important}
 #g8stage#g8stage#g8stage :is(.g8invitationgrid,.g8clubchooser) .g8clubcommit{border:1px solid rgba(255,255,255,.08)!important;background:rgba(255,255,255,.03)!important;font-size:14px!important;letter-spacing:.14em!important}
 #g8stage#g8stage#g8stage :is(.g8invitationgrid,.g8clubchooser) :is(.g8clubcardaction .g8button,.g8clubcommit) .g8icon{width:16px!important;height:16px!important;flex:0 0 16px!important}
 #g8stage#g8stage#g8stage :is(.g8invitationgrid,.g8clubchooser) .g8clubcommit .g8icon{color:var(--gcc-accent)!important}
@@ -14106,7 +14111,8 @@ function unusedDraftNeeds(root){
 #g8stage#g8stage#g8stage :is(.g8invitationgrid,.g8clubchooser) .g8clubcardaction .g8button{min-width:0!important;height:auto!important}
 #g8stage#g8stage#g8stage :is(.g8invitationgrid,.g8clubchooser) .g8clubcardaction .g8button>span{display:inline!important}
 #g8stage#g8stage#g8stage :is(.g8invitationgrid,.g8clubchooser) .g8clubcardaction .g8button>.g8icon{display:block!important}
-#g8stage#g8stage#g8stage :is(.g8invitationgrid,.g8clubchooser) .g8clubticket{display:flex!important}
+#g8stage#g8stage#g8stage :is(.g8invitationgrid,.g8clubchooser) .g8clubticket{display:flex!important;min-width:0!important}
+#g8stage#g8stage#g8stage :is(.g8invitationgrid,.g8clubchooser) .g8clubentry{white-space:nowrap!important;font-size:clamp(.65rem,1.2vw,.8rem)!important}
 #g8stage#g8stage#g8stage :is(.g8invitationgrid,.g8clubchooser) .g8clublocation,#g8stage#g8stage#g8stage :is(.g8invitationgrid,.g8clubchooser) .g8clubwatermark{display:block!important}
 #g8stage#g8stage#g8stage :is(.g8invitationgrid,.g8clubchooser) .g8clubcardaction .g8button::after{content:none!important;display:none!important}
 @media (max-width:760px){
