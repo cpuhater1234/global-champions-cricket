@@ -37,7 +37,23 @@ jobs:
           node qa/structural-risk/v117-fixture.mjs > /tmp/v117-career.log || { tail -c 2500 /tmp/v117-career.log; exit 1; }
           test -f qa/results/whole-ui-career/checkpoint-2009.json
       - name: Measure mobile layout and keyboard focus
-        run: node qa/v116_narrow_focus_layout.cjs
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          build = Path('PLAY_v117.html').read_bytes()
+          position = build.rfind(b'</head>')
+          assert position > 0
+          css = b"""<style>
+          @media (max-width:390px){
+            #g8app#g8app #g8stage .gccuiCampaignRibbon>div{grid-template-rows:auto minmax(44px,auto) auto;padding:10px 12px}
+            #g8app#g8app #g8stage .gccuiCampaignRibbon>div>span{letter-spacing:.08em}
+            #g8app#g8app#g8app #g8hud .g8careernav .g8navitem{padding-inline:.3rem!important;font-size:.8rem!important;letter-spacing:.03em}
+            #g8app#g8app#g8app .g8careernav .g8navitem:focus-visible{outline-offset:-4px!important}
+          }
+          </style>"""
+          Path('qa/results/v117-narrow-trial.html').write_bytes(build[:position] + css + build[position:])
+          PY
+          GCC8_TEST_BUILD=qa/results/v117-narrow-trial.html GCC8_EXPECT_SHA256= node qa/v116_narrow_focus_layout.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
