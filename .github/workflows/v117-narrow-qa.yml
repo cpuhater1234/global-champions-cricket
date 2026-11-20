@@ -32,7 +32,7 @@ jobs:
               setup + """fs.writeFileSync(reportDir+'/checkpoint-2009.json',context.GCC8_ENGINE_READ.backupRaw());\n"""
           )
           audit = Path('qa/v116_narrow_focus_layout.cjs')
-          audit.write_text(audit.read_text().replace("await prepareXI();await call('lodge');", "await call('continue');"))
+          audit.write_text(audit.read_text().replace("await prepareXI();await call('lodge');", "await call('continue');").replace('ow+Math.max(0,oo)', 'Math.max(0,ow+oo)'))
           PY
           node qa/structural-risk/v117-fixture.mjs > /tmp/v117-career.log || { tail -c 2500 /tmp/v117-career.log; exit 1; }
           test -f qa/results/whole-ui-career/checkpoint-2009.json
