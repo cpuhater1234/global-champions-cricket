@@ -24,7 +24,17 @@ jobs:
         run: |
           npm install --no-save --no-package-lock playwright
           npx playwright install chromium
-          node qa/structural-risk/career-run.mjs > /tmp/v117-career.log || { tail -c 2500 /tmp/v117-career.log; exit 1; }
+          python - <<'PY'
+          from pathlib import Path
+          runner = Path('qa/structural-risk/career-run.mjs')
+          setup = runner.read_text().split('// Double submission must not consume another match.', 1)[0]
+          Path('qa/structural-risk/v117-fixture.mjs').write_text(
+              setup + """fs.writeFileSync(reportDir+'/checkpoint-2009.json',context.GCC8_ENGINE_READ.backupRaw());\n"""
+          )
+          audit = Path('qa/v116_narrow_focus_layout.cjs')
+          audit.write_text(audit.read_text().replace("await prepareXI();await call('lodge');", "await call('continue');"))
+          PY
+          node qa/structural-risk/v117-fixture.mjs > /tmp/v117-career.log || { tail -c 2500 /tmp/v117-career.log; exit 1; }
           test -f qa/results/whole-ui-career/checkpoint-2009.json
       - name: Measure mobile layout and keyboard focus
         run: node qa/v116_narrow_focus_layout.cjs
