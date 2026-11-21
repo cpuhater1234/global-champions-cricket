@@ -17,14 +17,15 @@ To rebuild locally, run `mkdir -p qa/results && node qa/scratch_build_final.mjs`
 
 Seed 101 with Mumbai Indians completed 2008–2026 on the published narrow-screen build. The toss-aware runner passed 16,187 checks across 19 seasons and 266 user-club regular-season matches, with zero reported runtime errors. It checked annual draft completion, recognised CPU wicketkeepers, XI changes, scorecards, finals, career completion and recovery through the validated save serializer. A separate check reopened all 19 Season Books from the final checkpoint and verified the League Record Book, Club Legends, League Honours and the legacy view.
 
-These checks used the game engine and UI dispatch with a simulated DOM. Additional native reload checkpoints, the visual archive pass, screen-reader announcements, 200% zoom and the five-seed gameplay audit remain release checks.
+These checks used the game engine and UI dispatch with a simulated DOM. The visual archive pass, screen-reader announcements, 200% zoom and the five-seed gameplay audit remain release checks.
 
 ## Native Chromium save acceptance
 
-On the published v117 checksum, two post-match reload scenarios restored the Round 1 save, XI, score and captaincy plan. The two-tab check wrote Round 2 in the second tab, rejected the stale Round 1 write, preserved IndexedDB and restored Round 2 through Continue Career. Separate native reload checkpoints during the draft, before the first match and at season rollover remain untested.
+On the published v117 checksum, two post-match reload scenarios restored the Round 1 save, XI, score and captaincy plan. The two-tab check wrote Round 2 in the second tab, rejected the stale Round 1 write, preserved IndexedDB and restored Round 2 through Continue Career. Three additional Chromium scenarios passed at an in-progress 2008 draft, after lodging the 2008 XI before Round 1, and after advancing from the 2008 review into the 2009 offseason. Each started from a disposable validated fixture, then wrote and checked a native checkpoint and compared career state after reload and Continue.
 
 - [Single-tab verification](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44865103171)
 - [Two-tab verification](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44865421910)
+- [Draft, XI and rollover verification](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44865847975)
 
 ## Definition of done
 
@@ -34,7 +35,7 @@ The recovered summary of Grok's target is a polished, continuous career from the
 | --- | --- | --- |
 | 1 | Publish the narrow-screen candidate | Complete. Builder and both playable HTML files match the tested checksum. |
 | 2 | Update the career test for v117 matchday | Complete for the offline runner. It resolves the toss before auditing a match and exercises Continue Career. |
-| 3 | Play through 2008–2026 on the exact candidate | Seed 101 completed all 19 seasons with the archive and legacy views verified through UI dispatch. Verify remaining injury and trade scenarios and the remaining native reload checkpoints separately. |
+| 3 | Play through 2008–2026 on the exact candidate | Seed 101 completed all 19 seasons with the archive and legacy views verified through UI dispatch. Verify remaining injury and trade scenarios separately. |
 | 4 | Finish visual and accessibility review | Cover keyboard navigation, 200% zoom and live announcements. Inspect the menus, draft, XI, Fixtures and archive at phone and desktop widths. |
 | 5 | Re-run the five-seed gameplay audit and pin the release | Confirm scorebook and save integrity, record per-seed results and resolve or explicitly accept the 15.7% all-out outlier against the 15% ceiling. Pin the accepted commit and build checksum. |
 
