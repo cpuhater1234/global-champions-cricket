@@ -97,6 +97,12 @@ From over 16 with eight or nine wickets down, the engine applies a 0.90 multipli
 
 Candidate SHA-256: `e21c54c8596ab12e7f5a42daee96e88aabea779ece49f2871cebada722c87d2a`. The full 19-season career and native Chromium post-match save and Continue Career checks passed on this exact build. [Acceptance run](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44888428848)
 
+## v117 browser accessibility review
+
+On the published calibration checksum, Chromium completed 998 automated observations with no reported findings or runtime errors. Native 200% browser zoom was verified at 1440 px and 640 px physical widths (720 px and 320 px CSS viewports), covering Home, Matchday, XI and its player dialog. Keyboard coverage included navigation and playback controls. The live score text matched the displayed score and appeared in the accessibility tree as a polite, atomic status.
+
+The live status was replaced seven times across seven observed updates, which can affect announcements. Actual spoken screen-reader output remains unverified. The 2008 fixture did not cover the trade dialog, and the visual archive review is still open. [Audit and evidence](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44889781077)
+
 ## Persistent live score status
 
 Chromium observed one mounted polite, atomic status element across seven score updates. The verified build passed 998 automated observations including 200% zoom. Actual spoken output still needs testing. SHA-256: `a14e1f0c41bf383827b8f8e4e5c70b1c8ae1707c7744cc7935773eea10cecb85`. [Chromium evidence](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44910803638)
@@ -110,7 +116,7 @@ The recovered summary of Grok's target is a polished, continuous career from the
 | 1 | Publish the narrow-screen candidate | Complete. Builder and both playable HTML files match the tested checksum. |
 | 2 | Update the career test for v117 matchday | Complete for the offline runner. It resolves the toss before auditing a match and exercises Continue Career. |
 | 3 | Play through 2008–2026 on the exact candidate | Seed 101 completed all 19 seasons with the archive and legacy views verified through UI dispatch. Targeted cover and traded-pick checks passed. The blocked-trade Confirm regression is fixed and verified. |
-| 4 | Finish visual and accessibility review | Cover keyboard navigation, 200% zoom and live announcements. Inspect the menus, draft, XI, Fixtures and archive at phone and desktop widths. |
+| 4 | Finish visual and accessibility review | Chromium keyboard and 200% zoom checks passed on covered screens. Live status persistence passed in Chromium. Spoken screen-reader output and visual review of the draft and archive remain open. |
 | 5 | Re-run the five-seed gameplay audit and pin the release | Calibration and acceptance passed for the per-setup average, with the checksum recorded above. Individual seed ceilings remain unproven. |
 
 ## 18 November calibration and acceptance record
