@@ -91,6 +91,12 @@ Crossed five league setups with five independently chosen initial match RNG stat
 
 Across 15,000 matches there were 4,459 all-outs in 30,000 innings (14.86%), and chases won 52.31%. The same 8301 XIs ranged from 12.83% to 15.75%, showing that match randomness alone can cross the ceiling. Across common initial RNG states, league setup averages ranged from 14.18% to 15.55%. This captures the complete setup, including the opposition mix, and does not isolate individual roster traits. The evidence supports both match-level variation and a league-setup effect. An aggregate gate passes, while a strict per-setup gate remains open. Any calibration trial should use a predeclared gate and verify chase rates, wickets per innings and score distributions against the current build.
 
+## Late-innings calibration
+
+From over 16 with eight or nine wickets down, the engine applies a 0.90 multiplier before clamping wicket probability. The original sample of 15,000 matches per build moved from 14.86% to 14.16% all-outs and from 52.31% to 52.16% chase wins. The holdout sample of 9,000 matches per build moved from 14.38% to 14.05% all-outs and from 51.59% to 51.40% chase wins. All ten setup averages were below 15%. Individual seeds can still exceed 15%. Average first-innings scores moved by less than half a run in each sample.
+
+Candidate SHA-256: `e21c54c8596ab12e7f5a42daee96e88aabea779ece49f2871cebada722c87d2a`. The full 19-season career and native Chromium post-match save and Continue Career checks passed on this exact build. [Acceptance run](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44888428848)
+
 ## Definition of done
 
 The recovered summary of Grok's target is a polished, continuous career from the 2008 club reveal through the 2026 season. Drafting, manual XI selection, captaincy plans and their matchday consequences need to be clear and meaningful. Career history should pay off through League Honours, the GCC Record Book, Your Club Legends, all 19 season entries, an openable Season Book and an end-of-career legacy summary. Verify those views against existing career history.
@@ -101,7 +107,7 @@ The recovered summary of Grok's target is a polished, continuous career from the
 | 2 | Update the career test for v117 matchday | Complete for the offline runner. It resolves the toss before auditing a match and exercises Continue Career. |
 | 3 | Play through 2008–2026 on the exact candidate | Seed 101 completed all 19 seasons with the archive and legacy views verified through UI dispatch. Targeted cover and traded-pick checks passed. The blocked-trade Confirm regression is fixed and verified. |
 | 4 | Finish visual and accessibility review | Cover keyboard navigation, 200% zoom and live announcements. Inspect the menus, draft, XI, Fixtures and archive at phone and desktop widths. |
-| 5 | Re-run the five-seed gameplay audit and pin the release | Confirm scorebook and save integrity, record per-seed results and resolve or explicitly accept the corrected extended audit’s per-seed all-out overages against the 15% ceiling. Pin the accepted commit and build checksum. |
+| 5 | Re-run the five-seed gameplay audit and pin the release | Calibration and acceptance passed for the per-setup average, with the checksum recorded above. Individual seed ceilings remain unproven. |
 
 ## 18 November calibration and acceptance record
 

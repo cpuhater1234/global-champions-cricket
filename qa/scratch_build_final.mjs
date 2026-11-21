@@ -398,6 +398,11 @@ for (const [before, after] of tradeReviewChanges) {
   content = content.replace(before, after);
 }
 
+// Give the tail a small survival adjustment from over 16 onward.
+const lateWicketHazard = '*(1+Math.max(0,pressure)*0.00),.014,.15)';
+if (content.split(lateWicketHazard).length !== 2) throw new Error('Late wicket hazard anchor changed');
+content = content.replace(lateWicketHazard, '*(wickets>=8&&over>=16?0.90:1)' + lateWicketHazard);
+
 const narrowCareerStyles = "<style>\n@media (max-width:390px){\n  #g8app#g8app #g8stage .gccuiCampaignRibbon>div{grid-template-rows:auto minmax(44px,auto) auto;padding:10px 12px}\n  #g8app#g8app #g8stage .gccuiCampaignRibbon>div>span{letter-spacing:.08em}\n  #g8app#g8app#g8app #g8hud .g8careernav .g8navitem{padding-inline:.3rem!important;font-size:.8rem!important;letter-spacing:.03em}\n  #g8app#g8app#g8app .g8careernav .g8navitem:focus-visible{outline-offset:-4px!important}\n}\n</style>";
 content = content.replace('</head>', narrowCareerStyles + '</head>');
 
