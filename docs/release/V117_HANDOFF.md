@@ -1,4 +1,31 @@
-# GCC v117 — gameplay-calibrated release candidate handoff
+# GCC v117 release handoff
+
+## Current builds
+
+| Build | Location | Evidence |
+| --- | --- | --- |
+| Stable release | `v116` at `2648c00` | Frozen release |
+| Playable v117 baseline | `v117` at `774862b`, `PLAY_v117.html` | Club reveal and selection tested at 320, 390, 768 and 1440 px |
+| Narrow-screen candidate | `PLAY_v117.html` and `qa/candidates/v116-authenticity-candidate.html` | SHA-256 `9890a9108aa260b5a263fa407ac3bb371d23de59f05064f78e55036847003cd9`. Builder output matches the CSS trial that passed 126 Chromium checks. Both checked-in playable files and the recorded checksum match. |
+
+To rebuild locally, run `mkdir -p qa/results && node qa/scratch_build_final.mjs`. When promoting the candidate, commit the regenerated QA HTML and checksum together with the identical `PLAY_v117.html` and verify their hashes.
+
+- [Club-card verification](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44663751897)
+- [Narrow-screen verification](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44692366092)
+
+## Definition of done
+
+The recovered summary of Grok's target is a polished, continuous career from the 2008 club reveal through the 2026 season. Drafting, manual XI selection, captaincy plans and their matchday consequences need to be clear and meaningful. Career history should pay off through League Honours, the GCC Record Book, Your Club Legends, all 19 season entries, an openable Season Book and an end-of-career legacy summary. Verify those views against existing career history.
+
+| Order | Work | Acceptance |
+| --- | --- | --- |
+| 1 | Publish the narrow-screen candidate | Complete. Builder and both playable HTML files match the tested checksum. |
+| 2 | Update the career test for v117 matchday | Drive the toss and captaincy steps to completion before reading a result, then exercise Continue Career across a saved match. The old runner currently reads a result before v117 has produced one. |
+| 3 | Play through 2008–2026 on the exact candidate | Verify all 19 seasons, annual drafts, manual XI decisions, injuries and trades, scorecard totals, finals and save recovery. Check the archive and legacy views with the completed career. |
+| 4 | Finish visual and accessibility review | Cover keyboard navigation, 200% zoom and live announcements. Inspect the menus, draft, XI, Fixtures and archive at phone and desktop widths. |
+| 5 | Re-run the five-seed gameplay audit and pin the release | Confirm scorebook and save integrity, record per-seed results and resolve or explicitly accept the 15.7% all-out outlier against the 15% ceiling. Pin the accepted commit and build checksum. |
+
+## 18 November calibration and acceptance record
 
 Status 18 November 2026: **v117 is the gameplay-calibrated successor candidate to the
 frozen v116 release.** This handoff records the tuning evidence, the mechanism-level

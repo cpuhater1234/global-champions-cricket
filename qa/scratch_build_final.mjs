@@ -384,6 +384,9 @@ if (!content.includes('id="gcc-standard"')) {
 </body></html>`);
 }
 
+const narrowCareerStyles = "<style>\n@media (max-width:390px){\n  #g8app#g8app #g8stage .gccuiCampaignRibbon>div{grid-template-rows:auto minmax(44px,auto) auto;padding:10px 12px}\n  #g8app#g8app #g8stage .gccuiCampaignRibbon>div>span{letter-spacing:.08em}\n  #g8app#g8app#g8app #g8hud .g8careernav .g8navitem{padding-inline:.3rem!important;font-size:.8rem!important;letter-spacing:.03em}\n  #g8app#g8app#g8app .g8careernav .g8navitem:focus-visible{outline-offset:-4px!important}\n}\n</style>";
+content = content.replace('</head>', narrowCareerStyles + '</head>');
+
 fs.writeFileSync(OUT_HTML, content);
 const candidateHtml = path.join(__dirname, 'candidates', 'v116-authenticity-candidate.html');
 fs.writeFileSync(candidateHtml, content);
