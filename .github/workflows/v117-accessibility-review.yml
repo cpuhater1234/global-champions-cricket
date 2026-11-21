@@ -33,12 +33,13 @@ jobs:
           end = s.index('\n',start)
           s = s[:start] + "const prepareXI=async()=>{await call('continue');await call('editXI');};" + s[end:]
           s = s.replace("await call('playMatch',1);await call('startPlayback');","await call('playMatch',1);if(await page.locator('[data-action=tossBat]:visible').count())await call('tossBat');if(await page.locator('[data-action=startPlayback]:visible').count())await call('startPlayback');")
+          s = s.replace("await modalKeyboard('trade-keyboard-'+width,page.locator('[data-action=trade]:visible').first());", "if(await page.locator('[data-action=trade]:visible').count())await modalKeyboard('trade-keyboard-'+width,page.locator('[data-action=trade]:visible').first());")
           p.write_text(s)
           PY
           node qa/structural-risk/a11y-fixture.mjs
       - name: Audit keyboard controls, the live accessibility tree and 200% browser zoom
         run: |
-          node qa/v116_accessibility_gate.cjs > /tmp/v117-a11y.log || status=$?
+          GCC8_CHROMIUM="$(node -e 'process.stdout.write(require("playwright").chromium.executablePath())')" node qa/v116_accessibility_gate.cjs > /tmp/v117-a11y.log || status=$?
           python - <<'PY'
           import json
           from pathlib import Path
