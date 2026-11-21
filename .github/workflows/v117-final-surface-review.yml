@@ -30,6 +30,26 @@ jobs:
           Path('qa/structural-risk/surface-fixture.mjs').write_text(source)
           PY
           node qa/structural-risk/surface-fixture.mjs
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('PLAY_v117.html')
+          source=p.read_bytes()
+          anchor=b" document.addEventListener('keydown',event=>{if(event.key==='Escape'&&hud.querySelector"
+          assert source.count(anchor)==1
+          handler=b""" dialog.addEventListener('keydown', event => {
+            if (event.key !== 'Tab' || !dialog.open || ui.modal !== 'archiveSeason') return;
+            const body = dialog.querySelector('.g8modalbody');
+            const close = dialog.querySelector('.g8dialogclose');
+            if (!body || !close) return;
+            body.tabIndex = 0;
+            event.preventDefault();
+            (document.activeElement === body ? close : body).focus();
+           });
+          """
+          # Exercise the candidate in a disposable runner copy.
+          p.write_bytes(source.replace(anchor,handler+anchor))
+          PY
+
       - name: Check responsive layout and modal keyboard flow
         run: |
           node <<'JS'
