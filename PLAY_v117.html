@@ -5433,7 +5433,7 @@ window.GCC8_DELIVERY=(()=>{
     const baseline=over<=4?estimate.pp/36:over>=16?estimate.death/30:estimate.mid/54;
     const required=target?(target-total)/Math.max(1,120-balls)*6:0,pressure=target?clamp((required-8)*.05,-.12,.42):0;
     const mean=clamp(baseline+edge*.009+pressure+(restricted&&over>4?.18:0),.45,3.0);
-    const hazard=clamp((clamp((estimate.wickets+.8)/120,.025,.085))*(1-edge*.008)*(1+Math.max(0,pressure)*0.00),.014,.15);
+    const hazard=clamp((clamp((estimate.wickets+.8)/120,.025,.085))*(1-edge*.008)*(wickets>=8&&over>=16?0.90:1)*(1+Math.max(0,pressure)*0.00),.014,.15);
     const e={kind:'ball',over,ball:legal+1,batterId:p.id,nonStrikerId:order[nonStriker].id,bowlerId:bowler.id,legal:true,batRuns:0,runs:0,wicket:false,dismissal:null,extra:null,extraRuns:0,phase,surge:!!(surge.startOver&&over>=surge.startOver&&over<=surgeEnd),freeHit};
     const special=random();let runOut=false;
     if(special<.025){e.legal=false;e.extra='wides';e.extraRuns=1;}
