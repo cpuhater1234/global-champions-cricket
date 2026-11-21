@@ -1,0 +1,71 @@
+name: GCC v117 native browser acceptance
+on:
+  push:
+    branches: [work/v117-native-acceptance]
+permissions:
+  contents: read
+
+concurrency:
+  group: gcc-v117-native-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  captaincy-save-continue:
+    name: Captaincy, save, reload and Continue
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Playwright Chromium
+        run: |
+          python -m pip install --disable-pip-version-check playwright
+          python -m playwright install --with-deps chromium
+      - name: Check the promoted build hash
+        run: echo '9890a9108aa260b5a263fa407ac3bb371d23de59f05064f78e55036847003cd9  PLAY_v117.html' | sha256sum -c
+      - name: Verify exact v117 release through native browser storage
+        run: |
+          python captaincy_layer_v116.py \
+            --html PLAY_v117.html \
+            --no-hash-check --mode http \
+            --case-timeout 240 \
+            --out-dir qa/results/v117-native
+      # Repository artifact storage is at quota. Keep test results in job logs
+      # and a short GitHub Actions summary without uploading an artifact.
+      - name: Verify and summarize native result
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          report = json.loads(Path('qa/results/v117-native/captaincy_result.json').read_text())
+          assert report['status'] == 'PASS'
+          assert report['mode'] == 'http' and report['native_storage_checked']
+          assert len(report['runs']) == 2
+          assert all(run['reloaded']['captaincy'] == run['plan'] for run in report['runs'])
+          message = 'PASS: 2/2 native Chromium save, reload and Continue scenarios'
+          print(message)
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as out:
+              out.write('## GCC v117 native acceptance\n\n' + message + '\n')
+          PY
+      - name: Verify two-tab stale-save protection and recovery
+        run: |
+          python qa/native_two_tab_v116.py \
+            --html PLAY_v117.html \
+            --out qa/results/v117-native-two-tab.json
+      - name: Summarize two-tab acceptance
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          r=json.loads(Path('qa/results/v117-native-two-tab.json').read_text())
+          assert r['status']=='PASS' and r['native_origin']
+          assert r['stale_save_rejected'] and r['indexeddb_preserved']
+          assert r['reloaded_latest'] and r['rounds']==[1,2]
+          line='PASS: native two-tab stale-save rejected, IndexedDB preserved, Continue restored latest Round 2'
+          print(line)
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as out:
+              out.write('\n## GCC v117 two-tab acceptance\n\n'+line+'\n')
+          PY
+
