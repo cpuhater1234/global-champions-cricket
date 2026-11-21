@@ -44,13 +44,14 @@ jobs:
                 const save=fs.readFileSync('qa/results/surface/'+(surface==='draft'?'draft':'review')+'.json','utf8');
                 await c.addInitScript(raw=>localStorage.setItem('gcc_dynasty_v8',raw),save);
                 const p=await c.newPage();
+                p.setDefaultTimeout(10000);
                 p.on('pageerror',e=>errors.push(e.message));
                 await p.route(/^https?:/,route=>route.abort());
                 await p.goto(pathToFileURL(resolve('PLAY_v117.html')).href);
                 const call=async(action)=>assert(await p.evaluate(a=>GCC8.dispatch(a,[]),action),action);
                 await call('continue');
                 if(surface==='archive')await call('archive');
-                if(surface==='trade')await call('offseason');
+                if(surface==='trade'){await call('offseason');await call('cpuMarket');await call('annualDraw');await call('revealAll');}
                 assert.equal(await p.evaluate(()=>GCC8.ui.view),{draft:'draft',archive:'archive',trade:'dynasty'}[surface]);
                 await p.evaluate(()=>document.fonts.ready);
                 await p.screenshot({path:'qa/results/surface/'+surface+'-'+width+'.png'});
