@@ -1,0 +1,55 @@
+name: v117 accessibility review
+on:
+  push:
+    branches: [work/v117-accessibility-review]
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    env:
+      GCC8_TEST_BUILD: PLAY_v117.html
+      GCC8_EXPECT_SHA256: e21c54c8596ab12e7f5a42daee96e88aabea779ece49f2871cebada722c87d2a
+      GCC8_TEST_REPORT_DIR: qa/results/fixture
+      GCC8_BROWSER_CAREER_DIR: qa/results/fixture
+      GCC8_A11Y_DIR: qa/results/v117-a11y
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Prepare disposable career and adapt the audit to the v117 toss
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install chromium
+          python - <<'PY'
+          from pathlib import Path
+          source = Path('qa/structural-risk/career-run.mjs').read_text()
+          Path('qa/structural-risk/a11y-fixture.mjs').write_text(source.split('// Double submission must not consume another match.',1)[0] + "fs.writeFileSync(reportDir+'/checkpoint-2009.json',context.GCC8_ENGINE_READ.backupRaw());\n")
+          p = Path('qa/v116_accessibility_gate.cjs')
+          s = p.read_text()
+          start = s.index('const prepareXI=')
+          end = s.index('\n',start)
+          s = s[:start] + "const prepareXI=async()=>{await call('continue');await call('editXI');};" + s[end:]
+          s = s.replace("await call('playMatch',1);await call('startPlayback');","await call('playMatch',1);if(await page.locator('[data-action=tossBat]:visible').count())await call('tossBat');if(await page.locator('[data-action=startPlayback]:visible').count())await call('startPlayback');")
+          p.write_text(s)
+          PY
+          node qa/structural-risk/a11y-fixture.mjs
+      - name: Audit keyboard controls, the live accessibility tree and 200% browser zoom
+        run: |
+          node qa/v116_accessibility_gate.cjs > /tmp/v117-a11y.log || status=$?
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          f = Path('qa/results/v117-a11y/report.json')
+          if f.exists():
+              r=json.loads(f.read_text())
+              print(json.dumps({'zoom':r['zoom'],'findings':[x['id'] for x in r['findings']], 'errors':r['errors'],'runtimeErrors':r['runtimeErrors'],'live':r['live'] and {k:r['live'].get(k) for k in ('distinctRegionInstances','spokenAT','regionReplacementRisk')}}))
+          PY
+          exit "${status:-0}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v117-accessibility-evidence
+          path: qa/results/v117-a11y
