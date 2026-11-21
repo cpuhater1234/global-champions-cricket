@@ -34,6 +34,21 @@ Targeted offline checks used the published v117 build and validated career fixtu
 
 Trade review now disables Confirm when the engine reports an eligibility violation. The reason stays visible and the offer remains editable. Submission rechecks eligibility before any trade state changes. The existing `qa/v116_trade_review_gate.mjs` passed on the rebuilt candidate.
 
+## Published build gameplay audit
+
+The five original seeds were rerun for 300 matches each on the published trade-review build (SHA-256 `d9b21bcf205225375d227e929475e3dcc3a24cb26ce7a5acae599abd46674464`).
+
+| Seed | All-outs | Chase wins |
+| --- | ---: | ---: |
+| 8301 | 89/600 (14.8%) | 54.3% |
+| 8311 | 87/600 (14.5%) | 55.0% |
+| 8312 | 81/600 (13.5%) | 55.0% |
+| 8313 | 94/600 (15.7%) | 48.3% |
+| 8314 | 90/600 (15.0%) | 52.0% |
+| Combined | 441/3,000 (14.7%) | 52.9% |
+
+The reporting runner now accounts for floating-point roundoff at exact band endpoints. The two 55% chase rates are inside the band. All other benchmark checks passed except seed 8313's all-out rate. Extending that same seed to 1,500 matches gave 474/3,000 all-out innings (15.8%) and a 49.3% chase win rate. The extended run is a larger sample of the same seed and is excluded from the combined row. This points to a persistent seed-specific overage in the audit runner. Diagnose innings and squad composition using the delivery ledger before changing calibration. The published engine was left intact.
+
 ## Definition of done
 
 The recovered summary of Grok's target is a polished, continuous career from the 2008 club reveal through the 2026 season. Drafting, manual XI selection, captaincy plans and their matchday consequences need to be clear and meaningful. Career history should pay off through League Honours, the GCC Record Book, Your Club Legends, all 19 season entries, an openable Season Book and an end-of-career legacy summary. Verify those views against existing career history.
