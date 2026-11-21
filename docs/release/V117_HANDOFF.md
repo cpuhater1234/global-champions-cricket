@@ -4,6 +4,7 @@
 
 | Build | Location | Evidence |
 | --- | --- | --- |
+| Current playable build | `v117` at `1ea4a4c`, `PLAY_v117.html` | SHA-256 `326f3dabac9d337544b3b40bfd8b250dacca9025e755a89716a862c5f353da6d`. Two-season smoke passed 1,917 checks across 28 regular-season matches with zero runner errors. |
 | Stable release | `v116` at `2648c00` | Frozen release |
 | Playable v117 baseline | `v117` at `774862b`, `PLAY_v117.html` | Club reveal and selection tested at 320, 390, 768 and 1440 px |
 | Narrow-screen candidate | `PLAY_v117.html` and `qa/candidates/v116-authenticity-candidate.html` | SHA-256 `9890a9108aa260b5a263fa407ac3bb371d23de59f05064f78e55036847003cd9`. Builder output matches the CSS trial that passed 126 Chromium checks. Both playable files and the recorded checksum matched when this candidate was published. |
@@ -18,7 +19,7 @@ To rebuild locally, run `mkdir -p qa/results && node qa/scratch_build_final.mjs`
 
 Seed 101 with Mumbai Indians completed 2008–2026 on the published narrow-screen build. The toss-aware runner passed 16,187 checks across 19 seasons and 266 user-club regular-season matches, with zero reported runtime errors. It checked annual draft completion, recognised CPU wicketkeepers, XI changes, scorecards, finals, career completion and recovery through the validated save serializer. A separate check reopened all 19 Season Books from the final checkpoint and verified the League Record Book, Club Legends, League Honours and the legacy view.
 
-These checks used the game engine and UI dispatch with a simulated DOM. The visual archive pass, screen-reader announcements, 200% zoom and the five-seed gameplay audit remain release checks.
+These checks used the game engine and UI dispatch with a simulated DOM. Later sections record the browser and gameplay audit results.
 
 ## Native Chromium save acceptance
 
@@ -105,7 +106,7 @@ The live status was replaced seven times across seven observed updates, which ca
 
 ## Persistent live score status
 
-Chromium observed one mounted polite, atomic status element across seven score updates. The verified build passed 998 automated observations including 200% zoom. Actual spoken output still needs testing. SHA-256: `a14e1f0c41bf383827b8f8e4e5c70b1c8ae1707c7744cc7935773eea10cecb85`. [Chromium evidence](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44910803638)
+Chromium observed one mounted polite, atomic status element across seven score updates. The verified build passed 998 automated observations including 200% zoom. Spoken output is unverified and outside release scope. SHA-256: `a14e1f0c41bf383827b8f8e4e5c70b1c8ae1707c7744cc7935773eea10cecb85`. [Chromium evidence](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44910803638)
 
 ## Draft, archive and trade review
 
@@ -122,7 +123,7 @@ The recovered summary of Grok's target is a polished, continuous career from the
 | 1 | Publish the narrow-screen candidate | Complete. Builder and both playable HTML files match the tested checksum. |
 | 2 | Update the career test for v117 matchday | Complete for the offline runner. It resolves the toss before auditing a match and exercises Continue Career. |
 | 3 | Play through 2008–2026 on the exact candidate | Seed 101 completed all 19 seasons with the archive and legacy views verified through UI dispatch. Targeted cover and traded-pick checks passed. The blocked-trade Confirm regression is fixed and verified. |
-| 4 | Finish visual and accessibility review | Chromium keyboard and 200% zoom checks passed on covered screens. Live status persistence passed in Chromium. Spoken screen-reader output and visual review of the draft and archive remain open. |
+| 4 | Finish visual and accessibility review | Chromium keyboard and 200% zoom checks passed on covered screens. Live status persistence passed in Chromium. Draft, archive and trade review completed at sampled widths. Spoken screen-reader testing is outside release scope per Tom. |
 | 5 | Re-run the five-seed gameplay audit and pin the release | Calibration and acceptance passed for the per-setup average, with the checksum recorded above. Individual seed ceilings remain unproven. |
 
 ## 18 November calibration and acceptance record
