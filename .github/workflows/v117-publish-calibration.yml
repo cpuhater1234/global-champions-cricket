@@ -1,0 +1,28 @@
+name: Publish v117 calibration
+on:
+  push:
+    branches: [work/v117-late-wicket-calibration]
+    paths: ['.github/workflows/v117-publish-calibration.yml']
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: |
+          mkdir -p qa/results
+          node qa/scratch_build_final.mjs
+          cp qa/candidates/v116-authenticity-candidate.html PLAY_v117.html
+          hash=e21c54c8596ab12e7f5a42daee96e88aabea779ece49f2871cebada722c87d2a
+          printf '%s  %s\n' "$hash" PLAY_v117.html "$hash" qa/candidates/v116-authenticity-candidate.html | sha256sum -c
+          test "$(tr 'A-F' 'a-f' < qa/candidates/CANDIDATE_SHA256.txt)" = "$hash"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add PLAY_v117.html qa/candidates/v116-authenticity-candidate.html qa/candidates/CANDIDATE_SHA256.txt
+          git commit -m 'Publish verified v117 calibration build'
+          git push origin HEAD:refs/heads/work/v117-late-wicket-calibration
