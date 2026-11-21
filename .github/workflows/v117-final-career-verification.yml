@@ -1,0 +1,33 @@
+name: v117 final career regression
+on:
+  pull_request:
+    branches: [v117]
+permissions:
+  contents: read
+jobs:
+  career:
+    if: github.head_ref == 'work/v117-final-career-verification'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      GCC8_TEST_BUILD: PLAY_v117.html
+      GCC8_TEST_LAST_YEAR: '2026'
+      GCC8_TEST_REPORT_DIR: qa/results/v117-final
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Verify the exact playable build
+        run: echo '326f3dabac9d337544b3b40bfd8b250dacca9025e755a89716a862c5f353da6d  PLAY_v117.html' | sha256sum -c
+      - name: Run all 19 seasons
+        run: node qa/structural-risk/career-run.mjs
+      - name: Verify totals
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('qa/results/v117-final/v8_game_results.json').read_text())
+          assert r['seasons']==19 and r['regularSeasonMatches']==266 and not r['errors'], r
+          print({k:r[k] for k in ('seed','club','checks','seasons','regularSeasonMatches','errors')})
+          PY
