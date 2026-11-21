@@ -13,6 +13,12 @@ To rebuild locally, run `mkdir -p qa/results && node qa/scratch_build_final.mjs`
 - [Club-card verification](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44663751897)
 - [Narrow-screen verification](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44692366092)
 
+## 21 November full-career acceptance
+
+Seed 101 with Mumbai Indians completed 2008–2026 on the published narrow-screen build. The toss-aware runner passed 16,187 checks across 19 seasons and 266 user-club regular-season matches, with zero reported runtime errors. It checked annual draft completion, recognised CPU wicketkeepers, XI changes, scorecards, finals, career completion and recovery through the validated save serializer. A separate check reopened all 19 Season Books from the final checkpoint and verified the League Record Book, Club Legends, League Honours and the legacy view.
+
+These checks used the game engine and UI dispatch with a simulated DOM. Native browser storage recovery, the visual archive pass, screen-reader announcements, 200% zoom and the five-seed gameplay audit remain release checks.
+
 ## Definition of done
 
 The recovered summary of Grok's target is a polished, continuous career from the 2008 club reveal through the 2026 season. Drafting, manual XI selection, captaincy plans and their matchday consequences need to be clear and meaningful. Career history should pay off through League Honours, the GCC Record Book, Your Club Legends, all 19 season entries, an openable Season Book and an end-of-career legacy summary. Verify those views against existing career history.
@@ -20,8 +26,8 @@ The recovered summary of Grok's target is a polished, continuous career from the
 | Order | Work | Acceptance |
 | --- | --- | --- |
 | 1 | Publish the narrow-screen candidate | Complete. Builder and both playable HTML files match the tested checksum. |
-| 2 | Update the career test for v117 matchday | Drive the toss and captaincy steps to completion before reading a result, then exercise Continue Career across a saved match. The old runner currently reads a result before v117 has produced one. |
-| 3 | Play through 2008–2026 on the exact candidate | Verify all 19 seasons, annual drafts, manual XI decisions, injuries and trades, scorecard totals, finals and save recovery. Check the archive and legacy views with the completed career. |
+| 2 | Update the career test for v117 matchday | Complete for the offline runner. It resolves the toss before auditing a match and exercises Continue Career. |
+| 3 | Play through 2008–2026 on the exact candidate | Seed 101 completed all 19 seasons with the archive and legacy views verified through UI dispatch. Verify remaining injury and trade scenarios and native browser recovery separately. |
 | 4 | Finish visual and accessibility review | Cover keyboard navigation, 200% zoom and live announcements. Inspect the menus, draft, XI, Fixtures and archive at phone and desktop widths. |
 | 5 | Re-run the five-seed gameplay audit and pin the release | Confirm scorebook and save integrity, record per-seed results and resolve or explicitly accept the 15.7% all-out outlier against the 15% ceiling. Pin the accepted commit and build checksum. |
 
