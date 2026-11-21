@@ -50,6 +50,9 @@ jobs:
           # Exercise the candidate in a disposable runner copy.
           p.write_bytes(source.replace(anchor,handler+anchor))
           PY
+          node qa/scratch_build_final.mjs
+          cmp PLAY_v117.html qa/candidates/v116-authenticity-candidate.html
+          sha256sum PLAY_v117.html
 
       - name: Check responsive layout and modal keyboard flow
         run: |
