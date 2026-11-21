@@ -77,6 +77,20 @@ Delivery ledgers from the corrected five-seed run covered 15,000 innings. Ball c
 
 The overall wicket rate was 5.24% on balls 1–24, 5.20% on balls 25–42 and 5.11% on balls 43–60. Within the first 60 legal balls, 2,598 of 45,730 deliveries immediately following a wicket took a wicket (5.68%), versus 43,264 of 836,854 after a non-wicket (5.17%). This is an unadjusted comparison and includes changes of batter and matchups. The hazard formula has no explicit previous-wicket multiplier. The two seeds above the extended ceiling did not both have unusually many three-wicket starts: seed 8312 had 407, the same as seed 8301, while seed 8314 had 413. Early losses strongly predict a collapse, but this evidence does not identify a seed-specific early phase fault or justify a chase or momentum adjustment. Keep the engine unchanged pending matched tests that hold XIs or opposition fixed.
 
+### Fixed XI and fixture comparison
+
+Crossed five league setups with five independently chosen initial match RNG states (104729, 130363, 155921, 181081, 205019). Each cell simulated 600 fixtures through the corrected schedule. Within each row the clubs, XIs, ratings and fixture schedule were held fixed. Resetting `G.state.seed` after squad setup varied match randomness. The same initial RNG states were reused in each row, although individual matches consume different numbers of random draws. The published HTML was unchanged.
+
+| League setup | 104729 | 130363 | 155921 | 181081 | 205019 | Mean all-outs |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| 8301 | 14.00% | 15.75% | 13.08% | 12.83% | 15.25% | 14.18% |
+| 8311 | 14.92% | 16.50% | 16.08% | 15.50% | 14.75% | 15.55% |
+| 8312 | 14.58% | 16.58% | 15.42% | 14.33% | 14.92% | 15.17% |
+| 8313 | 14.75% | 16.50% | 14.58% | 14.08% | 15.92% | 15.17% |
+| 8314 | 14.25% | 13.92% | 14.75% | 13.58% | 14.75% | 14.25% |
+
+Across 15,000 matches there were 4,459 all-outs in 30,000 innings (14.86%), and chases won 52.31%. The same 8301 XIs ranged from 12.83% to 15.75%, showing that match randomness alone can cross the ceiling. Across common initial RNG states, league setup averages ranged from 14.18% to 15.55%. This captures the complete setup, including the opposition mix, and does not isolate individual roster traits. The evidence supports both match-level variation and a league-setup effect. An aggregate gate passes, while a strict per-setup gate remains open. Any calibration trial should use a predeclared gate and verify chase rates, wickets per innings and score distributions against the current build.
+
 ## Definition of done
 
 The recovered summary of Grok's target is a polished, continuous career from the 2008 club reveal through the 2026 season. Drafting, manual XI selection, captaincy plans and their matchday consequences need to be clear and meaningful. Career history should pay off through League Honours, the GCC Record Book, Your Club Legends, all 19 season entries, an openable Season Book and an end-of-career legacy summary. Verify those views against existing career history.
