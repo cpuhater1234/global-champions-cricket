@@ -157,6 +157,7 @@ export function setupBalancedLeague(G) {
 }
 
 export function auditMatchEngine(matchAudit, league, matchesToSimulate = 100) {
+  if (league.length < 2) throw new RangeError("Match audit requires at least two clubs");
   const totals1st = [];
   const totals2nd = [];
   const rpos = [];
@@ -171,8 +172,10 @@ export function auditMatchEngine(matchAudit, league, matchesToSimulate = 100) {
   let totalSixes = 0;
 
   for (let m = 0; m < matchesToSimulate; m++) {
-    const home = league[m % 8];
-    const away = league[(m + 1 + Math.floor(m / 8)) % 8];
+    const homeIndex = m % league.length;
+    const opponentOffset = 1 + Math.floor(m / league.length) % (league.length - 1);
+    const home = league[homeIndex];
+    const away = league[(homeIndex + opponentOffset) % league.length];
     const ground = {
       conditions: { boundary: (m % 5) - 2 },
       baseConditions: { pace: (m % 3) - 1, spin: ((m + 1) % 3) - 1 }
