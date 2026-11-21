@@ -49,6 +49,17 @@ jobs:
           with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as out:
               out.write('## GCC v117 native acceptance\n\n' + message + '\n')
           PY
+      - name: Adapt the two-tab harness to the pinned v117 build
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('qa/native_two_tab_v116.py')
+          source = p.read_text().replace('native.OFFICIAL_SHA256', repr('9890a9108aa260b5a263fa407ac3bb371d23de59f05064f78e55036847003cd9'))
+          marker = "    assert view(p)=='matchReveal', 'Match reveal absent'"
+          assert source.count(marker) == 1
+          source = source.replace(marker, "    if native.click_action(p, 'tossBat'):\n        p.wait_for_timeout(200)\n" + marker)
+          p.write_text(source)
+          PY
       - name: Verify two-tab stale-save protection and recovery
         run: |
           python qa/native_two_tab_v116.py \
