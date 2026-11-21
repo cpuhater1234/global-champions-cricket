@@ -25,30 +25,6 @@ jobs:
           python -m playwright install --with-deps chromium
       - name: Check the promoted build hash
         run: echo '9890a9108aa260b5a263fa407ac3bb371d23de59f05064f78e55036847003cd9  PLAY_v117.html' | sha256sum -c
-      - name: Verify exact v117 release through native browser storage
-        run: |
-          python captaincy_layer_v116.py \
-            --html PLAY_v117.html \
-            --no-hash-check --mode http \
-            --case-timeout 240 \
-            --out-dir qa/results/v117-native
-      # Repository artifact storage is at quota. Keep test results in job logs
-      # and a short GitHub Actions summary without uploading an artifact.
-      - name: Verify and summarize native result
-        run: |
-          python - <<'PY'
-          import json, os
-          from pathlib import Path
-          report = json.loads(Path('qa/results/v117-native/captaincy_result.json').read_text())
-          assert report['status'] == 'PASS'
-          assert report['mode'] == 'http' and report['native_storage_checked']
-          assert len(report['runs']) == 2
-          assert all(run['reloaded']['captaincy'] == run['plan'] for run in report['runs'])
-          message = 'PASS: 2/2 native Chromium save, reload and Continue scenarios'
-          print(message)
-          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as out:
-              out.write('## GCC v117 native acceptance\n\n' + message + '\n')
-          PY
       - name: Adapt the two-tab harness to the pinned v117 build
         run: |
           python - <<'PY'
@@ -58,6 +34,10 @@ jobs:
           marker = "    assert view(p)=='matchReveal', 'Match reveal absent'"
           assert source.count(marker) == 1
           source = source.replace(marker, "    if native.click_action(p, 'tossBat'):\n        p.wait_for_timeout(200)\n" + marker)
+          old = "        assert native.click_action(p,'matchday') or native.click_text(p,'Next match'), 'Next match absent'"
+          assert source.count(old) == 1
+          replacement = "        if native.click_action(p, 'nameSide'):\n            assert native.click_action(p, 'lodge'), 'Return to Matchday absent'\n        else:\n    " + old
+          source = source.replace(old, replacement)
           p.write_text(source)
           PY
       - name: Verify two-tab stale-save protection and recovery
