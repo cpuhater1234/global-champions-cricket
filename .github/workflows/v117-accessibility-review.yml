@@ -10,7 +10,7 @@ jobs:
     timeout-minutes: 12
     env:
       GCC8_TEST_BUILD: PLAY_v117.html
-      GCC8_EXPECT_SHA256: e21c54c8596ab12e7f5a42daee96e88aabea779ece49f2871cebada722c87d2a
+      GCC8_EXPECT_SHA256: a14e1f0c41bf383827b8f8e4e5c70b1c8ae1707c7744cc7935773eea10cecb85
       GCC8_TEST_REPORT_DIR: qa/results/fixture
       GCC8_BROWSER_CAREER_DIR: qa/results/fixture
       GCC8_A11Y_DIR: qa/results/v117-a11y
@@ -35,8 +35,12 @@ jobs:
           s = s.replace("await call('playMatch',1);await call('startPlayback');","await call('playMatch',1);if(await page.locator('[data-action=tossBat]:visible').count())await call('tossBat');if(await page.locator('[data-action=startPlayback]:visible').count())await call('startPlayback');")
           s = s.replace("await modalKeyboard('trade-keyboard-'+width,page.locator('[data-action=trade]:visible').first());", "if(await page.locator('[data-action=trade]:visible').count())await modalKeyboard('trade-keyboard-'+width,page.locator('[data-action=trade]:visible').first());")
           s = s.replace("await modalKeyboard('zoom200-player-'+physical,page.locator('[data-action=manageInspect]:visible').first());", "await call('editXI');await snapshot('zoom200-xi-'+physical);await modalKeyboard('zoom200-player-'+physical,page.locator('[data-action=inspect]:visible').first());")
+          s = s.replace('.gcc-moment[role=status]', '[data-key=live-score-status][role=status]')
           p.write_text(s)
           PY
+          mkdir -p qa/results
+          node qa/scratch_build_final.mjs
+          cp qa/candidates/v116-authenticity-candidate.html PLAY_v117.html
           node qa/structural-risk/a11y-fixture.mjs
       - name: Audit keyboard controls, the live accessibility tree and 200% browser zoom
         run: |
@@ -48,6 +52,12 @@ jobs:
           if f.exists():
               r=json.loads(f.read_text())
               print(json.dumps({'zoom':r['zoom'],'observations': len(r['observations']),'findings':[x['id'] for x in r['findings']], 'errors':r['errors'],'runtimeErrors':r['runtimeErrors'],'live':r['live'] and {k:r['live'].get(k) for k in ('distinctRegionInstances','spokenAT','regionReplacementRisk')}}))
+              assert not r['errors'] and not r['runtimeErrors'], r['errors']
+              assert not r['findings'], [x['id'] for x in r['findings']]
+              assert len(r['zoom'])==2 and all(x['verified'] for x in r['zoom']), r['zoom']
+              assert r['live']['distinctRegionInstances']==1, r['live']['distinctRegionInstances']
+          else:
+              raise SystemExit('Accessibility report missing')
           PY
           exit "${status:-0}"
       - uses: actions/upload-artifact@v4
