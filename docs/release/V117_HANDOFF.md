@@ -64,6 +64,19 @@ The original audit cycled through eight opponent offsets in an eight-club league
 
 In the corrected extended run for 8313, first innings contributed 224 all-outs and chases 218. The tenth wicket fell 282 times in the death phase, 109 in the middle and 51 during the surge. Batting sides five or more down at 60 legal balls went all out in 337/637 innings (52.9%), versus 105/2,363 (4.4%) for sides four or fewer down. The original schedule's 8313 self-fixtures had an all-out rate of 58/368 (15.8%), close to that schedule's overall 8313 rate. Changing the schedule changes opponents and the sequence of random draws, so the rerun does not isolate a causal effect of self-fixtures. Squad XIs also differed across the seeds. The corrected evidence indicates a broader tail risk around the ceiling, with two extended seeds above 15%, and does not support tuning a chase-only parameter for 8313. The playable engine was left intact.
 
+### Early-wicket clusters
+
+Delivery ledgers from the corrected five-seed run covered 15,000 innings. Ball counts use legal deliveries.
+
+| Wickets down after 24 balls | Innings | Five down by 60 balls | Eventually all out |
+| --- | ---: | ---: | ---: |
+| 0 | 4,392 | 3.3% | 3.4% |
+| 1 | 5,249 | 11.8% | 8.8% |
+| 2 | 3,315 | 32.7% | 21.2% |
+| 3 or more | 2,044 | 69.9% | 44.7% |
+
+The overall wicket rate was 5.24% on balls 1–24, 5.20% on balls 25–42 and 5.11% on balls 43–60. Within the first 60 legal balls, 2,598 of 45,730 deliveries immediately following a wicket took a wicket (5.68%), versus 43,264 of 836,854 after a non-wicket (5.17%). This is an unadjusted comparison and includes changes of batter and matchups. The hazard formula has no explicit previous-wicket multiplier. The two seeds above the extended ceiling did not both have unusually many three-wicket starts: seed 8312 had 407, the same as seed 8301, while seed 8314 had 413. Early losses strongly predict a collapse, but this evidence does not identify a seed-specific early phase fault or justify a chase or momentum adjustment. Keep the engine unchanged pending matched tests that hold XIs or opposition fixed.
+
 ## Definition of done
 
 The recovered summary of Grok's target is a polished, continuous career from the 2008 club reveal through the 2026 season. Drafting, manual XI selection, captaincy plans and their matchday consequences need to be clear and meaningful. Career history should pay off through League Honours, the GCC Record Book, Your Club Legends, all 19 season entries, an openable Season Book and an end-of-career legacy summary. Verify those views against existing career history.
