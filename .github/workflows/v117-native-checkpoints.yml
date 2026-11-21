@@ -71,7 +71,7 @@ jobs:
                   page.evaluate("(raw) => localStorage.setItem('gcc_dynasty_v8', raw)", (root / (label + '.json')).read_text())
                   page.reload()
                   page.get_by_role('button', name='Continue career').click()
-                  page.wait_for_function("(view) => GCC8.ui.view === view", expected)
+                  page.wait_for_function("(view) => GCC8.ui.view === view", arg=expected)
                   if label == 'rollover':
                       assert page.evaluate("GCC8.dispatch('offseason', [])")
                       page.wait_for_function("() => GCC.state.year === 2009")
@@ -81,7 +81,7 @@ jobs:
                   assert stored and two_tab.checkpoint(page) == stored
                   page.reload()
                   page.get_by_role('button', name='Continue career').click()
-                  page.wait_for_function("(view) => GCC8.ui.view === view", before['view'])
+                  page.wait_for_function("(view) => GCC8.ui.view === view", arg=before['view'])
                   assert page.evaluate(identity) == before, label
                   assert not errors, errors
                   print('PASS', label, before['year'], before['round'], before['view'], flush=True)
