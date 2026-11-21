@@ -12435,6 +12435,15 @@ function validSave(save){
   finally{G.closeModal();busy=false;const resetPosition=pendingScrollTop;pendingScrollTop=false;if(resetPosition&&(ui.view==='draft'||annual())&&X.draftCurrent(annual()))pendingFocus='#gccuiDraftTurnTitle';if(pendingFocus){const target=document.querySelector(pendingFocus);pendingFocus=null;target?.focus?.({preventScroll:true});if(resetPosition&&target?.id==='gccuiDraftTurnTitle')window.scrollTo({left:0,top:0,behavior:'instant'});else target?.scrollIntoView?.({block:'center',behavior:'instant'});}else if(resetPosition)window.scrollTo({left:0,top:0,behavior:'instant'});else if(ui.view===view&&sceneKey()===scene)window.scrollTo({left:x,top:y,behavior:'instant'});}
  };
  document.addEventListener('click',event=>{if(!event.target.closest?.('.g8utilitymenu'))closeUtilityMenu();});
+ dialog.addEventListener('keydown', event => {
+  if (event.key !== 'Tab' || !dialog.open || ui.modal !== 'archiveSeason') return;
+  const body = dialog.querySelector('.g8modalbody');
+  const close = dialog.querySelector('.g8dialogclose');
+  if (!body || !close) return;
+  body.tabIndex = 0;
+  event.preventDefault();
+  (document.activeElement === body ? close : body).focus();
+ });
  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&hud.querySelector('.g8utilitymenu[open]')){closeUtilityMenu(true);event.preventDefault();}});
  document.getElementById('g8app').addEventListener('click',event=>{let b=event.target.closest?.('button[data-action]');if(!b){const card=event.target.closest?.('.g8directpick');if(card&&!event.target.closest('.g8candidatechoice'))b=card.querySelector('.g8candidate');}if(!b||b.disabled)return;if(b.dataset.action==='draftPlayer'&&event.detail>1){event.preventDefault();return;}if(b.matches('.g8candidate'))b.focus({preventScroll:true});X.dispatch(b.dataset.action,JSON.parse(b.dataset.args||'[]'));});
  document.getElementById('g8app').addEventListener('input',event=>{
