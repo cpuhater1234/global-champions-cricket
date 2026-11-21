@@ -49,6 +49,21 @@ The five original seeds were rerun for 300 matches each on the published trade-r
 
 The reporting runner now accounts for floating-point roundoff at exact band endpoints. The two 55% chase rates are inside the band. All other benchmark checks passed except seed 8313's all-out rate. Extending that same seed to 1,500 matches gave 474/3,000 all-out innings (15.8%) and a 49.3% chase win rate. The extended run is a larger sample of the same seed and is excluded from the combined row. This points to a persistent seed-specific overage in the audit runner. Diagnose innings and squad composition using the delivery ledger before changing calibration. The published engine was left intact.
 
+## Corrected fixtures and delivery-ledger diagnosis
+
+The original audit cycled through eight opponent offsets in an eight-club league and scheduled clubs against themselves. The runner now cycles through seven offsets. Every ordered matchup occurs exactly once in a full fixture cycle. Results below use the same published HTML and supersede the original audit for release decisions.
+
+| Seed | All-outs, 300 matches | Chase wins, 300 matches | All-outs, 1,500 matches |
+| --- | ---: | ---: | ---: |
+| 8301 | 83/600 (13.8%) | 53.0% | 438/3,000 (14.6%) |
+| 8311 | 79/600 (13.2%) | 51.0% | 428/3,000 (14.3%) |
+| 8312 | 86/600 (14.3%) | 52.7% | 459/3,000 (15.3%) |
+| 8313 | 87/600 (14.5%) | 54.0% | 442/3,000 (14.7%) |
+| 8314 | 93/600 (15.5%) | 50.7% | 461/3,000 (15.4%) |
+| Combined | 428/3,000 (14.3%) | 52.3% | 2,228/15,000 (14.9%) |
+
+In the corrected extended run for 8313, first innings contributed 224 all-outs and chases 218. The tenth wicket fell 282 times in the death phase, 109 in the middle and 51 during the surge. Batting sides five or more down at 60 legal balls went all out in 337/637 innings (52.9%), versus 105/2,363 (4.4%) for sides four or fewer down. The original schedule's 8313 self-fixtures had an all-out rate of 58/368 (15.8%), close to that schedule's overall 8313 rate. Changing the schedule changes opponents and the sequence of random draws, so the rerun does not isolate a causal effect of self-fixtures. Squad XIs also differed across the seeds. The corrected evidence indicates a broader tail risk around the ceiling, with two extended seeds above 15%, and does not support tuning a chase-only parameter for 8313. The playable engine was left intact.
+
 ## Definition of done
 
 The recovered summary of Grok's target is a polished, continuous career from the 2008 club reveal through the 2026 season. Drafting, manual XI selection, captaincy plans and their matchday consequences need to be clear and meaningful. Career history should pay off through League Honours, the GCC Record Book, Your Club Legends, all 19 season entries, an openable Season Book and an end-of-career legacy summary. Verify those views against existing career history.
@@ -59,7 +74,7 @@ The recovered summary of Grok's target is a polished, continuous career from the
 | 2 | Update the career test for v117 matchday | Complete for the offline runner. It resolves the toss before auditing a match and exercises Continue Career. |
 | 3 | Play through 2008–2026 on the exact candidate | Seed 101 completed all 19 seasons with the archive and legacy views verified through UI dispatch. Targeted cover and traded-pick checks passed. The blocked-trade Confirm regression is fixed and verified. |
 | 4 | Finish visual and accessibility review | Cover keyboard navigation, 200% zoom and live announcements. Inspect the menus, draft, XI, Fixtures and archive at phone and desktop widths. |
-| 5 | Re-run the five-seed gameplay audit and pin the release | Confirm scorebook and save integrity, record per-seed results and resolve or explicitly accept the 15.7% all-out outlier against the 15% ceiling. Pin the accepted commit and build checksum. |
+| 5 | Re-run the five-seed gameplay audit and pin the release | Confirm scorebook and save integrity, record per-seed results and resolve or explicitly accept the corrected extended audit’s per-seed all-out overages against the 15% ceiling. Pin the accepted commit and build checksum. |
 
 ## 18 November calibration and acceptance record
 
