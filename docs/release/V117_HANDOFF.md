@@ -27,6 +27,12 @@ On the published v117 checksum, two post-match reload scenarios restored the Rou
 - [Two-tab verification](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44865421910)
 - [Draft, XI and rollover verification](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44865847975)
 
+## Injury cover and traded picks
+
+Targeted offline checks used the published v117 build and validated career fixtures. At Round 10 in 2010, injury cover rejected an ineligible signing and a duplicate request, kept the XI as selected, and survived save and reload. An accepted Mumbai-to-Derbyshire Round 1 pick transfer survived reload and appeared under Derbyshire in the annual draft. A second attempt to trade that pick was rejected without changing ownership.
+
+Open trade-review regression: a package that would remove the last recognised wicketkeeper shows the engine warning but still enables Confirm. The engine declines the package without changing career state. Disable confirmation for engine-blocked packages and retain the engine guard. The existing `qa/v116_trade_review_gate.mjs` reproduced this on v117.
+
 ## Definition of done
 
 The recovered summary of Grok's target is a polished, continuous career from the 2008 club reveal through the 2026 season. Drafting, manual XI selection, captaincy plans and their matchday consequences need to be clear and meaningful. Career history should pay off through League Honours, the GCC Record Book, Your Club Legends, all 19 season entries, an openable Season Book and an end-of-career legacy summary. Verify those views against existing career history.
@@ -35,7 +41,7 @@ The recovered summary of Grok's target is a polished, continuous career from the
 | --- | --- | --- |
 | 1 | Publish the narrow-screen candidate | Complete. Builder and both playable HTML files match the tested checksum. |
 | 2 | Update the career test for v117 matchday | Complete for the offline runner. It resolves the toss before auditing a match and exercises Continue Career. |
-| 3 | Play through 2008–2026 on the exact candidate | Seed 101 completed all 19 seasons with the archive and legacy views verified through UI dispatch. Verify remaining injury and trade scenarios separately. |
+| 3 | Play through 2008–2026 on the exact candidate | Seed 101 completed all 19 seasons with the archive and legacy views verified through UI dispatch. Targeted cover and traded-pick checks passed. The blocked-trade Confirm control still needs a fix. |
 | 4 | Finish visual and accessibility review | Cover keyboard navigation, 200% zoom and live announcements. Inspect the menus, draft, XI, Fixtures and archive at phone and desktop widths. |
 | 5 | Re-run the five-seed gameplay audit and pin the release | Confirm scorebook and save integrity, record per-seed results and resolve or explicitly accept the 15.7% all-out outlier against the 15% ceiling. Pin the accepted commit and build checksum. |
 
