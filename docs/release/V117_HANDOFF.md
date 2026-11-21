@@ -6,7 +6,8 @@
 | --- | --- | --- |
 | Stable release | `v116` at `2648c00` | Frozen release |
 | Playable v117 baseline | `v117` at `774862b`, `PLAY_v117.html` | Club reveal and selection tested at 320, 390, 768 and 1440 px |
-| Narrow-screen candidate | `PLAY_v117.html` and `qa/candidates/v116-authenticity-candidate.html` | SHA-256 `9890a9108aa260b5a263fa407ac3bb371d23de59f05064f78e55036847003cd9`. Builder output matches the CSS trial that passed 126 Chromium checks. Both checked-in playable files and the recorded checksum match. |
+| Narrow-screen candidate | `PLAY_v117.html` and `qa/candidates/v116-authenticity-candidate.html` | SHA-256 `9890a9108aa260b5a263fa407ac3bb371d23de59f05064f78e55036847003cd9`. Builder output matches the CSS trial that passed 126 Chromium checks. Both playable files and the recorded checksum matched when this candidate was published. |
+| Trade review build | `PLAY_v117.html` and `qa/candidates/v116-authenticity-candidate.html` | SHA-256 `d9b21bcf205225375d227e929475e3dcc3a24cb26ce7a5acae599abd46674464`. Trade review, injury cover and traded-pick checks passed. |
 
 To rebuild locally, run `mkdir -p qa/results && node qa/scratch_build_final.mjs`. When promoting the candidate, commit the regenerated QA HTML and checksum together with the identical `PLAY_v117.html` and verify their hashes.
 
@@ -31,7 +32,7 @@ On the published v117 checksum, two post-match reload scenarios restored the Rou
 
 Targeted offline checks used the published v117 build and validated career fixtures. At Round 10 in 2010, injury cover rejected an ineligible signing and a duplicate request, kept the XI as selected, and survived save and reload. An accepted Mumbai-to-Derbyshire Round 1 pick transfer survived reload and appeared under Derbyshire in the annual draft. A second attempt to trade that pick was rejected without changing ownership.
 
-Open trade-review regression: a package that would remove the last recognised wicketkeeper shows the engine warning but still enables Confirm. The engine declines the package without changing career state. Disable confirmation for engine-blocked packages and retain the engine guard. The existing `qa/v116_trade_review_gate.mjs` reproduced this on v117.
+Trade review now disables Confirm when the engine reports an eligibility violation. The reason stays visible and the offer remains editable. Submission rechecks eligibility before any trade state changes. The existing `qa/v116_trade_review_gate.mjs` passed on the rebuilt candidate.
 
 ## Definition of done
 
@@ -41,7 +42,7 @@ The recovered summary of Grok's target is a polished, continuous career from the
 | --- | --- | --- |
 | 1 | Publish the narrow-screen candidate | Complete. Builder and both playable HTML files match the tested checksum. |
 | 2 | Update the career test for v117 matchday | Complete for the offline runner. It resolves the toss before auditing a match and exercises Continue Career. |
-| 3 | Play through 2008–2026 on the exact candidate | Seed 101 completed all 19 seasons with the archive and legacy views verified through UI dispatch. Targeted cover and traded-pick checks passed. The blocked-trade Confirm control still needs a fix. |
+| 3 | Play through 2008–2026 on the exact candidate | Seed 101 completed all 19 seasons with the archive and legacy views verified through UI dispatch. Targeted cover and traded-pick checks passed. The blocked-trade Confirm regression is fixed and verified. |
 | 4 | Finish visual and accessibility review | Cover keyboard navigation, 200% zoom and live announcements. Inspect the menus, draft, XI, Fixtures and archive at phone and desktop widths. |
 | 5 | Re-run the five-seed gameplay audit and pin the release | Confirm scorebook and save integrity, record per-seed results and resolve or explicitly accept the 15.7% all-out outlier against the 15% ceiling. Pin the accepted commit and build checksum. |
 

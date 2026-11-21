@@ -384,6 +384,20 @@ if (!content.includes('id="gcc-standard"')) {
 </body></html>`);
 }
 
+// Use the engine's eligibility check both in trade review and on submission.
+const tradeReviewChanges = [
+  ['const deal=tradeDeal();ui.tradeReview=JSON.parse(JSON.stringify(deal));',
+   'const deal=tradeDeal(),problem=read.packageProblem(deal);ui.tradeReview=JSON.parse(JSON.stringify(deal));'],
+  ["btn('Confirm and send offer','confirmTrade',[],'g8primary')",
+   "btn('Confirm and send offer','confirmTrade',[],'g8primary',Boolean(problem))"],
+  ["'The package changed. Review the trade again.');ui.tradeReview=null;",
+   "'The package changed. Review the trade again.');const problem=read.packageProblem(deal);assert(!problem,problem);ui.tradeReview=null;"],
+];
+for (const [before, after] of tradeReviewChanges) {
+  if (content.split(before).length !== 2) throw new Error('Trade review build anchor changed: ' + before);
+  content = content.replace(before, after);
+}
+
 const narrowCareerStyles = "<style>\n@media (max-width:390px){\n  #g8app#g8app #g8stage .gccuiCampaignRibbon>div{grid-template-rows:auto minmax(44px,auto) auto;padding:10px 12px}\n  #g8app#g8app #g8stage .gccuiCampaignRibbon>div>span{letter-spacing:.08em}\n  #g8app#g8app#g8app #g8hud .g8careernav .g8navitem{padding-inline:.3rem!important;font-size:.8rem!important;letter-spacing:.03em}\n  #g8app#g8app#g8app .g8careernav .g8navitem:focus-visible{outline-offset:-4px!important}\n}\n</style>";
 content = content.replace('</head>', narrowCareerStyles + '</head>');
 
