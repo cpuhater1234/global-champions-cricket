@@ -403,6 +403,21 @@ const lateWicketHazard = '*(1+Math.max(0,pressure)*0.00),.014,.15)';
 if (content.split(lateWicketHazard).length !== 2) throw new Error('Late wicket hazard anchor changed');
 content = content.replace(lateWicketHazard, '*(wickets>=8&&over>=16?0.90:1)' + lateWicketHazard);
 
+// Keep the announcement mounted when the delivery card changes.
+const liveDeliveryStart = '<div class="gcc-moment gcc-${tone}" data-key="delivery-${n}-${count}" role="status" aria-atomic="true"><span class="g8liveread gcc-sr">';
+const liveDeliveryEnd = '</span><strong class="gcc-event';
+const liveStart = content.indexOf(liveDeliveryStart);
+const liveEnd = content.indexOf(liveDeliveryEnd, liveStart);
+if (liveStart < 0 || liveEnd < 0 || content.split(liveDeliveryStart).length !== 2) {
+  throw new Error('Live delivery announcement anchor changed');
+}
+const liveText = content.slice(liveStart + liveDeliveryStart.length, liveEnd);
+content = content.slice(0, liveStart)
+  + '<div class="gcc-sr" data-key="live-score-status" role="status" aria-atomic="true"><span class="g8liveread">'
+  + liveText
+  + '</span></div><div class="gcc-moment gcc-${tone}" data-key="delivery-${n}-${count}"><strong class="gcc-event'
+  + content.slice(liveEnd + liveDeliveryEnd.length);
+
 const narrowCareerStyles = "<style>\n@media (max-width:390px){\n  #g8app#g8app #g8stage .gccuiCampaignRibbon>div{grid-template-rows:auto minmax(44px,auto) auto;padding:10px 12px}\n  #g8app#g8app #g8stage .gccuiCampaignRibbon>div>span{letter-spacing:.08em}\n  #g8app#g8app#g8app #g8hud .g8careernav .g8navitem{padding-inline:.3rem!important;font-size:.8rem!important;letter-spacing:.03em}\n  #g8app#g8app#g8app .g8careernav .g8navitem:focus-visible{outline-offset:-4px!important}\n}\n</style>";
 content = content.replace('</head>', narrowCareerStyles + '</head>');
 

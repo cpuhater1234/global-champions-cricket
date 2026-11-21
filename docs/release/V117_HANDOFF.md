@@ -103,6 +103,10 @@ On the published calibration checksum, Chromium completed 998 automated observat
 
 The live status was replaced seven times across seven observed updates, which can affect announcements. Actual spoken screen-reader output remains unverified. The 2008 fixture did not cover the trade dialog, and the visual archive review is still open. [Audit and evidence](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44889781077)
 
+## Persistent live score status
+
+Chromium observed one mounted polite, atomic status element across seven score updates. The verified build passed 998 automated observations including 200% zoom. Actual spoken output still needs testing. SHA-256: `a14e1f0c41bf383827b8f8e4e5c70b1c8ae1707c7744cc7935773eea10cecb85`. [Chromium evidence](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44910803638)
+
 ## Definition of done
 
 The recovered summary of Grok's target is a polished, continuous career from the 2008 club reveal through the 2026 season. Drafting, manual XI selection, captaincy plans and their matchday consequences need to be clear and meaningful. Career history should pay off through League Honours, the GCC Record Book, Your Club Legends, all 19 season entries, an openable Season Book and an end-of-career legacy summary. Verify those views against existing career history.
@@ -112,7 +116,7 @@ The recovered summary of Grok's target is a polished, continuous career from the
 | 1 | Publish the narrow-screen candidate | Complete. Builder and both playable HTML files match the tested checksum. |
 | 2 | Update the career test for v117 matchday | Complete for the offline runner. It resolves the toss before auditing a match and exercises Continue Career. |
 | 3 | Play through 2008–2026 on the exact candidate | Seed 101 completed all 19 seasons with the archive and legacy views verified through UI dispatch. Targeted cover and traded-pick checks passed. The blocked-trade Confirm regression is fixed and verified. |
-| 4 | Finish visual and accessibility review | Chromium keyboard and 200% zoom checks passed on covered screens. Live status replacement and spoken screen-reader output remain open, along with visual review of the draft and archive. |
+| 4 | Finish visual and accessibility review | Chromium keyboard and 200% zoom checks passed on covered screens. Live status persistence passed in Chromium. Spoken screen-reader output and visual review of the draft and archive remain open. |
 | 5 | Re-run the five-seed gameplay audit and pin the release | Calibration and acceptance passed for the per-setup average, with the checksum recorded above. Individual seed ceilings remain unproven. |
 
 ## 18 November calibration and acceptance record
