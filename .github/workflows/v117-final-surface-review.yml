@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: '24'
       - run: |
-          echo 'a14e1f0c41bf383827b8f8e4e5c70b1c8ae1707c7744cc7935773eea10cecb85  PLAY_v117.html' | sha256sum -c
+          echo 'bbc5c7bf96edc70d62a1ddd33f48e1a5bf01cebbdf0b1f413d7992d26ac4c693  PLAY_v117.html' | sha256sum -c
           npm install --no-save --no-package-lock playwright
           npx playwright install chromium
           python - <<'PY'
@@ -50,7 +50,7 @@ jobs:
             const browser=await chromium.launch();
             const errors=[],findings=[];
             try {
-              for(const width of [320,390,1440]) for(const surface of ['draft','archive','trade']){
+              for(const width of [320,360,390,1440]) for(const surface of ['draft','archive','trade']){
                 const c=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce'});
                 const save=fs.readFileSync('qa/results/surface/'+(surface==='draft'?'draft':'review')+'.json','utf8');
                 await c.addInitScript(raw=>localStorage.setItem('gcc_dynasty_v8',raw),save);
