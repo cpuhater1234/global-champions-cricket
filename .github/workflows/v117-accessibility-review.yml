@@ -34,6 +34,7 @@ jobs:
           s = s[:start] + "const prepareXI=async()=>{await call('continue');await call('editXI');};" + s[end:]
           s = s.replace("await call('playMatch',1);await call('startPlayback');","await call('playMatch',1);if(await page.locator('[data-action=tossBat]:visible').count())await call('tossBat');if(await page.locator('[data-action=startPlayback]:visible').count())await call('startPlayback');")
           s = s.replace("await modalKeyboard('trade-keyboard-'+width,page.locator('[data-action=trade]:visible').first());", "if(await page.locator('[data-action=trade]:visible').count())await modalKeyboard('trade-keyboard-'+width,page.locator('[data-action=trade]:visible').first());")
+          s = s.replace("await modalKeyboard('zoom200-player-'+physical,page.locator('[data-action=manageInspect]:visible').first());", "await call('editXI');await snapshot('zoom200-xi-'+physical);await modalKeyboard('zoom200-player-'+physical,page.locator('[data-action=inspect]:visible').first());")
           p.write_text(s)
           PY
           node qa/structural-risk/a11y-fixture.mjs
@@ -46,7 +47,7 @@ jobs:
           f = Path('qa/results/v117-a11y/report.json')
           if f.exists():
               r=json.loads(f.read_text())
-              print(json.dumps({'zoom':r['zoom'],'findings':[x['id'] for x in r['findings']], 'errors':r['errors'],'runtimeErrors':r['runtimeErrors'],'live':r['live'] and {k:r['live'].get(k) for k in ('distinctRegionInstances','spokenAT','regionReplacementRisk')}}))
+              print(json.dumps({'zoom':r['zoom'],'observations': len(r['observations']),'findings':[x['id'] for x in r['findings']], 'errors':r['errors'],'runtimeErrors':r['runtimeErrors'],'live':r['live'] and {k:r['live'].get(k) for k in ('distinctRegionInstances','spokenAT','regionReplacementRisk')}}))
           PY
           exit "${status:-0}"
       - uses: actions/upload-artifact@v4
