@@ -109,7 +109,9 @@ Chromium observed one mounted polite, atomic status element across seven score u
 
 ## Draft, archive and trade review
 
-On build `9712737`, Chromium checked the draft, archive and preseason trade surfaces at 320, 390 and 1440 px. The audit reported no document overflow, dialog bounds failures, runtime errors or trade dialog keyboard failures. Opening and closing the Season Book worked, and Escape returned focus to its opener. Inside the Season Book, Tab and Shift+Tab could leave the dialog's focus cycle at all three widths. This remains open. Screenshots were captured and visual inspection remains pending. [Audit and screenshots](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44915689973)
+On build `9712737`, Chromium checked the draft, archive and preseason trade surfaces at 320, 390 and 1440 px. The audit reported no document overflow, dialog bounds failures, runtime errors or trade dialog keyboard failures. Opening and closing the Season Book worked, and Escape returned focus to its opener. Inside the Season Book, Tab and Shift+Tab could leave the dialog's focus cycle at all three widths. The fix passed at all three widths. Screenshots showed readable Season Book and trade layouts. The draft sort label is clipped at 320 px. [Audit and screenshots](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44915689973)
+
+The Season Book build checksum is `bbc5c7bf96edc70d62a1ddd33f48e1a5bf01cebbdf0b1f413d7992d26ac4c693`. [Passing keyboard audit](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44916253055) · [Build verification](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44916799004)
 
 ## Definition of done
 
