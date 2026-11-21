@@ -107,6 +107,8 @@ The live status was replaced seven times across seven observed updates, which ca
 
 Chromium observed one mounted polite, atomic status element across seven score updates. The verified build passed 998 automated observations including 200% zoom. Actual spoken output still needs testing. SHA-256: `a14e1f0c41bf383827b8f8e4e5c70b1c8ae1707c7744cc7935773eea10cecb85`. [Chromium evidence](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44910803638)
 
+The Season Book build checksum is `bbc5c7bf96edc70d62a1ddd33f48e1a5bf01cebbdf0b1f413d7992d26ac4c693`. [Passing keyboard audit](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44916253055) · [Build verification](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44916799004)
+
 ## Definition of done
 
 The recovered summary of Grok's target is a polished, continuous career from the 2008 club reveal through the 2026 season. Drafting, manual XI selection, captaincy plans and their matchday consequences need to be clear and meaningful. Career history should pay off through League Honours, the GCC Record Book, Your Club Legends, all 19 season entries, an openable Season Book and an end-of-career legacy summary. Verify those views against existing career history.
