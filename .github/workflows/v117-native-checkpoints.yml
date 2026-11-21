@@ -1,0 +1,89 @@
+name: v117 native career checkpoints
+on:
+  push:
+    branches: [work/v117-native-acceptance]
+    paths: ['.github/workflows/v117-native-checkpoints.yml']
+permissions:
+  contents: read
+jobs:
+  checkpoints:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    env:
+      GCC8_TEST_BUILD: PLAY_v117.html
+      GCC8_TEST_REPORT_DIR: qa/results/v117-checkpoints
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Verify the published build and generate disposable career checkpoints
+        run: |
+          echo '9890a9108aa260b5a263fa407ac3bb371d23de59f05064f78e55036847003cd9  PLAY_v117.html' | sha256sum -c
+          python - <<'PY'
+          from pathlib import Path
+          source = Path('qa/structural-risk/career-run.mjs').read_text()
+          marker = 'for(let year=2009;year<=lastYear;year++){'
+          assert source.count(marker) == 1
+          source = source.split(marker)[0]
+          source = source.replace("coverage.reloads.push({year:s.year,label,source:'validated backup snapshot'});", "coverage.reloads.push({year:s.year,label,source:'validated backup snapshot'}); if(label==='foundation-user-pick') fs.writeFileSync(reportDir+'/draft.json',raw);")
+          source += """fs.writeFileSync(reportDir+'/rollover.json',context.GCC8_ENGINE_READ.backupRaw());\n"""
+          source = source.replace('// Double submission must not consume another match.', """fs.writeFileSync(reportDir+'/xi.json',context.GCC8_ENGINE_READ.backupRaw());\n// Double submission must not consume another match.""")
+          Path('qa/structural-risk/v117-checkpoint-fixture.mjs').write_text(source)
+          PY
+          node qa/structural-risk/v117-checkpoint-fixture.mjs
+      - run: |
+          python -m pip install playwright
+          python -m playwright install chromium
+      - name: Reload checkpoints through the native browser save path
+        run: |
+          python - <<'PY'
+          import importlib.util
+          from pathlib import Path
+          from playwright.sync_api import sync_playwright
+
+          def load(name, path):
+              spec = importlib.util.spec_from_file_location(name, path)
+              module = importlib.util.module_from_spec(spec)
+              spec.loader.exec_module(module)
+              return module
+
+          native = load('captaincy_layer_v116', 'captaincy_layer_v116.py')
+          two_tab = load('native_two_tab_v116', 'qa/native_two_tab_v116.py')
+          root = Path('qa/results/v117-checkpoints')
+          job = Path('PLAY_v117.html').read_bytes()
+          identity = """() => {
+              const s=GCC.state;
+              return {year:s.year,round:s.round,pick:s.pickIndex,club:s.userClub.abbr,
+                  roster:s.teams,xi:s.xi,order:s.battingOrder,
+                  years:Object.keys(s.dynasty.archivedYears),phase:s.dynasty.offseason?.phase,
+                  results:s.results,table:s.table,view:GCC8.ui.view};
+          }"""
+          with native.temporary_release_server(job) as url, sync_playwright() as pw:
+              browser = pw.chromium.launch()
+              for label, expected in [('draft','draft'),('xi','season'),('rollover','review')]:
+                  ctx = browser.new_context()
+                  page = ctx.new_page()
+                  errors = []
+                  page.on('pageerror', lambda error: errors.append(str(error)))
+                  # Seed only once; reload must recover the native checkpoint written in this test.
+                  page.goto(url)
+                  page.evaluate("(raw) => localStorage.setItem('gcc_dynasty_v8', raw)", (root / (label + '.json')).read_text())
+                  page.reload()
+                  page.get_by_role('button', name='Continue career').click()
+                  page.wait_for_function("(view) => GCC8.ui.view === view", expected)
+                  if label == 'rollover':
+                      assert page.evaluate("GCC8.dispatch('offseason', [])")
+                      page.wait_for_function("() => GCC.state.year === 2009")
+                  before = page.evaluate(identity)
+                  assert page.evaluate("async () => await GCC8_ENGINE_READ.flushSave()")
+                  stored = page.evaluate("localStorage.getItem('gcc_dynasty_v8')")
+                  assert stored and two_tab.checkpoint(page) == stored
+                  page.reload()
+                  page.get_by_role('button', name='Continue career').click()
+                  page.wait_for_function("(view) => GCC8.ui.view === view", before['view'])
+                  assert page.evaluate(identity) == before, label
+                  assert not errors, errors
+                  print('PASS', label, before['year'], before['round'], before['view'], flush=True)
+                  ctx.close()
+          PY
