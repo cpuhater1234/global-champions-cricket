@@ -418,6 +418,20 @@ content = content.slice(0, liveStart)
   + '</span></div><div class="gcc-moment gcc-${tone}" data-key="delivery-${n}-${count}"><strong class="gcc-event'
   + content.slice(liveEnd + liveDeliveryEnd.length);
 
+// Retain keyboard focus in the Season Book and let its content receive focus for scrolling.
+const seasonBookKeyAnchor = " document.addEventListener('keydown',event=>{if(event.key==='Escape'&&hud.querySelector";
+if (content.split(seasonBookKeyAnchor).length !== 2) throw new Error('Season Book key anchor changed');
+content = content.replace(seasonBookKeyAnchor, ` dialog.addEventListener('keydown', event => {
+  if (event.key !== 'Tab' || !dialog.open || ui.modal !== 'archiveSeason') return;
+  const body = dialog.querySelector('.g8modalbody');
+  const close = dialog.querySelector('.g8dialogclose');
+  if (!body || !close) return;
+  body.tabIndex = 0;
+  event.preventDefault();
+  (document.activeElement === body ? close : body).focus();
+ });
+` + seasonBookKeyAnchor);
+
 const narrowCareerStyles = "<style>\n@media (max-width:390px){\n  #g8app#g8app #g8stage .gccuiCampaignRibbon>div{grid-template-rows:auto minmax(44px,auto) auto;padding:10px 12px}\n  #g8app#g8app #g8stage .gccuiCampaignRibbon>div>span{letter-spacing:.08em}\n  #g8app#g8app#g8app #g8hud .g8careernav .g8navitem{padding-inline:.3rem!important;font-size:.8rem!important;letter-spacing:.03em}\n  #g8app#g8app#g8app .g8careernav .g8navitem:focus-visible{outline-offset:-4px!important}\n}\n</style>";
 content = content.replace('</head>', narrowCareerStyles + '</head>');
 
