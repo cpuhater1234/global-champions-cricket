@@ -247,7 +247,9 @@ export function evaluateAgainstBenchmarks(simResults) {
   const evaluations = [];
 
   function evaluateMetric(name, actual, benchmark, unit = '') {
-    const isPass = actual >= benchmark.min && actual <= benchmark.max;
+    // Scaling a ratio to a percentage can put an exact endpoint one ULP outside the band.
+    const tolerance = Number.EPSILON * Math.max(1, Math.abs(actual), Math.abs(benchmark.min), Math.abs(benchmark.max));
+    const isPass = actual >= benchmark.min - tolerance && actual <= benchmark.max + tolerance;
     const dev = actual - benchmark.target;
     evaluations.push({
       metric: name,
