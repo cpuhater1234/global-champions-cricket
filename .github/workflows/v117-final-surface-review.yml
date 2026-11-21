@@ -1,11 +1,12 @@
 name: v117 draft archive and trade review
 on:
-  push:
-    branches: [work/v117-final-surface-review]
+  pull_request:
+    branches: [v117]
 permissions:
   contents: read
 jobs:
   review:
+    if: github.head_ref == 'work/v117-final-surface-review'
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     env:
