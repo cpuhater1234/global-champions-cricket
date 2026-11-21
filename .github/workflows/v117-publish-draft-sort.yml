@@ -1,0 +1,28 @@
+name: Publish verified draft sort build
+on:
+  push:
+    branches: [work/v117-mobile-draft-sort]
+    paths: ['.github/workflows/v117-publish-draft-sort.yml']
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: |
+          mkdir -p qa/results
+          node qa/scratch_build_final.mjs
+          cp qa/candidates/v116-authenticity-candidate.html PLAY_v117.html
+          hash=326f3dabac9d337544b3b40bfd8b250dacca9025e755a89716a862c5f353da6d
+          printf '%s  %s\n' "$hash" PLAY_v117.html "$hash" qa/candidates/v116-authenticity-candidate.html | sha256sum -c
+          test "$(tr 'A-F' 'a-f' < qa/candidates/CANDIDATE_SHA256.txt)" = "$hash"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add PLAY_v117.html qa/candidates/v116-authenticity-candidate.html qa/candidates/CANDIDATE_SHA256.txt
+          git commit -m 'Publish verified draft sort build'
+          git push origin HEAD:refs/heads/work/v117-mobile-draft-sort
