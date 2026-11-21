@@ -4,7 +4,7 @@
 
 | Build | Location | Evidence |
 | --- | --- | --- |
-| Current playable build | `v117` at `1ea4a4c`, `PLAY_v117.html` | SHA-256 `326f3dabac9d337544b3b40bfd8b250dacca9025e755a89716a862c5f353da6d`. Two-season smoke passed 1,917 checks across 28 regular-season matches with zero runner errors. |
+| Current playable build | `v117` at `1ea4a4c`, `PLAY_v117.html` | SHA-256 `326f3dabac9d337544b3b40bfd8b250dacca9025e755a89716a862c5f353da6d`. Full-career regression passed 17,036 checks across 19 seasons and 266 regular-season matches with zero runner errors. [Exact-build run](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44918414963) |
 | Stable release | `v116` at `2648c00` | Frozen release |
 | Playable v117 baseline | `v117` at `774862b`, `PLAY_v117.html` | Club reveal and selection tested at 320, 390, 768 and 1440 px |
 | Narrow-screen candidate | `PLAY_v117.html` and `qa/candidates/v116-authenticity-candidate.html` | SHA-256 `9890a9108aa260b5a263fa407ac3bb371d23de59f05064f78e55036847003cd9`. Builder output matches the CSS trial that passed 126 Chromium checks. Both playable files and the recorded checksum matched when this candidate was published. |
@@ -113,6 +113,10 @@ Chromium observed one mounted polite, atomic status element across seven score u
 On build `9712737`, Chromium checked the draft, archive and preseason trade surfaces at 320, 390 and 1440 px. The audit reported no document overflow, dialog bounds failures, runtime errors or trade dialog keyboard failures. Opening and closing the Season Book worked, and Escape returned focus to its opener. Inside the Season Book, Tab and Shift+Tab could leave the dialog's focus cycle at all three widths. The fix passed at all three widths. Screenshots showed readable Season Book and trade layouts. The draft sort label clipped at 320 px in that build. The updated draft stacks filters at 360 px and below. Chromium verified the full label fits at 320, 360, 390 and 1440 px. [Browser verification](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44917552439) [Audit and screenshots](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44915689973)
 
 The Season Book build checksum is `bbc5c7bf96edc70d62a1ddd33f48e1a5bf01cebbdf0b1f413d7992d26ac4c693`. [Passing keyboard audit](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44916253055) · [Build verification](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44916799004)
+
+## Published build full-career regression
+
+The current checksum-pinned playable HTML at `1ea4a4c` completed 2008–2026 with seed 101 and Mumbai Indians. The offline runner passed 17,036 checks across 19 seasons and 266 regular-season matches, including the 2026 ending and cold Continue Career from the final save. Browser save and accessibility evidence is recorded separately. [GitHub Actions](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44918414963)
 
 ## Definition of done
 
