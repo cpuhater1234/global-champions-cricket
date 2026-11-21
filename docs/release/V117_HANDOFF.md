@@ -97,6 +97,10 @@ From over 16 with eight or nine wickets down, the engine applies a 0.90 multipli
 
 Candidate SHA-256: `e21c54c8596ab12e7f5a42daee96e88aabea779ece49f2871cebada722c87d2a`. The full 19-season career and native Chromium post-match save and Continue Career checks passed on this exact build. [Acceptance run](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44888428848)
 
+## Persistent live score status
+
+Chromium observed one mounted polite, atomic status element across seven score updates. The verified build passed 998 automated observations including 200% zoom. Actual spoken output still needs testing. SHA-256: `a14e1f0c41bf383827b8f8e4e5c70b1c8ae1707c7744cc7935773eea10cecb85`. [Chromium evidence](https://github.com/cpuhater1234/global-champions-cricket/actions/runs/44910803638)
+
 ## Definition of done
 
 The recovered summary of Grok's target is a polished, continuous career from the 2008 club reveal through the 2026 season. Drafting, manual XI selection, captaincy plans and their matchday consequences need to be clear and meaningful. Career history should pay off through League Honours, the GCC Record Book, Your Club Legends, all 19 season entries, an openable Season Book and an end-of-career legacy summary. Verify those views against existing career history.
